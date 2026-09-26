@@ -65,3 +65,7 @@
   - The dog handler's shepherd really walks at heel (trotting legs, head, panting) on
     a leash that sags and pulls taut.
 - **Camera**: slightly closer to the player.
+- **Dogs** attack less abruptly: slower run (shepherd 190→160, rottweiler 165→145),
+  a longer growl before the lunge, a shorter lunge and more recovery between bites.
+- **Dog handler** walks with a proper stride: shoulders roll, a little bounce, the gun
+  carried low at his side, his fist on the leash, and he leans back when the dog pulls.

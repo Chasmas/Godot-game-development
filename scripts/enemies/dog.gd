@@ -19,7 +19,7 @@ const DOG_COLORS := {
 }
 const BITE_REACH := 15.0
 const DRAW_SCALE := 0.62     ## art is authored ~1.6x; a dog should be about a person's length
-const LUNGE_SPEED := 300.0
+const LUNGE_SPEED := 255.0
 const LUNGE_TIME := 0.2
 
 var sleeping := false
@@ -332,8 +332,8 @@ func _dog_combat(delta: float) -> Vector2:
 			p.take_damage(info)
 		if _lunge_t >= LUNGE_TIME:
 			_lunge_t = -1.0
-			_recover_t = 0.45
-			_melee_cd = 0.7
+			_recover_t = 0.6
+			_melee_cd = 1.0
 		return Vector2.ZERO
 	if _recover_t > 0.0:
 		_recover_t -= delta
