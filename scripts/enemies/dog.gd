@@ -263,7 +263,9 @@ func _dog_combat(delta: float) -> Vector2:
 			_lunge_dir = to.normalized()
 			Audio.play_at("bark", global_position, -3.0, 0.2)
 		return Vector2.ZERO
-	var clear := _clear_line(global_position, p.global_position)
+	# perception already knows if the dog can see you; only re-check the
+	# line up close where a lunge through a wall would matter
+	var clear := _clear_line(global_position, p.global_position) if dist < 60.0 else _sees_player
 	if dist < 44.0 and _melee_cd <= 0.0 and clear:
 		_windup_t = 0.0
 		_growl_t = 0.3

@@ -119,10 +119,10 @@ func _integrate(delta: float) -> void:
 		omega = -omega * t.door_restitution
 		if absf(omega) < 0.4:
 			omega = 0.0
-	# linear friction + quadratic air drag
+	# linear friction + quadratic air drag + hinge (static) friction, so a
+	# swinging door actually stops instead of creeping forever
 	omega -= (t.door_friction * omega + t.door_drag * omega * absf(omega)) * delta
-	if absf(omega) < 0.02:
-		omega = 0.0
+	omega = move_toward(omega, 0.0, t.door_hinge_friction * delta)
 
 ## Ray along the leaf (from just off the hinge to the tip) against walls.
 func _leaf_blocked() -> bool:
@@ -209,12 +209,15 @@ func kick(from: Vector2, dir: Vector2) -> bool:
 		return true
 	var a := leaf_dir()
 	var side := signf(a.cross(rel)) if a.cross(rel) != 0.0 else 1.0
-	omega = side * t.kick_speed
+	# positive omega swings the tip toward -orthogonal(leaf); the kicker is
+	# on `side`, so the leaf must go the other way (-side), away from them.
+	# (It used to be +side: kicked doors swung back at the player.)
+	omega = -side * t.kick_speed
 	_slammer_is_player = true
 	_handle = 1.0
 	# the boot lands on the leaf: splinters off the impact side, dust shaken
 	# out of the frame at the hinge
-	var push_dir := a.orthogonal() * -side
+	var push_dir := a.orthogonal() * side   # away from the kicker
 	Effects.splinters(hp_pos, push_dir, not metal)
 	Effects.dust(global_position, push_dir, 1.0)
 	Audio.play_at("door_kick", global_position, 0.0, 0.06)
@@ -272,7 +275,7 @@ func take_damage(info: DamageInfo) -> String:
 				_rattle = 0.6
 			else:
 				var side := signf(leaf_dir().cross(info.pos - info.dir * 10.0 - global_position))
-				omega = side * (15.0 if info.heavy else 9.0)
+				omega = -side * (15.0 if info.heavy else 9.0)   # away from the attacker
 				_slammer_is_player = info.from_player
 				_handle = 0.8
 				_play_slam()

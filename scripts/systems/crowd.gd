@@ -14,6 +14,7 @@ const CELL := 48.0
 
 var level: Node
 var _cells: Dictionary = {}          ## Vector2i -> Array[Node2D]
+var _enemy_cells: Dictionary = {}    ## same, enemies only (separation / doors)
 var _all: Array[Node2D] = []
 var _shooters: Dictionary = {}       ## Enemy -> true
 var _melee: Dictionary = {}          ## Enemy -> true
@@ -33,6 +34,7 @@ func _physics_process(_delta: float) -> void:
 func rebuild() -> void:
 	_frame = Engine.get_physics_frames()
 	_cells.clear()
+	_enemy_cells.clear()
 	_all.clear()
 	var tree := get_tree()
 	for group in ["enemies", "npcs", "player"]:
@@ -50,6 +52,11 @@ func rebuild() -> void:
 			if bucket.is_empty():
 				_cells[c] = bucket
 			bucket.append(a)
+			if group == "enemies":
+				var eb: Array = _enemy_cells.get(c, [])
+				if eb.is_empty():
+					_enemy_cells[c] = eb
+				eb.append(a)
 	_prune_tokens(_shooters)
 	_prune_tokens(_melee)
 
@@ -63,22 +70,27 @@ func query(pos: Vector2, radius: float, out: Array, group := &"") -> void:
 	var r2 := radius * radius
 	var c0 := _cell(pos - Vector2(radius, radius))
 	var c1 := _cell(pos + Vector2(radius, radius))
+	var cells := _enemy_cells if group == &"enemies" else _cells
+	var filter := group != &"" and group != &"enemies"
 	for cy in range(c0.y, c1.y + 1):
 		for cx in range(c0.x, c1.x + 1):
-			var bucket: Array = _cells.get(Vector2i(cx, cy), [])
+			var bucket: Array = cells.get(Vector2i(cx, cy), [])
 			for a in bucket:
 				if not is_instance_valid(a):
 					continue
-				if group != &"" and not (a as Node).is_in_group(group):
+				if filter and not (a as Node).is_in_group(group):
 					continue
 				if (a as Node2D).global_position.distance_squared_to(pos) <= r2:
 					out.append(a)
 
 ## Steering push away from nearby enemies (personal space). Cheap: only the
 ## actor's own and neighbouring cells are visited.
+var _near_buf: Array = []
+
 func separation(e: Node2D, space: float, strength: float) -> Vector2:
 	var push := Vector2.ZERO
-	var near: Array = []
+	var near := _near_buf
+	near.clear()
 	query(e.global_position, space, near, &"enemies")
 	var i := 0
 	for o in near:

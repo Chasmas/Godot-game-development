@@ -92,6 +92,7 @@ static func get_t() -> Tuning:
 @export var kick_noise := 300.0
 @export var door_friction := 2.2          ## linear damping (1/s)
 @export var door_drag := 0.12             ## quadratic damping: fast swings bleed speed quicker
+@export var door_hinge_friction := 1.4    ## constant deceleration (rad/s^2): brings the leaf to rest
 @export var door_restitution := 0.32      ## bounce off the hinge stop / walls
 @export var door_rattle := 0.9            ## visual shudder after a hard stop
 @export var kick_max_angle_deg := 100.0   ## must roughly face the door to kick it

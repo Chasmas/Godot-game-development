@@ -14,16 +14,27 @@ const DESCRIPTIONS := [
 ]
 
 static var _cache: Dictionary = {}   ## "id:level" -> scaled EnemyData
+static var _values: Dictionary = {}  ## key -> value for the cached level
+static var _values_level := -1
 
 static func current() -> int:
 	return clampi(int(SaveManager.get_setting("difficulty", Level.NORMAL)), 0, 2)
 
-## Per-difficulty value from one of Tuning's arrays.
+## Per-difficulty value from one of Tuning's arrays. Cached per level: AI
+## asks for these every tick.
 static func value(key: String) -> Variant:
+	var lv := current()
+	if lv != _values_level:
+		_values.clear()
+		_values_level = lv
+	if _values.has(key):
+		return _values[key]
+	var v: Variant = 1.0
 	var arr: Variant = Tuning.get_t().get(key)
 	if arr is Array and not (arr as Array).is_empty():
-		return arr[clampi(current(), 0, arr.size() - 1)]
-	return 1.0
+		v = arr[clampi(lv, 0, arr.size() - 1)]
+	_values[key] = v
+	return v
 
 static func mult(key: String) -> float:
 	return float(value(key))

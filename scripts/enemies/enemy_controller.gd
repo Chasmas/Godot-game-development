@@ -80,6 +80,8 @@ var _look_base := 0.0
 var _slot_angle := 0.0               ## where around the player this enemy prefers to fight from
 var _slot_t := 0.0
 var _holding := false                ## waiting for an attack token
+var _sep := Vector2.ZERO             ## cached separation push (refreshed every other tick)
+var _sep_phase := 0
 
 func _ready() -> void:
 	add_to_group("enemies")
@@ -101,6 +103,7 @@ func _ready() -> void:
 	Events.lights_changed.connect(_on_lights_changed)
 	_perceive_t = randf() * 0.1
 	_strafe = 1.0 if randf() > 0.5 else -1.0
+	_sep_phase = randi() % 2
 
 func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	data = Difficulty.scaled_enemy(p_data)
@@ -309,6 +312,10 @@ func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> v
 		return
 	if kind == &"voice" and source is Enemy:
 		_hear_shout(source as Enemy)
+		return
+	# colleagues opening doors and walking about are background noise;
+	# only their gunfire means something is going on
+	if source is Enemy and kind in [&"door", &"step", &"scuffle", &"thrown"]:
 		return
 	# cheap reject before any ray casts
 	var reach := radius * Tuning.get_t().noise_scale * data.hearing_mult
@@ -663,8 +670,8 @@ func _melee_combat(p: Player, dist: float, delta: float) -> Vector2:
 		var want := p.global_position + off.normalized().rotated(_strafe * 0.5) * ring
 		if randf() < 0.004:
 			_strafe *= -1.0
-		return (want - global_position).limit_length(1.0) * data.walk_speed * 1.3 if _clear_line(global_position, want) else _go_to(want, data.walk_speed * 1.3)
-	if _clear_line(global_position, p.global_position) and dist < 120.0:
+		return _go_to(want, data.walk_speed * 1.3)
+	if _sees_player and dist < 120.0:
 		return to * speed
 	return _go_to(p.global_position, speed)
 
@@ -715,8 +722,11 @@ func _separation() -> Vector2:
 	var crowd := _crowd()
 	if crowd == null or state == State.DOWNED:
 		return Vector2.ZERO
-	var t := Tuning.get_t()
-	return crowd.separation(self, t.personal_space, t.separation_strength)
+	# half rate, staggered: spacing drifts slowly, nobody can see the skip
+	if (Engine.get_physics_frames() + _sep_phase) % 2 == 0:
+		var t := Tuning.get_t()
+		_sep = crowd.separation(self, t.personal_space, t.separation_strength)
+	return _sep
 
 # ======================================================================= navigation
 func _go_to(target: Vector2, speed: float) -> Vector2:

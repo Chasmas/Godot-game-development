@@ -127,8 +127,15 @@ func restart_level() -> void:
 	get_tree().reload_current_scene()
 
 # ------------------------------------------------------------ transitions
+var _queued_scene := ""
+var _queued_fade := true
+
 func change_scene(path: String, fade := true) -> void:
 	if transitioning:
+		# a request mid-fade (e.g. a cutscene ending as a mission starts) is
+		# queued, not dropped: the newest one wins once this fade finishes
+		_queued_scene = path
+		_queued_fade = fade
 		return
 	transitioning = true
 	get_tree().paused = false
@@ -140,6 +147,11 @@ func change_scene(path: String, fade := true) -> void:
 	await get_tree().process_frame
 	await get_tree().process_frame
 	transitioning = false
+	if _queued_scene != "":
+		var q := _queued_scene
+		_queued_scene = ""
+		change_scene(q, _queued_fade)
+		return
 	if fade:
 		PostFX.fade_in(0.35)
 
