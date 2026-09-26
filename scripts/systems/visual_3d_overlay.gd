@@ -221,3 +221,15 @@ func _process(delta: float) -> void:
 	for child in props.get_children():
 		if child is Node3D and str(child.name) == "palm":
 			child.rotation.y = sin(_time * 0.55 + child.position.x * 0.7) * 0.025
+		elif child is Node3D and str(child.name) == "lamp":
+			var lamp_light := child.get_child_or_null(1) as OmniLight3D
+			if lamp_light:
+				var flick := 1.0 + sin(_time * 8.0 + child.position.x * 3.0) * 0.035
+				if fmod(_time + child.position.x, 17.0) > 16.94:
+					flick = 0.18
+				lamp_light.light_energy = 2.2 * flick
+		elif child is Node3D and str(child.name) == "sign":
+			var sign_light := child.get_child_or_null(1) as OmniLight3D
+			if sign_light:
+				var pulse := 1.0 + sin(_time * 3.2) * 0.08
+				sign_light.light_energy = 2.0 * pulse
