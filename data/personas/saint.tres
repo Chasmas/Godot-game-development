@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"saint"
+display_name = "THE SAINT"
+look = "White clerical collar, halo of gaffer tape on a hockey helmet."
+description = "Every blow is a blessing."
+rule_change = "Unarmed punches are lethal."

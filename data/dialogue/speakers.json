@@ -1,0 +1,12 @@
+{
+	"cass": {"name": "CASS", "color": "ff3d7f", "pitch": 1.1},
+	"voice": {"name": "THE VOICE", "color": "ffd23f", "pitch": 0.6},
+	"machine": {"name": "ANSWERING MACHINE", "color": "8a7fa0", "pitch": 0.8},
+	"harcourt": {"name": "LYLE HARCOURT", "color": "e8dcc0", "pitch": 0.75},
+	"earl": {"name": "EARL, ROOM 101", "color": "35e0ff", "pitch": 0.9},
+	"tommy": {"name": "TOMMY", "color": "7ad0ff", "pitch": 1.0},
+	"anchor": {"name": "KHSC CHANNEL 9", "color": "35e0ff", "pitch": 0.95},
+	"guard": {"name": "SECURITY", "color": "1f9e9a", "pitch": 0.8},
+	"marv": {"name": "MARV KESSEL", "color": "ffd23f", "pitch": 0.85},
+	"narration": {"name": "", "color": "f4f0e8", "pitch": 1.0}
+}

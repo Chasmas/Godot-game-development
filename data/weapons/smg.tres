@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"smg"
+display_name = "Surfside SMG"
+kind = 0
+hold = 0
+automatic = true
+fire_rate = 13.0
+magazine = 30
+spare_mags = 1
+reload_time = 1.2
+spread_deg = 5.5
+move_spread_deg = 5.0
+recoil_deg = 1.0
+bullet_speed = 1300.0
+noise_radius = 560.0
+sfx_fire = "smg"
+sprite_key = "smg"
+camera_kick = 1.6
+flavor = "Sprays like a garden hose. Sounds like a sewing machine from hell."

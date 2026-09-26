@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"luz"
+display_name = "Luz Ferreira"
+archetype = "THE GHOST"
+year_first_seen = 1990
+persona = &"ghost"
+palette = "luz"
+move_speed = 158.0
+ability = &"blackout"
+bio = "Cat burglar who only robs people who deserve it, by her own accounting. Keeps a ledger."
+strengths = "Invisible in the dark. Silent footsteps."
+weaknesses = "Can't carry two-handed guns."

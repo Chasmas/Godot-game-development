@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"knife"
+display_name = "Switchblade"
+kind = 1
+hold = 2
+melee_range = 21.0
+melee_arc_deg = 100.0
+melee_cooldown = 0.15
+melee_windup = 0.0
+throw_lethal = true
+throw_speed = 620.0
+sfx_hit = "hit_blade"
+sprite_key = "knife"
+score_tag = "melee"
+flavor = "Fast. Throw it and it stays thrown."

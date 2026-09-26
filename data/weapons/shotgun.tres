@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"shotgun"
+display_name = "Hibachi 12ga"
+kind = 0
+hold = 1
+fire_rate = 1.5
+magazine = 6
+spare_mags = 1
+reload_time = 1.7
+pellets = 8
+spread_deg = 20.0
+move_spread_deg = 4.0
+recoil_deg = 4.0
+bullet_speed = 1150.0
+max_range = 320.0
+noise_radius = 700.0
+sfx_fire = "shotgun"
+sprite_key = "shotgun"
+camera_kick = 7.0
+knockback = 300.0
+flavor = "Closes every conversation."

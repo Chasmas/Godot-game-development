@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"fool"
+display_name = "THE FOOL"
+look = "Arcade-token eyes glued to a jester's face paint."
+description = "Insert coin."
+rule_change = "Remix Mode: every weapon is random."

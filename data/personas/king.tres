@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"king"
+display_name = "THE KING"
+look = "Plastic Burger-joint crown, rhinestone sunglasses."
+description = "Heavy is the head."
+rule_change = "Score x2, but the first hit ends the run."

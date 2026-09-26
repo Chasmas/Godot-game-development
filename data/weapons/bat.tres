@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"bat"
+display_name = "Louisville Slugger"
+kind = 1
+hold = 3
+melee_range = 27.0
+melee_arc_deg = 150.0
+melee_cooldown = 0.32
+melee_windup = 0.03
+durability = 14
+sfx_hit = "hit_blunt"
+sprite_key = "bat"
+score_tag = "melee"
+flavor = "America's pastime."

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"pistol"
+display_name = "Service 9mm"
+kind = 0
+hold = 0
+fire_rate = 5.0
+magazine = 12
+spare_mags = 1
+reload_time = 0.95
+spread_deg = 2.5
+recoil_deg = 2.2
+bullet_speed = 1500.0
+noise_radius = 520.0
+sfx_fire = "pistol"
+sprite_key = "pistol"
+flavor = "Standard issue. Stolen from somebody who had it issued."

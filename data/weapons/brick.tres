@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"brick"
+display_name = "Brick"
+kind = 2
+hold = 2
+melee_range = 18.0
+melee_cooldown = 0.28
+lethal = false
+sfx_hit = "hit_blunt"
+sprite_key = "brick"
+score_tag = "thrown"
+flavor = "Throw it. Through a window, ideally."

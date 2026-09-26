@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"nadia"
+display_name = "Nadia Vasquez"
+archetype = "THE ANGEL"
+year_first_seen = 1991
+persona = &"angel"
+palette = "nadia"
+move_speed = 170.0
+dash_cooldown = 0.25
+ability = &"shadow_dash"
+bio = "ER nurse, night shift, Cedars. Knows exactly how much it takes. Knows exactly who ordered it."
+strengths = "Fastest runner. Dash kills."
+weaknesses = "Guns jam in her hands (half magazines)."

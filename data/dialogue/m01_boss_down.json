@@ -1,0 +1,16 @@
+{
+	"start": "a",
+	"nodes": {
+		"a": {"speaker": "harcourt", "text": "Okay... okay. You win. Look at you. Tommy always said you were the talented one.", "next": "b"},
+		"b": {"speaker": "cass", "text": "You knew Tommy.", "next": "c"},
+		"c": {"speaker": "harcourt", "text": "I held the fire extinguisher on set. The empty one. Nobody told me it was empty. I swear to God.", "next": "d"},
+		"d": {"speaker": "harcourt", "text": "Somebody wanted that shot, kid. The real one. They're still paying for it. They're paying for THIS.", "next": "e"},
+		"e": {"speaker": "cass", "text": "...", "choices": [
+			{"text": "Finish it.", "next": "k1", "set": {"harcourt_killed": true}},
+			{"text": "Walk away.", "next": "s1", "set": {"harcourt_spared": true}}
+		]},
+		"k1": {"speaker": "cass", "text": "Checkout's at midnight, Lyle.", "event": "boss_execute"},
+		"s1": {"speaker": "cass", "text": "Tell whoever's paying: I'm not acting.", "next": "s2"},
+		"s2": {"speaker": "harcourt", "text": "...Oh, they're going to love that.", "event": "boss_spare"}
+	}
+}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"gunner"
+display_name = "Gunner"
+combat = 0
+weapon_id = &"smg"
+palette = "gunner"
+burst = 5
+burst_gap = 0.08
+aim_error_deg = 8.0
+reaction_time = 0.45
+flank_chance = 0.5
+notes = "Sprays bursts, flanks through side doors."

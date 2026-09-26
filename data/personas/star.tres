@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"star"
+display_name = "THE STAR"
+look = "A gold five-point star painted over one eye, stage makeup cracking at the edges."
+description = "You're the lead. The camera loves you. Everybody else is an extra."
+rule_change = "Combo window +0.6s. SPOTLIGHT charges 25% faster."
+combo_window_bonus = 0.6
+ability_charge_mult = 1.25

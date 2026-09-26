@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"revolver"
+display_name = ".357 Lawman"
+kind = 0
+hold = 0
+fire_rate = 2.2
+magazine = 6
+spare_mags = 1
+reload_time = 1.45
+spread_deg = 1.2
+recoil_deg = 6.0
+bullet_speed = 1900.0
+penetration = 1
+noise_radius = 640.0
+sfx_fire = "revolver"
+sprite_key = "revolver"
+camera_kick = 4.5
+knockback = 200.0
+flavor = "Goes through the first guy. Sometimes the second."

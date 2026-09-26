@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"night_manager"
+display_name = "Lyle Harcourt, Night Manager"
+combat = 4
+weapon_id = &"revolver"
+palette = "boss"
+walk_speed = 70.0
+run_speed = 150.0
+armor = 3
+can_be_knocked_down = false
+immune_to_punch = true
+reaction_time = 0.5
+view_distance = 420.0
+view_angle_deg = 160.0
+burst = 3
+burst_gap = 0.22
+aim_error_deg = 4.0
+notes = "Boss."

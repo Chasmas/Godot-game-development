@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"cowboy"
+display_name = "THE COWBOY"
+look = "Sun-bleached Stetson, bandana over the jaw."
+description = "High noon, all night."
+rule_change = "First shot after a dash is a guaranteed kill."

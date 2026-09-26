@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MissionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/mission_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"m02_dog_days"
+title = "DOG DAYS"
+location = "Yermo Salvage & K-9 - Yermo, CA"
+date_text = "JULY 9, 1988"
+year = 1988
+chapter = 1
+level_file = "res://levels/m02_yermo_salvage.json"
+music_track = "motel"
+boss_track = "boss"
+default_character = &"cass"
+par_score = 36000
+par_time = 300.0
+briefing = "Somebody's been feeding the dogs. Somebody's been feeding them people."
+objective_type = "clear"

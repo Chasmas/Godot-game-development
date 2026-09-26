@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"riot"
+display_name = "Riot"
+combat = 2
+weapon_id = &"pipe"
+palette = "riot"
+walk_speed = 42.0
+run_speed = 88.0
+shield_arc_deg = 120.0
+reaction_time = 0.3
+melee_windup = 0.34
+can_be_knocked_down = true
+notes = "Frontal shield blocks bullets. Flank him, slam a door into him, or throw something to stagger the shield."

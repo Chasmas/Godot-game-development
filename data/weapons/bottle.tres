@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"bottle"
+display_name = "Bottle of Tequila"
+kind = 1
+hold = 2
+melee_range = 19.0
+melee_arc_deg = 110.0
+melee_cooldown = 0.19
+melee_windup = 0.02
+lethal = false
+durability = 1
+breaks_into = &"broken_bottle"
+sfx_hit = "bottle_break"
+sprite_key = "bottle"
+score_tag = "melee"
+flavor = "Knocks them down. Then it's a knife."

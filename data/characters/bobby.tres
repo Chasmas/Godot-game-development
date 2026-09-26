@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"bobby"
+display_name = "Bobby Sunshine"
+archetype = "THE DOG"
+year_first_seen = 1992
+persona = &"dog"
+palette = "bobby"
+move_speed = 165.0
+ability = &"frenzy"
+bio = "Surfed Rincon in '79. Hasn't come back up since. Hears a dog barking nobody else hears."
+strengths = "Berserk frenzy, huge melee."
+weaknesses = "Can't stop once he starts."

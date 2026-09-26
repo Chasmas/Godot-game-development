@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"cass"
+display_name = "Cass Moreno"
+archetype = "THE STAR"
+year_first_seen = 1988
+persona = &"star"
+palette = "cass"
+playable_in_slice = true
+ability = &"spotlight"
+equipment = &"flare"
+equipment_count = 2
+bio = "Stunt driver. Twenty-six. Walked away from a burning Cadillac on the set of a movie that never came out. Her brother Tommy didn't walk away from anything."
+strengths = "Fast hands, fast car, SPOTLIGHT slow-motion."
+weaknesses = "Nothing special up close. Reckless."

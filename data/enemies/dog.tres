@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"dog"
+display_name = "Guard Dog"
+combat = 1
+weapon_id = &""
+palette = "doberman"
+walk_speed = 46.0
+run_speed = 190.0
+reaction_time = 0.15
+melee_windup = 0.2
+view_distance = 170.0
+view_angle_deg = 150.0
+hearing_mult = 1.6
+alert_others_radius = 240.0
+can_be_knocked_down = true
+notes = "Dobermann. Smells you if you rush past. Barks for its handlers. Kill it while it sleeps."

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"tilly"
+display_name = "Tilly Park"
+archetype = "THE FOOL"
+year_first_seen = 1990
+persona = &"fool"
+palette = "tilly"
+move_speed = 160.0
+ability = &"continue"
+bio = "Seventeen. Holds the high score on every cabinet in the Galaxy Palace. Talks to the machines."
+strengths = "Hacks cameras and doors. One free CONTINUE per level."
+weaknesses = "Fragile, weak melee."

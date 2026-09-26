@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"pipe"
+display_name = "Lead Pipe"
+kind = 1
+hold = 3
+melee_range = 24.0
+melee_arc_deg = 130.0
+melee_cooldown = 0.27
+melee_windup = 0.02
+sfx_hit = "metal_clang"
+sprite_key = "pipe"
+score_tag = "melee"
+flavor = "Never breaks. Neither will they, after this."

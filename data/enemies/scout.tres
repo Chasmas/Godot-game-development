@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"scout"
+display_name = "Scout"
+combat = 3
+weapon_id = &""
+palette = "scout"
+walk_speed = 70.0
+run_speed = 178.0
+reaction_time = 0.1
+view_distance = 300.0
+view_angle_deg = 140.0
+alert_others_radius = 260.0
+panic_chance = 1.0
+notes = "Unarmed lookout. Runs for the nearest alarm panel when he sees you. Stop him."

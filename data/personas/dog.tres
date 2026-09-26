@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"dog"
+display_name = "THE DOG"
+look = "Chewed-up studded collar, teeth drawn in marker on the lips."
+description = "Good boy."
+rule_change = "Kills extend the combo window twice as much."

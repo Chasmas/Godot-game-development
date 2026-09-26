@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"hunter"
+display_name = "Hunter"
+combat = 1
+weapon_id = &"machete"
+palette = "hunter"
+walk_speed = 60.0
+run_speed = 172.0
+reaction_time = 0.2
+melee_windup = 0.24
+view_distance = 230.0
+notes = "Fast melee charger. Telegraphs his swing: hit him first to COUNTER."

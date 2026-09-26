@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"heavy"
+display_name = "Heavy"
+combat = 0
+weapon_id = &"shotgun"
+palette = "heavy"
+walk_speed = 38.0
+run_speed = 70.0
+armor = 1
+can_be_knocked_down = false
+immune_to_punch = true
+reaction_time = 0.55
+preferred_range = 90.0
+burst = 1
+notes = "Vest soaks one bullet. Doors and fists do nothing. Shoot twice, heavy-swing, or blow him up."

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/character_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"director"
+display_name = "???"
+archetype = "THE DEVIL"
+year_first_seen = 1987
+persona = &"devil"
+palette = "director"
+ability = &"cut"
+bio = "Credited as 'Director' on a film nobody has seen. Please be kind, rewind."
+strengths = "???"
+weaknesses = "???"

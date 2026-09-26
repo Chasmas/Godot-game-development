@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"rifle"
+display_name = "Canyon AR"
+kind = 0
+hold = 1
+automatic = true
+fire_rate = 9.0
+magazine = 30
+spare_mags = 1
+reload_time = 1.5
+spread_deg = 2.8
+move_spread_deg = 6.0
+recoil_deg = 1.4
+bullet_speed = 1800.0
+penetration = 1
+noise_radius = 680.0
+sfx_fire = "rifle"
+sprite_key = "rifle"
+camera_kick = 2.8
+flavor = "Desert-surplus. Punches through doors."

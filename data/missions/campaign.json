@@ -1,0 +1,30 @@
+[
+	{
+		"type": "cutscene",
+		"id": "prologue"
+	},
+	{
+		"type": "cutscene",
+		"id": "apartment_1988"
+	},
+	{
+		"type": "mission",
+		"id": "m01_checkout"
+	},
+	{
+		"type": "cutscene",
+		"id": "news_1988"
+	},
+	{
+		"type": "cutscene",
+		"id": "salvage_1988"
+	},
+	{
+		"type": "mission",
+		"id": "m02_dog_days"
+	},
+	{
+		"type": "cutscene",
+		"id": "teaser"
+	}
+]

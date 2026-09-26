@@ -1,0 +1,10 @@
+{
+	"start": "a",
+	"nodes": {
+		"a": {"speaker": "harcourt", "text": "Well. You're not housekeeping.", "next": "b"},
+		"b": {"speaker": "harcourt", "text": "I know that paint. Aurelio sent you. Tell him the tapes stay with me. That was the deal.", "next": "c"},
+		"c": {"speaker": "cass", "text": "Who the hell is Aurelio?", "next": "d"},
+		"d": {"speaker": "harcourt", "text": "Oh, honey. You don't even know what movie you're in.", "next": "e"},
+		"e": {"speaker": "harcourt", "text": "SECURITY! FRONT DESK!", "sfx": "intercom", "event": "boss_start"}
+	}
+}

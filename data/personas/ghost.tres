@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PersonaData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/persona_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"ghost"
+display_name = "THE GHOST"
+look = "Bedsheet hood with two burned eyeholes."
+description = "You were never here."
+rule_change = "Silent footsteps; enemies see 40% less far."

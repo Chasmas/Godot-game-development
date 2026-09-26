@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"broken_bottle"
+display_name = "Broken Bottle"
+kind = 1
+hold = 2
+melee_range = 18.0
+melee_arc_deg = 100.0
+melee_cooldown = 0.16
+melee_windup = 0.0
+durability = 3
+sfx_hit = "hit_blade"
+sprite_key = "broken_bottle"
+score_tag = "melee"
+flavor = "Three more uses. Maybe."

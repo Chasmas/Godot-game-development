@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"hotshot"
+display_name = "THE HOTSHOT"
+kind = 0
+hold = 0
+fire_rate = 2.6
+magazine = 6
+spare_mags = 3
+reload_time = 1.1
+spread_deg = 0.8
+recoil_deg = 4.0
+bullet_speed = 2100.0
+penetration = 2
+ricochet = 2
+noise_radius = 640.0
+sfx_fire = "revolver"
+sprite_key = "hotshot"
+camera_kick = 4.0
+muzzle_color = Color(1.0, 0.8, 0.2, 1)
+tracer_color = Color(1.0, 0.8, 0.3, 1)
+flavor = "Gold-plated prop revolver from an unreleased movie. It was never supposed to be loaded. Bullets ricochet."

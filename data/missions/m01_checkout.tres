@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MissionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/mission_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"m01_checkout"
+title = "CHECKOUT TIME"
+location = "Sunset Palms Motel - Barstow, CA"
+date_text = "JULY 4, 1988"
+year = 1988
+chapter = 1
+level_file = "res://levels/m01_sunset_palms.json"
+music_track = "motel"
+boss_track = "boss"
+default_character = &"cass"
+par_score = 42000
+par_time = 330.0
+briefing = "Room service. Checkout is at midnight. Don't forget your key."
+objective_type = "clear"
