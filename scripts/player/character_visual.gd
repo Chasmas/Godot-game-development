@@ -14,6 +14,8 @@ var shadow: Node2D
 var outline_color := Color(0, 0, 0, 0)
 
 var _walk_t := 0.0
+var _breath_t := 0.0
+var _move_blend := 0.0
 var _kick := 0.0
 var _swing_t := -1.0
 var _swing_dur := 0.14
@@ -81,14 +83,26 @@ func set_aim(angle: float) -> void:
 
 func update_move(vel: Vector2, delta: float) -> void:
 	var speed := vel.length()
+	var moving := clampf(speed / 105.0, 0.0, 1.0)
+	_move_blend = lerpf(_move_blend, moving, minf(1.0, delta * 12.0))
+	_breath_t += delta * (1.2 + _move_blend * 4.0)
+	var breathe := sin(_breath_t) * (0.32 + _move_blend * 0.18)
 	if speed > 8.0:
 		_walk_t += delta * speed * 0.09
 		legs.rotation = vel.angle()
 		var f := int(_walk_t) % 4
 		legs.texture = SpriteLib.legs([0, 1, 0, 2][f], palette)
+		var stride := sin(_walk_t * 0.5)
+		legs.position.y = stride * 0.7
+		legs.scale = Vector2(0.5 + absf(stride) * 0.018, 0.5 - absf(stride) * 0.012)
 	else:
 		legs.texture = SpriteLib.legs(0, palette)
 		legs.rotation = lerp_angle(legs.rotation, rig.rotation, minf(1.0, delta * 10.0))
+		legs.position.y = 0.0
+		legs.scale = Vector2.ONE * 0.5
+	# Subtle breathing + movement lean make the sprite feel alive even when aiming.
+	torso.position.y = breathe
+	shadow.scale = Vector2(1.0 + _move_blend * 0.10, 1.0 - _move_blend * 0.07)
 
 func kick_recoil(amount := 2.0) -> void:
 	_kick = amount
@@ -125,9 +139,10 @@ func muzzle_global() -> Vector2:
 	return rig.to_global(Vector2(10, 0))
 
 func _process(delta: float) -> void:
-	# recoil: torso pushed back along aim
+	# recoil: torso pushed back along aim, with a tiny breathing pulse.
 	_kick = move_toward(_kick, 0.0, delta * 30.0)
-	rig.position = Vector2.RIGHT.rotated(rig.rotation) * -_kick
+	var breathe := sin(_breath_t) * (0.32 + _move_blend * 0.18)
+	rig.position = Vector2.RIGHT.rotated(rig.rotation) * -_kick + Vector2(0, breathe)
 	if _swing_t >= 0.0:
 		_swing_t += delta
 		var k := clampf(_swing_t / _swing_dur, 0.0, 1.0)
