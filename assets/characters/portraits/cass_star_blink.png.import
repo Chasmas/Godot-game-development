@@ -15,9 +15,9 @@ dest_files=["res://.godot/imported/cass_star_blink.png-e1f38d036d16117232d865f48
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.85
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

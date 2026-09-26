@@ -14,8 +14,8 @@ dest_files=["res://.godot/imported/snore.wav-648c599bbd8e4857ea71587b4c5b2af3.sa
 
 force/8_bit=false
 force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
+force/max_rate=true
+force/max_rate_hz=22050
 edit/trim=false
 edit/normalize=false
 edit/loop_mode=0
