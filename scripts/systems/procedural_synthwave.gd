@@ -91,11 +91,13 @@ func _fill() -> void:
 		var pad := (sin(2.0 * PI * pad_freq * t) + 0.35 * sin(2.0 * PI * pad_freq * 1.4983 * t)) * 0.018
 
 		# Punchy electronic drums.
+		var beat_index := int(floor(beat))
 		var beat_pos := fmod(t, beat_len)
-		var kick_env := exp(-beat_pos * 34.0)
+		var kick_on := beat_index % 2 == 0
+		var kick_env := exp(-beat_pos * 34.0) if kick_on else 0.0
 		var kick := sin(2.0 * PI * (42.0 + 78.0 * exp(-beat_pos * 26.0)) * t) * kick_env * 0.28
-		var snare_pos := fmod(t + beat_len, beat_len)
-		var snare_env := exp(-snare_pos * 48.0)
+		var snare_on := beat_index % 4 == 1 or beat_index % 4 == 3
+		var snare_env := exp(-beat_pos * 48.0) if snare_on else 0.0
 		var snare := sin(2.0 * PI * 180.0 * t) * snare_env * 0.055
 		var hat_phase := fmod(t, beat_len / 2.0)
 		var hat_env := exp(-hat_phase * 90.0)
