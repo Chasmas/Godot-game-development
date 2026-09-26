@@ -12,5 +12,5 @@ VERSION=$(grep '^config/version=' project.godot | sed -E 's/.*"([0-9]+\.[0-9]+\.
 mkdir -p ../build
 "$GODOT" --headless --path . --import >/dev/null 2>&1 || true
 "$GODOT" --headless --path . --export-release "Windows Desktop" ../build/HotshotCalifornia.exe
-makensis -V2 -DVERSION="$VERSION" -DEXE="../../build/HotshotCalifornia.exe" -DOUT="../../build/HOTSHOT_CALIFORNIA_Setup.exe" installer/hotshot_installer.nsi
+makensis -V2 -DVERSION="$VERSION" -DEXE="../../build/HotshotCalifornia.exe" -DOUT="../../build/HOTSHOT_CALIFORNIA_Setup.exe" installer/setup_bootstrap.nsi
 ls -la ../build
