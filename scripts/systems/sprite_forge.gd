@@ -26,6 +26,10 @@ const STYLES := {
 	"boss":    {"hair": "silver", "build": 1.1, "extras": ["tie", "lapels", "pocket_square"]},
 	"sniper":  {"hair": "cap", "build": 0.95, "extras": ["shades", "radio"]},
 	"handler": {"hair": "bandana", "build": 1.1, "extras": ["vest", "stubble"]},
+	"bellhop": {"hair": "cap", "build": 0.9, "extras": ["epaulettes", "badge"]},
+	"biker":   {"hair": "bandana", "build": 1.2, "extras": ["shades", "chain", "sleeveless"]},
+	"scrapper":{"hair": "bald", "build": 1.05, "extras": ["stubble", "dogtags"]},
+	"welder":  {"hair": "helmet", "build": 1.15, "extras": ["vest", "thick_neck"]},
 	"civilian":{"hair": "short", "build": 1.0, "extras": []},
 	"shadow":  {"hair": "short", "build": 1.0, "extras": []},
 }

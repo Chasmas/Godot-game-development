@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"biker"
+display_name = "Biker"
+combat = 1
+weapon_id = &"bat"
+palette = "biker"
+walk_speed = 48.0
+run_speed = 132.0
+armor = 1
+can_be_knocked_down = false
+reaction_time = 0.35
+melee_windup = 0.32
+notes = "Hired from the bar across Route 58. The leather soaks one hit and he will not go down to a door. Long windup: counter him."

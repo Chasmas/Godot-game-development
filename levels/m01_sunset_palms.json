@@ -166,10 +166,10 @@
     ]
    ]
   },
-  "3,43": {
+  "3,43": {"kind": "biker", 
    "facing": "left"
   },
-  "8,32": {
+  "8,32": {"kind": "biker", 
    "facing": "up"
   },
   "20,33": {
@@ -190,10 +190,10 @@
   "25,28": {
    "facing": "left"
   },
-  "35,28": {
+  "35,28": {"kind": "bellhop", 
    "facing": "right"
   },
-  "38,29": {
+  "38,29": {"kind": "bellhop", 
    "facing": "left"
   },
   "47,29": {
@@ -282,7 +282,7 @@
   "36,7": {
    "facing": "left"
   },
-  "44,6": {
+  "44,6": {"kind": "bellhop", 
    "facing": "right"
   },
   "61,14": {

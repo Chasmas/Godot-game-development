@@ -74,6 +74,10 @@ const MANNER := {
 	"scout":  {"sway": 0.06, "lean": 1.0, "bounce": 0.5},
 	"riot":   {"sway": 0.02, "lean": 0.6, "bounce": 0.15},
 	"boss":   {"sway": 0.03, "lean": 0.0, "bounce": 0.2},
+	"bellhop": {"sway": 0.03, "lean": 1.2, "bounce": 0.45},
+	"biker":  {"sway": 0.1, "lean": 0.3, "bounce": 0.4},
+	"scrapper": {"sway": 0.06, "lean": 1.0, "bounce": 0.35},
+	"welder": {"sway": 0.04, "lean": 0.2, "bounce": 0.5},
 }
 var _manner: Dictionary = {}
 var _manner_off := 0.0

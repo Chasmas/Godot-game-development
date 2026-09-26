@@ -119,13 +119,13 @@ func _ready() -> void:
 				p3.aim_dir = Vector2.RIGHT
 			elif what == "guards":
 				# line up one of each archetype next to the player
-				var kinds := [&"guard", &"gunner", &"hunter", &"heavy", &"scout", &"riot"]
+				var kinds := [&"guard", &"gunner", &"hunter", &"heavy", &"scout", &"riot"] if OS.get_environment("SHOT_KINDS") == "" else Array(OS.get_environment("SHOT_KINDS").split(","))
 				for i in kinds.size():
 					var e2 := Enemy.new()
 					e2.enemy_id = "shot_%d" % i
 					e2.position = p3.global_position + Vector2(-60 + i * 24, -28)
 					lvl2.actors_root.add_child(e2)
-					e2.setup(DB.enemy(kinds[i]), lvl2, Vector2.DOWN)
+					e2.setup(DB.enemy(StringName(kinds[i])), lvl2, Vector2.DOWN)
 					e2.set_physics_process(false)
 				for i in 4:
 					var e3 := Enemy.new()

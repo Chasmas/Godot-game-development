@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"scrapper"
+display_name = "Scrapper"
+combat = 1
+weapon_id = &"pipe"
+palette = "scrapper"
+walk_speed = 56.0
+run_speed = 160.0
+reaction_time = 0.28
+melee_windup = 0.26
+hearing_mult = 0.7
+notes = "Yermo scrap crew. Works the crusher all night - half deaf from it, so you can get close, but he swings a length of pipe like he means it."

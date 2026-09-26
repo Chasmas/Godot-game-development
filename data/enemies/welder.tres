@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"welder"
+display_name = "Welder"
+combat = 0
+weapon_id = &"shotgun"
+palette = "welder"
+walk_speed = 40.0
+run_speed = 80.0
+armor = 1
+view_angle_deg = 60.0
+reaction_time = 0.5
+preferred_range = 80.0
+notes = "Welding mask down: it stops one hit, but he sees a narrow slot of the world. Come at him from the side."

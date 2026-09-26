@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"bellhop"
+display_name = "Bellhop"
+combat = 1
+weapon_id = &"knife"
+palette = "bellhop"
+walk_speed = 58.0
+run_speed = 186.0
+reaction_time = 0.25
+melee_windup = 0.18
+view_distance = 200.0
+notes = "Sunset Palms staff. Holds the door, smiles, then the switchblade. Fastest thing in the motel - and the shortest windup to counter."

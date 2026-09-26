@@ -151,7 +151,7 @@
   "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR."
  },
  "enemies": {
-  "20,31": {
+  "20,31": {"kind": "scrapper", 
    "patrol": [
     [
      20,
@@ -201,7 +201,7 @@
   "58,33": {"kind": "sniper", 
    "facing": "left"
   },
-  "41,21": {
+  "41,21": {"kind": "welder", 
    "facing": "down"
   },
   "16,12": {
@@ -227,7 +227,7 @@
     ]
    ]
   },
-  "26,15": {
+  "26,15": {"kind": "welder", 
    "facing": "left"
   },
   "12,2": {
@@ -236,7 +236,7 @@
   "40,11": {
    "facing": "down"
   },
-  "34,8": {
+  "34,8": {"kind": "scrapper", 
    "facing": "right"
   },
   "36,10": {
@@ -269,7 +269,7 @@
    "sleep": true,
    "facing": "up"
   },
-  "57,16": {
+  "57,16": {"kind": "scrapper", 
    "patrol": [
     [
      57,

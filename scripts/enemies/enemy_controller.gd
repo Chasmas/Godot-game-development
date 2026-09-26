@@ -23,7 +23,7 @@ const RADIUS := 5.5
 const DOWN_TIME := 2.8
 const MELEE_REACH := 20.0
 ## Archetypes whose members get individual skin/hair/trouser variants.
-const VARIED_PALETTES := ["guard", "gunner", "hunter", "scout", "heavy", "civilian"]
+const VARIED_PALETTES := ["guard", "gunner", "hunter", "scout", "heavy", "civilian", "bellhop", "biker", "scrapper", "welder"]
 
 var data: EnemyData
 var weapon: WeaponInstance
