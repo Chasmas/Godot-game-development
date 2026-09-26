@@ -3,6 +3,8 @@ extends Control
 ## with local leaderboards, cast, extras (gallery, stats, credits), options.
 
 var backdrop: TitleBackdrop
+var key_art: TextureRect
+var key_art_shade: ColorRect
 var logo_top: Label
 var logo_bottom: Label
 var press_label: Label
@@ -22,6 +24,17 @@ func _ready() -> void:
 	backdrop = TitleBackdrop.new()
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(backdrop)
+	# Optional production key art. If the PNG is absent, the procedural backdrop remains.
+	var title_tex := CinematicArt.title_texture()
+	if title_tex:
+		key_art = CinematicArt.make_fullscreen(title_tex)
+		key_art.modulate = Color(1, 1, 1, 0.94)
+		add_child(key_art)
+		key_art_shade = ColorRect.new()
+		key_art_shade.color = Color(0.015, 0.0, 0.04, 0.20)
+		key_art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		key_art_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(key_art_shade)
 	# logo
 	logo_top = Label.new()
 	logo_top.text = "HOTSHOT"
@@ -93,6 +106,12 @@ func _process(delta: float) -> void:
 	var secs := int(_t)
 	osd.text = "PLAY ▶   SP   %d:%02d:%02d" % [secs / 3600, (secs / 60) % 60, secs % 60]
 	logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
+	if key_art:
+		# Near-imperceptible Ken Burns drift keeps the painted title screen alive.
+		key_art.pivot_offset = key_art.size * 0.5
+		var breathe := 1.018 + sin(_t * 0.16) * 0.004
+		key_art.scale = Vector2.ONE * breathe
+		key_art.position = Vector2(sin(_t * 0.11) * 3.0, cos(_t * 0.09) * 2.0)
 
 func _unhandled_input(e: InputEvent) -> void:
 	if not _started and (e is InputEventKey or e is InputEventJoypadButton or e is InputEventMouseButton) and e.is_pressed():
