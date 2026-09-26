@@ -24,6 +24,26 @@ func _ready() -> void:
 			if OS.get_environment("SHOT_MENU") == "1":
 				Input.parse_input_event(ev)
 				await _frames(30)
+		"backdrop":
+			# title backdrop for promo/installer art. SHOT_HIDE: comma list of
+			# logo, osd, press, version
+			Game.goto_title()
+			await _frames(20)
+			var ts := get_tree().current_scene
+			var hide := OS.get_environment("SHOT_HIDE").split(",")
+			if "logo" in hide:
+				ts.logo_top.visible = false
+				ts.logo_bottom.visible = false
+			if "osd" in hide:
+				ts.osd.visible = false
+			if "press" in hide:
+				ts.press_label.visible = false
+			if "version" in hide:
+				for c in ts.get_children():
+					if c is Label and str(c.text).contains("v"):
+						if c != ts.logo_top and c != ts.logo_bottom and c != ts.osd and c != ts.press_label:
+							c.visible = false
+			await _frames(n)
 		"options":
 			Game.goto_title()
 			await _frames(20)
