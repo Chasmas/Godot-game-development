@@ -19,7 +19,7 @@ func _ready() -> void:
 	var only := OS.get_environment("EDGE_ONLY")
 	for case_name in ["gunshot_is_local", "walls_muffle", "kill_mid_investigation", "rapid_fire",
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
-			"double_death", "shout_is_local", "difficulty_scales", "dual_wield", "language_switch_mid_dialogue",
+			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
 			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese"]:
 		if only != "" and case_name != only:
 			continue
@@ -342,6 +342,40 @@ func difficulty_scales() -> void:
 	check(easy.reaction_time > g.reaction_time and hard.reaction_time < g.reaction_time, "reaction time scales (%.2f / %.2f / %.2f)" % [easy.reaction_time, g.reaction_time, hard.reaction_time])
 	check(easy.aim_error_deg > hard.aim_error_deg, "aim error scales")
 	check(g.reaction_time == DB.enemy(&"guard").reaction_time, "the source resource is never modified")
+
+## Enemies are dangerous but not laser-accurate: well under every other shot
+## connects at mid range, and less on the move, when rolling or right after
+## they spot you.
+func enemies_miss() -> void:
+	var e: Enemy = _enemies()[0]
+	var p := _p()
+	p.velocity = Vector2.ZERO
+	e._move_vel = Vector2.ZERO
+	e._burst_left = e.data.burst
+	e._seen_time = 5.0
+	var settled := e._hit_chance(p, 150.0)
+	check(settled > 0.25 and settled < 0.65, "settled aim at 150px hits some, misses some (%.2f)" % settled)
+	check(e._hit_chance(p, 380.0) < settled, "long range misses more (%.2f)" % e._hit_chance(p, 380.0))
+	p.velocity = Vector2(160, 0)
+	check(e._hit_chance(p, 150.0) < settled, "a running target is harder to hit (%.2f)" % e._hit_chance(p, 150.0))
+	p.velocity = Vector2.ZERO
+	e._seen_time = 0.0
+	check(e._hit_chance(p, 150.0) < settled * 0.5, "the first shots after spotting you rarely land (%.2f)" % e._hit_chance(p, 150.0))
+	e._seen_time = 5.0
+	SaveManager.settings["difficulty"] = 0
+	Difficulty._values_level = -1
+	var easy := e._hit_chance(p, 150.0)
+	SaveManager.settings["difficulty"] = 2
+	Difficulty._values_level = -1
+	var hard := e._hit_chance(p, 150.0)
+	SaveManager.settings["difficulty"] = 1
+	Difficulty._values_level = -1
+	check(easy < settled and settled < hard, "difficulty sets accuracy (%.2f / %.2f / %.2f)" % [easy, settled, hard])
+	var hits := 0
+	for i in 400:
+		if randf() <= e._hit_chance(p, 150.0):
+			hits += 1
+	check(hits > 80 and hits < 280, "about a third to two thirds of 400 settled shots land (%d)" % hits)
 
 func dual_wield() -> void:
 	var p := _p()

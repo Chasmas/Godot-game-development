@@ -101,10 +101,19 @@ static func get_t() -> Tuning:
 @export var dog_eye_glow := 1.0
 @export var dog_eye_light_energy := 0.8
 
+@export_group("Enemy aim")
+## Range (px) at which hit chance has dropped to its floor.
+@export var enemy_aim_falloff := 420.0
+## Seconds of line of sight before an enemy's aim has fully settled.
+@export var enemy_aim_settle := 1.1
+
 @export_group("Difficulty")
 ## Per difficulty (0 easy, 1 normal, 2 hard). Normal is the design baseline.
 @export var reaction_mult := [1.45, 1.0, 0.72]
 @export var aim_error_mult := [1.6, 1.0, 0.65]
+## Base chance that an enemy shot is on target (before range, movement,
+## settle-in and burst penalties). The rest are deliberate near-misses.
+@export var enemy_hit_chance := [0.3, 0.45, 0.62]
 @export var view_distance_mult := [0.88, 1.0, 1.12]
 @export var hearing_mult := [0.85, 1.0, 1.12]
 @export var fire_cooldown_mult := [1.3, 1.0, 0.85]

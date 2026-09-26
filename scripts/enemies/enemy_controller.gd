@@ -635,9 +635,37 @@ func _gun_combat(p: Player, dist: float, delta: float) -> Vector2:
 		_shoot(p)
 	return move
 
+## Chance that this shot is aimed at the player at all. Everything that
+## makes a real shot hard lowers it: range, a moving or rolling target, the
+## shooter moving, the first moments after spotting you, and each shot after
+## the first in a burst (muzzle climb). Difficulty sets the base.
+func _hit_chance(p: Player, dist: float) -> float:
+	var t := Tuning.get_t()
+	var c: float = Difficulty.mult("enemy_hit_chance")
+	c *= clampf(1.2 - dist / t.enemy_aim_falloff, 0.35, 1.15)
+	var pv := p.velocity.length()
+	if p.is_dashing():
+		c *= 0.3
+	elif pv > 60.0:
+		c *= lerpf(0.85, 0.6, clampf((pv - 60.0) / 120.0, 0.0, 1.0))
+	if _move_vel.length() > 40.0:
+		c *= 0.8
+	c *= lerpf(0.35, 1.0, clampf(_seen_time / t.enemy_aim_settle, 0.0, 1.0))
+	c *= pow(0.82, float(data.burst - _burst_left))
+	# a sharper shooter (lower aim error) is also likelier to connect
+	c *= clampf(1.25 - data.aim_error_deg * 0.04, 0.8, 1.2)
+	return clampf(c, 0.04, 0.9)
+
 func _shoot(p: Player) -> void:
+	var dist := global_position.distance_to(p.global_position)
 	var aim := (p.global_position + p.velocity * 0.05 - global_position).normalized()
-	var err := data.aim_error_deg + (6.0 if p.is_dashing() else 0.0)
+	var err := data.aim_error_deg * 0.35
+	if randf() > _hit_chance(p, dist):
+		# a miss that looks like a near-miss: the round cracks past a
+		# little to one side instead of spraying somewhere random
+		var miss := randf_range(11.0, 28.0) * (1.0 if randf() < 0.5 else -1.0)
+		aim = aim.rotated(atan2(miss, maxf(dist, 20.0)))
+		err *= 0.5
 	var origin := visual.muzzle_global()
 	var space := get_world_2d().direct_space_state
 	var q := PhysicsRayQueryParameters2D.create(global_position, origin, Layers.WORLD | Layers.DOOR | Layers.PROP, [get_rid()])

@@ -111,7 +111,7 @@ func _process(delta: float) -> void:
 func _input(e: InputEvent) -> void:
 	if _leaving:
 		return
-	var pressed := (e is InputEventKey or e is InputEventJoypadButton or e is InputEventMouseButton) and e.is_pressed()
+	var pressed := UIStyle.is_any_press(e)
 	if pressed:
 		get_viewport().set_input_as_handled()
 		if _phase == 0:

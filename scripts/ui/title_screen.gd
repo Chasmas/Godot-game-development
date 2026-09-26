@@ -51,9 +51,6 @@ func _ready() -> void:
 	osd = UIStyle.label("PLAY ▶", 22, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
-	var ver := UIStyle.label(tr("VERTICAL SLICE  ·  v%s") % ProjectSettings.get_setting("application/config/version", "0.1"), 12, UIStyle.DIM)
-	UIStyle.place(ver, Control.PRESET_BOTTOM_RIGHT, Vector2(-340, -28))
-	add_child(ver)
 	press_label = UIStyle.label("PRESS ANY BUTTON", 22, UIStyle.GOLD, true)
 	press_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
@@ -94,18 +91,24 @@ func _process(delta: float) -> void:
 	osd.text = "PLAY ▶   SP   %d:%02d:%02d" % [secs / 3600, (secs / 60) % 60, secs % 60]
 	logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
 
-func _unhandled_input(e: InputEvent) -> void:
-	if not _started and (e is InputEventKey or e is InputEventJoypadButton or e is InputEventMouseButton) and e.is_pressed():
-		_started = true
-		press_label.visible = false
-		Audio.play("ui_select")
-		PostFX.vhs_glitch(0.5)
-		_build_menu()
+## The "press any button" gate listens in _input: the full-screen title
+## Control would otherwise swallow a mouse click before _unhandled_input.
+func _input(e: InputEvent) -> void:
+	if not _started and UIStyle.is_any_press(e):
 		get_viewport().set_input_as_handled()
-		return
+		_start_menu()
+
+func _unhandled_input(e: InputEvent) -> void:
 	if panel.visible and (e.is_action_pressed("ui_cancel") or e.is_action_pressed("ui_cancel_alt")):
 		_close_panel()
 		get_viewport().set_input_as_handled()
+
+func _start_menu() -> void:
+	_started = true
+	press_label.visible = false
+	Audio.play("ui_select")
+	PostFX.vhs_glitch(0.5)
+	_build_menu()
 
 func _build_menu() -> void:
 	for c in menu.get_children():

@@ -187,3 +187,15 @@ static func place(c: Control, preset: Control.LayoutPreset, pos: Vector2, sz := 
 	c.offset_top = pos.y
 	c.offset_right = pos.x + sz.x
 	c.offset_bottom = pos.y + sz.y
+
+## Any key, any mouse button, any pad button, a pulled trigger or a pushed
+## stick, or a tap. Key repeats don't count (a held key from the splash
+## shouldn't fall straight through the title).
+static func is_any_press(e: InputEvent) -> bool:
+	if e is InputEventKey:
+		return e.pressed and not e.echo
+	if e is InputEventMouseButton or e is InputEventJoypadButton or e is InputEventScreenTouch:
+		return e.is_pressed()
+	if e is InputEventJoypadMotion:
+		return absf(e.axis_value) > 0.6
+	return false
