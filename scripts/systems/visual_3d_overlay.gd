@@ -115,12 +115,44 @@ func _build_decor(level_data: Dictionary) -> void:
 				_add_model("dumpster", "res://assets/models/dumpster.obj",
 					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.9)
 
+	_add_water_surface(level_data)
+
 	# One dimensional neon sign tied to the motel exterior.
 	for item in decor:
 		if str(item.get("type", "")) == "neon":
 			var pos := _cell_world(item.get("pos", [0, 0]))
 			var sign_size := clampf(float(item.get("size", 10.0)) / 12.0, 0.55, 1.5)
 			_add_model("sign", "res://assets/models/neon_motel_sign.obj", pos, sign_size)
+
+func _add_water_surface(level_data: Dictionary) -> void:
+	var rows: Array = level_data.get("map", [])
+	var min_x := 99999
+	var min_y := 99999
+	var max_x := -1
+	var max_y := -1
+	for y in rows.size():
+		var row := str(rows[y])
+		for x in row.length():
+			if row[x] == "~":
+				min_x = mini(min_x, x)
+				min_y = mini(min_y, y)
+				max_x = maxi(max_x, x)
+				max_y = maxi(max_y, y)
+	if max_x < 0:
+		return
+	var mesh := PlaneMesh.new()
+	mesh.size = Vector2(float(max_x - min_x + 1) * 16.0 / PIXELS_PER_UNIT, float(max_y - min_y + 1) * 16.0 / PIXELS_PER_UNIT)
+	var mat := ShaderMaterial.new()
+	var shader := Shader.new()
+	shader.code = "shader_type spatial; render_mode blend_mix, unshaded, cull_disabled; void fragment(){ float ripple = sin(UV.x*18.0 + TIME*1.8) * sin(UV.y*15.0 - TIME*1.2); vec3 base = vec3(0.04,0.45,0.62); ALBEDO = base + vec3(0.04,0.14,0.18) * ripple; EMISSION = vec3(0.02,0.20,0.32) + vec3(0.03,0.08,0.12) * ripple; ALPHA = 0.42; }"
+	mat.shader = shader
+	var mi := MeshInstance3D.new()
+	mi.mesh = mesh
+	mi.material_override = mat
+	mi.position = Vector3(((min_x + max_x + 1) * 0.5), 0.035, ((min_y + max_y + 1) * 0.5))
+	mi.scale = Vector3.ONE
+	props.add_child(mi)
+
 
 func _cell_world(p: Variant) -> Vector2:
 	var a: Array = p if p is Array else [0, 0]
