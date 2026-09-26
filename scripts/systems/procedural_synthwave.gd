@@ -73,7 +73,7 @@ func _fill() -> void:
 		var bar := int(floor(beat / 4.0))
 		var step := int(floor(t / step_len))
 		var root := roots[bar % roots.size()]
-		var note := arp[step % arp.size()] * (0.5 if ((bar / 2) as int) % 2 == 1 else 1.0)
+		var note := arp[step % arp.size()] * (0.5 if int(bar / 2) % 2 == 1 else 1.0)
 
 		# Warm Juno-style bass: fundamental + octave + slight detune.
 		var bass_phase := 2.0 * PI * root * t
