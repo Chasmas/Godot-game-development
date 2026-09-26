@@ -3,6 +3,8 @@ extends Control
 ## dialogue from res://data/dialogue/<id>.json, script events.
 
 var backdrop: TitleBackdrop
+var art: TextureRect
+var art_shade: ColorRect
 var card: Label
 var osd: Label
 var id := ""
@@ -19,6 +21,15 @@ func _ready() -> void:
 	backdrop.mode = str(d.get("bg", "black"))
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(backdrop)
+	var art_tex := CinematicArt.cutscene_texture(id)
+	if art_tex:
+		art = CinematicArt.make_fullscreen(art_tex)
+		add_child(art)
+		art_shade = ColorRect.new()
+		art_shade.color = Color(0.01, 0.0, 0.025, 0.12)
+		art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		art_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(art_shade)
 	osd = UIStyle.label("PLAY ▶", 20, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
@@ -43,6 +54,11 @@ func _process(delta: float) -> void:
 	osd.text = "PLAY ▶   %d:%02d" % [int(_t) / 60, int(_t) % 60]
 	if _t > 4.0:
 		card.modulate.a = move_toward(card.modulate.a, 0.35, delta)
+	if art:
+		art.pivot_offset = art.size * 0.5
+		var k := 1.012 + sin(_t * 0.12) * 0.003
+		art.scale = Vector2.ONE * k
+		art.position = Vector2(sin(_t * 0.10) * 2.5, cos(_t * 0.08) * 1.5)
 
 func _on_event(ev: String) -> void:
 	match ev:
