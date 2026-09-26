@@ -275,6 +275,19 @@ func show_upgrade(id: StringName) -> void:
 			c.queue_free()
 	root.add_child(card)
 
+## Checkpoint saved: a small stamp slides in bottom-right - spinning reel,
+## "TAPE SAVED", the area's name - and slides away.
+func show_checkpoint(area: String) -> void:
+	var st := CheckpointStamp.new()
+	st.area = area
+	st.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	st.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for c in root.get_children():
+		if c is CheckpointStamp:
+			c.queue_free()
+	root.add_child(st)
+	Audio.play("rec_beep", -14.0, 0.8)
+
 func show_hint(text: String, duration := 3.0) -> void:
 	hint_label.text = tr(text)
 	_hint_t = duration
@@ -876,3 +889,35 @@ class TipCard extends Control:
 			offer("finisher", "ON FIRE. Your next melee kill rolls the FINAL TAKE.")
 		if p.upgrades.size() > 0:
 			offer("upgrade", "Upgrades last until the end of the mission. They show in the bottom-left.")
+
+
+class CheckpointStamp extends Control:
+	var area := ""
+	var _t := 0.0
+	const LIFE := 2.6
+	func _process(delta: float) -> void:
+		_t += delta / maxf(Engine.time_scale, 0.05)
+		if _t > LIFE:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var inn := 1.0 - pow(1.0 - clampf(_t / 0.25, 0.0, 1.0), 3.0)
+		var out := pow(clampf((_t - (LIFE - 0.3)) / 0.3, 0.0, 1.0), 2.0)
+		var w := 250.0
+		var x := size.x - 18.0 - w * inn + (w + 20.0) * out
+		var y := size.y - 150.0
+		var r := Rect2(x, y, w, 42)
+		draw_rect(r, Color(UIStyle.INK, 0.86))
+		draw_rect(Rect2(r.position, Vector2(3, r.size.y)), UIStyle.GOLD)
+		# spinning reel
+		var c := r.position + Vector2(24, 21)
+		draw_arc(c, 11.0, 0, TAU, 24, UIStyle.GOLD, 1.5)
+		for i in 3:
+			var a := _t * 7.0 + i * TAU / 3.0
+			draw_line(c, c + Vector2.from_angle(a) * 9.0, UIStyle.GOLD, 2.0)
+		draw_circle(c, 2.5, UIStyle.GOLD)
+		var f := UIStyle.font_bold()
+		draw_string(f, r.position + Vector2(44, 18), tr("TAPE SAVED"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
+		draw_string(UIStyle.font_mono(), r.position + Vector2(44, 34), area, HORIZONTAL_ALIGNMENT_LEFT, w - 50.0, 12, Color(UIStyle.PAPER, 0.8))
+		if fmod(_t, 0.6) < 0.35:
+			draw_circle(r.position + Vector2(w - 12, 12), 3.0, Color(1, 0.15, 0.2))

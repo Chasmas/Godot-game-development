@@ -127,6 +127,7 @@ func _ready() -> void:
 	actors_root.add_child(player)
 	player.setup(Game.current_character)
 	var spawn: Vector2 = built.spawn
+	_mission_start = built.spawn
 	if not st.is_empty():
 		spawn = st.get("spawn", spawn)
 		player.restore_weapons(st.get("weapons", []))
@@ -138,6 +139,7 @@ func _ready() -> void:
 	else:
 		Score.reset()
 	player.global_position = spawn
+	_build_checkpoint_markers.call_deferred()
 	player.died.connect(_on_player_died)
 	if not st.is_empty():
 		player.restore_upgrades(st.get("upgrades", {}))
@@ -446,21 +448,86 @@ func _check_hints(cell: Vector2i) -> void:
 			SaveManager.data.story.flags["hint_" + id] = true
 			hud.show_hint(tr(str(hdef.text)), 5.0)
 
+## Checkpoints: each area has one, marked on the floor at the entrance you
+## come in by. It saves when you're in the area AND it's fair to: nobody
+## alerted near you or watching you, and you're not mid-dodge. You come back
+## at the marker, not wherever you happened to be standing.
+var _cp_markers: Array = []
+var _mission_start := Vector2.ZERO
+
+func _build_checkpoint_markers() -> void:
+	var cps: Array = data.get("checkpoints", [])
+	var from := _mission_start
+	for i in cps.size():
+		var r: Array = cps[i].rect
+		var rect := Rect2i(r[0], r[1], r[2], r[3])
+		var cell := _entrance_cell(rect, from)
+		var m := CheckpointMarker.new()
+		m.position = Vector2(cell) * 16.0 + Vector2(8, 8)
+		floor_root.add_child(m)
+		if _checkpoints_hit.has(str(i)):
+			m.activate(true)
+		_cp_markers.append(m)
+
+## The walkable cell just inside the area next to a way in (a door or an
+## open gap), preferring the one nearest the mission start: the way you'll
+## actually arrive.
+func _entrance_cell(rect: Rect2i, from: Vector2) -> Vector2i:
+	var best := Vector2i(-1, -1)
+	var best_d := INF
+	var fallback := Vector2i(-1, -1)
+	var fb_d := INF
+	var centre := Vector2(rect.get_center()) * 16.0
+	for y in range(rect.position.y, rect.end.y):
+		for x in range(rect.position.x, rect.end.x):
+			var c := Vector2i(x, y)
+			if not nav.is_in_boundsv(c) or nav.is_point_solid(c):
+				continue
+			var dc := Vector2(c) * 16.0
+			if dc.distance_to(centre) < fb_d:
+				fb_d = dc.distance_to(centre)
+				fallback = c
+			var edge := false
+			for o in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
+				var n: Vector2i = c + o
+				if rect.has_point(n) or not nav.is_in_boundsv(n):
+					continue
+				var chr: String = builder.ch(n.x, n.y) if builder else ""
+				if chr == "D" or chr == "L" or not nav.is_point_solid(n):
+					edge = true
+			if edge:
+				# one step further in, so the marker isn't in the doorway
+				var d := dc.distance_to(from)
+				if d < best_d:
+					best_d = d
+					best = c
+	return best if best.x >= 0 else fallback
+
+func _checkpoint_safe() -> bool:
+	if player.is_dashing():
+		return false
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and e.is_aware() and (e._sees_player or e.global_position.distance_to(player.global_position) < 260.0):
+			return false
+	return true
+
 func _check_checkpoints(cell: Vector2i) -> void:
 	var cps: Array = data.get("checkpoints", [])
 	for i in cps.size():
 		if _checkpoints_hit.has(str(i)):
 			continue
 		var r: Array = cps[i].rect
-		if Rect2i(r[0], r[1], r[2], r[3]).has_point(cell):
+		if Rect2i(r[0], r[1], r[2], r[3]).has_point(cell) and _checkpoint_safe():
 			_checkpoints_hit[str(i)] = true
-			_save_checkpoint(str(cps[i].get("name", "CHECKPOINT")))
+			var spawn := player.global_position
+			if i < _cp_markers.size():
+				(_cp_markers[i] as CheckpointMarker).activate()
+				spawn = (_cp_markers[i] as Node2D).global_position
+			_save_checkpoint(str(cps[i].get("name", "CHECKPOINT")), spawn)
 
-func _save_checkpoint(cp_name: String) -> void:
-	if player.is_dashing():
-		return
+func _save_checkpoint(cp_name: String, spawn: Vector2) -> void:
 	Game.checkpoint_state = {
-		"spawn": player.global_position,
+		"spawn": spawn,
 		"killed": killed_ids.keys(),
 		"collected": collected.keys(),
 		"weapons": player.weapon_state(),
@@ -473,7 +540,7 @@ func _save_checkpoint(cp_name: String) -> void:
 		"dead_zones": dead_zones.keys(),
 	}
 	Events.checkpoint_reached.emit(_checkpoints_hit.size())
-	hud.show_hint("◉ " + tr(cp_name), 1.6)
+	hud.show_checkpoint(tr(cp_name))
 
 func _update_objective() -> void:
 	match phase:
