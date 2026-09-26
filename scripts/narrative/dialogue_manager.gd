@@ -27,6 +27,10 @@ var _blip_t := 0.0
 var _input_block := 0.0
 
 var root: Control
+var cinematic_art: TextureRect
+var cinematic_dim: ColorRect
+var letterbox_top: ColorRect
+var letterbox_bottom: ColorRect
 var box: PanelContainer
 var name_label: Label
 var text_label: RichTextLabel
@@ -51,6 +55,33 @@ func _build_ui() -> void:
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.theme = UIStyle.theme()
 	add_child(root)
+	cinematic_art = TextureRect.new()
+	cinematic_art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	cinematic_art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	cinematic_art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	cinematic_art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	cinematic_art.visible = false
+	root.add_child(cinematic_art)
+	cinematic_dim = ColorRect.new()
+	cinematic_dim.color = Color(0.01, 0.0, 0.025, 0.18)
+	cinematic_dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	cinematic_dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	cinematic_dim.visible = false
+	root.add_child(cinematic_dim)
+	letterbox_top = ColorRect.new()
+	letterbox_top.color = Color(0, 0, 0, 0.92)
+	letterbox_top.anchor_right = 1.0
+	letterbox_top.offset_bottom = 42
+	letterbox_top.visible = false
+	root.add_child(letterbox_top)
+	letterbox_bottom = ColorRect.new()
+	letterbox_bottom.color = Color(0, 0, 0, 0.92)
+	letterbox_bottom.anchor_top = 1.0
+	letterbox_bottom.anchor_right = 1.0
+	letterbox_bottom.anchor_bottom = 1.0
+	letterbox_bottom.offset_top = -42
+	letterbox_bottom.visible = false
+	root.add_child(letterbox_bottom)
 	box = PanelContainer.new()
 	box.anchor_left = 0.08
 	box.anchor_right = 0.92
@@ -102,6 +133,12 @@ func start(id: String, pause_game := true) -> void:
 		return
 	_id = id
 	_pause_game = pause_game
+	var art_tex := CinematicArt.cutscene_texture(id) if pause_game else null
+	cinematic_art.texture = art_tex
+	cinematic_art.visible = art_tex != null
+	cinematic_dim.visible = art_tex != null
+	letterbox_top.visible = pause_game
+	letterbox_bottom.visible = pause_game
 	active = true
 	root.visible = true
 	if _pause_game:
@@ -198,6 +235,11 @@ func _advance() -> void:
 func _end() -> void:
 	active = false
 	root.visible = false
+	cinematic_art.texture = null
+	cinematic_art.visible = false
+	cinematic_dim.visible = false
+	letterbox_top.visible = false
+	letterbox_bottom.visible = false
 	for c in choice_box.get_children():
 		c.queue_free()
 	if _pause_game:
