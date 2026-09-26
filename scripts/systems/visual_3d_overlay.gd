@@ -180,6 +180,22 @@ func _add_model(kind: String, path: String, world_pos: Vector2, scale_factor: fl
 	mi.material_override = _material(kind)
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	holder.add_child(mi)
+	if kind == "lamp":
+		var lamp_light := OmniLight3D.new()
+		lamp_light.light_color = Color("#ffb36b")
+		lamp_light.light_energy = 2.2
+		lamp_light.omni_range = 4.5
+		lamp_light.shadow_enabled = false
+		lamp_light.position = Vector3(0.45, 2.2, 0.0)
+		holder.add_child(lamp_light)
+	elif kind == "sign":
+		var neon_light := OmniLight3D.new()
+		neon_light.light_color = Color("#ff3d86")
+		neon_light.light_energy = 2.0
+		neon_light.omni_range = 5.0
+		neon_light.shadow_enabled = false
+		neon_light.position = Vector3(0.0, 0.8, 0.0)
+		holder.add_child(neon_light)
 	props.add_child(holder)
 	return holder
 
