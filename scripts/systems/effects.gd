@@ -42,6 +42,8 @@ func _ready() -> void:
 	_make_pool("smoke", Color(0.5, 0.48, 0.55, 0.5), 10, 0.9, 30.0, 6, 3.0)
 	_make_pool("debris", Color(0.55, 0.36, 0.2), 12, 0.5, 110.0, 6, 1.4)
 	_make_pool("fire", Color(1.0, 0.55, 0.15), 24, 0.7, 90.0, 4, 2.2)
+	_make_pool("dust", Color(0.72, 0.66, 0.58, 0.45), 12, 0.8, 42.0, 6, 2.6)
+	_make_pool("splinter", Color(0.66, 0.42, 0.22), 10, 0.42, 150.0, 6, 1.1)
 	_flash_light = PointLight2D.new()
 	_flash_light.texture = SpriteLib.light_texture(128)
 	_flash_light.texture_scale = 1.4
@@ -68,7 +70,7 @@ func _make_pool(pool_name: String, color: Color, amount: int, life: float, speed
 		p.color = color
 		p.gravity = Vector2.ZERO
 		p.z_index = 5
-		if pool_name == "smoke" or pool_name == "fire":
+		if pool_name == "smoke" or pool_name == "fire" or pool_name == "dust":
 			var ramp := Gradient.new()
 			ramp.set_color(0, color)
 			ramp.set_color(1, Color(color.r, color.g, color.b, 0.0))
@@ -90,6 +92,8 @@ func emit(pool_name: String, pos: Vector2, dir := Vector2.ZERO, amount_scale := 
 	p.direction = dir if dir.length() > 0.01 else Vector2.RIGHT
 	if dir.length() <= 0.01:
 		p.spread = 180.0
+	elif pool_name == "dust":
+		p.spread = 70.0
 	elif pool_name != "smoke" and pool_name != "fire":
 		p.spread = 35.0
 	p.restart()
@@ -132,6 +136,29 @@ static func debris(pos: Vector2, dir: Vector2) -> void:
 	var fx := get_fx()
 	if fx:
 		fx.emit("debris", pos, dir)
+
+## Puff of dust shaken loose by an impact (door frames, bodies hitting the
+## floor). amount >= 1 adds a second, offset puff.
+static func dust(pos: Vector2, dir: Vector2, amount := 1.0) -> void:
+	var fx := get_fx()
+	if fx == null:
+		return
+	fx.emit("dust", pos, dir)
+	if amount >= 1.0:
+		fx.emit("dust", pos + dir * 4.0 + dir.orthogonal() * randf_range(-3, 3), dir.rotated(randf_range(-0.6, 0.6)))
+
+## Wood splinters (or sparks for metal) flying off a hit, with a few chips
+## left on the floor.
+static func splinters(pos: Vector2, dir: Vector2, wood := true, amount := 1.0) -> void:
+	var fx := get_fx()
+	if fx == null:
+		return
+	if not wood:
+		fx.emit("spark", pos, dir)
+		return
+	fx.emit("splinter", pos, dir)
+	for i in int(3 * amount):
+		fx.decals.add_mark(pos + dir.rotated(randf_range(-0.9, 0.9)) * randf_range(4, 16), Color(0.5, 0.3, 0.14, 0.85), 0.9)
 
 static func smoke(pos: Vector2) -> void:
 	var fx := get_fx()

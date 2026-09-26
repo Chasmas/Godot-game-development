@@ -66,6 +66,12 @@ var sneak_held := false
 var upgrades: Dictionary = {}          ## id -> true
 var armor_hits := 0
 var _adrenaline_t := 0.0
+var _dash_total := 0.15
+var _dash_avg := 400.0
+## Easy difficulty: hits absorbed before a lethal one lands; regenerates
+## after a quiet spell (see Tuning.player_guard_*).
+var guard_hits := 0
+var _guard_regen_t := 0.0
 var _laser: Node2D
 var _vest: Node2D
 
@@ -97,6 +103,7 @@ func setup(p_data: CharacterData) -> void:
 	ability.setup(data.ability, self, persona.ability_charge_mult if persona else 1.0)
 	equipment_left = data.equipment_count
 	extra_hits = 1 if (persona and persona.extra_hit) else 0
+	guard_hits = int(Difficulty.value("player_guard_hits"))
 	if data.start_weapon != &"":
 		var w := DB.weapon(data.start_weapon)
 		if w:
@@ -150,6 +157,13 @@ func _tick_timers(pd: float) -> void:
 	_stagger = maxf(0.0, _stagger - pd)
 	_bloom = move_toward(_bloom, 0.0, pd * 14.0)
 	_adrenaline_t = maxf(0.0, _adrenaline_t - pd)
+	var guard_max := int(Difficulty.value("player_guard_hits"))
+	if guard_hits < guard_max:
+		_guard_regen_t -= pd
+		if _guard_regen_t <= 0.0:
+			guard_hits += 1
+			Events.hint.emit("GUARD BACK UP", 0.8)
+			Audio.play("blip", -10.0, 1.3)
 	if _reload_t > 0.0:
 		_reload_t -= pd
 		if _reload_t <= 0.0:
@@ -287,7 +301,13 @@ func _update_lock(pd: float) -> void:
 func _movement(move: Vector2, pd: float) -> void:
 	if _dash_t > 0.0:
 		_dash_t -= pd
-		velocity = _dash_dir * data.dash_speed
+		# fast push-off easing into the roll-out: reads as a shove, not a
+		# teleport, and the distance stays exactly speed * time * scale
+		var tn := Tuning.get_t()
+		var k := clampf(1.0 - _dash_t / maxf(_dash_total, 0.001), 0.0, 1.0)
+		var shape := lerpf(tn.dash_start_mult, tn.dash_end_mult, 1.0 - pow(1.0 - k, 2.0))
+		var mean := (tn.dash_start_mult + 2.0 * tn.dash_end_mult) / 3.0   # average of the eased curve
+		velocity = _dash_dir * _dash_avg * shape / mean
 		if _dash_t <= 0.0:
 			if _overlaps(Layers.LOW | Layers.PIT) and _dash_extend < 0.25:
 				_dash_t = 0.02
@@ -316,7 +336,12 @@ func _start_dash() -> void:
 	if _dash_cd > 0.0 or _dash_t > 0.0:
 		return
 	_dash_dir = _last_move.normalized() if _last_move.length() > 0.2 else aim_dir
-	_dash_t = data.dash_time
+	# shorter dodge: split the reduction between speed and time so it keeps
+	# its snap but doesn't cross a room
+	var sc := sqrt(Tuning.get_t().dash_distance_scale)
+	_dash_total = data.dash_time * sc
+	_dash_avg = data.dash_speed * sc
+	_dash_t = _dash_total
 	_dash_extend = 0.0
 	_dash_cd = data.dash_cooldown
 	_iframes = 0.13
@@ -345,6 +370,15 @@ func has_upgrade(id: StringName) -> bool:
 	return upgrades.has(id)
 
 func _after_move() -> void:
+	if _dash_t > 0.0 and _dash_t < _dash_total - 0.02 and _dash_extend <= 0.0:
+		# ran into a wall: end the dodge cleanly instead of grinding along it
+		var got := get_real_velocity().length()
+		if got < _dash_avg * Tuning.get_t().dash_blocked_fraction and not _overlaps(Layers.LOW | Layers.PIT):
+			_end_dash()
+			velocity = Vector2.ZERO
+			Events.camera_shake.emit(1.5)
+			Effects.dust(global_position + _dash_dir * 5.0, -_dash_dir, 0.5)
+			return
 	if _dash_t > 0.0:
 		# dive through windows, shoulder-check enemies
 		var space := get_world_2d().direct_space_state
@@ -733,13 +767,20 @@ func _execute_or_kick() -> void:
 	if _kick_cd > 0.0:
 		return
 	_kick_cd = 0.4
-	visual.punch()
-	# doors first
+	visual.kick_leg()
+	velocity += aim_dir * 40.0
+	# doors first: the nearest door whose leaf is in reach and in front
+	var best_door: Node2D = null
+	var best_d := INF
 	for d in get_tree().get_nodes_in_group("door"):
-		if d.has_method("kick") and d.global_position.distance_to(global_position) < KICK_RANGE + 10.0:
-			if d.kick(global_position, aim_dir):
-				Events.camera_shake.emit(3.0)
-				return
+		if not (d is Door) or not d.has_method("kick"):
+			continue
+		var dd: float = (d as Door).hit_point(global_position).distance_to(global_position)
+		if dd < KICK_RANGE + 6.0 and dd < best_d:
+			best_d = dd
+			best_door = d
+	if best_door and best_door.kick(global_position, aim_dir):
+		return
 	for e in get_tree().get_nodes_in_group("enemies"):
 		if not e.is_alive():
 			continue
@@ -886,6 +927,21 @@ func take_damage(info: DamageInfo) -> String:
 		if _vest:
 			_vest.queue_free()
 			_vest = null
+		return "absorbed"
+	if guard_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
+		guard_hits -= 1
+		_guard_regen_t = float(Difficulty.value("player_guard_regen"))
+		_iframes = 0.6
+		_stagger = 0.3
+		velocity += info.dir * 150.0
+		visual.flash(0.3)
+		Score.on_player_hurt()
+		Audio.play_at("hit_blunt", global_position)
+		Events.camera_shake.emit(6.0)
+		Events.hit_stop.emit(0.07)
+		PostFX.flash(Color(0.8, 0.1, 0.15, 0.6), 0.2)
+		InputSetup.vibrate(0.7, 0.7, 0.2)
+		Events.hint.emit("HIT — GET TO COVER", 1.2)
 		return "absorbed"
 	if extra_hits > 0:
 		extra_hits -= 1

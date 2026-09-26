@@ -45,6 +45,7 @@ var actors_root: Node2D
 var lights_root: Node2D
 var fx: Effects
 var bullets: BulletSystem
+var crowd: Crowd
 
 var _checkpoints_hit: Dictionary = {}
 var _hints_shown: Dictionary = {}
@@ -195,6 +196,10 @@ func _make_roots() -> void:
 	bullets = BulletSystem.new()
 	bullets.name = "Bullets"
 	add_child(bullets)
+	crowd = Crowd.new()
+	crowd.name = "Crowd"
+	crowd.level = self
+	add_child(crowd)
 
 func _root(n: String) -> Node2D:
 	var r := Node2D.new()
@@ -220,6 +225,21 @@ func get_nav_path(from: Vector2, to: Vector2) -> PackedVector2Array:
 		path.remove_at(0)
 	path.append(to)
 	return path
+
+## Closest walkable point to p (cell centre), or fallback if p is deep in a
+## wall or outside the map. Used to keep investigation/search spots reachable.
+func nearest_open_point(p: Vector2, fallback: Vector2) -> Vector2:
+	if nav == null:
+		return p
+	var c := Vector2i(int(p.x / 16.0), int(p.y / 16.0))
+	if not nav.is_in_boundsv(c):
+		return fallback
+	if not nav.is_point_solid(c):
+		return p
+	var o := _nearest_open(c)
+	if nav.is_point_solid(o):
+		return fallback
+	return Vector2(o.x * 16 + 8, o.y * 16 + 8)
 
 func _nearest_open(c: Vector2i) -> Vector2i:
 	if not nav.is_point_solid(c):
@@ -502,7 +522,9 @@ func spawn_reinforcements(n: int, _near := Vector2.ZERO) -> void:
 		actors_root.add_child(e)
 		e.setup(DB.enemy(&"guard" if randf() > 0.4 else &"gunner"), self, Vector2.DOWN)
 		e.died.connect(_on_enemy_died)
-		e._last_known = player.global_position
+		# called in over the radio: they know the area, not the exact spot
+		var err := Tuning.get_t().position_error_max
+		e._last_known = player.global_position + Vector2.from_angle(randf() * TAU) * randf_range(err * 0.3, err)
 		e._enter_combat()
 
 func on_secret_found(id: String) -> void:

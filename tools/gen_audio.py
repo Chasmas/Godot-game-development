@@ -229,6 +229,16 @@ def sfx():
     # --- upgrades / armour
     S['upgrade'] = fade(norm(np.concatenate([sq(523, .06)*env_exp(.06, 20), sq(784, .06)*env_exp(.06, 20), sq(1046, .06)*env_exp(.06, 20), sq(1568, .22, .3)*env_exp(.22, 9)]) , .35))
     d = 0.5; S['armor_break'] = fade(norm(sum(sine(f, d)*env_exp(d, k) for f, k in ((520, 10), (980, 14), (1730, 18))) * 0.6 + sat(lp(noise(d), 1200)*env_exp(d, 20), 3) + hp(noise(d), 4000)*env_exp(d, 30)*0.4, .85))
+    # --- added in the polish pass (kept last so the seeded noise of every
+    # earlier sound is unchanged)
+    # boot into a door: a hard low thump, a woody crack on top, then the
+    # frame rattling for a moment
+    d = 0.55
+    thump = sweep_sine(95, 38, d, 18) * env_exp(d, 10) * 1.6
+    crack = bp(noise(d), 900, 3800) * env_exp(d, 55) * 0.9
+    body = lp(noise(d), 420) * env_exp(d, 14) * 0.8
+    rattle = bp(noise(d), 300, 1400) * (0.5 + 0.5 * np.sign(np.sin(2*np.pi*23*t_axis(d)))) * env_exp(d, 9) * 0.25
+    S['door_kick'] = fade(norm(sat(thump + crack + body + rattle, 3.5)))
     for name, x in S.items():
         write_wav(os.path.join(SFX_DIR, name + ".wav"), x)
     print(f"{len(S)} sfx written")

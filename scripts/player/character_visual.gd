@@ -25,6 +25,11 @@ var _flash := 0.0
 var _hold: int = WeaponData.Hold.NONE
 var _hand := Vector2(5, 0)
 var aim_angle := 0.0
+## 0 relaxed (weapon lowered), 1 wary (half raised), 2 ready. Enemies set it
+## from their AI state; everyone else stays ready.
+var _kick_leg_t := -1.0
+var _posture := 2
+var _relax := 0.0
 
 func _init() -> void:
 	legs = Sprite2D.new()
@@ -80,6 +85,13 @@ func set_aim(angle: float) -> void:
 	rig.rotation = angle + _twist
 
 func update_move(vel: Vector2, delta: float) -> void:
+	if _kick_leg_t > 0.0:
+		_kick_leg_t -= delta
+		legs.rotation = rig.rotation
+		legs.texture = SpriteLib.legs(1 if _kick_leg_t > 0.08 else 2, palette)
+		legs.position = Vector2.RIGHT.rotated(rig.rotation) * (3.0 * sin(clampf(_kick_leg_t / 0.2, 0.0, 1.0) * PI))
+		return
+	legs.position = Vector2.ZERO
 	var speed := vel.length()
 	if speed > 8.0:
 		_walk_t += delta * speed * 0.09
@@ -89,6 +101,14 @@ func update_move(vel: Vector2, delta: float) -> void:
 	else:
 		legs.texture = SpriteLib.legs(0, palette)
 		legs.rotation = lerp_angle(legs.rotation, rig.rotation, minf(1.0, delta * 10.0))
+
+func set_alert_posture(p: int) -> void:
+	_posture = clampi(p, 0, 2)
+
+## Front kick: the leading leg snaps out along the aim and the body leans in.
+func kick_leg() -> void:
+	_kick_leg_t = 0.2
+	_kick = -3.5
 
 func kick_recoil(amount := 2.0) -> void:
 	_kick = amount
@@ -144,6 +164,12 @@ func _process(delta: float) -> void:
 			weapon_sprite.position = _hand
 			var tw := create_tween()
 			tw.tween_property(weapon_sprite, "rotation", 0.0, 0.08)
+	# posture: guns drift down to a low-ready carry when calm and snap up
+	# fast when alerted (raising is quicker than lowering)
+	var want_relax: float = [1.0, 0.5, 0.0][_posture]
+	_relax = move_toward(_relax, want_relax, delta * (1.2 if want_relax > _relax else 6.0))
+	if _swing_t < 0.0 and weapon_sprite.visible and _hold in [WeaponData.Hold.ONE_HAND, WeaponData.Hold.TWO_HAND]:
+		weapon_sprite.rotation = 0.6 * _relax
 	if _punch_t >= 0.0:
 		_punch_t += delta
 		if _punch_t > 0.12:
