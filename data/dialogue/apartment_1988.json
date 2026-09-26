@@ -1,21 +1,84 @@
 {
-	"bg": "apartment", "music": "apartment", "title": "VAN NUYS — JULY 4, 1988 — 9:12 PM",
-	"start": "a",
-	"nodes": {
-		"a": {"speaker": "machine", "text": "You have... one... new message.", "sfx": "blip", "next": "b"},
-		"b": {"speaker": "voice", "text": "Miss Moreno. We loved your work on HOTSHOT. Tragic, what happened to the picture. And to your brother.", "next": "c"},
-		"c": {"speaker": "voice", "text": "There's a package on your doorstep. There's a motel in Barstow. The night manager has something that belongs to Tommy.", "next": "d"},
-		"d": {"speaker": "voice", "text": "Room service is at midnight. Wear the star. That way they'll know you're the lead.", "next": "e"},
-		"e": {"speaker": "machine", "text": "End of messages.", "sfx": "blip", "next": "f"},
-		"f": {"speaker": "cass", "text": "...", "choices": [
-			{"text": "Call the police.", "next": "p1", "set": {"cass_tried_police": true}},
-			{"text": "Open the package.", "next": "k1"}
-		]},
-		"p1": {"speaker": "cass", "text": "Nine... one...", "sfx": "blip", "next": "p2"},
-		"p2": {"speaker": "machine", "text": "We're sorry. The number you have dialed is not in service in this picture.", "sfx": "vhs_static", "next": "p3"},
-		"p3": {"speaker": "cass", "text": "...Right.", "next": "k1"},
-		"k1": {"speaker": "cass", "text": "Gold greasepaint. A key to room 204 at the Sunset Palms. A Polaroid of Tommy I've never seen.", "next": "k2"},
-		"k2": {"speaker": "cass", "text": "He's smiling in it. Tommy never smiled in pictures.", "next": "k3"},
-		"k3": {"speaker": "narration", "text": "She paints the star on. It goes on easier than it should.", "event": "star"}
-	}
+  "bg": "apartment",
+  "music": "apartment",
+  "title": "VAN NUYS — JULY 4, 1988 — 9:12 PM",
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "machine",
+      "text": "You have... one... new message.",
+      "sfx": "blip",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "voice",
+      "text": "Miss Moreno. We admired your work on HOTSHOT. What happened to the picture was unfortunate. What happened to Tommy was... useful.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "voice",
+      "text": "There's a package outside your door. Inside is a key to room 204 at the Sunset Palms, Barstow. The night manager is keeping something that belonged to your brother.",
+      "next": "d"
+    },
+    "d": {
+      "speaker": "voice",
+      "text": "Be there before midnight. Wear the star. The people inside will understand what that means.",
+      "next": "e"
+    },
+    "e": {
+      "speaker": "machine",
+      "text": "End of messages.",
+      "sfx": "blip",
+      "next": "f"
+    },
+    "f": {
+      "speaker": "cass",
+      "text": "...",
+      "choices": [
+        {
+          "text": "Call the police.",
+          "next": "p1",
+          "set": {
+            "cass_tried_police": true
+          }
+        },
+        {
+          "text": "Open the package.",
+          "next": "k1"
+        }
+      ]
+    },
+    "p1": {
+      "speaker": "cass",
+      "text": "Nine... one...",
+      "sfx": "blip",
+      "next": "p2"
+    },
+    "p2": {
+      "speaker": "machine",
+      "text": "We're sorry. The number you have dialed is not in service.",
+      "sfx": "vhs_static",
+      "next": "p3"
+    },
+    "p3": {
+      "speaker": "cass",
+      "text": "...Of course.",
+      "next": "k1"
+    },
+    "k1": {
+      "speaker": "cass",
+      "text": "Gold greasepaint. A key to room 204. A Polaroid of Tommy I've never seen.",
+      "next": "k2"
+    },
+    "k2": {
+      "speaker": "cass",
+      "text": "He's smiling. Tommy hated having his picture taken.",
+      "next": "k3"
+    },
+    "k3": {
+      "speaker": "narration",
+      "text": "She paints the star over her eye. In the mirror, it looks less like makeup than a mark.",
+      "event": "star"
+    }
+  }
 }
