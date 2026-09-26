@@ -2,6 +2,7 @@ extends Control
 ## Launch splash: INVERTED INDEX STUDIO logo, then the "A GAME CREATED BY" card.
 ## Any key / button / click skips to the title.
 
+const INTRO_SCENE := "res://scenes/ui/intro.tscn"
 const STUDIO_TIME := 3.6
 const CREDIT_TIME := 3.8
 
@@ -127,7 +128,7 @@ func _leave() -> void:
 		return
 	_leaving = true
 	_phase = 2
-	Game.change_scene(Game.TITLE_SCENE)
+	Game.change_scene(INTRO_SCENE)
 
 
 ## The INVERTED INDEX mark: an inverted triangle built from index bars,

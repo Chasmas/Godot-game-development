@@ -53,6 +53,9 @@ func _ready() -> void:
 			if OS.get_environment("SHOT_TAB") != "":
 				om.tabs.current_tab = int(OS.get_environment("SHOT_TAB"))
 			await _frames(n)
+		"intro":
+			Game.change_scene("res://scenes/ui/intro.tscn", false)
+			await _frames(n)
 		"splash":
 			Game.change_scene("res://scenes/ui/splash_screen.tscn", false)
 			await _frames(n)

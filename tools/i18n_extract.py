@@ -39,10 +39,10 @@ LIT = re.compile(r'(?<![&\w])"((?:[^"\\]|\\.)*)"')
 # node names, theme types and other code strings that happen to look like text
 NOT_TEXT = {"Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
             "Decor", "Glow", "TabContainer", "VScrollBar", "Button", "Label", "PanelContainer", "Panel", "HSlider",
-            "CheckButton", "OptionButton", "Underline", "modulate:a", ".remap", "[i]", "[/i]", "KV", "SS", "XM",
+            "CheckButton", "OptionButton", "Underline", "modulate:a", ".remap", "[i]", "[/i]", "[pop]", "[/pop]", "KV", "SS", "XM",
             "NV", "BK", "AD", "QH", "LS", "SI", "A+", "S+", "SSS", "LMB", "RMB", "MMB", "M4", "M5", "LB", "RB",
             "LT", "RT", "RS", "L3", "R3", "HOTSHOT", "California", "GILBERTO LOPES", "INVERTED  INDEX",
-            "S   T   U   D   I   O", "VACANCY", "NO", "Barks", "Ambience", "%s#%d", "position:x", "position:y", "1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440"}
+            "S   T   U   D   I   O", "VACANCY", "NO", "Barks", "Ambience", "%s#%d", "%s_%s%d", "position:x", "position:y", "1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440"}
 
 def looks_like_text(s):
     if s in NOT_TEXT or re.match(r"^(civilian#|reinf_|debug_|step|%s:%d)", s):
