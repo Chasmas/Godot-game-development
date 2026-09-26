@@ -108,6 +108,12 @@ func _build_decor(level_data: Dictionary) -> void:
 			elif ch == "Q":
 				_add_model("arcade", "res://assets/models/arcade_cabinet.obj",
 					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.72)
+			elif ch == "V":
+				_add_model("vending", "res://assets/models/vending_machine.obj",
+					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.72)
+			elif ch == "t":
+				_add_model("tv", "res://assets/models/retro_tv.obj",
+					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.78)
 			elif ch == "o":
 				_add_model("lamp", "res://assets/models/street_lamp.obj",
 					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.68)
@@ -203,6 +209,13 @@ func _material(kind: String) -> StandardMaterial3D:
 		"dumpster":
 			m.albedo_color = Color("#31594d")
 			m.roughness = 0.85
+		"vending":
+			m.albedo_color = Color("#b82d49")
+			m.metallic = 0.18
+			m.roughness = 0.4
+		"tv":
+			m.albedo_color = Color("#1b1720")
+			m.roughness = 0.62
 	_materials[kind] = m
 	return m
 
