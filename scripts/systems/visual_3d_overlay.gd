@@ -128,7 +128,18 @@ func _build_decor(level_data: Dictionary) -> void:
 		if str(item.get("type", "")) == "neon":
 			var pos := _cell_world(item.get("pos", [0, 0]))
 			var sign_size := clampf(float(item.get("size", 10.0)) / 12.0, 0.55, 1.5)
-			_add_model("sign", "res://assets/models/neon_motel_sign.obj", pos, sign_size)
+			var sign := _add_model("sign", "res://assets/models/neon_motel_sign.obj", pos, sign_size)
+			if sign:
+				var neon_color := Color(str(item.get("color", "ff3d7f")))
+				var sign_mesh := sign.get_child(0) as MeshInstance3D
+				if sign_mesh:
+					var sign_mat := _material("sign").duplicate() as StandardMaterial3D
+					sign_mat.albedo_color = neon_color
+					sign_mat.emission = neon_color
+					sign_mesh.material_override = sign_mat
+				var sign_light := sign.get_child(1) as OmniLight3D
+				if sign_light:
+					sign_light.light_color = neon_color
 
 func _add_water_surface(level_data: Dictionary) -> void:
 	var rows: Array = level_data.get("map", [])
