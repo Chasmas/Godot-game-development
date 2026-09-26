@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"sniper"
+display_name = "Sniper"
+combat = 0
+weapon_id = &"rifle"
+palette = "sniper"
+walk_speed = 40.0
+view_distance = 440.0
+view_angle_deg = 70.0
+reaction_time = 0.6
+preferred_range = 300.0
+flank_chance = 0.0
+aim_error_deg = 1.0
+notes = "Holds a long sightline. A laser settles on you before every shot: keep moving or break line of sight."

@@ -155,13 +155,16 @@ func _draw() -> void:
 ## Startled: drop whatever it was where they stand, and stop.
 func drop() -> void:
 	if kind != Kind.SNOOZE and is_inside_tree():
-		var d := DroppedProp.new()
-		d.kind = kind
-		d.variant = _variant
-		var host := get_tree().current_scene if get_tree().current_scene else get_parent()
-		host.add_child(d)
-		d.global_position = _prop_pos(fmod(_t, _cycle) / _cycle)
-		d.vel = Vector2.from_angle(randf() * TAU) * randf_range(10.0, 30.0)
+		# spawned deferred under the effects layer: this often runs while the
+		# owner is mid-death / mid-teardown, when adding nodes isn't safe
+		var fx := Effects.get_fx()
+		if fx:
+			var d := DroppedProp.new()
+			d.kind = kind
+			d.variant = _variant
+			d.start_pos = _prop_pos(fmod(_t, _cycle) / _cycle)
+			d.vel = Vector2.from_angle(randf() * TAU) * randf_range(10.0, 30.0)
+			fx.add_child.call_deferred(d)
 	if visual:
 		visual.torso.position = Vector2.ZERO
 		visual.torso.scale = Vector2(0.5, 0.5)
@@ -173,8 +176,10 @@ class DroppedProp extends Node2D:
 	var kind := 0
 	var variant := 0
 	var vel := Vector2.ZERO
+	var start_pos := Vector2.ZERO
 	var t := 0.0
 	func _ready() -> void:
+		global_position = start_pos
 		z_index = -1
 		if kind == IdleActivity.Kind.DRINK:
 			Audio.play_at("metal_clang", global_position, -20.0, 0.3)

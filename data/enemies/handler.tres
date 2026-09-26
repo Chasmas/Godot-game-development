@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"handler"
+display_name = "Dog Handler"
+combat = 0
+weapon_id = &"pistol"
+palette = "handler"
+walk_speed = 50.0
+reaction_time = 0.45
+notes = "Walks a German Shepherd on a leash. Spot him first: the moment he sees you, the dog is off."

@@ -131,6 +131,9 @@ var _queued_scene := ""
 var _queued_fade := true
 
 func change_scene(path: String, fade := true) -> void:
+	if _timed_slowmo_until > 0:
+		_timed_slowmo_until = 0
+		set_slowmo(1.0)
 	if transitioning:
 		# a request mid-fade (e.g. a cutscene ending as a mission starts) is
 		# queued, not dropped: the newest one wins once this fade finishes
@@ -163,11 +166,24 @@ func set_slowmo(scale: float) -> void:
 func get_slowmo() -> float:
 	return _slowmo_scale
 
+## Slow motion for a fixed stretch of real time (the FINAL TAKE). Owned
+## here, not by the level, so a level torn down mid-effect can't leave a
+## dangling timer behind; any scene change also ends it.
+var _timed_slowmo_until := 0
+func timed_slowmo(scale: float, seconds: float) -> void:
+	if _slowmo_scale < 0.99:
+		return   # the player's own slow-mo is running: leave it alone
+	set_slowmo(scale)
+	_timed_slowmo_until = Time.get_ticks_msec() + int(seconds * 1000.0)
+
 func hit_stop(duration: float) -> void:
 	_hitstop_until = maxi(_hitstop_until, Time.get_ticks_msec() + int(duration * 1000.0))
 	_apply_time_scale()
 
 func _process(_delta: float) -> void:
+	if _timed_slowmo_until > 0 and Time.get_ticks_msec() >= _timed_slowmo_until:
+		_timed_slowmo_until = 0
+		set_slowmo(1.0)
 	if _hitstop_until > 0 and Time.get_ticks_msec() >= _hitstop_until:
 		_hitstop_until = 0
 		_apply_time_scale()

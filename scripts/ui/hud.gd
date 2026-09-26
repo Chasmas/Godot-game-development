@@ -56,6 +56,15 @@ func _ready() -> void:
 	combo_bar.size = Vector2(120, 4)
 	combo_bar.color = UIStyle.GOLD
 	root.add_child(combo_bar)
+	beat_meter = BeatMeter.new()
+	beat_meter.position = Vector2(26, 94)
+	beat_meter.size = Vector2(160, 40)
+	beat_meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(beat_meter)
+	rec = RecOverlay.new()
+	rec.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	rec.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(rec)
 	# --- weapon (top right)
 	weapon_label = _lbl(Vector2(0, 14), 20, UIStyle.PAPER, UIStyle.font_bold())
 	weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
@@ -137,6 +146,10 @@ func _ready() -> void:
 	Events.hint.connect(show_hint)
 	Events.objective_changed.connect(_on_objective)
 	Events.player_died.connect(_on_player_died)
+	# bound methods, not lambdas: autoload signals must let go of a freed HUD
+	Music.beat.connect(_on_music_beat)
+	Score.on_beat.connect(_on_beat_kill)
+	Score.finisher.connect(_on_finisher)
 	_on_score(Score.score)
 	_on_combo(0, 0.0, 1.0)
 
@@ -222,6 +235,18 @@ func _process(delta: float) -> void:
 
 func _on_objective(t: String) -> void:
 	objective_label.text = t
+
+var beat_meter: BeatMeter
+var rec: RecOverlay
+
+func _on_music_beat(_i: int) -> void:
+	beat_meter.pulse()
+
+func _on_beat_kill(streak: int, _pos: Vector2) -> void:
+	beat_meter.hit(streak)
+
+func _on_finisher(_pos: Vector2) -> void:
+	rec.roll()
 
 ## Upgrade pickup: an animated card (icon, name, what it does) instead of a
 ## line of text. The HUD badge for it pulses in at the same time.
@@ -570,3 +595,87 @@ class UpgradeCard extends Control:
 		draw_string(UIStyle.font_display(), Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, UIStyle.PAPER)
 		var da := clampf((_t - 0.5) / 0.3, 0.0, 1.0)
 		draw_multiline_string(f, Vector2(tx, r.position.y + 70), tr(str(d.desc)), HORIZONTAL_ALIGNMENT_LEFT, w - 130.0, 12, 2, Color(UIStyle.PAPER, 0.75 * da))
+
+
+## Metronome under the combo: a pip flashes on every beat of the music;
+## kills that land on it flash the whole row and show the streak. Tier
+## callouts grow with the combo.
+class BeatMeter extends Control:
+	var _pulse := 0.0
+	var _hit := 0.0
+	var _streak := 0
+	var _n := 0
+	func pulse() -> void:
+		_pulse = 1.0
+		_n = (_n + 1) % 4
+	func hit(streak: int) -> void:
+		_hit = 1.0
+		_streak = streak
+	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.05)
+		_pulse = move_toward(_pulse, 0.0, rd * 5.0)
+		_hit = move_toward(_hit, 0.0, rd * 2.5)
+		queue_redraw()
+	func _draw() -> void:
+		if Music.beat_length() <= 0.0:
+			return
+		var combo := Score.combo
+		var alpha := 0.35 + (0.65 if combo >= 1 else 0.0)
+		for i in 4:
+			var on := i == _n
+			var c := UIStyle.PINK if on else UIStyle.DIM
+			var r := 3.0 + (3.0 * _pulse if on else 0.0)
+			draw_circle(Vector2(6 + i * 16, 8), r, Color(c, alpha * (1.0 if on else 0.5)))
+		if _hit > 0.0:
+			draw_rect(Rect2(-2, 0, 70, 16), Color(UIStyle.GOLD, 0.25 * _hit))
+			var t := tr("ON BEAT") if _streak < 2 else tr("RHYTHM x%d") % _streak
+			draw_string_outline(UIStyle.font_display(), Vector2(72, 14), t, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, 4, UIStyle.INK)
+			draw_string(UIStyle.font_display(), Vector2(72, 14), t, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.GOLD, _hit))
+		var tier := ""
+		if combo >= 12:
+			tier = "SHOWSTOPPER"
+		elif combo >= 8:
+			tier = "ON FIRE"
+		elif combo >= 5:
+			tier = "HOT"
+		if tier != "":
+			var wob := sin(Time.get_ticks_msec() * 0.012) * 1.5
+			draw_string_outline(UIStyle.font_display(), Vector2(0, 36 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, 5, UIStyle.INK)
+			draw_string(UIStyle.font_display(), Vector2(0, 36 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, UIStyle.HOT if combo >= 8 else UIStyle.GOLD)
+			if combo >= 8 and not Score._finisher_used:
+				draw_string(UIStyle.font_mono(), Vector2(0, 50), tr("MELEE KILL = FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(UIStyle.PAPER, 0.5 + 0.5 * sin(Time.get_ticks_msec() * 0.01)))
+
+
+## The finisher: camcorder REC frame, blinking dot, timecode, while the
+## world slows for a beat.
+class RecOverlay extends Control:
+	var _t := -1.0
+	const LIFE := 1.6
+	func roll() -> void:
+		_t = 0.0
+		Audio.play("rec_beep", -4.0)
+	func _process(delta: float) -> void:
+		if _t < 0.0:
+			return
+		_t += delta / maxf(Engine.time_scale, 0.05)
+		if _t > LIFE:
+			_t = -1.0
+		queue_redraw()
+	func _draw() -> void:
+		if _t < 0.0:
+			return
+		var a := clampf(minf(_t / 0.1, (LIFE - _t) / 0.3), 0.0, 1.0)
+		var m := 40.0
+		var L := 46.0
+		var c := Color(1, 1, 1, 0.85 * a)
+		for corner in [Vector2(m, m), Vector2(size.x - m, m), Vector2(m, size.y - m), Vector2(size.x - m, size.y - m)]:
+			var sx := 1.0 if corner.x < size.x * 0.5 else -1.0
+			var sy := 1.0 if corner.y < size.y * 0.5 else -1.0
+			draw_line(corner, corner + Vector2(L * sx, 0), c, 3.0)
+			draw_line(corner, corner + Vector2(0, L * sy), c, 3.0)
+		if fmod(_t, 0.5) < 0.3:
+			draw_circle(Vector2(m + 24, m + 30), 8.0, Color(1, 0.1, 0.15, a))
+		draw_string(UIStyle.font_bold(), Vector2(m + 40, m + 37), "REC", HORIZONTAL_ALIGNMENT_LEFT, -1, 22, c)
+		draw_string(UIStyle.font_display(), Vector2(size.x * 0.5 - 120, size.y - m - 12), tr("FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color(UIStyle.PINK, a))
+		var fr := int(_t * 30.0)
+		draw_string(UIStyle.font_mono(), Vector2(size.x - m - 150, m + 37), "00:00:%02d:%02d" % [fr / 30, fr % 30], HORIZONTAL_ALIGNMENT_LEFT, -1, 16, c)

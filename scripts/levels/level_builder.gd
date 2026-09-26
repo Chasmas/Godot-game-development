@@ -448,15 +448,21 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 	var id := "e_" + key(x, y)
 	if skip_enemies.has(id):
 		return
-	var edata := DB.enemy(ENEMY_CHARS[c])
+	var cfg: Dictionary = data.get("enemies", {}).get(key(x, y), {})
+	# a cell can name a special archetype ("kind": "sniper" / "handler")
+	var kind := StringName(cfg.get("kind", ENEMY_CHARS[c]))
+	var edata := DB.enemy(kind)
 	if edata == null:
 		return
-	var cfg: Dictionary = data.get("enemies", {}).get(key(x, y), {})
 	var e: Enemy
 	if c == "B":
 		e = BossNightManager.new()
 	elif c == "d" or c == "y":
 		e = Dog.new()
+	elif kind == &"sniper":
+		e = Sniper.new()
+	elif kind == &"handler":
+		e = Handler.new()
 	else:
 		e = Enemy.new()
 	e.enemy_id = id
@@ -478,6 +484,8 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 		(e as BossNightManager).cover_points = cov
 		out.boss = e
 	out.enemies.append(e)
+	if e is Handler and (e as Handler).dog:
+		out.enemies.append((e as Handler).dog)
 
 func _spawn_npc(x: int, y: int, center: Vector2, out: Dictionary) -> void:
 	var cfg: Dictionary = data.get("npcs", {}).get(key(x, y), {})

@@ -9,6 +9,16 @@ signal score_changed(score: int)
 signal combo_changed(count: int, time_left: float, window: float)
 signal combo_ended(count: int, bonus: int)
 signal points_popup(text: String, points: int, pos: Vector2)
+## A kill landed on the music's beat (streak = on-beat kills in a row).
+signal on_beat(streak: int, pos: Vector2)
+## Combo 8+ and a melee kill: the one-per-combo finisher ("FINAL TAKE").
+signal finisher(pos: Vector2)
+
+## How close to the beat a kill must land (seconds), per difficulty.
+const BEAT_WINDOW := [0.12, 0.095, 0.075]
+const FINISHER_COMBO := 8
+var beat_streak := 0
+var _finisher_used := false
 
 const COMBO_WINDOW := 3.2
 const MISS_PENALTY := 0.45
@@ -104,6 +114,15 @@ func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
 		tags.append("MOMENTUM")
 	if info.get("slowmo", false):
 		mult -= 0.2
+	# rhythm: kills on the beat are worth more, and a run of them more still
+	var beat_hit: bool = Music.beat_distance() <= float(BEAT_WINDOW[Difficulty.current()]) and not info.get("slowmo", false)
+	if beat_hit:
+		beat_streak += 1
+		mult += 0.4 + 0.15 * mini(beat_streak - 1, 4)
+		tags.append("ON BEAT" if beat_streak < 2 else tr("RHYTHM x%d") % beat_streak)
+		stats.beat_kills = int(stats.get("beat_kills", 0)) + 1
+	else:
+		beat_streak = 0
 	combo += 1
 	max_combo = maxi(max_combo, combo)
 	combo_time = COMBO_WINDOW
@@ -128,6 +147,16 @@ func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
 	combo_changed.emit(combo, combo_time, COMBO_WINDOW)
 	if combo >= 2:
 		Audio.play("combo", -6.0, 1.0 + minf(combo, 12) * 0.05)
+	if beat_hit:
+		Audio.play("beat_tick", -8.0, 1.0 + minf(beat_streak, 6) * 0.06)
+		on_beat.emit(beat_streak, info.get("pos", Vector2.ZERO))
+	if combo >= FINISHER_COMBO and not _finisher_used and method in [&"melee", &"punch", &"counter", &"execution"]:
+		_finisher_used = true
+		var fb := 2000 + combo * 150
+		score += fb
+		points_popup.emit("FINAL TAKE", fb, info.get("pos", Vector2.ZERO))
+		score_changed.emit(score)
+		finisher.emit(info.get("pos", Vector2.ZERO))
 
 func _on_player_fired(_weapon_id: StringName, hit: bool) -> void:
 	stats.shots += 1
@@ -152,6 +181,8 @@ func _bank_combo() -> void:
 		score += bonus
 		score_changed.emit(score)
 	combo_ended.emit(combo, bonus)
+	_finisher_used = false
+	beat_streak = 0
 	combo = 0
 	combo_points = 0
 	combo_time = 0.0

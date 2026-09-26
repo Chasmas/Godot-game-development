@@ -406,11 +406,14 @@ func _update_reload(delta: float) -> void:
 func _drop_mag() -> void:
 	if not is_inside_tree():
 		return
+	var fx := Effects.get_fx()
+	if fx == null:
+		return
 	var m := _DroppedMag.new()
-	get_tree().current_scene.add_child(m) if get_tree().current_scene else add_child(m)
-	m.global_position = rig.to_global(_hand + Vector2(1, 3))
+	m.start_pos = rig.to_global(_hand + Vector2(1, 3))
 	m.rotation = rig.global_rotation + randf_range(-0.6, 0.6)
 	m.vel = Vector2.from_angle(rig.global_rotation + PI * 0.6 * (1.0 if randf() < 0.5 else -1.0)) * randf_range(20.0, 40.0)
+	fx.add_child.call_deferred(m)
 
 
 class _MagInHand extends Node2D:
@@ -422,8 +425,10 @@ class _MagInHand extends Node2D:
 
 class _DroppedMag extends Node2D:
 	var vel := Vector2.ZERO
+	var start_pos := Vector2.ZERO
 	var t := 0.0
 	func _ready() -> void:
+		global_position = start_pos
 		z_index = -1
 	func _process(d: float) -> void:
 		t += d

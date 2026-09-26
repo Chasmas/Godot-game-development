@@ -15,6 +15,10 @@ var _targets: Array[float] = []
 var _levels: Array[float] = []
 var _master_fade := 1.0
 var _master_target := 1.0
+var _last_beat := -1
+
+## Fires on every beat of the current track (for HUD pulses).
+signal beat(index: int)
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -86,6 +90,29 @@ func set_intensity(level: int, instant := false) -> void:
 		if instant:
 			_levels[i] = _targets[i]
 
+## Seconds per beat of the current track (0 if there's no music).
+func beat_length() -> float:
+	if current_id == "" or not tracks.has(current_id) or _players.is_empty():
+		return 0.0
+	var bpm := float(tracks[current_id].get("bpm", 0))
+	return 60.0 / bpm if bpm > 0.0 else 0.0
+
+## Where we are in the beat: 0 on the beat, 0.5 halfway to the next. Uses
+## the audible position (playback minus output latency).
+func beat_phase() -> float:
+	var spb := beat_length()
+	if spb <= 0.0 or not _players[0].playing:
+		return -1.0
+	var pos := _players[0].get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
+	return fposmod(pos, spb) / spb
+
+## Seconds from the nearest beat (large if there's no music).
+func beat_distance() -> float:
+	var ph := beat_phase()
+	if ph < 0.0:
+		return 99.0
+	return minf(ph, 1.0 - ph) * beat_length()
+
 func set_pitch(p: float) -> void:
 	for pl in _players:
 		pl.pitch_scale = p
@@ -101,6 +128,12 @@ func _process(delta: float) -> void:
 		_levels[i] = move_toward(_levels[i], _targets[i], delta * FADE_SPEED)
 		var lin := _levels[i] * _master_fade
 		_players[i].volume_db = linear_to_db(lin) if lin > 0.001 else SILENT_DB
+	var ph := beat_phase()
+	if ph >= 0.0:
+		var idx := int(floor((_players[0].get_playback_position()) / beat_length()))
+		if idx != _last_beat:
+			_last_beat = idx
+			beat.emit(idx)
 	# keep stems locked together (ogg decoders can drift after long sessions)
 	if _players.size() > 1 and Engine.get_process_frames() % 240 == 0:
 		var ref := _players[0].get_playback_position()

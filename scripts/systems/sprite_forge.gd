@@ -24,6 +24,8 @@ const STYLES := {
 	"scout":   {"hair": "mullet", "build": 0.95, "extras": ["hawaii", "headphones"]},
 	"riot":    {"hair": "helmet", "build": 1.1, "extras": ["pads"]},
 	"boss":    {"hair": "silver", "build": 1.1, "extras": ["tie", "lapels", "pocket_square"]},
+	"sniper":  {"hair": "cap", "build": 0.95, "extras": ["shades", "radio"]},
+	"handler": {"hair": "bandana", "build": 1.1, "extras": ["vest", "stubble"]},
 	"civilian":{"hair": "short", "build": 1.0, "extras": []},
 	"shadow":  {"hair": "short", "build": 1.0, "extras": []},
 }

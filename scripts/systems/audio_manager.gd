@@ -6,9 +6,12 @@ extends Node
 const SFX_DIR := "res://assets/audio/sfx/"
 const POOL_2D := 32
 const POOL_UI := 8
+const POOL_FAR := 16
 
 var _cache: Dictionary = {}
 var _pool2d: Array[AudioStreamPlayer2D] = []
+var _poolfar: Array[AudioStreamPlayer2D] = []   ## own pool: a player never changes bus while live
+var _ifar := 0
 var _pool_ui: Array[AudioStreamPlayer] = []
 var _i2d := 0
 var _iui := 0
@@ -18,14 +21,17 @@ var music_lowpass: AudioEffectLowPassFilter
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_setup_buses()
-	for i in POOL_2D:
+	for i in POOL_2D + POOL_FAR:
 		var p := AudioStreamPlayer2D.new()
-		p.bus = "SFX"
+		p.bus = "SFX" if i < POOL_2D else "SFX_Far"
 		p.max_distance = 900.0
 		p.attenuation = 1.6
 		p.panning_strength = 0.8
 		add_child(p)
-		_pool2d.append(p)
+		if i < POOL_2D:
+			_pool2d.append(p)
+		else:
+			_poolfar.append(p)
 	for i in POOL_UI:
 		var u := AudioStreamPlayer.new()
 		u.bus = "SFX"
@@ -101,12 +107,18 @@ func play_at(sfx_name: String, pos: Vector2, volume_db := 0.0, pitch_var := 0.08
 	var s := get_stream(sfx_name)
 	if s == null or _throttled(sfx_name):
 		return
-	var p := _pool2d[_i2d]
-	_i2d = (_i2d + 1) % POOL_2D
+	var far := listener_pos().distance_to(pos) > FAR_DIST
+	var p: AudioStreamPlayer2D
+	if far:
+		p = _poolfar[_ifar]
+		_ifar = (_ifar + 1) % POOL_FAR
+	else:
+		p = _pool2d[_i2d]
+		_i2d = (_i2d + 1) % POOL_2D
+	if p.playing:
+		p.stop()
 	p.stream = s
 	p.global_position = pos
-	var far := listener_pos().distance_to(pos) > FAR_DIST
-	p.bus = "SFX_Far" if far else "SFX"
 	p.volume_db = volume_db - (3.0 if far else 0.0)
 	p.pitch_scale = randf_range(1.0 - pitch_var, 1.0 + pitch_var) * Engine.time_scale ** 0.35
 	p.play()
