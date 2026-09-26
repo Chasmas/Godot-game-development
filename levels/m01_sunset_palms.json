@@ -648,5 +648,6 @@
    "size": 0.8
   }
  ],
- "cameras": [{"cell": [18, 32], "angle": 90}, {"cell": [40, 32], "angle": 90}, {"cell": [65, 27], "angle": 125}]
+ "cameras": [{"cell": [18, 32], "angle": 90}, {"cell": [40, 32], "angle": 90}, {"cell": [65, 27], "angle": 125}],
+ "film_cameras": [{"cell": [5, 2], "angle": 45}, {"cell": [65, 11], "angle": 135}]
 }

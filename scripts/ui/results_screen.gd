@@ -136,6 +136,10 @@ func _director_notes() -> void:
 		notes.append(tr("Quiet work. I had to turn the volume up."))
 	if int(st.get("executions", 0)) >= 4:
 		notes.append(tr("You finish what you start. Close-ups sell."))
+	if int(st.get("feeds_cut", 0)) >= 1:
+		notes.push_front(tr("You found my cameras. Rude. There are always more."))
+	elif int(st.get("camera_kills", 0)) >= 2:
+		notes.push_front(tr("You played to the camera. I'm keeping that footage."))
 	if attempts <= 1 and notes.size() < 2:
 		notes.append(tr("One take. Print it."))
 	if notes.is_empty():

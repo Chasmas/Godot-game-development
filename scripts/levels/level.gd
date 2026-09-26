@@ -522,6 +522,11 @@ func _build_cameras() -> void:
 		cam.base_angle = deg_to_rad(float(c.get("angle", 90)))
 		cam.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - Vector2.from_angle(cam.base_angle) * 4.0
 		props_root.add_child(cam)
+	for c in data.get("film_cameras", []):
+		var fc := FilmCamera.new()
+		fc.facing = Vector2.from_angle(deg_to_rad(float(c.get("angle", 90))))
+		fc.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - fc.facing * 5.0
+		props_root.add_child(fc)
 
 func _build_checkpoint_markers() -> void:
 	var cps: Array = data.get("checkpoints", [])

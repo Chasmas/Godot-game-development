@@ -878,6 +878,10 @@ class TipCard extends Control:
 				"welder": offer("welder", "Welder's mask stops one hit and narrows his view. Come at him from the side.")
 			if d < 260.0 and p.lock_target == null:
 				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to switch.")
+		for fc in get_tree().get_nodes_in_group("film_cameras"):
+			if view.has_point(fc.global_position) and not fc._broken and fc.global_position.distance_to(p.global_position) < 160.0:
+				offer("film_camera", "A red light in the corner: somebody is filming. Play to it - kills it sees score more - or cut the feed.")
+				break
 		for cam in get_tree().get_nodes_in_group("security_cameras"):
 			if view.has_point(cam.global_position) and not cam._broken:
 				offer("camera", "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.")
