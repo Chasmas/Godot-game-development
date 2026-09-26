@@ -42,18 +42,38 @@ func shatter(dir: Vector2) -> void:
 	remove_from_group("glass")
 	Audio.play_at("glass", global_position)
 	Effects.glass(global_position, dir)
+	# a usable shard lands on the far side: a quick, fragile blade
+	var wd: WeaponData = DB.weapon(&"glass_shard")
+	var host := get_parent()
+	if wd and host:
+		var land := global_position + (dir if dir != Vector2.ZERO else Vector2.DOWN).normalized() * 12.0
+		(func(): WeaponPickup.spawn(host, WeaponInstance.create(wd), land)).call_deferred()
 	Events.noise.emit(global_position, 260.0, &"glass", null)
 	queue_redraw()
 
 func _draw() -> void:
 	var r := Rect2(-size * 0.5, size)
 	if broken:
+		# empty frame with jagged teeth of glass left along both edges
 		draw_rect(r, Color(0.1, 0.1, 0.14, 0.9))
-		var n := 5
-		for i in n:
-			var t := (i + 0.5) / n
-			var p := r.position + Vector2(r.size.x * t, r.size.y * 0.5) if size.x > size.y else r.position + Vector2(r.size.x * 0.5, r.size.y * t)
-			draw_colored_polygon(PackedVector2Array([p + Vector2(-2, -1), p + Vector2(1, -2), p + Vector2(2, 1)]), Color(0.7, 0.9, 1.0, 0.8))
+		var horiz := size.x > size.y
+		var length := size.x if horiz else size.y
+		var depth := (size.y if horiz else size.x) * 0.5
+		var rng := RandomNumberGenerator.new()
+		rng.seed = int(global_position.x * 7.0 + global_position.y)
+		for side in [-1.0, 1.0]:
+			var pts := PackedVector2Array()
+			var x := -length * 0.5
+			while x < length * 0.5:
+				var w := rng.randf_range(1.5, 4.0)
+				var h := rng.randf_range(0.3, 1.0) * depth
+				var a := Vector2(x, side * depth)
+				var tip := Vector2(x + w * rng.randf_range(0.3, 0.7), side * (depth - h))
+				var b := Vector2(minf(x + w, length * 0.5), side * depth)
+				var tri := PackedVector2Array([a, tip, b]) if horiz else PackedVector2Array([Vector2(a.y, a.x), Vector2(tip.y, tip.x), Vector2(b.y, b.x)])
+				draw_colored_polygon(tri, Color(0.6, 0.85, 1.0, 0.75))
+				draw_line(tri[0], tri[1], Color(0.9, 0.97, 1.0, 0.9), 0.6)
+				x += w
 		return
 	draw_rect(r, Color(0.45, 0.75, 0.95, 0.55))
 	draw_rect(r, Color(0.85, 0.95, 1.0, 0.9), false, 1.0)

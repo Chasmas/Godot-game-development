@@ -292,6 +292,11 @@ const WEAPONS := {
 	"kkk.kkkk.",
 	"kxxkmmmwk",
 	"kkk.kkk..",],
+	"glass_shard": [
+	"kkk.kkk...",
+	"krrkllwkk.",
+	"kkk.klllwk",
+	"....kkkk..",],
 	"bat": [
 	"...kkkkkkkkk.",
 	"kkkxxxxxxxxxk",

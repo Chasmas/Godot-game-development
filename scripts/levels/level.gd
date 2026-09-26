@@ -141,6 +141,7 @@ func _ready() -> void:
 	player.global_position = spawn
 	_build_checkpoint_markers.call_deferred()
 	_build_cameras()
+	_scatter_smashables()
 	player.died.connect(_on_player_died)
 	if not st.is_empty():
 		player.restore_upgrades(st.get("upgrades", {}))
@@ -455,6 +456,62 @@ func _check_hints(cell: Vector2i) -> void:
 ## at the marker, not wherever you happened to be standing.
 var _cp_markers: Array = []
 var _mission_start := Vector2.ZERO
+
+## Smashable scenery along the walls of rooms, chosen by floor type so it
+## suits the place (vases and chairs in motel rooms, crates and drums in the
+## yard). Deterministic, spaced out, clear of doors and the start.
+const SMASH_BY_FLOOR := {
+	".": ["vase", "chair", "box"], ",": ["box", "vase", "crate"], "_": ["crate", "box"], "=": ["vase"],
+	"+": ["crate", "box", "crate"], ";": ["drum", "crate"], "\"": ["chair", "vase"],
+}
+func _scatter_smashables() -> void:
+	if builder == null:
+		return
+	var placed: Array[Vector2i] = []
+	var start := Vector2i(_mission_start / 16.0)
+	var budget := 20
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash(str(data.get("id", "lvl")))
+	var cells: Array[Vector2i] = []
+	for y in range(1, builder.h - 1):
+		for x in range(1, builder.w - 1):
+			cells.append(Vector2i(x, y))
+	# shuffle deterministically
+	for i in range(cells.size() - 1, 0, -1):
+		var j := rng.randi_range(0, i)
+		var tmp := cells[i]
+		cells[i] = cells[j]
+		cells[j] = tmp
+	for c in cells:
+		if budget <= 0:
+			break
+		var f := builder.ch(c.x, c.y)
+		if not SMASH_BY_FLOOR.has(f) or nav.is_point_solid(c) or c.distance_to(start) < 7.0:
+			continue
+		var walls := 0
+		var near_door := false
+		for dy in range(-2, 3):
+			for dx in range(-2, 3):
+				var n := builder.ch(c.x + dx, c.y + dy)
+				if n == "D" or n == "L" or n == "W":
+					near_door = true
+				if absi(dx) + absi(dy) == 1 and n == "#":
+					walls += 1
+		if walls == 0 or near_door:
+			continue
+		var clear := true
+		for q in placed:
+			if q.distance_to(c) < 4.0:
+				clear = false
+				break
+		if not clear:
+			continue
+		var kinds: Array = SMASH_BY_FLOOR[f]
+		var sm := Smashable.new()
+		sm.setup(str(kinds[rng.randi() % kinds.size()]), c, self, rng.randi() % 1000)
+		props_root.add_child(sm)
+		placed.append(c)
+		budget -= 1
 
 ## Security cameras from the level's "cameras" list: {"cell": [x, y],
 ## "angle": degrees (0 right, 90 down)}. Mounted against the wall behind

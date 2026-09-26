@@ -643,5 +643,10 @@
  "TAPE SAVED": "CASSETE GRAVADA",
  "CAMERA DOWN": "CÂMARA ABAIXO",
  "CAMERA ALARM": "ALARME DA CÂMARA",
- "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.": "Câmara de segurança: fique fora do cone. Pode destruí-la - mas o barulho atrai um ou dois guardas."
+ "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.": "Câmara de segurança: fique fora do cone. Pode destruí-la - mas o barulho atrai um ou dois guardas.",
+ "Glass Shard": "Caco de Vidro",
+ "Picked out of a window frame, wrapped in a strip of curtain. Three good stabs, then it's sand.": "Tirado de uma moldura, embrulhado num pedaço de cortina. Três boas facadas e vira areia.",
+ "+AMMO": "+MUNIÇÃO",
+ "CASH": "DINHEIRO",
+ "+1 FLARE": "+1 SINALIZADOR"
 }

@@ -134,6 +134,7 @@ static func glass(pos: Vector2, dir: Vector2) -> void:
 	var fx := get_fx()
 	if fx:
 		fx.emit("glass", pos, dir)
+		shards(pos, dir, Color(0.75, 0.9, 1.0), 16, true)
 		for i in 10:
 			fx.decals.add_mark(pos + dir.rotated(randf_range(-1.2, 1.2)) * randf_range(4, 30), Color(0.7, 0.9, 1.0, 0.8), 0.8)
 
@@ -213,6 +214,20 @@ static func gun_smoke(pos: Vector2, dir: Vector2, amount := 1.0) -> void:
 	g.dir = dir
 	g.global_position = pos
 	fx.add_child(g)
+
+## Shards thrown out of something that broke: little angular pieces that
+## spin, skid to a stop on the floor and stay a while. Glass shards glint.
+static func shards(pos: Vector2, dir: Vector2, color: Color, count := 10, glint := false) -> void:
+	var fx := get_fx()
+	if fx == null or fx.get_child_count() > 420:
+		return
+	var s := ShardBurst.new()
+	s.color = color
+	s.glint = glint
+	s.count = count
+	s.dir = dir if dir != Vector2.ZERO else Vector2.from_angle(randf() * TAU)
+	s.global_position = pos
+	fx.add_child(s)
 
 ## Melee slash trail: a bright crescent sweeping through the attack arc
 ## (or a thrust streak for knives).
@@ -420,6 +435,50 @@ class GunSmoke extends Node2D:
 		var a := clampf(1.0 - t / 0.9, 0.0, 1.0)
 		for p in _puffs:
 			draw_circle(p.p, p.r, Color(0.75, 0.72, 0.8, 0.16 * a))
+
+
+class ShardBurst extends Node2D:
+	var color := Color.WHITE
+	var glint := false
+	var count := 10
+	var dir := Vector2.RIGHT
+	var t := 0.0
+	var _s: Array = []
+	func _ready() -> void:
+		z_index = -1
+		for i in count:
+			var a := dir.angle() + randf_range(-1.1, 1.1)
+			var sz := randf_range(1.2, 3.2)
+			_s.append({"p": Vector2.ZERO, "v": Vector2.from_angle(a) * randf_range(40.0, 140.0), "r": randf() * TAU,
+				"w": randf_range(-18.0, 18.0), "pts": PackedVector2Array([Vector2(-sz, -sz * 0.4), Vector2(sz, randf_range(-sz, sz) * 0.5), Vector2(randf_range(-sz, sz) * 0.4, sz)]),
+				"g": randf() * 6.0})
+	func _process(d: float) -> void:
+		t += d
+		var moving := false
+		for s in _s:
+			s.p += s.v * d
+			s.v = s.v.move_toward(Vector2.ZERO, 260.0 * d)
+			s.r += s.w * d
+			s.w = move_toward(s.w, 0.0, 40.0 * d)
+			if s.v.length() > 1.0:
+				moving = true
+		if t > 25.0:
+			modulate.a -= d * 0.5
+			if modulate.a <= 0.0:
+				queue_free()
+		if moving or glint:
+			queue_redraw()
+	func _draw() -> void:
+		for s in _s:
+			draw_set_transform(s.p, s.r, Vector2.ONE)
+			draw_colored_polygon(s.pts, Color(color, 0.85 if glint else 1.0))
+			draw_polyline(PackedVector2Array([s.pts[0], s.pts[1]]), Color(color.lightened(0.5), 0.9), 0.6)
+			if glint:
+				var g := fmod(t * 1.3 + s.g, 6.0)
+				if g < 0.12:
+					draw_line(Vector2(-2, 0), Vector2(2, 0), Color.WHITE, 0.6)
+					draw_line(Vector2(0, -2), Vector2(0, 2), Color.WHITE, 0.6)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
 class ExplosionRing extends Node2D:

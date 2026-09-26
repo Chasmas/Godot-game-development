@@ -601,7 +601,7 @@ func _melee_attack(heavy: bool) -> void:
 	if w == null or _melee_cd > 0.0:
 		return
 	_melee_cd = w.data.melee_cooldown * (1.45 if heavy else 1.0) * (0.75 if upgrades.has(&"quick_hands") else 1.0)
-	var stab := w.data.id == &"knife" or w.data.id == &"broken_bottle"
+	var stab := w.data.id in [&"knife", &"broken_bottle", &"glass_shard"]
 	visual.swing(heavy, stab)
 	Audio.play_at("swing_heavy" if heavy else "swing", global_position, -2.0, 0.15)
 	_pending_melee = w.data.melee_windup * 0.5 + (0.04 if heavy else 0.0)
