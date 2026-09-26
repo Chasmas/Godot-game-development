@@ -19,6 +19,8 @@ var _relocating := false
 var flashlight: PointLight2D
 var _defeated := false
 var active := false
+var _phase_intro_t := 0.0
+var _rage_pulse_t := 0.0
 
 const BARKS_HIT := ["You're bleeding on my carpet!", "SECURITY! Front desk!", "Do you know who OWNS this place?"]
 const BARKS_P2 := ["Let's see how you do in the dark, hotshot."]
@@ -42,6 +44,12 @@ func activate() -> void:
 
 func _physics_process(delta: float) -> void:
 	_bark_t = maxf(0.0, _bark_t - delta)
+	_phase_intro_t = maxf(0.0, _phase_intro_t - delta)
+	_rage_pulse_t += delta
+	if phase == 2 and active and not _defeated and fmod(_rage_pulse_t, 2.4) < delta:
+		flashlight.energy = 2.15
+		var ft := create_tween()
+		ft.tween_property(flashlight, "energy", 1.6, 0.22)
 	if not active:
 		visual.set_aim(facing.angle())
 		return
@@ -96,6 +104,11 @@ func _start_phase_two() -> void:
 	data.reaction_time = 0.45
 	data.aim_error_deg = 6.0
 	_say(BARKS_P2[0])
+	_phase_intro_t = 1.0
+	visual.flash(0.22)
+	PostFX.flash(Color(0.2, 0.35, 0.75), 0.18)
+	Events.camera_shake.emit(6.0)
+	Events.camera_punch.emit(1.16, 0.32)
 	Audio.play_at("power_down", global_position, 2.0)
 	Events.boss_phase.emit(2)
 	if level and level.has_method("boss_lights_out"):
@@ -115,7 +128,8 @@ func take_damage(info: DamageInfo) -> String:
 		# heavy blows count as armour hits too - no cheesing him with one knife
 		if armor_left > 0:
 			armor_left -= 1
-			visual.flash(0.15)
+			visual.hit_react(info.dir, true, 0.18)
+			Events.camera_punch.emit(1.07, 0.12)
 			_knock = info.dir * 200.0
 			Audio.play_at("hit_blunt", global_position)
 			_on_armor_hit(info)
@@ -131,6 +145,9 @@ func _final_down(info: DamageInfo) -> void:
 	visual.torso.texture = SpriteLib.downed(data.palette)
 	visual.legs.visible = false
 	visual.weapon_sprite.visible = false
+	visual.fall(info.dir)
+	PostFX.flash(Color(1.0, 0.16, 0.22), 0.16)
+	Events.camera_shake.emit(9.0)
 	_knock = info.dir * 150.0
 	Effects.blood(global_position, info.dir, true)
 	Audio.play_at("body_fall", global_position)
