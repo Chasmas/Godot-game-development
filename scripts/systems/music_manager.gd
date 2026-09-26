@@ -15,9 +15,13 @@ var _targets: Array[float] = []
 var _levels: Array[float] = []
 var _master_fade := 1.0
 var _master_target := 1.0
+var synthwave: ProceduralSynthwave
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	synthwave = ProceduralSynthwave.new()
+	synthwave.name = "ProceduralSynthwave"
+	add_child(synthwave)
 	var f := FileAccess.open("res://data/music.json", FileAccess.READ)
 	if f:
 		var parsed: Variant = JSON.parse_string(f.get_as_text())
@@ -33,6 +37,11 @@ func play(track_id: String, restart := false) -> void:
 		push_warning("Unknown music track %s" % track_id)
 		return
 	current_id = track_id
+	if synthwave:
+		if track_id == "motel":
+			synthwave.start(110.0)
+		else:
+			synthwave.stop()
 	var layers: Array = tracks[track_id].layers
 	for i in layers.size():
 		var p := AudioStreamPlayer.new()
@@ -64,6 +73,8 @@ func stop(fade_time := 1.0) -> void:
 		_players.clear()
 		_targets.clear()
 		_levels.clear()
+		if synthwave:
+			synthwave.stop()
 		current_id = ""
 	else:
 		_master_target = 0.0
@@ -81,6 +92,8 @@ func set_intensity(level: int, instant := false) -> void:
 	if not t.has("intensity"):
 		return
 	var mix: Array = t.intensity[mini(intensity, t.intensity.size() - 1)]
+	if synthwave:
+		synthwave.set_intensity(intensity)
 	for i in _targets.size():
 		_targets[i] = float(mix[i]) if i < mix.size() else 0.0
 		if instant:
