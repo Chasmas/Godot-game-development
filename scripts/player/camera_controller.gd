@@ -34,6 +34,9 @@ func add_trauma(amount: float) -> void:
 	_trauma = clampf(_trauma + amount * 0.06, 0.0, 1.0)
 
 func punch(z: float, duration: float) -> void:
+	# a gunshot's tiny punch never cuts short a bigger one (executions)
+	if _punch_time > 0.0 and z < _punch_target:
+		return
 	_punch_target = z
 	_punch_time = duration
 

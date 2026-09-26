@@ -545,6 +545,10 @@ func _try_shoot(w: WeaponInstance) -> void:
 	if w.data.fire_hit_stop > 0.0:
 		Events.hit_stop.emit(w.data.fire_hit_stop)
 	InputSetup.vibrate(0.2, clampf(w.data.camera_kick * 0.06, 0.08, 0.45), 0.08)
+	# punch: a hair of zoom per shot, more for heavy guns, and smoke that
+	# hangs where the gun went off
+	Events.camera_punch.emit(1.0 + clampf(w.data.camera_kick * 0.006, 0.004, 0.035), 0.07)
+	Effects.gun_smoke(origin, aim_dir, 1.4 if w.data.pellets > 1 else (0.6 if silenced else 1.0))
 	_emit_weapon()
 
 func gun_noise(w: WeaponInstance) -> float:
@@ -570,7 +574,7 @@ func _start_reload() -> void:
 		return
 	_reload_t = w.data.reload_time * data.reload_mult * (0.55 if upgrades.has(&"quick_hands") else 1.0) * (DUAL_RELOAD if w.dual else 1.0)
 	_reload_weapon = w
-	Audio.play_at("reload", global_position, -4.0)
+	visual.reload_anim(_reload_t, "dual" if w.dual else ("shell" if w.data.pellets > 1 else "mag"))
 
 func _finish_reload() -> void:
 	var w := current()
@@ -708,6 +712,7 @@ func _throw_current() -> void:
 		Audio.play_at("throw", global_position)
 		visual.punch()
 		_reload_t = 0.0
+		visual.cancel_reload()
 		_refresh_weapon()
 		return
 	WeaponPickup.spawn(parent, w, visual.hand_global(), aim_dir * spd + velocity * 0.3, self)
@@ -715,6 +720,7 @@ func _throw_current() -> void:
 	Audio.play_at("throw", global_position)
 	visual.punch()
 	_reload_t = 0.0
+	visual.cancel_reload()
 	# auto-draw the holstered weapon
 	var other := 1 - slot
 	if slots[other] != null:
@@ -749,6 +755,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 		cur.reserve += new_w.reserve
 		pk.queue_free()
 		_reload_t = 0.0
+		visual.cancel_reload()
 		_dual_left = true
 		Audio.play_at("pickup", global_position)
 		Audio.play_at("reload", global_position, -8.0, 0.1)
@@ -765,6 +772,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 	_apply_ext_mag(new_w)
 	pk.queue_free()
 	_reload_t = 0.0
+	visual.cancel_reload()
 	Audio.play_at("pickup", global_position)
 	Events.weapon_picked_up.emit(new_w.data.id)
 	_refresh_weapon()
@@ -774,6 +782,7 @@ func _swap() -> void:
 		return
 	slot = 1 - slot
 	_reload_t = 0.0
+	visual.cancel_reload()
 	Audio.play("pickup", -10.0, 1.3)
 	_refresh_weapon()
 

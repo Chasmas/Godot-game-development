@@ -204,6 +204,16 @@ static func muzzle(pos: Vector2, dir: Vector2, color: Color, big := false, scale
 	f.rotation = dir.angle()
 	fx.add_child(f)
 
+static func gun_smoke(pos: Vector2, dir: Vector2, amount := 1.0) -> void:
+	var fx := get_fx()
+	if fx == null or fx.get_child_count() > 400:
+		return
+	var g := GunSmoke.new()
+	g.amount = amount
+	g.dir = dir
+	g.global_position = pos
+	fx.add_child(g)
+
 ## Melee slash trail: a bright crescent sweeping through the attack arc
 ## (or a thrust streak for knives).
 static func slash(pos: Vector2, angle: float, radius: float, arc: float, tint: Color, heavy := false, stab := false, side := 1.0) -> void:
@@ -348,26 +358,68 @@ class MuzzleFlash extends Node2D:
 	var color := Color.WHITE
 	var big := false
 	var t := 0.0
+	var _petals: Array = []
+	var _sparks: Array = []
+	const LIFE := 0.07
 	func _ready() -> void:
 		z_index = 20
+		# every flash is a different jagged shape
+		for i in (7 if big else 5):
+			_petals.append(Vector2(randf_range(-0.9, 0.9), randf_range(0.5, 1.0)))
+		for i in (6 if big else 3):
+			_sparks.append([randf_range(-0.35, 0.35), randf_range(60.0, 160.0)])
 	func _process(d: float) -> void:
 		t += d
-		if t > 0.05:
+		if t > LIFE + 0.08:
 			queue_free()
 		queue_redraw()
 	func _draw() -> void:
 		var s := (1.6 if big else 1.0) * scale_mult
-		# two frames: full star, then a smaller dimmer one (reads as a flash,
-		# not a sticker)
-		var k := clampf(t / 0.05, 0.0, 1.0)
-		var sz := s * (1.0 - k * 0.45)
-		var pts := PackedVector2Array([Vector2(0, -3) * sz, Vector2(12, 0) * sz, Vector2(0, 3) * sz, Vector2(3, 0) * sz])
-		draw_colored_polygon(pts, Color(color, 1.0 - k * 0.5))
-		if big:
-			for a in [-0.5, 0.5]:
-				var d := Vector2.from_angle(a)
-				draw_colored_polygon(PackedVector2Array([d.orthogonal() * 1.5 * sz, d * 9.0 * sz, -d.orthogonal() * 1.5 * sz]), Color(color, 0.8 - k * 0.5))
-		draw_circle(Vector2(2, 0), 3.0 * sz, Color(1, 1, 0.9, 1.0 - k * 0.6))
+		var k := clampf(t / LIFE, 0.0, 1.0)
+		if k < 1.0:
+			# frame 1: white-hot core and long flare; frame 2: smaller, orange
+			var hot := k < 0.4
+			var sz := s * (1.15 if hot else 0.75)
+			var c := Color(1, 1, 0.95) if hot else color
+			for p in _petals:
+				var ang: float = p.x * (0.9 if big else 0.6)
+				var ln: float = (13.0 if hot else 8.0) * p.y * sz
+				var dir := Vector2.from_angle(ang)
+				draw_colored_polygon(PackedVector2Array([dir.orthogonal() * 2.2 * sz, dir * ln, -dir.orthogonal() * 2.2 * sz]), Color(c, 0.95 - k * 0.4))
+			draw_colored_polygon(PackedVector2Array([Vector2(0, -2.5) * sz, Vector2(17, 0) * sz, Vector2(0, 2.5) * sz]), Color(color, 0.9 - k * 0.5))
+			draw_circle(Vector2(2, 0), 4.0 * sz, Color(1, 1, 0.9, 1.0 - k * 0.6))
+			draw_circle(Vector2(2, 0), 9.0 * sz, Color(color, 0.25 * (1.0 - k)))
+		# sparks keep flying a moment after the flash
+		for sp in _sparks:
+			var dir2 := Vector2.from_angle(float(sp[0]))
+			var dist: float = float(sp[1]) * t
+			var a := clampf(1.0 - t / (LIFE + 0.08), 0.0, 1.0)
+			draw_line(dir2 * (6.0 + dist), dir2 * (10.0 + dist * 1.1), Color(1, 0.85, 0.4, a), 1.0)
+
+
+## Smoke that hangs where a gun went off, drifting and spreading.
+class GunSmoke extends Node2D:
+	var amount := 1.0
+	var dir := Vector2.RIGHT
+	var t := 0.0
+	var _puffs: Array = []
+	func _ready() -> void:
+		z_index = 19
+		for i in int(3 * amount) + 1:
+			_puffs.append({"p": dir * randf_range(4, 12) + Vector2(randf_range(-2, 2), randf_range(-2, 2)), "v": dir * randf_range(8, 22) + Vector2(randf_range(-6, 6), randf_range(-6, 6)), "r": randf_range(2.0, 3.5) * amount})
+	func _process(d: float) -> void:
+		t += d
+		for p in _puffs:
+			p.p += p.v * d
+			p.v *= 1.0 - d * 2.5
+			p.r += d * 7.0
+		if t > 0.9:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var a := clampf(1.0 - t / 0.9, 0.0, 1.0)
+		for p in _puffs:
+			draw_circle(p.p, p.r, Color(0.75, 0.72, 0.8, 0.16 * a))
 
 
 class ExplosionRing extends Node2D:

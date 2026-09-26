@@ -627,7 +627,7 @@ func _gun_combat(p: Player, dist: float, delta: float) -> Vector2:
 		return move * 0.6
 	if weapon.ammo <= 0:
 		_reload_t = weapon.data.reload_time * 1.35
-		Audio.play_at("reload", global_position, -8.0)
+		visual.reload_anim(_reload_t, "shell" if weapon.data.pellets > 1 else "mag")
 		return move
 	var crowd := _crowd()
 	_holding = crowd != null and not crowd.request_shooter(self)
