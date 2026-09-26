@@ -13,6 +13,7 @@ const CUTSCENES := {
 	"news_1988": ROOT + "cutscenes/news_1988.png",
 	"m01_room_204": ROOT + "cutscenes/room_204.png",
 	"m01_boss_intro": ROOT + "cutscenes/harcourt_confrontation.png",
+	"m01_boss_down": ROOT + "cutscenes/harcourt_confrontation.png",
 }
 
 static func texture_for(path: String) -> Texture2D:
