@@ -110,12 +110,51 @@ func _stamp() -> void:
 	ex.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	UIStyle.place(ex, Control.PRESET_CENTER_RIGHT, Vector2(-420, 100), Vector2(360, 30))
 	add_child(ex)
+	_director_notes()
 	await get_tree().create_timer(0.4).timeout
 	buttons.visible = true
 	var cont := _btn("CONTINUE", func(): Game.story_beat_finished())
 	_btn("RETRY", func(): Game.start_mission(String(Game.current_mission.id), String(Game.current_character.id), Game.modifiers))
 	_btn("TITLE", func(): Game.goto_title())
 	cont.grab_focus()
+
+## THE VOICE reviews the take: two notes picked from how you played, typed
+## out under the rank.
+func _director_notes() -> void:
+	var st: Dictionary = r.get("stats", {})
+	var notes: Array[String] = []
+	var attempts := int(st.get("attempts", 1))
+	if attempts >= 5:
+		notes.append(tr("%d takes. The audience never sees the takes. I do.") % attempts)
+	if float(r.get("accuracy", 1.0)) < 0.35 and int(st.get("shots", 0)) > 10:
+		notes.append(tr("You spray like a garden hose. Aim is a choice."))
+	if int(st.get("beat_kills", 0)) >= 5:
+		notes.append(tr("You found the rhythm. The editors will thank you."))
+	if int(r.get("max_combo", 0)) >= 8:
+		notes.append(tr("That run in the middle - that's the trailer."))
+	if int(st.get("silent_kills", 0)) >= 5:
+		notes.append(tr("Quiet work. I had to turn the volume up."))
+	if int(st.get("executions", 0)) >= 4:
+		notes.append(tr("You finish what you start. Close-ups sell."))
+	if attempts <= 1 and notes.size() < 2:
+		notes.append(tr("One take. Print it."))
+	if notes.is_empty():
+		notes.append(tr("Adequate. Tomorrow, be magnificent."))
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", 4)
+	UIStyle.place(box, Control.PRESET_BOTTOM_LEFT, Vector2(60, -96), Vector2(450, 90))
+	add_child(box)
+	box.add_child(UIStyle.label("DIRECTOR'S NOTES", 12, UIStyle.GOLD, true))
+	for i in mini(2, notes.size()):
+		var l := UIStyle.label("“" + notes[i] + "”", 13, UIStyle.PAPER)
+		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		l.custom_minimum_size = Vector2(450, 0)
+		l.visible_ratio = 0.0
+		box.add_child(l)
+		var tw := create_tween()
+		tw.tween_interval(0.3 + i * 1.1)
+		tw.tween_callback(func(): Audio.play("type_clack", -12.0))
+		tw.tween_property(l, "visible_ratio", 1.0, 0.9)
 
 func _btn(t: String, cb: Callable) -> Button:
 	var b := Button.new()

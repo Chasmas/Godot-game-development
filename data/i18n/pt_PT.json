@@ -648,5 +648,14 @@
  "Picked out of a window frame, wrapped in a strip of curtain. Three good stabs, then it's sand.": "Tirado de uma moldura, embrulhado num pedaço de cortina. Três boas facadas e vira areia.",
  "+AMMO": "+MUNIÇÃO",
  "CASH": "DINHEIRO",
- "+1 FLARE": "+1 SINALIZADOR"
+ "+1 FLARE": "+1 SINALIZADOR",
+ "%d takes. The audience never sees the takes. I do.": "%d takes. O público nunca vê os takes. Eu vejo.",
+ "You spray like a garden hose. Aim is a choice.": "Dispara como uma mangueira de jardim. Apontar é uma escolha.",
+ "You found the rhythm. The editors will thank you.": "Encontrou o ritmo. Os montadores vão agradecer.",
+ "That run in the middle - that's the trailer.": "Aquela sequência a meio - isso é o trailer.",
+ "Quiet work. I had to turn the volume up.": "Trabalho silencioso. Tive de aumentar o volume.",
+ "You finish what you start. Close-ups sell.": "Acaba o que começa. Grandes planos vendem.",
+ "One take. Print it.": "Um take. Fica esse.",
+ "Adequate. Tomorrow, be magnificent.": "Adequado. Amanhã, seja magnífica.",
+ "DIRECTOR'S NOTES": "NOTAS DO REALIZADOR"
 }
