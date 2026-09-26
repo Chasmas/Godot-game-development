@@ -97,6 +97,15 @@ func _build_decor(level_data: Dictionary) -> void:
 					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 1.0)
 				if car:
 					car.rotation.y = 0.15
+			elif ch == "Q":
+				_add_model("arcade", "res://assets/models/arcade_cabinet.obj",
+					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.72)
+			elif ch == "o":
+				_add_model("lamp", "res://assets/models/street_lamp.obj",
+					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.68)
+			elif ch == "Z":
+				_add_model("dumpster", "res://assets/models/dumpster.obj",
+					Vector2(x * PIXELS_PER_UNIT + 8.0, y * PIXELS_PER_UNIT + 8.0), 0.9)
 
 	# One dimensional neon sign tied to the motel exterior.
 	for item in decor:
@@ -144,6 +153,17 @@ func _material(kind: String) -> StandardMaterial3D:
 			m.emission = Color("#ff246f")
 			m.emission_energy_multiplier = 3.2
 			m.roughness = 0.28
+		"arcade":
+			m.albedo_color = Color("#263b8f")
+			m.metallic = 0.25
+			m.roughness = 0.38
+		"lamp":
+			m.albedo_color = Color("#3d3d48")
+			m.metallic = 0.65
+			m.roughness = 0.3
+		"dumpster":
+			m.albedo_color = Color("#31594d")
+			m.roughness = 0.85
 	_materials[kind] = m
 	return m
 
