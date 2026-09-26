@@ -23,7 +23,6 @@ var _choice_i := 0
 var _choices: Array = []
 var _pause_game := true
 var _auto_t := -1.0
-var _blip_t := 0.0
 var _input_block := 0.0
 
 var root: Control
@@ -33,6 +32,9 @@ var text_label: RichTextLabel
 var portrait: Portrait
 var choice_box: VBoxContainer
 var hint_label: Label
+var _fx := TextFX.Pop.new()
+var _spk := ""
+var _voice_i := -1
 
 func _ready() -> void:
 	layer = 80
@@ -78,6 +80,7 @@ func _build_ui() -> void:
 	text_label.add_theme_font_override("normal_font", UIStyle.font_mono())
 	text_label.add_theme_font_size_override("normal_font_size", 18)
 	text_label.add_theme_color_override("default_color", UIStyle.PAPER)
+	text_label.install_effect(_fx)
 	vb.add_child(text_label)
 	choice_box = VBoxContainer.new()
 	vb.add_child(choice_box)
@@ -146,9 +149,16 @@ func _goto(node_id: String) -> void:
 	portrait.speaker = spk
 	portrait.mood = str(_node.get("mood", _infer_mood(str(_node.get("text", "")))))
 	_full = tr(str(_node.get("text", "")))
-	text_label.text = ("[i]" + _full + "[/i]") if spk == "narration" else _full
-	text_label.visible_characters = 0
+	# the whole line is laid out up front (the box sizes to it once) and the
+	# Pop effect reveals it letter by letter
+	var body := ("[i]" + _full + "[/i]") if spk == "narration" else _full
+	text_label.text = "[pop]" + body + "[/pop]"
+	text_label.visible_characters = -1
 	_shown = 0.0
+	_spk = spk
+	_voice_i = -1
+	_fx.shown = 0.0
+	_fx.mood = _text_mood(spk, portrait.mood)
 	_auto_t = float(_node.get("auto", -1.0))
 	if not _pause_game and _auto_t < 0.0:
 		_auto_t = 1.2 + _full.length() / 22.0
@@ -173,6 +183,20 @@ func _infer_mood(text: String) -> String:
 	if t.begins_with("..."):
 		return "sad"
 	return ""
+
+## How the letters move for this line.
+func _text_mood(spk: String, mood: String) -> String:
+	if spk == "voice":
+		return "phone"
+	if spk == "narration":
+		return "dream"
+	if mood in ["angry", "scared", "shock", "sad"]:
+		return mood
+	return ""
+
+## Still typing the current line out.
+func is_typing() -> bool:
+	return _shown < _full.length()
 
 func _check(cond: String) -> bool:
 	var neg := cond.begins_with("!")
@@ -206,9 +230,9 @@ func _pick(i: int) -> void:
 	_goto(str(ch.get("next", "")))
 
 func _advance() -> void:
-	if text_label.visible_characters < _full.length():
-		text_label.visible_characters = _full.length()
+	if is_typing():
 		_shown = _full.length()
+		_fx.shown = _shown + TextFX.SETTLE
 		return
 	if not _choices.is_empty():
 		return
@@ -244,17 +268,18 @@ func _process(delta: float) -> void:
 	box.offset_top = -BOX_BOTTOM - maxf(BOX_MIN_H, need)
 	var real := delta / maxf(Engine.time_scale, 0.03) if not get_tree().paused else delta
 	_input_block = maxf(0.0, _input_block - real)
-	if text_label.visible_characters < _full.length():
-		_shown += real * _cps
-		text_label.visible_characters = int(_shown)
+	_fx.clock += real
+	if is_typing():
+		# a beat on punctuation, like someone drawing breath
+		var at := clampi(int(_shown), 0, _full.length() - 1)
+		var slow := 0.25 if _full[at] in [".", "!", "?", "…"] else (0.5 if _full[at] == "," else 1.0)
+		_shown = minf(_shown + real * _cps * slow, _full.length())
+		_fx.shown = _shown
 		portrait.talking = true
-		_blip_t -= real
-		if _blip_t <= 0.0:
-			_blip_t = 0.055
-			var spk := str(_node.get("speaker", "narration"))
-			if spk != "narration":
-				Audio.play("blip", -10.0, float(speakers.get(spk, {}).get("pitch", 1.0)) * randf_range(0.95, 1.05))
+		_speak(int(_shown))
 	else:
+		_fx.shown = _full.length() + TextFX.SETTLE
+
 		portrait.talking = false
 		_show_choices()
 		hint_label.visible = _choices.is_empty() and _pause_game
@@ -263,10 +288,24 @@ func _process(delta: float) -> void:
 			if _auto_t <= 0.0:
 				_advance()
 
+## Babble: one grain every other spoken letter (the vowel follows the text),
+## narration gets a typewriter key instead.
+func _speak(i: int) -> void:
+	if i == _voice_i or not TextFX.speaks(_full, i):
+		return
+	_voice_i = i
+	if i % 2 == 1:
+		return
+	if _spk == "narration":
+		Audio.play("type_clack", -16.0, randf_range(0.9, 1.1))
+		return
+	var base := float(speakers.get(_spk, {}).get("pitch", 1.0))
+	Audio.play(TextFX.voice_grain(_spk, _full, i), -9.0, TextFX.voice_pitch(base, _full, i))
+
 func _unhandled_input(e: InputEvent) -> void:
 	if not active or not _pause_game or _input_block > 0.0:
 		return
-	if not _choices.is_empty() and text_label.visible_characters >= _full.length():
+	if not _choices.is_empty() and not is_typing():
 		return   # buttons handle it
 	var pressed := (e.is_action_pressed("ui_confirm") or e.is_action_pressed("fire") or e.is_action_pressed("interact") or e.is_action_pressed("ui_accept"))
 	if pressed:

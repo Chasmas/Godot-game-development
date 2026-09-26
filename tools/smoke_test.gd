@@ -85,7 +85,7 @@ func _run() -> void:
 	for i in 40:
 		if not Dialogue.active:
 			break
-		if not Dialogue._choices.is_empty() and Dialogue.text_label.visible_characters >= Dialogue._full.length():
+		if not Dialogue._choices.is_empty() and not Dialogue.is_typing():
 			Dialogue._pick(1)
 		else:
 			Dialogue._advance()
@@ -286,7 +286,7 @@ func _run() -> void:
 		for i in 30:
 			if not Dialogue.active:
 				break
-			if not Dialogue._choices.is_empty() and Dialogue.text_label.visible_characters >= Dialogue._full.length():
+			if not Dialogue._choices.is_empty() and not Dialogue.is_typing():
 				Dialogue._pick(1)   # walk away
 			else:
 				Dialogue._advance()
@@ -299,7 +299,7 @@ func _run() -> void:
 		for i in 30:
 			if not Dialogue.active:
 				break
-			if not Dialogue._choices.is_empty() and Dialogue.text_label.visible_characters >= Dialogue._full.length():
+			if not Dialogue._choices.is_empty() and not Dialogue.is_typing():
 				Dialogue._pick(1)
 			else:
 				Dialogue._advance()

@@ -26,6 +26,8 @@ class Bark:
 	var life := 2.8
 	var color := Color(0.96, 0.94, 0.9)
 	var rect := Rect2()
+	var voice_i := -1
+	var mood := ""
 
 var _barks: Array[Bark] = []
 var _canvas: Control
@@ -45,6 +47,8 @@ static func find(tree: SceneTree) -> BarkLayer:
 func _enter_tree() -> void:
 	add_to_group("bark_layer")
 
+const CPS := 42.0
+
 ## Show (or replace) what `speaker` is saying. text is translated here.
 func say(speaker: Node2D, text: String, life := 2.8, color := Color(0.96, 0.94, 0.9), who := "") -> void:
 	if speaker == null or text == "":
@@ -55,16 +59,34 @@ func say(speaker: Node2D, text: String, life := 2.8, color := Color(0.96, 0.94, 
 		if b.speaker == speaker:
 			b.text = tr(text)
 			b.t = 0.0
-			b.life = life
+			b.voice_i = -1
+			b.life = _life_for(b.text, life)
 			b.color = color
+			b.mood = _mood_of(b.text)
 			return
 	var nb := Bark.new()
 	nb.speaker = speaker
 	nb.text = tr(text)
-	nb.life = life
+	nb.life = _life_for(nb.text, life)
 	nb.color = color
 	nb.name = who
+	nb.mood = _mood_of(nb.text)
 	_barks.append(nb)
+	Audio.play_at("bubble_pop", speaker.global_position, -10.0, 0.1)
+
+## Long lines stay up long enough to be typed out and read.
+static func _life_for(text: String, life: float) -> float:
+	return maxf(life, text.length() / CPS + 1.6)
+
+static func _mood_of(text: String) -> String:
+	var t := text.strip_edges()
+	if t.ends_with("!?") or t.ends_with("?!"):
+		return "shock"
+	if t.ends_with("!") and t.to_upper() == t:
+		return "angry"
+	if t.begins_with("..."):
+		return "sad"
+	return ""
 
 func clear(speaker: Node2D) -> void:
 	for b in _barks.duplicate():
@@ -77,6 +99,12 @@ func _process(delta: float) -> void:
 		b.t += rd
 		if b.t >= b.life or not is_instance_valid(b.speaker):
 			_barks.erase(b)
+			continue
+		# quiet babble while the bubble types out, from where they stand
+		var i := int(b.t * CPS)
+		if i != b.voice_i and i < b.text.length() and i % 3 == 0 and TextFX.speaks(b.text, i):
+			b.voice_i = i
+			Audio.play_at(TextFX.voice_grain("", b.text, i), b.speaker.global_position, -13.0, 0.12)
 	_canvas.queue_redraw()
 
 func _font_size() -> int:
@@ -137,10 +165,28 @@ func _draw_barks() -> void:
 		_canvas.draw_colored_polygon(PackedVector2Array([base - side, tail_tip, base + side]), bg)
 		_canvas.draw_rect(lr, bg)
 		_canvas.draw_rect(lr, Color(b.color, 0.55 * a), false, 1.0)
+		# letters pop in as they're typed (the bubble is sized for the whole line)
+		var shown := b.t * CPS
+		var ci := 0
 		for i in lines.size():
 			var lp := lr.position + PAD + Vector2(0, lh * i + f.get_ascent(fs))
-			_canvas.draw_string_outline(f, lp, lines[i], HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 4, Color(0, 0, 0, 0.8 * a))
-			_canvas.draw_string(f, lp, lines[i], HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(b.color, a))
+			var line: String = lines[i]
+			var x := 0.0
+			for j in line.length():
+				var ch := line[j]
+				var gw := f.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+				var pose := TextFX.letter_pose(ci, shown, b.t, b.mood)
+				ci += 1
+				if not pose.visible:
+					break
+				var la: float = a * float(pose.alpha)
+				var gc: Vector2 = lp + Vector2(x + gw * 0.5, 0) + pose.offset
+				_canvas.draw_set_transform(ctr + gc * pop, 0.0, Vector2.ONE * pop * float(pose.scale))
+				_canvas.draw_string_outline(f, Vector2(-gw * 0.5, 0), ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 4, Color(0, 0, 0, 0.8 * la))
+				_canvas.draw_string(f, Vector2(-gw * 0.5, 0), ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(b.color, la))
+				x += gw
+			ci += 1   # the space the wrap swallowed
+		_canvas.draw_set_transform(ctr, 0.0, Vector2.ONE * pop)
 		if off:
 			# the speaker is off screen: a small arrow at the bubble edge
 			var dir := (tip - base).normalized()
