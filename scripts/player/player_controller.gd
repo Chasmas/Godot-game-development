@@ -324,6 +324,8 @@ func _start_dash() -> void:
 	collision_mask = Layers.WALK_MASK_PLAYER & ~Layers.LOW & ~Layers.GLASS & ~Layers.ENEMY
 	Audio.play_at("dash", global_position, -4.0)
 	Effects.smoke(global_position)
+	Events.camera_punch.emit(1.045, 0.11)
+	Events.camera_nudge.emit(-_dash_dir * 2.5)
 
 func _end_dash() -> void:
 	_dash_t = 0.0
@@ -485,6 +487,8 @@ func _try_shoot(w: WeaponInstance) -> void:
 	Audio.play_at("suppressed" if silenced else w.data.sfx_fire, global_position, 0.0, 0.05)
 	Events.noise.emit(global_position, gun_noise(w), &"gunshot", self)
 	Events.camera_shake.emit(w.data.camera_kick)
+	Events.camera_punch.emit(1.0 + minf(w.data.camera_kick * 0.006, 0.045), 0.045)
+	Events.camera_nudge.emit(-aim_dir * minf(w.data.camera_kick * 0.7, 4.0))
 	InputSetup.vibrate(0.2, 0.3 if w.data.pellets > 1 else 0.1, 0.08)
 	_emit_weapon()
 
