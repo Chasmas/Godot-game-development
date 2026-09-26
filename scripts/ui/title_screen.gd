@@ -216,20 +216,167 @@ func _show_chapters() -> void:
 	_open_panel("CHAPTERS")
 	var done: bool = SaveManager.data.missions.has("m01_checkout")
 	var reached: bool = int(SaveManager.data.story.chapter) >= 2 or done
-	var first := _panel_button("1988  ·  CHAPTER I  ·  CHECKOUT TIME  —  Sunset Palms Motel", func():
-		if reached:
-			Game.replay_mission("m01_checkout")
-		else:
-			Game.new_game())
 	var m2_open: bool = done or SaveManager.data.missions.has("m02_dog_days")
-	_panel_button("1988  ·  CHAPTER I-B  ·  DOG DAYS  —  Yermo Salvage & K-9" if m2_open else "1988  ·  CHAPTER I-B  ·  ████████  —  FINISH CHAPTER I", func():
-		Game.replay_mission("m02_dog_days"), not m2_open)
-	first.grab_focus()
-	_panel_button("1990  ·  CHAPTER II  ·  ████████  —  TAPE DAMAGED", func(): pass, true)
-	_panel_button("1991  ·  CHAPTER III  ·  ████████  —  TAPE DAMAGED", func(): pass, true)
-	_panel_button("1992  ·  CHAPTER IV  ·  ████████  —  TAPE DAMAGED", func(): pass, true)
+	var chapters := [
+		{"mission": "m01_checkout", "year": "1988", "num": "I", "title": "CHECKOUT TIME", "place": "Sunset Palms Motel", "cover": "motel_night", "open": true},
+		{"mission": "m02_dog_days", "year": "1988", "num": "I-B", "title": "DOG DAYS", "place": "Yermo Salvage & K-9", "cover": "salvage_yard", "open": m2_open},
+		{"mission": "", "year": "1990", "num": "II", "title": "THE GALAXY PALACE", "place": "TAPE DAMAGED", "cover": "galaxy_palace", "open": false},
+		{"mission": "", "year": "1991", "num": "III", "title": "BARSTOW PD", "place": "TAPE DAMAGED", "cover": "barstow_pd", "open": false},
+		{"mission": "", "year": "1992", "num": "IV", "title": "THE HILLS", "place": "TAPE DAMAGED", "cover": "hills_fire", "open": false},
+	]
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 12)
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	panel_body.add_child(row)
+	var detail := ChapterDetail.new()
+	detail.custom_minimum_size = Vector2(720, 96)
+	var first: ChapterCard = null
+	for ch in chapters:
+		var card := ChapterCard.new()
+		card.info = ch
+		card.custom_minimum_size = Vector2(132, 214)
+		var info: Dictionary = ch
+		card.focus_entered.connect(func():
+			Audio.play("ui_move", -8.0)
+			detail.info = info)
+		card.mouse_entered.connect(func(): card.grab_focus())
+		card.pressed.connect(func():
+			if not info.open:
+				Audio.play("ui_back")
+				PostFX.vhs_glitch(0.4)
+				card.shake()
+				return
+			Audio.play("ui_select")
+			PostFX.vhs_glitch(0.6)
+			if info.mission == "m01_checkout" and not reached:
+				Game.new_game()
+			else:
+				Game.replay_mission(str(info.mission)))
+		row.add_child(card)
+		if first == null:
+			first = card
+	panel_body.add_child(detail)
 	_back_button()
 	first.grab_focus()
+
+## A chapter as a VHS tape box: painted cover (the chapter's story shot),
+## year spine, title strip. Lifts and glows when focused; locked tapes show
+## tracking noise and a DAMAGED sticker.
+class ChapterCard extends Button:
+	var info: Dictionary
+	var _t := 0.0
+	var _lift := 0.0
+	var _shake := 0.0
+	func _ready() -> void:
+		flat = true
+		focus_mode = Control.FOCUS_ALL
+		texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+		add_theme_stylebox_override("hover", StyleBoxEmpty.new())
+		add_theme_stylebox_override("pressed", StyleBoxEmpty.new())
+		add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+	func shake() -> void:
+		_shake = 1.0
+	func _process(delta: float) -> void:
+		_t += delta
+		_lift = move_toward(_lift, 1.0 if has_focus() else 0.0, delta * 6.0)
+		_shake = move_toward(_shake, 0.0, delta * 3.0)
+		queue_redraw()
+	func _draw() -> void:
+		var open: bool = info.get("open", false)
+		var e := _lift * _lift * (3.0 - 2.0 * _lift)
+		var off := Vector2(sin(_t * 60.0) * 4.0 * _shake, -10.0 * e)
+		var r := Rect2(Vector2(4, 12) + off, size - Vector2(8, 16))
+		# shadow
+		draw_rect(Rect2(r.position + Vector2(4, 8 + 6 * e), r.size), Color(0, 0, 0, 0.35 + 0.2 * e))
+		# glow when focused
+		if e > 0.01:
+			for k in 3:
+				draw_rect(r.grow(2.0 + k * 3.0), Color(UIStyle.PINK, (0.18 - k * 0.05) * e), false, 3.0)
+		draw_rect(r, UIStyle.INK)
+		# cover art: the chapter's story shot, cropped to the box
+		var art := Rect2(r.position + Vector2(6, 22), Vector2(r.size.x - 12, r.size.y - 70))
+		var cover := str(info.get("cover", ""))
+		for l in ["bg", "mid", "sign", "fg", "eyes"]:
+			var tx := StoryShot.tex(cover, l)
+			if tx == null:
+				continue
+			var tw := float(tx.get_width())
+			var th := float(tx.get_height())
+			var src_w := th * art.size.x / art.size.y
+			var pan := sin(_t * 0.4) * 10.0 * e
+			var src := Rect2((tw - src_w) * 0.5 + pan, 0, src_w, th)
+			var mod := Color(1, 1, 1) if open else Color(0.45, 0.4, 0.5)
+			if l == "eyes":
+				mod.a = 0.7 + 0.3 * sin(_t * 2.0)
+			draw_texture_rect_region(tx, art, src, mod)
+		if not open:
+			# tracking noise and a damaged-tape sticker
+			var rng := RandomNumberGenerator.new()
+			rng.seed = int(_t * 12.0) + int(info.get("year", "0"))
+			for i in 40:
+				var y := art.position.y + rng.randf() * art.size.y
+				draw_rect(Rect2(art.position.x, y, art.size.x, rng.randf_range(1, 3)), Color(1, 1, 1, rng.randf_range(0.03, 0.15)))
+			var st := Rect2(art.position + Vector2(8, art.size.y * 0.4), Vector2(art.size.x - 16, 22))
+			draw_set_transform(st.get_center(), -0.12, Vector2.ONE)
+			draw_rect(Rect2(-st.size * 0.5, st.size), Color(0.9, 0.85, 0.7))
+			draw_string(UIStyle.font_bold(), Vector2(-st.size.x * 0.5 + 6, 5), tr("DAMAGED"), HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(0.6, 0.05, 0.1))
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		# shine sweep across the box sleeve
+		if e > 0.0:
+			var sx := fmod(_t * 0.7, 1.6) * (art.size.x + 60.0) - 30.0
+			draw_colored_polygon(PackedVector2Array([art.position + Vector2(sx, 0), art.position + Vector2(sx + 14, 0), art.position + Vector2(sx - 6, art.size.y), art.position + Vector2(sx - 20, art.size.y)]), Color(1, 1, 1, 0.07 * e))
+		# frame, year band and title strip
+		var col := UIStyle.PINK if open else UIStyle.DIM
+		draw_rect(r, col.lerp(UIStyle.GOLD, e * 0.5) if open else col, false, 2.0)
+		draw_rect(Rect2(r.position, Vector2(r.size.x, 20)), col if open else Color(0.2, 0.18, 0.24))
+		draw_string(UIStyle.font_bold(), r.position + Vector2(6, 15), str(info.get("year", "")), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.INK if open else UIStyle.DIM)
+		draw_string(UIStyle.font_bold(), r.position + Vector2(44, 15), tr("CH.") + " " + str(info.get("num", "")), HORIZONTAL_ALIGNMENT_RIGHT, r.size.x - 50, 12, UIStyle.INK if open else UIStyle.DIM)
+		var title := tr(str(info.get("title", ""))) if open else "████████"
+		draw_multiline_string(UIStyle.font_display(), Vector2(r.position.x + 6, r.end.y - 30), title, HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 12, 14, 2, UIStyle.PAPER if open else UIStyle.DIM)
+		if open and e > 0.3:
+			var pr := Rect2(art.end - Vector2(62, 20), Vector2(58, 16))
+			draw_rect(pr, Color(UIStyle.INK, 0.85 * e))
+			draw_string(UIStyle.font_mono(), pr.position + Vector2(5, 12), tr("▶ PLAY"), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(UIStyle.GOLD, e * (0.7 + 0.3 * sin(_t * 6.0))))
+
+
+## Under the tapes: what the focused chapter is, and how you did.
+class ChapterDetail extends Control:
+	var info: Dictionary = {}
+	var _t := 0.0
+	var _shown := ""
+	var _k := 0.0
+	func _process(delta: float) -> void:
+		_t += delta
+		var key := str(info.get("title", ""))
+		if key != _shown:
+			_shown = key
+			_k = 0.0
+		_k = move_toward(_k, 1.0, delta * 5.0)
+		queue_redraw()
+	func _draw() -> void:
+		if info.is_empty():
+			return
+		var open: bool = info.get("open", false)
+		var x := 20.0 * (1.0 - _k)
+		var a := _k
+		var f := UIStyle.font_display()
+		var head := "%s  ·  %s  ·  %s" % [str(info.year), tr("CHAPTER") + " " + str(info.num), tr(str(info.title)) if open else "████████"]
+		draw_string(f, Vector2(8 + x, 30), head, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Color(UIStyle.PINK if open else UIStyle.DIM, a))
+		draw_string(UIStyle.font_bold(), Vector2(8 + x, 54), tr(str(info.place)), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color(UIStyle.CYAN if open else UIStyle.DIM, a))
+		var line := ""
+		var mid := str(info.get("mission", ""))
+		if open and mid != "":
+			var best: Dictionary = SaveManager.data.missions.get(mid, {})
+			if best.is_empty():
+				line = tr("Not yet played.")
+			else:
+				line = tr("Best rank %s   ·   Best score %d") % [str(best.get("best_rank", "-")), int(best.get("best_score", 0))]
+		elif not open and mid != "":
+			line = tr("Finish the chapter before to unlock this tape.")
+		else:
+			line = tr("The rest of this tape is damaged.")
+		draw_string(UIStyle.font_mono(), Vector2(8 + x, 78), line, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.PAPER, 0.8 * a))
 
 func _show_arcade() -> void:
 	_open_panel("ARCADE  ·  SCORE ATTACK")

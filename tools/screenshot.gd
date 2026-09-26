@@ -24,6 +24,9 @@ func _ready() -> void:
 			if OS.get_environment("SHOT_MENU") == "1":
 				Input.parse_input_event(ev)
 				await _frames(30)
+			if OS.get_environment("SHOT_PANEL") != "":
+				get_tree().current_scene.call("_show_" + OS.get_environment("SHOT_PANEL"))
+				await _frames(int(OS.get_environment("SHOT_PANEL_F")) if OS.get_environment("SHOT_PANEL_F") != "" else 40)
 		"backdrop":
 			# title backdrop for promo/installer art. SHOT_HIDE: comma list of
 			# logo, osd, press, version
