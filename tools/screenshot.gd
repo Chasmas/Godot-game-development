@@ -128,6 +128,12 @@ func _ready() -> void:
 				p.god_mode = OS.get_environment("SHOT_GOD") == "1"
 				var cam := get_tree().get_first_node_in_group("level").camera as CameraController
 				cam.snap_to_target()
+			var lvh := get_tree().get_first_node_in_group("level") as Level
+			if lvh and lvh.hud:
+				lvh.hud._banner_t = 0.0
+				lvh.hud._card_t = 0.0
+				lvh.hud.banner.modulate.a = 0.0
+				lvh.hud.card_sub.modulate.a = 0.0
 			if OS.get_environment("SHOT_GUN") != "" and p:
 				p.give_weapon(StringName(OS.get_environment("SHOT_GUN")))
 			var wx = get_tree().get_first_node_in_group("weather")

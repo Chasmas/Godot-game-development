@@ -77,6 +77,11 @@ func _ready() -> void:
 	builder = b
 	var decor_root := _root("Decor")
 	Decor.build(self, decor_root, b, data.get("decor", []))
+	if SaveManager.get_setting("set_dressing", true):
+		Dressing.build(self, b)
+	var motes := AmbientMotes.new()
+	motes.level = self
+	add_child(motes)
 	weather = WeatherSystem.new()
 	weather.setup(self, b, data.get("weather", {}))
 	add_child(weather)
