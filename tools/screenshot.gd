@@ -111,6 +111,27 @@ func _ready() -> void:
 				p3.input_enabled = false
 				p3.set_physics_process(false)
 				lvl2.camera.target = dog
+			elif what == "snooze" or what == "handler":
+				var tgt: Enemy = null
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if (what == "snooze" and e.is_snoozing()) or (what == "handler" and e is Handler):
+						tgt = e
+						break
+				if tgt == null:
+					# force one: first plain guard dozes off / nothing to show
+					for e in get_tree().get_nodes_in_group("enemies"):
+						if not e is Dog and e.idle_activity:
+							e.idle_activity.queue_free()
+							e.idle_activity = IdleActivity.new()
+							e.visual.rig.add_child(e.idle_activity)
+							e.idle_activity.setup(e.visual, IdleActivity.Kind.SNOOZE, "x")
+							tgt = e
+							break
+				print("closeup target ", tgt, " at ", tgt.global_position)
+				p3.global_position = tgt.global_position + Vector2(-400, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = tgt
 			elif what == "dual":
 				p3.give_weapon(&"pistol")
 				p3.current().dual = true

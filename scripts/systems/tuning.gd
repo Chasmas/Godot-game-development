@@ -114,7 +114,7 @@ static func get_t() -> Tuning:
 ## Base chance that an enemy shot is on target (before range, movement,
 ## settle-in and burst penalties). The rest are deliberate near-misses.
 @export var enemy_hit_chance := [0.3, 0.45, 0.62]
-@export var view_distance_mult := [0.88, 1.0, 1.12]
+@export var view_distance_mult := [0.68, 0.78, 0.88]
 @export var hearing_mult := [0.85, 1.0, 1.12]
 @export var fire_cooldown_mult := [1.3, 1.0, 0.85]
 @export var melee_windup_mult := [1.35, 1.0, 0.85]

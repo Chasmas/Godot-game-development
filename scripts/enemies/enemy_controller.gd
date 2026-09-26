@@ -104,7 +104,6 @@ func _ready() -> void:
 	add_child(visual)
 	z_index = 1
 	Events.noise.connect(_on_noise)
-	Events.alarm_raised.connect(_on_alarm)
 	Events.lights_changed.connect(_on_lights_changed)
 	_perceive_t = randf() * 0.1
 	_strafe = 1.0 if randf() > 0.5 else -1.0

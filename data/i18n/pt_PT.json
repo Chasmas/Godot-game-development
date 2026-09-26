@@ -643,7 +643,6 @@
  "TAPE SAVED": "CASSETE GRAVADA",
  "CAMERA DOWN": "CÂMARA ABAIXO",
  "CAMERA ALARM": "ALARME DA CÂMARA",
- "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.": "Câmara de segurança: fique fora do cone. Pode destruí-la - mas o barulho atrai um ou dois guardas.",
  "Glass Shard": "Caco de Vidro",
  "Picked out of a window frame, wrapped in a strip of curtain. Three good stabs, then it's sand.": "Tirado de uma moldura, embrulhado num pedaço de cortina. Três boas facadas e vira areia.",
  "+AMMO": "+MUNIÇÃO",
@@ -688,5 +687,6 @@
  "HOTSHOT CALIFORNIA has been removed. Thanks for watching. Be kind, rewind.": "O HOTSHOT CALIFORNIA foi removido. Obrigado por assistir. Seja simpático, rebobine.",
  "Couldn't create the folder:": "Não foi possível criar a pasta:",
  "Couldn't write the game to:": "Não foi possível gravar o jogo em:",
- "Is the game already running?": "O jogo já está aberto?"
+ "Is the game already running?": "O jogo já está aberto?",
+ "Security camera: stay out of the cone, or hug the wall right under it - the lens can't see straight down. Shoot it out and a guard or two comes to look.": "Câmara de segurança: fica fora do cone, ou encosta-te à parede mesmo por baixo dela - a lente não vê a direito para baixo. Se a destruíres, um ou dois guardas vêm ver."
 }

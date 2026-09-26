@@ -41,11 +41,10 @@ func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 	# at heel: the dog trots beside him until let go
 	if not _released and dog and is_instance_valid(dog) and dog.is_alive():
-		var heel := global_position + facing.orthogonal() * 12.0 - facing * 4.0
-		var off := heel - dog.global_position
-		if off.length() > 3.0:
-			dog.global_position += off * minf(1.0, delta * 6.0)
-		dog.facing = facing
+		# heel sits a little ahead when walking so the leash pulls taut
+		var ahead := 3.0 if velocity.length() > 10.0 else -4.0
+		var heel := global_position + facing.orthogonal() * 11.0 + facing * ahead
+		dog.heel_follow(delta, heel, facing)
 	if not is_alive() and not _released:
 		_release()   # shot the handler: the dog goes for you anyway
 
@@ -53,7 +52,18 @@ func _draw() -> void:
 	super._draw()
 	# the leash
 	if not _released and dog and is_instance_valid(dog) and is_alive():
-		draw_line(visual.hand_global() - global_position, dog.global_position - global_position, Color(0.35, 0.22, 0.12), 1.0)
+		# from his off hand to the collar, sagging when slack, taut when the
+		# dog pulls ahead
+		var a := facing.orthogonal() * 4.0 + facing * 2.0
+		var b := dog.global_position + dog.facing * 3.5 - global_position
+		var slack := clampf(1.0 - (a.distance_to(b) - 7.0) / 6.0, 0.0, 1.0)
+		var mid := (a + b) * 0.5 + Vector2(0, 3.0 * slack + sin(Time.get_ticks_msec() * 0.006) * 0.4 * slack)
+		var pts := PackedVector2Array()
+		for i in 7:
+			var t := i / 6.0
+			pts.append(a.lerp(mid, t).lerp(mid.lerp(b, t), t))
+		draw_polyline(pts, Color(0.1, 0.06, 0.04), 1.6)
+		draw_polyline(pts, Color(0.55, 0.32, 0.16), 0.8)
 
 func _process(_delta: float) -> void:
 	queue_redraw()

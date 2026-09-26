@@ -16,6 +16,7 @@ import numpy as np
 from paint import *
 from props import *
 from anatomy import *
+from retro import grade80s
 
 W, H = 544, 306
 ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
@@ -29,6 +30,7 @@ def shot(fn):
 def out(name, layer, L, levels=20):
     d = os.path.join(OUT, name)
     os.makedirs(d, exist_ok=True)
+    grade80s(L, 0.16)                  # one VHS-poster grade over every shot
     grain(L, 0.018, hash(name + layer) % 1000)
     save(L, os.path.join(d, layer + ".png"), True, levels)
 
@@ -74,7 +76,7 @@ def desert_road():
     # crew silhouettes by the camera
     for i, (px, ph) in enumerate(((W * 0.2, 44), (W * 0.24, 40), (W * 0.27, 46))):
         figure(mid, px, H * 0.8, ph, ["2a2230", "3a2a1a", "1e2430"][i], skin="b08060", light=(1, -0.3), light_col="ffb080",
-               fill_col="1a0a20", pose=["point", "cross", "stand"][i], cap=["", "3a3a30", ""][i] or None, hair_style=["short", "bald", "long"][i])
+               fill_col="1a0a20", pose=["hands_pockets", "cross", "stand"][i], cap=["", "3a3a30", ""][i] or None, hair_style=["short", "bald", "long"][i])
     # camera on a tripod
     mid.paint(rect(mid, W * 0.31, H * 0.8 - 36, 18, 11), "08040a")
     mid.paint(line(mid, [(W * 0.31 + 9, H * 0.8 - 26), (W * 0.31, H * 0.8)], 2) + line(mid, [(W * 0.31 + 9, H * 0.8 - 26), (W * 0.31 + 18, H * 0.8)], 2), "08040a")

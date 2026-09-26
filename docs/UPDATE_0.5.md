@@ -41,3 +41,27 @@
   - Prop spawns during teardown.
   - The positional audio pool changing bus on a live player.
 - **Tests:** the smoke, edge and stress suites (up to 80 enemies) pass, with 642/642 Portuguese strings.
+
+## 0.5.0 — feedback pass: synthwave, 80s cutscenes, fairer stealth
+
+- **Music**: both level scores rewritten as proper synthwave: a verse and a chorus,
+  side-chained supersaw pads, octave-pulse bass, gated 80s snare, FM e-piano, a big
+  detuned lead hook, tom fills and risers. Same beat grid and bpm, same four
+  intensity stems (explore / combat / combo / danger), so alerted enemies and combos
+  still drive how it plays.
+- **Cutscenes**: new 80s poster style with flat cel colour, ink outlines, neon rims and
+  synthwave skies. No more hands or arms. Memorable silhouettes: Cass's big red hair,
+  aviators and red leather; Tommy's pompadour, denim and cigarette; Marv at a stand mic.
+  Tommy now drives facing the road (seen from the passenger seat). The dialogue portraits
+  use the same style.
+- **Stealth**:
+  - Enemies see about 22% less far.
+  - An alarm sends at most 3 responders, radio reinforcements included.
+  - Security cameras have a dead zone right under the lens: hug the wall to slip
+    underneath. The cone is drawn with that gap.
+- **Readability**:
+  - Dozing guards slump in a folding chair with their feet out, big comic Zs and a
+    snore bubble. When startled, the chair tips over.
+  - The dog handler's shepherd really walks at heel (trotting legs, head, panting) on
+    a leash that sags and pulls taut.
+- **Camera**: slightly closer to the player.

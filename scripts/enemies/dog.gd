@@ -239,6 +239,32 @@ func _physics_process(delta: float) -> void:
 		Audio.play_at("step%d" % (randi() % 3), global_position, -22.0, 0.3)
 	queue_redraw()
 
+## On the leash: the handler drives where the dog goes, but it still
+## walks for real - trotting legs, bobbing, head turning, panting.
+func heel_follow(delta: float, heel: Vector2, face: Vector2) -> void:
+	_t += delta
+	var off := heel - global_position
+	var want := off * 7.0
+	if want.length() > 150.0:
+		want = want.normalized() * 150.0
+	if off.length() < 1.5:
+		want = Vector2.ZERO
+	_move_vel = _move_vel.move_toward(want, 900.0 * delta)
+	global_position += _move_vel * delta
+	_speed_now = _move_vel.length()
+	var dir := _move_vel.normalized() if _speed_now > 8.0 else face
+	facing = facing.slerp(dir, minf(1.0, delta * 6.0)).normalized()
+	_update_head(delta)
+	_update_eyes(delta)
+	_pant = clampf(_pant + (delta * 0.2 if _speed_now > 40.0 else -delta * 0.1), 0.0, 0.6)
+	_gait += delta * maxf(_speed_now, 0.0) * 0.16
+	_ear_t -= delta
+	if _ear_t <= 0.0:
+		_ear_t = randf_range(2.5, 6.0)
+		_ear_twitch = 0.25
+	_ear_twitch = maxf(0.0, _ear_twitch - delta)
+	queue_redraw()
+
 ## The head leads: it looks at the player when the dog is suspicious or
 ## hunting, at the next waypoint while walking, and sweeps when sniffing.
 func _update_head(delta: float) -> void:

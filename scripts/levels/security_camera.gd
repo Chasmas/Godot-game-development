@@ -18,6 +18,9 @@ const SWEEP_TIME := 6.5
 const SPOT_TIME := 0.9           ## seconds of clear view at range to raise the alarm
 const COOLDOWN := 9.0
 const RAYS := 13
+## the lens is mounted high and tilted out: right under it is a dead zone,
+## so hugging the wall beneath the camera slips past it
+const BLIND := 30.0
 
 var base_angle := PI * 0.5
 var _t := 0.0
@@ -27,6 +30,7 @@ var _cool := 0.0
 var _broken := false
 var _led := 0.0
 var _poly := PackedVector2Array()
+var _inner := PackedVector2Array()
 var _beep_t := 0.0
 
 func _ready() -> void:
@@ -78,7 +82,7 @@ func _physics_process(delta: float) -> void:
 	if p and p.alive and _cool <= 0.0:
 		var to := p.global_position - global_position
 		var d := to.length()
-		if d < RANGE and absf(angle_difference(_aim, to.angle())) < HALF_FOV:
+		if d < RANGE and d > BLIND and absf(angle_difference(_aim, to.angle())) < HALF_FOV:
 			var q := PhysicsRayQueryParameters2D.create(global_position + Vector2.from_angle(_aim) * 5.0, p.global_position, Layers.SIGHT_MASK)
 			sees = get_world_2d().direct_space_state.intersect_ray(q).is_empty()
 		if sees:
@@ -122,7 +126,8 @@ func _process(_delta: float) -> void:
 
 ## Fan of rays so the cone stops at walls.
 func _rebuild_cone() -> void:
-	_poly = PackedVector2Array([Vector2.ZERO])
+	_poly = PackedVector2Array()
+	_inner = PackedVector2Array()
 	var space := get_world_2d().direct_space_state
 	for i in RAYS:
 		var a := _aim - HALF_FOV + 2.0 * HALF_FOV * i / float(RAYS - 1)
@@ -131,6 +136,8 @@ func _rebuild_cone() -> void:
 		var hit := space.intersect_ray(q)
 		var pt: Vector2 = hit.position if not hit.is_empty() else to
 		_poly.append(pt - global_position)
+		var off := pt - global_position
+		_inner.append(off.normalized() * minf(BLIND, off.length()))
 
 func _draw() -> void:
 	var ink := Color("0b0710")
@@ -150,16 +157,23 @@ func _draw() -> void:
 	elif _meter > 0.0:
 		col = Color(1.0, 0.8, 0.2).lerp(Color(1.0, 0.15, 0.1), _meter)
 	if _poly.size() > 2:
-		var cols := PackedColorArray()
-		for i in _poly.size():
-			cols.append(Color(col, 0.28 if i == 0 else 0.08))
-		draw_polygon(_poly, cols)
-		var edge := _poly.slice(1)
-		draw_polyline(edge, Color(col, 0.55), 1.0)
-		draw_line(Vector2.ZERO, _poly[1], Color(col, 0.25), 1.0)
-		draw_line(Vector2.ZERO, _poly[_poly.size() - 1], Color(col, 0.25), 1.0)
+		# a band from the dead zone out to the edge: the gap under the
+		# lens reads as "safe if you hug the wall"
+		# quads drawn one by one (no triangulation to fail where a wall
+		# cuts the cone inside the dead zone)
+		var ci := Color(col, 0.28)
+		var co := Color(col, 0.08)
+		for i in _poly.size() - 1:
+			draw_primitive(PackedVector2Array([_inner[i], _inner[i + 1], _poly[i + 1], _poly[i]]), PackedColorArray([ci, ci, co, co]), PackedVector2Array())
+		draw_polyline(_poly, Color(col, 0.55), 1.0)
+		draw_line(_inner[0], _poly[0], Color(col, 0.25), 1.0)
+		draw_line(_inner[_inner.size() - 1], _poly[_poly.size() - 1], Color(col, 0.25), 1.0)
+		# dead-zone edge: a faint dotted arc
+		for i in range(0, _inner.size(), 2):
+			draw_circle(_inner[i], 0.6, Color(col, 0.45))
 		var sweep_k := fmod(_led * 0.9, 1.0)
-		draw_arc(Vector2.ZERO, RANGE * sweep_k, _aim - HALF_FOV, _aim + HALF_FOV, 10, Color(col, 0.12 * (1.0 - sweep_k)), 1.0)
+		var r := lerpf(BLIND, RANGE, sweep_k)
+		draw_arc(Vector2.ZERO, r, _aim - HALF_FOV, _aim + HALF_FOV, 10, Color(col, 0.12 * (1.0 - sweep_k)), 1.0)
 	# bracket on the wall and the camera body turned to the aim
 	draw_line(mount, Vector2.ZERO, ink, 3.0)
 	draw_line(mount, Vector2.ZERO, Color(0.45, 0.45, 0.5), 1.0)

@@ -20,7 +20,8 @@ func _ready() -> void:
 	for case_name in ["gunshot_is_local", "walls_muffle", "kill_mid_investigation", "rapid_fire",
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
 			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
-			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese"]:
+			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese",
+			"alarm_caps_responders", "camera_blind_spot"]:
 		if only != "" and case_name != only:
 			continue
 		await _load()
@@ -80,6 +81,46 @@ func _spawn(kind: StringName, pos: Vector2) -> Enemy:
 	return e
 
 # ------------------------------------------------------------------ cases
+func alarm_caps_responders() -> void:
+	var p := _p()
+	p.god_mode = true
+	var alarms := get_tree().get_nodes_in_group("alarm")
+	check(not alarms.is_empty(), "level has an alarm panel")
+	if alarms.is_empty():
+		return
+	var before := {}
+	for e in _enemies():
+		before[e] = e.is_aware() or e.state == Enemy.State.INVESTIGATE
+	var n_before := _enemies().size()
+	alarms[0].trigger(null)
+	await frames(10)
+	var answered := 0
+	for e in _enemies():
+		if before.has(e) and not before[e] and (e.is_aware() or e.state == Enemy.State.INVESTIGATE):
+			answered += 1
+	var spawned := _enemies().size() - n_before
+	check(answered + spawned <= 3 and answered + spawned >= 1, "alarm sends at most 3 (answered %d + reinforcements %d)" % [answered, spawned])
+
+func camera_blind_spot() -> void:
+	var p := _p()
+	p.god_mode = true
+	var lvl := _lvl()
+	var at := _open_cell(p.global_position, 3)
+	var cam := SecurityCamera.new()
+	cam.base_angle = PI * 0.5
+	cam.position = at
+	lvl.props_root.add_child(cam)
+	for e in _enemies():
+		e.global_position += Vector2(4000, 4000)   # nobody else in the way
+	p.global_position = at + Vector2(0, 14)       # right under the lens
+	p.set_physics_process(false)
+	await frames(60)
+	check(cam._meter <= 0.0, "hugging the wall under the camera is not seen (meter %.2f)" % cam._meter)
+	p.global_position = at + Vector2(0, 70)       # out in the cone
+	await frames(30)
+	check(cam._meter > 0.0 or cam._cool > 0.0, "standing in the cone is seen (meter %.2f)" % cam._meter)
+	cam.queue_free()
+
 func gunshot_is_local() -> void:
 	var p := _p()
 	var all := _enemies()

@@ -4,6 +4,8 @@ extends Node2D
 ## (interact) to keep a floor quiet. Triggering calls reinforcements.
 
 var armed := true
+const MAX_RESPONDERS := 3
+
 var triggered := false
 var _t := 0.0
 
@@ -34,16 +36,31 @@ func trigger(_by: Node) -> void:
 	triggered = true
 	Audio.play_at("alarm", global_position, 2.0)
 	Events.alarm_raised.emit(global_position)
-	Events.noise.emit(global_position, 3000.0, &"alarm", self)
 	Events.hint.emit("ALARM! REINFORCEMENTS INCOMING", 2.0)
 	PostFX.flash(Color(1, 0, 0.1), 0.15)
+	# only a small squad answers the bell: the nearest few, topped up by
+	# radio reinforcements, never more than MAX_RESPONDERS in total
+	var sent := _send_responders()
 	var lvl := get_tree().get_first_node_in_group("level")
 	if lvl and lvl.has_method("on_alarm"):
-		lvl.on_alarm(global_position)
+		lvl.on_alarm(global_position, MAX_RESPONDERS - sent)
 	for i in 3:
 		await get_tree().create_timer(1.2).timeout
 		if is_instance_valid(self):
 			Audio.play_at("alarm", global_position, 0.0)
+
+func _send_responders() -> int:
+	var p := get_tree().get_first_node_in_group("player") as Node2D
+	var focus: Vector2 = p.global_position if p else global_position
+	var cand: Array = []
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and not e.is_aware() and e.state != Enemy.State.DOWNED and not e is Dog:
+			cand.append(e)
+	cand.sort_custom(func(a, b): return a.global_position.distance_to(focus) < b.global_position.distance_to(focus))
+	var n := mini(MAX_RESPONDERS, cand.size())
+	for i in n:
+		(cand[i] as Enemy)._on_alarm(global_position)
+	return n
 
 func _process(delta: float) -> void:
 	_t += delta

@@ -4,7 +4,7 @@ extends Camera2D
 ## (scaled by the accessibility setting), zoom punches for executions and
 ## big moments, and a "zoom out" when the player holds the look key.
 
-const BASE_ZOOM := 2.0
+const BASE_ZOOM := 2.25
 const LOOK_AHEAD := 0.32
 const MAX_LOOK := 110.0
 

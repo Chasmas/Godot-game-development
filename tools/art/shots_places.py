@@ -93,9 +93,9 @@ def register(shot, out, W, H, motel_building):
             mid.paint(text_mask(mid, W * (0.02 + i * 0.09), H * (0.566 + 0.006 * math.sin(i)), "POLICE LINE", 3, F_BOLD, "lm") * tape, "101010")
         # officers standing in the lot, feet on the asphalt, scaled by distance
         for fx_, fy, pose, cap, facing, coat, jacket in (
-                (W * 0.3, H * 0.62, "phone", "1a2440", 1, False, "1a2440"),
+                (W * 0.3, H * 0.62, "hands_pockets", "1a2440", 1, False, "1a2440"),
                 (W * 0.37, H * 0.64, "cross", "1a2440", -1, False, "1a2440"),
-                (W * 0.78, H * 0.63, "point", None, -1, True, "4a4238")):
+                (W * 0.78, H * 0.63, "hands_pockets", None, -1, True, "4a4238")):
             h = 48 * depth_scale(fy)
             figure(mid, fx_, fy, h, jacket, skin="c09070", light=(-1, -0.3), light_col="a0b0ff", fill_col="ff3040",
                    pose=pose, cap=cap, coat=coat, facing=facing)

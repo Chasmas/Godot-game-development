@@ -884,7 +884,7 @@ class TipCard extends Control:
 				break
 		for cam in get_tree().get_nodes_in_group("security_cameras"):
 			if view.has_point(cam.global_position) and not cam._broken:
-				offer("camera", "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.")
+				offer("camera", "Security camera: stay out of the cone, or hug the wall right under it - the lens can't see straight down. Shoot it out and a guard or two comes to look.")
 				break
 		var w = p.current()
 		if w and w.data.is_firearm() and w.ammo <= 0 and w.reserve <= 0:

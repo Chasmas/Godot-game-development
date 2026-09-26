@@ -685,11 +685,12 @@ func _on_player_died(_info: Dictionary) -> void:
 	await get_tree().create_timer(0.45, true, false, true).timeout
 	_restart_ready = true
 
-func on_alarm(pos: Vector2) -> void:
+func on_alarm(pos: Vector2, budget := 3) -> void:
 	if _alarm_spawned:
 		return
 	_alarm_spawned = true
-	spawn_reinforcements(3, pos)
+	if budget > 0:
+		spawn_reinforcements(budget, pos)
 
 func spawn_reinforcements(n: int, _near := Vector2.ZERO) -> void:
 	if reinforcement_points.is_empty():
