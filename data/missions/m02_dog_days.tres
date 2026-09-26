@@ -16,5 +16,5 @@ boss_track = "boss"
 default_character = &"cass"
 par_score = 36000
 par_time = 300.0
-briefing = "Somebody's been feeding the dogs. Somebody's been feeding them people."
+briefing = "Arlo Vance knows who changed the stunt that killed Tommy. His salvage yard is fenced, armed, and full of dogs."
 objective_type = "clear"
