@@ -223,6 +223,20 @@ func _process(delta: float) -> void:
 func _on_objective(t: String) -> void:
 	objective_label.text = t
 
+## Upgrade pickup: an animated card (icon, name, what it does) instead of a
+## line of text. The HUD badge for it pulses in at the same time.
+var upgrade_times: Dictionary = {}
+func show_upgrade(id: StringName) -> void:
+	upgrade_times[id] = status.now() if status else 0.0
+	var card := UpgradeCard.new()
+	card.upgrade_id = id
+	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for c in root.get_children():
+		if c is UpgradeCard:
+			c.queue_free()
+	root.add_child(card)
+
 func show_hint(text: String, duration := 3.0) -> void:
 	hint_label.text = tr(text)
 	_hint_t = duration
@@ -426,6 +440,8 @@ class Tracker extends Control:
 class StatusPanel extends Control:
 	var hud: HUD
 	var _t := 0.0
+	func now() -> float:
+		return _t
 	var _state := ""
 	func _process(delta: float) -> void:
 		_t += delta
@@ -480,8 +496,77 @@ class StatusPanel extends Control:
 			var col2: Color = d.color
 			if id == &"armor" and hud.player.armor_hits <= 0:
 				col2 = Color(0.4, 0.4, 0.45)
-			draw_rect(Rect2(x - 1, y - 1, 26, 16), UIStyle.INK)
-			draw_rect(Rect2(x, y, 24, 14), Color(col2, 0.25))
-			draw_rect(Rect2(x, y, 24, 14), col2, false, 1.0)
-			draw_string(UIStyle.font_bold(), Vector2(x + 3, y + 11), str(d.icon), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, col2)
-			x += 30.0
+			var bc := Vector2(x + 14, y + 2)
+			var fresh := clampf(1.0 - (_t - float(hud.upgrade_times.get(id, -9.0))) / 0.6, 0.0, 1.0)
+			UpgradeIcon.badge(self, bc, 15.0 + fresh * 6.0, col2, _t, 0.6 + fresh)
+			UpgradeIcon.draw(self, id, bc, 21.0 + fresh * 6.0, col2, _t)
+			x += 36.0
+
+
+## "UPGRADE" pickup card: slides in on the right with a flash and a shine,
+## the icon pops out of its hex badge, the text types in, then it slides
+## away. Runs in real time so slow-mo doesn't stretch it.
+class UpgradeCard extends Control:
+	var upgrade_id: StringName
+	var _t := 0.0
+	const LIFE := 3.4
+	func _ready() -> void:
+		process_mode = Node.PROCESS_MODE_ALWAYS
+	func _process(delta: float) -> void:
+		_t += delta / maxf(Engine.time_scale, 0.05)
+		if _t > LIFE:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var d := Upgrades.def(upgrade_id)
+		var col: Color = d.color
+		var w := 360.0
+		var h := 96.0
+		var slide_in := 1.0 - pow(1.0 - clampf(_t / 0.35, 0.0, 1.0), 3.0)
+		var slide_out := pow(clampf((_t - (LIFE - 0.4)) / 0.4, 0.0, 1.0), 2.0)
+		var x := size.x - 24.0 - w * slide_in + (w + 40.0) * slide_out
+		var y := size.y * 0.30
+		var r := Rect2(x, y, w, h)
+		# slanted card body with a coloured spine
+		var sk := 14.0
+		var body := PackedVector2Array([r.position + Vector2(sk, 0), Vector2(r.end.x, r.position.y), Vector2(r.end.x - sk, r.end.y), Vector2(r.position.x, r.end.y)])
+		draw_colored_polygon(body, Color(UIStyle.INK, 0.94))
+		var spine := PackedVector2Array([r.position + Vector2(sk, 0), r.position + Vector2(sk + 8, 0), Vector2(r.position.x + 8, r.end.y), Vector2(r.position.x, r.end.y)])
+		draw_colored_polygon(spine, col)
+		var outline := body.duplicate()
+		outline.append(body[0])
+		draw_polyline(outline, Color(col, 0.8), 1.5, true)
+		# scanlines
+		for sy in range(int(r.position.y) + 2, int(r.end.y), 3):
+			draw_line(Vector2(r.position.x + 10, sy), Vector2(r.end.x - 4, sy), Color(1, 1, 1, 0.025), 1.0)
+		# flash on arrival
+		var fl := clampf(1.0 - _t / 0.25, 0.0, 1.0)
+		if fl > 0.0:
+			draw_colored_polygon(body, Color(col.lightened(0.6), fl * 0.7))
+		# shine sweep
+		var sh := fmod(_t * 0.9, 2.2) - 0.3
+		if sh >= 0.0 and sh <= 1.0:
+			var sx := r.position.x + sh * (w + 60.0) - 30.0
+			draw_colored_polygon(PackedVector2Array([Vector2(sx, r.position.y), Vector2(sx + 18, r.position.y), Vector2(sx + 4, r.end.y), Vector2(sx - 14, r.end.y)]), Color(1, 1, 1, 0.07))
+		# icon pops out of its badge
+		var ic := r.position + Vector2(62, h * 0.5)
+		var pop := clampf((_t - 0.12) / 0.3, 0.0, 1.0)
+		var bounce := 1.0 + sin(pop * PI) * 0.25
+		UpgradeIcon.badge(self, ic, 34.0 * bounce, col, _t, 1.0)
+		UpgradeIcon.draw(self, upgrade_id, ic, 44.0 * pop * bounce, col, _t)
+		# sparks around the badge
+		for i in 8:
+			var a := i * TAU / 8.0 + _t * 0.6
+			var k := fmod(_t * 1.3 + i * 0.125, 1.0)
+			draw_circle(ic + Vector2.from_angle(a) * (38.0 + k * 16.0), 1.6 * (1.0 - k), Color(col.lightened(0.4), 1.0 - k))
+		# text
+		var f := UIStyle.font_bold()
+		var tx := r.position.x + 112.0
+		var tag := tr("UPGRADE")
+		draw_string(f, Vector2(tx, r.position.y + 22), tag, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(col, 0.9))
+		var name_s := tr(str(d.name))
+		var n := clampi(int((_t - 0.15) * 40.0), 0, name_s.length())
+		draw_string_outline(UIStyle.font_display(), Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, 6, UIStyle.INK)
+		draw_string(UIStyle.font_display(), Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, UIStyle.PAPER)
+		var da := clampf((_t - 0.5) / 0.3, 0.0, 1.0)
+		draw_multiline_string(f, Vector2(tx, r.position.y + 70), tr(str(d.desc)), HORIZONTAL_ALIGNMENT_LEFT, w - 130.0, 12, 2, Color(UIStyle.PAPER, 0.75 * da))

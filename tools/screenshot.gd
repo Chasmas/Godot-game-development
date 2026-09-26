@@ -205,6 +205,10 @@ func _ready() -> void:
 					else:
 						p._begin_execution(best, true)
 					await _frames(int(OS.get_environment("SHOT_EXEC_F")) if OS.get_environment("SHOT_EXEC_F") != "" else 40)
+			if OS.get_environment("SHOT_UPGRADE") != "" and p:
+				p.add_upgrade(StringName(OS.get_environment("SHOT_UPGRADE")))
+				p.add_upgrade(&"night_vision")
+				await _frames(int(OS.get_environment("SHOT_UPGRADE_F")) if OS.get_environment("SHOT_UPGRADE_F") != "" else 30)
 			if OS.get_environment("SHOT_SLASH") == "1" and p:
 				InputSetup.using_gamepad = true
 				p.aim_dir = Vector2.RIGHT

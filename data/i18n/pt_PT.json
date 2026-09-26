@@ -587,5 +587,6 @@
  "You can change this at any time in OPTIONS.": "Podes mudar isto a qualquer momento em OPÇÕES.",
  "Normal": "Normal",
  "Fast": "Rápida",
- "%s\n%s\n\n%s\n\n%s: %s": "%s\n%s\n\n%s\n\n%s: %s"
+ "%s\n%s\n\n%s\n\n%s: %s": "%s\n%s\n\n%s\n\n%s: %s",
+ "UPGRADE": "MELHORIA"
 }

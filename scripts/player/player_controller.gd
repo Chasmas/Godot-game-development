@@ -1128,8 +1128,7 @@ func add_upgrade(id: StringName, quiet := false) -> void:
 		Audio.play("upgrade")
 		Events.upgrade_collected.emit(id)
 		if level and level.get("hud"):
-			level.hud.show_banner(tr(str(d.name)), 1.6, d.color)
-			level.hud.show_hint(str(d.desc), 3.0)
+			level.hud.show_upgrade(id)
 
 func _ensure_vest() -> void:
 	if _vest == null and armor_hits > 0:

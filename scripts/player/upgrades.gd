@@ -80,7 +80,9 @@ class Pickup extends Node2D:
 		var col: Color = d.color
 		var bob := sin(_t * 3.0) * 1.0
 		var ink := Color("0b0710")
-		# glow ring
+		# light cone rising from the case, like something precious inside
+		var beam := PackedVector2Array([Vector2(-6, -4 + bob), Vector2(6, -4 + bob), Vector2(9, -26 + bob), Vector2(-9, -26 + bob)])
+		draw_colored_polygon(beam, Color(col, 0.07 + 0.03 * sin(_t * 5.0)))
 		draw_arc(Vector2(0, bob), 10.0 + sin(_t * 4.0) * 1.0, 0, TAU, 20, Color(col, 0.35 + 0.2 * sin(_t * 5.0)), 1.2)
 		draw_set_transform(Vector2(1.5, 3.5), 0.0, Vector2(1.0, 0.5))
 		draw_circle(Vector2.ZERO, 7.0, Color(0, 0, 0, 0.3))
@@ -95,7 +97,18 @@ class Pickup extends Node2D:
 		draw_rect(Rect2(-3, -7 + bob, 6, 1), Color(0.2, 0.2, 0.22))
 		draw_rect(Rect2(-6, -1 + bob, 12, 2), col)
 		draw_rect(Rect2(-1, -2 + bob, 2, 4), Color(0.95, 0.85, 0.4))
-		draw_string(UIStyle.font_bold(), Vector2(-5, -9 + bob), str(d.icon), HORIZONTAL_ALIGNMENT_LEFT, -1, 7, col)
+		# hologram of what's inside, turning slowly above the case
+		var spin := cos(_t * 1.6)
+		var hc := Vector2(0, -19 + sin(_t * 2.2) * 1.5)
+		draw_set_transform(hc, 0.0, Vector2(maxf(absf(spin), 0.15), 1.0))
+		UpgradeIcon.badge(self, Vector2.ZERO, 8.0, col, _t, 0.8)
+		UpgradeIcon.draw(self, upgrade_id, Vector2.ZERO, 11.0, col, _t)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		# glints
+		for i in 3:
+			var k := fmod(_t * 0.7 + i * 0.33, 1.0)
+			var gp := Vector2(sin(i * 2.4 + _t) * 7.0, -6.0 - k * 22.0 + bob)
+			draw_rect(Rect2(gp, Vector2(1, 1)), Color(col.lightened(0.5), 1.0 - k))
 
 
 ## Laser sight: a thin red beam from the muzzle to whatever it hits.
