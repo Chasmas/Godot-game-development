@@ -82,6 +82,10 @@ func _ready() -> void:
 	var motes := AmbientMotes.new()
 	motes.level = self
 	add_child(motes)
+	var amb := Ambience.new()
+	amb.name = "Ambience"
+	amb.level = self
+	add_child(amb)
 	weather = WeatherSystem.new()
 	weather.setup(self, b, data.get("weather", {}))
 	add_child(weather)
@@ -95,6 +99,17 @@ func _ready() -> void:
 	darkness.level = self
 	add_child(darkness)
 	darkness.build(b)
+	# paint every enemy look now instead of mid-fight (see SpriteForge.prewarm)
+	var looks := {}
+	for e in enemies:
+		if e.visual:
+			looks[e.look] = true
+	for base in ["guard", "gunner"]:   # reinforcements can arrive in any variant
+		for v in 4:
+			looks["%s#%d" % [base, v]] = true
+	var warm_ms := SpriteForge.prewarm(looks.keys())
+	if OS.is_debug_build() and warm_ms > 1.0:
+		print("[level] prewarmed %d looks in %.0f ms" % [looks.size(), warm_ms])
 	for e in enemies:
 		e.died.connect(_on_enemy_died)
 		if Game.modifiers.get("hard", false):

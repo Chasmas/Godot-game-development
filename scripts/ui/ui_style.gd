@@ -151,6 +151,34 @@ static func title_label(text: String, size := 48, color := PINK) -> Label:
 
 ## Anchor a control to a preset and place it with offsets relative to that
 ## anchor (unlike `position`, this stays correct when the screen resizes).
+## Menu button feedback: the focused button grows a little from its left
+## edge and flashes; quick in both directions so menus stay snappy.
+static func menu_fx(b: Button) -> void:
+	b.pivot_offset = Vector2(0, 14)
+	b.focus_entered.connect(func():
+		b.pivot_offset = Vector2(0, b.size.y * 0.5)
+		var tw := b.create_tween().set_parallel(true)
+		tw.tween_property(b, "scale", Vector2(1.06, 1.06), 0.08).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		b.modulate = Color(1.6, 1.6, 1.6)
+		tw.tween_property(b, "modulate", Color.WHITE, 0.18))
+	b.focus_exited.connect(func():
+		b.create_tween().tween_property(b, "scale", Vector2.ONE, 0.08))
+	b.mouse_entered.connect(func():
+		if not b.disabled:
+			b.grab_focus())
+
+## Staggered reveal for a freshly built menu: each item fades in a beat
+## after the previous one (total well under a quarter second).
+static func reveal(container: Control, step := 0.03) -> void:
+	var i := 0
+	for c in container.get_children():
+		if c is CanvasItem:
+			(c as CanvasItem).modulate.a = 0.0
+			var tw := (c as Node).create_tween()
+			tw.tween_interval(i * step)
+			tw.tween_property(c, "modulate:a", 1.0, 0.12)
+			i += 1
+
 static func place(c: Control, preset: Control.LayoutPreset, pos: Vector2, sz := Vector2(-1, -1)) -> void:
 	if sz.x < 0.0:
 		sz = c.size if c.size != Vector2.ZERO else c.get_combined_minimum_size()

@@ -111,6 +111,8 @@ func _tier(n: int) -> void:
 		var ms := _tick_us / 1000.0
 		total += ms
 		worst = maxf(worst, ms)
+		if ms > 8.0 and OS.has_environment("STRESS_SPIKES"):
+			print("    spike %.2f ms at sample %d" % [ms, f])
 	print("  %-4d %6.2f  %8.2f  %5d  %7d  %7d" % [n, total / SAMPLE_FRAMES, worst,
 		Performance.get_monitor(Performance.OBJECT_NODE_COUNT),
 		Performance.get_monitor(Performance.OBJECT_COUNT),

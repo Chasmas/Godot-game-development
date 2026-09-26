@@ -7,3 +7,4 @@ HOTSHOT_CALIFORNIA_Setup.exe
 HOTSHOT_CALIFORNIA_Setup.exe
 *.exe
 .godot/
+data/i18n/_keys.txt

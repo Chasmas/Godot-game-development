@@ -583,5 +583,10 @@
  "Canyon AR": "Canyon AR",
  "Hibachi 12ga": "Hibachi 12ga",
  "Surfside SMG": "Surfside SMG",
- "Whisper .22": "Whisper .22"
+ "Whisper .22": "Whisper .22",
+ "DIFFICULTY": "DIFICULDADE",
+ "You can change this at any time in OPTIONS.": "Podes mudar isto a qualquer momento em OPÇÕES.",
+ "Normal": "Normal",
+ "Fast": "Rápida",
+ "%s\n%s\n\n%s\n\n%s: %s": "%s\n%s\n\n%s\n\n%s: %s"
 }

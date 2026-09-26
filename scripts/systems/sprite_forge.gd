@@ -45,8 +45,15 @@ static func variant_of(palette: String) -> int:
 static var _cache: Dictionary = {}
 const BAKE_DIR := "res://assets/characters/baked/"
 
+static func baked_path(key: String) -> String:
+	return BAKE_DIR + key.replace("|", "_").replace("#", "-v") + ".png"
+
+static var bake_disabled := false   ## the bake tool paints fresh, ignoring old PNGs
+
 static func _baked(key: String) -> Texture2D:
-	var path := BAKE_DIR + key.replace("|", "_") + ".png"
+	if bake_disabled:
+		return null
+	var path := baked_path(key)
 	if ResourceLoader.exists(path):
 		var t: Texture2D = load(path)
 		_cache[key] = t
@@ -346,6 +353,24 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	var tex := ImageTexture.create_from_image(img)
 	_cache[key] = tex
 	return tex
+
+## Paint every texture a set of looks will need (all poses, walk frames,
+## downed, corpse) up front. Painting is per-pixel GDScript: doing it the
+## first time an enemy punches or falls caused visible hitches in big
+## fights. Called during level load, behind the fade. Returns ms spent.
+const PREWARM_POSES := ["unarmed", "aim_one", "aim_two", "melee", "punch_l", "punch_r"]
+
+static func prewarm(looks: Array) -> float:
+	var t0 := Time.get_ticks_usec()
+	for look in looks:
+		var l := str(look)
+		for pose in PREWARM_POSES:
+			torso(pose, l)
+		for f in 3:
+			legs(f, l)
+		corpse(l, true)
+		corpse(l, false)
+	return (Time.get_ticks_usec() - t0) / 1000.0
 
 static func _star(img: Image, c: Vector2, r: float, col: Color) -> void:
 	for y in range(int(c.y - r - 1), int(c.y + r + 2)):

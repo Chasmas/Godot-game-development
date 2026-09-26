@@ -114,7 +114,7 @@ func _build_menu() -> void:
 	var has_save := SaveManager.has_progress()
 	if has_save:
 		_add("CONTINUE", Game.continue_game)
-	_add("NEW GAME", _confirm_new_game if has_save else Game.new_game)
+	_add("NEW GAME", _confirm_new_game if has_save else _choose_difficulty)
 	_add("CHAPTERS", _show_chapters)
 	var arcade_unlocked: bool = SaveManager.data.missions.has("m01_checkout")
 	_add("ARCADE" if arcade_unlocked else "ARCADE  [LOCKED]", _show_arcade, not arcade_unlocked)
@@ -122,6 +122,7 @@ func _build_menu() -> void:
 	_add("EXTRAS", _show_extras)
 	_add("OPTIONS", _show_options)
 	_add("QUIT", func(): get_tree().quit())
+	UIStyle.reveal(menu)
 	await get_tree().process_frame
 	if menu.get_child_count() > 0:
 		(menu.get_child(0) as Button).grab_focus()
@@ -134,6 +135,7 @@ func _add(text: String, cb: Callable, disabled := false) -> Button:
 		Audio.play("ui_select")
 		cb.call())
 	b.focus_entered.connect(func(): Audio.play("ui_move", -8.0))
+	UIStyle.menu_fx(b)
 	menu.add_child(b)
 	return b
 
@@ -144,6 +146,17 @@ func _open_panel(title: String) -> void:
 	panel.visible = true
 	menu.visible = false
 	panel_body.add_child(UIStyle.title_label(title, 34))
+	# panels drop in rather than pop
+	panel.modulate.a = 0.0
+	panel.scale = Vector2(0.97, 0.97)
+	panel.pivot_offset = panel.size * 0.5
+	var tw := create_tween().set_parallel(true)
+	tw.tween_property(panel, "modulate:a", 1.0, 0.14)
+	tw.tween_property(panel, "scale", Vector2.ONE, 0.16).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+	_reveal_panel.call_deferred()
+
+func _reveal_panel() -> void:
+	UIStyle.reveal(panel_body, 0.02)
 
 func _close_panel() -> void:
 	panel.visible = false
@@ -160,6 +173,8 @@ func _panel_button(text: String, cb: Callable, disabled := false) -> Button:
 	b.pressed.connect(func():
 		Audio.play("ui_select")
 		cb.call())
+	b.focus_entered.connect(func(): Audio.play("ui_move", -10.0))
+	UIStyle.menu_fx(b)
 	panel_body.add_child(b)
 	return b
 
@@ -170,9 +185,29 @@ func _back_button() -> void:
 func _confirm_new_game() -> void:
 	_open_panel("NEW GAME")
 	panel_body.add_child(UIStyle.label("This will overwrite your story progress.\nScores, collectibles and unlocks are kept.", 16))
-	var b := _panel_button("START OVER", Game.new_game)
+	var b := _panel_button("START OVER", _choose_difficulty)
 	_panel_button("◀ BACK", _close_panel)
 	b.grab_focus()
+
+## Pick a difficulty before a new game. Can be changed any time in OPTIONS.
+func _choose_difficulty() -> void:
+	_open_panel("DIFFICULTY")
+	var first: Button = null
+	for i in Difficulty.NAMES.size():
+		var lv: int = i
+		var b := _panel_button(Difficulty.NAMES[i], func():
+			SaveManager.set_setting("difficulty", lv)
+			Game.new_game())
+		var d := UIStyle.label(Difficulty.DESCRIPTIONS[i], 14, UIStyle.DIM)
+		d.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		d.custom_minimum_size = Vector2(700, 0)
+		panel_body.add_child(d)
+		if i == Difficulty.current():
+			first = b
+	panel_body.add_child(UIStyle.label("You can change this at any time in OPTIONS.", 13, UIStyle.CYAN))
+	_back_button()
+	if first:
+		first.grab_focus()
 
 func _show_chapters() -> void:
 	_open_panel("CHAPTERS")

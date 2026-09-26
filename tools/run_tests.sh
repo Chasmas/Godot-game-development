@@ -13,4 +13,10 @@ for suite in smoke_test edge_test stress_test; do
 	code=${PIPESTATUS[0]}
 	[ "$code" -ne 0 ] && status=1 && echo "!!! $suite exited with $code"
 done
+echo "=== i18n coverage"
+for loc in data/i18n/*.json; do
+	name=$(basename "$loc" .json)
+	case "$name" in _*) continue ;; esac
+	python3 tools/i18n_extract.py --check "$name" | tail -1 || status=1
+done
 exit $status

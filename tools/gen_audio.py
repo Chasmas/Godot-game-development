@@ -239,6 +239,56 @@ def sfx():
     body = lp(noise(d), 420) * env_exp(d, 14) * 0.8
     rattle = bp(noise(d), 300, 1400) * (0.5 + 0.5 * np.sign(np.sin(2*np.pi*23*t_axis(d)))) * env_exp(d, 9) * 0.25
     S['door_kick'] = fade(norm(sat(thump + crack + body + rattle, 3.5)))
+    # ambience beds: long, soft, seamless loops (the tail is crossfaded into
+    # the head so the loop point is inaudible); a separate rng so nothing
+    # above changes
+    arng = np.random.default_rng(1989)
+    def anoise(d): return arng.uniform(-1, 1, int(d * SR))
+    def loopable(x, xf=1.5):
+        n = int(xf * SR); head = x[:n].copy(); tail = x[-n:].copy()
+        ramp = np.linspace(0, 1, n)
+        x = x[:-n].copy(); x[:n] = tail * (1 - ramp) + head * ramp
+        return x
+    d = 18.0
+    t = t_axis(d)
+    # motel interior: AC unit hum, fluorescent buzz, faint air hiss
+    hum = sine(60, d) * 0.35 + sine(120, d) * 0.18 + sine(180, d) * 0.05
+    hum *= 0.85 + 0.15 * np.sin(2 * np.pi * 0.07 * t)
+    air = lp(anoise(d), 700) * 0.35 * (0.8 + 0.2 * np.sin(2 * np.pi * 0.11 * t))
+    buzz = bp(anoise(d), 2200, 3200) * 0.02
+    S['amb_interior'] = norm(loopable(hum + air + buzz), 0.5)
+    # exterior night: gusting wind, crickets, a distant highway rumble
+    gust = 0.5 + 0.5 * np.sin(2 * np.pi * 0.05 * t + 1.3) * np.sin(2 * np.pi * 0.013 * t)
+    wind = lp(anoise(d), 500) * gust * 0.8 + bp(anoise(d), 800, 1600) * gust * 0.08
+    crick = np.zeros_like(t)
+    for k in range(60):
+        c0 = arng.uniform(0, d - 0.3); cf = arng.uniform(4200, 5200)
+        m = (t > c0) & (t < c0 + 0.18)
+        crick[m] += np.sin(2 * np.pi * cf * (t[m] - c0)) * (np.sin(2 * np.pi * 30 * (t[m] - c0)) > 0) * 0.06
+    road = lp(anoise(d), 120) * 0.5
+    S['amb_exterior'] = norm(loopable(wind + crick + road), 0.5)
+    # industrial: machinery thump, transformer hum, metal creaks
+    thump = np.zeros_like(t)
+    for k in range(int(d / 1.1)):
+        t0 = k * 1.1
+        m = t >= t0
+        thump[m] += np.sin(2 * np.pi * 48 * (t[m] - t0)) * np.exp(-9 * (t[m] - t0)) * 0.5
+    xform = sine(50, d) * 0.2 + sine(100, d) * 0.12
+    creak = np.zeros_like(t)
+    for k in range(5):
+        c0 = arng.uniform(0, d - 1); m = (t > c0) & (t < c0 + 0.8)
+        creak[m] += bp(anoise(0.8), 300, 900)[:m.sum()] * np.linspace(0, 1, m.sum()) ** 2 * 0.15
+    S['amb_industrial'] = norm(loopable(thump + xform + lp(anoise(d), 300) * 0.2 + creak), 0.5)
+    # kennel: low hum, chain-link rattling in the wind, a dog shifting
+    rattle = bp(anoise(d), 2500, 6000) * (0.5 + 0.5 * np.sin(2 * np.pi * 0.3 * t)) ** 4 * 0.12
+    S['amb_kennel'] = norm(loopable(sine(60, d) * 0.15 + lp(anoise(d), 400) * 0.3 + rattle), 0.45)
+    # a car passing on the road outside (doppler sweep + tyre hiss)
+    d = 3.2
+    tt = t_axis(d)
+    env = np.exp(-((tt - 1.6) / 0.6) ** 2)
+    f = 90 - 30 * np.tanh((tt - 1.6) * 2.0)
+    eng = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.4 + np.sin(2 * np.pi * np.cumsum(f * 2) / SR) * 0.15
+    S['car_pass'] = fade(norm((eng + lp(anoise(d), 1400) * 0.6) * env, 0.6), 0.1, 0.3)
     for name, x in S.items():
         write_wav(os.path.join(SFX_DIR, name + ".wav"), x)
     print(f"{len(S)} sfx written")

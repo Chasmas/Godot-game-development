@@ -85,6 +85,7 @@ var _holding := false                ## waiting for an attack token
 var look := "guard"                  ## palette + variant ("guard#2") for sprites/corpse
 var _sep := Vector2.ZERO             ## cached separation push (refreshed every other tick)
 var _sep_phase := 0
+var _shout_heard_ms := -100000
 
 func _ready() -> void:
 	add_to_group("enemies")
@@ -324,6 +325,9 @@ func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> v
 	# only their gunfire means something is going on
 	if source is Enemy and kind in [&"door", &"step", &"scuffle", &"thrown"]:
 		return
+	# already fighting and looking right at the player: a sound adds nothing
+	if is_aware() and _sees_player:
+		return
 	# cheap reject before any ray casts
 	var reach := radius * Tuning.get_t().noise_scale * data.hearing_mult
 	if kind != &"alarm" and global_position.distance_squared_to(pos) > reach * reach:
@@ -363,10 +367,20 @@ func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> v
 func _hear_shout(ally: Enemy) -> void:
 	if is_aware() or not is_instance_valid(ally) or ally == self:
 		return
+	# many enemies entering combat on the same frame shout at once: reject
+	# cheaply by distance, and once a shout has been acted on, ignore the
+	# rest for a moment (otherwise every listener ray-casts every shout)
+	var reach := Tuning.get_t().shout_radius * Tuning.get_t().noise_scale * data.hearing_mult
+	if global_position.distance_squared_to(ally.global_position) > reach * reach:
+		return
+	var now := Time.get_ticks_msec()
+	if now - _shout_heard_ms < 1500:
+		return
 	var h := Hearing.perceive(self, ally.global_position, Tuning.get_t().shout_radius, &"voice", data.hearing_mult)
 	if not h.heard:
 		return
 	alert_level = 2
+	_shout_heard_ms = now
 	_show_icon("!")
 	var spread := Tuning.get_t().shout_spread
 	var target := ally.global_position.lerp(ally._last_known, 0.5)
