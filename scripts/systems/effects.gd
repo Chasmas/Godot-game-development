@@ -25,6 +25,7 @@ func _ready() -> void:
 	add_to_group("effects")
 	Events.enemy_killed.connect(_on_enemy_killed)
 	Events.enemy_alerted.connect(_on_enemy_alerted)
+	Score.combo_changed.connect(_on_combo_changed)
 	pools = Gore.PoolLayer.new()
 	pools.z_index = -9
 	add_child(pools)
@@ -71,6 +72,23 @@ func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
 	Events.camera_shake.emit(2.2 * kill_scale)
 	Events.camera_punch.emit(1.0 + 0.035 * kill_scale, 0.07 if kill_scale > 1.3 else 0.045)
 	PostFX.flash(Color(1.0, 0.28, 0.42) if method == &"gun" else Color(1.0, 0.72, 0.32), 0.08 if kill_scale <= 1.0 else 0.14)
+
+func _on_combo_changed(count: int, time_left: float, _window: float) -> void:
+	if count < 2:
+		return
+	if count == 3 or count == 5 or count == 8 or count == 12:
+		PostFX.flash(Color(1.0, 0.28, 0.55), 0.045)
+		Events.camera_punch.emit(1.015 + minf(count * 0.002, 0.035), 0.07)
+		var p := get_tree().get_first_node_in_group("player") as Node2D
+		if p:
+			p.scale = Vector2.ONE * 1.0
+			var tw := p.create_tween()
+			tw.tween_property(p, "scale", Vector2(1.025, 0.975), 0.045)
+			tw.tween_property(p, "scale", Vector2.ONE, 0.10)
+	if count >= 4 and time_left < 0.75:
+		# The shrinking window becomes visually urgent instead of being only UI.
+		PostFX.vhs_glitch(clampf((0.75 - time_left) * 0.18, 0.0, 0.14))
+
 
 func _on_enemy_alerted(_enemy: Node) -> void:
 	# Brief danger strobe when the AI acquires the player.
