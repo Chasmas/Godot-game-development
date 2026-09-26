@@ -1,22 +1,121 @@
 {
-	"title": {"name": "Neon Vigil", "layers": ["res://music/title_neon_vigil.ogg"], "bpm": 90},
-	"apartment": {"name": "Answering Machine", "layers": ["res://music/apartment_answering_machine.ogg"], "bpm": 76},
+	"title": {
+		"name": "Neon Vigil",
+		"layers": [
+			"res://music/title_neon_vigil.ogg"
+		],
+		"bpm": 90
+	},
+	"apartment": {
+		"name": "Answering Machine",
+		"layers": [
+			"res://music/apartment_answering_machine.ogg"
+		],
+		"bpm": 76
+	},
 	"motel": {
 		"name": "Checkout Time",
-		"bpm": 124,
+		"bpm": 120,
 		"layers": [
 			"res://music/level_checkout_explore.ogg",
 			"res://music/level_checkout_combat.ogg",
 			"res://music/level_checkout_combo.ogg",
 			"res://music/level_checkout_danger.ogg"
 		],
-		"intensity": [[1.0, 0.0, 0.0, 0.0], [1.0, 1.0, 0.0, 0.0], [1.0, 1.0, 1.0, 0.0], [1.0, 1.0, 1.0, 1.0]]
+		"intensity": [
+			[
+				1.0,
+				0.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				1.0
+			]
+		]
 	},
 	"boss": {
 		"name": "The Night Manager",
 		"bpm": 140,
-		"layers": ["res://music/boss_night_manager.ogg", "res://music/boss_night_manager_dark.ogg"],
-		"intensity": [[1.0, 0.0], [1.0, 0.0], [0.0, 1.0], [0.6, 1.0]]
+		"layers": [
+			"res://music/boss_night_manager.ogg",
+			"res://music/boss_night_manager_dark.ogg"
+		],
+		"intensity": [
+			[
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				0.0
+			],
+			[
+				0.0,
+				1.0
+			],
+			[
+				0.6,
+				1.0
+			]
+		]
 	},
-	"aftermath": {"name": "Static Heat", "layers": ["res://music/aftermath_static_heat.ogg"], "bpm": 60}
+	"aftermath": {
+		"name": "Static Heat",
+		"layers": [
+			"res://music/aftermath_static_heat.ogg"
+		],
+		"bpm": 60
+	},
+	"yard": {
+		"name": "Dog Days",
+		"bpm": 126,
+		"layers": [
+			"res://music/level_yard_explore.ogg",
+			"res://music/level_yard_combat.ogg",
+			"res://music/level_yard_combo.ogg",
+			"res://music/level_yard_danger.ogg"
+		],
+		"intensity": [
+			[
+				1.0,
+				0.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				1.0
+			]
+		]
+	}
 }

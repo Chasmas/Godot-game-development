@@ -404,14 +404,19 @@ func _process(delta: float) -> void:
 		phase = Phase.CLEAR
 		_update_objective()
 	# music intensity
+	# alerted enemies drive the score: anyone hunting nearby brings in the
+	# drums, several with eyes on you at once is danger; the combo climbs it
+	# further (the pulse is in every layer, so the beat never drops out)
 	var intensity := 0
+	var spotting := 0
 	for e in get_tree().get_nodes_in_group("enemies"):
 		if e.is_alive() and e.is_aware() and e.global_position.distance_to(player.global_position) < 400.0:
 			intensity = 1
-			break
-	if Score.combo >= 3:
+			if e._sees_player:
+				spotting += 1
+	if Score.combo >= 3 or spotting >= 2:
 		intensity = 2
-	if Score.combo >= 6:
+	if Score.combo >= 6 or spotting >= 4:
 		intensity = 3
 	if phase == Phase.BOSS and boss and boss.phase == 2:
 		intensity = 2
