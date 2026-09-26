@@ -578,7 +578,7 @@ func take_damage(info: DamageInfo) -> String:
 	# body armour soaks bullets
 	if armor_left > 0 and info.type == DamageInfo.Type.BALLISTIC:
 		armor_left -= 1
-		visual.flash(0.1)
+		visual.hit_react(info.dir, false, 0.11)
 		_knock = info.dir * 90.0
 		Effects.sparks(info.pos, -info.dir)
 		Audio.play_at("metal_clang", global_position, -6.0)
@@ -586,6 +586,7 @@ func take_damage(info: DamageInfo) -> String:
 		_on_armor_hit(info)
 		return "absorbed"
 	if not info.lethal:
+		visual.hit_react(info.dir, info.heavy, 0.12)
 		if data.immune_to_punch and not info.heavy and info.type in [DamageInfo.Type.PUNCH, DamageInfo.Type.THROWN, DamageInfo.Type.DOOR]:
 			_knock = info.dir * 40.0
 			_react_to_attack(info)
@@ -597,6 +598,7 @@ func take_damage(info: DamageInfo) -> String:
 		return "hurt"
 	if info.type == DamageInfo.Type.MELEE and data.immune_to_punch and not info.heavy and armor_left > 0:
 		return "blocked"
+	visual.hit_react(info.dir, true, 0.16)
 	_die(info)
 	return "killed"
 
@@ -615,6 +617,7 @@ func knock_down(info: DamageInfo) -> void:
 	_knock = info.dir * info.knockback
 	visual.torso.texture = SpriteLib.downed(data.palette)
 	visual.legs.visible = false
+	visual.fall(info.dir)
 	visual.weapon_sprite.visible = false
 	facing = -info.dir
 	collision_layer = Layers.DOWNED   # still shootable, no longer blocks movement
@@ -626,6 +629,7 @@ func knock_down(info: DamageInfo) -> void:
 
 func _get_up() -> void:
 	visual.legs.visible = true
+	visual.recover()
 	visual.set_weapon(weapon.data if weapon else null)
 	collision_layer = Layers.ENEMY
 	_set_state(State.COMBAT)
@@ -638,6 +642,7 @@ func _stun(t: float, dir: Vector2) -> void:
 	_windup_t = -1.0
 	_stun_t = t
 	_knock = dir * 120.0
+	visual.hit_react(dir, false, t)
 	_set_state(State.STUNNED)
 
 func begin_execution(by: Node) -> void:
@@ -669,6 +674,7 @@ func _die(info: DamageInfo) -> void:
 	if info.source and is_instance_valid(info.source) and info.source is Node2D:
 		src_pos = (info.source as Node2D).global_position
 	var missing := _gore_kill(info, src_pos)
+	visual.death_burst(info.dir, info.type == DamageInfo.Type.EXPLOSIVE or info.heavy)
 	_spawn_corpse(info, missing)
 	Effects.blood(global_position, info.dir, info.type in [DamageInfo.Type.EXPLOSIVE, DamageInfo.Type.BALLISTIC] or info.method == &"execution")
 	Audio.play_at("death", global_position, -3.0)
