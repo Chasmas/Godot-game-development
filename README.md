@@ -4,7 +4,7 @@ A fast, violent, surreal top-down action game set in California, 1988–1992.
 Built in **Godot 4.4** (GL Compatibility renderer), all GDScript.
 
 ## Download (Windows)
-**[releases/HOTSHOT_CALIFORNIA_0.4.0_Setup.exe](releases/HOTSHOT_CALIFORNIA_0.4.0_Setup.exe)** (30 MB, 64-bit Windows). On the file's page, use the download button (↓) at the top right.
+**[releases/HOTSHOT_CALIFORNIA_0.5.0_Setup.exe](releases/HOTSHOT_CALIFORNIA_0.5.0_Setup.exe)** (35 MB, 64-bit Windows). On the file's page, use the download button (↓) at the top right.
 
 - Run it to install. It adds Start Menu and desktop shortcuts, and uninstalls from Settings → Apps.
 - The installer isn't code-signed, so Windows SmartScreen may say "Windows protected your PC". Click **More info → Run anyway**.
