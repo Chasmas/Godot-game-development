@@ -71,6 +71,8 @@ var _dash_avg := 400.0
 ## Easy difficulty: hits absorbed before a lethal one lands; regenerates
 ## after a quiet spell (see Tuning.player_guard_*).
 var guard_hits := 0
+var _dual_left := false                ## which gun fires next when dual wielding
+var _reload_weapon: WeaponInstance = null
 var _guard_regen_t := 0.0
 var _laser: Node2D
 var _vest: Node2D
@@ -487,7 +489,14 @@ func _try_shoot(w: WeaponInstance) -> void:
 		Events.hint.emit("MELEE ONLY — throw it (RMB)", 1.2)
 		_fire_cd = 0.3
 		return
-	if w.ammo <= 0:
+	# dual wielding: guns take turns; if the one whose turn it is is dry,
+	# the other fires
+	var left := false
+	if w.dual:
+		left = _dual_left
+		if (w.ammo2 if left else w.ammo) <= 0:
+			left = not left
+	if (w.ammo2 if left else w.ammo) <= 0:
 		_fire_cd = 0.25
 		if w.reserve > 0:
 			_start_reload()
@@ -495,14 +504,21 @@ func _try_shoot(w: WeaponInstance) -> void:
 			Audio.play_at("empty", global_position)
 			Events.hint.emit("EMPTY — throw it", 1.0)
 		return
-	w.ammo -= 1
-	_fire_cd = 1.0 / w.data.fire_rate
+	if left:
+		w.ammo2 -= 1
+	else:
+		w.ammo -= 1
+	_dual_left = not left
+	# two guns: faster combined fire, but wilder (see _dual_* below)
+	_fire_cd = 1.0 / (w.data.fire_rate * (DUAL_RATE if w.dual else 1.0))
 	var move_factor := clampf(velocity.length() / data.move_speed, 0.0, 1.3)
 	var spread := w.data.spread_deg + w.data.move_spread_deg * move_factor + _bloom
+	if w.dual:
+		spread *= DUAL_SPREAD
 	if upgrades.has(&"laser"):
 		spread *= 0.4
-	_bloom = minf(_bloom + w.data.recoil_deg * (0.6 if upgrades.has(&"laser") else 1.0), 14.0)
-	var origin := visual.muzzle_global()
+	_bloom = minf(_bloom + w.data.recoil_deg * (0.6 if upgrades.has(&"laser") else 1.0) * (DUAL_BLOOM if w.dual else 1.0), 14.0)
+	var origin := visual.muzzle_global(left)
 	# never spawn the bullet on the far side of a wall we're hugging
 	var space := get_world_2d().direct_space_state
 	var q := PhysicsRayQueryParameters2D.create(global_position, origin, Layers.WORLD | Layers.DOOR | Layers.PROP, [get_rid()])
@@ -512,20 +528,34 @@ func _try_shoot(w: WeaponInstance) -> void:
 	var bs := BulletSystem.get_system()
 	if bs:
 		bs.fire(origin, aim_dir, w.data, self, spread)
-	visual.kick_recoil(w.data.camera_kick * 0.6)
-	var silenced := upgrades.has(&"silencer")
-	Effects.muzzle(origin, aim_dir, w.data.muzzle_color if not silenced else Color(1, 0.9, 0.7), w.data.pellets > 1 and not silenced)
-	Effects.casing(global_position, aim_dir)
-	Audio.play_at("suppressed" if silenced else w.data.sfx_fire, global_position, 0.0, 0.05)
+	visual.kick_recoil(w.data.camera_kick * (0.35 if w.dual else 0.6))
+	visual.gun_recoil(left, 1.5 + w.data.camera_kick * 0.4)
+	var silenced := upgrades.has(&"silencer") or w.data.suppressed
+	var mscale := w.data.muzzle_scale * (0.5 if upgrades.has(&"silencer") else 1.0)
+	Effects.muzzle(origin, aim_dir, w.data.muzzle_color if not upgrades.has(&"silencer") else Color(1, 0.9, 0.7), w.data.pellets > 1 and not silenced, mscale)
+	if w.data.ejects_shells:
+		Effects.casing(origin - aim_dir * 5.0, aim_dir, left, w.data.pellets > 1)
+	Audio.play_at("suppressed" if upgrades.has(&"silencer") else w.data.sfx_fire, global_position, 0.0, 0.05)
 	Events.noise.emit(global_position, gun_noise(w), &"gunshot", self)
-	Events.camera_shake.emit(w.data.camera_kick)
-	InputSetup.vibrate(0.2, 0.3 if w.data.pellets > 1 else 0.1, 0.08)
+	# every gun has its own weight: the shotgun shoves the camera back and
+	# freezes a hair, the SMG just buzzes
+	Events.camera_shake.emit(w.data.camera_kick * (0.8 if w.dual else 1.0))
+	if w.data.camera_kick >= 4.0:
+		Events.camera_nudge.emit(-aim_dir * w.data.camera_kick * 0.8)
+	if w.data.fire_hit_stop > 0.0:
+		Events.hit_stop.emit(w.data.fire_hit_stop)
+	InputSetup.vibrate(0.2, clampf(w.data.camera_kick * 0.06, 0.08, 0.45), 0.08)
 	_emit_weapon()
 
 func gun_noise(w: WeaponInstance) -> float:
 	if upgrades.has(&"silencer"):
 		return minf(w.data.noise_radius, 60.0) * 0.5
 	return w.data.noise_radius
+
+const DUAL_RATE := 1.6      ## combined fire rate vs one gun (not 2x)
+const DUAL_SPREAD := 1.35   ## each shot is less accurate
+const DUAL_BLOOM := 1.3     ## and walks off target faster
+const DUAL_RELOAD := 1.5    ## two magazines take longer
 
 func mag_size(w: WeaponInstance) -> int:
 	if upgrades.has(&"ext_mag") and w.data.is_firearm():
@@ -534,19 +564,28 @@ func mag_size(w: WeaponInstance) -> int:
 
 func _start_reload() -> void:
 	var w := current()
-	if w == null or not w.data.is_firearm() or w.reserve <= 0 or w.ammo >= mag_size(w) or _reload_t > 0.0:
+	if w == null or not w.data.is_firearm() or w.reserve <= 0 or _reload_t > 0.0:
 		return
-	_reload_t = w.data.reload_time * data.reload_mult * (0.55 if upgrades.has(&"quick_hands") else 1.0)
+	if w.ammo >= mag_size(w) and (not w.dual or w.ammo2 >= mag_size(w)):
+		return
+	_reload_t = w.data.reload_time * data.reload_mult * (0.55 if upgrades.has(&"quick_hands") else 1.0) * (DUAL_RELOAD if w.dual else 1.0)
+	_reload_weapon = w
 	Audio.play_at("reload", global_position, -4.0)
 
 func _finish_reload() -> void:
 	var w := current()
-	if w == null or not w.data.is_firearm():
+	# switched or threw the gun mid-reload: the reload is simply lost
+	if w == null or not w.data.is_firearm() or w != _reload_weapon:
+		_reload_weapon = null
 		return
-	var need := mag_size(w) - w.ammo
-	var take := mini(need, w.reserve)
+	_reload_weapon = null
+	var take := mini(mag_size(w) - w.ammo, w.reserve)
 	w.ammo += take
 	w.reserve -= take
+	if w.dual:
+		var take2 := mini(mag_size(w) - w.ammo2, w.reserve)
+		w.ammo2 += take2
+		w.reserve -= take2
 	_emit_weapon()
 
 func is_reloading() -> bool:
@@ -659,6 +698,18 @@ func _throw_current() -> void:
 		return
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var spd := w.data.throw_speed
+	if w.dual:
+		# toss the off-hand gun (with what's left in it), keep the other
+		var off := WeaponInstance.create(w.data, false)
+		off.ammo = w.ammo2
+		w.dual = false
+		w.ammo2 = 0
+		WeaponPickup.spawn(parent, off, visual.muzzle_global(true), aim_dir * spd + velocity * 0.3, self)
+		Audio.play_at("throw", global_position)
+		visual.punch()
+		_reload_t = 0.0
+		_refresh_weapon()
+		return
 	WeaponPickup.spawn(parent, w, visual.hand_global(), aim_dir * spd + velocity * 0.3, self)
 	slots[slot] = null
 	Audio.play_at("throw", global_position)
@@ -683,10 +734,27 @@ func _interact() -> void:
 	if current() and current().data.is_firearm():
 		_start_reload()
 
+## Picking up a second copy of a dual-wieldable gun you're holding pairs it.
+func can_dual_with(pk: WeaponPickup) -> bool:
+	var cur := current()
+	return pk != null and cur != null and not cur.dual and pk.weapon and pk.weapon.data == cur.data and cur.data.dual_wieldable
+
 func _pick_up(pk: WeaponPickup) -> void:
 	var new_w: WeaponInstance = pk.weapon
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var cur := current()
+	if can_dual_with(pk):
+		cur.dual = true
+		cur.ammo2 = mini(new_w.ammo, mag_size(cur))
+		cur.reserve += new_w.reserve
+		pk.queue_free()
+		_reload_t = 0.0
+		_dual_left = true
+		Audio.play_at("pickup", global_position)
+		Audio.play_at("reload", global_position, -8.0, 0.1)
+		Events.hint.emit("DUAL %s" % cur.data.display_name.to_upper(), 1.2)
+		_refresh_weapon()
+		return
 	if cur != null:
 		var other := 1 - slot
 		if slots[other] == null:
@@ -978,7 +1046,7 @@ func _die(info: DamageInfo) -> void:
 # =============================================================== helpers
 func _refresh_weapon() -> void:
 	var w := current()
-	visual.set_weapon(w.data if w else null)
+	visual.set_weapon(w.data if w else null, w != null and w.dual)
 	_emit_weapon()
 
 func _emit_weapon() -> void:
@@ -1003,7 +1071,10 @@ func _update_prompt() -> void:
 		return
 	var pk := WeaponPickup.nearest(global_position, get_tree())
 	if pk:
-		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), pk.weapon.data.display_name.to_upper()]
+		var what := pk.weapon.data.display_name.to_upper()
+		if can_dual_with(pk):
+			what = "DUAL WIELD  " + what
+		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), what]
 
 func give_weapon(id: StringName) -> void:
 	var d := DB.weapon(id)
@@ -1016,7 +1087,7 @@ func weapon_state() -> Array:
 	## for checkpoints: [[id, ammo, reserve, durability] or null, ...]
 	var out := []
 	for w in slots:
-		out.append([w.data.id, w.ammo, w.reserve, w.durability] if w else null)
+		out.append([w.data.id, w.ammo, w.reserve, w.durability, w.dual, w.ammo2] if w else null)
 	return out
 
 func restore_weapons(state: Array) -> void:
@@ -1027,6 +1098,9 @@ func restore_weapons(state: Array) -> void:
 			w.ammo = int(s[1])
 			w.reserve = int(s[2])
 			w.durability = int(s[3])
+			if s.size() >= 6 and w.data.dual_wieldable:
+				w.dual = bool(s[4])
+				w.ammo2 = int(s[5])
 			slots[i] = w
 	_refresh_weapon()
 

@@ -19,7 +19,7 @@ func _ready() -> void:
 	var only := OS.get_environment("EDGE_ONLY")
 	for case_name in ["gunshot_is_local", "walls_muffle", "kill_mid_investigation", "rapid_fire",
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
-			"double_death", "shout_is_local", "difficulty_scales"]:
+			"double_death", "shout_is_local", "difficulty_scales", "dual_wield"]:
 		if only != "" and case_name != only:
 			continue
 		await _load()
@@ -341,3 +341,70 @@ func difficulty_scales() -> void:
 	check(easy.reaction_time > g.reaction_time and hard.reaction_time < g.reaction_time, "reaction time scales (%.2f / %.2f / %.2f)" % [easy.reaction_time, g.reaction_time, hard.reaction_time])
 	check(easy.aim_error_deg > hard.aim_error_deg, "aim error scales")
 	check(g.reaction_time == DB.enemy(&"guard").reaction_time, "the source resource is never modified")
+
+func dual_wield() -> void:
+	var p := _p()
+	var lvl := _lvl()
+	p.god_mode = true
+	p.slots = [null, null]
+	p.slot = 0
+	p.give_weapon(&"pistol")
+	var pk := WeaponPickup.spawn(lvl.pickup_root(), WeaponInstance.create(DB.weapon(&"pistol")), p.global_position + Vector2(4, 0))
+	await frames(3)
+	check(p.can_dual_with(pk), "a second pistol offers dual wielding")
+	p._pick_up(pk)
+	await frames(2)
+	var w := p.current()
+	check(w.dual and w.ammo2 == 12 and p.visual.dual, "picking it up pairs the guns (both magazines full)")
+	var start := w.loaded()
+	var used_left := false
+	var used_right := false
+	for i in 6:
+		p._fire_cd = 0.0
+		var before_l := w.ammo2
+		var before_r := w.ammo
+		p._try_shoot(w)
+		used_left = used_left or w.ammo2 < before_l
+		used_right = used_right or w.ammo < before_r
+		await frames(2)
+	check(used_left and used_right and w.loaded() == start - 6, "the guns take turns (%d left)" % w.loaded())
+	# empty one side: the other keeps firing
+	w.ammo = 0
+	p._fire_cd = 0.0
+	var l0 := w.ammo2
+	p._try_shoot(w)
+	check(w.ammo2 == l0 - 1, "a dry gun hands off to the other")
+	# reload fills both, costs more time than one gun
+	w.ammo2 = 0
+	w.reserve = 40
+	p._start_reload()
+	var t_dual := p._reload_t
+	await frames(int(t_dual * 120) + 20)
+	check(w.ammo == 12 and w.ammo2 == 12, "reload fills both magazines (%d | %d)" % [w.ammo2, w.ammo])
+	check(t_dual > DB.weapon(&"pistol").reload_time * 1.2, "and takes longer than one gun")
+	# switching during a reload cancels it cleanly
+	w.ammo = 0
+	p._start_reload()
+	await frames(5)
+	p._swap()
+	await frames(5)
+	p._swap()
+	await frames(int(t_dual * 120) + 20)
+	check(w.ammo == 0 and not p.is_reloading(), "swapping away mid-reload cancels it (no free ammo)")
+	# throw: the off-hand gun flies, the other stays
+	var n_before := get_tree().get_nodes_in_group("pickups").size()
+	p._throw_current()
+	await frames(3)
+	check(p.current() != null and not p.current().dual and get_tree().get_nodes_in_group("pickups").size() == n_before + 1, "throwing tosses the off-hand gun only")
+	# checkpoint round trip keeps the pair
+	p.current().dual = true
+	p.current().ammo2 = 7
+	var st := p.weapon_state()
+	p.slots = [null, null]
+	p.restore_weapons(st)
+	check(p.current().dual and p.current().ammo2 == 7, "checkpoints keep the pair and its ammo")
+	# only dual-wieldable guns pair
+	p.give_weapon(&"shotgun")
+	var pk2 := WeaponPickup.spawn(lvl.pickup_root(), WeaponInstance.create(DB.weapon(&"shotgun")), p.global_position)
+	await frames(3)
+	check(not p.can_dual_with(pk2), "shotguns don't pair")

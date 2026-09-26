@@ -6,6 +6,10 @@ var data: WeaponData
 var ammo := 0
 var reserve := 0
 var durability := -1
+## Dual wielding: a second copy of the same gun in the off hand, with its
+## own magazine (ammo2). Reserve is shared. See Player._try_shoot.
+var dual := false
+var ammo2 := 0
 
 static func create(d: WeaponData, full := true) -> WeaponInstance:
 	var w := WeaponInstance.new()
@@ -17,7 +21,10 @@ static func create(d: WeaponData, full := true) -> WeaponInstance:
 	return w
 
 func can_reload() -> bool:
-	return data and data.is_firearm() and reserve > 0 and ammo < data.magazine
+	return data and data.is_firearm() and reserve > 0 and (ammo < data.magazine or (dual and ammo2 < data.magazine))
 
 func is_empty_gun() -> bool:
-	return data and data.is_firearm() and ammo <= 0 and reserve <= 0
+	return data and data.is_firearm() and ammo <= 0 and (not dual or ammo2 <= 0) and reserve <= 0
+
+func loaded() -> int:
+	return ammo + (ammo2 if dual else 0)

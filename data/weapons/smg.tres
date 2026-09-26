@@ -22,3 +22,5 @@ sfx_fire = "smg"
 sprite_key = "smg"
 camera_kick = 1.6
 flavor = "Sprays like a garden hose. Sounds like a sewing machine from hell."
+dual_wieldable = true
+muzzle_scale = 0.85

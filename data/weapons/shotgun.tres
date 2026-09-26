@@ -24,3 +24,5 @@ sprite_key = "shotgun"
 camera_kick = 7.0
 knockback = 300.0
 flavor = "Closes every conversation."
+muzzle_scale = 1.7
+fire_hit_stop = 0.03

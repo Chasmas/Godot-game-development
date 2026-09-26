@@ -8,6 +8,11 @@ var palette := "guard"
 var legs: Sprite2D
 var torso: Sprite2D
 var weapon_sprite: Sprite2D
+var weapon_sprite2: Sprite2D       ## off-hand gun when dual wielding
+var dual := false
+var _hand2 := Vector2(5, -2)
+var _gun_kick := 0.0               ## per-hand slide recoil (right, left)
+var _gun_kick2 := 0.0
 var overlay: Sprite2D
 var rig: Node2D          ## rotates with aim; holds torso (0.5x hi-res art) + weapon (1x)
 var shadow: Node2D
@@ -35,6 +40,7 @@ func _init() -> void:
 	legs = Sprite2D.new()
 	torso = Sprite2D.new()
 	weapon_sprite = Sprite2D.new()
+	weapon_sprite2 = Sprite2D.new()
 	overlay = Sprite2D.new()
 	rig = Node2D.new()
 	shadow = DropShadow.new()
@@ -43,13 +49,17 @@ func _init() -> void:
 	add_child(rig)
 	rig.add_child(torso)
 	rig.add_child(weapon_sprite)
+	rig.add_child(weapon_sprite2)
 	rig.add_child(overlay)
 	legs.scale = Vector2(0.5, 0.5)
 	torso.scale = Vector2(0.5, 0.5)
 	legs.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	weapon_sprite.centered = false
+	weapon_sprite2.centered = false
+	weapon_sprite2.flip_v = true
+	weapon_sprite2.visible = false
 	overlay.visible = false
-	for s in [legs, torso, weapon_sprite, overlay]:
+	for s in [legs, torso, weapon_sprite, weapon_sprite2, overlay]:
 		s.light_mask = 2
 
 func setup(p_palette: String) -> void:
@@ -63,22 +73,32 @@ func set_persona_overlay(enabled: bool) -> void:
 	if enabled:
 		overlay.texture = SpriteLib.persona_overlay(palette)
 
-func set_weapon(w: WeaponData) -> void:
+func set_weapon(w: WeaponData, p_dual := false) -> void:
+	dual = p_dual and w != null and w.is_firearm()
+	weapon_sprite2.visible = false
 	if w == null:
 		_hold = WeaponData.Hold.NONE
 		torso.texture = SpriteLib.torso("unarmed", palette)
 		weapon_sprite.visible = false
 		return
 	_hold = w.hold
-	torso.texture = SpriteLib.torso(SpriteLib.pose_for_hold(w.hold), palette)
+	var pose := "aim_dual" if dual else SpriteLib.pose_for_hold(w.hold)
+	torso.texture = SpriteLib.torso(pose, palette)
 	weapon_sprite.texture = SpriteLib.weapon(w.sprite_key)
 	weapon_sprite.visible = true
-	_hand = SpriteLib.hand_offset(w.hold)
+	_hand = SpriteForge.hand_world("aim_dual") if dual else SpriteLib.hand_offset(w.hold)
 	var tex_h := weapon_sprite.texture.get_height()
 	# grip sits on the hand: offset so the handle end is at the hand position
 	weapon_sprite.offset = Vector2(-2 if w.is_firearm() else -3, -tex_h * 0.5)
 	weapon_sprite.position = _hand
 	weapon_sprite.rotation = 0.0
+	if dual:
+		_hand2 = SpriteForge.hand_world("aim_dual_l")
+		weapon_sprite2.texture = weapon_sprite.texture
+		weapon_sprite2.offset = Vector2(-2, -tex_h * 0.5)
+		weapon_sprite2.position = _hand2
+		weapon_sprite2.rotation = 0.0
+		weapon_sprite2.visible = true
 
 func set_aim(angle: float) -> void:
 	aim_angle = angle
@@ -113,6 +133,13 @@ func kick_leg() -> void:
 func kick_recoil(amount := 2.0) -> void:
 	_kick = amount
 
+## One gun's slide/recoil when firing (the body kick is kick_recoil).
+func gun_recoil(left: bool, amount: float) -> void:
+	if left:
+		_gun_kick2 = amount
+	else:
+		_gun_kick = amount
+
 var _stab := false
 var _twist := 0.0
 
@@ -138,7 +165,9 @@ func is_swinging() -> bool:
 func hand_global() -> Vector2:
 	return rig.to_global(_hand + Vector2(6, 0))
 
-func muzzle_global() -> Vector2:
+func muzzle_global(left := false) -> Vector2:
+	if left and dual and weapon_sprite2.texture:
+		return rig.to_global(_hand2 + Vector2(weapon_sprite2.texture.get_width() - 2, 0))
 	if weapon_sprite.visible and weapon_sprite.texture:
 		var w := weapon_sprite.texture.get_width()
 		return rig.to_global(_hand + Vector2(w - 2, 0))
@@ -170,6 +199,13 @@ func _process(delta: float) -> void:
 	_relax = move_toward(_relax, want_relax, delta * (1.2 if want_relax > _relax else 6.0))
 	if _swing_t < 0.0 and weapon_sprite.visible and _hold in [WeaponData.Hold.ONE_HAND, WeaponData.Hold.TWO_HAND]:
 		weapon_sprite.rotation = 0.6 * _relax
+	# per-gun recoil: the gun snaps back along its barrel and returns
+	_gun_kick = move_toward(_gun_kick, 0.0, delta * 26.0)
+	_gun_kick2 = move_toward(_gun_kick2, 0.0, delta * 26.0)
+	if _swing_t < 0.0 and weapon_sprite.visible:
+		weapon_sprite.position = _hand - Vector2(_gun_kick, 0)
+		if dual:
+			weapon_sprite2.position = _hand2 - Vector2(_gun_kick2, 0)
 	if _punch_t >= 0.0:
 		_punch_t += delta
 		if _punch_t > 0.12:

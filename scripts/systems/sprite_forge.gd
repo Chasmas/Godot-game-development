@@ -178,6 +178,10 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		"aim_two":
 			hand_l = c + Vector2(9, -2)
 			hand_r = c + Vector2(11, 3)
+		"aim_dual":
+			# both arms out, a gun in each hand
+			hand_l = c + Vector2(12, -4)
+			hand_r = c + Vector2(12, 4)
 		"melee":
 			hand_l = c + Vector2(5, -8)
 			hand_r = c + Vector2(8, 7)
@@ -353,5 +357,7 @@ static func hand_world(pose: String) -> Vector2:
 	match pose:
 		"aim_one": return Vector2(5.5, 1.5)
 		"aim_two": return Vector2(4.5, 0.5)
+		"aim_dual": return Vector2(5.5, 2.0)
+		"aim_dual_l": return Vector2(5.5, -2.0)
 		"melee": return Vector2(3.5, 3.5)
 	return Vector2(3, 3)

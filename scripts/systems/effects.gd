@@ -14,6 +14,7 @@ var _pool_index: Dictionary = {}
 var _flash_light: PointLight2D
 var _flash_time := 0.0
 var _popup_layer: Node2D
+var shells: ShellLayer
 
 static func get_fx() -> Effects:
 	var tree := Engine.get_main_loop() as SceneTree
@@ -33,6 +34,10 @@ func _ready() -> void:
 	gib_root.name = "Gibs"
 	gib_root.z_index = -3
 	add_child(gib_root)
+	shells = ShellLayer.new()
+	shells.fx = self
+	shells.z_index = -2
+	add_child(shells)
 	_popup_layer = Node2D.new()
 	_popup_layer.z_index = 50
 	add_child(_popup_layer)
@@ -182,17 +187,19 @@ static func explosion(pos: Vector2, radius: float) -> void:
 	ring.global_position = pos
 	fx.add_child(ring)
 
-static func muzzle(pos: Vector2, dir: Vector2, color: Color, big := false) -> void:
+static func muzzle(pos: Vector2, dir: Vector2, color: Color, big := false, scale := 1.0) -> void:
 	var fx := get_fx()
 	if fx == null:
 		return
+	var sc := scale * (1.6 if big else 1.0)
 	fx._flash_light.global_position = pos
 	fx._flash_light.color = color
-	fx._flash_light.texture_scale = 2.2 if big else 1.4
-	fx._flash_time = 0.05
+	fx._flash_light.texture_scale = 1.4 * clampf(sc, 0.4, 1.8)
+	fx._flash_time = 0.05 * clampf(sc, 0.6, 1.5)
 	var f := MuzzleFlash.new()
 	f.color = color
 	f.big = big
+	f.scale_mult = scale
 	f.global_position = pos
 	f.rotation = dir.angle()
 	fx.add_child(f)
@@ -233,11 +240,23 @@ static func impact(pos: Vector2, dir: Vector2, kill: bool, blade: bool) -> void:
 			for k in 5:
 				fx.decals.add_splat(pos + dir * (6.0 + k * 5.0) + dir.orthogonal() * randf_range(-2, 2), 1.4, Color(0.55, 0.02, 0.07, 0.85))
 
-static func casing(pos: Vector2, dir: Vector2) -> void:
+## A spent case flicked out of the ejection port (right side of the gun, or
+## the left for the off-hand gun): arcs, spins, bounces once, then stays on
+## the floor as a decal. All cases are simulated by one ShellLayer node.
+static func casing(pos: Vector2, dir: Vector2, left := false, shotgun := false) -> void:
 	var fx := get_fx()
 	if fx:
-		var side := dir.orthogonal() * randf_range(6, 14) + dir * randf_range(-4, 2)
-		fx.decals.add_mark(pos + side, Color(0.95, 0.75, 0.3, 0.9), 1.0)
+		fx.shells.eject(pos, dir, left, shotgun)
+
+## Bullet into a wall: sparks on metal/stone, plus a puff of plaster dust.
+static func bullet_impact(pos: Vector2, normal: Vector2) -> void:
+	var fx := get_fx()
+	if fx == null:
+		return
+	fx.emit("spark", pos, normal)
+	fx.decals.add_mark(pos, Color(0.08, 0.06, 0.08, 0.7), 1.2)
+	if randf() < 0.6:
+		fx.emit("dust", pos + normal * 2.0, normal)
 
 static func popup(text: String, pos: Vector2, color := Color(1, 0.9, 0.3)) -> void:
 	var fx := get_fx()
@@ -325,6 +344,7 @@ class DecalChunk extends Node2D:
 
 
 class MuzzleFlash extends Node2D:
+	var scale_mult := 1.0
 	var color := Color.WHITE
 	var big := false
 	var t := 0.0
@@ -336,10 +356,18 @@ class MuzzleFlash extends Node2D:
 			queue_free()
 		queue_redraw()
 	func _draw() -> void:
-		var s := 1.6 if big else 1.0
-		var pts := PackedVector2Array([Vector2(0, -3) * s, Vector2(12, 0) * s, Vector2(0, 3) * s, Vector2(3, 0) * s])
-		draw_colored_polygon(pts, color)
-		draw_circle(Vector2(2, 0), 3.0 * s, Color(1, 1, 0.9))
+		var s := (1.6 if big else 1.0) * scale_mult
+		# two frames: full star, then a smaller dimmer one (reads as a flash,
+		# not a sticker)
+		var k := clampf(t / 0.05, 0.0, 1.0)
+		var sz := s * (1.0 - k * 0.45)
+		var pts := PackedVector2Array([Vector2(0, -3) * sz, Vector2(12, 0) * sz, Vector2(0, 3) * sz, Vector2(3, 0) * sz])
+		draw_colored_polygon(pts, Color(color, 1.0 - k * 0.5))
+		if big:
+			for a in [-0.5, 0.5]:
+				var d := Vector2.from_angle(a)
+				draw_colored_polygon(PackedVector2Array([d.orthogonal() * 1.5 * sz, d * 9.0 * sz, -d.orthogonal() * 1.5 * sz]), Color(color, 0.8 - k * 0.5))
+		draw_circle(Vector2(2, 0), 3.0 * sz, Color(1, 1, 0.9, 1.0 - k * 0.6))
 
 
 class ExplosionRing extends Node2D:
@@ -436,3 +464,55 @@ class ImpactFX extends Node2D:
 		draw_colored_polygon(PackedVector2Array([Vector2(-s, 0), Vector2(0, -s * 0.22), Vector2(s * 1.3, 0), Vector2(0, s * 0.22)]), c)
 		draw_colored_polygon(PackedVector2Array([Vector2(0, -s), Vector2(s * 0.22, 0), Vector2(0, s), Vector2(-s * 0.22, 0)]), c)
 		draw_arc(Vector2.ZERO, 4.0 + k * (16.0 if big else 10.0), 0, TAU, 20, Color(1, 0.4, 0.5, 0.7 * (1.0 - k)), 2.0)
+
+
+## Every spent casing in flight, simulated and drawn by one node (no node
+## per shell). Landed shells become floor decals; the list is capped.
+class ShellLayer extends Node2D:
+	const MAX := 48
+	var fx: Node
+	var items: Array = []   ## [pos, vel, height, vz, rot, spin, bounced, shotgun]
+	func eject(pos: Vector2, dir: Vector2, left: bool, shotgun: bool) -> void:
+		if items.size() >= MAX:
+			_land(items.pop_front())
+		var side := dir.orthogonal() * (-1.0 if left else 1.0)
+		var vel := side * randf_range(55.0, 85.0) + dir * randf_range(-25.0, 5.0)
+		items.append([pos + side * 3.0, vel, 3.0, randf_range(40.0, 60.0), randf() * TAU, randf_range(-25.0, 25.0), false, shotgun])
+		set_process(true)
+	func _ready() -> void:
+		set_process(false)
+	func _process(delta: float) -> void:
+		var i := items.size() - 1
+		while i >= 0:
+			var it: Array = items[i]
+			it[0] += it[1] * delta
+			it[3] -= 260.0 * delta
+			it[2] += it[3] * delta
+			it[4] += it[5] * delta
+			if it[2] <= 0.0:
+				if not it[6]:
+					# first touch: bounce, tinkle
+					it[6] = true
+					it[2] = 0.0
+					it[3] = absf(it[3]) * 0.35
+					it[1] *= 0.45
+					it[5] *= 0.5
+					Audio.play_at("shell", it[0], -20.0, 0.25)
+				else:
+					_land(it)
+					items.remove_at(i)
+			i -= 1
+		if items.is_empty():
+			set_process(false)
+		queue_redraw()
+	func _land(it: Array) -> void:
+		if fx and is_instance_valid(fx):
+			fx.decals.add_mark(it[0], Color(0.95, 0.72, 0.28, 0.9) if not it[7] else Color(0.8, 0.12, 0.12, 0.9), 1.0)
+	func _draw() -> void:
+		for it in items:
+			var p: Vector2 = it[0] - Vector2(0, it[2])
+			var d := Vector2.from_angle(it[4])
+			var len := 1.6 if not it[7] else 2.2
+			var col := Color(1.0, 0.8, 0.35) if not it[7] else Color(0.85, 0.15, 0.12)
+			draw_line(p - d * len, p + d * len, Color(0.1, 0.06, 0.02, 0.8), 1.8)
+			draw_line(p - d * len, p + d * len, col, 1.0)

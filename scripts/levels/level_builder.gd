@@ -178,7 +178,9 @@ func build() -> Dictionary:
 					continue
 				var wd := DB.weapon(wid)
 				if wd:
-					var pk := WeaponPickup.spawn(level.pickup_root(), WeaponInstance.create(wd), center + Vector2(randf_range(-3, 3), randf_range(-3, 3)))
+					var wi := WeaponInstance.create(wd)
+					wi.reserve = int(round(wi.reserve * Difficulty.mult("ammo_mult")))
+					var pk := WeaponPickup.spawn(level.pickup_root(), wi, center + Vector2(randf_range(-3, 3), randf_range(-3, 3)))
 					pk.set_meta("item_key", "w_" + k)
 	level.nav = _build_nav()
 	return out

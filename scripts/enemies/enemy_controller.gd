@@ -940,7 +940,7 @@ func _drop_weapon(vel: Vector2) -> void:
 	if weapon == null:
 		return
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
-	weapon.reserve = weapon.data.reserve_on_pickup() / 2 if weapon.data.is_firearm() else weapon.reserve
+	weapon.reserve = int(round(weapon.data.reserve_on_pickup() / 2 * Difficulty.mult("ammo_mult"))) if weapon.data.is_firearm() else weapon.reserve
 	WeaponPickup.spawn(parent, weapon, global_position, vel)
 	weapon = null   # disarmed shooters fall back to brawling (see _gun_combat)
 

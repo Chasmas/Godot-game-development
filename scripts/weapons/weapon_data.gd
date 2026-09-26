@@ -32,6 +32,8 @@ enum Hold { ONE_HAND, TWO_HAND, MELEE_ONE, MELEE_TWO, NONE }
 @export var suppressed := false
 @export var camera_kick := 2.5
 @export var knockback := 120.0
+## Two of these can be carried as a pair (see Player dual wielding).
+@export var dual_wieldable := false
 
 @export_group("Melee")
 @export var melee_range := 22.0
@@ -54,6 +56,9 @@ enum Hold { ONE_HAND, TWO_HAND, MELEE_ONE, MELEE_TWO, NONE }
 @export var tracer_color := Color(1.0, 0.95, 0.6)
 @export var sprite_key := "pistol"
 @export var score_tag := "gun"
+@export var muzzle_scale := 1.0           ## flash size: whisper tiny, shotgun huge
+@export var ejects_shells := true         ## revolvers keep their brass
+@export var fire_hit_stop := 0.0          ## tiny freeze on each shot for heavy guns
 
 func is_firearm() -> bool:
 	return kind == Kind.FIREARM

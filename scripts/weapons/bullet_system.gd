@@ -146,7 +146,7 @@ func _simulate(b: Bullet, step: float) -> bool:
 					b.pen -= 1
 					b.exclude.append(hit.rid)
 					continue
-				Effects.sparks(hp, hit.normal)
+				Effects.bullet_impact(hp, hit.normal)
 				_resolve_group(b.group, false)
 				return false
 	if b.dist_left <= 0.01:

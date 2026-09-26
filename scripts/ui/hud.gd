@@ -203,6 +203,10 @@ func _process(delta: float) -> void:
 		_card_t -= rd
 		card_sub.modulate.a = clampf(_card_t * 1.5, 0.0, 1.0)
 	_combo_pulse = move_toward(_combo_pulse, 0.0, rd * 4.0)
+	# the ammo counter jolts on each shot
+	_ammo_pulse = move_toward(_ammo_pulse, 0.0, rd * 10.0)
+	ammo_label.pivot_offset = Vector2(400, 18)
+	ammo_label.scale = Vector2.ONE * (1.0 + _ammo_pulse * 0.08)
 	combo_label.scale = Vector2.ONE * (1.0 + _combo_pulse * 0.35)
 	var show_map := Input.is_action_pressed("map")
 	map_panel.visible = show_map
@@ -260,17 +264,33 @@ func _on_combo_end(count: int, bonus: int) -> void:
 func _on_points(text: String, pts: int, pos: Vector2) -> void:
 	Effects.popup("%s +%d" % [text, pts] if pts >= 0 else "%s %d" % [text, pts], pos, UIStyle.GOLD if pts >= 0 else UIStyle.HOT)
 
+var _ammo_pulse := 0.0
+var _last_ammo_shown := 0
+var _last_weapon_shown: StringName = &""
+
 func _on_weapon(id: StringName, ammo: int, reserve: int) -> void:
 	if player == null:
 		return
+	_on_weapon_inner(id, ammo, reserve)
+	_last_ammo_shown = ammo
+	_last_weapon_shown = id
+
+func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 	var w := player.current()
 	if w == null:
 		weapon_label.text = "FISTS"
 		ammo_label.text = ""
 	elif w.data.is_firearm():
-		weapon_label.text = w.data.display_name.to_upper()
-		ammo_label.text = "%d / %d" % [w.ammo, w.reserve]
-		ammo_label.add_theme_color_override("font_color", UIStyle.HOT if w.ammo == 0 else UIStyle.PINK)
+		weapon_label.text = ("2× " if w.dual else "") + w.data.display_name.to_upper()
+		if w.dual:
+			ammo_label.text = "%d | %d / %d" % [w.ammo2, w.ammo, w.reserve]
+		else:
+			ammo_label.text = "%d / %d" % [w.ammo, w.reserve]
+		ammo_label.add_theme_color_override("font_color", UIStyle.HOT if w.loaded() == 0 else UIStyle.PINK)
+		if ammo > _last_ammo_shown or id != _last_weapon_shown:
+			_ammo_pulse = 0.0
+		elif ammo < _last_ammo_shown:
+			_ammo_pulse = 1.0
 	else:
 		weapon_label.text = w.data.display_name.to_upper()
 		ammo_label.text = "∞" if w.durability < 0 else "%d HITS" % w.durability
@@ -298,8 +318,21 @@ func _on_player_died(_info: Dictionary) -> void:
 class Crosshair extends Control:
 	var hud: HUD
 	var _t := 0.0
+	var _hit := 0.0      ## white X: a shot connected
+	var _kill := 0.0     ## red X: it was a kill
+	var _kick := 0.0     ## reticle opens on each shot
+	func _ready() -> void:
+		Events.player_fired.connect(func(_w, hit): 
+			_kick = 1.0
+			if hit:
+				_hit = 1.0)
+		Events.enemy_killed.connect(func(_e, _i): _kill = 1.0)
 	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.03)
 		_t += delta
+		_hit = move_toward(_hit, 0.0, rd * 5.0)
+		_kill = move_toward(_kill, 0.0, rd * 2.8)
+		_kick = move_toward(_kick, 0.0, rd * 12.0)
 		queue_redraw()
 	func _draw() -> void:
 		if hud == null or hud.player == null or not is_instance_valid(hud.player) or not hud.player.alive:
@@ -327,16 +360,42 @@ class Crosshair extends Control:
 			p = hud.player.get_viewport().get_canvas_transform() * hud.player.aim_point
 		else:
 			p = get_local_mouse_position()
-		var spread := 4.0 + hud.player._bloom * 0.6
+		var spread := 4.0 + hud.player._bloom * 0.6 + _kick * 3.0
 		var c := UIStyle.PINK
 		var w := hud.player.current()
-		if w and w.data.is_firearm() and w.ammo == 0:
+		if w and w.data.is_firearm() and w.loaded() == 0:
 			c = Color(0.6, 0.6, 0.6)
+		if hud.player.is_reloading():
+			# reload progress ring
+			var k := 1.0 - hud.player._reload_t / maxf(0.01, w.data.reload_time * hud.player.data.reload_mult * (Player.DUAL_RELOAD if w.dual else 1.0)) if w else 0.0
+			draw_arc(p, spread + 7.0, -PI * 0.5, -PI * 0.5 + TAU * clampf(k, 0.0, 1.0), 24, Color(UIStyle.CYAN, 0.8), 2.0)
 		for a in 4:
 			var d := Vector2.from_angle(a * PI * 0.5 + PI * 0.25)
 			draw_line(p + d * spread, p + d * (spread + 5.0), UIStyle.INK, 4.0)
 			draw_line(p + d * spread, p + d * (spread + 5.0), c, 2.0)
+		if w and w.dual:
+			# twin brackets for two guns
+			for sgn in [-1.0, 1.0]:
+				var bx := p + Vector2(sgn * (spread + 9.0), 0)
+				draw_polyline(PackedVector2Array([bx + Vector2(-sgn * 3, -5), bx + Vector2(0, -5), bx + Vector2(0, 5), bx + Vector2(-sgn * 3, 5)]), UIStyle.INK, 3.0)
+				draw_polyline(PackedVector2Array([bx + Vector2(-sgn * 3, -5), bx + Vector2(0, -5), bx + Vector2(0, 5), bx + Vector2(-sgn * 3, 5)]), c, 1.4)
 		draw_circle(p, 1.5, UIStyle.PAPER)
+		# hit / kill confirmation
+		var mk := maxf(_hit, _kill)
+		if mk > 0.0:
+			var col := Color(UIStyle.HOT, _kill) if _kill > 0.0 else Color(1, 1, 1, _hit)
+			var r0 := 5.0 + (1.0 - mk) * 3.0
+			for a in 4:
+				var d := Vector2.from_angle(a * PI * 0.5 + PI * 0.25)
+				draw_line(p + d * r0, p + d * (r0 + 5.0 + _kill * 3.0), Color(UIStyle.INK, col.a), 3.5)
+				draw_line(p + d * r0, p + d * (r0 + 5.0 + _kill * 3.0), col, 1.6)
+		# easy mode guard pips next to the reticle
+		var gmax := int(Difficulty.value("player_guard_hits"))
+		for i in gmax:
+			var filled := i < hud.player.guard_hits
+			var gp := p + Vector2(spread + 12.0 + i * 7.0, 8.0)
+			draw_rect(Rect2(gp - Vector2(2.5, 2.5), Vector2(5, 5)), UIStyle.INK)
+			draw_rect(Rect2(gp - Vector2(2, 2), Vector2(4, 4)), UIStyle.CYAN if filled else Color(0.4, 0.4, 0.45))
 
 
 ## Arrow to the nearest remaining enemy when only a few are left.
