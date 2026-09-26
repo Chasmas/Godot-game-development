@@ -3,6 +3,7 @@ extends Control
 ## dialogue from res://data/dialogue/<id>.json, script events.
 
 var backdrop: TitleBackdrop
+var shot: StoryShot          ## illustrated shots, when the dialogue names them
 var card: Label
 var osd: Label
 var id := ""
@@ -15,10 +16,17 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	id = Game.current_cutscene
 	var d := Dialogue.load_dialogue(id)
-	backdrop = TitleBackdrop.new()
-	backdrop.mode = str(d.get("bg", "black"))
-	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	add_child(backdrop)
+	if StoryShot.has_shot(str(d.get("shot", ""))):
+		shot = StoryShot.new()
+		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(shot)
+		shot.show_shot(str(d.shot), true)
+		Dialogue.line_shown.connect(_on_line)
+	else:
+		backdrop = TitleBackdrop.new()
+		backdrop.mode = str(d.get("bg", "black"))
+		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(backdrop)
 	osd = UIStyle.label("PLAY ▶", 20, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
@@ -42,12 +50,19 @@ func _process(delta: float) -> void:
 	_t += delta
 	osd.text = "PLAY ▶   %d:%02d" % [int(_t) / 60, int(_t) % 60]
 	if _t > 4.0:
-		card.modulate.a = move_toward(card.modulate.a, 0.35, delta)
+		card.modulate.a = move_toward(card.modulate.a, 0.0 if shot else 0.35, delta)
+
+## Each line can cut to a new shot ("shot" on the dialogue node).
+func _on_line(_speaker: String, _text: String) -> void:
+	var sid := str(Dialogue._node.get("shot", ""))
+	if shot and sid != "":
+		shot.show_shot(sid)
 
 func _on_event(ev: String) -> void:
 	match ev:
 		"fire":
-			backdrop.fire = 1.0
+			if backdrop:
+				backdrop.fire = 1.0
 			PostFX.flash(Color(1, 0.6, 0.2), 0.7)
 			PostFX.vhs_glitch(1.0)
 		"star":
@@ -66,5 +81,7 @@ func _on_finished(fid: String) -> void:
 func _exit_tree() -> void:
 	if Dialogue.event.is_connected(_on_event):
 		Dialogue.event.disconnect(_on_event)
+	if Dialogue.line_shown.is_connected(_on_line):
+		Dialogue.line_shown.disconnect(_on_line)
 	if Dialogue.finished.is_connected(_on_finished):
 		Dialogue.finished.disconnect(_on_finished)

@@ -1,13 +1,12 @@
 {
-	"bg": "desert_night", "music": "", "title": "ROUTE 58, MOJAVE DESERT — 1987",
-	"start": "a",
+	"bg": "desert_night", "music": "", "title": "ROUTE 58, MOJAVE DESERT — 1987", "start": "a", "shot": "desert_road",
 	"nodes": {
-		"a": {"speaker": "tommy", "text": "You ever notice nobody yells 'cut' out here? Desert just keeps rolling.", "next": "b"},
-		"b": {"speaker": "cass", "text": "Tommy. Get out of the car.", "next": "c"},
-		"c": {"speaker": "tommy", "text": "It's a stunt, Cassie. The fire's fake. The money's real.", "next": "d"},
-		"d": {"speaker": "voice", "text": "Rolling. Speed. HOTSHOT, scene forty, take one.", "sfx": "vhs_static", "next": "e"},
-		"e": {"speaker": "tommy", "text": "See you on the other side of the shot.", "next": "f"},
-		"f": {"speaker": "narration", "text": "Action.", "event": "fire", "sfx": "explosion", "next": "g"},
-		"g": {"speaker": "voice", "text": "...and that's a wrap. Print it.", "sfx": "vhs_static"}
+		"a": {"speaker": "tommy", "text": "You ever notice nobody yells 'cut' out here? Desert just keeps rolling.", "next": "b", "shot": "tommy_car"},
+		"b": {"speaker": "cass", "text": "Tommy. Get out of the car.", "next": "c", "shot": "cass_close"},
+		"c": {"speaker": "tommy", "text": "It's a stunt, Cassie. The fire's fake. The money's real.", "next": "d", "shot": "tommy_car"},
+		"d": {"speaker": "voice", "text": "Rolling. Speed. HOTSHOT, scene forty, take one.", "sfx": "vhs_static", "next": "e", "shot": "clapper"},
+		"e": {"speaker": "tommy", "text": "See you on the other side of the shot.", "next": "f", "shot": "tommy_car"},
+		"f": {"speaker": "narration", "text": "Action.", "event": "fire", "sfx": "explosion", "next": "g", "shot": "explosion"},
+		"g": {"speaker": "voice", "text": "...and that's a wrap. Print it.", "sfx": "vhs_static", "shot": "wreck"}
 	}
 }
