@@ -61,6 +61,10 @@ func _ready() -> void:
 	logo_bottom.rotation = -0.06
 	UIStyle.place(logo_bottom, Control.PRESET_CENTER_TOP, Vector2(-250, 178), Vector2(700, 90))
 	add_child(logo_bottom)
+	if key_art:
+		# The commissioned key art already contains the HOTSHOT wordmark.
+		logo_top.visible = false
+		logo_bottom.visible = false
 	osd = UIStyle.label("PLAY ▶", 22, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
@@ -69,12 +73,27 @@ func _ready() -> void:
 	add_child(ver)
 	press_label = UIStyle.label("PRESS ANY BUTTON", 22, UIStyle.GOLD, true)
 	press_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
+	if key_art:
+		press_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		UIStyle.place(press_label, Control.PRESET_BOTTOM_LEFT, Vector2(76, -82), Vector2(560, 30))
+	else:
+		UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
 	add_child(press_label)
 	menu = VBoxContainer.new()
 	menu.add_theme_constant_override("separation", 2)
 	menu.visible = false
-	UIStyle.place(menu, Control.PRESET_CENTER_BOTTOM, Vector2(-140, -250), Vector2(280, 230))
+	if key_art:
+		# Art-directed composition: menu sits in the quieter lower-left quadrant.
+		menu.anchor_left = 0.0
+		menu.anchor_right = 0.0
+		menu.anchor_top = 1.0
+		menu.anchor_bottom = 1.0
+		menu.offset_left = 76
+		menu.offset_right = 356
+		menu.offset_top = -292
+		menu.offset_bottom = -62
+	else:
+		UIStyle.place(menu, Control.PRESET_CENTER_BOTTOM, Vector2(-140, -250), Vector2(280, 230))
 	add_child(menu)
 	panel = PanelContainer.new()
 	panel.custom_minimum_size = Vector2(760, 420)
