@@ -263,6 +263,7 @@ func _gameplay_tab() -> void:
 func _access_tab() -> void:
 	var p := _page("ACCESS")
 	_toggle(p, "Subtitles", "subtitles", true)
+	_toggle(p, "Tutorial tips", "tips", true)
 	_choice(p, "Subtitle size", "subtitle_size", ["Small", "Medium", "Large"], 1)
 	_choice(p, "Text speed", "text_speed", ["Slow", "Normal", "Fast", "Instant"], 1)
 	_choice(p, "Colour-blind filter", "colorblind", ["Off", "Protanopia", "Deuteranopia", "Tritanopia"])

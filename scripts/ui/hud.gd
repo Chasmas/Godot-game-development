@@ -61,6 +61,11 @@ func _ready() -> void:
 	beat_meter.size = Vector2(160, 40)
 	beat_meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(beat_meter)
+	tips = TipCard.new()
+	tips.hud = self
+	tips.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	tips.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(tips)
 	rec = RecOverlay.new()
 	rec.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	rec.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -238,6 +243,14 @@ func _on_objective(t: String) -> void:
 
 var beat_meter: BeatMeter
 var rec: RecOverlay
+var tips: TipCard
+
+## A one-time tutorial note ("DIRECTOR'S NOTE"): shown the first time its
+## situation comes up in this save, never again. {action} names in the text
+## become the player's current bindings.
+func tip(id: String, text: String) -> void:
+	if tips:
+		tips.offer(id, text)
 
 func _on_music_beat(_i: int) -> void:
 	beat_meter.pulse()
@@ -372,16 +385,41 @@ class Crosshair extends Control:
 		_hit = move_toward(_hit, 0.0, rd * 5.0)
 		_kill = move_toward(_kill, 0.0, rd * 2.8)
 		_kick = move_toward(_kick, 0.0, rd * 12.0)
+		_lock_t += rd
 		queue_redraw()
+	var _lock_prev: Node2D = null
+	var _lock_t := 0.0
+	## Small marker over the locked enemy's head: a bobbing pink chevron with
+	## a tick, so you can see at a glance who your shots will follow.
+	func _draw_lock_marker(tp: Vector2) -> void:
+		var z := hud.player.get_viewport().get_canvas_transform().get_scale().y
+		var k := clampf(_lock_t / 0.2, 0.0, 1.0)
+		var e := 1.0 - pow(1.0 - k, 3.0)
+		var head := tp + Vector2(0, -14.0 * z - 10.0 - sin(_t * 5.0) * 2.0 - (1.0 - e) * 14.0)
+		var w := 7.0
+		var pts := PackedVector2Array([head + Vector2(-w, -6), head + Vector2(0, 2), head + Vector2(w, -6), head + Vector2(0, -2)])
+		draw_colored_polygon(pts, Color(UIStyle.INK, 0.9 * e))
+		var inner := PackedVector2Array([head + Vector2(-w + 2, -5), head + Vector2(0, 0), head + Vector2(w - 2, -5), head + Vector2(0, -2.5)])
+		draw_colored_polygon(inner, Color(UIStyle.HOT, e))
+		draw_rect(Rect2(head + Vector2(-1, -12), Vector2(2, 4)), Color(UIStyle.PAPER, e * (0.6 + 0.4 * sin(_t * 10.0))))
+		if _lock_t < 0.35:
+			draw_arc(head + Vector2(0, -3), 6.0 + _lock_t * 50.0, 0, TAU, 20, Color(UIStyle.HOT, 1.0 - _lock_t / 0.35), 1.5)
+
 	func _draw() -> void:
 		if hud == null or hud.player == null or not is_instance_valid(hud.player) or not hud.player.alive:
 			return
 		if get_tree().paused:
 			return
 		var lt: Node2D = hud.player.lock_target
+		if lt != _lock_prev:
+			_lock_prev = lt
+			_lock_t = 0.0
 		if lt and is_instance_valid(lt):
 			var tp := hud.player.get_viewport().get_canvas_transform() * lt.global_position
-			var rr := 14.0 + sin(_t * 8.0) * 1.5
+			_draw_lock_marker(tp)
+			# brackets snap in from wide when the lock is acquired
+			var snap := 1.0 - clampf(_lock_t / 0.18, 0.0, 1.0)
+			var rr := 14.0 + sin(_t * 8.0) * 1.5 + snap * snap * 26.0
 			var rot := _t * 2.0
 			for i in 4:
 				var a0 := rot + i * PI * 0.5
@@ -679,3 +717,162 @@ class RecOverlay extends Control:
 		draw_string(UIStyle.font_display(), Vector2(size.x * 0.5 - 120, size.y - m - 12), tr("FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color(UIStyle.PINK, a))
 		var fr := int(_t * 30.0)
 		draw_string(UIStyle.font_mono(), Vector2(size.x - m - 150, m + 37), "00:00:%02d:%02d" % [fr / 30, fr % 30], HORIZONTAL_ALIGNMENT_LEFT, -1, 16, c)
+
+
+## DIRECTOR'S NOTE cards: short tutorial bits the first time something
+## happens, slid in on the right like a note clipped to the script, text
+## popping in letter by letter. One at a time, queued, each once per save.
+## The watcher checks the situations a few times a second.
+class TipCard extends Control:
+	var hud: HUD
+	var _queue: Array = []
+	var _cur: Dictionary = {}
+	var _t := 0.0
+	var _check_t := 0.0
+	var _level_t := 0.0
+	var _clack_i := -1
+	const CPS := 60.0
+
+	func offer(id: String, text: String) -> void:
+		if not bool(SaveManager.get_setting("tips", true)):
+			return
+		if bool(SaveManager.get_flag("tip_" + id, false)):
+			return
+		if _cur.get("id", "") == id:
+			return
+		for q in _queue:
+			if q.id == id:
+				return
+		SaveManager.set_flag("tip_" + id, true)
+		_queue.append({"id": id, "text": _bind(tr(text))})
+
+	## "{fire}" -> the binding for that action on the current device
+	static func _bind(t: String) -> String:
+		var out := t
+		for a in ["fire", "secondary", "dash", "interact", "swap", "reload", "lock_on", "sneak", "execute", "ability", "equipment"]:
+			if out.contains("{" + a + "}"):
+				out = out.replace("{" + a + "}", "[" + InputSetup.binding_text(a, InputSetup.using_gamepad) + "]")
+		return out
+
+	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.05)
+		_level_t += rd
+		_check_t -= rd
+		if _check_t <= 0.0:
+			_check_t = 0.25
+			_watch()
+		if _cur.is_empty():
+			if not _queue.is_empty():
+				_cur = _queue.pop_front()
+				_t = 0.0
+				_clack_i = -1
+				Audio.play("ui_move", -10.0, 0.8)
+		else:
+			_t += rd
+			var life: float = 2.8 + str(_cur.text).length() / 26.0
+			var n := int((_t - 0.25) * CPS)
+			if n != _clack_i and n > 0 and n < _cur.text.length() and n % 3 == 0:
+				_clack_i = n
+				Audio.play("type_clack", -22.0, randf_range(0.9, 1.1))
+			if _t > life:
+				_cur = {}
+		queue_redraw()
+
+	func _draw() -> void:
+		if _cur.is_empty():
+			return
+		var text: String = _cur.text
+		var life := 2.8 + text.length() / 26.0
+		var w := 330.0
+		var f := UIStyle.font_mono()
+		var fs := 13
+		var lines := BarkLayer._wrap(f, text, fs, w - 34.0)
+		var lh := f.get_height(fs)
+		var h := 34.0 + lines.size() * lh + 12.0
+		var slide := 1.0 - pow(1.0 - clampf(_t / 0.3, 0.0, 1.0), 3.0)
+		var out := pow(clampf((_t - (life - 0.35)) / 0.35, 0.0, 1.0), 2.0)
+		var x := size.x - 20.0 - w * slide + (w + 30.0) * out
+		var y := 104.0
+		var r := Rect2(x, y, w, h)
+		draw_set_transform(r.get_center(), -0.012 * (1.0 - slide) - 0.01, Vector2.ONE)
+		var lr := Rect2(-r.size * 0.5, r.size)
+		# the note: dark card, gold spine, a paper-clip, a tiny slate icon
+		draw_rect(Rect2(lr.position + Vector2(4, 5), lr.size), Color(0, 0, 0, 0.35))
+		draw_rect(lr, Color(UIStyle.INK, 0.93))
+		draw_rect(Rect2(lr.position, Vector2(4, lr.size.y)), UIStyle.GOLD)
+		draw_rect(lr, Color(UIStyle.GOLD, 0.35), false, 1.0)
+		var clip := lr.position + Vector2(lr.size.x - 34, -6)
+		draw_rect(Rect2(clip, Vector2(10, 18)), Color(0.75, 0.75, 0.8), false, 1.5)
+		var sl := lr.position + Vector2(14, 10)
+		draw_rect(Rect2(sl + Vector2(0, 4), Vector2(16, 10)), UIStyle.PAPER)
+		for i in 3:
+			draw_line(sl + Vector2(2 + i * 5, 0), sl + Vector2(5 + i * 5, 4), UIStyle.PAPER, 2.0)
+		var ft := UIStyle.font_bold()
+		draw_string(ft, lr.position + Vector2(38, 22), tr("DIRECTOR'S NOTE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 12, UIStyle.GOLD)
+		# body text pops in
+		var shown := (_t - 0.25) * CPS
+		var ci := 0
+		for li in lines.size():
+			var line: String = lines[li]
+			var px := lr.position + Vector2(16, 38 + li * lh + f.get_ascent(fs))
+			var cx := 0.0
+			for j in line.length():
+				var pose := TextFX.letter_pose(ci, shown, _t, "")
+				ci += 1
+				if not pose.visible:
+					break
+				var ch := line[j]
+				var cw := f.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+				var col := UIStyle.CYAN if ch == "[" or ch == "]" else UIStyle.PAPER
+				draw_string(f, px + Vector2(cx, 0) + pose.offset, ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(col, float(pose.alpha)))
+				cx += cw
+			ci += 1
+		# time left
+		var k := clampf(1.0 - _t / life, 0.0, 1.0)
+		draw_rect(Rect2(lr.position + Vector2(4, lr.size.y - 2), Vector2((lr.size.x - 4) * k, 2)), Color(UIStyle.GOLD, 0.6))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+	# ------------------------------------------------------------ situations
+	func _watch() -> void:
+		if hud == null or hud.player == null or not is_instance_valid(hud.player) or not hud.player.alive:
+			return
+		var p: Player = hud.player
+		if get_tree().paused:
+			return
+		if _level_t > 2.5:
+			offer("move", "Move and aim; {fire} shoots or swings, {dash} dodges through danger. One hit kills - both ways.")
+		var vp := p.get_viewport()
+		var view := vp.get_canvas_transform().affine_inverse() * vp.get_visible_rect()
+		for e in get_tree().get_nodes_in_group("enemies"):
+			if not e.is_alive() or not view.has_point(e.global_position):
+				continue
+			var d: float = e.global_position.distance_to(p.global_position)
+			if e is Sniper and (e as Sniper).charge_k() >= 0.0:
+				offer("sniper", "Red laser: a sniper. The shot lands where the dot was a beat ago - keep moving or break line of sight.")
+			if e is Handler:
+				offer("handler", "Dog handler. Drop him before he sees you - or the dog is off the leash.")
+			if e.has_method("is_snoozing") and e.is_snoozing() and d < 200.0:
+				offer("snooze", "He's dozing. Footsteps and doors won't wake him. Gunfire will.")
+			if e.state == Enemy.State.DOWNED and d < 120.0:
+				offer("execute", "Downed. {execute} to finish him before he gets up.")
+			var kind := String(e.data.id) if e.data else ""
+			match kind:
+				"heavy": offer("heavy", "Heavy: the vest soaks a bullet and fists do nothing. Shoot twice, or heavy-swing.")
+				"riot": offer("riot", "Riot shield blocks bullets from the front. Flank him or slam a door into him.")
+				"hunter", "bellhop", "biker", "scrapper":
+					offer("counter", "Melee rushers wind up before they swing. Hit them first to COUNTER.")
+				"scout": offer("scout", "Unarmed lookout: he runs for the alarm. Stop him first.")
+				"welder": offer("welder", "Welder's mask stops one hit and narrows his view. Come at him from the side.")
+			if d < 260.0 and p.lock_target == null:
+				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to switch.")
+		var w = p.current()
+		if w and w.data.is_firearm() and w.ammo <= 0 and w.reserve <= 0:
+			offer("throw", "Empty? Throw it with {secondary} - a thrown gun stuns whoever it hits.")
+		if Score.combo >= 2:
+			offer("combo", "COMBO: keep killing before the bar runs out. Mix weapons and methods for more.")
+		if Score.combo >= 2 and Music.beat_length() > 0.0:
+			offer("beat", "Kills on the beat of the music score extra - watch the pips under your combo.")
+		if Score.combo >= 8:
+			offer("finisher", "ON FIRE. Your next melee kill rolls the FINAL TAKE.")
+		if p.upgrades.size() > 0:
+			offer("upgrade", "Upgrades last until the end of the mission. They show in the bottom-left.")
