@@ -9,6 +9,8 @@ func _ready() -> void:
 	var ph := Node.new()
 	get_tree().root.add_child(ph)
 	get_tree().current_scene = ph
+	if OS.get_environment("SHOT_LANG") != "":
+		Loc.apply(OS.get_environment("SHOT_LANG"), false)
 	var mode := OS.get_environment("SHOT_MODE")
 	var out := OS.get_environment("SHOT_OUT")
 	var n := int(OS.get_environment("SHOT_FRAMES")) if OS.get_environment("SHOT_FRAMES") != "" else 90
@@ -27,6 +29,9 @@ func _ready() -> void:
 			await _frames(20)
 			var om := OptionsMenu.new()
 			get_tree().current_scene.add_child(om)
+			await _frames(10)
+			if OS.get_environment("SHOT_TAB") != "":
+				om.tabs.current_tab = int(OS.get_environment("SHOT_TAB"))
 			await _frames(n)
 		"splash":
 			Game.change_scene("res://scenes/ui/splash_screen.tscn", false)

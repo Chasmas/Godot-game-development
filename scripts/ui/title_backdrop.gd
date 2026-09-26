@@ -177,7 +177,7 @@ func _draw_tv() -> void:
 	draw_rect(scr.grow(16), Color(0.15, 0.1, 0.08))
 	draw_rect(scr, Color(0.1, 0.16, 0.35))
 	draw_rect(Rect2(scr.position + Vector2(0, scr.size.y - 44), Vector2(scr.size.x, 44)), Color(0.8, 0.08, 0.15))
-	draw_string(UIStyle.font_bold(), scr.position + Vector2(14, scr.size.y - 16), "LIVE  ·  BARSTOW MOTEL MASSACRE  ·  'THE STAR KILLER'", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color.WHITE)
+	draw_string(UIStyle.font_bold(), scr.position + Vector2(14, scr.size.y - 16), tr("LIVE  ·  BARSTOW MOTEL MASSACRE  ·  'THE STAR KILLER'"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color.WHITE)
 	draw_string(UIStyle.font_display(), scr.position + Vector2(scr.size.x - 90, 40), "9", HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color(1, 1, 1, 0.8))
 	# anchor silhouette
 	var ac := scr.position + Vector2(scr.size.x * 0.35, scr.size.y * 0.55)

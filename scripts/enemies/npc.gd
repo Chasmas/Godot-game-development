@@ -53,6 +53,9 @@ func interact(_p: Node) -> void:
 func _say(text: String) -> void:
 	_bark = text
 	_bark_t = 2.8
+	var bl := BarkLayer.find(get_tree())
+	if bl:
+		bl.say(self, text, 2.8)
 	queue_redraw()
 
 func _on_noise(pos: Vector2, radius: float, kind: StringName, _src: Node) -> void:
@@ -114,9 +117,6 @@ func take_damage(info: DamageInfo) -> String:
 
 func _draw() -> void:
 	if _bark_t > 0.0:
-		var f := UIStyle.font_bold()
-		var w := f.get_string_size(_bark, HORIZONTAL_ALIGNMENT_LEFT, -1, 7).x
-		draw_rect(Rect2(-w * 0.5 - 3, -24, w + 6, 11), Color(0.04, 0.02, 0.08, 0.85))
-		draw_string(f, Vector2(-w * 0.5, -16), _bark, HORIZONTAL_ALIGNMENT_LEFT, -1, 7, UIStyle.PAPER)
+		pass   # the words themselves are drawn by the BarkLayer, in screen space
 	elif alive and not lines.is_empty() and not panicking:
 		draw_string(UIStyle.font_bold(), Vector2(-2, -11), "…", HORIZONTAL_ALIGNMENT_LEFT, -1, 8, Color(UIStyle.CYAN, 0.7))

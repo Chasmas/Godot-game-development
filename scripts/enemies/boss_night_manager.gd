@@ -162,12 +162,10 @@ func is_downed() -> bool:
 func _say(t: String) -> void:
 	_bark = t
 	_bark_t = 3.0
-	queue_redraw()
+	# screen-space bubble: never clips through the lobby furniture
+	var bl := BarkLayer.find(get_tree())
+	if bl:
+		bl.say(self, t, 3.0, Color(1.0, 0.75, 0.75))
 
 func _draw() -> void:
 	super._draw()
-	if _bark_t > 0.0 and _bark != "":
-		var f := UIStyle.font_bold()
-		var w := f.get_string_size(_bark, HORIZONTAL_ALIGNMENT_LEFT, -1, 8).x
-		draw_rect(Rect2(-w * 0.5 - 3, -28, w + 6, 12), Color(0.35, 0.02, 0.08, 0.9))
-		draw_string(f, Vector2(-w * 0.5, -19), _bark, HORIZONTAL_ALIGNMENT_LEFT, -1, 8, UIStyle.PAPER)

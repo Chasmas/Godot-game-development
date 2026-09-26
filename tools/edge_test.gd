@@ -19,7 +19,8 @@ func _ready() -> void:
 	var only := OS.get_environment("EDGE_ONLY")
 	for case_name in ["gunshot_is_local", "walls_muffle", "kill_mid_investigation", "rapid_fire",
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
-			"double_death", "shout_is_local", "difficulty_scales", "dual_wield"]:
+			"double_death", "shout_is_local", "difficulty_scales", "dual_wield", "language_switch_mid_dialogue",
+			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese"]:
 		if only != "" and case_name != only:
 			continue
 		await _load()
@@ -408,3 +409,113 @@ func dual_wield() -> void:
 	var pk2 := WeaponPickup.spawn(lvl.pickup_root(), WeaponInstance.create(DB.weapon(&"shotgun")), p.global_position)
 	await frames(3)
 	check(not p.can_dual_with(pk2), "shotguns don't pair")
+
+func language_switch_mid_dialogue() -> void:
+	var before := Loc.current()
+	Loc.apply("en", false)
+	Dialogue.start("m01_boss_intro", true)
+	await frames(10)
+	var en_line := Dialogue._full
+	Loc.apply("pt_PT", false)
+	Dialogue._advance()   # finish the line
+	Dialogue._advance()   # next line, now in Portuguese
+	await frames(5)
+	check(Dialogue._full != "" and Dialogue._full != tr_en(Dialogue._node.get("text", "")), "the next line after switching is Portuguese (%s)" % Dialogue._full.left(40))
+	check(Dialogue.name_label.text == TranslationServer.translate(str(Dialogue.speakers.get(str(Dialogue._node.get("speaker", "")), {}).get("name", ""))), "speaker name follows the language")
+	while Dialogue.active:
+		if not Dialogue._choices.is_empty():
+			Dialogue._pick(0)
+		else:
+			Dialogue._advance()
+		await frames(2)
+	Loc.apply(before, false)
+	check(en_line != "", "dialogue ran in English before the switch")
+
+func tr_en(s: Variant) -> String:
+	return str(s)
+
+func long_text_fits() -> void:
+	var before := Loc.current()
+	Loc.apply("pt_PT", false)
+	SaveManager.settings["subtitle_size"] = 2
+	# the longest line in the game, in Portuguese, at the largest size
+	var longest := ""
+	for f in DirAccess.get_files_at("res://data/dialogue"):
+		if not f.ends_with(".json") or f == "speakers.json":
+			continue
+		var d: Dictionary = Dialogue.load_dialogue(f.trim_suffix(".json"))
+		for n in (d.get("nodes", {}) as Dictionary).values():
+			var t := tr(str(n.get("text", "")))
+			if t.length() > longest.length():
+				longest = t
+	for lf in ["res://levels/m01_sunset_palms.json", "res://levels/m02_yermo_salvage.json"]:
+		var ld: Variant = JSON.parse_string(FileAccess.get_file_as_string(lf))
+		for c in (ld.get("collectibles", {}) as Dictionary).values():
+			var t2 := tr(str(c.get("text", "")))
+			if t2.length() > longest.length():
+				longest = t2
+	Dialogue._data = {"start": "a", "nodes": {"a": {"speaker": "cass", "text": longest}}}
+	Dialogue._id = "long"
+	Dialogue._pause_game = true
+	Dialogue.active = true
+	Dialogue.root.visible = true
+	Dialogue._apply_reading_settings()
+	Dialogue._goto("a")
+	await frames(10)
+	var box := Dialogue.box.get_global_rect()
+	var vp := Dialogue.root.get_viewport_rect()
+	var text_h := Dialogue.text_label.get_content_height()
+	check(vp.encloses(box), "dialogue box stays on screen with the longest Portuguese line (%d chars)" % longest.length())
+	check(Dialogue.text_label.get_global_rect().end.y <= box.end.y + 1.0 and text_h > 0, "and the text fits inside the box")
+	Dialogue._end()
+	get_tree().paused = false
+	SaveManager.settings["subtitle_size"] = 1
+	Loc.apply(before, false)
+
+func bark_stays_on_screen() -> void:
+	var p := _p()
+	var lvl := _lvl()
+	var npc := NPC.new()
+	npc.npc_id = "edge_npc"
+	lvl.actors_root.add_child(npc)
+	var vr := p.get_viewport().get_canvas_transform().affine_inverse() * p.get_viewport_rect()
+	# right at the top-left corner of the view, then off screen entirely
+	var bl := BarkLayer.find(get_tree())
+	var ok_all := true
+	for pos in [vr.position + Vector2(4, 4), vr.end - Vector2(4, 4), vr.position - Vector2(200, 200)]:
+		npc.global_position = pos
+		Loc.apply("pt_PT", false)
+		bl.say(npc, "The manager keeps a room nobody rents. East side. Walls are thin.", 2.0)
+		await frames(4)
+		var screen := p.get_viewport_rect()
+		for b in bl._barks:
+			if b.speaker == npc and not screen.encloses(b.rect):
+				ok_all = false
+	check(ok_all, "speech bubbles stay fully on screen at the corners and for off-screen speakers")
+	# tiny room: the bubble is screen space, so walls can't cover it
+	check(bl.layer > 10, "bubbles render above the world (layer %d)" % bl.layer)
+	Loc.apply("en", false)
+	npc.queue_free()
+
+func language_persists() -> void:
+	var before := Loc.current()
+	Loc.apply("pt_PT")
+	var f := FileAccess.get_file_as_string(SaveManager.SETTINGS_PATH)
+	var parsed: Variant = JSON.parse_string(f)
+	check(parsed is Dictionary and str(parsed.get("language", "")) == "pt_PT", "choosing Português is written to settings.json")
+	check(TranslationServer.translate("OPTIONS") == "OPÇÕES", "and the game is in Portuguese (%s)" % TranslationServer.translate("OPTIONS"))
+	check(Loc.count("pt_PT") > 500, "translation table loaded (%d entries)" % Loc.count("pt_PT"))
+	Loc.apply(before)
+
+func hud_in_portuguese() -> void:
+	Loc.apply("pt_PT", false)
+	var lvl := _lvl()
+	var p := _p()
+	lvl._update_objective()
+	p.give_weapon(&"pistol")
+	await frames(3)
+	var h := lvl.hud
+	check(h.score_label.text.ends_with("PTS"), "score label ok (%s)" % h.score_label.text)
+	check(h.weapon_label.text == "9MM DE SERVIÇO", "weapon name translated (%s)" % h.weapon_label.text)
+	check(h.objective_label.text.begins_with("ENTRA") or h.objective_label.text.begins_with("LIMPA"), "objective translated (%s)" % h.objective_label.text)
+	Loc.apply("en", false)

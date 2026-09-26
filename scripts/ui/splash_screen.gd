@@ -84,7 +84,7 @@ func _process(delta: float) -> void:
 			var secs := int(_t * 30.0)
 			_osd.text = "PLAY ▶   SP   0:00:%02d:%02d" % [secs / 30, secs % 30]
 			# typewriter for the small line
-			var full := "A  GAME  CREATED  BY"
+			var full := tr("A  GAME  CREATED  BY")
 			var n := clampi(int((_t - 0.3) * 28.0), 0, full.length())
 			if n != _by_label.text.length():
 				_by_label.text = full.substr(0, n)

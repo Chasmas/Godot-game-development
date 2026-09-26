@@ -51,7 +51,7 @@ func _ready() -> void:
 	osd = UIStyle.label("PLAY ▶", 22, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
-	var ver := UIStyle.label("VERTICAL SLICE  ·  v%s" % ProjectSettings.get_setting("application/config/version", "0.1"), 12, UIStyle.DIM)
+	var ver := UIStyle.label(tr("VERTICAL SLICE  ·  v%s") % ProjectSettings.get_setting("application/config/version", "0.1"), 12, UIStyle.DIM)
 	UIStyle.place(ver, Control.PRESET_BOTTOM_RIGHT, Vector2(-340, -28))
 	add_child(ver)
 	press_label = UIStyle.label("PRESS ANY BUTTON", 22, UIStyle.GOLD, true)
@@ -208,7 +208,7 @@ func _show_arcade() -> void:
 		if md == null:
 			continue
 		var unlocked: bool = mid == "m01_checkout" or SaveManager.data.missions.has("m01_checkout")
-		panel_body.add_child(UIStyle.label("\n" + md.title + ("" if unlocked else "  [LOCKED]"), 18, UIStyle.PINK if unlocked else UIStyle.DIM, true))
+		panel_body.add_child(UIStyle.label("\n" + tr(md.title) + ("" if unlocked else tr("  [LOCKED]")), 18, UIStyle.PINK if unlocked else UIStyle.DIM, true))
 		var row := HBoxContainer.new()
 		row.add_theme_constant_override("separation", 8)
 		panel_body.add_child(row)
@@ -240,10 +240,10 @@ func _show_cast() -> void:
 		if c == null:
 			continue
 		var unlocked: bool = String(c.id) in SaveManager.data.unlocked_characters
-		var head := "%s  —  %s  (%d)" % [c.display_name if unlocked else "???", c.archetype, c.year_first_seen]
+		var head := "%s  —  %s  (%d)" % [tr(c.display_name) if unlocked else "???", tr(c.archetype), c.year_first_seen]
 		panel_body.add_child(UIStyle.label(head, 17, UIStyle.PINK if unlocked else UIStyle.DIM, true))
-		var bio := c.bio if unlocked else "Not yet on tape."
-		var l := UIStyle.label(bio + ("\n+ %s   − %s" % [c.strengths, c.weaknesses] if unlocked else ""), 14)
+		var bio := tr(c.bio) if unlocked else tr("Not yet on tape.")
+		var l := UIStyle.label(bio + ("\n+ %s   − %s" % [tr(c.strengths), tr(c.weaknesses)] if unlocked else ""), 14)
 		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		l.custom_minimum_size = Vector2(700, 0)
 		panel_body.add_child(l)
@@ -258,20 +258,20 @@ func _show_extras() -> void:
 		for k in all.keys():
 			var cd: Dictionary = all[k]
 			var got: bool = cd.id in SaveManager.data.collectibles
-			panel_body.add_child(UIStyle.label(("■ " if got else "□ ") + (str(cd.title) if got else "??? — " + str(lf[1])), 15, UIStyle.PAPER if got else UIStyle.DIM))
+			panel_body.add_child(UIStyle.label(("■ " if got else "□ ") + (tr(str(cd.title)) if got else "??? — " + tr(str(lf[1]))), 15, UIStyle.PAPER if got else UIStyle.DIM))
 			if got:
-				var l := UIStyle.label(str(cd.text), 13, UIStyle.DIM)
+				var l := UIStyle.label(tr(str(cd.text)), 13, UIStyle.DIM)
 				l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 				l.custom_minimum_size = Vector2(700, 0)
 				panel_body.add_child(l)
 	panel_body.add_child(UIStyle.label("\nSTATISTICS", 18, UIStyle.GOLD, true))
 	var st: Dictionary = SaveManager.data.stats
-	panel_body.add_child(UIStyle.label("Kills %d    Deaths %d    Executions %d    Secrets %d    Play time %s" % [int(st.get("kills", 0)), int(st.get("deaths", 0)), int(st.get("executions", 0)), SaveManager.data.secrets.size(), Level._fmt_time(float(st.get("play_time", 0.0)))], 14))
+	panel_body.add_child(UIStyle.label(tr("Kills %d    Deaths %d    Executions %d    Secrets %d    Play time %s") % [int(st.get("kills", 0)), int(st.get("deaths", 0)), int(st.get("executions", 0)), SaveManager.data.secrets.size(), Level._fmt_time(float(st.get("play_time", 0.0)))], 14))
 	for mid in ["m01_checkout", "m02_dog_days"]:
 		var best: Dictionary = SaveManager.data.missions.get(mid, {})
 		var md: MissionData = Game.missions.get(mid)
 		if not best.is_empty() and md:
-			panel_body.add_child(UIStyle.label("%s — best %d (%s)" % [md.title, int(best.get("best_score", 0)), best.get("best_rank", "")], 14))
+			panel_body.add_child(UIStyle.label(tr("%s — best %d (%s)") % [tr(md.title), int(best.get("best_score", 0)), best.get("best_rank", "")], 14))
 	panel_body.add_child(UIStyle.label("\nCREDITS", 18, UIStyle.GOLD, true))
 	var cr := UIStyle.label("HOTSHOT CALIFORNIA — an original game.\nDesign, code, pixels, synthesized music and sound: made procedurally for this vertical slice.\nFonts: DejaVu Sans Mono (Bitstream Vera license), Poppins & Lora (SIL OFL).\nBe kind. Rewind.", 13, UIStyle.DIM)
 	cr.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

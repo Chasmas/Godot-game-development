@@ -58,7 +58,7 @@ class Pickup extends Node2D:
 		return not taken and upgrade_id != &""
 
 	func get_prompt() -> String:
-		return "TAKE " + str(Upgrades.def(upgrade_id).name)
+		return tr("TAKE ") + tr(str(Upgrades.def(upgrade_id).name))
 
 	func interact(by: Node) -> void:
 		if taken:

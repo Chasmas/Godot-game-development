@@ -18,6 +18,7 @@ config/windows_native_icon="res://icon.ico"
 
 Events="*res://scripts/systems/events.gd"
 SaveManager="*res://scripts/systems/save_manager.gd"
+Loc="*res://scripts/systems/loc.gd"
 InputSetup="*res://scripts/systems/input_setup.gd"
 Audio="*res://scripts/systems/audio_manager.gd"
 Music="*res://scripts/systems/music_manager.gd"
@@ -47,6 +48,10 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=false
+
+[internationalization]
+
+locale/fallback="en"
 
 [input_devices]
 

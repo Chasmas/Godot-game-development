@@ -192,7 +192,7 @@ func _process(delta: float) -> void:
 		prompt_label.text = player.prompt if player.alive else ""
 		if player.is_reloading():
 			prompt_label.text = "RELOADING..."
-		equip_label.text = "FLARES %d   [%s]" % [player.equipment_left, InputSetup.binding_text("equipment", InputSetup.using_gamepad)]
+		equip_label.text = tr("FLARES %d   [%s]") % [player.equipment_left, InputSetup.binding_text("equipment", InputSetup.using_gamepad)]
 	if _hint_t > 0.0:
 		_hint_t -= rd
 		hint_label.modulate.a = clampf(_hint_t * 2.0, 0.0, 1.0)
@@ -216,7 +216,7 @@ func _process(delta: float) -> void:
 		boss_label.visible = true
 		var b: BossNightManager = level.boss
 		var pips := "◆".repeat(b.armor_left) + "◇".repeat(maxi(0, b.data.armor - b.armor_left))
-		boss_label.text = "LYLE HARCOURT — NIGHT MANAGER   %s" % (pips if b.phase == 1 else "LIGHTS OUT")
+		boss_label.text = tr("LYLE HARCOURT — NIGHT MANAGER   %s") % (pips if b.phase == 1 else tr("LIGHTS OUT"))
 	else:
 		boss_label.visible = false
 
@@ -224,19 +224,19 @@ func _on_objective(t: String) -> void:
 	objective_label.text = t
 
 func show_hint(text: String, duration := 3.0) -> void:
-	hint_label.text = text
+	hint_label.text = tr(text)
 	_hint_t = duration
 	hint_label.modulate.a = 1.0
 
 func show_banner(text: String, duration := 2.5, color := UIStyle.PAPER) -> void:
-	banner.text = text
+	banner.text = tr(text)
 	banner.add_theme_color_override("font_color", color)
 	_banner_t = duration
 	banner.modulate.a = 1.0
 
 ## Mission title card: big pink title, VHS-style details beneath.
 func show_title_card(title: String, sub: String, duration := 3.6) -> void:
-	show_banner(title, duration, UIStyle.PINK)
+	show_banner(tr(title), duration, UIStyle.PINK)
 	banner.add_theme_font_size_override("font_size", 56)
 	card_sub.text = sub
 	_card_t = duration
@@ -245,13 +245,13 @@ func show_title_card(title: String, sub: String, duration := 3.6) -> void:
 	banner.add_theme_font_size_override("font_size", 40)
 
 func _on_score(s: int) -> void:
-	score_label.text = "%d PTS" % s
+	score_label.text = tr("%d PTS") % s
 
 func _on_combo(count: int, t: float, window: float) -> void:
 	combo_label.visible = count >= 2
 	combo_bar.visible = count >= 2
 	if count >= 2:
-		combo_label.text = "%dx COMBO" % count
+		combo_label.text = tr("%dx COMBO") % count
 		combo_bar.size.x = 120.0 * clampf(t / window, 0.0, 1.0)
 		if count != _last_combo:
 			_combo_pulse = 1.0
@@ -259,10 +259,10 @@ func _on_combo(count: int, t: float, window: float) -> void:
 
 func _on_combo_end(count: int, bonus: int) -> void:
 	if count >= 3:
-		show_banner("%dx COMBO\n+%d" % [count, bonus], 1.2, UIStyle.GOLD)
+		show_banner(tr("%dx COMBO\n+%d") % [count, bonus], 1.2, UIStyle.GOLD)
 
 func _on_points(text: String, pts: int, pos: Vector2) -> void:
-	Effects.popup("%s +%d" % [text, pts] if pts >= 0 else "%s %d" % [text, pts], pos, UIStyle.GOLD if pts >= 0 else UIStyle.HOT)
+	Effects.popup("%s +%d" % [tr(text), pts] if pts >= 0 else "%s %d" % [tr(text), pts], pos, UIStyle.GOLD if pts >= 0 else UIStyle.HOT)
 
 var _ammo_pulse := 0.0
 var _last_ammo_shown := 0
@@ -281,7 +281,7 @@ func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 		weapon_label.text = "FISTS"
 		ammo_label.text = ""
 	elif w.data.is_firearm():
-		weapon_label.text = ("2× " if w.dual else "") + w.data.display_name.to_upper()
+		weapon_label.text = ("2× " if w.dual else "") + tr(w.data.display_name).to_upper()
 		if w.dual:
 			ammo_label.text = "%d | %d / %d" % [w.ammo2, w.ammo, w.reserve]
 		else:
@@ -292,22 +292,22 @@ func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 		elif ammo < _last_ammo_shown:
 			_ammo_pulse = 1.0
 	else:
-		weapon_label.text = w.data.display_name.to_upper()
-		ammo_label.text = "∞" if w.durability < 0 else "%d HITS" % w.durability
+		weapon_label.text = tr(w.data.display_name).to_upper()
+		ammo_label.text = "∞" if w.durability < 0 else tr("%d HITS") % w.durability
 		ammo_label.add_theme_color_override("font_color", UIStyle.PINK)
 	var other = player.slots[1 - player.slot]
-	holster_label.text = ("[%s] %s" % [InputSetup.binding_text("swap", InputSetup.using_gamepad), (other as WeaponInstance).data.display_name]) if other else ""
+	holster_label.text = ("[%s] %s" % [InputSetup.binding_text("swap", InputSetup.using_gamepad), tr((other as WeaponInstance).data.display_name)]) if other else ""
 
 func _on_ability(charge: float, active: bool) -> void:
 	ability_bar.size.x = 160.0 * clampf(charge, 0.0, 1.0)
 	ability_bar.color = Color.WHITE if active else (UIStyle.GOLD if charge >= 0.999 else Color(UIStyle.GOLD, 0.5))
 	var nm := player.ability.display_name() if player else "ABILITY"
-	ability_label.text = "%s  [%s]%s" % [nm, InputSetup.binding_text("ability", InputSetup.using_gamepad), "  READY" if charge >= 0.999 and not active else ""]
+	ability_label.text = "%s  [%s]%s" % [tr(nm), InputSetup.binding_text("ability", InputSetup.using_gamepad), tr("  READY") if charge >= 0.999 and not active else ""]
 
 func _on_player_died(_info: Dictionary) -> void:
 	death_panel.visible = true
 	death_title.text = DEATH_LINES[randi() % DEATH_LINES.size()]
-	death_sub.text = "[%s] RESTART" % InputSetup.binding_text("restart", InputSetup.using_gamepad)
+	death_sub.text = tr("[%s] RESTART") % InputSetup.binding_text("restart", InputSetup.using_gamepad)
 	death_title.scale = Vector2(1.4, 1.4)
 	death_title.pivot_offset = death_title.size * 0.5
 	var tw := create_tween()
@@ -468,7 +468,7 @@ class StatusPanel extends Control:
 			draw_polyline(pts, col, 2.0, true)
 			if open > 0.3:
 				draw_circle(c, 3.0 * open, col)
-			var label: String = {"SPOTTED": "SPOTTED", "HIDDEN": "HIDDEN IN THE DARK", "SNEAKING": "SNEAKING", "SHADOW": "IN SHADOW"}[_state]
+			var label: String = tr({"SPOTTED": "SPOTTED", "HIDDEN": "HIDDEN IN THE DARK", "SNEAKING": "SNEAKING", "SHADOW": "IN SHADOW"}[_state])
 			var f := UIStyle.font_bold()
 			draw_string_outline(f, base + Vector2(26, 5), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, 5, UIStyle.INK)
 			draw_string(f, base + Vector2(26, 5), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, col)

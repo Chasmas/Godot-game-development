@@ -144,6 +144,9 @@ func _ready() -> void:
 	hud.level = self
 	hud.player = player
 	add_child(hud)
+	var barks := BarkLayer.new()
+	barks.name = "Barks"
+	add_child(barks)
 	pause_menu = PauseMenu.new()
 	pause_menu.level = self
 	add_child(pause_menu)
@@ -171,7 +174,7 @@ func _ready() -> void:
 	elif phase >= Phase.PHONE:
 		_begin_phone()
 	if Game.attempts <= 1 and st.is_empty():
-		hud.show_title_card(mission.title, "%s\n%s  ·  %s" % [mission.location.to_upper(), mission.date_text, str(data.get("time_text", "11:48 PM"))])
+		hud.show_title_card(tr(mission.title), "%s\n%s  ·  %s" % [tr(mission.location).to_upper(), tr(mission.date_text), tr(str(data.get("time_text", "11:48 PM")))])
 		PostFX.vhs_glitch(0.8)
 		Events.objective_changed.emit(_obj("infiltrate", "GET INSIDE THE SUNSET PALMS"))
 	else:
@@ -354,7 +357,7 @@ func _assign_upgrades() -> void:
 		up.collected.connect(func(p): collected[p.item_id] = true)
 
 func _obj(k: String, fallback: String) -> String:
-	return str(data.get("objectives", {}).get(k, fallback))
+	return tr(str(data.get("objectives", {}).get(k, fallback)))
 
 func remaining_enemies() -> Array:
 	var out := []
@@ -408,7 +411,7 @@ func _check_hints(cell: Vector2i) -> void:
 		if Rect2i(r[0], r[1], r[2], r[3]).has_point(cell):
 			_hints_shown[id] = true
 			SaveManager.data.story.flags["hint_" + id] = true
-			hud.show_hint(str(hdef.text), 5.0)
+			hud.show_hint(tr(str(hdef.text)), 5.0)
 
 func _check_checkpoints(cell: Vector2i) -> void:
 	var cps: Array = data.get("checkpoints", [])
@@ -437,7 +440,7 @@ func _save_checkpoint(cp_name: String) -> void:
 		"dead_zones": dead_zones.keys(),
 	}
 	Events.checkpoint_reached.emit(_checkpoints_hit.size())
-	hud.show_hint("◉ " + cp_name, 1.6)
+	hud.show_hint("◉ " + tr(cp_name), 1.6)
 
 func _update_objective() -> void:
 	match phase:
@@ -446,39 +449,39 @@ func _update_objective() -> void:
 		Phase.CLEAR:
 			var n := remaining_enemies().size()
 			if boss and is_instance_valid(boss) and boss.is_alive():
-				Events.objective_changed.emit("%s  ·  %d LEFT  ·  FIND THE NIGHT MANAGER" % [_obj("clear", "CLEAR THE MOTEL"), n])
+				Events.objective_changed.emit(tr("%s  ·  %d LEFT  ·  FIND THE NIGHT MANAGER") % [_obj("clear", "CLEAR THE MOTEL"), n])
 			else:
-				Events.objective_changed.emit("%s  ·  %d LEFT" % [_obj("clear", "CLEAR THE MOTEL"), n])
+				Events.objective_changed.emit(tr("%s  ·  %d LEFT") % [_obj("clear", "CLEAR THE MOTEL"), n])
 		Phase.BOSS:
-			Events.objective_changed.emit("DEAL WITH HARCOURT")
+			Events.objective_changed.emit(tr("DEAL WITH HARCOURT"))
 		Phase.BOSS_DOWN:
 			Events.objective_changed.emit("")
 		Phase.PHONE:
 			var left := remaining_enemies().size()
 			if left > 0:
-				Events.objective_changed.emit("FINISH THE JOB  ·  %d LEFT" % left)
+				Events.objective_changed.emit(tr("FINISH THE JOB  ·  %d LEFT") % left)
 			else:
-				Events.objective_changed.emit("THE PHONE IS RINGING")
+				Events.objective_changed.emit(tr("THE PHONE IS RINGING"))
 		Phase.ESCAPE:
 			Events.objective_changed.emit(_obj("escape", "GET BACK TO THE CAR"))
 
 func objectives_text() -> String:
 	var lines := PackedStringArray()
-	lines.append("%s — %s" % [mission.title, mission.location])
-	lines.append(mission.date_text)
+	lines.append("%s — %s" % [tr(mission.title), tr(mission.location)])
+	lines.append(tr(mission.date_text))
 	lines.append("")
-	lines.append("OBJECTIVE: " + hud.objective_label.text)
-	lines.append("ENEMIES LEFT: %d" % remaining_enemies().size())
-	lines.append("SCORE: %d    MAX COMBO: %d" % [Score.score, Score.max_combo])
-	lines.append("TIME: %s" % _fmt_time(Score.elapsed))
+	lines.append(tr("OBJECTIVE: ") + hud.objective_label.text)
+	lines.append(tr("ENEMIES LEFT: %d") % remaining_enemies().size())
+	lines.append(tr("SCORE: %d    MAX COMBO: %d") % [Score.score, Score.max_combo])
+	lines.append(tr("TIME: %s") % _fmt_time(Score.elapsed))
 	var found := 0
 	for k in data.get("collectibles", {}).keys():
 		if collected.has(data.collectibles[k].id) or data.collectibles[k].id in SaveManager.data.collectibles:
 			found += 1
-	lines.append("TAPES & EVIDENCE: %d / %d" % [found, data.get("collectibles", {}).size()])
-	lines.append("SECRETS: %d" % secrets_found.size())
+	lines.append(tr("TAPES & EVIDENCE: %d / %d") % [found, data.get("collectibles", {}).size()])
+	lines.append(tr("SECRETS: %d") % secrets_found.size())
 	lines.append("")
-	lines.append("\"%s\"" % mission.briefing)
+	lines.append("\"%s\"" % tr(mission.briefing))
 	return "\n".join(lines)
 
 static func _fmt_time(t: float) -> String:
@@ -549,7 +552,7 @@ func _on_collectible(it: Interactable, _by: Node) -> void:
 	Audio.play("collect")
 	Score.add_bonus("EVIDENCE", 1000 if fresh else 250, it.global_position)
 	Events.collectible_found.emit(StringName(it.item_id))
-	hud.show_banner(str(it.get_meta("title", "")), 2.0, UIStyle.GOLD)
+	hud.show_banner(tr(str(it.get_meta("title", ""))), 2.0, UIStyle.GOLD)
 	await get_tree().create_timer(0.4).timeout
 	var tmp := {"start": "a", "nodes": {"a": {"speaker": "narration", "text": str(it.get_meta("text", ""))}}}
 	_run_inline_dialogue(tmp)
@@ -632,7 +635,7 @@ func _maybe_ring_phone() -> void:
 	if remaining_enemies().is_empty():
 		phone.enabled = true
 		phone.ringing = true
-		Events.objective_changed.emit("THE PHONE IS RINGING")
+		Events.objective_changed.emit(tr("THE PHONE IS RINGING"))
 		hud.show_hint("THE FRONT DESK PHONE IS RINGING", 3.0)
 
 func _on_phone(_it: Interactable, _by: Node) -> void:

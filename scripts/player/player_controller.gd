@@ -676,7 +676,7 @@ func _break_weapon(w: WeaponInstance) -> void:
 	Effects.debris(visual.hand_global(), aim_dir)
 	if w.data.id == &"bottle":
 		Effects.glass(visual.hand_global(), aim_dir)
-	Events.hint.emit("%s broke" % w.data.display_name, 0.8)
+	Events.hint.emit(tr("%s broke") % tr(w.data.display_name), 0.8)
 	if into != &"" and DB.weapon(into):
 		slots[slot] = WeaponInstance.create(DB.weapon(into))
 	else:
@@ -752,7 +752,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 		_dual_left = true
 		Audio.play_at("pickup", global_position)
 		Audio.play_at("reload", global_position, -8.0, 0.1)
-		Events.hint.emit("DUAL %s" % cur.data.display_name.to_upper(), 1.2)
+		Events.hint.emit(tr("DUAL %s") % tr(cur.data.display_name).to_upper(), 1.2)
 		_refresh_weapon()
 		return
 	if cur != null:
@@ -881,7 +881,7 @@ func _begin_execution(target: Enemy, standing := false) -> void:
 	global_position = target.global_position - aim_dir * (8.0 if standing else 9.0)
 	visual.set_aim(aim_dir.angle())
 	Events.camera_punch.emit(1.18, 0.45)
-	Effects.popup(str(_exec_move.name), target.global_position + Vector2(0, -8), UIStyle.HOT)
+	Effects.popup(tr(str(_exec_move.name)), target.global_position + Vector2(0, -8), UIStyle.HOT)
 	if standing:
 		Audio.play_at("punch", global_position, -14.0)
 
@@ -962,7 +962,7 @@ func _use_equipment() -> void:
 	f.velocity = aim_dir * 330.0 + velocity * 0.3
 	parent.add_child(f)
 	Audio.play_at("throw", global_position)
-	Events.hint.emit("FLARE  (%d left)" % equipment_left, 0.8)
+	Events.hint.emit(tr("FLARE  (%d left)") % equipment_left, 0.8)
 
 # =============================================================== damage
 func take_damage(info: DamageInfo) -> String:
@@ -1059,21 +1059,21 @@ func _emit_weapon() -> void:
 func _update_prompt() -> void:
 	prompt = ""
 	if _find_downed():
-		prompt = "[%s] EXECUTE" % InputSetup.binding_text("execute", InputSetup.using_gamepad)
+		prompt = tr("[%s] EXECUTE") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
 		return
 	var td := _find_takedown()
 	if td:
-		prompt = "[%s] TAKEDOWN" % InputSetup.binding_text("execute", InputSetup.using_gamepad)
+		prompt = tr("[%s] TAKEDOWN") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
 		return
 	var it := _nearest_interactable()
 	if it and it.has_method("get_prompt"):
-		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), it.get_prompt()]
+		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), tr(it.get_prompt())]
 		return
 	var pk := WeaponPickup.nearest(global_position, get_tree())
 	if pk:
-		var what := pk.weapon.data.display_name.to_upper()
+		var what := tr(pk.weapon.data.display_name).to_upper()
 		if can_dual_with(pk):
-			what = "DUAL WIELD  " + what
+			what = tr("DUAL WIELD  ") + what
 		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), what]
 
 func give_weapon(id: StringName) -> void:
@@ -1128,7 +1128,7 @@ func add_upgrade(id: StringName, quiet := false) -> void:
 		Audio.play("upgrade")
 		Events.upgrade_collected.emit(id)
 		if level and level.get("hud"):
-			level.hud.show_banner(str(d.name), 1.6, d.color)
+			level.hud.show_banner(tr(str(d.name)), 1.6, d.color)
 			level.hud.show_hint(str(d.desc), 3.0)
 
 func _ensure_vest() -> void:

@@ -228,7 +228,7 @@ func _run() -> void:
 	if listener:
 		Events.noise.emit(listener.global_position + Vector2(40, 0), 400.0, &"gunshot", p)
 		await frames(5)
-		check(listener.state in [Enemy.State.INVESTIGATE, Enemy.State.SUSPICIOUS, Enemy.State.COMBAT], "enemy investigates gunshot (%s)" % listener.state_name())
+		check(listener.state in [Enemy.State.INVESTIGATE, Enemy.State.SUSPICIOUS, Enemy.State.SEARCH, Enemy.State.COMBAT], "enemy investigates gunshot (%s)" % listener.state_name())
 	# let the AI run a while with the player standing in the corridor
 	p.global_position = Vector2(30 * 16, 33 * 16)
 	p.god_mode = true

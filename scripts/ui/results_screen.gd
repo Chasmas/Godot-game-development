@@ -24,7 +24,7 @@ func _ready() -> void:
 	stripe.position = Vector2(0, 60)
 	stripe.size = Vector2(4000, 70)
 	add_child(stripe)
-	var title := UIStyle.title_label("%s — COMPLETE" % (Game.current_mission.title if Game.current_mission else "MISSION"), 44)
+	var title := UIStyle.title_label(tr("%s — COMPLETE") % (tr(Game.current_mission.title) if Game.current_mission else tr("MISSION")), 44)
 	title.position = Vector2(48, 66)
 	add_child(title)
 	lines_box = VBoxContainer.new()

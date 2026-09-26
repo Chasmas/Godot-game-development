@@ -160,9 +160,9 @@ func binding_text(action: String, pad := false) -> String:
 
 func event_text(ev: InputEvent) -> String:
 	if ev is InputEventKey:
-		return OS.get_keycode_string(ev.physical_keycode if ev.physical_keycode != 0 else ev.keycode)
+		return tr(OS.get_keycode_string(ev.physical_keycode if ev.physical_keycode != 0 else ev.keycode))
 	if ev is InputEventMouseButton:
-		return {MOUSE_BUTTON_LEFT: "LMB", MOUSE_BUTTON_RIGHT: "RMB", MOUSE_BUTTON_MIDDLE: "MMB", MOUSE_BUTTON_XBUTTON1: "M4", MOUSE_BUTTON_XBUTTON2: "M5"}.get(ev.button_index, "Mouse %d" % ev.button_index)
+		return tr({MOUSE_BUTTON_LEFT: "LMB", MOUSE_BUTTON_RIGHT: "RMB", MOUSE_BUTTON_MIDDLE: "MMB", MOUSE_BUTTON_XBUTTON1: "M4", MOUSE_BUTTON_XBUTTON2: "M5"}.get(ev.button_index, tr("Mouse %d") % ev.button_index))
 	if ev is InputEventJoypadButton:
 		return {JOY_BUTTON_A: "A", JOY_BUTTON_B: "B", JOY_BUTTON_X: "X", JOY_BUTTON_Y: "Y", JOY_BUTTON_LEFT_SHOULDER: "LB",
 			JOY_BUTTON_RIGHT_SHOULDER: "RB", JOY_BUTTON_START: "Start", JOY_BUTTON_BACK: "Back", JOY_BUTTON_LEFT_STICK: "L3",

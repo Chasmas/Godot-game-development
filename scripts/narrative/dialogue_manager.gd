@@ -102,12 +102,25 @@ func start(id: String, pause_game := true) -> void:
 		return
 	_id = id
 	_pause_game = pause_game
+	_apply_reading_settings()
 	active = true
 	root.visible = true
 	if _pause_game:
 		get_tree().paused = true
 	_input_block = 0.25
 	_goto(str(_data.get("start", "a")))
+
+## Text speed and size come from the accessibility settings.
+const SPEEDS := [30.0, 55.0, 95.0, 100000.0]
+const SIZES := [15, 18, 23]
+var _cps := CPS
+
+func _apply_reading_settings() -> void:
+	_cps = SPEEDS[clampi(int(SaveManager.get_setting("text_speed", 1)), 0, SPEEDS.size() - 1)]
+	var fs: int = SIZES[clampi(int(SaveManager.get_setting("subtitle_size", 1)), 0, SIZES.size() - 1)]
+	text_label.add_theme_font_size_override("normal_font_size", fs)
+	text_label.add_theme_font_size_override("italics_font_size", fs)
+	name_label.add_theme_font_size_override("font_size", fs)
 
 func _goto(node_id: String) -> void:
 	var nodes: Dictionary = _data.get("nodes", {})
@@ -127,12 +140,12 @@ func _goto(node_id: String) -> void:
 		event.emit(str(_node.event))
 	var spk := str(_node.get("speaker", "narration"))
 	var sd: Dictionary = speakers.get(spk, {"name": spk.to_upper(), "color": "f4f0e8"})
-	name_label.text = str(sd.get("name", ""))
+	name_label.text = tr(str(sd.get("name", "")))
 	name_label.add_theme_color_override("font_color", Color.html("#" + str(sd.get("color", "f4f0e8"))))
 	portrait.visible = spk != "narration"
 	portrait.speaker = spk
 	portrait.mood = str(_node.get("mood", _infer_mood(str(_node.get("text", "")))))
-	_full = str(_node.get("text", ""))
+	_full = tr(str(_node.get("text", "")))
 	text_label.text = ("[i]" + _full + "[/i]") if spk == "narration" else _full
 	text_label.visible_characters = 0
 	_shown = 0.0
@@ -172,7 +185,7 @@ func _show_choices() -> void:
 		return
 	for i in _choices.size():
 		var b := Button.new()
-		b.text = "  " + str(_choices[i].text)
+		b.text = "  " + tr(str(_choices[i].text))
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		b.process_mode = Node.PROCESS_MODE_ALWAYS
 		var idx := i
@@ -219,13 +232,20 @@ func _end() -> void:
 	_id = ""
 	finished.emit(id)
 
+const BOX_MIN_H := 146.0
+const BOX_BOTTOM := 24.0
+
 func _process(delta: float) -> void:
 	if not active:
 		return
+	# the box grows upward to fit long lines (Portuguese, large text) instead
+	# of letting text spill out of it
+	var need := box.get_combined_minimum_size().y
+	box.offset_top = -BOX_BOTTOM - maxf(BOX_MIN_H, need)
 	var real := delta / maxf(Engine.time_scale, 0.03) if not get_tree().paused else delta
 	_input_block = maxf(0.0, _input_block - real)
 	if text_label.visible_characters < _full.length():
-		_shown += real * CPS
+		_shown += real * _cps
 		text_label.visible_characters = int(_shown)
 		portrait.talking = true
 		_blip_t -= real

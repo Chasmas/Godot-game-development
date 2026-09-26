@@ -112,4 +112,4 @@ func _emit() -> void:
 	Events.ability_changed.emit(shown, active)
 
 func display_name() -> String:
-	return str(DEFS[id].name)
+	return tr(str(DEFS[id].name))
