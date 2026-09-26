@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import numpy as np
 from paint import *
 from props import *
+from anatomy import *
 
 W, H = 544, 306
 ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
@@ -72,7 +73,8 @@ def desert_road():
     car_side(mid, W * 0.44, H * 0.8, 120, "b01020", rimc="ff9090", lights_on=True)
     # crew silhouettes by the camera
     for i, (px, ph) in enumerate(((W * 0.2, 44), (W * 0.24, 40), (W * 0.27, 46))):
-        person(mid, px, H * 0.8, ph, "08040a", rimc="ffb080", rim_dir=(1, 0))
+        figure(mid, px, H * 0.8, ph, ["2a2230", "3a2a1a", "1e2430"][i], skin="b08060", light=(1, -0.3), light_col="ffb080",
+               fill_col="1a0a20", pose=["point", "cross", "stand"][i], cap=["", "3a3a30", ""][i] or None, hair_style=["short", "bald", "long"][i])
     # camera on a tripod
     mid.paint(rect(mid, W * 0.31, H * 0.8 - 36, 18, 11), "08040a")
     mid.paint(line(mid, [(W * 0.31 + 9, H * 0.8 - 26), (W * 0.31, H * 0.8)], 2) + line(mid, [(W * 0.31 + 9, H * 0.8 - 26), (W * 0.31 + 18, H * 0.8)], 2), "08040a")
@@ -90,56 +92,6 @@ def desert_road():
     fg.paint(rect(fg, W * 0.9, H * 0.55, 8, H * 0.5), "060306")
     fg.paint(rim(rect(fg, W * 0.9, H * 0.55, 8, H * 0.5), -1, 0, 1), "ff7a70", 0.5)
     out("desert_road", "fg", fg)
-
-@shot
-def cass_close():
-    """Cass on set, 1987: half-lit by the crew lights, the desert behind."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "0a0418"), (0.6, "2a0c30"), (1, "702040")], 0, H)
-    stars(bg, 90, 0.45, 5, 0.8)
-    bg.radial(W * 0.85, H * 0.3, 160, "fff0d0", 1.8, 0.5)
-    for i in range(3):
-        bg.radial(W * (0.78 + i * 0.06), H * 0.22, 8, "ffffff", 1.5, 0.9)
-    ridge(bg, H * 0.78, 18, 9, "140814", 70, "ff8070")
-    out("cass_close", "bg", bg)
-    fg = Layer(W, H)
-    face(fg, W * 0.42, H * 0.34, 40, "e6a888", "5a1612", jacket="7a1420", light=(1, -0.3),
-         light_col="ffd0a0", fill_col="4030a0", hair_style="long", look=(0.7, 0), brows=0.3, shirt="d8d0c8",
-         grime=0.4, earring=True)
-    out("cass_close", "fg", fg)
-
-
-@shot
-def tommy_car():
-    """Tommy at the wheel: dash glow, the crew lights through the glass."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "0a0418"), (0.7, "3a1030"), (1, "802a40")], 0, H)
-    stars(bg, 60, 0.5, 21, 0.7)
-    for i in range(4):
-        bg.radial(W * (0.1 + i * 0.07), H * 0.28, 7, "fff4e0", 1.5, 1.0)
-    bg.radial(W * 0.2, H * 0.3, 140, "fff0d0", 2.0, 0.35)
-    ridge(bg, H * 0.62, 16, 31, "180a18", 60, "ff8070")
-    out("tommy_car", "bg", bg)
-    mid = Layer(W, H)
-    face(mid, W * 0.6, H * 0.35, 38, "dca080", "2a140c", jacket="23386a", light=(-1, -0.2), light_col="80d0ff",
-         fill_col="ff4060", hair_style="short", look=(-0.6, 0.1), brows=-0.2, mouth=0.4, stubble=True, shirt="c8c0b0", collar="lapel")
-    out("tommy_car", "mid", mid)
-    fg = Layer(W, H)
-    # car interior frame: A-pillar, roof, dash, wheel
-    fg.paint(poly(fg, [(0, 0), (W, 0), (W, 22), (0, 30)]), "08060c")
-    fg.paint(poly(fg, [(W * 0.05, 0), (W * 0.14, 0), (W * 0.02, H), (0, H), (0, 40)]), "08060c")
-    dash = poly(fg, [(0, H * 0.66), (W * 0.35, H * 0.62), (W, H * 0.68), (W, H), (0, H)])
-    fg.vgrad([(0, "1a1420"), (1, "060408")], H * 0.62, H, mask=dash)
-    fg.radial(W * 0.3, H * 0.66, 60, "40e0ff", 1.8, 0.35, 0.4)
-    for i in range(3):
-        fg.paint(ellipse(fg, W * (0.22 + i * 0.07), H * 0.69, 9, 7), "0a1418")
-        fg.paint(line(fg, [(W * (0.22 + i * 0.07), H * 0.69), (W * (0.22 + i * 0.07) + 5, H * 0.67)], 1), "ff4040")
-    wheel = ellipse(fg, W * 0.62, H * 0.66, 70, 26) - ellipse(fg, W * 0.62, H * 0.66, 62, 20)
-    fg.paint(np.clip(wheel, 0, 1), "0c0a10")
-    fg.paint(rim(np.clip(wheel, 0, 1), 0, -1, 1), "80d0ff", 0.6)
-    hand = spoly(fg, [(W * 0.5, H * 0.56), (W * 0.54, H * 0.54), (W * 0.56, H * 0.59), (W * 0.51, H * 0.61)])
-    fg.paint(hand, "b07860")
-    out("tommy_car", "fg", fg)
 
 @shot
 def clapper():
@@ -197,7 +149,8 @@ def explosion():
     out("explosion", "mid", mid)
     fg = Layer(W, H)
     for i, (px, ph) in enumerate(((W * 0.08, 92), (W * 0.14, 84))):
-        person(fg, px, H * 0.98, ph, "0a0406", rimc="ffb050", rim_dir=(1, 0), pose="stand")
+        figure(fg, px, H * 0.98, ph, "1a0c0a", pants="0c0606", skin="5a3020", hair="0a0404", light=(1, -0.2),
+               light_col="ffb050", fill_col="1a0404", pose=["stand", "cross"][i])
     out("explosion", "fg", fg)
 
 @shot
@@ -247,220 +200,100 @@ def apartment_room(dark=1.0):
     return bg
 
 @shot
-def apartment():
-    """Van Nuys, 9:12 PM. Cass on the couch, the machine blinking."""
-    bg = apartment_room()
-    out("apartment", "bg", bg)
-    mid = Layer(W, H)
-    # couch
-    couch = spoly(mid, [(W * 0.04, H * 0.62), (W * 0.42, H * 0.6), (W * 0.46, H * 0.9), (W * 0.02, H * 0.92)])
-    mid.vgrad([(0, "3a2040"), (1, "140a18")], H * 0.6, H * 0.92, mask=couch)
-    mid.paint(rim(couch, 1, -1, 1), "ff5a9a", 0.5)
-    # Cass sitting, silhouette with pink rim
-    # sitting forward, elbows on knees, face turned to the machine
-    head = ellipse(mid, W * 0.25, H * 0.46, 9, 11)
-    hairm = spoly(mid, [(W * 0.225, H * 0.41), (W * 0.26, H * 0.4), (W * 0.27, H * 0.47), (W * 0.24, H * 0.58), (W * 0.215, H * 0.5)])
-    body = spoly(mid, [(W * 0.2, H * 0.54), (W * 0.27, H * 0.52), (W * 0.3, H * 0.6), (W * 0.29, H * 0.68), (W * 0.2, H * 0.7)])
-    arm = line(mid, [(W * 0.27, H * 0.55), (W * 0.31, H * 0.64), (W * 0.27, H * 0.62)], 5)
-    legs = line(mid, [(W * 0.22, H * 0.69), (W * 0.33, H * 0.7), (W * 0.33, H * 0.86)], 9)
-    fig = np.clip(head + hairm + body + arm + legs, 0, 1)
-    mid.paint(fig, "0c0610")
-    mid.paint(rim(fig, 1, 0, 1), "ff5a9a", 0.9)
-    mid.paint(rim(fig, 0, -1, 1), "ff5a9a", 0.4)
-    # side table with answering machine and the package
-    tbl = rect(mid, W * 0.44, H * 0.66, W * 0.2, 6)
-    mid.paint(tbl, "2a1810")
-    mid.paint(rect(mid, W * 0.46, H * 0.66, 4, H * 0.2) + rect(mid, W * 0.62, H * 0.66, 4, H * 0.2), "1a0e0a")
-    am = rect(mid, W * 0.46, H * 0.61, 40, 14)
-    mid.paint(am, "181820")
-    mid.paint(rim(am, 1, -1, 1), "ff5a9a", 0.5)
-    pk = rect(mid, W * 0.55, H * 0.585, 30, 22)
-    mid.vgrad([(0, "a07848"), (1, "5a4028")], H * 0.585, H * 0.66, mask=pk)
-    mid.paint(rect(mid, W * 0.55 + 13, H * 0.585, 4, 22), "d0b040")
-    # lamp off, phone cord
-    mid.paint(line(mid, [(W * 0.49, H * 0.66), (W * 0.47, H * 0.78), (W * 0.52, H * 0.88)], 1), "0a0a10")
-    out("apartment", "mid", mid)
-    fg = Layer(W, H)
-    # the LED is a separate layer so it can blink
-    fg.radial(W * 0.46 + 32, H * 0.61 + 5, 6, "ff2020", 1.2, 1.0)
-    out("apartment", "led", fg)
-
-@shot
 def machine():
-    """Close on the answering machine: tape, red light, the voice."""
+    """Close on the answering machine: buttons, the tape turning, the red light,
+    the phone on its cradle."""
     bg = Layer(W, H)
     bg.vgrad([(0, "0c0610"), (1, "1a0c18")], 0, H)
-    bg.radial(W * 0.8, H * 0.1, 260, "ff3d7f", 1.8, 0.3)
+    bg.radial(W * 0.82, H * 0.08, 280, "ff3d7f", 1.8, 0.3)
+    bg.add(blur(poly(bg, [(W * 0.7, 0), (W * 0.78, 0), (W * 0.45, H), (W * 0.33, H)]), 8), col("ff3d7f"), 0.06)
     top = rect(bg, 0, H * 0.72, W, H)
     bg.vgrad([(0, "3a2418"), (1, "140a08")], H * 0.72, H, mask=top)
-    bg.multiply(top * value_noise(W, H, 3, 5, 3), "5a3a28", 0.4)
+    wood = value_noise(W, H, 40, 5, 3)
+    bg.multiply(top * (np.abs(np.sin((bg.yy + wood * 24) * 0.3)) > 0.93), "1a0c06", 0.5)
     out("machine", "bg", bg)
     mid = Layer(W, H)
-    body = spoly(mid, [(W * 0.14, H * 0.38), (W * 0.86, H * 0.36), (W * 0.9, H * 0.8), (W * 0.1, H * 0.82)])
-    mid.vgrad([(0, "3a3a44"), (0.2, "24242c"), (1, "0e0e14")], H * 0.36, H * 0.82, mask=body)
+    body = spoly(mid, [(W * 0.12, H * 0.36), (W * 0.74, H * 0.34), (W * 0.78, H * 0.8), (W * 0.08, H * 0.82)])
+    mid.vgrad([(0, "3e3e4a"), (0.15, "26262e"), (1, "0c0c12")], H * 0.34, H * 0.82, mask=body)
     mid.paint(rim(body, 0, -1, 1), "ff8ab0", 0.7)
-    win = rect(mid, W * 0.3, H * 0.44, W * 0.4, H * 0.2)
-    mid.paint(win, "0a0a10")
+    # speaker grille
+    for gy in range(6):
+        for gx in range(9):
+            mid.paint(ellipse(mid, W * (0.17 + gx * 0.018), H * (0.44 + gy * 0.035), 1.4, 1.4), "08080c")
+    # cassette window with the tape visible
+    win = rect(mid, W * 0.33, H * 0.42, W * 0.3, H * 0.19)
+    mid.paint(win, "07070a")
     mid.paint(rim(win, 0, 1, 1), "606070", 0.6)
-    mid.paint(rect(mid, W * 0.34, H * 0.47, W * 0.32, H * 0.14), "3a2a20")
-    mid.paint(rect(mid, W * 0.4, H * 0.5, W * 0.2, H * 0.08), "d8d0c0")
-    m = text_mask(mid, W * 0.5, H * 0.54, "TOMMY 87", 9, F_MONO, "mm")
-    mid.paint(m, "303040")
-    for bx in range(5):
-        b = rect(mid, W * (0.22 + bx * 0.1), H * 0.7, W * 0.07, H * 0.05)
-        mid.paint(b, "18181e")
-        mid.paint(rim(b, 0, -1, 1), "8080a0", 0.6)
-    glow_text(mid, W * 0.24, H * 0.42, "MESSAGES  1", 9, F_MONO, "ff3040", 0.7)
+    cas = rect(mid, W * 0.35, H * 0.445, W * 0.26, H * 0.14)
+    mid.paint(cas, "2a2228")
+    mid.paint(rect(mid, W * 0.39, H * 0.47, W * 0.18, H * 0.05), "d8d0c0")
+    mid.paint(text_mask(mid, W * 0.48, H * 0.495, "TOMMY 87", 8, F_MONO, "mm"), "303040")
+    mid.paint(rect(mid, W * 0.36, H * 0.545, W * 0.24, H * 0.03), "3a2a22")     # the tape between the reels
+    mid.add(blur(poly(mid, [(W * 0.34, H * 0.43), (W * 0.4, H * 0.43), (W * 0.36, H * 0.6), (W * 0.33, H * 0.6)]), 2), col("ffffff"), 0.12)
+    # 7-segment counter and the button row with labels
+    disp = rect(mid, W * 0.16, H * 0.37, W * 0.12, H * 0.05)
+    mid.paint(disp, "140406")
+    glow_text(mid, W * 0.22, H * 0.395, "01", 11, F_MONO, "ff3040", 0.8, "mm")
+    for bx, lab in enumerate(("PLAY", "REW", "FF", "STOP", "MEMO")):
+        b = rect(mid, W * (0.18 + bx * 0.1), H * 0.66, W * 0.075, H * 0.05)
+        mid.vgrad([(0, "3a3a44"), (1, "141418")], H * 0.66, H * 0.71, mask=b)
+        mid.paint(rim(b, 0, -1, 1), "a0a0b8", 0.6)
+        mid.paint(text_mask(mid, W * (0.2175 + bx * 0.1), H * 0.735, lab, 5, F_BOLD, "mm"), "a0a0b0", 0.9)
+    glow_text(mid, W * 0.44, H * 0.385, "MESSAGES", 7, F_MONO, "ff3040", 0.5, "mm")
+    # the phone on its cradle, coiled cord
+    ph = spoly(mid, [(W * 0.8, H * 0.5), (W * 0.97, H * 0.46), (W * 0.99, H * 0.56), (W * 0.82, H * 0.6)])
+    mid.vgrad([(0, "3a3a44"), (1, "121216")], H * 0.46, H * 0.6, mask=ph)
+    mid.paint(rim(ph, 0, -1, 1), "ff8ab0", 0.6)
+    base = spoly(mid, [(W * 0.79, H * 0.58), (W * 0.99, H * 0.55), (W * 1.0, H * 0.8), (W * 0.8, H * 0.82)])
+    mid.vgrad([(0, "2a2a32"), (1, "0c0c10")], H * 0.55, H * 0.82, mask=base)
+    for k in range(10):
+        cx_ = W * 0.78 - k * 4
+        mid.paint(np.clip(ellipse(mid, cx_, H * 0.7 + math.sin(k) * 2, 3, 5) - ellipse(mid, cx_, H * 0.7 + math.sin(k) * 2, 2, 4), 0, 1), "18181e")
     out("machine", "mid", mid)
-    reels = Layer(W, H)
-    for rx in (W * 0.38, W * 0.62):
-        r = ellipse(reels, rx, H * 0.54, 14, 14)
-        reels.paint(r, "1a1418")
-        reels.paint(ellipse(reels, rx, H * 0.54, 5, 5), "d8d0c0")
-        for k in range(3):
-            a = k * math.tau / 3
-            reels.paint(line(reels, [(rx, H * 0.54), (rx + math.cos(a) * 11, H * 0.54 + math.sin(a) * 11)], 2), "d8d0c0", 0.8)
-    out("machine", "reels", reels)
+    # reels: three frames of the spokes turning
+    for f in range(3):
+        reels = Layer(W, H)
+        for rx in (W * 0.4, W * 0.56):
+            reels.paint(ellipse(reels, rx, H * 0.515, 10, 10), "1a1418")
+            reels.paint(ellipse(reels, rx, H * 0.515, 4.5, 4.5), "d8d0c0")
+            for k in range(6):
+                a = f * (math.tau / 18) + k * math.tau / 6
+                reels.paint(line(reels, [(rx + math.cos(a) * 2, H * 0.515 + math.sin(a) * 2), (rx + math.cos(a) * 4.5, H * 0.515 + math.sin(a) * 4.5)], 1.2), "2a2228")
+        out("machine", "reels_%d" % f, reels)
     led = Layer(W, H)
-    led.radial(W * 0.8, H * 0.44, 9, "ff2020", 1.1, 1.0)
-    led.paint(ellipse(led, W * 0.8, H * 0.44, 3, 3), "ffd0d0")
+    led.radial(W * 0.7, H * 0.4, 9, "ff2020", 1.1, 1.0)
+    led.paint(ellipse(led, W * 0.7, H * 0.4, 3, 3), "ffd0d0")
     out("machine", "led", led)
 
-@shot
-def package():
-    """Gold greasepaint, the key to 204, a Polaroid of Tommy smiling."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "2a1810"), (1, "140a06")], 0, H)
-    wood = value_noise(W, H, 60, 12, 3)
-    for i in range(12):
-        bg.multiply(np.abs(np.sin((bg.yy + wood * 30) * 0.18 + i)) > 0.97, "1a0c06", 0.3)
-    bg.radial(W * 0.45, H * 0.45, 280, "ffb070", 1.5, 0.35)
-    out("package", "bg", bg)
-    mid = Layer(W, H)
-    # box, open flaps
-    box = poly(mid, [(W * 0.06, H * 0.14), (W * 0.42, H * 0.1), (W * 0.46, H * 0.72), (W * 0.1, H * 0.78)])
-    mid.vgrad([(0, "b08858"), (1, "6a4a2a")], H * 0.1, H * 0.78, mask=box)
-    inner = poly(mid, [(W * 0.09, H * 0.2), (W * 0.4, H * 0.17), (W * 0.43, H * 0.68), (W * 0.12, H * 0.72)])
-    mid.paint(inner, "3a2410")
-    mid.paint(rect(mid, W * 0.24, H * 0.1, 10, H * 0.68) * box * (1 - inner), "d0b040")
-    # greasepaint tin (gold)
-    tin = ellipse(mid, W * 0.26, H * 0.44, 34, 28)
-    mid.vgrad([(0, "fff0a0"), (0.5, "d8a428"), (1, "7a5a10")], H * 0.44 - 28, H * 0.44 + 28, mask=tin)
-    mid.paint(rim(tin, -1, -1, 1), "ffffff", 0.7)
-    mid.paint(poly(mid, star_pts(W * 0.26, H * 0.44, 16, 7)), "7a4a08", 0.8)
-    mid.paint(text_mask(mid, W * 0.26, H * 0.6, "STAR GOLD", 8, F_BOLD, "mm"), "3a2a08", 0.8)
-    # key with a motel tag
-    kx, ky = W * 0.56, H * 0.66
-    mid.paint(line(mid, [(kx, ky), (kx + 50, ky - 10)], 4), "c8b070")
-    mid.paint(ellipse(mid, kx - 6, ky + 1, 9, 9) - ellipse(mid, kx - 6, ky + 1, 4, 4), "c8b070")
-    tag = poly(mid, [(kx + 46, ky - 30), (kx + 90, ky - 40), (kx + 100, ky - 14), (kx + 56, ky - 4)])
-    mid.paint(tag, "b01830")
-    mid.paint(text_mask(mid, kx + 73, ky - 22, "204", 14, F_BOLD, "mm", 12), "fff0e0")
-    # the polaroid
-    pol = poly(mid, [(W * 0.6, H * 0.12), (W * 0.9, H * 0.16), (W * 0.86, H * 0.58), (W * 0.56, H * 0.53)])
-    mid.paint(pol, "ece6d8")
-    mid.paint(rim(pol, -1, -1, 1), "ffffff", 0.6)
-    ph = poly(mid, [(W * 0.62, H * 0.16), (W * 0.87, H * 0.195), (W * 0.845, H * 0.45), (W * 0.595, H * 0.415)])
-    photo = Layer(W, H)
-    photo.vgrad([(0, "e0a060"), (1, "704030")], H * 0.16, H * 0.45)
-    face(photo, W * 0.73, H * 0.3, 20, "e0a888", "2a140c", jacket="2f4f8f", light=(1, -0.3), light_col="ffe0b0",
-         fill_col="905040", hair_style="short", mouth=1.0, shirt="e0d8c8", collar="lapel")
-    mid.paint(ph, photo.a)
-    mid.paint(text_mask(mid, W * 0.62, H * 0.5, "A.V.  '87", 10, F_SCRIPT, "la", -8), "303048", 0.85)
-    out("package", "mid", mid)
-
-@shot
-def mirror():
-    """She paints the star on. It goes on easier than it should."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "10141c"), (1, "06080c")], 0, H)
-    tiles = ((np.mod(bg.xx, 22) < 1) | (np.mod(bg.yy, 22) < 1)).astype(np.float32)
-    bg.multiply(tiles, "000000", 0.5)
-    bg.radial(W * 0.5, H * 0.05, 220, "e0f0ff", 1.8, 0.3)
-    out("mirror", "bg", bg)
-    mid = Layer(W, H)
-    frame = rect(mid, W * 0.18, H * 0.06, W * 0.64, H * 0.8)
-    glass = rect(mid, W * 0.2, H * 0.09, W * 0.6, H * 0.74)
-    mid.paint(frame, "2a2830")
-    refl = Layer(W, H)
-    refl.vgrad([(0, "1a2030"), (1, "0a0c14")], 0, H)
-    refl.radial(W * 0.5, H * 0.1, 200, "e8f4ff", 1.6, 0.25)
-    face(refl, W * 0.5, H * 0.34, 40, "e6a888", "5a1612", jacket="7a1420", light=(-1, -0.4), light_col="f0f4ff",
-         fill_col="4a2a70", hair_style="ponytail", star=True, look=(0.0, 0.0), brows=0.1, shirt="d8d0c8", grime=0.2)
-    # a hand with the brush up to the star
-    refl.paint(spoly(refl, [(W * 0.28, H * 0.9), (W * 0.31, H * 0.45), (W * 0.37, H * 0.3), (W * 0.41, H * 0.32), (W * 0.37, H * 0.5), (W * 0.35, H * 0.9)]), "c88868")
-    refl.paint(line(refl, [(W * 0.39, H * 0.31), (W * 0.435, H * 0.275)], 2), "402818")
-    refl.paint(ellipse(refl, W * 0.44, H * 0.27, 2.5, 2.5), "e8b830")
-    mid.paint(glass, refl.a)
-    # streaks on the glass
-    for i in range(5):
-        mid.add(glass * blur(line(mid, [(W * (0.25 + i * 0.12), H * 0.1), (W * (0.18 + i * 0.12), H * 0.8)], 6), 5), col("ffffff"), 0.05)
-    out("mirror", "mid", mid)
-    fg = Layer(W, H)
-    sink = spoly(fg, [(W * 0.1, H * 0.86), (W * 0.9, H * 0.86), (W * 0.95, H), (W * 0.05, H)])
-    fg.vgrad([(0, "d8dce0"), (1, "7a8088")], H * 0.86, H, mask=sink)
-    tin = ellipse(fg, W * 0.72, H * 0.88, 16, 6)
-    fg.paint(tin, "d8a428")
-    fg.paint(rim(tin, 0, -1, 1), "fff0a0", 0.8)
-    out("mirror", "fg", fg)
-
 # ================================================================ KHSC 9
-@shot
-def tv_news():
-    """Channel 9 on the set in a dark room."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "06060a"), (1, "0c0a10")], 0, H)
-    bg.radial(W * 0.5, H * 0.45, 300, "3060c0", 1.6, 0.3)
-    out("tv_news", "bg", bg)
-    mid = Layer(W, H)
-    cab = spoly(mid, [(W * 0.14, H * 0.08), (W * 0.86, H * 0.08), (W * 0.88, H * 0.9), (W * 0.12, H * 0.9)])
-    mid.vgrad([(0, "3a2a1e"), (1, "1a100a")], 0, H, mask=cab)
-    wood = value_noise(W, H, 50, 2, 3)
-    mid.multiply(cab * (np.abs(np.sin(mid.xx * 0.05 + wood * 10)) > 0.9), "140a06", 0.4)
-    scr = spoly(mid, [(W * 0.2, H * 0.14), (W * 0.72, H * 0.13), (W * 0.73, H * 0.8), (W * 0.19, H * 0.81)])
-    tv = Layer(W, H)
-    tv.vgrad([(0, "18306a"), (1, "0c1838")], 0, H)
-    tv.radial(W * 0.62, H * 0.35, 90, "ffd23f", 1.4, 0.3)
-    m = poly(tv, star_pts(W * 0.62, H * 0.3, 30, 12))
-    tv.paint(m, "ffd23f")
-    tv.paint(rim(m, 1, -1, 1), "ffffff", 0.7)
-    face(tv, W * 0.37, H * 0.34, 30, "e6b494", "c8a060", jacket="203060", light=(1, -0.3), light_col="ffffff",
-         fill_col="4060c0", hair_style="helmet", mouth=0.6, shirt="e8e8f0", tie="a01828", collar="lapel")
-    lower = rect(tv, W * 0.2, H * 0.53, W * 0.53, H * 0.08)
-    tv.paint(lower, "c01020")
-    tv.paint(text_mask(tv, W * 0.22, H * 0.57, "LIVE  BARSTOW MOTEL MASSACRE", 11, F_BOLD, "lm"), "ffffff")
-    tv.paint(text_mask(tv, W * 0.67, H * 0.2, "9", 20, F_DISPLAY, "mm"), "ffffff", 0.85)
-    mid.paint(scr, tv.a)
-    mid.add(scr * blur(scr, 1), col("a0c0ff"), 0.08)
-    mid.paint(rim(scr, 0, -1, 1), "000000", 0.8)
-    for k in range(2):
-        mid.paint(ellipse(mid, W * 0.8, H * (0.3 + k * 0.14), 10, 10), "8a7a60")
-        mid.paint(line(mid, [(W * 0.8, H * (0.3 + k * 0.14)), (W * 0.8 + 7, H * (0.3 + k * 0.14) - 5)], 1.5), "2a2010")
-    for k in range(6):
-        mid.paint(rect(mid, W * 0.77, H * (0.6 + k * 0.03), W * 0.07, 2), "0a0806")
-    out("tv_news", "mid", mid)
-
-def motel_building(L, lit=True):
-    # two-storey motel block, balcony, doors, VACANCY sign
-    L.paint(rect(L, W * 0.06, H * 0.34, W * 0.72, H * 0.42), "2a1a2a")
-    L.vgrad([(0, "3a2438"), (1, "1a0e1a")], H * 0.34, H * 0.76, mask=rect(L, W * 0.06, H * 0.34, W * 0.72, H * 0.42))
-    L.paint(rect(L, W * 0.05, H * 0.53, W * 0.74, 4), "5a3a50")
-    L.paint(rect(L, W * 0.05, H * 0.32, W * 0.74, 5), "1a0e18")
+def motel_building(L, lit=True, oy=0.0, sign=True):
+    """Two-storey motel block: balcony, doors, room numbers (2xx upstairs),
+    VACANCY sign. oy shifts it up/down (fraction of H)."""
+    Y = lambda f: H * (f + oy)
+    body = rect(L, W * 0.06, Y(0.34), W * 0.72, H * 0.42)
+    L.vgrad([(0, "3a2438"), (1, "1a0e1a")], Y(0.34), Y(0.76), mask=body)
+    stucco = value_noise(W, H, 2, 77, 1)
+    L.multiply(body * (stucco > 0.7), "2a1828", 0.12)
+    L.paint(rect(L, W * 0.05, Y(0.53), W * 0.74, 4), "5a3a50")             # balcony
+    for k in range(25):
+        L.paint(rect(L, W * (0.055 + k * 0.03), Y(0.49), 1.5, H * 0.04), "4a2a40")   # railing
+    L.paint(rect(L, W * 0.05, Y(0.49), W * 0.74, 1.5), "5a3a50")
+    L.paint(rect(L, W * 0.05, Y(0.32), W * 0.74, 5), "1a0e18")             # roof edge
     for i in range(8):
-        for row, y in ((0, H * 0.38), (1, H * 0.58)):
+        for row, y in ((0, Y(0.38)), (1, Y(0.58))):
             x = W * (0.09 + i * 0.086)
             d = rect(L, x, y, 14, 26 if row else 22)
             L.paint(d, "140a14")
             L.paint(rect(L, x + 18, y + 4, 16, 10), "ffcf80" if (i * 3 + row) % 5 in (1, 3) and lit else "10080c")
             if (i * 3 + row) % 5 in (1, 3) and lit:
                 L.radial(x + 26, y + 9, 16, "ffcf80", 1.5, 0.35)
-            L.paint(text_mask(L, x + 7, y - 3, str(101 + i + row * 100), 6, F_MONO, "mm"), "c8a0b0", 0.7)
-    # sign
-    L.paint(rect(L, W * 0.84, H * 0.24, 4, H * 0.5), "140a14")
-    s = rect(L, W * 0.79, H * 0.1, W * 0.17, H * 0.16)
-    L.paint(s, "1a0a18")
-    glow_text(L, W * 0.875, H * 0.15, "SUNSET", 11, F_DISPLAY, "ff9040", 0.8, "mm")
-    glow_text(L, W * 0.875, H * 0.21, "PALMS", 11, F_DISPLAY, "ff3d7f", 0.8, "mm")
+            L.paint(text_mask(L, x + 7, y - 3, str(201 + i - row * 100), 6, F_MONO, "mm"), "c8a0b0", 0.7)
+    if sign:
+        L.paint(rect(L, W * 0.84, Y(0.24), 4, H * 0.5), "140a14")
+        sg = rect(L, W * 0.79, Y(0.1), W * 0.17, H * 0.16)
+        L.paint(sg, "1a0a18")
+        glow_text(L, W * 0.875, Y(0.15), "SUNSET", 11, F_DISPLAY, "ff9040", 0.8, "mm")
+        glow_text(L, W * 0.875, Y(0.21), "PALMS", 11, F_DISPLAY, "ff3d7f", 0.8, "mm")
 
 @shot
 def motel_night():
@@ -487,88 +320,6 @@ def motel_night():
     glow_text(vac, W * 0.875, H * 0.285, "VACANCY", 8, F_BOLD, "40e0ff", 0.9, "mm")
     out("motel_night", "fg", fg)
     out("motel_night", "sign", vac)
-
-@shot
-def motel_crime():
-    """The morning after: tape, cruisers, a gold star on 204."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "0a0818"), (0.6, "1a1030"), (1, "302040")], 0, H * 0.78)
-    ridge(bg, H * 0.5, 16, 62, "140a1c", 60)
-    out("motel_crime", "bg", bg)
-    mid = Layer(W, H)
-    motel_building(mid, lit=False)
-    # star painted on door 204
-    x = W * (0.09 + 3 * 0.086)
-    m = poly(mid, star_pts(x + 7, H * 0.435, 10, 4))
-    mid.paint(m, "e8b830")
-    mid.add(blur(m, 3), col("ffc040"), 0.4)
-    lot = rect(mid, 0, H * 0.76, W, H)
-    mid.vgrad([(0, "201820"), (1, "0a080a")], H * 0.76, H, mask=lot)
-    for i, cx in enumerate((W * 0.08, W * 0.5)):
-        car_side(mid, cx, H * 0.94, 170, "d8d8e0", glass="10141c", rimc="c0c8ff")
-        mid.paint(rect(mid, cx + 60, H * 0.94 - 50, 50, 5), "101018")
-    tape = line(mid, [(0, H * 0.72), (W * 0.3, H * 0.74), (W * 0.62, H * 0.71), (W, H * 0.73)], 3)
-    mid.paint(tape, "f0d020")
-    for i in range(10):
-        mid.paint(text_mask(mid, W * (0.03 + i * 0.1), H * 0.728, "POLICE", 4, F_BOLD, "lm") * tape, "101010")
-    for px in (W * 0.3, W * 0.36, W * 0.72):
-        person(mid, px, H * 0.9, 50, "0a0a14", rimc="80a0ff", coat=True)
-    out("motel_crime", "mid", mid)
-    red = Layer(W, H)
-    for cx in (W * 0.08, W * 0.5):
-        red.radial(cx + 72, H * 0.94 - 52, 40, "ff2030", 1.3, 0.9)
-    out("motel_crime", "red", red)
-    blue = Layer(W, H)
-    for cx in (W * 0.08, W * 0.5):
-        blue.radial(cx + 98, H * 0.94 - 52, 40, "2050ff", 1.3, 0.9)
-    out("motel_crime", "blue", blue)
-
-@shot
-def marv():
-    """Marv Kessel: 'She doesn't even know she's on.'"""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "1a0818"), (1, "3a0a20")], 0, H)
-    for i in range(14):
-        a = i / 14 * math.pi
-        bg.add(blur(poly(bg, [(W * 0.5, H * 1.1), (W * 0.5 + math.cos(a) * W, H * 1.1 - math.sin(a) * W), (W * 0.5 + math.cos(a + 0.1) * W, H * 1.1 - math.sin(a + 0.1) * W)]), 3), col("ffd23f" if i % 2 else "ff3d7f"), 0.12)
-    glow_text(bg, W * 0.5, H * 0.16, "HOTSHOT", 44, F_DISPLAY, "ff3d7f", 0.8, "mm")
-    glow_text(bg, W * 0.8, H * 0.3, "California", 20, F_SCRIPT, "ffd23f", 0.8, "mm", 6)
-    for i in range(20):
-        bg.radial(W * (0.02 + i * 0.05), H * 0.04, 5, "fff0c0", 1.5, 0.8)
-    out("marv", "bg", bg)
-    mid = Layer(W, H)
-    face(mid, W * 0.5, H * 0.4, 42, "e0b090", "1e1e24", jacket="7a1030", light=(1, -0.4), light_col="ffe8a0",
-         fill_col="ff3d7f", hair_style="slick", mouth=1.6, brows=0.5, look=(0.0, 0.0), shirt="f0e8e0", tie="ffd23f", collar="lapel")
-    # microphone
-    mid.paint(line(mid, [(W * 0.66, H), (W * 0.61, H * 0.6)], 5), "18181e")
-    mic = ellipse(mid, W * 0.605, H * 0.57, 11, 14)
-    mid.vgrad([(0, "c0c0d0"), (1, "404050")], H * 0.52, H * 0.62, mask=mic)
-    out("marv", "mid", mid)
-
-@shot
-def polaroid():
-    """'A.V.' Tommy and his stunt coordinator, 1986."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "1a1210"), (1, "0a0806")], 0, H)
-    bg.radial(W * 0.5, H * 0.45, 260, "ffb080", 1.6, 0.35)
-    out("polaroid", "bg", bg)
-    mid = Layer(W, H)
-    pol = poly(mid, [(W * 0.26, H * 0.08), (W * 0.76, H * 0.1), (W * 0.74, H * 0.94), (W * 0.24, H * 0.92)])
-    mid.paint(pol, "ece4d4")
-    mid.paint(rim(pol, -1, -1, 1), "ffffff", 0.5)
-    ph = poly(mid, [(W * 0.29, H * 0.13), (W * 0.73, H * 0.15), (W * 0.72, H * 0.72), (W * 0.28, H * 0.7)])
-    photo = Layer(W, H)
-    photo.vgrad([(0, "f0c080"), (0.6, "d08050"), (1, "7a4028")], H * 0.13, H * 0.72)
-    ridge(photo, H * 0.52, 12, 81, "a05040", 60)
-    face(photo, W * 0.4, H * 0.42, 34, "e0a888", "2a140c", jacket="2f4f8f", light=(1, -0.3), light_col="fff0c0",
-         fill_col="905040", hair_style="short", mouth=1.2, shirt="e0d8c8", collar="lapel")
-    face(photo, W * 0.61, H * 0.44, 34, "c89070", "5a5a50", jacket="3a4a2a", light=(1, -0.3), light_col="fff0c0",
-         fill_col="905040", hair_style="balding", mouth=0.5, stubble=True, collar="popped", glasses=True)
-    # fade and warm tint like an old print
-    photo.a[..., :3] = photo.a[..., :3] * 0.85 + np.array([0.12, 0.07, 0.02])
-    mid.paint(ph, photo.a)
-    mid.paint(text_mask(mid, W * 0.3, H * 0.83, "T & A.V.  -  Yermo, '86", 15, F_SCRIPT, "lm", 2), "2a2a48", 0.9)
-    out("polaroid", "mid", mid)
 
 @shot
 def salvage_yard():
@@ -643,30 +394,9 @@ def galaxy_palace():
         mid.paint(scr, mix(c_, INK, 0.5))
         mid.radial(x + 29, H * 0.45, 40, c_, 1.5, 0.4)
         mid.paint(rim(cab, 0, -1, 1), c_, 0.7)
-    person(mid, W * 0.5, H * 0.98, 110, "07040c", rimc="b040ff", rim_dir=(1, -1), pose="hands_hips")
+    figure(mid, W * 0.5, H * 0.98, 110, "2a1040", pants="120818", skin="c89070", hair="e8c040", light=(1, -0.3),
+           light_col="b040ff", fill_col="35e0ff", pose="cross", hair_style="short")
     out("galaxy_palace", "mid", mid)
-
-@shot
-def barstow_pd():
-    """1991. Barstow PD. Officer Dana Pruitt still can't sleep."""
-    bg = Layer(W, H)
-    bg.vgrad([(0, "05060c"), (1, "141c28")], 0, H)
-    bg.radial(W * 0.5, H * 0.3, 240, "80a0c0", 1.6, 0.2)
-    out("barstow_pd", "bg", bg)
-    mid = Layer(W, H)
-    st = rect(mid, W * 0.08, H * 0.3, W * 0.84, H * 0.5)
-    mid.vgrad([(0, "3a3a44"), (1, "1a1a22")], H * 0.3, H * 0.8, mask=st)
-    glow_text(mid, W * 0.5, H * 0.38, "BARSTOW  POLICE  DEPT.", 16, F_BOLD, "e0e8ff", 0.4, "mm")
-    for i in range(6):
-        mid.paint(rect(mid, W * (0.14 + i * 0.13), H * 0.5, 34, 30), "ffe0a0" if i in (2, 4) else "0c0c14")
-    lot = rect(mid, 0, H * 0.8, W, H)
-    mid.vgrad([(0, "18181e"), (1, "08080a")], H * 0.8, H, mask=lot)
-    car_side(mid, W * 0.55, H * 0.97, 170, "d0d0d8", glass="10141c", rimc="a0c0ff")
-    person(mid, W * 0.3, H * 0.97, 96, "0a0c14", rimc="ff4050", rim_dir=(-1, 0), coat=True, pose="stand")
-    out("barstow_pd", "mid", mid)
-    red = Layer(W, H)
-    red.radial(W * 0.55 + 90, H * 0.97 - 52, 60, "ff2030", 1.3, 0.8)
-    out("barstow_pd", "red", red)
 
 @shot
 def hills_fire():
@@ -692,6 +422,10 @@ def hills_fire():
     fg = Layer(W, H)
     palm(fg, W * 0.9, H * 1.05, 260, "080304", -0.05, 12, "ff8040")
     out("hills_fire", "fg", fg)
+
+import shots_people, shots_places
+shots_people.register(shot, out, W, H)
+shots_places.register(shot, out, W, H, motel_building)
 
 if __name__ == "__main__":
     names = sys.argv[1:] or list(SHOTS)

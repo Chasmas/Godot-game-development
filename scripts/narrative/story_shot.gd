@@ -14,19 +14,19 @@ const FRAME := Vector2(480, 270)     ## the visible frame inside each 544x306 la
 ## in frame pixels); anims per layer; fx drawn over it.
 const SHOTS := {
 	"desert_road":  {"layers": [["bg", 0.2], ["mid", 0.6], ["fg", 1.0]], "cam": [1.0, Vector2(-14, 0), 1.08, Vector2(10, -4)], "fx": ["dust"]},
-	"cass_close":   {"layers": [["bg", 0.25], ["fg", 1.0]], "cam": [1.04, Vector2(-8, 4), 1.1, Vector2(6, -2)], "anim": {"fg": "breathe"}, "fx": ["dust"]},
-	"tommy_car":    {"layers": [["bg", 0.3], ["mid", 0.7], ["fg", 1.0]], "cam": [1.02, Vector2(8, 0), 1.06, Vector2(-6, 2)], "anim": {"mid": "breathe", "fg": "rumble"}, "fx": []},
+	"cass_close":   {"layers": [["bg", 0.25], ["fg", 1.0], ["flare", 1.0]], "cam": [1.04, Vector2(-8, 4), 1.1, Vector2(6, -2)], "anim": {"fg": "breathe", "flare": "flare"}, "face": {"layer": "fg", "speaker": "cass"}, "fx": ["dust"]},
+	"tommy_car":    {"layers": [["bg", 0.3], ["mid", 0.7], ["fg", 1.0], ["charm", 1.0]], "cam": [1.02, Vector2(8, 0), 1.06, Vector2(-6, 2)], "anim": {"mid": "breathe", "fg": "rumble", "charm": "sway"}, "pivot": {"charm": Vector2(0.4, 0.165)}, "face": {"layer": "mid", "speaker": "tommy"}, "smoke": [Vector2(0.65, 0.38)], "fx": []},
 	"clapper":      {"layers": [["bg", 0.3], ["fg", 1.0], ["arm", 1.0]], "cam": [1.0, Vector2.ZERO, 1.05, Vector2(0, 4)], "anim": {"arm": "snap"}, "fx": []},
 	"explosion":    {"layers": [["bg", 0.2], ["mid", 0.6], ["fg", 1.0]], "cam": [1.12, Vector2(0, -6), 1.02, Vector2.ZERO], "anim": {"mid": "flicker_fire"}, "fx": ["shake", "embers", "flash"]},
 	"wreck":        {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.0, Vector2(-10, 0), 1.06, Vector2(6, 0)], "anim": {"mid": "flicker_fire"}, "fx": ["embers", "smoke"]},
-	"apartment":    {"layers": [["bg", 0.4], ["mid", 1.0], ["led", 1.0]], "cam": [1.0, Vector2(-10, 0), 1.06, Vector2(10, -2)], "anim": {"led": "blink", "bg": "neon"}, "fx": ["rain_window", "dust"]},
-	"machine":      {"layers": [["bg", 0.3], ["mid", 1.0], ["reels", 1.0], ["led", 1.0]], "cam": [1.06, Vector2(0, 2), 1.14, Vector2(-8, 0)], "anim": {"led": "blink", "reels": "wobble"}, "fx": ["dust"]},
+	"apartment":    {"layers": [["bg", 0.4], ["fan_0", 0.7], ["mid", 1.0], ["led", 1.0]], "cam": [1.0, Vector2(-10, 0), 1.06, Vector2(10, -2)], "anim": {"led": "blink", "bg": "neon", "fan_0": "cycle3"}, "smoke": [Vector2(0.425, 0.69)], "fx": ["rain_window", "dust"]},
+	"machine":      {"layers": [["bg", 0.3], ["mid", 1.0], ["reels_0", 1.0], ["led", 1.0]], "cam": [1.06, Vector2(0, 2), 1.14, Vector2(-8, 0)], "anim": {"led": "blink", "reels_0": "cycle3"}, "fx": ["dust"]},
 	"package":      {"layers": [["bg", 0.5], ["mid", 1.0]], "cam": [1.0, Vector2(-16, 6), 1.12, Vector2(12, -4)], "fx": ["dust"]},
-	"mirror":       {"layers": [["bg", 0.4], ["mid", 0.9], ["fg", 1.0]], "cam": [1.02, Vector2(0, -6), 1.12, Vector2(0, 4)], "anim": {"mid": "breathe"}, "fx": ["glint"]},
-	"tv_news":      {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.0, Vector2.ZERO, 1.07, Vector2(-6, 0)], "anim": {"mid": "tv"}, "fx": ["scan"]},
+	"mirror":       {"layers": [["bg", 0.4], ["mid", 0.9], ["bulbs", 0.9], ["fg", 1.0]], "cam": [1.02, Vector2(0, -6), 1.12, Vector2(0, 4)], "anim": {"mid": "breathe", "bulbs": "buzz"}, "face": {"layer": "mid", "speaker": ""}, "fx": ["glint"]},
+	"tv_news":      {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.0, Vector2.ZERO, 1.07, Vector2(-6, 0)], "anim": {"mid": "tv"}, "face": {"layer": "mid", "speaker": "anchor"}, "fx": ["scan"]},
 	"motel_night":  {"layers": [["bg", 0.2], ["mid", 0.6], ["sign", 0.6], ["fg", 1.0]], "cam": [1.0, Vector2(-12, 0), 1.06, Vector2(10, -2)], "anim": {"sign": "flicker"}, "fx": ["rain"]},
 	"motel_crime":  {"layers": [["bg", 0.2], ["mid", 1.0], ["red", 1.0], ["blue", 1.0]], "cam": [1.0, Vector2(10, 0), 1.06, Vector2(-8, 0)], "anim": {"red": "siren_a", "blue": "siren_b"}, "fx": []},
-	"marv":         {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.06, Vector2(0, 4), 1.0, Vector2.ZERO], "anim": {"mid": "breathe", "bg": "neon"}, "fx": ["scan"]},
+	"marv":         {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.06, Vector2(0, 4), 1.0, Vector2.ZERO], "anim": {"mid": "breathe", "bg": "neon"}, "face": {"layer": "mid", "speaker": "marv"}, "fx": ["scan", "glitter"]},
 	"polaroid":     {"layers": [["bg", 0.4], ["mid", 1.0]], "cam": [1.0, Vector2(0, 10), 1.14, Vector2(10, -6)], "fx": ["dust"]},
 	"salvage_yard": {"layers": [["bg", 0.2], ["mid", 0.6], ["fg", 1.0], ["eyes", 1.0]], "cam": [1.0, Vector2(-10, 0), 1.08, Vector2(8, 0)], "anim": {"eyes": "eyes"}, "fx": ["dust"]},
 	"galaxy_palace": {"layers": [["bg", 0.3], ["mid", 1.0]], "cam": [1.0, Vector2(0, 6), 1.08, Vector2(0, -2)], "anim": {"bg": "neon"}, "fx": []},
@@ -51,6 +51,13 @@ var _flash := 0.0
 var _shake := 0.0
 var _rng := RandomNumberGenerator.new()
 var _embers: Array = []
+var _face_layer := ""
+var _face_speaker := ""
+var _blink_t := 3.0
+var _blinking := 0.0
+var _mouth_t := 0.0
+var _mouth_open := false
+var _smoke: Array = []
 var _rain: Array = []
 
 static var _cache: Dictionary = {}
@@ -92,7 +99,11 @@ func show_shot(id: String, hard := false) -> void:
 	for l in _def.get("layers", []):
 		var t := tex(id, l[0])
 		if t:
-			_tex.append([t, float(l[1]), String(l[0])])
+			_tex.append([t, float(l[1]), String(l[0]), id])
+	var fdef: Dictionary = _def.get("face", {})
+	_face_layer = str(fdef.get("layer", ""))
+	_face_speaker = str(fdef.get("speaker", ""))
+	_smoke.clear()
 	if "shake" in _def.get("fx", []):
 		_shake = 1.0
 	if "flash" in _def.get("fx", []):
@@ -107,6 +118,27 @@ func _process(delta: float) -> void:
 	_glitch = move_toward(_glitch, 0.0, delta * 3.0)
 	_flash = move_toward(_flash, 0.0, delta * 1.4)
 	_shake = move_toward(_shake, 0.0, delta * 0.7)
+	# faces: blink now and then; the mouth moves while this character's
+	# line is typing out in the dialogue box
+	_blink_t -= delta
+	if _blink_t <= 0.0:
+		_blink_t = _rng.randf_range(2.2, 5.0)
+		_blinking = 0.13
+	_blinking = maxf(0.0, _blinking - delta)
+	_mouth_t -= delta
+	if _mouth_t <= 0.0:
+		_mouth_t = _rng.randf_range(0.07, 0.12)
+		_mouth_open = _talking() and not _mouth_open
+	# cigarette smoke: wisps rising from each point
+	for p in _def.get("smoke", []):
+		if _rng.randf() < delta * 7.0 and _smoke.size() < 50:
+			_smoke.append({"p": p, "o": Vector2.ZERO, "v": Vector2(_rng.randf_range(-3, 3), _rng.randf_range(-16, -9)), "t": 0.0, "life": _rng.randf_range(1.6, 2.8), "r": _rng.randf_range(1.5, 2.5)})
+	for w in _smoke.duplicate():
+		w.t += delta
+		w.o += w.v * delta
+		w.v.x += sin(_t * 2.0 + w.life * 7.0) * 6.0 * delta
+		if w.t > w.life:
+			_smoke.erase(w)
 	var fx: Array = _def.get("fx", [])
 	if "embers" in fx and _embers.size() < 60 and _rng.randf() < 0.6:
 		_embers.append({"p": Vector2(_rng.randf_range(0.2, 0.8), _rng.randf_range(0.6, 0.9)), "v": Vector2(_rng.randf_range(-0.02, 0.02), _rng.randf_range(-0.12, -0.05)), "life": _rng.randf_range(1.5, 3.5), "t": 0.0})
@@ -118,9 +150,45 @@ func _process(delta: float) -> void:
 			_embers.erase(e)
 	queue_redraw()
 
+func _talking() -> bool:
+	if _face_speaker == "" or not Dialogue.active:
+		return false
+	return Dialogue._spk == _face_speaker and Dialogue.is_typing()
+
+## The texture to draw for a layer right now (face frames, cycling frames).
+func _layer_tex(id: String, lname: String, base: Texture2D, t: float, def: Dictionary) -> Texture2D:
+	if lname == _face_layer and def == _def:
+		if _blinking > 0.0:
+			var b := tex(id, lname + "_blink")
+			if b:
+				return b
+		if _mouth_open:
+			var m := tex(id, lname + "_talk")
+			if m:
+				return m
+	var anim := str(def.get("anim", {}).get(lname, ""))
+	if anim.begins_with("cycle"):
+		var n := int(anim.substr(5))
+		var stem := lname.substr(0, lname.rfind("_"))
+		var f := tex(id, "%s_%d" % [stem, int(t * 14.0) % n])
+		if f:
+			return f
+	return base
+
 ## Scale (screen px per art px) so the frame fills the control.
 func _base_scale() -> float:
 	return maxf(size.x / FRAME.x, size.y / FRAME.y)
+
+## A point in the art (0..1 of the layer) to screen, for the nearest layer.
+func _art_to_screen(p: Vector2) -> Vector2:
+	var cam := _cam(_def, _t)
+	var zoom: float = cam[0]
+	var pan: Vector2 = cam[1]
+	var base := _base_scale()
+	var art := Vector2(544, 306)
+	var sc := base * zoom
+	var centre := size * 0.5 + pan * base
+	return centre + (p - Vector2(0.5, 0.5)) * art * sc
 
 func _cam(def: Dictionary, t: float) -> Array:
 	var c: Array = def.get("cam", [1.0, Vector2.ZERO, 1.0, Vector2.ZERO])
@@ -152,9 +220,9 @@ func _draw_layers(list: Array, def: Dictionary, t: float, alpha: float) -> void:
 		shake = Vector2(_rng.randf_range(-1, 1), _rng.randf_range(-1, 1)) * 6.0 * _shake * _shake
 	var anims: Dictionary = def.get("anim", {})
 	for entry in list:
-		var tx: Texture2D = entry[0]
 		var depth: float = entry[1]
 		var lname: String = entry[2]
+		var tx: Texture2D = _layer_tex(str(entry[3]) if entry.size() > 3 else shot_id, lname, entry[0], t, def)
 		var z := 1.0 + (zoom - 1.0) * (0.4 + 0.6 * depth)
 		var sc := base * z
 		var tsz := Vector2(tx.get_width(), tx.get_height()) * sc
@@ -191,6 +259,17 @@ func _draw_layers(list: Array, def: Dictionary, t: float, alpha: float) -> void:
 			"tv":
 				var fl := 0.94 + 0.06 * sin(t * 50.0)
 				mod = Color(fl, fl, fl, mod.a)
+			"sway":
+				# hanging from its string: swings with the car
+				rot = sin(t * 2.6) * 0.18 + sin(t * 7.0) * 0.04
+				var pv: Vector2 = def.get("pivot", {}).get(lname, Vector2(0.5, 0.0))
+				pivot = Vector2(tsz.x * pv.x, tsz.y * pv.y)
+			"buzz":
+				# vanity bulbs: a faint hum in the brightness, and now and then a dip
+				var dip := 0.55 if fmod(t, 4.7) < 0.09 or fmod(t, 2.3) < 0.03 else 1.0
+				mod.a *= (0.92 + 0.08 * sin(t * 60.0)) * dip
+			"flare":
+				mod.a *= 0.75 + 0.25 * sin(t * 1.3) * sin(t * 0.7)
 			"snap":
 				# the clapper stick hangs open, then snaps shut at 0.9s
 				var k := clampf((t - 0.9) / 0.08, 0.0, 1.0)
@@ -233,6 +312,20 @@ func _draw_fx() -> void:
 			var k := fmod(t * 0.05 + i / 6.0, 1.0)
 			var c := Vector2(size.x * (0.35 + 0.3 * sin(i * 1.7)), size.y * (0.8 - k * 0.8))
 			draw_circle(c, 40.0 + k * 120.0, Color(0.08, 0.04, 0.05, 0.12 * sin(k * PI)))
+	if not _smoke.is_empty():
+		for w in _smoke:
+			var sp: Vector2 = _art_to_screen(w.p) + w.o * _base_scale()
+			var k: float = w.t / w.life
+			draw_circle(sp, (w.r + k * 6.0) * _base_scale() * 0.5, Color(0.85, 0.85, 0.9, 0.16 * (1.0 - k)))
+	if "glitter" in fx:
+		for i in 18:
+			var gx := fmod(i * 131.0, size.x)
+			var gy := size.y * 0.55 + fmod(i * 71.0, size.y * 0.4)
+			var ph := fmod(t * 1.7 + i * 0.37, 1.0)
+			if ph < 0.15:
+				var kk := sin(ph / 0.15 * PI)
+				draw_line(Vector2(gx - 4 * kk, gy), Vector2(gx + 4 * kk, gy), Color(1, 0.95, 0.7, kk), 1.0)
+				draw_line(Vector2(gx, gy - 4 * kk), Vector2(gx, gy + 4 * kk), Color(1, 0.95, 0.7, kk), 1.0)
 	if "dust" in fx:
 		for i in 26:
 			var x := fmod(i * 97.0 + t * (6.0 + i % 5), size.x)

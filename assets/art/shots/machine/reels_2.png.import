@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw3jvmqgqw6em"
-path="res://.godot/imported/reels.png-55f93be3e12d8ff4c6cb4422905239ac.ctex"
+uid="uid://4t46i7syxn0a"
+path="res://.godot/imported/reels_2.png-8cc5773d5ae57b2f624cb94c6d49e5a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/shots/machine/reels.png"
-dest_files=["res://.godot/imported/reels.png-55f93be3e12d8ff4c6cb4422905239ac.ctex"]
+source_file="res://assets/art/shots/machine/reels_2.png"
+dest_files=["res://.godot/imported/reels_2.png-8cc5773d5ae57b2f624cb94c6d49e5a7.ctex"]
 
 [params]
 
 compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.85
+compress/lossy_quality=0.8
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
