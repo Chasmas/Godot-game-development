@@ -584,6 +584,62 @@
    "size": 8
   },
   {
+   "type": "lamp",
+   "pos": [
+    8,
+    47
+   ],
+   "size": 0.62
+  },
+  {
+   "type": "lamp",
+   "pos": [
+    26,
+    47
+   ],
+   "size": 0.62
+  },
+  {
+   "type": "lamp",
+   "pos": [
+    38,
+    47
+   ],
+   "size": 0.62
+  },
+  {
+   "type": "lamp",
+   "pos": [
+    56,
+    47
+   ],
+   "size": 0.62
+  },
+  {
+   "type": "arcade",
+   "pos": [
+    60,
+    28
+   ],
+   "size": 0.72
+  },
+  {
+   "type": "arcade",
+   "pos": [
+    64,
+    29
+   ],
+   "size": 0.72
+  },
+  {
+   "type": "dumpster",
+   "pos": [
+    50,
+    43
+   ],
+   "size": 0.9
+  },
+  {
    "type": "palm",
    "pos": [
     2,
