@@ -6,7 +6,7 @@ config_version=5
 
 config/name="HOTSHOT CALIFORNIA"
 config/description="A fast, violent, surreal top-down action game. California, 1988-1992."
-config/version="0.3.0-dog-days"
+config/version="0.4.0-neon-cut"
 run/main_scene="res://scenes/boot.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.02, 0.01, 0.04, 1)
