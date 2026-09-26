@@ -79,9 +79,17 @@ func _build_environment() -> void:
 func _build_decor(level_data: Dictionary) -> void:
 	var decor: Array = level_data.get("decor", [])
 	for item in decor:
-		if str(item.get("type", "")) == "palm":
-			_add_model("palm", "res://assets/models/palm_tree.obj",
-				_cell_world(item.get("pos", [0, 0])), float(item.get("size", 1.0)))
+		var kind := str(item.get("type", ""))
+		var pos := _cell_world(item.get("pos", [0, 0]))
+		var size := float(item.get("size", 1.0))
+		if kind == "palm":
+			_add_model("palm", "res://assets/models/palm_tree.obj", pos, size)
+		elif kind == "lamp":
+			_add_model("lamp", "res://assets/models/street_lamp.obj", pos, size)
+		elif kind == "arcade":
+			_add_model("arcade", "res://assets/models/arcade_cabinet.obj", pos, size)
+		elif kind == "dumpster":
+			_add_model("dumpster", "res://assets/models/dumpster.obj", pos, size)
 
 	# Bring some of the exterior parking geometry into 3D.
 	var rows: Array = level_data.get("map", [])
