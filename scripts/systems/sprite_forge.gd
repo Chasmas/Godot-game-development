@@ -16,7 +16,7 @@ const INK := Color("0b0710")
 ## (headgear, shoulders, arms), then by colour. Every archetype gets at least
 ## one shape nobody else has.
 const STYLES := {
-	"cass":    {"hair": "ponytail", "build": 1.0, "extras": ["star", "popped_collar", "aviators_up", "sheen"]},
+	"cass":    {"hair": "ponytail", "build": 1.0, "extras": ["star", "popped_collar", "aviators_up", "sheen", "holster", "scuffs", "tape_hand"]},
 	"guard":   {"hair": "cap", "build": 1.0, "extras": ["radio", "epaulettes", "badge"]},
 	"gunner":  {"hair": "slick", "build": 1.05, "extras": ["shades", "chain", "power_shoulders"]},
 	"hunter":  {"hair": "bandana", "build": 1.05, "extras": ["sleeveless", "dogtags"]},
@@ -270,6 +270,24 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		var sh1 := ell(c + Vector2(-1.5, -5.5 * bw), Vector2(1.0, 2.8), top.lightened(0.5), false)
 		sh1.outline = false
 		shapes.append(sh1)
+	if "holster" in extras:
+		# shoulder rig: a worn strap across the jacket, the holster under the arm
+		shapes.append(cap(sh_r + Vector2(0.5, -0.5), c + Vector2(-3.0, -4.5), 0.7, Color("3a2012")))
+		shapes.append(ell(c + Vector2(-2.6, -5.4), Vector2(1.8, 1.3), Color("2a160c")))
+	if "scuffs" in extras:
+		# wear on the leather: a couple of pale scrapes and a dark stain
+		var sc1 := ell(c + Vector2(-2.5, 3.5), Vector2(1.1, 0.5), top.lightened(0.28), false)
+		sc1.outline = false
+		shapes.append(sc1)
+		var sc2 := ell(c + Vector2(1.0, 6.0), Vector2(0.8, 0.4), top.lightened(0.22), false)
+		sc2.outline = false
+		shapes.append(sc2)
+		var st2 := ell(c + Vector2(-1.0, -2.0), Vector2(0.9, 0.7), top.darkened(0.35), false)
+		st2.outline = false
+		shapes.append(st2)
+	if "tape_hand" in extras:
+		# boxer's tape on the knuckles
+		shapes.append(ell(hand_r, Vector2(2.2, 1.4), Color("e8e0d0"), false))
 	if "dogtags" in extras:
 		shapes.append(ell(c + Vector2(4.6, 1.2), Vector2(0.9, 1.1), Color("c8ccd8"), false))
 	if "pads" in extras:

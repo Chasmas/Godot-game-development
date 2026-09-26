@@ -13,6 +13,7 @@
 
 Unicode true
 SetCompressor /SOLID lzma
+SetCompressorDictSize 64
 RequestExecutionLevel admin
 ManifestDPIAware true
 

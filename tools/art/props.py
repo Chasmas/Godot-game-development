@@ -157,7 +157,7 @@ def star_pts(cx, cy, r_out, r_in, rot=0.0):
 def face(L, cx, cy, s, skin, hair, eyes="2a1810", jacket="c01830", lip="a03040", light=(1, -0.3),
          light_col="ff5a9a", fill_col="3040a0", hair_style="long", star=False, stubble=False,
          shirt=None, collar="popped", look=(0.0, 0.0), brows=0.0, mouth=0.0, glasses=False, scar=False,
-         jaw=1.0, grime=0.0, cig=False, earring=False, tie=None):
+         jaw=1.0, grime=0.0, cig=False, earring=False, tie=None, open_=0.0, blink=False, bruise=False, sweat=False):
     """A bust, three-quarter view, noir split lighting: warm key from the
     `light` side, cool fill from the other. s = half the head height."""
     lx = 1 if light[0] >= 0 else -1
@@ -222,6 +222,12 @@ def face(L, cx, cy, s, skin, hair, eyes="2a1810", jacket="c01830", lip="a03040",
         ecx, ecy = cx + ox * s, cy - 0.25 * s
         w_ = 0.25 * s
         L.multiply(blur(ellipse(L, ecx, ecy - 0.02 * s, w_ * 1.35, 0.2 * s), s * 0.07) * fm, "402a40", 0.5)
+        if blink:
+            L.paint(line(L, smooth([(ecx - w_ * 1.05, ecy + 0.02 * s), (ecx, ecy + 0.06 * s), (ecx + w_ * 1.05, ecy + 0.0 * s)], 6, False), max(1, 0.06 * s)), "140a10")
+            by = ecy - 0.27 * s - brows * 0.05 * s
+            tilt = brows * 0.07 * s * side
+            L.paint(line(L, smooth([(ecx - w_ * 1.15, by + 0.06 * s + tilt), (ecx - w_ * 0.2, by - 0.03 * s), (ecx + w_ * 1.1, by + 0.02 * s - tilt)], 6, False), max(1, 0.085 * s)), mix(hair, INK, 0.35))
+            continue
         eye = spoly(L, [(ecx - w_, ecy + 0.01 * s), (ecx - w_ * 0.1, ecy - 0.1 * s), (ecx + w_, ecy - 0.02 * s), (ecx + w_ * 0.1, ecy + 0.08 * s)])
         L.paint(eye, mix("e0d8d0", fill_col, 0.25 if side * lx < 0 else 0.0))
         L.paint(ellipse(L, ecx + ex * 0.09 * s, ecy + ey * 0.04 * s - 0.01 * s, 0.095 * s, 0.095 * s) * eye, eyes)
@@ -242,6 +248,14 @@ def face(L, cx, cy, s, skin, hair, eyes="2a1810", jacket="c01830", lip="a03040",
     L.paint(spoly(L, [(cx - 0.3 * s, my - curve), (cx, my - 0.05 * s), (cx + 0.3 * s, my - curve), (cx, my + 0.11 * s)]), lip)
     L.paint(line(L, smooth([(cx - 0.3 * s, my - curve), (cx, my + 0.015 * s), (cx + 0.3 * s, my - curve)], 5, False), max(1, 0.04 * s)), "2a0612")
     L.paint(ellipse(L, cx + 0.05 * s * lx, my + 0.08 * s, 0.1 * s, 0.025 * s), mix(lip, "ffffff", 0.4), 0.4)
+    if open_ > 0:
+        L.paint(ellipse(L, cx, my + 0.03 * s, 0.2 * s, 0.1 * s * open_ + 0.02 * s), "1a0408")
+        L.paint(ellipse(L, cx, my - 0.02 * s, 0.15 * s, 0.03 * s * open_), "e8e0d8", 0.8)
+    if bruise:
+        L.multiply(blur(ellipse(L, cx + 0.6 * s * lx, cy + 0.15 * s, 0.25 * s, 0.18 * s), s * 0.08) * fm, "6a3a6a", 0.6)
+    if sweat:
+        for k in range(3):
+            L.paint(ellipse(L, cx + (-0.6 + k * 0.5) * s, cy - 0.85 * s + (k % 2) * 0.1 * s, 0.04 * s, 0.06 * s), "e8f4ff", 0.8)
     if cig:
         L.paint(line(L, [(cx + 0.18 * s, my + 0.02 * s), (cx + 0.75 * s, my + 0.12 * s)], max(1, 0.07 * s)), "e8e0d0")
         L.radial(cx + 0.78 * s, my + 0.12 * s, 0.14 * s, "ff6020", 1.5, 1.0)

@@ -103,6 +103,33 @@ func _process(delta: float) -> void:
 		_sweat = fmod(_sweat + delta * 0.25, 1.0)
 	queue_redraw()
 
+static var _art_cache: Dictionary = {}
+
+func _art(id: String) -> Texture2D:
+	if not _art_cache.has(id):
+		var path := "res://assets/characters/portraits/%s.png" % id
+		_art_cache[id] = load(path) if ResourceLoader.exists(path) else null
+	return _art_cache[id]
+
+## The painted frame for this moment, if the speaker has painted art. Cass
+## wears the gold star once she's painted it on.
+func _art_frame() -> Texture2D:
+	var id := speaker
+	if id == "cass" and bool(SaveManager.get_flag("wore_the_star", false)):
+		id = "cass_star"
+	var base := _art(id)
+	if base == null:
+		return null
+	if _blinking > 0.0:
+		var b := _art(id + "_blink")
+		if b:
+			return b
+	if talking and _mouth > 0:
+		var t := _art(id + "_talk")
+		if t:
+			return t
+	return base
+
 func _c(hexs: String) -> Color:
 	return Color.html("#" + hexs)
 
@@ -124,7 +151,20 @@ func _draw() -> void:
 		var y0 := fmod(i * 7.0 + _t * 3.0, G)
 		px.call(0, y0, G, 1, Color(frame_col, 0.06))
 	var style := str(st.get("style", "short"))
-	if style == "phone" or style == "machine":
+	var art := _art_frame()
+	if art:
+		# painted portrait: rest / talk / blink frames, head bob and tilt
+		# while talking, a jolt for shock, a tremor for fear or anger
+		var tilt2 := sin(_t * 2.3) * float(tp.tilt) * (0.4 + _talk_amt)
+		var sc := 1.0 + (0.04 if _shown_mood == "shock" else 0.0) * _mood_k
+		var shake := Vector2.ZERO
+		if _shown_mood in ["angry", "scared"]:
+			shake = Vector2(randf_range(-1, 1), randf_range(-1, 1)) * 1.2 * _mood_k
+		var ctr := inner.get_center() + jit + shake + Vector2(0, -bob * s * 0.6) + _jit * s
+		draw_set_transform(ctr, tilt2, Vector2.ONE * sc)
+		draw_texture_rect(art, Rect2(-inner.size * 0.5 - Vector2(2, 2), inner.size + Vector2(4, 4)), false)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	elif style == "phone" or style == "machine":
 		_draw_device(px, style, frame_col)
 	else:
 		# the head tilts a little while talking (more for expressive people),
