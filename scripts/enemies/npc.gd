@@ -32,6 +32,8 @@ func _ready() -> void:
 	add_child(cs)
 	visual = CharacterVisual.new()
 	add_child(visual)
+	if palette == "civilian":
+		palette = "civilian#%d" % (absi(hash(npc_id)) % 4)
 	visual.setup(palette)
 	visual.set_aim(facing.angle())
 	Events.noise.connect(_on_noise)

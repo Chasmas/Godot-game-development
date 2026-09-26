@@ -131,6 +131,7 @@ func _goto(node_id: String) -> void:
 	name_label.add_theme_color_override("font_color", Color.html("#" + str(sd.get("color", "f4f0e8"))))
 	portrait.visible = spk != "narration"
 	portrait.speaker = spk
+	portrait.mood = str(_node.get("mood", _infer_mood(str(_node.get("text", "")))))
 	_full = str(_node.get("text", ""))
 	text_label.text = ("[i]" + _full + "[/i]") if spk == "narration" else _full
 	text_label.visible_characters = 0
@@ -147,6 +148,18 @@ func _goto(node_id: String) -> void:
 		_choices.append(ch)
 	_choice_i = 0
 	line_shown.emit(spk, _full)
+
+## Lines without an explicit "mood" get a light guess from punctuation so
+## portraits react even in dialogue written before moods existed.
+func _infer_mood(text: String) -> String:
+	var t := text.strip_edges()
+	if t.ends_with("?!") or t.ends_with("!?"):
+		return "shock"
+	if t.ends_with("!") and t.length() < 60 and t.to_upper() == t:
+		return "angry"
+	if t.begins_with("..."):
+		return "sad"
+	return ""
 
 func _check(cond: String) -> bool:
 	var neg := cond.begins_with("!")

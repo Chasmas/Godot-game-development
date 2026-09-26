@@ -62,8 +62,26 @@ func _init() -> void:
 	for s in [legs, torso, weapon_sprite, weapon_sprite2, overlay]:
 		s.light_mask = 2
 
+## Body language per archetype: walking sway (radians), forward lean while
+## moving (px), and gait bounce. Small, but it lets you tell a swaggering
+## gunner from a lumbering heavy before you can see their colours.
+const MANNER := {
+	"cass":   {"sway": 0.05, "lean": 0.8, "bounce": 0.35},
+	"guard":  {"sway": 0.03, "lean": 0.4, "bounce": 0.25},
+	"gunner": {"sway": 0.11, "lean": 0.2, "bounce": 0.45},
+	"hunter": {"sway": 0.04, "lean": 1.6, "bounce": 0.3},
+	"heavy":  {"sway": 0.08, "lean": 0.3, "bounce": 0.6},
+	"scout":  {"sway": 0.06, "lean": 1.0, "bounce": 0.5},
+	"riot":   {"sway": 0.02, "lean": 0.6, "bounce": 0.15},
+	"boss":   {"sway": 0.03, "lean": 0.0, "bounce": 0.2},
+}
+var _manner: Dictionary = {}
+var _manner_off := 0.0
+var _speed_k := 0.0
+
 func setup(p_palette: String) -> void:
 	palette = p_palette
+	_manner = MANNER.get(SpriteForge.base_name(p_palette), {"sway": 0.04, "lean": 0.5, "bounce": 0.3})
 	legs.texture = SpriteLib.legs(0, palette)
 	set_weapon(null)
 
@@ -102,9 +120,16 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 
 func set_aim(angle: float) -> void:
 	aim_angle = angle
-	rig.rotation = angle + _twist
+	rig.rotation = angle + _twist + _manner_off
 
 func update_move(vel: Vector2, delta: float) -> void:
+	# mannerisms: shoulders sway with the stride, torso leans into the walk
+	_speed_k = move_toward(_speed_k, clampf(vel.length() / 150.0, 0.0, 1.2), delta * 6.0)
+	if not _manner.is_empty():
+		_manner_off = sin(_walk_t * PI * 0.5) * float(_manner.sway) * _speed_k
+		# torso is inside the rig, which already faces the aim: +x is forward
+		var bounce := absf(sin(_walk_t * PI * 0.5)) * float(_manner.bounce) * _speed_k
+		torso.position = Vector2(float(_manner.lean) * _speed_k + bounce * 0.5, 0.0)
 	if _kick_leg_t > 0.0:
 		_kick_leg_t -= delta
 		legs.rotation = rig.rotation

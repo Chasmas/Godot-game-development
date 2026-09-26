@@ -16,7 +16,7 @@ const DEFAULT_SETTINGS := {
 	"brightness": 1.0, "fullscreen": false, "vsync": true, "vibration": true,
 	"aim_assist": 0.5, "language": "en", "subtitles": true, "ui_scale": 1.0,
 	"colorblind": 0, "show_fps": false, "bindings": {}, "window_size": 1, "bloom": true, "cel_shading": true, "weather": true,
-	"lock_auto_next": true, "laser_always": false,
+	"lock_auto_next": true, "laser_always": false, "difficulty": 1,
 }
 
 const DEFAULT_SAVE := {

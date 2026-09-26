@@ -12,18 +12,35 @@ const SIZE := 32                # character canvas (16 world px)
 const INK := Color("0b0710")
 
 ## Per-palette look: hair style + extras.
+## Silhouette first: at 16 px on screen a character is read by its outline
+## (headgear, shoulders, arms), then by colour. Every archetype gets at least
+## one shape nobody else has.
 const STYLES := {
-	"cass":    {"hair": "ponytail", "build": 1.0, "extras": ["star", "jacket_collar"]},
-	"guard":   {"hair": "short", "build": 1.0, "extras": ["radio"]},
-	"gunner":  {"hair": "slick", "build": 1.0, "extras": ["shades", "chain"]},
-	"hunter":  {"hair": "bandana", "build": 1.05, "extras": []},
-	"heavy":   {"hair": "bald", "build": 1.3, "extras": ["vest"]},
-	"scout":   {"hair": "mullet", "build": 0.95, "extras": ["hawaii"]},
+	"cass":    {"hair": "ponytail", "build": 1.0, "extras": ["star", "popped_collar", "aviators_up", "sheen"]},
+	"guard":   {"hair": "cap", "build": 1.0, "extras": ["radio", "epaulettes", "badge"]},
+	"gunner":  {"hair": "slick", "build": 1.05, "extras": ["shades", "chain", "power_shoulders"]},
+	"hunter":  {"hair": "bandana", "build": 1.05, "extras": ["sleeveless", "dogtags"]},
+	"heavy":   {"hair": "bald", "build": 1.35, "extras": ["vest", "thick_neck", "stubble"]},
+	"scout":   {"hair": "mullet", "build": 0.95, "extras": ["hawaii", "headphones"]},
 	"riot":    {"hair": "helmet", "build": 1.1, "extras": ["pads"]},
-	"boss":    {"hair": "silver", "build": 1.1, "extras": ["tie"]},
+	"boss":    {"hair": "silver", "build": 1.1, "extras": ["tie", "lapels", "pocket_square"]},
 	"civilian":{"hair": "short", "build": 1.0, "extras": []},
 	"shadow":  {"hair": "short", "build": 1.0, "extras": []},
 }
+
+## Per-instance looks so a room of guards isn't a room of clones:
+## "guard#2" = guard palette, variant 2 (skin tone / hair / trousers).
+const VARIANT_SKIN := [0.0, -0.28, 0.12, -0.14]
+const VARIANT_HAIR := ["", "3a2618", "8a6a3a", "121014"]
+const VARIANT_PANTS := [0.0, 0.12, -0.1, 0.06]
+
+static func base_name(palette: String) -> String:
+	var i := palette.find("#")
+	return palette if i < 0 else palette.substr(0, i)
+
+static func variant_of(palette: String) -> int:
+	var i := palette.find("#")
+	return 0 if i < 0 else int(palette.substr(i + 1))
 
 static var _cache: Dictionary = {}
 const BAKE_DIR := "res://assets/characters/baked/"
@@ -37,10 +54,22 @@ static func _baked(key: String) -> Texture2D:
 	return null
 
 static func _pal(name: String) -> Dictionary:
-	var p: Dictionary = SpriteLib.PALETTES.get(name, SpriteLib.PALETTES["guard"])
+	var p: Dictionary = SpriteLib.PALETTES.get(base_name(name), SpriteLib.PALETTES["guard"])
 	var out := {}
 	for k in p.keys():
 		out[k] = Color.html("#" + str(p[k]))
+	var v := variant_of(name)
+	if v > 0:
+		var ds: float = VARIANT_SKIN[v % VARIANT_SKIN.size()]
+		for k in ["s", "S"]:
+			if out.has(k):
+				out[k] = (out[k] as Color).darkened(-ds) if ds < 0.0 else (out[k] as Color).lightened(ds)
+		var hc: String = VARIANT_HAIR[v % VARIANT_HAIR.size()]
+		if hc != "" and base_name(name) != "heavy":
+			out["h"] = Color.html("#" + hc)
+		var dp: float = VARIANT_PANTS[v % VARIANT_PANTS.size()]
+		if out.has("p"):
+			out["p"] = (out["p"] as Color).lightened(dp) if dp > 0.0 else (out["p"] as Color).darkened(-dp)
 	return out
 
 # ---------------------------------------------------------------- shapes
@@ -158,7 +187,7 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	if bk:
 		return bk
 	var P := _pal(palette)
-	var st: Dictionary = STYLES.get(palette, STYLES["guard"])
+	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = st.build
 	var c := Vector2(15, 16)
 	var shapes: Array = []
@@ -192,8 +221,9 @@ static func torso(pose: String, palette: String) -> Texture2D:
 			hand_l = c + Vector2(5, -7)
 			hand_r = c + Vector2(14, 4)
 	# arms first (under shoulders)
-	shapes.append(cap(sh_l, hand_l, 2.6, sleeve))
-	shapes.append(cap(sh_r, hand_r, 2.6, sleeve))
+	var arm_col := skin.darkened(0.06) if "sleeveless" in extras else sleeve
+	shapes.append(cap(sh_l, hand_l, 2.6 if not "sleeveless" in extras else 2.3, arm_col))
+	shapes.append(cap(sh_r, hand_r, 2.6 if not "sleeveless" in extras else 2.3, arm_col))
 	shapes.append(ell(hand_l, Vector2(2.4, 2.4), skin))
 	shapes.append(ell(hand_r, Vector2(2.4, 2.4), skin))
 	# shoulders / torso
@@ -203,6 +233,32 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	shapes.append(body)
 	if "vest" in extras:
 		shapes.append(ell(c + Vector2(0.5, 0), Vector2(5.0 * bw, 8.5 * bw), Color("3a2413")))
+	if "power_shoulders" in extras:
+		# 80s blazer: square padded shoulders stick out past the arms
+		shapes.append(ell(sh_l + Vector2(-0.5, 1.0), Vector2(3.4, 3.2), top.lightened(0.08)))
+		shapes.append(ell(sh_r - Vector2(0.5, 1.0), Vector2(3.4, 3.2), top.lightened(0.08)))
+	if "epaulettes" in extras:
+		shapes.append(ell(sh_l + Vector2(0, 2.0), Vector2(2.4, 1.5), sleeve.darkened(0.3)))
+		shapes.append(ell(sh_r - Vector2(0, 2.0), Vector2(2.4, 1.5), sleeve.darkened(0.3)))
+	if "thick_neck" in extras:
+		shapes.append(ell(c + Vector2(0.5, 0), Vector2(4.2, 6.5), skin.darkened(0.12)))
+	if "lapels" in extras:
+		shapes.append(ell(c + Vector2(3.8, -2.6), Vector2(2.4, 1.3), top.darkened(0.22)))
+		shapes.append(ell(c + Vector2(3.8, 2.6), Vector2(2.4, 1.3), top.darkened(0.22)))
+	if "pocket_square" in extras:
+		shapes.append(ell(c + Vector2(3.0, -5.2), Vector2(0.9, 1.1), Color("c81e5a"), false))
+	if "popped_collar" in extras:
+		# leather jacket collar turned up either side of the neck
+		shapes.append(ell(c + Vector2(2.2, -4.2), Vector2(2.0, 2.6), top.darkened(0.3)))
+		shapes.append(ell(c + Vector2(2.2, 4.2), Vector2(2.0, 2.6), top.darkened(0.3)))
+	if "sheen" in extras:
+		# the main character's jacket catches the light: a bright streak across
+		# the shoulder that stays readable in dark rooms
+		var sh1 := ell(c + Vector2(-1.5, -5.5 * bw), Vector2(1.0, 2.8), top.lightened(0.5), false)
+		sh1.outline = false
+		shapes.append(sh1)
+	if "dogtags" in extras:
+		shapes.append(ell(c + Vector2(4.6, 1.2), Vector2(0.9, 1.1), Color("c8ccd8"), false))
 	if "pads" in extras:
 		shapes.append(ell(sh_l + Vector2(0, 1.5), Vector2(3.5, 3), Color("2e3a60")))
 		shapes.append(ell(sh_r - Vector2(0, 1.5), Vector2(3.5, 3), Color("2e3a60")))
@@ -216,6 +272,9 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	if "radio" in extras:
 		var rd := ell(sh_l + Vector2(1, 2), Vector2(1.5, 1.5), Color("222222"))
 		shapes.append(rd)
+		shapes.append(cap(sh_l + Vector2(1, 2), sh_l + Vector2(-2.5, 3.5), 0.45, Color("111111")))   # antenna
+	if "badge" in extras:
+		shapes.append(ell(c + Vector2(3.5, -4.0), Vector2(1.0, 1.0), Color("ffd23f"), false))
 	# head
 	var hc := c + Vector2(1.5, 0)
 	var hair: Color = P.get("h", Color.BLACK)
@@ -241,6 +300,14 @@ static func torso(pose: String, palette: String) -> Texture2D:
 			shapes.append(hl)
 		"mullet":
 			shapes.append(ell(hc - Vector2(2.2, 0), Vector2(4.8, 5.6), hair))
+			shapes.append(cap(hc - Vector2(4, 0), hc - Vector2(7, 0), 2.2, hair))   # business in the back
+		"cap":
+			# security guard's peaked cap: crown + a visor sticking out front
+			shapes.append(ell(hc - Vector2(0.6, 0), Vector2(4.9, 5.3), Color("1b2a4a")))
+			shapes.append(ell(hc + Vector2(3.6, 0), Vector2(2.3, 4.2), Color("0e1528")))
+			var capb := ell(hc + Vector2(1.6, 0), Vector2(0.9, 0.9), Color("ffd23f"), false)
+			capb.outline = false
+			shapes.append(capb)
 		"slick":
 			shapes.append(ell(hc - Vector2(1.8, 0), Vector2(4.4, 5.1), hair))
 			var sl := ell(hc - Vector2(2, 0), Vector2(3.5, 0.6), hair.lightened(0.4), false)
@@ -254,12 +321,25 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		_:
 			shapes.append(ell(hc - Vector2(1.8, 0), Vector2(4.4, 5.1), hair))
 	# nose + ears
+	if "stubble" in extras:
+		shapes.append(ell(hc + Vector2(3.4, 0), Vector2(1.9, 3.6), skin.darkened(0.32)))
 	shapes.append(ell(hc + Vector2(5, 0), Vector2(1.2, 1.1), skin.darkened(0.1)))
-	if str(st.hair) != "helmet":
+	if str(st.hair) != "helmet" and not "headphones" in extras:
 		shapes.append(ell(hc + Vector2(0.5, -5.1), Vector2(1.1, 0.9), skin.darkened(0.15)))
 		shapes.append(ell(hc + Vector2(0.5, 5.1), Vector2(1.1, 0.9), skin.darkened(0.15)))
 	if "shades" in extras:
 		shapes.append(cap(hc + Vector2(3.6, -3), hc + Vector2(3.6, 3), 1.1, Color("101018")))
+	if "aviators_up" in extras:
+		# sunglasses pushed up into the hair: gold frame glint on top
+		shapes.append(cap(hc + Vector2(0.5, -3.6), hc + Vector2(0.5, 3.6), 0.8, Color("2a1a14")))
+		var gl := ell(hc + Vector2(0.5, -2.0), Vector2(0.6, 1.0), Color("ffd23f"), false)
+		gl.outline = false
+		shapes.append(gl)
+	if "headphones" in extras:
+		# Walkman headphones: band over the top, orange foam on the ears
+		shapes.append(cap(hc + Vector2(0, -5.2), hc + Vector2(0, 5.2), 0.7, Color("2a2a30")))
+		shapes.append(ell(hc + Vector2(0.5, -5.4), Vector2(1.7, 1.5), Color("ff8a20")))
+		shapes.append(ell(hc + Vector2(0.5, 5.4), Vector2(1.7, 1.5), Color("ff8a20")))
 	var img := _render(shapes, SIZE, SIZE)
 	if "star" in extras:
 		_star(img, hc + Vector2(2.5, 2.2), 2.2, Color("ffd23f"))
@@ -286,7 +366,7 @@ static func legs(frame: int, palette: String) -> Texture2D:
 	if bk:
 		return bk
 	var P := _pal(palette)
-	var st: Dictionary = STYLES.get(palette, STYLES["guard"])
+	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = st.build
 	var c := Vector2(15, 16)
 	var pants: Color = P.get("p", Color.DIM_GRAY)
@@ -313,7 +393,7 @@ static func corpse(palette: String, downed := false, missing := "") -> Texture2D
 	if bk:
 		return bk
 	var P := _pal(palette)
-	var st: Dictionary = STYLES.get(palette, STYLES["guard"])
+	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = st.build
 	var c := Vector2(24, 16)
 	var top: Color = P.get("j", Color.GRAY)

@@ -139,6 +139,24 @@ func _choice(parent: Control, text: String, key: String, options: Array) -> void
 		Audio.play("ui_select", -8.0))
 	hb.add_child(o)
 
+## Difficulty picker with a one-line description of what it changes.
+## Takes effect from the next mission start or restart.
+func _difficulty(parent: Control) -> void:
+	var hb := _row(parent, "Difficulty")
+	var o := OptionButton.new()
+	for i in Difficulty.NAMES.size():
+		o.add_item(Difficulty.NAMES[i], i)
+	o.selected = Difficulty.current()
+	hb.add_child(o)
+	var desc := UIStyle.label(Difficulty.DESCRIPTIONS[Difficulty.current()], 13, UIStyle.DIM)
+	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	desc.custom_minimum_size = Vector2(600, 0)
+	parent.add_child(desc)
+	o.item_selected.connect(func(i):
+		SaveManager.set_setting("difficulty", i)
+		desc.text = Difficulty.DESCRIPTIONS[i]
+		Audio.play("ui_select", -8.0))
+
 func _audio_tab() -> void:
 	var p := _page("AUDIO")
 	_slider(p, "Master volume", "master_volume")
@@ -161,6 +179,7 @@ func _video_tab() -> void:
 
 func _gameplay_tab() -> void:
 	var p := _page("GAMEPLAY")
+	_difficulty(p)
 	_slider(p, "Screen shake", "screen_shake", 0.0, 1.5, 0.05)
 	_choice(p, "Gore", "gore", ["Off (ink)", "Reduced", "Full"])
 	_slider(p, "Aim assist", "aim_assist")

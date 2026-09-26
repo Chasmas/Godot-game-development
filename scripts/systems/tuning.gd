@@ -99,7 +99,7 @@ static func get_t() -> Tuning:
 
 @export_group("Dog")
 @export var dog_eye_glow := 1.0
-@export var dog_eye_light_energy := 0.55
+@export var dog_eye_light_energy := 0.8
 
 @export_group("Difficulty")
 ## Per difficulty (0 easy, 1 normal, 2 hard). Normal is the design baseline.

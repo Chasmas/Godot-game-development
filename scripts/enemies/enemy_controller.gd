@@ -22,6 +22,8 @@ const STATE_NAMES := ["IDLE", "PATROL", "SUSPICIOUS", "INVESTIGATE", "SEARCH", "
 const RADIUS := 5.5
 const DOWN_TIME := 2.8
 const MELEE_REACH := 20.0
+## Archetypes whose members get individual skin/hair/trouser variants.
+const VARIED_PALETTES := ["guard", "gunner", "hunter", "scout", "heavy", "civilian"]
 
 var data: EnemyData
 var weapon: WeaponInstance
@@ -80,6 +82,7 @@ var _look_base := 0.0
 var _slot_angle := 0.0               ## where around the player this enemy prefers to fight from
 var _slot_t := 0.0
 var _holding := false                ## waiting for an attack token
+var look := "guard"                  ## palette + variant ("guard#2") for sprites/corpse
 var _sep := Vector2.ZERO             ## cached separation push (refreshed every other tick)
 var _sep_phase := 0
 
@@ -112,7 +115,11 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	_home_facing = facing
 	armor_left = data.armor
 	_home = global_position
-	visual.setup(data.palette)
+	look = data.palette
+	if data.palette in VARIED_PALETTES:
+		# stable per enemy (same look after a checkpoint restart)
+		look = "%s#%d" % [data.palette, absi(hash(enemy_id if enemy_id != "" else str(get_instance_id()))) % 4]
+	visual.setup(look)
 	if data.weapon_id != &"" and DB.weapon(data.weapon_id):
 		weapon = WeaponInstance.create(DB.weapon(data.weapon_id))
 	visual.set_weapon(weapon.data if weapon else null)
@@ -821,7 +828,7 @@ func knock_down(info: DamageInfo) -> void:
 	_down_t = DOWN_TIME
 	_knock = info.dir * info.knockback
 	_move_vel = Vector2.ZERO
-	visual.torso.texture = SpriteLib.downed(data.palette)
+	visual.torso.texture = SpriteLib.downed(look)
 	visual.legs.visible = false
 	visual.weapon_sprite.visible = false
 	facing = -info.dir
@@ -923,7 +930,7 @@ func _gore_kill(info: DamageInfo, src_pos: Vector2) -> String:
 
 func _spawn_corpse(info: DamageInfo, missing: String) -> void:
 	var corpse := Corpse.new()
-	corpse.setup(data.palette, info.dir, false, missing)
+	corpse.setup(look, info.dir, false, missing)
 	corpse.global_position = global_position
 	get_parent().add_child(corpse)
 

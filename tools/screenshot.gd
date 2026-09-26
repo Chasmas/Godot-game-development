@@ -51,6 +51,68 @@ func _ready() -> void:
 			for i in 3:
 				lvl.boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p2, lvl.boss.global_position, Vector2.RIGHT, &"pistol"))
 			await _frames(n)
+		"closeup":
+			# SHOT_MISSION, SHOT_ZOOM (camera zoom bias), SHOT_WHAT=dog|guards|dual
+			Game.start_mission(OS.get_environment("SHOT_MISSION") if OS.get_environment("SHOT_MISSION") != "" else "m02_dog_days")
+			await _frames(30)
+			var lvl2 := get_tree().get_first_node_in_group("level") as Level
+			var p3 := get_tree().get_first_node_in_group("player") as Player
+			p3.god_mode = true
+			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
+			var what := OS.get_environment("SHOT_WHAT")
+			if what == "dog":
+				var dog: Dog = null
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if e is Dog and not e.sleeping:
+						dog = e
+						break
+				if dog == null:
+					for e in get_tree().get_nodes_in_group("enemies"):
+						if e is Dog:
+							dog = e
+							break
+				dog.sleeping = false
+				p3.global_position = dog.global_position + Vector2(26, 6)
+				dog._last_known = p3.global_position
+				if OS.get_environment("SHOT_ALERT") == "1":
+					dog._enter_combat()
+				dog.set_physics_process(OS.get_environment("SHOT_ALERT") == "1")
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = dog
+			elif what == "dual":
+				p3.give_weapon(&"pistol")
+				p3.current().dual = true
+				p3.current().ammo2 = 12
+				p3._refresh_weapon()
+				p3.aim_dir = Vector2.RIGHT
+			elif what == "guards":
+				# line up one of each archetype next to the player
+				var kinds := [&"guard", &"gunner", &"hunter", &"heavy", &"scout", &"riot"]
+				for i in kinds.size():
+					var e2 := Enemy.new()
+					e2.enemy_id = "shot_%d" % i
+					e2.position = p3.global_position + Vector2(-60 + i * 24, -28)
+					lvl2.actors_root.add_child(e2)
+					e2.setup(DB.enemy(kinds[i]), lvl2, Vector2.DOWN)
+					e2.set_physics_process(false)
+				for i in 4:
+					var e3 := Enemy.new()
+					e3.enemy_id = "shot_v_%d" % i
+					e3.position = p3.global_position + Vector2(-36 + i * 24, 26)
+					lvl2.actors_root.add_child(e3)
+					e3.setup(DB.enemy(&"guard"), lvl2, Vector2.UP)
+					e3.set_physics_process(false)
+			lvl2.camera.snap_to_target()
+			print("closeup: player ", p3.global_position, " cam ", lvl2.camera.global_position, " zoom ", lvl2.camera.zoom, " visible ", p3.visual.visible)
+			for e in get_tree().get_nodes_in_group("enemies"):
+				if e is Dog:
+					print("  dog ", e.global_position, " sleeping ", e.sleeping, " state ", e.state_name(), " vis ", e.visible)
+			lvl2.hud._banner_t = 0.0
+			lvl2.hud._card_t = 0.0
+			lvl2.hud.banner.modulate.a = 0.0
+			lvl2.hud.card_sub.modulate.a = 0.0
+			await _frames(n)
 		"cutscene":
 			Game.current_cutscene = OS.get_environment("SHOT_CUT")
 			Game.change_scene(Game.CUTSCENE_SCENE)
