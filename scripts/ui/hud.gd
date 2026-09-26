@@ -878,6 +878,10 @@ class TipCard extends Control:
 				"welder": offer("welder", "Welder's mask stops one hit and narrows his view. Come at him from the side.")
 			if d < 260.0 and p.lock_target == null:
 				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to switch.")
+		for cam in get_tree().get_nodes_in_group("security_cameras"):
+			if view.has_point(cam.global_position) and not cam._broken:
+				offer("camera", "Security camera: stay out of the cone. Shoot it out - but the crash brings a guard or two to look.")
+				break
 		var w = p.current()
 		if w and w.data.is_firearm() and w.ammo <= 0 and w.reserve <= 0:
 			offer("throw", "Empty? Throw it with {secondary} - a thrown gun stuns whoever it hits.")

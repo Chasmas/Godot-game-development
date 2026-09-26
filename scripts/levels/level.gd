@@ -140,6 +140,7 @@ func _ready() -> void:
 		Score.reset()
 	player.global_position = spawn
 	_build_checkpoint_markers.call_deferred()
+	_build_cameras()
 	player.died.connect(_on_player_died)
 	if not st.is_empty():
 		player.restore_upgrades(st.get("upgrades", {}))
@@ -454,6 +455,16 @@ func _check_hints(cell: Vector2i) -> void:
 ## at the marker, not wherever you happened to be standing.
 var _cp_markers: Array = []
 var _mission_start := Vector2.ZERO
+
+## Security cameras from the level's "cameras" list: {"cell": [x, y],
+## "angle": degrees (0 right, 90 down)}. Mounted against the wall behind
+## them. Checkpoint restarts bring broken ones back (they're cheap to dodge).
+func _build_cameras() -> void:
+	for c in data.get("cameras", []):
+		var cam := SecurityCamera.new()
+		cam.base_angle = deg_to_rad(float(c.get("angle", 90)))
+		cam.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - Vector2.from_angle(cam.base_angle) * 4.0
+		props_root.add_child(cam)
 
 func _build_checkpoint_markers() -> void:
 	var cps: Array = data.get("checkpoints", [])
