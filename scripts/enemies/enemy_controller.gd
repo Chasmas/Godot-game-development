@@ -457,7 +457,8 @@ func go_fix(target: Node2D) -> void:
 func can_fix_lights() -> bool:
 	var calm := not is_aware() or (state == State.SEARCH and not _sees_player)
 	return is_alive() and calm and state != State.DOWNED and state != State.STUNNED and not _held and _fix_target == null \
-		and data.combat != EnemyData.Combat.BOSS and data.combat != EnemyData.Combat.ALERTER
+		and data.combat != EnemyData.Combat.BOSS and data.combat != EnemyData.Combat.ALERTER \
+		and not (self is Dog) and not is_snoozing()
 
 ## Can be grabbed from behind (unaware, not already down).
 func can_be_taken_down() -> bool:

@@ -208,6 +208,9 @@ func _run() -> void:
 		var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, glass.global_position, Vector2.UP)
 		glass.take_damage(info)
 		check(glass.broken, "window breaks when shot")
+	# from here the level is live (cameras, snipers, handlers): keep the
+	# player alive through the environment checks and the AI run below
+	p.god_mode = true
 	# explosive
 	var tank: ExplosiveTank = null
 	for n in get_tree().get_nodes_in_group("damageable"):
