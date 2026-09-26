@@ -219,7 +219,16 @@ func _add_model(kind: String, path: String, world_pos: Vector2, scale_factor: fl
 	mi.material_override = _material(kind)
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	holder.add_child(mi)
-	if kind == "lamp":
+	if kind == "car" or kind == "wreck":
+		for side in [-1.0, 1.0]:
+			var head := OmniLight3D.new()
+			head.light_color = Color("#ffe0a3") if kind == "car" else Color("#6b8cff")
+			head.light_energy = 1.1 if kind == "car" else 0.25
+			head.omni_range = 2.8
+			head.shadow_enabled = false
+			head.position = Vector3(side * 0.28, 0.34, 0.42)
+			holder.add_child(head)
+	elif kind == "lamp":
 		var lamp_light := OmniLight3D.new()
 		lamp_light.light_color = Color("#ffb36b")
 		lamp_light.light_energy = 2.2
