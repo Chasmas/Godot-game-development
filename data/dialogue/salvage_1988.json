@@ -1,18 +1,67 @@
 {
-	"bg": "apartment", "music": "apartment", "title": "VAN NUYS — JULY 8, 1988 — 11:40 PM",
-	"start": "a",
-	"nodes": {
-		"a": {"speaker": "machine", "text": "You have... one... new message.", "sfx": "blip", "next": "b"},
-		"b": {"speaker": "voice", "text": "Congratulations on the ratings, Miss Moreno. Harcourt was a supporting role. You were magnificent.", "next": "c"},
-		"c": {"speaker": "voice", "text": "That Polaroid. 'A.V.' Tommy's stunt coordinator was Arlo Vance. He keeps dogs now. Out past Yermo, at the salvage yard.", "next": "d"},
-		"d": {"speaker": "voice", "text": "He likes to say his dogs eat better than the crew ever did. Go and see what he feeds them.", "next": "e"},
-		"e": {"speaker": "machine", "text": "End of messages.", "sfx": "blip", "next": "f"},
-		"f": {"speaker": "cass", "text": "Arlo taught Tommy how to fall off a building. The trick, he said, is to never think about the ground.", "choices": [
-			{"text": "Bring something quiet.", "next": "q1", "set": {"cass_quiet_approach": true}},
-			{"text": "Bring something loud.", "next": "l1"}
-		]},
-		"q1": {"speaker": "cass", "text": "Dogs have good ears. So do the people who keep them.", "next": "z"},
-		"l1": {"speaker": "cass", "text": "Let them bark.", "next": "z"},
-		"z": {"speaker": "narration", "text": "The star is still on the bathroom mirror. She doesn't wipe it off.", "event": "star"}
-	}
+  "bg": "apartment",
+  "music": "apartment",
+  "title": "VAN NUYS — JULY 8, 1988 — 11:40 PM",
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "machine",
+      "text": "You have... one... new message.",
+      "sfx": "blip",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "voice",
+      "text": "Congratulations, Miss Moreno. The motel played beautifully. Harcourt was supporting cast. You carried the picture.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "voice",
+      "text": "The initials on that Polaroid belong to Arlo Vance. Tommy's stunt coordinator. These days he runs a salvage yard outside Yermo and keeps dogs around the perimeter.",
+      "next": "d"
+    },
+    "d": {
+      "speaker": "voice",
+      "text": "Arlo knows who ordered the fire gag changed. Ask him what they fed the cameras after Tommy died.",
+      "next": "e"
+    },
+    "e": {
+      "speaker": "machine",
+      "text": "End of messages.",
+      "sfx": "blip",
+      "next": "f"
+    },
+    "f": {
+      "speaker": "cass",
+      "text": "Arlo taught Tommy how to fall from a roof. He used to say the trick was forgetting the ground was there.",
+      "choices": [
+        {
+          "text": "Bring something quiet.",
+          "next": "q1",
+          "set": {
+            "cass_quiet_approach": true
+          }
+        },
+        {
+          "text": "Bring something loud.",
+          "next": "l1"
+        }
+      ]
+    },
+    "q1": {
+      "speaker": "cass",
+      "text": "Dogs hear everything. I'll make sure they hear nothing.",
+      "next": "z"
+    },
+    "l1": {
+      "speaker": "cass",
+      "text": "Let them hear me coming.",
+      "next": "z"
+    },
+    "z": {
+      "speaker": "narration",
+      "text": "The gold star is still on the bathroom mirror. This time she leaves it there on purpose.",
+      "event": "star"
+    }
+  }
 }
