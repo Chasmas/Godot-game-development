@@ -119,9 +119,8 @@ func _build_decor(level_data: Dictionary) -> void:
 	for item in decor:
 		if str(item.get("type", "")) == "neon":
 			var pos := _cell_world(item.get("pos", [0, 0]))
-			var text := str(item.get("text", ""))
-			if text == "SUNSET PALMS":
-				_add_model("sign", "res://assets/models/neon_motel_sign.obj", pos, 1.0)
+			var sign_size := clampf(float(item.get("size", 10.0)) / 12.0, 0.55, 1.5)
+			_add_model("sign", "res://assets/models/neon_motel_sign.obj", pos, sign_size)
 
 func _cell_world(p: Variant) -> Vector2:
 	var a: Array = p if p is Array else [0, 0]
