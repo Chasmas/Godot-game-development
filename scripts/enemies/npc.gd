@@ -17,6 +17,7 @@ var _flee_dir := Vector2.ZERO
 var _bark_t := 0.0
 var _bark := ""
 var facing := Vector2.DOWN
+var _activity: IdleActivity = null
 
 func _ready() -> void:
 	add_to_group("npcs")
@@ -37,6 +38,15 @@ func _ready() -> void:
 	visual.setup(palette)
 	visual.set_aim(facing.angle())
 	Events.noise.connect(_on_noise)
+	if absi(hash(npc_id + "busy")) % 100 < 70:
+		_activity = IdleActivity.new()
+		visual.rig.add_child(_activity)
+		_activity.setup(visual, IdleActivity.pick(npc_id, false), npc_id)
+
+func _drop_activity() -> void:
+	if _activity and is_instance_valid(_activity):
+		_activity.drop()
+	_activity = null
 
 func can_interact(_p: Node) -> bool:
 	return alive and not lines.is_empty()
@@ -64,6 +74,7 @@ func _on_noise(pos: Vector2, radius: float, kind: StringName, _src: Node) -> voi
 	if kind in [&"gunshot", &"explosion", &"glass"] and global_position.distance_to(pos) < radius:
 		if not panicking:
 			panicking = true
+			_drop_activity()
 			_say(["Oh God--", "Don't shoot! DON'T SHOOT!", "I didn't see nothing!", "Mama..."][randi() % 4])
 		_panic_t = 3.0
 		_flee_dir = (global_position - pos).normalized()
@@ -100,6 +111,7 @@ func take_damage(info: DamageInfo) -> String:
 		_on_noise(global_position, 100.0, &"gunshot", null)
 		return "hurt"
 	alive = false
+	_drop_activity()
 	collision_layer = 0
 	remove_from_group("interactable")
 	remove_from_group("damageable")

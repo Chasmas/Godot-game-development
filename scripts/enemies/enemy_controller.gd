@@ -78,6 +78,7 @@ var _search_pts: PackedVector2Array = []
 var _search_i := 0
 var _search_len := 0.0
 var _look_left := 0.0
+var idle_activity: IdleActivity = null   ## smoking / drinking / eating / dozing while calm
 var _look_base := 0.0
 var _slot_angle := 0.0               ## where around the player this enemy prefers to fight from
 var _slot_t := 0.0
@@ -128,6 +129,14 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	visual.set_alert_posture(alert_posture())
 	if not patrol_points.is_empty():
 		_set_state(State.PATROL)
+	elif data.combat != EnemyData.Combat.ALERTER and absi(hash(enemy_id + "busy")) % 100 < 65:
+		# calm guards find something to do with their hands
+		idle_activity = IdleActivity.new()
+		visual.rig.add_child(idle_activity)
+		idle_activity.setup(visual, IdleActivity.pick(enemy_id if enemy_id != "" else str(get_instance_id()), true), enemy_id)
+
+func is_snoozing() -> bool:
+	return idle_activity != null and is_instance_valid(idle_activity) and idle_activity.snoozing
 
 # ======================================================================= queries
 func is_alive() -> bool:
@@ -257,6 +266,8 @@ func _perceive() -> void:
 	var aware := is_aware()
 	var dk: int = level.darkness_at(p.global_position) if level != null and level.has_method("darkness_at") else 0
 	var dark := dk == 2
+	if is_snoozing():
+		view *= 0.12   # eyes closed: only something right in their face wakes them
 	if dk == 2:
 		# pitch dark: the unaware are practically blind, the alert still squint
 		view *= 0.45 if aware else 0.17
@@ -318,6 +329,8 @@ func _clear_line(a: Vector2, b: Vector2) -> bool:
 func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> void:
 	if not is_alive() or state == State.DOWNED or state == State.STUNNED or source == self or _held:
 		return
+	if is_snoozing() and kind in [&"step", &"scuffle", &"door", &"thrown"]:
+		radius *= 0.35   # a dozing guard sleeps through footsteps, not gunfire
 	if kind == &"voice" and source is Enemy:
 		_hear_shout(source as Enemy)
 		return
@@ -928,6 +941,9 @@ func _die(info: DamageInfo) -> void:
 	_was_unaware_when_killed = not is_aware() and state != State.DOWNED
 	var prev_state := state
 	state = State.DEAD
+	if idle_activity and is_instance_valid(idle_activity):
+		idle_activity.drop()
+		idle_activity = null
 	collision_layer = 0
 	collision_mask = 0
 	remove_from_group("damageable")
@@ -999,6 +1015,12 @@ func _set_state(s: State) -> void:
 		return
 	state = s
 	_state_t = 0.0
+	if idle_activity and is_instance_valid(idle_activity) and s != State.IDLE:
+		var was_asleep := idle_activity.snoozing
+		idle_activity.drop()
+		idle_activity = null
+		if was_asleep and is_alive() and s != State.DOWNED:
+			_show_icon("!?")
 	_path = []
 	_windup_t = -1.0 if s != State.COMBAT else _windup_t
 	if not is_aware():
