@@ -1,15 +1,85 @@
 {
-	"bg": "tv_news", "music": "aftermath", "title": "KHSC CHANNEL 9 — JULY 5, 1988", "start": "a", "shot": "tv_news",
-	"nodes": {
-		"a": {"speaker": "anchor", "text": "Good evening. Police in Barstow are calling it the worst act of violence in San Bernardino County history.", "next": "b", "shot": "tv_news"},
-		"b": {"speaker": "anchor", "text": "Twenty-four dead at the Sunset Palms Motel. Investigators found a gold star painted on the wall of room 204.", "branch": [{"if": "harcourt_spared", "next": "c1"}, {"next": "c2"}], "shot": "motel_crime"},
-		"c1": {"speaker": "anchor", "text": "The motel's night manager, Lyle Harcourt, survived. He has declined to speak to police.", "next": "d", "shot": "motel_crime"},
-		"c2": {"speaker": "anchor", "text": "Among the dead: night manager Lyle Harcourt, who, sources say, once worked in the film industry.", "next": "d", "shot": "motel_crime"},
-		"d": {"speaker": "anchor", "text": "One long-term resident spoke to Channel 9.", "branch": [{"if": "killed_civilian_earl", "next": "e2"}, {"next": "e1"}], "shot": "tv_news"},
-		"e1": {"speaker": "earl", "text": "She told me stay in my room, Earl. Nicest thing anybody said to me all year.", "next": "f", "shot": "tv_news"},
-		"e2": {"speaker": "anchor", "text": "Correction: the resident was among the victims. Channel 9 regrets the error.", "next": "f", "shot": "tv_news"},
-		"f": {"speaker": "anchor", "text": "In entertainment news: the late-night program HOTSHOT CALIFORNIA has been renewed for a second season.", "next": "g", "shot": "tv_news"},
-		"g": {"speaker": "marv", "text": "Stay tuned, California. We've got a star in the making. And folks? She doesn't even know she's on.", "next": "h", "shot": "marv"},
-		"h": {"speaker": "anchor", "text": "Happy Independence Day.", "sfx": "vhs_static", "shot": "tv_news"}
-	}
+ "bg": "tv_news",
+ "music": "aftermath",
+ "title": "KHSC CHANNEL 9 — JULY 5, 1988",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "anchor",
+   "text": "Good evening. Barstow police are investigating a mass killing at the Sunset Palms Motel late last night.",
+   "next": "b",
+   "shot": "tv_news"
+  },
+  "b": {
+   "speaker": "anchor",
+   "text": "Authorities have confirmed twenty-four dead. Investigators also found a gold star painted on the wall of room 204.",
+   "branch": [
+    {
+     "if": "harcourt_spared",
+     "next": "c1"
+    },
+    {
+     "next": "c2"
+    }
+   ],
+   "shot": "motel_crime"
+  },
+  "c1": {
+   "speaker": "anchor",
+   "text": "Night manager Lyle Harcourt survived and was taken into custody for questioning. He has refused to identify the attacker.",
+   "next": "d",
+   "shot": "motel_crime"
+  },
+  "c2": {
+   "speaker": "anchor",
+   "text": "Among the dead is night manager Lyle Harcourt, whose employment records connect him to a film production shut down last year after a fatal stunt accident.",
+   "next": "d",
+   "shot": "motel_crime"
+  },
+  "d": {
+   "speaker": "anchor",
+   "text": "One long-term resident agreed to speak with Channel 9.",
+   "branch": [
+    {
+     "if": "killed_civilian_earl",
+     "next": "e2"
+    },
+    {
+     "next": "e1"
+    }
+   ],
+   "shot": "tv_news"
+  },
+  "e1": {
+   "speaker": "earl",
+   "text": "She told me to stay inside. Didn't ask my name, didn't ask for money. Just said lock the door.",
+   "next": "f",
+   "shot": "tv_news"
+  },
+  "e2": {
+   "speaker": "anchor",
+   "text": "The resident scheduled to speak with us was later identified among the dead.",
+   "next": "f",
+   "shot": "tv_news"
+  },
+  "f": {
+   "speaker": "anchor",
+   "text": "And in entertainment news, KHSC has acquired a mysterious new late-night program titled HOTSHOT CALIFORNIA.",
+   "next": "g",
+   "shot": "tv_news"
+  },
+  "g": {
+   "speaker": "marv",
+   "text": "California, keep your eyes open. Our leading lady doesn't know the cameras are still rolling.",
+   "next": "h",
+   "shot": "marv"
+  },
+  "h": {
+   "speaker": "anchor",
+   "text": "This is Channel 9. Good night.",
+   "sfx": "vhs_static",
+   "shot": "tv_news"
+  }
+ },
+ "shot": "tv_news"
 }

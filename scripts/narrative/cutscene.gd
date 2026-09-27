@@ -4,6 +4,8 @@ extends Control
 
 var backdrop: TitleBackdrop
 var shot: StoryShot          ## illustrated shots, when the dialogue names them
+var art: TextureRect         ## authored full-frame art (CinematicArt), when present
+var art_shade: ColorRect
 var card: Label
 var osd: Label
 var id := ""
@@ -16,7 +18,22 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	id = Game.current_cutscene
 	var d := Dialogue.load_dialogue(id)
-	if StoryShot.has_shot(str(d.get("shot", ""))):
+	# authored key art wins when its PNG is in the project; otherwise the
+	# illustrated StoryShot sequence; otherwise the procedural backdrop
+	var art_tex := CinematicArt.cutscene_texture(id)
+	if art_tex:
+		backdrop = TitleBackdrop.new()
+		backdrop.mode = str(d.get("bg", "black"))
+		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(backdrop)
+		art = CinematicArt.make_fullscreen(art_tex)
+		add_child(art)
+		art_shade = ColorRect.new()
+		art_shade.color = Color(0.01, 0.0, 0.025, 0.12)
+		art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		art_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(art_shade)
+	elif StoryShot.has_shot(str(d.get("shot", ""))):
 		shot = StoryShot.new()
 		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		add_child(shot)
@@ -51,6 +68,11 @@ func _process(delta: float) -> void:
 	osd.text = "PLAY ▶   %d:%02d" % [int(_t) / 60, int(_t) % 60]
 	if _t > 4.0:
 		card.modulate.a = move_toward(card.modulate.a, 0.0 if shot else 0.35, delta)
+	if art:
+		art.pivot_offset = art.size * 0.5
+		var k := 1.012 + sin(_t * 0.12) * 0.003
+		art.scale = Vector2.ONE * k
+		art.position = Vector2(sin(_t * 0.10) * 2.5, cos(_t * 0.08) * 1.5)
 
 ## Each line can cut to a new shot ("shot" on the dialogue node).
 func _on_line(_speaker: String, _text: String) -> void:

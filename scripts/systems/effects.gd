@@ -24,6 +24,9 @@ static func get_fx() -> Effects:
 
 func _ready() -> void:
 	add_to_group("effects")
+	Events.enemy_killed.connect(_on_enemy_killed)
+	Events.enemy_alerted.connect(_on_enemy_alerted)
+	Score.combo_changed.connect(_on_combo_changed)
 	pools = Gore.PoolLayer.new()
 	pools.z_index = -9
 	add_child(pools)
@@ -55,6 +58,42 @@ func _ready() -> void:
 	_flash_light.energy = 0.0
 	_flash_light.color = Color(1, 0.8, 0.4)
 	add_child(_flash_light)
+
+func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
+	# A short, high-contrast impact language makes every kill feel authored.
+	var pos: Vector2 = info.get("pos", Vector2.ZERO)
+	var method: StringName = info.get("method", &"gun")
+	var kill_scale := 1.0
+	if method == &"execution" or method == &"explosion":
+		kill_scale = 1.45
+	elif method == &"melee" or method == &"counter":
+		kill_scale = 1.2
+	emit("spark", pos, Vector2.RIGHT.rotated(randf() * TAU), 1.0)
+	if kill_scale > 1.0:
+		emit("debris", pos, Vector2.RIGHT.rotated(randf() * TAU))
+		var ring := KillRingFX.new()
+		ring.global_position = pos
+		ring.radius = 22.0 * kill_scale
+		ring.big = kill_scale > 1.3
+		add_child(ring)
+	Events.camera_shake.emit(2.2 * kill_scale)
+	Events.camera_punch.emit(1.0 + 0.035 * kill_scale, 0.07 if kill_scale > 1.3 else 0.045)
+	PostFX.flash(Color(1.0, 0.28, 0.42) if method == &"gun" else Color(1.0, 0.72, 0.32), 0.08 if kill_scale <= 1.0 else 0.14)
+
+func _on_combo_changed(count: int, time_left: float, _window: float) -> void:
+	if count < 2:
+		return
+	if count == 3 or count == 5 or count == 8 or count == 12:
+		PostFX.flash(Color(1.0, 0.28, 0.55), 0.045)
+		Events.camera_punch.emit(1.015 + minf(count * 0.002, 0.035), 0.07)
+	if count >= 4 and time_left < 0.75:
+		# The shrinking window becomes visually urgent instead of being only UI.
+		PostFX.vhs_glitch(clampf((0.75 - time_left) * 0.18, 0.0, 0.14))
+
+
+func _on_enemy_alerted(_enemy: Node) -> void:
+	# Brief danger strobe when the AI acquires the player.
+	PostFX.flash(Color(1.0, 0.12, 0.22), 0.055)
 
 func _make_pool(pool_name: String, color: Color, amount: int, life: float, speed: float, count: int, size: float) -> void:
 	var arr: Array[CPUParticles2D] = []
@@ -553,6 +592,24 @@ class SlashFX extends Node2D:
 		if heavy and k < 0.4:
 			draw_arc(Vector2.ZERO, radius * (0.8 + k), a0, a1, 12, Color(1, 1, 1, 0.4 * (1.0 - k / 0.4)), 3.0)
 
+
+class KillRingFX extends Node2D:
+	var radius := 22.0
+	var big := false
+	var t := 0.0
+	func _ready() -> void:
+		z_index = 29
+	func _process(d: float) -> void:
+		t += d / maxf(Engine.time_scale, 0.05)
+		if t >= 0.22:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var k := clampf(t / 0.22, 0.0, 1.0)
+		var r := lerpf(radius * 0.35, radius, k)
+		var a := (1.0 - k) * (0.9 if big else 0.55)
+		draw_arc(Vector2.ZERO, r, 0.0, TAU, 24, Color(1.0, 0.18, 0.38, a), 2.2 if big else 1.4)
+		draw_arc(Vector2.ZERO, r * 0.68, -1.2, 1.0, 12, Color(1.0, 0.8, 0.45, a * 0.7), 1.0)
 
 class ImpactFX extends Node2D:
 	var big := false

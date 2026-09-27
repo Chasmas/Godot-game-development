@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diifouxoofogv"
+path="res://.godot/imported/retro_car.obj-c427fc9aaf65a0cd65746b3dc32a6ef1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/retro_car.obj-c427fc9aaf65a0cd65746b3dc32a6ef1.mesh"]
+
+source_file="res://assets/models/retro_car.obj"
+dest_files=["res://.godot/imported/retro_car.obj-c427fc9aaf65a0cd65746b3dc32a6ef1.mesh", "res://.godot/imported/retro_car.obj-c427fc9aaf65a0cd65746b3dc32a6ef1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

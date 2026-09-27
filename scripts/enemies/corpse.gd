@@ -14,6 +14,8 @@ var missing := ""
 var _slide := Vector2.ZERO
 var _pooled := false
 var _twitch := 0.0
+var _settle_t := 0.32
+var _settle_rot := 0.0
 
 func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> void:
 	is_player = player
@@ -24,6 +26,7 @@ func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> v
 	sprite.rotation = dir.angle() + randf_range(-0.4, 0.4)
 	add_child(sprite)
 	_slide = dir.normalized() * 70.0
+	_settle_rot = randf_range(-0.18, 0.18)
 
 func setup_dog(colors: Dictionary, dir: Vector2, p_missing := "") -> void:
 	is_dog = true
@@ -38,6 +41,11 @@ func _ready() -> void:
 	z_index = -4
 
 func _process(delta: float) -> void:
+	if _settle_t > 0.0 and sprite:
+		_settle_t -= delta
+		var k := clampf(1.0 - _settle_t / 0.32, 0.0, 1.0)
+		sprite.scale = Vector2(0.5 + sin(k * PI) * 0.035, 0.5 - sin(k * PI) * 0.045)
+		sprite.rotation += _settle_rot * delta * (1.0 - k)
 	if _slide.length() > 1.0:
 		position += _slide * delta
 		_slide = _slide.move_toward(Vector2.ZERO, 400.0 * delta)

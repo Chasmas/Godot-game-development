@@ -190,7 +190,14 @@ func camera_blind_spot() -> void:
 	var p := _p()
 	p.god_mode = true
 	var lvl := _lvl()
+	# a spot with open floor 80 px straight down, so the cone has room
 	var at := _open_cell(p.global_position, 3)
+	var space := p.get_world_2d().direct_space_state
+	for i in 200:
+		var q := PhysicsRayQueryParameters2D.create(at, at + Vector2(0, 80), Layers.SIGHT_MASK | Layers.LOW | Layers.GLASS)
+		if space.intersect_ray(q).is_empty():
+			break
+		at = _open_cell(p.global_position, 10)
 	var cam := SecurityCamera.new()
 	cam.base_angle = PI * 0.5
 	cam.position = at
@@ -202,8 +209,14 @@ func camera_blind_spot() -> void:
 	await frames(60)
 	check(cam._meter <= 0.0, "hugging the wall under the camera is not seen (meter %.2f)" % cam._meter)
 	p.global_position = at + Vector2(0, 70)       # out in the cone
-	await frames(30)
-	check(cam._meter > 0.0 or cam._cool > 0.0, "standing in the cone is seen (meter %.2f)" % cam._meter)
+	# the lens sweeps: give it one full pass to come round to you
+	var seen := false
+	for i in 30:
+		await frames(15)
+		if cam._meter > 0.0 or cam._cool > 0.0:
+			seen = true
+			break
+	check(seen, "standing in the cone is seen within one sweep")
 	cam.queue_free()
 
 func gunshot_is_local() -> void:

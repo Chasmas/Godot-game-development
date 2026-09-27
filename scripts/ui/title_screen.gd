@@ -3,6 +3,8 @@ extends Control
 ## with local leaderboards, cast, extras (gallery, stats, credits), options.
 
 var backdrop: TitleBackdrop
+var key_art: TextureRect
+var key_art_shade: ColorRect
 var logo_top: Label
 var logo_bottom: Label
 var press_label: Label
@@ -22,6 +24,17 @@ func _ready() -> void:
 	backdrop = TitleBackdrop.new()
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(backdrop)
+	# Optional production key art. If the PNG is absent, the procedural backdrop remains.
+	var title_tex := CinematicArt.title_texture()
+	if title_tex:
+		key_art = CinematicArt.make_fullscreen(title_tex)
+		key_art.modulate = Color(1, 1, 1, 0.94)
+		add_child(key_art)
+		key_art_shade = ColorRect.new()
+		key_art_shade.color = Color(0.015, 0.0, 0.04, 0.20)
+		key_art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		key_art_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(key_art_shade)
 	# logo
 	logo_top = Label.new()
 	logo_top.text = "HOTSHOT"
@@ -48,17 +61,36 @@ func _ready() -> void:
 	logo_bottom.rotation = -0.06
 	UIStyle.place(logo_bottom, Control.PRESET_CENTER_TOP, Vector2(-250, 178), Vector2(700, 90))
 	add_child(logo_bottom)
+	if key_art:
+		# The commissioned key art already contains the HOTSHOT wordmark.
+		logo_top.visible = false
+		logo_bottom.visible = false
 	osd = UIStyle.label("PLAY ▶", 22, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
 	press_label = UIStyle.label("PRESS ANY BUTTON", 22, UIStyle.GOLD, true)
 	press_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
+	if key_art:
+		press_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		UIStyle.place(press_label, Control.PRESET_BOTTOM_LEFT, Vector2(76, -82), Vector2(560, 30))
+	else:
+		UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
 	add_child(press_label)
 	menu = VBoxContainer.new()
 	menu.add_theme_constant_override("separation", 2)
 	menu.visible = false
-	UIStyle.place(menu, Control.PRESET_CENTER_BOTTOM, Vector2(-140, -250), Vector2(280, 230))
+	if key_art:
+		# Art-directed composition: menu sits in the quieter lower-left quadrant.
+		menu.anchor_left = 0.0
+		menu.anchor_right = 0.0
+		menu.anchor_top = 1.0
+		menu.anchor_bottom = 1.0
+		menu.offset_left = 76
+		menu.offset_right = 356
+		menu.offset_top = -292
+		menu.offset_bottom = -62
+	else:
+		UIStyle.place(menu, Control.PRESET_CENTER_BOTTOM, Vector2(-140, -250), Vector2(280, 230))
 	add_child(menu)
 	panel = PanelContainer.new()
 	panel.custom_minimum_size = Vector2(760, 420)
@@ -90,6 +122,12 @@ func _process(delta: float) -> void:
 	var secs := int(_t)
 	osd.text = "PLAY ▶   SP   %d:%02d:%02d" % [secs / 3600, (secs / 60) % 60, secs % 60]
 	logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
+	if key_art:
+		# Near-imperceptible Ken Burns drift keeps the painted title screen alive.
+		key_art.pivot_offset = key_art.size * 0.5
+		var breathe := 1.018 + sin(_t * 0.16) * 0.004
+		key_art.scale = Vector2.ONE * breathe
+		key_art.position = Vector2(sin(_t * 0.11) * 3.0, cos(_t * 0.09) * 2.0)
 
 ## The "press any button" gate listens in _input: the full-screen title
 ## Control would otherwise swallow a mouse click before _unhandled_input.

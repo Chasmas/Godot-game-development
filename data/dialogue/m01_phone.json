@@ -1,18 +1,80 @@
 {
-	"start": "a",
-	"nodes": {
-		"a": {"speaker": "voice", "text": "Nice work, hotshot.", "branch": [{"if": "harcourt_spared", "next": "b1"}, {"next": "b2"}]},
-		"b1": {"speaker": "voice", "text": "Mercy. Interesting choice. It tests very well with women over forty.", "next": "c"},
-		"b2": {"speaker": "voice", "text": "Lyle always did overact. We'll fix it in the edit.", "next": "c"},
-		"c": {"speaker": "cass", "text": "Who is this?", "next": "d"},
-		"d": {"speaker": "voice", "text": "Your biggest fan. If you haven't watched the tape in 204, you should. We'll call with your next scene.", "next": "e"},
-		"e": {"speaker": "cass", "text": "...", "choices": [
-			{"text": "Hang up.", "next": "h1", "set": {"hung_up_1988": true}},
-			{"text": "Stay on the line.", "next": "t1"}
-		]},
-		"h1": {"speaker": "narration", "text": "Dial tone. Somewhere outside, fireworks. Happy Fourth of July.", "event": "phone_done"},
-		"t1": {"speaker": "voice", "text": "...", "sfx": "vhs_static", "next": "t2"},
-		"t2": {"speaker": "tommy", "text": "Cassie? Cassie, is that you? It's so hot in here. Why is it still so hot?", "set": {"heard_tommy_1988": true}, "next": "t3"},
-		"t3": {"speaker": "narration", "text": "The line goes dead.", "sfx": "vhs_static", "event": "phone_done"}
-	}
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "voice",
+      "text": "Beautiful work, hotshot.",
+      "branch": [
+        {
+          "if": "harcourt_spared",
+          "next": "b1"
+        },
+        {
+          "next": "b2"
+        }
+      ]
+    },
+    "b1": {
+      "speaker": "voice",
+      "text": "You left Harcourt breathing. Unexpected. Somebody upstairs just lost a bet.",
+      "next": "c"
+    },
+    "b2": {
+      "speaker": "voice",
+      "text": "Harcourt always loved a dramatic ending. Shame he won't see the final cut.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "cass",
+      "text": "Who is this?",
+      "next": "d"
+    },
+    "d": {
+      "speaker": "voice",
+      "text": "Someone who's been watching you for a long time. If you haven't found the tape in 204, go back. Tommy left more behind than a body.",
+      "next": "e"
+    },
+    "e": {
+      "speaker": "cass",
+      "text": "...",
+      "choices": [
+        {
+          "text": "Hang up.",
+          "next": "h1",
+          "set": {
+            "hung_up_1988": true
+          }
+        },
+        {
+          "text": "Stay on the line.",
+          "next": "t1"
+        }
+      ]
+    },
+    "h1": {
+      "speaker": "narration",
+      "text": "Dial tone. Outside, fireworks open over Barstow like silent muzzle flashes.",
+      "event": "phone_done"
+    },
+    "t1": {
+      "speaker": "voice",
+      "text": "...",
+      "sfx": "vhs_static",
+      "next": "t2"
+    },
+    "t2": {
+      "speaker": "tommy",
+      "text": "Cassie? ...Cassie, is that you? I can't get the door open. It's getting hot.",
+      "set": {
+        "heard_tommy_1988": true
+      },
+      "next": "t3"
+    },
+    "t3": {
+      "speaker": "narration",
+      "text": "The voice cuts out beneath a burst of tape hiss. Then the line goes dead.",
+      "sfx": "vhs_static",
+      "event": "phone_done"
+    }
+  }
 }

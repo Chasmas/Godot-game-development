@@ -16,5 +16,5 @@ boss_track = "boss"
 default_character = &"cass"
 par_score = 42000
 par_time = 330.0
-briefing = "Room service. Checkout is at midnight. Don't forget your key."
+briefing = "Room 204. One tape. One night manager who knows Tommy's name. Get in before midnight and find out why."
 objective_type = "clear"

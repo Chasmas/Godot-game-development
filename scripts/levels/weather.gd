@@ -203,6 +203,16 @@ func _draw() -> void:
 		draw_set_transform(s[0], 0.0, Vector2(1.0, 0.55))
 		draw_arc(Vector2.ZERO, 1.0 + k * 4.0, 0, TAU, 8, Color(0.75, 0.85, 1.0, 0.5 * (1.0 - k)), 1.0)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	# Wet-road glints: sparse horizontal highlights sell rain without a heavy
+	# reflection pass and stay cheap because they are only drawn outdoors.
+	if rain > 0.45:
+		var glint_count := int(18.0 * rain)
+		for g in glint_count:
+			var gp := _random_view_point()
+			if not is_outdoor_at(gp):
+				continue
+			var gl := 0.35 + 0.65 * sin(_t * 4.0 + float(g) * 1.7)
+			draw_line(gp, gp + Vector2(10.0 + gl * 12.0, 0.0), Color(0.55, 0.7, 0.9, 0.08 + 0.08 * gl), 1.0)
 	for L in _leaves:
 		var lp: Vector2 = L[0]
 		if not is_outdoor_at(lp):

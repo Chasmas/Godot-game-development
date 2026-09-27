@@ -37,7 +37,7 @@ KEEP_UPPER_SINGLE = True   # single uppercase words are UI labels ("OPTIONS")
 LIT = re.compile(r'(?<![&\w])"((?:[^"\\]|\\.)*)"')
 
 # node names, theme types and other code strings that happen to look like text
-NOT_TEXT = {"Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
+NOT_TEXT = {"Visual3DDressing", "Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
             "Decor", "Glow", "TabContainer", "VScrollBar", "Button", "Label", "PanelContainer", "Panel", "HSlider",
             "CheckButton", "OptionButton", "Underline", "modulate:a", ".remap", "[i]", "[/i]", "[pop]", "[/pop]", "KV", "SS", "XM",
             "NV", "BK", "AD", "QH", "LS", "SI", "A+", "S+", "SSS", "LMB", "RMB", "MMB", "M4", "M5", "LB", "RB",

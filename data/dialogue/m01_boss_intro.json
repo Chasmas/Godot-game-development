@@ -1,10 +1,31 @@
 {
-	"start": "a",
-	"nodes": {
-		"a": {"speaker": "harcourt", "text": "Well. You're not housekeeping.", "next": "b"},
-		"b": {"speaker": "harcourt", "text": "I know that paint. Aurelio sent you. Tell him the tapes stay with me. That was the deal.", "next": "c"},
-		"c": {"speaker": "cass", "text": "Who the hell is Aurelio?", "next": "d"},
-		"d": {"speaker": "harcourt", "text": "Oh, honey. You don't even know what movie you're in.", "next": "e"},
-		"e": {"speaker": "harcourt", "text": "SECURITY! FRONT DESK!", "sfx": "intercom", "event": "boss_start"}
-	}
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "harcourt",
+      "text": "Well. You're definitely not housekeeping.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "harcourt",
+      "text": "I know that star. Aurelio sent you, didn't he? Tell him the tapes stay here. That was the arrangement.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "cass",
+      "text": "I don't know any Aurelio.",
+      "next": "d"
+    },
+    "d": {
+      "speaker": "harcourt",
+      "text": "No. Of course you don't. That's the cruel part.",
+      "next": "e"
+    },
+    "e": {
+      "speaker": "harcourt",
+      "text": "SECURITY. FRONT DESK. Now.",
+      "sfx": "intercom",
+      "event": "boss_start"
+    }
+  }
 }

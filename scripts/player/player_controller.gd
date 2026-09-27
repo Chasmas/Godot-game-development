@@ -351,6 +351,8 @@ func _start_dash() -> void:
 	collision_mask = Layers.WALK_MASK_PLAYER & ~Layers.LOW & ~Layers.GLASS & ~Layers.ENEMY
 	Audio.play_at("dash", global_position, -4.0)
 	Effects.smoke(global_position)
+	Events.camera_punch.emit(1.045, 0.11)
+	Events.camera_nudge.emit(-_dash_dir * 2.5)
 
 func _end_dash() -> void:
 	_dash_t = 0.0
@@ -653,6 +655,8 @@ func _melee_hit(heavy: bool) -> void:
 			info.lethal = true
 		var res := str(n.take_damage(info))
 		if res == "blocked":
+			visual.kick_recoil(5.0)
+			Events.camera_nudge.emit(-aim_dir * 5.0)
 			Audio.play_at("shield_block", p)
 			Events.camera_shake.emit(2.0)
 			continue
@@ -662,6 +666,8 @@ func _melee_hit(heavy: bool) -> void:
 		if res == "killed":
 			killed_any = true
 	if hit_any:
+		visual.kick_recoil(-4.8 if heavy else -3.0)
+		Events.camera_punch.emit(1.055 if heavy else 1.025, 0.10 if heavy else 0.065)
 		Audio.play_at("punch" if unarmed else w.data.sfx_hit, global_position)
 		Events.hit_stop.emit((0.085 if heavy else 0.065) if killed_any else 0.04)
 		Events.camera_shake.emit(5.0 if heavy else 3.0)
@@ -945,7 +951,8 @@ func _process_execution(pd: float) -> void:
 			Audio.play_at("neck_snap", tpos, -2.0)
 		if noise > 0.0:
 			Events.noise.emit(global_position, noise, &"gunshot" if anim == "shot" else &"scuffle", self)
-		Events.hit_stop.emit(0.09 if last else 0.05)
+		Events.hit_stop.emit(0.11 if last else 0.05)
+		Events.camera_punch.emit(1.08 if last else 1.025, 0.12 if last else 0.055)
 		if not last or anim != "grab":
 			Events.camera_shake.emit(3.5 if last else 2.0)
 		InputSetup.vibrate(0.6, 0.6 if last else 0.3, 0.12)

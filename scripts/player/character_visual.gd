@@ -19,6 +19,8 @@ var shadow: Node2D
 var outline_color := Color(0, 0, 0, 0)
 
 var _walk_t := 0.0
+var _breath_t := 0.0
+var _move_blend := 0.0
 var _kick := 0.0
 var _swing_t := -1.0
 var _swing_dur := 0.14
@@ -27,6 +29,11 @@ var _swing_arc := 1.9
 var _punch_t := -1.0
 var _punch_left := true
 var _flash := 0.0
+var _hit_t := 0.0
+var _hit_dir := Vector2.ZERO
+var _fall_t := 0.0
+var _death_t := 0.0
+var _death_dir := Vector2.ZERO
 var _hold: int = WeaponData.Hold.NONE
 var _hand := Vector2(5, 0)
 var aim_angle := 0.0
@@ -142,14 +149,25 @@ func update_move(vel: Vector2, delta: float) -> void:
 		return
 	legs.position = Vector2.ZERO
 	var speed := vel.length()
+	var moving := clampf(speed / 105.0, 0.0, 1.0)
+	_move_blend = lerpf(_move_blend, moving, minf(1.0, delta * 12.0))
+	_breath_t += delta * (1.2 + _move_blend * 4.0)
 	if speed > 8.0:
 		_walk_t += delta * speed * 0.09
 		legs.rotation = vel.angle()
 		var f := int(_walk_t) % 4
 		legs.texture = SpriteLib.legs([0, 1, 0, 2][f], palette)
+		var stride := sin(_walk_t * 0.5)
+		legs.position.y = stride * 0.7
+		legs.scale = Vector2(0.5 + absf(stride) * 0.018, 0.5 - absf(stride) * 0.012)
 	else:
 		legs.texture = SpriteLib.legs(0, palette)
 		legs.rotation = lerp_angle(legs.rotation, rig.rotation, minf(1.0, delta * 10.0))
+		legs.position.y = 0.0
+		legs.scale = Vector2.ONE * 0.5
+	# breathing is applied to the whole rig in _process; the torso's own
+	# offset belongs to manners, idle poses (dozing) and the handler's gait
+	shadow.scale = Vector2(1.0 + _move_blend * 0.10, 1.0 - _move_blend * 0.07)
 
 func set_alert_posture(p: int) -> void:
 	_posture = clampi(p, 0, 2)
@@ -205,6 +223,30 @@ func punch() -> void:
 func flash(t := 0.08) -> void:
 	_flash = t
 
+func hit_react(dir: Vector2, heavy := false, duration := 0.12) -> void:
+	_hit_dir = dir.normalized()
+	_hit_t = maxf(duration, 0.08) * (1.35 if heavy else 1.0)
+	_flash = maxf(_flash, 0.07 if not heavy else 0.12)
+	_kick = 3.8 if heavy else 2.2
+
+func fall(dir: Vector2) -> void:
+	_fall_t = 0.24
+	_hit_dir = dir.normalized()
+	weapon_sprite.visible = false
+
+func recover() -> void:
+	_fall_t = 0.0
+	_death_t = 0.0
+	modulate = Color.WHITE
+	scale = Vector2.ONE
+	rig.scale = Vector2.ONE
+	rig.position = Vector2.ZERO
+
+func death_burst(dir: Vector2, heavy := false) -> void:
+	_death_dir = dir.normalized()
+	_death_t = 0.18 if heavy else 0.12
+	_flash = 0.06
+
 func is_swinging() -> bool:
 	return _swing_t >= 0.0
 
@@ -220,9 +262,28 @@ func muzzle_global(left := false) -> Vector2:
 	return rig.to_global(Vector2(10, 0))
 
 func _process(delta: float) -> void:
-	# recoil: torso pushed back along aim
+	# recoil: torso pushed back along aim, with a tiny breathing pulse.
+	_hit_t = maxf(0.0, _hit_t - delta)
+	_fall_t = maxf(0.0, _fall_t - delta)
+	_death_t = maxf(0.0, _death_t - delta)
 	_kick = move_toward(_kick, 0.0, delta * 30.0)
-	rig.position = Vector2.RIGHT.rotated(rig.rotation) * -_kick
+	var breathe := sin(_breath_t) * (0.32 + _move_blend * 0.18)
+	var hit_push := _hit_dir * (sin((_hit_t / 0.18) * PI) * 2.8 if _hit_t > 0.0 else 0.0)
+	rig.position = Vector2.RIGHT.rotated(rig.rotation) * -_kick + Vector2(0, breathe) + hit_push
+	if _hit_t > 0.0:
+		rig.scale = Vector2(0.96, 1.05)
+	else:
+		rig.scale = rig.scale.lerp(Vector2.ONE, minf(1.0, delta * 18.0))
+	if _fall_t > 0.0:
+		var fk := 1.0 - _fall_t / 0.24
+		rig.rotation = aim_angle + lerpf(0.0, _swing_dir * 0.7, fk)
+		scale = Vector2(1.0 + fk * 0.08, 1.0 - fk * 0.18)
+	elif _death_t > 0.0:
+		var dk := 1.0 - _death_t / 0.18
+		rig.position += _death_dir * dk * 4.0
+		scale = Vector2(1.0 + dk * 0.12, 1.0 - dk * 0.16)
+	else:
+		scale = scale.lerp(Vector2.ONE, minf(1.0, delta * 14.0))
 	if _swing_t >= 0.0:
 		_swing_t += delta
 		var k := clampf(_swing_t / _swing_dur, 0.0, 1.0)

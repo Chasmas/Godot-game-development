@@ -1,10 +1,40 @@
 {
-	"bg": "black", "music": "", "title": "", "start": "a", "shot": "static",
-	"nodes": {
-		"a": {"speaker": "narration", "text": "THE REMAINDER OF THIS TAPE IS DAMAGED.", "sfx": "vhs_static", "next": "b", "shot": "static"},
-		"b": {"speaker": "narration", "text": "NEXT:  1990 — THE GALAXY PALACE.  'THE FOOL' HOLDS THE HIGH SCORE.", "next": "c", "shot": "galaxy_palace"},
-		"c": {"speaker": "narration", "text": "1991 — BARSTOW PD.  OFFICER DANA PRUITT STILL CAN'T SLEEP.", "next": "d", "shot": "barstow_pd"},
-		"d": {"speaker": "narration", "text": "1992 — THE HILLS ARE ON FIRE.", "next": "e", "shot": "hills_fire"},
-		"e": {"speaker": "narration", "text": "Thank you for playing the HOTSHOT CALIFORNIA vertical slice. ARCADE MODE is now unlocked.", "event": "slice_complete", "shot": "hills_fire"}
-	}
+ "bg": "black",
+ "music": "",
+ "title": "",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "THE REMAINDER OF THIS RECORDING IS DAMAGED.",
+   "sfx": "vhs_static",
+   "next": "b",
+   "shot": "static"
+  },
+  "b": {
+   "speaker": "narration",
+   "text": "RECOVERED FRAME: 1990 — GALAXY PALACE ARCADE. 'THE FOOL' HOLDS THE HIGH SCORE.",
+   "next": "c",
+   "shot": "galaxy_palace"
+  },
+  "c": {
+   "speaker": "narration",
+   "text": "RECOVERED AUDIO: 1991 — BARSTOW POLICE DEPARTMENT. OFFICER DANA PRUITT HAS NOT SLEPT IN THREE DAYS.",
+   "next": "d",
+   "shot": "barstow_pd"
+  },
+  "d": {
+   "speaker": "narration",
+   "text": "RECOVERED FILM: 1992 — THE HILLS ARE BURNING. SOMEONE IS STILL SHOOTING.",
+   "next": "e",
+   "shot": "hills_fire"
+  },
+  "e": {
+   "speaker": "narration",
+   "text": "END OF VERTICAL SLICE. ARCADE MODE UNLOCKED. THE TAPE IS NOT FINISHED.",
+   "event": "slice_complete",
+   "shot": "hills_fire"
+  }
+ },
+ "shot": "static"
 }

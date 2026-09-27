@@ -46,6 +46,7 @@ var lights_root: Node2D
 var fx: Effects
 var bullets: BulletSystem
 var crowd: Crowd
+var visual_3d: Visual3DOverlay
 
 var _checkpoints_hit: Dictionary = {}
 var _hints_shown: Dictionary = {}
@@ -160,6 +161,14 @@ func _ready() -> void:
 	camera.target = player
 	add_child(camera)
 	camera.snap_to_target()
+	# Optional low-poly 3D dressing: real OBJ assets rendered over the 2D
+	# world. Off by default (setting "visual_3d") until its framing
+	# matches the pixel camera - see Visual3DOverlay.
+	if SaveManager.get_setting("visual_3d", false):
+		visual_3d = Visual3DOverlay.new()
+		visual_3d.name = "Visual3DDressing"
+		add_child(visual_3d)
+		visual_3d.setup(self, camera, data)
 	# HUD / pause
 	hud = HUD.new()
 	hud.level = self
