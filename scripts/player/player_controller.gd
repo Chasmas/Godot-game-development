@@ -529,7 +529,7 @@ func _try_shoot(w: WeaponInstance) -> void:
 		origin = global_position
 	var bs := BulletSystem.get_system()
 	if bs:
-		bs.fire(origin, aim_dir, w.data, self, spread)
+		bs.fire(origin, _forgiving_shot(aim_dir), w.data, self, spread)
 	visual.kick_recoil(w.data.camera_kick * (0.35 if w.dual else 0.6))
 	visual.gun_recoil(left, 1.5 + w.data.camera_kick * 0.4)
 	var silenced := upgrades.has(&"silencer") or w.data.suppressed
@@ -603,6 +603,7 @@ func _melee_attack(heavy: bool) -> void:
 	if w == null or _melee_cd > 0.0:
 		return
 	_melee_cd = w.data.melee_cooldown * (1.45 if heavy else 1.0) * (0.75 if upgrades.has(&"quick_hands") else 1.0)
+	_turn_into_target(w.data.melee_range + (6.0 if heavy else 0.0), w.data.melee_arc_deg * 0.5)
 	var stab := w.data.id in [&"knife", &"broken_bottle", &"glass_shard"]
 	visual.swing(heavy, stab)
 	Audio.play_at("swing_heavy" if heavy else "swing", global_position, -2.0, 0.15)
@@ -618,6 +619,7 @@ func _punch() -> void:
 	if _melee_cd > 0.0:
 		return
 	_melee_cd = 0.22
+	_turn_into_target(17.0, 50.0)
 	visual.punch()
 	Audio.play_at("swing", global_position, -8.0, 0.2)
 	velocity += aim_dir * 60.0
@@ -628,8 +630,10 @@ func _punch() -> void:
 func _melee_hit(heavy: bool) -> void:
 	var w := current()
 	var unarmed := w == null
-	var rng := 17.0 if unarmed else w.data.melee_range + (6.0 if heavy else 0.0)
-	var arc := 100.0 if unarmed else w.data.melee_arc_deg + (40.0 if heavy else 0.0)
+	# forgiving by design: the crosshair says which way you swing, it doesn't
+	# have to sit on the body - a little extra reach and a wider arc
+	var rng := (17.0 if unarmed else w.data.melee_range + (6.0 if heavy else 0.0)) + MELEE_REACH_BONUS
+	var arc := (100.0 if unarmed else w.data.melee_arc_deg + (40.0 if heavy else 0.0)) + MELEE_ARC_BONUS
 	var hit_any := false
 	var killed_any := false
 	for n in get_tree().get_nodes_in_group("damageable"):
@@ -642,7 +646,7 @@ func _melee_hit(heavy: bool) -> void:
 			continue
 		if to.length() > 7.0 and absf(angle_difference(aim_dir.angle(), to.angle())) > deg_to_rad(arc * 0.5):
 			continue
-		if not _has_los(global_position, p, n):
+		if not _has_los(global_position, p, n, Layers.WORLD | Layers.DOOR):
 			continue
 		var method := &"punch" if unarmed else &"melee"
 		if n.has_method("is_winding_up") and n.is_winding_up():
@@ -693,13 +697,81 @@ func _break_weapon(w: WeaponInstance) -> void:
 		slots[slot] = null
 	_refresh_weapon()
 
-func _has_los(a: Vector2, b: Vector2, target: Object = null) -> bool:
+func _has_los(a: Vector2, b: Vector2, target: Object = null, mask := Layers.WORLD | Layers.PROP) -> bool:
 	var space := get_world_2d().direct_space_state
 	var ex: Array[RID] = [get_rid()]
 	if target is CollisionObject2D:
 		ex.append((target as CollisionObject2D).get_rid())
-	var q := PhysicsRayQueryParameters2D.create(a, b, Layers.WORLD | Layers.PROP, ex)
+	var q := PhysicsRayQueryParameters2D.create(a, b, mask, ex)
 	return space.intersect_ray(q).is_empty()
+
+# ------------------------------------------------------- aim forgiveness
+## The crosshair is a direction, not a pixel test. These stay deliberately
+## small: you still have to point the right way - nothing on screen is
+## auto-targeted, nothing is locked.
+const MELEE_REACH_BONUS := 5.0     ## px beyond the weapon's own reach
+const MELEE_ARC_BONUS := 40.0      ## degrees added to the swing arc
+const MELEE_TURN_EXTRA := 30.0     ## how far off-aim a swing will turn into a target
+const GUN_PAD_PX := 12.0           ## a shot "counts" within this many px of a body
+const GUN_MIN_DEG := 2.5
+const GUN_MAX_DEG := 11.0
+const GUN_RANGE := 420.0
+
+## Nearest enemy the swing could reasonably mean: in reach and roughly in
+## front. The swing (and lunge) turns into it.
+func _turn_into_target(reach: float, half_arc: float) -> void:
+	if lock_target and is_instance_valid(lock_target):
+		return
+	var best: Node2D = null
+	var best_score := INF
+	var lim := deg_to_rad(half_arc + MELEE_TURN_EXTRA)
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if not is_instance_valid(e) or not e.is_alive():
+			continue
+		var to: Vector2 = (e as Node2D).global_position - global_position
+		var r: float = e.get("hit_radius") if e.get("hit_radius") != null else 6.0
+		if to.length() - r > reach + MELEE_REACH_BONUS + 6.0:
+			continue
+		var a := absf(angle_difference(aim_dir.angle(), to.angle()))
+		if a > lim:
+			continue
+		if not _has_los(global_position, (e as Node2D).global_position, e, Layers.WORLD | Layers.DOOR):
+			continue
+		var sc := a * 40.0 + to.length()
+		if sc < best_score:
+			best_score = sc
+			best = e
+	if best:
+		aim_dir = aim_dir.slerp((best.global_position - global_position).normalized(), 0.85).normalized()
+		visual.set_aim(aim_dir.angle())
+
+## A shot fired close to someone goes to them: the tolerance is a few px
+## of body width at any distance (a wider angle up close, a hair at range).
+func _forgiving_shot(dir: Vector2) -> Vector2:
+	if lock_target and is_instance_valid(lock_target):
+		return dir
+	var best: Node2D = null
+	var best_k := 1.0
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if not is_instance_valid(e) or not e.is_alive():
+			continue
+		var to: Vector2 = (e as Node2D).global_position - global_position
+		var d := to.length()
+		if d < 4.0 or d > GUN_RANGE:
+			continue
+		var r: float = e.get("hit_radius") if e.get("hit_radius") != null else 6.0
+		var tol := clampf(atan2(r + GUN_PAD_PX, d), deg_to_rad(GUN_MIN_DEG), deg_to_rad(GUN_MAX_DEG))
+		var k := absf(angle_difference(dir.angle(), to.angle())) / tol
+		if k >= best_k:
+			continue
+		if not _has_los(global_position, (e as Node2D).global_position, e, Layers.WORLD | Layers.PROP | Layers.DOOR):
+			continue
+		best_k = k
+		best = e
+	if best == null:
+		return dir
+	var tv: Vector2 = best.velocity if best is CharacterBody2D else Vector2.ZERO
+	return ((best.global_position + tv * 0.04) - global_position).normalized()
 
 # ---------------------------------------------------------------- throwing
 func _throw_current() -> void:

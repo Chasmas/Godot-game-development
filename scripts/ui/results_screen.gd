@@ -128,8 +128,6 @@ func _director_notes() -> void:
 		notes.append(tr("%d takes. The audience never sees the takes. I do.") % attempts)
 	if float(r.get("accuracy", 1.0)) < 0.35 and int(st.get("shots", 0)) > 10:
 		notes.append(tr("You spray like a garden hose. Aim is a choice."))
-	if int(st.get("beat_kills", 0)) >= 5:
-		notes.append(tr("You found the rhythm. The editors will thank you."))
 	if int(r.get("max_combo", 0)) >= 8:
 		notes.append(tr("That run in the middle - that's the trailer."))
 	if int(st.get("silent_kills", 0)) >= 5:

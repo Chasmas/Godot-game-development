@@ -119,7 +119,6 @@ func _ready() -> void:
 			e.data.aim_error_deg *= 0.6
 			e.data.view_distance *= 1.15
 	Score.finisher.connect(_on_finisher)
-	Score.on_beat.connect(_on_beat_kill)
 	if boss:
 		boss.defeated.connect(_on_boss_defeated)
 	# player
@@ -443,10 +442,6 @@ func _on_finisher(_pos: Vector2) -> void:
 	Events.camera_punch.emit(1.2, 0.5)
 	PostFX.flash(UIStyle.PINK, 0.25)
 	Game.timed_slowmo(0.3, 0.9)
-
-func _on_beat_kill(streak: int, _pos: Vector2) -> void:
-	PostFX.flash(UIStyle.GOLD, 0.06 + minf(streak, 5) * 0.015)
-	Events.camera_punch.emit(1.03 + minf(streak, 5) * 0.008, 0.12)
 
 func _check_hints(cell: Vector2i) -> void:
 	for hdef in data.get("hints", []):

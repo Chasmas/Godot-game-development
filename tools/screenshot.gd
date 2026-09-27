@@ -111,6 +111,22 @@ func _ready() -> void:
 				p3.input_enabled = false
 				p3.set_physics_process(false)
 				lvl2.camera.target = dog
+			elif what.begins_with("idle"):
+				# idle0 / idle1 / idle2: the Nth calm guard busy with something
+				var want := int(what.substr(4)) if what.length() > 4 else 0
+				var found := 0
+				var tgt2: Enemy = null
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if e.idle_activity and not e.is_snoozing():
+						if found == want:
+							tgt2 = e
+							break
+						found += 1
+				print("closeup idle target ", tgt2, " kind ", tgt2.idle_activity.kind if tgt2 else -1)
+				p3.global_position = tgt2.global_position + Vector2(-400, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = tgt2
 			elif what == "snooze" or what == "handler":
 				var tgt: Enemy = null
 				for e in get_tree().get_nodes_in_group("enemies"):

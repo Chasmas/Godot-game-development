@@ -152,8 +152,6 @@ func _ready() -> void:
 	Events.objective_changed.connect(_on_objective)
 	Events.player_died.connect(_on_player_died)
 	# bound methods, not lambdas: autoload signals must let go of a freed HUD
-	Music.beat.connect(_on_music_beat)
-	Score.on_beat.connect(_on_beat_kill)
 	Score.finisher.connect(_on_finisher)
 	_on_score(Score.score)
 	_on_combo(0, 0.0, 1.0)
@@ -251,12 +249,6 @@ var tips: TipCard
 func tip(id: String, text: String) -> void:
 	if tips:
 		tips.offer(id, text)
-
-func _on_music_beat(_i: int) -> void:
-	beat_meter.pulse()
-
-func _on_beat_kill(streak: int, _pos: Vector2) -> void:
-	beat_meter.hit(streak)
 
 func _on_finisher(_pos: Vector2) -> void:
 	rec.roll()
@@ -648,40 +640,13 @@ class UpgradeCard extends Control:
 		draw_multiline_string(f, Vector2(tx, r.position.y + 70), tr(str(d.desc)), HORIZONTAL_ALIGNMENT_LEFT, w - 130.0, 12, 2, Color(UIStyle.PAPER, 0.75 * da))
 
 
-## Metronome under the combo: a pip flashes on every beat of the music;
-## kills that land on it flash the whole row and show the streak. Tier
-## callouts grow with the combo.
+## Combo tier callouts under the combo counter (HOT / ON FIRE /
+## SHOWSTOPPER) and the FINAL TAKE reminder.
 class BeatMeter extends Control:
-	var _pulse := 0.0
-	var _hit := 0.0
-	var _streak := 0
-	var _n := 0
-	func pulse() -> void:
-		_pulse = 1.0
-		_n = (_n + 1) % 4
-	func hit(streak: int) -> void:
-		_hit = 1.0
-		_streak = streak
-	func _process(delta: float) -> void:
-		var rd := delta / maxf(Engine.time_scale, 0.05)
-		_pulse = move_toward(_pulse, 0.0, rd * 5.0)
-		_hit = move_toward(_hit, 0.0, rd * 2.5)
+	func _process(_delta: float) -> void:
 		queue_redraw()
 	func _draw() -> void:
-		if Music.beat_length() <= 0.0:
-			return
 		var combo := Score.combo
-		var alpha := 0.35 + (0.65 if combo >= 1 else 0.0)
-		for i in 4:
-			var on := i == _n
-			var c := UIStyle.PINK if on else UIStyle.DIM
-			var r := 3.0 + (3.0 * _pulse if on else 0.0)
-			draw_circle(Vector2(6 + i * 16, 8), r, Color(c, alpha * (1.0 if on else 0.5)))
-		if _hit > 0.0:
-			draw_rect(Rect2(-2, 0, 70, 16), Color(UIStyle.GOLD, 0.25 * _hit))
-			var t := tr("ON BEAT") if _streak < 2 else tr("RHYTHM x%d") % _streak
-			draw_string_outline(UIStyle.font_display(), Vector2(72, 14), t, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, 4, UIStyle.INK)
-			draw_string(UIStyle.font_display(), Vector2(72, 14), t, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.GOLD, _hit))
 		var tier := ""
 		if combo >= 12:
 			tier = "SHOWSTOPPER"
@@ -691,10 +656,10 @@ class BeatMeter extends Control:
 			tier = "HOT"
 		if tier != "":
 			var wob := sin(Time.get_ticks_msec() * 0.012) * 1.5
-			draw_string_outline(UIStyle.font_display(), Vector2(0, 36 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, 5, UIStyle.INK)
-			draw_string(UIStyle.font_display(), Vector2(0, 36 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, UIStyle.HOT if combo >= 8 else UIStyle.GOLD)
+			draw_string_outline(UIStyle.font_display(), Vector2(0, 20 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, 5, UIStyle.INK)
+			draw_string(UIStyle.font_display(), Vector2(0, 20 + wob), tr(tier), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, UIStyle.HOT if combo >= 8 else UIStyle.GOLD)
 			if combo >= 8 and not Score._finisher_used:
-				draw_string(UIStyle.font_mono(), Vector2(0, 50), tr("MELEE KILL = FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(UIStyle.PAPER, 0.5 + 0.5 * sin(Time.get_ticks_msec() * 0.01)))
+				draw_string(UIStyle.font_mono(), Vector2(0, 34), tr("MELEE KILL = FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(UIStyle.PAPER, 0.5 + 0.5 * sin(Time.get_ticks_msec() * 0.01)))
 
 
 ## The finisher: camcorder REC frame, blinking dot, timecode, while the
@@ -891,8 +856,6 @@ class TipCard extends Control:
 			offer("throw", "Empty? Throw it with {secondary} - a thrown gun stuns whoever it hits.")
 		if Score.combo >= 2:
 			offer("combo", "COMBO: keep killing before the bar runs out. Mix weapons and methods for more.")
-		if Score.combo >= 2 and Music.beat_length() > 0.0:
-			offer("beat", "Kills on the beat of the music score extra - watch the pips under your combo.")
 		if Score.combo >= 8:
 			offer("finisher", "ON FIRE. Your next melee kill rolls the FINAL TAKE.")
 		if p.upgrades.size() > 0:

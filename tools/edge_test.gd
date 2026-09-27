@@ -21,7 +21,7 @@ func _ready() -> void:
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
 			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
 			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese",
-			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists"]:
+			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists", "aim_forgiveness"]:
 		if only != "" and case_name != only:
 			continue
 		_mission = "m02_dog_days" if case_name.begins_with("m02") else "m01_checkout"
@@ -156,6 +156,50 @@ func _kill_all(melee: bool, fists := false) -> void:
 			survivors.append(tag)
 			print("    survived: ", tag, " at ", e.global_position, " layer ", e.collision_layer, " hp-armor ", e.armor_left)
 	check(survivors.is_empty(), ("every m02 enemy dies to %s" % ("fists" if fists else ("melee" if melee else "bullets"))) + ("" if survivors.is_empty() else " - survivors: " + ", ".join(survivors)))
+
+## Crosshair = direction: near misses connect, clear misses don't.
+func aim_forgiveness() -> void:
+	var p := _p()
+	p.god_mode = true
+	# an ordinary guard: armour and shields have their own rules
+	var e: Enemy = null
+	for o in _enemies():
+		if not o is Dog and o.data.armor == 0 and o.data.shield_arc_deg == 0.0 and not o.data.immune_to_punch:
+			e = o
+			break
+	for o in _enemies():
+		if o != e:
+			o.global_position += Vector2(5000, 5000)
+	e.set_physics_process(false)
+	var cases := [[60.0, 7.0, true], [60.0, 35.0, false], [140.0, 4.0, true], [140.0, 16.0, false]]
+	for c in cases:
+		var d: float = c[0]
+		var off: float = c[1]
+		p.global_position = _clear_spot(e, d)
+		p.velocity = Vector2.ZERO
+		if not p._has_los(p.global_position, e.global_position, e, Layers.WORLD | Layers.PROP | Layers.DOOR):
+			# find open ground in a straight line: move the target instead
+			e.global_position = _open_cell(p.global_position, 2)
+			p.global_position = e.global_position + Vector2(d, 0)
+		var to := (e.global_position - p.global_position).normalized()
+		var dir := to.rotated(deg_to_rad(off))
+		var shot := p._forgiving_shot(dir)
+		var hits := absf(angle_difference(shot.angle(), to.angle())) < 0.01
+		check(hits == c[2], "shot %.0f deg off at %.0f px %s" % [off, d, "connects" if c[2] else "still misses"])
+	# melee: a bat swing 70 deg off the enemy still lands; behind you doesn't
+	for c2 in [[70.0, true], [160.0, false]]:
+		if not is_instance_valid(e) or not e.is_alive():
+			break
+		p.global_position = _clear_spot(e, 18.0)
+		var to2 := (e.global_position - p.global_position).normalized()
+		p.aim_dir = to2.rotated(deg_to_rad(c2[0]))
+		p.slots[p.slot] = WeaponInstance.create(DB.weapon(&"bat"))
+		p._refresh_weapon()
+		p._melee_cd = 0.0
+		p._melee_attack(false)
+		await frames(20)
+		var landed := not is_instance_valid(e) or not e.is_alive() or e.state == Enemy.State.DOWNED
+		check(landed == c2[1], "bat swing %.0f deg off %s" % [c2[0], "lands" if c2[1] else "misses"])
 
 func m02_all_killable_gun() -> void:
 	await _kill_all(false)
