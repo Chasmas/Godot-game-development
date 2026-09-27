@@ -240,7 +240,11 @@ func _process(delta: float) -> void:
 		for i in int(rain * 6.0 * rd * 60.0):
 			var sp := _random_view_point()
 			if is_outdoor_at(sp):
-				_splashes.append([sp, 0.0])
+				# a ring and a few droplets thrown up and out
+				var drops: Array = []
+				for k in randi_range(2, 4):
+					drops.append(Vector3(randf_range(-1.0, 1.0), randf_range(0.6, 1.0), randf_range(0.7, 1.3)))
+				_splashes.append([sp, 0.0, drops])
 	var i2 := _splashes.size() - 1
 	while i2 >= 0:
 		_splashes[i2][1] += rd
@@ -371,6 +375,13 @@ func _draw() -> void:
 			var k: float = s[1] / 0.3
 			draw_set_transform(s[0], 0.0, Vector2(1.0, 0.55))
 			draw_arc(Vector2.ZERO, 1.0 + k * 4.0, 0, TAU, 8, Color(rain_color.lightened(0.1), 0.5 * (1.0 - k)), 1.0)
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			# droplets: a little hop up and out, falling back as they fade
+			if s.size() > 2:
+				for dv in s[2]:
+					var v: Vector3 = dv
+					var hop := Vector2(v.x * 5.0 * k * v.z, -sin(k * PI) * 5.0 * v.y)
+					draw_rect(Rect2(s[0] + hop, Vector2(1, 1)), Color(rain_color.lightened(0.25), 0.8 * (1.0 - k)))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		# wet-road glints: sparse highlights sell rain without a reflection pass
 		if rain > 0.45:

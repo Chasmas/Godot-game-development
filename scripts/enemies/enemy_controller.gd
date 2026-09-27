@@ -60,7 +60,7 @@ var _down_t := 0.0
 var _shield_down := 0.0
 var _stun_t := 0.0
 var _patrol_i := 0
-var _look_t := 0.0
+var _look_t := 0.0                    ## until the next idle glance (set on setup, so nobody turns on frame one)
 var _home := Vector2.ZERO
 var _home_facing := Vector2.RIGHT
 var _alert_icon := 0.0
@@ -114,6 +114,7 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	level = p_level
 	facing = p_facing.normalized() if p_facing.length() > 0.1 else Vector2.RIGHT
 	_home_facing = facing
+	_look_t = randf_range(2.0, 4.5)
 	armor_left = data.armor
 	_home = global_position
 	look = data.palette
@@ -858,11 +859,17 @@ func take_damage(info: DamageInfo) -> String:
 		_knock = info.dir * 90.0
 		Effects.sparks(info.pos, -info.dir)
 		Audio.play_at("metal_clang", global_position, -6.0)
+		if data.fleshy:
+			# the armour rings, and the dead under it still bleed
+			Effects.blood(global_position, info.dir, false)
+			Audio.play_at("hit_flesh", global_position, -6.0)
 		_react_to_attack(info)
 		_on_armor_hit(info)
 		return "absorbed"
 	if not info.lethal:
 		visual.hit_react(info.dir, info.heavy, 0.12)
+		if data.fleshy:
+			Effects.blood(global_position, info.dir, false)
 		if data.immune_to_punch and not info.heavy and info.type in [DamageInfo.Type.PUNCH, DamageInfo.Type.THROWN, DamageInfo.Type.DOOR]:
 			# shrugs off one punch - not a flurry: the third in quick
 			# succession staggers even a heavy onto the floor
@@ -881,6 +888,9 @@ func take_damage(info: DamageInfo) -> String:
 		_stun(0.35, info.dir)
 		return "hurt"
 	if info.type == DamageInfo.Type.MELEE and data.immune_to_punch and not info.heavy and armor_left > 0:
+		if data.fleshy:
+			Effects.blood(global_position, info.dir, false)
+			Audio.play_at("hit_flesh", global_position, -4.0)
 		return "blocked"
 	visual.hit_react(info.dir, true, 0.16)
 	_die(info)

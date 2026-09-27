@@ -23,6 +23,10 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
 					sp.z_index = -1
 					root.add_child(sp)
+			"vacancy":
+				var vs := WallArt.VacancySign.new()
+				vs.position = p
+				root.add_child(vs)
 			"neon":
 				var ns := NeonSign.new()
 				ns.position = p
@@ -49,6 +53,7 @@ class PalmTree extends Node2D:
 		_seed = randf() * 10.0
 		_shadow = PalmShadow.new()
 		_shadow.size = size
+		_shadow.palm = self
 		_shadow.z_index = -6
 		_shadow.z_as_relative = false
 		add_child(_shadow)
@@ -57,19 +62,31 @@ class PalmTree extends Node2D:
 		_t += d
 		if Engine.get_process_frames() % 2 == 0:
 			queue_redraw()
+			_shadow.queue_redraw()
 
 	func _wind() -> float:
 		var w = get_tree().get_first_node_in_group("weather")
 		return float(w.wind) if w else 0.2
 
+	## The crown's pose right now: the shadow copies it exactly.
+	func sway() -> float:
+		var wind := _wind()
+		return sin(_t * (1.2 + wind) + _seed) * (0.05 + wind * 0.12)
+
+	func lean() -> Vector2:
+		return Vector2(_wind() * 4.0, 0)
+
+	func breathe() -> float:
+		return 1.0 + sin(_t * 2.1 + _seed) * 0.015 * (1.0 + _wind())
+
 	func _draw() -> void:
 		var wind := _wind()
-		var sway := sin(_t * (1.2 + wind) + _seed) * (0.05 + wind * 0.12)
-		var lean := Vector2(wind * 4.0, 0)
+		var sway := sway()
+		var lean := lean()
 		var tex := ArtLib.sprite("palm")
 		if tex:
 			# painted crown: turns and leans with the wind, fronds breathe
-			var sz := Vector2(tex.get_width(), tex.get_height()) * 0.5 * size * (1.0 + sin(_t * 2.1 + _seed) * 0.015 * (1.0 + wind))
+			var sz := Vector2(tex.get_width(), tex.get_height()) * 0.5 * size * breathe()
 			draw_set_transform(lean, sway * 1.6 + _seed, Vector2.ONE)
 			draw_texture_rect(tex, Rect2(-sz * 0.5, sz), false)
 			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
@@ -92,11 +109,41 @@ class PalmTree extends Node2D:
 		draw_circle(lean + Vector2(-1, -1), 2.0 * size, Color(0.55, 0.38, 0.18))
 
 
+## The palm's shadow on the ground: the crown's own silhouette, thrown down
+## and to the side by the light and squashed onto the floor, moving frond for
+## frond with the tree (same sway, lean and breathing) but a touch further,
+## as a shadow does.
 class PalmShadow extends Node2D:
 	var size := 1.0
+	var palm: PalmTree
+	const OFFSET := Vector2(12, 16)
+	const SHADE := Color(0.0, 0.0, 0.02, 0.4)
 	func _draw() -> void:
-		draw_set_transform(Vector2(10, 14) * size, 0.3, Vector2(1.0, 0.7))
-		draw_circle(Vector2.ZERO, 26.0 * size, Color(0, 0, 0, 0.22))
+		if palm == null:
+			return
+		var sway := palm.sway() * 1.25
+		var lean := palm.lean() * 1.4
+		var base := OFFSET * size + lean
+		var tex := ArtLib.sprite("palm")
+		if tex:
+			var sz := Vector2(tex.get_width(), tex.get_height()) * 0.5 * size * palm.breathe()
+			# squash onto the ground: rotate with the crown, then flatten
+			draw_set_transform_matrix(Transform2D(0.0, Vector2(1.05, 0.72), 0.25, base) * Transform2D(sway + palm._seed, Vector2.ZERO))
+			draw_texture_rect(tex, Rect2(-sz * 0.5, sz), false, SHADE)
+			draw_set_transform_matrix(Transform2D.IDENTITY)
+			return
+		# procedural crown: the same fronds as dark polygons
+		draw_set_transform_matrix(Transform2D(0.0, Vector2(1.05, 0.72), 0.25, base))
+		for i in 9:
+			var a := i * TAU / 9.0 + sway + palm._seed
+			var L := (26.0 + (i % 3) * 5.0) * size
+			var dir := Vector2.from_angle(a)
+			var tip := dir * L
+			var mid := dir * L * 0.5 + dir.orthogonal() * 3.0 * size
+			var w := 5.0 * size
+			draw_colored_polygon(PackedVector2Array([Vector2.ZERO, mid + dir.orthogonal() * w, tip, mid - dir.orthogonal() * w * 0.4]), SHADE)
+		draw_circle(Vector2.ZERO, 4.0 * size, SHADE)
+		draw_set_transform_matrix(Transform2D.IDENTITY)
 
 
 ## Neon lettering with glow, buzz-flicker and its own light.

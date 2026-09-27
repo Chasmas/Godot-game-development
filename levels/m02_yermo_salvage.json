@@ -432,5 +432,6 @@
   }
  ],
  "cameras": [{"cell": [1, 1], "angle": 45}, {"cell": [30, 20], "angle": 90}, {"cell": [47, 1], "angle": 130}],
- "film_cameras": [{"cell": [47, 12], "angle": 135}, {"cell": [64, 20], "angle": 135}]
+ "film_cameras": [{"cell": [47, 12], "angle": 135}, {"cell": [64, 20], "angle": 135}],
+ "intro_call": {"dialogue": "call_m02", "caller": "mom", "device": "phone"}
 }

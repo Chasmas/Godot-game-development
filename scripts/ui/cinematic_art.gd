@@ -17,6 +17,7 @@ const CUTSCENES := {
 const PAINTED := {
 	"m01_boss_intro": "harcourt_office", "m01_boss_down": "harcourt_office", "m01_room_204": "room_204",
 	"m03_boss_intro": "fireman", "m03_boss_down": "fireman_down",
+	"m04_boss_intro": "burning_tommy", "m04_boss_down": "burning_tommy", "m01_phone": "lobby_phone",
 }
 
 static func texture_for(path: String) -> Texture2D:

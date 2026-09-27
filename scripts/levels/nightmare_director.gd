@@ -21,6 +21,10 @@ var _fired: Dictionary = {}
 var _layer: CanvasLayer
 var _face: TextureRect
 var _face_t := 0.0
+var _amb_t := 9.0              ## until the next far-off cry or scream
+var _voice_t := 2.0            ## until the next creature sound nearby
+const FAR_SOUNDS := ["cry", "scream_f", "cry", "scream_m", "laugh_track"]
+const VOICES := {&"zombie": "moan", &"ghoul": "shriek", &"demon": "roar", &"hellhound": "growl", &"cultist": "moan"}
 var _chandelier_t := 0.0
 var _chandelier_at := Vector2.ZERO
 var _warn: Node2D
@@ -57,6 +61,7 @@ func _process(delta: float) -> void:
 		_face.modulate = Color(0.9, 0.7, 0.72, k * 0.22)
 		_face.scale = Vector2.ONE * (1.0 + (1.0 - _face_t / FACE_TIME) * 0.08)
 		_face.pivot_offset = _face.size * 0.5
+	_ambience(delta)
 	if _chandelier_t > 0.0:
 		_chandelier_t -= delta
 		if _chandelier_t <= 0.0:
@@ -143,6 +148,33 @@ func _drop_chandelier() -> void:
 		pi.lethal = true
 		p.take_damage(pi)
 
+## The house is never quiet: now and then someone cries or screams in
+## another room (positional, far away, never twice in a row), and the dead
+## near you moan, shriek, roar or snarl.
+var _last_far := ""
+func _ambience(delta: float) -> void:
+	var p := level.player
+	_amb_t -= delta
+	if _amb_t <= 0.0:
+		_amb_t = randf_range(14.0, 32.0)
+		var pick := _last_far
+		while pick == _last_far:
+			pick = FAR_SOUNDS[randi() % FAR_SOUNDS.size()]
+		_last_far = pick
+		var at := p.global_position + Vector2.from_angle(randf() * TAU) * randf_range(300.0, 480.0)
+		Audio.play_at(pick, at, -6.0 if pick != "laugh_track" else -14.0)
+	_voice_t -= delta
+	if _voice_t <= 0.0:
+		_voice_t = randf_range(1.4, 3.6)
+		var near: Array = []
+		for e in get_tree().get_nodes_in_group("enemies"):
+			if e.is_alive() and e.data and VOICES.has(e.data.id) and (e as Node2D).global_position.distance_to(p.global_position) < 420.0:
+				near.append(e)
+		if not near.is_empty():
+			var e: Enemy = near[randi() % near.size()]
+			var v: String = VOICES[e.data.id]
+			Audio.play_at(v, e.global_position, -4.0 if e.is_aware() else -10.0)
+
 ## Something climbs out of the floor at `at`.
 func rise(at: Vector2, kind: StringName) -> Enemy:
 	var data := DB.enemy(kind)
@@ -162,6 +194,8 @@ func rise(at: Vector2, kind: StringName) -> Enemy:
 	e._enter_combat()
 	Effects.dust(e.global_position, Vector2.UP, 2.0)
 	Effects.debris(e.global_position, Vector2.UP)
+	if VOICES.has(kind):
+		Audio.play_at(VOICES[kind], e.global_position, -6.0)
 	return e
 
 func _on_died(e: Enemy, info: DamageInfo) -> void:

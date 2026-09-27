@@ -109,6 +109,7 @@ class DarknessLayer extends Node2D:
 	var _mat: ShaderMaterial
 	var _nv_tinted := false
 	var _t := 0.0
+	var _ramp := 0.0
 
 	func _ready() -> void:
 		z_index = 36
@@ -138,6 +139,7 @@ class DarknessLayer extends Node2D:
 	func set_dark(zone: String, dark: bool) -> void:
 		if dark and not active.has(zone):
 			active.append(zone)
+			_ramp = 0.0
 		elif not dark:
 			active.erase(zone)
 		queue_redraw()
@@ -154,8 +156,12 @@ class DarknessLayer extends Node2D:
 			return
 		var nv: bool = p.has_method("has_upgrade") and p.has_upgrade(&"night_vision")
 		_mat.set_shader_parameter("player_pos", p.global_position)
-		_mat.set_shader_parameter("radius", 230.0 if nv else 78.0)
-		_mat.set_shader_parameter("strength", 0.42 if nv else 0.7)
+		# lights out is properly dark: without night vision you see a small
+		# halo round yourself and little else; with it, the room in green.
+		# The dark eases in, like tubes dying.
+		_ramp = move_toward(_ramp, 1.0, delta / 0.6)
+		_mat.set_shader_parameter("radius", 260.0 if nv else 58.0)
+		_mat.set_shader_parameter("strength", (0.34 if nv else 0.94) * _ramp)
 		_mat.set_shader_parameter("nv", 1.0 if nv else 0.0)
 		_mat.set_shader_parameter("time", _t)
 		var fl: Array[Vector4] = []
@@ -169,7 +175,7 @@ class DarknessLayer extends Node2D:
 		var want := nv and in_dark
 		if want != _nv_tinted:
 			_nv_tinted = want
-			PostFX.set_tint(Color(0.55, 1.0, 0.55, 0.3) if want else Color(1, 1, 1, 0))
+			PostFX.set_tint(Color(0.45, 1.0, 0.5, 0.38) if want else Color(1, 1, 1, 0))
 
 	func _draw() -> void:
 		for z in active:

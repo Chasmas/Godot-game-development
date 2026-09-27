@@ -17,3 +17,4 @@ view_distance = 280.0
 view_angle_deg = 200.0
 hearing_mult = 2.0
 notes = "The hungry ones. Fast, low, and they come in packs. Counter the lunge."
+fleshy = true

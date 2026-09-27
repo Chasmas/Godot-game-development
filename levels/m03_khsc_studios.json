@@ -169,6 +169,11 @@
   "cleared": "STAGE NINE IS DARK",
   "escape_hint": "THE STAGE IS BURNING. BACK TO THE CAR."
  },
+ "intro_call": {
+  "dialogue": "call_m03",
+  "caller": "rudy",
+  "device": "walkie"
+ },
  "boss": {
   "intro": "m03_boss_intro",
   "down": "m03_boss_down"

@@ -58,7 +58,7 @@ def prologue():
         ("f", "narration", "Action.", {"event": "fire", "sfx": "explosion", "shot": "explosion"}),
         ("g", "voice", "...hold it. Hold it. Nobody move.", {"sfx": "vhs_static", "shot": "wreck"}),
         ("g1", "voice", "Keep the cameras rolling. That's the take.", {"shot": "wreck"}),
-        ("g2", "narration", "Somebody drops an extinguisher. It bounces on the asphalt. It's empty. It rings like a bell.", {"shot": "wreck"}),
+        ("g2", "narration", "Somebody drops an extinguisher. It bounces on the asphalt. It's empty. It rings like a bell.", {"shot": "extinguisher"}),
     ])
     d["start"] = "a0"
     save("prologue", d)
@@ -127,7 +127,7 @@ def yermo_after():
         ("v2", "arlo", "That's the whole business, Cass. Somebody else always holds the lens.", {"shot": "arlo_close"}),
         ("r", "narration", "A small red dot drifts across the whiskey bottle. The desk. His chest. He sees it before she does.", {"shot": "red_dot"}),
         ("r2", "arlo", "Ah. Wrap party.", {"shot": "arlo_close", "auto": 1.2}),
-        ("r3", "narration", "The window goes white. Out in the yard, every dog stops barking at once.", {"shot": "red_dot", "sfx": "sniper", "event": "gunshot", "set": {"arlo_dead": True}}),
+        ("r3", "narration", "The window goes white. Out in the yard, every dog stops barking at once.", {"shot": "dogs_silent", "sfx": "sniper", "event": "gunshot", "set": {"arlo_dead": True}}),
         ("r4", "voice", "Episode two is in the can, hotshot. Get some sleep. Friday is the big one.", {"shot": "live_monitors", "sfx": "vhs_static"}),
     ])
     save("yermo_after", {"bg": "apartment", "music": "aftermath", "title": "YERMO SALVAGE — JULY 9, 1988 — 3:02 AM", "shot": "yermo_office", "start": "a", "nodes": nodes})
@@ -212,7 +212,7 @@ def teaser():
     n = d["nodes"]
     # a note on Dana's board before the fire
     n["c"]["next"] = "c2"
-    n["c2"] = {"speaker": "narration", "text": "RECOVERED NOTE, PINNED TO A CORKBOARD: 'THE STAR KILLER IS NOT ONE PERSON. CHECK THE CREDITS.'", "shot": "barstow_pd", "next": "d"}
+    n["c2"] = {"speaker": "narration", "text": "RECOVERED NOTE, PINNED TO A CORKBOARD: 'THE STAR KILLER IS NOT ONE PERSON. CHECK THE CREDITS.'", "shot": "corkboard_note", "next": "d"}
     save("teaser", d)
 
 
@@ -224,7 +224,7 @@ def dream():
         ("c", "cass", "They had guns. They were paid. They'd have done the same to me.", {"shot": "motel_dream"}),
         ("c2", "narration", "In the mirror by the door, her reflection gets up a moment after she does.", {"shot": "mirror_dead"}),
         ("c3", "cass", "...", {"shot": "mirror_dead", "auto": 1.4}),
-        ("d", "narration", "The television at the foot of the bed stops showing static. It shows a house on a hill, and a banner over the door. WRAP PARTY.", {"shot": "villa_gate", "sfx": "vhs_static"}),
+        ("d", "narration", "The television at the foot of the bed stops showing static. It shows a house on a hill, and a banner over the door. WRAP PARTY.", {"shot": "tv_mansion", "sfx": "vhs_static"}),
         ("e", "dead", "Everybody's here, Cass. Everybody you invited.", {"shot": "wrap_party"}),
         ("f", "tommy", "Cassie. Come up to the house. We saved you a seat.", {"shot": "villa_gate"}),
         ("g", "narration", "She's standing on the lawn. The graves have gold stars on them. The dirt is still moving.", {"shot": "villa_gate"}),
@@ -253,8 +253,8 @@ def dream():
         ("s3", "tommy_burnt", "Check the credits, Cassie. Check who signed.", {"end": True}),
     ])})
     nodes = chain([
-        ("a", "narration", "She wakes with the pistol pointed at the television. The test pattern hums.", {"shot": "wake_motel"}),
-        ("b", "narration", "The phone is ringing. It has been ringing for a while.", {"shot": "wake_motel", "sfx": "phone_ring"}),
+        ("a", "narration", "She wakes with the pistol pointed at the television. The test pattern hums.", {"shot": "pov_test_pattern"}),
+        ("b", "narration", "The phone is ringing. It has been ringing for a while.", {"shot": "phone_ringing", "sfx": "phone_ring"}),
         ("c", "voice", "Bad dreams, Miss Moreno? Good. It means you're finally method acting.", {"shot": "wake_motel"}),
         ("d", "cass", "Who signed the change order?", {"shot": "wake_motel"}),
         ("e", "voice", "Season two starts in 1990. We've already cast the others. A girl at an arcade. A cop who doesn't sleep. You'll love them. You'll kill some of them.", {"shot": "casting_1990"}),
@@ -264,6 +264,41 @@ def dream():
         ("i", "cass", "Then I get there first.", {"shot": "casting_1990"}),
     ])
     save("wake_1988", {"bg": "black", "music": "apartment", "title": "A MOTEL OFF THE 5 — JULY 16, 1988 — 6:40 AM", "shot": "wake_motel", "start": "a", "nodes": nodes})
+
+
+# ------------------------------------------------------------------ the call as each mission starts
+def calls():
+    def t(line):
+        return {"auto": round(1.4 + len(line[2]) / 20.0, 1)}
+    def call(name, lines):
+        rows = [(r[0], r[1], r[2], dict(t(r), **(r[3] if len(r) > 3 else {}))) for r in lines]
+        save(name, {"start": rows[0][0], "nodes": chain(rows)})
+    call("call_m01", [
+        ("a", "voice", "Evening, Miss Moreno. You parked where Harcourt can't see you. Good instincts."),
+        ("b", "voice", "Room 204 is upstairs, east side. The night manager keeps the office off the lobby. Twenty-odd guests tonight. None of them are guests."),
+        ("c", "cass", "Why me?"),
+        ("d", "voice", "Because you already know how this scene ends. Wear the star. Hit your mark."),
+    ])
+    call("call_m02", [
+        ("a", "mom", "Cassie? It's Mom. I know it's late. A man called about Tommy's car. Arlo something. He says he still has it."),
+        ("b", "mom", "He said you'd come for it tonight. Out in Yermo? At two in the morning?"),
+        ("c", "cass", "Go back to sleep, Mom."),
+        ("d", "mom", "Bring me something of his. Anything. ...And be nice to the dogs. You know how you get with dogs."),
+    ])
+    call("call_m03", [
+        ("a", "rudy", "Is this thing on? Miss Moreno? It's Rudy. From the door. I'm in the green room closet. Don't ask."),
+        ("b", "rudy", "Security's everywhere, the stagehands have pipes, and Mr. Kowalski is on the Cadillac in the middle of the stage. He's been polishing a flamethrower for an hour."),
+        ("c", "rudy", "The control room's up the east side. And the sprinklers really are fake. I checked. I'm a professional."),
+        ("d", "cass", "Stay in the closet, Rudy."),
+        ("e", "rudy", "Copy. Closet. Great. Love the closet."),
+    ])
+    call("call_m04", [
+        ("a", "tommy", "Cassie? It's me. Don't hang up. I know what this is. I'm calling from the house."),
+        ("b", "tommy", "Everybody came. The guards from the motel, Arlo's boys, the stagehands. They've got stars on their faces now. Your stars."),
+        ("c", "cass", "Tommy. You're dead."),
+        ("d", "tommy", "So are they. Nobody here minds. Come up to the ballroom. There's a gun on every table. Mom would hate it."),
+        ("e", "dead", "Checkout was midnight... checkout was midnight..."),
+    ])
 
 
 def speakers():
@@ -306,4 +341,4 @@ def campaign():
 
 
 if __name__ == "__main__":
-    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); teaser(); speakers(); campaign()
+    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); calls(); teaser(); speakers(); campaign()

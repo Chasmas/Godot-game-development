@@ -494,15 +494,33 @@ class Tracker extends Control:
 			return
 		var ct := hud.player.get_viewport().get_canvas_transform()
 		var pp := ct * hud.player.global_position
+		# the last few: a pulsing chevron round the player and, off screen,
+		# a marker on the screen edge with the distance in metres
+		var t := Time.get_ticks_msec() / 1000.0
+		var pulse := 0.6 + 0.4 * sin(t * 5.0)
+		var vr := Rect2(Vector2.ZERO, size).grow(-34.0)
 		for e in remaining:
 			var ep: Vector2 = ct * (e as Node2D).global_position
 			var d := ep - pp
 			if d.length() < 140.0:
 				continue
 			var dir := d.normalized()
-			var tip := pp + dir * 70.0
-			var pts := PackedVector2Array([tip, tip - dir * 10.0 + dir.orthogonal() * 5.0, tip - dir * 10.0 - dir.orthogonal() * 5.0])
-			draw_colored_polygon(pts, Color(UIStyle.HOT, 0.8))
+			var tip := pp + dir * (72.0 + 4.0 * sin(t * 6.0))
+			var pts := PackedVector2Array([tip, tip - dir * 14.0 + dir.orthogonal() * 7.0, tip - dir * 14.0 - dir.orthogonal() * 7.0])
+			draw_colored_polygon(pts, Color(UIStyle.HOT, 0.85 * pulse))
+			if not vr.has_point(ep):
+				var k := 1.0
+				if absf(d.x) > 0.001:
+					k = minf(k, (vr.size.x * 0.5) / absf(d.x) if d.x != 0.0 else k)
+				if absf(d.y) > 0.001:
+					k = minf(k, (vr.size.y * 0.5) / absf(d.y))
+				var edge := vr.get_center() + d * k
+				edge = Vector2(clampf(edge.x, vr.position.x, vr.end.x), clampf(edge.y, vr.position.y, vr.end.y))
+				draw_circle(edge, 11.0, Color(0.05, 0.0, 0.08, 0.7))
+				draw_arc(edge, 11.0, 0.0, TAU, 20, Color(UIStyle.HOT, pulse), 2.0)
+				draw_colored_polygon(PackedVector2Array([edge + dir * 7.0, edge - dir * 3.0 + dir.orthogonal() * 5.0, edge - dir * 3.0 - dir.orthogonal() * 5.0]), UIStyle.HOT)
+				var m := int((e as Node2D).global_position.distance_to(hud.player.global_position) / 16.0)
+				draw_string(UIStyle.font_bold(), edge + Vector2(-14, 26), "%dm" % m, HORIZONTAL_ALIGNMENT_CENTER, 28, 12, UIStyle.PAPER)
 
 
 ## Bottom-left status: stealth state + collected upgrades.
@@ -864,10 +882,10 @@ class TipCard extends Control:
 
 
 class CheckpointStamp extends Control:
-	## A VHS cassette slides in from the right, drops into a deck slot with a
-	## clunk, its reels spin and the OSD reads "▶ PLAY  CHECKPOINT" (or
-	## "◀◀ REWIND" when you come back after a death). Bottom-right, small,
-	## ~2.8 s, never in the middle of the action.
+	## A VHS cassette drops in at the top centre of the screen, lands in a
+	## glowing deck slot with a clunk, its reels spin and the OSD reads
+	## "▶ PLAY" (or "◀◀ REWIND" after a death); the area's name is set in
+	## neon under it between two rules. ~2.9 s, then it lifts away.
 	var area := ""
 	var rewind := false
 	var _t := 0.0
@@ -885,14 +903,41 @@ class CheckpointStamp extends Control:
 		var ink := UIStyle.INK
 		var gold := UIStyle.GOLD
 		var pink := UIStyle.PINK
-		var base := Vector2(size.x - W - 30.0, size.y - H - 128.0)
-		# timeline: 0-.35 slide in, .35-.55 drop into the slot, then play,
-		# last .35 s slide down and fade
+		# top-right corner, under the weapon readout: easy to see, out of the way
+		var S := 0.9
 		var slide := _ease_out(_t / 0.35)
 		var drop := _ease_out((_t - 0.35) / 0.2)
 		var out := clampf((_t - (LIFE - 0.35)) / 0.35, 0.0, 1.0)
 		var a := 1.0 - out * out
-		var off := Vector2((1.0 - slide) * (W + 60.0), drop * 8.0 + out * 40.0)
+		var centre_x := size.x - 40.0 - W * S * 0.5
+		var top := 92.0
+		# neon title underneath: the area, between two pink rules
+		if _t > 0.45 and area != "":
+			var ta := a * clampf((_t - 0.45) / 0.25, 0.0, 1.0)
+			var fd := UIStyle.font_display()
+			var title := area.to_upper()
+			var tw := fd.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, 18).x
+			var ty := top + (H - 6.0) * S
+			var glow := 0.55 + 0.45 * sin(_t * 6.0)
+			# a dark band so the name reads over anything
+			var band := Rect2(centre_x - maxf(tw * 0.5 + 14.0, W * S * 0.5 + 8.0), ty - 22.0, maxf(tw + 28.0, W * S + 16.0), 44.0)
+			draw_rect(band, Color(0.03, 0.01, 0.06, 0.55 * ta))
+			draw_rect(Rect2(band.position, Vector2(band.size.x, 1)), Color(pink, 0.35 * ta))
+			draw_rect(Rect2(band.position + Vector2(0, band.size.y - 1), Vector2(band.size.x, 1)), Color(pink, 0.35 * ta))
+			for k in 3:
+				draw_string_outline(fd, Vector2(centre_x - tw * 0.5, ty), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, 6 + k * 4, Color(pink, 0.12 * ta * glow))
+			draw_string_outline(fd, Vector2(centre_x - tw * 0.5, ty), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, 4, Color(ink, ta))
+			draw_string(fd, Vector2(centre_x - tw * 0.5, ty), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color(UIStyle.PAPER, ta))
+			var rule := band.size.x * 0.5 * clampf((_t - 0.45) / 0.3, 0.0, 1.0)
+			draw_rect(Rect2(centre_x - rule, band.position.y, rule * 2.0, 2.0), Color(pink, ta))
+			var sub := tr("TAPE SAVED") if not rewind else tr("REWOUND - FROM THE TOP")
+			var sw := UIStyle.font_bold().get_string_size(sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 11).x
+			draw_string(UIStyle.font_bold(), Vector2(centre_x - sw * 0.5, ty + 16.0), sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(gold, ta))
+		draw_set_transform(Vector2(centre_x - W * S * 0.5, top), 0.0, Vector2(S, S))
+		var base := Vector2.ZERO
+		var off := Vector2((1.0 - slide) * (W + 60.0), drop * 8.0 - out * 20.0)
+		# soft neon halo behind the deck
+		draw_rect(Rect2(Vector2(-18, 40), Vector2(W + 36, 46)), Color(pink, 0.08 * a * (0.7 + 0.3 * sin(_t * 5.0))))
 		# the deck slot the tape drops into
 		var slot := Rect2(base + Vector2(-8, 58), Vector2(W + 16, 20))
 		draw_rect(slot, Color(0.04, 0.02, 0.07, 0.85 * a))
@@ -915,7 +960,6 @@ class CheckpointStamp extends Control:
 		draw_rect(Rect2(lab.position + Vector2(0, 22), Vector2(lab.size.x, 2)), Color(gold, a))
 		var f := UIStyle.font_bold()
 		draw_string(f, lab.position + Vector2(5, 14), tr("CHECKPOINT"), HORIZONTAL_ALIGNMENT_LEFT, lab.size.x * 0.5, 11, Color(ink, a))
-		draw_string(UIStyle.font_mono(), lab.position + Vector2(lab.size.x - 5, 14), area, HORIZONTAL_ALIGNMENT_RIGHT, lab.size.x * 0.55, 9, Color(0.3, 0.1, 0.25, a))
 		# window with two reels; tape winds from one to the other
 		var win := Rect2(c + Vector2(40, 36), Vector2(W - 80, 22))
 		draw_rect(win, Color(0.18, 0.14, 0.2, a))
@@ -947,4 +991,5 @@ class CheckpointStamp extends Control:
 			for i in 2:
 				var ty := c.y + fmod(_t * 70.0 + i * 37.0, 64.0)
 				draw_rect(Rect2(Vector2(c.x, ty), Vector2(W, 1)), Color(1, 1, 1, 0.08 * osd_a))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 

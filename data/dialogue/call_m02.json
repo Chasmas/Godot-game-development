@@ -1,0 +1,28 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "mom",
+   "text": "Cassie? It's Mom. I know it's late. A man called about Tommy's car. Arlo something. He says he still has it.",
+   "auto": 6.8,
+   "next": "b"
+  },
+  "b": {
+   "speaker": "mom",
+   "text": "He said you'd come for it tonight. Out in Yermo? At two in the morning?",
+   "auto": 4.9,
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "Go back to sleep, Mom.",
+   "auto": 2.5,
+   "next": "d"
+  },
+  "d": {
+   "speaker": "mom",
+   "text": "Bring me something of his. Anything. ...And be nice to the dogs. You know how you get with dogs.",
+   "auto": 6.2
+  }
+ }
+}

@@ -165,6 +165,11 @@
   "cleared": "THE PARTY'S OVER",
   "escape_hint": "The car's still out front. It isn't burning. Yet."
  },
+ "intro_call": {
+  "dialogue": "call_m04",
+  "caller": "tommy",
+  "device": "phone"
+ },
  "boss": {
   "intro": "m04_boss_intro",
   "down": "m04_boss_down"

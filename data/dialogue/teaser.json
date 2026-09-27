@@ -38,7 +38,7 @@
   "c2": {
    "speaker": "narration",
    "text": "RECOVERED NOTE, PINNED TO A CORKBOARD: 'THE STAR KILLER IS NOT ONE PERSON. CHECK THE CREDITS.'",
-   "shot": "barstow_pd",
+   "shot": "corkboard_note",
    "next": "d"
   }
  },

@@ -182,6 +182,7 @@ func _goto(node_id: String) -> void:
 		Audio.play(str(_node.sfx))
 	if _node.has("event"):
 		event.emit(str(_node.event))
+	_cut_to(str(_node.get("shot", "")))
 	var spk := str(_node.get("speaker", "narration"))
 	var sd: Dictionary = speakers.get(spk, {"name": spk.to_upper(), "color": "f4f0e8"})
 	name_label.text = tr(str(sd.get("name", "")))
@@ -212,6 +213,25 @@ func _goto(node_id: String) -> void:
 		_choices.append(ch)
 	_choice_i = 0
 	line_shown.emit(spk, _full)
+
+## In a level, a line with a "shot" cuts the frame behind the box to that
+## painting (animated, faded in with a touch of tape glitch). Story
+## cutscenes run their own StoryShot, so this only acts inside a level.
+func _cut_to(sid: String) -> void:
+	if sid == "" or not _pause_game or get_tree().get_first_node_in_group("level") == null:
+		return
+	var rid := StoryShot.resolve(sid)
+	var tex := StoryShot.painted_tex(rid)
+	if tex == null or cinematic_art.texture == tex:
+		return
+	cinematic_art.texture = tex
+	cinematic_art.material = StoryShot.painted_material(rid)
+	cinematic_art.visible = true
+	cinematic_dim.visible = true
+	cinematic_art.modulate.a = 0.0
+	var tw := create_tween()
+	tw.tween_property(cinematic_art, "modulate:a", 1.0, 0.35)
+	PostFX.vhs_glitch(0.3)
 
 ## Lines without an explicit "mood" get a light guess from punctuation so
 ## portraits react even in dialogue written before moods existed.

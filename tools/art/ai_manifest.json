@@ -31,6 +31,9 @@
     },
     "dead": {
      "prompt": "An eerie portrait of a ghost: a pale, grey-skinned man in a teal 1980s motel security uniform, faintly translucent, blank milky eyes, a small gold star painted on his forehead, cold blue light, mist around him. Quietly unsettling, not gory."
+    },
+    "mom": {
+     "prompt": "Cass Moreno's mother: a kind, tired woman in her late 50s with greying auburn hair in a loose bun, reading glasses on a chain, a cardigan over a floral blouse, holding a beige telephone receiver to her ear, warm kitchen light, soft worried smile."
     }
    }
   },
@@ -210,6 +213,91 @@
     },
     "casting_1990": {
      "prompt": "A corkboard in a motel room covered in Polaroids connected with red string: an arcade called GALAXY PALACE with a girl in a harlequin jacket circled in marker and labelled THE FOOL, a Beverly Hills house, a nightclub called BLUE HOUR, a tired policewoman at a desk; gold star stickers on each; a map of Los Angeles; a bus ticket to 1990 as a joke-shaped date stamp."
+    },
+    "lobby_phone": {
+     "prompt": "Cass Moreno, a red-haired woman in a red leather jacket with a gold star painted over her left eye, standing behind the wrecked front desk of a 1960s motel lobby at night, holding an old beige telephone receiver to her ear, bullet holes in the wood panelling, papers scattered, a neon VACANCY sign glowing through the window.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "tommy_trapped": {
+     "prompt": "Inside a black 1970s Cadillac at night: a young man's hand with a blue satin varsity jacket cuff pressed flat against the driver's window from the inside, orange firelight outside the glass, smoke curling at the edges. No face visible. Tragic and tense, not graphic."
+    },
+    "dead_line": {
+     "prompt": "Close-up of an old beige telephone receiver dangling on its coiled cord off the edge of a motel front desk, swinging slightly, the cord stretched, a faint tape-hiss haze in the air, neon light."
+    },
+    "barstow_fireworks": {
+     "prompt": "Cass Moreno, a red-haired woman in a red leather jacket with a gold star painted over her left eye, seen from behind, standing in the doorway of a motel lobby looking out at the night sky over a small desert town, fireworks bursting silently in red, gold and blue over Barstow, the neon motel sign in the foreground.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "tote_board": {
+     "prompt": "A giant 1980s telethon tote board of light bulbs above a burning TV soundstage, reading FINISH 2,114,902 and SPARE 11 in glowing numbers, sparks and smoke drifting in front of it."
+    },
+    "canned_applause": {
+     "prompt": "A TV studio audience section of empty seats where cardboard cut-out audience members with painted smiles are propped up, a speaker box labelled APPLAUSE blaring, red ON AIR sign, smoke from the fire drifting across. Eerie satire."
+    },
+    "cameras_shot": {
+     "prompt": "Cass Moreno, a red-haired woman in a red leather jacket with a gold star painted over her left eye, seen from behind in a burning TV studio, aiming a pistol at a row of big studio cameras; the nearest camera's lens is shattered and sparking; the monitors on the wall behind turn to white static one after another.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "dead_applause": {
+     "prompt": "A haunted mansion ballroom after a fire has just gone out: thin smoke rising from a scorched circle on the parquet floor, and around it a crowd of pale translucent ghostly guests in 1980s clothes applauding politely, gold stars painted on their faces. Melancholy, no gore."
+    },
+    "holding_tommy": {
+     "prompt": "Cass Moreno, a red-haired woman in a red leather jacket with a gold star painted over her left eye kneeling on a ballroom floor, holding her brother Tommy - a young man with curly brown hair in a blue varsity jacket - in her arms; soft golden flames flicker gently around them like candlelight without burning; ghostly guests watch from the shadows. Tender, dreamlike, not gory.",
+     "refs": [
+      "cass",
+      "tommy"
+     ]
+    },
+    "tv_mansion": {
+     "prompt": "Close-up of an old CRT television at the foot of a motel bed at night: on the screen, through static, a mansion on a hill under a red moon with a banner reading WRAP PARTY over the door; the TV glow is the only light."
+    },
+    "extinguisher": {
+     "prompt": "Close-up at asphalt level on a desert road at night: a red fire extinguisher lying on its side, just dropped, its gauge needle on EMPTY, a burning car blurred in the background and film crew boots nearby."
+    },
+    "star_on_mirror": {
+     "prompt": "A small bathroom mirror ringed with vanity bulbs, with a gold five-pointed star painted directly on the glass in greasepaint, fingerprints in the paint; the room behind it empty, a red leather jacket gone from the hook. Morning light."
+    },
+    "dogs_silent": {
+     "prompt": "A floodlit desert salvage yard at night seen through an office window whose glass has just blown white with a flash; outside, a dozen guard dogs stand frozen and silent, all staring at the window."
+    },
+    "pov_test_pattern": {
+     "prompt": "First-person view from a motel bed at dawn: a hand holding a revolver pointed at an old CRT television that shows a colour-bar test pattern; grey morning light through the blinds; rumpled bedsheets in the foreground."
+    },
+    "phone_ringing": {
+     "prompt": "Close-up of a beige 1980s telephone on a motel nightstand at dawn, ringing so hard the receiver jumps in its cradle, motion blur, a pistol and a smudged tin of gold greasepaint beside it."
+    },
+    "corkboard_note": {
+     "prompt": "Close-up of a police station corkboard at night covered in crime-scene Polaroids with gold star stickers, and a handwritten note pinned in the centre that reads: THE STAR KILLER IS NOT ONE PERSON. CHECK THE CREDITS."
+    },
+    "ev_tape_roll7": {
+     "prompt": "A CRT TV screen showing grainy VHS footage with tracking lines: a burning Cadillac on a desert road, and a stuntwoman walking out of the fire unharmed, film crew silhouettes; a timecode in the corner."
+    },
+    "ev_photo_harcourt": {
+     "prompt": "An old Polaroid on a motel desk: a younger silver-haired man in a HOTSHOT film crew jacket standing next to a man whose face has been scratched out of the photo with a key; handwriting on the white border reads Residuals - A.V."
+    },
+    "ev_tape_vance": {
+     "prompt": "A CRT TV screen showing grainy VHS footage: on a rooftop at dusk, a grey-haired stunt coordinator walks a smiling young man with curly hair to the edge; far below, the ground, and no landing pad."
+    },
+    "ev_photo_kennel": {
+     "prompt": "An old Polaroid pinned in a salvage-yard kennel: a big rottweiler wearing a small HOTSHOT film crew jacket, sitting proudly; written on the border: Employee of the month."
+    },
+    "ev_tape_pilot": {
+     "prompt": "A CRT TV screen split into four grainy VHS security views of a motel at night, a red-haired woman in a doorway in one of them, and a title card overlay reading NEXT WEEK - THE DOGS."
+    },
+    "ev_photo_casting": {
+     "prompt": "A clipped stack of Polaroids on a TV control desk: the top one shows a girl in a harlequin jacket at an arcade machine labelled THE FOOL; the edge of another shows a tired policewoman at a desk; the last one has its face cut out with a gold star sticker over the hole."
+    },
+    "ev_tape_dream": {
+     "prompt": "A CRT TV screen showing grainy VHS footage of a wild 1987 film crew party in a mansion: people cheering at a television in the corner that shows a car exploding; a man in aviator sunglasses in the crowd clapping."
+    },
+    "ev_photo_nursery": {
+     "prompt": "An old faded Polaroid of two children, a boy of about ten with curly brown hair and a red-haired girl of about eight, sitting on the hood of a black Cadillac wearing paper gold stars, sunny 1970s California driveway; handwriting on the border: My two stars."
     }
    }
   },
@@ -356,6 +444,61 @@
     },
     "rug": {
      "prompt": "Ornate blood-red Persian rug pattern with gold and black motifs, worn."
+    }
+   }
+  },
+  "ui": {
+   "style": "A single glowing neon-tube sign icon, 1980s synthwave style, bright tube with a soft glow halo, centred, on a fully transparent background, no text, no wall, no frame.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "icon_phone": {
+     "prompt": "A classic 1980s telephone handset drawn as a single continuous hot-pink neon tube with glow: curved grip, round ear cup, round mouth cup, short coiled cord."
+    },
+    "icon_walkie": {
+     "prompt": "A 1980s walkie-talkie with its antenna up, drawn as a cyan neon tube, a small speaker grille, tilted slightly."
+    }
+   }
+  },
+  "posters": {
+   "style": "A painted 1980s movie poster in the style of classic airbrushed and oil-painted theatrical one-sheets: dramatic key art, a big bold stylised title treatment, a tagline, small credits block at the bottom with fictional names. Vertical poster format. Neon synthwave palette touches. All names and titles are fictional parodies.",
+   "defaults": {
+    "size": "1024x1536",
+    "quality": "medium"
+   },
+   "entries": {
+    "psychoe_motel": {
+     "prompt": "Title: PSYCHOE MOTEL. Tagline: Check in. Check out. Check again. Key art: a lonely roadside motel at night with a neon VACANCY sign, a silhouette in an upstairs window, rain."
+    },
+    "mad_maxine": {
+     "prompt": "Title: MAD MAXINE. Tagline: The road has no speed limit. Neither does she. Key art: a fierce woman in leather with a shotgun on the hood of a souped-up muscle car in a desert wasteland at sunset."
+    },
+    "die_hardly": {
+     "prompt": "Title: DIE HARDLY. Tagline: Twelve floors. One barefoot cop. Zero fire exits. Key art: a skyscraper with an explosion blowing out one floor, a man in a sweaty vest crawling through an air vent."
+    },
+    "beware_of_dogg": {
+     "prompt": "Title: BEWARE OF DOGG. Tagline: Some yards bite back. Key art: a snarling rottweiler with glowing red eyes behind a chain-link fence in a floodlit salvage yard."
+    },
+    "lost_angeles": {
+     "prompt": "Title: LOST ANGELES. Tagline: Everybody's somebody's extra. Key art: a cracked Hollywood-style hillside sign reading LOST, palm trees and a burning sunset over a freeway."
+    },
+    "backdrafted": {
+     "prompt": "Title: BACKDRAFTED. Tagline: It came from the hills. It wants the valley. Key art: two firefighters silhouetted against a towering wall of wildfire over the hills."
+    },
+    "tron_ish": {
+     "prompt": "Title: TRON-ISH. Tagline: Enter the grid. Bring quarters. Key art: a glowing neon grid world with light-cycle trails and a hero in a glowing suit holding an arcade joystick."
+    },
+    "scarfaced": {
+     "prompt": "Title: SCARFACED. Tagline: Say hello to my little friend's lawyer. Key art: a slick gangster in a white suit on a staircase with a pile of cash, pink and teal Miami neon."
+    },
+    "top_gum": {
+     "prompt": "Title: TOP GUM. Tagline: I feel the need... the need for mint. Key art: a cocky pilot in aviator sunglasses blowing a huge bubble of pink gum in front of a fighter jet at sunset."
+    },
+    "back_to_the_futon": {
+     "prompt": "Title: BACK TO THE FUTON. Tagline: He's never been late for a nap. Key art: a teen in a puffer vest riding a flying futon trailing fire tracks, a clock tower behind him, lightning."
     }
    }
   }

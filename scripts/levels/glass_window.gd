@@ -42,11 +42,22 @@ func shatter(dir: Vector2) -> void:
 	remove_from_group("glass")
 	Audio.play_at("glass", global_position)
 	Effects.glass(global_position, dir)
-	# a usable shard lands on the far side: a quick, fragile blade
+	# the usable shard (a quick, fragile blade) drops on the player's side of
+	# the frame, where they can reach it; some glass sprays back that way too
+	var normal := Vector2(0, 1) if size.x > size.y else Vector2(1, 0)
+	var side := 1.0
+	var pl := get_tree().get_first_node_in_group("player") as Node2D
+	if pl:
+		side = signf((pl.global_position - global_position).dot(normal))
+		if side == 0.0:
+			side = 1.0
+	elif dir != Vector2.ZERO:
+		side = -signf(dir.dot(normal))
+	Effects.glass(global_position, normal * side)
 	var wd: WeaponData = DB.weapon(&"glass_shard")
 	var host := get_parent()
 	if wd and host:
-		var land := global_position + (dir if dir != Vector2.ZERO else Vector2.DOWN).normalized() * 12.0
+		var land := global_position + normal * side * 12.0 + normal.orthogonal() * randf_range(-5.0, 5.0)
 		(func(): WeaponPickup.spawn(host, WeaponInstance.create(wd), land)).call_deferred()
 	Events.noise.emit(global_position, 260.0, &"glass", null)
 	queue_redraw()

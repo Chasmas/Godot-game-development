@@ -156,6 +156,7 @@ level = {
         "boss": "PUT OUT THE FIREMAN", "escape": "GET OUT BEFORE THE ROOF COMES DOWN",
         "cleared": "STAGE NINE IS DARK", "escape_hint": "THE STAGE IS BURNING. BACK TO THE CAR.",
     },
+    "intro_call": {"dialogue": "call_m03", "caller": "rudy", "device": "walkie"},
     "boss": {"intro": "m03_boss_intro", "down": "m03_boss_down"},
     "enemies": {
         "20,46": {"kind": "security", "patrol": [[20, 46], [34, 46], [34, 51], [20, 51]]},

@@ -79,6 +79,10 @@ func _break(dir: Vector2) -> void:
 	if float(absi(hash(str(cell) + kind)) % 100) / 100.0 < float(DEFS[kind].loot):
 		var l := LootPickup.new()
 		l.kind = ["ammo", "ammo", "cash", "flare", "bottle", "knife"][absi(hash(str(cell))) % 6]
+		# now and then something better is hidden in there
+		var rare_roll := absi(hash(str(cell) + "rare")) % 100
+		if rare_roll < 14:
+			l.kind = ["upgrade", "guard", "spotlight", "gun"][rare_roll % 4]
 		l.position = position
 		get_parent().add_child.call_deferred(l)
 	queue_free()
@@ -180,17 +184,67 @@ class LootPickup extends Node2D:
 				var wd: WeaponData = DB.weapon(StringName(kind))
 				if wd:
 					WeaponPickup.spawn(get_parent(), WeaponInstance.create(wd), global_position)
+			"upgrade":
+				var id := Upgrades.roll(p.upgrades.keys(), [])
+				if id == &"":
+					Score.add_bonus("JACKPOT", 1000, global_position)
+				else:
+					p.add_upgrade(id)
+					label = tr(str(Upgrades.def(id).get("name", "UPGRADE")))
+			"guard":
+				p.armor_hits += 1
+				label = "+1 GUARD"
+			"spotlight":
+				if p.ability:
+					p.ability.add_charge(1.0)
+				label = "SPOTLIGHT READY"
+			"gun":
+				var gd: WeaponData = DB.weapon([&"shotgun", &"smg", &"revolver", &"rifle"][absi(hash(str(global_position))) % 4])
+				if gd:
+					WeaponPickup.spawn(get_parent(), WeaponInstance.create(gd), global_position)
+				label = "STASHED PIECE"
 		_taken = true
 		Audio.play("pickup", -6.0, 1.1)
+		if is_rare():
+			Audio.play("upgrade", -4.0)
+			PostFX.flash(UIStyle.GOLD, 0.12)
 		if label != "":
 			Effects.popup(tr(label), global_position, UIStyle.GOLD)
 		queue_free()
+	func is_rare() -> bool:
+		return kind in ["upgrade", "guard", "spotlight", "gun"]
 	func _draw() -> void:
 		var bob := sin(_t * 4.0) * 1.2
 		var pop := clampf(_t / 0.2, 0.0, 1.0)
 		draw_set_transform(Vector2(0, -2 + bob), 0.0, Vector2.ONE * pop)
 		draw_circle(Vector2.ZERO, 6.0 + sin(_t * 5.0), Color(UIStyle.GOLD, 0.15))
+		if is_rare():
+			# rare: a turning rainbow ring and sparkles, so it reads from afar
+			var hue := fmod(_t * 0.35, 1.0)
+			draw_arc(Vector2.ZERO, 9.0, _t * 3.0, _t * 3.0 + TAU * 0.75, 18, Color.from_hsv(hue, 0.7, 1.0, 0.9), 1.5)
+			for k in 3:
+				var sp := Vector2.from_angle(_t * 2.0 + k * TAU / 3.0) * 11.0
+				var tw := absf(sin(_t * 6.0 + k))
+				draw_line(sp - Vector2(2, 0) * tw, sp + Vector2(2, 0) * tw, Color(1, 1, 0.85, tw), 1.0)
+				draw_line(sp - Vector2(0, 2) * tw, sp + Vector2(0, 2) * tw, Color(1, 1, 0.85, tw), 1.0)
 		match kind:
+			"upgrade":
+				draw_rect(Rect2(-5, -3, 10, 7), Color("0b0710"))
+				draw_rect(Rect2(-4.5, -2.5, 9, 6), Color("3a2a50"))
+				draw_rect(Rect2(-1.5, -4, 3, 1.5), Color("c8a040"))
+				draw_rect(Rect2(-4.5, 0, 9, 1), Color("ffd23f"))
+			"guard":
+				draw_colored_polygon(PackedVector2Array([Vector2(0, -5), Vector2(4, -3), Vector2(3, 2), Vector2(0, 5), Vector2(-3, 2), Vector2(-4, -3)]), Color("35e0ff"))
+				draw_colored_polygon(PackedVector2Array([Vector2(0, -3), Vector2(2, -2), Vector2(1.5, 1), Vector2(0, 3), Vector2(-1.5, 1), Vector2(-2, -2)]), Color("0b3a50"))
+			"spotlight":
+				draw_circle(Vector2.ZERO, 3.5, Color("ffd23f"))
+				for k in 8:
+					var d := Vector2.from_angle(k * TAU / 8.0 + _t)
+					draw_line(d * 4.5, d * 6.5, Color("ffd23f"), 1.0)
+			"gun":
+				draw_rect(Rect2(-5, -1.5, 10, 3), Color("0b0710"))
+				draw_rect(Rect2(-4.5, -1, 9, 2), Color("8a8e9a"))
+				draw_rect(Rect2(-4, 0, 2, 3.5), Color("5a3a22"))
 			"ammo":
 				for i in 3:
 					draw_rect(Rect2(-3 + i * 2.2, -3, 1.6, 6), Color("0b0710"))

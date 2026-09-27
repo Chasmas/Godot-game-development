@@ -162,5 +162,25 @@ def textures():
     print("textures:", n)
 
 
+def posters():
+    """Vertical movie posters -> 16:9 frames for the inspect view: the poster
+    centred on a blurred, darkened wash of itself (painted/poster_<id>)."""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "posters", "*.webp")):
+        pid = os.path.basename(f)[:-5]
+        im = Image.open(f).convert("RGB")
+        bg = im.resize((1280, int(1280 * im.height / im.width)), Image.LANCZOS)
+        top = (bg.height - 720) // 2
+        bg = bg.crop((0, top, 1280, top + 720)).filter(ImageFilter.GaussianBlur(18))
+        bg = Image.eval(bg, lambda v: int(v * 0.35))
+        ph = 680
+        pw = int(im.width * ph / im.height)
+        bg.paste(im.resize((pw, ph), Image.LANCZOS), ((1280 - pw) // 2, 20))
+        bg.save(out("assets", "art", "painted", "poster_" + pid + ".webp"), "WEBP", quality=82, method=6)
+        glow_mask(bg).save(out("assets", "art", "painted", "poster_" + pid + "_glow.png"), optimize=True)
+        n += 1
+    print("posters:", n)
+
+
 if __name__ == "__main__":
-    shots(); portraits(); sprites(); textures()
+    shots(); portraits(); sprites(); textures(); posters()

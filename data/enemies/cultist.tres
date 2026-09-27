@@ -15,3 +15,4 @@ preferred_range = 150.0
 view_distance = 300.0
 hearing_mult = 1.8
 notes = "Hooded ushers who keep the party seated. They shoot."
+fleshy = true

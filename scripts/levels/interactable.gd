@@ -78,6 +78,26 @@ func _draw() -> void:
 		"car":
 			if enabled:
 				draw_arc(Vector2.ZERO, 10.0 + sin(_t * 3.0) * 1.5, 0, TAU, 20, Color(UIStyle.PINK, 0.8), 1.5)
+		"charge":
+			if not enabled:
+				return
+			# a satchel of pyro charges, bobbing, ringed in gold
+			draw_rect(Rect2(-6, -4 + bob, 12, 8), ink)
+			draw_rect(Rect2(-5, -3 + bob, 10, 6), Color(0.6, 0.14, 0.1))
+			for i in 3:
+				draw_rect(Rect2(-4 + i * 3, -3 + bob, 2, 6), Color(0.85, 0.2, 0.14))
+			draw_line(Vector2(-5, bob), Vector2(5, bob), Color(0.95, 0.85, 0.3), 1.0)
+			draw_circle(Vector2(3, -2 + bob), 1.0, Color(1, 0.2, 0.1, 0.5 + 0.5 * sin(_t * 8.0)))
+			draw_arc(Vector2(0, bob), 10.0, 0, TAU, 16, Color(UIStyle.GOLD, 0.35 + 0.25 * sin(_t * 5.0)), 1.0)
+		"plant":
+			if not enabled:
+				return
+			# where the charge goes: a pulsing target on the doors
+			var r := 9.0 + sin(_t * 5.0) * 1.5
+			draw_arc(Vector2.ZERO, r, 0, TAU, 20, Color(1.0, 0.3, 0.2, 0.9), 1.5)
+			for k in 4:
+				var d := Vector2.from_angle(k * PI * 0.5)
+				draw_line(d * (r - 3.0), d * (r + 3.0), Color(1.0, 0.3, 0.2, 0.9), 1.5)
 		"switch":
 			draw_rect(Rect2(-3, -4, 6, 8), ink)
 			draw_rect(Rect2(-2, -3 if enabled else 0, 4, 3), UIStyle.GOLD)

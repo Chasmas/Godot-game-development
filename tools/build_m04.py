@@ -141,6 +141,7 @@ level = {
         "boss": "TOP BILLING", "escape": "WAKE UP. GET TO THE CAR.", "cleared": "THE PARTY'S OVER",
         "escape_hint": "The car's still out front. It isn't burning. Yet.",
     },
+    "intro_call": {"dialogue": "call_m04", "caller": "tommy", "device": "phone"},
     "boss": {"intro": "m04_boss_intro", "down": "m04_boss_down"},
     "reinforcement_kinds": ["zombie", "ghoul", "zombie", "hellhound"],
     "arcade_roster": [[1, "zombie", 5.0], [1, "ghoul", 2.0], [2, "hellhound", 1.5], [3, "cultist", 2.0], [4, "demon", 1.0], [6, "ghoul", 2.0]],

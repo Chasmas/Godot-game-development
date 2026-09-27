@@ -190,6 +190,12 @@ func _process(_delta: float) -> void:
 		_hitstop_until = 0
 		_apply_time_scale()
 
+## Mission-start calls: off in headless test runs (they'd hold the dialogue
+## box while a test drives it) unless a test asks for them.
+var force_intro_calls := false
+func intro_calls_enabled() -> bool:
+	return force_intro_calls or DisplayServer.get_name() != "headless"
+
 ## Arcade TURBO runs the whole world a notch faster.
 func _base_speed() -> float:
 	return 1.2 if modifiers.get("turbo", false) and not campaign_mode else 1.0

@@ -1,0 +1,34 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "rudy",
+   "text": "Is this thing on? Miss Moreno? It's Rudy. From the door. I'm in the green room closet. Don't ask.",
+   "auto": 6.2,
+   "next": "b"
+  },
+  "b": {
+   "speaker": "rudy",
+   "text": "Security's everywhere, the stagehands have pipes, and Mr. Kowalski is on the Cadillac in the middle of the stage. He's been polishing a flamethrower for an hour.",
+   "auto": 9.5,
+   "next": "c"
+  },
+  "c": {
+   "speaker": "rudy",
+   "text": "The control room's up the east side. And the sprinklers really are fake. I checked. I'm a professional.",
+   "auto": 6.6,
+   "next": "d"
+  },
+  "d": {
+   "speaker": "cass",
+   "text": "Stay in the closet, Rudy.",
+   "auto": 2.6,
+   "next": "e"
+  },
+  "e": {
+   "speaker": "rudy",
+   "text": "Copy. Closet. Great. Love the closet.",
+   "auto": 3.2
+  }
+ }
+}

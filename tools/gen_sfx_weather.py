@@ -183,5 +183,90 @@ def sprinkler():
     write("sprinkler", norm(fade(x + hiss + cough), 0.8))
 
 
+# ------------------------------------------------------------------ the dream: voices and creatures
+def voice(d, f0_curve, vowel, breath=0.3, jitter=0.02, rough=0.0):
+    """A synthetic voice: glottal saw on a pitch curve through two vowel
+    formants, with breath noise, pitch jitter and optional rasp."""
+    tt = t(d)
+    f0 = np.interp(tt, np.linspace(0, d, len(f0_curve)), f0_curve)
+    f0 = f0 * (1 + jitter * (smooth_noise(d, 18.0) - 0.5) * 2)
+    ph = np.cumsum(f0) / SR
+    src = 2.0 * (ph % 1.0) - 1.0
+    src = src * (1 - breath) + noise(d) * breath
+    if rough > 0:
+        src *= 1 + rough * (np.sin(2 * np.pi * ph * 0.5) > 0)
+    f1, f2 = vowel
+    return band(src, f1 * 0.75, f1 * 1.3) + 0.55 * band(src, f2 * 0.8, f2 * 1.25)
+
+
+def distance(x, far=0.6):
+    """Push a sound into another room: low-passed, reverbed, quieter."""
+    return reverb_small(lp(x, 2600 - 1600 * far), 0.5 + 0.3 * far) * (1 - 0.4 * far)
+
+
+def scream_f():
+    d = 1.9
+    x = voice(d, [520, 900, 1150, 1050, 820, 600], (850, 1250), 0.35, 0.05)
+    env = np.minimum(t(d) / 0.08, 1.0) * np.exp(-np.maximum(t(d) - 1.1, 0) * 3.5)
+    write("scream_f", norm(fade(distance(x * env, 0.7), 0.01, 0.3), 0.7))
+
+
+def scream_m():
+    d = 1.6
+    x = voice(d, [220, 380, 420, 360, 250], (700, 1100), 0.4, 0.06, 0.4)
+    env = np.minimum(t(d) / 0.06, 1.0) * np.exp(-np.maximum(t(d) - 0.9, 0) * 4.0)
+    write("scream_m", norm(fade(distance(np.tanh(x * env * 2), 0.75), 0.01, 0.3), 0.7))
+
+
+def cry():
+    """Sobbing, far off: short broken breaths that catch in the throat."""
+    d = 4.2
+    n = int(d * SR)
+    x = np.zeros(n)
+    at = 0.1
+    while at < d - 0.6:
+        L = rng.uniform(0.22, 0.55)
+        seg = voice(L, [330, rng.uniform(380, 460), 300], (600, 1000), 0.45, 0.04)
+        seg *= np.sin(np.linspace(0, np.pi, len(seg))) ** 1.5
+        i = int(at * SR)
+        x[i:i + len(seg)] += seg[:n - i]
+        at += L + rng.uniform(0.08, 0.5)
+    inhale = hp(noise(d), 2500) * 0.05
+    write("cry", norm(fade(distance(x + inhale, 0.8), 0.05, 0.6), 0.6))
+
+
+def moan():
+    d = 1.8
+    x = voice(d, [105, 96, 88, 92, 80], (480, 780), 0.35, 0.05, 0.6)
+    env = np.minimum(t(d) / 0.25, 1.0) * np.exp(-np.maximum(t(d) - 1.2, 0) * 3)
+    write("moan", norm(fade(np.tanh(x * env * 1.6), 0.02, 0.3), 0.75))
+
+
+def shriek():
+    d = 0.9
+    x = voice(d, [900, 1500, 1350, 1100], (1400, 2600), 0.5, 0.12)
+    env = np.minimum(t(d) / 0.03, 1.0) * np.exp(-t(d) * 3.0)
+    write("shriek", norm(fade(np.tanh(x * env * 3), 0.005, 0.1), 0.75))
+
+
+def roar():
+    d = 1.6
+    x = voice(d, [70, 62, 55, 48], (380, 650), 0.45, 0.08, 1.0)
+    sub = np.sin(2 * np.pi * np.cumsum(np.interp(t(d), [0, d], [55, 38])) / SR) * 0.6
+    env = np.minimum(t(d) / 0.1, 1.0) * np.exp(-np.maximum(t(d) - 0.9, 0) * 3)
+    write("roar", norm(fade(np.tanh((x + sub) * env * 2.5), 0.01, 0.3), 0.85))
+
+
+def phone_pickup():
+    d = 0.5
+    click = np.zeros(int(d * SR)); click[:400] = band(rng.uniform(-1, 1, 400), 800, 4000) * np.linspace(1, 0, 400)
+    line = band(noise(d), 300, 3000) * 0.08 * (t(d) > 0.08)
+    write("phone_pickup", norm(fade(click + line), 0.7))
+
+
 if __name__ == "__main__":
+    import sys
+    if "--dream" in sys.argv:
+        scream_f(); scream_m(); cry(); moan(); shriek(); roar(); phone_pickup()
+        raise SystemExit
     wind_loop(); fire_loop(); flame_burst(); flame_ignite(); applause(); laugh_track(); tote_ding(); on_air_buzz(); sprinkler()

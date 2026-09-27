@@ -513,12 +513,44 @@ class _DroppedMag extends Node2D:
 
 
 ## Soft elliptical contact shadow (does not rotate), grounds the character.
+## The character's shadow: a small contact shadow under the feet, plus the
+## body's own silhouette (legs, torso, gun) thrown away from each of the
+## (up to two) lights that reach them - longer and fainter the further they
+## stand from a lamp, turning as they walk past it, moving with every pose.
 class DropShadow extends Node2D:
+	var _smooth := LightProbe.Smoother.new()
+	var _probe: Array = []
 	func _ready() -> void:
 		z_index = -1
 		z_as_relative = true
 		show_behind_parent = true
+	func _process(delta: float) -> void:
+		_smooth.update(get_tree(), global_position, delta)
+		_probe = _smooth.top(2)
+		queue_redraw()
 	func _draw() -> void:
-		draw_set_transform(Vector2(1.5, 2.5), 0.0, Vector2(1.0, 0.62))
-		draw_circle(Vector2.ZERO, 8.0, Color(0, 0, 0, 0.28))
-		draw_circle(Vector2.ZERO, 6.0, Color(0, 0, 0, 0.22))
+		var v := get_parent() as CharacterVisual
+		# contact shadow
+		draw_set_transform(Vector2(0.5, 1.5), 0.0, Vector2(1.0, 0.62))
+		draw_circle(Vector2.ZERO, 6.5, Color(0, 0, 0, 0.26))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		if v == null or v.rig == null or not v.visible:
+			return
+		for pr in _probe:
+			var dir: Vector2 = pr.dir
+			var k: float = pr.k
+			var length := 2.0 + 7.0 * float(pr.far)
+			var alpha := clampf(0.12 + 0.3 * k, 0.0, 0.4)
+			var base := Transform2D(0.0, dir * length) * LightProbe.stretch(dir, 1.25 + 0.5 * float(pr.far))
+			var col := Color(0.0, 0.0, 0.03, alpha)
+			for spr in [v.legs, v.torso, v.weapon_sprite]:
+				var sp := spr as Sprite2D
+				if sp == null or sp.texture == null or not sp.visible:
+					continue
+				var xf: Transform2D = sp.transform if sp.get_parent() == v else v.rig.transform * sp.transform
+				draw_set_transform_matrix(base * xf)
+				var ts := sp.texture.get_size()
+				var r := Rect2(-ts * 0.5 if sp.centered else Vector2.ZERO, ts)
+				r.position += sp.offset
+				draw_texture_rect(sp.texture, r, false, col)
+		draw_set_transform_matrix(Transform2D.IDENTITY)

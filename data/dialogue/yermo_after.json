@@ -130,7 +130,7 @@
   "r3": {
    "speaker": "narration",
    "text": "The window goes white. Out in the yard, every dog stops barking at once.",
-   "shot": "red_dot",
+   "shot": "dogs_silent",
    "sfx": "sniper",
    "event": "gunshot",
    "set": {

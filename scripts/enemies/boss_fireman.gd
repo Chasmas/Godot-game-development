@@ -30,6 +30,7 @@ var _flame: FlameFx
 func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	super.setup(p_data, p_level, p_facing)
 	flashlight.visible = false
+	p2_hits = 1
 	_flame = FlameFx.new()
 	_flame.boss = self
 	add_child(_flame)

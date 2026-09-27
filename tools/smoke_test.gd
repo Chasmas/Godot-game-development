@@ -264,10 +264,29 @@ func _run() -> void:
 	var boss := lvl.boss
 	check(boss != null, "boss exists")
 	if boss:
-		p.global_position = Vector2(58 * 16, 34 * 16)
+		# the lobby is sealed: find the charges, plant them, blow the doors
+		check(lvl.breach != null and not lvl.breach.done, "lobby sealed until the breach")
 		p.god_mode = true
-		await frames(30)
-		check(lvl.phase == Level.Phase.BOSS, "boss trigger fires")
+		p.global_position = lvl.breach._charge_it.global_position
+		lvl.breach._charge_it.interact(p)
+		await frames(5)
+		check(lvl.breach.has_charge and lvl.breach._plant_it.enabled, "picked up the pyro charges")
+		p.global_position = lvl.breach._plant_it.global_position + Vector2(0, 120)
+		lvl.breach._plant_it.interact(p)
+		await frames(5)
+		check(lvl.breach.planted, "charge planted on the lobby doors")
+		for i in 900:
+			await frames(1)
+			if lvl.breach.done:
+				break
+		check(lvl.breach.done, "the doors blow")
+		var all_broken := true
+		for d in lvl.breach.doors:
+			all_broken = all_broken and d.broken
+		check(all_broken and lvl.breach.doors.size() >= 1, "the lobby doors are destroyed")
+		await frames(200)
+		check(lvl.phase == Level.Phase.BOSS, "the breach starts Harcourt's scene")
+		p.global_position = Vector2(58 * 16, 34 * 16)
 		# skip intro dialogue
 		for i in 20:
 			if not Dialogue.active:
@@ -276,13 +295,16 @@ func _run() -> void:
 			await frames(3)
 		await frames(10)
 		check(boss.active, "boss activated")
-		for i in 3:
+		for i in 4:
 			boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 			await frames(10)
-		check(boss.phase == 2, "boss enters phase 2 after 3 armour hits")
+		check(boss.phase == 2, "boss enters phase 2 after 4 armour hits")
 		for e in get_tree().get_nodes_in_group("enemies"):
 			if e.is_alive() and not e is BossNightManager:
 				e.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, e.global_position, Vector2.RIGHT, &"pistol"))
+		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
+		await frames(10)
+		check(boss.is_alive() and not boss._defeated, "Harcourt takes a second hit in the dark")
 		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 		await frames(160)
 		check(Dialogue.active, "boss-down dialogue plays")

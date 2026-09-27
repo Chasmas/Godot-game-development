@@ -39,7 +39,7 @@
   "d": {
    "speaker": "narration",
    "text": "The television at the foot of the bed stops showing static. It shows a house on a hill, and a banner over the door. WRAP PARTY.",
-   "shot": "villa_gate",
+   "shot": "tv_mansion",
    "sfx": "vhs_static",
    "next": "e"
   },

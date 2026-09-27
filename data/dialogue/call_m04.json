@@ -1,0 +1,34 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "tommy",
+   "text": "Cassie? It's me. Don't hang up. I know what this is. I'm calling from the house.",
+   "auto": 5.4,
+   "next": "b"
+  },
+  "b": {
+   "speaker": "tommy",
+   "text": "Everybody came. The guards from the motel, Arlo's boys, the stagehands. They've got stars on their faces now. Your stars.",
+   "auto": 7.4,
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "Tommy. You're dead.",
+   "auto": 2.3,
+   "next": "d"
+  },
+  "d": {
+   "speaker": "tommy",
+   "text": "So are they. Nobody here minds. Come up to the ballroom. There's a gun on every table. Mom would hate it.",
+   "auto": 6.7,
+   "next": "e"
+  },
+  "e": {
+   "speaker": "dead",
+   "text": "Checkout was midnight... checkout was midnight...",
+   "auto": 3.9
+  }
+ }
+}

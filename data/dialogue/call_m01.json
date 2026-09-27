@@ -1,0 +1,28 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "voice",
+   "text": "Evening, Miss Moreno. You parked where Harcourt can't see you. Good instincts.",
+   "auto": 5.3,
+   "next": "b"
+  },
+  "b": {
+   "speaker": "voice",
+   "text": "Room 204 is upstairs, east side. The night manager keeps the office off the lobby. Twenty-odd guests tonight. None of them are guests.",
+   "auto": 8.1,
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "Why me?",
+   "auto": 1.8,
+   "next": "d"
+  },
+  "d": {
+   "speaker": "voice",
+   "text": "Because you already know how this scene ends. Wear the star. Hit your mark.",
+   "auto": 5.2
+  }
+ }
+}

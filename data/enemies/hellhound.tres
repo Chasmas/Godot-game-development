@@ -20,3 +20,4 @@ hearing_mult = 2.0
 alert_others_radius = 300.0
 can_be_knocked_down = true
 notes = "The Yermo dogs, burning from the inside. Two hits."
+fleshy = true

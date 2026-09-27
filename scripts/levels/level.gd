@@ -49,6 +49,7 @@ var crowd: Crowd
 var visual_3d: Visual3DOverlay
 var arcade: ArcadeDirector          ## arcade WAVES / ENDLESS run, when set
 var nightmare: NightmareDirector    ## the dream level's scares and risen dead
+var breach: Breach                  ## a sealed room to blow open (the lobby)
 
 var _checkpoints_hit: Dictionary = {}
 var _hints_shown: Dictionary = {}
@@ -81,8 +82,15 @@ func _ready() -> void:
 	builder = b
 	var decor_root := _root("Decor")
 	Decor.build(self, decor_root, b, data.get("decor", []))
+
+	var wall_art: WallArt = null
+	if data.get("wall_art", true) and SaveManager.get_setting("set_dressing", true):
+		wall_art = WallArt.new()
+		wall_art.name = "WallArt"
+		decor_root.add_child(wall_art)
+		wall_art.build(b)
 	if SaveManager.get_setting("set_dressing", true):
-		Dressing.build(self, b)
+		Dressing.build(self, b, wall_art)
 	var motes := AmbientMotes.new()
 	motes.level = self
 	add_child(motes)
@@ -212,6 +220,12 @@ func _ready() -> void:
 		arcade.name = "Arcade"
 		add_child(arcade)
 		arcade.setup(self)
+	if data.has("breach") and arcade == null:
+		breach = Breach.new()
+		breach.name = "Breach"
+		add_child(breach)
+		breach.setup(self, data.breach, st.get("breach", {}))
+		breach.breached.connect(_on_breached)
 	if data.get("nightmare", false):
 		nightmare = NightmareDirector.new()
 		nightmare.name = "Nightmare"
@@ -235,6 +249,18 @@ func _ready() -> void:
 		_update_objective()
 	player.ability._emit()
 	player._emit_weapon()
+	# the call as she arrives: first load only (not after a death, a
+	# checkpoint or in arcade), once the title card has had its moment
+	var ic: Dictionary = data.get("intro_call", {})
+	if not ic.is_empty() and arcade == null and Game.attempts <= 1 and st.is_empty() and Game.intro_calls_enabled():
+		get_tree().create_timer(3.4, false).timeout.connect(func():
+			if not is_inside_tree() or not player.alive:
+				return
+			var call := IntroCall.new()
+			call.dialogue_id = str(ic.get("dialogue", ""))
+			call.caller = str(ic.get("caller", "voice"))
+			call.device = str(ic.get("device", "phone"))
+			add_child(call))
 
 func _load_level(path: String) -> Dictionary:
 	var f := FileAccess.open(path, FileAccess.READ)
@@ -497,14 +523,14 @@ var _mission_start := Vector2.ZERO
 ## yard). Deterministic, spaced out, clear of doors and the start.
 const SMASH_BY_FLOOR := {
 	".": ["vase", "chair", "box"], ",": ["box", "vase", "crate"], "_": ["crate", "box"], "=": ["vase"],
-	"+": ["crate", "box", "crate"], ";": ["drum", "crate"], "\"": ["chair", "vase"],
+	"+": ["crate", "box", "crate"], ";": ["drum", "crate"], "\"": ["chair", "vase"], "-": ["crate", "box", "chair"],
 }
 func _scatter_smashables() -> void:
 	if builder == null:
 		return
 	var placed: Array[Vector2i] = []
 	var start := Vector2i(_mission_start / 16.0)
-	var budget := 20
+	var budget := 30
 	var rng := RandomNumberGenerator.new()
 	rng.seed = hash(str(data.get("id", "lvl")))
 	var cells: Array[Vector2i] = []
@@ -569,13 +595,88 @@ func _build_checkpoint_markers() -> void:
 	for i in cps.size():
 		var r: Array = cps[i].rect
 		var rect := Rect2i(r[0], r[1], r[2], r[3])
-		var cell := _entrance_cell(rect, from)
 		var m := CheckpointMarker.new()
-		m.position = Vector2(cell) * 16.0 + Vector2(8, 8)
+		m.position = _door_point(rect, from)
 		floor_root.add_child(m)
 		if _checkpoints_hit.has(str(i)):
 			m.activate(true)
 		_cp_markers.append(m)
+
+## Where a checkpoint marker goes: one step inside the area's door nearest
+## the way you come in, centred on the doorway (a double door's middle). An
+## area without a door gets the walkable edge cell nearest your approach.
+func _door_point(rect: Rect2i, from: Vector2) -> Vector2:
+	var best := Vector2.INF
+	var bd := INF
+	var seen := {}
+	for y in range(rect.position.y - 1, rect.end.y + 1):
+		for x in range(rect.position.x - 1, rect.end.x + 1):
+			var c := Vector2i(x, y)
+			if seen.has(c) or rect.has_point(c) or not builder:
+				continue
+			var ch := builder.ch(x, y)
+			if ch != "D" and ch != "L":
+				continue
+			# the whole doorway run (double doors are two cells)
+			var run: Array[Vector2i] = [c]
+			seen[c] = true
+			for step in [Vector2i(1, 0), Vector2i(0, 1)]:
+				var q: Vector2i = c + step
+				while (builder.ch(q.x, q.y) == "D" or builder.ch(q.x, q.y) == "L") and not rect.has_point(q):
+					run.append(q)
+					seen[q] = true
+					q += step
+			var mid := Vector2.ZERO
+			for rc in run:
+				mid += Vector2(rc) * 16.0 + Vector2(8, 8)
+			mid /= run.size()
+			# step inward, perpendicular to the doorway
+			var inward := Vector2.ZERO
+			for o in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
+				if rect.has_point(c + o):
+					inward = Vector2(o)
+			if inward == Vector2.ZERO:
+				continue
+			var p := mid + inward * 18.0
+			var d := p.distance_to(from)
+			if d < bd:
+				bd = d
+				best = p
+	if best != Vector2.INF:
+		return best
+	var cell := _entrance_cell(rect, from)
+	return Vector2(cell) * 16.0 + Vector2(8, 8)
+
+## The open cell nearest the middle of an area, clear of furniture and
+## props around it, so the marker (and the respawn) sits centred in the room.
+func _centre_cell(rect: Rect2i, fallback: Vector2i) -> Vector2i:
+	var c := rect.get_center()
+	var best := fallback
+	var bd := INF
+	for r in range(0, 8):
+		for dy in range(-r, r + 1):
+			for dx in range(-r, r + 1):
+				if maxi(absi(dx), absi(dy)) != r:
+					continue
+				var q := Vector2i(c.x + dx, c.y + dy)
+				if not rect.has_point(q) or not nav.is_in_boundsv(q) or nav.is_point_solid(q):
+					continue
+				# want a little room around it
+				var clear := 0
+				for oy in range(-1, 2):
+					for ox in range(-1, 2):
+						var n := q + Vector2i(ox, oy)
+						if nav.is_in_boundsv(n) and not nav.is_point_solid(n):
+							clear += 1
+				if clear < 8:
+					continue
+				var d := Vector2(q - c).length()
+				if d < bd:
+					bd = d
+					best = q
+		if bd < INF:
+			return best
+	return best
 
 ## The walkable cell just inside the area next to a way in (a door or an
 ## open gap), preferring the one nearest the mission start: the way you'll
@@ -646,6 +747,7 @@ func _save_checkpoint(cp_name: String, spawn: Vector2) -> void:
 		"score": Score.snapshot(),
 		"upgrades": player.upgrade_state(),
 		"dead_zones": dead_zones.keys(),
+		"breach": breach.state() if breach else {},
 	}
 	Events.checkpoint_reached.emit(_checkpoints_hit.size())
 	hud.show_checkpoint(tr(cp_name))
@@ -657,7 +759,8 @@ func _update_objective() -> void:
 		Phase.CLEAR:
 			var n := remaining_enemies().size()
 			if boss and is_instance_valid(boss) and boss.is_alive():
-				Events.objective_changed.emit("%s  ·  %s  ·  %s" % [_obj("clear", "CLEAR THE MOTEL"), tr("%d LEFT") % n, _obj("find_boss", "FIND THE NIGHT MANAGER")])
+				var find := breach.objective() if breach and not breach.done else _obj("find_boss", "FIND THE NIGHT MANAGER")
+				Events.objective_changed.emit("%s  ·  %s  ·  %s" % [_obj("clear", "CLEAR THE MOTEL"), tr("%d LEFT") % n, find])
 			else:
 				Events.objective_changed.emit(tr("%s  ·  %d LEFT") % [_obj("clear", "CLEAR THE MOTEL"), n])
 		Phase.BOSS:
@@ -775,7 +878,7 @@ func _on_collectible(it: Interactable, _by: Node) -> void:
 	Events.collectible_found.emit(StringName(it.item_id))
 	hud.show_banner(tr(str(it.get_meta("title", ""))), 2.0, UIStyle.GOLD)
 	await get_tree().create_timer(0.4).timeout
-	var tmp := {"start": "a", "nodes": {"a": {"speaker": "narration", "text": str(it.get_meta("text", ""))}}}
+	var tmp := {"start": "a", "nodes": {"a": {"speaker": "narration", "text": str(it.get_meta("text", "")), "shot": "ev_" + str(it.item_id)}}}
 	_run_inline_dialogue(tmp)
 
 func _run_inline_dialogue(d: Dictionary) -> void:
@@ -809,6 +912,15 @@ func _boss_dialogue(which: String) -> String:
 
 ## The Fireman's second act: the stage goes up. Fires break out along the
 ## level's "fire_points", the light turns orange, the sprinklers cough dry.
+## The doors are gone: straight into the boss's scene, no walking in.
+func _on_breached() -> void:
+	_update_objective()
+	await get_tree().create_timer(1.1, false).timeout
+	if not is_inside_tree() or player == null or not player.alive:
+		return
+	if boss and is_instance_valid(boss) and boss.is_alive() and not _boss_triggered:
+		_start_boss(true)
+
 func boss_set_ablaze() -> void:
 	var tw := create_tween()
 	tw.tween_property(dark_modulate, "color", Color(ambient.r * 1.15, ambient.g * 0.7, ambient.b * 0.55), 1.2)

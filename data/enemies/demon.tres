@@ -20,3 +20,4 @@ view_distance = 300.0
 view_angle_deg = 180.0
 hearing_mult = 1.5
 notes = "Something wearing a gold star that was never a person. Four hits. Don't let it get close."
+fleshy = true

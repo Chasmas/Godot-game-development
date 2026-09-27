@@ -8,13 +8,13 @@
   "a": {
    "speaker": "narration",
    "text": "She wakes with the pistol pointed at the television. The test pattern hums.",
-   "shot": "wake_motel",
+   "shot": "pov_test_pattern",
    "next": "b"
   },
   "b": {
    "speaker": "narration",
    "text": "The phone is ringing. It has been ringing for a while.",
-   "shot": "wake_motel",
+   "shot": "phone_ringing",
    "sfx": "phone_ring",
    "next": "c"
   },

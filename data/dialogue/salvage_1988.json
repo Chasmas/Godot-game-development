@@ -70,7 +70,7 @@
    "speaker": "narration",
    "text": "The gold star is still on the bathroom mirror. This time she leaves it there on purpose.",
    "event": "star",
-   "shot": "mirror"
+   "shot": "star_on_mirror"
   },
   "c2": {
    "speaker": "cass",

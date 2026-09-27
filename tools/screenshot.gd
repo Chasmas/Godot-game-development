@@ -213,6 +213,22 @@ func _ready() -> void:
 				p.god_mode = OS.get_environment("SHOT_GOD") == "1"
 				var cam := get_tree().get_first_node_in_group("level").camera as CameraController
 				cam.snap_to_target()
+			if OS.get_environment("SHOT_CP") != "":
+				var lvc := get_tree().get_first_node_in_group("level") as Level
+				lvc.hud._banner_t = 0.0
+				lvc.hud.banner.modulate.a = 0.0
+				lvc.hud.show_checkpoint("COURTYARD", OS.get_environment("SHOT_CP") == "rewind")
+				await _frames(int(OS.get_environment("SHOT_CP_F")) if OS.get_environment("SHOT_CP_F") != "" else 70)
+			if OS.get_environment("SHOT_BREACH") != "":
+				var lvb := get_tree().get_first_node_in_group("level") as Level
+				lvb.breach._on_take(null, p)
+				p.global_position = lvb.breach._plant_it.global_position + Vector2(-60, 40)
+				lvb.camera.snap_to_target()
+				if OS.get_environment("SHOT_BREACH") == "blow":
+					lvb.breach.detonate()
+				else:
+					lvb.breach._on_plant(null, p)
+				await _frames(int(OS.get_environment("SHOT_BREACH_F")) if OS.get_environment("SHOT_BREACH_F") != "" else 6)
 			var lvh := get_tree().get_first_node_in_group("level") as Level
 			if lvh and lvh.hud:
 				lvh.hud._banner_t = 0.0

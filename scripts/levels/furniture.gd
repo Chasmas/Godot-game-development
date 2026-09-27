@@ -15,6 +15,22 @@ func setup(p_kind: String, rect: Rect2, p_variant := 0) -> void:
 	rect_size = rect.size
 	variant = p_variant
 
+var _shadow_t := 0.0
+var _lights_sig := 0
+
+func _process(delta: float) -> void:
+	# lights go out (fuse boxes, the boss): re-throw the shadow when they do
+	_shadow_t -= delta
+	if _shadow_t <= 0.0:
+		_shadow_t = 0.5
+		var sig := 0
+		for l in get_tree().get_nodes_in_group("lights"):
+			if l.on and (l as Node2D).global_position.distance_to(global_position) < l.radius_px:
+				sig += 1 + int(l.get_instance_id() % 97)
+		if sig != _lights_sig:
+			_lights_sig = sig
+			queue_redraw()
+
 func _ready() -> void:
 	add_to_group("furniture")
 	var solid := kind == "car" or kind == "wreck"
@@ -61,9 +77,17 @@ func _draw() -> void:
 	var pt := _painted()
 	if pt:
 		var solid := kind == "car" or kind == "wreck"
-		_shadow(r.grow(2) if solid else r, Vector2(4, 5) if solid else Vector2(3, 4))
+		var fr := r.grow(1.5) if solid else r.grow(0.5)
+		# its own silhouette, thrown away from the lamps around it
+		for pr in LightProbe.sample(get_tree(), global_position, 2):
+			var dir: Vector2 = pr.dir
+			var off := dir * ((5.0 if solid else 3.0) + 6.0 * float(pr.far))
+			var col := Color(0.0, 0.0, 0.03, clampf(0.14 + 0.3 * float(pr.k), 0.0, 0.42))
+			draw_set_transform(off, 0.0, Vector2.ONE)
+			ArtLib.draw_fitted(self, pt, fr, h % 2 == 0 and solid, col)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		# parked cars face either way; crates and washers turn a little
-		ArtLib.draw_fitted(self, pt, r.grow(1.5) if solid else r.grow(0.5), h % 2 == 0 and solid)
+		ArtLib.draw_fitted(self, pt, fr, h % 2 == 0 and solid)
 		return
 	match kind:
 		"table":

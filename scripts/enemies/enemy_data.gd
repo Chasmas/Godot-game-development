@@ -18,6 +18,7 @@ enum Combat { SHOOTER, MELEE_RUSHER, SHIELD, ALERTER, BOSS }
 @export var can_be_knocked_down := true
 @export var immune_to_punch := false
 @export var shield_arc_deg := 0.0            ## frontal arc that blocks bullets (riot)
+@export var fleshy := false                  ## armour is meat, not kevlar: hits splatter blood (the dead)
 
 @export_group("Perception")
 @export var view_distance := 260.0

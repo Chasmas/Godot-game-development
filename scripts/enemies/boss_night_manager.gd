@@ -21,6 +21,7 @@ var _defeated := false
 var active := false
 var _phase_intro_t := 0.0
 var _rage_pulse_t := 0.0
+var p2_hits := 2               ## clean hits it takes to drop him in the dark
 
 const BARKS_HIT := ["You're bleeding on my carpet!", "SECURITY! Front desk!", "Do you know who OWNS this place?"]
 const BARKS_P2 := ["Let's see how you do in the dark, hotshot."]
@@ -122,6 +123,18 @@ func take_damage(info: DamageInfo) -> String:
 	if not active:
 		activate()
 	if phase == 2 and (info.lethal or info.type == DamageInfo.Type.EXPLOSIVE):
+		p2_hits -= 1
+		if p2_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
+			# staggers, drops the flashlight beam for a moment, keeps coming
+			visual.hit_react(info.dir, true, 0.2)
+			_knock = info.dir * 160.0
+			Effects.blood(global_position, info.dir)
+			Audio.play_at("hit_flesh", global_position)
+			Events.camera_punch.emit(1.08, 0.15)
+			_say("Is that it, hotshot?")
+			_cover_i += 1
+			_relocating = true
+			return "absorbed"
 		_final_down(info)
 		return "killed"
 	if phase == 1 and info.type != DamageInfo.Type.BALLISTIC and info.lethal:
