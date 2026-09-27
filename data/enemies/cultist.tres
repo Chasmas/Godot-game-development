@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"cultist"
+display_name = "Usher"
+combat = 0
+weapon_id = &"smg"
+palette = "cultist"
+reaction_time = 0.45
+burst = 3
+preferred_range = 150.0
+view_distance = 300.0
+hearing_mult = 1.8
+notes = "Hooded ushers who keep the party seated. They shoot."

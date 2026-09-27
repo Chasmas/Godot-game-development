@@ -130,7 +130,7 @@ level = {
         {"rect": [30, 5, 3, 7], "id": "m02_kennel", "text": "The kennel lights are on their last legs. When they die, so do the handlers' eyes."},
     ],
     "exit": [7, 45],
-    "weather": {"schedule": [["rain", 30], ["storm", 60], ["drizzle", 25], ["storm", 45]]},
+    "weather": {"preset": "desert_wind"},
     "decor": [
         {"type": "neon", "pos": [33, 45], "text": "YERMO SALVAGE & K-9", "color": "ffd23f", "size": 14},
         {"type": "neon", "pos": [10, 42], "text": "BEWARE OF DOG", "color": "ff3d7f", "size": 9},

@@ -1,0 +1,86 @@
+{
+ "bg": "tv_news",
+ "music": "aftermath",
+ "title": "KHSC CHANNEL 9 — JULY 16, 1988",
+ "shot": "news_studio_fire",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "anchor",
+   "text": "Good evening. A fire at KHSC's Stage Nine in Burbank interrupted last night's premiere of HOTSHOT CALIFORNIA.",
+   "shot": "news_studio_fire",
+   "branch": [
+    {
+     "if": "dutch_spared",
+     "next": "b1"
+    },
+    {
+     "next": "b2"
+    }
+   ]
+  },
+  "b1": {
+   "speaker": "anchor",
+   "text": "Special-effects technician Dutch Kowalski was carried from the building by firefighters. He told reporters he would, quote, absolutely do it again.",
+   "shot": "news_studio_fire",
+   "next": "c"
+  },
+  "b2": {
+   "speaker": "anchor",
+   "text": "The body of special-effects technician Dutch Kowalski was recovered from the stage. Viewers who phoned in to vote have been assured their calls were billed correctly.",
+   "shot": "phone_bank",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "anchor",
+   "text": "The network estimates forty million viewers. The largest audience in the station's history.",
+   "shot": "phone_bank",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "marv",
+   "text": "Folks, we lost a soundstage. We found a star. You can't buy that. Well. You can. We did.",
+   "shot": "marv",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "anchor",
+   "text": "Next week's episode will air as scheduled.",
+   "shot": "news_studio_fire",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "narration",
+   "text": "In a motel off the 5, she tapes the rerun and steps through the end credits one frame at a time.",
+   "shot": "credits_tv",
+   "next": "g"
+  },
+  "g": {
+   "speaker": "narration",
+   "text": "EXECUTIVE PRODUCER — T. MORENO.",
+   "shot": "credits_tv",
+   "sfx": "tape_rewind",
+   "next": "h"
+  },
+  "h": {
+   "speaker": "cass",
+   "text": "...Tommy?",
+   "shot": "credits_tv",
+   "auto": 1.6,
+   "next": "i"
+  },
+  "i": {
+   "speaker": "narration",
+   "text": "She rewinds it three times. The name doesn't change.",
+   "shot": "credits_tv",
+   "sfx": "tape_rewind",
+   "next": "j"
+  },
+  "j": {
+   "speaker": "voice",
+   "text": "Again. From the top.",
+   "shot": "control_room",
+   "sfx": "vhs_static"
+  }
+ }
+}

@@ -17,7 +17,7 @@ const DEFAULT_SETTINGS := {
 	"aim_assist": 0.5, "language": "en", "subtitles": true, "ui_scale": 1.0,
 	"colorblind": 0, "show_fps": false, "bindings": {}, "window_size": 1, "bloom": true, "cel_shading": true, "weather": true,
 	"lock_auto_next": true, "laser_always": false, "difficulty": 1,
-	"subtitle_size": 1, "text_speed": 1, "set_dressing": true,
+	"subtitle_size": 1, "text_speed": 1, "set_dressing": true, "painted_props": true,
 }
 
 const DEFAULT_SAVE := {

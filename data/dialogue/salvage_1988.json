@@ -20,7 +20,7 @@
   "c": {
    "speaker": "voice",
    "text": "The initials on that Polaroid belong to Arlo Vance. Tommy's stunt coordinator. These days he runs a salvage yard outside Yermo and keeps dogs around the perimeter.",
-   "next": "d",
+   "next": "c2",
    "shot": "polaroid"
   },
   "d": {
@@ -71,6 +71,12 @@
    "text": "The gold star is still on the bathroom mirror. This time she leaves it there on purpose.",
    "event": "star",
    "shot": "mirror"
+  },
+  "c2": {
+   "speaker": "cass",
+   "text": "Arlo. He still owes Tommy forty bucks and a carburetor.",
+   "shot": "polaroid",
+   "next": "d"
   }
  },
  "shot": "apartment"

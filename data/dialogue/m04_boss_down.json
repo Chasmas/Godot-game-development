@@ -1,0 +1,68 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "tommy_burnt",
+   "text": "...see? You can put a fire out. You just never want to.",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "cass",
+   "text": "I'm doing this for you.",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "tommy_burnt",
+   "text": "No. You're doing it for them. Look up. The little red lights.",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "tommy_burnt",
+   "text": "Top billing, Cassie. It's all yours. It always was.",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "cass",
+   "text": "...",
+   "choices": [
+    {
+     "text": "Let him burn out.",
+     "next": "k1"
+    },
+    {
+     "text": "Hold him.",
+     "next": "s1",
+     "set": {
+      "held_tommy_dream": true
+     }
+    }
+   ]
+  },
+  "k1": {
+   "speaker": "cass",
+   "text": "Goodbye, Tommy.",
+   "event": "boss_execute",
+   "next": "k2"
+  },
+  "k2": {
+   "speaker": "narration",
+   "text": "The fire goes out. The dead applaud politely, like a studio audience told when to.",
+   "sfx": "applause"
+  },
+  "s1": {
+   "speaker": "cass",
+   "text": "Come here.",
+   "event": "boss_spare",
+   "next": "s2"
+  },
+  "s2": {
+   "speaker": "narration",
+   "text": "She holds him while he burns. It doesn't hurt. That's how she knows it's a dream.",
+   "next": "s3"
+  },
+  "s3": {
+   "speaker": "tommy_burnt",
+   "text": "Check the credits, Cassie. Check who signed."
+  }
+ }
+}

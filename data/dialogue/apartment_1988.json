@@ -6,9 +6,9 @@
  "nodes": {
   "a": {
    "speaker": "machine",
-   "text": "You have... one... new message.",
+   "text": "You have... two... new messages.",
    "sfx": "blip",
-   "next": "b",
+   "next": "m1",
    "shot": "machine"
   },
   "b": {
@@ -89,8 +89,34 @@
   "k3": {
    "speaker": "narration",
    "text": "She paints the star over her eye. In the mirror, it looks less like makeup than a mark.",
-   "event": "star",
-   "shot": "mirror"
+   "shot": "mirror",
+   "next": "k4"
+  },
+  "m1": {
+   "speaker": "mom",
+   "text": "Cassie, it's Mom. Happy Fourth. The fireworks have the cat under the stove again.",
+   "shot": "mom_kitchen",
+   "next": "m2",
+   "sfx": "blip"
+  },
+  "m2": {
+   "speaker": "mom",
+   "text": "I bought a cake. I know. I know it's silly. He'd be twenty-six today... Anyway. Call me back, sweetheart.",
+   "shot": "mom_kitchen",
+   "next": "m3"
+  },
+  "m3": {
+   "speaker": "machine",
+   "text": "Next message.",
+   "sfx": "blip",
+   "shot": "machine",
+   "next": "b"
+  },
+  "k4": {
+   "speaker": "cass",
+   "text": "Top billing, Tommy.",
+   "shot": "mirror",
+   "event": "star"
   }
  },
  "shot": "apartment"

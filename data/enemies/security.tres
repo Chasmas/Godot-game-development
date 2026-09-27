@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"security"
+display_name = "Studio Security"
+combat = 0
+weapon_id = &"revolver"
+palette = "security"
+reaction_time = 0.45
+notes = "KHSC security in maroon blazers. Revolvers, radios, and a strong opinion about badges."

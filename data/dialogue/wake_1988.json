@@ -1,0 +1,64 @@
+{
+ "bg": "black",
+ "music": "apartment",
+ "title": "A MOTEL OFF THE 5 — JULY 16, 1988 — 6:40 AM",
+ "shot": "wake_motel",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "She wakes with the pistol pointed at the television. The test pattern hums.",
+   "shot": "wake_motel",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "narration",
+   "text": "The phone is ringing. It has been ringing for a while.",
+   "shot": "wake_motel",
+   "sfx": "phone_ring",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "voice",
+   "text": "Bad dreams, Miss Moreno? Good. It means you're finally method acting.",
+   "shot": "wake_motel",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "cass",
+   "text": "Who signed the change order?",
+   "shot": "wake_motel",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "voice",
+   "text": "Season two starts in 1990. We've already cast the others. A girl at an arcade. A cop who doesn't sleep. You'll love them. You'll kill some of them.",
+   "shot": "casting_1990",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "cass",
+   "text": "And me?",
+   "shot": "wake_motel",
+   "next": "g"
+  },
+  "g": {
+   "speaker": "voice",
+   "text": "You're the reason they're watching. Rest. We'll call you when we need the star.",
+   "shot": "wake_motel",
+   "sfx": "blip",
+   "next": "h"
+  },
+  "h": {
+   "speaker": "narration",
+   "text": "On the corkboard she builds that week, the first Polaroid is a girl in a harlequin jacket at the Galaxy Palace. Somebody has already written THE FOOL under it.",
+   "shot": "casting_1990",
+   "next": "i"
+  },
+  "i": {
+   "speaker": "cass",
+   "text": "Then I get there first.",
+   "shot": "casting_1990"
+  }
+ }
+}

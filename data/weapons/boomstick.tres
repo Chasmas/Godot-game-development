@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"boomstick"
+display_name = "Boomstick"
+kind = 0
+hold = 1
+fire_rate = 3.2
+magazine = 2
+spare_mags = 8
+reload_time = 0.95
+pellets = 12
+spread_deg = 26.0
+move_spread_deg = 4.0
+recoil_deg = 5.0
+bullet_speed = 1100.0
+max_range = 260.0
+noise_radius = 720.0
+sfx_fire = "shotgun"
+sprite_key = "boomstick"
+camera_kick = 9.0
+knockback = 460.0
+flavor = "Two barrels, sawn short. Found in a dream. Works anyway."
+muzzle_scale = 2.1
+fire_hit_stop = 0.05

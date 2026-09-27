@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"hellhound"
+display_name = "Hellhound"
+combat = 1
+weapon_id = &""
+palette = "hellhound"
+walk_speed = 60.0
+run_speed = 200.0
+armor = 1
+reaction_time = 0.25
+melee_windup = 0.28
+view_distance = 260.0
+view_angle_deg = 200.0
+hearing_mult = 2.0
+alert_others_radius = 300.0
+can_be_knocked_down = true
+notes = "The Yermo dogs, burning from the inside. Two hits."

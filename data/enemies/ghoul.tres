@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"ghoul"
+display_name = "Ghoul"
+combat = 1
+weapon_id = &""
+palette = "ghoul"
+walk_speed = 70.0
+run_speed = 196.0
+reaction_time = 0.2
+melee_windup = 0.22
+view_distance = 280.0
+view_angle_deg = 200.0
+hearing_mult = 2.0
+notes = "The hungry ones. Fast, low, and they come in packs. Counter the lunge."

@@ -33,7 +33,7 @@ func _ready() -> void:
 	Events.hit_stop.connect(hit_stop)
 
 func _load_data() -> void:
-	for id in ["m01_checkout", "m02_dog_days"]:
+	for id in ["m01_checkout", "m02_dog_days", "m03_prime_time", "m04_sweet_dreams"]:
 		var path := "res://data/missions/%s.tres" % id
 		if ResourceLoader.exists(path):
 			missions[id] = load(path)
@@ -101,6 +101,7 @@ func start_mission(mission_id: String, character_id := "", mods := {}) -> void:
 	checkpoint_state = {}
 	attempts = 1
 	Score.reset()
+	_apply_time_scale()
 	change_scene(LEVEL_SCENE)
 
 func replay_mission(mission_id: String, character_id := "", mods := {}) -> void:
@@ -114,6 +115,7 @@ func mission_complete(result: Dictionary) -> void:
 	change_scene(RESULTS_SCENE)
 
 func goto_title() -> void:
+	modifiers = {}
 	set_slowmo(1.0)
 	get_tree().paused = false
 	change_scene(TITLE_SCENE)
@@ -188,5 +190,9 @@ func _process(_delta: float) -> void:
 		_hitstop_until = 0
 		_apply_time_scale()
 
+## Arcade TURBO runs the whole world a notch faster.
+func _base_speed() -> float:
+	return 1.2 if modifiers.get("turbo", false) and not campaign_mode else 1.0
+
 func _apply_time_scale() -> void:
-	Engine.time_scale = 0.03 if _hitstop_until > 0 else _slowmo_scale
+	Engine.time_scale = 0.03 if _hitstop_until > 0 else _slowmo_scale * _base_speed()

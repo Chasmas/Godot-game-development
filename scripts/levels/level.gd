@@ -47,6 +47,8 @@ var fx: Effects
 var bullets: BulletSystem
 var crowd: Crowd
 var visual_3d: Visual3DOverlay
+var arcade: ArcadeDirector          ## arcade WAVES / ENDLESS run, when set
+var nightmare: NightmareDirector    ## the dream level's scares and risen dead
 
 var _checkpoints_hit: Dictionary = {}
 var _hints_shown: Dictionary = {}
@@ -205,11 +207,27 @@ func _ready() -> void:
 	PostFX.set_tint(Color(1, 1, 1, 0))
 	Audio.set_music_muffled(false)
 	Score.running = true
-	if phase == Phase.BOSS and boss and is_instance_valid(boss):
+	if Game.modifiers.get("mode", "") in ["waves", "endless"]:
+		arcade = ArcadeDirector.new()
+		arcade.name = "Arcade"
+		add_child(arcade)
+		arcade.setup(self)
+	if data.get("nightmare", false):
+		nightmare = NightmareDirector.new()
+		nightmare.name = "Nightmare"
+		nightmare.add_to_group("nightmare")
+		add_child(nightmare)
+		nightmare.setup(self)
+	if arcade:
+		pass
+	elif phase == Phase.BOSS and boss and is_instance_valid(boss):
 		_start_boss(false)
 	elif phase >= Phase.PHONE:
 		_begin_phone()
-	if Game.attempts <= 1 and st.is_empty():
+	if arcade:
+		hud.show_title_card(tr(mission.title), tr("ARCADE") + "  ·  " + arcade.title())
+		PostFX.vhs_glitch(0.8)
+	elif Game.attempts <= 1 and st.is_empty():
 		hud.show_title_card(tr(mission.title), "%s\n%s  ·  %s" % [tr(mission.location).to_upper(), tr(mission.date_text), tr(str(data.get("time_text", "11:48 PM")))])
 		PostFX.vhs_glitch(0.8)
 		Events.objective_changed.emit(_obj("infiltrate", "GET INSIDE THE SUNSET PALMS"))
@@ -412,6 +430,9 @@ func _process(delta: float) -> void:
 			Game.restart_level()
 		return
 	var cell := Vector2i(int(player.global_position.x / 16.0), int(player.global_position.y / 16.0))
+	if arcade:
+		_music_intensity()
+		return
 	_check_hints(cell)
 	_check_checkpoints(cell)
 	if not _boss_triggered and boss and is_instance_valid(boss):
@@ -422,6 +443,9 @@ func _process(delta: float) -> void:
 	if phase == Phase.INFILTRATE and Rect2i(inside[0], inside[1], inside[2], inside[3]).has_point(cell):
 		phase = Phase.CLEAR
 		_update_objective()
+	_music_intensity()
+
+func _music_intensity() -> void:
 	# music intensity
 	# alerted enemies drive the score: anyone hunting nearby brings in the
 	# drums, several with eyes on you at once is danger; the combo climbs it
@@ -633,11 +657,11 @@ func _update_objective() -> void:
 		Phase.CLEAR:
 			var n := remaining_enemies().size()
 			if boss and is_instance_valid(boss) and boss.is_alive():
-				Events.objective_changed.emit(tr("%s  ·  %d LEFT  ·  FIND THE NIGHT MANAGER") % [_obj("clear", "CLEAR THE MOTEL"), n])
+				Events.objective_changed.emit("%s  ·  %s  ·  %s" % [_obj("clear", "CLEAR THE MOTEL"), tr("%d LEFT") % n, _obj("find_boss", "FIND THE NIGHT MANAGER")])
 			else:
 				Events.objective_changed.emit(tr("%s  ·  %d LEFT") % [_obj("clear", "CLEAR THE MOTEL"), n])
 		Phase.BOSS:
-			Events.objective_changed.emit(tr("DEAL WITH HARCOURT"))
+			Events.objective_changed.emit(_obj("boss", "DEAL WITH HARCOURT"))
 		Phase.BOSS_DOWN:
 			Events.objective_changed.emit("")
 		Phase.PHONE:
@@ -675,6 +699,9 @@ static func _fmt_time(t: float) -> String:
 func _on_enemy_died(e: Enemy, _info: DamageInfo) -> void:
 	killed_ids[e.enemy_id] = true
 	enemies.erase(e)
+	if arcade:
+		arcade.on_enemy_died(e)
+		return
 	_update_objective()
 	if phase == Phase.CLEAR or phase == Phase.PHONE:
 		_maybe_ring_phone()
@@ -693,6 +720,9 @@ func _on_player_died(_info: Dictionary) -> void:
 	Music.duck(0.5)
 	SaveManager.add_stat("deaths")
 	_restart_ready = false
+	if arcade:
+		arcade.player_died()
+		return
 	await get_tree().create_timer(0.45, true, false, true).timeout
 	_restart_ready = true
 
@@ -708,13 +738,19 @@ func spawn_reinforcements(n: int, _near := Vector2.ZERO) -> void:
 		return
 	for i in n:
 		var p: Vector2 = reinforcement_points[randi() % reinforcement_points.size()]
-		var e := Enemy.new()
+		var kinds: Array = data.get("reinforcement_kinds", ["guard", "gunner", "gunner"])
+		var kind := StringName(kinds[randi() % kinds.size()])
+		var e: Enemy = Dog.new() if kind == &"hellhound" or kind == &"dog" else Enemy.new()
 		e.enemy_id = "reinf_%d_%d" % [Time.get_ticks_msec(), i]
 		e.required = false
 		e.position = p + Vector2(randf_range(-6, 6), randf_range(-6, 6))
 		actors_root.add_child(e)
-		e.setup(DB.enemy(&"guard" if randf() > 0.4 else &"gunner"), self, Vector2.DOWN)
+		e.setup(DB.enemy(kind), self, Vector2.DOWN)
+		if e is Dog:
+			(e as Dog).sleeping = false
 		e.died.connect(_on_enemy_died)
+		if nightmare:
+			nightmare._watch(e)
 		# called in over the radio: they know the area, not the exact spot
 		var err := Tuning.get_t().position_error_max
 		e._last_known = player.global_position + Vector2.from_angle(randf() * TAU) * randf_range(err * 0.3, err)
@@ -763,9 +799,30 @@ func _start_boss(with_intro: bool) -> void:
 	if not Game.checkpoint_state.is_empty():
 		Game.checkpoint_state["boss_seen"] = true
 	if with_intro:
-		Dialogue.start("m01_boss_intro")
+		Dialogue.start(_boss_dialogue("intro"))
 	else:
 		boss.activate()
+
+## Boss scenes per level: "boss": {"intro": id, "down": id} (Harcourt's by default).
+func _boss_dialogue(which: String) -> String:
+	return str(data.get("boss", {}).get(which, "m01_boss_" + which))
+
+## The Fireman's second act: the stage goes up. Fires break out along the
+## level's "fire_points", the light turns orange, the sprinklers cough dry.
+func boss_set_ablaze() -> void:
+	var tw := create_tween()
+	tw.tween_property(dark_modulate, "color", Color(ambient.r * 1.15, ambient.g * 0.7, ambient.b * 0.55), 1.2)
+	for fp in data.get("fire_points", []):
+		var at := Vector2(float(fp[0]), float(fp[1])) * 16.0 + Vector2(8, 8)
+		get_tree().create_timer(randf_range(0.0, 1.6), false).timeout.connect(func():
+			if is_inside_tree():
+				FireZone.ignite(actors_root, at, randf_range(12.0, 18.0), 9999.0))
+	get_tree().create_timer(0.8, false).timeout.connect(func():
+		if is_inside_tree():
+			Audio.play("sprinkler", -2.0)
+			hud.show_hint("THE SPRINKLERS ARE DRY. OF COURSE THEY ARE.", 3.0))
+	PostFX.vhs_glitch(0.7)
+	Music.set_intensity(3)
 
 func boss_lights_out() -> void:
 	set_zone_lights("lobby", false, "boss")
@@ -781,7 +838,7 @@ func _on_boss_defeated(_b: BossNightManager) -> void:
 	_update_objective()
 	Music.stop(1.5)
 	await get_tree().create_timer(0.9).timeout
-	Dialogue.start("m01_boss_down")
+	Dialogue.start(_boss_dialogue("down"))
 
 func _on_dialogue_event(ev: String) -> void:
 	match ev:
@@ -802,7 +859,12 @@ func _on_dialogue_event(ev: String) -> void:
 			_begin_escape()
 
 func _on_dialogue_finished(id: String) -> void:
-	if id == "m01_boss_down":
+	if id == _boss_dialogue("down"):
+		if phone == null:
+			# no phone call here: straight out, the building behind you
+			Music.play("aftermath")
+			_begin_escape()
+			return
 		var tw := create_tween()
 		tw.tween_property(dark_modulate, "color", ambient, 1.5)
 		phase = Phase.PHONE

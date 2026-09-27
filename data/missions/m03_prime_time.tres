@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MissionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/mission_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"m03_prime_time"
+title = "PRIME TIME"
+location = "KHSC Studios, Stage Nine - Burbank, CA"
+date_text = "JULY 15, 1988"
+year = 1988
+chapter = 1
+level_file = "res://levels/m03_khsc_studios.json"
+music_track = "prime_time"
+boss_track = "boss_fireman"
+default_character = &"cass"
+par_score = 42000
+par_time = 360.0
+briefing = "Dutch Kowalski rigged the car that killed Tommy. Tonight he's running the fire effects for the premiere of HOTSHOT CALIFORNIA - live from Stage Nine."
+objective_type = "clear"

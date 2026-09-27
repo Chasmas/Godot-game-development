@@ -35,6 +35,55 @@ const SHOTS := {
 	"static":       {"layers": [], "cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "fx": ["static"]},
 }
 
+## Painted frames (assets/art/painted/<id>.webp, see tools/art/gen_ai_art.py)
+## take over from the pixel shots of the same name. One flat painting each,
+## brought to life by the painted_shot shader: zones [type, x, y, w, h,
+## amount, speed] over the frame (types below), the emissive mask breathing,
+## a slow camera move, and the same drawn effects as the pixel shots.
+## Extras: "fireworks" rect, "eyes" points, "reddot" point, "papers",
+## "rumble" / "handheld" camera motion, "glow" mask strength.
+const PAINT := "res://assets/art/painted/%s.webp"
+const PAINT_GLOW := "res://assets/art/painted/%s_glow.png"
+const PAINT_SHADER := preload("res://shaders/painted_shot.gdshader")
+enum Z { SWAY, RIPPLE, FLICKER, PULSE, TV, HEAT, BLINK, BREATHE, SIREN, DRIFT }
+const PAINTED := {
+	"desert_road":  {"cam": [1.02, Vector2(-14, 2), 1.1, Vector2(12, -4)], "z": [[Z.PULSE, 0.0, 0.55, 0.4, 0.25, 0.3, 1.2], [Z.FLICKER, 0.75, 0.4, 0.25, 0.3, 0.5, 1.0], [Z.BREATHE, 0.45, 0.2, 0.25, 0.7, 0.5, 1.0]], "fx": ["dust"]},
+	"cass_close":   {"cam": [1.04, Vector2(-6, 4), 1.12, Vector2(6, -2)], "z": [[Z.BREATHE, 0.3, 0.0, 0.5, 1.0, 0.7, 1.0], [Z.SWAY, 0.28, 0.0, 0.2, 0.7, 0.6, 0.8], [Z.FLICKER, 0.85, 0.0, 0.15, 0.35, 0.6, 1.4]], "fx": ["dust"]},
+	"tommy_car":    {"cam": [1.03, Vector2(8, 0), 1.1, Vector2(-6, 2)], "z": [[Z.SWAY, 0.03, 0.12, 0.09, 0.34, 3.0, 2.6], [Z.BREATHE, 0.3, 0.15, 0.4, 0.85, 0.8, 1.0], [Z.FLICKER, 0.6, 0.35, 0.4, 0.4, 0.25, 0.8]], "rumble": 0.6, "fx": ["dust"]},
+	"clapper":      {"cam": [1.0, Vector2.ZERO, 1.07, Vector2(0, 4)], "z": [[Z.PULSE, 0.7, 0.4, 0.3, 0.3, 0.4, 2.0], [Z.FLICKER, 0.8, 0.0, 0.2, 0.3, 0.5, 1.2]], "handheld": 1.0, "fx": ["dust"]},
+	"explosion":    {"cam": [1.14, Vector2(0, -6), 1.03, Vector2.ZERO], "z": [[Z.HEAT, 0.3, 0.0, 0.5, 0.75, 1.4, 1.0], [Z.FLICKER, 0.25, 0.0, 0.6, 0.8, 0.6, 2.0]], "glow": 0.5, "fx": ["shake", "embers", "flash", "smoke"]},
+	"wreck":        {"cam": [1.02, Vector2(-10, 0), 1.08, Vector2(6, 0)], "z": [[Z.HEAT, 0.55, 0.2, 0.35, 0.5, 1.0, 1.0], [Z.FLICKER, 0.5, 0.3, 0.45, 0.5, 0.6, 1.5], [Z.DRIFT, 0.4, 0.0, 0.6, 0.45, 1.0, 1.0]], "fx": ["embers", "smoke"]},
+	"apartment":    {"cam": [1.02, Vector2(-10, 0), 1.08, Vector2(10, -2)], "z": [[Z.BLINK, 0.535, 0.27, 0.03, 0.05, 1.2, 1.6], [Z.FLICKER, 0.9, 0.0, 0.1, 0.3, 0.5, 1.0], [Z.PULSE, 0.3, 0.0, 0.2, 0.35, 0.25, 0.7]], "fireworks": [0.02, 0.02, 0.26, 0.3], "fx": ["rain_window", "dust"]},
+	"machine":      {"cam": [1.06, Vector2(0, 2), 1.15, Vector2(-8, 0)], "z": [[Z.BLINK, 0.34, 0.6, 0.05, 0.08, 1.4, 1.6], [Z.PULSE, 0.55, 0.0, 0.45, 0.5, 0.2, 0.5]], "fx": ["dust"]},
+	"package":      {"cam": [1.02, Vector2(-16, 6), 1.14, Vector2(12, -4)], "z": [[Z.PULSE, 0.7, 0.0, 0.3, 0.4, 0.2, 0.8], [Z.FLICKER, 0.0, 0.0, 0.35, 0.3, 0.3, 1.0]], "fx": ["dust"]},
+	"mirror":       {"cam": [1.03, Vector2(0, -6), 1.12, Vector2(0, 4)], "z": [[Z.BREATHE, 0.45, 0.05, 0.4, 0.95, 0.7, 1.0], [Z.FLICKER, 0.85, 0.0, 0.15, 1.0, 0.35, 2.0], [Z.BREATHE, 0.0, 0.0, 0.4, 1.0, 0.5, 1.0]], "fx": ["glint"]},
+	"tv_news":      {"cam": [1.02, Vector2.ZERO, 1.08, Vector2(-6, 0)], "z": [[Z.TV, 0.0, 0.0, 1.0, 1.0, 0.6, 1.0], [Z.BREATHE, 0.25, 0.1, 0.5, 0.9, 0.5, 1.0]], "fx": ["scan"]},
+	"motel_night":  {"cam": [1.02, Vector2(-12, 0), 1.08, Vector2(10, -2)], "z": [[Z.FLICKER, 0.55, 0.1, 0.35, 0.4, 0.9, 1.3], [Z.SWAY, 0.0, 0.0, 0.25, 0.6, 1.2, 1.1], [Z.RIPPLE, 0.0, 0.72, 1.0, 0.28, 1.2, 1.0]], "fx": ["rain"]},
+	"motel_crime":  {"cam": [1.02, Vector2(10, 0), 1.08, Vector2(-8, 0)], "z": [[Z.SIREN, 0.0, 0.3, 0.55, 0.35, 1.0, 1.0], [Z.FLICKER, 0.75, 0.0, 0.25, 0.3, 0.7, 1.4], [Z.BREATHE, 0.35, 0.3, 0.3, 0.6, 0.4, 1.0]], "fx": []},
+	"marv":         {"cam": [1.07, Vector2(0, 4), 1.0, Vector2.ZERO], "z": [[Z.BREATHE, 0.2, 0.0, 0.6, 1.0, 0.6, 1.0], [Z.FLICKER, 0.25, 0.0, 0.5, 0.45, 0.35, 2.0]], "glow": 0.5, "fx": ["scan", "glitter"]},
+	"polaroid":     {"cam": [1.0, Vector2(0, 10), 1.14, Vector2(10, -6)], "z": [[Z.DRIFT, 0.0, 0.0, 0.3, 0.3, 0.6, 0.6]], "smoke": [Vector2(0.05, 0.1)], "fx": ["dust"]},
+	"salvage_yard": {"cam": [1.02, Vector2(-10, 0), 1.1, Vector2(8, 0)], "z": [[Z.FLICKER, 0.75, 0.0, 0.25, 0.3, 0.8, 1.2], [Z.RIPPLE, 0.3, 0.7, 0.7, 0.3, 0.8, 0.8], [Z.SWAY, 0.4, 0.25, 0.25, 0.25, 0.8, 0.5]], "eyes": [[0.12, 0.62], [0.33, 0.68], [0.58, 0.66], [0.81, 0.72]], "fx": ["dust"]},
+	"galaxy_palace": {"cam": [1.02, Vector2(0, 6), 1.1, Vector2(0, -2)], "z": [[Z.TV, 0.55, 0.3, 0.3, 0.4, 0.5, 1.0], [Z.TV, 0.0, 0.2, 0.15, 0.5, 0.5, 1.3], [Z.PULSE, 0.3, 0.0, 0.7, 0.2, 0.4, 1.5], [Z.BREATHE, 0.3, 0.1, 0.35, 0.9, 0.5, 1.0]], "glow": 0.5, "fx": []},
+	"barstow_pd":   {"cam": [1.02, Vector2(-8, 0), 1.08, Vector2(8, 0)], "z": [[Z.SIREN, 0.0, 0.15, 0.3, 0.5, 0.8, 0.8], [Z.BREATHE, 0.3, 0.05, 0.45, 0.95, 0.6, 1.0], [Z.FLICKER, 0.75, 0.3, 0.25, 0.3, 0.3, 1.0]], "smoke": [Vector2(0.43, 0.55)], "fx": ["rain_window"]},
+	"hills_fire":   {"cam": [1.02, Vector2(0, 0), 1.1, Vector2(-8, -4)], "z": [[Z.HEAT, 0.0, 0.05, 1.0, 0.55, 1.2, 1.0], [Z.FLICKER, 0.0, 0.05, 1.0, 0.6, 0.5, 1.5], [Z.SWAY, 0.05, 0.1, 0.2, 0.6, 1.0, 1.2], [Z.RIPPLE, 0.0, 0.75, 1.0, 0.25, 0.6, 1.0]], "fx": ["embers", "smoke"]},
+	"arlo_close":   {"cam": [1.03, Vector2(-6, 2), 1.1, Vector2(6, 0)], "z": [[Z.TV, 0.6, 0.0, 0.4, 0.55, 0.7, 1.0], [Z.BREATHE, 0.2, 0.05, 0.5, 0.95, 0.6, 0.9], [Z.FLICKER, 0.0, 0.2, 0.15, 0.25, 0.4, 1.0]], "smoke": [Vector2(0.88, 0.8)], "fx": ["dust"]},
+	"yermo_office": {"cam": [1.02, Vector2(-8, 0), 1.1, Vector2(8, -2)], "z": [[Z.TV, 0.43, 0.0, 0.36, 0.45, 0.7, 1.0], [Z.BREATHE, 0.62, 0.72, 0.36, 0.28, 1.2, 0.6], [Z.BREATHE, 0.2, 0.1, 0.45, 0.9, 0.5, 1.0], [Z.FLICKER, 0.05, 0.15, 0.2, 0.3, 0.4, 1.0]], "fx": ["rain_window", "dust"]},
+	"live_monitors": {"cam": [1.0, Vector2(0, 0), 1.12, Vector2(0, -4)], "z": [[Z.TV, 0.0, 0.0, 1.0, 1.0, 0.9, 1.0], [Z.BLINK, 0.05, 0.0, 0.9, 0.2, 0.5, 1.0]], "glow": 0.5, "fx": ["scan"]},
+	"red_dot":      {"cam": [1.02, Vector2(4, 0), 1.12, Vector2(-4, 2)], "z": [[Z.BREATHE, 0.3, 0.1, 0.5, 0.9, 0.5, 0.8], [Z.TV, 0.05, 0.4, 0.15, 0.25, 0.6, 1.0], [Z.FLICKER, 0.55, 0.0, 0.45, 0.6, 0.3, 1.0]], "reddot": [0.42, 0.54], "fx": ["rain_window"]},
+	"burbank_night": {"cam": [1.02, Vector2(-10, 2), 1.1, Vector2(10, -2)], "z": [[Z.SWAY, 0.0, 0.1, 0.15, 0.8, 2.2, 1.6], [Z.SWAY, 0.25, 0.4, 0.15, 0.4, 2.0, 1.8], [Z.SWAY, 0.82, 0.3, 0.18, 0.5, 2.2, 1.7], [Z.FLICKER, 0.15, 0.0, 0.65, 0.35, 0.6, 1.3], [Z.HEAT, 0.15, 0.05, 0.6, 0.3, 0.7, 1.0]], "glow": 0.45, "fx": ["embers", "dust"]},
+	"stage_door":   {"cam": [1.03, Vector2(0, 2), 1.1, Vector2(-4, 0)], "z": [[Z.BLINK, 0.7, 0.0, 0.14, 0.2, 1.0, 1.0], [Z.BREATHE, 0.25, 0.05, 0.5, 0.95, 0.8, 1.6], [Z.SWAY, 0.55, 0.3, 0.3, 0.5, 2.5, 2.0]], "papers": true, "fx": ["dust"]},
+	"room_204_set": {"cam": [1.0, Vector2(0, 4), 1.12, Vector2(0, -2)], "z": [[Z.PULSE, 0.0, 0.0, 1.0, 0.3, 0.2, 0.6], [Z.BLINK, 0.1, 0.35, 0.8, 0.3, 0.4, 1.0], [Z.FLICKER, 0.3, 0.3, 0.4, 0.4, 0.2, 1.0]], "fx": ["dust"]},
+	"control_room": {"cam": [1.02, Vector2(0, 2), 1.1, Vector2(6, -2)], "z": [[Z.TV, 0.05, 0.0, 0.9, 0.6, 0.8, 1.0], [Z.BLINK, 0.05, 0.6, 0.55, 0.25, 0.5, 2.3]], "glow": 0.5, "fx": ["scan"]},
+	"fireman":      {"cam": [1.05, Vector2(0, 4), 1.12, Vector2(-6, 0)], "z": [[Z.HEAT, 0.55, 0.3, 0.45, 0.5, 1.2, 1.2], [Z.FLICKER, 0.5, 0.2, 0.5, 0.7, 0.6, 1.8], [Z.BREATHE, 0.25, 0.05, 0.4, 0.95, 0.6, 1.0]], "glow": 0.55, "fx": ["embers", "smoke"]},
+	"fireman_down": {"cam": [1.02, Vector2(0, 0), 1.1, Vector2(0, 4)], "z": [[Z.FLICKER, 0.2, 0.0, 0.55, 0.3, 0.6, 2.2], [Z.HEAT, 0.65, 0.2, 0.35, 0.6, 1.0, 1.0], [Z.BLINK, 0.82, 0.5, 0.12, 0.2, 1.0, 1.5], [Z.BREATHE, 0.3, 0.2, 0.4, 0.8, 1.0, 1.4]], "glow": 0.5, "fx": ["embers", "smoke"]},
+	"phone_bank":   {"cam": [1.02, Vector2(6, 0), 1.1, Vector2(-6, 2)], "z": [[Z.FLICKER, 0.55, 0.0, 0.45, 0.25, 0.7, 2.5], [Z.PULSE, 0.0, 0.0, 0.35, 0.15, 0.4, 2.0], [Z.BREATHE, 0.35, 0.3, 0.3, 0.7, 0.9, 1.3]], "glow": 0.5, "fx": []},
+	"news_studio_fire": {"cam": [1.03, Vector2(0, 2), 1.09, Vector2(-4, 0)], "z": [[Z.FLICKER, 0.45, 0.0, 0.55, 0.6, 0.6, 1.8], [Z.HEAT, 0.45, 0.0, 0.55, 0.55, 0.6, 1.0], [Z.BREATHE, 0.2, 0.05, 0.5, 0.95, 0.5, 1.0]], "fx": ["scan"]},
+	"credits_tv":   {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -8)], "z": [[Z.TV, 0.28, 0.02, 0.45, 0.62, 0.9, 1.0], [Z.BREATHE, 0.0, 0.5, 0.3, 0.5, 0.5, 0.8]], "fx": ["scan"]},
+	"harcourt_office": {"cam": [1.03, Vector2(0, 2), 1.1, Vector2(4, 0)], "z": [[Z.BREATHE, 0.0, 0.05, 0.45, 0.95, 0.6, 1.1], [Z.BREATHE, 0.6, 0.0, 0.4, 1.0, 0.5, 0.8], [Z.FLICKER, 0.0, 0.1, 0.1, 0.4, 0.8, 1.3]], "fx": ["dust"]},
+	"room_204":     {"cam": [1.02, Vector2(-6, 0), 1.1, Vector2(6, 0)], "z": [[Z.TV, 0.1, 0.05, 0.2, 0.3, 0.8, 1.0], [Z.FLICKER, 0.7, 0.0, 0.3, 0.4, 0.5, 1.2]], "fx": ["rain_window", "dust"]},
+	"mom_kitchen":  {"cam": [1.03, Vector2(-4, 2), 1.1, Vector2(4, -2)], "z": [[Z.BREATHE, 0.35, 0.2, 0.35, 0.8, 0.6, 0.8], [Z.PULSE, 0.0, 0.0, 0.3, 0.45, 0.2, 0.6]], "fireworks": [0.42, 0.05, 0.3, 0.3], "fx": ["dust"]},
+}
+
 var shot_id := ""
 var shot_time := 9.0         ## seconds the camera takes over its move
 var letterbox := true
@@ -59,11 +108,71 @@ var _mouth_t := 0.0
 var _mouth_open := false
 var _smoke: Array = []
 var _rain: Array = []
+var _paint: PaintedLayer        ## the painted frame on screen, if this shot has one
+var _paint_old: PaintedLayer    ## the one fading out under it
+var _bursts: Array = []         ## fireworks
+var _papers: Array = []
 
 static var _cache: Dictionary = {}
 
+## Frames whose painting hasn't been made yet stand in with a close cousin.
+const PAINT_FALLBACK := {
+	"motel_dream": "room_204", "villa_gate": "hills_fire", "wrap_party": "room_204_set", "burning_tommy": "wreck",
+	"mirror_dead": "mirror", "wake_motel": "room_204", "casting_1990": "galaxy_palace",
+}
+
+static func resolve(id: String) -> String:
+	if painted_tex(id) == null and not SHOTS.has(id) and PAINT_FALLBACK.has(id):
+		return str(PAINT_FALLBACK[id])
+	return id
+
 static func has_shot(id: String) -> bool:
-	return SHOTS.has(id)
+	id = resolve(id)
+	return SHOTS.has(id) or painted_tex(id) != null
+
+static func painted_tex(id: String) -> Texture2D:
+	var key := "paint/" + id
+	if not _cache.has(key):
+		var p := PAINT % id
+		_cache[key] = load(p) if ResourceLoader.exists(p) else null
+	return _cache[key]
+
+static func painted_glow(id: String) -> Texture2D:
+	var key := "glow/" + id
+	if not _cache.has(key):
+		var p := PAINT_GLOW % id
+		_cache[key] = load(p) if ResourceLoader.exists(p) else null
+	return _cache[key]
+
+## A ShaderMaterial that animates the painting `id` (also used for the
+## full-frame art behind in-level dialogue).
+static func painted_material(id: String) -> ShaderMaterial:
+	var def: Dictionary = PAINTED.get(id, {})
+	var m := ShaderMaterial.new()
+	m.shader = PAINT_SHADER
+	var zt := PackedInt32Array()
+	var zr: Array = []
+	var zp: Array = []
+	var i := 0
+	for z in def.get("z", []):
+		zt.append(int(z[0]))
+		zr.append(Vector4(z[1], z[2], z[3], z[4]))
+		zp.append(Vector4(z[5], z[6], float(i) * 1.7, 0.0))
+		i += 1
+	while zt.size() < 16:
+		zt.append(-1)
+		zr.append(Vector4.ZERO)
+		zp.append(Vector4.ZERO)
+	m.set_shader_parameter("zn", i)
+	m.set_shader_parameter("zt", zt)
+	m.set_shader_parameter("zr", zr)
+	m.set_shader_parameter("zp", zp)
+	m.set_shader_parameter("glow_amount", float(def.get("glow", 0.35)))
+	m.set_shader_parameter("time_offset", randf() * 50.0)
+	var g := painted_glow(id)
+	if g:
+		m.set_shader_parameter("glow_mask", g)
+	return m
 
 static func tex(id: String, layer: String) -> Texture2D:
 	var key := id + "/" + layer
@@ -82,7 +191,8 @@ func _ready() -> void:
 
 ## Cut to a shot. `hard` skips the cross-fade (first shot of a scene).
 func show_shot(id: String, hard := false) -> void:
-	if id == shot_id or not SHOTS.has(id):
+	id = resolve(id)
+	if id == shot_id or not has_shot(id):
 		return
 	if not hard and shot_id != "":
 		_prev = _tex
@@ -92,10 +202,38 @@ func show_shot(id: String, hard := false) -> void:
 		_glitch = 1.0
 		if is_inside_tree():
 			PostFX.vhs_glitch(0.35)
+	# the painted frame fades out under the new one (or is dropped on a hard cut)
+	if _paint_old and is_instance_valid(_paint_old):
+		_paint_old.queue_free()
+	_paint_old = _paint
+	_paint = null
+	if _paint_old and hard:
+		_paint_old.queue_free()
+		_paint_old = null
 	shot_id = id
-	_def = SHOTS[id]
+	var ptex := painted_tex(id)
+	_def = PAINTED.get(id, {"cam": [1.02, Vector2.ZERO, 1.1, Vector2.ZERO], "fx": ["dust"]}) if ptex else SHOTS[id]
 	_t = 0.0
 	_tex = []
+	_bursts.clear()
+	_papers.clear()
+	if ptex:
+		_paint = PaintedLayer.new()
+		_paint.shot = self
+		_paint.def = _def
+		_paint.texture = ptex
+		_paint.material = painted_material(id)
+		_paint.modulate.a = 1.0 if hard or _prev.is_empty() and _paint_old == null else 0.0
+		add_child(_paint)
+		_face_layer = ""
+		_face_speaker = ""
+		_smoke.clear()
+		if "shake" in _def.get("fx", []):
+			_shake = 1.0
+		if "flash" in _def.get("fx", []):
+			_flash = 1.0
+		_embers.clear()
+		return
 	for l in _def.get("layers", []):
 		var t := tex(id, l[0])
 		if t:
@@ -148,7 +286,38 @@ func _process(delta: float) -> void:
 		e.v.x += sin(_t * 3.0 + e.life * 10.0) * 0.004 * delta * 60.0
 		if e.t > e.life:
 			_embers.erase(e)
+	_update_painted(delta)
 	queue_redraw()
+
+## Painted frames: fade the new one in and the old one out; fireworks and
+## flying papers.
+func _update_painted(delta: float) -> void:
+	if _paint:
+		_paint.modulate.a = move_toward(_paint.modulate.a, 1.0, delta / 0.45)
+	if _paint_old and is_instance_valid(_paint_old):
+		_paint_old.modulate.a = move_toward(_paint_old.modulate.a, 0.0, delta / 0.45)
+		if _paint_old.modulate.a <= 0.0:
+			_paint_old.queue_free()
+			_paint_old = null
+	if _paint == null:
+		return
+	var fw: Array = _def.get("fireworks", [])
+	if fw.size() == 4 and _rng.randf() < delta * 1.1:
+		var hue: Color = [Color(1, 0.35, 0.6), Color(0.4, 0.9, 1.0), Color(1, 0.85, 0.35), Color(0.7, 0.5, 1.0)][_rng.randi() % 4]
+		_bursts.append({"p": Vector2(fw[0] + _rng.randf() * fw[2], fw[1] + _rng.randf() * fw[3] * 0.7), "t": 0.0, "c": hue, "n": _rng.randi_range(10, 16), "r": _rng.randf_range(0.025, 0.045)})
+	for b in _bursts.duplicate():
+		b.t += delta
+		if b.t > 1.6:
+			_bursts.erase(b)
+	if _def.get("papers", false):
+		if _rng.randf() < delta * 2.5 and _papers.size() < 14:
+			_papers.append({"p": Vector2(-0.05, _rng.randf_range(0.1, 0.9)), "v": Vector2(_rng.randf_range(0.25, 0.5), _rng.randf_range(-0.12, 0.05)), "rot": _rng.randf() * TAU, "spin": _rng.randf_range(-7, 7), "s": _rng.randf_range(0.7, 1.3)})
+		for pp in _papers.duplicate():
+			pp.p += pp.v * delta
+			pp.v.y += sin(_t * 3.0 + pp.rot) * 0.2 * delta
+			pp.rot += pp.spin * delta
+			if pp.p.x > 1.1:
+				_papers.erase(pp)
 
 func _talking() -> bool:
 	if _face_speaker == "" or not Dialogue.active:
@@ -181,6 +350,8 @@ func _base_scale() -> float:
 
 ## A point in the art (0..1 of the layer) to screen, for the nearest layer.
 func _art_to_screen(p: Vector2) -> Vector2:
+	if _paint:
+		return _paint.frame_to_screen(p)
 	var cam := _cam(_def, _t)
 	var zoom: float = cam[0]
 	var pan: Vector2 = cam[1]
@@ -197,10 +368,17 @@ func _cam(def: Dictionary, t: float) -> Array:
 	return [lerpf(float(c[0]), float(c[2]), k), (c[1] as Vector2).lerp(c[3] as Vector2, k)]
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, size), Color(0.01, 0.0, 0.02))
-	if _fade < 1.0 and not _prev.is_empty():
+	# a painted frame sits behind this node (show_behind_parent): only
+	# black out the back when nothing painted is on screen
+	if _paint == null and _paint_old == null:
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.01, 0.0, 0.02))
+	if _paint != null and _fade < 1.0 and not _prev.is_empty():
+		_draw_layers(_prev, _prev_def, _prev_t, 1.0 - _fade)
+	elif _fade < 1.0 and not _prev.is_empty():
 		_draw_layers(_prev, _prev_def, _prev_t, 1.0)
-	_draw_layers(_tex, _def, _t, _fade if not _prev.is_empty() else 1.0)
+	if _paint == null:
+		_draw_layers(_tex, _def, _t, _fade if (not _prev.is_empty() or _paint_old != null) else 1.0)
+	_draw_painted_fx()
 	_draw_fx()
 	# letterbox bars (drawn last, over everything but the dialogue)
 	var bh := size.y * 0.1 * _bars
@@ -293,6 +471,48 @@ func _on_snap() -> void:
 	Audio.play("door_slam", -6.0, 1.6)
 	_shake = maxf(_shake, 0.35)
 
+## Drawn over painted frames: fireworks in the window, dog eyes in the dark,
+## a sniper's dot, papers in the wind.
+func _draw_painted_fx() -> void:
+	if _paint == null:
+		return
+	var fr := _paint.frame_rect()
+	for b in _bursts:
+		var c: Vector2 = fr.position + (b.p as Vector2) * fr.size
+		var k: float = b.t / 1.6
+		var rad: float = b.r * fr.size.x * (1.0 - pow(1.0 - minf(k * 1.6, 1.0), 3.0))
+		var col: Color = b.c
+		col.a = (1.0 - k) * 0.9
+		for i in int(b.n):
+			var a: float = float(i) / float(b.n) * TAU
+			var q := c + Vector2.from_angle(a) * rad + Vector2(0, k * k * 18.0)
+			draw_circle(q, 2.0, col)
+			draw_line(q, q - Vector2.from_angle(a) * 6.0, Color(col, col.a * 0.5), 1.0)
+		if b.t < 0.12:
+			draw_circle(c, 5.0, Color(1, 1, 1, 0.8))
+	for e in _def.get("eyes", []):
+		var ep: Vector2 = fr.position + Vector2(e[0], e[1]) * fr.size
+		var on := fmod(_t + float(e[0]) * 7.0, 4.1) > 0.15
+		if on:
+			var gl := 0.7 + 0.3 * sin(_t * 2.0 + float(e[1]) * 9.0)
+			for dx in [-5.0, 5.0]:
+				draw_circle(ep + Vector2(dx, 0), 5.0, Color(1, 0.1, 0.05, 0.18 * gl))
+				draw_circle(ep + Vector2(dx, 0), 2.0, Color(1, 0.25, 0.15, 0.95 * gl))
+	var rd: Array = _def.get("reddot", [])
+	if rd.size() == 2:
+		var wob := Vector2(sin(_t * 1.3) * 0.012 + sin(_t * 4.1) * 0.003, cos(_t * 1.1) * 0.01)
+		var dp := fr.position + (Vector2(rd[0], rd[1]) + wob) * fr.size
+		draw_circle(dp, 6.0, Color(1, 0, 0, 0.25))
+		draw_circle(dp, 2.5, Color(1, 0.2, 0.2, 0.95))
+	for pp in _papers:
+		var pc: Vector2 = fr.position + (pp.p as Vector2) * fr.size
+		var sq := 0.35 + 0.65 * absf(cos(pp.rot * 1.3))
+		draw_set_transform(pc, pp.rot, Vector2(pp.s, pp.s * sq))
+		draw_rect(Rect2(-9, -12, 18, 24), Color(0.93, 0.9, 0.82, 0.9))
+		draw_line(Vector2(-6, -7), Vector2(6, -7), Color(0.4, 0.4, 0.45, 0.6), 1.0)
+		draw_line(Vector2(-6, -2), Vector2(5, -2), Color(0.4, 0.4, 0.45, 0.6), 1.0)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
 func _draw_fx() -> void:
 	var fx: Array = _def.get("fx", [])
 	var t := _t
@@ -353,3 +573,52 @@ func _draw_fx() -> void:
 		for i in 6:
 			var y := _rng.randf() * size.y
 			draw_rect(Rect2(0, y, size.x, _rng.randf_range(2, 10)), Color(1, 1, 1, 0.08 * _glitch))
+
+
+## One painted frame, drawn behind the StoryShot's own effects. It carries
+## its own camera move (plus a car's rumble or a handheld wobble) and the
+## animating shader; the frame is overscanned so a pan never shows an edge.
+class PaintedLayer extends Control:
+	var shot: StoryShot
+	var def: Dictionary
+	var texture: Texture2D
+	var t := 0.0
+
+	func _ready() -> void:
+		show_behind_parent = true
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+		set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+
+	func _process(delta: float) -> void:
+		t += delta
+		queue_redraw()
+
+	func frame_rect() -> Rect2:
+		var cam: Array = shot._cam(def, t)
+		var zoom: float = cam[0]
+		var pan: Vector2 = cam[1]
+		var ts := Vector2(texture.get_width(), texture.get_height())
+		var cover := maxf(size.x / ts.x, size.y / ts.y) * 1.05 * zoom
+		var sz := ts * cover
+		var base := maxf(size.x / 480.0, size.y / 270.0)
+		var off := pan * base
+		var rumble := float(def.get("rumble", 0.0))
+		if rumble > 0.0:
+			off += Vector2(sin(t * 31.0) * 0.6, sin(t * 43.0) * 0.8 + sin(t * 11.0) * 0.5) * rumble * base * 0.5
+		var hand := float(def.get("handheld", 0.0))
+		if hand > 0.0:
+			off += Vector2(sin(t * 0.9) * 2.0 + sin(t * 2.3), cos(t * 0.7) * 1.5 + sin(t * 1.9) * 0.8) * hand * base * 0.5
+		var pos := size * 0.5 - sz * 0.5 + off
+		# never show past the edge of the painting
+		pos.x = clampf(pos.x, size.x - sz.x, 0.0)
+		pos.y = clampf(pos.y, size.y - sz.y, 0.0)
+		return Rect2(pos, sz)
+
+	func frame_to_screen(p: Vector2) -> Vector2:
+		var r := frame_rect()
+		return r.position + p * r.size
+
+	func _draw() -> void:
+		if texture:
+			draw_texture_rect(texture, frame_rect(), false)

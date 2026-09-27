@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MissionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/mission_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"m04_sweet_dreams"
+title = "SWEET DREAMS"
+location = "Villa Estrella - somewhere she has never been"
+date_text = "JULY 16, 1988"
+year = 1988
+chapter = 1
+level_file = "res://levels/m04_villa_estrella.json"
+music_track = "nightmare"
+boss_track = "boss_nightmare"
+default_character = &"cass"
+par_score = 52000
+par_time = 420.0
+briefing = "Everyone she has killed is at the wrap party. Tommy saved her a seat."
+objective_type = "clear"

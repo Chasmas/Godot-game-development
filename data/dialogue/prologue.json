@@ -2,51 +2,100 @@
  "bg": "desert_night",
  "music": "",
  "title": "ROUTE 58, MOJAVE DESERT — 1987",
- "start": "a",
+ "start": "a0",
  "nodes": {
+  "a0": {
+   "speaker": "narration",
+   "text": "Route 58, 1987. The crew calls it the edge of the world, because the catering truck won't drive any further.",
+   "shot": "desert_road",
+   "next": "a"
+  },
   "a": {
    "speaker": "tommy",
    "text": "Ever notice nobody says 'cut' out here? Desert doesn't care when the scene ends.",
-   "next": "b",
-   "shot": "tommy_car"
+   "shot": "tommy_car",
+   "next": "b"
   },
   "b": {
    "speaker": "cass",
    "text": "Tommy. Get out of the car.",
-   "next": "c",
-   "shot": "cass_close"
+   "shot": "cass_close",
+   "next": "c"
   },
   "c": {
    "speaker": "tommy",
    "text": "Cassie, it's a stunt. Squibs, fire bars, camera tricks. We do the dangerous part so somebody else gets the close-up.",
-   "next": "d",
-   "shot": "tommy_car"
+   "shot": "tommy_car",
+   "next": "c1"
+  },
+  "c1": {
+   "speaker": "cass",
+   "text": "The fire marshal left an hour ago.",
+   "shot": "cass_close",
+   "next": "c2"
+  },
+  "c2": {
+   "speaker": "tommy",
+   "text": "He left because craft services ran out of donuts. The man has priorities.",
+   "shot": "tommy_car",
+   "next": "c3"
+  },
+  "c3": {
+   "speaker": "cass",
+   "text": "Harcourt's standing where the extinguishers are supposed to be. He won't look at me.",
+   "shot": "cass_close",
+   "next": "c4"
+  },
+  "c4": {
+   "speaker": "tommy",
+   "text": "Harcourt doesn't look at anybody. That's why they put him on fire watch.",
+   "shot": "tommy_car",
+   "next": "d"
   },
   "d": {
    "speaker": "voice",
    "text": "Rolling. Speed. HOTSHOT, scene forty, take one.",
    "sfx": "vhs_static",
-   "next": "e",
-   "shot": "clapper"
+   "shot": "clapper",
+   "next": "e"
   },
   "e": {
    "speaker": "tommy",
    "text": "Hey. If this goes wrong, tell Mom I finally got top billing.",
-   "next": "f",
-   "shot": "tommy_car"
+   "shot": "tommy_car",
+   "next": "e1"
+  },
+  "e1": {
+   "speaker": "cass",
+   "text": "Tommy—",
+   "shot": "cass_close",
+   "auto": 0.9,
+   "next": "f"
   },
   "f": {
    "speaker": "narration",
    "text": "Action.",
    "event": "fire",
    "sfx": "explosion",
-   "next": "g",
-   "shot": "explosion"
+   "shot": "explosion",
+   "next": "g"
   },
   "g": {
    "speaker": "voice",
-   "text": "...hold it. Hold it. Nobody move. Keep the cameras rolling.",
+   "text": "...hold it. Hold it. Nobody move.",
    "sfx": "vhs_static",
+   "shot": "wreck",
+   "next": "g1"
+  },
+  "g1": {
+   "speaker": "voice",
+   "text": "Keep the cameras rolling. That's the take.",
+   "shot": "wreck",
+   "next": "g2"
+  },
+  "g2": {
+   "speaker": "narration",
+   "text": "Somebody drops an extinguisher. It bounces on the asphalt. It's empty. It rings like a bell.",
    "shot": "wreck"
   }
  },

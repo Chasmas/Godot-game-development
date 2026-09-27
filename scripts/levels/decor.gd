@@ -12,6 +12,17 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				pt.position = p
 				pt.size = float(it.get("size", 1.0))
 				root.add_child(pt)
+			"sprite":
+				# a painted prop laid on the floor (studio cameras, lights...)
+				var tex := ArtLib.sprite(str(it.get("id", "")))
+				if tex:
+					var sp := Sprite2D.new()
+					sp.texture = tex
+					sp.scale = Vector2(0.5, 0.5)
+					sp.position = p
+					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
+					sp.z_index = -1
+					root.add_child(sp)
 			"neon":
 				var ns := NeonSign.new()
 				ns.position = p
@@ -55,6 +66,14 @@ class PalmTree extends Node2D:
 		var wind := _wind()
 		var sway := sin(_t * (1.2 + wind) + _seed) * (0.05 + wind * 0.12)
 		var lean := Vector2(wind * 4.0, 0)
+		var tex := ArtLib.sprite("palm")
+		if tex:
+			# painted crown: turns and leans with the wind, fronds breathe
+			var sz := Vector2(tex.get_width(), tex.get_height()) * 0.5 * size * (1.0 + sin(_t * 2.1 + _seed) * 0.015 * (1.0 + wind))
+			draw_set_transform(lean, sway * 1.6 + _seed, Vector2.ONE)
+			draw_texture_rect(tex, Rect2(-sz * 0.5, sz), false)
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			return
 		for i in 9:
 			var a := i * TAU / 9.0 + sway + _seed
 			var L := (26.0 + (i % 3) * 5.0) * size

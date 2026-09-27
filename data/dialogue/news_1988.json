@@ -65,13 +65,13 @@
   "f": {
    "speaker": "anchor",
    "text": "And in entertainment news, KHSC has acquired a mysterious new late-night program titled HOTSHOT CALIFORNIA.",
-   "next": "g",
+   "next": "ad1",
    "shot": "tv_news"
   },
   "g": {
    "speaker": "marv",
    "text": "California, keep your eyes open. Our leading lady doesn't know the cameras are still rolling.",
-   "next": "h",
+   "next": "g2",
    "shot": "marv"
   },
   "h": {
@@ -79,6 +79,18 @@
    "text": "This is Channel 9. Good night.",
    "sfx": "vhs_static",
    "shot": "tv_news"
+  },
+  "ad1": {
+   "speaker": "marv",
+   "text": "HOTSHOT CALIFORNIA is brought to you by Desert Rose Funeral Homes. Desert Rose: we're dying to meet you.",
+   "shot": "marv",
+   "next": "g"
+  },
+  "g2": {
+   "speaker": "marv",
+   "text": "Fridays, eleven P.M. Viewers are advised that everything you are about to see is real. Everything.",
+   "shot": "marv",
+   "next": "h"
   }
  },
  "shot": "tv_news"

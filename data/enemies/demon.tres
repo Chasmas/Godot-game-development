@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"demon"
+display_name = "Demon"
+combat = 1
+weapon_id = &""
+palette = "demon"
+walk_speed = 46.0
+run_speed = 118.0
+armor = 3
+can_be_knocked_down = false
+immune_to_punch = true
+reaction_time = 0.5
+melee_windup = 0.55
+view_distance = 300.0
+view_angle_deg = 180.0
+hearing_mult = 1.5
+notes = "Something wearing a gold star that was never a person. Four hits. Don't let it get close."

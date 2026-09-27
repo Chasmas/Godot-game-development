@@ -1,0 +1,111 @@
+{
+ "bg": "tv_news",
+ "music": "apartment",
+ "title": "BURBANK — JULY 15, 1988 — 10:41 PM",
+ "shot": "burbank_night",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "Santa Ana winds: hot as a hair dryer, forty miles an hour. The hills behind the studio lot have been burning since Tuesday.",
+   "shot": "burbank_night",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "narration",
+   "text": "On the billboard, a gold star the size of a car. HOTSHOT CALIFORNIA. TONIGHT. 11 PM.",
+   "shot": "burbank_night",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "voice",
+   "text": "The overnights came in, Miss Moreno. Thirty-one share for the motel. Your mother watched. She didn't know it was you. She liked it.",
+   "shot": "control_room",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "cass",
+   "text": "Where's Kowalski?",
+   "shot": "burbank_night",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "voice",
+   "text": "Stage Nine. Wardrobe has your jacket. And I see makeup's already done.",
+   "shot": "control_room",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "rudy",
+   "text": "THERE you are! Oh thank God. You're late, you're gorgeous, you're on in nineteen minutes. Is that the star? Great star. Very on brand.",
+   "shot": "stage_door",
+   "next": "g"
+  },
+  "g": {
+   "speaker": "cass",
+   "text": "Who are you?",
+   "shot": "stage_door",
+   "next": "h"
+  },
+  "h": {
+   "speaker": "rudy",
+   "text": "Rudy! Floor manager! Nobody ever— okay. Listen. Security's jumpy, the sprinklers are 'decorative', and Mr. Kowalski says nobody touches his fire bars.",
+   "shot": "stage_door",
+   "next": "h2"
+  },
+  "h2": {
+   "speaker": "rudy",
+   "text": "Break a leg. Not literally. Legal was very clear about that this week.",
+   "shot": "stage_door",
+   "next": "i"
+  },
+  "i": {
+   "speaker": "cass",
+   "text": "What's the show tonight, Rudy?",
+   "shot": "stage_door",
+   "next": "j"
+  },
+  "j": {
+   "speaker": "rudy",
+   "text": "Sweetheart. You are.",
+   "shot": "stage_door",
+   "auto": 1.6,
+   "next": "k"
+  },
+  "k": {
+   "speaker": "narration",
+   "text": "Inside, under the lights, somebody has built room 204. Same bedspread. Same stain on the carpet. The cameras are already rolling.",
+   "shot": "room_204_set",
+   "sfx": "on_air_buzz",
+   "next": "l"
+  },
+  "l": {
+   "speaker": "cass",
+   "text": "...",
+   "shot": "room_204_set",
+   "choices": [
+    {
+     "text": "Find the Fireman.",
+     "next": "q1"
+    },
+    {
+     "text": "Find the control room.",
+     "next": "q2",
+     "set": {
+      "cass_hunts_booth": true
+     }
+    }
+   ]
+  },
+  "q1": {
+   "speaker": "cass",
+   "text": "Fire watch, Dutch. Your turn.",
+   "shot": "burbank_night"
+  },
+  "q2": {
+   "speaker": "cass",
+   "text": "Somebody's calling the shots in there. I'd like a word.",
+   "shot": "control_room"
+  }
+ }
+}

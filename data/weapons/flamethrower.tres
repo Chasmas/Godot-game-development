@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"flamethrower"
+display_name = "Pyro Special"
+kind = 0
+hold = 1
+automatic = true
+fire_rate = 14.0
+magazine = 120
+spare_mags = 2
+reload_time = 1.8
+spread_deg = 0.0
+recoil_deg = 0.0
+bullet_speed = 400.0
+max_range = 100.0
+noise_radius = 380.0
+sfx_fire = "flame_burst"
+sprite_key = "flamethrower"
+camera_kick = 0.6
+flavor = "Dutch's own rig. It remembers the car."
+muzzle_scale = 0.0
+ejects_shells = false

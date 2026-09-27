@@ -1,0 +1,51 @@
+{
+ "bg": "black",
+ "music": "",
+ "title": "A MOTEL OFF THE 5 — JULY 16, 1988 — 4:12 AM",
+ "shot": "motel_dream",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "She counts them before she sleeps. It used to be sheep.",
+   "shot": "motel_dream",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "narration",
+   "text": "Twenty-four at the motel. Nineteen at the yard. Thirty-one on Stage Nine. She always loses count around the bellhop.",
+   "shot": "motel_dream",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "They had guns. They were paid. They'd have done the same to me.",
+   "shot": "motel_dream",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "narration",
+   "text": "The television at the foot of the bed stops showing static. It shows a house on a hill, and a banner over the door. WRAP PARTY.",
+   "shot": "villa_gate",
+   "sfx": "vhs_static",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "dead",
+   "text": "Everybody's here, Cass. Everybody you invited.",
+   "shot": "wrap_party",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "tommy",
+   "text": "Cassie. Come up to the house. We saved you a seat.",
+   "shot": "villa_gate",
+   "next": "g"
+  },
+  "g": {
+   "speaker": "narration",
+   "text": "She's standing on the lawn. The graves have gold stars on them. The dirt is still moving.",
+   "shot": "villa_gate"
+  }
+ }
+}

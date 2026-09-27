@@ -196,8 +196,15 @@ func _ready() -> void:
 			Game.change_scene(Game.CUTSCENE_SCENE)
 			await _frames(n)
 		_:
-			Game.start_mission(OS.get_environment("SHOT_MISSION") if OS.get_environment("SHOT_MISSION") != "" else "m01_checkout")
+			var mods := {}
+			if OS.get_environment("SHOT_MODS") != "":
+				mods = JSON.parse_string(OS.get_environment("SHOT_MODS"))
+			if OS.get_environment("SHOT_WEATHER") != "":
+				mods["weather"] = OS.get_environment("SHOT_WEATHER")
+			Game.start_mission(OS.get_environment("SHOT_MISSION") if OS.get_environment("SHOT_MISSION") != "" else "m01_checkout", "", mods)
 			await _frames(20)
+			while get_tree().get_first_node_in_group("player") == null:
+				await _frames(5)
 			var p := get_tree().get_first_node_in_group("player") as Player
 			var pos := OS.get_environment("SHOT_POS")
 			if p and pos != "":

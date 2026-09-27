@@ -1,0 +1,31 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "dutch",
+   "text": "Well, look at that jawline. You've got his jawline. Hold still, I'll get your good side.",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "cass",
+   "text": "You went back to the car at three in the morning.",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "dutch",
+   "text": "Four minutes past. I'm a professional. Fire bars, doubled. Pads, pulled. Extinguishers, emptied into the sand. Tommy even waved at me.",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "dutch",
+   "text": "Fire's honest, kid. It doesn't care who the star is.",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "pa",
+   "text": "WE ARE LIVE IN FIVE. FOUR. THREE...",
+   "sfx": "on_air_buzz",
+   "event": "boss_start"
+  }
+ }
+}

@@ -24,7 +24,11 @@ func _ready() -> void:
 	stripe.position = Vector2(0, 60)
 	stripe.size = Vector2(4000, 70)
 	add_child(stripe)
-	var title := UIStyle.title_label(tr("%s — COMPLETE") % (tr(Game.current_mission.title) if Game.current_mission else tr("MISSION")), 44)
+	var arc: Dictionary = r.get("arcade", {})
+	var head := tr("%s — COMPLETE") % (tr(Game.current_mission.title) if Game.current_mission else tr("MISSION"))
+	if not arc.is_empty():
+		head = (tr("%s — ALL WAVES CLEARED") if arc.get("won", false) else tr("%s — RUN OVER")) % (tr(Game.current_mission.title) if Game.current_mission else tr("ARCADE"))
+	var title := UIStyle.title_label(head, 44)
 	title.position = Vector2(48, 66)
 	add_child(title)
 	lines_box = VBoxContainer.new()
@@ -50,7 +54,7 @@ func _ready() -> void:
 	add_child(buttons)
 	var st: Dictionary = r.get("stats", {})
 	_items = [
-		["TIME", Level._fmt_time(float(r.get("time", 0.0)))],
+		["TIME", Level._fmt_time(float(r.get("time", 0.0)))] if arc.is_empty() else ["WAVE REACHED", str(int(arc.get("wave", 0)))],
 		["KILLS", str(int(st.get("kills", 0)))],
 		["MAX COMBO", "%dx" % int(r.get("max_combo", 0))],
 		["ACCURACY", "%d%%" % int(float(r.get("accuracy", 0.0)) * 100.0)],

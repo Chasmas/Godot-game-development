@@ -246,6 +246,7 @@ func _video_tab() -> void:
 	_toggle(p, "Cel-shaded finish", "cel_shading", true)
 	_toggle(p, "Weather (rain, storms)", "weather", true)
 	_toggle(p, "Set dressing (room clutter)", "set_dressing", true)
+	_toggle(p, "Painted props & floors", "painted_props", true)
 	_slider(p, "Brightness", "brightness", 0.6, 1.4, 0.05)
 	_toggle(p, "Show FPS", "show_fps")
 	_choice(p, "Window size", "window_size", ["1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440"], 1)

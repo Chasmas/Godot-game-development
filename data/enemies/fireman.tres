@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"fireman"
+display_name = "The Fireman"
+combat = 0
+weapon_id = &"rifle"
+palette = "fireman"
+walk_speed = 46.0
+run_speed = 110.0
+armor = 3
+reaction_time = 0.5
+preferred_range = 95.0
+view_distance = 320.0
+notes = "Dutch Kowalski. Flamethrower, aluminised suit (3 hits), fireproof. Sidestep the spray; propane ends the show."

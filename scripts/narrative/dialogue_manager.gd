@@ -139,6 +139,7 @@ func start(id: String, pause_game := true) -> void:
 	_apply_reading_settings()
 	var art_tex := CinematicArt.cutscene_texture(id) if pause_game else null
 	cinematic_art.texture = art_tex
+	cinematic_art.material = CinematicArt.cutscene_material(id) if art_tex else null
 	cinematic_art.visible = art_tex != null
 	cinematic_dim.visible = art_tex != null
 	# in-level scenes get cinema bars; story cutscenes already frame

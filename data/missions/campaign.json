@@ -25,6 +25,34 @@
 	},
 	{
 		"type": "cutscene",
+		"id": "yermo_after"
+	},
+	{
+		"type": "cutscene",
+		"id": "studio_1988"
+	},
+	{
+		"type": "mission",
+		"id": "m03_prime_time"
+	},
+	{
+		"type": "cutscene",
+		"id": "news_1988b"
+	},
+	{
+		"type": "cutscene",
+		"id": "motel_dream"
+	},
+	{
+		"type": "mission",
+		"id": "m04_sweet_dreams"
+	},
+	{
+		"type": "cutscene",
+		"id": "wake_1988"
+	},
+	{
+		"type": "cutscene",
 		"id": "teaser"
 	}
 ]

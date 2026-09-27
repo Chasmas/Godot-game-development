@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"burning_man"
+display_name = "Tommy?"
+combat = 0
+weapon_id = &"rifle"
+palette = "burnt"
+walk_speed = 52.0
+run_speed = 120.0
+armor = 4
+reaction_time = 0.45
+preferred_range = 90.0
+view_distance = 360.0
+notes = "The part of Tommy she kept. Burns, summons the dead, and wants one more take."

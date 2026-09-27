@@ -117,5 +117,110 @@
 				1.0
 			]
 		]
+	},
+	"prime_time": {
+		"name": "Prime Time",
+		"bpm": 132,
+		"layers": [
+			"res://music/level_primetime_explore.ogg",
+			"res://music/level_primetime_combat.ogg",
+			"res://music/level_primetime_combo.ogg",
+			"res://music/level_primetime_danger.ogg"
+		],
+		"intensity": [
+			[
+				1.0,
+				0.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				1.0
+			]
+		]
+	},
+	"boss_fireman": {
+		"name": "The Fireman",
+		"bpm": 150,
+		"layers": [
+			"res://music/boss_fireman.ogg",
+			"res://music/boss_fireman_fire.ogg"
+		],
+		"intensity": [
+			[
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				0.3
+			],
+			[
+				1.0,
+				1.0
+			],
+			[
+				1.0,
+				1.0
+			]
+		]
+	},
+	"nightmare": {
+		"name": "Sweet Dreams",
+		"bpm": 100,
+		"layers": [
+			"res://music/level_nightmare_explore.ogg",
+			"res://music/level_nightmare_combat.ogg",
+			"res://music/level_nightmare_combo.ogg",
+			"res://music/level_nightmare_danger.ogg"
+		],
+		"intensity": [
+			[
+				1.0,
+				0.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				0.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				0.0
+			],
+			[
+				1.0,
+				1.0,
+				1.0,
+				1.0
+			]
+		]
+	},
+	"boss_nightmare": {
+		"name": "Top Billing",
+		"bpm": 140,
+		"layers": [
+			"res://music/boss_nightmare.ogg"
+		]
 	}
 }

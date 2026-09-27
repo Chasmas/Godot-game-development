@@ -312,6 +312,21 @@ func _break(dir: Vector2) -> void:
 func unlock() -> void:
 	locked = false
 
+## Something slams it shut from the other side and holds it (the dream).
+func slam_shut(hold := 4.0) -> void:
+	if broken:
+		return
+	swing = 0.0
+	omega = 0.0
+	_apply()
+	_rattle = 1.0
+	_play_slam()
+	var was := locked
+	locked = true
+	get_tree().create_timer(hold, false).timeout.connect(func():
+		if is_instance_valid(self):
+			locked = was)
+
 func _draw() -> void:
 	if broken:
 		# splintered stump on the hinge + a few boards on the floor (seeded so

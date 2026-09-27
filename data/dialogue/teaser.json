@@ -20,7 +20,7 @@
   "c": {
    "speaker": "narration",
    "text": "RECOVERED AUDIO: 1991 — BARSTOW POLICE DEPARTMENT. OFFICER DANA PRUITT HAS NOT SLEPT IN THREE DAYS.",
-   "next": "d",
+   "next": "c2",
    "shot": "barstow_pd"
   },
   "d": {
@@ -34,6 +34,12 @@
    "text": "END OF VERTICAL SLICE. ARCADE MODE UNLOCKED. THE TAPE IS NOT FINISHED.",
    "event": "slice_complete",
    "shot": "hills_fire"
+  },
+  "c2": {
+   "speaker": "narration",
+   "text": "RECOVERED NOTE, PINNED TO A CORKBOARD: 'THE STAR KILLER IS NOT ONE PERSON. CHECK THE CREDITS.'",
+   "shot": "barstow_pd",
+   "next": "d"
   }
  },
  "shot": "static"

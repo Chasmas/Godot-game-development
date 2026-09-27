@@ -11,9 +11,12 @@ const TITLE := ROOT + "title/hotshot_title.webp"
 const CUTSCENES := {
 	"apartment_1988": ROOT + "cutscenes/apartment_1988.webp",
 	"news_1988": ROOT + "cutscenes/news_1988.webp",
-	"m01_room_204": ROOT + "cutscenes/room_204.png",
-	"m01_boss_intro": ROOT + "cutscenes/harcourt_confrontation.png",
-	"m01_boss_down": ROOT + "cutscenes/harcourt_confrontation.png",
+}
+## In-level scenes played over a painted frame (animated by StoryShot's
+## painted_shot shader): dialogue id -> painted shot id.
+const PAINTED := {
+	"m01_boss_intro": "harcourt_office", "m01_boss_down": "harcourt_office", "m01_room_204": "room_204",
+	"m03_boss_intro": "fireman", "m03_boss_down": "fireman_down",
 }
 
 static func texture_for(path: String) -> Texture2D:
@@ -22,7 +25,15 @@ static func texture_for(path: String) -> Texture2D:
 	return load(path) as Texture2D
 
 static func cutscene_texture(id: String) -> Texture2D:
+	if PAINTED.has(id):
+		return StoryShot.painted_tex(str(PAINTED[id]))
 	return texture_for(str(CUTSCENES.get(id, "")))
+
+## The animating material for an in-level scene's frame, or null.
+static func cutscene_material(id: String) -> Material:
+	if PAINTED.has(id) and StoryShot.painted_tex(str(PAINTED[id])):
+		return StoryShot.painted_material(str(PAINTED[id]))
+	return null
 
 static func title_texture() -> Texture2D:
 	return texture_for(TITLE)

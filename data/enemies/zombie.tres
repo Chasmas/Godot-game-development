@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"zombie"
+display_name = "The Dead"
+combat = 1
+weapon_id = &""
+palette = "zombie"
+walk_speed = 30.0
+run_speed = 64.0
+armor = 1
+reaction_time = 0.6
+melee_windup = 0.45
+view_distance = 320.0
+view_angle_deg = 220.0
+hearing_mult = 2.2
+alert_others_radius = 260.0
+notes = "Everyone she ever put down, back for the wrap party. Slow. Takes two. Sometimes gets back up."

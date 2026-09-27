@@ -5,12 +5,13 @@ extends RefCounted
 ## props, lights, pickups, enemies, NPCs, interactables and a nav grid.
 
 const T := 16
-const FLOORS := ".,_:=\"~;+"
+const FLOORS := ".,_:=\"~;+-"
 const LOW_CHARS := "TCblwkcn"
 const PROP_CHARS := "VtQIYFo"
-const ENEMY_CHARS := {"g": &"guard", "m": &"gunner", "h": &"hunter", "H": &"heavy", "s": &"scout", "r": &"riot", "B": &"night_manager", "d": &"dog", "y": &"dog_rott"}
+const ENEMY_CHARS := {"g": &"guard", "m": &"gunner", "h": &"hunter", "H": &"heavy", "s": &"scout", "r": &"riot", "B": &"night_manager", "d": &"dog", "y": &"dog_rott",
+	"z": &"zombie", "u": &"ghoul", "M": &"demon", "q": &"cultist", "v": &"hellhound"}
 const WEAPON_CHARS := {"1": &"pistol", "2": &"whisper", "3": &"revolver", "4": &"smg", "5": &"shotgun", "6": &"rifle",
-	"7": &"knife", "8": &"bat", "9": &"pipe", "0": &"machete", "!": &"bottle", "?": &"brick", "G": &"hotshot"}
+	"7": &"knife", "8": &"bat", "9": &"pipe", "0": &"machete", "!": &"bottle", "?": &"brick", "G": &"hotshot", "(": &"boomstick", ")": &"flamethrower"}
 const FURN := {"T": "table", "C": "counter", "b": "bed", "l": "lounger", "w": "washer", "k": "desk", "K": "car", "Z": "dumpster", "c": "crate", "n": "cage", "j": "wreck"}
 const PROPS := {"V": "vending", "t": "tv", "Q": "arcade", "I": "ice", "Y": "plant", "F": "fuse", "o": "lamp"}
 
@@ -456,8 +457,13 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 		return
 	var e: Enemy
 	if c == "B":
-		e = BossNightManager.new()
-	elif c == "d" or c == "y":
+		if kind == &"burning_man":
+			e = BossBurningMan.new()
+		elif kind == &"fireman":
+			e = BossFireman.new()
+		else:
+			e = BossNightManager.new()
+	elif c == "d" or c == "y" or c == "v":
 		e = Dog.new()
 	elif kind == &"sniper":
 		e = Sniper.new()
@@ -561,10 +567,44 @@ class FloorChunk extends Node2D:
 			if _solid(x, y + 1):
 				draw_rect(Rect2(p + Vector2(0, T2 - (i + 1) * w), Vector2(T2, w)), Color(0.02, 0.0, 0.05, a * 0.45))
 
+	## Painted floor tile (ArtLib): the seamless texture sampled in world
+	## space, a little per-tile tone so it never reads as wallpaper, and the
+	## procedural details that carry gameplay or story (parking lines,
+	## puddles, stains, spike marks) on top.
+	func _tile_painted(tex: Texture2D, f: String, p: Vector2, x: int, y: int) -> void:
+		var T2 := float(LevelBuilder.T)
+		var h := _h(x, y)
+		var src := Rect2(fposmod(p.x * 2.0, 256.0), fposmod(p.y * 2.0, 256.0), 32, 32)
+		draw_texture_rect_region(tex, Rect2(p, Vector2(T2, T2)), src)
+		var tone := float(_h(x / 2, y / 2, 7) % 5) / 4.0
+		draw_rect(Rect2(p, Vector2(T2, T2)), Color(0.05, 0.0, 0.1, 0.04 + 0.05 * tone))
+		match f:
+			":":
+				if x % 4 == 0 and builder.is_parking_row(y):
+					draw_rect(Rect2(p, Vector2(1.5, T2)), Color(0.95, 0.9, 0.6, 0.85))
+				if h % 19 == 3:
+					draw_set_transform(p + Vector2(8, 8), 0.0, Vector2(1.0, 0.55))
+					draw_circle(Vector2.ZERO, 9.0, Color(0.1, 0.12, 0.22, 0.5))
+					draw_arc(Vector2.ZERO, 9.0, PI * 1.1, PI * 1.7, 6, Color(0.8, 0.85, 1.0, 0.3), 1.0)
+					draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			".":
+				if h % 17 == 0:
+					draw_circle(p + Vector2(4 + h % 8, 5 + (h >> 4) % 7), 3.0 + (h % 3), Color(0.25, 0.05, 0.12, 0.4))
+			"-":
+				if h % 37 == 4:
+					var tc: Color = [Color(1.0, 0.3, 0.45), Color(0.3, 0.9, 1.0), Color(1.0, 0.85, 0.3)][h % 3]
+					var cc := p + Vector2(8, 8)
+					draw_line(cc - Vector2(4, 0), cc + Vector2(4, 0), tc, 2.0)
+					draw_line(cc - Vector2(0, 4), cc + Vector2(0, 4), tc, 2.0)
+
 	func _tile(f: String, p: Vector2, x: int, y: int) -> void:
 		var T2 := float(LevelBuilder.T)
 		var r := Rect2(p, Vector2(T2, T2))
 		var h := _h(x, y)
+		var ptex := ArtLib.floor_tex(f)
+		if ptex:
+			_tile_painted(ptex, f, p, x, y)
+			return
 		match f:
 			".":   # 80s motel carpet: diamond lattice, wear, the odd stain
 				var base := Color(0.52, 0.14, 0.28) if (x / 6 + y / 6) % 7 != 0 else Color(0.47, 0.12, 0.26)
@@ -681,6 +721,21 @@ class FloorChunk extends Node2D:
 				draw_rect(Rect2(p, Vector2(1, T2)), Color(0.22, 0.23, 0.27))
 				if h % 13 == 0:
 					draw_circle(p + Vector2(4 + h % 8, 4 + (h >> 3) % 8), 3.0, Color(0.3, 0.2, 0.12, 0.45))
+			"-":   # soundstage floor: matte black paint, scuffs, gaffer-tape marks
+				var tone := 0.1 + 0.015 * float(_h(x / 3, y / 3) % 3)
+				draw_rect(r, Color(tone, tone * 0.95, tone * 1.1))
+				for i in 4:
+					draw_rect(Rect2(p + Vector2(float((h >> (i * 3)) % 15), float((h >> (i * 3 + 6)) % 15)), Vector2(1, 1)), Color(0.2, 0.19, 0.24))
+				if h % 9 == 0:
+					draw_line(p + Vector2(2 + h % 6, 3 + (h >> 4) % 9), p + Vector2(9 + h % 6, 4 + (h >> 4) % 9), Color(0.16, 0.15, 0.2), 1.0)
+				if h % 37 == 4:
+					# a spike mark: two crossed strips of coloured tape
+					var tc: Color = [Color(1.0, 0.3, 0.45), Color(0.3, 0.9, 1.0), Color(1.0, 0.85, 0.3)][h % 3]
+					var cc := p + Vector2(8, 8)
+					draw_line(cc - Vector2(4, 0), cc + Vector2(4, 0), tc, 2.0)
+					draw_line(cc - Vector2(0, 4), cc + Vector2(0, 4), tc, 2.0)
+				if y % 8 == 0 and h % 3 == 0:
+					draw_rect(Rect2(p + Vector2(0, 7), Vector2(T2, 1)), Color(1, 1, 1, 0.04))
 			_:
 				draw_rect(r, Color(0.4, 0.4, 0.4))
 

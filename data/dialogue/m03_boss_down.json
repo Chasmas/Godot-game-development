@@ -1,0 +1,96 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "dutch",
+   "text": "Hah... hah. Look at the tote board, kid. Look at those numbers. They love you.",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "cass",
+   "text": "Who paid you?",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "dutch",
+   "text": "Vance paid. Vance always pays. But Vance didn't sign the change order.",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "cass",
+   "text": "Then who did?",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "dutch",
+   "text": "Moreno. T. Moreno. Nice handwriting. Loops on the capitals.",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "cass",
+   "text": "You're lying.",
+   "next": "g"
+  },
+  "g": {
+   "speaker": "dutch",
+   "text": "Maybe. Ask why the sprinklers in here are dry. Same as the extinguishers. Somebody likes a theme.",
+   "next": "h"
+  },
+  "h": {
+   "speaker": "pa",
+   "text": "THE LINES ARE OPEN, CALIFORNIA! Dial ONE to FINISH HIM. Dial TWO to SPARE HIM. Operators are standing by!",
+   "sfx": "tote_ding",
+   "next": "i"
+  },
+  "i": {
+   "speaker": "narration",
+   "text": "Above the stage the tote board ticks over. FINISH: 2,114,902. SPARE: 11.",
+   "sfx": "tote_ding",
+   "next": "j"
+  },
+  "j": {
+   "speaker": "cass",
+   "text": "...",
+   "choices": [
+    {
+     "text": "Give them their ending.",
+     "next": "k1"
+    },
+    {
+     "text": "Cut the feed.",
+     "next": "s1",
+     "set": {
+      "dutch_spared": true
+     }
+    }
+   ]
+  },
+  "k1": {
+   "speaker": "cass",
+   "text": "This one's for the viewers at home.",
+   "event": "boss_execute",
+   "next": "k2"
+  },
+  "k2": {
+   "speaker": "narration",
+   "text": "The studio audience applauds. The applause is canned. It goes on a little too long.",
+   "sfx": "applause"
+  },
+  "s1": {
+   "speaker": "cass",
+   "text": "Show's over.",
+   "event": "boss_spare",
+   "next": "s2"
+  },
+  "s2": {
+   "speaker": "narration",
+   "text": "She puts a bullet through the nearest camera. Then the next. Then the next. On forty million screens, the picture goes to snow.",
+   "sfx": "tv_break",
+   "next": "s3"
+  },
+  "s3": {
+   "speaker": "dutch",
+   "text": "They'll just cut to a commercial, kid. They always cut to a commercial."
+  }
+ }
+}

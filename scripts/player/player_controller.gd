@@ -511,7 +511,9 @@ func _try_shoot(w: WeaponInstance) -> void:
 			Audio.play_at("empty", global_position)
 			Events.hint.emit("EMPTY — throw it", 1.0)
 		return
-	if left:
+	if Game.modifiers.get("infinite_ammo", false):
+		pass   # arcade: the magazine never runs dry
+	elif left:
 		w.ammo2 -= 1
 	else:
 		w.ammo -= 1
@@ -532,6 +534,10 @@ func _try_shoot(w: WeaponInstance) -> void:
 	var block := space.intersect_ray(q)
 	if not block.is_empty():
 		origin = global_position
+	if w.data.id == &"flamethrower":
+		_flame_shot(origin, aim_dir)
+		_emit_weapon()
+		return
 	var bs := BulletSystem.get_system()
 	if bs:
 		bs.fire(origin, _forgiving_shot(aim_dir), w.data, self, spread)
@@ -557,6 +563,30 @@ func _try_shoot(w: WeaponInstance) -> void:
 	Events.camera_punch.emit(1.0 + clampf(w.data.camera_kick * 0.006, 0.004, 0.035), 0.07)
 	Effects.gun_smoke(origin, aim_dir, 1.4 if w.data.pellets > 1 else (0.6 if silenced else 1.0))
 	_emit_weapon()
+
+## The flamethrower: a short cone that kills what it touches and leaves
+## the floor burning (the player's own fire doesn't catch the player).
+func _flame_shot(origin: Vector2, dir: Vector2) -> void:
+	var reach := 96.0
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if not e.is_alive():
+			continue
+		var to: Vector2 = (e as Node2D).global_position - origin
+		if to.length() < reach and absf(dir.angle_to(to)) < 0.3:
+			var info := DamageInfo.make(DamageInfo.Type.FIRE, self, (e as Node2D).global_position, to.normalized(), &"flamethrower", &"fire")
+			info.lethal = true
+			info.from_player = true
+			e.take_damage(info)
+	if randf() < 0.45 and level:
+		var at: Vector2 = level.nearest_open_point(origin + dir.rotated(randf_range(-0.25, 0.25)) * randf_range(30.0, reach), origin)
+		var fz := FireZone.ignite(level.actors_root, at, randf_range(7.0, 10.0), randf_range(1.0, 1.8))
+		fz.friendly = true
+	var fx := FireZone.ignite(level.actors_root if level else get_parent(), origin + dir * 14.0, 5.0, 0.18)
+	fx.friendly = true
+	fx.harmless = true
+	Audio.play_at("flame_burst", global_position, -8.0)
+	Events.noise.emit(global_position, 380.0, &"gunshot", self)
+	Events.camera_shake.emit(0.6)
 
 func gun_noise(w: WeaponInstance) -> float:
 	if upgrades.has(&"silencer"):

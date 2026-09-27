@@ -1,0 +1,363 @@
+{
+ "note": "Prompts for tools/art/gen_ai_art.py. Recurring cast: CASS = woman late 20s, long voluminous wavy auburn-red hair, gold five-pointed star greasepaint over her left eye (from 1988 on), red leather jacket. TOMMY = young man, curly brown hair, blue satin varsity jacket. ARLO = wiry man in his 60s, grey crew cut, grey horseshoe moustache, sun-leathered skin, faded olive film-crew jacket. DUTCH = huge bald man in his 50s, burn scars over the left side of face and scalp, silver aluminised pyrotechnics suit, welding goggles pushed up on his forehead. RUDY = nervous TV floor manager in his 30s, headset, clipboard, beige cardigan, big glasses.",
+ "categories": {
+  "portraits": {
+   "style": "Painted head-and-shoulders character portrait for a 1980s neo-noir video game. Realistic oil painting with visible brushwork, front-facing, looking at the viewer, dark textured purple-magenta studio backdrop with a cyan rim light on one side and warm key light on the face. Square format, face centred, shoulders visible. No text.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high"
+   },
+   "entries": {
+    "arlo": {
+     "prompt": "Arlo Vance: a wiry man in his 60s, grey crew cut, grey horseshoe moustache, sun-leathered deeply lined skin, tired cunning eyes, faded olive film-crew jacket with a small embroidered gold star, a dog whistle on a cord around his neck."
+    },
+    "dutch": {
+     "prompt": "Dutch Kowalski, 'The Fireman': a huge bald man in his 50s, shiny burn scars across the left side of his face and scalp, a calm unsettling smile, silver aluminised fireproof pyrotechnics suit, welding goggles pushed up on his forehead, faint orange firelight on his face."
+    },
+    "rudy": {
+     "prompt": "Rudy, a nervous TV floor manager in his 30s: big square glasses, sweaty forehead, curly thinning hair, a headset microphone, beige cardigan over a loud patterned shirt, holding a clipboard to his chest, comic anxious expression."
+    },
+    "dana": {
+     "prompt": "Officer Dana Pruitt, a police officer in her early 30s, tired intelligent eyes with dark circles, dark hair in a tight bun, 1980s California police uniform, a paper coffee cup."
+    },
+    "director": {
+     "prompt": "A mysterious film director seen only in silhouette against a blinding projector beam, wearing a flat cap and aviator sunglasses that catch the light, holding a director's megaphone; the face is completely in shadow."
+    },
+    "tommy_burnt": {
+     "prompt": "A horror portrait: Tommy Moreno, a young man with curly brown hair, but half his face is charred and glowing with embers like cooling coals, his blue satin varsity jacket scorched, one eye clear and kind, the other a burning ember; smoke curling up. Tragic, not monstrous.",
+     "refs": [
+      "tommy"
+     ]
+    },
+    "dead": {
+     "prompt": "A horror portrait of a dead motel security guard risen as a zombie: grey rotting skin, milky eyes, a teal security uniform torn and bloodstained, a small gold star painted on his forehead, jaw slack. Unsettling."
+    }
+   }
+  },
+  "shots": {
+   "style": "Painted cinematic key frame for a 1980s neo-noir action video game set in California. Realistic oil painting with visible brushwork in the style of painted 1980s movie posters, deep indigo and purple shadows, hot magenta and cyan neon rim lighting, warm amber practical lights, soft film grain. Wide 16:9 cinematic composition: keep the main subject in the central band, nothing important near the top or bottom edges. No text, no captions, no watermark unless described.",
+   "defaults": {
+    "size": "1536x1024",
+    "quality": "high"
+   },
+   "entries": {
+    "desert_road": {
+     "prompt": "Night in the Mojave desert, 1987: a lonely two-lane highway running to the horizon, a film crew's trucks and tall work lights glowing far away, a black 1970s Cadillac parked on the road, Joshua trees, a starry sky with a violet-orange glow on the horizon, dust in the air."
+    },
+    "cass_close": {
+     "prompt": "Close-up of Cass Moreno on a desert film set at night in 1987 (no star makeup yet), wearing a crew headset over her hair and a red leather jacket, worried eyes looking off-camera, lit by harsh white work lights with magenta rim light, blurred crew and cameras behind her.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "tommy_car": {
+     "prompt": "Tommy Moreno sitting in the driver's seat of a black 1970s Cadillac at night, grinning through the open window, blue satin varsity jacket, a small gold star charm hanging from the rear-view mirror, film lights reflecting on the chrome, desert behind.",
+     "refs": [
+      "tommy"
+     ]
+    },
+    "clapper": {
+     "prompt": "Extreme close-up of a film clapperboard held up in front of a camera lens at night; the slate is chalk-written: HOTSHOT, SCENE 40, TAKE 1. Behind it, out of focus, a car on a desert road and film lights.",
+     "quality": "high"
+    },
+    "explosion": {
+     "prompt": "A black Cadillac exploding into a huge fireball on a desert highway at night during a film shoot, film cameras on tripods silhouetted in the foreground, burning debris flying, orange light flooding everything."
+    },
+    "wreck": {
+     "prompt": "The aftermath: a burned-out Cadillac wreck still burning on a desert road at night, a film crew standing perfectly still in silhouette with cameras still rolling, empty red fire extinguishers dropped on the asphalt, smoke drifting across the stars. Chilling and quiet."
+    },
+    "machine": {
+     "prompt": "Close-up of a beige 1980s answering machine on a dark wooden desk, its red message light glowing, a cassette visible in the window, a coiled phone cord, blue neon light slicing through window blinds across it."
+    },
+    "package": {
+     "prompt": "An opened brown paper package on a scratched wooden table at night: inside, a small brass tin of gold greasepaint, a motel room key on a diamond-shaped plastic fob reading 204, and a Polaroid photo of a smiling young man with curly brown hair. Warm lamp light, neon glow from the window."
+    },
+    "mirror": {
+     "prompt": "Cass Moreno in a small bathroom lit by a ring of bare vanity bulbs, painting a gold five-pointed star over her left eye with her fingertip, seen in the mirror, determined and haunted expression, red leather jacket, steam on the glass edges.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "motel_night": {
+     "prompt": "The Sunset Palms Motel in Barstow at night in heavy rain: a two-storey 1960s motel with a glowing pink-and-cyan neon sign reading SUNSET PALMS and a VACANCY sign, palm trees, a wet parking lot reflecting neon, a lone car arriving with headlights on."
+    },
+    "motel_crime": {
+     "prompt": "Dawn after a massacre at a desert motel: police cars with red and blue lights, yellow crime-scene tape, covered bodies on stretchers, a TV news van, detectives with coffee, the neon motel sign still flickering in the grey morning."
+    },
+    "marv": {
+     "prompt": "Marv Kessel, a slick TV host with black slicked-back hair, burgundy suit jacket, black shirt and gold tie, smiling a showman's smile on a glitzy late-night TV set with a giant glowing gold star behind him, studio lights and glitter in the air.",
+     "refs": [
+      "marv"
+     ]
+    },
+    "polaroid": {
+     "prompt": "Close-up of an old Polaroid lying on a dark table: it shows a desert film set with a car and crew, and someone has written the initials A.V. on the white border in black marker. A cigarette burn on one corner, neon reflections."
+    },
+    "salvage_yard": {
+     "prompt": "A desert salvage yard at night, empty of people: chain-link fence topped with barbed wire, towers of crushed cars, a crane, harsh sodium floodlights, a sign on the fence reading BEWARE OF DOG, and several pairs of glowing red dog eyes in the darkness between the wrecks."
+    },
+    "galaxy_palace": {
+     "prompt": "Inside the Galaxy Palace arcade in 1990: rows of glowing arcade cabinets, star-patterned carpet, neon planets on the ceiling, a lone young woman in a harlequin jacket with her back to us playing a machine, a high-score screen glowing."
+    },
+    "barstow_pd": {
+     "prompt": "A small-town police station at night in the rain, 1991: Officer Dana Pruitt, a tired woman in her early 30s with dark hair in a bun, alone at a desk buried in case files and Polaroids pinned with gold stars, a cold coffee, red light from a patrol car outside the window.",
+     "refs": [
+      "dana"
+     ]
+    },
+    "hills_fire": {
+     "prompt": "The Hollywood hills burning at night in 1992: a wall of wildfire on the ridge, burning palm trees, ash falling like snow over a freeway, and on a hilltop a lone film camera on a tripod silhouetted against the flames."
+    },
+    "yermo_office": {
+     "prompt": "A cramped salvage-yard office at 3 AM: a wall of small CRT security monitors showing a fenced yard, cheap wood panelling, a calendar with dogs, a bottle of whiskey, a rottweiler asleep on a rug, an old HOTSHOT film-crew jacket on a hook, rain on the window."
+    },
+    "arlo_close": {
+     "prompt": "Arlo Vance, a wiry man in his 60s with a grey crew cut and horseshoe moustache, sitting behind a cluttered desk lit by the blue glow of security monitors, a shotgun resting across his lap, a glass of whiskey, a bleak knowing smile.",
+     "refs": [
+      "arlo"
+     ]
+    },
+    "live_monitors": {
+     "prompt": "Close-up of a stack of CRT security monitors in a dark office: every screen shows the same red-haired woman with a gold star on her face walking through a salvage yard, from different angles, and in the corner of each screen a small red LIVE tally light. Unsettling."
+    },
+    "red_dot": {
+     "prompt": "Arlo Vance, a wiry man in his 60s with a grey crew cut and grey horseshoe moustache, sitting at his cluttered salvage-yard office desk at night, looking calmly toward the window; a small red laser dot rests on his chest. Behind him the window is streaked with rain and has a single bullet hole spiderwebbing the glass; outside, floodlights and the silhouettes of guard dogs in the yard. Blue monitor glow.",
+     "refs": [
+      "arlo"
+     ]
+    },
+    "burbank_night": {
+     "prompt": "Burbank at night during the Santa Ana winds, 1988: the KHSC Channel 9 studio lot with a big blocky soundstage marked STAGE 9, palm trees bending hard in the wind, dust and leaves flying, a huge billboard reading HOTSHOT CALIFORNIA - TONIGHT 11PM, and the hills behind glowing orange with wildfire."
+    },
+    "stage_door": {
+     "prompt": "A studio stage door lit by a red WHEN LIGHT IS ON DO NOT ENTER lamp: Rudy, a nervous floor manager with big glasses, a headset and beige cardigan, holding a clipboard, waving someone in with frantic comic urgency, wind blowing papers off his clipboard.",
+     "refs": [
+      "rudy"
+     ]
+    },
+    "room_204_set": {
+     "prompt": "Inside a dark TV soundstage: a perfect replica of a cheap motel room, number 204, built as a film set with only three walls, surrounded by studio cameras, boom microphones and lights all pointed at the empty bed, a gold star painted on the wall. Deeply unsettling."
+    },
+    "control_room": {
+     "prompt": "A TV control room at night: a wall of monitors showing a red-haired woman with a gold star on her face fighting through a studio from a dozen angles, a vision mixer desk with glowing buttons, an empty producer's chair with a director's megaphone and a single gold star on the seat."
+    },
+    "fireman": {
+     "prompt": "Dutch Kowalski 'The Fireman', a huge bald man with burn scars on the left side of his face, in a silver aluminised pyrotechnics suit with welding goggles on his forehead, holding a flamethrower on a burning soundstage; behind him a replica black Cadillac on fire, studio lights and cameras.",
+     "refs": [
+      "dutch"
+     ]
+    },
+    "fireman_down": {
+     "prompt": "A defeated giant pyrotechnician in a scorched silver fire suit sitting against a burning studio set, laughing, while studio cameras with red tally lights close in on him and a big light-bulb scoreboard above reads FINISH and SPARE with glowing numbers.",
+     "refs": [
+      "dutch"
+     ]
+    },
+    "phone_bank": {
+     "prompt": "A late-night TV telethon phone bank: rows of operators in headsets answering beige phones under a neon sign reading CALL NOW, a big tote board of glowing numbers, everyone smiling too hard. Surreal and creepy."
+    },
+    "news_studio_fire": {
+     "prompt": "A TV news anchor, a woman in her 40s with big auburn 80s hair and a magenta blazer, at a news desk; the screen behind her shows a burning television studio with fire trucks; her professional smile does not reach her eyes.",
+     "refs": [
+      "anchor"
+     ]
+    },
+    "credits_tv": {
+     "prompt": "Close-up of an old CRT television in a dark motel room showing white end credits scrolling over black; the clearly legible line on screen reads EXECUTIVE PRODUCER  T. MORENO. The TV glow is the only light; a hand holding a VCR remote in the foreground."
+    },
+    "harcourt_office": {
+     "prompt": "A tense standoff in a 1960s motel office at night: Cass Moreno with a gold star over her eye, red leather jacket, aiming a pistol; across the desk Lyle Harcourt, a man in his 50s with slicked silver hair and a cream suit, hands half-raised, calm and sad. Neon light through blinds.",
+     "refs": [
+      "cass",
+      "harcourt"
+     ]
+    },
+    "room_204": {
+     "prompt": "Motel room 204 at night: an old CRT television and VCR on a dresser playing a damaged tape of a car stunt, a stack of VHS tapes, a Polaroid and a motel key on the bedspread, rain on the window, neon sign light bleeding in."
+    },
+    "mom_kitchen": {
+     "prompt": "A small 1980s kitchen in Van Nuys at night. A tired, kind woman in her late 50s (Cass's mother: greying auburn hair in a loose bun, cardigan over a floral blouse) sits alone at the kitchen table holding a wall phone's receiver to her ear, its long curly cord stretched across the room. In front of her a birthday cake with unlit candles. On the fridge a photo of two smiling children held by a gold star magnet. Fireworks bloom silently through the window. No men in the scene. Tender and lonely."
+    },
+    "motel_dream": {
+     "prompt": "A cheap motel room at 4 AM: Cass Moreno, red-haired woman with a gold star greasepaint over her left eye smudged, asleep in her clothes on top of the bedspread, one hand still holding a pistol; the old CRT television at the foot of the bed shows only static that lights the whole room blue; shadows on the wall look like people standing around the bed.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "villa_gate": {
+     "prompt": "A nightmare: a huge 1920s Spanish-style Hollywood mansion on a hill under a blood-red full moon, every window lit, a banner over the door reading WRAP PARTY; the lawn in front is a graveyard of fresh graves with gold stars on the headstones; dead hands pushing out of the soil; fog, dead palm trees, lightning."
+    },
+    "wrap_party": {
+     "prompt": "A nightmare ballroom party in a Hollywood mansion: dozens of dead people in 1980s clothes — motel guards, bikers, stagehands, a bellhop — dancing slowly under a crystal chandelier, their skin grey and wounds still open, each with a gold star painted on the face; a film crew of skeletons filming them; red light, champagne, rot."
+    },
+    "burning_tommy": {
+     "prompt": "A tragic horror boss: Tommy Moreno as a burning man standing in a mansion ballroom, his body wreathed in flame, his blue varsity jacket burning, arms open wide as if for a hug, the Cadillac wreck burning behind him, the dead crowd watching in a circle holding candles.",
+     "refs": [
+      "tommy_burnt"
+     ]
+    },
+    "mirror_dead": {
+     "prompt": "Cass Moreno, red-haired woman with a gold star greasepaint over her left eye, looks into a gilded mansion mirror; her reflection is her own corpse, grey-skinned, smiling, surrounded by the reflections of dead people standing right behind her who are not in the room. Horror.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "wake_motel": {
+     "prompt": "Dawn in a cheap motel room: Cass Moreno, red-haired woman with a smudged gold star over her left eye, sitting bolt upright in bed drenched in sweat, pistol pointed at the empty room; the TV shows a test pattern; a beige phone on the nightstand is ringing, its receiver slightly jumping.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "casting_1990": {
+     "prompt": "A corkboard in a motel room covered in Polaroids connected with red string: an arcade called GALAXY PALACE with a girl in a harlequin jacket circled in marker and labelled THE FOOL, a Beverly Hills house, a nightclub called BLUE HOUR, a tired policewoman at a desk; gold star stickers on each; a map of Los Angeles; a bus ticket to 1990 as a joke-shaped date stamp."
+    }
+   }
+  },
+  "sprites": {
+   "style": "Top-down video game sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective, no horizon, no side faces visible. A single isolated object centred on a fully transparent background, no floor, no cast shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan neon reflections, crisp clean silhouette that reads at small size.",
+   "defaults": {
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "car_red": {
+     "prompt": "A red 1970s Cadillac Eldorado convertible with the roof up, seen from directly above, the front of the car pointing to the RIGHT, chrome bumpers, whitewall edges visible, windscreen reflecting neon."
+    },
+    "car_blue": {
+     "prompt": "A faded blue 1980s four-door sedan seen from directly above, front pointing to the RIGHT, a little rust, a dent in the roof."
+    },
+    "car_white": {
+     "prompt": "A white 1980s station wagon with wood panelling seen from directly above, front pointing to the RIGHT, roof rack."
+    },
+    "car_black": {
+     "prompt": "A black 1980s Lincoln Town Car seen from directly above, front pointing to the RIGHT, tinted windows, glossy paint with neon reflections."
+    },
+    "car_police": {
+     "prompt": "A black-and-white 1980s California police cruiser seen from directly above, front pointing to the RIGHT, red and blue light bar on the roof."
+    },
+    "wreck": {
+     "prompt": "A burned-out rusted car wreck seen from directly above, front pointing to the RIGHT, no windows left, scorched black and orange rust, crushed roof."
+    },
+    "dumpster": {
+     "prompt": "A dark green metal dumpster seen from directly above, lid half open, trash bags inside, landscape orientation."
+    },
+    "bed": {
+     "prompt": "A motel double bed seen from directly above, headboard on the LEFT, two pillows, a loud 1970s orange-and-brown floral bedspread slightly rumpled, landscape orientation.",
+     "size": "1536x1024"
+    },
+    "lounger": {
+     "prompt": "A white poolside sun lounger with blue-and-white striped cushion seen from directly above, headrest on the LEFT, landscape orientation, a folded towel on it."
+    },
+    "washer": {
+     "prompt": "A white coin-operated laundromat washing machine seen from directly above, round lid and coin slot visible, square.",
+     "size": "1024x1024"
+    },
+    "crate": {
+     "prompt": "A wooden shipping crate with stencilled markings seen from directly above, square, metal corner brackets.",
+     "size": "1024x1024"
+    },
+    "palm": {
+     "prompt": "A palm tree seen from directly above: a starburst crown of long feathery green palm fronds radiating from the centre, some brown dead fronds, square.",
+     "size": "1024x1024"
+    },
+    "plant": {
+     "prompt": "A potted leafy indoor plant in a terracotta pot seen from directly above, square.",
+     "size": "1024x1024"
+    },
+    "arcade": {
+     "prompt": "An arcade cabinet seen from directly above: the control panel with joystick and buttons at the bottom edge, glowing marquee, square.",
+     "size": "1024x1024"
+    },
+    "vending": {
+     "prompt": "A soda vending machine seen from directly above, red top, glowing front edge at the bottom, square.",
+     "size": "1024x1024"
+    },
+    "camera_rig": {
+     "prompt": "A professional 1980s TV studio camera on a wheeled pedestal seen from directly above, lens pointing to the RIGHT, cables coiled on the floor, square.",
+     "size": "1024x1024"
+    },
+    "studio_light": {
+     "prompt": "A large studio fresnel light on a stand seen from directly above, barn doors open, pointing to the RIGHT, square.",
+     "size": "1024x1024"
+    },
+    "leaf": {
+     "prompt": "A single dry curled eucalyptus leaf seen from above, square.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "paper": {
+     "prompt": "A single crumpled sheet of newspaper seen from above, square.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "frond": {
+     "prompt": "A single dry brown palm frond fragment seen from above, square.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "coffin": {
+     "prompt": "An open ornate wooden coffin with red velvet lining, empty, seen from directly above, landscape orientation, head end on the LEFT."
+    },
+    "grave": {
+     "prompt": "A small grave: a cracked stone headstone with a gold star carved in it at the top edge and a rectangle of freshly dug disturbed earth below it, seen from directly above, portrait orientation.",
+     "size": "1024x1536"
+    },
+    "piano": {
+     "prompt": "A black grand piano seen from directly above, lid open, keys along the bottom edge, square.",
+     "size": "1024x1024"
+    },
+    "candelabra": {
+     "prompt": "A tall silver candelabra with five lit candles seen from directly above, dripping wax, square.",
+     "size": "1024x1024"
+    },
+    "chandelier": {
+     "prompt": "A crashed crystal chandelier lying broken on the floor, seen from directly above, shattered crystals scattered around, square.",
+     "size": "1024x1024"
+    }
+   }
+  },
+  "textures": {
+   "style": "Seamless tileable texture for a video game floor: flat top-down orthographic view straight onto the surface, even soft lighting with no directional shadows and no vignette, the pattern fills the whole square edge to edge, no objects, no text. Realistic, slightly worn, 1980s California.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "medium"
+   },
+   "entries": {
+    "carpet": {
+     "prompt": "Cheap 1980s motel carpet: deep magenta-burgundy with a repeating small diamond lattice in orange and teal, flattened pile, faint stains."
+    },
+    "tile": {
+     "prompt": "Bathroom checkerboard floor tiles, alternating off-white cream and pale blue-grey squares, grey grout lines, a few chips and hairline cracks."
+    },
+    "wood": {
+     "prompt": "Warm honey-brown hardwood floor planks running horizontally, visible grain and knots, a few scuffs."
+    },
+    "asphalt": {
+     "prompt": "Dark grey-violet parking lot asphalt with coarse aggregate, fine cracks and faint oil stains."
+    },
+    "concrete": {
+     "prompt": "Smooth pale grey poured concrete floor slabs with faint seams, pits and stains."
+    },
+    "grass": {
+     "prompt": "Short dark green lawn grass, dense blades, a few tiny yellow and pink wildflowers."
+    },
+    "dirt": {
+     "prompt": "Packed dusty desert dirt and fine gravel, sandy tan and brown, tiny pebbles and dry scrub twigs."
+    },
+    "steel": {
+     "prompt": "Industrial steel diamond-plate floor, grey metal with raised diamond treads, scuffs and a little rust."
+    },
+    "stage": {
+     "prompt": "Black painted TV soundstage floor, matte and scuffed, faint coloured gaffer-tape marks and chalk marks."
+    },
+    "marble": {
+     "prompt": "Black and white checkered marble floor with grey veins, polished but cracked, a few dark stains."
+    },
+    "rug": {
+     "prompt": "Ornate blood-red Persian rug pattern with gold and black motifs, worn."
+    }
+   }
+  }
+ }
+}

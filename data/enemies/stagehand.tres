@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"stagehand"
+display_name = "Stagehand"
+combat = 1
+weapon_id = &"pipe"
+palette = "stagehand"
+walk_speed = 55.0
+run_speed = 160.0
+reaction_time = 0.28
+melee_windup = 0.3
+view_distance = 210.0
+notes = "Stage crew in show blacks. Hard to see in the dark wings; rushes you with whatever was lying around."

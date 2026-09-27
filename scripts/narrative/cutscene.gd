@@ -21,7 +21,13 @@ func _ready() -> void:
 	# authored key art wins when its PNG is in the project; otherwise the
 	# illustrated StoryShot sequence; otherwise the procedural backdrop
 	var art_tex := CinematicArt.cutscene_texture(id)
-	if art_tex:
+	if StoryShot.has_shot(str(d.get("shot", ""))):
+		shot = StoryShot.new()
+		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(shot)
+		shot.show_shot(str(d.shot), true)
+		Dialogue.line_shown.connect(_on_line)
+	elif art_tex:
 		backdrop = TitleBackdrop.new()
 		backdrop.mode = str(d.get("bg", "black"))
 		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -33,12 +39,6 @@ func _ready() -> void:
 		art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		art_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		add_child(art_shade)
-	elif StoryShot.has_shot(str(d.get("shot", ""))):
-		shot = StoryShot.new()
-		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		add_child(shot)
-		shot.show_shot(str(d.shot), true)
-		Dialogue.line_shown.connect(_on_line)
 	else:
 		backdrop = TitleBackdrop.new()
 		backdrop.mode = str(d.get("bg", "black"))
@@ -87,6 +87,10 @@ func _on_event(ev: String) -> void:
 				backdrop.fire = 1.0
 			PostFX.flash(Color(1, 0.6, 0.2), 0.7)
 			PostFX.vhs_glitch(1.0)
+		"gunshot":
+			PostFX.flash(Color(1, 1, 1), 0.5)
+			PostFX.vhs_glitch(1.0)
+			Events.camera_shake.emit(8.0)
 		"star":
 			PostFX.flash(UIStyle.GOLD, 0.35)
 			SaveManager.set_flag("wore_the_star", true)

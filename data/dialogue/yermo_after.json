@@ -1,0 +1,148 @@
+{
+ "bg": "apartment",
+ "music": "aftermath",
+ "title": "YERMO SALVAGE — JULY 9, 1988 — 3:02 AM",
+ "shot": "yermo_office",
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "The office smells like wet dog, whiskey and old film stock. Every monitor in the room is showing her.",
+   "shot": "yermo_office",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "arlo",
+   "text": "Sit down, kid. You're blocking channel four.",
+   "shot": "arlo_close",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "You watched the whole thing.",
+   "shot": "arlo_close",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "arlo",
+   "text": "Watched? I had money on you. Sergeant Biscuits had money on the dogs. Biscuits is gonna be unbearable.",
+   "shot": "arlo_close",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "arlo",
+   "text": "The network sends the dog food. Premium. By the pallet. Nobody sends a stunt coordinator steak out of kindness, Cass. They were fattening up the set.",
+   "shot": "live_monitors",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "cass",
+   "text": "...",
+   "shot": "arlo_close",
+   "choices": [
+    {
+     "text": "Who rigged the car, Arlo?",
+     "next": "w1"
+    },
+    {
+     "text": "You were there. You let it happen.",
+     "next": "l1",
+     "set": {
+      "arlo_confessed": true
+     }
+    }
+   ]
+  },
+  "w1": {
+   "speaker": "arlo",
+   "text": "The gag was clean when I checked it at midnight. Pads, bars, two extinguishers. Full ones. I lifted them myself.",
+   "shot": "arlo_close",
+   "next": "w2"
+  },
+  "l1": {
+   "speaker": "arlo",
+   "text": "I was there. Asleep in the truck with the heater on, because the Director swore the shot was scrubbed till dawn.",
+   "shot": "arlo_close",
+   "next": "l2"
+  },
+  "l2": {
+   "speaker": "arlo",
+   "text": "I woke up to the light. You ever see a fire through a windshield? Looks like a sunrise on the wrong side of the sky.",
+   "shot": "arlo_close",
+   "next": "w2"
+  },
+  "w2": {
+   "speaker": "arlo",
+   "text": "Three in the morning, Dutch Kowalski walked back out to that car with a toolbox. Dutch. Our pyro. They call him the Fireman now.",
+   "shot": "arlo_close",
+   "next": "x"
+  },
+  "x": {
+   "speaker": "arlo",
+   "text": "Dutch does effects for KHSC these days. Stage Nine, Burbank. That new show. The one your brother's in.",
+   "shot": "live_monitors",
+   "next": "y"
+  },
+  "y": {
+   "speaker": "cass",
+   "text": "Tommy isn't in anything.",
+   "shot": "arlo_close",
+   "next": "z"
+  },
+  "z": {
+   "speaker": "arlo",
+   "text": "Friday, eleven P.M. They're cutting his last take into the premiere. I've seen the promo. They put a laugh track on the part where he's screaming.",
+   "shot": "live_monitors",
+   "next": "z2"
+  },
+  "z2": {
+   "speaker": "cass",
+   "text": "...",
+   "shot": "arlo_close",
+   "auto": 1.4,
+   "next": "v"
+  },
+  "v": {
+   "speaker": "arlo",
+   "text": "And Vance. Aurelio. My kid brother. When we were boys he'd burn ants with a magnifying glass. Said the sun did it. He just held the lens.",
+   "shot": "arlo_close",
+   "next": "v2"
+  },
+  "v2": {
+   "speaker": "arlo",
+   "text": "That's the whole business, Cass. Somebody else always holds the lens.",
+   "shot": "arlo_close",
+   "next": "r"
+  },
+  "r": {
+   "speaker": "narration",
+   "text": "A small red dot drifts across the whiskey bottle. The desk. His chest. He sees it before she does.",
+   "shot": "red_dot",
+   "next": "r2"
+  },
+  "r2": {
+   "speaker": "arlo",
+   "text": "Ah. Wrap party.",
+   "shot": "arlo_close",
+   "auto": 1.2,
+   "next": "r3"
+  },
+  "r3": {
+   "speaker": "narration",
+   "text": "The window goes white. Out in the yard, every dog stops barking at once.",
+   "shot": "red_dot",
+   "sfx": "sniper",
+   "event": "gunshot",
+   "set": {
+    "arlo_dead": true
+   },
+   "next": "r4"
+  },
+  "r4": {
+   "speaker": "voice",
+   "text": "Episode two is in the can, hotshot. Get some sleep. Friday is the big one.",
+   "shot": "live_monitors",
+   "sfx": "vhs_static"
+  }
+ }
+}

@@ -15,6 +15,7 @@ const DOG_COLORS := {
 	"shepherd":   {"base": Color("7e4a20"), "shade": Color("4e2c12"), "light": Color("a4692e"), "tan": Color("b98648"),
 		"saddle": Color("120c0a"), "saddle_hi": Color("2e221c"), "mask": Color("0f0a08"), "collar": Color("b01822")},
 	"doberman":   {"base": Color("2c211b"), "shade": Color("15100d"), "light": Color("54423a"), "tan": Color("a8602c"), "collar": Color("c81e28")},
+	"hellhound":  {"base": Color("3a0808"), "shade": Color("1a0404"), "light": Color("6a1410"), "tan": Color("ff5a1a"), "saddle": Color("120404"), "saddle_hi": Color("5a1008"), "mask": Color("0a0202"), "collar": Color("ffd23f")},
 	"rottweiler": {"base": Color("1c1612"), "shade": Color("0e0a08"), "light": Color("33271f"), "tan": Color("8a4a22"), "collar": Color("d4a020")},
 }
 const BITE_REACH := 15.0

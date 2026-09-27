@@ -258,6 +258,8 @@ func _show_chapters() -> void:
 	var chapters := [
 		{"mission": "m01_checkout", "year": "1988", "num": "I", "title": "CHECKOUT TIME", "place": "Sunset Palms Motel", "cover": "motel_night", "open": true},
 		{"mission": "m02_dog_days", "year": "1988", "num": "I-B", "title": "DOG DAYS", "place": "Yermo Salvage & K-9", "cover": "salvage_yard", "open": m2_open},
+		{"mission": "m03_prime_time", "year": "1988", "num": "I-C", "title": "PRIME TIME", "place": "KHSC Studios, Stage Nine", "cover": "burbank_night", "open": SaveManager.data.missions.has("m02_dog_days") or SaveManager.data.missions.has("m03_prime_time")},
+		{"mission": "m04_sweet_dreams", "year": "1988", "num": "I-D", "title": "SWEET DREAMS", "place": "Villa Estrella", "cover": "villa_gate", "open": SaveManager.data.missions.has("m03_prime_time") or SaveManager.data.missions.has("m04_sweet_dreams")},
 		{"mission": "", "year": "1990", "num": "II", "title": "THE GALAXY PALACE", "place": "TAPE DAMAGED", "cover": "galaxy_palace", "open": false},
 		{"mission": "", "year": "1991", "num": "III", "title": "BARSTOW PD", "place": "TAPE DAMAGED", "cover": "barstow_pd", "open": false},
 		{"mission": "", "year": "1992", "num": "IV", "title": "THE HILLS", "place": "TAPE DAMAGED", "cover": "hills_fire", "open": false},
@@ -334,8 +336,15 @@ class ChapterCard extends Button:
 		draw_rect(r, UIStyle.INK)
 		# cover art: the chapter's story shot, cropped to the box
 		var art := Rect2(r.position + Vector2(6, 22), Vector2(r.size.x - 12, r.size.y - 70))
-		var cover := str(info.get("cover", ""))
-		for l in ["bg", "mid", "sign", "fg", "eyes"]:
+		var cover := StoryShot.resolve(str(info.get("cover", "")))
+		var painted := StoryShot.painted_tex(cover)
+		if painted:
+			var pw := float(painted.get_width())
+			var ph := float(painted.get_height())
+			var psw := ph * art.size.x / art.size.y
+			var ppan := sin(_t * 0.4) * 30.0 * e
+			draw_texture_rect_region(painted, art, Rect2((pw - psw) * 0.5 + ppan, 0, psw, ph), Color(1, 1, 1) if open else Color(0.45, 0.4, 0.5))
+		for l in ([] if painted else ["bg", "mid", "sign", "fg", "eyes"]):
 			var tx := StoryShot.tex(cover, l)
 			if tx == null:
 				continue
@@ -416,44 +425,136 @@ class ChapterDetail extends Control:
 			line = tr("The rest of this tape is damaged.")
 		draw_string(UIStyle.font_mono(), Vector2(8 + x, 78), line, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.PAPER, 0.8 * a))
 
+## ARCADE: pick a map, a mode and any modifiers, then go. Every
+## map + mode pair keeps its own local top 10.
+const ARCADE_MAPS := ["m01_checkout", "m02_dog_days", "m03_prime_time", "m04_sweet_dreams"]
+const ARCADE_MODES := [
+	["SCORE ATTACK", {}, "The mission as written. Every kill counts; style counts double."],
+	["WAVES ×5", {"mode": "waves", "waves": 5}, "Five waves. Each one arrives in rows from the far side of the map."],
+	["WAVES ×10", {"mode": "waves", "waves": 10}, "Ten waves. Supply drops between them. Don't get comfortable."],
+	["ENDLESS", {"mode": "endless"}, "They keep coming until you stop. You will stop."],
+]
+const ARCADE_MODS := [
+	["INFINITE AMMO", "infinite_ammo"], ["WEAPON ROULETTE", "roulette"], ["MELEE ONLY", "melee_only"],
+	["NO SPOTLIGHT", "no_ability"], ["HARD", "hard"], ["TURBO", "turbo"],
+]
+const ARCADE_WEATHER := [
+	["MISSION DEFAULT", ""], ["RANDOM", "random"], ["NIGHT RAIN", "night_rain"], ["DESERT WIND", "desert_wind"],
+	["SANTA ANA", "santa_ana"], ["SNOWFALL", "snowfall"], ["SUNNY DAY", "sunny"], ["FOG", "foggy"], ["CLEAR NIGHT", "clear_night"],
+]
+var _arc_map := "m01_checkout"
+var _arc_mode := 0
+var _arc_mods: Dictionary = {}
+var _arc_weather := 0
+var _arc_focus := ""             ## which toggle to refocus after the panel rebuilds
+
+func _arcade_unlocked(mid: String) -> bool:
+	var i := ARCADE_MAPS.find(mid)
+	return i <= 0 or SaveManager.data.missions.has(ARCADE_MAPS[i - 1]) or SaveManager.data.missions.has(mid)
+
 func _show_arcade() -> void:
-	_open_panel("ARCADE  ·  SCORE ATTACK")
-	panel_body.add_child(UIStyle.label("Pick a mission and a rule set. Best runs go on the local board.", 15, UIStyle.DIM))
-	var modes := [
-		["STANDARD", {}],
-		["MELEE ONLY", {"melee_only": true}],
-		["NO ABILITY", {"no_ability": true}],
-		["HARD", {"hard": true}],
-	]
-	var first: Button = null
-	for mid in ["m01_checkout", "m02_dog_days"]:
+	_open_panel("ARCADE")
+	var first: Control = null
+	panel_body.add_child(UIStyle.label("MAP", 14, UIStyle.GOLD, true))
+	var maps := HBoxContainer.new()
+	maps.add_theme_constant_override("separation", 8)
+	panel_body.add_child(maps)
+	for mid in ARCADE_MAPS:
 		var md: MissionData = Game.missions.get(mid)
 		if md == null:
 			continue
-		var unlocked: bool = mid == "m01_checkout" or SaveManager.data.missions.has("m01_checkout")
-		panel_body.add_child(UIStyle.label("\n" + tr(md.title) + ("" if unlocked else tr("  [LOCKED]")), 18, UIStyle.PINK if unlocked else UIStyle.DIM, true))
-		var row := HBoxContainer.new()
-		row.add_theme_constant_override("separation", 8)
-		panel_body.add_child(row)
-		for m in modes:
-			var mods: Dictionary = m[1]
-			var id: String = mid
-			var b := Button.new()
-			b.text = str(m[0])
-			b.disabled = not unlocked
-			b.pressed.connect(func():
-				Audio.play("ui_select")
-				Game.replay_mission(id, "cass", mods))
-			row.add_child(b)
-			if first == null and unlocked:
-				first = b
-		var board: Array = SaveManager.data.leaderboards.get(mid, [])
-		for i in mini(board.size(), 5):
-			var r: Dictionary = board[i]
-			panel_body.add_child(UIStyle.label("%2d.  %-4s  %8d   %s   %s" % [i + 1, r.rank, int(r.score), Level._fmt_time(float(r.time)), r.date], 14))
+		var open := _arcade_unlocked(mid)
+		var b := _arc_toggle(maps, tr(md.title) if open else tr(md.title) + tr("  [LOCKED]"), mid == _arc_map, func():
+			_arc_map = mid
+			_arc_focus = mid
+			_show_arcade())
+		b.disabled = not open
+		if (first == null and mid == _arc_map and _arc_focus == "") or _arc_focus == mid:
+			first = b
+	panel_body.add_child(UIStyle.label("MODE", 14, UIStyle.GOLD, true))
+	var modes := HBoxContainer.new()
+	modes.add_theme_constant_override("separation", 8)
+	panel_body.add_child(modes)
+	for i in ARCADE_MODES.size():
+		var k := i
+		var mb := _arc_toggle(modes, tr(str(ARCADE_MODES[i][0])), i == _arc_mode, func():
+			_arc_mode = k
+			_arc_focus = "mode%d" % k
+			_show_arcade())
+		if _arc_focus == "mode%d" % i:
+			first = mb
+	var blurb := UIStyle.label(tr(str(ARCADE_MODES[_arc_mode][2])), 14, UIStyle.DIM)
+	blurb.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	blurb.custom_minimum_size = Vector2(720, 0)
+	panel_body.add_child(blurb)
+	panel_body.add_child(UIStyle.label("MODIFIERS", 14, UIStyle.GOLD, true))
+	var grid := GridContainer.new()
+	grid.columns = 3
+	grid.add_theme_constant_override("h_separation", 18)
+	panel_body.add_child(grid)
+	for m in ARCADE_MODS:
+		var key: String = m[1]
+		var cb := CheckButton.new()
+		cb.text = tr(str(m[0]))
+		cb.button_pressed = _arc_mods.get(key, false)
+		cb.toggled.connect(func(on: bool):
+			Audio.play("ui_select" if on else "ui_back", -6.0)
+			if on:
+				_arc_mods[key] = true
+			else:
+				_arc_mods.erase(key)
+			if key == "melee_only" and on:
+				_arc_mods.erase("infinite_ammo"))
+		cb.focus_entered.connect(func(): Audio.play("ui_move", -10.0))
+		grid.add_child(cb)
+	var wrow := HBoxContainer.new()
+	wrow.add_theme_constant_override("separation", 12)
+	panel_body.add_child(wrow)
+	wrow.add_child(UIStyle.label("WEATHER", 14, UIStyle.GOLD, true))
+	var wopt := OptionButton.new()
+	for w in ARCADE_WEATHER:
+		wopt.add_item(tr(str(w[0])))
+	wopt.selected = _arc_weather
+	wopt.item_selected.connect(func(i: int):
+		_arc_weather = i
+		Audio.play("ui_select", -6.0))
+	wrow.add_child(wopt)
+	var go := _panel_button("▶ START", func():
+		var mods: Dictionary = (ARCADE_MODES[_arc_mode][1] as Dictionary).duplicate()
+		mods.merge(_arc_mods, true)
+		var w := str(ARCADE_WEATHER[_arc_weather][1])
+		if w != "":
+			mods["weather"] = w
+		Game.replay_mission(_arc_map, "cass", mods))
+	go.add_theme_color_override("font_color", UIStyle.PINK)
+	# local board for this map + mode
+	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ""))
+	var board_id := _arc_map if mode_key == "" else "%s@%s" % [_arc_map, mode_key]
+	var board: Array = SaveManager.data.leaderboards.get(board_id, [])
+	panel_body.add_child(UIStyle.label("
+" + tr("LOCAL BOARD"), 14, UIStyle.GOLD, true))
+	if board.is_empty():
+		panel_body.add_child(UIStyle.label(tr("No runs yet. Be the first name on the tape."), 14, UIStyle.DIM))
+	for i in mini(board.size(), 5):
+		var r: Dictionary = board[i]
+		panel_body.add_child(UIStyle.label("%2d.  %-4s  %8d   %s   %s" % [i + 1, r.rank, int(r.score), Level._fmt_time(float(r.time)), r.date], 14))
 	_back_button()
 	if first:
 		first.grab_focus()
+	_arc_focus = ""
+
+func _arc_toggle(parent: Control, text: String, on: bool, cb: Callable) -> Button:
+	var b := Button.new()
+	b.text = ("■ " if on else "□ ") + text
+	b.pressed.connect(func():
+		Audio.play("ui_select")
+		cb.call())
+	b.focus_entered.connect(func(): Audio.play("ui_move", -10.0))
+	if on:
+		b.add_theme_color_override("font_color", UIStyle.PINK)
+	UIStyle.menu_fx(b)
+	parent.add_child(b)
+	return b
 
 func _show_cast() -> void:
 	_open_panel("CAST")

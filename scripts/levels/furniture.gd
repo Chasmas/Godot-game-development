@@ -45,10 +45,26 @@ func _cel_box(r: Rect2, c: Color, ink: Color) -> void:
 	draw_rect(Rect2(r.position + Vector2(0, r.size.y * 0.8), Vector2(r.size.x, r.size.y * 0.2)), c.darkened(0.22))
 	draw_rect(r, ink, false, 1.0)
 
+## Painted sprite for this piece, if there is one (see ArtLib).
+func _painted() -> Texture2D:
+	match kind:
+		"car":
+			return ArtLib.sprite(ArtLib.CARS[variant % ArtLib.CARS.size()])
+		"wreck", "bed", "lounger", "washer", "crate":
+			return ArtLib.sprite(kind)
+	return null
+
 func _draw() -> void:
 	var r := Rect2(-rect_size * 0.5 + Vector2(1, 1), rect_size - Vector2(2, 2))
 	var ink := Color(0.06, 0.03, 0.08)
 	var h := absi(int(position.x * 7.0 + position.y * 13.0))
+	var pt := _painted()
+	if pt:
+		var solid := kind == "car" or kind == "wreck"
+		_shadow(r.grow(2) if solid else r, Vector2(4, 5) if solid else Vector2(3, 4))
+		# parked cars face either way; crates and washers turn a little
+		ArtLib.draw_fitted(self, pt, r.grow(1.5) if solid else r.grow(0.5), h % 2 == 0 and solid)
+		return
 	match kind:
 		"table":
 			_shadow(r)
