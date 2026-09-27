@@ -21,9 +21,10 @@ func _ready() -> void:
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
 			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
 			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese",
-			"alarm_caps_responders", "camera_blind_spot"]:
+			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists"]:
 		if only != "" and case_name != only:
 			continue
+		_mission = "m02_dog_days" if case_name.begins_with("m02") else "m01_checkout"
 		await _load()
 		print("-- ", case_name)
 		await call(case_name)
@@ -41,9 +42,10 @@ func frames(n: int) -> void:
 	for i in n:
 		await get_tree().physics_frame
 
+var _mission := "m01_checkout"
 func _load() -> void:
 	Game.checkpoint_state = {}
-	Game.start_mission("m01_checkout")
+	Game.start_mission(_mission)
 	await frames(60)
 	var p := _p()
 	if p:
@@ -81,6 +83,89 @@ func _spawn(kind: StringName, pos: Vector2) -> Enemy:
 	return e
 
 # ------------------------------------------------------------------ cases
+## Stand somewhere open with a clear line to `e`, `dist` px away.
+func _clear_spot(e: Node2D, dist: float) -> Vector2:
+	var p := _p()
+	var space := p.get_world_2d().direct_space_state
+	for i in 32:
+		var a := TAU * i / 32.0
+		var at := e.global_position + Vector2.from_angle(a) * dist
+		var c := Vector2i(int(at.x / 16), int(at.y / 16))
+		var lvl := _lvl()
+		if not lvl.nav.is_in_boundsv(c) or lvl.nav.is_point_solid(c):
+			continue
+		var q := PhysicsRayQueryParameters2D.create(at, e.global_position, Layers.WORLD | Layers.PROP | Layers.DOOR | Layers.LOW)
+		q.exclude = [e.get_rid()]
+		if space.intersect_ray(q).is_empty():
+			return at
+	return e.global_position + Vector2(dist, 0)
+
+func _kill_all(melee: bool, fists := false) -> void:
+	var p := _p()
+	p.god_mode = true
+	var all := _enemies()
+	check(all.size() >= 15, "m02 has its enemies (%d)" % all.size())
+	var survivors := []
+	for e in all:
+		if not is_instance_valid(e) or not e.is_alive():
+			continue
+		var tag := "%s %s (%s)" % [e.enemy_id, e.data.id, e.state_name()]
+		for attempt in 12:
+			if not is_instance_valid(e) or not e.is_alive():
+				break
+			p.global_position = _clear_spot(e, 14.0 if melee else 56.0)
+			p.velocity = Vector2.ZERO
+			p.aim_dir = (e.global_position - p.global_position).normalized()
+			await frames(1)
+			if fists:
+				# no weapon, no execute button: just keep swinging
+				p.slots[p.slot] = null
+				p._refresh_weapon()
+				for s in 4:
+					if not is_instance_valid(e):
+						break
+					p.global_position = _clear_spot(e, 12.0)
+					p.aim_dir = (e.global_position - p.global_position).normalized()
+					p._melee_cd = 0.0
+					p._punch()
+					await frames(12)
+			elif melee:
+				p.slots[p.slot] = WeaponInstance.create(DB.weapon(&"machete"))
+				p._refresh_weapon()
+				p._melee_cd = 0.0
+				p.aim_dir = (e.global_position - p.global_position).normalized()
+				p._melee_attack(attempt % 2 == 1)
+				await frames(20)
+				if is_instance_valid(e) and e.is_alive() and e.state == Enemy.State.DOWNED:
+					p.global_position = e.global_position + Vector2(10, 0)
+					await frames(1)
+					p._execute_or_kick()
+					await frames(200)
+			else:
+				var w := WeaponInstance.create(DB.weapon(&"pistol"))
+				p.slots[p.slot] = w
+				p._refresh_weapon()
+				for s in 3:
+					p.aim_dir = (e.global_position - p.global_position).normalized() if is_instance_valid(e) else p.aim_dir
+					p._fire_cd = 0.0
+					p._bloom = 0.0
+					w.ammo = 10
+					p._try_shoot(w)
+					await frames(6)
+		if is_instance_valid(e) and e.is_alive():
+			survivors.append(tag)
+			print("    survived: ", tag, " at ", e.global_position, " layer ", e.collision_layer, " hp-armor ", e.armor_left)
+	check(survivors.is_empty(), ("every m02 enemy dies to %s" % ("fists" if fists else ("melee" if melee else "bullets"))) + ("" if survivors.is_empty() else " - survivors: " + ", ".join(survivors)))
+
+func m02_all_killable_gun() -> void:
+	await _kill_all(false)
+
+func m02_all_killable_melee() -> void:
+	await _kill_all(true)
+
+func m02_all_killable_fists() -> void:
+	await _kill_all(true, true)
+
 func alarm_caps_responders() -> void:
 	var p := _p()
 	p.god_mode = true

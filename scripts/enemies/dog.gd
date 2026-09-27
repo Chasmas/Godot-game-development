@@ -378,7 +378,9 @@ func knock_down(info: DamageInfo) -> void:
 
 func _get_up() -> void:
 	collision_layer = Layers.ENEMY
+	_getting_up = true
 	_set_state(State.COMBAT)
+	_getting_up = false
 	var p := _player()
 	if p:
 		_last_known = p.global_position

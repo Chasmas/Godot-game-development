@@ -175,6 +175,7 @@ func _physics_process(delta: float) -> void:
 	_shield_down = maxf(0.0, _shield_down - delta)
 	_alert_icon = maxf(0.0, _alert_icon - delta)
 	_shout_cd = maxf(0.0, _shout_cd - delta)
+	_punch_hits_t = maxf(0.0, _punch_hits_t - delta)
 	_knock = _knock.move_toward(Vector2.ZERO, 900.0 * delta)
 	if _reload_t > 0.0:
 		_reload_t -= delta
@@ -822,7 +823,10 @@ func take_damage(info: DamageInfo) -> String:
 		return "pass"
 	var from_front := absf(angle_difference(facing.angle(), (-info.dir).angle())) < deg_to_rad(data.shield_arc_deg * 0.5)
 	if state == State.DOWNED:
-		if info.lethal or info.type == DamageInfo.Type.BALLISTIC:
+		# on the floor, anything the player lands finishes the job: a stomp,
+		# a kick, a punch - not only the execute prompt
+		var ground_hit := info.from_player and info.type in [DamageInfo.Type.PUNCH, DamageInfo.Type.MELEE, DamageInfo.Type.THROWN, DamageInfo.Type.DOOR]
+		if info.lethal or info.type == DamageInfo.Type.BALLISTIC or info.type == DamageInfo.Type.EXPLOSIVE or ground_hit:
 			_die(info)
 			return "killed"
 		return "ignored"
@@ -856,6 +860,14 @@ func take_damage(info: DamageInfo) -> String:
 		return "absorbed"
 	if not info.lethal:
 		if data.immune_to_punch and not info.heavy and info.type in [DamageInfo.Type.PUNCH, DamageInfo.Type.THROWN, DamageInfo.Type.DOOR]:
+			# shrugs off one punch - not a flurry: the third in quick
+			# succession staggers even a heavy onto the floor
+			_punch_hits = _punch_hits + 1 if _punch_hits_t > 0.0 else 1
+			_punch_hits_t = 1.6
+			if _punch_hits >= 3 and data.combat != EnemyData.Combat.BOSS:
+				_punch_hits = 0
+				knock_down(info)
+				return "hurt"
 			_knock = info.dir * 40.0
 			_react_to_attack(info)
 			return "blocked" if info.type == DamageInfo.Type.PUNCH else "hurt"
@@ -898,7 +910,9 @@ func _get_up() -> void:
 	visual.legs.visible = true
 	visual.set_weapon(weapon.data if weapon else null)
 	collision_layer = Layers.ENEMY
+	_getting_up = true
 	_set_state(State.COMBAT)
+	_getting_up = false
 	_fire_cd = data.reaction_time + 0.2
 	var p := _player()
 	if p:
@@ -1010,8 +1024,17 @@ func _drop_weapon(vel: Vector2) -> void:
 	weapon = null   # disarmed shooters fall back to brawling (see _gun_combat)
 
 # ======================================================================= misc
+var _getting_up := false
+var _punch_hits := 0          ## punches soaked by a punch-immune bruiser, see take_damage
+var _punch_hits_t := 0.0
+
 func _set_state(s: State) -> void:
 	if s == state:
+		return
+	# a downed body only leaves the floor by getting up (which restores its
+	# collision and sprite) or by dying - a shout, a corpse or a camera
+	# crash must not drag it into INVESTIGATE half-downed
+	if state == State.DOWNED and not _getting_up and s not in [State.DEAD, State.EXECUTED]:
 		return
 	state = s
 	_state_t = 0.0
