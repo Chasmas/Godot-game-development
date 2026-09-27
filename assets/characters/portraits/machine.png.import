@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mjf2du6whie8"
-path="res://.godot/imported/earl_blink.png-a17f1519ea22d4e769bd1ef8f187c7eb.ctex"
+uid="uid://8ewnqqgbbfbu"
+path="res://.godot/imported/machine.png-d6b7c9bf62a7420d5ace93472ede9d1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/earl_blink.png"
-dest_files=["res://.godot/imported/earl_blink.png-a17f1519ea22d4e769bd1ef8f187c7eb.ctex"]
+source_file="res://assets/characters/portraits/machine.png"
+dest_files=["res://.godot/imported/machine.png-d6b7c9bf62a7420d5ace93472ede9d1e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://67rk364egiif"
-path="res://.godot/imported/tommy_talk.png-a733e525c08ff85535535bc756737886.ctex"
+uid="uid://b38cubohu0f3g"
+path="res://.godot/imported/voice.png-227dec401e3e114e0c4262fb4c444339.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/tommy_talk.png"
-dest_files=["res://.godot/imported/tommy_talk.png-a733e525c08ff85535535bc756737886.ctex"]
+source_file="res://assets/characters/portraits/voice.png"
+dest_files=["res://.godot/imported/voice.png-227dec401e3e114e0c4262fb4c444339.ctex"]
 
 [params]
 

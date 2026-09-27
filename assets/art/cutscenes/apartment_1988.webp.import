@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nbcjm85lb3n2"
-path="res://.godot/imported/cass_talk.png-ffc1159c504fb45eca4ab532837b83f4.ctex"
+uid="uid://uo2ln1brq35l"
+path="res://.godot/imported/apartment_1988.webp-b293acff2cce3e0371d92c90b739c74d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/cass_talk.png"
-dest_files=["res://.godot/imported/cass_talk.png-ffc1159c504fb45eca4ab532837b83f4.ctex"]
+source_file="res://assets/art/cutscenes/apartment_1988.webp"
+dest_files=["res://.godot/imported/apartment_1988.webp-b293acff2cce3e0371d92c90b739c74d.ctex"]
 
 [params]
 

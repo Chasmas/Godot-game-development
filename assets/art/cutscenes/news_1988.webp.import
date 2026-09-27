@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brrqy731jy2o8"
-path="res://.godot/imported/cass_blink.png-50892a1c6cc0790906837a5e820cbea4.ctex"
+uid="uid://kl3g3ru7y77g"
+path="res://.godot/imported/news_1988.webp-fee56f9bb13a29a6e5966a261e9bc68e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/cass_blink.png"
-dest_files=["res://.godot/imported/cass_blink.png-50892a1c6cc0790906837a5e820cbea4.ctex"]
+source_file="res://assets/art/cutscenes/news_1988.webp"
+dest_files=["res://.godot/imported/news_1988.webp-fee56f9bb13a29a6e5966a261e9bc68e.ctex"]
 
 [params]
 

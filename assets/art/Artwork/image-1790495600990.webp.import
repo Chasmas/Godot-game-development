@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do6dkgbtpn7pk"
-path="res://.godot/imported/cass_star_blink.png-e1f38d036d16117232d865f482591b81.ctex"
+uid="uid://brt3rx1j2ad68"
+path="res://.godot/imported/image-1790495600990.webp-c324d996936ed1d7d4b4b882998b843d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/cass_star_blink.png"
-dest_files=["res://.godot/imported/cass_star_blink.png-e1f38d036d16117232d865f482591b81.ctex"]
+source_file="res://assets/art/Artwork/image-1790495600990.webp"
+dest_files=["res://.godot/imported/image-1790495600990.webp-c324d996936ed1d7d4b4b882998b843d.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.85
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

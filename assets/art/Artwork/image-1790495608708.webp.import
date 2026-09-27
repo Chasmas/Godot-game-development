@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ctcyes57cs6"
-path="res://.godot/imported/harcourt_blink.png-7205f70f232805aba6b96da54ebb35cb.ctex"
+uid="uid://cvxao7ooo31g1"
+path="res://.godot/imported/image-1790495608708.webp-928b7e9143d02643283d945f8ac13073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/harcourt_blink.png"
-dest_files=["res://.godot/imported/harcourt_blink.png-7205f70f232805aba6b96da54ebb35cb.ctex"]
+source_file="res://assets/art/Artwork/image-1790495608708.webp"
+dest_files=["res://.godot/imported/image-1790495608708.webp-928b7e9143d02643283d945f8ac13073.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.85
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

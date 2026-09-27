@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg8ihqby3t63v"
-path="res://.godot/imported/earl_talk.png-ff517cf3eecde6ac8eff39edddefdf43.ctex"
+uid="uid://bk2o183w68xpp"
+path="res://.godot/imported/hotshot_title.webp-0185d0e09669ceeb11220ed91a14256b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/earl_talk.png"
-dest_files=["res://.godot/imported/earl_talk.png-ff517cf3eecde6ac8eff39edddefdf43.ctex"]
+source_file="res://assets/art/title/hotshot_title.webp"
+dest_files=["res://.godot/imported/hotshot_title.webp-0185d0e09669ceeb11220ed91a14256b.ctex"]
 
 [params]
 

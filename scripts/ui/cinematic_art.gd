@@ -6,11 +6,11 @@ extends RefCounted
 
 const ROOT := "res://assets/art/"
 
-const TITLE := ROOT + "title/hotshot_title.png"
+const TITLE := ROOT + "title/hotshot_title.webp"
 
 const CUTSCENES := {
-	"apartment_1988": ROOT + "cutscenes/apartment_1988.png",
-	"news_1988": ROOT + "cutscenes/news_1988.png",
+	"apartment_1988": ROOT + "cutscenes/apartment_1988.webp",
+	"news_1988": ROOT + "cutscenes/news_1988.webp",
 	"m01_room_204": ROOT + "cutscenes/room_204.png",
 	"m01_boss_intro": ROOT + "cutscenes/harcourt_confrontation.png",
 	"m01_boss_down": ROOT + "cutscenes/harcourt_confrontation.png",

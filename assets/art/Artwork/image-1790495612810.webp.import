@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4j13xq52d6xe"
-path="res://.godot/imported/guard_talk.png-14511db557bef483252d4a51ba5c6a2e.ctex"
+uid="uid://bbbnppw7fj6pp"
+path="res://.godot/imported/image-1790495612810.webp-4106dd9fb764ca3b11673df4c9a7b733.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/guard_talk.png"
-dest_files=["res://.godot/imported/guard_talk.png-14511db557bef483252d4a51ba5c6a2e.ctex"]
+source_file="res://assets/art/Artwork/image-1790495612810.webp"
+dest_files=["res://.godot/imported/image-1790495612810.webp-4106dd9fb764ca3b11673df4c9a7b733.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.85
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

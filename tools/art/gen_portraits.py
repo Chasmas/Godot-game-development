@@ -38,9 +38,15 @@ def paint(id_, **over):
     grain(L, 0.015, hash(id_) % 99)
     return L
 
+## Painted portraits (sliced from assets/art/Artwork, see
+## tools/art/import_artwork.py) win: the procedural ones only fill gaps.
+PAINTED = {"cass", "cass_star", "harcourt", "earl", "tommy", "anchor", "guard", "marv", "voice", "machine"}
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     for id_ in BG:
+        if id_ in PAINTED:
+            continue
         sets = [("", {"aviators_up": True} if id_ == "cass" else {})]
         if id_ == "cass":
             sets.append(("_star", {"star": True, "hair_style": "ponytail"}))

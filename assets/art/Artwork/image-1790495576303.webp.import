@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwyp8ld7sv46a"
-path="res://.godot/imported/anchor_blink.png-892bbaeff8000d9e4bcefac2e1293316.ctex"
+uid="uid://dy6atxh5twpnx"
+path="res://.godot/imported/image-1790495576303.webp-0847c08b0928d295aaba4cf26e97588c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/portraits/anchor_blink.png"
-dest_files=["res://.godot/imported/anchor_blink.png-892bbaeff8000d9e4bcefac2e1293316.ctex"]
+source_file="res://assets/art/Artwork/image-1790495576303.webp"
+dest_files=["res://.godot/imported/image-1790495576303.webp-0847c08b0928d295aaba4cf26e97588c.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.85
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
