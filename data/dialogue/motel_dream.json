@@ -21,6 +21,19 @@
    "speaker": "cass",
    "text": "They had guns. They were paid. They'd have done the same to me.",
    "shot": "motel_dream",
+   "next": "c2"
+  },
+  "c2": {
+   "speaker": "narration",
+   "text": "In the mirror by the door, her reflection gets up a moment after she does.",
+   "shot": "mirror_dead",
+   "next": "c3"
+  },
+  "c3": {
+   "speaker": "cass",
+   "text": "...",
+   "shot": "mirror_dead",
+   "auto": 1.4,
    "next": "d"
   },
   "d": {

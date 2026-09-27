@@ -531,8 +531,10 @@ func _show_arcade() -> void:
 	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ""))
 	var board_id := _arc_map if mode_key == "" else "%s@%s" % [_arc_map, mode_key]
 	var board: Array = SaveManager.data.leaderboards.get(board_id, [])
-	panel_body.add_child(UIStyle.label("
-" + tr("LOCAL BOARD"), 14, UIStyle.GOLD, true))
+	var gap := Control.new()
+	gap.custom_minimum_size = Vector2(0, 14)
+	panel_body.add_child(gap)
+	panel_body.add_child(UIStyle.label("LOCAL BOARD", 14, UIStyle.GOLD, true))
 	if board.is_empty():
 		panel_body.add_child(UIStyle.label(tr("No runs yet. Be the first name on the tape."), 14, UIStyle.DIM))
 	for i in mini(board.size(), 5):

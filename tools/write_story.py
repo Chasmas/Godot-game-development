@@ -222,6 +222,8 @@ def dream():
         ("a", "narration", "She counts them before she sleeps. It used to be sheep.", {"shot": "motel_dream"}),
         ("b", "narration", "Twenty-four at the motel. Nineteen at the yard. Thirty-one on Stage Nine. She always loses count around the bellhop.", {"shot": "motel_dream"}),
         ("c", "cass", "They had guns. They were paid. They'd have done the same to me.", {"shot": "motel_dream"}),
+        ("c2", "narration", "In the mirror by the door, her reflection gets up a moment after she does.", {"shot": "mirror_dead"}),
+        ("c3", "cass", "...", {"shot": "mirror_dead", "auto": 1.4}),
         ("d", "narration", "The television at the foot of the bed stops showing static. It shows a house on a hill, and a banner over the door. WRAP PARTY.", {"shot": "villa_gate", "sfx": "vhs_static"}),
         ("e", "dead", "Everybody's here, Cass. Everybody you invited.", {"shot": "wrap_party"}),
         ("f", "tommy", "Cassie. Come up to the house. We saved you a seat.", {"shot": "villa_gate"}),

@@ -19,7 +19,15 @@ First launch imports the audio/fonts (a few seconds).
 
 ## What's in the slice
 - **Title screen**: animated freeway/neon/rain backdrop, VHS OSD, chrome-sunset logo. Menus: continue, new game, chapters, arcade + challenges with a local leaderboard, cast, extras (evidence locker, stats, credits), options.
-- **Story**: prologue (the 1987 stunt), the answering-machine scene (with a choice), **Mission 1 "Checkout Time"** at the Sunset Palms Motel, a TV news epilogue that reacts to what you did, the salvage-yard call, **Mission 2 "Dog Days"** at Yermo Salvage & K-9, and a teaser for 1990–1992.
+- **Story** (1988, four missions; what's new: [docs/UPDATE_0.9.md](docs/UPDATE_0.9.md)):
+  1. Prologue (the 1987 stunt) and the answering machine (Mom's message, then the Voice).
+  2. **Mission 1 "Checkout Time"** at the Sunset Palms Motel, then the TV news and the salvage-yard call.
+  3. **Mission 2 "Dog Days"** at Yermo Salvage & K-9, then Arlo Vance's office and the drive to Burbank.
+  4. **Mission 3 "Prime Time"** on KHSC's Stage Nine, live, against Dutch "The Fireman" Kowalski; then the news and the credits.
+  5. **Mission 4 "Sweet Dreams"**: the nightmare at Villa Estrella, where everyone she has killed comes to the wrap party. Then the wake-up call and a teaser for 1990–1992.
+- **Cutscenes**: painted frames (`tools/art/gen_ai_art.py`) animated by `shaders/painted_shot.gdshader`: camera moves, neon and firelight flicker, CRT screens, heat haze, breathing, swaying palms, rippling water, sirens, fireworks, flying papers. The older pixel shots remain as the fallback.
+- **Arcade**: pick a map (all four), a mode (Score Attack, Waves ×5, Waves ×10, Endless), modifiers (infinite ammo, weapon roulette, melee only, no Spotlight, hard, turbo) and the weather. Every map + mode keeps its own local top 10.
+- **Weather**: per-level presets and arcade overrides: night rain, desert wind and dust storms, Santa Ana winds with embers, snowfall that settles, a sunny day, fog, a clear night, and the dream's blood rain. Wind carries leaves, newspaper and palm fronds.
 - **Mission 2**: a salvage yard with German Shepherd and Rottweiler guard dogs (they sleep, sniff, bark for their handlers and lunge; their eyes burn red once they've spotted you), light switches and fuse boxes, stealth takedowns, lock-on, and upgrade briefcases.
 - **Difficulty**: Easy, Normal (the design baseline) and Hard, picked when you start a new game and changeable in OPTIONS. Easy gives enemies slower reactions and worse aim, and gives you one regenerating guard hit. Hard sharpens reactions, aim and hearing, lets more enemies attack at once and gives less ammo. All values live in `Tuning`.
 - **Languages**: English and Portuguese (European). Switch in OPTIONS → GAMEPLAY → Idioma/Language; it applies instantly and is saved.
@@ -97,7 +105,7 @@ tools/             gen_audio.py, gen_data.py, build_m01.py (level authoring),
 ```
 tools/run_tests.sh [path/to/godot]
 ```
-This runs four checks:
+This runs five checks:
 - **Smoke test** (`tools/smoke_test.tscn`) compiles every script, then plays both missions automatically: movement, dash, punch and execute, shooting, throwing, pickups, melee, door kicks, glass, explosions, AI hearing, death and instant restart, checkpoints, the boss's two phases, the dialogue choice, the phone call, the escape, the results screen, a save/load round trip, and Mission 2's dogs, stealth, power and upgrades.
 - **Edge tests** (`tools/edge_test.tscn`) cover:
   - gunfire staying local and walls muffling it
@@ -110,6 +118,7 @@ This runs four checks:
   - dual wielding (including swapping mid-reload)
   - switching language mid-conversation, and the longest Portuguese text fitting at the largest size
   - speech bubbles at the screen edge, the language surviving a restart, and the HUD in Portuguese
+- **Chapter test** (`tools/chapter3_test.tscn`) plays every story scene through, then Mission 3 (fire, both boss phases, the vote, the escape), Mission 4 (the risen dead, the flamethrower, Tommy's two phases), an arcade Waves run and every weather preset. `CH3_ONLY=story|m3|m4|arcade|weather` runs one part.
 - **Stress test** (`tools/stress_test.tscn`) puts 5–80 armed enemies in combat around the player. It reports physics cost per tick, node counts and orphans, then kills them all at once.
 - **i18n coverage** (`tools/i18n_extract.py --check pt_PT`) lists any player-facing string without a translation.
 

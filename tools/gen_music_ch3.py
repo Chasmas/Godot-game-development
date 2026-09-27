@@ -53,7 +53,40 @@ def prime_time():
     score("level_primetime", 132, 42, prog, hook, counter, pre_line, FS_MIN, dirt=1.3)
 
 
+def haunt(x, amount=1.0):
+    """The dream's tape: wow and flutter that bend the whole mix out of
+    tune, a drone a semitone apart (D against Eb) breathing under it, and
+    reversed ghosts of the music swelling in every few bars."""
+    n = len(x)
+    t = np.arange(n) / SR
+    wob = (0.0045 * np.sin(2 * np.pi * 0.31 * t) + 0.0012 * np.sin(2 * np.pi * 5.3 * t)) * amount
+    src = np.clip(np.arange(n) - (0.008 + wob) * SR, 0, n - 1)
+    y = np.stack([np.interp(src, np.arange(n), x[:, c]) for c in range(2)], axis=1)
+    trem = 0.5 + 0.5 * np.sin(2 * np.pi * 0.07 * t)
+    drone = (np.sin(2 * np.pi * mtof(26) * t) + 0.8 * np.sin(2 * np.pi * mtof(27) * t) + 0.3 * np.sin(2 * np.pi * mtof(50) * t * 1.003))
+    y += np.stack([drone * trem, drone * (1 - trem)], axis=1) * 0.07 * amount
+    # reversed swells: a slice of what just played, backwards, fading in
+    seg = int(SR * 2.4)
+    for start in range(seg, n - seg, int(SR * 9.6)):
+        ghost = lp(y[start - seg:start].mean(axis=1)[::-1], 2200) * np.linspace(0, 1, seg) ** 2
+        y[start:start + seg] += np.stack([ghost, ghost], axis=1) * 0.35 * amount
+    return y
+
+
 def nightmare():
+    real = gms.render
+    amounts = {"_explore": 0.8, "_combat": 1.0, "_combo": 1.1, "_danger": 1.4}
+    def haunted(name, x, *a, **k):
+        amt = next((v for key, v in amounts.items() if name.endswith(key)), 1.0)
+        return real(name, st_master(haunt(x, amt), 0.8), *a, **k)
+    gms.render = haunted
+    try:
+        _nightmare_score()
+    finally:
+        gms.render = real
+
+
+def _nightmare_score():
     D_MIN = [2, 4, 5, 7, 9, 10, 0]
     prog = expand({
         "INTRO": [(38, "m9"), (38, "m9"), (34, "M7"), (34, "M7")],
@@ -146,7 +179,7 @@ def boss_nightmare():
                 main.add(hero_lead(m + r - 38, st * L), t0 + s * st, .2)
         if bar % 4 == 3:
             main.add(reverse_cymbal(B), t0, .3)
-    render("boss_nightmare", st_master(st_reverb(main.buf, .3, 1.4), .85))
+    render("boss_nightmare", st_master(haunt(st_reverb(main.buf, .3, 1.4), 0.9), .85))
 
 
 if __name__ == "__main__":

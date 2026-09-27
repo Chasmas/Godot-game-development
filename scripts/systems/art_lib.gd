@@ -23,10 +23,11 @@ static func sprite(id: String) -> Texture2D:
 		return null
 	return _load("res://assets/art/sprites/%s.png" % id)
 
-static func floor_tex(ch: String) -> Texture2D:
-	if not enabled() or not FLOORS.has(ch):
+## `over`: the level's own "floor_textures" (a mansion's tile is marble).
+static func floor_tex(ch: String, over: Dictionary = {}) -> Texture2D:
+	if not enabled() or not (FLOORS.has(ch) or over.has(ch)):
 		return null
-	return _load("res://assets/art/floors/%s.png" % FLOORS[ch])
+	return _load("res://assets/art/floors/%s.png" % str(over.get(ch, FLOORS.get(ch, ""))))
 
 ## Draw a right-facing sprite into rect r on `ci`, turned to fit the rect
 ## (tall rects get the sprite rotated a quarter turn; `flip` turns it round).

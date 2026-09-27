@@ -16,10 +16,17 @@ func _ready() -> void:
 	ph.name = "Placeholder"
 	get_tree().root.add_child(ph)
 	get_tree().current_scene = ph
-	await _story()
-	await _mission3()
-	await _arcade()
-	await _weather()
+	var only := OS.get_environment("CH3_ONLY")   # story | m3 | m4 | arcade | weather
+	if only == "" or only == "story":
+		await _story()
+	if only == "" or only == "m3":
+		await _mission3()
+	if only == "" or only == "m4":
+		await _mission4()
+	if only == "" or only == "arcade":
+		await _arcade()
+	if only == "" or only == "weather":
+		await _weather()
 	print("=== CHAPTER 3 TEST DONE: %d failures ===" % failures.size())
 	for f in failures:
 		print("  FAIL: ", f)
@@ -154,6 +161,77 @@ func _mission3() -> void:
 	lvl.exit_car.interact(p)
 	await frames(150)
 	check(get_tree().current_scene != null and get_tree().current_scene.name == "Results", "results after Stage Nine")
+
+func _mission4() -> void:
+	print("-- mission 4 (the dream)")
+	Game.campaign_mode = false
+	Game.modifiers = {}
+	Game.start_mission("m04_sweet_dreams")
+	await frames(60)
+	var lvl := get_tree().get_first_node_in_group("level") as Level
+	check(lvl != null and lvl.nightmare != null, "Villa Estrella loads with its director")
+	if lvl == null:
+		return
+	var p := lvl.player
+	p.god_mode = true
+	check(lvl.weather.preset == "nightmare" and lvl.weather.rain_color.r > 0.5, "blood rain")
+	check(lvl.boss is BossBurningMan, "Tommy is the boss")
+	var kinds := {}
+	for e in lvl.enemies:
+		kinds[String(e.data.id)] = true
+	check(kinds.has("zombie") and kinds.has("ghoul") and kinds.has("demon") and kinds.has("cultist") and kinds.has("hellhound"), "the whole guest list (%s)" % ", ".join(kinds.keys()))
+	# weapons on the lawn
+	var guns := {}
+	for pk in get_tree().get_nodes_in_group("pickups"):
+		if pk.weapon:
+			guns[String(pk.weapon.data.id)] = true
+	check(guns.has("boomstick") and guns.has("flamethrower"), "boomstick and flamethrower placed")
+	# the graves open when you cross the lawn
+	var before := get_tree().get_nodes_in_group("enemies").size()
+	p.global_position = Vector2(30 * 16 + 8, 43 * 16 + 8)
+	await frames(90)
+	check(get_tree().get_nodes_in_group("enemies").size() > before, "the dead climb out of the graves")
+	# the flamethrower burns them
+	p.give_weapon(&"flamethrower")
+	var z := lvl.nightmare.rise(p.global_position + Vector2(40, 0), &"zombie")
+	await frames(2)
+	var zid := z.get_instance_id()
+	p._flame_shot(p.global_position, (z.global_position - p.global_position).normalized())
+	var burned := z.state == Enemy.State.DEAD
+	await frames(5)
+	check(burned and (not is_instance_id_valid(zid) or not (instance_from_id(zid) as Enemy).is_alive()), "the flamethrower kills a zombie (and it stays down)")
+	# clear the house, then Tommy
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and e != lvl.boss:
+			e.take_damage(DamageInfo.make(DamageInfo.Type.EXPLOSIVE, p, e.global_position, Vector2.RIGHT, &"explosion", &"explosion"))
+	await frames(20)
+	var boss := lvl.boss as BossBurningMan
+	p.global_position = Vector2(36 * 16 + 8, 15 * 16 + 8)
+	lvl.camera.snap_to_target()
+	await frames(40)
+	check(Dialogue.active and Dialogue._id == "m04_boss_intro", "Tommy's scene plays")
+	await _play_dialogue()
+	await frames(20)
+	check(boss.active, "Tommy fights")
+	for i in 4:
+		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
+		await frames(12)
+	check(boss.phase == 2, "phase 2 after four hits")
+	await frames(900)
+	check(get_tree().get_nodes_in_group("enemies").size() > 1, "he calls up the dead")
+	await _shot("m04_boss")
+	var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol")
+	info.lethal = true
+	boss.take_damage(info)
+	await frames(160)
+	check(Dialogue.active and Dialogue._id == "m04_boss_down", "the last scene plays")
+	await _play_dialogue(1)    # hold him
+	await frames(20)
+	check(SaveManager.get_flag("held_tommy_dream", false), "holding him is remembered")
+	check(lvl.phase == Level.Phase.ESCAPE, "wake up: escape")
+	lvl.exit_car.interact(p)
+	await frames(150)
+	check(get_tree().current_scene != null and get_tree().current_scene.name == "Results", "results after the dream")
 
 func _arcade() -> void:
 	print("-- arcade waves")

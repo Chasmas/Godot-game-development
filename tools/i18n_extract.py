@@ -22,7 +22,8 @@ UI_SCRIPTS = [
     "scripts/player/player_controller.gd", "scripts/player/upgrades.gd", "scripts/player/ability_system.gd",
     "scripts/player/executions.gd", "scripts/systems/score_system.gd", "scripts/systems/input_setup.gd",
     "scripts/systems/difficulty.gd", "scripts/systems/debug_menu.gd", "scripts/enemies/boss_night_manager.gd",
-    "scripts/enemies/npc.gd", "scripts/enemies/handler.gd", "scripts/weapons/weapon_pickup.gd", "scripts/systems/game.gd",
+    "scripts/enemies/npc.gd", "scripts/levels/arcade_director.gd", "scripts/levels/nightmare_director.gd",
+    "scripts/enemies/boss_fireman.gd", "scripts/enemies/boss_burning_man.gd", "scripts/enemies/handler.gd", "scripts/weapons/weapon_pickup.gd", "scripts/systems/game.gd",
 ]
 # strings that are code, not text
 SKIP_RE = [
@@ -37,7 +38,7 @@ KEEP_UPPER_SINGLE = True   # single uppercase words are UI labels ("OPTIONS")
 LIT = re.compile(r'(?<![&\w])"((?:[^"\\]|\\.)*)"')
 
 # node names, theme types and other code strings that happen to look like text
-NOT_TEXT = {"Visual3DDressing", "title/hotshot_title.webp", "cutscenes/apartment_1988.webp", "cutscenes/news_1988.webp", "Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
+NOT_TEXT = {"mode%d", "%s@%s", "paint/", "glow/", "Arcade", "Nightmare", "arc_%d_%d", "rise_%d_%d", "%s  ·  %s", "I-C", "I-D", "Visual3DDressing", "title/hotshot_title.webp", "cutscenes/apartment_1988.webp", "cutscenes/news_1988.webp", "Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
             "Decor", "Glow", "TabContainer", "VScrollBar", "Button", "Label", "PanelContainer", "Panel", "HSlider",
             "CheckButton", "OptionButton", "Underline", "modulate:a", ".remap", "[i]", "[/i]", "[pop]", "[/pop]", "KV", "SS", "XM",
             "NV", "BK", "AD", "QH", "LS", "SI", "A+", "S+", "SSS", "LMB", "RMB", "MMB", "M4", "M5", "LB", "RB",
@@ -68,7 +69,7 @@ TR_LIT = re.compile(r'\btr\("((?:[^"\\]|\\.)*)"\)')
 def from_scripts():
     out = {}
     for pat in UI_SCRIPTS:
-        for f in sorted(glob.glob(pat)):
+        for f in sorted(g.replace("\\", "/") for g in glob.glob(pat)):
             if f in TR_ONLY:
                 for i, line in enumerate(open(f, encoding="utf-8"), 1):
                     for m in TR_LIT.finditer(line):

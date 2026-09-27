@@ -601,7 +601,7 @@ class FloorChunk extends Node2D:
 		var T2 := float(LevelBuilder.T)
 		var r := Rect2(p, Vector2(T2, T2))
 		var h := _h(x, y)
-		var ptex := ArtLib.floor_tex(f)
+		var ptex := ArtLib.floor_tex(f, builder.data.get("floor_textures", {}))
 		if ptex:
 			_tile_painted(ptex, f, p, x, y)
 			return

@@ -81,6 +81,13 @@ const PAINTED := {
 	"credits_tv":   {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -8)], "z": [[Z.TV, 0.28, 0.02, 0.45, 0.62, 0.9, 1.0], [Z.BREATHE, 0.0, 0.5, 0.3, 0.5, 0.5, 0.8]], "fx": ["scan"]},
 	"harcourt_office": {"cam": [1.03, Vector2(0, 2), 1.1, Vector2(4, 0)], "z": [[Z.BREATHE, 0.0, 0.05, 0.45, 0.95, 0.6, 1.1], [Z.BREATHE, 0.6, 0.0, 0.4, 1.0, 0.5, 0.8], [Z.FLICKER, 0.0, 0.1, 0.1, 0.4, 0.8, 1.3]], "fx": ["dust"]},
 	"room_204":     {"cam": [1.02, Vector2(-6, 0), 1.1, Vector2(6, 0)], "z": [[Z.TV, 0.1, 0.05, 0.2, 0.3, 0.8, 1.0], [Z.FLICKER, 0.7, 0.0, 0.3, 0.4, 0.5, 1.2]], "fx": ["rain_window", "dust"]},
+	"motel_dream":  {"cam": [1.03, Vector2(-4, 2), 1.12, Vector2(4, -2)], "z": [[Z.TV, 0.0, 0.08, 0.24, 0.4, 0.9, 1.0], [Z.BREATHE, 0.2, 0.25, 0.55, 0.65, 0.5, 0.6], [Z.DRIFT, 0.15, 0.0, 0.45, 0.45, 1.2, 0.5], [Z.FLICKER, 0.78, 0.0, 0.18, 0.25, 0.5, 1.0]], "fx": ["dust"]},
+	"villa_gate":   {"cam": [1.02, Vector2(0, 4), 1.12, Vector2(0, -4)], "z": [[Z.FLICKER, 0.3, 0.1, 0.4, 0.35, 0.5, 1.0], [Z.SWAY, 0.0, 0.0, 0.18, 0.5, 1.5, 1.2], [Z.SWAY, 0.82, 0.0, 0.18, 0.5, 1.5, 1.3], [Z.PULSE, 0.5, 0.0, 0.2, 0.2, 0.3, 0.8], [Z.DRIFT, 0.0, 0.55, 1.0, 0.45, 1.5, 0.6], [Z.SWAY, 0.35, 0.6, 0.2, 0.3, 0.6, 2.0]], "glow": 0.5, "fx": ["blood_rain"]},
+	"wrap_party":   {"cam": [1.02, Vector2(-6, 0), 1.1, Vector2(6, -2)], "z": [[Z.SWAY, 0.2, 0.2, 0.6, 0.6, 0.8, 0.5], [Z.FLICKER, 0.35, 0.55, 0.15, 0.3, 0.7, 1.4], [Z.PULSE, 0.4, 0.0, 0.25, 0.15, 0.3, 0.7], [Z.DRIFT, 0.0, 0.0, 1.0, 1.0, 0.6, 0.4]], "glow": 0.45, "fx": ["dust"]},
+	"burning_tommy": {"cam": [1.06, Vector2(0, 4), 1.12, Vector2(0, -2)], "z": [[Z.HEAT, 0.15, 0.05, 0.7, 0.9, 1.5, 1.2], [Z.FLICKER, 0.15, 0.05, 0.7, 0.9, 0.6, 2.0], [Z.BREATHE, 0.3, 0.1, 0.4, 0.9, 0.7, 0.8]], "glow": 0.6, "fx": ["embers", "smoke"]},
+	"mirror_dead":  {"cam": [1.02, Vector2(4, 0), 1.12, Vector2(-4, -2)], "z": [[Z.BREATHE, 0.1, 0.1, 0.35, 0.9, 0.4, 0.4], [Z.SWAY, 0.45, 0.0, 0.4, 0.6, 0.6, 0.7], [Z.FLICKER, 0.85, 0.4, 0.15, 0.3, 0.6, 1.2], [Z.DRIFT, 0.0, 0.05, 0.35, 0.5, 1.0, 0.3]], "fx": ["dust"]},
+	"wake_motel":   {"cam": [1.05, Vector2(0, 0), 1.1, Vector2(2, 0)], "z": [[Z.TV, 0.0, 0.15, 0.24, 0.38, 0.7, 1.0], [Z.BREATHE, 0.35, 0.1, 0.45, 0.9, 1.2, 2.2], [Z.BLINK, 0.72, 0.75, 0.2, 0.2, 0.3, 3.0], [Z.PULSE, 0.8, 0.0, 0.2, 0.5, 0.2, 0.4]], "handheld": 0.5, "fx": ["dust"]},
+	"casting_1990": {"cam": [1.0, Vector2(-8, 4), 1.14, Vector2(8, -4)], "z": [[Z.PULSE, 0.05, 0.0, 0.25, 0.25, 0.4, 1.4], [Z.PULSE, 0.65, 0.5, 0.3, 0.25, 0.4, 1.1], [Z.FLICKER, 0.0, 0.45, 0.12, 0.35, 0.5, 1.0]], "fx": ["dust"]},
 	"mom_kitchen":  {"cam": [1.03, Vector2(-4, 2), 1.1, Vector2(4, -2)], "z": [[Z.BREATHE, 0.35, 0.2, 0.35, 0.8, 0.6, 0.8], [Z.PULSE, 0.0, 0.0, 0.3, 0.45, 0.2, 0.6]], "fireworks": [0.42, 0.05, 0.3, 0.3], "fx": ["dust"]},
 }
 
@@ -516,12 +523,13 @@ func _draw_painted_fx() -> void:
 func _draw_fx() -> void:
 	var fx: Array = _def.get("fx", [])
 	var t := _t
-	if "rain" in fx or "rain_window" in fx:
-		var a := 0.22 if "rain" in fx else 0.1
+	if "rain" in fx or "rain_window" in fx or "blood_rain" in fx:
+		var a := 0.22 if "rain" in fx else (0.3 if "blood_rain" in fx else 0.1)
+		var rc := Color(0.75, 0.05, 0.08, a) if "blood_rain" in fx else Color(0.75, 0.8, 1.0, a)
 		for r in _rain:
 			var x := fmod(r.x * size.x + t * 50.0, size.x)
-			var y := fmod(r.y * size.y + t * 620.0 * r.z, size.y)
-			draw_line(Vector2(x, y), Vector2(x - 4, y + 16), Color(0.75, 0.8, 1.0, a), 1.0)
+			var y := fmod(r.y * size.y + t * (380.0 if "blood_rain" in fx else 620.0) * r.z, size.y)
+			draw_line(Vector2(x, y), Vector2(x - 4, y + 16), rc, 1.0)
 	if "embers" in fx:
 		for e in _embers:
 			var k: float = 1.0 - e.t / e.life

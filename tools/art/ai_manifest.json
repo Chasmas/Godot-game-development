@@ -30,7 +30,7 @@
      ]
     },
     "dead": {
-     "prompt": "A horror portrait of a dead motel security guard risen as a zombie: grey rotting skin, milky eyes, a teal security uniform torn and bloodstained, a small gold star painted on his forehead, jaw slack. Unsettling."
+     "prompt": "An eerie portrait of a ghost: a pale, grey-skinned man in a teal 1980s motel security uniform, faintly translucent, blank milky eyes, a small gold star painted on his forehead, cold blue light, mist around him. Quietly unsettling, not gory."
     }
    }
   },
@@ -188,7 +188,7 @@
      "prompt": "A nightmare: a huge 1920s Spanish-style Hollywood mansion on a hill under a blood-red full moon, every window lit, a banner over the door reading WRAP PARTY; the lawn in front is a graveyard of fresh graves with gold stars on the headstones; dead hands pushing out of the soil; fog, dead palm trees, lightning."
     },
     "wrap_party": {
-     "prompt": "A nightmare ballroom party in a Hollywood mansion: dozens of dead people in 1980s clothes — motel guards, bikers, stagehands, a bellhop — dancing slowly under a crystal chandelier, their skin grey and wounds still open, each with a gold star painted on the face; a film crew of skeletons filming them; red light, champagne, rot."
+     "prompt": "A haunted ballroom party in a 1920s Hollywood mansion: dozens of pale, translucent ghostly guests in 1980s clothes - security guards, bikers, stagehands, a bellhop - dancing slowly under a crystal chandelier, each with a small gold star painted on the face, their eyes blank; a film crew of shadowy figures filming them; red candlelight, fog, champagne. Eerie and melancholy, no gore."
     },
     "burning_tommy": {
      "prompt": "A tragic horror boss: Tommy Moreno as a burning man standing in a mansion ballroom, his body wreathed in flame, his blue varsity jacket burning, arms open wide as if for a hug, the Cadillac wreck burning behind him, the dead crowd watching in a circle holding candles.",
@@ -203,7 +203,7 @@
      ]
     },
     "wake_motel": {
-     "prompt": "Dawn in a cheap motel room: Cass Moreno, red-haired woman with a smudged gold star over her left eye, sitting bolt upright in bed drenched in sweat, pistol pointed at the empty room; the TV shows a test pattern; a beige phone on the nightstand is ringing, its receiver slightly jumping.",
+     "prompt": "Dawn in a cheap motel room: Cass Moreno, a red-haired woman in a red leather jacket with a smudged gold star painted over her left eye, sitting upright in bed, startled and breathing hard, staring at the room; the TV shows a colour test pattern; a beige phone on the nightstand is ringing. Grey-blue morning light through the blinds.",
      "refs": [
       "cass"
      ]

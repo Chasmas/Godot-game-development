@@ -572,7 +572,9 @@ func _flame_shot(origin: Vector2, dir: Vector2) -> void:
 		if not e.is_alive():
 			continue
 		var to: Vector2 = (e as Node2D).global_position - origin
-		if to.length() < reach and absf(dir.angle_to(to)) < 0.3:
+		# the flame spreads as it goes: a wide mouth close up
+		var cone := 0.42 if to.length() > 36.0 else 0.9
+		if to.length() < reach and absf(dir.angle_to(to)) < cone:
 			var info := DamageInfo.make(DamageInfo.Type.FIRE, self, (e as Node2D).global_position, to.normalized(), &"flamethrower", &"fire")
 			info.lethal = true
 			info.from_player = true

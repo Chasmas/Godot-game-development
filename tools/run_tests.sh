@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 GODOT="${1:-${GODOT:-godot}}"
 status=0
 timeout 300 "$GODOT" --headless --path . --import >/dev/null 2>&1
-for suite in smoke_test edge_test stress_test; do
+for suite in smoke_test edge_test chapter3_test stress_test; do
 	echo "=== $suite"
 	timeout 600 "$GODOT" --headless --path . "res://tools/$suite.tscn" --quit-after 120000 2>&1 \
 		| grep -E "^\s+(ok|FAIL)|FAIL|DONE|SCRIPT ERROR|^\s+[0-9]+ +[0-9]" 

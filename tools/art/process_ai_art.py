@@ -31,6 +31,7 @@ SPRITE_TILES = {
     "wreck": (4, 2), "dumpster": (2, 2), "bed": (2, 2), "lounger": (2, 1), "washer": (1, 1), "crate": (1, 1),
     "palm": (4, 4), "plant": (1, 1), "arcade": (1, 1), "vending": (1, 1), "camera_rig": (2, 2),
     "studio_light": (2, 2), "leaf": (0.5, 0.5), "paper": (0.75, 0.75), "frond": (1, 1),
+    "coffin": (2, 1), "grave": (1, 1.5), "piano": (3, 3), "candelabra": (1, 1), "chandelier": (3, 3),
 }
 # existing hand-made frames reused as painted shots
 EXTRA_SHOTS = {"apartment": "assets/art/cutscenes/apartment_1988.webp", "tv_news": "assets/art/cutscenes/news_1988.webp"}

@@ -119,6 +119,7 @@ level = {
     "id": "m04_villa_estrella",
     "name": "Villa Estrella",
     "nightmare": True,
+    "floor_textures": {",": "marble", ".": "rug"},
     "ambient": [0.34, 0.22, 0.36],
     "map": rows,
     "zones": {
