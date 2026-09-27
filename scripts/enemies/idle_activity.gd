@@ -208,7 +208,10 @@ func drop() -> void:
 		if kind == Kind.SNOOZE:
 			visual.weapon_sprite.visible = true
 			visual.legs.visible = true
-	if _chair and is_instance_valid(_chair):
+	if _chair and is_instance_valid(_chair) and not _chair.is_inside_tree():
+		# woken before the chair even landed (it's added deferred)
+		_chair.set_meta("cancelled", true)
+	elif _chair and is_instance_valid(_chair):
 		# startled up: the chair tips over and stays where it was
 		var fx := Effects.get_fx() if is_inside_tree() else null
 		if fx:
@@ -267,6 +270,9 @@ class DroppedProp extends Node2D:
 class SnoozeChair extends Node2D:
 	var tipped := false
 	func _ready() -> void:
+		if has_meta("cancelled"):
+			queue_free()
+			return
 		if tipped:
 			rotation += 1.2
 			queue_redraw()
