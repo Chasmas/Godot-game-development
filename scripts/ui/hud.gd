@@ -269,16 +269,17 @@ func show_upgrade(id: StringName) -> void:
 
 ## Checkpoint saved: a small stamp slides in bottom-right - spinning reel,
 ## "TAPE SAVED", the area's name - and slides away.
-func show_checkpoint(area: String) -> void:
+func show_checkpoint(area: String, rewind := false) -> void:
 	var st := CheckpointStamp.new()
 	st.area = area
+	st.rewind = rewind
 	st.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	st.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	for c in root.get_children():
 		if c is CheckpointStamp:
 			c.queue_free()
 	root.add_child(st)
-	Audio.play("rec_beep", -14.0, 0.8)
+	Audio.play("tape_rewind" if rewind else "tape_insert", -8.0)
 
 func show_hint(text: String, duration := 3.0) -> void:
 	hint_label.text = tr(text)
@@ -863,32 +864,87 @@ class TipCard extends Control:
 
 
 class CheckpointStamp extends Control:
+	## A VHS cassette slides in from the right, drops into a deck slot with a
+	## clunk, its reels spin and the OSD reads "▶ PLAY  CHECKPOINT" (or
+	## "◀◀ REWIND" when you come back after a death). Bottom-right, small,
+	## ~2.8 s, never in the middle of the action.
 	var area := ""
+	var rewind := false
 	var _t := 0.0
-	const LIFE := 2.6
+	const LIFE := 2.9
+	const W := 176.0
+	const H := 104.0
 	func _process(delta: float) -> void:
 		_t += delta / maxf(Engine.time_scale, 0.05)
 		if _t > LIFE:
 			queue_free()
 		queue_redraw()
+	static func _ease_out(k: float) -> float:
+		return 1.0 - pow(1.0 - clampf(k, 0.0, 1.0), 3.0)
 	func _draw() -> void:
-		var inn := 1.0 - pow(1.0 - clampf(_t / 0.25, 0.0, 1.0), 3.0)
-		var out := pow(clampf((_t - (LIFE - 0.3)) / 0.3, 0.0, 1.0), 2.0)
-		var w := 250.0
-		var x := size.x - 18.0 - w * inn + (w + 20.0) * out
-		var y := size.y - 150.0
-		var r := Rect2(x, y, w, 42)
-		draw_rect(r, Color(UIStyle.INK, 0.86))
-		draw_rect(Rect2(r.position, Vector2(3, r.size.y)), UIStyle.GOLD)
-		# spinning reel
-		var c := r.position + Vector2(24, 21)
-		draw_arc(c, 11.0, 0, TAU, 24, UIStyle.GOLD, 1.5)
-		for i in 3:
-			var a := _t * 7.0 + i * TAU / 3.0
-			draw_line(c, c + Vector2.from_angle(a) * 9.0, UIStyle.GOLD, 2.0)
-		draw_circle(c, 2.5, UIStyle.GOLD)
+		var ink := UIStyle.INK
+		var gold := UIStyle.GOLD
+		var pink := UIStyle.PINK
+		var base := Vector2(size.x - W - 30.0, size.y - H - 128.0)
+		# timeline: 0-.35 slide in, .35-.55 drop into the slot, then play,
+		# last .35 s slide down and fade
+		var slide := _ease_out(_t / 0.35)
+		var drop := _ease_out((_t - 0.35) / 0.2)
+		var out := clampf((_t - (LIFE - 0.35)) / 0.35, 0.0, 1.0)
+		var a := 1.0 - out * out
+		var off := Vector2((1.0 - slide) * (W + 60.0), drop * 8.0 + out * 40.0)
+		# the deck slot the tape drops into
+		var slot := Rect2(base + Vector2(-8, 58), Vector2(W + 16, 20))
+		draw_rect(slot, Color(0.04, 0.02, 0.07, 0.85 * a))
+		draw_rect(Rect2(slot.position, Vector2(slot.size.x, 2)), Color(pink, 0.6 * a))
+		draw_rect(Rect2(slot.position + Vector2(0, slot.size.y - 2), Vector2(slot.size.x, 2)), Color(0.25, 0.2, 0.3, a))
+		# the cassette (drawn above the slot; after the drop its lower edge
+		# hides behind the deck lip)
+		var c := base + off
+		var body := Rect2(c, Vector2(W, 64))
+		draw_rect(Rect2(body.position + Vector2(3, 4), body.size), Color(0, 0, 0, 0.45 * a))   # shadow
+		draw_rect(body, Color(0.07, 0.06, 0.09, a))
+		draw_rect(body, Color(0.35, 0.3, 0.4, a), false, 1.0)
+		for i in 4:   # screw heads
+			var sp := body.position + Vector2(6 + (W - 12) * (i % 2), 6 + 52 * (i / 2))
+			draw_circle(sp, 1.6, Color(0.5, 0.48, 0.55, a))
+		# label: cream strip with a pink band, the area written on it
+		var lab := Rect2(c + Vector2(12, 6), Vector2(W - 24, 26))
+		draw_rect(lab, Color(0.95, 0.9, 0.8, a))
+		draw_rect(Rect2(lab.position + Vector2(0, 18), Vector2(lab.size.x, 4)), Color(pink, a))
+		draw_rect(Rect2(lab.position + Vector2(0, 22), Vector2(lab.size.x, 2)), Color(gold, a))
 		var f := UIStyle.font_bold()
-		draw_string(f, r.position + Vector2(44, 18), tr("TAPE SAVED"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
-		draw_string(UIStyle.font_mono(), r.position + Vector2(44, 34), area, HORIZONTAL_ALIGNMENT_LEFT, w - 50.0, 12, Color(UIStyle.PAPER, 0.8))
-		if fmod(_t, 0.6) < 0.35:
-			draw_circle(r.position + Vector2(w - 12, 12), 3.0, Color(1, 0.15, 0.2))
+		draw_string(f, lab.position + Vector2(5, 14), tr("CHECKPOINT"), HORIZONTAL_ALIGNMENT_LEFT, lab.size.x * 0.5, 11, Color(ink, a))
+		draw_string(UIStyle.font_mono(), lab.position + Vector2(lab.size.x - 5, 14), area, HORIZONTAL_ALIGNMENT_RIGHT, lab.size.x * 0.55, 9, Color(0.3, 0.1, 0.25, a))
+		# window with two reels; tape winds from one to the other
+		var win := Rect2(c + Vector2(40, 36), Vector2(W - 80, 22))
+		draw_rect(win, Color(0.18, 0.14, 0.2, a))
+		draw_rect(win, Color(0.45, 0.4, 0.5, a), false, 1.0)
+		var spin := (_t - 0.5) * (-18.0 if rewind else 7.0) if _t > 0.5 else 0.0
+		var wind := clampf((_t - 0.5) / (LIFE - 0.8), 0.0, 1.0)
+		if rewind:
+			wind = 1.0 - wind
+		for side in 2:
+			var rc := win.position + Vector2(18 + (win.size.x - 36) * side, 11)
+			var tape_r := lerpf(9.0, 5.0, wind if side == 0 else 1.0 - wind)
+			draw_circle(rc, tape_r, Color(0.28, 0.16, 0.12, a))
+			draw_circle(rc, 4.2, Color(0.9, 0.88, 0.85, a))
+			for k in 6:
+				var ang := spin + k * TAU / 6.0
+				draw_line(rc + Vector2.from_angle(ang) * 1.5, rc + Vector2.from_angle(ang) * 3.8, Color(ink, a), 1.0)
+		draw_line(win.position + Vector2(18, 20), win.position + Vector2(win.size.x - 18, 20), Color(0.28, 0.16, 0.12, a), 1.0)
+		# OSD once it plays: ▶ PLAY / ◀◀ REWIND, blinking, with tracking noise
+		if _t > 0.55:
+			var osd_a := a * clampf((_t - 0.55) / 0.12, 0.0, 1.0)
+			var txt := tr("◀◀ REWIND") if rewind else tr("▶ PLAY")
+			var op := base + Vector2(0, -12)
+			draw_string_outline(UIStyle.font_display(), op, txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, 4, Color(ink, osd_a))
+			draw_string(UIStyle.font_display(), op, txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color(UIStyle.PAPER, osd_a))
+			if fmod(_t, 0.7) < 0.45:
+				draw_circle(op + Vector2(W - 8, -6), 3.5, Color(1, 0.15, 0.2, osd_a))
+				draw_string(UIStyle.font_mono(), op + Vector2(W - 44, -1), "REC", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(1, 0.3, 0.35, osd_a))
+			# two thin tracking lines wandering over the tape
+			for i in 2:
+				var ty := c.y + fmod(_t * 70.0 + i * 37.0, 64.0)
+				draw_rect(Rect2(Vector2(c.x, ty), Vector2(W, 1)), Color(1, 1, 1, 0.08 * osd_a))
+

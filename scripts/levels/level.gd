@@ -178,6 +178,8 @@ func _ready() -> void:
 	hud.level = self
 	hud.player = player
 	add_child(hud)
+	if not st.is_empty():
+		hud.show_checkpoint.call_deferred("", true)   # ◀◀ REWIND
 	var barks := BarkLayer.new()
 	barks.name = "Barks"
 	add_child(barks)
