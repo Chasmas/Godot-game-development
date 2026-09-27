@@ -77,7 +77,7 @@ def st_master(x, peak=0.85):
     x = sat(x * 1.15, 1.25)
     return x / (np.max(np.abs(x)) + 1e-9) * peak
 
-def render(name, x, q=1, rate=32000):
+def render(name, x, q=0, rate=32000):
     tmp = os.path.join(MUS_DIR, name + ".tmp.wav")
     data = (np.clip(x, -1, 1) * 32767).astype(np.int16)
     with wave.open(tmp, "wb") as w:

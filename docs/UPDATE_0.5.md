@@ -69,3 +69,36 @@
   a longer growl before the lunge, a shorter lunge and more recovery between bites.
 - **Dog handler** walks with a proper stride: shoulders roll, a little bounce, the gun
   carried low at his side, his fist on the leash, and he leans back when the dog pulls.
+
+## 0.8.0 — merge with the ChatGPT pass, fixes, painted art, new score
+
+- **Merged** main's story rewrite, hit/fall/death reactions, boss polish and kill
+  feedback; fixed what it broke:
+  - the procedural synth failed to parse and took all music down
+  - the 3D overlay called a missing method and drew a dark band
+  - breathing undid the idle poses
+  - letterbox bars covered the VHS counter
+- **Painted art** (assets/art/Artwork, imported by tools/art/import_artwork.py):
+  - title key art
+  - apartment and Channel 9 cutscene frames
+  - ten painted dialogue portraits
+- **Enemies can always be killed:**
+  - a downed enemy can no longer be dragged into another state half-downed
+  - any hit on a downed enemy finishes it
+  - heavies go down to a flurry of three punches
+- **Forgiving aim:**
+  - melee turns into a target in front of you and has a little more reach and arc
+  - a shot within about 12 px of a body goes to it
+  - no lock-on
+- **Checkpoints:**
+  - VHS cassette popup (PLAY) and REWIND on respawn
+  - 2.5 s grace after respawn: no enemy sees or hears you until you attack
+  - enemies are back at their posts, facing the way they were placed
+- **Sleeping dogs** lie on their side; **dozing guards'** chairs no longer turn.
+- **Kill-on-the-beat bonus removed.** The music still follows the action.
+- **Level scores v3:**
+  - 32-bar stereo pieces with intro, verse, pre-chorus, chorus, breakdown and
+    turnaround
+  - much richer arrangement
+- **Installer** kept under 30 MiB: subset fonts, lighter Vorbis, source art
+  excluded from the export.

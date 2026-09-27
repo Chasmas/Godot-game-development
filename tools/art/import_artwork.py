@@ -26,8 +26,8 @@ GRID = [["cass_star", "harcourt", "earl"], ["tommy", "anchor", "guard"], ["marv"
 def main():
     for src, dst in FRAMES.items():
         im = Image.open(os.path.join(A, src)).convert("RGB")
-        if im.width > 1600:
-            im = im.resize((1600, int(im.height * 1600 / im.width)), Image.LANCZOS)
+        if im.width > 1440:
+            im = im.resize((1440, int(im.height * 1440 / im.width)), Image.LANCZOS)
         os.makedirs(os.path.dirname(os.path.join(ROOT, dst)), exist_ok=True)
         im.save(os.path.join(ROOT, dst), "WEBP", quality=88)
     sheet = Image.open(os.path.join(A, SHEET)).convert("RGB")
