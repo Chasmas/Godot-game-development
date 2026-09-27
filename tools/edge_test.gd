@@ -21,7 +21,7 @@ func _ready() -> void:
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
 			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
 			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese",
-			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists", "aim_forgiveness"]:
+			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists", "aim_forgiveness", "checkpoint_respawn"]:
 		if only != "" and case_name != only:
 			continue
 		_mission = "m02_dog_days" if case_name.begins_with("m02") else "m01_checkout"
@@ -156,6 +156,52 @@ func _kill_all(melee: bool, fists := false) -> void:
 			survivors.append(tag)
 			print("    survived: ", tag, " at ", e.global_position, " layer ", e.collision_layer, " hp-armor ", e.armor_left)
 	check(survivors.is_empty(), ("every m02 enemy dies to %s" % ("fists" if fists else ("melee" if melee else "bullets"))) + ("" if survivors.is_empty() else " - survivors: " + ", ".join(survivors)))
+
+## Die after a checkpoint: enemies are back at their posts, facing the way
+## they were placed, and nobody opens fire the moment you reappear.
+func checkpoint_respawn() -> void:
+	var lvl := _lvl()
+	var p := _p()
+	var e: Enemy = null
+	for o in _enemies():
+		if not o is Dog and o.patrol_points.is_empty() and not o.is_snoozing() and not o is Sniper:
+			e = o
+			break
+	var home := e.global_position
+	var face := e.facing
+	var eid := e.enemy_id
+	# respawn point: right in front of the guard, in plain view
+	var spawn := home + face * 40.0
+	lvl.player.global_position = spawn
+	lvl._save_checkpoint("TEST", spawn)
+	# the world moves on: the guard wanders off and turns round
+	e.global_position = home + Vector2(60, 30)
+	e.facing = -face
+	e._enter_combat()
+	await frames(10)
+	Game.restart_level()
+	await frames(8)
+	var lvl2 := _lvl()
+	var e2: Enemy = null
+	for o in get_tree().get_nodes_in_group("enemies"):
+		if o.enemy_id == eid:
+			e2 = o
+	check(e2 != null and e2.global_position.distance_to(home) < 2.0, "guard back at his post after respawn")
+	check(e2 != null and e2.facing.dot(face) > 0.99, "guard faces the way he was placed")
+	check(lvl2.player.global_position.distance_to(spawn) < 2.0 and lvl2.player.respawn_grace > 0.0, "player respawns at the checkpoint with a grace period")
+	lvl2.player.god_mode = false
+	var aware_early := false
+	var tps := float(Engine.physics_ticks_per_second)
+	for i in 8:
+		await frames(int(tps * 0.25))
+		for o in get_tree().get_nodes_in_group("enemies"):
+			if o.is_alive() and o.is_aware():
+				aware_early = true
+	check(not aware_early and lvl2.player.alive, "nobody opens fire in the first two seconds")
+	lvl2.player.god_mode = true
+	await frames(int(tps * 2.0))
+	check(e2 != null and is_instance_valid(e2) and (e2.is_aware() or e2.state == Enemy.State.SUSPICIOUS), "the guard does notice after the grace (%s)" % (e2.state_name() if e2 and is_instance_valid(e2) else "?"))
+	Game.checkpoint_state = {}
 
 ## Crosshair = direction: near misses connect, clear misses don't.
 func aim_forgiveness() -> void:

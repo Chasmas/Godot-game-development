@@ -21,6 +21,9 @@ var slots: Array = [null, null]      # WeaponInstance or null
 var slot := 0
 var alive := true
 var god_mode := false
+## Seconds after respawning at a checkpoint during which no enemy can see
+## or hear you: time to get your bearings. Attacking ends it at once.
+var respawn_grace := 0.0
 var noclip := false
 var aim_dir := Vector2.RIGHT
 var aim_point := Vector2.ZERO
@@ -151,6 +154,7 @@ func _physics_process(delta: float) -> void:
 	_footsteps(pd)
 
 func _tick_timers(pd: float) -> void:
+	respawn_grace = maxf(0.0, respawn_grace - pd)
 	_fire_cd = maxf(0.0, _fire_cd - pd)
 	_dash_cd = maxf(0.0, _dash_cd - pd)
 	_iframes = maxf(0.0, _iframes - pd)
@@ -487,6 +491,7 @@ func _actions(pd: float) -> void:
 func _try_shoot(w: WeaponInstance) -> void:
 	if _fire_cd > 0.0 or _reload_t > 0.0:
 		return
+	respawn_grace = 0.0
 	if Game.modifiers.get("melee_only", false):
 		Events.hint.emit("MELEE ONLY — throw it (RMB)", 1.2)
 		_fire_cd = 0.3
@@ -602,6 +607,7 @@ func _melee_attack(heavy: bool) -> void:
 	var w := current()
 	if w == null or _melee_cd > 0.0:
 		return
+	respawn_grace = 0.0
 	_melee_cd = w.data.melee_cooldown * (1.45 if heavy else 1.0) * (0.75 if upgrades.has(&"quick_hands") else 1.0)
 	_turn_into_target(w.data.melee_range + (6.0 if heavy else 0.0), w.data.melee_arc_deg * 0.5)
 	var stab := w.data.id in [&"knife", &"broken_bottle", &"glass_shard"]
@@ -618,6 +624,7 @@ func _melee_attack(heavy: bool) -> void:
 func _punch() -> void:
 	if _melee_cd > 0.0:
 		return
+	respawn_grace = 0.0
 	_melee_cd = 0.22
 	_turn_into_target(17.0, 50.0)
 	visual.punch()

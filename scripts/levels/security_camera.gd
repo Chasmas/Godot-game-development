@@ -79,7 +79,7 @@ func _physics_process(delta: float) -> void:
 	_cool = maxf(0.0, _cool - delta)
 	var p := _player()
 	var sees := false
-	if p and p.alive and _cool <= 0.0:
+	if p and p.alive and _cool <= 0.0 and p.respawn_grace <= 0.0:
 		var to := p.global_position - global_position
 		var d := to.length()
 		if d < RANGE and d > BLIND and absf(angle_difference(_aim, to.angle())) < HALF_FOV:

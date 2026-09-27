@@ -82,7 +82,7 @@ func _wake(pos: Vector2) -> void:
 func _perceive() -> void:
 	var p := _player()
 	_sees_player = false
-	if p == null or not p.alive or state == State.DOWNED or _held:
+	if p == null or not p.alive or state == State.DOWNED or _held or p.respawn_grace > 0.0:
 		return
 	var to := p.global_position - global_position
 	var dist := to.length()
@@ -133,6 +133,8 @@ func _perceive() -> void:
 
 func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> void:
 	if not is_alive() or state == State.DOWNED or source == self or _held:
+		return
+	if source is Player and (source as Player).respawn_grace > 0.0:
 		return
 	if sleeping:
 		var d := global_position.distance_to(pos)

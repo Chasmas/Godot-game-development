@@ -258,7 +258,7 @@ func _perceive_interval() -> float:
 func _perceive() -> void:
 	var p := _player()
 	_sees_player = false
-	if p == null or not p.alive or state == State.DOWNED or _held:
+	if p == null or not p.alive or state == State.DOWNED or _held or p.respawn_grace > 0.0:
 		return
 	var to := p.global_position - global_position
 	var dist := to.length()
@@ -329,6 +329,8 @@ func _clear_line(a: Vector2, b: Vector2) -> bool:
 func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> void:
 	if not is_alive() or state == State.DOWNED or state == State.STUNNED or source == self or _held:
 		return
+	if source is Player and (source as Player).respawn_grace > 0.0:
+		return   # just respawned: footsteps don't carry yet
 	if is_snoozing() and kind in [&"step", &"scuffle", &"door", &"thrown"]:
 		radius *= 0.35   # a dozing guard sleeps through footsteps, not gunfire
 	if kind == &"voice" and source is Enemy:

@@ -54,6 +54,7 @@ var _boss_triggered := false
 var _restart_ready := false
 var _t := 0.0
 var _alarm_spawned := false
+const RESPAWN_GRACE := 2.5
 
 func _ready() -> void:
 	add_to_group("level")
@@ -139,6 +140,10 @@ func _ready() -> void:
 	else:
 		Score.reset()
 	player.global_position = spawn
+	if not st.is_empty():
+		# back from a checkpoint: everyone is at their post again, facing the
+		# way they were placed; give the player a beat before anyone looks
+		player.respawn_grace = RESPAWN_GRACE
 	_build_checkpoint_markers.call_deferred()
 	_build_cameras()
 	_scatter_smashables()
