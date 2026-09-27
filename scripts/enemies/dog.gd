@@ -574,27 +574,63 @@ func _draw() -> void:
 	_draw_icons()
 
 func _draw_sleeping(C: Dictionary, rot: float, ink: Color) -> void:
-	var breathe := 1.0 + sin(_t * 1.8) * 0.05
+	# flat out on its side, seen from above: long body, all four legs
+	# stretched out to one side, head down with the snout forward, one ear
+	# flopped over, tail trailing - it reads as "dog, asleep" at a glance
+	var br := sin(_t * 1.8)
+	var ribs := 1.0 + br * 0.07
 	var base: Color = C.base
-	# curled: round body, tail wrapped, head on paws
-	_ell(self, rot, Vector2.ZERO, 7.4 * breathe, 6.4 * breathe, ink)
-	_ell(self, rot, Vector2(0, 0.5), 6.6 * breathe, 5.6 * breathe, C.shade)
-	_ell(self, rot, Vector2(-0.4, -0.4), 5.6 * breathe, 4.4 * breathe, base)
-	_ell(self, rot, Vector2(-1.4, -1.0), 3.8 * breathe, 2.6 * breathe, C.get("saddle", C.light))
-	_ell(self, rot, Vector2(-1.2, -1.6), 2.0, 0.8, C.get("saddle_hi", C.light))
-	# tail wrapped around the front
-	draw_arc(Vector2.ZERO, 6.8, rot + 0.6, rot + 2.4, 8, ink, 2.4)
-	draw_arc(Vector2.ZERO, 6.8, rot + 0.6, rot + 2.4, 8, base, 1.3)
-	# head resting at the front-right, paws under the chin
-	var head := Vector2(4.6, 2.8)
-	_ell(self, rot, head + Vector2(2.2, 1.4), 1.6, 1.0, ink)
-	_ell(self, rot, head, 3.4, 3.0, ink)
-	_ell(self, rot, head, 2.7, 2.3, base)
-	_ell(self, rot, head + Vector2(2.6, 0.4), 1.9, 1.3, ink)
-	_ell(self, rot, head + Vector2(2.6, 0.4), 1.4, 0.8, C.tan)
-	draw_line((head + Vector2(1.0, -1.2)).rotated(rot), (head + Vector2(1.8, -1.0)).rotated(rot), ink, 0.8)   # closed eye
-	# ears folded back while it sleeps
-	draw_colored_polygon(PackedVector2Array([(head + Vector2(-1.0, -1.4)).rotated(rot), (head + Vector2(-3.4, -2.8)).rotated(rot), (head + Vector2(0.2, -2.4)).rotated(rot)]), ink)
+	var shade: Color = C.shade
+	var light: Color = C.light
+	var tan: Color = C.tan
+	var saddle: Color = C.get("saddle", base)
+	var off := Vector2(-2.0, -1.5)
+	# tail trailing back, a little curl
+	var tail := PackedVector2Array()
+	for i in 8:
+		var k := i / 7.0
+		tail.append((off + Vector2(-8.0 - k * 6.0, 0.4 + k * k * 4.0)).rotated(rot))
+	draw_polyline(tail, ink, 3.4)
+	draw_polyline(tail, base, 2.2)
+	draw_polyline(tail.slice(4), tan, 1.2)
+	# legs: stretched out to the belly side, paws relaxed (a twitch now
+	# and then - dreaming)
+	var dream := sin(_t * 11.0) * 0.6 if fmod(_t, 5.0) < 0.8 else 0.0
+	var legs := [
+		[Vector2(4.4, 2.4), Vector2(6.8 + dream, 7.4)], [Vector2(2.8, 2.8), Vector2(4.2, 8.0)],
+		[Vector2(-4.8, 2.4), Vector2(-3.6 - dream, 7.8)], [Vector2(-6.6, 2.0), Vector2(-7.6, 7.2)]]
+	for lg in legs:
+		var la: Vector2 = off + lg[0]
+		var lb: Vector2 = off + lg[1]
+		draw_line(la.rotated(rot), lb.rotated(rot), ink, 3.0)
+		draw_line(la.rotated(rot), lb.rotated(rot), tan, 1.8)
+		_ell(self, rot, lb + (lb - la).normalized() * 0.6, 1.3, 1.0, ink)
+		_ell(self, rot, lb + (lb - la).normalized() * 0.6, 0.9, 0.6, tan)
+	# body: outline, then colour; ribs rise and fall
+	_ell(self, rot, off + Vector2(-0.6, 0.0), 9.2, 5.0 * ribs, ink)
+	_ell(self, rot, off + Vector2(4.2, 0.2), 5.0, 5.0 * ribs, ink)
+	_ell(self, rot, off + Vector2(-0.6, 0.0), 8.4, 4.2 * ribs, base)
+	_ell(self, rot, off + Vector2(4.2, 0.2), 4.3, 4.2 * ribs, base)
+	_ell(self, rot, off + Vector2(0.0, 2.3), 6.8, 1.6, light)            # belly
+	_ell(self, rot, off + Vector2(-1.2, -1.6), 6.6 * ribs, 2.4, saddle)  # back / saddle
+	_ell(self, rot, off + Vector2(-1.8, -2.6), 4.2, 0.6, C.get("saddle_hi", light))
+	_ell(self, rot, off + Vector2(-6.4, 0.4), 2.8, 3.2, shade)           # haunch
+	# head, lying flat: skull, snout, nose, one ear flopped over the skull
+	var hd := off + Vector2(10.2, -0.2)
+	_ell(self, rot, hd, 3.6, 3.2, ink)
+	_ell(self, rot, hd, 2.9, 2.5, base)
+	_ell(self, rot, hd + Vector2(3.6, 0.8), 3.1, 1.8, ink, 0.2)
+	_ell(self, rot, hd + Vector2(3.5, 0.7), 2.5, 1.2, tan, 0.2)
+	_ell(self, rot, hd + Vector2(3.8, 0.3), 1.8, 0.6, C.get("mask", shade), 0.2)
+	_ell(self, rot, hd + Vector2(6.1, 1.4), 0.95, 0.85, ink)             # nose
+	var ear := PackedVector2Array([(hd + Vector2(-1.2, -1.6)).rotated(rot), (hd + Vector2(-2.6, -4.2)).rotated(rot),
+		(hd + Vector2(0.6, -3.6)).rotated(rot), (hd + Vector2(1.0, -1.8)).rotated(rot)])
+	draw_colored_polygon(ear, ink)
+	var ear2 := PackedVector2Array([(hd + Vector2(-0.8, -1.8)).rotated(rot), (hd + Vector2(-1.9, -3.6)).rotated(rot), (hd + Vector2(0.3, -3.2)).rotated(rot)])
+	draw_colored_polygon(ear2, shade)
+	var eye := PackedVector2Array([(hd + Vector2(1.0, -0.6)).rotated(rot), (hd + Vector2(1.6, -0.25)).rotated(rot), (hd + Vector2(2.2, -0.6)).rotated(rot)])
+	draw_polyline(eye, ink, 0.7)
+	draw_line((hd + Vector2(-2.9, -1.4)).rotated(rot), (hd + Vector2(-2.6, 1.8)).rotated(rot), C.get("collar", Color(0.7, 0.1, 0.1)), 1.2)
 	# Zzz
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	var zt := fmod(_t * 0.6, 1.0)

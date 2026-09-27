@@ -44,9 +44,16 @@ func setup(p_visual: CharacterVisual, p_kind: int, seed_str: String) -> void:
 	if kind == Kind.SNOOZE and visual:
 		# a folding chair under him, gun put away, legs stretched out: it
 		# has to read as "asleep on the job" at a glance
+		# on the body, not the rig: the rig breathes and turns with the aim,
+		# the chair stays put on the floor
 		_chair = SnoozeChair.new()
-		_chair.z_index = -2
-		visual.rig.add_child(_chair)
+		_chair.z_index = -1
+		_chair.rotation = visual.rig.rotation
+		var body := visual.get_parent() as Node2D
+		if body:
+			body.add_child.call_deferred(_chair)
+		else:
+			visual.rig.add_child(_chair)
 		visual.weapon_sprite.visible = false
 		visual.legs.visible = false
 	_variant = absi(hash(seed_str)) % 3

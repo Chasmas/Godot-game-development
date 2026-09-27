@@ -111,6 +111,16 @@ func _ready() -> void:
 				p3.input_enabled = false
 				p3.set_physics_process(false)
 				lvl2.camera.target = dog
+			elif what == "sleepdog":
+				var sd: Dog = null
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if e is Dog and e.sleeping:
+						sd = e
+						break
+				p3.global_position = sd.global_position + Vector2(-400, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = sd
 			elif what.begins_with("idle"):
 				# idle0 / idle1 / idle2: the Nth calm guard busy with something
 				var want := int(what.substr(4)) if what.length() > 4 else 0

@@ -21,7 +21,7 @@ func _ready() -> void:
 			"spawn_while_shooting", "door_kick_hits_enemy", "doorway_traffic", "dodge_into_wall",
 			"double_death", "shout_is_local", "difficulty_scales", "enemies_miss", "dual_wield", "language_switch_mid_dialogue",
 			"long_text_fits", "bark_stays_on_screen", "language_persists", "hud_in_portuguese",
-			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists", "aim_forgiveness", "checkpoint_respawn"]:
+			"alarm_caps_responders", "camera_blind_spot", "m02_all_killable_gun", "m02_all_killable_melee", "m02_all_killable_fists", "aim_forgiveness", "checkpoint_respawn", "snooze_chair_still"]:
 		if only != "" and case_name != only:
 			continue
 		_mission = "m02_dog_days" if case_name.begins_with("m02") else "m01_checkout"
@@ -156,6 +156,32 @@ func _kill_all(melee: bool, fists := false) -> void:
 			survivors.append(tag)
 			print("    survived: ", tag, " at ", e.global_position, " layer ", e.collision_layer, " hp-armor ", e.armor_left)
 	check(survivors.is_empty(), ("every m02 enemy dies to %s" % ("fists" if fists else ("melee" if melee else "bullets"))) + ("" if survivors.is_empty() else " - survivors: " + ", ".join(survivors)))
+
+## A dozing guard and his chair stay put: no look-around, no drift.
+func snooze_chair_still() -> void:
+	var e: Enemy = null
+	for o in _enemies():
+		if not o is Dog and o.idle_activity:
+			e = o
+			break
+	e.idle_activity.queue_free()
+	e.idle_activity = IdleActivity.new()
+	e.visual.rig.add_child(e.idle_activity)
+	e.idle_activity.setup(e.visual, IdleActivity.Kind.SNOOZE, "test")
+	await frames(4)
+	var chair: Node2D = e.idle_activity._chair
+	check(chair != null and chair.get_parent() == e, "the chair sits on the body, not the aiming rig")
+	var p0 := chair.global_position
+	var r0 := chair.global_rotation
+	var f0 := e.facing
+	var moved := 0.0
+	for i in 16:
+		await frames(int(Engine.physics_ticks_per_second * 0.5))
+		if not e.is_snoozing():
+			break
+		moved = maxf(moved, chair.global_position.distance_to(p0) + absf(angle_difference(chair.global_rotation, r0)) * 10.0)
+	check(e.is_snoozing(), "still asleep after 8 s")
+	check(moved < 0.5 and e.facing.dot(f0) > 0.999, "chair and sleeper stay still (moved %.2f)" % moved)
 
 ## Die after a checkpoint: enemies are back at their posts, facing the way
 ## they were placed, and nobody opens fire the moment you reappear.

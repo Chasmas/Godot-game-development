@@ -200,7 +200,7 @@ func _physics_process(delta: float) -> void:
 				_set_state(State.COMBAT if _sees_player else State.SEARCH)
 		State.IDLE:
 			_look_t -= delta
-			if _look_t <= 0.0:
+			if _look_t <= 0.0 and not is_snoozing():   # a sleeper doesn't look around
 				_look_t = randf_range(2.0, 4.5)
 				if randf() < 0.35:
 					facing = facing.rotated(randf_range(-1.2, 1.2))
@@ -224,7 +224,8 @@ func _physics_process(delta: float) -> void:
 			desired = _flee(delta)
 	if state == State.DOWNED or state == State.STUNNED:
 		desired = Vector2.ZERO
-	desired += _separation()
+	if not is_snoozing():
+		desired += _separation()   # a sleeper isn't nudged along by passers-by
 	_steer(desired, delta)
 	move_and_slide()
 	if _move_vel.length() > 5.0 and not (state in [State.COMBAT, State.RETREAT] and _sees_player) and state != State.SEARCH:
