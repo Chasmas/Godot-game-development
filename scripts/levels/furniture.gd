@@ -134,6 +134,14 @@ func _draw() -> void:
 		"counter":
 			_shadow(r, Vector2(2, 3))
 			_cel_box(r, Color(0.78, 0.72, 0.62), ink)
+			# a varnished wood top from the painted floor wood, a laminate lip
+			var wood := ArtLib.floor_tex("_")
+			if wood:
+				var kk := float(wood.get_width()) / 128.0
+				draw_texture_rect_region(wood, r.grow(-1.0), Rect2(fposmod(position.x * kk, 256.0), fposmod(position.y * kk, 256.0), r.size.x * kk, r.size.y * kk), Color(0.95, 0.82, 0.7))
+				draw_rect(r.grow(-1.0), Color(0.06, 0.03, 0.02, 0.12))
+				draw_rect(r, ink, false, 1.0)
+				draw_rect(Rect2(r.position + Vector2(0, r.size.y - 2), Vector2(r.size.x, 2)), Color(0.35, 0.2, 0.12))
 			draw_rect(Rect2(r.position, Vector2(r.size.x, 2)), Color(0.98, 0.94, 0.85))
 			if r.size.x > r.size.y:
 				draw_rect(Rect2(r.position + Vector2(4, 3), Vector2(6, 3)), Color(0.2, 0.2, 0.25))     # register

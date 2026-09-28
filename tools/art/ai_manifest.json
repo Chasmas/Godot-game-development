@@ -1226,6 +1226,33 @@
      ]
     }
    }
+  },
+  "materials": {
+   "style": "A seamless tileable material texture filling the whole square image edge to edge, flat and evenly lit from the front, close-up, no objects, no seams, no vignette, no text. Neutral mid-grey colour (the game tints it).",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high"
+   },
+   "entries": {
+    "leather": {
+     "prompt": "Worn soft leather jacket hide: fine pebbled grain, creases, a few scuffs and pale scratches."
+    },
+    "denim": {
+     "prompt": "Denim fabric: diagonal twill weave, slightly faded, a few worn threads."
+    },
+    "twill": {
+     "prompt": "Uniform shirt cotton twill: tight fine diagonal weave, a few soft wrinkles."
+    },
+    "wool": {
+     "prompt": "Suit wool: fine herringbone weave, soft texture."
+    },
+    "canvas": {
+     "prompt": "Heavy work canvas: coarse plain weave, a few grease stains and worn patches."
+    },
+    "nylon": {
+     "prompt": "Quilted padded nylon: diamond stitched quilting, slight sheen, puffy."
+    }
+   }
   }
  }
 }

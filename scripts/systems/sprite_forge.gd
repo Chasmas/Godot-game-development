@@ -113,6 +113,7 @@ class Shape:
 	var shade := true
 	var outline := true
 	var pattern := ""
+	var mat := ""          ## cloth material image (tools/art "materials"), tinted by `color`
 	var bb := Rect2()
 
 	func finish() -> void:
@@ -162,11 +163,17 @@ static func cap(a: Vector2, b: Vector2, rad: float, col: Color) -> Shape:
 
 ## Mark shapes by material so the painter can give each its own surface:
 ## hair gets strands, cloth gets creases and seams, skin stays smooth.
-static func _tag(shapes: Array, P: Dictionary) -> void:
+static func _tag(shapes: Array, P: Dictionary, look := "") -> void:
 	var hair: Color = P.get("h", Color(-1, -1, -1))
 	var cloth := [P.get("j", Color(-1, -1, -1)), P.get("J", Color(-1, -1, -1)), P.get("p", Color(-1, -1, -1))]
+	var mats: Array = MATERIALS.get(look, ["", ""])
 	for sh in shapes:
 		var sp := sh as Shape
+		# the fabric itself: top and sleeves, trousers
+		if sp.color.is_equal_approx(P.get("j", Color(-1, -1, -1))) or sp.color.is_equal_approx(P.get("J", Color(-1, -1, -1))):
+			sp.mat = str(mats[0])
+		elif sp.color.is_equal_approx(P.get("p", Color(-1, -1, -1))):
+			sp.mat = str(mats[1])
 		if sp.pattern != "":
 			continue
 		if sp.color.is_equal_approx(hair) or sp.color.is_equal_approx(hair.lightened(0.05)):
@@ -175,6 +182,26 @@ static func _tag(shapes: Array, P: Dictionary) -> void:
 			for cc in cloth:
 				if sp.color.is_equal_approx(cc):
 					sp.pattern = "cloth"
+
+## What each look is wearing: [top / sleeves, trousers].
+const MATERIALS := {
+	"cass": ["leather", "denim"], "guard": ["twill", "twill"], "gunner": ["wool", "wool"],
+	"hunter": ["canvas", "canvas"], "heavy": ["leather", "denim"], "scout": ["twill", "twill"],
+	"riot": ["nylon", "nylon"], "boss": ["wool", "wool"], "sniper": ["canvas", "canvas"],
+	"fireman": ["nylon", "nylon"], "stagehand": ["canvas", "denim"], "security": ["wool", "twill"],
+	"handler": ["nylon", "canvas"], "bellhop": ["wool", "wool"], "biker": ["leather", "denim"],
+	"scrapper": ["canvas", "canvas"], "welder": ["leather", "canvas"], "civilian": ["twill", "denim"],
+	"buck": ["canvas", "denim"], "zombie": ["wool", "wool"], "ghoul": ["wool", "wool"],
+	"cultist": ["canvas", "canvas"], "demon": ["leather", "leather"], "burnt": ["twill", "denim"],
+}
+
+## The material images, greyscale, tiling (assets/art/materials).
+static var _mats: Dictionary = {}
+static func _mat_img(m: String) -> Image:
+	if not _mats.has(m):
+		var pth := "res://assets/art/materials/%s.png" % m
+		_mats[m] = (load(pth) as Texture2D).get_image() if ResourceLoader.exists(pth) else null
+	return _mats[m]
 
 ## A texture from a RES-times painted image, reporting the base size.
 static func _tex(img: Image) -> ImageTexture:
@@ -219,9 +246,15 @@ static func _render(shapes: Array, w: int, h: int) -> Image:
 						# light from the top-left of the canvas: a soft cross-light
 						var lit := ((p - s.a).normalized().dot(Vector2(-0.7, -0.7)) if p != s.a else 0.0) * rim
 						c = c.lightened(0.06 * maxf(lit, 0.0)) if lit > 0.0 else c.darkened(0.08 * -lit)
-					# cloth / skin grain: a faint, stable weave
-					var g := float(((x * 7 + y * 13) ^ (x * y)) % 5) / 5.0 - 0.4
-					c = c.lightened(0.03 * g) if g > 0.0 else c.darkened(-0.03 * g)
+					# the fabric: a painted material, tinted by the shape's colour
+					var mi: Image = _mat_img(s.mat) if s.mat != "" else null
+					if mi:
+						var l := mi.get_pixel(x % mi.get_width(), y % mi.get_height()).r
+						c = Color(c.r * (0.72 + 0.56 * l), c.g * (0.72 + 0.56 * l), c.b * (0.72 + 0.56 * l), c.a)
+					else:
+						# cloth / skin grain: a faint, stable weave
+						var g := float(((x * 7 + y * 13) ^ (x * y)) % 5) / 5.0 - 0.4
+						c = c.lightened(0.03 * g) if g > 0.0 else c.darkened(-0.03 * g)
 					var px := int(p.x)
 					var py := int(p.y)
 					if s.pattern == "hair":
@@ -373,7 +406,7 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		# still take every pose
 		if "tape_hand" in extras:
 			shapes.append(ell(hand_r, Vector2(2.2, 1.4), Color("e8e0d0"), false))
-		_tag(shapes, P)
+		_tag(shapes, P, base_name(palette))
 		var aimg := _render(shapes, SIZE, SIZE)
 		# sized by the shoulders: the painting spans the arms' roots
 		var bi: Image = hybrid.duplicate()
@@ -390,7 +423,7 @@ static func torso(pose: String, palette: String) -> Texture2D:
 			fore.append(ell(pr[1], Vector2(hand_rr, hand_rr), skin))
 		if "tape_hand" in extras:
 			fore.append(ell(hand_r, Vector2(2.0, 1.3), Color("e8e0d0"), false))
-		_tag(fore, P)
+		_tag(fore, P, base_name(palette))
 		var fimg := _render(fore, SIZE, SIZE)
 		aimg.blend_rect(fimg, Rect2i(Vector2i.ZERO, fimg.get_size()), Vector2i.ZERO)
 		var htex := _tex(aimg)
@@ -528,7 +561,7 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		shapes.append(cap(hc + Vector2(0, -5.2), hc + Vector2(0, 5.2), 0.7, Color("2a2a30")))
 		shapes.append(ell(hc + Vector2(0.5, -5.4), Vector2(1.7, 1.5), Color("ff8a20")))
 		shapes.append(ell(hc + Vector2(0.5, 5.4), Vector2(1.7, 1.5), Color("ff8a20")))
-	_tag(shapes, P)
+	_tag(shapes, P, base_name(palette))
 	var img := _render(shapes, SIZE, SIZE)
 	if "star" in extras:
 		_star(img, (hc + Vector2(2.5, 2.2)) * RES, 2.2 * RES, Color("ffd23f"))
@@ -587,7 +620,7 @@ static func legs(frame: int, palette: String) -> Texture2D:
 		cap(hip_l, foot_l, 2.7 * bw, pants), cap(hip_r, foot_r, 2.7 * bw, pants),
 		ell(foot_l + Vector2(1.6, 0), Vector2(2.6, 2.1), shoe), ell(foot_r + Vector2(1.6, 0), Vector2(2.6, 2.1), shoe),
 	]
-	_tag(shapes, P)
+	_tag(shapes, P, base_name(palette))
 	var tex := _tex(_render(shapes, SIZE, SIZE))
 	_cache[key] = tex
 	return tex
@@ -681,7 +714,7 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 			shapes.append(ell(head_c + Vector2(4.0, 0), Vector2(1.4, 3.0), top_s))    # the cap's peak
 		elif str(st.hair) != "bald":
 			shapes.append(ell(head_c + Vector2(2.2, 0), Vector2(2.6, 4.0), hair))
-	_tag(shapes, P)
+	_tag(shapes, P, base_name(palette))
 	var tex := _tex(_render(shapes, 48, 32))
 	_cache[key] = tex
 	return tex

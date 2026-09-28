@@ -328,6 +328,17 @@ class OfficeChair extends Node2D:
 		draw_set_transform(Vector2(1, 2), 0.0, Vector2(1.0, 0.75))
 		draw_circle(Vector2.ZERO, 10.0, Color(0, 0, 0, 0.32))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		var pt := ArtLib.sprite("office_chair")
+		if pt:
+			# the painted chair, its back behind him (it faces the way he does)
+			draw_set_transform(Vector2(-2, 0), -PI * 0.5, Vector2.ONE)
+			draw_texture_rect(pt, Rect2(-11, -11, 22, 22), false)
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			draw_rect(Rect2(6, -3.5, 8, 3), ink)
+			draw_rect(Rect2(6, 0.5, 8, 3), ink)
+			draw_rect(Rect2(6.5, -3, 7, 2), Color(0.16, 0.14, 0.2))
+			draw_rect(Rect2(6.5, 1, 7, 2), Color(0.16, 0.14, 0.2))
+			return
 		# the five-star base with casters
 		for k in 5:
 			var d := Vector2.from_angle(k * TAU / 5.0 + 0.3)

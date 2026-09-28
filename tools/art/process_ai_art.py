@@ -288,8 +288,22 @@ def cast():
     print("cast:", n)
 
 
+def materials():
+    """Cloth materials for the character painter (assets/art/materials):
+    seamless, greyscale, contrast normalised around mid-grey, 96 px."""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "materials", "*.webp")):
+        mid = os.path.basename(f)[:-5]
+        im = seamless(Image.open(f).convert("RGB")).resize((96, 96), Image.LANCZOS).convert("L")
+        a = np.asarray(im).astype(np.float32)
+        a = (a - a.mean()) / (a.std() + 1e-6) * 0.18 + 0.5
+        Image.fromarray((np.clip(a, 0, 1) * 255).astype(np.uint8), "L").convert("RGB").save(out("assets", "art", "materials", mid + ".png"))
+        n += 1
+    print("materials:", n)
+
+
 if __name__ == "__main__":
     only = sys.argv[1:]
-    for fn in (shots, portraits, sprites, textures, posters, weapons, masks, covers, cast):
+    for fn in (shots, portraits, sprites, textures, posters, weapons, masks, covers, cast, materials):
         if not only or fn.__name__ in only:
             fn()
