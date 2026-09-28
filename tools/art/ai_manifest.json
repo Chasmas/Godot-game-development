@@ -97,6 +97,12 @@
     },
     "enemy_cultist": {
      "prompt": "A hooded figure in a black robe, face half in shadow, a gold star pendant, nightmare version."
+    },
+    "buck": {
+     "prompt": "Buck Halverson, the kennel master of a Mojave salvage yard: a heavy weathered man in his 60s, a battered brown cowboy hat, grey stubble and a thick grey moustache, sunburnt skin, a grey work shirt under a stained leather apron, a dog whistle on a cord, small hard pale eyes, a dog-bite scar on his cheek."
+    },
+    "pa": {
+     "prompt": "No person: a battered 1980s studio public-address loudspeaker horn mounted on a wall, rain-streaked, a red ON AIR light glowing beside it, cables, dramatic lighting."
     }
    }
   },

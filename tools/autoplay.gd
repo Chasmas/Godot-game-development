@@ -54,6 +54,8 @@ func _ready() -> void:
 		if OS.get_environment("AUTOPLAY_MODS") != "":
 			mods = JSON.parse_string(OS.get_environment("AUTOPLAY_MODS"))
 		Game.replay_mission(only, "", mods)
+		if OS.get_environment("AUTOPLAY_BOSSFIGHT") == "1":
+			_skip_to_boss.call_deferred()
 	else:
 		Game.new_game()
 		var from := OS.get_environment("AUTOPLAY_FROM")
@@ -407,3 +409,19 @@ func _write_summary() -> void:
 	keys.sort_custom(func(a, b): return int(_deaths[a]) > int(_deaths[b]))
 	for k in keys:
 		_log("deaths %3d  %s" % [int(_deaths[k]), k])
+
+## Straight to the boss (trailer footage): the room cleared, Cass at the
+## door of the boss room, the bot does the rest.
+func _skip_to_boss() -> void:
+	var lvl: Level = null
+	while lvl == null or lvl.player == null or lvl.boss == null:
+		await get_tree().create_timer(0.2, true, false, true).timeout
+		lvl = get_tree().get_first_node_in_group("level") as Level
+	await get_tree().create_timer(1.0, true, false, true).timeout
+	var p := lvl.player
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and e != lvl.boss:
+			e.queue_free()
+	await get_tree().process_frame
+	p.global_position = lvl.boss.global_position + Vector2(-150, 60)
+	lvl.camera.snap_to_target()

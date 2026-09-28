@@ -11,6 +11,8 @@ signal closed
 var gallery := false   ## from the title menu: no pause, ESC backs out
 
 var _i := 0
+## the cards: bare-faced first, then every mask
+var cards: Array = [Masks.NONE] + Masks.ORDER
 var _t := 0.0
 var _root: Control
 var _shelf: Shelf
@@ -20,8 +22,8 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if not gallery:
 		get_tree().paused = true
-	var cur := Game.mask if Game.mask != &"" else &"star"
-	_i = maxi(0, Masks.ORDER.find(cur))
+	var cur := Game.mask if Game.mask != &"" else Masks.NONE
+	_i = maxi(0, cards.find(cur))
 	_root = Control.new()
 	_root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_root.theme = UIStyle.theme()
@@ -66,12 +68,12 @@ func _input(e: InputEvent) -> void:
 	get_viewport().set_input_as_handled()
 
 func _move(d: int) -> void:
-	_i = posmod(_i + d, Masks.ORDER.size())
+	_i = posmod(_i + d, cards.size())
 	Audio.play("ui_move", -8.0)
 	_shelf.bump = 1.0
 
 func _confirm() -> void:
-	var id: StringName = Masks.ORDER[_i]
+	var id: StringName = cards[_i]
 	if not Masks.is_unlocked(id):
 		Audio.play("empty", -4.0)
 		_shelf.shake = 1.0
@@ -120,13 +122,13 @@ class Shelf extends Control:
 		var fb := UIStyle.font_bold()
 		var head := tr("WHO ARE YOU TONIGHT?")
 		draw_string(f, Vector2(0, 104), head, HORIZONTAL_ALIGNMENT_CENTER, vs.x, 42, UIStyle.PINK)
-		var n := Masks.ORDER.size()
+		var n: int = sel.cards.size()
 		var cw := minf(128.0, (vs.x - 80.0) / n)
 		var x0 := vs.x * 0.5 - cw * n * 0.5
 		var y0 := vs.y * 0.42
 		_rects.clear()
 		for i in n:
-			var id: StringName = Masks.ORDER[i]
+			var id: StringName = sel.cards[i]
 			var open := Masks.is_unlocked(id)
 			var focus := i == sel._i
 			var lift := (18.0 + 4.0 * sin(t * 2.0)) if focus else 0.0
@@ -141,7 +143,11 @@ class Shelf extends Control:
 				draw_colored_polygon(PackedVector2Array([Vector2(c.x - 18, 40), Vector2(c.x + 18, 40), Vector2(c.x + sz * 0.7, c.y + sz * 0.6), Vector2(c.x - sz * 0.7, c.y + sz * 0.6)]), Color(1, 0.85, 0.55, 0.07))
 				draw_circle(c, sz * 0.62, Color(1, 0.3, 0.6, 0.12))
 			var tex := Masks.icon(id)
-			if tex:
+			if id == Masks.NONE:
+				# bare face: an empty frame, a slash through it
+				draw_arc(c, sz * 0.34, 0, TAU, 32, Color(0.95, 0.9, 0.85, 1.0 if focus else 0.6), 3.0)
+				draw_line(c + Vector2(-sz * 0.24, sz * 0.24), c + Vector2(sz * 0.24, -sz * 0.24), Color(0.95, 0.9, 0.85, 1.0 if focus else 0.6), 3.0)
+			elif tex:
 				var mod := Color.WHITE if open else Color(0.16, 0.08, 0.22, 0.95)
 				if open and not focus:
 					mod = Color(0.6, 0.55, 0.7)
@@ -153,11 +159,18 @@ class Shelf extends Control:
 			# the shelf
 			draw_line(Vector2(x0 + cw * i + 4, y0 + cw * 0.62), Vector2(x0 + cw * (i + 1) - 4, y0 + cw * 0.62), Color(0.5, 0.3, 0.2, 0.8), 3.0)
 		# the focused mask's card
-		var id2: StringName = Masks.ORDER[sel._i]
+		var id2: StringName = sel.cards[sel._i]
+		var yy := y0 + cw * 0.95
+		if id2 == Masks.NONE:
+			draw_string(f, Vector2(0, yy + 34), tr("NO MASK"), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 38, UIStyle.GOLD)
+			draw_string(fb, Vector2(0, yy + 66), tr("Just Cass. No paint, no part to play."), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 15, UIStyle.DIM)
+			draw_string(fb, Vector2(0, yy + 104), "+  " + tr("Nothing borrowed."), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 19, UIStyle.CYAN)
+			draw_string(fb, Vector2(0, yy + 134), "-  " + tr("Nothing to hide behind."), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 19, UIStyle.HOT)
+			draw_string(fb, Vector2(0, vs.y - 36), tr("◄ ►  CHOOSE      ENTER  WEAR IT"), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 14, Color(1, 1, 1, 0.5 + 0.2 * sin(t * 3.0)))
+			return
 		var p := DB.persona(id2)
 		if p == null:
 			return
-		var yy := y0 + cw * 0.95
 		var open2 := Masks.is_unlocked(id2)
 		draw_string(f, Vector2(0, yy + 34), tr(p.display_name) if open2 else "? ? ?", HORIZONTAL_ALIGNMENT_CENTER, vs.x, 38, UIStyle.GOLD)
 		if open2:

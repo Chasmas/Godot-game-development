@@ -4,25 +4,28 @@ extends RefCounted
 ## and takes something. She starts with THE STAR; the rest are earned by
 ## finishing chapters, by how well she plays them, by habits (bare-handed
 ## kills, arcade runs) or by finding them hidden in a level. Unlocks live in
-## the save ("masks"); the one she's wearing is Game.mask.
+## the save ("masks"); the one she's wearing is Game.mask. She can always
+## go bare-faced: NONE (&"none") - no upside, no price - and that's where
+## everyone starts; even the star is earned now (finish Chapter I).
 
 const ORDER := [&"star", &"soldier", &"dog", &"cowboy", &"angel", &"saint", &"ghost", &"fool", &"king", &"devil", &"king_hidden"]
 const RANKS := ["C", "B", "A", "A+", "S", "S+", "SS", "SSS"]
+const NONE := &"none"
 
 static func unlocked_list() -> Array:
 	var l: Array = SaveManager.data.get("masks", [])
-	if not "star" in l:
-		l.append("star")
-		SaveManager.data["masks"] = l
+	SaveManager.data["masks"] = l
 	return l
 
 static func is_unlocked(id: StringName) -> bool:
-	return String(id) in unlocked_list()
+	return id == NONE or String(id) in unlocked_list()
 
-## The mask for this job: the chosen one if it's unlocked, else the star.
+## The mask for this job: the chosen one if it's unlocked; bare-faced (null)
+## otherwise.
 static func current() -> PersonaData:
-	var id: StringName = Game.mask if Game.mask != &"" and is_unlocked(Game.mask) else &"star"
-	return DB.persona(id)
+	if Game.mask == &"" or Game.mask == NONE or not is_unlocked(Game.mask):
+		return null
+	return DB.persona(Game.mask)
 
 static func unlock(id: StringName) -> bool:
 	if is_unlocked(id):

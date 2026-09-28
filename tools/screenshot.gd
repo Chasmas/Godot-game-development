@@ -17,6 +17,10 @@ func _ready() -> void:
 		for cid in ["tape_roll7", "photo_harcourt", "tape_vance", "tape_pilot", "photo_casting"]:
 			if not cid in SaveManager.data.collectibles:
 				SaveManager.data.collectibles.append(cid)
+	if OS.get_environment("SHOT_ALLMASKS") == "1":
+		# every mask on the shelf (in memory only; nothing is saved)
+		SaveManager.data["masks"] = Masks.ORDER.map(func(m): return String(m))
+		SaveManager.data["missions"]["m01_checkout"] = {"completed": true, "best_score": 1, "best_rank": "A", "best_time": 1.0}
 	var out := OS.get_environment("SHOT_OUT")
 	var n := int(OS.get_environment("SHOT_FRAMES")) if OS.get_environment("SHOT_FRAMES") != "" else 90
 	match mode:
@@ -39,6 +43,18 @@ func _ready() -> void:
 							ch._tab = "posters"
 							ch._psel = 1
 					await _frames(20)
+				if OS.get_environment("SHOT_CYCLE") != "":
+					# browse along the shelf / list, a beat per step
+					for k in int(OS.get_environment("SHOT_CYCLE")):
+						var ev2 := InputEventAction.new()
+						ev2.action = "ui_right" if OS.get_environment("SHOT_PANEL") == "masks" else "ui_down"
+						ev2.pressed = true
+						Input.parse_input_event(ev2)
+						await _frames(2)
+						var ev3 := ev2.duplicate()
+						ev3.pressed = false
+						Input.parse_input_event(ev3)
+						await _frames(16)
 				if OS.get_environment("SHOT_VCR_PLAY") != "":
 					for ch in get_tree().current_scene.get_children():
 						if ch is VcrScreen:

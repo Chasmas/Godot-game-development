@@ -290,7 +290,7 @@ func _ready() -> void:
 		MeatBone.place_for(self, player.global_position)
 	# which mask tonight: asked once per job (retries keep it), and only
 	# once there's more than the star to choose from
-	if not Game.mask_chosen and player.data.id == &"cass" and Masks.unlocked_list().size() > 1 and st.is_empty() 			and DisplayServer.get_name() != "headless" and not Engine.has_meta("autoplay"):
+	if not Game.mask_chosen and player.data.id == &"cass" and Masks.unlocked_list().size() >= 1 and st.is_empty() 			and DisplayServer.get_name() != "headless" and not Engine.has_meta("autoplay"):
 		var ms := MaskSelect.new()
 		ms.chosen.connect(func(_id): player.apply_mask())
 		add_child(ms)

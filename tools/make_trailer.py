@@ -58,6 +58,8 @@ def kenburns(img, k, z0=1.04, z1=1.14, pan=(0.0, 0.0)):
     cw, ch = iw / z, ih / z
     cx = iw / 2 + pan[0] * iw * 0.03 * (k - 0.5)
     cy = ih / 2 + pan[1] * ih * 0.03 * (k - 0.5)
+    cx = min(max(cx, cw / 2), iw - cw / 2)
+    cy = min(max(cy, ch / 2), ih - ch / 2)
     box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
     return img.resize((W, H), Image.BICUBIC, box=box)
 
@@ -149,6 +151,34 @@ def env(t, a, b, fade=0.3):
         return 0.0
     return min(1.0, (t - a) / fade, (b - t) / fade)
 
+# ------------------------------------------------------------------ language
+# TRAILER_LANG=pt makes the Portuguese cut (captions, the release card, the
+# game's own splash and menus recorded in Portuguese)
+LANG = os.environ.get("TRAILER_LANG", "en")
+PT = {
+ "CALIFORNIA, 1988.": "CALIFÓRNIA, 1988.",
+ "SOMEBODY SENT HER A TAPE.": "ALGUÉM LHE ENVIOU UMA CASSETE.",
+ "SHE KNOWS WHAT IT MEANS.": "ELA SABE O QUE SIGNIFICA.",
+ "EVERY NAME ON THE CALL SHEET": "CADA NOME DA FOLHA DE SERVIÇO",
+ "IS GOING TO ANSWER FOR IT.": "VAI PAGAR POR ISSO.",
+ "AND SOMEBODY IS FILMING EVERYTHING.": "E ALGUÉM ESTÁ A FILMAR TUDO.",
+ "BRUTAL.": "BRUTAL.",
+ "FAST.": "RÁPIDO.",
+ "UNFORGIVING.": "IMPLACÁVEL.",
+ "PICK A FACE. PAY THE PRICE.": "ESCOLHE UMA CARA. PAGA O PREÇO.",
+ "EVERY TAPE TELLS ON SOMEBODY.": "CADA CASSETE DENUNCIA ALGUÉM.",
+ "BOSSES THAT FIGHT DIRTY.": "CHEFES QUE LUTAM SUJO.",
+ "ARCADE. SEVEN WAYS TO PLAY.": "ARCADA. SETE MANEIRAS DE JOGAR.",
+ "A NIGHTMARE OR TWO.": "UM PESADELO OU DOIS.",
+ "ONE HIT. ONE LIFE. ONE MORE TRY.": "UM GOLPE. UMA VIDA. MAIS UMA TENTATIVA.",
+ "RELEASE DATE TO BE ANNOUNCED": "DATA DE LANÇAMENTO A ANUNCIAR",
+ "INVERTED INDEX STUDIO   ·   A GAME BY GILBERTO LOPES": "INVERTED INDEX STUDIO   ·   UM JOGO DE GILBERTO LOPES",
+ "AVAILABLE ON": "DISPONÍVEL NA"
+}
+def L(s):
+    return PT.get(s, s) if LANG == "pt" and s else s
+GAME_LANG = "pt_PT" if LANG == "pt" else "en"
+
 # ------------------------------------------------------------------ motion
 _glows = {}
 def glow_of(pid):
@@ -168,6 +198,8 @@ def kenburns_l(img, k, z0, z1, pan):
     cw, ch = iw / z, ih / z
     cx = iw / 2 + pan[0] * iw * 0.03 * (k - 0.5)
     cy = ih / 2 + pan[1] * ih * 0.03 * (k - 0.5)
+    cx = min(max(cx, cw / 2), iw - cw / 2)
+    cy = min(max(cy, ch / 2), ih - ch / 2)
     return img.resize((W, H), Image.BILINEAR, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
 
 PRNG = np.random.default_rng(7)
@@ -238,7 +270,7 @@ def badge(kind, h=86):
         d.ellipse([h * 0.22, h * 0.22, h * 0.78, h * 0.78], outline=(199, 213, 224, 255), width=int(h * 0.07))
         d.ellipse([h * 0.40, h * 0.40, h * 0.60, h * 0.60], fill=(199, 213, 224, 255))
         d.text((h * 0.95, h * 0.18), "STEAM", font=fb, fill=(235, 240, 245, 255))
-        d.text((h * 0.97, h * 0.66), "AVAILABLE ON", font=fm, fill=(102, 192, 244, 255))
+        d.text((h * 0.97, h * 0.66), L("AVAILABLE ON"), font=fm, fill=(102, 192, 244, 255))
     elif kind == "GOG":
         w = int(h * 2.5)
         im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
@@ -279,9 +311,12 @@ for k, v in moments.items():
 # the timeline: [start, end, kind, payload]
 TL = []
 def story(a, b, pid, cap=None, pan=(0.0, 0.0)):
-    TL.append([a, b, "still", {"id": pid, "cap": cap, "pan": pan}])
+    TL.append([a, b, "still", {"id": pid, "cap": L(cap), "pan": pan}])
 def play(a, b, src, cap=None, idx=0, off=0.0):
-    TL.append([a, b, "clip", {"src": src, "cap": cap, "idx": idx, "off": off}])
+    TL.append([a, b, "clip", {"src": src, "cap": L(cap), "idx": idx, "off": off}])
+def play_file(a, b, name, at, cap=None, zoom=1.0):
+    """A fixed stretch of one recording (menus, the boss)."""
+    TL.append([a, b, "clip", {"file": os.path.join(WORK, name + ".avi"), "at": at, "cap": L(cap), "zoom": zoom}])
 
 # 0-9.5: studio, creator
 TL.append([0.0, 9.5, "splash", {}])
@@ -300,8 +335,7 @@ TL.append([31.5, 32.0, "black", {}])
 order = [("m01", 0), ("m03w", 0), ("m02w", 0), ("m01", 1), ("m04", 0), ("m03w", 1), ("m02w", 1), ("m04", 1),
          ("m01", 2), ("m03w", 2), ("m02w", 2), ("m04", 2), ("m03w", 3), ("m01", 3), ("m02w", 3), ("m04", 3),
          ("m03w", 4), ("m01", 4), ("m02w", 4), ("m04", 4), ("m03w", 5), ("m01", 5), ("m02w", 5), ("m04", 5)]
-caps = {32.0: "BRUTAL.", 36.0: "FAST.", 40.0: "UNFORGIVING.", 44.0: "PICK A FACE. PAY THE PRICE.",
-        48.0: "BOSSES THAT FIGHT DIRTY.", 52.0: "A NIGHTMARE OR TWO.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
+caps = {32.0: "BRUTAL.", 36.0: "FAST.", 40.0: "UNFORGIVING.", 54.0: "A NIGHTMARE OR TWO.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
 t = 32.0
 oi = 0
 while t < 64.0 - 1e-6:
@@ -313,13 +347,19 @@ while t < 64.0 - 1e-6:
     cap = None
     for ct, cs in caps.items():
         if abs(ct - t) < 1e-6:
-            cap = cs
+            cap = L(cs)
     if abs(t - 44.0) < 1e-6:
-        TL.append([t, t + BAR, "masks", {"cap": cap}])
+        # the game's own screens: the masks shelf, a tape in the deck
+        play_file(44.0, 46.0, "menu_masks_" + GAME_LANG, 3.4, "PICK A FACE. PAY THE PRICE.")
+        play_file(46.0, 48.0, "menu_vcr_" + GAME_LANG, 7.0, "EVERY TAPE TELLS ON SOMEBODY.")
+        t = 48.0
+        continue
     elif abs(t - 48.0) < 1e-6:
-        TL.append([t, t + BEAT * 2, "still", {"id": "k_buck", "cap": None, "pan": (0, 0), "flash": True}])
-        play(t + BEAT * 2, t + BAR * 2, k, cap, idx)
-        t += BAR * 2
+        # the Fireman: his painted entrance, then the fight on the stage
+        play_file(48.0, 49.5, "boss", 3.0, None)
+        play_file(49.5, 52.0, "boss", 24.0, "BOSSES THAT FIGHT DIRTY.", 1.25)
+        play_file(52.0, 54.0, "menu_arcade_" + GAME_LANG, 3.6, "ARCADE. SEVEN WAYS TO PLAY.")
+        t = 54.0
         continue
     else:
         play(t, t + step, k, cap, idx)
@@ -351,7 +391,7 @@ for fi in range(total):
         if 0.0 <= st:
             key = "splash"
             if key not in clips:
-                clips[key] = Clip(os.path.join(WORK, "splash.avi"), 0.0, 7.6)
+                clips[key] = Clip(os.path.join(WORK, "splash_%s.avi" % GAME_LANG), 0.0, 7.6)
             img = clips[key].frame().copy()
             # the credit gets a pulse of glitch on the beats and a light sweep
             if st > 3.6:
@@ -407,9 +447,13 @@ for fi in range(total):
             for c in list(clips.values()):
                 c.close()
             clips.clear()
-            src = SRC[p["src"]]
-            ms = moments.get(p["src"], [10.0])
-            start = ms[p["idx"] % len(ms)] - 0.7 + p.get("off", 0.0)
+            if "file" in p:
+                src = p["file"]
+                start = float(p["at"])
+            else:
+                src = SRC[p["src"]]
+                ms = moments.get(p["src"], [10.0])
+                start = ms[p["idx"] % len(ms)] - 0.7 + p.get("off", 0.0)
             clips[key] = Clip(src, max(0.0, start), b - a + 0.1)
             # the game's own sound for this cut, under the score
             ap = subprocess.run([FFMPEG, "-loglevel", "error", "-ss", f"{max(0.0, start):.3f}", "-i", src, "-t", f"{b - a:.3f}",
@@ -426,7 +470,7 @@ for fi in range(total):
             game_audio[s0:e0] += aud[: e0 - s0]
         img = clips[key].frame()
         # a punch-in on every cut
-        z = 1.12 + 0.06 * max(0.0, 1.0 - since_cut / 0.25)   # a little closer than the game camera, and a punch on the cut
+        z = float(p.get("zoom", 1.12)) + 0.06 * max(0.0, 1.0 - since_cut / 0.25)   # a little closer than the game camera, and a punch on the cut
         if z > 1.001:
             cw, ch = W / z, H / z
             img = img.resize((W, H), Image.BICUBIC, box=((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2))
@@ -459,7 +503,7 @@ for fi in range(total):
         al = env(tt, a + 0.2, b + 1.0, 0.6)
         base = light_leak(particles(base, tt, True, 0.6), tt, 0.6)
         img = text_center(base, "HOTSHOT CALIFORNIA", 250, 96, PINK, al)
-        img = text_center(img, "RELEASE DATE TO BE ANNOUNCED", 400, 60, GOLD, env(tt, a + 0.2, b + 1.0, 0.3))
+        img = text_center(img, L("RELEASE DATE TO BE ANNOUNCED"), 400, 60, GOLD, env(tt, a + 0.2, b + 1.0, 0.3))
         # the stores pop in fast, one after another, each in its own style
         img = img.convert("RGBA")
         gap = 36
@@ -480,7 +524,7 @@ for fi in range(total):
                 img.alpha_composite(b2, (x + bd.width // 2 - bw // 2, 560 - bh // 2))
             x += bd.width + gap
         img = img.convert("RGB")
-        img = text_center(img, "INVERTED INDEX STUDIO   ·   A GAME BY GILBERTO LOPES", 800, 30, CYAN, env(tt, a + 2.0, b + 1.0, 0.6), fnt=F_MONO(30))
+        img = text_center(img, L("INVERTED INDEX STUDIO   ·   A GAME BY GILBERTO LOPES"), 800, 30, CYAN, env(tt, a + 2.0, b + 1.0, 0.6), fnt=F_MONO(30))
         if tt > b - 1.2:
             img = darken(img, (tt - (b - 1.2)) / 1.2)
         img = vhs(img, 0.0, tt, 0.05)
