@@ -280,6 +280,7 @@ func _ready() -> void:
 		hero_car.arrive(player)
 	if arcade == null and not data.get("tasks", []).is_empty():
 		get_tree().create_timer(9.0, false).timeout.connect(func(): Events.tutorial.emit("tasks"))
+	Events.enemy_killed.connect(_capture_highlight)
 	if arcade == null:
 		var chat := Chatter.new()
 		chat.level = self
@@ -892,6 +893,34 @@ func _poll_tasks() -> void:
 	if _escape_pending and tasks_done():
 		_escape_pending = false
 		_begin_escape()
+
+# ------------------------------------------------------------ highlights
+## The best kills of the job, grabbed off the screen as they happen (the
+## frame after the blow lands), for the reel on the results screen. Keeps
+## the six with the biggest combos.
+var _hl_last := -10.0
+
+func _capture_highlight(_e: Node, info: Dictionary) -> void:
+	if DisplayServer.get_name() == "headless" or not bool(info.get("from_player", true)):
+		return
+	if _t - _hl_last < 1.2:
+		return
+	_hl_last = _t
+	var combo := Score.combo
+	var weapon := str(info.get("weapon_id", "fists"))
+	var at := Score.elapsed
+	await RenderingServer.frame_post_draw
+	if not is_inside_tree():
+		return
+	var img := get_viewport().get_texture().get_image()
+	if img == null:
+		return
+	img.resize(384, 216, Image.INTERPOLATE_BILINEAR)
+	Game.highlights.append({"img": img, "combo": combo, "t": at, "weapon": weapon})
+	if Game.highlights.size() > 6:
+		Game.highlights.sort_custom(func(a, b): return int(a.combo) > int(b.combo))
+		Game.highlights.resize(6)
+	Game.highlights.sort_custom(func(a, b): return float(a.t) < float(b.t))
 
 func objectives_text() -> String:
 	var lines := PackedStringArray()

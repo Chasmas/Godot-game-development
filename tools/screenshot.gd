@@ -73,8 +73,20 @@ func _ready() -> void:
 		"splash":
 			Game.change_scene("res://scenes/ui/splash_screen.tscn", false)
 			await _frames(n)
+		"hub":
+			SaveManager.data.missions["m01_checkout"] = {"completed": true, "best_score": 1, "best_rank": "A", "best_time": 1.0}
+			Game.change_scene(Game.HUB_SCENE)
+			await _frames(n)
+			if OS.get_environment("SHOT_BOARD") == "1":
+				get_tree().current_scene._use("BOARD")
+				await _frames(20)
 		"results":
 			Game.current_mission = load("res://data/missions/m01_checkout.tres")
+			if OS.get_environment("SHOT_HL") == "1":
+				for i in 3:
+					var im := Image.create(384, 216, false, Image.FORMAT_RGB8)
+					im.fill(Color(0.3 + i * 0.2, 0.1, 0.3))
+					Game.highlights.append({"img": im, "combo": 3 + i, "t": 30.0 + i * 20.0, "weapon": "pistol"})
 			Game.last_result = {"score": 38200, "time": 212.4, "max_combo": 9, "stats": {"kills": 23, "executions": 5, "silent_kills": 4, "attempts": 6}, "variety": 5, "methods": 6, "accuracy": 0.61, "time_bonus": 2900, "flow_bonus": 5400, "variety_bonus": 5000, "accuracy_bonus": 1830, "total": 53330, "rank": "S+", "new_best": true, "place": 1}
 			Game.change_scene(Game.RESULTS_SCENE)
 			await _frames(n)

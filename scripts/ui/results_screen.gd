@@ -47,6 +47,10 @@ func _ready() -> void:
 	rank_label.rotation = -0.12
 	UIStyle.place(rank_label, Control.PRESET_CENTER_RIGHT, Vector2(-430, -170), Vector2(380, 260))
 	add_child(rank_label)
+	if not Game.highlights.is_empty():
+		var reel := HighlightReel.new()
+		UIStyle.place(reel, Control.PRESET_TOP_LEFT, Vector2(360, 140), Vector2(240, 175))
+		add_child(reel)
 	buttons = HBoxContainer.new()
 	buttons.add_theme_constant_override("separation", 16)
 	buttons.visible = false
@@ -178,3 +182,50 @@ func _unhandled_input(e: InputEvent) -> void:
 			_tick = 0.0
 			_process(0.0)
 		get_viewport().set_input_as_handled()
+
+
+## HIGHLIGHTS: the job's best kills, played back as a tape - each frame
+## pushes in slowly, the deck's OSD shows the time and the combo, and a
+## splice of tracking noise cuts to the next.
+class HighlightReel extends Control:
+	var _texs: Array = []
+	var _i := 0
+	var _t := 0.0
+	const HOLD := 2.6
+	func _ready() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		for h in Game.highlights:
+			_texs.append(ImageTexture.create_from_image(h.img))
+	func _process(delta: float) -> void:
+		_t += delta
+		if _t > HOLD:
+			_t = 0.0
+			_i = (_i + 1) % maxi(1, _texs.size())
+		queue_redraw()
+	func _draw() -> void:
+		if _texs.is_empty():
+			return
+		var fb := UIStyle.font_bold()
+		var fm := UIStyle.font_mono()
+		draw_string(fb, Vector2(0, 14), tr("HIGHLIGHTS"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
+		var r := Rect2(Vector2(0, 22), Vector2(size.x, size.x * 9.0 / 16.0))
+		draw_rect(r.grow(4), Color(0.1, 0.08, 0.1))
+		var tex: Texture2D = _texs[_i]
+		var z := 1.0 + 0.06 * (_t / HOLD)
+		var src_sz := Vector2(tex.get_width(), tex.get_height()) / z
+		var src := Rect2((Vector2(tex.get_width(), tex.get_height()) - src_sz) * 0.5, src_sz)
+		draw_texture_rect_region(tex, r, src)
+		var h: Dictionary = Game.highlights[_i]
+		var secs := int(float(h.t))
+		draw_string(fm, r.position + Vector2(8, 16), "PLAY ▶", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(1, 1, 1, 0.9))
+		draw_string(fm, r.position + Vector2(r.size.x - 70, 16), "%d:%02d" % [secs / 60, secs % 60], HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(1, 1, 1, 0.8))
+		if int(h.combo) > 1:
+			draw_string(fb, r.position + Vector2(8, r.size.y - 10), tr("COMBO %dx") % int(h.combo), HORIZONTAL_ALIGNMENT_LEFT, -1, 14, UIStyle.PINK)
+		if _t < 0.2:
+			var rng := RandomNumberGenerator.new()
+			rng.seed = int(_t * 100.0) + _i
+			for k in 6:
+				draw_rect(Rect2(r.position.x, r.position.y + rng.randf() * r.size.y, r.size.x, rng.randf_range(2, 8)), Color(1, 1, 1, 0.3))
+		for yy in range(int(r.position.y), int(r.end.y), 3):
+			draw_line(Vector2(r.position.x, yy), Vector2(r.end.x, yy), Color(0, 0, 0, 0.15), 1.0)
+		draw_string(fm, Vector2(0, r.end.y + 18), "%d / %d" % [_i + 1, _texs.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 11, UIStyle.DIM)

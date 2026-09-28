@@ -16,6 +16,9 @@
 		"id": "news_1988"
 	},
 	{
+		"type": "hub"
+	},
+	{
 		"type": "cutscene",
 		"id": "salvage_1988"
 	},
@@ -28,6 +31,9 @@
 		"id": "yermo_after"
 	},
 	{
+		"type": "hub"
+	},
+	{
 		"type": "cutscene",
 		"id": "studio_1988"
 	},
@@ -38,6 +44,9 @@
 	{
 		"type": "cutscene",
 		"id": "news_1988b"
+	},
+	{
+		"type": "hub"
 	},
 	{
 		"type": "cutscene",

@@ -6,6 +6,7 @@ const TITLE_SCENE := "res://scenes/ui/title_screen.tscn"
 const LEVEL_SCENE := "res://scenes/levels/level.tscn"
 const CUTSCENE_SCENE := "res://scenes/game/cutscene.tscn"
 const RESULTS_SCENE := "res://scenes/ui/results.tscn"
+const HUB_SCENE := "res://scenes/ui/hub.tscn"
 
 var campaign: Array = []
 var missions: Dictionary = {}       # id -> MissionData
@@ -15,7 +16,8 @@ var current_character: CharacterData
 var current_cutscene := ""
 var campaign_mode := true           # false = arcade / level select replay
 var mask: StringName = &""
-var mask_chosen := false             # picked for this job already (retries keep it)         # the mask for this job (see Masks); "" = the star
+var mask_chosen := false
+var highlights: Array = []           # [{img, combo, t, weapon}] the job's best kills, for the results reel             # picked for this job already (retries keep it)         # the mask for this job (see Masks); "" = the star
 var modifiers: Dictionary = {}      # challenge/arcade modifiers e.g. {"melee_only": true}
 var last_result: Dictionary = {}
 
@@ -80,6 +82,8 @@ func advance_to(step: int) -> void:
 			change_scene(CUTSCENE_SCENE)
 		"mission":
 			start_mission(str(beat.id), str(beat.get("character", "")))
+		"hub":
+			change_scene(HUB_SCENE)
 		_:
 			goto_title()
 
@@ -103,6 +107,7 @@ func start_mission(mission_id: String, character_id := "", mods := {}) -> void:
 	checkpoint_state = {}
 	attempts = 1
 	mask_chosen = false
+	highlights = []
 	if modifiers.get("arcade", false) or modifiers.has("mode"):
 		SaveManager.add_stat("arcade_runs")
 	Score.reset()

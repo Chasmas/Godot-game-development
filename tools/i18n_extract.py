@@ -40,7 +40,7 @@ KEEP_UPPER_SINGLE = True   # single uppercase words are UI labels ("OPTIONS")
 LIT = re.compile(r'(?<![&\w])"((?:[^"\\]|\\.)*)"')
 
 # node names, theme types and other code strings that happen to look like text
-NOT_TEXT = {"BOSS", " else &", "%02d", "WASD", "L-STICK", " %s  -  %s", "PLAY", "LOAD", "EJECT", "SFX", "%s %d/%d", "+%ds", " and is_unlocked(Game.mask) else &", "secret:", "buck_dog_%d_%d", "%dm", "Breach", "WallArt", "mode%d", "%s@%s", "paint/", "glow/", "Arcade", "Nightmare", "arc_%d_%d", "rise_%d_%d", "%s  ·  %s", "I-C", "I-D", "Visual3DDressing", "title/hotshot_title.webp", "cutscenes/apartment_1988.webp", "cutscenes/news_1988.webp", "Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
+NOT_TEXT = {"DOOR", "MACHINE", "BOARD", "SHOT_MODE", "%d:%02d", "BOSS", " else &", "%02d", "WASD", "L-STICK", " %s  -  %s", "PLAY", "LOAD", "EJECT", "SFX", "%s %d/%d", "+%ds", " and is_unlocked(Game.mask) else &", "secret:", "buck_dog_%d_%d", "%dm", "Breach", "WallArt", "mode%d", "%s@%s", "paint/", "glow/", "Arcade", "Nightmare", "arc_%d_%d", "rise_%d_%d", "%s  ·  %s", "I-C", "I-D", "Visual3DDressing", "title/hotshot_title.webp", "cutscenes/apartment_1988.webp", "cutscenes/news_1988.webp", "Floor", "Effects", "Walls", "Props", "Pickups", "Doors", "Actors", "Lights", "Bullets", "Crowd",
             "Decor", "Glow", "TabContainer", "VScrollBar", "Button", "Label", "PanelContainer", "Panel", "HSlider",
             "CheckButton", "OptionButton", "Underline", "modulate:a", ".remap", "[i]", "[/i]", "[pop]", "[/pop]", "KV", "SS", "XM",
             "NV", "BK", "AD", "QH", "LS", "SI", "A+", "S+", "SSS", "LMB", "RMB", "MMB", "M4", "M5", "LB", "RB",
