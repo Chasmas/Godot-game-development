@@ -335,7 +335,7 @@ TL.append([31.5, 32.0, "black", {}])
 order = [("m01", 0), ("m03w", 0), ("m02w", 0), ("m01", 1), ("m04", 0), ("m03w", 1), ("m02w", 1), ("m04", 1),
          ("m01", 2), ("m03w", 2), ("m02w", 2), ("m04", 2), ("m03w", 3), ("m01", 3), ("m02w", 3), ("m04", 3),
          ("m03w", 4), ("m01", 4), ("m02w", 4), ("m04", 4), ("m03w", 5), ("m01", 5), ("m02w", 5), ("m04", 5)]
-caps = {32.0: "BRUTAL.", 36.0: "FAST.", 40.0: "UNFORGIVING.", 54.0: "A NIGHTMARE OR TWO.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
+caps = {32.0: "BRUTAL.", 54.0: "A NIGHTMARE OR TWO.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
 t = 32.0
 oi = 0
 while t < 64.0 - 1e-6:
@@ -348,6 +348,13 @@ while t < 64.0 - 1e-6:
     for ct, cs in caps.items():
         if abs(ct - t) < 1e-6:
             cap = L(cs)
+    if abs(t - 38.0) < 1e-6:
+        # the dodge roll, then the lobby doors going up
+        play_file(38.0, 40.0, "dodge", 8.5, "FAST.", 1.4)
+        play_file(40.0, 42.0, "breach", 4.4, None, 1.1)
+        play_file(42.0, 44.0, "breach", 6.3, "UNFORGIVING.", 1.1)
+        t = 44.0
+        continue
     if abs(t - 44.0) < 1e-6:
         # the game's own screens: the masks shelf, a tape in the deck
         play_file(44.0, 46.0, "menu_masks_" + GAME_LANG, 3.4, "PICK A FACE. PAY THE PRICE.")

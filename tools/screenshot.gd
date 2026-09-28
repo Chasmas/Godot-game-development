@@ -10,6 +10,11 @@ func _ready() -> void:
 	var ph := Node.new()
 	get_tree().root.add_child(ph)
 	get_tree().current_scene = ph
+	if OS.get_environment("SHOT_TRAILER") == "1":
+		# trailer footage: no HUD, no tips, no calls, no chapter card
+		Engine.set_meta("trailer", true)
+		SaveManager.set_setting("tips", false, false)
+		Game.force_intro_calls = false
 	if OS.get_environment("SHOT_LANG") != "":
 		Loc.apply(OS.get_environment("SHOT_LANG"), false)
 	var mode := OS.get_environment("SHOT_MODE")
@@ -144,6 +149,8 @@ func _ready() -> void:
 				await _frames(5)
 			var lvl2 := get_tree().get_first_node_in_group("level") as Level
 			var p3 := get_tree().get_first_node_in_group("player") as Player
+			if Engine.has_meta("trailer") and lvl2.hud:
+				lvl2.hud.visible = false
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
 			if OS.get_environment("SHOT_UPGRADE") != "":
@@ -162,6 +169,22 @@ func _ready() -> void:
 				while Dialogue.active:
 					Dialogue._end()
 					await _frames(2)
+			if OS.get_environment("SHOT_DODGE") != "":
+				# a string of dodge rolls through the room, gun out
+				p3.set_physics_process(true)
+				p3.input_enabled = false
+				p3.give_weapon(&"smg")
+				await _frames(20)
+				var dirs := [Vector2.RIGHT, Vector2(1, 1).normalized(), Vector2.LEFT, Vector2(-1, -1).normalized(), Vector2.UP, Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT]
+				for dv in dirs:
+					p3._last_move = dv
+					p3.aim_dir = dv.rotated(0.6)
+					p3._dash_cd = 0.0
+					p3.stamina = 100.0
+					p3._start_dash()
+					await _frames(22)
+					p3.velocity = Vector2.ZERO
+					await _frames(8)
 			if what == "bone":
 				await _frames(30)
 				var bn := get_tree().get_first_node_in_group("meat_bone_pickups") as Node2D

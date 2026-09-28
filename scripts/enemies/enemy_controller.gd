@@ -138,7 +138,8 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 		# calm guards find something to do with their hands
 		idle_activity = IdleActivity.new()
 		visual.rig.add_child(idle_activity)
-		idle_activity.setup(visual, IdleActivity.pick(enemy_id if enemy_id != "" else str(get_instance_id()), true), enemy_id)
+		# handlers walk dogs and never nap (a chair dragged along by a dog)
+		idle_activity.setup(visual, IdleActivity.pick(enemy_id if enemy_id != "" else str(get_instance_id()), not (self is Handler)), enemy_id)
 
 func is_snoozing() -> bool:
 	return idle_activity != null and is_instance_valid(idle_activity) and idle_activity.snoozing

@@ -135,15 +135,16 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 	weapon_sprite2.scale = weapon_sprite.scale
 	_hand = SpriteForge.hand_world("aim_dual") if dual else SpriteLib.hand_offset(w.hold)
 	var tex_h := weapon_sprite.texture.get_height()
-	# grip sits on the hand: offset so the handle end is at the hand position
-	# (offset is in texture pixels, the sprite is drawn at 1 / density)
-	weapon_sprite.offset = Vector2((-2 if w.is_firearm() else -3) * _wd, -tex_h * 0.5)
+	# the grip in the hand: guns by the bottom of the handle's column, the
+	# barrel line through the hand; melee weapons by the end of the handle
+	_firearm = w.is_firearm()
+	weapon_sprite.offset = _grip_offset(weapon_sprite.texture, false)
 	weapon_sprite.position = _hand
 	weapon_sprite.rotation = 0.0
 	if dual:
 		_hand2 = SpriteForge.hand_world("aim_dual_l")
 		weapon_sprite2.texture = weapon_sprite.texture
-		weapon_sprite2.offset = Vector2(-2 * _wd, -tex_h * 0.5)
+		weapon_sprite2.offset = _grip_offset(weapon_sprite.texture, true)
 		weapon_sprite2.position = _hand2
 		weapon_sprite2.rotation = 0.0
 		weapon_sprite2.visible = true
@@ -477,6 +478,40 @@ func muzzle_global(left := false) -> Vector2:
 		return sp.to_global(Vector2(sp.offset.x + tip.x, sp.offset.y + sp.texture.get_height() * 0.5 + y))
 	return rig.to_global(Vector2(10, 0))
 
+var _firearm := true
+
+## Offset (texture px) that puts a weapon picture's grip on the hand. For a
+## gun: the lowest solid point is the bottom of the handle; the hand holds
+## just above it, the barrel line (the muzzle's height) runs through it.
+static var _grips: Dictionary = {}
+func _grip_offset(tex: Texture2D, flipped: bool) -> Vector2:
+	var h := float(tex.get_height())
+	var tip := _barrel_tip(tex)
+	var gx: float
+	if _firearm:
+		var k := tex.get_rid()
+		if not _grips.has(k):
+			var img := tex.get_image()
+			var gxx := tex.get_width() * 0.25
+			if img:
+				if img.is_compressed():
+					img.decompress()
+				# lowest row with pixels, in the back half of the gun
+				for y in range(img.get_height() - 1, -1, -1):
+					var xs := []
+					for x in int(img.get_width() * 0.7):
+						if img.get_pixel(x, y).a > 0.5:
+							xs.append(x)
+					if xs.size() > 0:
+						gxx = (float(xs[0]) + float(xs[-1])) * 0.5
+						break
+			_grips[k] = gxx
+		gx = _grips[k]
+	else:
+		gx = 2.0 * _wd
+	var by := tip.y if not flipped else h - tip.y
+	return Vector2(-gx, -by)
+
 ## Where the muzzle is in a weapon picture: the rightmost solid column,
 ## halfway down its solid run (painted guns aren't centred on the barrel).
 static var _tips: Dictionary = {}
@@ -503,8 +538,13 @@ static func _barrel_tip(tex: Texture2D) -> Vector2:
 func _process(delta: float) -> void:
 	# side-view guns stay the right way up: aiming left, the picture flips
 	var left_aim := cos(rig.global_rotation) < 0.0
-	weapon_sprite.flip_v = left_aim
-	weapon_sprite2.flip_v = left_aim   # both guns the same way up
+	if weapon_sprite.flip_v != left_aim and weapon_sprite.texture:
+		weapon_sprite.flip_v = left_aim
+		weapon_sprite.offset = _grip_offset(weapon_sprite.texture, left_aim)
+	# the second gun is the mirror image of the first (a pair held apart)
+	if weapon_sprite2.flip_v != (not left_aim) and weapon_sprite2.texture:
+		weapon_sprite2.flip_v = not left_aim
+		weapon_sprite2.offset = _grip_offset(weapon_sprite2.texture, not left_aim)
 	# recoil: torso pushed back along aim, with a tiny breathing pulse.
 	_hit_t = maxf(0.0, _hit_t - delta)
 	_fall_t = maxf(0.0, _fall_t - delta)
