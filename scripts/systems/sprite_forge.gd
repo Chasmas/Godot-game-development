@@ -342,6 +342,66 @@ static func _cast(id: String) -> Texture2D:
 ## red jacket turns into a red blob at game size.
 const DRAWN_LOOKS := []
 
+## Painted limbs (tools/art "limbs" -> assets/art/cast/legs_*.png, arm_*.png).
+static func _limb(id: String) -> Image:
+	var k := "limb|" + id
+	if not _cache.has(k):
+		var pth := "res://assets/art/cast/%s.png" % id
+		var im: Image = null
+		if ResourceLoader.exists(pth):
+			im = (load(pth) as Texture2D).get_image()
+			if im and im.is_compressed():
+				im.decompress()
+		_cache[k] = im
+	return _cache[k]
+
+## Which painted sleeve a look wears.
+static func _arm_kind(look: String, extras: Array) -> String:
+	if look == "scout":
+		return "hawaii"
+	if "sleeveless" in extras or look in ["heavy", "hunter", "biker"]:
+		return "bare"
+	if look in ["riot", "fireman"]:
+		return "armour"
+	var m: String = str(MATERIALS.get(look, ["twill", "twill"])[0])
+	match m:
+		"leather":
+			return "leather"
+		"wool":
+			return "wool"
+		"nylon":
+			return "armour"
+	return "twill"
+
+## Paint `src` (an arm lying left -> right) along the segment a -> b, `w`
+## wide, tinted, onto `dst` (all in texture pixels).
+static func _stamp_segment(dst: Image, src: Image, a: Vector2, b: Vector2, w: float, tint: Color) -> void:
+	var ab := b - a
+	var L := ab.length()
+	if L < 1.0:
+		return
+	var u := ab / L
+	var n := u.orthogonal()
+	var lo := Vector2(minf(a.x, b.x), minf(a.y, b.y)) - Vector2(w, w)
+	var hi := Vector2(maxf(a.x, b.x), maxf(a.y, b.y)) + Vector2(w, w)
+	var sw := src.get_width()
+	var sh := src.get_height()
+	for y in range(maxi(0, int(lo.y)), mini(dst.get_height(), int(hi.y) + 1)):
+		for x in range(maxi(0, int(lo.x)), mini(dst.get_width(), int(hi.x) + 1)):
+			var p := Vector2(x + 0.5, y + 0.5) - a
+			var t := p.dot(u) / L
+			var d := p.dot(n) / w
+			if t < 0.0 or t > 1.0 or absf(d) > 0.5:
+				continue
+			var c := src.get_pixel(clampi(int(t * sw), 0, sw - 1), clampi(int((d + 0.5) * sh), 0, sh - 1))
+			if c.a < 0.1:
+				continue
+			# tint the sleeve, leave the dark glove / outline alone
+			var lum := c.get_luminance()
+			if lum > 0.18:
+				c = Color(c.r * tint.r, c.g * tint.g, c.b * tint.b, c.a)
+			dst.set_pixel(x, y, dst.get_pixel(x, y).blend(c))
+
 ## A character's painted body from above, if there is one.
 static func _body_image(name: String) -> Image:
 	if name in DRAWN_LOOKS:
@@ -422,6 +482,19 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		bi.resize(maxi(1, int(bi.get_width() * k * 0.92)), maxi(1, int(bi.get_height() * k)), Image.INTERPOLATE_LANCZOS)
 		var at := Vector2i((c + Vector2(0.8, 0)) * RES) - Vector2i(bi.get_width() / 2, bi.get_height() / 2)
 		aimg.blend_rect(bi, Rect2i(Vector2i.ZERO, bi.get_size()), at)
+		var arm_img := _limb("arm_" + _arm_kind(base_name(palette), extras))
+		if arm_img:
+			# painted arms, shoulder to fist, in her / his own sleeve colour
+			var tint: Color = arm_col.lightened(0.25) if not ("sleeveless" in extras) else Color(1, 1, 1)
+			if base_name(palette) == "scout":
+				tint = Color(1, 1, 1)
+			for pr in [[sh_l, hand_l], [sh_r, hand_r]]:
+				_stamp_segment(aimg, arm_img, (pr[0] as Vector2) * RES, ((pr[1] as Vector2) + ((pr[1] as Vector2) - (pr[0] as Vector2)).normalized() * 1.5) * RES, arm_r * 1.25 * RES, tint)
+			if "star" in extras:
+				_star(aimg, (c + Vector2(4.0, 1.8)) * RES, 2.2 * RES, Color("ffd23f"))
+			var atex := _tex(aimg)
+			_cache[key] = atex
+			return atex
 		# forearms and hands over the painting: that's what shows the pose
 		var fore: Array = []
 		for pr in [[sh_l, hand_l], [sh_r, hand_r]]:
@@ -616,6 +689,25 @@ static func legs(frame: int, palette: String) -> Texture2D:
 	var bk := _baked(key)
 	if bk:
 		return bk
+	var st0: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
+	var li := _limb("legs_" + base_name(palette))
+	if li:
+		# painted legs mid-stride: frame 1 as painted, frame 2 the other foot
+		# forward (mirrored), frame 0 feet together (pressed along the step)
+		var bw0: float = st0.build
+		var img := Image.create(SIZE * RES, SIZE * RES, false, Image.FORMAT_RGBA8)
+		img.fill(Color(0, 0, 0, 0))
+		var b: Image = li.duplicate()
+		var th := 12.0 * bw0 * RES
+		var tw := th * float(b.get_width()) / float(b.get_height()) * (0.55 if frame % 3 == 0 else 1.0)
+		b.resize(maxi(1, int(tw)), maxi(1, int(th)), Image.INTERPOLATE_LANCZOS)
+		if frame % 3 == 2:
+			b.flip_y()
+		var c0 := Vector2(15, 16)
+		img.blend_rect(b, Rect2i(Vector2i.ZERO, b.get_size()), Vector2i(int((c0.x + 2.5) * RES - tw * 0.5), int(c0.y * RES - th * 0.5)))
+		var ltex := _tex(img)
+		_cache[key] = ltex
+		return ltex
 	var P := _pal(palette)
 	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = st.build

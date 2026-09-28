@@ -285,6 +285,12 @@ def cast():
             k = 128 / im.width
             pixelize(im, (128, max(16, round(im.height * k))), 160).save(out("assets", "art", "cast", tid.replace("dog_", "dog_") + ".png"))
         n += 1
+    for f in glob.glob(os.path.join(RAW, "limbs", "*.webp")):
+        lid = os.path.basename(f)[:-5]
+        im = _trimmed(f)
+        k = 96 / max(im.width, im.height)
+        pixelize(im, (max(8, round(im.width * k)) + 4, max(8, round(im.height * k)) + 4), 160).save(out("assets", "art", "cast", lid + ".png"))
+        n += 1
     for f in glob.glob(os.path.join(RAW, "bodies", "*.webp")):
         bid = os.path.basename(f)[:-5]
         im = _trimmed(f)

@@ -1557,6 +1557,97 @@
      "prompt": "A red brick, seen from directly above."
     }
    }
+  },
+  "limbs": {
+   "style": "Top-down video game sprite: seen from DIRECTLY ABOVE (orthographic bird's-eye view), a person's legs only (no torso, no arms), standing mid-stride, one foot forward to the RIGHT and one back to the left, the hips at the middle. Transparent background, no shadow. Detailed painted style, bold simple shapes, dark outline, readable at tiny size.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "medium",
+    "background": "transparent"
+   },
+   "entries": {
+    "legs_cass": {
+     "prompt": "Legs in blue denim jeans and black ankle boots."
+    },
+    "legs_guard": {
+     "prompt": "Legs in dark navy uniform trousers and black shoes."
+    },
+    "legs_gunner": {
+     "prompt": "Legs in purple suit trousers and white loafers."
+    },
+    "legs_hunter": {
+     "prompt": "Legs in olive cargo trousers and brown boots."
+    },
+    "legs_heavy": {
+     "prompt": "Legs in black jeans and heavy black boots."
+    },
+    "legs_scout": {
+     "prompt": "Legs in cream chinos and white sneakers."
+    },
+    "legs_riot": {
+     "prompt": "Legs in navy padded riot trousers with knee guards and black boots."
+    },
+    "legs_boss": {
+     "prompt": "Legs in cream suit trousers and burgundy loafers."
+    },
+    "legs_sniper": {
+     "prompt": "Legs in dark olive trousers and black boots."
+    },
+    "legs_handler": {
+     "prompt": "Legs in khaki work trousers and brown boots."
+    },
+    "legs_bellhop": {
+     "prompt": "Legs in black trousers with a red stripe and black shoes."
+    },
+    "legs_biker": {
+     "prompt": "Legs in faded blue jeans and black biker boots."
+    },
+    "legs_scrapper": {
+     "prompt": "Legs in grey-green work trousers and scuffed boots."
+    },
+    "legs_welder": {
+     "prompt": "Legs in dark work trousers and steel-toe boots."
+    },
+    "legs_stagehand": {
+     "prompt": "Legs in black trousers and black sneakers."
+    },
+    "legs_security": {
+     "prompt": "Legs in charcoal trousers and black shoes."
+    },
+    "legs_civilian": {
+     "prompt": "Legs in light blue jeans and pink sneakers."
+    },
+    "legs_buck": {
+     "prompt": "Legs in dusty brown work trousers and cowboy boots."
+    },
+    "legs_fireman": {
+     "prompt": "Legs in silver fireproof trousers and heavy boots."
+    },
+    "arm_leather": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a light grey leather jacket sleeve.",
+     "size": "1536x1024"
+    },
+    "arm_twill": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a light grey uniform shirt sleeve.",
+     "size": "1536x1024"
+    },
+    "arm_wool": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a light grey suit jacket sleeve with a white cuff.",
+     "size": "1536x1024"
+    },
+    "arm_bare": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a bare muscular forearm and upper arm (natural skin).",
+     "size": "1536x1024"
+    },
+    "arm_hawaii": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a loud yellow and pink Hawaiian shirt short sleeve over a bare forearm.",
+     "size": "1536x1024"
+    },
+    "arm_armour": {
+     "prompt": "Top-down video game sprite: a single human arm lying straight and horizontal, seen from DIRECTLY ABOVE, the shoulder end at the LEFT edge, a hand in a black glove clenched in a fist at the RIGHT edge. Transparent background, no shadow, no body. Detailed painted style, bold simple shapes, dark outline. The arm: a light grey padded armoured sleeve with an elbow pad.",
+     "size": "1536x1024"
+    }
+   }
   }
  }
 }
