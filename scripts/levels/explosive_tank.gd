@@ -131,6 +131,16 @@ func _draw() -> void:
 		j = Vector2(sin(_t * 70.0), cos(_t * 63.0)) * 0.6   # rattling as it cooks off
 	# shadow, then the drum seen from above: rolled rim, two ribs, the lid
 	draw_circle(Vector2(1.5, 2.2), 7.4, Color(0, 0, 0, 0.35))
+	var ptex := ArtLib.sprite("oil_drum")
+	if ptex:
+		# the painted drum
+		draw_texture_rect(ptex, Rect2(j - Vector2(7.5, 7.5), Vector2(15, 15)), false)
+		if burning:
+			_draw_fire(j)
+		if _fuse >= 0.0:
+			var kk := 0.5 + 0.5 * absf(sin(_t * 30.0))
+			draw_circle(j, 7.0, Color(1.0, 0.45, 0.1, 0.3 * kk))
+		return
 	draw_circle(j, 7.2, ink)
 	draw_circle(j, 6.4, red.darkened(0.25))
 	draw_arc(j, 6.0, 0, TAU, 28, red.lightened(0.15), 1.0)            # the rolled rim

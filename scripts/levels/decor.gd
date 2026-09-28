@@ -502,6 +502,10 @@ class OldPickup extends StaticBody2D:
 		var hw := WD * 0.5
 		# shadow
 		draw_rect(Rect2(-hl + 3, -hw + 4, L, WD), Color(0, 0, 0, 0.35))
+		var ptex := ArtLib.sprite("pickup_truck")
+		if ptex:
+			ArtLib.draw_fitted(self, ptex, Rect2(-hl - 2, -hw - 2, L + 4, WD + 4))
+			return
 		# tyres poking out
 		for tx in [-hl + 9, hl - 11]:
 			for ty in [-hw - 1.0, hw - 3.0]:

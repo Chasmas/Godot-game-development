@@ -168,8 +168,33 @@ static func _stripes_at_doors(r, layer) -> void:
 			if r.cells.has(c):
 				layer.items.append(["hazard_stripes", RoomKits._px(c), 0.0 if o.y != 0 else PI * 0.5, 0])
 
+## Painted versions (tools/art, ArtLib.sprite) of dressing pieces: kind ->
+## [sprite, size in world px]. Drawn in the piece's own orientation, fitted
+## inside that size; the hand-drawn version is the fallback.
+const PAINTED := {
+	"office_chair": ["office_chair", Vector2(10, 10)], "armchair": ["armchair", Vector2(12, 11)],
+	"jukebox": ["jukebox", Vector2(13, 11)], "pinball": ["pinball", Vector2(9, 14)],
+	"pallet": ["pallet", Vector2(15, 11)], "workbench": ["workbench", Vector2(19, 9)],
+	"tires": ["tyre_stack", Vector2(10, 10)],
+}
+
+static func draw_painted(ci: CanvasItem, k: String) -> bool:
+	if not PAINTED.has(k):
+		return false
+	var tex := ArtLib.sprite(str(PAINTED[k][0]))
+	if tex == null:
+		return false
+	var box: Vector2 = PAINTED[k][1]
+	var ta := float(tex.get_width()) / float(tex.get_height())
+	var sz := Vector2(box.x, box.x / ta) if box.x / box.y < ta else Vector2(box.y * ta, box.y)
+	ci.draw_texture_rect(tex, Rect2(-sz * 0.5 + Vector2(1.0, 1.5), sz), false, Color(0, 0, 0, 0.3))   # contact shadow
+	ci.draw_texture_rect(tex, Rect2(-sz * 0.5, sz), false)
+	return true
+
 ## Drawings for the pieces above. Returns false for kinds it doesn't know.
 static func draw(ci: CanvasItem, k: String, v: int) -> bool:
+	if draw_painted(ci, k):
+		return true
 	var ink := Color(0.06, 0.03, 0.07)
 	match k:
 		"pallet":

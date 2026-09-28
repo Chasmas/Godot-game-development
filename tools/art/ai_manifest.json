@@ -668,6 +668,70 @@
     },
     "car_hero": {
      "prompt": "A cherry-red 1970s Cadillac Eldorado convertible with the top down, seen from directly above, the front of the car pointing to the RIGHT, white leather seats, polished chrome bumpers and trim, a big hand-painted gold five-pointed star on the hood, long and low, gleaming, clearly the hero car."
+    },
+    "table": {
+     "prompt": "A rectangular 1980s motel diner table seen from directly above: turquoise formica top with a chrome edge, a napkin dispenser, salt and pepper shakers, a glass ashtray and a coffee ring stain.",
+     "size": "1536x1024"
+    },
+    "desk": {
+     "prompt": "An office desk seen from directly above: dark scratched wood top, a green banker's desk lamp, scattered papers and folders, a beige rotary phone, an overflowing ashtray, a coffee mug.",
+     "size": "1536x1024"
+    },
+    "cage": {
+     "prompt": "A dog kennel cage seen from directly above: galvanised chain-link mesh roof on a steel frame, a dented steel food bowl and loose straw visible through the mesh.",
+     "size": "1024x1024"
+    },
+    "office_chair": {
+     "prompt": "A 1980s swivel office chair seen from directly above: oxblood leather seat with buttoned tufts, a tall back, five-star chrome base with casters.",
+     "size": "1024x1024"
+    },
+    "tv_crt": {
+     "prompt": "A 1980s CRT television set seen from directly above: wood-grain casing, vents on the top, rabbit-ear antenna, a VHS tape lying on it.",
+     "size": "1024x1024"
+    },
+    "ice_machine": {
+     "prompt": "A motel ice machine seen from directly above: white enamel metal box with rust at the edges, a scoop hanging on a chain, a sticker reading ICE.",
+     "size": "1024x1024"
+    },
+    "oil_drum": {
+     "prompt": "A red 55-gallon steel fuel drum seen from directly above: rolled rim, two bung caps, a yellow flammable hazard diamond, rust blooms and dents, chipped paint.",
+     "size": "1024x1024"
+    },
+    "pickup_truck": {
+     "prompt": "An abandoned 1970s pickup truck seen from directly above, pointing right: faded teal and cream two-tone paint, rust along the wheel arches, a cracked windshield, junk in the open bed (a spare tyre, a wooden crate, a blue tarp).",
+     "size": "1536x1024"
+    },
+    "cardboard_box": {
+     "prompt": "A taped cardboard moving box seen from directly above, scuffed, with a THIS SIDE UP arrow and a shipping label.",
+     "size": "1024x1024"
+    },
+    "wooden_chair": {
+     "prompt": "A simple wooden diner chair seen from directly above: worn seat, a slatted backrest on one side.",
+     "size": "1024x1024"
+    },
+    "jukebox": {
+     "prompt": "A 1950s-style chrome jukebox seen from directly above: rounded top with colourful glowing tubes, chrome trim.",
+     "size": "1024x1024"
+    },
+    "pinball": {
+     "prompt": "A 1980s pinball machine seen from directly above: glass playfield with bright artwork, bumpers and flippers, a backbox at one end.",
+     "size": "1024x1536"
+    },
+    "armchair": {
+     "prompt": "A worn velvet armchair seen from directly above: burgundy velvet, rolled arms, a cushion, cigarette burns.",
+     "size": "1024x1024"
+    },
+    "tyre_stack": {
+     "prompt": "A stack of three old car tyres seen from directly above, worn treads, dusty.",
+     "size": "1024x1024"
+    },
+    "pallet": {
+     "prompt": "A wooden shipping pallet seen from directly above, weathered planks, a few nails.",
+     "size": "1024x1024"
+    },
+    "workbench": {
+     "prompt": "A cluttered garage workbench seen from directly above: oily wood top, a vice, wrenches, a coffee can of screws, rags, a work lamp.",
+     "size": "1536x1024"
     }
    }
   },
@@ -918,6 +982,26 @@
     },
     "cover_m07": {
      "prompt": "The Hollywood Hills at night on fire, a modern glass villa on the ridge glowing, helicopters with searchlights, a tiny figure standing in front of the flames."
+    }
+   }
+  },
+  "vcr": {
+   "style": "Detailed realistic painted object, straight-on front view, no perspective, a single isolated object centred on a fully transparent background, no floor, no shadow. 1980s, lit at night with subtle magenta and cyan neon reflections, crisp edges.",
+   "defaults": {
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "vcr_tv": {
+     "prompt": "A 1980s wood-grain CRT television set: curved glass screen switched off, dark grey with a faint reflection, silver control knobs and a channel dial on a panel to the right of the screen, a small speaker grille, rabbit-ear antenna on top, a few scuffs."
+    },
+    "vcr_deck": {
+     "prompt": "A 1980s silver front-loading VHS video recorder, wide and low: a flip-up cassette slot door in the middle, a row of chunky piano-key buttons, a blue fluorescent clock display on the right, small red record light. No brand name."
+    },
+    "vhs_spine": {
+     "prompt": "The spine of a worn black cardboard VHS cassette sleeve, a long thin horizontal strip filling the width of the image, scuffed and creased, a blank white paper label strip along it, one torn corner, a small round coloured price sticker.",
+     "size": "1536x1024"
     }
    }
   }

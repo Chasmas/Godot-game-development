@@ -145,6 +145,17 @@ func _process(delta: float) -> void:
 func _draw() -> void:
 	var r := Rect2(-size * 0.5, size)
 	var ink := Color(0.06, 0.03, 0.08)
+	var painted := {"tv": "tv_crt", "ice": "ice_machine"}
+	if painted.has(kind) and not is_broken:
+		var ptex := ArtLib.sprite(painted[kind])
+		if ptex:
+			draw_rect(Rect2(r.position + Vector2(1.5, 2), r.size), Color(0, 0, 0, 0.3))
+			ArtLib.draw_fitted(self, ptex, r.grow(1.5))
+			if kind == "tv":
+				# the screen's glow spilling off the front edge
+				var n := sin(_t * 23.0) * 0.5 + 0.5
+				draw_rect(Rect2(r.position.x, r.end.y - 1.0, r.size.x, 1.2), Color(0.45 + n * 0.2, 0.65, 0.95, 0.8))
+			return
 	match kind:
 		"tv":
 			draw_rect(r, Color(0.2, 0.17, 0.2))

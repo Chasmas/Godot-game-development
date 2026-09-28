@@ -477,6 +477,8 @@ class ClutterLayer extends Node2D:
 				draw_circle(Vector2.ZERO, 5.5, Color(0.04, 0.03, 0.06, 0.55))
 				draw_circle(Vector2(-1.5, -1), 2.2, Color(0.3, 0.2, 0.45, 0.3))
 			"tires":
+				if RoomKitsMore.draw_painted(self, "tires"):
+					return
 				for i in 1 + v % 2:
 					var tp := Vector2(i * 3.0, -i * 2.0)
 					draw_circle(tp, 4.5, Color(0.08, 0.08, 0.09))

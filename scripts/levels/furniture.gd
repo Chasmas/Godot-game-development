@@ -66,9 +66,27 @@ func _painted() -> Texture2D:
 	match kind:
 		"car":
 			return ArtLib.sprite(ArtLib.CARS[variant % ArtLib.CARS.size()])
-		"wreck", "bed", "lounger", "washer", "crate":
+		"wreck", "bed", "lounger", "washer", "crate", "table", "desk", "cage":
 			return ArtLib.sprite(kind)
 	return null
+
+## Long runs of table / desk / kennel are several pieces side by side, each
+## the painting's own shape, not one painting stretched along the run.
+func _pieces(fr: Rect2, pt: Texture2D) -> Array:
+	if not kind in ["table", "desk", "cage"]:
+		return [fr]
+	var tall := fr.size.y > fr.size.x
+	var long := fr.size.y if tall else fr.size.x
+	var short := fr.size.x if tall else fr.size.y
+	var ta := float(pt.get_width()) / float(pt.get_height())
+	var n := maxi(1, int(round(long / (short * ta))))
+	var out := []
+	for i in n:
+		if tall:
+			out.append(Rect2(fr.position + Vector2(0, fr.size.y * i / n), Vector2(fr.size.x, fr.size.y / n)))
+		else:
+			out.append(Rect2(fr.position + Vector2(fr.size.x * i / n, 0), Vector2(fr.size.x / n, fr.size.y)))
+	return out
 
 func _draw() -> void:
 	var r := Rect2(-rect_size * 0.5 + Vector2(1, 1), rect_size - Vector2(2, 2))
@@ -84,10 +102,14 @@ func _draw() -> void:
 			var off := dir * ((5.0 if solid else 3.0) + 6.0 * float(pr.far))
 			var col := Color(0.0, 0.0, 0.03, clampf(0.14 + 0.3 * float(pr.k), 0.0, 0.42))
 			draw_set_transform(off, 0.0, Vector2.ONE)
-			ArtLib.draw_fitted(self, pt, fr, h % 2 == 0 and solid, col)
+			for pc in _pieces(fr, pt):
+				ArtLib.draw_fitted(self, pt, pc, h % 2 == 0 and solid, col)
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		# parked cars face either way; crates and washers turn a little
-		ArtLib.draw_fitted(self, pt, fr, h % 2 == 0 and solid)
+		var pi := 0
+		for pc in _pieces(fr, pt):
+			ArtLib.draw_fitted(self, pt, pc, (h + pi) % 2 == 0 and (solid or kind in ["table", "desk"]))
+			pi += 1
 		return
 	match kind:
 		"table":

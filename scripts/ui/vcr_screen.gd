@@ -104,11 +104,36 @@ func _ready() -> void:
 
 func _layout() -> void:
 	var vs := size
-	_tv = Rect2(vs.x * 0.44, vs.y * 0.12, vs.x * 0.5, vs.x * 0.5 * 0.62)
-	_deck = Rect2(_tv.position.x + _tv.size.x * 0.12, _tv.end.y + 34.0, _tv.size.x * 0.76, 54.0)
-	var scr := _tv.grow(-18.0)
-	_shot.position = scr.position
-	_shot.size = scr.size
+	# the TV on its stand on the right, the deck under it
+	var tex := _art("vcr_tv")
+	var ar := float(tex.get_height()) / float(tex.get_width()) if tex else 0.72
+	# sized so the set, the deck and the info card fit under one another
+	var tw := minf(vs.x * 0.42, vs.y * 0.56 / ar)
+	var th := tw * ar
+	_tv = Rect2(vs.x * 0.71 - tw * 0.5, vs.y * 0.05, tw, th)
+	if tex:
+		_scr = Rect2(_tv.position + _tv.size * SCREEN_BOX.position, _tv.size * SCREEN_BOX.size)
+	else:
+		_scr = _tv.grow(-18.0)
+	var dtex := _art("vcr_deck")
+	var dw := tw * 0.62
+	var dh := dw * (float(dtex.get_height()) / float(dtex.get_width()) if dtex else 0.2)
+	_deck = Rect2(_tv.get_center().x - dw * 0.5, _tv.end.y + 6.0, dw, dh)
+	_shot.position = _scr.position
+	_shot.size = _scr.size
+
+## Painted pieces of the room (tools/art "vcr"): the TV, the deck, a VHS
+## sleeve. Kept once loaded; null means draw the plain version.
+static var _arts: Dictionary = {}
+static func _art(id: String) -> Texture2D:
+	if not _arts.has(id):
+		var pth := "res://assets/art/vcr/%s.png" % id
+		_arts[id] = load(pth) if ResourceLoader.exists(pth) else null
+	return _arts[id]
+
+## Where the glass is inside the painted TV (fractions of the picture).
+const SCREEN_BOX := Rect2(0.095, 0.255, 0.61, 0.56)
+var _scr := Rect2()
 
 func _input(e: InputEvent) -> void:
 	if not is_visible_in_tree():
@@ -297,7 +322,7 @@ func _process(delta: float) -> void:
 func _draw_over() -> void:
 	var fb := UIStyle.font_bold()
 	var fm := UIStyle.font_mono()
-	var scr := _tv.grow(-18.0)
+	var scr := _scr
 	var on := _state in ["warm", "play"]
 	var c := _over
 	if _tab == "posters":
@@ -322,18 +347,27 @@ func _draw_over() -> void:
 	# scanlines and glass
 	for yy in range(int(scr.position.y), int(scr.end.y), 3):
 		c.draw_line(Vector2(scr.position.x, yy), Vector2(scr.end.x, yy), Color(0, 0, 0, 0.18), 1.0)
-	c.draw_rect(scr, Color(0.3, 0.5, 0.6, 0.05), false, 6.0)
+	if on and _state == "play":
+		# a tracking band rolling up the picture, colour fringing on it
+		var ty := scr.end.y - fmod(_t * 60.0, scr.size.y + 60.0)
+		c.draw_rect(Rect2(scr.position.x, ty, scr.size.x, 10), Color(1, 1, 1, 0.05))
+		c.draw_rect(Rect2(scr.position.x, ty + 1, scr.size.x, 2), Color(1, 0.2, 0.4, 0.06))
+		c.draw_rect(Rect2(scr.position.x, ty + 6, scr.size.x, 2), Color(0.2, 0.8, 1.0, 0.06))
+	# the tube: dark rounded corners and edges (a curved screen), a glare
+	for k in 10:
+		var g := float(k) * 2.2
+		c.draw_rect(scr.grow(-g), Color(0, 0, 0, 0.09 * (1.0 - k / 10.0)), false, 2.4)
+	for cx in [scr.position.x, scr.end.x]:
+		for cy in [scr.position.y, scr.end.y]:
+			c.draw_circle(Vector2(cx, cy), scr.size.y * 0.06, Color(0, 0, 0, 0.55))
+	c.draw_colored_polygon(PackedVector2Array([scr.position + Vector2(scr.size.x * 0.06, 6), scr.position + Vector2(scr.size.x * 0.34, 6), scr.position + Vector2(scr.size.x * 0.12, scr.size.y * 0.42), scr.position + Vector2(6, scr.size.y * 0.42)]), Color(1, 1, 1, 0.035))
 
 func _draw() -> void:
 	var vs := size
 	var fd := UIStyle.font_display()
 	var fb := UIStyle.font_bold()
 	var fm := UIStyle.font_mono()
-	# the room: dark wallpaper, a neon strip bleeding in from the window
-	draw_rect(Rect2(Vector2.ZERO, vs), Color(0.04, 0.02, 0.06))
-	for i in 12:
-		draw_rect(Rect2(0, vs.y * i / 12.0, vs.x, 2), Color(1, 0.3, 0.6, 0.015))
-	draw_rect(Rect2(vs.x * 0.36, 0, 6, vs.y), Color(1.0, 0.25, 0.6, 0.06 + 0.02 * sin(_t * 2.0)))
+	_draw_room(vs)
 	draw_string(fd, Vector2(40, 60), tr("PLAY VIDEOTAPE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 38, UIStyle.PINK)
 	# the two shelves, as tabs
 	var tx := 42.0
@@ -353,11 +387,43 @@ func _draw() -> void:
 		return
 	var got := _items.filter(func(it): return it.found).size()
 	draw_string(fm, Vector2(42, 112), tr("%d OF %d FOUND") % [got, _items.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 14, UIStyle.DIM)
-	# the shelf, by chapter: tapes as spines, photos as little polaroids
+	_draw_shelf(vs)
+	_draw_tv()
+	_draw_deck(fm)
+	_draw_info(vs, fd, fb, fm)
+	var hint := tr("ENTER  PLAY     ESC  BACK") if _state == "idle" else tr("ENTER  NEXT     ESC  EJECT")
+	draw_string(fb, Vector2(0, vs.y - 26), hint, HORIZONTAL_ALIGNMENT_CENTER, vs.x, 14, Color(1, 1, 1, 0.55))
+	if got == 0:
+		draw_string(fb, Vector2(_tv.position.x, vs.y - 60), tr("Tapes and photos are hidden in every job. Find them and they'll be waiting here."), HORIZONTAL_ALIGNMENT_LEFT, _tv.size.x, 14, UIStyle.DIM)
+
+## Cass's room at night behind it all: the apartment painting, dark, the
+## neon from the window washing over it, a lamp's pool of warm light.
+func _draw_room(vs: Vector2) -> void:
+	draw_rect(Rect2(Vector2.ZERO, vs), Color(0.03, 0.015, 0.05))
+	var bg := StoryShot.painted_tex("apartment")
+	if bg:
+		var k := maxf(vs.x / bg.get_width(), vs.y / bg.get_height())
+		var sz := Vector2(bg.get_width(), bg.get_height()) * k
+		draw_texture_rect(bg, Rect2((vs - sz) * 0.5, sz), false, Color(0.32, 0.26, 0.36))
+	# neon through the blinds, breathing
+	var neon := 0.5 + 0.5 * sin(_t * 1.3)
+	for i in 7:
+		draw_rect(Rect2(vs.x * 0.36 + i * 26.0, 0, 10, vs.y), Color(1.0, 0.2, 0.55, 0.02 + 0.012 * neon))
+	# darken the shelf side so the labels read, and a vignette all round
+	draw_rect(Rect2(0, 0, vs.x * 0.42, vs.y), Color(0.02, 0.01, 0.04, 0.55))
+	for k in 12:
+		draw_rect(Rect2(Vector2.ZERO, vs).grow(-k * 14.0), Color(0, 0, 0, 0.05), false, 14.0)
+
+## The shelf: VHS sleeves on their sides (label out, the chapter's colour on
+## a price sticker), Polaroids of the photos pinned between them.
+func _draw_shelf(vs: Vector2) -> void:
+	var fb := UIStyle.font_bold()
+	var fd := UIStyle.font_display()
 	var y := 132.0
 	var x0 := 40.0
 	var w := vs.x * 0.34
 	var last_ch := ""
+	var spine := _art("vhs_spine")
 	for i in _items.size():
 		var it: Dictionary = _items[i]
 		var def: Dictionary = it.def
@@ -369,60 +435,101 @@ func _draw() -> void:
 					title = c[1]
 			y += 8.0
 			draw_string(fb, Vector2(x0, y + 12), tr("CH.") + " %s  -  %s" % [def.ch, tr(title)], HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
-			draw_line(Vector2(x0, y + 18), Vector2(x0 + w, y + 18), Color(0.5, 0.3, 0.2, 0.8), 2.0)
-			y += 24.0
+			# the shelf plank under the row
+			draw_rect(Rect2(x0 - 6, y + 17, w + 12, 4), Color(0.28, 0.16, 0.1))
+			draw_rect(Rect2(x0 - 6, y + 21, w + 12, 3), Color(0.12, 0.07, 0.05))
+			y += 28.0
 		var focus := i == _sel and _state == "idle"
-		var off := 14.0 if focus else 0.0
-		var r := Rect2(Vector2(x0 + off, y), Vector2(w - 20.0, 30.0))
+		var off := 18.0 if focus else 0.0
+		var r := Rect2(Vector2(x0 + off, y), Vector2(w - 24.0, 32.0))
 		it.rect = r
 		var flying: bool = _state == "insert" and it == _playing
 		if flying:
-			# the tape leaves the shelf and flies to the slot
 			var k := clampf(_st / 0.55, 0.0, 1.0)
 			var slot := Rect2(_deck.get_center() - Vector2(60, 8), Vector2(120, 16))
 			var e := k * k * (3.0 - 2.0 * k)
 			r = Rect2(r.position.lerp(slot.position, e), r.size.lerp(slot.size, e))
 		if it.kind == "tape":
-			var col: Color = def.col if it.found else Color(0.18, 0.16, 0.2)
-			draw_rect(r, Color(0.06, 0.05, 0.07))
-			draw_rect(Rect2(r.position + Vector2(8, 5), Vector2(r.size.x - 16, r.size.y - 10)), col.darkened(0.2) if it.found else col)
-			if it.found:
-				draw_string(fb, r.position + Vector2(14, 20), tr(str(def.label)), HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 28, 12, Color(0.05, 0.03, 0.05))
+			var col: Color = def.col if it.found else Color(0.25, 0.22, 0.28)
+			# the sleeve
+			draw_rect(Rect2(r.position + Vector2(3, 4), r.size), Color(0, 0, 0, 0.45))
+			if spine:
+				draw_texture_rect(spine, r, false, Color.WHITE if it.found else Color(0.3, 0.28, 0.32))
 			else:
-				draw_string(fb, r.position + Vector2(14, 20), "? ? ?", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, UIStyle.DIM)
+				draw_rect(r, Color(0.07, 0.06, 0.08))
+				draw_rect(r.grow(-1), Color(0.12, 0.11, 0.13), false, 1.0)
+			if it.found:
+				# a paper label, the title in marker, a round sticker in the chapter colour
+				var lab := Rect2(r.position + Vector2(r.size.x * 0.12, 7), Vector2(r.size.x * 0.66, r.size.y - 14))
+				draw_rect(lab, Color(0.93, 0.9, 0.82))
+				draw_line(lab.position + Vector2(0, lab.size.y - 1), lab.end - Vector2(0, 1), Color(0.7, 0.66, 0.58), 1.0)
+				draw_set_transform(lab.position + Vector2(6, lab.size.y * 0.78), -0.015, Vector2.ONE)
+				draw_string(fd, Vector2.ZERO, tr(str(def.label)), HORIZONTAL_ALIGNMENT_LEFT, lab.size.x - 12, 12, Color(0.08, 0.06, 0.14))
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				draw_rect(Rect2(lab.position, Vector2(5, lab.size.y)), col)
+			else:
+				draw_string(fb, r.position + Vector2(r.size.x * 0.16, 21), "? ? ?", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, UIStyle.DIM)
 		else:
-			draw_rect(Rect2(r.position + Vector2(10, 2), Vector2(26, 26)), Color(0.92, 0.9, 0.84) if it.found else Color(0.2, 0.18, 0.22))
-			draw_rect(Rect2(r.position + Vector2(13, 5), Vector2(20, 16)), Color(0.35, 0.25, 0.3) if it.found else Color(0.1, 0.08, 0.12))
-			draw_string(fb, r.position + Vector2(46, 20), tr(str(def.label)) if it.found else tr("MISSING PHOTO"), HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 56, 12, UIStyle.PAPER if it.found else UIStyle.DIM)
+			# a Polaroid, pinned, a little crooked; the photo itself when found
+			var pr := Rect2(r.position + Vector2(8, -2), Vector2(34, 38))
+			var rot := -0.08 + 0.05 * float(i % 3)
+			draw_set_transform(pr.get_center(), rot, Vector2.ONE)
+			var lr := Rect2(-pr.size * 0.5, pr.size)
+			draw_rect(Rect2(lr.position + Vector2(2, 3), lr.size), Color(0, 0, 0, 0.45))
+			draw_rect(lr, Color(0.94, 0.92, 0.86) if it.found else Color(0.22, 0.2, 0.24))
+			var ph := Rect2(lr.position + Vector2(3, 3), Vector2(lr.size.x - 6, lr.size.y - 12))
+			var tex := StoryShot.painted_tex(str(def.shot)) if it.found else null
+			if tex:
+				var tw := float(tex.get_width())
+				var th := float(tex.get_height())
+				var sw := th * ph.size.x / ph.size.y
+				draw_texture_rect_region(tex, ph, Rect2((tw - sw) * 0.5, 0, sw, th), Color(0.95, 0.9, 0.85))
+			else:
+				draw_rect(ph, Color(0.1, 0.08, 0.12))
+			draw_circle(Vector2(0, lr.position.y + 1), 2.4, Color(0.85, 0.15, 0.2))    # the pin
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			draw_string(fb, r.position + Vector2(52, 21), tr(str(def.label)) if it.found else tr("MISSING PHOTO"), HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 60, 12, UIStyle.PAPER if it.found else UIStyle.DIM)
 		if focus:
 			draw_rect(r.grow(3), Color(UIStyle.PINK, 0.7 + 0.3 * sin(_t * 5.0)), false, 2.0)
-		y += 36.0
-	# the TV
-	draw_rect(_tv.grow(10), Color(0.09, 0.07, 0.08))
-	draw_rect(_tv, Color(0.14, 0.12, 0.13))
-	var scr := _tv.grow(-18.0)
+		y += 40.0
+
+## The set: painted when the art is there, else a plain box. The picture
+## itself (warm-up, snow, the tape) sits in _scr.
+func _draw_tv() -> void:
+	var tex := _art("vcr_tv")
+	draw_rect(Rect2(_tv.position + Vector2(10, _tv.size.y * 0.9), Vector2(_tv.size.x, _tv.size.y * 0.14)), Color(0, 0, 0, 0.35))
 	var on := _state in ["warm", "play"]
+	# the screen's own light on the wall behind
+	if on:
+		draw_circle(_scr.get_center(), _scr.size.x * 0.75, Color(0.4, 0.6, 1.0, 0.04))
+	if tex:
+		draw_texture_rect(tex, _tv, false)
+	else:
+		draw_rect(_tv, Color(0.14, 0.12, 0.13))
 	if not on:
-		draw_rect(scr, Color(0.03, 0.04, 0.05))
-		draw_line(scr.position + Vector2(scr.size.x * 0.1, 10), scr.position + Vector2(scr.size.x * 0.4, 30), Color(1, 1, 1, 0.05), 8.0)
+		draw_rect(_scr, Color(0.03, 0.04, 0.05, 0.9 if tex == null else 0.55))
+		draw_line(_scr.position + Vector2(_scr.size.x * 0.1, 10), _scr.position + Vector2(_scr.size.x * 0.4, 30), Color(1, 1, 1, 0.05), 8.0)
 	elif _state == "warm":
-		# a white line opens out into snow
 		var k := clampf(_st / 0.3, 0.0, 1.0)
-		draw_rect(scr, Color(0.02, 0.02, 0.03))
-		var hh := scr.size.y * k
+		draw_rect(_scr, Color(0.02, 0.02, 0.03))
+		var hh := _scr.size.y * k
 		var rng := RandomNumberGenerator.new()
 		rng.seed = int(_t * 30.0)
-		var band := Rect2(scr.position.x, scr.get_center().y - hh * 0.5, scr.size.x, maxf(hh, 2.0))
+		var band := Rect2(_scr.position.x, _scr.get_center().y - hh * 0.5, _scr.size.x, maxf(hh, 2.0))
 		if k < 1.0:
 			draw_rect(band, Color(1, 1, 1, 0.9))
 		else:
-			for i2 in 180:
+			for i2 in 220:
 				draw_rect(Rect2(band.position + Vector2(rng.randf() * band.size.x, rng.randf() * band.size.y), Vector2(rng.randf_range(2, 8), 2)), Color(1, 1, 1, rng.randf_range(0.2, 0.8)))
-	# the VCR
-	draw_rect(_deck, Color(0.12, 0.11, 0.13))
-	draw_rect(_deck, Color(0.3, 0.28, 0.32), false, 1.0)
-	var slot := Rect2(_deck.get_center() - Vector2(66, 12), Vector2(132, 10))
-	draw_rect(slot, Color(0.02, 0.02, 0.03))
+
+func _draw_deck(fm: Font) -> void:
+	var tex := _art("vcr_deck")
+	if tex:
+		draw_texture_rect(tex, _deck, false)
+	else:
+		draw_rect(_deck, Color(0.12, 0.11, 0.13))
+		draw_rect(_deck, Color(0.3, 0.28, 0.32), false, 1.0)
+		draw_rect(Rect2(_deck.get_center() - Vector2(66, 12), Vector2(132, 10)), Color(0.02, 0.02, 0.03))
 	var led := "12:00"
 	if _state == "play" or _state == "warm":
 		led = "PLAY"
@@ -430,15 +537,53 @@ func _draw() -> void:
 		led = "LOAD"
 	elif _state == "stop":
 		led = "EJECT"
-	var blink := led != "12:00" or fmod(_t, 1.0) < 0.6
-	if blink:
-		draw_string(fm, Vector2(_deck.end.x - 86, _deck.position.y + 38), led, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color(0.3, 1.0, 0.5))
-	draw_circle(Vector2(_deck.position.x + 22, _deck.position.y + 32), 4.0, Color(1.0, 0.2, 0.15) if _state == "play" else Color(0.3, 0.1, 0.1))
-	# how to use it
-	var hint := tr("ENTER  PLAY     ESC  BACK") if _state == "idle" else tr("ENTER  NEXT     ESC  EJECT")
-	draw_string(fb, Vector2(0, vs.y - 30), hint, HORIZONTAL_ALIGNMENT_CENTER, vs.x, 14, Color(1, 1, 1, 0.55))
-	if got == 0:
-		draw_string(fb, Vector2(_tv.position.x, _deck.end.y + 40), tr("Tapes and photos are hidden in every job. Find them and they'll be waiting here."), HORIZONTAL_ALIGNMENT_LEFT, _tv.size.x, 14, UIStyle.DIM)
+	# the display: over the painted one, on the right of the deck
+	var disp := Rect2(_deck.position + _deck.size * Vector2(0.76, 0.29), _deck.size * Vector2(0.2, 0.2))
+	draw_rect(disp, Color(0.02, 0.05, 0.08, 0.92))
+	if led != "12:00" or fmod(_t, 1.0) < 0.6:
+		draw_string(fm, Vector2(disp.position.x, disp.get_center().y + 7), led, HORIZONTAL_ALIGNMENT_CENTER, disp.size.x, 18, Color(0.35, 0.85, 1.0))
+	if tex == null:
+		draw_circle(_deck.position + _deck.size * Vector2(0.06, 0.6), 4.0, Color(1.0, 0.2, 0.15) if _state == "play" else Color(0.3, 0.1, 0.1))
+	elif _state == "play":
+		# the PLAY key lit
+		draw_rect(Rect2(_deck.position + _deck.size * Vector2(0.33, 0.72), _deck.size * Vector2(0.07, 0.1)), Color(0.4, 1.0, 0.6, 0.35))
+
+## What's under the cursor, on a card under the deck: the label, the
+## chapter, the running time, and a still of it once found.
+func _draw_info(vs: Vector2, fd: Font, fb: Font, fm: Font) -> void:
+	if _state != "idle" or _items.is_empty():
+		return
+	var it: Dictionary = _items[_sel]
+	var def: Dictionary = it.def
+	var card := Rect2(_tv.position.x + 20, _deck.end.y + 14, _tv.size.x - 40, 100)
+	if card.end.y > vs.y - 40:
+		card.position.y = vs.y - 40 - card.size.y
+	draw_rect(card, Color(0.04, 0.02, 0.07, 0.86))
+	draw_rect(Rect2(card.position, Vector2(4, card.size.y)), def.get("col", UIStyle.PINK) if it.found else UIStyle.DIM)
+	var still := Rect2(card.position + Vector2(16, 12), Vector2(card.size.y * 1.4, card.size.y - 24))
+	var shot := str(def.frames[0]) if it.kind == "tape" else str(def.shot)
+	var tex := StoryShot.painted_tex(shot) if it.found else null
+	if tex:
+		draw_texture_rect(tex, still, false, Color(0.9, 0.85, 0.9))
+		for yy in range(int(still.position.y), int(still.end.y), 3):
+			draw_line(Vector2(still.position.x, yy), Vector2(still.end.x, yy), Color(0, 0, 0, 0.2), 1.0)
+	else:
+		draw_rect(still, Color(0.08, 0.07, 0.1))
+		draw_string(fd, Vector2(still.position.x, still.get_center().y + 10), "?", HORIZONTAL_ALIGNMENT_CENTER, still.size.x, 30, UIStyle.DIM)
+	var tx := still.end.x + 18
+	var title := tr(str(def.label)) if it.found else tr("NOT FOUND YET")
+	draw_string(fd, Vector2(tx, card.position.y + 36), title, HORIZONTAL_ALIGNMENT_LEFT, card.end.x - tx - 12, 16, UIStyle.PAPER if it.found else UIStyle.DIM)
+	var chn := ""
+	for c in CHAPTERS:
+		if c[0] == def.ch:
+			chn = c[1]
+	draw_string(fb, Vector2(tx, card.position.y + 60), tr("CH.") + " %s  -  %s" % [def.ch, tr(chn)], HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
+	var meta := ""
+	if it.kind == "tape":
+		meta = "VHS  ·  SP  ·  0:%02d:%02d" % [def.frames.size() * 14 / 60, (def.frames.size() * 14) % 60]
+	else:
+		meta = tr("PHOTOGRAPH")
+	draw_string(fm, Vector2(tx, card.position.y + 84), meta if it.found else tr("Hidden somewhere in this job."), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.DIM)
 
 
 ## The poster collection: the list on the left (a thumbnail and a title per
