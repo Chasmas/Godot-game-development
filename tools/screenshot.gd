@@ -4,6 +4,7 @@ extends Node
 ## xvfb-run godot --path . res://tools/screenshot.tscn
 
 func _ready() -> void:
+	Engine.set_meta("autoplay", true)   # no mask picker over the shots
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	var ph := Node.new()
@@ -194,7 +195,17 @@ func _ready() -> void:
 		"cutscene":
 			Game.current_cutscene = OS.get_environment("SHOT_CUT")
 			Game.change_scene(Game.CUTSCENE_SCENE)
+			if OS.get_environment("SHOT_NODE") != "":
+				while not Dialogue.active:
+					await _frames(5)
+				await _frames(10)
+				Dialogue._goto(OS.get_environment("SHOT_NODE"))
 			await _frames(n)
+			for ss in get_tree().current_scene.get_children():
+				if ss is StoryShot:
+					print("SHOT ", ss.shot_id)
+					for ch in ss.get_children():
+						print("  ", ch, " ", ch.get("texture").resource_path if ch.get("texture") else "", " a=", ch.modulate.a, " vis=", ch.visible)
 		_:
 			var mods := {}
 			if OS.get_environment("SHOT_MODS") != "":
@@ -213,6 +224,17 @@ func _ready() -> void:
 				p.god_mode = OS.get_environment("SHOT_GOD") == "1"
 				var cam := get_tree().get_first_node_in_group("level").camera as CameraController
 				cam.snap_to_target()
+			if OS.get_environment("SHOT_KILL") != "":
+				# kill everyone near with a mix of weapons, for gore/corpse shots
+				var wpns := [&"pistol", &"shotgun", &"rifle", &"smg"]
+				var i := 0
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if e.is_alive() and (e as Node2D).global_position.distance_to(p.global_position) < 260.0:
+						var di := DamageInfo.make(DamageInfo.Type.EXPLOSIVE if i % 5 == 4 else DamageInfo.Type.BALLISTIC, p, (e as Node2D).global_position, ((e as Node2D).global_position - p.global_position).normalized(), wpns[i % 4])
+						di.lethal = true
+						e.take_damage(di)
+						i += 1
+				await _frames(int(OS.get_environment("SHOT_KILL_F")) if OS.get_environment("SHOT_KILL_F") != "" else 60)
 			if OS.get_environment("SHOT_CP") != "":
 				var lvc := get_tree().get_first_node_in_group("level") as Level
 				lvc.hud._banner_t = 0.0
@@ -235,13 +257,14 @@ func _ready() -> void:
 				lvh.hud._card_t = 0.0
 				lvh.hud.banner.modulate.a = 0.0
 				lvh.hud.card_sub.modulate.a = 0.0
+			if OS.get_environment("SHOT_CHARGE") != "" and p:
+				p.ability.charge = float(OS.get_environment("SHOT_CHARGE"))
+				p.ability._emit()
 			if OS.get_environment("SHOT_GUN") != "" and p:
 				p.give_weapon(StringName(OS.get_environment("SHOT_GUN")))
 			var wx = get_tree().get_first_node_in_group("weather")
-			if wx and OS.get_environment("SHOT_WEATHER") != "":
-				wx._target_rain = 1.0
+			if wx and OS.get_environment("SHOT_STORM") == "1":
 				wx.rain = 1.0
-				wx._target_wind = 0.8
 				wx.wind = 0.8
 				wx.thunder = true
 			await _frames(n)

@@ -75,6 +75,20 @@ static func splatter(pos: Vector2, dir: Vector2, amount := 1.0) -> void:
 		for k in 5:
 			fx.decals.add_splat(st + dir * k * 3.0, 1.6 - k * 0.2, Color(0.5, 0.02, 0.07, 0.85))
 
+## Droplets all round whoever was hit: small spots at their feet, a few
+## flung further out, so a fight leaves the floor speckled around them,
+## not just a streak behind.
+static func spatter_around(pos: Vector2, amount := 1.0) -> void:
+	var fx := _fx()
+	if fx == null or level() == 0:
+		return
+	var n := int((5.0 + 5.0 * amount) * (1.0 if level() == 2 else 0.5))
+	for i in n:
+		var a := randf() * TAU
+		var d := randf_range(3.0, 10.0) if randf() < 0.7 else randf_range(12.0, 22.0 * amount + 8.0)
+		var r := randf_range(0.6, 1.6) if d > 12.0 else randf_range(1.0, 2.6)
+		fx.decals.add_splat(pos + Vector2.from_angle(a) * d, r, Color(0.42 + randf() * 0.2, 0.01, 0.06, 0.9))
+
 ## Head burst: skull pieces, brain, an eye, a big fan of blood.
 static func head_burst(pos: Vector2, dir: Vector2, palette := "guard") -> void:
 	splatter(pos, dir, 2.5)
@@ -145,8 +159,9 @@ static func on_kill(pos: Vector2, info: DamageInfo, palette: String, source_pos:
 			gut(pos, dir, palette)
 			return ""
 		"limb":
-			dismember(pos, dir, palette, "arm" if randf() > 0.4 else "leg")
-			return "arm"
+			var part := "arm" if randf() > 0.4 else "leg"
+			dismember(pos, dir, palette, part)
+			return part
 		"teeth":
 			for i in 2:
 				gib(pos + dir * 5.0, dir.rotated(randf_range(-1, 1)) * 110.0, "teeth", palette)
@@ -158,7 +173,7 @@ static func on_kill(pos: Vector2, info: DamageInfo, palette: String, source_pos:
 	match info.type:
 		DamageInfo.Type.EXPLOSIVE:
 			explode_body(pos, dir, palette)
-			return "head" if randf() < 0.5 else "arm"
+			return ["head", "arm", "leg", "legs"][randi() % 4]
 		DamageInfo.Type.BALLISTIC:
 			if info.weapon_id in [&"shotgun", &"hotshot"] and dist < 70.0:
 				var r := randf()
@@ -168,10 +183,24 @@ static func on_kill(pos: Vector2, info: DamageInfo, palette: String, source_pos:
 				elif r < 0.6:
 					dismember(pos, dir, palette, "arm")
 					return "arm"
-			elif info.weapon_id in [&"rifle", &"revolver"] and randf() < 0.15:
+				elif r < 0.8:
+					dismember(pos, dir, palette, "leg")
+					return "leg"
+				gut(pos, dir, palette)
+				return ""
+			elif info.weapon_id in [&"rifle", &"revolver", &"boomstick"] and randf() < 0.25:
 				head_burst(pos + dir * 5.0, dir, palette)
 				return "head"
 			splatter(pos, dir, 1.0)
+			# a bullet still takes a piece with it now and then
+			var roll := randf()
+			if roll < 0.12:
+				var limb := "arm" if randf() < 0.6 else "leg"
+				dismember(pos, dir, palette, limb)
+				return limb
+			elif roll < 0.55:
+				for i in randi_range(1, 2):
+					gib(pos + dir * 3.0, dir.rotated(randf_range(-0.9, 0.9)) * randf_range(70, 150), "chunk", palette)
 		DamageInfo.Type.MELEE:
 			if info.weapon_id == &"machete":
 				var r2 := randf()

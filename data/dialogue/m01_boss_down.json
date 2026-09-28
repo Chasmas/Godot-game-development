@@ -1,60 +1,86 @@
 {
-  "start": "a",
-  "nodes": {
-    "a": {
-      "speaker": "harcourt",
-      "text": "All right... all right. You win. Tommy always said you were the one with nerve.",
-      "next": "b"
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "harcourt",
+   "text": "All right... all right. You win. Tommy always said you were the one with nerve.",
+   "next": "b",
+   "shot": "h_down"
+  },
+  "b": {
+   "speaker": "cass",
+   "text": "You knew my brother.",
+   "next": "c",
+   "shot": "h_down"
+  },
+  "c": {
+   "speaker": "harcourt",
+   "text": "I was there that night. Fire watch. They handed me an extinguisher with nothing in it and told me to stand where the camera could see me.",
+   "next": "c2",
+   "shot": "h_polaroid"
+  },
+  "d": {
+   "speaker": "harcourt",
+   "text": "That wasn't an accident, Cass. Somebody wanted the real take. No cut. No reset. And somebody has been paying to keep that reel buried ever since.",
+   "next": "e",
+   "shot": "h_down"
+  },
+  "e": {
+   "speaker": "cass",
+   "text": "...",
+   "choices": [
+    {
+     "text": "Finish it.",
+     "next": "k1",
+     "set": {
+      "harcourt_killed": true
+     }
     },
-    "b": {
-      "speaker": "cass",
-      "text": "You knew my brother.",
-      "next": "c"
-    },
-    "c": {
-      "speaker": "harcourt",
-      "text": "I was there that night. Fire watch. They handed me an extinguisher with nothing in it and told me to stand where the camera could see me.",
-      "next": "d"
-    },
-    "d": {
-      "speaker": "harcourt",
-      "text": "That wasn't an accident, Cass. Somebody wanted the real take. No cut. No reset. And somebody has been paying to keep that reel buried ever since.",
-      "next": "e"
-    },
-    "e": {
-      "speaker": "cass",
-      "text": "...",
-      "choices": [
-        {
-          "text": "Finish it.",
-          "next": "k1",
-          "set": {
-            "harcourt_killed": true
-          }
-        },
-        {
-          "text": "Walk away.",
-          "next": "s1",
-          "set": {
-            "harcourt_spared": true
-          }
-        }
-      ]
-    },
-    "k1": {
-      "speaker": "cass",
-      "text": "Checkout was midnight, Lyle.",
-      "event": "boss_execute"
-    },
-    "s1": {
-      "speaker": "cass",
-      "text": "Tell whoever bought the reel I'm done playing their part.",
-      "next": "s2"
-    },
-    "s2": {
-      "speaker": "harcourt",
-      "text": "That's what Tommy said.",
-      "event": "boss_spare"
+    {
+     "text": "Walk away.",
+     "next": "s1",
+     "set": {
+      "harcourt_spared": true
+     }
     }
+   ],
+   "shot": "h_down"
+  },
+  "k1": {
+   "speaker": "cass",
+   "text": "Checkout was midnight, Lyle.",
+   "event": "boss_execute",
+   "shot": "h_down"
+  },
+  "s1": {
+   "speaker": "cass",
+   "text": "Tell whoever bought the reel I'm done playing their part.",
+   "next": "s2",
+   "shot": "h_down"
+  },
+  "s2": {
+   "speaker": "harcourt",
+   "text": "That's what Tommy said.",
+   "event": "boss_spare",
+   "shot": "h_down"
+  },
+  "c2": {
+   "speaker": "narration",
+   "text": "The Polaroid in his hand: the whole crew grinning in front of the car. Tommy in the middle. One face scratched out so hard the pen went through.",
+   "shot": "h_polaroid",
+   "next": "c3"
+  },
+  "c3": {
+   "speaker": "cass",
+   "text": "Who's that?",
+   "shot": "h_polaroid",
+   "next": "c4"
+  },
+  "c4": {
+   "speaker": "harcourt",
+   "text": "The one who signed the checks. You'll meet him. Everybody does, eventually. Usually on television.",
+   "shot": "h_down",
+   "next": "d"
   }
+ }
 }

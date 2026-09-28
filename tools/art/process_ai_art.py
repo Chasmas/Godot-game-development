@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 """
 Turn the generated paintings (assets/art/Artwork/ai/, see gen_ai_art.py) into
 the files the game loads:
@@ -27,7 +28,7 @@ INK = (11, 7, 16)
 
 # world size (in 16 px tiles, w x h, as drawn facing right) per sprite; texels = tiles * 16 * 2
 SPRITE_TILES = {
-    "car_red": (4, 2), "car_blue": (4, 2), "car_white": (4, 2), "car_black": (4, 2), "car_police": (4, 2),
+    "car_red": (4, 2), "car_hero": (4.5, 2.1), "car_blue": (4, 2), "car_white": (4, 2), "car_black": (4, 2), "car_police": (4, 2),
     "wreck": (4, 2), "dumpster": (2, 2), "bed": (2, 2), "lounger": (2, 1), "washer": (1, 1), "crate": (1, 1),
     "palm": (4, 4), "plant": (1, 1), "arcade": (1, 1), "vending": (1, 1), "camera_rig": (2, 2),
     "studio_light": (2, 2), "leaf": (0.5, 0.5), "paper": (0.75, 0.75), "frond": (1, 1),
@@ -182,5 +183,59 @@ def posters():
     print("posters:", n)
 
 
+def weapons():
+    """HUD weapon icons: trimmed to the object, fitted into 256x128
+    (art/weapons/<id>.png, transparent)."""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "weapons", "*.webp")):
+        wid = os.path.basename(f)[:-5].replace("weapon_", "")
+        im = Image.open(f).convert("RGBA")
+        a = np.asarray(im)[:, :, 3]
+        ys, xs = np.nonzero(a > 24)
+        if len(xs) == 0:
+            continue
+        im = im.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
+        k = min(248 / im.width, 120 / im.height)
+        im = im.resize((max(1, int(im.width * k)), max(1, int(im.height * k))), Image.LANCZOS)
+        c = Image.new("RGBA", (256, 128), (0, 0, 0, 0))
+        c.paste(im, ((256 - im.width) // 2, (128 - im.height) // 2), im)
+        c.save(out("assets", "art", "weapons", wid + ".png"), optimize=True)
+        n += 1
+    print("weapons:", n)
+
+
+def masks():
+    """mask cards: trimmed, centred in 256x256, transparent (art/masks/<id>.png)"""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "masks", "*.webp")):
+        mid = os.path.basename(f)[:-5]
+        im = Image.open(f).convert("RGBA")
+        a = np.asarray(im)[:, :, 3]
+        ys, xs = np.nonzero(a > 24)
+        if len(xs):
+            im = im.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
+        k = 236 / max(im.width, im.height)
+        im = im.resize((max(1, int(im.width * k)), max(1, int(im.height * k))), Image.LANCZOS)
+        c = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
+        c.paste(im, ((256 - im.width) // 2, (256 - im.height) // 2), im)
+        c.save(out("assets", "art", "masks", mid + ".png"), optimize=True)
+        n += 1
+    print("masks:", n)
+
+
+def covers():
+    """VHS box covers: 2:3, 360x540 webp (art/covers/<id>.webp)"""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "covers", "*.webp")):
+        cid = os.path.basename(f)[:-5]
+        im = Image.open(f).convert("RGB").resize((360, 540), Image.LANCZOS)
+        im.save(out("assets", "art", "covers", cid + ".webp"), "WEBP", quality=86, method=6)
+        n += 1
+    print("covers:", n)
+
+
 if __name__ == "__main__":
-    shots(); portraits(); sprites(); textures(); posters()
+    only = sys.argv[1:]
+    for fn in (shots, portraits, sprites, textures, posters, weapons, masks, covers):
+        if not only or fn.__name__ in only:
+            fn()

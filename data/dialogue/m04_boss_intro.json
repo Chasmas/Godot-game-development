@@ -1,31 +1,42 @@
 {
- "start": "a",
+ "start": "n0",
  "nodes": {
   "a": {
    "speaker": "tommy_burnt",
    "text": "Cassie. You came to the party.",
-   "next": "b"
+   "next": "b",
+   "shot": "b_party"
   },
   "b": {
    "speaker": "cass",
    "text": "You're not him.",
-   "next": "c"
+   "next": "c",
+   "shot": "b_party"
   },
   "c": {
    "speaker": "tommy_burnt",
    "text": "I'm the part of him you kept. Somebody had to. You burned the rest of the cast getting here.",
-   "next": "d"
+   "next": "d",
+   "shot": "b_party"
   },
   "d": {
    "speaker": "tommy_burnt",
    "text": "Twenty-four. Nineteen. Thirty-one. You were never this good at math.",
-   "next": "e"
+   "next": "e",
+   "shot": "b_party"
   },
   "e": {
    "speaker": "tommy_burnt",
    "text": "Let's do the take properly this time. You in the car. Me holding the extinguisher.",
    "event": "boss_start",
-   "sfx": "flame_ignite"
+   "sfx": "flame_ignite",
+   "shot": "burning_tommy"
+  },
+  "n0": {
+   "speaker": "narration",
+   "text": "The ballroom is full. Everyone she ever put down is here, dressed for a premiere, clapping without a sound. Nobody's eyes move. Except his.",
+   "shot": "b_party",
+   "next": "a"
   }
  }
 }

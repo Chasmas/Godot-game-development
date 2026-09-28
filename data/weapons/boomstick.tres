@@ -13,6 +13,7 @@ magazine = 2
 spare_mags = 8
 reload_time = 0.95
 pellets = 12
+ejects_shells = false
 spread_deg = 26.0
 move_spread_deg = 4.0
 recoil_deg = 5.0

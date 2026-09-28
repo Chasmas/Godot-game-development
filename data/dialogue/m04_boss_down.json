@@ -4,22 +4,26 @@
   "a": {
    "speaker": "tommy_burnt",
    "text": "...see? You can put a fire out. You just never want to.",
-   "next": "b"
+   "next": "b",
+   "shot": "burning_tommy"
   },
   "b": {
    "speaker": "cass",
    "text": "I'm doing this for you.",
-   "next": "c"
+   "next": "c",
+   "shot": "b_party"
   },
   "c": {
    "speaker": "tommy_burnt",
    "text": "No. You're doing it for them. Look up. The little red lights.",
-   "next": "d"
+   "next": "c2",
+   "shot": "red_dot"
   },
   "d": {
    "speaker": "tommy_burnt",
    "text": "Top billing, Cassie. It's all yours. It always was.",
-   "next": "e"
+   "next": "e",
+   "shot": "burning_tommy"
   },
   "e": {
    "speaker": "cass",
@@ -36,33 +40,45 @@
       "held_tommy_dream": true
      }
     }
-   ]
+   ],
+   "shot": "burning_tommy"
   },
   "k1": {
    "speaker": "cass",
    "text": "Goodbye, Tommy.",
    "event": "boss_execute",
-   "next": "k2"
+   "next": "k2",
+   "shot": "burning_tommy"
   },
   "k2": {
    "speaker": "narration",
    "text": "The fire goes out. The dead applaud politely, like a studio audience told when to.",
-   "sfx": "applause"
+   "sfx": "applause",
+   "shot": "dead_applause"
   },
   "s1": {
    "speaker": "cass",
    "text": "Come here.",
    "event": "boss_spare",
-   "next": "s2"
+   "next": "s2",
+   "shot": "b_embrace"
   },
   "s2": {
    "speaker": "narration",
    "text": "She holds him while he burns. It doesn't hurt. That's how she knows it's a dream.",
-   "next": "s3"
+   "next": "s3",
+   "shot": "b_embrace"
   },
   "s3": {
    "speaker": "tommy_burnt",
-   "text": "Check the credits, Cassie. Check who signed."
+   "text": "Check the credits, Cassie. Check who signed.",
+   "shot": "b_credits"
+  },
+  "c2": {
+   "speaker": "narration",
+   "text": "Up in the smoke, where the ceiling should be: a row of little red lights. Recording. They always were.",
+   "shot": "red_dot",
+   "next": "d"
   }
  }
 }

@@ -31,6 +31,7 @@ const DEFAULT_SAVE := {
 	"secrets": [],
 	"stats": {"kills": 0, "deaths": 0, "executions": 0, "shots": 0, "hits": 0, "play_time": 0.0},
 	"gallery": [],
+	"masks": ["star"],
 }
 
 var settings: Dictionary = {}

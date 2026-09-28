@@ -16,9 +16,12 @@ var combo_label: Label
 var combo_bar: ColorRect
 var weapon_label: Label
 var ammo_label: Label
+var weapon_icon: TextureRect
+static var _icons: Dictionary = {}
 var holster_label: Label
 var ability_label: Label
 var ability_bar: ColorRect
+var meter: AbilityMeter
 var ability_bg: ColorRect
 var equip_label: Label
 var prompt_label: Label
@@ -71,26 +74,39 @@ func _ready() -> void:
 	rec.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(rec)
 	# --- weapon (top right)
+	# the painted icon of what's in her hands, name and ammo to its left
+	weapon_icon = TextureRect.new()
+	weapon_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	weapon_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	weapon_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(weapon_icon)
+	UIStyle.place(weapon_icon, Control.PRESET_TOP_RIGHT, Vector2(-156, 10), Vector2(140, 70))
+	weapon_icon.pivot_offset = Vector2(70, 35)
 	weapon_label = _lbl(Vector2(0, 14), 20, UIStyle.PAPER, UIStyle.font_bold())
 	weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 14), Vector2(400, 24))
-	ammo_label = _lbl(Vector2(-420, 38), 28, UIStyle.PINK, UIStyle.font_display())
+	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 14), Vector2(400, 24))
+	ammo_label = _lbl(Vector2(-566, 38), 28, UIStyle.PINK, UIStyle.font_display())
 	ammo_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(ammo_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 38), Vector2(400, 36))
-	holster_label = _lbl(Vector2(-420, 76), 13, UIStyle.DIM, UIStyle.font_mono())
+	UIStyle.place(ammo_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 38), Vector2(400, 36))
+	holster_label = _lbl(Vector2(-420, 82), 13, UIStyle.DIM, UIStyle.font_mono())
 	holster_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(holster_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 76), Vector2(400, 18))
+	UIStyle.place(holster_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 82), Vector2(400, 18))
 	# --- ability (bottom left)
-	ability_label = _lbl(Vector2(22, 0), 14, UIStyle.GOLD, UIStyle.font_bold())
+	# the meter draws itself; the old label/bar stay (hidden) for anything
+	# that still reads them
+	ability_label = _lbl(Vector2(22, 0), 17, UIStyle.GOLD, UIStyle.font_display())
 	UIStyle.place(ability_label, Control.PRESET_BOTTOM_LEFT, Vector2(22, -58))
+	ability_label.visible = false
 	ability_bg = ColorRect.new()
-	ability_bg.color = Color(1, 1, 1, 0.15)
-	UIStyle.place(ability_bg, Control.PRESET_BOTTOM_LEFT, Vector2(22, -36), Vector2(160, 6))
+	ability_bg.visible = false
 	root.add_child(ability_bg)
 	ability_bar = ColorRect.new()
-	ability_bar.color = UIStyle.GOLD
-	UIStyle.place(ability_bar, Control.PRESET_BOTTOM_LEFT, Vector2(22, -36), Vector2(160, 6))
+	ability_bar.visible = false
 	root.add_child(ability_bar)
+	meter = AbilityMeter.new()
+	UIStyle.place(meter, Control.PRESET_BOTTOM_LEFT, Vector2(16, -104), Vector2(310, 74))
+	meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(meter)
 	equip_label = _lbl(Vector2(22, 0), 13, UIStyle.DIM, UIStyle.font_mono())
 	UIStyle.place(equip_label, Control.PRESET_BOTTOM_LEFT, Vector2(22, -26))
 	# --- prompt (bottom centre)
@@ -208,7 +224,10 @@ func _process(delta: float) -> void:
 		prompt_label.text = player.prompt if player.alive else ""
 		if player.is_reloading():
 			prompt_label.text = "RELOADING..."
-		equip_label.text = tr("FLARES %d   [%s]") % [player.equipment_left, InputSetup.binding_text("equipment", InputSetup.using_gamepad)]
+		if player.bones > 0:
+			equip_label.text = tr("MEAT BONES %d   [%s]") % [player.bones, InputSetup.binding_text("equipment", InputSetup.using_gamepad)]
+		else:
+			equip_label.text = tr("FLARES %d   [%s]") % [player.equipment_left, InputSetup.binding_text("equipment", InputSetup.using_gamepad)]
 	if _hint_t > 0.0:
 		_hint_t -= rd
 		hint_label.modulate.a = clampf(_hint_t * 2.0, 0.0, 1.0)
@@ -335,8 +354,18 @@ func _on_weapon(id: StringName, ammo: int, reserve: int) -> void:
 
 func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 	var w := player.current()
+	var icon_id := "fists" if w == null else str(w.data.id)
+	var tex := weapon_icon_tex(icon_id)
+	if weapon_icon.texture != tex:
+		weapon_icon.texture = tex
+		# a new weapon in hand: the icon punches in
+		weapon_icon.scale = Vector2.ONE * 1.35
+		weapon_icon.modulate = Color(2.0, 2.0, 2.0)
+		var tw := create_tween().set_parallel()
+		tw.tween_property(weapon_icon, "scale", Vector2.ONE, 0.25).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		tw.tween_property(weapon_icon, "modulate", Color.WHITE, 0.3)
 	if w == null:
-		weapon_label.text = "FISTS"
+		weapon_label.text = tr("FISTS")
 		ammo_label.text = ""
 	elif w.data.is_firearm():
 		weapon_label.text = ("2× " if w.dual else "") + tr(w.data.display_name).to_upper()
@@ -356,11 +385,40 @@ func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 	var other = player.slots[1 - player.slot]
 	holster_label.text = ("[%s] %s" % [InputSetup.binding_text("swap", InputSetup.using_gamepad), tr((other as WeaponInstance).data.display_name)]) if other else ""
 
+static func weapon_icon_tex(id: String) -> Texture2D:
+	if not _icons.has(id):
+		var p := "res://assets/art/weapons/%s.png" % id
+		_icons[id] = load(p) if ResourceLoader.exists(p) else null
+	return _icons[id]
+
+var _spot: SpotlightFX
+var _was_active := false
+
 func _on_ability(charge: float, active: bool) -> void:
+	if active and not _was_active and player and player.ability.id == &"spotlight":
+		_spot = SpotlightFX.new()
+		_spot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		_spot.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		root.add_child(_spot)
+		root.move_child(_spot, 0)
+	if _spot and is_instance_valid(_spot):
+		_spot.left = charge if active else 0.0
+		if not active:
+			_spot.finish()
+			_spot = null
+	_was_active = active
 	ability_bar.size.x = 160.0 * clampf(charge, 0.0, 1.0)
 	ability_bar.color = Color.WHITE if active else (UIStyle.GOLD if charge >= 0.999 else Color(UIStyle.GOLD, 0.5))
 	var nm := player.ability.display_name() if player else "ABILITY"
 	ability_label.text = "%s  [%s]%s" % [tr(nm), InputSetup.binding_text("ability", InputSetup.using_gamepad), tr("  READY") if charge >= 0.999 and not active else ""]
+	if meter:
+		meter.title = tr(nm)
+		meter.key = InputSetup.binding_text("ability", InputSetup.using_gamepad)
+		if charge >= 0.999 and meter.charge < 0.999 and not active:
+			meter.ready_flash = 1.0
+			Audio.play("power_up", -10.0)
+		meter.charge = charge
+		meter.active = active
 
 func _on_player_died(_info: Dictionary) -> void:
 	death_panel.visible = true
@@ -993,3 +1051,172 @@ class CheckpointStamp extends Control:
 				draw_rect(Rect2(Vector2(c.x, ty), Vector2(W, 1)), Color(1, 1, 1, 0.08 * osd_a))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
+
+
+## SPOTLIGHT on screen: the world goes to stage light. The word slams in
+## across the middle in gold with a chromatic split and spreads its letters
+## as it fades; warm beams sweep down from the rig, the edges sink into a
+## dark vignette, and a film-reel countdown in the corner spins down with
+## the time left (kills in the light add a flash of extra reel).
+class SpotlightFX extends Control:
+	var left := 1.0
+	var _t := 0.0
+	var _out := -1.0
+	var _bonus := 0.0
+
+	func _ready() -> void:
+		Events.ability_bonus.connect(func(_s): _bonus = 1.0)
+
+	func finish() -> void:
+		_out = 0.0
+
+	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.03)   # real time
+		_t += rd
+		_bonus = maxf(0.0, _bonus - rd * 2.0)
+		if _out >= 0.0:
+			_out += rd
+			if _out > 0.45:
+				queue_free()
+		queue_redraw()
+
+	func _draw() -> void:
+		var vs := size
+		var fade := 1.0 - clampf(_out / 0.45, 0.0, 1.0) if _out >= 0.0 else clampf(_t / 0.15, 0.0, 1.0)
+		# vignette: the house lights are down
+		var steps := 10
+		for i in steps:
+			var k := float(i) / steps
+			var m := vs * 0.5 * (0.45 + k * 0.55)
+			draw_rect(Rect2(vs * 0.5 - m - Vector2(4, 4) * i, m * 2.0 + Vector2(8, 8) * i), Color(0.03, 0.0, 0.03, 0.06 * k * fade), false, vs.y * 0.06)
+		# beams from the rig, slowly sweeping
+		for b in 3:
+			var x := vs.x * (0.2 + 0.3 * b) + sin(_t * 0.6 + b * 2.0) * vs.x * 0.06
+			var w := vs.x * 0.05
+			draw_colored_polygon(PackedVector2Array([Vector2(x - w * 0.3, 0), Vector2(x + w * 0.3, 0), Vector2(x + w * 2.4, vs.y), Vector2(x - w * 2.4, vs.y)]), Color(1.0, 0.85, 0.55, 0.045 * fade))
+		# the word: slams in, holds, then spreads out and fades (first 1.3 s)
+		var f := UIStyle.font_display()
+		var word := tr("SPOTLIGHT")
+		if _t < 1.3:
+			var k := clampf(_t / 0.12, 0.0, 1.0)
+			var sc := lerpf(2.2, 1.0, k * k)
+			var spread := maxf(0.0, _t - 0.6) * 60.0
+			var a := (1.0 - clampf((_t - 0.8) / 0.5, 0.0, 1.0)) * fade
+			var fs := int(96 * sc)
+			var total := 0.0
+			for ch in word:
+				total += f.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + spread
+			var x0 := vs.x * 0.5 - total * 0.5
+			var y := vs.y * 0.42
+			for i in word.length():
+				var ch := word[i]
+				var cw := f.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+				var jit := Vector2(0, sin(_t * 30.0 + i) * 2.0 * (1.0 - k))
+				draw_string(f, Vector2(x0 - 4, y) + jit, ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(1.0, 0.2, 0.45, 0.55 * a))
+				draw_string(f, Vector2(x0 + 4, y) + jit, ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(0.2, 0.9, 1.0, 0.45 * a))
+				var gold := Color(1.0, 0.88, 0.4).lerp(Color(1.0, 0.55, 0.2), float(i) / word.length())
+				draw_string(f, Vector2(x0, y) + jit, ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(gold, a))
+				x0 += cw + spread
+			var sub := tr("THE WORLD SLOWS. YOU DON'T.")
+			draw_string(UIStyle.font_bold(), Vector2(0, y + 40), sub, HORIZONTAL_ALIGNMENT_CENTER, vs.x, 18, Color(1, 0.95, 0.85, 0.8 * a))
+		# film-reel countdown, bottom right
+		var c := Vector2(vs.x - 70, vs.y - 150)
+		var r := 34.0
+		var rot := _t * 2.4
+		draw_circle(c, r + 6, Color(0.05, 0.02, 0.06, 0.6 * fade))
+		draw_arc(c, r, -PI / 2, -PI / 2 + TAU * clampf(left, 0.0, 1.0), 48, Color(1.0, 0.85, 0.4, fade), 5.0, true)
+		if _bonus > 0.0:
+			draw_arc(c, r + 5, 0, TAU, 48, Color(1, 1, 1, _bonus * fade), 2.0, true)
+		for h in 6:
+			var hp := c + Vector2.from_angle(rot + h * TAU / 6.0) * r * 0.55
+			draw_circle(hp, 5.0, Color(1.0, 0.85, 0.4, 0.5 * fade))
+		draw_circle(c, 4.0, Color(1.0, 0.85, 0.4, fade))
+		draw_string(UIStyle.font_bold(), c + Vector2(-40, r + 22), tr("SPOTLIGHT"), HORIZONTAL_ALIGNMENT_CENTER, 80, 12, Color(1.0, 0.85, 0.4, fade))
+
+
+## Bottom-left: the SPOTLIGHT meter. A tilted neon plate with a stage lamp,
+## the name in the display face and a segmented bar that fills with points.
+## Full, it lights up: the bar goes neon, the lamp throws a beam and READY
+## blinks with the key. Running, the bar drains white like a reel.
+class AbilityMeter extends Control:
+	var title := "SPOTLIGHT"
+	var key := ""
+	var charge := 0.0
+	var active := false
+	var ready_flash := 0.0
+	var _t := 0.0
+	var _shown := 0.0
+	const SEGS := 12
+
+	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.03)
+		_t += rd
+		_shown = move_toward(_shown, charge, rd * (3.0 if active else 1.2))
+		ready_flash = maxf(0.0, ready_flash - rd * 1.5)
+		queue_redraw()
+
+	func _draw() -> void:
+		var ready := charge >= 0.999 and not active
+		var pulse := 0.5 + 0.5 * sin(_t * 5.0)
+		var skew := 10.0
+		var w := size.x
+		var h := size.y
+		# the plate: a slanted dark panel with a neon edge
+		var plate := PackedVector2Array([Vector2(skew, 0), Vector2(w, 0), Vector2(w - skew, h), Vector2(0, h)])
+		draw_colored_polygon(plate, Color(0.03, 0.01, 0.06, 0.78))
+		var edge := UIStyle.GOLD if not ready else UIStyle.PINK.lerp(UIStyle.GOLD, pulse)
+		if active:
+			edge = Color.WHITE
+		var loop := plate.duplicate()
+		loop.append(plate[0])
+		if ready or active:
+			draw_polyline(loop, Color(edge, 0.25), 6.0, true)
+		draw_polyline(loop, Color(edge, 0.9 if (ready or active) else 0.45), 1.5, true)
+		# the lamp: a little stage spotlight, throwing a beam when it's ready
+		var lc := Vector2(30, h * 0.5)
+		if ready or active:
+			draw_colored_polygon(PackedVector2Array([lc + Vector2(6, -4), lc + Vector2(6, 4), lc + Vector2(40, 22), lc + Vector2(40, -22)]), Color(1.0, 0.85, 0.5, 0.12 + 0.1 * pulse))
+		draw_circle(lc, 12.0, Color(0.1, 0.06, 0.12))
+		draw_circle(lc + Vector2(3, 0), 7.0, Color(1.0, 0.85, 0.45) if (ready or active) else Color(0.35, 0.3, 0.3))
+		draw_line(lc + Vector2(-6, 12), lc + Vector2(-10, 20), Color(0.5, 0.45, 0.5), 2.0)
+		draw_line(lc + Vector2(6, 12), lc + Vector2(10, 20), Color(0.5, 0.45, 0.5), 2.0)
+		# the name
+		var f := UIStyle.font_display()
+		var fb := UIStyle.font_bold()
+		var tx := 56.0
+		draw_string(f, Vector2(tx + 1, 26), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 20, Color(0, 0, 0, 0.6))
+		draw_string(f, Vector2(tx, 25), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 20, UIStyle.GOLD if not active else Color.WHITE)
+		var tag := ""
+		var tag_c := UIStyle.DIM
+		if active:
+			tag = tr("ON AIR")
+			tag_c = UIStyle.HOT
+		elif ready:
+			tag = tr("READY") + "  [" + key + "]"
+			tag_c = Color(UIStyle.PINK, 0.6 + 0.4 * pulse)
+		else:
+			tag = "%d%%" % int(_shown * 100.0)
+		draw_string(fb, Vector2(tx, 66), tag, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, tag_c)
+		# the bar: segments on a slant
+		var bx := tx
+		var by := 36.0
+		var bw := w - tx - 22.0
+		var sw := bw / SEGS
+		for i in SEGS:
+			var k := clampf(_shown * SEGS - i, 0.0, 1.0)
+			var r := Rect2(bx + i * sw, by, sw - 3.0, 14.0)
+			var poly := PackedVector2Array([r.position + Vector2(3, 0), Vector2(r.end.x + 3, r.position.y), r.end, Vector2(r.position.x, r.end.y)])
+			draw_colored_polygon(poly, Color(1, 1, 1, 0.08))
+			if k <= 0.0:
+				continue
+			var col := UIStyle.GOLD.lerp(UIStyle.PINK, float(i) / SEGS)
+			if active:
+				col = Color.WHITE
+			elif ready:
+				col = UIStyle.PINK.lerp(UIStyle.CYAN, 0.5 + 0.5 * sin(_t * 4.0 + i * 0.5))
+			var fill := PackedVector2Array([poly[0], poly[0].lerp(poly[1], k), poly[3].lerp(poly[2], k), poly[3]])
+			if ready or active:
+				draw_rect(r.grow(2.0), Color(col, 0.18), true)
+			draw_colored_polygon(fill, col)
+		if ready_flash > 0.0:
+			draw_polyline(loop, Color(1, 1, 1, ready_flash), 3.0 + 6.0 * (1.0 - ready_flash), true)

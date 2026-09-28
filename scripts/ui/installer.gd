@@ -48,6 +48,7 @@ func _ready() -> void:
 	_dest = _default_dest()
 	# the motel in the rain, the sign flickering
 	shot = StoryShot.new()
+	shot.ambience = false
 	shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	shot.letterbox = false
 	shot.shot_time = 40.0

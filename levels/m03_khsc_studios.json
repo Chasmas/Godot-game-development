@@ -750,5 +750,18 @@
    ],
    "angle": 270
   }
+ ],
+ "tasks": [
+  {
+   "id": "feeds",
+   "kind": "film_cameras",
+   "text": "KILL THE LIVE FEEDS"
+  },
+  {
+   "id": "tape",
+   "kind": "collect",
+   "item": "tape_pilot",
+   "text": "STEAL THE PILOT TAPE"
+  }
  ]
 }

@@ -249,6 +249,18 @@ func _ready() -> void:
 		_update_objective()
 	player.ability._emit()
 	player._emit_weapon()
+	if arcade == null:
+		var chat := Chatter.new()
+		chat.level = self
+		add_child(chat)
+		MaskPickup.place(self, String(mission.id), player.global_position)
+		MeatBone.place_for(self, player.global_position)
+	# which mask tonight: asked once per job (retries keep it), and only
+	# once there's more than the star to choose from
+	if not Game.mask_chosen and player.data.id == &"cass" and Masks.unlocked_list().size() > 1 and st.is_empty() 			and DisplayServer.get_name() != "headless" and not Engine.has_meta("autoplay"):
+		var ms := MaskSelect.new()
+		ms.chosen.connect(func(_id): player.apply_mask())
+		add_child(ms)
 	# the call as she arrives: first load only (not after a death, a
 	# checkpoint or in arcade), once the title card has had its moment
 	var ic: Dictionary = data.get("intro_call", {})
@@ -442,7 +454,8 @@ func _obj(k: String, fallback: String) -> String:
 func remaining_enemies() -> Array:
 	var out := []
 	for e in get_tree().get_nodes_in_group("enemies"):
-		if e.is_alive() and e.required and e != boss:
+		# animals don't count: kill them or don't, the job is the people
+		if e.is_alive() and e.required and e != boss and not (e is Dog):
 			out.append(e)
 	return out
 
@@ -460,6 +473,8 @@ func _process(delta: float) -> void:
 		_music_intensity()
 		return
 	_check_hints(cell)
+	if Engine.get_process_frames() % 30 == 0:
+		_poll_tasks()
 	_check_checkpoints(cell)
 	if not _boss_triggered and boss and is_instance_valid(boss):
 		var br: Array = data.get("boss_trigger", [])
@@ -755,26 +770,82 @@ func _save_checkpoint(cp_name: String, spawn: Vector2) -> void:
 func _update_objective() -> void:
 	match phase:
 		Phase.INFILTRATE:
-			Events.objective_changed.emit(_obj("infiltrate", "GET INSIDE THE SUNSET PALMS"))
+			_emit_obj(_obj("infiltrate", "GET INSIDE THE SUNSET PALMS"))
 		Phase.CLEAR:
 			var n := remaining_enemies().size()
 			if boss and is_instance_valid(boss) and boss.is_alive():
 				var find := breach.objective() if breach and not breach.done else _obj("find_boss", "FIND THE NIGHT MANAGER")
-				Events.objective_changed.emit("%s  ·  %s  ·  %s" % [_obj("clear", "CLEAR THE MOTEL"), tr("%d LEFT") % n, find])
+				_emit_obj("%s  ·  %s  ·  %s" % [_obj("clear", "CLEAR THE MOTEL"), tr("%d LEFT") % n, find])
 			else:
-				Events.objective_changed.emit(tr("%s  ·  %d LEFT") % [_obj("clear", "CLEAR THE MOTEL"), n])
+				_emit_obj(tr("%s  ·  %d LEFT") % [_obj("clear", "CLEAR THE MOTEL"), n])
 		Phase.BOSS:
-			Events.objective_changed.emit(_obj("boss", "DEAL WITH HARCOURT"))
+			_emit_obj(_obj("boss", "DEAL WITH HARCOURT"))
 		Phase.BOSS_DOWN:
-			Events.objective_changed.emit("")
+			_emit_obj("")
 		Phase.PHONE:
 			var left := remaining_enemies().size()
 			if left > 0:
-				Events.objective_changed.emit(tr("FINISH THE JOB  ·  %d LEFT") % left)
+				_emit_obj(tr("FINISH THE JOB  ·  %d LEFT") % left)
 			else:
-				Events.objective_changed.emit(tr("THE PHONE IS RINGING"))
+				_emit_obj(tr("THE PHONE IS RINGING"))
 		Phase.ESCAPE:
-			Events.objective_changed.emit(_obj("escape", "GET BACK TO THE CAR"))
+			_emit_obj(_obj("escape", "GET BACK TO THE CAR"))
+
+# ------------------------------------------------------------------ side tasks
+## Every job has one or two things to do besides the killing (level JSON
+## "tasks"): smash the film cameras that are taping her, recover a tape.
+## The way out only opens once they're done.
+var _escape_pending := false
+var _tasks_sig := ""
+
+func _tasks_status() -> Array:
+	var out: Array = []
+	for t in data.get("tasks", []):
+		match str(t.get("kind", "")):
+			"film_cameras":
+				var cams := get_tree().get_nodes_in_group("film_cameras")
+				var broken := cams.filter(func(c): return c.get("_broken")).size()
+				out.append([tr(str(t.text)), broken, cams.size()])
+			"collect":
+				var got := 1 if collected.has(str(t.item)) else 0
+				out.append([tr(str(t.text)), got, 1])
+	return out
+
+func tasks_done() -> bool:
+	if Engine.has_meta("skip_tasks"):   # the flow tests walk the main path only
+		return true
+	for t in _tasks_status():
+		if int(t[1]) < int(t[2]):
+			return false
+	return true
+
+func _tasks_suffix() -> String:
+	var parts := PackedStringArray()
+	for t in _tasks_status():
+		if int(t[1]) >= int(t[2]):
+			continue
+		parts.append("%s %d/%d" % [t[0], t[1], t[2]] if int(t[2]) > 1 else str(t[0]))
+	return "  ·  ".join(parts)
+
+func _emit_obj(text: String) -> void:
+	var sfx := _tasks_suffix() if phase in [Phase.INFILTRATE, Phase.CLEAR, Phase.PHONE, Phase.ESCAPE] and arcade == null else ""
+	if _escape_pending and sfx != "":
+		text = ""   # the floor's clear: only what's left to do
+	Events.objective_changed.emit(text if sfx == "" else (sfx if text == "" else text + "  ·  " + sfx))
+
+func _poll_tasks() -> void:
+	var sig := str(_tasks_status())
+	if sig == _tasks_sig:
+		return
+	var was := _tasks_sig
+	_tasks_sig = sig
+	if was != "":
+		_update_objective()
+		if tasks_done() and not data.get("tasks", []).is_empty():
+			hud.show_banner(tr("ALL DONE HERE"), 1.8, UIStyle.GOLD)
+	if _escape_pending and tasks_done():
+		_escape_pending = false
+		_begin_escape()
 
 func objectives_text() -> String:
 	var lines := PackedStringArray()
@@ -1001,6 +1072,11 @@ func _on_phone(_it: Interactable, _by: Node) -> void:
 	Dialogue.start("m01_phone")
 
 func _begin_escape() -> void:
+	if not tasks_done() and arcade == null:
+		_escape_pending = true
+		_update_objective()
+		hud.show_hint(tr("SOMETHING'S STILL LEFT TO DO"), 2.5)
+		return
 	phase = Phase.ESCAPE
 	for d in locked_doors:
 		if is_instance_valid(d):

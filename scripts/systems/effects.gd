@@ -4,7 +4,7 @@ extends Node2D
 ## (blood, glass, casings, scorch), muzzle flashes and score popups.
 ## Static helpers let any object spawn effects without holding a reference.
 
-const MAX_DECALS := 900
+const MAX_DECALS := 1400
 
 var decals: DecalLayer
 var pools: Gore.PoolLayer
@@ -160,6 +160,7 @@ static func blood(pos: Vector2, dir: Vector2, big := false) -> void:
 		fx.emit("debris", pos, dir)
 		return
 	Gore.splatter(pos, dir, 1.8 if big else 0.9)
+	Gore.spatter_around(pos, 1.6 if big else 0.8)
 	if big:
 		fx.decals.add_splat(pos + dir * 8.0, randf_range(5.0, 7.0), Color(0.45, 0.01, 0.06, 0.85))
 

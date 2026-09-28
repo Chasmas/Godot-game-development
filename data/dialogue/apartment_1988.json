@@ -21,7 +21,7 @@
    "speaker": "voice",
    "text": "There's a package outside your door. Inside is a key to room 204 at the Sunset Palms, Barstow. The night manager is keeping something that belonged to your brother.",
    "next": "d",
-   "shot": "machine"
+   "shot": "machine_close"
   },
   "d": {
    "speaker": "voice",
@@ -66,7 +66,7 @@
    "text": "We're sorry. The number you have dialed is not in service.",
    "sfx": "vhs_static",
    "next": "p3",
-   "shot": "machine"
+   "shot": "machine_close"
   },
   "p3": {
    "speaker": "cass",

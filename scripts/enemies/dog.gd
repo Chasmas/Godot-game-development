@@ -85,6 +85,8 @@ func _perceive() -> void:
 	_sees_player = false
 	if p == null or not p.alive or state == State.DOWNED or _held or p.respawn_grace > 0.0:
 		return
+	if p.persona and p.persona.dogs_ignore and state != State.COMBAT:
+		return   # the dog mask: one of the pack
 	var to := p.global_position - global_position
 	var dist := to.length()
 	if sleeping:
@@ -133,7 +135,7 @@ func _perceive() -> void:
 				break
 
 func _on_noise(pos: Vector2, radius: float, kind: StringName, source: Node) -> void:
-	if not is_alive() or state == State.DOWNED or source == self or _held:
+	if not is_alive() or state == State.DOWNED or source == self or _held or _food != null:
 		return
 	if source is Player and (source as Player).respawn_grace > 0.0:
 		return
@@ -162,8 +164,62 @@ func _bark() -> void:
 	Events.noise.emit(global_position, data.alert_others_radius, &"voice", self)
 
 # ======================================================================= loop
+var _food: MeatBone = null
+var _chew_t := 0.0
+
+## A meat bone landed nearby: go and eat it (unless already mid-fight with
+## her in its teeth, or down, or leashed). Returns whether it took the bait.
+func lure(food: MeatBone) -> bool:
+	if not is_alive() or state in [State.DOWNED, State.STUNNED] or _held or _lunge_t >= 0.0:
+		return false
+	sleeping = false
+	_food = food
+	_set_state(State.IDLE)
+	_sees_player = false
+	return true
+
+func is_eating(food: MeatBone) -> bool:
+	return _food == food
+
+func stop_eating() -> void:
+	_food = null
+	_set_state(State.PATROL if not patrol_points.is_empty() else State.IDLE)
+
+func _eat(delta: float) -> Vector2:
+	var to := _food.global_position - global_position
+	if to.length() > 9.0:
+		return _go_to(_food.global_position, data.walk_speed * 2.2)
+	facing = facing.slerp(to.normalized(), minf(1.0, delta * 8.0))
+	_chew_t -= delta
+	if _chew_t <= 0.0:
+		_chew_t = randf_range(0.5, 1.1)
+		_bark_anim = 0.12   # head dips into it
+		Audio.play_at("splat", global_position, -24.0, 0.3)
+		if randf() < 0.25:
+			Audio.play_at("growl", global_position, -20.0, 0.2)
+	return Vector2.ZERO
+
 func _physics_process(delta: float) -> void:
 	if not is_alive():
+		return
+	if _food != null and not is_instance_valid(_food):
+		stop_eating()
+	if _food != null and state != State.DOWNED:
+		# dinner: nothing else in the world exists
+		_t += delta
+		_state_t += delta
+		_bark_anim = maxf(0.0, _bark_anim - delta)
+		_knock = _knock.move_toward(Vector2.ZERO, 900.0 * delta)
+		_move_vel = _move_vel.move_toward(_eat(delta) + _separation() * 0.3, 1200.0 * delta)
+		velocity = _move_vel + _knock
+		move_and_slide()
+		_speed_now = velocity.length()
+		if _move_vel.length() > 5.0:
+			facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 6.5))
+		_update_head(delta)
+		_update_eyes(delta)
+		_gait += delta * _speed_now * 0.16
+		queue_redraw()
 		return
 	_t += delta
 	_state_t += delta
@@ -368,6 +424,7 @@ func _dog_combat(delta: float) -> Vector2:
 
 # ======================================================================= damage
 func knock_down(info: DamageInfo) -> void:
+	_food = null
 	_windup_t = -1.0
 	_lunge_t = -1.0
 	sleeping = false

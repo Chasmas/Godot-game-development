@@ -111,11 +111,16 @@ func _art(id: String) -> Texture2D:
 		_art_cache[id] = load(path) if ResourceLoader.exists(path) else null
 	return _art_cache[id]
 
+func _on_a_job() -> bool:
+	return is_inside_tree() and get_tree().get_first_node_in_group("level") != null
+
 ## The painted frame for this moment, if the speaker has painted art. Cass
 ## wears the gold star once she's painted it on.
 func _art_frame() -> Texture2D:
 	var id := speaker
-	if id == "cass" and bool(SaveManager.get_flag("wore_the_star", false)):
+	# she paints it on in the apartment and wears it on every job after -
+	# also when a chapter is started straight from the shelf
+	if id == "cass" and (bool(SaveManager.get_flag("wore_the_star", false)) or _on_a_job()):
 		id = "cass_star"
 	var base := _art(id)
 	if base == null:

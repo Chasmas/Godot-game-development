@@ -31,7 +31,7 @@
    "speaker": "cass",
    "text": "Who is this?",
    "next": "d",
-   "shot": "lobby_phone"
+   "shot": "phone_cass"
   },
   "d": {
    "speaker": "voice",
@@ -55,7 +55,7 @@
      "next": "t1"
     }
    ],
-   "shot": "lobby_phone"
+   "shot": "phone_cass"
   },
   "h1": {
    "speaker": "narration",

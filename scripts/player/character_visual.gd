@@ -55,6 +55,16 @@ func _init() -> void:
 	add_child(legs)
 	add_child(rig)
 	rig.add_child(torso)
+	_leg = KickLeg.new()
+	_leg.vis = self
+	_leg.visible = false
+	_leg.light_mask = 2
+	rig.add_child(_leg)
+	_arm = MeleeArm.new()
+	_arm.vis = self
+	_arm.visible = false
+	_arm.light_mask = 2
+	rig.add_child(_arm)
 	rig.add_child(weapon_sprite)
 	rig.add_child(weapon_sprite2)
 	rig.add_child(overlay)
@@ -111,6 +121,7 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 		weapon_sprite.visible = false
 		return
 	_hold = w.hold
+	_rest_torso = null
 	var pose := "aim_dual" if dual else SpriteLib.pose_for_hold(w.hold)
 	torso.texture = SpriteLib.torso(pose, palette)
 	weapon_sprite.texture = SpriteLib.weapon(w.sprite_key)
@@ -131,6 +142,8 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 
 func set_aim(angle: float) -> void:
 	aim_angle = angle
+	if _roll_t >= 0.0:
+		return   # mid-roll the body turns with the roll, not the aim
 	rig.rotation = angle + _twist + _manner_off
 
 func update_move(vel: Vector2, delta: float) -> void:
@@ -144,8 +157,12 @@ func update_move(vel: Vector2, delta: float) -> void:
 	if _kick_leg_t > 0.0:
 		_kick_leg_t -= delta
 		legs.rotation = rig.rotation
-		legs.texture = SpriteLib.legs(1 if _kick_leg_t > 0.08 else 2, palette)
-		legs.position = Vector2.RIGHT.rotated(rig.rotation) * (3.0 * sin(clampf(_kick_leg_t / 0.2, 0.0, 1.0) * PI))
+		legs.texture = SpriteLib.legs(0, palette)
+		legs.position = Vector2.ZERO
+		_leg.visible = true
+		_leg.queue_redraw()
+		if _kick_leg_t <= 0.0:
+			_leg.visible = false
 		return
 	legs.position = Vector2.ZERO
 	var speed := vel.length()
@@ -174,8 +191,25 @@ func set_alert_posture(p: int) -> void:
 
 ## Front kick: the leading leg snaps out along the aim and the body leans in.
 func kick_leg() -> void:
-	_kick_leg_t = 0.2
-	_kick = -3.5
+	_kick_leg_t = KICK_TIME
+	_kick = 2.0   # she leans back to put the foot through
+
+const KICK_TIME := 0.3
+var _leg: KickLeg
+var _mount := false          ## astride someone on the floor (unarmed execution)
+var _punch_reach := 6.5
+
+func set_mount(on: bool) -> void:
+	_mount = on
+	_leg.visible = on or _kick_leg_t > 0.0
+	_leg.queue_redraw()
+
+## A punch on someone on the floor: the fist comes down from high, harder
+## and slower for the last one.
+func ground_punch(big: bool) -> void:
+	_punch_reach = 9.0 if big else 7.5
+	punch()
+	_kick = -6.0 if big else -4.0
 
 func kick_recoil(amount := 2.0) -> void:
 	_kick = amount
@@ -188,6 +222,8 @@ func gun_recoil(left: bool, amount: float) -> void:
 		_gun_kick = amount
 
 var _stab := false
+var _rest_torso: Texture2D   ## the pose to go back to after a swing
+var _arm: MeleeArm           ## the striking arm(s), drawn live during melee
 var _twist := 0.0
 var _heavy_swing := false
 var _ghosts: Array[Sprite2D] = []
@@ -201,6 +237,11 @@ var _mag: Node2D = null
 
 func swing(heavy := false, stab := false) -> void:
 	_swing_t = 0.0
+	# the live arms do the work: the torso drops its baked-in holding arms
+	# for the blow and gets them back after
+	if _rest_torso == null:
+		_rest_torso = torso.texture
+	torso.texture = SpriteLib.torso("unarmed", palette)
 	_stab = stab and not heavy
 	# a touch longer than before: the extra time is anticipation and
 	# follow-through, the strike itself is as fast as ever
@@ -212,13 +253,78 @@ func swing(heavy := false, stab := false) -> void:
 	if is_inside_tree() and palette.begins_with("cass"):
 		Audio.play_at("whoosh", global_position, -8.0 if heavy else -12.0, 0.15)
 
+# ---------------------------------------------------------------- the roll
+var _roll_t := -1.0
+var _roll_dur := 0.3
+var _roll_dir := Vector2.RIGHT
+var _roll_ghost_t := 0.0
+
+## A dodge roll: she tucks, goes over her shoulder in the direction of travel
+## and comes up facing her aim again. Seen from above: the body squashes into
+## a ball, turns a full circle along the roll, the legs fold away, the gun
+## is tucked in, dust kicks up at the push-off and the landing.
+func roll(dir: Vector2, dur: float) -> void:
+	_roll_t = 0.0
+	_roll_dur = maxf(dur, 0.12)
+	_roll_dir = dir.normalized() if dir != Vector2.ZERO else Vector2.RIGHT
+	_roll_ghost_t = 0.0
+
+func is_rolling() -> bool:
+	return _roll_t >= 0.0
+
+func _apply_roll(delta: float) -> void:
+	if _roll_t < 0.0:
+		return
+	_roll_t += delta
+	var k := clampf(_roll_t / _roll_dur, 0.0, 1.0)
+	if k >= 1.0:
+		_roll_t = -1.0
+		legs.visible = true
+		weapon_sprite.modulate.a = 1.0
+		shadow.scale = Vector2.ONE
+		return
+	# ease: quick tuck, the turn over the shoulder, a soft unfold
+	var tuck := sin(k * PI)
+	var turn := k * k * (3.0 - 2.0 * k)
+	rig.rotation = _roll_dir.angle() + TAU * turn
+	rig.scale = Vector2(1.0 - 0.38 * tuck, 1.0 - 0.18 * tuck)
+	rig.position = _roll_dir * (-1.5 * tuck)
+	legs.visible = k < 0.12 or k > 0.88
+	weapon_sprite.modulate.a = 1.0 - 0.8 * tuck
+	shadow.scale = Vector2.ONE * (1.0 - 0.25 * tuck)
+	# afterimages while she's over
+	_roll_ghost_t -= delta
+	if _roll_ghost_t <= 0.0 and k > 0.1 and k < 0.8:
+		_roll_ghost_t = 0.035
+		var g := Sprite2D.new()
+		g.texture = torso.texture
+		g.scale = torso.scale * rig.scale
+		g.global_position = rig.global_position
+		g.rotation = rig.rotation
+		g.modulate = Color(1.0, 0.5, 0.8, 0.35)
+		g.z_index = z_index - 1
+		g.top_level = true
+		add_child(g)
+		var tw := g.create_tween()
+		tw.tween_property(g, "modulate:a", 0.0, 0.18)
+		tw.tween_callback(g.queue_free)
+
+## The pump racked back and forward after a shotgun blast.
+func pump() -> void:
+	_gun_kick = 3.2
+	_kick = minf(_kick, -1.0)
+
 func punch() -> void:
 	_punch_t = 0.0
 	_kick = -3.5
 	torso.scale = Vector2(0.54, 0.48)
 	create_tween().tween_property(torso, "scale", Vector2(0.5, 0.5), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	_punch_left = not _punch_left
-	torso.texture = SpriteLib.torso("punch_l" if _punch_left else "punch_r", palette)
+	# the arm is drawn live (out from the shoulder and back); the torso keeps
+	# its guard pose so there's never a second, frozen arm
+	torso.texture = SpriteLib.torso("unarmed", palette)
+	_arm.visible = true
+	_arm.queue_redraw()
 
 func flash(t := 0.08) -> void:
 	_flash = t
@@ -289,9 +395,12 @@ func _process(delta: float) -> void:
 		var k := clampf(_swing_t / _swing_dur, 0.0, 1.0)
 		if _stab:
 			# knife: small draw-back, fast thrust, snap back
-			var d := -2.0 * sin(clampf(k / 0.25, 0.0, 1.0) * PI * 0.5) if k < 0.25 else 8.0 * sin(clampf((k - 0.25) / 0.75, 0.0, 1.0) * PI)
+			var d := -2.5 * sin(clampf(k / 0.25, 0.0, 1.0) * PI * 0.5) if k < 0.25 else 6.5 * sin(clampf((k - 0.25) / 0.75, 0.0, 1.0) * PI)
 			weapon_sprite.rotation = 0.0
-			weapon_sprite.position = _hand + Vector2(d, 0)
+			# the thrust comes in from the shoulder toward the centre line
+			weapon_sprite.position = _hand + Vector2(d, -_hand.y * 0.35 * clampf(d / 6.5, 0.0, 1.0))
+			_arm.visible = true
+			_arm.queue_redraw()
 			torso.scale = Vector2(0.5 + 0.04 * clampf(d / 8.0, 0.0, 1.0), 0.5 - 0.02 * clampf(d / 8.0, 0.0, 1.0))
 		else:
 			# anticipation -> strike (expo ease-out) -> overshoot and settle
@@ -310,11 +419,17 @@ func _process(delta: float) -> void:
 				rot = lerpf(a * 0.62, a * 0.5, w3 * w3)
 				torso.scale = Vector2(0.5, 0.5)
 			weapon_sprite.rotation = _swing_dir * rot
+			_arm.visible = true
+			_arm.queue_redraw()
 			_twist = _swing_dir * (sin(clampf((k - 0.1) / 0.7, 0.0, 1.0) * PI) * (0.32 if _heavy_swing else 0.24) - (0.12 if k < 0.22 else 0.0))
 			_push_ghost()
 		if _swing_t >= _swing_dur + 0.03:
 			_swing_t = -1.0
 			_twist = 0.0
+			_arm.visible = false
+			if _rest_torso:
+				torso.texture = _rest_torso
+				_rest_torso = null
 			torso.scale = Vector2(0.5, 0.5)
 			weapon_sprite.position = _hand
 			var tw := create_tween()
@@ -338,13 +453,17 @@ func _process(delta: float) -> void:
 			weapon_sprite2.position = _hand2 - Vector2(_gun_kick2, 0)
 	if _punch_t >= 0.0:
 		_punch_t += delta
-		if _punch_t > 0.12:
+		_arm.queue_redraw()
+		if _punch_t > 0.14:
 			_punch_t = -1.0
+			_punch_reach = 6.5
+			_arm.visible = _swing_t >= 0.0
 			if _hold == WeaponData.Hold.NONE:
 				torso.texture = SpriteLib.torso("unarmed", palette)
 	if _flash > 0.0:
 		_flash -= delta
 		modulate = Color(3, 3, 3) if _flash > 0.0 else Color.WHITE
+	_apply_roll(delta)
 
 
 # ---------------------------------------------------------------- swing ghosts
@@ -408,8 +527,12 @@ func _update_reload(delta: float) -> void:
 		return
 	_reload_k += delta / _reload_dur
 	var k := _reload_k
+	_arm.visible = _mag != null and is_instance_valid(_mag)
+	if _arm.visible:
+		_arm.queue_redraw()
 	if k >= 1.0:
 		_reload_k = -1.0
+		_arm.visible = false
 		weapon_sprite.rotation = 0.0
 		weapon_sprite.position = _hand
 		if _mag:
@@ -554,3 +677,96 @@ class DropShadow extends Node2D:
 				r.position += sp.offset
 				draw_texture_rect(sp.texture, r, false, col)
 		draw_set_transform_matrix(Transform2D.IDENTITY)
+
+
+## The arms that do the hitting, drawn live over the torso art: sleeve from
+## the shoulder through a bent elbow to the fist. A stab drives the fist
+## out along the blade; a swing carries the grip round the arc (both hands
+## on the handle for two-handed weapons); a punch throws the fist out from
+## alternating shoulders and snaps it back.
+class MeleeArm extends Node2D:
+	var vis: Node
+
+	func _limb(shoulder: Vector2, hand: Vector2, side: float, sleeve: Color, skin: Color, fist := 1.3) -> void:
+		var reach := (hand - shoulder).length()
+		var bend := clampf(1.0 - reach / 12.0, 0.0, 1.0)
+		var elbow := shoulder.lerp(hand, 0.5) + Vector2(-1.2, 1.6 * side) * bend
+		var dark := sleeve.darkened(0.6)
+		var cloth := sleeve.darkened(0.15)
+		draw_polyline(PackedVector2Array([shoulder, elbow, hand]), dark, 2.3)
+		draw_polyline(PackedVector2Array([shoulder, elbow, hand]), cloth, 1.4)
+		draw_circle(hand, fist * 0.8 + 0.35, skin.darkened(0.45))
+		draw_circle(hand, fist * 0.8, skin)
+
+	func _draw() -> void:
+		var P: Dictionary = SpriteForge._pal(str(vis.palette))
+		var sleeve: Color = P.get("j", Color(0.3, 0.3, 0.35))
+		var skin: Color = P.get("s", Color.BISQUE)
+		if float(vis._punch_t) >= 0.0:
+			var k := clampf(float(vis._punch_t) / 0.14, 0.0, 1.0)
+			# fast out (ease-out), slower back
+			var e := sin(clampf(k / 0.4, 0.0, 1.0) * PI * 0.5) if k < 0.4 else 1.0 - (k - 0.4) / 0.6 * 0.85
+			var side := -1.0 if vis._punch_left else 1.0
+			var shoulder := Vector2(-1.0, 3.4 * side)
+			var fist := Vector2(2.0 + float(vis._punch_reach) * e, 3.4 * side * (1.0 - 0.7 * e))
+			_limb(shoulder, fist, side, sleeve, skin, 1.7)
+			return
+		var mag = vis._mag
+		if float(vis._reload_k) >= 0.0 and mag and is_instance_valid(mag):
+			# the off hand brings the fresh magazine up to the gun
+			var s2 := -(signf(float(vis._hand.y)) if absf(float(vis._hand.y)) > 0.5 else 1.0)
+			_limb(Vector2(-1.0, 3.2 * s2), (mag as Node2D).position, s2, sleeve, skin, 1.1)
+			return
+		var ws: Sprite2D = vis.weapon_sprite
+		var grip := ws.position + Vector2(-1, 0).rotated(ws.rotation)
+		var side1 := signf(float(vis._hand.y)) if absf(float(vis._hand.y)) > 0.5 else 1.0
+		_limb(Vector2(-1.0, 3.2 * side1), grip, side1, sleeve, skin)
+		if not vis._stab and int(vis._hold) == WeaponData.Hold.MELEE_TWO:
+			# the other hand further up the handle
+			var grip2 := ws.position + Vector2(3.5, 0).rotated(ws.rotation)
+			_limb(Vector2(-1.0, -3.2 * side1), grip2, -side1, sleeve, skin)
+
+
+## The kicking leg, drawn live under the torso: the knee comes up (chamber),
+## the boot snaps out along the aim, then comes back. Also the knees either
+## side of someone she's knelt on, for bare-handed executions.
+class KickLeg extends Node2D:
+	var vis: Node
+
+	func _ready() -> void:
+		show_behind_parent = false
+		z_index = -1
+
+	func _seg(a: Vector2, b: Vector2, c: Vector2, pants: Color, shoe: Color) -> void:
+		var dark := pants.darkened(0.55)
+		draw_polyline(PackedVector2Array([a, b, c]), dark, 3.2)
+		draw_polyline(PackedVector2Array([a, b, c]), pants, 2.2)
+		var d := (c - b).normalized()
+		draw_line(c - d * 0.5, c + d * 2.2, shoe.darkened(0.3), 3.0)
+		draw_line(c, c + d * 2.0, shoe, 2.0)
+
+	func _draw() -> void:
+		var P: Dictionary = SpriteForge._pal(str(vis.palette))
+		var pants: Color = P.get("p", Color(0.2, 0.2, 0.25))
+		var shoe: Color = P.get("P", Color(0.08, 0.06, 0.06))
+		if vis._mount:
+			# kneeling astride: both knees forward and out, shins tucked back
+			for side in [-1.0, 1.0]:
+				_seg(Vector2(-1, 2.0 * side), Vector2(3, 3.8 * side), Vector2(-1.5, 4.4 * side), pants, shoe)
+			return
+		var t: float = 1.0 - float(vis._kick_leg_t) / float(vis.KICK_TIME)
+		# 0-35% chamber, 35-55% snap out, hold, 75-100% retract
+		var ext: float
+		if t < 0.35:
+			ext = 0.0
+		elif t < 0.55:
+			ext = sin((t - 0.35) / 0.2 * PI * 0.5)
+		elif t < 0.75:
+			ext = 1.0
+		else:
+			ext = 1.0 - (t - 0.75) / 0.25
+		var chamber := sin(clampf(t / 0.35, 0.0, 1.0) * PI * 0.5) * (1.0 - ext)
+		var hip := Vector2(-1.0, 2.0)
+		var knee := hip + Vector2(3.5 + 2.5 * chamber + 3.0 * ext, 1.5 - 1.0 * ext)
+		var foot := knee + Vector2(-2.5 * (1.0 - ext) + 6.0 * ext, 1.0 - 1.5 * ext)
+		_seg(hip, knee, foot, pants, shoe)

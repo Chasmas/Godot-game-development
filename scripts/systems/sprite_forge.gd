@@ -442,49 +442,82 @@ static func legs(frame: int, palette: String) -> Texture2D:
 	return tex
 
 ## Body lying on its back (48x32 tex), head to the right.
-static func corpse(palette: String, downed := false, missing := "") -> Texture2D:
-	var key := "c|%s|%s" % [palette, downed] + ("" if missing == "" else "|" + missing)
+## A body on the floor, head to the right: a lean sprawl, not a blob.
+## Torso as a narrow capsule from hips to shoulders with a collar and belt,
+## the pelvis, two legs bent at the knee, two arms flung out (one up, one
+## back), the head tipped over. `pose` (0..3) picks one of four sprawls so a
+## room of dead doesn't look stamped. `missing`: head / arm / leg / legs -
+## the stump is painted in, the part itself flies off as a gib.
+static func corpse(palette: String, downed := false, missing := "", pose := 0) -> Texture2D:
+	var key := "c2|%s|%s|%d" % [palette, downed, pose] + ("" if missing == "" else "|" + missing)
 	if _cache.has(key):
 		return _cache[key]
-	var bk := _baked(key)
-	if bk:
-		return bk
 	var P := _pal(palette)
 	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
-	var bw: float = st.build
+	var bw: float = clampf(float(st.build), 0.85, 1.5)
 	var c := Vector2(24, 16)
 	var top: Color = P.get("j", Color.GRAY)
+	var top_s: Color = P.get("J", top.darkened(0.25))
 	var skin: Color = P.get("s", Color.BISQUE)
 	var pants: Color = P.get("p", Color.DIM_GRAY)
+	var shoes: Color = P.get("P", Color.BLACK)
 	var hair: Color = P.get("h", Color.BLACK)
-	var spread := 6.0 if downed else 3.0
-	var shapes: Array = [
-		cap(c + Vector2(-6, -3), c + Vector2(-17, -5 - spread * 0.3), 2.8, pants),
-		cap(c + Vector2(-6, 3), c + Vector2(-16, 6 + spread * 0.4), 2.8, pants),
-		ell(c + Vector2(-18, -5 - spread * 0.3), Vector2(2.0, 2.4), P.get("P", Color.BLACK)),
-		ell(c + Vector2(-17, 6 + spread * 0.4), Vector2(2.0, 2.4), P.get("P", Color.BLACK)),
-		cap(c + Vector2(3, -7 * bw), c + Vector2(7 + spread, -12 - spread), 2.4, P.get("J", top)),
-		cap(c + Vector2(3, 7 * bw), c + Vector2(4 - spread * 0.5, 13 + spread * 0.5), 2.4, P.get("J", top)),
-		ell(c + Vector2(7 + spread, -12 - spread), Vector2(2.2, 2.2), skin),
-		ell(c + Vector2(4 - spread * 0.5, 13 + spread * 0.5), Vector2(2.2, 2.2), skin),
-		ell(c, Vector2(9.0, 8.0 * bw), top),
-		ell(c + Vector2(12, 0), Vector2(5.0, 5.0), skin),
+	var gore := Color("7a0812")
+	var bone := Color("efe6d8")
+	# the four sprawls: [left leg bend, right leg bend, up-arm reach, back-arm reach, head tilt]
+	var poses := [[3.0, 2.0, 1.0, 1.0, 0.0], [6.0, -1.0, 1.4, 0.6, 1.5], [0.0, 5.0, 0.6, 1.4, -1.5], [4.0, 4.0, 1.2, 1.2, 1.0]]
+	var q: Array = poses[posmod(pose, 4)]
+	var spread := 6.0 if downed else 2.0
+	var flip := -1.0 if pose % 2 == 1 else 1.0     # which side the raised arm is on
+	var hips := c + Vector2(-5, 0)
+	var chest := c + Vector2(5, 0)
+	var shapes: Array = []
+	# legs: thigh then shin, knees bent by the pose
+	var legs := [
+		[hips + Vector2(-1, -2.2 * bw), hips + Vector2(-7, -3.5 - float(q[0]) - spread * 0.3), hips + Vector2(-13, -2.5 - float(q[0]) * 1.4 - spread * 0.3)],
+		[hips + Vector2(-1, 2.2 * bw), hips + Vector2(-7, 3.5 + float(q[1]) + spread * 0.3), hips + Vector2(-13, 3.0 + float(q[1]) * 0.6 + spread * 0.4)],
 	]
-	if missing == "arm":
-		shapes.remove_at(7)   # hand
-		shapes.remove_at(5)   # sleeve
-		shapes.append(ell(c + Vector2(3, 7 * bw), Vector2(2.6, 2.6), Color("8a0a16")))
+	for li in 2:
+		if missing == "legs" or (missing == "leg" and li == 1):
+			shapes.append(ell(legs[li][0] + Vector2(-1.5, 0), Vector2(2.2, 2.2), gore))
+			shapes.append(ell(legs[li][0] + Vector2(-2.5, 0), Vector2(1.0, 1.1), bone))
+			continue
+		shapes.append(cap(legs[li][0], legs[li][1], 2.3 * bw, pants))
+		shapes.append(cap(legs[li][1], legs[li][2], 2.0, pants.darkened(0.08)))
+		shapes.append(ell(legs[li][2] + Vector2(-1.8, 0), Vector2(2.2, 1.7), shoes))
+	# pelvis and torso: narrow, with a belt and a collar
+	shapes.append(ell(hips + Vector2(-1, 0), Vector2(3.2, 3.2 * bw), pants))
+	shapes.append(cap(hips + Vector2(1, 0), chest, 3.6 * bw, top))
+	shapes.append(cap(hips + Vector2(0.5, -3.0 * bw), hips + Vector2(0.5, 3.0 * bw), 0.8, Color(0.12, 0.08, 0.06)))
+	shapes.append(cap(hips + Vector2(3, -1.5 * bw), chest + Vector2(-1, -1.8 * bw), 1.0, top_s))    # a crease down the shirt
+	# arms: upper arm to elbow to hand; one flung up past the head, one back
+	var arms := [
+		[chest + Vector2(0, -3.6 * bw * flip), chest + Vector2(4.0 * float(q[2]), (-7.5 - spread) * flip), chest + Vector2(9.0 * float(q[2]), (-10.0 - spread) * flip)],
+		[chest + Vector2(0, 3.6 * bw * flip), chest + Vector2(-3.0 * float(q[3]), (7.0 + spread * 0.5) * flip), chest + Vector2(-8.0 * float(q[3]), (9.0 + spread * 0.5) * flip)],
+	]
+	for ai in 2:
+		if missing == "arm" and ai == 1:
+			shapes.append(ell(arms[ai][0], Vector2(2.4, 2.4), gore))
+			shapes.append(ell(arms[ai][0], Vector2(1.0, 1.0), bone))
+			continue
+		shapes.append(cap(arms[ai][0], arms[ai][1], 1.9, top_s))
+		shapes.append(cap(arms[ai][1], arms[ai][2], 1.6, skin if str(st.extras).contains("sleeveless") else top_s.darkened(0.05)))
+		shapes.append(ell(arms[ai][2], Vector2(1.6, 1.6), skin))
+	shapes.append(ell(chest + Vector2(1.5, 0), Vector2(1.6, 2.4 * bw), top.lightened(0.12)))   # collar
+	var head_c := c + Vector2(10.5, float(q[4]))
 	if missing == "head":
-		shapes.remove_at(shapes.size() - 1)
-		shapes.append(ell(c + Vector2(8.5, 0), Vector2(3.0, 3.6), Color("8a0a16")))
-		shapes.append(ell(c + Vector2(9.5, 0), Vector2(1.4, 1.6), Color("efe6d8")))
-		var tex0 := ImageTexture.create_from_image(_render(shapes, 48, 32))
-		_cache[key] = tex0
-		return tex0
-	if str(st.hair) == "helmet":
-		shapes.append(ell(c + Vector2(12, 0), Vector2(5.5, 5.5), Color("20202a")))
-	elif str(st.hair) != "bald":
-		shapes.append(ell(c + Vector2(14, 0), Vector2(3.4, 5.0), hair))
+		shapes.append(ell(head_c + Vector2(-2.5, 0), Vector2(2.8, 3.2), gore))
+		shapes.append(ell(head_c + Vector2(-2.0, 0), Vector2(1.2, 1.4), bone))
+	else:
+		shapes.append(ell(head_c + Vector2(-1.8, 0), Vector2(1.6, 1.8), skin.darkened(0.12)))   # neck
+		shapes.append(ell(head_c, Vector2(3.9, 3.8), skin))
+		if str(st.hair) == "helmet":
+			shapes.append(ell(head_c + Vector2(0.5, 0), Vector2(4.3, 4.2), Color("20202a")))
+		elif str(st.hair) == "cap":
+			shapes.append(ell(head_c + Vector2(1.5, 0), Vector2(3.4, 4.0), hair.lightened(0.05)))
+			shapes.append(ell(head_c + Vector2(4.0, 0), Vector2(1.4, 3.0), top_s))    # the cap's peak
+		elif str(st.hair) != "bald":
+			shapes.append(ell(head_c + Vector2(2.2, 0), Vector2(2.6, 4.0), hair))
 	var tex := ImageTexture.create_from_image(_render(shapes, 48, 32))
 	_cache[key] = tex
 	return tex

@@ -15,6 +15,7 @@ var _by_label: Label
 var _name_label: Label
 var _osd: Label
 var _played_stamp := false
+var _played_chime := false
 var _played_name := false
 
 func _ready() -> void:
@@ -69,10 +70,15 @@ func _process(delta: float) -> void:
 	match _phase:
 		0:
 			_studio.t = _t
+			# the studio's chime: a bell per side of the triangle as it draws,
+			# the motif turned upside down as the logo lands
+			if _t > 0.15 and not _played_chime:
+				_played_chime = true
+				Audio.play("studio_chime", -2.0)
 			if _t > 1.05 and not _played_stamp:
 				_played_stamp = true
-				Audio.play("rank_stamp", -6.0, 0.8)
-				PostFX.vhs_glitch(0.6)
+				PostFX.vhs_glitch(0.35)
+				PostFX.flash(UIStyle.GOLD, 0.12)
 			if _t > STUDIO_TIME - 0.5:
 				_studio.modulate.a = clampf((STUDIO_TIME - _t) / 0.5, 0.0, 1.0)
 			if _t >= STUDIO_TIME:

@@ -14,6 +14,8 @@ var current_mission: MissionData
 var current_character: CharacterData
 var current_cutscene := ""
 var campaign_mode := true           # false = arcade / level select replay
+var mask: StringName = &""
+var mask_chosen := false             # picked for this job already (retries keep it)         # the mask for this job (see Masks); "" = the star
 var modifiers: Dictionary = {}      # challenge/arcade modifiers e.g. {"melee_only": true}
 var last_result: Dictionary = {}
 
@@ -100,6 +102,9 @@ func start_mission(mission_id: String, character_id := "", mods := {}) -> void:
 	checkpoint_index = -1
 	checkpoint_state = {}
 	attempts = 1
+	mask_chosen = false
+	if modifiers.get("arcade", false) or modifiers.has("mode"):
+		SaveManager.add_stat("arcade_runs")
 	Score.reset()
 	_apply_time_scale()
 	change_scene(LEVEL_SCENE)
@@ -111,6 +116,7 @@ func replay_mission(mission_id: String, character_id := "", mods := {}) -> void:
 
 func mission_complete(result: Dictionary) -> void:
 	last_result = result
+	result["masks_unlocked"] = Masks.check_all()
 	set_slowmo(1.0)
 	change_scene(RESULTS_SCENE)
 

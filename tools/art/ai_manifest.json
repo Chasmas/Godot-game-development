@@ -34,6 +34,12 @@
     },
     "mom": {
      "prompt": "Cass Moreno's mother: a kind, tired woman in her late 50s with greying auburn hair in a loose bun, reading glasses on a chain, a cardigan over a floral blouse, holding a beige telephone receiver to her ear, warm kitchen light, soft worried smile."
+    },
+    "cass_star": {
+     "refs": [
+      "cass"
+     ],
+     "prompt": "Cass Moreno, the same woman as the reference: long wavy auburn hair, red leather jacket, no headset. Over her left eye she has painted a big bold five-pointed star in shiny metallic GOLD greasepaint, thick and opaque, the star's points reaching her eyebrow and cheekbone, catching the light - it must read clearly even as a tiny thumbnail. Hard, determined, grieving expression, jaw set."
     }
    }
   },
@@ -298,6 +304,167 @@
     },
     "ev_photo_nursery": {
      "prompt": "An old faded Polaroid of two children, a boy of about ten with curly brown hair and a red-haired girl of about eight, sitting on the hood of a black Cadillac wearing paper gold stars, sunny 1970s California driveway; handwriting on the border: My two stars."
+    },
+    "t_tape": {
+     "prompt": "Extreme close-up of a black VHS tape with a handwritten label reading HOTSHOT in red marker being pushed into a top-loading VCR, the VCR's green LED clock blinking 12:00, a dark room lit only by the blue glow of a CRT television, dust in the light."
+    },
+    "t_drive": {
+     "prompt": "Cass Moreno driving an old red Cadillac alone at night on an empty desert highway, seen through the rain-streaked windscreen, her face lit green by the dashboard and orange by passing sodium lights, eyes hard, the road stretching into darkness.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "t_star": {
+     "prompt": "Extreme close-up of Cass Moreno's left eye framed by a shiny gold greasepaint five-pointed star painted over it, a hot pink neon reflection in her iris, one tear cutting through the gold paint, lashes and skin texture in painterly detail.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "t_arsenal": {
+     "prompt": "Top-down view of a cheap motel bedspread with things laid out neatly in a row: a baseball bat wrapped in tape, a revolver, a switchblade, a pump shotgun, a stack of Polaroids of different men, a film call sheet with names crossed out in red, a room key on a plastic tag, striped neon light falling through window blinds."
+    },
+    "t_corridor": {
+     "prompt": "A long second-floor motel walkway at night in heavy rain, a row of numbered doors, one door half open spilling warm light and a long shadow, a flickering pink neon sign reflected in the puddles, an ice machine humming, nobody in sight."
+    },
+    "t_dogs": {
+     "prompt": "Behind a rusted chain-link fence topped with razor wire in a salvage yard at night, a pack of big guard dogs stand in the dust, their eyes glowing in the dark, one sodium lamp overhead, stacked wrecked cars, drifting dust."
+    },
+    "t_studio": {
+     "prompt": "An empty 1980s TV game-show studio: the audience seats are filled with rows of pale shop mannequins wearing party hats, a giant prize wheel with neon bulbs, a red APPLAUSE sign lit up, spotlights cutting through haze, confetti on the floor."
+    },
+    "t_fire": {
+     "prompt": "The silhouette of a huge man in a bulky fireproof suit standing still in front of a wall of roaring flame on a film soundstage, a burning car behind him, embers swirling, the lights of studio rigs above, dramatic backlight."
+    },
+    "t_mansion": {
+     "prompt": "The grand staircase of a decaying gothic mansion at night, blood-red rain running down tall arched windows, a crystal chandelier swaying, thick fog on the floor, tall thin shadowy figures standing motionless at the top of the stairs, candles guttering."
+    },
+    "t_monitors": {
+     "prompt": "A dark TV control room with a wall of thirty glowing CRT monitors, each showing security camera footage of the same red-haired woman in a red leather jacket from a different angle, an empty swivel chair in front of the desk, cigarette smoke in the blue light.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "t_marv": {
+     "prompt": "Close-up of TV host Marv Kessel laughing into a microphone, shown on a curved CRT screen with rolling scan lines and colour bleeding, big white teeth, sweat, a studio light flaring behind him, unsettling.",
+     "refs": [
+      "marv"
+     ]
+    },
+    "t_phone": {
+     "prompt": "A motel payphone at night in the rain, the handset hanging off the hook on its metal cord and swinging, the coin slot glowing, a neon VACANCY sign buzzing above, puddles reflecting magenta and cyan."
+    },
+    "t_walk": {
+     "prompt": "Cass Moreno walking straight toward the camera down a wet neon-lit street at night, a baseball bat hanging from one hand, her red leather jacket open, the gold star painted over her left eye, a car burning behind her throwing orange light and smoke, low heroic angle.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "arlo_wide": {
+     "prompt": "Inside a cluttered salvage-yard office trailer at night: old Arlo, a skinny grey-bearded man in a stained undershirt, sunk in a busted recliner surrounded by six small TVs showing security feeds, a sleeping bulldog at his feet, beer cans, Cass Moreno standing in the doorway in her red leather jacket, dusty lamp light.",
+     "refs": [
+      "arlo",
+      "cass_star"
+     ]
+    },
+    "cass_listens": {
+     "prompt": "Over-the-shoulder shot past an old man's grey head onto Cass Moreno's face as she listens, jaw clenched, eyes wet, the gold star over her left eye, lit by the blue flicker of TV screens in a dark trailer.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "fire_windshield": {
+     "prompt": "Point of view from inside a dark truck cab at night looking through a dusty windshield: out on the desert road a car is engulfed in a towering column of fire, the glass reflecting the flames, a thermos and a crumpled blanket on the dashboard."
+    },
+    "dutch_3am": {
+     "prompt": "At 3 a.m. in the desert, a huge bald man in coveralls walks away from the camera toward a lone stunt car parked on the road, carrying a metal toolbox, his long shadow thrown by a single work light, stars overhead, a sleeping film crew's trailers in the distance."
+    },
+    "vance_boys": {
+     "prompt": "A faded 1950s snapshot look: two young brothers crouched on a sunny backyard sidewalk, the younger one holding a magnifying glass over the ground with a thin wisp of smoke rising, smiling too calmly, the older boy looking away uneasy, washed-out Kodachrome colours."
+    },
+    "machine_close": {
+     "prompt": "Macro close-up of a 1980s answering machine: the tiny cassette spinning behind a smoked plastic window, the red MESSAGE light blinking, the speaker grille, rain light from a window sliding across the plastic."
+    },
+    "earl_tv": {
+     "prompt": "A local TV news interview shown on a CRT: an old man in a cardigan standing in a motel doorway at night, police lights behind him, a news microphone held up to him, a lower-third banner with no readable text, scan lines.",
+     "refs": [
+      "earl"
+     ]
+    },
+    "phone_cass": {
+     "prompt": "Cass Moreno in a dark motel lobby pressing an old beige telephone receiver to her ear, the gold star over her left eye, bloodied knuckles, neon from the window cutting across her face, the cord stretched tight, suspicious and furious.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "rudy_backstage": {
+     "prompt": "Rudy, a frantic skinny floor manager with a headset, huge 80s glasses and a clipboard, rushing down a cramped TV studio backstage corridor full of cables, flight cases and a rack of sequined costumes, a red ON AIR light above a door.",
+     "refs": [
+      "rudy"
+     ]
+    },
+    "tommy_grin": {
+     "prompt": "Tommy Moreno, a young stuntman with messy dark hair, grinning in the driver's seat of a black Cadillac at night in the desert, a fire-proof racing suit half zipped, helmet on his lap, lit by the film crew's big lights through the windscreen.",
+     "refs": [
+      "tommy"
+     ]
+    },
+    "h_door": {
+     "prompt": "A motel manager's back office seen from the doorway as the door swings open: Lyle Harcourt, a heavy balding man in a sweat-stained short-sleeve shirt and loosened tie, behind a desk covered in VHS tapes, a pump shotgun lying on the blotter, a bank of small monitors showing the motel's hallways, a single green banker's lamp, cigarette smoke.",
+     "refs": [
+      "harcourt"
+     ]
+    },
+    "h_reveal": {
+     "prompt": "Close-up of Lyle Harcourt, a heavy balding sweating man, recognising someone: his eyes wide, the reflection of a gold star in his glasses, an old tarnished FIRE WATCH badge pinned to his shirt, monitor glow on his face.",
+     "refs": [
+      "harcourt"
+     ]
+    },
+    "h_alarm": {
+     "prompt": "A fat hand slamming a red alarm button under a motel front desk, the lobby behind flooding red with a rotating light, a bell ringing on the wall, keys swinging on their hooks."
+    },
+    "h_down": {
+     "prompt": "Lyle Harcourt slumped on the floor against a dented filing cabinet in a wrecked motel office, exhausted and beaten but alive, holding an old faded Polaroid in his shaking hand, spilled VHS tapes around him, red alarm light washing the room.",
+     "refs": [
+      "harcourt"
+     ]
+    },
+    "h_polaroid": {
+     "prompt": "Close-up of an old faded 1987 Polaroid held in a trembling hand: a desert film crew posing in front of a black Cadillac stunt car, a young smiling stuntman in a racing suit in the middle, a heavy man at the edge holding a red fire extinguisher, one face scratched out with a pen."
+    },
+    "d_stage": {
+     "prompt": "A live TV game-show stage: a huge bald man with burn scars in a silver fireproof suit stands in the centre spotlight lighting the pilot flame of his flamethrower, rows of pale mannequins in party hats in the audience, a giant prize wheel behind him, cameras on cranes pointed at him.",
+     "refs": [
+      "dutch"
+     ]
+    },
+    "d_tote": {
+     "prompt": "A giant 1980s electronic tote board over a TV studio with two big glowing columns labelled with numbers only, digits flipping fast, a telephone-bank of empty operators' desks below, all phones ringing, lights flashing."
+    },
+    "d_changeorder": {
+     "prompt": "Extreme close-up of a crumpled, scorched film-production change-order form on a burning stage floor, a signature at the bottom in elegant loopy handwriting, a thumbprint in soot, embers drifting across it. No other readable text."
+    },
+    "d_cameras": {
+     "prompt": "Cass Moreno from behind in her red leather jacket shooting out a row of TV studio cameras one after another, each camera exploding in sparks and glass, the ON AIR sign flickering, smoke and fire in the background.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "b_party": {
+     "prompt": "A burning Hollywood mansion ballroom during a macabre party: ghostly pale guests in 1980s evening wear frozen mid-applause, and walking through them a young stuntman whose racing suit and skin are charred and still smouldering, his eyes kind and sad, fire dripping from the chandeliers.",
+     "refs": [
+      "tommy_burnt"
+     ]
+    },
+    "b_embrace": {
+     "prompt": "On the scorched floor of a burning ballroom, Cass Moreno kneels and holds her charred brother in her arms while small flames still flicker on him, she is crying, the gold star over her eye streaked, rows of pale ghostly guests watching silently.",
+     "refs": [
+      "cass_star",
+      "tommy_burnt"
+     ]
+    },
+    "b_credits": {
+     "prompt": "End credits rolling on an old CRT television in a dark empty motel room at dawn: white lines of credits scrolling on black, one line near the bottom glowing brighter than the rest, a hand reaching toward the screen, rain on the window."
     }
    }
   },
@@ -402,6 +569,9 @@
     "chandelier": {
      "prompt": "A crashed crystal chandelier lying broken on the floor, seen from directly above, shattered crystals scattered around, square.",
      "size": "1024x1024"
+    },
+    "car_hero": {
+     "prompt": "A cherry-red 1970s Cadillac Eldorado convertible with the top down, seen from directly above, the front of the car pointing to the RIGHT, white leather seats, polished chrome bumpers and trim, a big hand-painted gold five-pointed star on the hood, long and low, gleaming, clearly the hero car."
     }
    }
   },
@@ -499,6 +669,159 @@
     },
     "back_to_the_futon": {
      "prompt": "Title: BACK TO THE FUTON. Tagline: He's never been late for a nap. Key art: a teen in a puffer vest riding a flying futon trailing fire tracks, a clock tower behind him, lightning."
+    }
+   }
+  },
+  "weapons": {
+   "style": "Video game weapon icon for a 1980s neon-noir action game HUD: the single object seen in a clean flat side view, pointing to the RIGHT, lying horizontally, centred and filling the frame width, detailed realistic painted style with a hot-pink and cyan neon rim light and a subtle glow, on a fully transparent background, no hands, no text, no floor, no shadow.",
+   "defaults": {
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "weapon_fists": {
+     "prompt": "A pair of clenched bare fists with taped knuckles and a little blood on the tape, side by side."
+    },
+    "weapon_bat": {
+     "prompt": "A worn wooden baseball bat with a black grip tape handle, dents and a few nails driven through the barrel."
+    },
+    "weapon_boomstick": {
+     "prompt": "A sawn-off double-barrelled shotgun with a short walnut pistol grip and a leather shell loop."
+    },
+    "weapon_bottle": {
+     "prompt": "A full bottle of cheap tequila with a faded label (no readable text) and a cork, amber liquid."
+    },
+    "weapon_brick": {
+     "prompt": "A single chipped red house brick with mortar crumbs stuck to it."
+    },
+    "weapon_broken_bottle": {
+     "prompt": "The neck of a smashed green glass bottle held as a weapon, jagged glittering shards at the broken end."
+    },
+    "weapon_flamethrower": {
+     "prompt": "A home-made flamethrower: a scratched red propane tank strapped to a wand with a pilot flame burning at the nozzle, hoses and duct tape."
+    },
+    "weapon_glass_shard": {
+     "prompt": "A long jagged shard of window glass with a cloth rag wrapped round one end as a grip."
+    },
+    "weapon_hotshot": {
+     "prompt": "A gold-plated long-barrelled prop revolver with engraved scrollwork and ivory grips, gleaming, a movie-star gun."
+    },
+    "weapon_knife": {
+     "prompt": "An open switchblade knife with a black pearl handle and a polished chrome blade."
+    },
+    "weapon_machete": {
+     "prompt": "A long machete with a chipped blade and a black rubber handle, a strip of red cloth tied to the lanyard hole."
+    },
+    "weapon_pipe": {
+     "prompt": "A length of heavy grey lead pipe with a threaded elbow joint at one end."
+    },
+    "weapon_pistol": {
+     "prompt": "A black 9mm service pistol, police issue, matte finish, magazine inserted."
+    },
+    "weapon_revolver": {
+     "prompt": "A .357 magnum revolver with a six-inch steel barrel and worn wooden grips."
+    },
+    "weapon_rifle": {
+     "prompt": "A black semi-automatic assault rifle with a curved magazine and a carry handle."
+    },
+    "weapon_shotgun": {
+     "prompt": "A pump-action 12 gauge shotgun with a wooden pump and stock and a long barrel."
+    },
+    "weapon_smg": {
+     "prompt": "A compact 1980s submachine gun with a folding wire stock and a long straight magazine."
+    },
+    "weapon_whisper": {
+     "prompt": "A slim .22 pistol with a long cylindrical silencer screwed on the barrel."
+    }
+   }
+  },
+  "masks": {
+   "style": "A single mask or headpiece shown alone, front view, floating centred on a fully transparent background, as a collectible item for a 1980s neon-noir action game: realistic oil painting with visible brushwork, hot magenta and cyan neon rim light, warm key light, crisp silhouette, no face or head inside it unless described, no text.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "star": {
+     "prompt": "A pale theatre half-mask with a big shiny gold five-pointed greasepaint star painted over the left eye hole, cracked stage makeup at the edges."
+    },
+    "angel": {
+     "prompt": "A white surgical face mask with delicate painted angel wings on both cheeks, a thin gold halo wire above it."
+    },
+    "cowboy": {
+     "prompt": "A sun-bleached cowboy Stetson with a red paisley bandana tied below it as if over a jaw, dusty."
+    },
+    "devil": {
+     "prompt": "A film clapperboard snapped in half, the two broken pieces arranged like devil horns on a black leather headband, red light."
+    },
+    "dog": {
+     "prompt": "A chewed-up leather studded dog collar wrapped around a crude papier-mache dog muzzle mask with teeth drawn on in black marker."
+    },
+    "fool": {
+     "prompt": "A jester's painted face mask with two shiny brass arcade tokens glued over the eye holes, a tiny bell on the tip."
+    },
+    "ghost": {
+     "prompt": "A classic Halloween trick-or-treat sheet ghost costume: a soft white cotton sheet draped over nothing, two small round eyeholes with singed brown edges, the fabric catching cyan moonlight, eerie but playful."
+    },
+    "king": {
+     "prompt": "A cheap gold plastic burger-restaurant crown with rhinestone sunglasses resting on it, a little ketchup stain."
+    },
+    "king_hidden": {
+     "prompt": "A blank white face mask with a large bank cheque taped over it with silver duct tape, the amount scribbled out."
+    },
+    "saint": {
+     "prompt": "A white hockey goalie mask with a halo made of silver gaffer tape above it and a white clerical collar tied beneath."
+    },
+    "soldier": {
+     "prompt": "An olive-drab army helmet with camouflage face paint smeared across a mask below it and a stitched name tape that reads NOBODY."
+    }
+   }
+  },
+  "covers": {
+   "style": "Painted VHS box cover art for a 1980s neo-noir action movie, portrait orientation, realistic oil painting in the style of 1980s movie posters, deep indigo shadows, hot magenta and cyan neon, warm amber highlights, dramatic composition with the main subject in the middle, leave the top fifth and bottom fifth calm and dark for a title to be printed later, no text, no letters, no logos.",
+   "defaults": {
+    "size": "1024x1536",
+    "quality": "high"
+   },
+   "entries": {
+    "cover_m01": {
+     "prompt": "Cass Moreno in a red leather jacket with a gold star painted over her left eye, holding a baseball bat, standing in front of the Sunset Palms motel at night in the rain, a VACANCY neon sign, palm trees, a man silhouetted in a lit office window above.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "cover_m02": {
+     "prompt": "A salvage yard at night seen through chain-link: a pack of snarling guard dogs with glowing eyes in the foreground, stacked wrecked cars, a sodium lamp, Cass Moreno small in the background climbing over the fence.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "cover_m03": {
+     "prompt": "A TV studio soundstage in flames: a huge bald man in a silver fireproof suit with a flamethrower, cameras on cranes, a game-show prize wheel burning behind him, Cass Moreno in the foreground with a shotgun, lit by fire.",
+     "refs": [
+      "dutch",
+      "cass_star"
+     ]
+    },
+    "cover_m04": {
+     "prompt": "A gothic mansion on a hill under blood-red rain and lightning, demons and pale figures in every window, Cass Moreno in the foreground in a nightgown under her red leather jacket holding a candle and a revolver, the gold star over her eye running like tears.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "cover_m05": {
+     "prompt": "The interior of a glittering 1990 Las Vegas style casino-palace, a casting call line of hopefuls, a huge neon GALAXY planet sign, Cass Moreno older with shorter hair in a sequinned jacket looking over her shoulder.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "cover_m06": {
+     "prompt": "A small desert police station at night with police cars and flashing lights, rain, a lone woman in a red jacket walking up the steps carrying a duffel bag, a sheriff watching from the door."
+    },
+    "cover_m07": {
+     "prompt": "The Hollywood Hills at night on fire, a modern glass villa on the ridge glowing, helicopters with searchlights, a tiny figure standing in front of the flames."
     }
    }
   }

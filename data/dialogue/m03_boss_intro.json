@@ -4,28 +4,39 @@
   "a": {
    "speaker": "dutch",
    "text": "Well, look at that jawline. You've got his jawline. Hold still, I'll get your good side.",
-   "next": "b"
+   "next": "a2",
+   "shot": "d_stage"
   },
   "b": {
    "speaker": "cass",
    "text": "You went back to the car at three in the morning.",
-   "next": "c"
+   "next": "c",
+   "shot": "d_stage"
   },
   "c": {
    "speaker": "dutch",
    "text": "Four minutes past. I'm a professional. Fire bars, doubled. Pads, pulled. Extinguishers, emptied into the sand. Tommy even waved at me.",
-   "next": "d"
+   "next": "d",
+   "shot": "dutch_3am"
   },
   "d": {
    "speaker": "dutch",
    "text": "Fire's honest, kid. It doesn't care who the star is.",
-   "next": "e"
+   "next": "e",
+   "shot": "d_stage"
   },
   "e": {
    "speaker": "pa",
    "text": "WE ARE LIVE IN FIVE. FOUR. THREE...",
    "sfx": "on_air_buzz",
-   "event": "boss_start"
+   "event": "boss_start",
+   "shot": "d_tote"
+  },
+  "a2": {
+   "speaker": "narration",
+   "text": "Stage Nine. A live studio audience of four hundred mannequins, every one in a party hat. The APPLAUSE sign is already lit.",
+   "shot": "d_stage",
+   "next": "b"
   }
  }
 }

@@ -50,13 +50,13 @@
   "h": {
    "speaker": "rudy",
    "text": "Rudy! Floor manager! Nobody ever— okay. Listen. Security's jumpy, the sprinklers are 'decorative', and Mr. Kowalski says nobody touches his fire bars.",
-   "shot": "stage_door",
+   "shot": "rudy_backstage",
    "next": "h2"
   },
   "h2": {
    "speaker": "rudy",
    "text": "Break a leg. Not literally. Legal was very clear about that this week.",
-   "shot": "stage_door",
+   "shot": "rudy_backstage",
    "next": "i"
   },
   "i": {

@@ -887,5 +887,18 @@
    ],
    "angle": 270
   }
+ ],
+ "tasks": [
+  {
+   "id": "feeds",
+   "kind": "film_cameras",
+   "text": "STOP THE DREAM RECORDING"
+  },
+  {
+   "id": "tape",
+   "kind": "collect",
+   "item": "tape_dream",
+   "text": "FIND THE WRAP-PARTY TAPE"
+  }
  ]
 }

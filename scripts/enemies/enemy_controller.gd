@@ -34,6 +34,7 @@ var state: State = State.IDLE
 var facing := Vector2.RIGHT
 var hit_radius := 6.0
 var armor_left := 0
+var _mask_speed := 1.0   ## the devil's mask makes everyone faster
 var patrol_points: PackedVector2Array = []
 var required := true                # counts toward "clear the floor"
 var debug_draw := false
@@ -116,6 +117,10 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	_home_facing = facing
 	_look_t = randf_range(2.0, 4.5)
 	armor_left = data.armor
+	var mp = get_tree().get_first_node_in_group("player") if is_inside_tree() else null
+	if mp and mp.get("persona"):
+		armor_left += int(mp.persona.enemy_extra_armor)
+		_mask_speed = float(mp.persona.enemy_speed_mult)
 	_home = global_position
 	look = data.palette
 	if data.palette in VARIED_PALETTES:
@@ -277,8 +282,8 @@ func _perceive() -> void:
 		view *= 0.45
 	if _dark_confused > 0.0:
 		view *= 0.5
-	if p.persona and p.persona.id == &"ghost":
-		view *= 0.6
+	if p.persona:
+		view *= p.persona.enemy_sight_mult   # the ghost fades, the star shines
 	var in_cone := absf(angle_difference(facing.angle(), to.angle())) < deg_to_rad(data.view_angle_deg * 0.5)
 	# you can creep right up behind someone if you move slowly; running is heard/felt
 	var close := 10.0 if (p.is_quiet() or dark) else 34.0
@@ -797,6 +802,7 @@ func _separation() -> Vector2:
 
 # ======================================================================= navigation
 func _go_to(target: Vector2, speed: float) -> Vector2:
+	speed *= _mask_speed
 	_repath_t -= get_physics_process_delta_time()
 	if _path.is_empty() or _repath_t <= 0.0 or (_path.size() > 0 and _path[_path.size() - 1].distance_to(target) > 24.0):
 		_repath_t = 0.45 + randf() * 0.2

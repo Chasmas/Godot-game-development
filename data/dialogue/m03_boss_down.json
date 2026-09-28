@@ -4,49 +4,58 @@
   "a": {
    "speaker": "dutch",
    "text": "Hah... hah. Look at the tote board, kid. Look at those numbers. They love you.",
-   "next": "b"
+   "next": "b",
+   "shot": "fireman_down"
   },
   "b": {
    "speaker": "cass",
    "text": "Who paid you?",
-   "next": "c"
+   "next": "c",
+   "shot": "fireman_down"
   },
   "c": {
    "speaker": "dutch",
    "text": "Vance paid. Vance always pays. But Vance didn't sign the change order.",
-   "next": "d"
+   "next": "d",
+   "shot": "fireman_down"
   },
   "d": {
    "speaker": "cass",
    "text": "Then who did?",
-   "next": "e"
+   "next": "e",
+   "shot": "fireman_down"
   },
   "e": {
    "speaker": "dutch",
    "text": "Moreno. T. Moreno. Nice handwriting. Loops on the capitals.",
-   "next": "f"
+   "next": "e2",
+   "shot": "d_changeorder"
   },
   "f": {
    "speaker": "cass",
    "text": "You're lying.",
-   "next": "g"
+   "next": "g",
+   "shot": "fireman_down"
   },
   "g": {
    "speaker": "dutch",
    "text": "Maybe. Ask why the sprinklers in here are dry. Same as the extinguishers. Somebody likes a theme.",
-   "next": "h"
+   "next": "h",
+   "shot": "d_changeorder"
   },
   "h": {
    "speaker": "pa",
    "text": "THE LINES ARE OPEN, CALIFORNIA! Dial ONE to FINISH HIM. Dial TWO to SPARE HIM. Operators are standing by!",
    "sfx": "tote_ding",
-   "next": "i"
+   "next": "i",
+   "shot": "d_tote"
   },
   "i": {
    "speaker": "narration",
    "text": "Above the stage the tote board ticks over. FINISH: 2,114,902. SPARE: 11.",
    "sfx": "tote_ding",
-   "next": "j"
+   "next": "j",
+   "shot": "d_tote"
   },
   "j": {
    "speaker": "cass",
@@ -63,34 +72,46 @@
       "dutch_spared": true
      }
     }
-   ]
+   ],
+   "shot": "fireman_down"
   },
   "k1": {
    "speaker": "cass",
    "text": "This one's for the viewers at home.",
    "event": "boss_execute",
-   "next": "k2"
+   "next": "k2",
+   "shot": "fireman_down"
   },
   "k2": {
    "speaker": "narration",
    "text": "The studio audience applauds. The applause is canned. It goes on a little too long.",
-   "sfx": "applause"
+   "sfx": "applause",
+   "shot": "canned_applause"
   },
   "s1": {
    "speaker": "cass",
    "text": "Show's over.",
    "event": "boss_spare",
-   "next": "s2"
+   "next": "s2",
+   "shot": "fireman_down"
   },
   "s2": {
    "speaker": "narration",
    "text": "She puts a bullet through the nearest camera. Then the next. Then the next. On forty million screens, the picture goes to snow.",
    "sfx": "tv_break",
-   "next": "s3"
+   "next": "s3",
+   "shot": "d_cameras"
   },
   "s3": {
    "speaker": "dutch",
-   "text": "They'll just cut to a commercial, kid. They always cut to a commercial."
+   "text": "They'll just cut to a commercial, kid. They always cut to a commercial.",
+   "shot": "fireman_down"
+  },
+  "e2": {
+   "speaker": "narration",
+   "text": "He fishes a scorched form out of his suit and presses it into her hand. The signature at the bottom has loops on the capitals.",
+   "shot": "d_changeorder",
+   "next": "f"
   }
  }
 }

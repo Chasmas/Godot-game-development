@@ -21,7 +21,7 @@ func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> v
 	is_player = player
 	missing = p_missing
 	sprite = Sprite2D.new()
-	sprite.texture = SpriteLib.corpse(palette, missing)
+	sprite.texture = SpriteLib.corpse(palette, missing, randi() % 4)
 	sprite.scale = Vector2(0.5, 0.5)
 	sprite.rotation = dir.angle() + randf_range(-0.4, 0.4)
 	add_child(sprite)

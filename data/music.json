@@ -1,10 +1,17 @@
 {
+	"teaser": {
+		"name": "Coming Attractions",
+		"layers": [
+			"res://music/intro_teaser.ogg"
+		],
+		"bpm": 128
+	},
 	"title": {
 		"name": "Neon Vigil",
 		"layers": [
 			"res://music/title_neon_vigil.ogg"
 		],
-		"bpm": 90
+		"bpm": 104
 	},
 	"apartment": {
 		"name": "Answering Machine",

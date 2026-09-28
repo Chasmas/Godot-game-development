@@ -11,7 +11,7 @@ signal activated(id: StringName)
 signal ended(id: StringName)
 
 const DEFS := {
-	&"spotlight": {"name": "SPOTLIGHT", "duration": 3.0, "cost": 1.0, "desc": "The world slows. You don't."},
+	&"spotlight": {"name": "SPOTLIGHT", "duration": 6.0, "cost": 1.0, "desc": "The world slows. You don't."},
 	&"blackout": {"name": "BLACKOUT", "duration": 4.0, "cost": 1.0, "desc": "Invisible while in darkness."},
 	&"dead_eye": {"name": "DEAD EYE", "duration": 3.0, "cost": 1.0, "desc": "Mark every visible enemy; each shot snaps to a mark."},
 	&"frenzy": {"name": "FRENZY", "duration": 5.0, "cost": 1.0, "desc": "Melee kills heal the combo. Can't stop."},
@@ -29,9 +29,21 @@ func setup(ability_id: StringName, p_owner: Node, p_charge_mult := 1.0) -> void:
 	id = ability_id if DEFS.has(ability_id) else &"spotlight"
 	owner_player = p_owner
 	charge_mult = p_charge_mult
-	Events.enemy_killed.connect(_on_kill)
-	Events.execution_performed.connect(_on_execution)
+	# the reel fills with points: style pays, spraying doesn't (about six
+	# or seven good kills a charge; a long combo gets there faster)
+	if not Score.score_changed.is_connected(_on_score):
+		Score.score_changed.connect(_on_score)
+	_last_score = Score.score
 	_emit()
+
+const POINTS_PER_CHARGE := 4500.0
+var _last_score := 0
+
+func _on_score(total: int) -> void:
+	var gained := total - _last_score
+	_last_score = total
+	if gained > 0:
+		add_charge(float(gained) / POINTS_PER_CHARGE)
 
 func _exit_tree() -> void:
 	if active:
@@ -42,12 +54,6 @@ func add_charge(v: float) -> void:
 		return
 	charge = clampf(charge + v * charge_mult, 0.0, 1.0)
 	_emit()
-
-func _on_execution(_e: Node) -> void:
-	add_charge(0.15)
-
-func _on_kill(_e: Node, info: Dictionary) -> void:
-	add_charge(0.12 if info.get("method", &"gun") == &"gun" else 0.2)
 
 func can_activate() -> bool:
 	if Game.modifiers.get("no_ability", false):
@@ -63,7 +69,9 @@ func activate() -> bool:
 	time_left = float(DEFS[id].duration)
 	match id:
 		&"spotlight":
-			Game.set_slowmo(0.35)
+			Game.set_slowmo(0.3)
+			if not Events.enemy_killed.is_connected(_on_kill_in_light):
+				Events.enemy_killed.connect(_on_kill_in_light)
 			Audio.play("slowmo_in")
 			Music.set_pitch(0.8)
 			PostFX.set_tint(Color(1.0, 0.85, 0.55, 0.25))
@@ -83,6 +91,12 @@ func _process(delta: float) -> void:
 	_emit()
 	if time_left <= 0.0:
 		_end()
+
+## Every kill in the spotlight buys a little more of it (up to the full reel).
+func _on_kill_in_light(_e: Node, _info: Dictionary) -> void:
+	if active and id == &"spotlight":
+		time_left = minf(time_left + 0.5, float(DEFS[id].duration))
+		Events.ability_bonus.emit(0.5)
 
 func _end() -> void:
 	active = false

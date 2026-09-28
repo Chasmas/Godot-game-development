@@ -393,8 +393,8 @@ static func weapon(key: String) -> Texture2D:
 		return load(OVERRIDES[key])
 	return make(WEAPONS.get(key, WEAPONS["pistol"]), "guard")
 
-static func corpse(palette_name: String, missing := "") -> Texture2D:
-	return SpriteForge.corpse(palette_name, false, missing)
+static func corpse(palette_name: String, missing := "", pose := 0) -> Texture2D:
+	return SpriteForge.corpse(palette_name, false, missing, pose)
 
 static func downed(palette_name: String) -> Texture2D:
 	return SpriteForge.corpse(palette_name, true)

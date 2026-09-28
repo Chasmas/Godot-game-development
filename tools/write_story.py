@@ -55,7 +55,8 @@ def prologue():
         ("d", "voice", "Rolling. Speed. HOTSHOT, scene forty, take one.", {"sfx": "vhs_static", "shot": "clapper"}),
         ("e", "tommy", "Hey. If this goes wrong, tell Mom I finally got top billing.", {"shot": "tommy_car"}),
         ("e1", "cass", "Tommy—", {"shot": "cass_close", "auto": 0.9}),
-        ("f", "narration", "Action.", {"event": "fire", "sfx": "explosion", "shot": "explosion"}),
+        ("f0", "voice", "ACTION!", {"event": "action", "shot": "clapper", "auto": 0.85}),
+        ("f", "narration", "The car goes up like the sun coming out of the ground.", {"event": "fire", "sfx": "explosion", "shot": "explosion"}),
         ("g", "voice", "...hold it. Hold it. Nobody move.", {"sfx": "vhs_static", "shot": "wreck"}),
         ("g1", "voice", "Keep the cameras rolling. That's the take.", {"shot": "wreck"}),
         ("g2", "narration", "Somebody drops an extinguisher. It bounces on the asphalt. It's empty. It rings like a bell.", {"shot": "extinguisher"}),
@@ -340,5 +341,93 @@ def campaign():
         f.write("\n")
 
 
+# ------------------------------------------------------------------ coverage
+# Long exchanges cut between angles instead of sitting on one painting:
+# a node here gets its own frame, and every line around it names its shot
+# so nothing inherits the wrong one.
+COVERAGE = {
+    "apartment_1988": {"c": "machine_close", "p2": "machine_close"},
+    "salvage_1988": {"b": "machine_close"},
+    "m01_phone": {"c": "phone_cass", "e": "phone_cass"},
+    "news_1988": {"e1": "earl_tv"},
+    "prologue": {"e": "tommy_grin", "c2": "tommy_grin"},
+    "studio_1988": {"h": "rudy_backstage", "h2": "rudy_backstage"},
+    "yermo_after": {"b": "arlo_wide", "c": "cass_listens", "f": "cass_listens", "l2": "fire_windshield",
+                    "w2": "dutch_3am", "y": "cass_listens", "z2": "cass_listens", "v": "vance_boys"},
+}
+
+def coverage():
+    for name, cuts in COVERAGE.items():
+        d = load(name)
+        last = d.get("shot", "")
+        for k, n in d["nodes"].items():
+            last = n.get("shot") or last
+            if last:
+                n["shot"] = last
+        for k, sid in cuts.items():
+            if k in d["nodes"]:
+                d["nodes"][k]["shot"] = sid
+        save(name, d)
+
+
+# ------------------------------------------------------------------ boss scenes
+# Every boss gets a painted scene on the way in and on the way out: a frame
+# per beat, and a little more of the story each time.
+def _after(d, key, new_key, node):
+    n = d["nodes"]
+    if new_key in n:          # already there (m01's scenes aren't rebuilt each run)
+        n[new_key].update({k: v for k, v in node.items() if k != "next"})
+        return
+    node["next"] = n[key].get("next")
+    if node["next"] is None:
+        node.pop("next")
+    n[key]["next"] = new_key
+    n[new_key] = node
+
+def _shots(d, table):
+    for k, sid in table.items():
+        if k in d["nodes"]:
+            d["nodes"][k]["shot"] = sid
+
+def boss_scenes():
+    d = load("m01_boss_intro")
+    _shots(d, {"a": "h_door", "b": "h_reveal", "c": "h_reveal", "d": "h_reveal", "e": "h_alarm"})
+    d["nodes"]["n0"] = {"speaker": "narration", "text": "The dust is still settling when she steps through. Lyle Harcourt hasn't left his desk. He's been watching her on six little screens since the parking lot.", "shot": "h_door", "next": "a"}
+    d["start"] = "n0"
+    _after(d, "d", "d2", {"speaker": "narration", "text": "Under the sweat stain on his shirt, a tin badge from 1987: FIRE WATCH. Nine years later, he's still wearing it.", "shot": "h_reveal"})
+    save("m01_boss_intro", d)
+
+    d = load("m01_boss_down")
+    _shots(d, {"a": "h_down", "b": "h_down", "c": "h_polaroid", "d": "h_down", "e": "h_down", "k1": "h_down", "s1": "h_down", "s2": "h_down"})
+    _after(d, "c", "c2", {"speaker": "narration", "text": "The Polaroid in his hand: the whole crew grinning in front of the car. Tommy in the middle. One face scratched out so hard the pen went through.", "shot": "h_polaroid"})
+    _after(d, "c2", "c3", {"speaker": "cass", "text": "Who's that?", "shot": "h_polaroid"})
+    _after(d, "c3", "c4", {"speaker": "harcourt", "text": "The one who signed the checks. You'll meet him. Everybody does, eventually. Usually on television.", "shot": "h_down"})
+    save("m01_boss_down", d)
+
+    d = load("m03_boss_intro")
+    _shots(d, {"a": "d_stage", "b": "d_stage", "c": "dutch_3am", "d": "d_stage", "e": "d_tote"})
+    _after(d, "a", "a2", {"speaker": "narration", "text": "Stage Nine. A live studio audience of four hundred mannequins, every one in a party hat. The APPLAUSE sign is already lit.", "shot": "d_stage"})
+    save("m03_boss_intro", d)
+
+    d = load("m03_boss_down")
+    _shots(d, {"a": "fireman_down", "b": "fireman_down", "c": "fireman_down", "d": "fireman_down", "e": "d_changeorder", "f": "fireman_down",
+               "g": "d_changeorder", "h": "d_tote", "i": "d_tote", "j": "fireman_down", "k1": "fireman_down", "k2": "canned_applause",
+               "s1": "fireman_down", "s2": "d_cameras", "s3": "fireman_down"})
+    _after(d, "e", "e2", {"speaker": "narration", "text": "He fishes a scorched form out of his suit and presses it into her hand. The signature at the bottom has loops on the capitals.", "shot": "d_changeorder"})
+    save("m03_boss_down", d)
+
+    d = load("m04_boss_intro")
+    _shots(d, {"a": "b_party", "b": "b_party", "c": "b_party", "d": "b_party", "e": "burning_tommy"})
+    d["nodes"]["n0"] = {"speaker": "narration", "text": "The ballroom is full. Everyone she ever put down is here, dressed for a premiere, clapping without a sound. Nobody's eyes move. Except his.", "shot": "b_party", "next": "a"}
+    d["start"] = "n0"
+    save("m04_boss_intro", d)
+
+    d = load("m04_boss_down")
+    _shots(d, {"a": "burning_tommy", "b": "b_party", "c": "red_dot", "d": "burning_tommy", "e": "burning_tommy",
+               "k1": "burning_tommy", "k2": "dead_applause", "s1": "b_embrace", "s2": "b_embrace", "s3": "b_credits"})
+    _after(d, "c", "c2", {"speaker": "narration", "text": "Up in the smoke, where the ceiling should be: a row of little red lights. Recording. They always were.", "shot": "red_dot"})
+    save("m04_boss_down", d)
+
+
 if __name__ == "__main__":
-    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); calls(); teaser(); speakers(); campaign()
+    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); calls(); teaser(); speakers(); campaign(); coverage(); boss_scenes()

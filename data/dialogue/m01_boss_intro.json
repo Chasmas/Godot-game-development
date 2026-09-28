@@ -1,31 +1,48 @@
 {
-  "start": "a",
-  "nodes": {
-    "a": {
-      "speaker": "harcourt",
-      "text": "Well. You're definitely not housekeeping.",
-      "next": "b"
-    },
-    "b": {
-      "speaker": "harcourt",
-      "text": "I know that star. Aurelio sent you, didn't he? Tell him the tapes stay here. That was the arrangement.",
-      "next": "c"
-    },
-    "c": {
-      "speaker": "cass",
-      "text": "I don't know any Aurelio.",
-      "next": "d"
-    },
-    "d": {
-      "speaker": "harcourt",
-      "text": "No. Of course you don't. That's the cruel part.",
-      "next": "e"
-    },
-    "e": {
-      "speaker": "harcourt",
-      "text": "SECURITY. FRONT DESK. Now.",
-      "sfx": "intercom",
-      "event": "boss_start"
-    }
+ "start": "n0",
+ "nodes": {
+  "a": {
+   "speaker": "harcourt",
+   "text": "Well. You're definitely not housekeeping.",
+   "next": "b",
+   "shot": "h_door"
+  },
+  "b": {
+   "speaker": "harcourt",
+   "text": "I know that star. Aurelio sent you, didn't he? Tell him the tapes stay here. That was the arrangement.",
+   "next": "c",
+   "shot": "h_reveal"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "I don't know any Aurelio.",
+   "next": "d",
+   "shot": "h_reveal"
+  },
+  "d": {
+   "speaker": "harcourt",
+   "text": "No. Of course you don't. That's the cruel part.",
+   "next": "d2",
+   "shot": "h_reveal"
+  },
+  "e": {
+   "speaker": "harcourt",
+   "text": "SECURITY. FRONT DESK. Now.",
+   "sfx": "intercom",
+   "event": "boss_start",
+   "shot": "h_alarm"
+  },
+  "n0": {
+   "speaker": "narration",
+   "text": "The dust is still settling when she steps through. Lyle Harcourt hasn't left his desk. He's been watching her on six little screens since the parking lot.",
+   "shot": "h_door",
+   "next": "a"
+  },
+  "d2": {
+   "speaker": "narration",
+   "text": "Under the sweat stain on his shirt, a tin badge from 1987: FIRE WATCH. Nine years later, he's still wearing it.",
+   "shot": "h_reveal",
+   "next": "e"
   }
+ }
 }

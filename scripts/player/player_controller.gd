@@ -29,7 +29,22 @@ var aim_dir := Vector2.RIGHT
 var aim_point := Vector2.ZERO
 var prompt := ""
 var equipment_left := 2
+var bones := 0
+## Stamina: a roll costs a chunk, sprinting burns it steadily; it comes back
+## quickly once she stops spending it. Run it dry sprinting and she's winded
+## (no sprint) until a third is back.
+const STAMINA_MAX := 100.0
+const ROLL_COST := 30.0
+const SPRINT_DRAIN := 20.0      ## per second: five seconds of flat-out running
+const STAMINA_REGEN := 34.0     ## per second, after the pause below
+const STAMINA_DELAY := 0.55
+var stamina := STAMINA_MAX
+var _stamina_rest := 0.0
+var _winded := false
+var _stamina_denied := 0.0
+var _stamina_ring: Node2D   ## meat bones to throw to the dogs (thrown before flares)
 var extra_hits := 0
+var _volley_ready := false   ## the cowboy's fan shot, armed by a dash
 var input_enabled := true
 var level: Node                       # the Level node (for spawning)
 
@@ -98,17 +113,36 @@ func _ready() -> void:
 	z_index = 2
 	Events.enemy_killed.connect(_on_any_kill)
 
+## Re-reads the mask after it's been picked at the start of a job.
+func apply_mask() -> void:
+	persona = Masks.current() if data.id == &"cass" else DB.persona(data.persona)
+	ability.setup(data.ability, self, persona.ability_charge_mult if persona else 1.0)
+	extra_hits = 1 if (persona and persona.extra_hit) else 0
+	guard_hits = 0 if (persona and persona.first_hit_kills) else int(Difficulty.value("player_guard_hits"))
+	if persona and persona.first_hit_kills:
+		extra_hits = 0
+	if persona and persona.no_guns:
+		for i in slots.size():
+			if slots[i] and (slots[i] as WeaponInstance).data.is_firearm():
+				slots[i] = null
+		_refresh_weapon()
+	Events.hint.emit(tr(persona.display_name) if persona else "", 1.6)
+
 func setup(p_data: CharacterData) -> void:
 	data = p_data
 	if data == null:
 		data = CharacterData.new()
-	persona = DB.persona(data.persona)
+	# Cass wears the mask chosen for the job; the others their own persona
+	persona = Masks.current() if data.id == &"cass" else DB.persona(data.persona)
 	visual.setup(data.palette)
 	visual.set_persona_overlay(persona != null)
 	ability.setup(data.ability, self, persona.ability_charge_mult if persona else 1.0)
 	equipment_left = data.equipment_count
 	extra_hits = 1 if (persona and persona.extra_hit) else 0
 	guard_hits = int(Difficulty.value("player_guard_hits"))
+	if persona and persona.first_hit_kills:
+		guard_hits = 0
+		extra_hits = 0
 	if data.start_weapon != &"":
 		var w := DB.weapon(data.start_weapon)
 		if w:
@@ -157,6 +191,17 @@ func _tick_timers(pd: float) -> void:
 	respawn_grace = maxf(0.0, respawn_grace - pd)
 	_fire_cd = maxf(0.0, _fire_cd - pd)
 	_dash_cd = maxf(0.0, _dash_cd - pd)
+	_stamina_denied = maxf(0.0, _stamina_denied - pd * 2.5)
+	if _stamina_rest > 0.0:
+		_stamina_rest -= pd
+	elif stamina < STAMINA_MAX:
+		stamina = minf(STAMINA_MAX, stamina + STAMINA_REGEN * pd)
+	if _winded and stamina >= STAMINA_MAX * 0.34:
+		_winded = false
+	if _stamina_ring == null:
+		_stamina_ring = StaminaRing.new()
+		_stamina_ring.player = self
+		add_child(_stamina_ring)
 	_iframes = maxf(0.0, _iframes - pd)
 	_melee_cd = maxf(0.0, _melee_cd - pd)
 	_kick_cd = maxf(0.0, _kick_cd - pd)
@@ -321,12 +366,16 @@ func _movement(move: Vector2, pd: float) -> void:
 			else:
 				_end_dash()
 		return
-	var speed := data.move_speed
+	var speed := data.move_speed * (persona.move_mult if persona else 1.0)
 	sneak_held = input_enabled and Input.is_action_pressed("sneak")
 	if sneak_held:
 		speed *= 0.45
-	elif Input.is_action_pressed("sprint") and move.length() > 0.1:
+	elif Input.is_action_pressed("sprint") and move.length() > 0.1 and not _winded and stamina > 0.0:
 		speed *= data.sprint_mult
+		stamina = maxf(0.0, stamina - SPRINT_DRAIN * pd)
+		_stamina_rest = STAMINA_DELAY * 0.5
+		if stamina <= 0.0:
+			_winded = true   # run dry: no sprinting until she's got a third back
 	if _adrenaline_t > 0.0:
 		speed *= 1.3
 	if _stagger > 0.0:
@@ -341,16 +390,28 @@ func _movement(move: Vector2, pd: float) -> void:
 func _start_dash() -> void:
 	if _dash_cd > 0.0 or _dash_t > 0.0:
 		return
+	if stamina < ROLL_COST:
+		# out of breath: no roll, just a stumble of the shoulders
+		_stamina_denied = 1.0
+		Audio.play_at("dash", global_position, -18.0, 0.0)
+		return
+	stamina -= ROLL_COST
+	_stamina_rest = STAMINA_DELAY
 	_dash_dir = _last_move.normalized() if _last_move.length() > 0.2 else aim_dir
 	# shorter dodge: split the reduction between speed and time so it keeps
 	# its snap but doesn't cross a room
 	var sc := sqrt(Tuning.get_t().dash_distance_scale)
-	_dash_total = data.dash_time * sc
-	_dash_avg = data.dash_speed * sc
+	# a roll, not a blink: longer and a little slower, so the body has time
+	# to go over and come up - about the same ground covered
+	_dash_total = data.dash_time * sc * 1.8
+	_dash_avg = data.dash_speed * sc * 0.62
 	_dash_t = _dash_total
 	_dash_extend = 0.0
-	_dash_cd = data.dash_cooldown
-	_iframes = 0.13
+	_dash_cd = data.dash_cooldown * (persona.dash_cd_mult if persona else 1.0)
+	_volley_ready = persona != null and persona.dash_volley
+	_iframes = 0.2
+	visual.roll(_dash_dir, _dash_total)
+	Effects.dust(global_position, -_dash_dir, 0.8)
 	_tackled.clear()
 	collision_mask = Layers.WALK_MASK_PLAYER & ~Layers.LOW & ~Layers.GLASS & ~Layers.ENEMY
 	Audio.play_at("dash", global_position, -4.0)
@@ -360,6 +421,7 @@ func _start_dash() -> void:
 
 func _end_dash() -> void:
 	_dash_t = 0.0
+	Effects.dust(global_position, _dash_dir, 0.5)
 	collision_mask = Layers.WALK_MASK_PLAYER
 	velocity = _dash_dir * data.move_speed * 0.8   # roll out of it
 
@@ -541,20 +603,35 @@ func _try_shoot(w: WeaponInstance) -> void:
 	var bs := BulletSystem.get_system()
 	if bs:
 		bs.fire(origin, _forgiving_shot(aim_dir), w.data, self, spread)
+		if _volley_ready and _dash_cd > 0.0:
+			# the cowboy: out of a dash, the first shot fans out three
+			for side in [-1.0, 1.0]:
+				bs.fire(origin, _forgiving_shot(aim_dir).rotated(side * 0.12), w.data, self, spread)
+		_volley_ready = false
 	visual.kick_recoil(w.data.camera_kick * (0.35 if w.dual else 0.6))
 	visual.gun_recoil(left, 1.5 + w.data.camera_kick * 0.4)
 	var silenced := upgrades.has(&"silencer") or w.data.suppressed
 	var mscale := w.data.muzzle_scale * (0.5 if upgrades.has(&"silencer") else 1.0)
 	Effects.muzzle(origin, aim_dir, w.data.muzzle_color if not upgrades.has(&"silencer") else Color(1, 0.9, 0.7), w.data.pellets > 1 and not silenced, mscale)
-	if w.data.ejects_shells:
+	if w.data.id == &"shotgun":
+		# pump gun: the shell comes out when she racks it, a beat later
+		var sw := w
+		get_tree().create_timer(0.2, false).timeout.connect(func():
+			if not is_instance_valid(self) or current() != sw:
+				return
+			Audio.play_at("slide_rack", global_position, -9.0, 0.08)
+			visual.pump()
+			Effects.casing(visual.muzzle_global(false) - aim_dir * 7.0, aim_dir, false, true))
+	elif w.data.ejects_shells:
 		Effects.casing(origin - aim_dir * 5.0, aim_dir, left, w.data.pellets > 1)
 	Audio.play_at("suppressed" if upgrades.has(&"silencer") else w.data.sfx_fire, global_position, 0.0, 0.05)
 	Events.noise.emit(global_position, gun_noise(w), &"gunshot", self)
 	# every gun has its own weight: the shotgun shoves the camera back and
 	# freezes a hair, the SMG just buzzes
 	Events.camera_shake.emit(w.data.camera_kick * (0.8 if w.dual else 1.0))
-	if w.data.camera_kick >= 4.0:
-		Events.camera_nudge.emit(-aim_dir * w.data.camera_kick * 0.8)
+	# every shot shoves the view back along the barrel: a tap for the 9mm,
+	# a shove for the shotgun
+	Events.camera_nudge.emit(-aim_dir * w.data.camera_kick * (0.8 if w.data.camera_kick >= 4.0 else 0.45))
 	if w.data.fire_hit_stop > 0.0:
 		Events.hit_stop.emit(w.data.fire_hit_stop)
 	InputSetup.vibrate(0.2, clampf(w.data.camera_kick * 0.06, 0.08, 0.45), 0.08)
@@ -591,9 +668,10 @@ func _flame_shot(origin: Vector2, dir: Vector2) -> void:
 	Events.camera_shake.emit(0.6)
 
 func gun_noise(w: WeaponInstance) -> float:
+	var nm := persona.noise_mult if persona else 1.0
 	if upgrades.has(&"silencer"):
-		return minf(w.data.noise_radius, 60.0) * 0.5
-	return w.data.noise_radius
+		return minf(w.data.noise_radius, 60.0) * 0.5 * nm
+	return w.data.noise_radius * nm
 
 const DUAL_RATE := 1.6      ## combined fire rate vs one gun (not 2x)
 const DUAL_SPREAD := 1.35   ## each shot is less accurate
@@ -611,9 +689,18 @@ func _start_reload() -> void:
 		return
 	if w.ammo >= mag_size(w) and (not w.dual or w.ammo2 >= mag_size(w)):
 		return
-	_reload_t = w.data.reload_time * data.reload_mult * (0.55 if upgrades.has(&"quick_hands") else 1.0) * (DUAL_RELOAD if w.dual else 1.0)
+	_reload_t = w.data.reload_time * data.reload_mult * (persona.reload_mult if persona else 1.0) * (0.55 if upgrades.has(&"quick_hands") else 1.0) * (DUAL_RELOAD if w.dual else 1.0)
 	_reload_weapon = w
 	visual.reload_anim(_reload_t, "dual" if w.dual else ("shell" if w.data.pellets > 1 else "mag"))
+	# guns that keep their brass dump it all on the floor when reloading:
+	# the revolver's cylinder, the boomstick's two barrels
+	if not w.data.ejects_shells or w.data.id == &"boomstick":
+		var spent: int = mag_size(w) - w.ammo
+		var at := global_position + aim_dir * 4.0
+		for i in mini(spent, 8):
+			get_tree().create_timer(0.12 + i * 0.03, false).timeout.connect(func():
+				if is_instance_valid(self):
+					Effects.casing(at, aim_dir.rotated(randf_range(2.2, 4.0)), randf() < 0.5, w.data.pellets > 1))
 
 func _finish_reload() -> void:
 	var w := current()
@@ -694,7 +781,7 @@ func _melee_hit(heavy: bool) -> void:
 		info.lethal = (not unarmed and (w.data.lethal or heavy)) or method == &"counter"
 		info.heavy = heavy
 		info.knockback = 200.0 if heavy else 140.0
-		if unarmed and (data.melee_damage_mult > 1.5 or upgrades.has(&"brass_knuckles")):
+		if unarmed and (data.melee_damage_mult > 1.5 or upgrades.has(&"brass_knuckles") or (persona and persona.lethal_punch)):
 			info.lethal = true
 		var res := str(n.take_damage(info))
 		if res == "blocked":
@@ -720,6 +807,8 @@ func _melee_hit(heavy: bool) -> void:
 		Events.noise.emit(global_position, 90.0, &"voice", self)
 		if not unarmed and w.durability > 0:
 			w.durability -= 1
+			if persona and persona.melee_wear_mult > 1.0 and w.durability > 0 and randf() < persona.melee_wear_mult - 1.0:
+				w.durability -= 1
 			if w.durability == 0:
 				_break_weapon(w)
 
@@ -863,6 +952,15 @@ func can_dual_with(pk: WeaponPickup) -> bool:
 	return pk != null and cur != null and not cur.dual and pk.weapon and pk.weapon.data == cur.data and cur.data.dual_wieldable
 
 func _pick_up(pk: WeaponPickup) -> void:
+	if persona and persona.no_guns and pk.weapon and pk.weapon.data.is_firearm():
+		Events.hint.emit(tr("THE SAINT DOESN'T TOUCH GUNS"), 1.2)
+		return
+	if persona and persona.remix and pk.weapon and not pk.has_meta("remixed"):
+		# the fool: whatever was on the floor, something else is in her hands
+		var pool: Array = DB.all_weapons().filter(func(wd): return wd.id != &"hotshot" and wd.id != &"whisper" and not (persona.no_guns and wd.is_firearm()))
+		if not pool.is_empty():
+			pk.weapon = WeaponInstance.create(pool[randi() % pool.size()])
+			pk.set_meta("remixed", true)
 	var new_w: WeaponInstance = pk.weapon
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var cur := current()
@@ -1053,8 +1151,16 @@ func _process_execution(pd: float) -> void:
 				visual.punch()
 				Audio.play_at("punch", global_position, -10.0)
 			_:
-				visual.punch()
-				Audio.play_at("punch", global_position)
+				if w == null and not _exec_standing:
+					# astride them: fists coming down, the last one wound up
+					visual.set_mount(true)
+					visual.ground_punch(last)
+					Audio.play_at("punch", global_position, 2.0 if last else 0.0, 0.1)
+					Audio.play_at("hit_flesh", tpos, -4.0, 0.15)
+					Effects.blood(tpos, aim_dir.rotated(randf_range(-1.2, 1.2)), last)
+				else:
+					visual.punch()
+					Audio.play_at("punch", global_position)
 		if blood > 0.0:
 			Gore.splatter(tpos, aim_dir.rotated(randf_range(-0.6, 0.6)), blood * (1.3 if last else 0.8))
 			Audio.play_at("gore", tpos, -6.0 if not last else -2.0, 0.15)
@@ -1068,6 +1174,7 @@ func _process_execution(pd: float) -> void:
 			Events.camera_shake.emit(3.5 if last else 2.0)
 		InputSetup.vibrate(0.6, 0.6 if last else 0.3, 0.12)
 	if _locked_t <= 0.0:
+		visual.set_mount(false)
 		var wid: StringName = w.data.id if w else &"fists"
 		var t := _exec_target
 		_exec_target = null
@@ -1079,6 +1186,15 @@ func _process_execution(pd: float) -> void:
 
 # ---------------------------------------------------------------- equipment
 func _use_equipment() -> void:
+	if bones > 0:
+		bones -= 1
+		var bp: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
+		var mb := MeatBone.new()
+		mb.global_position = visual.hand_global()
+		mb.velocity = aim_dir * 300.0 + velocity * 0.3
+		bp.add_child(mb)
+		Audio.play_at("throw", global_position)
+		return
 	if equipment_left <= 0:
 		Events.hint.emit("NO FLARES LEFT", 0.8)
 		return
@@ -1100,6 +1216,9 @@ func take_damage(info: DamageInfo) -> String:
 		return "absorbed"
 	if _iframes > 0.0 and info.type != DamageInfo.Type.EXPLOSIVE:
 		return "pass"   # dodged through it
+	if persona and persona.first_hit_kills and info.lethal:
+		_die(info)   # the crown: no vest, no second chance
+		return "killed"
 	if not info.lethal and info.type != DamageInfo.Type.EXPLOSIVE:
 		_stagger = 0.35
 		velocity += info.dir * 160.0
@@ -1287,3 +1406,39 @@ func _on_any_kill(_e: Node, info: Dictionary) -> void:
 	ability.add_charge(0.08)
 	if info.has("pos"):
 		Effects.popup("ADRENALINE", global_position + Vector2(0, -10), Color("ff8a20"))
+
+
+## The stamina indicator: a thin arc round her feet, only there while
+## stamina isn't full. White while it's fine, amber when low, red and
+## shaking when a roll was refused or she's winded; fades once it's back.
+class StaminaRing extends Node2D:
+	var player: Node
+	var _a := 0.0
+	func _ready() -> void:
+		z_index = 30
+		z_as_relative = false
+	func _process(delta: float) -> void:
+		var frac: float = player.stamina / player.STAMINA_MAX
+		var want := 0.0 if frac >= 0.999 and player._stamina_denied <= 0.0 else 1.0
+		_a = move_toward(_a, want, delta * (6.0 if want > _a else 2.0))
+		queue_redraw()
+	func _draw() -> void:
+		if _a <= 0.01:
+			return
+		var frac: float = clampf(player.stamina / player.STAMINA_MAX, 0.0, 1.0)
+		var denied: float = player._stamina_denied
+		var col := Color(1, 1, 1)
+		if player._winded or frac < 0.3:
+			col = Color(1.0, 0.65, 0.2)
+		if denied > 0.0 or player._winded:
+			col = col.lerp(UIStyle.HOT, maxf(denied, 0.6 if player._winded else 0.0))
+		var shake := Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.5 * denied, 0)
+		var r := 11.0
+		var start := PI * 0.5 + PI * 0.35
+		var span := PI * 1.3
+		draw_arc(shake, r, start, start + span, 24, Color(0, 0, 0, 0.35 * _a), 3.0, true)
+		draw_arc(shake, r, start, start + span * frac, 24, Color(col, 0.85 * _a), 1.6, true)
+		# the roll cost as a notch: enough for a roll past the notch
+		var notch: float = player.ROLL_COST / player.STAMINA_MAX
+		var np := Vector2.from_angle(start + span * notch) * r + shake
+		draw_circle(np, 1.1, Color(1, 1, 1, 0.5 * _a))

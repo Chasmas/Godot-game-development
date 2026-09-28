@@ -347,13 +347,13 @@
   "48,7": {
    "id": "tape_roll7",
    "kind": "tape",
-   "title": "VHS: HOTSHOT \u2014 CAMERA B / ROLL 7",
+   "title": "VHS: HOTSHOT — CAMERA B / ROLL 7",
    "text": "Unedited stunt footage. A Cadillac burns on a desert road. Cass walks out of frame, coughing. Tommy is still inside the car.\nA voice behind the camera says: 'Don't cut. Aurelio wants the whole take.'\nThe image buckles into static."
   },
   "63,3": {
    "id": "photo_harcourt",
    "kind": "photo",
-   "title": "POLAROID: HOTSHOT WRAP PARTY \u2014 1987",
+   "title": "POLAROID: HOTSHOT WRAP PARTY — 1987",
    "text": "Harcourt, younger, wearing a HOTSHOT crew jacket. Beside him stands a man whose face has been gouged away with a key.\nOn the back, in blue ink: 'A.V. knows who changed the fire gag. Residuals due.'"
   }
  },
@@ -434,7 +434,7 @@
     14
    ],
    "id": "move",
-   "text": "WASD / LEFT STICK  move    \u00b7    MOUSE / RIGHT STICK  aim"
+   "text": "WASD / LEFT STICK  move    ·    MOUSE / RIGHT STICK  aim"
   },
   {
    "rect": [
@@ -454,7 +454,7 @@
     12
    ],
    "id": "lock",
-   "text": "[V] / [R3]  LOCK-ON the nearest enemy  \u00b7  tap again to switch target (or flick the right stick)  \u00b7  hold to release"
+   "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  tap again to switch target (or flick the right stick)  ·  hold to release"
   },
   {
    "rect": [
@@ -464,7 +464,7 @@
     5
    ],
    "id": "switch",
-   "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark \u2014 but someone may walk over to turn them back on."
+   "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark — but someone may walk over to turn them back on."
   },
   {
    "rect": [
@@ -484,7 +484,7 @@
     4
    ],
    "id": "upgrade",
-   "text": "BRIEFCASES hold random upgrades \u2014 they last the whole mission."
+   "text": "BRIEFCASES hold random upgrades — they last the whole mission."
   },
   {
    "rect": [
@@ -494,7 +494,7 @@
     3
    ],
    "id": "window",
-   "text": "[SPACE] DASH  \u2014  dive through windows, vault tables, dodge bullets"
+   "text": "[SPACE] DASH  —  dive through windows, vault tables, dodge bullets"
   },
   {
    "rect": [
@@ -514,7 +514,7 @@
     8
    ],
    "id": "brick",
-   "text": "[E] pick up  \u00b7  [RMB] THROW \u2014 anything you throw knocks people down"
+   "text": "[E] pick up  ·  [RMB] THROW — anything you throw knocks people down"
   },
   {
    "rect": [
@@ -787,5 +787,12 @@
   "find_charge": "FIND EXPLOSIVES (BOILER ROOM)",
   "plant": "PLANT THE CHARGE ON THE LOBBY DOORS",
   "find_boss": "FIND THE NIGHT MANAGER"
- }
+ },
+ "tasks": [
+  {
+   "id": "feeds",
+   "kind": "film_cameras",
+   "text": "SMASH THE FILM CAMERAS"
+  }
+ ]
 }

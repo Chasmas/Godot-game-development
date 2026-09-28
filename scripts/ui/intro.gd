@@ -3,17 +3,30 @@ extends Control
 ## story flashes past in illustrated shots with typed captions, and the logo
 ## slams in. Any key, button or click skips to the title.
 
+## A trailer, cut to its own track (music/intro_teaser.ogg, 128 bpm - see
+## TEASER_CUTS in tools/gen_music_hm.py): every cut lands on the beat. The
+## story in a breath, then a taste of every job ahead, then the logo.
+const BPM := 128.0
 const BEATS := [
-	# [shot, seconds, caption]
-	["static", 1.3, ""],
-	["desert_road", 3.4, "CALIFORNIA, 1987."],
-	["explosion", 2.4, "ONE STUNT WENT WRONG."],
-	["motel_night", 3.0, "A YEAR LATER, SOMEBODY SENT HER A KEY."],
-	["mirror", 2.8, "AND A STAR TO WEAR."],
-	["salvage_yard", 1.0, "THEY'RE FILMING EVERYTHING."],
-	["motel_crime", 0.9, "THEY'RE FILMING EVERYTHING."],
-	["marv", 0.9, "THEY'RE FILMING EVERYTHING."],
-	["cass_close", 2.6, "SHE'S THE LEAD."],
+	# [shot, beats, caption]
+	["static", 2, ""],
+	["t_tape", 4, "1988. SOMEBODY MAILED HER A TAPE."],
+	["t_drive", 2, "NO RETURN ADDRESS."],
+	["t_star", 4, "SHE KNOWS WHAT IT MEANS."],
+	["t_arsenal", 4, "EVERY NAME ON THE CALL SHEET."],
+	["t_corridor", 2, "THE MOTEL."],
+	["t_dogs", 2, "THE YARD."],
+	["t_studio", 2, "THE STUDIO."],
+	["t_fire", 2, "THE FIREMAN."],
+	["t_mansion", 2, "THE DREAM."],
+	["t_monitors", 2, "AND SOMEONE"],
+	["t_marv", 2, "IS WATCHING."],
+	["t_phone", 2, "NOBODY YELLS CUT."],
+	["t_fire", 1, ""],
+	["t_marv", 1, ""],
+	["t_dogs", 1, ""],
+	["t_star", 1, ""],
+	["t_walk", 4, "SHE'S THE LEAD."],
 ]
 const LOGO_TIME := 3.2
 
@@ -74,7 +87,7 @@ func _ready() -> void:
 	UIStyle.place(logo_bottom, Control.PRESET_CENTER, Vector2(-250, 22), Vector2(700, 90))
 	logo_bottom.visible = false
 	add_child(logo_bottom)
-	Music.play("title")
+	Music.play("teaser", true)
 	PostFX.set_desaturate(0.0)
 	PostFX.set_tint(Color(1, 1, 1, 0))
 	Audio.play("vhs_static", -6.0)
@@ -93,11 +106,13 @@ func _next_beat() -> void:
 		_caption_full = cap
 		_typed = 0
 		caption.text = ""
-	if str(b[0]) == "explosion":
-		Audio.play("explosion", -4.0)
-		PostFX.flash(Color(1, 0.6, 0.2), 0.5)
+	if _beat == 3:   # the drop: lands on the star
+		PostFX.flash(Color(1, 0.8, 0.5), 0.8)
+		PostFX.vhs_glitch(1.0)
+		Events.camera_shake.emit(10.0)
 	elif _beat > 0:
-		Audio.play("vhs_static", -18.0, 1.3)
+		# a tape-splice glitch on every cut, harder as the cuts get faster
+		PostFX.vhs_glitch(0.25 if float(b[1]) >= 2.0 else 0.5)
 
 func _start_logo() -> void:
 	_logo_t = 0.0
@@ -135,7 +150,7 @@ func _process(delta: float) -> void:
 			if _caption_full[_typed - 1] != " ":
 				Audio.play("type_clack", -12.0, randf_range(0.9, 1.1))
 		caption.text = _caption_full.substr(0, _typed)
-	if _beat < BEATS.size() and _beat_t >= float(BEATS[_beat][1]):
+	if _beat < BEATS.size() and _beat_t >= float(BEATS[_beat][1]) * 60.0 / BPM:
 		_next_beat()
 
 func _input(e: InputEvent) -> void:

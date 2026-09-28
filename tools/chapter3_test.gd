@@ -10,6 +10,7 @@ extends Node
 var failures: Array[String] = []
 
 func _ready() -> void:
+	Engine.set_meta("skip_tasks", true)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	var ph := Node.new()

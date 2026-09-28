@@ -3,7 +3,9 @@ extends Control
 ## dialogue from res://data/dialogue/<id>.json, script events.
 
 var backdrop: TitleBackdrop
-var shot: StoryShot          ## illustrated shots, when the dialogue names them
+var shot: StoryShot
+var _lines := 0
+var _slam: Label               ## the big ACTION! card          ## illustrated shots, when the dialogue names them
 var art: TextureRect         ## authored full-frame art (CinematicArt), when present
 var art_shade: ColorRect
 var card: Label
@@ -77,16 +79,61 @@ func _process(delta: float) -> void:
 ## Each line can cut to a new shot ("shot" on the dialogue node).
 func _on_line(_speaker: String, _text: String) -> void:
 	var sid := str(Dialogue._node.get("shot", ""))
-	if shot and sid != "":
+	if shot == null:
+		return
+	if sid != "" and StoryShot.resolve(sid) != shot.shot_id:
 		shot.show_shot(sid)
+	elif _lines > 0:
+		# the same painting again: cut to another angle on it
+		shot.reframe()
+	_lines += 1
 
 func _on_event(ev: String) -> void:
 	match ev:
+		"action":
+			# the director's call: the slate cracks, the room goes dead quiet,
+			# the word slams onto the screen - and hangs there a beat too long
+			Audio.play("slate_clap", 2.0)
+			PostFX.vhs_glitch(0.5)
+			if shot:
+				shot._shake = 0.35
+			_slam = UIStyle.title_label(tr("ACTION!"), 118, UIStyle.GOLD)
+			_slam.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			_slam.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+			_slam.add_theme_color_override("font_outline_color", UIStyle.PINK)
+			_slam.add_theme_constant_override("outline_size", 14)
+			_slam.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+			_slam.offset_bottom = -140
+			add_child(_slam)
+			_slam.pivot_offset = get_viewport_rect().size * 0.5 - Vector2(0, 70)
+			_slam.scale = Vector2.ONE * 2.6
+			_slam.modulate.a = 0.0
+			var tw := create_tween().set_parallel()
+			tw.tween_property(_slam, "scale", Vector2.ONE, 0.13).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN)
+			tw.tween_property(_slam, "modulate:a", 1.0, 0.08)
+			# a slow creep closer while nothing happens
+			tw.chain().tween_property(_slam, "scale", Vector2.ONE * 1.08, 0.7)
 		"fire":
 			if backdrop:
 				backdrop.fire = 1.0
-			PostFX.flash(Color(1, 0.6, 0.2), 0.7)
+			# the word is blown off the screen with the car
+			if _slam and is_instance_valid(_slam):
+				var sl := _slam
+				_slam = null
+				var tw := create_tween().set_parallel()
+				tw.tween_property(sl, "scale", Vector2.ONE * 4.0, 0.35).set_ease(Tween.EASE_OUT)
+				tw.tween_property(sl, "modulate", Color(1.6, 0.6, 0.2, 0.0), 0.35)
+				tw.chain().tween_callback(sl.queue_free)
+			PostFX.flash(Color(1, 1, 0.9), 1.0)
 			PostFX.vhs_glitch(1.0)
+			Events.camera_shake.emit(14.0)
+			InputSetup.vibrate(0.9, 1.0, 0.6)
+			if shot:
+				shot._shake = 1.0
+				shot._flash = 1.0
+			# ears ringing under whatever comes next
+			get_tree().create_timer(0.35).timeout.connect(func(): Audio.play("ear_ring", -10.0))
+			get_tree().create_timer(0.25).timeout.connect(func(): PostFX.flash(Color(1, 0.5, 0.15), 0.8))
 		"gunshot":
 			PostFX.flash(Color(1, 1, 1), 0.5)
 			PostFX.vhs_glitch(1.0)

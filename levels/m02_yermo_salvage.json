@@ -151,7 +151,8 @@
   "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR."
  },
  "enemies": {
-  "20,31": {"kind": "scrapper", 
+  "20,31": {
+   "kind": "scrapper",
    "patrol": [
     [
      20,
@@ -198,16 +199,19 @@
   "48,33": {
    "facing": "left"
   },
-  "58,33": {"kind": "sniper", 
+  "58,33": {
+   "kind": "sniper",
    "facing": "left"
   },
-  "41,21": {"kind": "welder", 
+  "41,21": {
+   "kind": "welder",
    "facing": "down"
   },
   "16,12": {
    "facing": "down"
   },
-  "8,7": {"kind": "handler", 
+  "8,7": {
+   "kind": "handler",
    "patrol": [
     [
      8,
@@ -227,7 +231,8 @@
     ]
    ]
   },
-  "26,15": {"kind": "welder", 
+  "26,15": {
+   "kind": "welder",
    "facing": "left"
   },
   "12,2": {
@@ -236,7 +241,8 @@
   "40,11": {
    "facing": "down"
   },
-  "34,8": {"kind": "scrapper", 
+  "34,8": {
+   "kind": "scrapper",
    "facing": "right"
   },
   "36,10": {
@@ -269,7 +275,8 @@
    "sleep": true,
    "facing": "up"
   },
-  "57,16": {"kind": "scrapper", 
+  "57,16": {
+   "kind": "scrapper",
    "patrol": [
     [
      57,
@@ -374,7 +381,9 @@
   7,
   45
  ],
- "weather": {"preset": "desert_wind"},
+ "weather": {
+  "preset": "desert_wind"
+ },
  "decor": [
   {
    "type": "neon",
@@ -431,7 +440,61 @@
    "size": 1.1
   }
  ],
- "cameras": [{"cell": [1, 1], "angle": 45}, {"cell": [30, 20], "angle": 90}, {"cell": [47, 1], "angle": 130}],
- "film_cameras": [{"cell": [47, 12], "angle": 135}, {"cell": [64, 20], "angle": 135}],
- "intro_call": {"dialogue": "call_m02", "caller": "mom", "device": "phone"}
+ "cameras": [
+  {
+   "cell": [
+    1,
+    1
+   ],
+   "angle": 45
+  },
+  {
+   "cell": [
+    30,
+    20
+   ],
+   "angle": 90
+  },
+  {
+   "cell": [
+    47,
+    1
+   ],
+   "angle": 130
+  }
+ ],
+ "film_cameras": [
+  {
+   "cell": [
+    47,
+    12
+   ],
+   "angle": 135
+  },
+  {
+   "cell": [
+    64,
+    20
+   ],
+   "angle": 135
+  }
+ ],
+ "intro_call": {
+  "dialogue": "call_m02",
+  "caller": "mom",
+  "device": "phone"
+ },
+ "tasks": [
+  {
+   "id": "feeds",
+   "kind": "film_cameras",
+   "text": "SMASH THE FILM CAMERAS"
+  },
+  {
+   "id": "tape",
+   "kind": "collect",
+   "item": "tape_vance",
+   "text": "FIND ARLO'S TAPE"
+  }
+ ]
 }

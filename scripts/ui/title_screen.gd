@@ -256,28 +256,28 @@ func _show_chapters() -> void:
 	var reached: bool = int(SaveManager.data.story.chapter) >= 2 or done
 	var m2_open: bool = done or SaveManager.data.missions.has("m02_dog_days")
 	var chapters := [
-		{"mission": "m01_checkout", "year": "1988", "num": "I", "title": "CHECKOUT TIME", "place": "Sunset Palms Motel", "cover": "motel_night", "open": true},
-		{"mission": "m02_dog_days", "year": "1988", "num": "I-B", "title": "DOG DAYS", "place": "Yermo Salvage & K-9", "cover": "salvage_yard", "open": m2_open},
-		{"mission": "m03_prime_time", "year": "1988", "num": "I-C", "title": "PRIME TIME", "place": "KHSC Studios, Stage Nine", "cover": "burbank_night", "open": SaveManager.data.missions.has("m02_dog_days") or SaveManager.data.missions.has("m03_prime_time")},
-		{"mission": "m04_sweet_dreams", "year": "1988", "num": "I-D", "title": "SWEET DREAMS", "place": "Villa Estrella", "cover": "villa_gate", "open": SaveManager.data.missions.has("m03_prime_time") or SaveManager.data.missions.has("m04_sweet_dreams")},
-		{"mission": "", "year": "1990", "num": "II", "title": "THE GALAXY PALACE", "place": "TAPE DAMAGED", "cover": "galaxy_palace", "open": false},
-		{"mission": "", "year": "1991", "num": "III", "title": "BARSTOW PD", "place": "TAPE DAMAGED", "cover": "barstow_pd", "open": false},
-		{"mission": "", "year": "1992", "num": "IV", "title": "THE HILLS", "place": "TAPE DAMAGED", "cover": "hills_fire", "open": false},
+		{"mission": "m01_checkout", "year": "1988", "num": "I", "title": "CHECKOUT TIME", "place": "Sunset Palms Motel", "cover": "motel_night", "box": "cover_m01", "blurb": "A key to room 204, a star to wear, and a night manager who was on fire watch in 1987.", "open": true},
+		{"mission": "m02_dog_days", "year": "1988", "num": "I-B", "title": "DOG DAYS", "place": "Yermo Salvage & K-9", "cover": "salvage_yard", "box": "cover_m02", "blurb": "A salvage yard in the Mojave. Forty dogs, one old man with six TVs, and a tape somebody wants back.", "open": m2_open},
+		{"mission": "m03_prime_time", "year": "1988", "num": "I-C", "title": "PRIME TIME", "place": "KHSC Studios, Stage Nine", "cover": "burbank_night", "box": "cover_m03", "blurb": "Live from Stage Nine: the premiere of HOTSHOT CALIFORNIA. The Fireman is the special guest.", "open": SaveManager.data.missions.has("m02_dog_days") or SaveManager.data.missions.has("m03_prime_time")},
+		{"mission": "m04_sweet_dreams", "year": "1988", "num": "I-D", "title": "SWEET DREAMS", "place": "Villa Estrella", "cover": "villa_gate", "box": "cover_m04", "blurb": "She counts them before she sleeps. Tonight they're all at the party, and Tommy is the host.", "open": SaveManager.data.missions.has("m03_prime_time") or SaveManager.data.missions.has("m04_sweet_dreams")},
+		{"mission": "", "year": "1990", "num": "II", "title": "THE GALAXY PALACE", "place": "TAPE DAMAGED", "cover": "galaxy_palace", "box": "cover_m05", "open": false},
+		{"mission": "", "year": "1991", "num": "III", "title": "BARSTOW PD", "place": "TAPE DAMAGED", "cover": "barstow_pd", "box": "cover_m06", "open": false},
+		{"mission": "", "year": "1992", "num": "IV", "title": "THE HILLS", "place": "TAPE DAMAGED", "cover": "hills_fire", "box": "cover_m07", "open": false},
 	]
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 12)
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	panel_body.add_child(row)
 	var detail := ChapterDetail.new()
-	detail.custom_minimum_size = Vector2(720, 96)
+	detail.custom_minimum_size = Vector2(720, 132)
 	var first: ChapterCard = null
 	for ch in chapters:
 		var card := ChapterCard.new()
 		card.info = ch
-		card.custom_minimum_size = Vector2(132, 214)
+		card.custom_minimum_size = Vector2(140, 236)
 		var info: Dictionary = ch
 		card.focus_entered.connect(func():
-			Audio.play("ui_move", -8.0)
+			Audio.play("tape_slide", -6.0, randf_range(0.95, 1.05))
 			detail.info = info)
 		card.mouse_entered.connect(func(): card.grab_focus())
 		card.pressed.connect(func():
@@ -286,7 +286,7 @@ func _show_chapters() -> void:
 				PostFX.vhs_glitch(0.4)
 				card.shake()
 				return
-			Audio.play("ui_select")
+			Audio.play("tape_insert", -2.0)
 			PostFX.vhs_glitch(0.6)
 			if info.mission == "m01_checkout" and not reached:
 				Game.new_game()
@@ -317,6 +317,15 @@ class ChapterCard extends Button:
 		add_theme_stylebox_override("normal", StyleBoxEmpty.new())
 	func shake() -> void:
 		_shake = 1.0
+	## the painted VHS box art (assets/art/covers), held in a static cache
+	static var _boxes: Dictionary = {}
+	static func _box(id: String) -> Texture2D:
+		if id == "":
+			return null
+		if not _boxes.has(id):
+			var p := "res://assets/art/covers/%s.webp" % id
+			_boxes[id] = load(p) if ResourceLoader.exists(p) else null
+		return _boxes[id]
 	func _process(delta: float) -> void:
 		_t += delta
 		_lift = move_toward(_lift, 1.0 if has_focus() else 0.0, delta * 6.0)
@@ -337,13 +346,20 @@ class ChapterCard extends Button:
 		# cover art: the chapter's story shot, cropped to the box
 		var art := Rect2(r.position + Vector2(6, 22), Vector2(r.size.x - 12, r.size.y - 70))
 		var cover := StoryShot.resolve(str(info.get("cover", "")))
-		var painted := StoryShot.painted_tex(cover)
+		var painted := _box(str(info.get("box", "")))
+		if painted == null:
+			painted = StoryShot.painted_tex(cover)
 		if painted:
 			var pw := float(painted.get_width())
 			var ph := float(painted.get_height())
 			var psw := ph * art.size.x / art.size.y
 			var ppan := sin(_t * 0.4) * 30.0 * e
-			draw_texture_rect_region(painted, art, Rect2((pw - psw) * 0.5 + ppan, 0, psw, ph), Color(1, 1, 1) if open else Color(0.45, 0.4, 0.5))
+			var src := Rect2((pw - psw) * 0.5 + ppan, 0, psw, ph)
+			if psw > pw:
+				# portrait box art: crop height instead, drifting slowly while focused
+				var sh := pw * art.size.y / art.size.x
+				src = Rect2(0, (ph - sh) * (0.5 + 0.3 * sin(_t * 0.3) * e), pw, sh)
+			draw_texture_rect_region(painted, art, src, Color(1, 1, 1) if open else Color(0.45, 0.4, 0.5))
 		for l in ([] if painted else ["bg", "mid", "sign", "fg", "eyes"]):
 			var tx := StoryShot.tex(cover, l)
 			if tx == null:
@@ -424,6 +440,10 @@ class ChapterDetail extends Control:
 		else:
 			line = tr("The rest of this tape is damaged.")
 		draw_string(UIStyle.font_mono(), Vector2(8 + x, 78), line, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.PAPER, 0.8 * a))
+		var blurb := tr(str(info.get("blurb", ""))) if open else ""
+		if blurb != "":
+			var n := int(_k * 1.0 * blurb.length()) if _k < 1.0 else blurb.length()
+			draw_multiline_string(UIStyle.font_bold(), Vector2(8 + x, 102), blurb.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, size.x - 16, 14, 2, Color(UIStyle.GOLD, 0.85 * a))
 
 ## ARCADE: pick a map, a mode and any modifiers, then go. Every
 ## map + mode pair keeps its own local top 10.
@@ -525,6 +545,7 @@ func _show_arcade() -> void:
 		var w := str(ARCADE_WEATHER[_arc_weather][1])
 		if w != "":
 			mods["weather"] = w
+		mods["arcade"] = true
 		Game.replay_mission(_arc_map, "cass", mods))
 	go.add_theme_color_override("font_color", UIStyle.PINK)
 	# local board for this map + mode

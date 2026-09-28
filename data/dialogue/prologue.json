@@ -37,7 +37,7 @@
   "c2": {
    "speaker": "tommy",
    "text": "He left because craft services ran out of donuts. The man has priorities.",
-   "shot": "tommy_car",
+   "shot": "tommy_grin",
    "next": "c3"
   },
   "c3": {
@@ -62,7 +62,7 @@
   "e": {
    "speaker": "tommy",
    "text": "Hey. If this goes wrong, tell Mom I finally got top billing.",
-   "shot": "tommy_car",
+   "shot": "tommy_grin",
    "next": "e1"
   },
   "e1": {
@@ -70,11 +70,19 @@
    "text": "Tommy—",
    "shot": "cass_close",
    "auto": 0.9,
+   "next": "f0"
+  },
+  "f0": {
+   "speaker": "voice",
+   "text": "ACTION!",
+   "event": "action",
+   "shot": "clapper",
+   "auto": 0.85,
    "next": "f"
   },
   "f": {
    "speaker": "narration",
-   "text": "Action.",
+   "text": "The car goes up like the sun coming out of the ground.",
    "event": "fire",
    "sfx": "explosion",
    "shot": "explosion",

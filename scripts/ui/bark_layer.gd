@@ -128,9 +128,10 @@ func _draw_barks() -> void:
 		var lines := _wrap(f, b.text, fs, MAX_W)
 		var w := 0.0
 		for l in lines:
-			w = maxf(w, f.get_string_size(l, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x)
+			w = maxf(w, _drawn_w(f, l, fs))
 		var lh := f.get_height(fs)
-		var size := Vector2(w, lh * lines.size()) + PAD * 2.0
+		# a little extra round the edge for the outline and the letters' pop
+		var size := Vector2(w + 6.0, lh * lines.size() + 2.0) + PAD * 2.0
 		var r := Rect2(head - Vector2(size.x * 0.5, size.y + 10.0), size)
 		var off := not safe.has_point(head)
 		# keep inside the safe area
@@ -193,13 +194,31 @@ func _draw_barks() -> void:
 			_canvas.draw_colored_polygon(PackedVector2Array([tail_tip + dir * 5.0, tail_tip + dir.orthogonal() * 4.0, tail_tip - dir.orthogonal() * 4.0]), Color(b.color, a))
 		_canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
+## Width as the bubble draws it: letter by letter (no kerning), so the box
+## and the text always agree.
+static func _drawn_w(f: Font, text: String, fs: int) -> float:
+	var w := 0.0
+	for ch in text:
+		w += f.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+	return w
+
 static func _wrap(f: Font, text: String, fs: int, max_w: float) -> PackedStringArray:
 	var out := PackedStringArray()
 	for para in text.split("\n"):
 		var line := ""
-		for word in para.split(" ", false):
+		for word0 in para.split(" ", false):
+			var word: String = word0
+			while _drawn_w(f, word, fs) > max_w and word.length() > 4:
+				var cut := word.length() - 1
+				while cut > 2 and _drawn_w(f, word.substr(0, cut) + "-", fs) > max_w:
+					cut -= 1
+				if line != "":
+					out.append(line)
+					line = ""
+				out.append(word.substr(0, cut) + "-")
+				word = word.substr(cut)
 			var trial := word if line == "" else line + " " + word
-			if f.get_string_size(trial, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > max_w and line != "":
+			if _drawn_w(f, trial, fs) > max_w and line != "":
 				out.append(line)
 				line = word
 			else:

@@ -137,7 +137,10 @@ func start(id: String, pause_game := true) -> void:
 	_id = id
 	_pause_game = pause_game
 	_apply_reading_settings()
-	var art_tex := CinematicArt.cutscene_texture(id) if pause_game else null
+	# a story cutscene with its own StoryShot sequence cuts frame by frame
+	# underneath; one fixed key art over the top would hide every cut
+	var own_shots := StoryShot.has_shot(str(_data.get("shot", "")))
+	var art_tex := CinematicArt.cutscene_texture(id) if pause_game and not own_shots else null
 	cinematic_art.texture = art_tex
 	cinematic_art.material = CinematicArt.cutscene_material(id) if art_tex else null
 	cinematic_art.visible = art_tex != null

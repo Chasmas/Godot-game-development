@@ -91,6 +91,44 @@ const PAINTED := {
 	"lobby_phone":  {"cam": [1.03, Vector2(-4, 0), 1.1, Vector2(4, -2)], "z": [[Z.BREATHE, 0.05, 0.05, 0.4, 0.95, 0.6, 0.9], [Z.FLICKER, 0.6, 0.0, 0.35, 0.35, 0.8, 1.4], [Z.FLICKER, 0.0, 0.3, 0.15, 0.3, 0.4, 1.0]], "fx": ["dust"]},
 	"tommy_trapped": {"cam": [1.05, Vector2(0, 0), 1.12, Vector2(2, -2)], "z": [[Z.HEAT, 0.3, 0.0, 0.7, 0.7, 1.4, 1.2], [Z.FLICKER, 0.3, 0.0, 0.7, 0.8, 0.7, 2.2], [Z.SWAY, 0.25, 0.0, 0.25, 0.4, 0.5, 3.0]], "glow": 0.6, "fx": ["embers", "smoke"]},
 	"dead_line":    {"cam": [1.04, Vector2(0, -4), 1.14, Vector2(0, 4)], "z": [[Z.SWAY, 0.35, 0.05, 0.3, 0.75, 2.5, 1.0], [Z.FLICKER, 0.75, 0.0, 0.25, 0.4, 0.6, 1.2]], "fx": ["scan", "dust"]},
+	# --- the trailer (scripts/ui/intro.gd)
+	"t_tape":       {"cam": [1.0, Vector2(-10, 4), 1.22, Vector2(8, -2)], "z": [[Z.PULSE, 0.0, 0.0, 0.35, 0.35, 0.6, 1.4], [Z.BLINK, 0.75, 0.45, 0.14, 0.12, 1.0, 2.0], [Z.TV, 0.0, 0.0, 0.3, 0.25, 1.0, 0.6]], "glow": 0.5, "fx": ["dust"]},
+	"t_drive":      {"cam": [1.04, Vector2(6, 0), 1.14, Vector2(-6, -2)], "z": [[Z.RIPPLE, 0.0, 0.0, 1.0, 1.0, 0.8, 0.5], [Z.FLICKER, 0.6, 0.0, 0.4, 0.5, 0.9, 1.6], [Z.BREATHE, 0.3, 0.1, 0.35, 0.8, 0.5, 0.7]], "rumble": 0.6, "fx": ["rain_window"]},
+	"t_star":       {"cam": [1.0, Vector2.ZERO, 1.2, Vector2(0, -3)], "z": [[Z.BREATHE, 0.0, 0.0, 1.0, 1.0, 0.4, 0.5], [Z.PULSE, 0.38, 0.35, 0.24, 0.3, 0.7, 1.2]], "glow": 0.6, "fx": ["glint"]},
+	"t_arsenal":    {"cam": [1.12, Vector2(-14, 0), 1.02, Vector2(14, 0)], "z": [[Z.PULSE, 0.5, 0.0, 0.5, 0.5, 0.3, 0.8], [Z.DRIFT, 0.0, 0.0, 1.0, 1.0, 0.5, 0.6]], "fx": ["dust"]},
+	"t_corridor":   {"cam": [1.02, Vector2(0, 0), 1.16, Vector2(6, -2)], "z": [[Z.FLICKER, 0.78, 0.0, 0.22, 0.4, 1.2, 2.2], [Z.RIPPLE, 0.0, 0.72, 1.0, 0.28, 0.9, 1.0], [Z.PULSE, 0.8, 0.2, 0.15, 0.55, 0.4, 0.8]], "fx": ["rain"]},
+	"t_dogs":       {"cam": [1.02, Vector2(-6, 2), 1.14, Vector2(4, 0)], "z": [[Z.BREATHE, 0.0, 0.45, 0.6, 0.4, 0.9, 1.0], [Z.PULSE, 0.05, 0.5, 0.55, 0.3, 0.5, 0.8], [Z.FLICKER, 0.5, 0.0, 0.2, 0.3, 0.4, 1.0]], "handheld": 1.0, "fx": ["dust"]},
+	"t_studio":     {"cam": [1.0, Vector2(0, 4), 1.1, Vector2(0, -2)], "z": [[Z.FLICKER, 0.5, 0.1, 0.3, 0.55, 1.4, 2.4], [Z.BLINK, 0.55, 0.0, 0.25, 0.15, 0.8, 1.8], [Z.PULSE, 0.0, 0.0, 1.0, 0.3, 0.3, 0.6]], "glow": 0.5, "fx": ["dust"]},
+	"t_fire":       {"cam": [1.08, Vector2(0, -4), 1.0, Vector2.ZERO], "z": [[Z.HEAT, 0.0, 0.05, 1.0, 0.75, 1.3, 1.2], [Z.FLICKER, 0.0, 0.0, 1.0, 0.9, 0.7, 2.0]], "glow": 0.6, "rumble": 1.0, "fx": ["embers", "smoke"]},
+	"t_mansion":    {"cam": [1.02, Vector2(0, 6), 1.16, Vector2(0, -6)], "z": [[Z.SWAY, 0.35, 0.0, 0.3, 0.22, 0.4, 0.8], [Z.FLICKER, 0.0, 0.3, 1.0, 0.5, 0.6, 1.2], [Z.DRIFT, 0.0, 0.7, 1.0, 0.3, 0.3, 1.0]], "fx": ["blood_rain", "dust"]},
+	"t_monitors":   {"cam": [1.02, Vector2(-8, 0), 1.12, Vector2(8, 0)], "z": [[Z.TV, 0.0, 0.0, 0.62, 0.55, 1.0, 1.0], [Z.BREATHE, 0.62, 0.08, 0.34, 0.9, 0.5, 0.8]], "fx": ["scan"]},
+	"t_marv":       {"cam": [1.0, Vector2.ZERO, 1.14, Vector2(0, -2)], "z": [[Z.TV, 0.03, 0.05, 0.9, 0.85, 1.4, 1.4], [Z.BREATHE, 0.2, 0.1, 0.5, 0.8, 1.6, 1.4]], "fx": ["scan"]},
+	"t_phone":      {"cam": [1.02, Vector2(-4, 0), 1.12, Vector2(4, -2)], "z": [[Z.SWAY, 0.24, 0.45, 0.18, 0.5, 0.6, 1.6], [Z.FLICKER, 0.38, 0.05, 0.25, 0.15, 1.2, 2.2], [Z.RIPPLE, 0.0, 0.75, 1.0, 0.25, 0.9, 1.0]], "fx": ["rain"]},
+	"t_walk":       {"cam": [1.18, Vector2(0, -6), 1.02, Vector2(0, 2)], "z": [[Z.HEAT, 0.0, 0.3, 0.45, 0.55, 1.2, 1.2], [Z.FLICKER, 0.0, 0.2, 0.5, 0.7, 0.8, 1.6], [Z.BREATHE, 0.4, 0.1, 0.3, 0.9, 0.7, 0.8]], "glow": 0.5, "fx": ["embers", "smoke", "rain"]},
+	# --- boss scenes
+	"h_door":       {"cam": [1.12, Vector2(0, 0), 1.02, Vector2(4, 0)], "z": [[Z.TV, 0.1, 0.05, 0.25, 0.35, 1.0, 1.0], [Z.PULSE, 0.02, 0.35, 0.12, 0.15, 0.4, 0.8], [Z.BREATHE, 0.12, 0.25, 0.2, 0.45, 0.6, 0.8]], "smoke": [Vector2(0.25, 0.1)], "fx": ["dust"]},
+	"h_reveal":     {"cam": [1.0, Vector2(0, 0), 1.18, Vector2(0, -4)], "z": [[Z.BREATHE, 0.2, 0.0, 0.6, 1.0, 1.4, 1.2], [Z.PULSE, 0.35, 0.2, 0.3, 0.15, 0.6, 1.0]], "handheld": 0.8, "fx": ["dust"]},
+	"h_alarm":      {"cam": [1.1, Vector2(6, 0), 1.0, Vector2(-4, 0)], "z": [[Z.SIREN, 0.3, 0.0, 0.7, 1.0, 1.6, 1.4], [Z.SWAY, 0.72, 0.4, 0.2, 0.4, 2.0, 0.8]], "rumble": 0.8, "fx": ["shake"]},
+	"h_down":       {"cam": [1.02, Vector2(0, 0), 1.1, Vector2(-4, -2)], "z": [[Z.SIREN, 0.0, 0.0, 1.0, 0.6, 0.6, 0.7], [Z.BREATHE, 0.25, 0.2, 0.4, 0.6, 1.0, 1.0]], "fx": ["dust"]},
+	"h_polaroid":   {"cam": [1.0, Vector2(0, 0), 1.16, Vector2(-6, -2)], "z": [[Z.BREATHE, 0.0, 0.3, 0.3, 0.7, 1.6, 0.8], [Z.FLICKER, 0.0, 0.0, 0.2, 0.3, 0.4, 0.8]], "handheld": 1.2, "fx": ["dust"]},
+	"d_stage":      {"cam": [1.02, Vector2(0, 4), 1.12, Vector2(0, -2)], "z": [[Z.HEAT, 0.3, 0.3, 0.2, 0.3, 1.2, 1.0], [Z.FLICKER, 0.6, 0.0, 0.4, 0.8, 1.2, 2.0], [Z.BREATHE, 0.3, 0.1, 0.4, 0.9, 0.5, 0.7]], "glow": 0.5, "fx": ["embers"]},
+	"d_tote":       {"cam": [1.0, Vector2(0, 0), 1.1, Vector2(0, 4)], "z": [[Z.TV, 0.25, 0.0, 0.5, 0.35, 2.0, 1.4], [Z.BLINK, 0.0, 0.1, 0.2, 0.5, 1.0, 1.2], [Z.BLINK, 0.8, 0.1, 0.2, 0.5, 1.3, 1.2]], "glow": 0.5, "fx": []},
+	"d_changeorder": {"cam": [1.0, Vector2(0, 0), 1.18, Vector2(8, 2)], "z": [[Z.HEAT, 0.7, 0.0, 0.3, 1.0, 1.4, 1.2], [Z.FLICKER, 0.5, 0.0, 0.5, 1.0, 0.8, 1.6]], "fx": ["embers"]},
+	"d_cameras":    {"cam": [1.1, Vector2(-6, 0), 1.0, Vector2(6, 0)], "z": [[Z.FLICKER, 0.3, 0.2, 0.7, 0.6, 1.6, 2.4], [Z.BLINK, 0.0, 0.05, 0.12, 0.1, 1.2, 1.6], [Z.HEAT, 0.5, 0.0, 0.5, 0.6, 1.0, 1.0]], "rumble": 0.6, "fx": ["embers", "shake"]},
+	"b_party":      {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -4)], "z": [[Z.HEAT, 0.3, 0.0, 0.4, 1.0, 1.0, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 0.4, 0.8, 1.4], [Z.BREATHE, 0.0, 0.2, 0.3, 0.8, 0.4, 0.6], [Z.BREATHE, 0.7, 0.2, 0.3, 0.8, 0.4, 0.6]], "fx": ["embers", "smoke"]},
+	"b_embrace":    {"cam": [1.06, Vector2(0, 0), 1.14, Vector2(0, -3)], "z": [[Z.HEAT, 0.2, 0.3, 0.6, 0.7, 0.8, 0.8], [Z.BREATHE, 0.3, 0.1, 0.4, 0.8, 0.5, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 1.0, 0.5, 1.2]], "fx": ["embers"]},
+	"b_credits":    {"cam": [1.0, Vector2(0, 0), 1.12, Vector2(-6, 0)], "z": [[Z.TV, 0.1, 0.25, 0.3, 0.5, 1.0, 1.0], [Z.RIPPLE, 0.75, 0.1, 0.25, 0.5, 0.6, 0.6]], "fx": ["rain_window"]},
+	# --- coverage frames for the long scenes
+	"arlo_wide":    {"cam": [1.02, Vector2(-6, 0), 1.08, Vector2(6, 0)], "z": [[Z.TV, 0.0, 0.2, 0.22, 0.35, 1.0, 1.0], [Z.BREATHE, 0.3, 0.2, 0.3, 0.7, 0.5, 0.8], [Z.BREATHE, 0.6, 0.6, 0.2, 0.3, 0.9, 0.8]], "smoke": [Vector2(0.4, 0.4)], "fx": ["dust"]},
+	"cass_listens": {"cam": [1.04, Vector2(4, 0), 1.12, Vector2(-2, -2)], "z": [[Z.TV, 0.85, 0.0, 0.15, 0.35, 1.0, 1.0], [Z.BREATHE, 0.35, 0.05, 0.4, 0.9, 0.5, 0.7], [Z.FLICKER, 0.3, 0.0, 0.7, 1.0, 0.4, 0.6]], "fx": ["dust"]},
+	"fire_windshield": {"cam": [1.0, Vector2(0, 0), 1.12, Vector2(-6, -2)], "z": [[Z.HEAT, 0.15, 0.2, 0.3, 0.45, 1.2, 1.2], [Z.FLICKER, 0.0, 0.0, 1.0, 1.0, 0.6, 1.4]], "glow": 0.6, "fx": ["embers"]},
+	"dutch_3am":    {"cam": [1.0, Vector2(0, 2), 1.1, Vector2(0, -2)], "z": [[Z.FLICKER, 0.18, 0.1, 0.12, 0.2, 0.5, 1.0], [Z.DRIFT, 0.0, 0.5, 1.0, 0.5, 0.3, 0.6]], "fx": ["dust"]},
+	"vance_boys":   {"cam": [1.02, Vector2(0, 0), 1.1, Vector2(4, -2)], "z": [[Z.DRIFT, 0.5, 0.35, 0.12, 0.2, 0.6, 1.2], [Z.BREATHE, 0.0, 0.0, 1.0, 1.0, 0.3, 0.3]], "smoke": [Vector2(0.53, 0.55)], "fx": ["dust"]},
+	"machine_close": {"cam": [1.06, Vector2(0, 0), 1.16, Vector2(-4, 0)], "z": [[Z.BLINK, 0.32, 0.72, 0.08, 0.1, 1.0, 2.0], [Z.PULSE, 0.4, 0.2, 0.5, 0.5, 0.5, 0.6], [Z.DRIFT, 0.0, 0.0, 1.0, 0.4, 0.3, 0.5]], "fx": ["dust"]},
+	"earl_tv":      {"cam": [1.02, Vector2(0, 0), 1.1, Vector2(0, -2)], "z": [[Z.TV, 0.05, 0.05, 0.9, 0.9, 1.0, 1.0], [Z.SIREN, 0.7, 0.3, 0.25, 0.3, 1.0, 1.0], [Z.BREATHE, 0.35, 0.15, 0.35, 0.7, 0.8, 0.8]], "fx": ["scan"]},
+	"phone_cass":   {"cam": [1.04, Vector2(-4, 0), 1.12, Vector2(4, -2)], "z": [[Z.FLICKER, 0.3, 0.2, 0.5, 0.4, 0.8, 1.2], [Z.BREATHE, 0.1, 0.1, 0.4, 0.9, 0.6, 0.8]], "fx": ["dust"]},
+	"rudy_backstage": {"cam": [1.06, Vector2(0, 0), 1.0, Vector2(0, 2)], "z": [[Z.BLINK, 0.2, 0.02, 0.12, 0.1, 0.9, 1.6], [Z.BREATHE, 0.35, 0.15, 0.3, 0.8, 1.4, 1.2], [Z.FLICKER, 0.7, 0.0, 0.3, 0.8, 0.6, 1.0]], "handheld": 1.2, "fx": ["dust"]},
+	"tommy_grin":   {"cam": [1.02, Vector2(4, 0), 1.1, Vector2(-4, -2)], "z": [[Z.PULSE, 0.6, 0.0, 0.4, 0.4, 0.4, 0.8], [Z.BREATHE, 0.3, 0.1, 0.4, 0.8, 0.5, 0.7]], "fx": ["dust"]},
 	"barstow_fireworks": {"cam": [1.02, Vector2(4, 0), 1.1, Vector2(-4, -2)], "z": [[Z.BREATHE, 0.1, 0.1, 0.4, 0.9, 0.5, 0.8], [Z.FLICKER, 0.8, 0.0, 0.2, 0.7, 0.7, 1.3]], "fireworks": [0.45, 0.02, 0.35, 0.35], "fx": ["rain"]},
 	"tote_board":   {"cam": [1.0, Vector2(0, 4), 1.1, Vector2(0, -2)], "z": [[Z.FLICKER, 0.1, 0.0, 0.8, 0.35, 0.5, 3.0], [Z.HEAT, 0.0, 0.35, 1.0, 0.65, 1.0, 1.0], [Z.FLICKER, 0.0, 0.35, 1.0, 0.65, 0.4, 1.6]], "glow": 0.6, "fx": ["embers", "smoke"]},
 	"canned_applause": {"cam": [1.02, Vector2(-6, 0), 1.08, Vector2(6, 0)], "z": [[Z.BLINK, 0.85, 0.0, 0.15, 0.1, 0.8, 1.2], [Z.FLICKER, 0.0, 0.0, 0.4, 0.5, 0.6, 1.5], [Z.DRIFT, 0.0, 0.0, 1.0, 0.5, 1.0, 0.6]], "fx": ["smoke"]},
@@ -238,7 +276,11 @@ func show_shot(id: String, hard := false) -> void:
 		_paint_old.queue_free()
 		_paint_old = null
 	shot_id = id
+	_rf_zoom = 1.0
+	_rf_pan = Vector2.ZERO
+	_rf_i = 0
 	var ptex := painted_tex(id)
+	_def_for_amb = PAINTED.get(id, SHOTS.get(id, {}))
 	_def = PAINTED.get(id, {"cam": [1.02, Vector2.ZERO, 1.1, Vector2.ZERO], "fx": ["dust"]}) if ptex else SHOTS[id]
 	_t = 0.0
 	_tex = []
@@ -274,6 +316,52 @@ func show_shot(id: String, hard := false) -> void:
 	if "flash" in _def.get("fx", []):
 		_flash = 1.0
 	_embers.clear()
+	_set_bed(_bed_for(_def_for_amb))
+
+var _def_for_amb: Dictionary = {}
+var _beds: Dictionary = {}       ## loop name -> AudioStreamPlayer
+var ambience := true             ## play the frame's sound bed
+
+## What the frame sounds like: rain on the glass, fire, a TV, sirens, or
+## the room just breathing.
+func _bed_for(def: Dictionary) -> String:
+	var fx: Array = def.get("fx", [])
+	var zs: Array = def.get("z", [])
+	var kinds := zs.map(func(z): return int(z[0]))
+	var anim: Dictionary = def.get("anim", {})
+	if "embers" in fx or Z.HEAT in kinds or "flicker_fire" in anim.values():
+		return "fire_loop"
+	if Z.SIREN in kinds:
+		return "siren_loop"
+	if "rain_window" in fx or "rain" in fx or "blood_rain" in fx:
+		return "rain_loop"
+	if Z.TV in kinds or "scan" in fx or "tv" in anim.values():
+		return "tv_hum"
+	return "room_tone"
+
+func _set_bed(bed: String) -> void:
+	if not is_inside_tree() or not ambience:
+		return
+	for k in _beds:
+		var p: AudioStreamPlayer = _beds[k]
+		create_tween().tween_property(p, "volume_db", -8.0 if k == bed else -60.0, 0.6)
+	if bed == "" or _beds.has(bed):
+		return
+	var src := Audio.get_stream(bed) as AudioStreamWAV
+	if src == null:
+		return
+	var st := src.duplicate() as AudioStreamWAV
+	st.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	st.loop_begin = 0
+	st.loop_end = st.data.size() / 2
+	var pl := AudioStreamPlayer.new()
+	pl.stream = st
+	pl.bus = "Ambience" if AudioServer.get_bus_index("Ambience") >= 0 else "SFX"
+	pl.volume_db = -60.0
+	add_child(pl)
+	pl.play()
+	_beds[bed] = pl
+	create_tween().tween_property(pl, "volume_db", -8.0, 0.6)
 
 func _process(delta: float) -> void:
 	_t += delta
@@ -331,6 +419,9 @@ func _update_painted(delta: float) -> void:
 	var fw: Array = _def.get("fireworks", [])
 	if fw.size() == 4 and _rng.randf() < delta * 1.1:
 		var hue: Color = [Color(1, 0.35, 0.6), Color(0.4, 0.9, 1.0), Color(1, 0.85, 0.35), Color(0.7, 0.5, 1.0)][_rng.randi() % 4]
+		if _rng.randf() < 0.6:
+			var pop_v := -18.0 - _rng.randf() * 8.0
+			get_tree().create_timer(_rng.randf_range(0.2, 0.7)).timeout.connect(func(): Audio.play("firework_pop", pop_v, _rng.randf_range(0.8, 1.15)))
 		_bursts.append({"p": Vector2(fw[0] + _rng.randf() * fw[2], fw[1] + _rng.randf() * fw[3] * 0.7), "t": 0.0, "c": hue, "n": _rng.randi_range(10, 16), "r": _rng.randf_range(0.025, 0.045)})
 	for b in _bursts.duplicate():
 		b.t += delta
@@ -392,7 +483,33 @@ func _cam(def: Dictionary, t: float) -> Array:
 	var c: Array = def.get("cam", [1.0, Vector2.ZERO, 1.0, Vector2.ZERO])
 	var k := clampf(t / shot_time, 0.0, 1.0)
 	k = k * k * (3.0 - 2.0 * k)
-	return [lerpf(float(c[0]), float(c[2]), k), (c[1] as Vector2).lerp(c[3] as Vector2, k)]
+	var z := lerpf(float(c[0]), float(c[2]), k)
+	var pan := (c[1] as Vector2).lerp(c[3] as Vector2, k)
+	if def == _def:
+		# coverage: the same frame re-cut closer / wider / off to a side
+		z *= _rf_zoom
+		pan += _rf_pan
+	return [z, pan]
+
+## Coverage within one frame: several lines on the same painting cut to
+## a new framing each time (a push-in on a face, a wider look, a slide to
+## the other side) and the slow camera move starts again from there.
+const FRAMINGS := [[1.0, Vector2.ZERO], [1.22, Vector2(-22, -10)], [1.3, Vector2(24, -8)], [1.14, Vector2(0, 12)], [1.35, Vector2(-8, -16)], [1.08, Vector2(16, 6)]]
+var _rf_zoom := 1.0
+var _rf_pan := Vector2.ZERO
+var _rf_i := 0
+
+func reframe() -> void:
+	var i := _rf_i
+	while i == _rf_i:
+		i = _rng.randi_range(0, FRAMINGS.size() - 1)
+	_rf_i = i
+	_rf_zoom = float(FRAMINGS[i][0])
+	_rf_pan = FRAMINGS[i][1]
+	_t = 0.0
+	if _paint:
+		_paint.t = 0.0
+	_glitch = 0.4
 
 func _draw() -> void:
 	# a painted frame sits behind this node (show_behind_parent): only
@@ -634,7 +751,7 @@ class PaintedLayer extends Control:
 		var rumble := float(def.get("rumble", 0.0))
 		if rumble > 0.0:
 			off += Vector2(sin(t * 31.0) * 0.6, sin(t * 43.0) * 0.8 + sin(t * 11.0) * 0.5) * rumble * base * 0.5
-		var hand := float(def.get("handheld", 0.0))
+		var hand := float(def.get("handheld", 0.35))   # a breath of handheld on every frame
 		if hand > 0.0:
 			off += Vector2(sin(t * 0.9) * 2.0 + sin(t * 2.3), cos(t * 0.7) * 1.5 + sin(t * 1.9) * 0.8) * hand * base * 0.5
 		var pos := size * 0.5 - sz * 0.5 + off

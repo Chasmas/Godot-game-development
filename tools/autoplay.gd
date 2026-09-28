@@ -32,6 +32,7 @@ var _wander_t := 0.0
 var _shot_n := 0
 
 func _ready() -> void:
+	Engine.set_meta("autoplay", true)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	var ph := Node.new()
@@ -217,6 +218,21 @@ func _play(lvl: Level, delta: float) -> void:
 	if lvl.phase == Level.Phase.ESCAPE and lvl.exit_car:
 		goal = lvl.exit_car.global_position
 		why = "car"
+	elif lvl.breach and not lvl.breach.done and lvl.remaining_enemies().size() <= _breach_after(lvl):
+		# blow the lobby: fetch the charges, plant them, then back off
+		if lvl.breach.planted:
+			goal = lvl.breach._plant_it.global_position + Vector2(0, 90)
+			why = "clear of the blast"
+		elif lvl.breach.has_charge:
+			goal = lvl.breach._plant_it.global_position
+			why = "plant"
+			if goal.distance_to(p.global_position) < 20.0:
+				lvl.breach._plant_it.interact(p)
+		elif lvl.breach._charge_it:
+			goal = lvl.breach._charge_it.global_position
+			why = "charges"
+			if goal.distance_to(p.global_position) < 16.0:
+				lvl.breach._charge_it.interact(p)
 	elif lvl.phone and lvl.phone.enabled and lvl.phone.ringing:
 		goal = lvl.phone.global_position
 		why = "phone"
@@ -333,6 +349,10 @@ func _check_reachable(lvl: Level, p: Player, e: Enemy) -> void:
 			for x in lvl.remaining_enemies():
 				_log("  clearing unreachable %s so the run can continue" % String(x.data.id))
 				x.take_damage(DamageInfo.make(DamageInfo.Type.EXPLOSIVE, p, x.global_position, Vector2.RIGHT, &"explosion", &"explosion"))
+
+## Go for the breach once most of the floor is clear (like a player would).
+func _breach_after(lvl: Level) -> int:
+	return 8
 
 func _los(p: Player, e: Node2D) -> bool:
 	var space := p.get_world_2d().direct_space_state

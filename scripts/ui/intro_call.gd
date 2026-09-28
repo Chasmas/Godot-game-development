@@ -95,6 +95,7 @@ func _exit_tree() -> void:
 ## that jitters on each ring, signal waves while the line is open.
 class CallPanel extends Control:
 	var line: IntroCall
+	var _icon: Texture2D
 
 	func _draw() -> void:
 		var r := Rect2(Vector2.ZERO, size)
@@ -114,7 +115,11 @@ class CallPanel extends Control:
 		var neon := UIStyle.PINK if line._state == "ring" else UIStyle.CYAN
 		var glow_a := 0.55 + 0.45 * sin(line._t * (9.0 if line._state == "ring" else 3.0))
 		var ipath := "res://assets/art/ui/icon_%s_neon.png" % ("walkie" if line.device == "walkie" else "phone")
-		var icon: Texture2D = load(ipath) if ResourceLoader.exists(ipath) else null
+		# held on the panel: a texture loaded into a local here is freed
+		# before the frame is drawn and shows as a blank white square
+		if _icon == null and ResourceLoader.exists(ipath):
+			_icon = load(ipath)
+		var icon: Texture2D = _icon
 		if icon:
 			# the neon handset / walkie: jumps on each ring, glow breathing,
 			# dim while the line is quiet, bright while someone's talking

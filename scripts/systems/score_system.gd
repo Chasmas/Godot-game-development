@@ -92,6 +92,8 @@ func _process(delta: float) -> void:
 func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
 	var method: StringName = info.get("method", &"gun")
 	var weapon: StringName = info.get("weapon_id", &"fists")
+	if weapon == &"fists" and method in [&"punch", &"counter"]:
+		SaveManager.add_stat("unarmed_kills")
 	var base: int = METHOD_POINTS.get(method, 300)
 	var mult := 1.0
 	var tags: Array[String] = []
@@ -111,7 +113,10 @@ func _on_enemy_killed(_enemy: Node, info: Dictionary) -> void:
 		mult -= 0.2
 	combo += 1
 	max_combo = maxi(max_combo, combo)
-	combo_time = COMBO_WINDOW
+	var mask = _mask()
+	combo_time = COMBO_WINDOW + (float(mask.combo_window_bonus) if mask else 0.0)
+	if mask:
+		mult *= float(mask.score_mult)
 	var pts := int(round(base * mult * (1.0 + 0.5 * (combo - 1)) / 10.0)) * 10
 	score += pts
 	combo_points += pts
@@ -194,3 +199,8 @@ func compute_rank(result: Dictionary, par_score: int, par_time: float) -> Dictio
 			idx = i
 	return {"rank": RANKS[idx], "total": total, "time_bonus": maxi(time_bonus, 0), "flow_bonus": flow_bonus,
 		"variety_bonus": variety_bonus, "accuracy": acc, "accuracy_bonus": acc_bonus, "ratio": ratio}
+
+
+func _mask():
+	var p = get_tree().get_first_node_in_group("player")
+	return p.persona if p and p.get("persona") else null

@@ -14,13 +14,13 @@
   "b": {
    "speaker": "arlo",
    "text": "Sit down, kid. You're blocking channel four.",
-   "shot": "arlo_close",
+   "shot": "arlo_wide",
    "next": "c"
   },
   "c": {
    "speaker": "cass",
    "text": "You watched the whole thing.",
-   "shot": "arlo_close",
+   "shot": "cass_listens",
    "next": "d"
   },
   "d": {
@@ -38,7 +38,7 @@
   "f": {
    "speaker": "cass",
    "text": "...",
-   "shot": "arlo_close",
+   "shot": "cass_listens",
    "choices": [
     {
      "text": "Who rigged the car, Arlo?",
@@ -68,13 +68,13 @@
   "l2": {
    "speaker": "arlo",
    "text": "I woke up to the light. You ever see a fire through a windshield? Looks like a sunrise on the wrong side of the sky.",
-   "shot": "arlo_close",
+   "shot": "fire_windshield",
    "next": "w2"
   },
   "w2": {
    "speaker": "arlo",
    "text": "Three in the morning, Dutch Kowalski walked back out to that car with a toolbox. Dutch. Our pyro. They call him the Fireman now.",
-   "shot": "arlo_close",
+   "shot": "dutch_3am",
    "next": "x"
   },
   "x": {
@@ -86,7 +86,7 @@
   "y": {
    "speaker": "cass",
    "text": "Tommy isn't in anything.",
-   "shot": "arlo_close",
+   "shot": "cass_listens",
    "next": "z"
   },
   "z": {
@@ -98,14 +98,14 @@
   "z2": {
    "speaker": "cass",
    "text": "...",
-   "shot": "arlo_close",
+   "shot": "cass_listens",
    "auto": 1.4,
    "next": "v"
   },
   "v": {
    "speaker": "arlo",
    "text": "And Vance. Aurelio. My kid brother. When we were boys he'd burn ants with a magnifying glass. Said the sun did it. He just held the lens.",
-   "shot": "arlo_close",
+   "shot": "vance_boys",
    "next": "v2"
   },
   "v2": {
