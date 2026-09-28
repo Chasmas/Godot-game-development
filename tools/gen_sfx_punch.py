@@ -54,7 +54,7 @@ def fade(x, ms=6):
     return x
 def write(name, x, peak=0.95):
     x = np.asarray(x, dtype=float)
-    if name not in ("tv_hum", "siren_loop", "room_tone"):   # loops keep their seam
+    if name not in ("tv_hum", "siren_loop", "room_tone", "car_idle"):   # loops keep their seam
         x = fade(x)
     x = x / (np.max(np.abs(x)) + 1e-9) * peak
     with wave.open(os.path.join(OUT, name + ".wav"), "wb") as w:
@@ -238,6 +238,10 @@ def make_world(C):
     S["car_arrive"] = room(mix((0, arrive, 1.0), (1.9, squeal, 0.6), (2.4, thump(0.2, 90, 40, 20, 12), 0.4)), 0.4, 1500, 0.2)
     S["car_door"] = room(sat(mix((0, click(0.02, 1400), 0.8), (0.02, thump(0.2, 160, 60, 30, 16), 1.0), (0.02, bp(N(0.1), 600, 3000) * np.exp(-T(0.1) * 30), 0.5), (0.05, rattle(0.1, 1600, 2, 0.03), 0.3)), 1.8), 0.3, 2000, 0.25)
     screech = bp(N(1.4), 1500, 4200) * (0.6 + 0.4 * np.sin(T(1.4) * 40)) * np.minimum(1, T(1.4) / 0.05) * np.exp(-T(1.4) * 1.2)
+    idle = v8(3.0, 26, 26)
+    S["car_idle"] = loopify(idle * 0.7)
+    S["tire_skid"] = bp(N(0.6), 1400, 4200) * (0.6 + 0.4 * np.sin(T(0.6) * 55)) * np.sin(np.linspace(0, np.pi, int(0.6 * SR))) ** 0.5
+    S["car_brake"] = mix((0, bp(N(0.45), 2200, 5200) * np.sin(np.linspace(0, np.pi, int(0.45 * SR))) * 0.6, 1.0), (0.3, thump(0.15, 120, 60, 30, 20), 0.4))
     S["car_peel"] = room(mix((0, v8(2.4, 40, 110) * np.minimum(1, T(2.4) / 0.15) * np.exp(-T(2.4) * 0.6), 1.0), (0.05, screech, 0.7)), 0.5, 1800, 0.25)
     # a VHS box slid off a video-store shelf: plastic scrape, a soft knock
     S["tape_slide"] = sat(mix((0, bp(N(0.14), 900, 6000) * np.sin(np.linspace(0, np.pi, int(0.14 * SR))) ** 2, 0.5),

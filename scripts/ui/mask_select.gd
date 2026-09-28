@@ -68,6 +68,7 @@ func _confirm() -> void:
 		return
 	Game.mask = id
 	Game.mask_chosen = true
+	Events.tutorial.emit("mask")
 	Audio.play("ui_select")
 	Audio.play("rank_stamp", -8.0)
 	PostFX.vhs_glitch(0.5)

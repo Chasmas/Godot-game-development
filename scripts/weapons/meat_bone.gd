@@ -113,7 +113,7 @@ class Pickup extends Node2D:
 		if p and p.visible and p.global_position.distance_to(global_position) < 10.0 and p.get("bones") != null:
 			p.bones += 1
 			Audio.play("pickup")
-			Events.hint.emit(tr("MEAT BONE  -  THROW IT [%s] TO KEEP DOGS BUSY") % InputSetup.binding_text("equipment", InputSetup.using_gamepad), 2.6)
+			Events.tutorial.emit("bone")
 			queue_free()
 	func _draw() -> void:
 		draw_circle(Vector2.ZERO, 7.0 + sin(_t * 3.0), Color(1, 0.5, 0.4, 0.1))

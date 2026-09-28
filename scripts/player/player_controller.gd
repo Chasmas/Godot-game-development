@@ -393,6 +393,7 @@ func _start_dash() -> void:
 	if stamina < ROLL_COST:
 		# out of breath: no roll, just a stumble of the shoulders
 		_stamina_denied = 1.0
+		Events.tutorial.emit("stamina")
 		Audio.play_at("dash", global_position, -18.0, 0.0)
 		return
 	stamina -= ROLL_COST
@@ -579,6 +580,8 @@ func _try_shoot(w: WeaponInstance) -> void:
 		w.ammo2 -= 1
 	else:
 		w.ammo -= 1
+		if w.ammo == 0 and w.reserve > 0:
+			Events.tutorial.emit("reload")
 	_dual_left = not left
 	# two guns: faster combined fire, but wilder (see _dual_* below)
 	_fire_cd = 1.0 / (w.data.fire_rate * (DUAL_RATE if w.dual else 1.0))
@@ -962,6 +965,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 			pk.weapon = WeaponInstance.create(pool[randi() % pool.size()])
 			pk.set_meta("remixed", true)
 	var new_w: WeaponInstance = pk.weapon
+	Events.tutorial.emit("weapon")
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var cur := current()
 	if can_dual_with(pk):

@@ -257,6 +257,10 @@ func _ready() -> void:
 				lvh.hud._card_t = 0.0
 				lvh.hud.banner.modulate.a = 0.0
 				lvh.hud.card_sub.modulate.a = 0.0
+			if OS.get_environment("SHOT_TUT") != "":
+				for tid in OS.get_environment("SHOT_TUT").split(","):
+					SaveManager.data.story.flags.erase("tut_" + tid)
+					Events.tutorial.emit(tid)
 			if OS.get_environment("SHOT_CHARGE") != "" and p:
 				p.ability.charge = float(OS.get_environment("SHOT_CHARGE"))
 				p.ability._emit()

@@ -22,6 +22,7 @@ var holster_label: Label
 var ability_label: Label
 var ability_bar: ColorRect
 var meter: AbilityMeter
+var tutorials: TutorialCards
 var ability_bg: ColorRect
 var equip_label: Label
 var prompt_label: Label
@@ -103,6 +104,10 @@ func _ready() -> void:
 	ability_bar = ColorRect.new()
 	ability_bar.visible = false
 	root.add_child(ability_bar)
+	tutorials = TutorialCards.new()
+	UIStyle.place(tutorials, Control.PRESET_TOP_RIGHT, Vector2(-404, 132), Vector2(388, 560))
+	root.add_child(tutorials)
+	Events.tutorial.connect(func(id): tutorials.show_card(id))
 	meter = AbilityMeter.new()
 	UIStyle.place(meter, Control.PRESET_BOTTOM_LEFT, Vector2(16, -108), Vector2(310, 74))
 	meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -416,6 +421,7 @@ func _on_ability(charge: float, active: bool) -> void:
 		meter.key = InputSetup.binding_text("ability", InputSetup.using_gamepad)
 		if charge >= 0.999 and meter.charge < 0.999 and not active:
 			meter.ready_flash = 1.0
+			tutorials.show_card("spotlight")
 			Audio.play("power_up", -10.0)
 		meter.charge = charge
 		meter.active = active

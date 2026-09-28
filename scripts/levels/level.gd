@@ -266,7 +266,11 @@ func _ready() -> void:
 	player.ability._emit()
 	player._emit_weapon()
 	if hero_car and arcade == null and Game.attempts <= 1 and st.is_empty() and DisplayServer.get_name() != "headless":
+		# headlights only after dark (a sunny-day preset brightens the ambient)
+		hero_car.night = ambient.get_luminance() < 0.6
 		hero_car.arrive(player)
+	if arcade == null and not data.get("tasks", []).is_empty():
+		get_tree().create_timer(9.0, false).timeout.connect(func(): Events.tutorial.emit("tasks"))
 	if arcade == null:
 		var chat := Chatter.new()
 		chat.level = self
@@ -543,7 +547,7 @@ func _check_hints(cell: Vector2i) -> void:
 		if Rect2i(r[0], r[1], r[2], r[3]).has_point(cell):
 			_hints_shown[id] = true
 			SaveManager.data.story.flags["hint_" + id] = true
-			hud.show_hint(tr(str(hdef.text)), 5.0)
+			hud.tutorials.show_card(id, str(hdef.text))
 
 ## Checkpoints: each area has one, marked on the floor at the entrance you
 ## come in by. It saves when you're in the area AND it's fair to: nobody
@@ -976,6 +980,7 @@ func on_secret_found(id: String) -> void:
 
 func _on_collectible(it: Interactable, _by: Node) -> void:
 	collected[it.item_id] = true
+	Events.tutorial.emit("tape")
 	var fresh := SaveManager.add_collectible(it.item_id)
 	Audio.play("collect")
 	Score.add_bonus("EVIDENCE", 1000 if fresh else 250, it.global_position)
@@ -1129,6 +1134,7 @@ func _on_exit(_it: Interactable, _by: Node) -> void:
 	phase = Phase.DONE
 	player.input_enabled = false
 	if hero_car and is_instance_valid(hero_car) and DisplayServer.get_name() != "headless":
+		hero_car.night = ambient.get_luminance() < 0.6
 		hero_car.depart(player)
 		await get_tree().create_timer(1.9).timeout
 	else:

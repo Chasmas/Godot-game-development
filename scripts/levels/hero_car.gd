@@ -76,6 +76,9 @@ func _ready() -> void:
 
 var _heading := 0.0            ## direction of travel (the nose may be off it mid-slide)
 var _drift := 0.0              ## slip angle through a turn
+var _skid_cd := 0.0
+var night := true              ## headlights only after dark
+var _idle: AudioStreamPlayer2D   ## the V8 ticking over while it's parked with the lights on
 var route_in: Array = []       ## world points: off the map, through the gate, into the space
 var route_out: Array = []      ## world points: out of the space, through a gate, gone
 var gates: Array = []          ## BoomGates to lift on the way through
@@ -119,6 +122,10 @@ func _drive(pts: Array, dur: float, ease_mode: int, on_step := Callable()) -> Tw
 		_dir = Vector2.from_angle(head)
 		rotation = head + _drift
 		# rubber where the tyres scrub sideways
+		_skid_cd -= get_process_delta_time()
+		if absf(_drift) > 0.3 and _skid_cd <= 0.0:
+			_skid_cd = 0.45
+			Audio.play_at("tire_skid", global_position, -4.0, 0.1)
 		if step > 0.3 and absf(_drift) > 0.12:
 			_skids.add_pair(global_position - Vector2.from_angle(rotation) * 18.0, Vector2.from_angle(rotation), 0.0, step)
 			if randf() < 0.25:
@@ -126,8 +133,8 @@ func _drive(pts: Array, dur: float, ease_mode: int, on_step := Callable()) -> Tw
 		else:
 			_skids.lift()
 		for g in gates:
-			if is_instance_valid(g) and g.global_position.distance_to(here) < 90.0:
-				g.lift()
+			if is_instance_valid(g) and not g.broken and g.hit_by(here, Vector2.from_angle(rotation)):
+				g.smash(Vector2.from_angle(rotation), step / maxf(get_process_delta_time(), 0.001))
 		if on_step.is_valid():
 			on_step.call(k, before),
 		0.0, 1.0, dur)
@@ -157,7 +164,7 @@ func arrive(player: Node2D) -> void:
 		route_in = [global_position - _dir * LANE, global_position]
 	var home: Vector2 = route_in[-1]
 	global_position = route_in[0]
-	_lights = 1.0
+	_lights = 1.0 if night else 0.0
 	_driving = true
 	_body.collision_layer = 0
 	player.visible = false
@@ -168,8 +175,9 @@ func arrive(player: Node2D) -> void:
 	var tw := _drive(route_in, 2.8, 0, func(k: float, _b: Vector2):
 		# she's at the wheel: the camera rides with the car
 		player.global_position = global_position
-		if k > 0.62:
-			_brake = 1.0)
+		if k > 0.62 and _brake < 1.0:
+			_brake = 1.0
+			Audio.play_at("car_brake", global_position, -6.0))
 	tw.tween_callback(func():
 		_driving = false
 		_bounce = 1.0
@@ -180,6 +188,8 @@ func arrive(player: Node2D) -> void:
 	tw.tween_interval(0.4)
 	tw.tween_callback(func():
 		_brake = 0.0
+		# key out: lights die, the engine ticks down
+		create_tween().tween_property(self, "_lights", 0.0, 0.25)
 		Audio.play_at("car_door", global_position, -6.0)
 		_swing_door(true))
 	tw.tween_interval(0.3)
@@ -210,9 +220,7 @@ func arrive(player: Node2D) -> void:
 	tw.tween_callback(func():
 		player.set("input_enabled", true)
 		arrived.emit())
-	var ltw := create_tween()
-	ltw.tween_interval(6.0)
-	ltw.tween_property(self, "_lights", 0.25, 1.2)
+
 
 ## The getaway: she walks up to the driver's door, pulls it open, drops in,
 ## the door slams, the dome light dies, the V8 catches and it peels out
@@ -246,15 +254,18 @@ func depart(player: Node2D) -> void:
 		_swing_door(false, 0.18))
 	tw.tween_interval(0.45)
 	tw.tween_callback(func():
-		_lights = 1.0
+		_lights = 1.0 if night else 0.0
 		_brake = 1.0
-		Audio.play_at("car_arrive", global_position, -16.0, 0.4))   # the engine catching
+		Audio.play_at("car_arrive", global_position, -16.0, 0.4)   # the engine catching
+		_engine(true))
 	tw.tween_interval(0.35)
 	tw.tween_callback(func():
 		_brake = 0.0
 		_driving = true
 		_body.collision_layer = 0
 		Audio.play_at("car_peel", global_position, 0.0)
+		Audio.play_at("tire_skid", global_position, -2.0)
+		_engine(false)
 		Events.camera_shake.emit(3.0)
 		var t2 := _drive(pts, 1.9, 1, func(k: float, before: Vector2):
 			if k < 0.7:
@@ -264,6 +275,29 @@ func depart(player: Node2D) -> void:
 			if k < 0.55 and randf() < 0.45:
 				Effects.smoke(global_position - _dir * 26.0 + _dir.orthogonal() * randf_range(-10, 10)))
 		t2.tween_callback(func(): departed.emit()))
+
+## The engine idling: a quiet positional loop while she's parked with the
+## lights on (and again after she gets in, before it goes).
+func _engine(on: bool) -> void:
+	if on and _idle == null:
+		var src := Audio.get_stream("car_idle") as AudioStreamWAV
+		if src:
+			var st := src.duplicate() as AudioStreamWAV
+			st.loop_mode = AudioStreamWAV.LOOP_FORWARD
+			st.loop_end = st.data.size() / 2
+			_idle = AudioStreamPlayer2D.new()
+			_idle.stream = st
+			_idle.bus = "SFX"
+			_idle.volume_db = -14.0
+			_idle.max_distance = 500.0
+			add_child(_idle)
+			_idle.play()
+	elif not on and _idle:
+		var p := _idle
+		_idle = null
+		var tw := create_tween()
+		tw.tween_property(p, "volume_db", -60.0, 1.0)
+		tw.tween_callback(p.queue_free)
 
 func _process(delta: float) -> void:
 	_t += delta
@@ -307,6 +341,10 @@ func _draw() -> void:
 
 ## Rubber on the tarmac: pairs of dark strokes behind the rear wheels that
 ## stay for the rest of the job.
+
+
+## Rubber on the tarmac: pairs of dark strokes behind the rear wheels that
+## stay for the rest of the job.
 class SkidMarks extends Node2D:
 	var _segs: Array = []   ## [a, b, alpha]
 	var _last: Array = [Vector2.INF, Vector2.INF]
@@ -323,8 +361,8 @@ class SkidMarks extends Node2D:
 			elif _last[i] != Vector2.INF and step > 0.0:
 				_segs.append([_last[i], p, 0.55])
 			_last[i] = p
-		if _segs.size() > 400:
-			_segs = _segs.slice(_segs.size() - 400)
+		if _segs.size() > 600:
+			_segs = _segs.slice(_segs.size() - 600)
 		queue_redraw()
 
 	func _draw() -> void:
@@ -333,18 +371,18 @@ class SkidMarks extends Node2D:
 
 
 ## A striped boom barrier across a gap in the lot's wall: the car's way in
-## and out. The arm lifts (tilting up toward the camera, so it shortens)
-## when the car comes through and drops after; on foot it's a wall, and
-## she says so if she tries it.
+## and out. The car goes straight through it - the arm snaps into striped
+## pieces that cartwheel away and stay where they land. On foot the gap is
+## still closed, and she says so if she tries it.
 class BoomGate extends Node2D:
 	const LINES := ["Not yet. I'm not done here.", "Not on foot. The car's right there.", "Walk out now and it was all for nothing."]
 	var span := 32.0          ## the gap it closes (px)
 	var axis := Vector2.DOWN  ## which way the arm runs across the gap
-	var _arm := 0.0           ## 0 down, 1 up
-	var _up_t := 0.0
+	var broken := false
+	var level: Node
+	var _bits: Array = []     ## flying pieces of the arm: {p, v, r, w, len, stripe, h, vh}
 	var _bark_cd := 0.0
 	var _body: StaticBody2D
-	var level: Node
 
 	func _ready() -> void:
 		z_index = 5
@@ -358,14 +396,47 @@ class BoomGate extends Node2D:
 		_body.add_child(cs)
 		add_child(_body)
 
-	func lift() -> void:
-		if _up_t <= 0.0 and _arm < 0.5:
-			Audio.play_at("buzz", global_position, -18.0)
-		_up_t = 1.4
+	## Is the car's nose on the arm right now?
+	func hit_by(pos: Vector2, _heading: Vector2) -> bool:
+		var rel := pos - global_position
+		var along := rel.dot(axis)
+		var across := absf(rel.dot(axis.orthogonal()))
+		return along > -8.0 and along < span + 8.0 and across < 34.0
+
+	func smash(dir: Vector2, speed: float) -> void:
+		if broken:
+			return
+		broken = true
+		var v := clampf(speed, 120.0, 420.0)
+		Audio.play_at("door_break", global_position, -2.0, 0.1)
+		Audio.play_at("hit_blunt", global_position, -6.0, 0.1)
+		Events.camera_shake.emit(3.5)
+		var n := 7
+		for k in n:
+			var mid := axis * span * (k + 0.5) / n
+			_bits.append({"p": mid, "v": dir * v * randf_range(0.5, 1.1) + axis.orthogonal() * randf_range(-80, 80),
+				"r": 0.0, "w": randf_range(-14.0, 14.0), "len": span / n * randf_range(0.7, 1.0), "stripe": k % 2 == 0,
+				"h": 0.0, "vh": randf_range(40.0, 110.0)})
+			Effects.splinters(global_position + mid, dir, true, 0.6)
 
 	func _process(delta: float) -> void:
-		_up_t -= delta
-		_arm = move_toward(_arm, 1.0 if _up_t > 0.0 else 0.0, delta * 2.5)
+		for b in _bits:
+			if float(b.h) <= 0.0 and float(b.vh) == 0.0:
+				continue
+			b.p = (b.p as Vector2) + (b.v as Vector2) * delta
+			b.v = (b.v as Vector2).move_toward(Vector2.ZERO, 260.0 * delta)
+			b.r = float(b.r) + float(b.w) * delta
+			b.vh = float(b.vh) - 320.0 * delta
+			b.h = float(b.h) + float(b.vh) * delta
+			if float(b.h) <= 0.0:
+				b.h = 0.0
+				if float(b.vh) < -40.0:
+					b.vh = -float(b.vh) * 0.3   # a bounce
+					b.w = float(b.w) * 0.5
+				else:
+					b.vh = 0.0
+					b.v = Vector2.ZERO
+					b.w = 0.0
 		_bark_cd -= delta
 		var p := get_tree().get_first_node_in_group("player") as Node2D
 		if p and p.visible and _bark_cd <= 0.0:
@@ -382,25 +453,32 @@ class BoomGate extends Node2D:
 		queue_redraw()
 
 	func _draw() -> void:
-		# posts at both ends, the striped arm between; lifted, it foreshortens
-		# toward the hinge post and throws a shadow
+		# posts at both ends; the striped arm between them until the car goes
+		# through it, then its pieces where they landed
 		for e in [Vector2.ZERO, axis * span]:
 			draw_rect(Rect2(e - Vector2(4, 4), Vector2(8, 8)), Color(0.15, 0.15, 0.18))
-		draw_circle(Vector2.ZERO, 2.2, Color(1.0, 0.25, 0.2) if _arm < 0.5 else Color(0.3, 1.0, 0.4))
-		var L := span * (1.0 - 0.82 * _arm)
-		if _arm > 0.05:
-			draw_line(Vector2(4, 4), Vector2(4, 4) + axis * L * 1.1, Color(0, 0, 0, 0.3 * _arm), 3.0)
-		var lift_off := -axis.orthogonal() * 6.0 * _arm
-		for k in 8:
-			var a := axis * (L * k / 8.0) + lift_off * (k / 8.0)
-			var b := axis * (L * (k + 1) / 8.0) + lift_off * ((k + 1) / 8.0)
-			draw_line(a, b, Color(0.95, 0.9, 0.85) if k % 2 == 0 else Color(0.85, 0.1, 0.12), 3.0)
-		draw_circle(axis * L + lift_off, 1.6, Color(1.0, 0.3, 0.2, 0.6 + 0.4 * sin(Time.get_ticks_msec() * 0.006)))
+		draw_circle(Vector2.ZERO, 2.2, Color(1.0, 0.25, 0.2) if not broken else Color(0.3, 0.3, 0.3))
+		if not broken:
+			for k in 8:
+				var a := axis * (span * k / 8.0)
+				var b := axis * (span * (k + 1) / 8.0)
+				draw_line(a, b, Color(0.95, 0.9, 0.85) if k % 2 == 0 else Color(0.85, 0.1, 0.12), 3.0)
+			draw_circle(axis * span, 1.6, Color(1.0, 0.3, 0.2, 0.6 + 0.4 * sin(Time.get_ticks_msec() * 0.006)))
+		else:
+			draw_line(Vector2.ZERO, axis * 5.0, Color(0.95, 0.9, 0.85), 3.0)   # the stub left on the hinge
+		for b in _bits:
+			var h: float = b.h
+			var c: Vector2 = b.p
+			var d := Vector2.from_angle(float(b.r)).rotated(axis.angle()) * float(b.len) * 0.5
+			if h > 0.5:
+				draw_line(c - d + Vector2(3, 3), c + d + Vector2(3, 3), Color(0, 0, 0, 0.3), 3.0)
+			var lift := Vector2(0, -h * 0.25)
+			draw_line(c - d + lift, c + d + lift, Color(0.95, 0.9, 0.85) if b.stripe else Color(0.85, 0.1, 0.12), 3.0 + h * 0.02)
 
 
-## The road in and out: asphalt with kerbs, a dashed centre line and a
-## couple of street lamps, laid along the car's routes under the level's
-## own floor - so beyond the gates the lot has somewhere to come from.
+## The road in and out: asphalt with kerbs and a dashed centre line, laid
+## along the car's routes under the level's own floor - so beyond the gates
+## the lot has somewhere to come from.
 class ApproachRoad extends Node2D:
 	var car: Node
 
@@ -411,7 +489,6 @@ class ApproachRoad extends Node2D:
 			var pts := PackedVector2Array(route)
 			draw_polyline(pts, Color(0.28, 0.26, 0.3), 58.0, true)          # kerb
 			draw_polyline(pts, Color(0.09, 0.085, 0.11), 50.0, true)        # tarmac
-			# dashed centre line
 			for i in pts.size() - 1:
 				var a: Vector2 = pts[i]
 				var b: Vector2 = pts[i + 1]
@@ -421,10 +498,3 @@ class ApproachRoad extends Node2D:
 				while t < L:
 					draw_line(a + d * t, a + d * minf(t + 10.0, L), Color(0.85, 0.7, 0.25, 0.7), 2.0)
 					t += 22.0
-			# a street lamp by the road's far end, pooling light
-			var far: Vector2 = pts[0] if route == car.route_in else pts[pts.size() - 1]
-			var side := (pts[1] - pts[0]).normalized().orthogonal() if route == car.route_in else (pts[pts.size() - 1] - pts[pts.size() - 2]).normalized().orthogonal()
-			var lamp := far.lerp(pts[1] if route == car.route_in else pts[pts.size() - 2], 0.35) + side * 36.0
-			draw_circle(lamp, 26.0, Color(1.0, 0.75, 0.4, 0.08))
-			draw_circle(lamp, 3.0, Color(0.2, 0.2, 0.22))
-			draw_circle(lamp, 1.6, Color(1.0, 0.85, 0.55))
