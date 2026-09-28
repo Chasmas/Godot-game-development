@@ -105,6 +105,7 @@ func start_mission(mission_id: String, character_id := "", mods := {}) -> void:
 		modifiers = mods
 	checkpoint_index = -1
 	checkpoint_state = {}
+	start_section = -1
 	attempts = 1
 	mask_chosen = false
 	highlights = []
@@ -114,10 +115,14 @@ func start_mission(mission_id: String, character_id := "", mods := {}) -> void:
 	_apply_time_scale()
 	change_scene(LEVEL_SCENE)
 
-func replay_mission(mission_id: String, character_id := "", mods := {}) -> void:
+func replay_mission(mission_id: String, character_id := "", mods := {}, section := -1) -> void:
 	campaign_mode = false
 	modifiers = mods
 	start_mission(mission_id, character_id, mods)
+	start_section = section
+
+## -1 = from the top; else the checkpoint section chosen in the chapter select.
+var start_section := -1
 
 func mission_complete(result: Dictionary) -> void:
 	last_result = result

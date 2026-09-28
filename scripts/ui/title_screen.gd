@@ -377,18 +377,61 @@ func _show_chapters() -> void:
 				PostFX.vhs_glitch(0.4)
 				card.shake()
 				return
-			Audio.play("tape_insert", -2.0)
-			PostFX.vhs_glitch(0.6)
 			if info.mission == "m01_checkout" and not reached:
+				Audio.play("tape_insert", -2.0)
+				PostFX.vhs_glitch(0.6)
 				Game.new_game()
 			else:
-				Game.replay_mission(str(info.mission)))
+				_show_sections(info))
 		row.add_child(card)
 		if first == null:
 			first = card
 	panel_body.add_child(detail)
 	_back_button()
 	first.grab_focus()
+
+## Where to start a chapter: from the top, or any section (checkpoint area)
+## already reached - with the best score, rank and time for the chapter and
+## the best time to each section.
+func _show_sections(info: Dictionary) -> void:
+	var mid := str(info.mission)
+	_open_panel(tr(str(info.title)))
+	var best: Dictionary = SaveManager.data.missions.get(mid, {})
+	var line := tr("Not yet finished.")
+	if not best.is_empty():
+		line = tr("Best rank %s   ·   Best score %d   ·   Best time %s") % [str(best.get("best_rank", "-")), int(best.get("best_score", 0)), _clock(float(best.get("best_time", 0.0)))]
+	panel_body.add_child(UIStyle.label(line, 15, UIStyle.GOLD))
+	var names: Array = []
+	var m = Game.missions.get(mid)
+	if m:
+		var fa := FileAccess.open("res://levels/%s.json" % m.level_file if not str(m.level_file).begins_with("res://") else str(m.level_file), FileAccess.READ)
+		if fa:
+			var d = JSON.parse_string(fa.get_as_text())
+			if d is Dictionary:
+				for c in d.get("checkpoints", []):
+					names.append(str(c.get("name", "")))
+	var reached: Dictionary = SaveManager.data.get("sections", {}).get(mid, {})
+	var go := func(section: int):
+		Audio.play("tape_insert", -2.0)
+		PostFX.vhs_glitch(0.6)
+		Game.replay_mission(mid, "", {}, section)
+	var first := _panel_button("▶  " + tr("FROM THE TOP"), func(): go.call(-1))
+	for i in names.size():
+		var idx: int = i
+		var open := reached.has(str(i))
+		var label := ("▶  " if open else "    ") + tr(names[i])
+		if open:
+			label += "      " + tr("best %s") % _clock(float(reached[str(i)]))
+		else:
+			label += "      " + tr("not reached yet")
+		_panel_button(label, func(): go.call(idx), not open)
+	_panel_button("◀ BACK", _show_chapters)
+	first.grab_focus()
+
+static func _clock(t: float) -> String:
+	if t <= 0.0:
+		return "-"
+	return "%d:%02d" % [int(t) / 60, int(t) % 60]
 
 ## A chapter as a VHS tape box: painted cover (the chapter's story shot),
 ## year spine, title strip. Lifts and glows when focused; locked tapes show
@@ -488,6 +531,17 @@ class ChapterCard extends Button:
 		draw_string(UIStyle.font_bold(), r.position + Vector2(44, 15), tr("CH.") + " " + str(info.get("num", "")), HORIZONTAL_ALIGNMENT_RIGHT, r.size.x - 50, 12, UIStyle.INK if open else UIStyle.DIM)
 		var title := tr(str(info.get("title", ""))) if open else "████████"
 		draw_multiline_string(UIStyle.font_display(), Vector2(r.position.x + 6, r.end.y - 30), title, HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 12, 14, 2, UIStyle.PAPER if open else UIStyle.DIM)
+		# how you did, stamped on the box: the best rank, score and time
+		var bst: Dictionary = SaveManager.data.missions.get(str(info.get("mission", "")), {}) if open else {}
+		if not bst.is_empty():
+			var rk := str(bst.get("best_rank", ""))
+			var sc := Vector2(art.end.x - 22, art.position.y + 22)
+			draw_circle(sc, 17, Color(UIStyle.INK, 0.9))
+			draw_arc(sc, 17, 0, TAU, 24, UIStyle.GOLD, 2.0)
+			draw_string(UIStyle.font_display(), sc + Vector2(-17, 7), rk, HORIZONTAL_ALIGNMENT_CENTER, 34, 18 if rk.length() < 3 else 13, UIStyle.GOLD)
+			var sl := Rect2(art.position + Vector2(0, art.size.y - 36), Vector2(art.size.x, 16))
+			draw_rect(sl, Color(UIStyle.INK, 0.8))
+			draw_string(UIStyle.font_mono(), sl.position + Vector2(4, 12), "%d  ·  %s" % [int(bst.get("best_score", 0)), TitleScreenClock.clock(float(bst.get("best_time", 0.0)))], HORIZONTAL_ALIGNMENT_LEFT, sl.size.x - 8, 11, UIStyle.PAPER)
 		if open and e > 0.3:
 			var pr := Rect2(art.end - Vector2(62, 20), Vector2(58, 16))
 			draw_rect(pr, Color(UIStyle.INK, 0.85 * e))
@@ -525,7 +579,7 @@ class ChapterDetail extends Control:
 			if best.is_empty():
 				line = tr("Not yet played.")
 			else:
-				line = tr("Best rank %s   ·   Best score %d") % [str(best.get("best_rank", "-")), int(best.get("best_score", 0))]
+				line = tr("Best rank %s   ·   Best score %d   ·   Best time %s") % [str(best.get("best_rank", "-")), int(best.get("best_score", 0)), TitleScreenClock.clock(float(best.get("best_time", 0.0)))]
 		elif not open and mid != "":
 			line = tr("Finish the chapter before to unlock this tape.")
 		else:

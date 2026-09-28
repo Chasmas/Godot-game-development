@@ -73,6 +73,9 @@ func _ready() -> void:
 	_make_roots()
 	var b := LevelBuilder.new(self, data)
 	var st: Dictionary = Game.checkpoint_state
+	# chosen from the chapter select: start at a section (and again after a
+	# death before the next checkpoint)
+	_start_section = Game.start_section if st.is_empty() else -1
 	if not st.is_empty():
 		for id in st.get("killed", []):
 			b.skip_enemies[id] = true
@@ -678,6 +681,23 @@ func b_ch(x: int, y: int) -> String:
 		return "#"
 	return str(rows[y])[x]
 
+var _start_section := -1
+
+## Starting at a section (chapter select): Cass at that section's marker,
+## the sections before it counted as passed.
+func _apply_start_section() -> void:
+	if _start_section < 0 or _start_section >= _cp_markers.size():
+		return
+	for i in _start_section + 1:
+		_checkpoints_hit[str(i)] = true
+		(_cp_markers[i] as CheckpointMarker).activate(true)
+	player.global_position = (_cp_markers[_start_section] as Node2D).global_position
+	if phase == Phase.INFILTRATE:
+		phase = Phase.CLEAR
+		_update_objective()
+	camera.snap_to_target()
+	hud.show_checkpoint(tr(str(data.get("checkpoints", [])[_start_section].get("name", ""))))
+
 func _build_checkpoint_markers() -> void:
 	var cps: Array = data.get("checkpoints", [])
 	var from := _mission_start
@@ -690,6 +710,7 @@ func _build_checkpoint_markers() -> void:
 		if _checkpoints_hit.has(str(i)):
 			m.activate(true)
 		_cp_markers.append(m)
+	_apply_start_section()
 
 ## Where a checkpoint marker goes: one step inside the area's door nearest
 ## the way you come in, centred on the doorway (a double door's middle). An
@@ -822,6 +843,9 @@ func _check_checkpoints(cell: Vector2i) -> void:
 				(_cp_markers[i] as CheckpointMarker).activate()
 				spawn = (_cp_markers[i] as Node2D).global_position
 			_save_checkpoint(str(cps[i].get("name", "CHECKPOINT")), spawn)
+			# the chapter select remembers the best time to each section
+			if Game.modifiers.is_empty():
+				SaveManager.record_section(String(mission.id), i, Score.elapsed)
 
 func _save_checkpoint(cp_name: String, spawn: Vector2) -> void:
 	Game.checkpoint_state = {

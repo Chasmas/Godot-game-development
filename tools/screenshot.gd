@@ -21,6 +21,12 @@ func _ready() -> void:
 		# every mask on the shelf (in memory only; nothing is saved)
 		SaveManager.data["masks"] = Masks.ORDER.map(func(m): return String(m))
 		SaveManager.data["missions"]["m01_checkout"] = {"completed": true, "best_score": 1, "best_rank": "A", "best_time": 1.0}
+	if OS.get_environment("SHOT_PROGRESS") == "1":
+		# a save that has played a bit (in memory only)
+		SaveManager.data["missions"]["m01_checkout"] = {"completed": true, "best_score": 48210, "best_rank": "S", "best_time": 412.0}
+		SaveManager.data["missions"]["m02_dog_days"] = {"completed": true, "best_score": 36900, "best_rank": "A+", "best_time": 530.0}
+		SaveManager.data["sections"] = {"m01_checkout": {"0": 40.0, "1": 131.0, "2": 250.0}}
+		SaveManager.data["story"]["chapter"] = 5
 	var out := OS.get_environment("SHOT_OUT")
 	var n := int(OS.get_environment("SHOT_FRAMES")) if OS.get_environment("SHOT_FRAMES") != "" else 90
 	match mode:

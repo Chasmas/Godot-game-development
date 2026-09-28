@@ -424,7 +424,7 @@
  "BAD TAKE": "TAKE FALHADO",
  "STUNT DOUBLE NEEDED": "PRECISA-SE DE DUPLO",
  "ROLL IT AGAIN": "GRAVA OUTRA VEZ",
- "FROM THE TOP": "DO PRINCÍPIO",
+ "FROM THE TOP": "DO INÍCIO",
  "YOU MISSED YOUR MARK": "FALHASTE A MARCA",
  "DEAD ON ARRIVAL": "MORTA À CHEGADA",
  "%d%%": "%d%%",
@@ -1433,5 +1433,9 @@
  "Just Cass. No paint, no part to play.": "Só a Cass. Sem pintura, sem papel para representar.",
  "Nothing borrowed.": "Nada emprestado.",
  "Nothing to hide behind.": "Nada atrás do qual te esconderes.",
- "Finish Chapter I.": "Termina o Capítulo I."
+ "Finish Chapter I.": "Termina o Capítulo I.",
+ "Not yet finished.": "Ainda não terminado.",
+ "Best rank %s   ·   Best score %d   ·   Best time %s": "Melhor rank %s   ·   Melhor pontuação %d   ·   Melhor tempo %s",
+ "best %s": "melhor %s",
+ "not reached yet": "ainda não alcançado"
 }

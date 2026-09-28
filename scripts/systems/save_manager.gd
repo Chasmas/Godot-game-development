@@ -108,6 +108,17 @@ func add_collectible(id: String) -> bool:
 	save_game()
 	return true
 
+## Best time (seconds from the start) a section of a mission was reached in.
+func record_section(mission_id: String, idx: int, t: float) -> void:
+	if not data.has("sections"):
+		data["sections"] = {}
+	var m: Dictionary = data.sections.get(mission_id, {})
+	var k := str(idx)
+	if not m.has(k) or (t > 0.0 and t < float(m[k])):
+		m[k] = t
+	data.sections[mission_id] = m
+	save_game()
+
 ## A movie poster read on a wall goes into the collection. True if it's new.
 func add_poster(id: String) -> bool:
 	if not data.has("posters"):
