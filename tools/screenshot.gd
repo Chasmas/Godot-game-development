@@ -121,7 +121,18 @@ func _ready() -> void:
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
 			var what := OS.get_environment("SHOT_WHAT")
-			if what == "cell":
+			if what == "bone":
+				await _frames(30)
+				var bn := get_tree().get_first_node_in_group("meat_bone_pickups") as Node2D
+				print("bone at ", bn.global_position / 16.0 if bn else Vector2(-1, -1))
+				p3.global_position = bn.global_position + Vector2(-700, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = bn
+				while Dialogue.active:
+					Dialogue._end()
+					await _frames(2)
+			elif what == "cell":
 				# look at a map cell: SHOT_CELL=x,y
 				var xy := OS.get_environment("SHOT_CELL").split(",")
 				var mk := Node2D.new()
