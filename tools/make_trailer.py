@@ -155,7 +155,7 @@ def env(t, a, b, fade=0.3):
 # TRAILER_LANG=pt makes the Portuguese cut (captions, the release card, the
 # game's own splash and menus recorded in Portuguese)
 LANG = os.environ.get("TRAILER_LANG", "en")
-PT = {
+PT = {"SPOTLIGHT.": "SPOTLIGHT.",
  "CALIFORNIA, 1988.": "CALIFÓRNIA, 1988.",
  "SOMEBODY SENT HER A TAPE.": "ALGUÉM LHE ENVIOU UMA CASSETE.",
  "SHE KNOWS WHAT IT MEANS.": "ELA SABE O QUE SIGNIFICA.",
@@ -335,7 +335,7 @@ TL.append([31.5, 32.0, "black", {}])
 order = [("m01", 0), ("m03w", 0), ("m02w", 0), ("m01", 1), ("m04", 0), ("m03w", 1), ("m02w", 1), ("m04", 1),
          ("m01", 2), ("m03w", 2), ("m02w", 2), ("m04", 2), ("m03w", 3), ("m01", 3), ("m02w", 3), ("m04", 3),
          ("m03w", 4), ("m01", 4), ("m02w", 4), ("m04", 4), ("m03w", 5), ("m01", 5), ("m02w", 5), ("m04", 5)]
-caps = {32.0: "BRUTAL.", 54.0: "A NIGHTMARE OR TWO.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
+caps = {32.0: "BRUTAL.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
 t = 32.0
 oi = 0
 while t < 64.0 - 1e-6:
@@ -348,6 +348,11 @@ while t < 64.0 - 1e-6:
     for ct, cs in caps.items():
         if abs(ct - t) < 1e-6:
             cap = L(cs)
+    if abs(t - 54.0) < 1e-6:
+        # the SPOTLIGHT: the world goes to stage light
+        play_file(54.0, 56.0, "spot", 10.5, "SPOTLIGHT.", 1.25)
+        t = 56.0
+        continue
     if abs(t - 38.0) < 1e-6:
         # the dodge roll, then the lobby doors going up
         play_file(38.0, 40.0, "dodge", 8.5, "FAST.", 1.4)

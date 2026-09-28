@@ -210,10 +210,12 @@ func arrive(player: Node2D) -> void:
 		_swing_door(true))
 	tw.tween_interval(0.3)
 	tw.tween_callback(func():
-		# she's in the seat, low, turned toward the door
+		# she's in the seat, low, turned toward the door - drawn over the car
+		# (she was hidden under the bodywork until she cleared the door)
 		_take_wheel(player, false)
 		player.global_position = _seat()
 		player.visible = true
+		player.z_index = z_index + 1
 		if vis:
 			vis.scale = Vector2.ONE * 0.8
 			vis.modulate.a = 0.75
@@ -225,6 +227,7 @@ func arrive(player: Node2D) -> void:
 			vis.scale = Vector2.ONE * lerpf(0.8, 1.0, k)
 			vis.modulate.a = lerpf(0.75, 1.0, k), 0.0, 1.0, 0.45)
 	tw.tween_callback(func():
+		player.z_index = 2
 		Effects.dust(player.global_position, _dir.orthogonal(), 0.3))
 	# a look around: over the lot, then back at the job
 	tw.tween_method(func(k: float):
