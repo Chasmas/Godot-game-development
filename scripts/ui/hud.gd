@@ -1186,6 +1186,7 @@ class SpotlightFX extends Control:
 ## Full, it lights up: the bar goes neon, the lamp throws a beam and READY
 ## blinks with the key. Running, the bar drains white like a reel.
 class AbilityMeter extends Control:
+	static var _lamp: Texture2D
 	var title := "SPOTLIGHT"
 	var key := ""
 	var charge := 0.0
@@ -1223,10 +1224,18 @@ class AbilityMeter extends Control:
 		var lc := Vector2(30, h * 0.5)
 		if ready or active:
 			draw_colored_polygon(PackedVector2Array([lc + Vector2(6, -4), lc + Vector2(6, 4), lc + Vector2(40, 22), lc + Vector2(40, -22)]), Color(1.0, 0.85, 0.5, 0.12 + 0.1 * pulse))
-		draw_circle(lc, 12.0, Color(0.1, 0.06, 0.12))
-		draw_circle(lc + Vector2(3, 0), 7.0, Color(1.0, 0.85, 0.45) if (ready or active) else Color(0.35, 0.3, 0.3))
-		draw_line(lc + Vector2(-6, 12), lc + Vector2(-10, 20), Color(0.5, 0.45, 0.5), 2.0)
-		draw_line(lc + Vector2(6, 12), lc + Vector2(10, 20), Color(0.5, 0.45, 0.5), 2.0)
+		if _lamp == null:
+			_lamp = load("res://assets/art/ui/icon_spotlight.png") if ResourceLoader.exists("res://assets/art/ui/icon_spotlight.png") else null
+		if _lamp:
+			# the painted stage lamp: dim while charging, blazing when ready
+			var ls := 44.0 + (4.0 * pulse if ready else 0.0)
+			var mod := Color.WHITE if (ready or active) else Color(0.45, 0.4, 0.45)
+			draw_texture_rect(_lamp, Rect2(lc - Vector2(ls, ls) * 0.5, Vector2(ls, ls)), false, mod)
+		else:
+			draw_circle(lc, 12.0, Color(0.1, 0.06, 0.12))
+			draw_circle(lc + Vector2(3, 0), 7.0, Color(1.0, 0.85, 0.45) if (ready or active) else Color(0.35, 0.3, 0.3))
+			draw_line(lc + Vector2(-6, 12), lc + Vector2(-10, 20), Color(0.5, 0.45, 0.5), 2.0)
+			draw_line(lc + Vector2(6, 12), lc + Vector2(10, 20), Color(0.5, 0.45, 0.5), 2.0)
 		# the name
 		var f := UIStyle.font_display()
 		var fb := UIStyle.font_bold()

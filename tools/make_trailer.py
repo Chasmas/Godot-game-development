@@ -299,7 +299,7 @@ def badge(kind, h=86):
         d.text(((w - tw) / 2, h * 0.2), "PC", font=fb, fill=(53, 224, 255, 255))
     return im
 
-BADGES = [badge(k) for k in ("PC", "STEAM", "GOG", "EPIC")]
+BADGES = [badge(k) for k in ("STEAM", "GOG", "EPIC")]
 
 # ------------------------------------------------------------------ the cut
 SRC = {k: os.path.join(WORK, k + ".avi") for k in ("m01", "m02w", "m03w", "m04")}

@@ -131,7 +131,8 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 	weapon_sprite.texture = SpriteLib.weapon(w.sprite_key)
 	weapon_sprite.visible = true
 	_wd = SpriteLib.weapon_density(w.sprite_key)
-	weapon_sprite.scale = Vector2.ONE / _wd
+	# a touch smaller than the painting's scale: guns in hand, not guns as big as her
+	weapon_sprite.scale = Vector2.ONE * (0.8 if w.is_firearm() else 0.9) / _wd
 	weapon_sprite2.scale = weapon_sprite.scale
 	_hand = SpriteForge.hand_world("aim_dual") if dual else SpriteLib.hand_offset(w.hold)
 	var tex_h := weapon_sprite.texture.get_height()
@@ -538,13 +539,18 @@ static func _barrel_tip(tex: Texture2D) -> Vector2:
 func _process(delta: float) -> void:
 	# side-view guns stay the right way up: aiming left, the picture flips
 	var left_aim := cos(rig.global_rotation) < 0.0
-	if weapon_sprite.flip_v != left_aim and weapon_sprite.texture:
-		weapon_sprite.flip_v = left_aim
-		weapon_sprite.offset = _grip_offset(weapon_sprite.texture, left_aim)
-	# the second gun is the mirror image of the first (a pair held apart)
-	if weapon_sprite2.flip_v != (not left_aim) and weapon_sprite2.texture:
-		weapon_sprite2.flip_v = not left_aim
-		weapon_sprite2.offset = _grip_offset(weapon_sprite2.texture, not left_aim)
+	# one gun: kept the right way up. Two guns: a mirrored pair with both
+	# grips turned outward, the same whichever way she faces
+	# (a mirrored pair is symmetric about the aim line: it never flips with
+	# the direction she's facing)
+	var f1: bool = false if dual else left_aim   # dual: grips turned outward
+	var f2: bool = true
+	if weapon_sprite.flip_v != f1 and weapon_sprite.texture:
+		weapon_sprite.flip_v = f1
+		weapon_sprite.offset = _grip_offset(weapon_sprite.texture, f1)
+	if weapon_sprite2.flip_v != f2 and weapon_sprite2.texture:
+		weapon_sprite2.flip_v = f2
+		weapon_sprite2.offset = _grip_offset(weapon_sprite2.texture, f2)
 	# recoil: torso pushed back along aim, with a tiny breathing pulse.
 	_hit_t = maxf(0.0, _hit_t - delta)
 	_fall_t = maxf(0.0, _fall_t - delta)

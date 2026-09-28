@@ -275,8 +275,22 @@ class ChargeLight extends Node2D:
 				_last_n = n
 				_pop = 1.0
 		queue_redraw()
+	static var _tex: Texture2D
 	func _draw() -> void:
 		var ink := Color(0.06, 0.04, 0.05)
+		if _tex == null:
+			_tex = ArtLib.sprite("pyro_charge")
+		if _tex:
+			# the painted charge: taped bundle, timer, wires
+			draw_rect(Rect2(-7, -5, 16, 12), Color(0, 0, 0, 0.3))
+			draw_texture_rect(_tex, Rect2(-9, -9, 18, 18), false)
+			if tape < 1.0:
+				draw_rect(Rect2(-9, -9 + 18 * tape, 18, 18 * (1.0 - tape)), Color(0, 0, 0, 0.0))
+			draw_circle(Vector2(3, -2), 1.3, Color(1, 0.15, 0.1, 0.4 + 0.6 * _k))
+			if _k > 0.0:
+				draw_circle(Vector2(3, -2), 7.0 * _k, Color(1, 0.1, 0.05, 0.3 * _k))
+			_draw_count()
+			return
 		# the sticks, bundled
 		draw_rect(Rect2(-7, -5, 14, 10), ink)
 		for i in 4:
@@ -295,6 +309,9 @@ class ChargeLight extends Node2D:
 			draw_circle(Vector2(12, 8.5), 1.2, Color(1, 0.15, 0.1, 0.4 + 0.6 * _k))
 			if _k > 0.0:
 				draw_circle(Vector2(12, 8.5), 7.0 * _k, Color(1, 0.1, 0.05, 0.3 * _k))
+		_draw_count()
+
+	func _draw_count() -> void:
 		# the countdown, big, over the charge
 		if fuse_left > 0.0:
 			var n := int(ceil(fuse_left))

@@ -907,6 +907,10 @@
     "round_rug": {
      "prompt": "A round Persian rug with ornate red, gold and navy patterns, fringed edge, flat, seen from directly above.",
      "size": "1024x1024"
+    },
+    "pyro_charge": {
+     "prompt": "A bundle of four red demolition charges wrapped together with grey duct tape, a small black digital timer with a red LED display and coloured wires on top, seen from directly above.",
+     "size": "1024x1024"
     }
    }
   },
@@ -965,6 +969,10 @@
     },
     "icon_walkie": {
      "prompt": "A 1980s walkie-talkie with its antenna up, drawn as a cyan neon tube, a small speaker grille, tilted slightly."
+    },
+    "icon_spotlight": {
+     "prompt": "A 1980s theatre stage spotlight lamp (a round fresnel spotlight on a yoke), glowing warm gold, beams of light streaming out, neon pink and cyan rim light.",
+     "background": "transparent"
     }
    }
   },
