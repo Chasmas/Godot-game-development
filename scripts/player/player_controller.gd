@@ -135,6 +135,7 @@ func setup(p_data: CharacterData) -> void:
 	# Cass wears the mask chosen for the job; the others their own persona
 	persona = Masks.current() if data.id == &"cass" else DB.persona(data.persona)
 	visual.setup(data.palette)
+	visual.idle_fidgets = true
 	visual.set_persona_overlay(persona != null)
 	ability.setup(data.ability, self, persona.ability_charge_mult if persona else 1.0)
 	equipment_left = data.equipment_count
@@ -1024,7 +1025,7 @@ func _find_downed() -> Enemy:
 	var best: Enemy = null
 	var bd := EXEC_RANGE
 	for e in get_tree().get_nodes_in_group("enemies"):
-		if e.has_method("is_downed") and e.is_downed():
+		if is_instance_valid(e) and not e.is_queued_for_deletion() and e.has_method("is_downed") and e.is_downed():
 			var d := (e as Node2D).global_position.distance_to(global_position)
 			if d < bd:
 				bd = d

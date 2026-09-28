@@ -37,3 +37,4 @@ signal hit_stop(duration: float)
 signal settings_changed()
 signal collectible_found(id: StringName)
 signal boss_phase(phase: int)
+signal boss_hp(boss: Node, hp: float, max_hp: float)   ## the boss bar

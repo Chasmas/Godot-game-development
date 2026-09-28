@@ -43,6 +43,29 @@ func _hit_barks() -> Array:
 func _phase_two_bark() -> String:
 	return BARKS_TOMMY_P2[0]
 
+## Bullets and blades barely scorch him (the fire keeps him standing);
+## the extinguishers on the ballroom walls take the bar down in big pieces.
+const FOAM := 3.0
+
+func _chip(info: DamageInfo) -> float:
+	return 0.45 if info.type != DamageInfo.Type.EXPLOSIVE else 1.5
+
+func take_damage(info: DamageInfo) -> String:
+	if _defeated:
+		return "pass"
+	if bool(info.get_meta("foam", false)):
+		Effects.smoke(global_position)
+		Effects.smoke(global_position + info.dir * 6.0)
+		var r := _hurt(FOAM, info)
+		if r != "killed":
+			blind(2.5, ["It's cold... it's cold, Cassie.", "Again. Do it again.", "Almost out..."][randi() % 3])
+		return r
+	if info.type == DamageInfo.Type.FIRE:
+		return "pass"
+	if info.from_player and randf() < 0.3:
+		_say(["Bullets don't put a fire out, Cassie.", "You can't shoot a fire.", "The extinguishers, Cassie. Remember?"][randi() % 3])
+	return super.take_damage(info)
+
 func _on_armor_hit(info: DamageInfo) -> void:
 	super._on_armor_hit(info)
 	if phase == 1:

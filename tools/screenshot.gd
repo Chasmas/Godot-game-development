@@ -13,6 +13,10 @@ func _ready() -> void:
 	if OS.get_environment("SHOT_LANG") != "":
 		Loc.apply(OS.get_environment("SHOT_LANG"), false)
 	var mode := OS.get_environment("SHOT_MODE")
+	if OS.get_environment("SHOT_COLLECT") == "1":
+		for cid in ["tape_roll7", "photo_harcourt", "tape_vance", "tape_pilot", "photo_casting"]:
+			if not cid in SaveManager.data.collectibles:
+				SaveManager.data.collectibles.append(cid)
 	var out := OS.get_environment("SHOT_OUT")
 	var n := int(OS.get_environment("SHOT_FRAMES")) if OS.get_environment("SHOT_FRAMES") != "" else 90
 	match mode:
@@ -28,6 +32,12 @@ func _ready() -> void:
 			if OS.get_environment("SHOT_PANEL") != "":
 				get_tree().current_scene.call("_show_" + OS.get_environment("SHOT_PANEL"))
 				await _frames(int(OS.get_environment("SHOT_PANEL_F")) if OS.get_environment("SHOT_PANEL_F") != "" else 40)
+				if OS.get_environment("SHOT_VCR_PLAY") != "":
+					for ch in get_tree().current_scene.get_children():
+						if ch is VcrScreen:
+							ch._sel = int(OS.get_environment("SHOT_VCR_PLAY"))
+							ch._play_selected()
+					await _frames(int(OS.get_environment("SHOT_VCR_F")) if OS.get_environment("SHOT_VCR_F") != "" else 200)
 		"backdrop":
 			# title backdrop for promo/installer art. SHOT_HIDE: comma list of
 			# logo, osd, press, version

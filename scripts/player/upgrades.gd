@@ -125,18 +125,27 @@ class LaserBeam extends Node2D:
 		var w = player.current()
 		if w == null or not w.data.is_firearm():
 			return
-		var from: Vector2 = player.visual.muzzle_global()
-		var dir: Vector2 = player.aim_dir
+		# from the barrel's actual tip, along the barrel's actual line (the
+		# sprite's own transform: recoil, sway and all)
+		var ws: Sprite2D = player.visual.weapon_sprite
+		if not ws.visible or ws.texture == null:
+			return
+		var tip_local := Vector2(ws.offset.x + ws.texture.get_width() - 0.5, 0.0)
+		var from: Vector2 = ws.to_global(tip_local)
+		var dir: Vector2 = Vector2.from_angle(ws.global_rotation)
 		var space := get_world_2d().direct_space_state
 		var q := PhysicsRayQueryParameters2D.create(from, from + dir * 420.0, Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.ENEMY | Layers.GLASS | Layers.DOWNED, [player.get_rid()])
 		var hit := space.intersect_ray(q)
 		var to: Vector2 = hit.position if not hit.is_empty() else from + dir * 420.0
 		var flick := 0.8 + 0.2 * sin(Time.get_ticks_msec() * 0.05)
-		draw_line(from, to, Color(1.0, 0.1, 0.2, 0.18 * flick), 3.0)
-		draw_line(from, to, Color(1.0, 0.25, 0.3, 0.55 * flick), 1.0)
+		# a hairline core with a faint haze, fading along its length
+		var mid := from.lerp(to, 0.6)
+		draw_line(from, to, Color(1.0, 0.1, 0.2, 0.12 * flick), 1.0)
+		draw_line(from, mid, Color(1.0, 0.3, 0.35, 0.8 * flick), -1.0)
+		draw_line(mid, to, Color(1.0, 0.3, 0.35, 0.45 * flick), -1.0)
 		if not hit.is_empty():
-			draw_circle(to, 2.2, Color(1, 0.2, 0.3, 0.35))
-			draw_circle(to, 1.0, Color(1, 0.8, 0.8, 0.95))
+			draw_circle(to, 1.4, Color(1, 0.2, 0.3, 0.35))
+			draw_circle(to, 0.6, Color(1, 0.85, 0.85, 0.95))
 
 
 ## Kevlar plates drawn over the torso while the vest is intact.

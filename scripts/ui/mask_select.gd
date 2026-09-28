@@ -6,6 +6,9 @@ extends CanvasLayer
 ## game waits (paused) until she picks; retries keep the choice.
 
 signal chosen(id: StringName)
+signal closed
+
+var gallery := false   ## from the title menu: no pause, ESC backs out
 
 var _i := 0
 var _t := 0.0
@@ -15,7 +18,8 @@ var _shelf: Shelf
 func _ready() -> void:
 	layer = 60
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().paused = true
+	if not gallery:
+		get_tree().paused = true
 	var cur := Game.mask if Game.mask != &"" else &"star"
 	_i = maxi(0, Masks.ORDER.find(cur))
 	_root = Control.new()
@@ -33,6 +37,12 @@ func _process(delta: float) -> void:
 	_shelf.queue_redraw()
 
 func _input(e: InputEvent) -> void:
+	if gallery and (e.is_action_pressed("ui_cancel") or e.is_action_pressed("pause")):
+		Audio.play("ui_back")
+		get_viewport().set_input_as_handled()
+		closed.emit()
+		queue_free()
+		return
 	if e.is_action_pressed("ui_left") or e.is_action_pressed("move_left"):
 		_move(-1)
 	elif e.is_action_pressed("ui_right") or e.is_action_pressed("move_right"):
@@ -72,8 +82,10 @@ func _confirm() -> void:
 	Audio.play("ui_select")
 	Audio.play("rank_stamp", -8.0)
 	PostFX.vhs_glitch(0.5)
-	get_tree().paused = false
+	if not gallery:
+		get_tree().paused = false
 	chosen.emit(id)
+	closed.emit()
 	queue_free()
 
 

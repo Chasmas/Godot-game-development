@@ -1043,6 +1043,13 @@ func ally_died(pos: Vector2) -> void:
 func _drop_weapon(vel: Vector2) -> void:
 	if weapon == null:
 		return
+	# shooters sometimes carry a spare magazine too
+	if weapon.data.is_firearm() and not Game.modifiers.get("infinite_ammo", false) and randf() < 0.2:
+		var mag := Smashable.LootPickup.new()
+		mag.kind = "ammo"
+		mag.position = global_position + Vector2.from_angle(randf() * TAU) * 8.0
+		var mp: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
+		mp.add_child.call_deferred(mag)
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	weapon.reserve = int(round(weapon.data.reserve_on_pickup() / 2 * Difficulty.mult("ammo_mult"))) if weapon.data.is_firearm() else weapon.reserve
 	WeaponPickup.spawn(parent, weapon, global_position, vel)

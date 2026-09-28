@@ -36,6 +36,7 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	add_child(_flame)
 
 func _physics_process(delta: float) -> void:
+	_doused_t = maxf(0.0, _doused_t - delta)
 	super._physics_process(delta)
 	if not active or _defeated:
 		_windup = 0.0
@@ -138,18 +139,17 @@ func _gun_combat(p: Player, dist: float, delta: float) -> Vector2:
 	return (p.global_position - global_position).normalized().orthogonal() * data.walk_speed * 0.4
 
 func _on_armor_hit(_info: DamageInfo) -> void:
+	_hit_n += 1
 	var hb := _hit_barks()
-	_say(hb[(data.armor - armor_left - 1) % hb.size()])
+	_say(hb[_hit_n % hb.size()])
 	Audio.play_at("intercom", global_position)
 	_windup = 0.0
 	_spray = 0.0
 	_cover_i += 1
 	_relocating = true
 	if level and level.has_method("spawn_reinforcements"):
-		level.spawn_reinforcements(2 if armor_left > 0 else 1)
+		level.spawn_reinforcements(1)
 	Events.boss_phase.emit(1)
-	if armor_left <= 0:
-		_start_phase_two()
 
 func _start_phase_two() -> void:
 	phase = 2
@@ -172,6 +172,27 @@ func take_damage(info: DamageInfo) -> String:
 	if info.type == DamageInfo.Type.FIRE:
 		return "pass"    # aluminised suit
 	return super.take_damage(info)
+
+## Waterlogged: the suit stops turning blows for a while.
+func _chip(info: DamageInfo) -> float:
+	return super._chip(info) * (1.6 if _doused_t > 0.0 else 1.0)
+
+
+
+var _doused_t := 0.0
+
+## Someone opened the water main: the sprinklers finally work. The pilot
+## light drowns, the fires hiss out, the suit's waterlogged - one good hit
+## will do it now, and for a while he can't light anything.
+func douse() -> void:
+	_doused_t = 12.0
+	_windup = 0.0
+	_spray = 0.0
+	_ring_wind = 0.0
+	_flame_cd = 12.0
+	_ring_t = 14.0
+	blind(3.5, "My PILOT! You drowned my pilot!")
+	Audio.play_at("flame_ignite", global_position, -2.0, 0.4)
 
 func _final_down(info: DamageInfo) -> void:
 	_windup = 0.0

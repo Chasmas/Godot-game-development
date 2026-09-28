@@ -13,7 +13,7 @@ const WINDOW_SIZES := [Vector2i(1280, 720), Vector2i(1600, 900), Vector2i(1920, 
 const DEFAULT_SETTINGS := {
 	"master_volume": 0.9, "music_volume": 0.8, "sfx_volume": 0.9, "dialogue_volume": 0.9,
 	"screen_shake": 1.0, "crt": true, "chromatic": true, "gore": 2, "reduced_flashing": false,
-	"brightness": 1.0, "fullscreen": false, "vsync": true, "vibration": true,
+	"brightness": 1.0, "fullscreen": true, "vsync": true, "vibration": true,
 	"aim_assist": 0.5, "language": "en", "subtitles": true, "ui_scale": 1.0,
 	"colorblind": 0, "show_fps": false, "bindings": {}, "window_size": 1, "bloom": true, "cel_shading": true, "weather": true,
 	"lock_auto_next": true, "laser_always": false, "difficulty": 1,
@@ -40,6 +40,12 @@ var data: Dictionary = {}
 func _ready() -> void:
 	settings = _merge(DEFAULT_SETTINGS.duplicate(true), _load_json(SETTINGS_PATH))
 	data = _merge(DEFAULT_SAVE.duplicate(true), _load_json(SAVE_PATH))
+	# 0.10: the game opens borderless fullscreen by default (once, for
+	# settings saved before that; the option still turns it off)
+	if not settings.get("fs_default_2", false):
+		settings["fs_default_2"] = true
+		settings["fullscreen"] = true
+		save_settings()
 	apply_video_settings()
 
 func has_progress() -> bool:
@@ -60,7 +66,7 @@ func set_setting(key: String, value: Variant, save_now := true) -> void:
 func apply_video_settings() -> void:
 	if DisplayServer.get_name() == "headless":
 		return
-	var fs: bool = settings.get("fullscreen", false)
+	var fs: bool = settings.get("fullscreen", true)
 	var cur := DisplayServer.window_get_mode()
 	if fs and cur != DisplayServer.WINDOW_MODE_FULLSCREEN and cur != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

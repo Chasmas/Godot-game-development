@@ -23,6 +23,7 @@ var ability_label: Label
 var ability_bar: ColorRect
 var meter: AbilityMeter
 var tutorials: TutorialCards
+var boss_bar: BossBar
 var ability_bg: ColorRect
 var equip_label: Label
 var prompt_label: Label
@@ -104,6 +105,10 @@ func _ready() -> void:
 	ability_bar = ColorRect.new()
 	ability_bar.visible = false
 	root.add_child(ability_bar)
+	boss_bar = BossBar.new()
+	UIStyle.place(boss_bar, Control.PRESET_CENTER_TOP, Vector2(-330, 64), Vector2(660, 64))
+	root.add_child(boss_bar)
+	Events.boss_hp.connect(boss_bar.on_hp)
 	tutorials = TutorialCards.new()
 	UIStyle.place(tutorials, Control.PRESET_TOP_RIGHT, Vector2(-404, 132), Vector2(388, 560))
 	root.add_child(tutorials)
@@ -1226,3 +1231,73 @@ class AbilityMeter extends Control:
 			draw_colored_polygon(fill, col)
 		if ready_flash > 0.0:
 			draw_polyline(loop, Color(1, 1, 1, ready_flash), 3.0 + 6.0 * (1.0 - ready_flash), true)
+
+
+## The boss's health: a name in the display face over a slanted neon bar,
+## a white trail that catches up after each hit, a notch where phase two
+## starts, a shake when it's hit. Slides in when the fight starts, drains
+## away after it.
+class BossBar extends Control:
+	var _boss: Node
+	var _hp := 1.0
+	var _trail := 1.0
+	var _shake := 0.0
+	var _a := 0.0
+	var _t := 0.0
+	var _name := ""
+
+	func _ready() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	func on_hp(boss: Node, hp: float, max_hp: float) -> void:
+		var k := clampf(hp / maxf(max_hp, 0.01), 0.0, 1.0)
+		if _boss != boss:
+			_boss = boss
+			_hp = k
+			_trail = k
+			var sd: Dictionary = Dialogue.speakers.get(str(boss.get("data").id) if boss.get("data") else "", {})
+			_name = tr(str(sd.get("name", ""))) if not sd.is_empty() else ""
+			if _name == "":
+				_name = {"night_manager": "LYLE HARCOURT", "fireman": "DUTCH 'THE FIREMAN' KOWALSKI", "burning_man": "TOMMY?"}.get(str(boss.get("data").id), "BOSS")
+		if k < _hp:
+			_shake = 1.0
+		_hp = k
+
+	func _process(delta: float) -> void:
+		_t += delta
+		var live: bool = _boss != null and is_instance_valid(_boss) and _boss.is_alive() and not bool(_boss.get("_defeated"))
+		_a = move_toward(_a, 1.0 if live else 0.0, delta * (3.0 if live else 1.0))
+		_trail = move_toward(_trail, _hp, delta * (0.25 if _trail - _hp < 0.3 else 0.6))
+		_shake = maxf(0.0, _shake - delta * 3.0)
+		queue_redraw()
+
+	func _draw() -> void:
+		if _a <= 0.01:
+			return
+		var w := size.x
+		var off := Vector2(sin(_t * 70.0) * 4.0 * _shake, (1.0 - _a) * -20.0)
+		var fd := UIStyle.font_display()
+		draw_string(fd, off + Vector2(2, 24), _name, HORIZONTAL_ALIGNMENT_CENTER, w, 24, Color(0, 0, 0, 0.7 * _a))
+		draw_string(fd, off + Vector2(0, 22), _name, HORIZONTAL_ALIGNMENT_CENTER, w, 24, Color(UIStyle.GOLD, _a))
+		var y := 34.0
+		var h := 16.0
+		var skew := 12.0
+		var poly := func(k: float) -> PackedVector2Array:
+			var x1 := skew + (w - skew * 2.0) * k
+			return PackedVector2Array([off + Vector2(skew, y), off + Vector2(x1 + skew, y), off + Vector2(x1, y + h), off + Vector2(0, y + h)])
+		draw_colored_polygon(poly.call(1.0), Color(0.05, 0.0, 0.07, 0.85 * _a))
+		if _trail > _hp:
+			draw_colored_polygon(poly.call(_trail), Color(1, 1, 1, 0.85 * _a))
+		if _hp > 0.0:
+			var col := UIStyle.HOT.lerp(UIStyle.PINK, 0.5 + 0.5 * sin(_t * 3.0))
+			draw_colored_polygon(poly.call(_hp), Color(col, _a))
+			# a glossy strip along the top
+			var g: PackedVector2Array = poly.call(_hp)
+			draw_line(g[0] + Vector2(1, 2), g[1] + Vector2(-1, 2), Color(1, 1, 1, 0.35 * _a), 2.0)
+		# the phase-two notch
+		var nk := BossNightManager.PHASE2_AT
+		var nx := skew + (w - skew * 2.0) * nk
+		draw_line(off + Vector2(nx + skew, y - 3), off + Vector2(nx, y + h + 3), Color(UIStyle.CYAN, 0.9 * _a), 2.0)
+		var outline := poly.call(1.0)
+		outline.append(outline[0])
+		draw_polyline(outline, Color(UIStyle.PINK, 0.9 * _a), 1.5, true)

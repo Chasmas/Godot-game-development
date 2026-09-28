@@ -867,5 +867,15 @@
     50
    ]
   ]
- }
+ },
+ "boss_props": [
+  {
+   "kind": "breaker",
+   "pos": [
+    55,
+    38
+   ]
+  }
+ ],
+ "boss_weapon": "shotgun"
 }

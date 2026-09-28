@@ -23,6 +23,8 @@ SR = 44100
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MUS = os.path.join(ROOT, "music")
 rng = np.random.default_rng(1987)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gen_music_dream import space   # the hall + chorus finishing chain
 
 # ------------------------------------------------------------------ dsp
 def t_ax(d): return np.arange(int(d * SR)) / SR
@@ -198,7 +200,7 @@ MINOR = [0, 2, 3, 5, 7, 8, 10]
 def chord(root, kind="m"):
     return [root, root + (4 if kind == "M" else 3), root + (6 if kind == "d" else 7)]
 
-def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=0, dirt=1.0, bars=32, danger_hook=True):
+def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=0, dirt=1.0, bars=48, danger_hook=True, layout=(0, 1, 2, 3, 4, 5)):
     """prog: 8 [root(midi, around 40-52), kind] one per bar (the loop repeats
     4x across 32 bars with sections). hook: 2-bar phrase [(step16, midi, len16), ...]
     for bars 1-2 of every 4; the answer (bars 3-4) is the hook shifted to the
@@ -210,17 +212,33 @@ def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=
     K, S, C = kick(), snare(), clap()
     for bar in range(bars):
         t0 = bar * B
+        # six sections of eight bars:
+        #   0 intro   - the bed, filtered; the hook's first notes tease at the end
+        #   1 call    - drums in, the hook in fragments
+        #   2 chorus  - the whole hook and its answer
+        #   3 break   - drums out, the hook slow and low, a snare roll into...
+        #   4 lift    - the chorus again a whole tone up, with a counter-line
+        #   5 turn    - the answer alone, varied, back round to the top
+        sec = layout[(bar // 8) % len(layout)]
+        lift = 2 if sec == 4 else 0
         root, kind = prog[bar % len(prog)]
-        sec = (bar // 8) % 4          # A B A' C
+        root += lift
         ch = chord(root + 12, kind)
         # ---- explore: bass, pad, hats, arp
         for s16 in range(16):
             at = t0 + s16 * st
-            if bass_style == "octaves" and s16 % 2 == 0:
+            if sec == 3:
+                if s16 == 0:
+                    stems["explore"].add(gritbass(root - 12, B * 0.95, 400, 1.8), at, 0.5)
+            elif bass_style == "octaves" and s16 % 2 == 0:
                 m = root - 12 + (12 if (s16 // 2) % 2 else 0)
                 stems["explore"].add(gritbass(m, st * 1.8, 700 + 500 * dirt, 2.6 + dirt), at, 0.55)
             elif bass_style == "gallop" and s16 % 4 in (0, 2, 3):
                 stems["explore"].add(gritbass(root - 12, st * 0.95, 900, 3.0 + dirt), at, 0.55)
+            elif bass_style == "ostinato":
+                # the hypnotic 16th-note figure under it all
+                fig = [0, 0, 12, 0, 7, 0, 12, 3][s16 % 8]
+                stems["explore"].add(gritbass(root - 12 + fig, st * 0.9, 1100, 2.4 + dirt * 0.6), at, 0.4 if s16 % 4 == 0 else 0.3)
             elif bass_style == "drone" and s16 % 8 == 0:
                 stems["explore"].add(gritbass(root - 12, st * 7.5, 500, 2.0 + dirt), at, 0.6)
             stems["explore"].add(hat(), at + (st * 0.12 if s16 % 2 else 0.0), 0.16 if s16 % 4 == 2 else 0.08, 0.3 if s16 % 2 else -0.3)
@@ -230,8 +248,21 @@ def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=
         if bar % 2 == 0:
             stems["explore"].add(pad(ch, B * 2), t0, 0.12)
         # ---- combat: drums and stabs
+        quiet = sec == 0 or sec == 3
+        if sec == 3:
+            stems["combat"].add(K, t0, 0.7)
+            kicks.append(t0)
+            if bar % 8 == 7:
+                for r in range(16):
+                    stems["combat"].add(S, t0 + r * st, 0.12 + 0.03 * r)
+        if sec in (1, 3) and bar % 8 == 7:
+            # a reversed swell into the next section
+            sw = hp(noise(B * 0.5), 2500) * np.linspace(0, 1, int(B * 0.5 * SR)) ** 3 * 0.6
+            stems["combat"].add(sw, t0 + B * 0.5, 0.5)
         for b4 in range(4):
             at = t0 + b4 * beat
+            if quiet:
+                break
             if drums == "four" or (drums == "half" and b4 in (0, 2)) or (drums == "break" and b4 in (0,)):
                 stems["combat"].add(K, at, 0.95)
                 kicks.append(at)
@@ -245,26 +276,45 @@ def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=
                 stems["combat"].add(S, at, 0.6)
             stems["combat"].add(hat(open_=True), at + beat * 0.5, 0.12, 0.4)
         for s16 in (0, 3, 6, 10, 12):
-            if sec in (1, 2) or s16 in (0, 6):
+            if quiet:
+                break
+            if sec in (2, 4) or s16 in (0, 6):
                 stab_ch = [ch[0], ch[0] + 7, ch[0] + 12]      # power chords: grit, no sweetness
                 stems["combat"].add(stab(stab_ch, st * 2), t0 + s16 * st, 0.2, -0.1)
         if bar % 8 == 7:
             for i, m in enumerate((50, 47, 45, 43)):
                 stems["danger"].add(tom(m + (root % 12) - 4), t0 + (12 + i) * st, 0.45, -0.4 + i * 0.25)
-        if bar % 8 == 0:
-            stems["combat"].add(crash(), t0, 0.35)
+        if bar % 8 == 0 and sec in (1, 2, 4, 5):
+            stems["combat"].add(crash(), t0, 0.45 if sec in (2, 4) else 0.3)
         # ---- combo: the hook, answered on the next chord
-        if sec != 3 or bar % 4 < 2:
-            phrase = hook if (bar % 4) < 2 else [(s, m + (root - prog[0][0]), l) for (s, m, l) in hook]
-            half = (bar % 2) * 16
+        answer = [(s2, m + (root - lift - prog[0][0]), l) for (s2, m, l) in hook]
+        phrase = None
+        if sec == 0 and bar % 8 == 7:
+            phrase = [x for x in hook if x[0] < 8]                 # the tease
+        elif sec == 1 and bar % 4 < 2:
+            phrase = hook if bar % 4 == 0 else []                   # the call, half of it
+        elif sec in (2, 4):
+            phrase = hook if (bar % 4) < 2 else answer
+        elif sec == 5:
+            # the answer alone, its last note held and bent down a step
+            phrase = [(s2, m - (2 if i == len(answer) - 1 else 0), l) for i, (s2, m, l) in enumerate(answer)]
+        if phrase:
+            half = (bar % 2) * 16 if sec != 0 else 0
             prev = None
-            for (s, m, l) in phrase:
-                if half <= s < half + 16:
-                    mm = m + 12 * lead_oct
-                    stems["combo"].add(hook_lead(mm, st * l * 0.95, prev), t0 + (s - half) * st, 0.3, 0.05)
+            for (s2, m, l) in phrase:
+                if half <= s2 < half + 16:
+                    mm = m + 12 * lead_oct + lift
+                    stems["combo"].add(hook_lead(mm, st * l * 0.95, prev), t0 + (s2 - half) * st, 0.3, 0.05)
+                    if sec == 4:
+                        # the counter-line: a sixth below, answering in the other ear
+                        stems["combo"].add(hook_lead(mm - 9, st * l * 0.9), t0 + (s2 - half) * st + st * 0.5, 0.12, -0.5)
                     prev = mm
+        if sec == 3 and bar % 2 == 0:
+            # the break: the hook's opening, twice as slow and an octave down
+            for (s2, m, l) in [x for x in hook if x[0] < 8]:
+                stems["combo"].add(lp(hook_lead(m - 12 + 12 * lead_oct, st * l * 1.9), 1400), t0 + s2 * 2 * st, 0.28, 0.0)
         # ---- danger: the hook an octave up, crushed and driven
-        if danger_hook and (bar % 4) < 2:
+        if danger_hook and (bar % 4) < 2 and sec in (2, 4, 5):
             half = (bar % 2) * 16
             for (s, m, l) in hook:
                 if half <= s < half + 16:
@@ -282,14 +332,17 @@ def compose(name, bpm, prog, hook, bass_style="octaves", drums="four", lead_oct=
     stems["combo"].delay(beat * 0.75, 0.35, 0.28)
     stems["explore"].delay(beat * 0.75, 0.25, 0.12)
     peaks = {"explore": 0.72, "combat": 0.8, "combo": 0.62, "danger": 0.55}
+    wets = {"explore": 0.3, "combat": 0.1, "combo": 0.28, "danger": 0.18}
     for k, bus in stems.items():
-        write_ogg(f"{name}_{k}", master(bus.stereo(), 1.3 + 0.3 * dirt, peaks[k]))
+        L, R = space(bus.L, bus.R, wets[k], 2.2)
+        write_ogg(f"{name}_{k}", master(np.stack([L, R], axis=1), 1.3 + 0.3 * dirt, peaks[k]))
 
-def boss(name, bpm, prog, hook, alt=None, dirt=1.4, bars=16):
+def boss(name, bpm, prog, hook, alt=None, dirt=1.4, bars=24):
     """A full boss mix (all four layers summed) and, if `alt` is given, a
     second full variant ('dark': drums and bass only, crushed; 'fire': the
     hook doubled and driven) for data/music.json's second layer."""
-    compose(name + "__tmp", bpm, prog, hook, "gallop", "four", 0, dirt, bars)
+    # a fight doesn't get an intro: chorus, the lift, the chorus again
+    compose(name + "__tmp", bpm, prog, hook, "gallop", "four", 0, dirt, bars, True, (2, 4, 2))
     parts = {}
     for k in ("explore", "combat", "combo", "danger"):
         p = os.path.join(MUS, f"{name}__tmp_{k}.ogg")
@@ -315,7 +368,7 @@ TRACKS = {
     # falling back onto the same bad note
     "level_checkout": dict(bpm=118, prog=[(40, "m"), (40, "m"), (41, "M"), (40, "m"), (36, "M"), (35, "M"), (40, "m"), (41, "M")],
         hook=[(0, 64, 2), (2, 67, 2), (4, 65, 2), (6, 64, 2), (8, 71, 4), (12, 70, 2), (14, 67, 2), (16, 64, 2), (18, 67, 2), (20, 65, 2), (22, 64, 2), (24, 59, 6), (30, 63, 2)],
-        bass_style="octaves", drums="four", dirt=1.6),
+        bass_style="ostinato", drums="four", dirt=1.6),
     # Dog Days - C# minor, 124: heat and chain-link, a galloping reese
     "level_yard": dict(bpm=124, prog=[(37, "m"), (37, "m"), (38, "M"), (37, "m"), (45, "M"), (44, "M"), (37, "m"), (44, "M")],
         hook=[(0, 61, 3), (3, 64, 3), (6, 62, 2), (8, 61, 2), (10, 68, 4), (14, 67, 2), (16, 61, 3), (19, 64, 3), (22, 62, 2), (24, 60, 8)],
@@ -323,7 +376,7 @@ TRACKS = {
     # Prime Time - F# minor, 128: the game-show sting played in a morgue
     "level_primetime": dict(bpm=128, prog=[(42, "m"), (43, "M"), (42, "m"), (38, "M"), (47, "m"), (37, "M"), (42, "m"), (37, "M")],
         hook=[(0, 66, 2), (2, 66, 1), (3, 69, 3), (6, 67, 2), (8, 66, 4), (12, 61, 4), (16, 66, 2), (18, 73, 2), (20, 72, 2), (22, 69, 2), (24, 67, 4), (28, 65, 4)],
-        bass_style="octaves", drums="break", dirt=1.8),
+        bass_style="ostinato", drums="break", dirt=1.8),
     # Sweet Dreams - D minor, 96: a lullaby dragged underwater, half-time
     "level_nightmare": dict(bpm=96, prog=[(38, "m"), (39, "M"), (38, "m"), (34, "M"), (43, "m"), (45, "M"), (38, "m"), (37, "d")],
         hook=[(0, 62, 4), (4, 63, 4), (8, 62, 2), (10, 58, 2), (12, 57, 4), (16, 62, 4), (20, 69, 4), (24, 68, 4), (28, 65, 4)],

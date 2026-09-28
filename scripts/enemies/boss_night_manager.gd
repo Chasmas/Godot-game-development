@@ -22,6 +22,7 @@ var active := false
 var _phase_intro_t := 0.0
 var _rage_pulse_t := 0.0
 var p2_hits := 2               ## clean hits it takes to drop him in the dark
+var _blind_t := 0.0            ## dazzled by the lights coming back (or doused, or foamed)
 
 const BARKS_HIT := ["You're bleeding on my carpet!", "SECURITY! Front desk!", "Do you know who OWNS this place?"]
 const BARKS_P2 := ["Let's see how you do in the dark, hotshot."]
@@ -42,6 +43,7 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 func activate() -> void:
 	active = true
 	_enter_combat()
+	Events.boss_hp.emit(self, hp, max_hp)
 
 func _physics_process(delta: float) -> void:
 	_bark_t = maxf(0.0, _bark_t - delta)
@@ -53,6 +55,16 @@ func _physics_process(delta: float) -> void:
 		ft.tween_property(flashlight, "energy", 1.6, 0.22)
 	if not active:
 		visual.set_aim(facing.angle())
+		return
+	if _blind_t > 0.0 and not _defeated:
+		# staggering, arm over the eyes: the opening
+		_blind_t -= delta
+		_knock = _knock.move_toward(Vector2.ZERO, 600.0 * delta)
+		velocity = _knock + Vector2(sin(_blind_t * 9.0), cos(_blind_t * 7.0)) * 14.0
+		move_and_slide()
+		visual.set_aim(facing.angle() + sin(_blind_t * 6.0) * 0.6)
+		visual.update_move(velocity, delta)
+		queue_redraw()
 		return
 	super._physics_process(delta)
 	if _bark_t > 0.0:
@@ -84,16 +96,17 @@ func _gun_combat(p: Player, dist: float, delta: float) -> Vector2:
 		return _go_to(p.global_position, data.walk_speed * 1.4)
 	return move
 
+var _hit_n := 0
+
 func _on_armor_hit(_info: DamageInfo) -> void:
-	_say(BARKS_HIT[(data.armor - armor_left - 1) % BARKS_HIT.size()])
+	_hit_n += 1
+	_say(BARKS_HIT[_hit_n % BARKS_HIT.size()])
 	Audio.play_at("intercom", global_position)
 	_cover_i += 1
 	_relocating = true
 	if level and level.has_method("spawn_reinforcements"):
-		level.spawn_reinforcements(2 if armor_left > 0 else 1)
+		level.spawn_reinforcements(1)
 	Events.boss_phase.emit(1)
-	if armor_left <= 0:
-		_start_phase_two()
 
 func _start_phase_two() -> void:
 	phase = 2
@@ -115,6 +128,56 @@ func _start_phase_two() -> void:
 	if level and level.has_method("boss_lights_out"):
 		level.boss_lights_out()
 
+## Dazzled/soaked/foamed for `t` seconds: can't fight back, and a clean
+## blow while he's like this ends it.
+func blind(t: float, bark := "") -> void:
+	if _defeated:
+		return
+	_blind_t = t
+	flashlight.visible = false
+	visual.hit_react(Vector2.from_angle(randf() * TAU), true, 0.3)
+	if bark != "":
+		_say(bark)
+	Events.camera_punch.emit(1.1, 0.25)
+
+## HEALTH. Every boss has a bar (HUD BossBar). Plain hits take a little;
+## the room's trick (breaker, water main, extinguishers) leaves them open and
+## the next blow takes a big chunk - never the whole bar at once. Phase two
+## starts at PHASE2_AT of the bar.
+var max_hp := 10.0
+var hp := 10.0
+const PHASE2_AT := 0.6
+const HIT := 1.25             ## a bullet / blade / thrown thing, phase one
+const HIT_P2 := 1.5           ## phase two: he's hurt, he's careless
+const HIT_OPEN := 3.2         ## a blow while he's blinded / soaked / foamed
+const HIT_BOOM := 2.5         ## explosions
+
+func _chip(info: DamageInfo) -> float:
+	if info.type == DamageInfo.Type.EXPLOSIVE:
+		return HIT_BOOM
+	return HIT if phase == 1 else HIT_P2
+
+func _hurt(amount: float, info: DamageInfo) -> String:
+	hp = maxf(0.0, hp - amount)
+	Events.boss_hp.emit(self, hp, max_hp)
+	if hp <= 0.0:
+		_final_down(info)
+		return "killed"
+	visual.hit_react(info.dir, true, 0.2)
+	_knock = info.dir * 170.0
+	Effects.blood(global_position, info.dir)
+	Audio.play_at("hit_flesh", global_position)
+	Events.camera_punch.emit(1.08, 0.15)
+	if phase == 1:
+		_on_armor_hit(info)
+		if hp <= max_hp * PHASE2_AT:
+			_start_phase_two()
+	else:
+		_say("Is that it, hotshot?")
+		_cover_i += 1
+		_relocating = true
+	return "absorbed"
+
 func take_damage(info: DamageInfo) -> String:
 	if _defeated:
 		return "pass"
@@ -122,32 +185,17 @@ func take_damage(info: DamageInfo) -> String:
 		return "pass" if info.type == DamageInfo.Type.BALLISTIC else "blocked"
 	if not active:
 		activate()
-	if phase == 2 and (info.lethal or info.type == DamageInfo.Type.EXPLOSIVE):
-		p2_hits -= 1
-		if p2_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
-			# staggers, drops the flashlight beam for a moment, keeps coming
-			visual.hit_react(info.dir, true, 0.2)
-			_knock = info.dir * 160.0
-			Effects.blood(global_position, info.dir)
-			Audio.play_at("hit_flesh", global_position)
-			Events.camera_punch.emit(1.08, 0.15)
-			_say("Is that it, hotshot?")
-			_cover_i += 1
-			_relocating = true
-			return "absorbed"
-		_final_down(info)
-		return "killed"
-	if phase == 1 and info.type != DamageInfo.Type.BALLISTIC and info.lethal:
-		# heavy blows count as armour hits too - no cheesing him with one knife
-		if armor_left > 0:
-			armor_left -= 1
-			visual.hit_react(info.dir, true, 0.18)
-			Events.camera_punch.emit(1.07, 0.12)
-			_knock = info.dir * 200.0
-			Audio.play_at("hit_blunt", global_position)
-			_on_armor_hit(info)
-			return "absorbed"
-	return super.take_damage(info)
+	if not (info.lethal or info.type == DamageInfo.Type.EXPLOSIVE or info.type == DamageInfo.Type.BALLISTIC):
+		# a shove or a punch: he rocks, nothing more
+		visual.hit_react(info.dir, false, 0.12)
+		_knock = info.dir * 120.0
+		return "absorbed"
+	if _blind_t > 0.0:
+		_blind_t = 0.0
+		PostFX.flash(Color(1, 0.9, 0.6), 0.25)
+		Events.hit_stop.emit(0.12)
+		return _hurt(HIT_OPEN, info)
+	return _hurt(_chip(info), info)
 
 func _final_down(info: DamageInfo) -> void:
 	_defeated = true

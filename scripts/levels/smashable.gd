@@ -172,9 +172,12 @@ class LootPickup extends Node2D:
 				var w = p.current()
 				if w == null or not w.data.is_firearm():
 					return   # leave it for when you have a gun
-				w.reserve += p.mag_size(w)
+				# a universal magazine: half a load for whatever's in her hands
+				var n: int = 3 if w.data.pellets > 1 else maxi(4, int(ceil(p.mag_size(w) * 0.5)))
+				w.reserve += n
 				p._emit_weapon()
-				label = "+AMMO"
+				Audio.play("mag_in", -4.0)
+				label = tr("+%d ROUNDS") % n
 			"cash":
 				Score.add_bonus("CASH", 250, global_position)
 			"flare":
@@ -246,10 +249,13 @@ class LootPickup extends Node2D:
 				draw_rect(Rect2(-4.5, -1, 9, 2), Color("8a8e9a"))
 				draw_rect(Rect2(-4, 0, 2, 3.5), Color("5a3a22"))
 			"ammo":
-				for i in 3:
-					draw_rect(Rect2(-3 + i * 2.2, -3, 1.6, 6), Color("0b0710"))
-					draw_rect(Rect2(-2.8 + i * 2.2, -2.8, 1.2, 5.4), Color("d8a428"))
-					draw_rect(Rect2(-2.8 + i * 2.2, -2.8, 1.2, 1.4), Color("c07030"))
+				# a magazine, rounds showing at the lips
+				draw_set_transform(Vector2.ZERO, 0.35, Vector2.ONE)
+				draw_rect(Rect2(-2.5, -4.5, 5, 9), Color("0b0710"))
+				draw_rect(Rect2(-2, -4, 4, 8), Color("3a3e46"))
+				draw_rect(Rect2(-2, 2, 4, 2), Color("24272d"))
+				draw_rect(Rect2(-1.2, -5.2, 2.4, 1.6), Color("d8a428"))
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 			"cash":
 				draw_rect(Rect2(-4, -2.5, 8, 5), Color("0b0710"))
 				draw_rect(Rect2(-3.5, -2, 7, 4), Color("5aa060"))

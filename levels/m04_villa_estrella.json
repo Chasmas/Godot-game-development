@@ -969,5 +969,36 @@
     59
    ]
   ]
- }
+ },
+ "boss_props": [
+  {
+   "kind": "extinguisher",
+   "pos": [
+    28,
+    8
+   ]
+  },
+  {
+   "kind": "extinguisher",
+   "pos": [
+    44,
+    8
+   ]
+  },
+  {
+   "kind": "extinguisher",
+   "pos": [
+    28,
+    16
+   ]
+  },
+  {
+   "kind": "extinguisher",
+   "pos": [
+    44,
+    16
+   ]
+  }
+ ],
+ "boss_weapon": "smg"
 }

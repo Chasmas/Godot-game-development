@@ -159,19 +159,19 @@ func _ready() -> void:
 	else:
 		Score.reset()
 	player.global_position = spawn
-	if not st.is_empty() and phase in [Phase.PHONE, Phase.ESCAPE]:
-		var ph := phase
-		(func():
-			if ph == Phase.PHONE:
-				_begin_phone()
-			else:
-				_begin_escape()).call_deferred()
+	if not st.is_empty() and phase == Phase.ESCAPE:
+		# the later "phase >= PHONE" pass puts the phone back; this puts the
+		# way out back open on top of it
+		(func(): _begin_escape()).call_deferred()
 	if not st.is_empty():
 		# back from a checkpoint: everyone is at their post again, facing the
 		# way they were placed; give the player a beat before anyone looks
 		player.respawn_grace = RESPAWN_GRACE
 	_build_checkpoint_markers.call_deferred()
 	_build_cameras()
+	_build_boss_props()
+	if st.is_empty() or not st.get("boss_weapon_taken", false):
+		_place_boss_weapon()
 	_scatter_smashables()
 	player.died.connect(_on_player_died)
 	if not st.is_empty():
@@ -258,7 +258,11 @@ func _ready() -> void:
 		hud.show_title_card(tr(mission.title), tr("ARCADE") + "  ·  " + arcade.title())
 		PostFX.vhs_glitch(0.8)
 	elif Game.attempts <= 1 and st.is_empty():
-		hud.show_title_card(tr(mission.title), "%s\n%s  ·  %s" % [tr(mission.location).to_upper(), tr(mission.date_text), tr(str(data.get("time_text", "11:48 PM")))])
+		# the chapter's spotlight: box art, title, place and a line of story
+		var li := LevelIntro.new()
+		li.mission = mission
+		li.time_text = tr(str(data.get("time_text", "11:48 PM")))
+		add_child(li)
 		PostFX.vhs_glitch(0.8)
 		Events.objective_changed.emit(_obj("infiltrate", "GET INSIDE THE SUNSET PALMS"))
 	else:
@@ -1010,6 +1014,7 @@ func _start_boss(with_intro: bool) -> void:
 		with_intro = false
 	if not Game.checkpoint_state.is_empty():
 		Game.checkpoint_state["boss_seen"] = true
+	_arm_boss_props()
 	if with_intro:
 		Dialogue.start(_boss_dialogue("intro"))
 	else:
@@ -1051,8 +1056,104 @@ func boss_lights_out() -> void:
 	tw.tween_property(dark_modulate, "color", ambient * 0.28, 0.6)
 	player_light.energy = 0.9
 	hud.show_hint("HE CUT THE POWER. WATCH FOR HIS FLASHLIGHT.", 3.0)
+	get_tree().create_timer(3.2, false).timeout.connect(_arm_boss_props)
 	PostFX.vhs_glitch(0.7)
 	Music.set_intensity(2)
+
+# ------------------------------------------------------------ boss props
+## Each boss can be beaten another way, with something in the room: the
+## breaker in the lobby (Harcourt), the water main on Stage Nine (the
+## Fireman), the extinguishers on the ballroom walls (the dream). Level JSON
+## "boss_props": [{"kind": ..., "pos": [x, y]}].
+var _boss_props: Array = []
+
+func _build_boss_props() -> void:
+	var labels := {"breaker": "THROW THE BREAKER", "valve": "OPEN THE WATER MAIN", "extinguisher": "GRAB THE EXTINGUISHER"}
+	for bp in data.get("boss_props", []):
+		var k := str(bp.kind)
+		var it := Interactable.new()
+		it.setup(k, labels.get(k, "USE"), "")
+		it.one_shot = true
+		it.enabled = false
+		var c := Vector2i(int(bp.pos[0]), int(bp.pos[1]))
+		if nav and nav.is_in_boundsv(c):
+			c = _nearest_open(c)
+		it.position = Vector2(c) * 16.0 + Vector2(8, 8)
+		props_root.add_child(it)
+		it.used.connect(_on_boss_prop)
+		_boss_props.append(it)
+
+## A weapon waiting at the door of every boss room (level JSON
+## "boss_weapon"): whatever state she arrives in, she can fight.
+func _place_boss_weapon() -> void:
+	var wid := str(data.get("boss_weapon", ""))
+	if wid == "" or arcade:
+		return
+	var at := Vector2i(-1, -1)
+	var tr_rect: Array = data.get("boss_trigger", [])
+	if tr_rect.size() == 4:
+		at = Vector2i(int(tr_rect[0]) + int(tr_rect[2]) / 2, int(tr_rect[1]) + int(tr_rect[3]) + 2)
+	elif data.has("breach"):
+		var pl: Array = data.breach.get("plant", [0, 0])
+		at = Vector2i(int(pl[0]) - 2, int(pl[1]) + 2)
+	if at.x < 0 or nav == null or not nav.is_in_boundsv(at):
+		return
+	at = _nearest_open(at)
+	var wd := DB.weapon(StringName(wid))
+	if wd:
+		WeaponPickup.spawn(pickup_root(), WeaponInstance.create(wd), Vector2(at) * 16.0 + Vector2(8, 8))
+
+func _arm_boss_props() -> void:
+	for it in _boss_props:
+		# the breaker only matters once he's killed the lights
+		if is_instance_valid(it) and not (it.kind == "breaker" and boss and boss.phase < 2):
+			it.enabled = true
+	if not _boss_props.is_empty() and _boss_props[0].kind == "breaker" and boss and boss.phase < 2:
+		return
+	if not _boss_props.is_empty():
+		var k: String = _boss_props[0].kind
+		var tip := {"breaker": "THE BREAKER BOX IS BY THE DESK. LIGHTS ON = HE'S BLIND.",
+			"valve": "THE SPRINKLERS ARE DRY. FIND THE WATER MAIN.",
+			"extinguisher": "BULLETS WON'T DO IT. THE EXTINGUISHERS ARE FULL THIS TIME."}.get(k, "")
+		if tip != "":
+			hud.show_hint(tip, 4.0)
+
+func _on_boss_prop(it: Interactable, _by: Node) -> void:
+	if boss == null or not is_instance_valid(boss) or not boss.is_alive():
+		return
+	match it.kind:
+		"breaker":
+			Audio.play("light_switch", 0.0)
+			Audio.play("power_up", -4.0)
+			set_zone_lights("lobby", true, "boss")
+			create_tween().tween_property(dark_modulate, "color", ambient, 0.25)
+			PostFX.flash(Color(1, 1, 0.9), 0.5)
+			boss.blind(4.0, "MY EYES! Who turned the lights on?!")
+		"valve":
+			Audio.play("sprinkler", 2.0)
+			Audio.play("rain_loop", -6.0)
+			PostFX.flash(Color(0.6, 0.8, 1.0), 0.3)
+			for fz in get_tree().get_nodes_in_group("fires"):
+				fz.queue_free()
+			var rain := SprinklerRain.new()
+			rain.centre = boss.global_position
+			actors_root.add_child(rain)
+			if boss.has_method("douse"):
+				boss.douse()
+			hud.show_hint("THE SPRINKLERS WORK. ONE GOOD HIT.", 2.5)
+		"extinguisher":
+			# a blast of foam in the direction she's facing
+			Audio.play_at("sprinkler", player.global_position, 0.0, 0.2)
+			for i in 10:
+				Effects.smoke(player.global_position + player.aim_dir * (10.0 + i * 8.0) + Vector2(randf_range(-6, 6), randf_range(-6, 6)))
+			var to := boss.global_position - player.global_position
+			if to.length() < 110.0 and absf(angle_difference(player.aim_dir.angle(), to.angle())) < 0.9:
+				var info := DamageInfo.make(DamageInfo.Type.MELEE, player, boss.global_position, to.normalized(), &"extinguisher", &"environment")
+				info.from_player = true
+				info.set_meta("foam", true)
+				boss.take_damage(info)
+			else:
+				hud.show_hint("TOO FAR. GET HIM CLOSER TO THE NEXT ONE.", 2.0)
 
 func _on_boss_defeated(_b: BossNightManager) -> void:
 	phase = Phase.BOSS_DOWN
@@ -1167,3 +1268,29 @@ func _exit_tree() -> void:
 		Dialogue.event.disconnect(_on_dialogue_event)
 	if Dialogue.finished.is_connected(_on_dialogue_finished):
 		Dialogue.finished.disconnect(_on_dialogue_finished)
+
+
+## Stage Nine's sprinklers, finally working: a shower of streaks over the
+## set for a few seconds, hissing on the floor.
+class SprinklerRain extends Node2D:
+	var centre := Vector2.ZERO
+	var _t := 0.0
+	const LIFE := 10.0
+	func _ready() -> void:
+		z_index = 60
+	func _process(delta: float) -> void:
+		_t += delta
+		if _t > LIFE:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var a := clampf((LIFE - _t) / 2.0, 0.0, 1.0) * clampf(_t / 0.3, 0.0, 1.0)
+		var rng := RandomNumberGenerator.new()
+		rng.seed = 5
+		for i in 220:
+			var x := centre.x + rng.randf_range(-260, 260)
+			var y0 := centre.y + rng.randf_range(-180, 180)
+			var y := centre.y - 180.0 + fmod(y0 - centre.y + 180.0 + _t * rng.randf_range(260, 360), 360.0)
+			draw_line(Vector2(x, y), Vector2(x - 1.5, y + 7), Color(0.65, 0.8, 1.0, 0.55 * a), 1.0)
+			if fmod(_t * 3.0 + i, 3.0) < 0.1:
+				draw_arc(Vector2(x, y + 8), 2.0, 0, TAU, 6, Color(0.7, 0.85, 1.0, 0.4 * a), 1.0)

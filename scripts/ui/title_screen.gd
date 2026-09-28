@@ -8,6 +8,12 @@ var key_art_shade: ColorRect
 var logo_top: Label
 var logo_bottom: Label
 var press_label: Label
+var press_fx: PressStart
+var vignette: StoryShot
+const VIGNETTES := ["menu_smoke", "menu_revolver", "menu_dutch", "menu_marv", "menu_arlo", "menu_tommy"]
+var _vig_i := -1
+var _vig_t := 0.0             ## time on the current picture
+var _vig_on := false          ## showing a vignette (vs the key art)
 var osd: Label
 var menu: VBoxContainer
 var panel: PanelContainer
@@ -27,8 +33,22 @@ func _ready() -> void:
 	# Optional production key art. If the PNG is absent, the procedural backdrop remains.
 	var title_tex := CinematicArt.title_texture()
 	if title_tex:
+		# behind the key art: small moments from the story it dissolves to now
+		# and then (Cass smoking at the window, loading the revolver, the
+		# Fireman lighting his pilot, Marv practising his smile...)
+		vignette = StoryShot.new()
+		vignette.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		vignette.letterbox = false
+		vignette.ambience = false
+		vignette.shot_time = 30.0
+		vignette.modulate.a = 0.0
+		add_child(vignette)
 		key_art = CinematicArt.make_fullscreen(title_tex)
 		key_art.modulate = Color(1, 1, 1, 0.94)
+		# a tape on an old deck: the picture holds still, the tape doesn't
+		var vm := ShaderMaterial.new()
+		vm.shader = load("res://shaders/vcr_filter.gdshader")
+		key_art.material = vm
 		add_child(key_art)
 		key_art_shade = ColorRect.new()
 		key_art_shade.color = Color(0.015, 0.0, 0.04, 0.20)
@@ -62,9 +82,15 @@ func _ready() -> void:
 	UIStyle.place(logo_bottom, Control.PRESET_CENTER_TOP, Vector2(-250, 178), Vector2(700, 90))
 	add_child(logo_bottom)
 	if key_art:
-		# The commissioned key art already contains the HOTSHOT wordmark.
+		# The commissioned key art already contains the HOTSHOT wordmark; the
+		# drawn one only shows over the vignettes, where the painted one sits
 		logo_top.visible = false
 		logo_bottom.visible = false
+		logo_top.add_theme_font_size_override("font_size", 92)
+		UIStyle.place(logo_top, Control.PRESET_TOP_LEFT, Vector2(40, 34), Vector2(560, 120))
+		logo_top.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		logo_bottom.add_theme_font_size_override("font_size", 50)
+		UIStyle.place(logo_bottom, Control.PRESET_TOP_LEFT, Vector2(150, 128), Vector2(460, 80))
 	osd = UIStyle.label("PLAY ▶", 22, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
@@ -76,8 +102,15 @@ func _ready() -> void:
 	else:
 		UIStyle.place(press_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -130), Vector2(600, 30))
 	add_child(press_label)
+	press_fx = PressStart.new()
+	press_fx.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if key_art:
+		UIStyle.place(press_fx, Control.PRESET_BOTTOM_LEFT, Vector2(60, -150), Vector2(520, 90))
+	else:
+		UIStyle.place(press_fx, Control.PRESET_CENTER_BOTTOM, Vector2(-260, -190), Vector2(520, 90))
+	add_child(press_fx)
 	menu = VBoxContainer.new()
-	menu.add_theme_constant_override("separation", 2)
+	menu.add_theme_constant_override("separation", 0)
 	menu.visible = false
 	if key_art:
 		# Art-directed composition: menu sits in the quieter lower-left quadrant.
@@ -87,11 +120,20 @@ func _ready() -> void:
 		menu.anchor_bottom = 1.0
 		menu.offset_left = 76
 		menu.offset_right = 356
-		menu.offset_top = -292
-		menu.offset_bottom = -62
+		menu.anchor_top = 0.0
+		menu.anchor_bottom = 0.0
+		menu.offset_top = 226
+		menu.offset_bottom = 506
+		menu.offset_right = 470
 	else:
 		UIStyle.place(menu, Control.PRESET_CENTER_BOTTOM, Vector2(-140, -250), Vector2(280, 230))
 	add_child(menu)
+	menu_desc = UIStyle.label("", 15, UIStyle.PAPER, true)
+	menu_desc.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.9))
+	menu_desc.add_theme_constant_override("outline_size", 5)
+	UIStyle.place(menu_desc, Control.PRESET_TOP_LEFT, Vector2(76, 510), Vector2(640, 22))
+	menu_desc.visible = false
+	add_child(menu_desc)
 	panel = PanelContainer.new()
 	panel.custom_minimum_size = Vector2(760, 420)
 	panel.visible = false
@@ -114,20 +156,24 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	press_label.modulate.a = 0.5 + 0.5 * sin(_t * 4.0)
+	press_label.modulate.a = 0.0   # PressStart draws it now
+	if press_fx:
+		press_fx.visible = not _started
 	var flick := 1.0
 	if fmod(_t, 5.1) < 0.08 or fmod(_t, 3.3) < 0.04:
 		flick = 0.35
 	logo_bottom.modulate = Color(1, 1, 1, flick)
 	var secs := int(_t)
 	osd.text = "PLAY ▶   SP   %d:%02d:%02d" % [secs / 3600, (secs / 60) % 60, secs % 60]
-	logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
-	if key_art:
-		# Near-imperceptible Ken Burns drift keeps the painted title screen alive.
-		key_art.pivot_offset = key_art.size * 0.5
-		var breathe := 1.018 + sin(_t * 0.16) * 0.004
-		key_art.scale = Vector2.ONE * breathe
-		key_art.position = Vector2(sin(_t * 0.11) * 3.0, cos(_t * 0.09) * 2.0)
+	if not key_art:
+		logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
+	# (the key art stays still: the VCR filter on it does the moving)
+	_cycle_vignettes(delta)
+	if menu_desc:
+		menu_desc.visible = menu.visible
+		if _desc_n < _desc_full.length():
+			_desc_n += delta * 60.0
+		menu_desc.text = _desc_full.substr(0, int(_desc_n))
 
 ## The "press any button" gate listens in _input: the full-screen title
 ## Control would otherwise swallow a mouse click before _unhandled_input.
@@ -149,6 +195,7 @@ func _start_menu() -> void:
 	_build_menu()
 
 func _build_menu() -> void:
+	_menu_i = 0
 	for c in menu.get_children():
 		c.queue_free()
 	menu.visible = true
@@ -157,6 +204,8 @@ func _build_menu() -> void:
 		_add("CONTINUE", Game.continue_game)
 	_add("NEW GAME", _confirm_new_game if has_save else _choose_difficulty)
 	_add("CHAPTERS", _show_chapters)
+	_add("PLAY VIDEOTAPE", _show_vcr)
+	_add("MASKS", _show_masks)
 	var arcade_unlocked: bool = SaveManager.data.missions.has("m01_checkout")
 	_add("ARCADE" if arcade_unlocked else "ARCADE  [LOCKED]", _show_arcade, not arcade_unlocked)
 	_add("CAST", _show_cast)
@@ -168,17 +217,59 @@ func _build_menu() -> void:
 	if menu.get_child_count() > 0:
 		(menu.get_child(0) as Button).grab_focus()
 
+## What each entry does, typed along the bottom when it's in focus.
+const MENU_DESC := {
+	"CONTINUE": "Pick the tape up where it stopped.",
+	"NEW GAME": "July 4, 1988. A key to room 204, and a star to wear.",
+	"CHAPTERS": "Replay any job you've been through, as many times as it takes.",
+	"PLAY VIDEOTAPE": "The tapes and photos you've found. Put one in the deck.",
+	"MASKS": "Every mask gives something and takes something. Pick one for the next job.",
+	"ARCADE": "The jobs as score attacks, waves and endless runs, with modifiers.",
+	"ARCADE  [LOCKED]": "Finish Checkout Time to open the arcade.",
+	"CAST": "Who made this, and why.",
+	"EXTRAS": "The evidence locker and the rest of the archive.",
+	"OPTIONS": "Sound, picture, controls, language.",
+	"QUIT": "Stop the tape.",
+}
+var menu_desc: Label
+var _menu_i := 0
+var _desc_full := ""
+var _desc_n := 0.0
+
 func _add(text: String, cb: Callable, disabled := false) -> Button:
-	var b := Button.new()
-	b.text = text
+	var b := TitleEntry.new()
+	_menu_i += 1
+	b.index = _menu_i
+	b.label_text = tr(text)
+	b.custom_minimum_size = Vector2(0, 28)
 	b.disabled = disabled
+	b.focus_entered.connect(func():
+		_desc_full = tr(str(MENU_DESC.get(text, "")))
+		_desc_n = 0.0)
 	b.pressed.connect(func():
 		Audio.play("ui_select")
 		cb.call())
 	b.focus_entered.connect(func(): Audio.play("ui_move", -8.0))
-	UIStyle.menu_fx(b)
+	b.mouse_entered.connect(func():
+		if not b.disabled:
+			b.grab_focus())
 	menu.add_child(b)
 	return b
+
+func _show_vcr() -> void:
+	menu.visible = false
+	var v := VcrScreen.new()
+	add_child(v)
+	v.closed.connect(_build_menu)
+
+## The masks gallery: the same shelf as before a job, without the pause;
+## picking one sets it for the next job.
+func _show_masks() -> void:
+	menu.visible = false
+	var ms := MaskSelect.new()
+	ms.gallery = true
+	add_child(ms)
+	ms.closed.connect(_build_menu)
 
 # ------------------------------------------------------------ panels
 func _open_panel(title: String) -> void:
@@ -579,21 +670,36 @@ func _arc_toggle(parent: Control, text: String, on: bool, cb: Callable) -> Butto
 	parent.add_child(b)
 	return b
 
+## CAST: the person behind the tape.
+const CAST_STORY := [
+	"HOTSHOT CALIFORNIA was made by one person: me, Gilberto Lopes.",
+	"Since I was a kid I've dreamed of making games - the kind I grew up loving, the ones you still remember years later and tell your friends about.",
+	"This one was built in the hours between everything else: late nights, weekends, a lot of coffee, and more restarts than Cass gets on a single floor.",
+	"Every motel room, every tape, every note of the score came out of that same stubborn dream.",
+	"If you laughed, jumped, or held your breath for a second while playing - then it worked, and every one of those nights was worth it.",
+	"Thank you for playing. I really hope you have fun.",
+]
+
 func _show_cast() -> void:
 	_open_panel("CAST")
-	var ids := ["cass", "deacon", "luz", "tilly", "dana", "nadia", "marv", "wes", "bobby", "director"]
-	for id in ids:
-		var c: CharacterData = Game.characters.get(StringName(id))
-		if c == null:
-			continue
-		var unlocked: bool = String(c.id) in SaveManager.data.unlocked_characters
-		var head := "%s  —  %s  (%d)" % [tr(c.display_name) if unlocked else "???", tr(c.archetype), c.year_first_seen]
-		panel_body.add_child(UIStyle.label(head, 17, UIStyle.PINK if unlocked else UIStyle.DIM, true))
-		var bio := tr(c.bio) if unlocked else tr("Not yet on tape.")
-		var l := UIStyle.label(bio + ("\n+ %s   − %s" % [tr(c.strengths), tr(c.weaknesses)] if unlocked else ""), 14)
+	var who := UIStyle.title_label("A GAME BY GILBERTO LOPES", 30, UIStyle.GOLD)
+	panel_body.add_child(who)
+	panel_body.add_child(UIStyle.label(tr("WRITTEN, DESIGNED, DIRECTED AND DREAMED UP BY"), 13, UIStyle.CYAN, true))
+	var gap := Control.new()
+	gap.custom_minimum_size = Vector2(0, 6)
+	panel_body.add_child(gap)
+	for line in CAST_STORY:
+		var l := UIStyle.label(tr(line), 16, UIStyle.PAPER)
 		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		l.custom_minimum_size = Vector2(700, 0)
 		panel_body.add_child(l)
+	var sig := UIStyle.label("-  Gilberto", 22, UIStyle.PINK, true)
+	sig.add_theme_font_override("font", UIStyle.font_script())
+	panel_body.add_child(sig)
+	var gap2 := Control.new()
+	gap2.custom_minimum_size = Vector2(0, 8)
+	panel_body.add_child(gap2)
+	panel_body.add_child(UIStyle.label(tr("WITH THANKS TO EVERYONE WHO PLAYS, TESTS AND SHARES IT."), 13, UIStyle.DIM, true))
 	_back_button()
 
 func _show_extras() -> void:
@@ -638,3 +744,122 @@ func _show_options() -> void:
 		_options = null
 		menu.visible = true
 		(menu.get_child(0) as Button).grab_focus())
+
+
+## PRESS ANY BUTTON, with some life: the words in the display face with a
+## chrome gradient and a shine sweeping through them, neon brackets that
+## breathe in and out, a blinking play arrow, a thin scan of light under it.
+class PressStart extends Control:
+	var _t := 0.0
+	func _process(delta: float) -> void:
+		_t += delta
+		queue_redraw()
+	func _draw() -> void:
+		var fd := UIStyle.font_display()
+		var word := tr("PRESS ANY BUTTON")
+		var fs := 30
+		var tw := fd.get_string_size(word, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+		var x0 := 56.0
+		var y := 50.0
+		var pulse := 0.5 + 0.5 * sin(_t * 3.0)
+		# brackets breathing out and in
+		var open := 10.0 + 6.0 * pulse
+		var bc := Color(UIStyle.PINK, 0.6 + 0.4 * pulse)
+		for side in [-1.0, 1.0]:
+			var bx := (x0 - open) if side < 0 else (x0 + tw + open)
+			draw_line(Vector2(bx, y - 30), Vector2(bx, y + 8), bc, 3.0)
+			draw_line(Vector2(bx, y - 30), Vector2(bx - side * 10.0, y - 30), bc, 3.0)
+			draw_line(Vector2(bx, y + 8), Vector2(bx - side * 10.0, y + 8), bc, 3.0)
+		# the play arrow, blinking
+		if fmod(_t, 1.0) < 0.6:
+			draw_colored_polygon(PackedVector2Array([Vector2(x0 - open - 34, y - 22), Vector2(x0 - open - 34, y), Vector2(x0 - open - 20, y - 11)]), UIStyle.GOLD)
+		# the words: shadow, chroma split, gold-to-pink per letter, a shine
+		draw_string(fd, Vector2(x0 + 3, y + 3), word, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(0, 0, 0, 0.7))
+		draw_string(fd, Vector2(x0 - 2, y), word, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(0.2, 0.9, 1.0, 0.35))
+		var x := x0
+		var shine := fmod(_t * 0.5, 1.6) * tw * 1.3 - tw * 0.15
+		for i in word.length():
+			var ch := word[i]
+			var cw := fd.get_string_size(ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+			var k := float(i) / maxf(1.0, word.length() - 1)
+			var col := Color(1.0, 0.88, 0.45).lerp(Color(1.0, 0.35, 0.65), k)
+			var near := clampf(1.0 - absf((x - x0) - shine) / 40.0, 0.0, 1.0)
+			col = col.lerp(Color.WHITE, near * 0.8)
+			draw_string(fd, Vector2(x, y), ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, col)
+			x += cw
+		# a scan of light underneath
+		var sx := fmod(_t * 0.8, 1.0)
+		draw_line(Vector2(x0, y + 18), Vector2(x0 + tw, y + 18), Color(UIStyle.PINK, 0.25), 1.0)
+		draw_line(Vector2(x0 + tw * sx - 30, y + 18), Vector2(x0 + tw * sx + 30, y + 18), Color(1, 1, 1, 0.7), 2.0)
+
+
+## A title-menu entry with some soul: a two-digit tape index in cyan, the
+## name in the display face; in focus a slanted neon plate slides in behind
+## it, a chrome shine runs through the letters and a play arrow blinks.
+class TitleEntry extends Button:
+	var index := 1
+	var label_text := ""
+	var _k := 0.0
+	var _t := 0.0
+
+	func _ready() -> void:
+		flat = true
+		text = ""
+		focus_mode = Control.FOCUS_ALL
+		for st in ["normal", "hover", "pressed", "focus", "disabled"]:
+			add_theme_stylebox_override(st, StyleBoxEmpty.new())
+
+	func _process(delta: float) -> void:
+		_t += delta
+		_k = move_toward(_k, 1.0 if has_focus() else 0.0, delta * 8.0)
+		queue_redraw()
+
+	func _draw() -> void:
+		var e := _k * _k * (3.0 - 2.0 * _k)
+		var h := size.y
+		var fd := UIStyle.font_display()
+		var fm := UIStyle.font_mono()
+		# the plate
+		if e > 0.01:
+			var w := (size.x - 20.0) * e
+			var plate := PackedVector2Array([Vector2(8, 2), Vector2(8 + w + 12, 2), Vector2(8 + w, h - 2), Vector2(-4, h - 2)])
+			draw_colored_polygon(plate, Color(UIStyle.PINK, 0.85 * e))
+			draw_line(Vector2(8 + w + 12, 2), Vector2(8 + w, h - 2), Color(UIStyle.CYAN, e), 2.0)
+		var dis := disabled
+		var ix := "%02d" % index
+		draw_string(fm, Vector2(14, h * 0.5 + 6), ix, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(UIStyle.CYAN, 0.35 if dis else (0.6 + 0.4 * e)))
+		var col := UIStyle.DIM if dis else Color.WHITE.lerp(UIStyle.INK, e)
+		var x := 46.0 + 8.0 * e
+		draw_string(fd, Vector2(x + 2, h * 0.5 + 9), label_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Color(0, 0, 0, 0.6 * (1.0 - e)))
+		draw_string(fd, Vector2(x, h * 0.5 + 7), label_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, col)
+		if e > 0.5 and fmod(_t, 0.9) < 0.55:
+			var ax := x + fd.get_string_size(label_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22).x + 12.0
+			draw_colored_polygon(PackedVector2Array([Vector2(ax, h * 0.5 - 6), Vector2(ax, h * 0.5 + 6), Vector2(ax + 9, h * 0.5)]), UIStyle.INK)
+
+
+## Key art for a good while, then a slow dissolve (through a touch of tape
+## glitch) to one of the vignettes for a few seconds, and back. Only while
+## no panel is open, so it never pulls the eye from reading.
+func _cycle_vignettes(delta: float) -> void:
+	if vignette == null or key_art == null:
+		return
+	_vig_t += delta
+	var hold := 9.0 if _vig_on else 16.0
+	if _vig_t > hold and not panel.visible:
+		_vig_t = 0.0
+		_vig_on = not _vig_on
+		if _vig_on:
+			var n := VIGNETTES.size()
+			for k in n:
+				_vig_i = (_vig_i + 1) % n
+				if StoryShot.painted_tex(VIGNETTES[_vig_i]) != null:
+					break
+			vignette.show_shot(VIGNETTES[_vig_i], true)
+		PostFX.vhs_glitch(0.3)
+	var want := 1.0 if _vig_on else 0.0
+	vignette.modulate.a = move_toward(vignette.modulate.a, want, delta / 1.6)
+	key_art.modulate.a = 0.94 * (1.0 - vignette.modulate.a)
+	# the wordmark rides over the vignettes (the key art has it painted in)
+	logo_top.visible = vignette.modulate.a > 0.01
+	logo_bottom.visible = logo_top.visible
+	logo_top.modulate.a = vignette.modulate.a

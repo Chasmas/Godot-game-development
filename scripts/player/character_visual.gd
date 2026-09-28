@@ -168,6 +168,11 @@ func update_move(vel: Vector2, delta: float) -> void:
 	var speed := vel.length()
 	var moving := clampf(speed / 105.0, 0.0, 1.0)
 	_move_blend = lerpf(_move_blend, moving, minf(1.0, delta * 12.0))
+	# standing still long enough, the fidgets start (see _apply_idle)
+	if moving < 0.05 and _swing_t < 0.0 and _punch_t < 0.0 and _reload_k < 0.0 and _roll_t < 0.0:
+		_still_t += delta
+	else:
+		_still_t = 0.0
 	_breath_t += delta * (1.2 + _move_blend * 4.0)
 	if speed > 8.0:
 		_walk_t += delta * speed * 0.09
@@ -212,10 +217,12 @@ func ground_punch(big: bool) -> void:
 	_kick = -6.0 if big else -4.0
 
 func kick_recoil(amount := 2.0) -> void:
+	_still_t = 0.0
 	_kick = amount
 
 ## One gun's slide/recoil when firing (the body kick is kick_recoil).
 func gun_recoil(left: bool, amount: float) -> void:
+	_still_t = 0.0
 	if left:
 		_gun_kick2 = amount
 	else:
@@ -252,6 +259,97 @@ func swing(heavy := false, stab := false) -> void:
 	_kick = -4.5 if _stab else -3.0   # body lunges forward with the blow
 	if is_inside_tree() and palette.begins_with("cass"):
 		Audio.play_at("whoosh", global_position, -8.0 if heavy else -12.0, 0.15)
+
+# ---------------------------------------------------------------- idle
+## Only the player's character fidgets (idle_fidgets is set by Player).
+var idle_fidgets := false
+var _still_t := 0.0
+var _fidget := ""
+var _fidget_t := 0.0
+var _cig: CigaretteFx
+
+## Standing still, she's never quite still: a gun gets checked (tilted up,
+## the cylinder spun), a blade flips over in her hand, bare fists bounce like
+## a boxer's; left long enough she lights a cigarette. Anything she does
+## breaks it off at once.
+func _apply_idle(delta: float) -> void:
+	if not idle_fidgets:
+		return
+	if _still_t < 2.5:
+		if _fidget != "":
+			_fidget = ""
+			weapon_sprite.rotation = 0.0
+			weapon_sprite.position = _hand
+		if _cig and _still_t < 0.1:
+			_cig.put_out()
+			_cig = null
+		return
+	if _fidget == "":
+		_fidget_t = 0.0
+		if not weapon_sprite.visible:
+			_fidget = "box"
+		elif _hold in [WeaponData.Hold.MELEE_ONE] :
+			_fidget = "flip"
+		else:
+			_fidget = "check"
+	_fidget_t += delta
+	var k := fmod(_fidget_t, 4.5)
+	match _fidget:
+		"check":
+			# tilt the gun up to look it over, a little shake, back down
+			var up := sin(clampf(k / 1.4, 0.0, 1.0) * PI)
+			weapon_sprite.rotation = -0.9 * up
+			weapon_sprite.position = _hand + Vector2(-2.0 * up, -1.5 * up)
+			if k > 0.6 and k < 0.62 + delta:
+				_sfx("slide_rack", -20.0)
+		"flip":
+			# the blade turns over in her fingers
+			var f := clampf((k - 0.3) / 0.5, 0.0, 1.0)
+			weapon_sprite.rotation = TAU * f * f * (3.0 - 2.0 * f) if k < 1.0 else 0.0
+		"box":
+			# up on her toes
+			rig.position.y += sin(_fidget_t * 9.0) * 0.6
+			rig.position.x += sin(_fidget_t * 4.5) * 0.4
+	# a cigarette, eventually
+	if _still_t > 9.0 and _cig == null and palette.begins_with("cass"):
+		_cig = CigaretteFx.new()
+		_cig.vis = self
+		rig.add_child(_cig)
+		_sfx("light_switch", -22.0)
+
+## The cigarette: an ember at her lips that brightens as she draws on it,
+## and smoke drifting up off it. Put out the moment she moves.
+class CigaretteFx extends Node2D:
+	var vis: Node
+	var _t := 0.0
+	var _puffs: Array = []
+	var _out := -1.0
+	func _ready() -> void:
+		z_index = 4
+		position = Vector2(4.5, -1.0)
+	func put_out() -> void:
+		_out = 0.0
+	func _process(delta: float) -> void:
+		_t += delta
+		if _out >= 0.0:
+			_out += delta
+			if _out > 0.6:
+				queue_free()
+		elif fmod(_t, 0.35) < delta:
+			_puffs.append({"p": Vector2.ZERO, "t": 0.0, "d": Vector2(randf_range(-2, 2), randf_range(-6, -3))})
+		for p in _puffs:
+			p.t = float(p.t) + delta
+			p.p = (p.p as Vector2) + (p.d as Vector2) * delta + Vector2(sin(_t * 2.0 + float(p.t) * 3.0) * 3.0 * delta, 0)
+		_puffs = _puffs.filter(func(p): return float(p.t) < 2.2)
+		queue_redraw()
+	func _draw() -> void:
+		var draw_ := sin(_t * 0.9) > 0.6
+		var a := 1.0 - clampf(_out / 0.6, 0.0, 1.0) if _out >= 0.0 else 1.0
+		for p in _puffs:
+			var k: float = float(p.t) / 2.2
+			draw_circle((p.p as Vector2).rotated(-global_rotation), 0.8 + k * 3.0, Color(0.8, 0.8, 0.85, 0.22 * (1.0 - k) * a))
+		draw_line(Vector2.ZERO, Vector2(2.5, 0), Color(0.95, 0.93, 0.88, a), 1.0)
+		draw_circle(Vector2(2.8, 0), 0.8 if not draw_ else 1.1, Color(1.0, 0.45 if draw_ else 0.3, 0.1, a))
 
 # ---------------------------------------------------------------- the roll
 var _roll_t := -1.0
@@ -464,6 +562,7 @@ func _process(delta: float) -> void:
 		_flash -= delta
 		modulate = Color(3, 3, 3) if _flash > 0.0 else Color.WHITE
 	_apply_roll(delta)
+	_apply_idle(delta)
 
 
 # ---------------------------------------------------------------- swing ghosts

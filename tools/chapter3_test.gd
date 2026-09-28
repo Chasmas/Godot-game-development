@@ -138,10 +138,11 @@ func _mission3() -> void:
 			if i % 60 == 0:
 				await _shot("m03_spray")
 	check(burned, "the flamethrower sets the floor alight")
-	for i in 3:
+	for i in 4:
 		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 		await frames(12)
-	check(boss.phase == 2, "phase 2 after three hits to the suit")
+	check(boss.phase == 2, "phase 2 at 60% of the bar (%.1f / %.1f)" % [boss.hp, boss.max_hp])
+	check(boss.hp > 0.0 and not boss._defeated, "hits take a piece, not the whole bar")
 	await frames(120)
 	check(get_tree().get_nodes_in_group("fires").size() >= 8, "the stage is on fire")
 	await _shot("m03_ablaze")
@@ -149,9 +150,29 @@ func _mission3() -> void:
 	for e in get_tree().get_nodes_in_group("enemies"):
 		if e.is_alive() and e != boss:
 			e.take_damage(DamageInfo.make(DamageInfo.Type.EXPLOSIVE, p, e.global_position, Vector2.RIGHT, &"explosion", &"explosion"))
-	var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol")
-	info.lethal = true
-	boss.take_damage(info)
+	# the water main: the stage rains, he's soaked and open
+	var valve: Interactable = null
+	for it in lvl._boss_props:
+		if it.kind == "valve":
+			valve = it
+	check(valve != null and valve.enabled, "the water main is there once the fight starts")
+	if valve:
+		var before_hp: float = boss.hp
+		valve.interact(p)
+		await frames(10)
+		check(boss._blind_t > 0.0 and boss._doused_t > 0.0, "the sprinklers douse him")
+		var hit := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol")
+		hit.lethal = true
+		boss.take_damage(hit)
+		check(boss.hp < before_hp - 2.5 and boss.hp > 0.0, "a soaked hit takes a big piece (%.1f -> %.1f)" % [before_hp, boss.hp])
+	var n := 0
+	while not boss._defeated and n < 30:
+		var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol")
+		info.lethal = true
+		boss.take_damage(info)
+		n += 1
+		await frames(4)
+	check(boss._defeated, "the bar runs out")
 	await frames(160)
 	check(Dialogue.active and Dialogue._id == "m03_boss_down", "the vote plays")
 	await _play_dialogue(1)    # cut the feed
@@ -214,16 +235,29 @@ func _mission4() -> void:
 	await _play_dialogue()
 	await frames(20)
 	check(boss.active, "Tommy fights")
-	for i in 4:
+	var foam := func() -> DamageInfo:
+		var d := DamageInfo.make(DamageInfo.Type.MELEE, p, boss.global_position, Vector2.RIGHT, &"extinguisher", &"environment")
+		d.from_player = true
+		d.set_meta("foam", true)
+		return d
+	var hp0: float = boss.hp
+	for i in 3:
 		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 		await frames(12)
-	check(boss.phase == 2, "phase 2 after four hits")
+	check(boss.hp > hp0 - 2.0, "bullets barely scorch him")
+	boss.take_damage(foam.call())
+	await frames(12)
+	check(boss.phase == 2, "phase 2 after the first extinguisher")
 	await frames(900)
 	check(get_tree().get_nodes_in_group("enemies").size() > 1, "he calls up the dead")
 	await _shot("m04_boss")
-	var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol")
-	info.lethal = true
-	boss.take_damage(info)
+	var tries := 0
+	while not boss._defeated and tries < 10:
+		boss._blind_t = 0.0
+		boss.take_damage(foam.call())
+		tries += 1
+		await frames(6)
+	check(boss._defeated and tries <= 4, "the extinguishers put him out (%d)" % tries)
 	await frames(160)
 	check(Dialogue.active and Dialogue._id == "m04_boss_down", "the last scene plays")
 	await _play_dialogue(1)    # hold him

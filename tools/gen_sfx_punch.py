@@ -225,6 +225,18 @@ def make_world(C):
     S["firework_pop"] = room(mix((0, thump(0.5, 120, 40, 20, 8), 0.8), (0, crack(0.08, 300, 4000, 40), 1.0),
                                  *[(0.15 + rng.uniform(0, 0.5), crack(0.02, 2000, 8000, 180), rng.uniform(0.1, 0.35)) for _ in range(14)]), 1.2, 1200, 0.6)
     S["studio_chime"] = studio_chime()
+    # the lobby doors going up: sub drop, a cracking front, the doors
+    # splintering, glass raining for a second and a half, the lot echoing it back
+    boom = mix((0, thump(3.0, 70, 22, 5, 1.6), 1.5), (0, crack(0.4, 250, 9000, 9), 1.4),
+               (0.02, C["door_break"], 0.9), (0.1, C["glass"], 0.8), (0.35, C["glass"][: int(0.6 * SR)], 0.4),
+               (0, lp(N(3.0), 350) * np.exp(-T(3.0) * 1.4), 1.0),
+               (0.5, lp(crack(0.6, 200, 3000, 6), 1200), 0.35), (0.95, lp(crack(0.6, 200, 2400, 6), 1000), 0.2))
+    deb = np.zeros(int(2.6 * SR))
+    for i in range(70):
+        c = click(0.03, rng.uniform(900, 4500)) * rng.uniform(0.1, 0.5)
+        st = int(rng.uniform(0.2, 2.4) ** 1.3 * SR * 0.8)
+        deb[st:st + len(c)] += c[: len(deb) - st]
+    S["breach_boom"] = room(sat(mix((0, boom, 1.0), (0, deb, 0.6)), 3.2), 1.4, 2500, 0.35)
     # the Cadillac: a big V8 arriving, the door, the tyres leaving
     def v8(d, f0, f1, amp_in=0.3):
         t = T(d)

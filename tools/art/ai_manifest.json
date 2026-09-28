@@ -465,6 +465,87 @@
     },
     "b_credits": {
      "prompt": "End credits rolling on an old CRT television in a dark empty motel room at dawn: white lines of credits scrolling on black, one line near the bottom glowing brighter than the rest, a hand reaching toward the screen, rain on the window."
+    },
+    "vhs_roll7_a": {
+     "prompt": "Camera-B footage at night on a desert road: a black Cadillac stunt car engulfed in a towering column of fire, film lights on stands, crew silhouettes standing still, nobody running with extinguishers. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_roll7_b": {
+     "prompt": "Camera-B footage: a red-haired young woman in a stunt suit staggering out of the smoke toward the camera, coughing, face blackened, reaching back toward the burning car behind her. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "vhs_roll7_c": {
+     "prompt": "Camera-B footage, zoomed in on the burning car's side window: a dark silhouette inside behind the flames, and in the foreground a man's hand with a gold pinky ring raised flat toward the lens, signalling keep rolling. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_vance_a": {
+     "prompt": "Rehearsal footage in daylight on a flat Los Angeles rooftop: an older man in a fishing vest walking a grinning young stuntman to the edge, pointing down, the city hazy behind them. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text.",
+     "refs": [
+      "tommy"
+     ]
+    },
+    "vhs_vance_b": {
+     "prompt": "Footage looking straight down from a rooftop edge: the alley far below is empty concrete where a crash pad should be, only chalk marks and a coiled rope. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_vance_c": {
+     "prompt": "Footage of an empty director's chair on a rooftop with a megaphone on the seat and a script with a coffee ring, a pair of expensive loafers visible beside it. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_pilot_a": {
+     "prompt": "A TV monitor showing four security-camera views of a neon motel at night in a quad split: the parking lot, a walkway, the lobby, a stairwell, figures running, timecodes in the corners without readable text. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_pilot_b": {
+     "prompt": "Security-camera still on a CRT: a woman with a gold star painted over her eye framed in a motel room doorway, looking straight up at the camera, lit red. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "vhs_pilot_c": {
+     "prompt": "A garish late-night TV title card on a CRT: a snarling cartoon dog's head in neon over a chain-link pattern, the words NEXT WEEK in chrome letters at the top. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_dream_a": {
+     "prompt": "A crowded 1987 film-crew wrap party in a house at night: people drinking, streamers, a TV in the corner showing a car on fire, faces lit by the screen. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_dream_b": {
+     "prompt": "The same party: the crowd cheering and raising their drinks at the TV showing the burning car, one woman in the background not cheering, hand over her mouth. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "vhs_dream_c": {
+     "prompt": "Close footage: a silver-haired man in a white suit in the crowd clapping with his whole body, eyes shining, grinning at the TV, everything else in shadow. Shot as if on a cheap 1980s camcorder: slightly washed colours, soft focus, a hint of video grain, a date stamp look without readable text."
+    },
+    "menu_smoke": {
+     "prompt": "Cass Moreno sitting on the sill of a motel window at night, smoking, the smoke curling up through pink neon light from outside, rain on the glass, the gold star over her eye, looking out, patient and dangerous. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "menu_revolver": {
+     "prompt": "Close on Cass Moreno's hands at a kitchen table under a single hanging lamp, thumbing brass cartridges one by one into the cylinder of a revolver, a glass of whiskey and a Polaroid beside it, her face half in shadow with the gold star catching the light. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "cass_star"
+     ]
+    },
+    "menu_dutch": {
+     "prompt": "Dutch 'the Fireman' Kowalski in his silver fireproof suit in a dark soundstage, lighting the pilot of his flamethrower with a flick of a lighter, the small blue flame lighting his scarred face from below, grinning. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "dutch"
+     ]
+    },
+    "menu_arlo": {
+     "prompt": "Old Arlo in his salvage yard at night tossing scraps of meat over a chain-link fence to a row of big dogs, his cigarette glowing, sodium lamp above, TV glow from his trailer behind him. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "arlo"
+     ]
+    },
+    "menu_marv": {
+     "prompt": "TV host Marv Kessel in a dressing room adjusting his tie in a mirror ringed with bulbs, practising a huge smile, a wall of small monitors behind him showing security footage of a motel, a stack of VHS tapes on the counter. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "marv"
+     ]
+    },
+    "menu_tommy": {
+     "prompt": "Tommy Moreno in 1987 leaning against a black Cadillac in the desert at dusk, spinning a set of car keys around his finger, his helmet under his arm, grinning at the camera, heat haze and film lights in the distance. A quiet, cinematic moment, composed for a title screen: the subject off to the right third, the left side calm and dark for a menu.",
+     "refs": [
+      "tommy"
+     ]
     }
    }
   },

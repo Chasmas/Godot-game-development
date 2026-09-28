@@ -118,6 +118,13 @@ const PAINTED := {
 	"b_party":      {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -4)], "z": [[Z.HEAT, 0.3, 0.0, 0.4, 1.0, 1.0, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 0.4, 0.8, 1.4], [Z.BREATHE, 0.0, 0.2, 0.3, 0.8, 0.4, 0.6], [Z.BREATHE, 0.7, 0.2, 0.3, 0.8, 0.4, 0.6]], "fx": ["embers", "smoke"]},
 	"b_embrace":    {"cam": [1.06, Vector2(0, 0), 1.14, Vector2(0, -3)], "z": [[Z.HEAT, 0.2, 0.3, 0.6, 0.7, 0.8, 0.8], [Z.BREATHE, 0.3, 0.1, 0.4, 0.8, 0.5, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 1.0, 0.5, 1.2]], "fx": ["embers"]},
 	"b_credits":    {"cam": [1.0, Vector2(0, 0), 1.12, Vector2(-6, 0)], "z": [[Z.TV, 0.1, 0.25, 0.3, 0.5, 1.0, 1.0], [Z.RIPPLE, 0.75, 0.1, 0.25, 0.5, 0.6, 0.6]], "fx": ["rain_window"]},
+	# --- title-screen vignettes: the camera holds still, only the moment moves
+	"menu_smoke":   {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.FLICKER, 0.25, 0.0, 0.2, 0.6, 0.4, 0.8], [Z.BREATHE, 0.5, 0.05, 0.35, 0.9, 0.35, 0.6], [Z.RIPPLE, 0.35, 0.0, 0.3, 0.5, 0.4, 0.4]], "smoke": [Vector2(0.63, 0.2)], "fx": ["rain_window"]},
+	"menu_revolver": {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.SWAY, 0.4, 0.0, 0.2, 0.15, 0.3, 0.6], [Z.BREATHE, 0.45, 0.1, 0.4, 0.8, 0.35, 0.6], [Z.PULSE, 0.4, 0.0, 0.25, 0.25, 0.3, 0.6]], "fx": ["dust"]},
+	"menu_dutch":   {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.FLICKER, 0.6, 0.35, 0.2, 0.25, 1.2, 1.6], [Z.BREATHE, 0.55, 0.05, 0.4, 0.9, 0.4, 0.6]], "glow": 0.5, "fx": ["dust"]},
+	"menu_arlo":    {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.TV, 0.0, 0.3, 0.3, 0.4, 1.0, 0.8], [Z.BREATHE, 0.5, 0.2, 0.4, 0.8, 0.4, 0.6]], "fx": ["dust"]},
+	"menu_marv":    {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.TV, 0.3, 0.0, 0.25, 0.8, 1.0, 1.0], [Z.FLICKER, 0.6, 0.0, 0.3, 0.2, 0.4, 0.8], [Z.BREATHE, 0.45, 0.1, 0.25, 0.8, 0.35, 0.6]], "fx": ["dust"]},
+	"menu_tommy":   {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.HEAT, 0.0, 0.5, 0.7, 0.3, 0.6, 0.6], [Z.BREATHE, 0.6, 0.1, 0.35, 0.9, 0.35, 0.6], [Z.SWAY, 0.62, 0.35, 0.08, 0.1, 1.2, 1.0]], "fx": ["dust"]},
 	# --- coverage frames for the long scenes
 	"arlo_wide":    {"cam": [1.02, Vector2(-6, 0), 1.08, Vector2(6, 0)], "z": [[Z.TV, 0.0, 0.2, 0.22, 0.35, 1.0, 1.0], [Z.BREATHE, 0.3, 0.2, 0.3, 0.7, 0.5, 0.8], [Z.BREATHE, 0.6, 0.6, 0.2, 0.3, 0.9, 0.8]], "smoke": [Vector2(0.4, 0.4)], "fx": ["dust"]},
 	"cass_listens": {"cam": [1.04, Vector2(4, 0), 1.12, Vector2(-2, -2)], "z": [[Z.TV, 0.85, 0.0, 0.15, 0.35, 1.0, 1.0], [Z.BREATHE, 0.35, 0.05, 0.4, 0.9, 0.5, 0.7], [Z.FLICKER, 0.3, 0.0, 0.7, 1.0, 0.4, 0.6]], "fx": ["dust"]},
@@ -281,7 +288,11 @@ func show_shot(id: String, hard := false) -> void:
 	_rf_i = 0
 	var ptex := painted_tex(id)
 	_def_for_amb = PAINTED.get(id, SHOTS.get(id, {}))
-	_def = PAINTED.get(id, {"cam": [1.02, Vector2.ZERO, 1.1, Vector2.ZERO], "fx": ["dust"]}) if ptex else SHOTS[id]
+	var fallback := {"cam": [1.02, Vector2.ZERO, 1.1, Vector2.ZERO], "fx": ["dust"]}
+	if id.begins_with("vhs_"):
+		# camcorder footage: handheld, a slow push, the frame breathing
+		fallback = {"cam": [1.04, Vector2(-6, 2), 1.16, Vector2(6, -2)], "handheld": 1.8, "z": [[Z.BREATHE, 0.0, 0.0, 1.0, 1.0, 0.6, 0.5], [Z.FLICKER, 0.0, 0.0, 1.0, 1.0, 0.5, 0.6]], "fx": ["scan"]}
+	_def = PAINTED.get(id, fallback) if ptex else SHOTS[id]
 	_t = 0.0
 	_tex = []
 	_bursts.clear()
