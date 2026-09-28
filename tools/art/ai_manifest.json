@@ -40,6 +40,63 @@
       "cass"
      ],
      "prompt": "Cass Moreno, the same woman as the reference: long wavy auburn hair, red leather jacket, no headset. Over her left eye she has painted a big bold five-pointed star in shiny metallic GOLD greasepaint, thick and opaque, the star's points reaching her eyebrow and cheekbone, catching the light - it must read clearly even as a tiny thumbnail. Hard, determined, grieving expression, jaw set."
+    },
+    "enemy_guard": {
+     "prompt": "A motel security guard in his 30s, teal short-sleeved security uniform with a badge and epaulettes, a matching peaked cap, a walkie-talkie on his shoulder, bored mean eyes."
+    },
+    "enemy_gunner": {
+     "prompt": "A hired gun in his 30s, slicked-back dark hair, mirrored aviator shades, purple 1980s suit jacket with big shoulders over a bare chest, a gold chain."
+    },
+    "enemy_hunter": {
+     "prompt": "A rough man in his 40s, red bandana on his head, sleeveless off-white vest showing tattooed arms, military dog tags, stubble."
+    },
+    "enemy_heavy": {
+     "prompt": "A huge bald bruiser, thick neck, stubble, brown leather vest over a bare barrel chest, broken nose."
+    },
+    "enemy_scout": {
+     "prompt": "A wiry young man with a blond mullet, loud yellow and pink Hawaiian shirt, Walkman headphones around his neck, twitchy grin."
+    },
+    "enemy_riot": {
+     "prompt": "A riot officer in a navy blue riot helmet with the visor up and padded navy body armour, hard jaw."
+    },
+    "enemy_sniper": {
+     "prompt": "A quiet marksman, dark olive field jacket, black cap, wraparound shades, a red scarf."
+    },
+    "enemy_handler": {
+     "prompt": "A dog handler in his 50s, brown bandana, orange quilted work vest, heavy stubble, bite scars on his forearms."
+    },
+    "enemy_bellhop": {
+     "prompt": "A young motel bellhop in a red uniform jacket with gold piping and a small pillbox cap, nervous and cruel."
+    },
+    "enemy_biker": {
+     "prompt": "A biker in his 40s, black leather jacket, wraparound shades, red bandana, chain across his chest, grey-streaked beard."
+    },
+    "enemy_scrapper": {
+     "prompt": "A salvage-yard scrapper, bald and sunburnt, stubble, dirty olive-green work shirt, dog tags, grease on his face."
+    },
+    "enemy_welder": {
+     "prompt": "A welder with a flipped-up welding mask, brown leather apron over a work shirt, soot on his face, a thick neck."
+    },
+    "enemy_stagehand": {
+     "prompt": "A TV studio stagehand in black, a black cap, headset with a microphone, gaffer tape rolls on his wrist."
+    },
+    "enemy_security": {
+     "prompt": "A TV studio security officer, burgundy blazer with a gold badge, short dark hair, earpiece, cold stare."
+    },
+    "enemy_civilian": {
+     "prompt": "A motel guest in her 30s, big permed 1980s hair, pink blouse, frightened eyes."
+    },
+    "enemy_zombie": {
+     "prompt": "A dead-eyed grey-green skinned man in a torn grey suit, a gold star smeared on his forehead, nightmare version."
+    },
+    "enemy_ghoul": {
+     "prompt": "A pale gaunt bald figure with white skin and black clothes, empty eyes, nightmare version."
+    },
+    "enemy_demon": {
+     "prompt": "A huge red-skinned horned brute with glowing amber eyes, charred black clothes, nightmare version."
+    },
+    "enemy_cultist": {
+     "prompt": "A hooded figure in a black robe, face half in shadow, a gold star pendant, nightmare version."
     }
    }
   },
@@ -1002,6 +1059,171 @@
     "vhs_spine": {
      "prompt": "The spine of a worn black cardboard VHS cassette sleeve, a long thin horizontal strip filling the width of the image, scuffed and creased, a blank white paper label strip along it, one torn corner, a small round coloured price sticker.",
      "size": "1536x1024"
+    }
+   }
+  },
+  "corpses": {
+   "style": "Top-down video game sprite seen from directly overhead: a man lying flat on his back, knocked out cold, on the floor, sprawled, arms flung out, head towards the RIGHT edge of the image, strict orthographic bird's-eye view looking straight down, no perspective. Isolated on a fully transparent background, no floor, no blood pool, no shadow. Detailed realistic painted style, 1980s crime scene lit at night with subtle magenta and cyan reflections, Crisp silhouette that reads at small size.",
+   "defaults": {
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "guard": {
+     "prompt": "a motel security guard in his 30s, teal short-sleeved security uniform with a badge and epaulettes, a matching peaked cap, a walkie-talkie on his shoulder, bored mean eyes."
+    },
+    "gunner": {
+     "prompt": "The body of a hired gun in his 30s, slicked-back dark hair, mirrored aviator shades, purple 1980s suit jacket with big shoulders over a bare chest, a gold chain."
+    },
+    "hunter": {
+     "prompt": "a rough man in his 40s, red bandana on his head, sleeveless off-white vest showing tattooed arms, military dog tags, stubble."
+    },
+    "heavy": {
+     "prompt": "The body of a huge bald bruiser, thick neck, stubble, brown leather vest over a bare barrel chest, broken nose."
+    },
+    "scout": {
+     "prompt": "The body of a wiry young man with a blond mullet, loud yellow and pink Hawaiian shirt, Walkman headphones around his neck, twitchy grin."
+    },
+    "riot": {
+     "prompt": "The body of a riot officer in a navy blue riot helmet with the visor up and padded navy body armour, hard jaw."
+    },
+    "sniper": {
+     "prompt": "The body of a quiet marksman, dark olive field jacket, black cap, wraparound shades, a red scarf."
+    },
+    "handler": {
+     "prompt": "The body of a dog handler in his 50s, brown bandana, orange quilted work vest, heavy stubble, bite scars on his forearms."
+    },
+    "bellhop": {
+     "prompt": "The body of a young motel bellhop in a red uniform jacket with gold piping and a small pillbox cap, nervous and cruel."
+    },
+    "biker": {
+     "prompt": "The body of a biker in his 40s, black leather jacket, wraparound shades, red bandana, chain across his chest, grey-streaked beard."
+    },
+    "scrapper": {
+     "prompt": "a salvage-yard scrapper, bald and sunburnt, stubble, dirty olive-green work shirt, dog tags, grease on his face."
+    },
+    "welder": {
+     "prompt": "a welder with a flipped-up welding mask, brown leather apron over a work shirt, soot on his face, a thick neck."
+    },
+    "stagehand": {
+     "prompt": "a TV studio stagehand in black, a black cap, headset with a microphone, gaffer tape rolls on his wrist."
+    },
+    "security": {
+     "prompt": "The body of a TV studio security officer, burgundy blazer with a gold badge, short dark hair, earpiece, cold stare."
+    },
+    "civilian": {
+     "prompt": "The body of a motel guest in her 30s, big permed 1980s hair, pink blouse, frightened eyes."
+    }
+   }
+  },
+  "topdown": {
+   "style": "Top-down video game sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective, the subject facing the RIGHT edge of the image. Isolated on a fully transparent background, no floor, no shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan reflections, crisp silhouette that reads at small size.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "dog_shepherd": {
+     "prompt": "Satellite-style view straight down onto a German shepherd dog standing still, like a photo taken from a drone directly above it: we see its back and spine running along the middle of the image, the black saddle, both shoulders and hips symmetrical, the top of the head with both ears symmetrical, the snout pointing to the RIGHT edge, the tail pointing to the left. Not a side view, no profile, no visible belly."
+    },
+    "dog_rottweiler": {
+     "prompt": "Satellite-style view straight down onto a muscular Rottweiler dog standing still, like a photo taken from a drone directly above it: we see its broad black back and spine running along the middle of the image, both shoulders and hips symmetrical, the top of the head with both ears, rust markings on the muzzle, a spiked collar, the snout pointing to the RIGHT edge, a short tail to the left. Not a side view, no profile, no visible belly."
+    },
+    "boss_harcourt": {
+     "prompt": "Lyle Harcourt, a motel night manager in his 60s with silver swept-back hair, a cream three-piece suit and a burgundy tie, seen from directly above: the top of his head, his shoulders, both arms reaching forward to the right as if holding a gun, empty hands.",
+     "refs": [
+      "harcourt"
+     ]
+    },
+    "boss_buck": {
+     "prompt": "Buck Halverson, a heavy old kennel master with a battered brown cowboy hat, a grey work shirt and a leather apron, seen from directly above: the crown of the hat, broad shoulders, both arms reaching forward to the right as if holding a shotgun, empty hands."
+    },
+    "boss_dutch": {
+     "prompt": "Dutch 'The Fireman', a huge bald man with burn scars on his scalp, in a silver aluminised fireproof suit with a fuel tank on his back, seen from directly above: the top of his scarred head, the tank on his back, both arms reaching forward to the right as if holding a flamethrower nozzle, empty hands.",
+     "refs": [
+      "dutch"
+     ]
+    }
+   }
+  },
+  "bodies": {
+   "style": "Top-down video game character sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective. Only the top of the head, the shoulders and the upper back and chest are visible, facing the RIGHT edge of the image (face towards the right). NO ARMS AND NO HANDS: the arms are cut off cleanly at the shoulders (they are drawn separately by the game). Isolated on a fully transparent background, no floor, no shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan reflections, crisp silhouette that reads at small size.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent"
+   },
+   "entries": {
+    "cass": {
+     "prompt": "Cass Moreno, a woman in her late 20s with long voluminous wavy auburn-red hair (a loose ponytail), a red leather jacket with the collar popped, a shoulder holster strap.",
+     "refs": [
+      "cass"
+     ]
+    },
+    "guard": {
+     "prompt": "A motel security guard, teal uniform shirt with epaulettes and a badge, a teal peaked cap, a walkie-talkie clipped to the shoulder.",
+     "refs": [
+      "guard"
+     ]
+    },
+    "gunner": {
+     "prompt": "A hired gun, slicked-back dark hair, a purple 1980s suit jacket with big padded shoulders, a gold chain."
+    },
+    "hunter": {
+     "prompt": "A rough man with a red bandana on his head, a sleeveless off-white vest, tattooed shoulders, dog tags."
+    },
+    "heavy": {
+     "prompt": "A huge bald bruiser with a thick neck and a brown leather vest over a bare barrel chest."
+    },
+    "scout": {
+     "prompt": "A wiry young man with a blond mullet, a loud yellow and pink Hawaiian shirt, Walkman headphones."
+    },
+    "riot": {
+     "prompt": "A riot officer in a navy riot helmet and padded navy body armour with shoulder pads."
+    },
+    "sniper": {
+     "prompt": "A marksman in a dark olive field jacket, a black cap, a red scarf."
+    },
+    "handler": {
+     "prompt": "A dog handler with a brown bandana on his head and an orange quilted work vest."
+    },
+    "bellhop": {
+     "prompt": "A motel bellhop in a red uniform jacket with gold piping and a small red pillbox cap."
+    },
+    "biker": {
+     "prompt": "A biker in a black leather jacket, a red bandana, a chain across his chest."
+    },
+    "scrapper": {
+     "prompt": "A bald sunburnt salvage-yard worker in a dirty olive-green work shirt."
+    },
+    "welder": {
+     "prompt": "A welder wearing a welding helmet (flipped up) and a brown leather apron."
+    },
+    "stagehand": {
+     "prompt": "A TV studio stagehand dressed in black, a black cap, a headset."
+    },
+    "security": {
+     "prompt": "A TV studio security officer in a burgundy blazer with a gold badge, short dark hair."
+    },
+    "civilian": {
+     "prompt": "A motel guest, a woman with big permed 1980s hair and a pink blouse."
+    },
+    "boss": {
+     "prompt": "Lyle Harcourt, a motel night manager in his 60s, silver swept-back hair, a cream three-piece suit, a burgundy tie.",
+     "refs": [
+      "harcourt"
+     ]
+    },
+    "buck": {
+     "prompt": "Buck Halverson, a heavy old kennel master with a battered brown cowboy hat, a grey work shirt, a leather apron."
+    },
+    "fireman": {
+     "prompt": "Dutch 'The Fireman', a huge bald man with burn scars on his scalp, a silver aluminised fireproof suit, a fuel tank strapped to his back.",
+     "refs": [
+      "dutch"
+     ]
     }
    }
   }

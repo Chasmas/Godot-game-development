@@ -558,6 +558,28 @@ func _draw() -> void:
 		for i in 4:
 			var hx2 := 2.5 - i * 1.6
 			draw_line(Vector2(hx2, by - 2.2).rotated(rot), Vector2(hx2 - 0.6, by - 3.2 - (i % 2) * 0.5).rotated(rot), saddle, 0.8)
+	var painted := _painted_body()
+	if painted:
+		# the painting from above, turning and stretching with the dog; the
+		# head nods with the head's own turn
+		var L := 29.0 * stretch
+		var H := L * float(painted.get_height()) / float(painted.get_width())
+		draw_set_transform(Vector2(0, by).rotated(rot) * DRAW_SCALE, rot + _head_rel * 0.25, Vector2.ONE * DRAW_SCALE)
+		draw_texture_rect(painted, Rect2(Vector2(-L * 0.5 + 1.5, -H * 0.5), Vector2(L, H)), false)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE * DRAW_SCALE)
+		var head_c := Vector2(L * 0.5 - 4.5, by)
+		if _eye_glow > 0.01:
+			var g := (0.7 + 0.3 * sin(_t * 9.0)) * _eye_glow * Tuning.get_t().dog_eye_glow
+			for side in [-1.0, 1.0]:
+				var epr := (head_c + Vector2(0.5, side * 1.3)).rotated(rot)
+				draw_circle(epr, 2.4 + _spot_flash * 3.0, Color(1.0, 0.1, 0.05, 0.16 * g + 0.25 * _spot_flash))
+				draw_circle(epr, 0.9, Color(1.0, 0.35, 0.2, 0.8 * _eye_glow))
+		if _bark_anim > 0.0:
+			var kk := 1.0 - _bark_anim / 0.35
+			for i in 2:
+				draw_arc((head_c + Vector2(3, 0)).rotated(rot), 6.0 + kk * 8.0 + i * 4.0, rot - 0.6, rot + 0.6, 6, Color(1, 0.9, 0.5, 0.7 * (1.0 - kk)), 1.0)
+		_draw_icons()
+		return
 	# cream chest ruff
 	_ell(self, rot, Vector2(bx - 1.9, 0), 1.9, 2.4, tan)
 	# neck + head (the head turns on its own, see _update_head)
@@ -630,6 +652,15 @@ func _draw() -> void:
 		var ha2 := rot + _head_rel
 		draw_arc(mz.rotated(rot), 5.0, ha2 - 0.4, ha2 + 0.4, 5, Color(1, 0.4, 0.3, 0.6), 1.0)
 	_draw_icons()
+
+## The breed's painting from above (tools/art "topdown"), if there is one.
+static var _bodies: Dictionary = {}
+func _painted_body() -> Texture2D:
+	var id := "dog_" + str(data.palette if data else "shepherd")
+	if not _bodies.has(id):
+		var pth := "res://assets/art/cast/%s.png" % id
+		_bodies[id] = load(pth) if ResourceLoader.exists(pth) else null
+	return _bodies[id]
 
 func _draw_sleeping(C: Dictionary, rot: float, ink: Color) -> void:
 	# flat out on its side, seen from above: long body, all four legs

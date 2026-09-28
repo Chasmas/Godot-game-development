@@ -249,8 +249,47 @@ def covers():
     print("covers:", n)
 
 
+def _trimmed(f):
+    im = Image.open(f).convert("RGBA")
+    a = im.getchannel("A").point(lambda v: 255 if v > 24 else 0)
+    bb = a.getbbox()
+    return im.crop(bb) if bb else im
+
+
+def _fit(im, w, h, colors=160):
+    """Into a w x h canvas (4 texels per world pixel), centred, outlined."""
+    return pixelize(im, (w, h), colors)
+
+
+def cast():
+    """Painted cast for the game world (assets/art/cast): corpses in the
+    corpse canvas (48x32 at 2x -> 96x64), boss bodies in the torso canvas
+    (32x32 -> 64x64), dogs as a free-size sprite (drawn to length)."""
+    n = 0
+    for f in glob.glob(os.path.join(RAW, "corpses", "*.webp")):
+        cid = os.path.basename(f)[:-5]
+        _fit(_trimmed(f), 96, 64).save(out("assets", "art", "cast", "corpse_" + cid + ".png"))
+        n += 1
+    for f in glob.glob(os.path.join(RAW, "topdown", "*.webp")):
+        tid = os.path.basename(f)[:-5]
+        if tid.startswith("boss_"):
+            _fit(_trimmed(f), 64, 64).save(out("assets", "art", "cast", tid + ".png"))
+        else:
+            im = _trimmed(f)
+            k = 128 / im.width
+            pixelize(im, (128, max(16, round(im.height * k))), 160).save(out("assets", "art", "cast", tid.replace("dog_", "dog_") + ".png"))
+        n += 1
+    for f in glob.glob(os.path.join(RAW, "bodies", "*.webp")):
+        bid = os.path.basename(f)[:-5]
+        im = _trimmed(f)
+        k = 112 / max(im.width, im.height)
+        pixelize(im, (max(16, round(im.width * k)) + 4, max(16, round(im.height * k)) + 4), 160).save(out("assets", "art", "cast", "body_" + bid + ".png"))
+        n += 1
+    print("cast:", n)
+
+
 if __name__ == "__main__":
     only = sys.argv[1:]
-    for fn in (shots, portraits, sprites, textures, posters, weapons, masks, covers):
+    for fn in (shots, portraits, sprites, textures, posters, weapons, masks, covers, cast):
         if not only or fn.__name__ in only:
             fn()

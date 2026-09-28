@@ -31,6 +31,7 @@ const STYLES := {
 	"boss":    {"hair": "silver", "build": 1.1, "extras": ["tie", "lapels", "pocket_square"]},
 	"sniper":  {"hair": "cap", "build": 0.95, "extras": ["shades", "radio"]},
 	"handler": {"hair": "bandana", "build": 1.1, "extras": ["vest", "stubble"]},
+	"buck":    {"hair": "cap", "build": 1.3, "extras": ["vest", "stubble", "thick_neck"]},
 	"bellhop": {"hair": "cap", "build": 0.9, "extras": ["epaulettes", "badge"]},
 	"biker":   {"hair": "bandana", "build": 1.2, "extras": ["shades", "chain", "sleeveless"]},
 	"scrapper":{"hair": "bald", "build": 1.05, "extras": ["stubble", "dogtags"]},
@@ -284,13 +285,47 @@ static func _render(shapes: Array, w: int, h: int) -> Image:
 	return out
 
 # ---------------------------------------------------------------- characters
+## The three bosses are paintings from above (tools/art "topdown"), one
+## picture for every pose: they hold their weapon out in all of them.
+const BOSS_ART := {"boss": "boss_harcourt", "fireman": "boss_dutch", "buck": "boss_buck"}
+
+## A painted cast picture at RES density, reporting the canvas size the
+## painted-by-shapes version has, so it drops into the same sprites.
+static func _cast(id: String) -> Texture2D:
+	var k := "cast|" + id
+	if _cache.has(k):
+		return _cache[k]
+	var pth := "res://assets/art/cast/%s.png" % id
+	var t: Texture2D = null
+	if ResourceLoader.exists(pth):
+		var img: Image = (load(pth) as Texture2D).get_image()
+		if img:
+			t = _tex(img)
+	_cache[k] = t
+	return t
+
+## A character's painted body from above, if there is one.
+static func _body_image(name: String) -> Image:
+	var k := "body|" + name
+	if not _cache.has(k):
+		var pth := "res://assets/art/cast/body_%s.png" % name
+		_cache[k] = (load(pth) as Texture2D).get_image() if ResourceLoader.exists(pth) else null
+	return _cache[k]
+
 static func torso(pose: String, palette: String) -> Texture2D:
 	var key := "t|%s|%s" % [palette, pose]
 	if _cache.has(key):
 		return _cache[key]
+	# baked PNGs already hold the painted-body version (the bake paints fresh)
 	var bk := _baked(key)
 	if bk:
 		return bk
+	var hybrid := _body_image(base_name(palette))
+	if hybrid == null and BOSS_ART.has(base_name(palette)):
+		var bt := _cast(BOSS_ART[base_name(palette)])
+		if bt:
+			_cache[key] = bt
+			return bt
 	var P := _pal(palette)
 	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = st.build
@@ -327,10 +362,40 @@ static func torso(pose: String, palette: String) -> Texture2D:
 			hand_r = c + Vector2(14, 4)
 	# arms first (under shoulders)
 	var arm_col := skin.darkened(0.06) if "sleeveless" in extras else sleeve
-	shapes.append(cap(sh_l, hand_l, 2.6 if not "sleeveless" in extras else 2.3, arm_col))
-	shapes.append(cap(sh_r, hand_r, 2.6 if not "sleeveless" in extras else 2.3, arm_col))
-	shapes.append(ell(hand_l, Vector2(2.4, 2.4), skin))
-	shapes.append(ell(hand_r, Vector2(2.4, 2.4), skin))
+	var arm_r := (2.6 if not "sleeveless" in extras else 2.3) * (0.78 if hybrid else 1.0)
+	var hand_rr := 2.4 * (0.82 if hybrid else 1.0)
+	shapes.append(cap(sh_l, hand_l, arm_r, arm_col))
+	shapes.append(cap(sh_r, hand_r, arm_r, arm_col))
+	shapes.append(ell(hand_l, Vector2(hand_rr, hand_rr), skin))
+	shapes.append(ell(hand_r, Vector2(hand_rr, hand_rr), skin))
+	if hybrid:
+		# the painted head and shoulders (tools/art "bodies") over arms that
+		# still take every pose
+		if "tape_hand" in extras:
+			shapes.append(ell(hand_r, Vector2(2.2, 1.4), Color("e8e0d0"), false))
+		_tag(shapes, P)
+		var aimg := _render(shapes, SIZE, SIZE)
+		# sized by the shoulders: the painting spans the arms' roots
+		var bi: Image = hybrid.duplicate()
+		var k := (21.0 * bw * RES) / float(bi.get_height())
+		bi.resize(maxi(1, int(bi.get_width() * k)), maxi(1, int(bi.get_height() * k)), Image.INTERPOLATE_LANCZOS)
+		var at := Vector2i((c + Vector2(0.8, 0)) * RES) - Vector2i(bi.get_width() / 2, bi.get_height() / 2)
+		aimg.blend_rect(bi, Rect2i(Vector2i.ZERO, bi.get_size()), at)
+		# forearms and hands over the painting: that's what shows the pose
+		var fore: Array = []
+		for pr in [[sh_l, hand_l], [sh_r, hand_r]]:
+			var from: Vector2 = pr[0].lerp(pr[1], 0.5)
+			if (pr[1] as Vector2).x - c.x > 4.0:
+				fore.append(cap(from, pr[1], arm_r, arm_col))
+			fore.append(ell(pr[1], Vector2(hand_rr, hand_rr), skin))
+		if "tape_hand" in extras:
+			fore.append(ell(hand_r, Vector2(2.0, 1.3), Color("e8e0d0"), false))
+		_tag(fore, P)
+		var fimg := _render(fore, SIZE, SIZE)
+		aimg.blend_rect(fimg, Rect2i(Vector2i.ZERO, fimg.get_size()), Vector2i.ZERO)
+		var htex := _tex(aimg)
+		_cache[key] = htex
+		return htex
 	# shoulders / torso
 	var body := ell(c, Vector2(6.0 * bw, 10.5 * bw), top)
 	if "hawaii" in extras:
@@ -538,6 +603,18 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 	var key := "c2|%s|%s|%d" % [palette, downed, pose] + ("" if missing == "" else "|" + missing)
 	if _cache.has(key):
 		return _cache[key]
+	# a whole body gets its painting (tools/art "corpses"); a dismembered
+	# one or a downed (still breathing) one keeps the painted-by-shapes look
+	if not downed and missing == "":
+		var pc := _cast("corpse_" + base_name(palette))
+		if pc:
+			_cache[key] = pc
+			return pc
+	# the bake has the downed and dismembered versions (tools/bake_sprites.gd)
+	var cbk := _baked("c|%s|%s" % [palette, downed] + ("" if missing == "" else "|" + missing))
+	if cbk:
+		_cache[key] = cbk
+		return cbk
 	var P := _pal(palette)
 	var st: Dictionary = STYLES.get(base_name(palette), STYLES["guard"])
 	var bw: float = clampf(float(st.build), 0.85, 1.5)

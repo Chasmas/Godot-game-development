@@ -801,7 +801,9 @@ class TipCard extends Control:
 	var _clack_i := -1
 	const CPS := 60.0
 
-	func offer(id: String, text: String) -> void:
+	## `face`: a painted portrait (assets/characters/portraits/<face>.png)
+	## pinned to the note - the first look at a new kind of enemy.
+	func offer(id: String, text: String, face := "") -> void:
 		if not bool(SaveManager.get_setting("tips", true)):
 			return
 		if bool(SaveManager.get_flag("tip_" + id, false)):
@@ -812,7 +814,7 @@ class TipCard extends Control:
 			if q.id == id:
 				return
 		SaveManager.set_flag("tip_" + id, true)
-		_queue.append({"id": id, "text": _bind(tr(text))})
+		_queue.append({"id": id, "text": _bind(tr(text)), "face": face})
 
 	## "{fire}" -> the binding for that action on the current device
 	static func _bind(t: String) -> String:
@@ -851,12 +853,14 @@ class TipCard extends Control:
 			return
 		var text: String = _cur.text
 		var life := 2.8 + text.length() / 26.0
-		var w := 330.0
+		var face_tex: Texture2D = _face(str(_cur.get("face", "")))
+		var fw := 74.0 if face_tex else 0.0
+		var w := 330.0 + fw
 		var f := UIStyle.font_mono()
 		var fs := 13
-		var lines := BarkLayer._wrap(f, text, fs, w - 34.0)
+		var lines := BarkLayer._wrap(f, text, fs, w - 34.0 - fw)
 		var lh := f.get_height(fs)
-		var h := 34.0 + lines.size() * lh + 12.0
+		var h := maxf(34.0 + lines.size() * lh + 12.0, 96.0 if face_tex else 0.0)
 		var slide := 1.0 - pow(1.0 - clampf(_t / 0.3, 0.0, 1.0), 3.0)
 		var out := pow(clampf((_t - (life - 0.35)) / 0.35, 0.0, 1.0), 2.0)
 		var x := size.x - 20.0 - w * slide + (w + 30.0) * out
@@ -882,7 +886,7 @@ class TipCard extends Control:
 		var ci := 0
 		for li in lines.size():
 			var line: String = lines[li]
-			var px := lr.position + Vector2(16, 38 + li * lh + f.get_ascent(fs))
+			var px := lr.position + Vector2(16 + fw, 38 + li * lh + f.get_ascent(fs))
 			var cx := 0.0
 			for j in line.length():
 				var pose := TextFX.letter_pose(ci, shown, _t, "")
@@ -895,10 +899,38 @@ class TipCard extends Control:
 				draw_string(f, px + Vector2(cx, 0) + pose.offset, ch, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(col, float(pose.alpha)))
 				cx += cw
 			ci += 1
+		if face_tex:
+			# the mugshot, pinned on, a touch crooked
+			var fr := Rect2(lr.position + Vector2(12, 32), Vector2(fw - 12, fw - 12))
+			draw_rect(fr.grow(3), Color(0.92, 0.9, 0.84))
+			draw_texture_rect(face_tex, fr, false)
+			draw_rect(fr, Color(0, 0, 0, 0.25), false, 1.0)
 		# time left
 		var k := clampf(1.0 - _t / life, 0.0, 1.0)
 		draw_rect(Rect2(lr.position + Vector2(4, lr.size.y - 2), Vector2((lr.size.x - 4) * k, 2)), Color(UIStyle.GOLD, 0.6))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+	static var _faces: Dictionary = {}
+	static func _face(id: String) -> Texture2D:
+		if id == "":
+			return null
+		if not _faces.has(id):
+			var pth := "res://assets/characters/portraits/%s.png" % id
+			_faces[id] = load(pth) if ResourceLoader.exists(pth) else null
+		return _faces[id]
+
+	## A first look at each kind of man on the payroll.
+	const WHO := {
+		"guard": "Motel security. Bored, armed, and paid to not ask questions.",
+		"gunner": "Hired gun. Fast hands, slow brain. He won't miss twice.",
+		"sniper": "",
+		"bellhop": "The bellhop carries more than bags. Don't turn your back on him.",
+		"biker": "Biker muscle. He'll close the distance before you blink.",
+		"security": "Studio security. Blazer, badge, and a gun under the blazer.",
+		"stagehand": "A stagehand. Knows every shortcut on the lot.",
+		"scrapper": "Yard crew. He'll come at you with whatever he's holding.",
+		"civilian": "",
+	}
 
 	# ------------------------------------------------------------ situations
 	func _watch() -> void:
@@ -916,21 +948,23 @@ class TipCard extends Control:
 				continue
 			var d: float = e.global_position.distance_to(p.global_position)
 			if e is Sniper and (e as Sniper).charge_k() >= 0.0:
-				offer("sniper", "Red laser: a sniper. The shot lands where the dot was a beat ago - keep moving or break line of sight.")
+				offer("sniper", "Red laser: a sniper. The shot lands where the dot was a beat ago - keep moving or break line of sight.", "enemy_sniper")
 			if e is Handler:
-				offer("handler", "Dog handler. Drop him before he sees you - or the dog is off the leash.")
+				offer("handler", "Dog handler. Drop him before he sees you - or the dog is off the leash.", "enemy_handler")
 			if e.has_method("is_snoozing") and e.is_snoozing() and d < 200.0:
 				offer("snooze", "He's dozing. Footsteps and doors won't wake him. Gunfire will.")
 			if e.state == Enemy.State.DOWNED and d < 120.0:
 				offer("execute", "Downed. {execute} to finish him before he gets up.")
 			var kind := String(e.data.id) if e.data else ""
 			match kind:
-				"heavy": offer("heavy", "Heavy: the vest soaks a bullet and fists do nothing. Shoot twice, or heavy-swing.")
-				"riot": offer("riot", "Riot shield blocks bullets from the front. Flank him or slam a door into him.")
+				"heavy": offer("heavy", "Heavy: the vest soaks a bullet and fists do nothing. Shoot twice, or heavy-swing.", "enemy_heavy")
+				"riot": offer("riot", "Riot shield blocks bullets from the front. Flank him or slam a door into him.", "enemy_riot")
 				"hunter", "bellhop", "biker", "scrapper":
-					offer("counter", "Melee rushers wind up before they swing. Hit them first to COUNTER.")
-				"scout": offer("scout", "Unarmed lookout: he runs for the alarm. Stop him first.")
-				"welder": offer("welder", "Welder's mask stops one hit and narrows his view. Come at him from the side.")
+					offer("counter", "Melee rushers wind up before they swing. Hit them first to COUNTER.", "enemy_" + kind)
+				"scout": offer("scout", "Unarmed lookout: he runs for the alarm. Stop him first.", "enemy_scout")
+				"welder": offer("welder", "Welder's mask stops one hit and narrows his view. Come at him from the side.", "enemy_welder")
+			if WHO.has(kind) and str(WHO[kind]) != "" and d < 240.0:
+				offer("who_" + kind, WHO[kind], "enemy_" + kind)
 			if d < 260.0 and p.lock_target == null:
 				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to switch.")
 		for fc in get_tree().get_nodes_in_group("film_cameras"):
