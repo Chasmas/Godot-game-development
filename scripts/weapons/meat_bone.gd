@@ -110,7 +110,7 @@ class Pickup extends Node2D:
 		_t += delta
 		queue_redraw()
 		var p := get_tree().get_first_node_in_group("player") as Node2D
-		if p and p.global_position.distance_to(global_position) < 10.0 and p.get("bones") != null:
+		if p and p.visible and p.global_position.distance_to(global_position) < 10.0 and p.get("bones") != null:
 			p.bones += 1
 			Audio.play("pickup")
 			Events.hint.emit(tr("MEAT BONE  -  THROW IT [%s] TO KEEP DOGS BUSY") % InputSetup.binding_text("equipment", InputSetup.using_gamepad), 2.6)

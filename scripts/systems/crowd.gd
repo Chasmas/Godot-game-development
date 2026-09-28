@@ -127,11 +127,26 @@ func release(e: Node) -> void:
 	_shooters.erase(e)
 	_melee.erase(e)
 
+## Tokens are leases, not titles: a holder gets a couple of seconds to
+## shoot or close in, then has to give the turn up and wait a moment before
+## asking again - so the room takes turns instead of the same few firing
+## non-stop while the rest queue, and never everybody at once.
+const LEASE_MS := 2200
+const REST_MS := 900
+var _rest: Dictionary = {}
+
 func _request(pool: Dictionary, e: Node, cap: int) -> bool:
+	var now := Time.get_ticks_msec()
+	for k in pool.keys():
+		if int(pool[k]) < now:
+			pool.erase(k)
+			_rest[k] = now + REST_MS
 	if pool.has(e):
 		return true
+	if int(_rest.get(e, 0)) > now:
+		return false
 	if pool.size() < maxi(cap, 1):
-		pool[e] = true
+		pool[e] = now + LEASE_MS + randi_range(-300, 300)
 		return true
 	return false
 

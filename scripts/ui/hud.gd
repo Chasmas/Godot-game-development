@@ -104,7 +104,7 @@ func _ready() -> void:
 	ability_bar.visible = false
 	root.add_child(ability_bar)
 	meter = AbilityMeter.new()
-	UIStyle.place(meter, Control.PRESET_BOTTOM_LEFT, Vector2(16, -104), Vector2(310, 74))
+	UIStyle.place(meter, Control.PRESET_BOTTOM_LEFT, Vector2(16, -108), Vector2(310, 74))
 	meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(meter)
 	equip_label = _lbl(Vector2(22, 0), 13, UIStyle.DIM, UIStyle.font_mono())
@@ -612,7 +612,7 @@ class StatusPanel extends Control:
 	func _draw() -> void:
 		if hud == null or hud.player == null or not is_instance_valid(hud.player):
 			return
-		var base := Vector2(22, size.y - 92)
+		var base := Vector2(26, size.y - 126)   # above the SPOTLIGHT meter
 		# stealth eye
 		if _state != "":
 			var col: Color = {"SPOTTED": UIStyle.HOT, "HIDDEN": UIStyle.CYAN, "SNEAKING": Color("b18cff"), "SHADOW": Color("7a8fb0")}[_state]

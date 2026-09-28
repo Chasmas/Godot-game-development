@@ -17,6 +17,7 @@ var pause_menu: PauseMenu
 var boss: BossNightManager
 var phone: Interactable
 var exit_car: Interactable
+var hero_car: HeroCar              ## her Eldorado: drives in at the start, peels out at the end
 var locked_doors: Array = []
 var phase: Phase = Phase.INFILTRATE
 var enemies: Array = []
@@ -80,6 +81,14 @@ func _ready() -> void:
 			collected[id] = true
 	var built := b.build()
 	builder = b
+	var ok := Outskirts.new()
+	ok.z_index = -40
+	ok.z_as_relative = false
+	add_child(ok)
+	var mw := 0
+	for r in data.get("map", []):
+		mw = maxi(mw, str(r).length())
+	ok.setup(self, Vector2i(mw, data.get("map", []).size()), String(mission.id))
 	var decor_root := _root("Decor")
 	Decor.build(self, decor_root, b, data.get("decor", []))
 
@@ -150,6 +159,13 @@ func _ready() -> void:
 	else:
 		Score.reset()
 	player.global_position = spawn
+	if not st.is_empty() and phase in [Phase.PHONE, Phase.ESCAPE]:
+		var ph := phase
+		(func():
+			if ph == Phase.PHONE:
+				_begin_phone()
+			else:
+				_begin_escape()).call_deferred()
 	if not st.is_empty():
 		# back from a checkpoint: everyone is at their post again, facing the
 		# way they were placed; give the player a beat before anyone looks
@@ -249,6 +265,8 @@ func _ready() -> void:
 		_update_objective()
 	player.ability._emit()
 	player._emit_weapon()
+	if hero_car and arcade == null and Game.attempts <= 1 and st.is_empty() and DisplayServer.get_name() != "headless":
+		hero_car.arrive(player)
 	if arcade == null:
 		var chat := Chatter.new()
 		chat.level = self
@@ -475,6 +493,7 @@ func _process(delta: float) -> void:
 	_check_hints(cell)
 	if Engine.get_process_frames() % 30 == 0:
 		_poll_tasks()
+		_poll_boss_checkpoint()
 	_check_checkpoints(cell)
 	if not _boss_triggered and boss and is_instance_valid(boss):
 		var br: Array = data.get("boss_trigger", [])
@@ -796,6 +815,20 @@ func _update_objective() -> void:
 ## "tasks"): smash the film cameras that are taping her, recover a tape.
 ## The way out only opens once they're done.
 var _escape_pending := false
+var _boss_cp_pending := false   ## save once the boss is down and the room is quiet
+
+## After a boss: the tape saves as soon as nobody's left close by, so a
+## death on the way out never means doing the fight again.
+func _poll_boss_checkpoint() -> void:
+	if not _boss_cp_pending or not player.alive or Dialogue.active:
+		return
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and not (e is Dog) and (e as Node2D).global_position.distance_to(player.global_position) < 320.0:
+			return
+	if not _checkpoint_safe():
+		return
+	_boss_cp_pending = false
+	_save_checkpoint(tr("BOSS DOWN"), player.global_position)
 var _tasks_sig := ""
 
 func _tasks_status() -> Array:
@@ -1018,6 +1051,8 @@ func boss_lights_out() -> void:
 
 func _on_boss_defeated(_b: BossNightManager) -> void:
 	phase = Phase.BOSS_DOWN
+	if boss and is_instance_valid(boss):
+		killed_ids[boss.enemy_id] = true   # a checkpoint from here on never brings him back
 	_update_objective()
 	Music.stop(1.5)
 	await get_tree().create_timer(0.9).timeout
@@ -1043,6 +1078,7 @@ func _on_dialogue_event(ev: String) -> void:
 
 func _on_dialogue_finished(id: String) -> void:
 	if id == _boss_dialogue("down"):
+		_boss_cp_pending = true
 		if phone == null:
 			# no phone call here: straight out, the building behind you
 			Music.play("aftermath")
@@ -1092,8 +1128,12 @@ func _on_exit(_it: Interactable, _by: Node) -> void:
 		return
 	phase = Phase.DONE
 	player.input_enabled = false
-	Audio.play("door_slam")
-	await get_tree().create_timer(0.5).timeout
+	if hero_car and is_instance_valid(hero_car) and DisplayServer.get_name() != "headless":
+		hero_car.depart(player)
+		await get_tree().create_timer(1.9).timeout
+	else:
+		Audio.play("door_slam")
+		await get_tree().create_timer(0.5).timeout
 	_complete()
 
 func _complete() -> void:

@@ -118,8 +118,8 @@ static func get_t() -> Tuning:
 @export var hearing_mult := [0.85, 1.0, 1.12]
 @export var fire_cooldown_mult := [1.3, 1.0, 0.85]
 @export var melee_windup_mult := [1.35, 1.0, 0.85]
-@export var max_shooters := [2, 3, 5]
-@export var max_melee := [1, 2, 3]
+@export var max_shooters := [1, 2, 3]
+@export var max_melee := [1, 2, 2]
 ## Easy: the player can take this many extra hits (regenerating guard).
 @export var player_guard_hits := [1, 0, 0]
 ## Seconds without taking damage before the guard comes back.

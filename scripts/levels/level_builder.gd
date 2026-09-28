@@ -165,6 +165,29 @@ func build() -> Dictionary:
 				car.used.connect(level._on_exit)
 				level.exit_car = car
 				out.exit_pos = center
+				var hc := HeroCar.new()
+				var hcd: Dictionary = data.get("hero_car", {})
+				hc.position = Vector2(float(hcd.pos[0]), float(hcd.pos[1])) * 16.0 if hcd.has("pos") else center
+				for v in hcd.get("route_in", []):
+					hc.route_in.append(Vector2(float(v[0]), float(v[1])) * 16.0)
+				for v in hcd.get("route_out", []):
+					hc.route_out.append(Vector2(float(v[0]), float(v[1])) * 16.0)
+				if hc.route_in.size() >= 2:
+					var n: int = hc.route_in.size()
+					hc._dir = (hc.route_in[n - 1] - hc.route_in[n - 2]).normalized()
+					hc.rotation = hc._dir.angle()
+				for g in hcd.get("gates", []):
+					# [x0, y0, x1, y1]: the stretch of boundary opened for the car
+					var bg := HeroCar.BoomGate.new()
+					bg.level = level
+					var vertical: bool = int(g[3]) > int(g[1])
+					bg.axis = Vector2.DOWN if vertical else Vector2.RIGHT
+					bg.span = ((float(g[3]) - float(g[1])) if vertical else (float(g[2]) - float(g[0]))) * 16.0 + 16.0
+					bg.position = Vector2(float(g[0]) * 16.0 + 8.0, float(g[1]) * 16.0) if vertical else Vector2(float(g[0]) * 16.0, float(g[1]) * 16.0 + 8.0)
+					level.props_root.add_child(bg)
+					hc.gates.append(bg)
+				level.props_root.add_child(hc)
+				level.hero_car = hc
 			elif c == "P":
 				out.spawn = center
 			elif c == "R":

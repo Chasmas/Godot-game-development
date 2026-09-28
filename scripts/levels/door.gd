@@ -17,7 +17,10 @@ var length := 32.0
 var closed_angle := 0.0        # direction the leaf points when closed (from hinge)
 var swing := 0.0
 var omega := 0.0
-var locked := false
+var locked := false:
+	set(v):
+		locked = v
+		_solid(v)
 var hp := 5
 var broken := false
 var hit_radius := 12.0
@@ -44,8 +47,8 @@ func _ready() -> void:
 	add_to_group("damageable")
 	leaf = DoorLeaf.new()
 	leaf.door = self
-	leaf.collision_layer = Layers.DOOR
 	leaf.collision_mask = 0
+	_solid(locked)
 	leaf.add_to_group("door")
 	_shape = CollisionShape2D.new()
 	var r := RectangleShape2D.new()
@@ -154,6 +157,12 @@ func _push_from_bodies(delta: float) -> void:
 			continue
 		var perp := a.cross(rel)   # signed distance from leaf line
 		var r := 7.0
+		# someone walking at a closed door opens it ahead of their body, like a
+		# hand on the push plate, instead of the leaf sliding through them
+		if absf(perp) < 12.0 and absf(swing) < 0.9 and body.velocity.dot(a.orthogonal() * signf(perp)) > 0.0 				and body.velocity.length() > 15.0 and not (body is Player and (body as Player).is_dashing()):
+			var s2 := signf(perp) if perp != 0.0 else 1.0
+			if absf(omega) < 4.5:
+				omega = -s2 * 4.5
 		if absf(perp) < r:
 			var overlap := r - absf(perp)
 			var side := signf(perp) if perp != 0.0 else 1.0
@@ -309,8 +318,16 @@ func _break(dir: Vector2) -> void:
 	Events.noise.emit(global_position, 260.0, &"door", null)
 	queue_redraw()
 
+## A locked leaf is a wall to everyone (nobody walks through a locked door,
+## enemies included); an unlocked one only stops bullets and eyes and gets
+## pushed open by whoever walks into it.
+func _solid(on: bool) -> void:
+	if leaf:
+		leaf.collision_layer = Layers.DOOR | (Layers.WORLD if on else 0)
+
 func unlock() -> void:
 	locked = false
+	_solid(false)
 
 ## Something slams it shut from the other side and holds it (the dream).
 func slam_shut(hold := 4.0) -> void:

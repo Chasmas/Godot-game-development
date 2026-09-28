@@ -19,7 +19,7 @@ const DEFS := {
 }
 
 var id: StringName = &"spotlight"
-var charge := 1.0            # 0..1, starts full so the first level teaches it
+var charge := 0.0            # 0..1, earned with points (the tutorial explains it the first time it fills)
 var active := false
 var time_left := 0.0
 var charge_mult := 1.0
