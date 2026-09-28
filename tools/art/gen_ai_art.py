@@ -68,7 +68,7 @@ def call(entry, style):
     key = os.environ["OPENAI_API_KEY"]
     prompt = (style + " " + entry["prompt"]).strip()
     size = entry.get("size", "1536x1024")
-    quality = entry.get("quality", "high")
+    quality = entry.get("quality", "medium")   # medium unless asked otherwise (credits)
     bg = entry.get("background")
     refs = entry.get("refs", [])
     if refs:

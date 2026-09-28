@@ -5,7 +5,7 @@
    "style": "Painted head-and-shoulders character portrait for a 1980s neo-noir video game. Realistic oil painting with visible brushwork, front-facing, looking at the viewer, dark textured purple-magenta studio backdrop with a cyan rim light on one side and warm key light on the face. Square format, face centred, shoulders visible. No text.",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high"
+    "quality": "medium"
    },
    "entries": {
     "arlo": {
@@ -110,7 +110,7 @@
    "style": "Painted cinematic key frame for a 1980s neo-noir action video game set in California. Realistic oil painting with visible brushwork in the style of painted 1980s movie posters, deep indigo and purple shadows, hot magenta and cyan neon rim lighting, warm amber practical lights, soft film grain. Wide 16:9 cinematic composition: keep the main subject in the central band, nothing important near the top or bottom edges. No text, no captions, no watermark unless described.",
    "defaults": {
     "size": "1536x1024",
-    "quality": "high"
+    "quality": "medium"
    },
    "entries": {
     "desert_road": {
@@ -631,7 +631,7 @@
    "style": "Top-down video game sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective, no horizon, no side faces visible. A single isolated object centred on a fully transparent background, no floor, no cast shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan neon reflections, crisp clean silhouette that reads at small size.",
    "defaults": {
     "size": "1536x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -911,6 +911,16 @@
     "pyro_charge": {
      "prompt": "A bundle of four red demolition charges wrapped together with grey duct tape, a small black digital timer with a red LED display and coloured wires on top, seen from directly above.",
      "size": "1024x1024"
+    },
+    "cigarette": {
+     "prompt": "A single lit cigarette, white paper with an orange filter, a glowing ember at the tip and a wisp of smoke, seen from directly above, pointing right.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "folding_chair": {
+     "prompt": "A worn metal folding chair with a cracked red vinyl seat and a backrest, seen from directly above, the backrest along the left edge.",
+     "size": "1024x1024",
+     "quality": "medium"
     }
    }
   },
@@ -960,7 +970,7 @@
    "style": "A single glowing neon-tube sign icon, 1980s synthwave style, bright tube with a soft glow halo, centred, on a fully transparent background, no text, no wall, no frame.",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1019,7 +1029,7 @@
    "style": "Video game weapon icon for a 1980s neon-noir action game HUD: the single object seen in a clean flat side view, pointing to the RIGHT, lying horizontally, centred and filling the frame width, detailed realistic painted style with a hot-pink and cyan neon rim light and a subtle glow, on a fully transparent background, no hands, no text, no floor, no shadow.",
    "defaults": {
     "size": "1536x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1083,7 +1093,7 @@
    "style": "A single mask or headpiece shown alone, front view, floating centred on a fully transparent background, as a collectible item for a 1980s neon-noir action game: realistic oil painting with visible brushwork, hot magenta and cyan neon rim light, warm key light, crisp silhouette, no face or head inside it unless described, no text.",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1126,7 +1136,7 @@
    "style": "Painted VHS box cover art for a 1980s neo-noir action movie, portrait orientation, realistic oil painting in the style of 1980s movie posters, deep indigo shadows, hot magenta and cyan neon, warm amber highlights, dramatic composition with the main subject in the middle, leave the top fifth and bottom fifth calm and dark for a title to be printed later, no text, no letters, no logos.",
    "defaults": {
     "size": "1024x1536",
-    "quality": "high"
+    "quality": "medium"
    },
    "entries": {
     "cover_m01": {
@@ -1172,7 +1182,7 @@
    "style": "Detailed realistic painted object, straight-on front view, no perspective, a single isolated object centred on a fully transparent background, no floor, no shadow. 1980s, lit at night with subtle magenta and cyan neon reflections, crisp edges.",
    "defaults": {
     "size": "1536x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1192,7 +1202,7 @@
    "style": "Top-down video game sprite seen from directly overhead: a man lying flat on his back, knocked out cold, on the floor, sprawled, arms flung out, head towards the RIGHT edge of the image, strict orthographic bird's-eye view looking straight down, no perspective. Isolated on a fully transparent background, no floor, no blood pool, no shadow. Detailed realistic painted style, 1980s crime scene lit at night with subtle magenta and cyan reflections, Crisp silhouette that reads at small size.",
    "defaults": {
     "size": "1536x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1247,7 +1257,7 @@
    "style": "Hand-painted 2D top-down video game character sprite in the style of Hotline Miami meets modern high-detail painted indie art: BOLD SIMPLE SHAPES, strong dark outline, limited palette, a lean athletic build (not round, not chubby), readable at tiny size, lots of small costume detail. Seen from above and slightly behind, the character facing the RIGHT edge of the image. The whole animal, standing, seen straight from above, its back and spine along the middle, snout to the RIGHT. Transparent background, no shadow.",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1284,7 +1294,7 @@
    "style": "Hand-painted 2D top-down video game character sprite in the style of Hotline Miami meets modern high-detail painted indie art: BOLD SIMPLE SHAPES, strong dark outline, limited palette, a lean athletic build (not round, not chubby), readable at tiny size, lots of small costume detail. Seen from above and slightly behind, the character facing the RIGHT edge of the image. Only the head, shoulders and upper torso, NO ARMS (cut cleanly at the shoulders). Transparent background, no shadow.",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high",
+    "quality": "medium",
     "background": "transparent"
    },
    "entries": {
@@ -1363,7 +1373,7 @@
    "style": "A seamless tileable material texture filling the whole square image edge to edge, flat and evenly lit from the front, close-up, no objects, no seams, no vignette, no text. Neutral mid-grey colour (the game tints it).",
    "defaults": {
     "size": "1024x1024",
-    "quality": "high"
+    "quality": "medium"
    },
    "entries": {
     "leather": {

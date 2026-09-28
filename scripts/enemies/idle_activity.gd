@@ -135,7 +135,11 @@ func _draw() -> void:
 	match kind:
 		Kind.SMOKE:
 			var drag := _hump(phase, 0.16, 0.28)
-			draw_line(p, p + Vector2(2.5, 0.5), Color(0.95, 0.93, 0.88), 1.0)
+			var cig := ArtLib.sprite("cigarette")
+			if cig:
+				draw_texture_rect(cig, Rect2(p + Vector2(-0.5, -1.2), Vector2(4.0, 2.4)), false)
+			else:
+				draw_line(p, p + Vector2(2.5, 0.5), Color(0.95, 0.93, 0.88), 1.0)
 			draw_circle(p + Vector2(2.8, 0.5), 0.9 + drag * 0.5, Color(1.0, 0.35 + 0.3 * drag, 0.1))
 			draw_circle(p + Vector2(2.8, 0.5), 2.5 + drag * 2.0, Color(1.0, 0.4, 0.1, 0.18 + 0.25 * drag))
 		Kind.DRINK:
@@ -288,6 +292,17 @@ class SnoozeChair extends Node2D:
 		draw_set_transform(Vector2(0.5, 1.5), 0.0, Vector2(1.0, 0.7))
 		draw_circle(Vector2.ZERO, 7.5, Color(0, 0, 0, 0.3))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		var ch := ArtLib.sprite("folding_chair")
+		if ch:
+			# the painted folding chair, backrest behind him
+			draw_texture_rect(ch, Rect2(-9, -7, 14, 14), false)
+			draw_rect(Rect2(6, -3.5, 7, 3), ink)
+			draw_rect(Rect2(6, 0.5, 7, 3), ink)
+			draw_rect(Rect2(6.5, -3, 6, 2), Color(0.2, 0.2, 0.26))
+			draw_rect(Rect2(6.5, 1, 6, 2), Color(0.2, 0.2, 0.26))
+			draw_rect(Rect2(12, -3.8, 2.5, 3.4), Color(0.12, 0.08, 0.06))
+			draw_rect(Rect2(12, 0.4, 2.5, 3.4), Color(0.12, 0.08, 0.06))
+			return
 		# seat, backrest behind him, the leg ends poking out
 		draw_rect(Rect2(-6, -5.5, 11, 11), ink)
 		draw_rect(Rect2(-5, -4.5, 9, 9), seat)
