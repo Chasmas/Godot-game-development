@@ -749,17 +749,19 @@ static func draw_dead(ci: CanvasItem, C: Dictionary, twitch: float, missing := "
 	var breed = DOG_COLORS.find_key(C)
 	var tex: Texture2D = null
 	if breed != null:
-		var pth := "res://assets/art/cast/dog_%s.png" % str(breed)
-		if not _bodies.has("dog_" + str(breed)):
-			_bodies["dog_" + str(breed)] = load(pth) if ResourceLoader.exists(pth) else null
-		tex = _bodies["dog_" + str(breed)]
+		var key := "dog_%s_down" % str(breed)
+		var pth := "res://assets/art/cast/%s.png" % key
+		if not _bodies.has(key):
+			_bodies[key] = load(pth) if ResourceLoader.exists(pth) else null
+		tex = _bodies[key]
 	if tex and missing == "":
-		var L := 28.0
+		# the painting of the dog down on its side
+		var L := 30.0
 		var H := L * float(tex.get_height()) / float(tex.get_width())
 		ci.draw_set_transform(Vector2(1.5, 2.0) * DRAW_SCALE, 0.0, Vector2(1.0, 0.7) * DRAW_SCALE)
 		ci.draw_circle(Vector2(1, 3), 9.0, Color(0.35, 0.02, 0.05, 0.55))
-		ci.draw_set_transform(Vector2.ZERO, 0.12 + tw * 0.02, Vector2(1.0, 1.2) * DRAW_SCALE)
-		ci.draw_texture_rect(tex, Rect2(Vector2(-L * 0.5, -H * 0.5), Vector2(L, H)), false, Color(0.72, 0.66, 0.66))
+		ci.draw_set_transform(Vector2.ZERO, tw * 0.02, Vector2.ONE * DRAW_SCALE)
+		ci.draw_texture_rect(tex, Rect2(Vector2(-L * 0.5, -H * 0.5), Vector2(L, H)), false, Color(0.85, 0.8, 0.8))
 		ci.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		return
 	# legs sticking out to one side
