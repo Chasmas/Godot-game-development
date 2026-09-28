@@ -53,7 +53,7 @@ func _ready() -> void:
 	shot.letterbox = false
 	shot.shot_time = 40.0
 	add_child(shot)
-	shot.show_shot("motel_night", true)
+	shot.show_shot(BACKDROPS[0], true)
 	var shade := Shade.new()
 	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -117,8 +117,21 @@ func _build_logo() -> void:
 	_logo_bottom.position = Vector2(250, 124)
 	add_child(_logo_bottom)
 
+## Behind the pages, the story's moments dissolve one into the next.
+const BACKDROPS := ["motel_night", "menu_smoke", "t_corridor", "menu_revolver", "t_studio", "menu_tommy", "t_mansion"]
+var _bd_i := 0
+var _bd_t := 0.0
+
 func _process(delta: float) -> void:
 	_t += delta
+	_bd_t += delta
+	if _bd_t > 8.0:
+		_bd_t = 0.0
+		for k in BACKDROPS.size():
+			_bd_i = (_bd_i + 1) % BACKDROPS.size()
+			if StoryShot.has_shot(BACKDROPS[_bd_i]):
+				break
+		shot.show_shot(BACKDROPS[_bd_i])
 	_logo_top.position.y = 48 + sin(_t * 1.3) * 2.0
 	var flick := 0.35 if (fmod(_t, 5.1) < 0.08 or fmod(_t, 3.3) < 0.04) else 1.0
 	_logo_bottom.modulate.a = flick
@@ -140,6 +153,7 @@ func _go(step: String) -> void:
 	page.add_child(box)
 	match step:
 		"welcome": _page_welcome(box)
+		"license": _page_license(box)
 		"options": _page_options(box)
 		"copying": _page_progress(box, tr("Loading the tape..."))
 		"done": _page_done(box)
@@ -190,13 +204,56 @@ func _page_welcome(box: VBoxContainer) -> void:
 	box.add_child(_p(tr("California, 1988. There's a package on your doorstep, a motel in Barstow, and somebody filming everything.")))
 	box.add_child(_p(tr("Setup will install HOTSHOT CALIFORNIA %s for you.") % _version(), UIStyle.DIM, 13))
 	_spacer(box, 12)
-	var go := _button(box, tr("INSTALL"), _start_install, true)
+	box.add_child(_p(tr("It's a good idea to close other programs first. Your saves (if you've played before) are safe."), UIStyle.DIM, 12))
+	var go := _button(box, tr("NEXT ▶"), func(): _go("license"), true)
+	_button(box, tr("CANCEL"), _confirm_cancel)
+	go.grab_focus.call_deferred()
+
+func _page_license(box: VBoxContainer) -> void:
+	box.add_child(_h(tr("The fine print"), 30, UIStyle.PINK))
+	var tx := RichTextLabel.new()
+	tx.custom_minimum_size = Vector2(460, 170)
+	tx.scroll_active = true
+	tx.add_theme_font_size_override("normal_font_size", 12)
+	tx.text = tr(LICENSE)
+	box.add_child(tx)
+	var ok := CheckBox.new()
+	ok.text = tr("I accept the terms")
+	ok.button_pressed = _accepted
+	box.add_child(ok)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 12)
 	box.add_child(row)
-	_button(row, tr("OPTIONS"), func(): _go("options"))
-	_button(row, tr("CANCEL"), _quit)
-	go.grab_focus.call_deferred()
+	var next := _button(row, tr("NEXT ▶"), func(): _go("options"), true)
+	next.disabled = not _accepted
+	ok.toggled.connect(func(v):
+		_accepted = v
+		next.disabled = not v)
+	_button(row, tr("◀ BACK"), func(): _go("welcome"))
+	ok.grab_focus.call_deferred()
+
+const LICENSE := """HOTSHOT CALIFORNIA - (c) 2026 Gilberto Lopes / Inverted Index Studio.
+
+This is a test build. You're welcome to play it, and to share this installer with friends so they can play and test it too - free of charge.
+
+You may not sell it, repackage it as your own, or extract its art, music or writing to use elsewhere.
+
+The game is provided as it is, without warranty of any kind. It installs for your user only, needs no administrator rights, and can be removed at any time from Windows Settings > Apps.
+
+HOTSHOT CALIFORNIA is a work of fiction. It contains strong violence, blood and dark themes, and is intended for adults.
+
+Thank you for testing. Feedback makes it better."""
+
+var _accepted := false
+
+func _confirm_cancel() -> void:
+	var d := ConfirmationDialog.new()
+	d.dialog_text = tr("Stop the setup? Nothing has been installed yet.")
+	d.ok_button_text = tr("STOP")
+	d.cancel_button_text = tr("KEEP GOING")
+	d.confirmed.connect(_quit)
+	add_child(d)
+	d.popup_centered()
 
 func _page_options(box: VBoxContainer) -> void:
 	box.add_child(_h(tr("Location scouting"), 30, UIStyle.PINK))
@@ -226,7 +283,7 @@ func _page_options(box: VBoxContainer) -> void:
 	box.add_child(_p(tr("Needs about %d MB. Your saves are kept in your user folder, not here.") % int(ceil(_exe_size() / 1048576.0)), UIStyle.DIM, 12))
 	_spacer(box, 6)
 	var go := _button(box, tr("INSTALL"), _start_install, true)
-	_button(box, tr("◀ BACK"), func(): _go("welcome"))
+	_button(box, tr("◀ BACK"), func(): _go("license"))
 	go.grab_focus.call_deferred()
 
 var _desktop_cb_state := true
@@ -255,9 +312,23 @@ func _page_progress(box: VBoxContainer, title: String) -> void:
 func _page_done(box: VBoxContainer) -> void:
 	box.add_child(_h(tr("That's a wrap."), 34, UIStyle.PINK))
 	box.add_child(_p(tr("HOTSHOT CALIFORNIA is installed. Somebody's filming. Make it look good.")))
-	_spacer(box, 14)
-	var go := _button(box, tr("ACTION! (play now)"), _play, true)
-	_button(box, tr("CLOSE"), _quit)
+	box.add_child(_p(tr("Installed to:") + " " + _dest.replace("/", "\"), UIStyle.DIM, 12))
+	var launch := CheckBox.new()
+	launch.text = tr("Launch HOTSHOT CALIFORNIA now")
+	launch.button_pressed = true
+	box.add_child(launch)
+	var notes := CheckBox.new()
+	notes.text = tr("Show what's new in this version")
+	notes.button_pressed = false
+	box.add_child(notes)
+	_spacer(box, 8)
+	var go := _button(box, tr("FINISH"), func():
+		if notes.button_pressed:
+			_show_notes()
+		if launch.button_pressed:
+			_play()
+		else:
+			_quit(), true)
 	go.grab_focus.call_deferred()
 	Audio.play("rank_stamp", -4.0)
 	PostFX.flash(UIStyle.GOLD, 0.2)
@@ -384,6 +455,29 @@ func _fail(msg: String) -> void:
 	_error = msg
 	Audio.play("ui_back")
 	_go("error")
+
+## What's new: written next to the game when installed, opened in Notepad.
+func _show_notes() -> void:
+	var p := _dest.path_join("WHATS_NEW.txt")
+	var f := FileAccess.open(p, FileAccess.WRITE)
+	if f:
+		f.store_string(tr(WHATS_NEW))
+		f.close()
+		OS.shell_open(p.replace("/", "\\"))
+
+const WHATS_NEW := """HOTSHOT CALIFORNIA - what's new
+
+- Masks: eleven faces to wear, each with an upside and a price. Earn them, or find them hidden.
+- Every boss has a health bar and a way to beat them with the room itself - and Dog Days has a boss now.
+- A trailer, a new title theme and darker, longer level scores.
+- Cutscenes with more painted frames, boss scenes, and a VCR on the menu for the tapes you find.
+- Cass arrives and leaves in her Eldorado. The lots have roads now, and the world beyond the walls.
+- Dodge roll and stamina, live arms for every punch, stab and swing, kicks, better executions.
+- Tutorial cards, side jobs on every level, guards who talk among themselves, meat bones for the dogs.
+- Arcade: One in the Chamber, Gun Game and Clock's Ticking.
+- Between jobs: Cass's room - the answering machine, the VCR, the mirror, the corkboard.
+
+Thanks for testing!  - Gilberto"""
 
 func _play() -> void:
 	OS.create_process(_dest.path_join(EXE_NAME).replace("/", "\\"), [])

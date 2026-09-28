@@ -9,6 +9,10 @@ func _ready() -> void:
 	await get_tree().process_frame
 	# the same exe is its own installer / uninstaller (see installer.gd)
 	var args := OS.get_cmdline_args()
+	# double-clicked as "..._Setup.exe" (the game exe, renamed): install mode
+	var setup_named := OS.get_executable_path().get_file().to_lower().contains("setup")
+	if setup_named and not OS.has_feature("editor"):
+		args.append("--hotshot-install")
 	if "--hotshot-install" in args or "--hotshot-uninstall" in args:
 		var inst: GDScript = load("res://scripts/ui/installer.gd")
 		inst.set("uninstall_mode", "--hotshot-uninstall" in args)
