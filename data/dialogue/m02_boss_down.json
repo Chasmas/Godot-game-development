@@ -1,0 +1,68 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "buck",
+   "text": "Don't... don't hurt the dogs. They only ever did what I taught 'em.",
+   "shot": "k_down",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "cass",
+   "text": "Who told you to keep the lane clear?",
+   "shot": "k_down",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "buck",
+   "text": "Call came from the production office. Same voice that calls you, I'd bet. Smooth. Polite. Pays in cash.",
+   "shot": "k_down",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "narration",
+   "text": "Behind her, forty dogs go quiet at once.",
+   "shot": "k_yard",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "cass",
+   "text": "...",
+   "shot": "k_down",
+   "choices": [
+    {
+     "text": "Finish it.",
+     "next": "k1",
+     "set": {
+      "buck_killed": true
+     }
+    },
+    {
+     "text": "Let the dogs decide.",
+     "next": "s1",
+     "set": {
+      "buck_spared": true
+     }
+    }
+   ]
+  },
+  "k1": {
+   "speaker": "cass",
+   "text": "Dinner's served, Buck.",
+   "shot": "k_down",
+   "event": "boss_execute"
+  },
+  "s1": {
+   "speaker": "cass",
+   "text": "Open the pens, Buck. Let's see who they follow.",
+   "shot": "k_down",
+   "event": "boss_spare",
+   "next": "s2"
+  },
+  "s2": {
+   "speaker": "narration",
+   "text": "The dogs walk straight past her. Every one of them. They lie down around him and won't let anybody near.",
+   "shot": "k_dogs"
+  }
+ }
+}

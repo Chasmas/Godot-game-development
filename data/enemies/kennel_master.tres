@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"kennel_master"
+display_name = "Buck Halverson, Kennel Master"
+combat = 4
+weapon_id = &"shotgun"
+palette = "handler"
+walk_speed = 64.0
+run_speed = 140.0
+armor = 0
+can_be_knocked_down = false
+immune_to_punch = true
+reaction_time = 0.55
+view_distance = 400.0
+view_angle_deg = 160.0
+burst = 1
+burst_gap = 0.4
+aim_error_deg = 5.0
+notes = "Boss. The dogs are his armour; the dinner bell takes it away."

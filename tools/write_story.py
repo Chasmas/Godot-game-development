@@ -312,6 +312,7 @@ def speakers():
         "pa": {"name": "STAGE ANNOUNCER", "color": "ff5a5a", "pitch": 0.9},
         "tommy_burnt": {"name": "TOMMY?", "color": "ff9a4a", "pitch": 0.85},
         "dead": {"name": "THE DEAD", "color": "a8b0a0", "pitch": 0.55},
+        "buck": {"name": "BUCK HALVERSON", "color": "d0a060", "pitch": 0.75},
     })
     with open(os.path.join(D, "speakers.json"), "w", encoding="utf-8") as f:
         json.dump(s, f, ensure_ascii=False, indent=1)
@@ -368,6 +369,31 @@ def coverage():
             if k in d["nodes"]:
                 d["nodes"][k]["shot"] = sid
         save(name, d)
+
+
+# ------------------------------------------------------------------ Dog Days' boss
+def kennel():
+    save("m02_boss_intro", {"start": "a", "nodes": chain([
+        ("a", "narration", "The kennel yard. Forty cages, and every dog in them on its feet and silent.", {"shot": "k_yard"}),
+        ("b", "buck", "Easy, girls. Easy. That's the lady from the tape.", {"shot": "k_buck"}),
+        ("c", "cass", "You were on the shoot. The animal wrangler.", {"shot": "k_buck"}),
+        ("d", "buck", "Twelve dogs on a picture about cars. Ever wonder why? Somebody wanted the fire lane kept clear. Nobody gets past a hungry Rottweiler.", {"shot": "k_lane"}),
+        ("e", "cass", "Tommy was in that car.", {"shot": "k_buck"}),
+        ("f", "buck", "And my girls were very good that night. Dinner's late, ladies.", {"shot": "k_yard", "sfx": "bark", "event": "boss_start"}),
+    ])})
+    save("m02_boss_down", {"start": "a", "nodes": chain([
+        ("a", "buck", "Don't... don't hurt the dogs. They only ever did what I taught 'em.", {"shot": "k_down"}),
+        ("b", "cass", "Who told you to keep the lane clear?", {"shot": "k_down"}),
+        ("c", "buck", "Call came from the production office. Same voice that calls you, I'd bet. Smooth. Polite. Pays in cash.", {"shot": "k_down"}),
+        ("d", "narration", "Behind her, forty dogs go quiet at once.", {"shot": "k_yard"}),
+        ("e", "cass", "...", {"shot": "k_down", "choices": [
+            {"text": "Finish it.", "next": "k1", "set": {"buck_killed": True}},
+            {"text": "Let the dogs decide.", "next": "s1", "set": {"buck_spared": True}},
+        ]}),
+        ("k1", "cass", "Dinner's served, Buck.", {"shot": "k_down", "event": "boss_execute", "end": True}),
+        ("s1", "cass", "Open the pens, Buck. Let's see who they follow.", {"shot": "k_down", "event": "boss_spare"}),
+        ("s2", "narration", "The dogs walk straight past her. Every one of them. They lie down around him and won't let anybody near.", {"shot": "k_dogs"}),
+    ])})
 
 
 # ------------------------------------------------------------------ boss scenes
@@ -430,4 +456,4 @@ def boss_scenes():
 
 
 if __name__ == "__main__":
-    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); calls(); teaser(); speakers(); campaign(); coverage(); boss_scenes()
+    prologue(); apartment(); news(); salvage(); yermo_after(); studio(); boss(); news_b(); dream(); calls(); teaser(); speakers(); campaign(); coverage(); boss_scenes(); kennel()

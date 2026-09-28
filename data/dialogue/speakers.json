@@ -83,5 +83,10 @@
   "name": "THE DEAD",
   "color": "a8b0a0",
   "pitch": 0.55
+ },
+ "buck": {
+  "name": "BUCK HALVERSON",
+  "color": "d0a060",
+  "pitch": 0.75
  }
 }

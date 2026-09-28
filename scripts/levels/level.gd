@@ -48,7 +48,8 @@ var fx: Effects
 var bullets: BulletSystem
 var crowd: Crowd
 var visual_3d: Visual3DOverlay
-var arcade: ArcadeDirector          ## arcade WAVES / ENDLESS run, when set
+var arcade: ArcadeDirector
+var rules: ArcadeRules              ## an arcade rule mode over the mission (chamber / gun game / clock)          ## arcade WAVES / ENDLESS run, when set
 var nightmare: NightmareDirector    ## the dream level's scares and risen dead
 var breach: Breach                  ## a sealed room to blow open (the lobby)
 
@@ -231,6 +232,10 @@ func _ready() -> void:
 	PostFX.set_tint(Color(1, 1, 1, 0))
 	Audio.set_music_muffled(false)
 	Score.running = true
+	if Game.modifiers.get("rule", "") != "":
+		rules = ArcadeRules.new()
+		add_child(rules)
+		rules.setup(self, str(Game.modifiers.rule))
 	if Game.modifiers.get("mode", "") in ["waves", "endless"]:
 		arcade = ArcadeDirector.new()
 		arcade.name = "Arcade"
@@ -269,7 +274,7 @@ func _ready() -> void:
 		_update_objective()
 	player.ability._emit()
 	player._emit_weapon()
-	if hero_car and arcade == null and Game.attempts <= 1 and st.is_empty() and DisplayServer.get_name() != "headless":
+	if hero_car and arcade == null and rules == null and Game.attempts <= 1 and st.is_empty() and DisplayServer.get_name() != "headless":
 		# headlights only after dark (a sunny-day preset brightens the ambient)
 		hero_car.night = ambient.get_luminance() < 0.6
 		hero_car.arrive(player)
@@ -290,7 +295,7 @@ func _ready() -> void:
 	# the call as she arrives: first load only (not after a death, a
 	# checkpoint or in arcade), once the title card has had its moment
 	var ic: Dictionary = data.get("intro_call", {})
-	if not ic.is_empty() and arcade == null and Game.attempts <= 1 and st.is_empty() and Game.intro_calls_enabled():
+	if not ic.is_empty() and arcade == null and rules == null and Game.attempts <= 1 and st.is_empty() and Game.intro_calls_enabled():
 		get_tree().create_timer(3.4, false).timeout.connect(func():
 			if not is_inside_tree() or not player.alive:
 				return
@@ -1068,7 +1073,7 @@ func boss_lights_out() -> void:
 var _boss_props: Array = []
 
 func _build_boss_props() -> void:
-	var labels := {"breaker": "THROW THE BREAKER", "valve": "OPEN THE WATER MAIN", "extinguisher": "GRAB THE EXTINGUISHER"}
+	var labels := {"breaker": "THROW THE BREAKER", "valve": "OPEN THE WATER MAIN", "extinguisher": "GRAB THE EXTINGUISHER", "dinner_bell": "RING THE DINNER BELL"}
 	for bp in data.get("boss_props", []):
 		var k := str(bp.kind)
 		var it := Interactable.new()
@@ -1114,7 +1119,8 @@ func _arm_boss_props() -> void:
 		var k: String = _boss_props[0].kind
 		var tip := {"breaker": "THE BREAKER BOX IS BY THE DESK. LIGHTS ON = HE'S BLIND.",
 			"valve": "THE SPRINKLERS ARE DRY. FIND THE WATER MAIN.",
-			"extinguisher": "BULLETS WON'T DO IT. THE EXTINGUISHERS ARE FULL THIS TIME."}.get(k, "")
+			"extinguisher": "BULLETS WON'T DO IT. THE EXTINGUISHERS ARE FULL THIS TIME.",
+			"dinner_bell": "THE DOGS ARE HIS ARMOUR. THERE'S A DINNER BELL ON THE YARD WALL."}.get(k, "")
 		if tip != "":
 			hud.show_hint(tip, 4.0)
 
@@ -1141,6 +1147,24 @@ func _on_boss_prop(it: Interactable, _by: Node) -> void:
 			if boss.has_method("douse"):
 				boss.douse()
 			hud.show_hint("THE SPRINKLERS WORK. ONE GOOD HIT.", 2.5)
+		"dinner_bell":
+			# every dog in the place goes for the troughs; Buck is on his own
+			Audio.play("tote_ding", 2.0, 0.7)
+			Audio.play("bark", -2.0)
+			for pen in data.get("kennel_cages", []):
+				var mb := MeatBone.new()
+				mb.global_position = Vector2(float(pen[0]), float(pen[1])) * 16.0 + Vector2(8, 8)
+				actors_root.add_child(mb)
+			for e in get_tree().get_nodes_in_group("enemies"):
+				if e is Dog and e.is_alive():
+					var best: MeatBone = null
+					for mb2 in get_tree().get_nodes_in_group("meat_bones"):
+						if best == null or (mb2 as Node2D).global_position.distance_to(e.global_position) < best.global_position.distance_to(e.global_position):
+							best = mb2
+					if best and e.lure(best):
+						best.eaters.append(e)
+			boss.blind(4.5, "NO! Get back here, you mutts! WORK!")
+			hud.show_hint("DINNER TIME. HE'S ALONE NOW.", 2.5)
 		"extinguisher":
 			# a blast of foam in the direction she's facing
 			Audio.play_at("sprinkler", player.global_position, 0.0, 0.2)

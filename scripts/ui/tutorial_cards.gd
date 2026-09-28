@@ -39,6 +39,8 @@ func _ready() -> void:
 ## Queue a card by id (DEFS), or a free one with `text` (for level JSON
 ## hints that don't have a definition). Returns false if already seen.
 func show_card(id: String, text := "") -> bool:
+	if not bool(SaveManager.get_setting("tips", true)):
+		return false
 	if bool(SaveManager.get_flag("tut_" + id, false)):
 		return false
 	for c in _cards:

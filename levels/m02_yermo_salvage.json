@@ -15,7 +15,7 @@
   "#+++cccccc++++cccccc+++++++++++#,,,,,,,,,,,,,,,,#.......s...*....#",
   "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,0,#................#",
   "#+++++*+g+++++++*+++++++++*++++#,,,,*,,,,,,,*,,,#................#",
-  "#++++++++++++++++++++++++++++++D,,g,,,,,,,,,,,,,#...d.......t....#",
+  "#++++++++++++++++++++++++++++++D,,g,,,,,B,,,,,,,#...d.......t....#",
   "#+++cccccc++++cccccc+++++++++++D,,,,,,,TTT,,,,,,#.S............U.#",
   "#+++cccccc++++cccccc+++++++++++#,,,,d,,,,,,,d,,,#................#",
   "#++++++++++++++++++++++++++++++#,,,,,,,,h,,,,,,,######DD##########",
@@ -148,7 +148,9 @@
   "clear": "CLEAR THE YARD",
   "escape": "GET BACK TO THE CAR",
   "cleared": "YARD CLEARED",
-  "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR."
+  "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR.",
+  "find_boss": "FIND THE KENNEL MASTER",
+  "boss": "DEAL WITH BUCK"
  },
  "enemies": {
   "20,31": {
@@ -291,6 +293,10 @@
      13
     ]
    ]
+  },
+  "40,8": {
+   "kind": "kennel_master",
+   "facing": "down"
   }
  },
  "collectibles": {
@@ -561,5 +567,73 @@
     47
    ]
   ]
- }
+ },
+ "boss": {
+  "intro": "m02_boss_intro",
+  "down": "m02_boss_down"
+ },
+ "boss_trigger": [
+  32,
+  5,
+  16,
+  8
+ ],
+ "boss_cover": [
+  [
+   36,
+   6
+  ],
+  [
+   44,
+   6
+  ],
+  [
+   40,
+   10
+  ],
+  [
+   34,
+   12
+  ],
+  [
+   46,
+   12
+  ]
+ ],
+ "kennel_cages": [
+  [
+   33,
+   3
+  ],
+  [
+   37,
+   3
+  ],
+  [
+   41,
+   3
+  ],
+  [
+   45,
+   3
+  ],
+  [
+   33,
+   15
+  ],
+  [
+   43,
+   15
+  ]
+ ],
+ "boss_props": [
+  {
+   "kind": "dinner_bell",
+   "pos": [
+    32,
+    9
+   ]
+  }
+ ],
+ "boss_weapon": "shotgun"
 }

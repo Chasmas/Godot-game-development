@@ -484,6 +484,8 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 			e = BossBurningMan.new()
 		elif kind == &"fireman":
 			e = BossFireman.new()
+		elif kind == &"kennel_master":
+			e = BossKennel.new()
 		else:
 			e = BossNightManager.new()
 	elif c == "d" or c == "y" or c == "v":
@@ -511,6 +513,11 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 		for p in data.get("boss_cover", []):
 			cov.append(cell_center(int(p[0]), int(p[1])))
 		(e as BossNightManager).cover_points = cov
+		if e is BossKennel:
+			var cg := PackedVector2Array()
+			for p in data.get("kennel_cages", []):
+				cg.append(cell_center(int(p[0]), int(p[1])))
+			(e as BossKennel).cages = cg
 		out.boss = e
 	out.enemies.append(e)
 	if e is Handler and (e as Handler).dog:

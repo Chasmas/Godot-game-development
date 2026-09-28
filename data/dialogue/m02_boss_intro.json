@@ -1,0 +1,42 @@
+{
+ "start": "a",
+ "nodes": {
+  "a": {
+   "speaker": "narration",
+   "text": "The kennel yard. Forty cages, and every dog in them on its feet and silent.",
+   "shot": "k_yard",
+   "next": "b"
+  },
+  "b": {
+   "speaker": "buck",
+   "text": "Easy, girls. Easy. That's the lady from the tape.",
+   "shot": "k_buck",
+   "next": "c"
+  },
+  "c": {
+   "speaker": "cass",
+   "text": "You were on the shoot. The animal wrangler.",
+   "shot": "k_buck",
+   "next": "d"
+  },
+  "d": {
+   "speaker": "buck",
+   "text": "Twelve dogs on a picture about cars. Ever wonder why? Somebody wanted the fire lane kept clear. Nobody gets past a hungry Rottweiler.",
+   "shot": "k_lane",
+   "next": "e"
+  },
+  "e": {
+   "speaker": "cass",
+   "text": "Tommy was in that car.",
+   "shot": "k_buck",
+   "next": "f"
+  },
+  "f": {
+   "speaker": "buck",
+   "text": "And my girls were very good that night. Dinner's late, ladies.",
+   "shot": "k_yard",
+   "sfx": "bark",
+   "event": "boss_start"
+  }
+ }
+}

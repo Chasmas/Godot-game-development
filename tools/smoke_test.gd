@@ -299,14 +299,28 @@ func _run() -> void:
 		for i in 4:
 			boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 			await frames(10)
-		check(boss.phase == 2, "boss enters phase 2 after 4 armour hits")
+		check(boss.phase == 2, "boss enters phase 2 at 60%% of his bar (%.1f)" % boss.hp)
 		for e in get_tree().get_nodes_in_group("enemies"):
 			if e.is_alive() and not e is BossNightManager:
 				e.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, e.global_position, Vector2.RIGHT, &"pistol"))
 		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 		await frames(10)
-		check(boss.is_alive() and not boss._defeated, "Harcourt takes a second hit in the dark")
-		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
+		check(boss.is_alive() and not boss._defeated, "Harcourt takes a hit in the dark and keeps coming")
+		# the breaker: lights on, he's dazzled, and the next hit takes a big piece
+		await frames(220)
+		for it in lvl._boss_props:
+			if it.kind == "breaker" and it.enabled:
+				var hp0: float = boss.hp
+				it.interact(p)
+				await frames(4)
+				check(boss._blind_t > 0.0, "the breaker blinds him")
+				boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
+				check(boss.hp <= hp0 - 3.0, "a hit while he's blind takes a big piece")
+		var n := 0
+		while not boss._defeated and n < 20:
+			boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
+			n += 1
+			await frames(4)
 		await frames(160)
 		check(Dialogue.active, "boss-down dialogue plays")
 		for i in 30:
@@ -495,12 +509,48 @@ func _run_m02() -> void:
 		await frames(30)
 		check(get_tree().get_nodes_in_group("gibs").size() > gibs_before, "decapitation throws a head")
 		check(lvl.fx.pools.pools.size() > 0, "blood pools spread")
-	# --- clear the yard -> escape
+	# --- clear the yard, then Buck in the kennels -> escape
 	for k in 3:
 		for e in get_tree().get_nodes_in_group("enemies"):
-			if e.is_alive():
+			if e.is_alive() and not e is BossNightManager:
 				e.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, e.global_position, Vector2.RIGHT, &"shotgun"))
 		await frames(10)
+	var buck := lvl.boss as BossKennel
+	check(buck != null, "Buck is in the kennels")
+	if buck:
+		p.global_position = Vector2(40 * 16 + 8, 11 * 16 + 8)
+		await frames(40)
+		for i in 20:
+			if not Dialogue.active:
+				break
+			Dialogue._advance()
+			await frames(3)
+		await frames(10)
+		check(buck.active, "Buck fights")
+		var dogs_before := get_tree().get_nodes_in_group("enemies").filter(func(e): return e is Dog and e.is_alive()).size()
+		buck.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, buck.global_position, Vector2.RIGHT, &"pistol"))
+		await frames(5)
+		check(get_tree().get_nodes_in_group("enemies").filter(func(e): return e is Dog and e.is_alive()).size() > dogs_before, "a hit opens a cage")
+		for it in lvl._boss_props:
+			if it.kind == "dinner_bell":
+				it.interact(p)
+				await frames(4)
+				check(buck._blind_t > 0.0, "the dinner bell leaves him alone")
+		var n2 := 0
+		while not buck._defeated and n2 < 20:
+			buck.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, buck.global_position, Vector2.RIGHT, &"pistol"))
+			n2 += 1
+			await frames(4)
+		await frames(160)
+		check(Dialogue.active and Dialogue._id == "m02_boss_down", "Buck's last scene plays")
+		for i in 20:
+			if not Dialogue.active:
+				break
+			if not Dialogue._choices.is_empty():
+				Dialogue._pick(1)
+			else:
+				Dialogue._advance()
+			await frames(3)
 	await frames(200)
 	check(lvl.phase == Level.Phase.ESCAPE, "clearing the yard opens the escape (%d)" % lvl.phase)
 	check(lvl.exit_car != null and lvl.exit_car.enabled, "m02 car exit enabled")

@@ -956,6 +956,9 @@ func can_dual_with(pk: WeaponPickup) -> bool:
 	return pk != null and cur != null and not cur.dual and pk.weapon and pk.weapon.data == cur.data and cur.data.dual_wieldable
 
 func _pick_up(pk: WeaponPickup) -> void:
+	if level and level.get("rules") and not level.rules.allows_pickup(pk.weapon):
+		Events.hint.emit(tr("NOT IN THIS MODE"), 1.0)
+		return
 	if persona and persona.no_guns and pk.weapon and pk.weapon.data.is_firearm():
 		Events.hint.emit(tr("THE SAINT DOESN'T TOUCH GUNS"), 1.2)
 		return

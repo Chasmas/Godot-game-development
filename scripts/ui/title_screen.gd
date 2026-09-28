@@ -544,6 +544,9 @@ const ARCADE_MODES := [
 	["WAVES ×5", {"mode": "waves", "waves": 5}, "Five waves. Each one arrives in rows from the far side of the map."],
 	["WAVES ×10", {"mode": "waves", "waves": 10}, "Ten waves. Supply drops between them. Don't get comfortable."],
 	["ENDLESS", {"mode": "endless"}, "They keep coming until you stop. You will stop."],
+	["ONE IN THE CHAMBER", {"rule": "chamber"}, "A pistol with one round. Every kill puts one back. Miss and it's knives and fists."],
+	["GUN GAME", {"rule": "gungame"}, "Every kill swaps your gun for the next on the ladder. Kill with the gold HOTSHOT to win."],
+	["CLOCK'S TICKING", {"rule": "clock"}, "Ninety seconds. Every kill buys three more. Don't stop moving."],
 ]
 const ARCADE_MODS := [
 	["INFINITE AMMO", "infinite_ammo"], ["WEAPON ROULETTE", "roulette"], ["MELEE ONLY", "melee_only"],
@@ -583,7 +586,7 @@ func _show_arcade() -> void:
 		if (first == null and mid == _arc_map and _arc_focus == "") or _arc_focus == mid:
 			first = b
 	panel_body.add_child(UIStyle.label("MODE", 14, UIStyle.GOLD, true))
-	var modes := HBoxContainer.new()
+	var modes := HFlowContainer.new()
 	modes.add_theme_constant_override("separation", 8)
 	panel_body.add_child(modes)
 	for i in ARCADE_MODES.size():
@@ -640,7 +643,7 @@ func _show_arcade() -> void:
 		Game.replay_mission(_arc_map, "cass", mods))
 	go.add_theme_color_override("font_color", UIStyle.PINK)
 	# local board for this map + mode
-	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ""))
+	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ARCADE_MODES[_arc_mode][1].get("rule", "")))
 	var board_id := _arc_map if mode_key == "" else "%s@%s" % [_arc_map, mode_key]
 	var board: Array = SaveManager.data.leaderboards.get(board_id, [])
 	var gap := Control.new()

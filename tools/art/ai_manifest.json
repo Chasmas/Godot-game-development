@@ -546,6 +546,21 @@
      "refs": [
       "tommy"
      ]
+    },
+    "k_yard": {
+     "prompt": "A salvage-yard kennel compound at night: two long rows of chain-link dog cages under sodium lamps, big Rottweilers standing silent in every cage watching the viewer, dust in the air, a rusty dinner bell on a post."
+    },
+    "k_buck": {
+     "prompt": "Buck Halverson, a weathered barrel-chested dog wrangler in his sixties with a grey handlebar moustache, a sweat-stained cowboy hat, a leather apron and a pump shotgun resting on his shoulder, standing between dog cages under a sodium lamp, smiling without warmth."
+    },
+    "k_lane": {
+     "prompt": "A flashback on a 1987 desert film set at night: a gravel fire lane blocked by a line of snarling Rottweilers held on chains by a younger moustached man in a cowboy hat, beyond them a black Cadillac on fire, crew members standing back unable to pass."
+    },
+    "k_down": {
+     "prompt": "Buck Halverson, a beaten old dog wrangler with a grey handlebar moustache, sitting in the dust against a chain-link kennel, his cowboy hat fallen beside him, a Rottweiler's head resting on his knee, sodium light, rain of dust."
+    },
+    "k_dogs": {
+     "prompt": "In a salvage yard at night a pack of big Rottweilers lying down in a protective circle around an old man slumped in the dust, all of them looking up at the viewer, calm and watchful, sodium lamp above."
     }
    }
   },
