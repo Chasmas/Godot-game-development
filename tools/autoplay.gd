@@ -70,8 +70,30 @@ func _log(s: String) -> void:
 	if f:
 		f.store_string("\n".join(log_lines))
 
+var _spot_cd := 6.0
+
+## Trailer: fire the SPOTLIGHT whenever a fight is on (charge topped up).
+func _trailer_spotlight(delta: float) -> void:
+	_spot_cd -= delta
+	if _spot_cd > 0.0:
+		return
+	var lvl := get_tree().get_first_node_in_group("level") as Level
+	if lvl == null or lvl.player == null or not lvl.player.alive:
+		return
+	var near := 0
+	for e in get_tree().get_nodes_in_group("enemies"):
+		if e.is_alive() and e.is_aware() and (e as Node2D).global_position.distance_to(lvl.player.global_position) < 260.0:
+			near += 1
+	if near >= 2:
+		lvl.player.ability.charge = 1.0
+		if lvl.player.ability.activate():
+			_log("SPOTLIGHT at %.1f" % _t)
+			_spot_cd = 14.0
+
 func _physics_process(delta: float) -> void:
 	_t += delta
+	if OS.get_environment("AUTOPLAY_SPOTLIGHT") == "1":
+		_trailer_spotlight(delta)
 	var scene := get_tree().current_scene
 	_release_all_soft()
 	if Dialogue.active:
@@ -170,8 +192,11 @@ func _play(lvl: Level, delta: float) -> void:
 	if OS.get_environment("AUTOPLAY_TRAILER") == "1":
 		# filming: she can't die, and the HUD stays off the picture
 		p.god_mode = true
-		if lvl.hud and lvl.hud.visible:
-			lvl.hud.visible = false
+		# every HUD piece hidden except the SPOTLIGHT's own screen effect
+		if lvl.hud:
+			for c in lvl.hud.root.get_children():
+				if c is CanvasItem and not (c is HUD.SpotlightFX):
+					(c as CanvasItem).visible = false
 	if _mission != String(lvl.mission.id):
 		_mission = String(lvl.mission.id)
 		_mission_t = 0.0

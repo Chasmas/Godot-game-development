@@ -29,6 +29,14 @@ LENGTH = {
 INK = (11, 7, 16, 255)
 
 def build(key):
+    top = os.path.join(ROOT, "assets", "art", "Artwork", "ai", "weapons_top", key + ".webp")
+    if os.path.exists(top) and not SIDE:
+        # the painting seen from above (no neon rim to cut away)
+        im = Image.open(top).convert("RGBA")
+        a = im.getchannel("A").point(lambda v: 255 if v > 40 else 0)
+        im.putalpha(a)
+        im = im.crop(a.getbbox())
+        return finish(key, im)
     im = Image.open(os.path.join(SRC, key + ".png")).convert("RGBA")
     r, g, b, a = im.split()
     # cut the neon rim: keep the solid body, shrink it past the glow
@@ -38,6 +46,9 @@ def build(key):
     im.putalpha(solid)
     box = solid.getbbox()
     im = im.crop(box)
+    return finish(key, im)
+
+def finish(key, im):
     tw = LENGTH[key] * K
     th = max(K * 2, round(im.height * tw / im.width))
     # two-step downscale keeps the painted texture from turning to mush
@@ -69,6 +80,10 @@ def build(key):
     out.alpha_composite(pad)
     return out
 
+# SIDE=1: the side-view set (weapons lying on the floor) into weapons_side/
+SIDE = os.environ.get("SIDE") == "1"
+if SIDE:
+    OUT = os.path.join(ROOT, "assets", "art", "weapons_side")
 os.makedirs(OUT, exist_ok=True)
 for key in LENGTH:
     img = build(key)

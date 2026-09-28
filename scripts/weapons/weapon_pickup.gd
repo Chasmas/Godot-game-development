@@ -34,7 +34,7 @@ func _ready() -> void:
 	z_index = -2
 	sprite = Sprite2D.new()
 	var sk: String = weapon.data.sprite_key if weapon and weapon.data else "pistol"
-	sprite.texture = SpriteLib.weapon(sk)
+	sprite.texture = SpriteLib.weapon_side(sk)   # on the floor: the side view
 	sprite.scale = Vector2.ONE / SpriteLib.weapon_density(sk)
 	sprite.light_mask = 2
 	add_child(sprite)

@@ -405,6 +405,15 @@ static func weapon(key: String) -> Texture2D:
 		return _wtex[key]
 	return make(WEAPONS.get(key, WEAPONS["pistol"]), "guard")
 
+## The side view (a weapon lying on the floor); falls back to the one in hand.
+static var _wside: Dictionary = {}
+static func weapon_side(key: String) -> Texture2D:
+	if not _wside.has(key):
+		var p := "res://assets/art/weapons_world/../weapons_side/%s.png" % key
+		p = "res://assets/art/weapons_side/%s.png" % key
+		_wside[key] = load(p) if ResourceLoader.exists(p) else null
+	return _wside[key] if _wside[key] != null else weapon(key)
+
 ## How many texture pixels to one world pixel for this weapon's sprite.
 static func weapon_density(key: String) -> float:
 	weapon(key)

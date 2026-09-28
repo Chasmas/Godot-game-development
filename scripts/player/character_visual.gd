@@ -489,6 +489,11 @@ func _grip_offset(tex: Texture2D, flipped: bool) -> Vector2:
 	var h := float(tex.get_height())
 	var tip := _barrel_tip(tex)
 	var gx: float
+	if true:
+		# seen from above: held a third of the way back (guns) or by the end
+		# of the handle (melee), on the weapon's centre line
+		gx = float(tex.get_width()) * (0.3 if _firearm else 0.12)
+		return Vector2(-gx, -h * 0.5)
 	if _firearm:
 		var k := tex.get_rid()
 		if not _grips.has(k):
@@ -543,8 +548,9 @@ func _process(delta: float) -> void:
 	# grips turned outward, the same whichever way she faces
 	# (a mirrored pair is symmetric about the aim line: it never flips with
 	# the direction she's facing)
-	var f1: bool = false if dual else left_aim   # dual: grips turned outward
-	var f2: bool = true
+	# weapons are painted from above now: nothing to turn the right way up
+	var f1 := false
+	var f2 := false
 	if weapon_sprite.flip_v != f1 and weapon_sprite.texture:
 		weapon_sprite.flip_v = f1
 		weapon_sprite.offset = _grip_offset(weapon_sprite.texture, f1)

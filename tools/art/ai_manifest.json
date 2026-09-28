@@ -1385,6 +1385,67 @@
      "prompt": "Quilted padded nylon: diamond stitched quilting, slight sheen, puffy."
     }
    }
+  },
+  "weapons_top": {
+   "style": "Top-down video game sprite: an object lying flat, seen from DIRECTLY ABOVE (bird's-eye, orthographic, no perspective), pointing to the RIGHT edge of the image, the muzzle or tip at the right, the grip or handle at the left. Isolated on a fully transparent background, no shadow, no hands. Detailed realistic painted style, crisp silhouette.",
+   "defaults": {
+    "size": "1024x1024",
+    "quality": "medium",
+    "background": "transparent"
+   },
+   "entries": {
+    "pistol": {
+     "prompt": "A 9mm semi-automatic service pistol, seen from directly above."
+    },
+    "whisper": {
+     "prompt": "A pistol with a long black suppressor, seen from directly above."
+    },
+    "revolver": {
+     "prompt": "A .357 revolver with a wooden grip, seen from directly above."
+    },
+    "hotshot": {
+     "prompt": "A gold-plated revolver with a pearl grip, seen from directly above."
+    },
+    "boomstick": {
+     "prompt": "A sawn-off double-barrel shotgun with a wooden stock, seen from directly above."
+    },
+    "flamethrower": {
+     "prompt": "A flamethrower wand with a fuel hose, seen from directly above."
+    },
+    "smg": {
+     "prompt": "A compact submachine gun with a straight magazine, seen from directly above."
+    },
+    "shotgun": {
+     "prompt": "A pump-action shotgun with a wooden stock, seen from directly above."
+    },
+    "rifle": {
+     "prompt": "An assault rifle with a curved magazine, seen from directly above."
+    },
+    "knife": {
+     "prompt": "A combat knife, seen from directly above."
+    },
+    "glass_shard": {
+     "prompt": "A jagged shard of broken glass with tape wrapped round one end, seen from directly above."
+    },
+    "bat": {
+     "prompt": "A wooden baseball bat, seen from directly above."
+    },
+    "pipe": {
+     "prompt": "A length of steel pipe, seen from directly above."
+    },
+    "machete": {
+     "prompt": "A machete with a black handle, seen from directly above."
+    },
+    "bottle": {
+     "prompt": "A green glass beer bottle, seen from directly above."
+    },
+    "broken_bottle": {
+     "prompt": "A broken green glass bottle, jagged end, seen from directly above."
+    },
+    "brick": {
+     "prompt": "A red brick, seen from directly above."
+    }
+   }
   }
  }
 }
