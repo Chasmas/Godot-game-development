@@ -273,7 +273,7 @@ static func _dress_walls(r: Room, b: LevelBuilder, layer: ClutterLayer, room_no:
 				bx /= bed_x.size()
 				target = Vector2(bx * T + 8, mid_face.y * T + T - 2.5)
 			if wa:
-				wa.add_painting(target + Vector2(0, -4), r.id + room_no[0])
+				wa.add_painting(target + Vector2(0, -4), wa.theme_painting(r.id + room_no[0]))
 			else:
 				layer.items.append(["picture", target, 0.0, rng.randi() % 4])
 			# the wall AC unit goes at the far end of the same wall
@@ -288,21 +288,20 @@ static func _dress_walls(r: Room, b: LevelBuilder, layer: ClutterLayer, room_no:
 			if r.kind == "lobby":
 				layer.items.append(["key_rack", face_pos.call(faces[maxi(0, faces.size() / 2 - 2)]), 0.0, 0])
 				if wa:
-					wa.add_neon(face_pos.call(mid_face) + Vector2(0, -4), "palm", Color("35e0ff"))
+					wa.add_neon(face_pos.call(mid_face) + Vector2(0, -4), wa.theme_neon(0), Color("35e0ff"))
 		"office":
 			# a poster centred on the back wall, the calendar beside it
 			if wa:
-				wa.add_poster(face_pos.call(mid_face) + Vector2(0, -3), WallArt.POSTER_DEFS.keys()[(r.id * 3) % WallArt.POSTER_DEFS.size()])
+				wa.add_poster(face_pos.call(mid_face) + Vector2(0, -3), wa.theme_poster(r.id * 3))
 			if faces.size() > 2:
 				layer.items.append(["calendar", face_pos.call(faces[maxi(0, faces.size() / 2 - 2)]), 0.0, rng.randi() % 4])
 		"lounge":
 			# a neon sign centred on the wall, two posters framing it
 			if wa:
-				wa.add_neon(face_pos.call(mid_face) + Vector2(0, -4), ["cocktail", "star", "heart"][r.id % 3], WallArt.NEON_COLORS[r.id % WallArt.NEON_COLORS.size()])
-				var keys := WallArt.POSTER_DEFS.keys()
+				wa.add_neon(face_pos.call(mid_face) + Vector2(0, -4), wa.theme_neon(r.id + 1), WallArt.NEON_COLORS[r.id % WallArt.NEON_COLORS.size()])
 				if faces.size() >= 7:
-					wa.add_poster(face_pos.call(faces[faces.size() / 2 - 3]) + Vector2(0, -3), keys[(r.id * 2) % keys.size()])
-					wa.add_poster(face_pos.call(faces[faces.size() / 2 + 3]) + Vector2(0, -3), keys[(r.id * 2 + 1) % keys.size()])
+					wa.add_poster(face_pos.call(faces[faces.size() / 2 - 3]) + Vector2(0, -3), wa.theme_poster(r.id * 2))
+					wa.add_poster(face_pos.call(faces[faces.size() / 2 + 3]) + Vector2(0, -3), wa.theme_poster(r.id * 2 + 1))
 			else:
 				layer.items.append(["poster", face_pos.call(mid_face), 0.0, rng.randi() % 4])
 		"industrial", "laundry":

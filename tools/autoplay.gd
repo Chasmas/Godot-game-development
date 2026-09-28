@@ -45,8 +45,15 @@ func _ready() -> void:
 	SaveManager.set_setting("aim_assist", 0.8)
 	_log("autoplay start: Normal difficulty")
 	var only := OS.get_environment("AUTOPLAY_MISSION")
+	if OS.get_environment("AUTOPLAY_TRAILER") == "1":
+		Engine.set_meta("trailer", true)
+		SaveManager.set_setting("tips", false, false)
+		Game.force_intro_calls = false
 	if only != "":
-		Game.replay_mission(only)
+		var mods := {}
+		if OS.get_environment("AUTOPLAY_MODS") != "":
+			mods = JSON.parse_string(OS.get_environment("AUTOPLAY_MODS"))
+		Game.replay_mission(only, "", mods)
 	else:
 		Game.new_game()
 		var from := OS.get_environment("AUTOPLAY_FROM")
@@ -158,6 +165,11 @@ func _play(lvl: Level, delta: float) -> void:
 	var p := lvl.player
 	if p == null:
 		return
+	if OS.get_environment("AUTOPLAY_TRAILER") == "1":
+		# filming: she can't die, and the HUD stays off the picture
+		p.god_mode = true
+		if lvl.hud and lvl.hud.visible:
+			lvl.hud.visible = false
 	if _mission != String(lvl.mission.id):
 		_mission = String(lvl.mission.id)
 		_mission_t = 0.0

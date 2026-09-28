@@ -32,6 +32,13 @@ func _ready() -> void:
 			if OS.get_environment("SHOT_PANEL") != "":
 				get_tree().current_scene.call("_show_" + OS.get_environment("SHOT_PANEL"))
 				await _frames(int(OS.get_environment("SHOT_PANEL_F")) if OS.get_environment("SHOT_PANEL_F") != "" else 40)
+				if OS.get_environment("SHOT_VCR_TAB") == "posters":
+					SaveManager.data["posters"] = ["psychoe_motel", "die_hardly", "beware_of_dogg", "top_gum"]
+					for ch in get_tree().current_scene.get_children():
+						if ch is VcrScreen:
+							ch._tab = "posters"
+							ch._psel = 1
+					await _frames(20)
 				if OS.get_environment("SHOT_VCR_PLAY") != "":
 					for ch in get_tree().current_scene.get_children():
 						if ch is VcrScreen:

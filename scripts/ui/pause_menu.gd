@@ -105,5 +105,5 @@ func _open_options() -> void:
 		(menu.get_child(3) as Button).grab_focus())
 
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_APPLICATION_FOCUS_OUT and level and level.player and level.player.alive and not get_tree().paused and not Dialogue.active:
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT and not Engine.has_meta("autoplay") and level and level.player and level.player.alive and not get_tree().paused and not Dialogue.active:
 		_pause()

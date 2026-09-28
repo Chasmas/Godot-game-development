@@ -18,7 +18,52 @@ const NEON_COLORS := [Color("ff3d7f"), Color("35e0ff"), Color("ffd23f"), Color("
 const TAGS := ["TOMMY 4EVER", "CUT!", "★", "HOTSHOT", "WAKE UP", "1988", "NO CUT", "AGAIN", "V.", "ROOM 204"]
 const TAG_COLORS := [Color("ff3d7f"), Color("35e0ff"), Color("ffd23f"), Color("7aff6a"), Color("ff8a3d"), Color("f4f0e8")]
 
+## Each place dresses its walls its own way. "outside" is the cycle of what
+## goes on exterior faces: "tag" (spray paint, drips), "stencil" (painted
+## block letters, no drips), "plate" (a bolted metal sign), "hubcap", "vine"
+## (bougainvillea), "sconce" (a lit lantern). Tags, plates, the neon shapes,
+## the posters and the paintings indoors are picked from the theme too.
+const THEMES := {
+	"m01_sunset_palms": {
+		"outside": ["tag", "tag", "stencil"],
+		"tags": ["TOMMY 4EVER", "CUT!", "★", "ROOM 204", "WAKE UP", "SUNSET GIRLS", "1988", "NO CUT", "AGAIN"],
+		"stencils": ["NO PARKING", "GUESTS ONLY", "ICE →"],
+		"colors": [Color("ff3d7f"), Color("35e0ff"), Color("ffd23f"), Color("f4f0e8")],
+		"neons": ["palm", "cocktail", "heart", "open"],
+		"posters": ["psychoe_motel", "lost_angeles", "back_to_the_futon", "top_gum", "mad_maxine"],
+		"paintings": [0, 1, 2, 3, 4, 5],
+	},
+	"m02_yermo_salvage": {
+		"outside": ["stencil", "plate", "hubcap", "tag", "hubcap", "plate"],
+		"tags": ["BAD DOG", "ARLO WAS HERE", "YERMO 88", "RUN", "WOOF"],
+		"stencils": ["KEEP OUT", "DOGS LOOSE", "PARTS $$", "NO DUMPING", "GATE 2"],
+		"plates": ["NO TRESPASSING", "BEWARE OF DOG", "CASH ONLY", "U-PULL-IT"],
+		"colors": [Color("ff8a3d"), Color("f4f0e8"), Color("ffd23f"), Color("c21f2f")],
+		"neons": ["open", "arrow", "star"],
+		"posters": ["beware_of_dogg", "mad_maxine", "scarfaced"],
+		"paintings": [6, 7],
+	},
+	"m03_khsc_studios": {
+		"outside": ["stencil", "plate", "stencil", "tag"],
+		"tags": ["CUT!", "RATINGS KILL", "★", "ROLL 7"],
+		"stencils": ["STAGE 9", "QUIET ON SET", "LOT C", "NO SMOKING", "CREW ONLY", "DOCK 3"],
+		"plates": ["CAST PARKING", "ON AIR = NO ENTRY", "FIRE LANE", "KHSC 9"],
+		"colors": [Color("ffd23f"), Color("f4f0e8"), Color("35e0ff")],
+		"neons": ["tv", "star", "arrow"],
+		"posters": ["die_hardly", "tron_ish", "backdrafted", "lost_angeles", "scarfaced"],
+		"paintings": [8, 9],
+	},
+	"m04_villa_estrella": {
+		"outside": ["vine", "sconce", "vine", "vine", "sconce"],
+		"neons": ["star", "cocktail", "heart"],
+		"posters": ["scarfaced", "top_gum", "die_hardly", "back_to_the_futon", "tron_ish"],
+		"paintings": [10, 11, 12],
+	},
+}
+const DEFAULT_THEME := {"outside": ["tag"], "tags": TAGS, "colors": TAG_COLORS, "neons": NEONS, "posters": [], "paintings": [0, 1, 2, 3, 4, 5]}
+
 var builder: LevelBuilder
+var theme: Dictionary = DEFAULT_THEME
 var items: Array = []        ## {kind, pos (face centre), seed, ...}
 var _t := 0.0
 
@@ -45,6 +90,16 @@ const PAINTING_DEFS := [
 	["galaxy_palace", "An arcade at night. Printed along the bottom: GALAXY PALACE - FREE PLAY WEDNESDAYS."],
 	["polaroid", "Somebody framed a Polaroid of a film set. The initials on the border have been scratched off."],
 	["salvage_yard", "A junkyard at night, lovingly painted. On the back: 'For Arlo. The dogs came out great.'"],
+	# Yermo
+	["salvage_yard", "The yard, painted from the office window. Every dog has a name written underneath, in pencil."],
+	["desert_road", "A road map of the Mojave, framed behind cracked glass. Somebody circled Yermo twice."],
+	# KHSC
+	["burbank_night", "A publicity still of the lot at night. EYEWITNESS 9 - WE'RE ALWAYS WATCHING."],
+	["galaxy_palace", "A framed set sketch: an arcade, for a pilot that never aired. 'Too loud,' says a note in the margin."],
+	# Villa Estrella
+	["villa_gate", "The villa's own gate, painted in oils. Commissioned, of course."],
+	["hills_fire", "The hills from the terrace at dusk. Gold leaf where the lights of the valley are."],
+	["desert_road", "A long road into the desert. Signed in the corner by someone who wanted you to know they were famous."],
 ]
 
 var level: Node
@@ -53,8 +108,10 @@ func build(b: LevelBuilder) -> void:
 	builder = b
 	level = b.level
 	z_index = 7   # over the wall chunks (6)
-	# outside: graffiti on exterior faces only, evenly spaced along each run
+	theme = THEMES.get(str(b.data.get("id", "")), DEFAULT_THEME)
+	# outside: the place's own kind of wall dressing, evenly spaced along each exterior run
 	var tag_i := 0
+	var out_i := 0
 	for y in range(1, b.h - 2):
 		var x := 1
 		while x < b.w - 1:
@@ -66,9 +123,51 @@ func build(b: LevelBuilder) -> void:
 				x += 1
 			var cx := x0 + 4
 			while cx < x - 3:
-				items.append({"kind": "tag", "pos": Vector2(cx * 16 + 8, y * 16 + 8), "text": TAGS[tag_i % TAGS.size()], "color": TAG_COLORS[(tag_i * 3) % TAG_COLORS.size()], "rot": 0.06 * sin(tag_i * 1.7), "seed": fmod(tag_i * 0.37, 1.0)})
+				_add_outside(Vector2(cx * 16 + 8, y * 16 + 8), str(theme.outside[out_i % theme.outside.size()]), tag_i)
+				out_i += 1
 				tag_i += 1
 				cx += 12
+
+func _add_outside(p: Vector2, kind: String, i: int) -> void:
+	var cols: Array = theme.get("colors", TAG_COLORS)
+	var col: Color = cols[(i * 3) % cols.size()]
+	var sd := fmod(i * 0.37, 1.0)
+	match kind:
+		"tag":
+			var tags: Array = theme.get("tags", TAGS)
+			items.append({"kind": "tag", "pos": p, "text": tags[i % tags.size()], "color": col, "rot": 0.06 * sin(i * 1.7), "seed": sd})
+		"stencil":
+			var st: Array = theme.get("stencils", ["NO PARKING"])
+			items.append({"kind": "stencil", "pos": p, "text": st[i % st.size()], "color": col, "seed": sd})
+		"plate":
+			var pl: Array = theme.get("plates", ["NO TRESPASSING"])
+			items.append({"kind": "plate", "pos": p, "text": pl[i % pl.size()], "seed": sd})
+		"hubcap", "vine":
+			items.append({"kind": kind, "pos": p, "seed": sd})
+		"sconce":
+			items.append({"kind": "sconce", "pos": p, "seed": sd})
+			var l := PointLight2D.new()
+			l.texture = SpriteLib.light_texture(128)
+			l.texture_scale = 0.55
+			l.energy = 0.7
+			l.color = Color(1.0, 0.72, 0.4)
+			l.position = p + Vector2(0, 14)
+			add_child(l)
+
+## What this level hangs indoors: neon shape, poster and painting by index.
+func theme_neon(i: int) -> String:
+	var n: Array = theme.get("neons", NEONS)
+	return n[absi(i) % n.size()]
+
+func theme_poster(i: int) -> String:
+	var ps: Array = theme.get("posters", [])
+	if ps.is_empty():
+		ps = POSTER_DEFS.keys()
+	return ps[absi(i) % ps.size()]
+
+func theme_painting(i: int) -> int:
+	var ps: Array = theme.get("paintings", [0])
+	return int(ps[absi(i) % ps.size()])
 
 ## A framed painting on a wall face; inspectable.
 func add_painting(pos: Vector2, idx: int) -> void:
@@ -87,7 +186,7 @@ func add_poster(pos: Vector2, id: String) -> void:
 		shot = str(d[2])
 	items.append({"kind": "poster", "pos": pos, "title": d[0], "sub": d[1], "color": NEON_COLORS[absi(hash(id)) % NEON_COLORS.size()], "seed": 0.5, "tex": StoryShot.painted_tex(shot)})
 	_inspect(pos, "READ THE POSTER", shot, "%s
-\"%s\"" % [str(d[0]), tr(str(d[1]))])
+\"%s\"" % [str(d[0]), tr(str(d[1]))], id)
 
 func add_neon(pos: Vector2, shape: String, color: Color) -> void:
 	var it := {"kind": "neon", "pos": pos, "shape": shape, "color": color, "seed": fmod(pos.x * 0.013, 10.0)}
@@ -103,7 +202,7 @@ func add_neon(pos: Vector2, shape: String, color: Color) -> void:
 	it["light"] = l
 
 ## The interactable in front of a wall piece: [E] shows it full screen.
-func _inspect(pos: Vector2, prompt: String, shot: String, text: String) -> void:
+func _inspect(pos: Vector2, prompt: String, shot: String, text: String, poster := "") -> void:
 	if level == null:
 		return
 	var it := Interactable.new()
@@ -112,11 +211,15 @@ func _inspect(pos: Vector2, prompt: String, shot: String, text: String) -> void:
 	it.position = pos + Vector2(0, 14)
 	it.set_meta("shot", shot)
 	it.set_meta("text", text)
+	it.set_meta("poster", poster)
 	level.props_root.add_child(it)
 	it.used.connect(func(i2: Interactable, _by: Node):
 		if Dialogue.active:
 			return
 		Audio.play("blip", -6.0)
+		var pid := str(i2.get_meta("poster", ""))
+		if pid != "" and SaveManager.add_poster(pid):
+			Events.hint.emit(tr("Poster added to your collection (PLAY VIDEOTAPE)."), 3.0)
 		level._run_inline_dialogue({"start": "a", "nodes": {"a": {"speaker": "narration", "text": str(i2.get_meta("text")), "shot": str(i2.get_meta("shot"))}}}))
 
 func _face(x: int, y: int) -> bool:
@@ -190,6 +293,57 @@ func _draw() -> void:
 					var dx := -w * 0.4 + w * 0.4 * k + float(it.seed) * 4.0
 					draw_line(Vector2(dx, 3), Vector2(dx, 3 + 2.0 + fmod(float(it.seed) * 13.0 * (k + 1), 4.0)), Color(col, 0.7), 1.0)
 				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			"stencil":
+				# painted block capitals: a soft overspray halo, crisp letters, no drips
+				var fb := UIStyle.font_bold()
+				var st: String = it.text
+				var sw := fb.get_string_size(st, HORIZONTAL_ALIGNMENT_LEFT, -1, 7).x
+				var sc: Color = it.color
+				draw_rect(Rect2(p + Vector2(-sw * 0.5 - 2, -5), Vector2(sw + 4, 9)), Color(sc, 0.06))
+				draw_string(fb, p + Vector2(-sw * 0.5, 2), st, HORIZONTAL_ALIGNMENT_LEFT, -1, 7, Color(sc, 0.72))
+				# stencil bridges: thin gaps through the letters
+				for k in int(sw / 5.0):
+					draw_line(p + Vector2(-sw * 0.5 + 2.5 + k * 5.0, -4), p + Vector2(-sw * 0.5 + 2.5 + k * 5.0, -2.5), Color(0.12, 0.1, 0.12, 0.5), 0.6)
+			"plate":
+				var fb2 := UIStyle.font_bold()
+				var pt: String = it.text
+				var pw2 := fb2.get_string_size(pt, HORIZONTAL_ALIGNMENT_LEFT, -1, 5).x + 6.0
+				var pr := Rect2(p + Vector2(-pw2 * 0.5, -6), Vector2(pw2, 9))
+				draw_rect(Rect2(pr.position + Vector2(1, 2), pr.size), Color(0, 0, 0, 0.35))
+				draw_rect(pr, Color(0.86, 0.84, 0.78))
+				draw_rect(pr.grow(-1.0), Color(0.72, 0.1, 0.1) if ("DOG" in pt or "NO " in pt) else Color(0.12, 0.16, 0.28), false, 1.0)
+				draw_string(fb2, pr.position + Vector2(3, 6.5), pt, HORIZONTAL_ALIGNMENT_LEFT, -1, 5, Color(0.12, 0.08, 0.08))
+				# bolts and a rust run under one of them
+				draw_circle(pr.position + Vector2(1.8, 1.8), 0.7, Color(0.4, 0.38, 0.36))
+				draw_circle(Vector2(pr.end.x - 1.8, pr.position.y + 1.8), 0.7, Color(0.4, 0.38, 0.36))
+				draw_line(Vector2(pr.end.x - 1.8, pr.position.y + 2.5), Vector2(pr.end.x - 2.2, pr.end.y + 2.0 + float(it.seed) * 3.0), Color(0.5, 0.25, 0.1, 0.55), 0.8)
+			"hubcap":
+				# a chrome hubcap nailed up as a trophy
+				var hc := p + Vector2(0, -1)
+				draw_circle(hc + Vector2(1, 2), 5.5, Color(0, 0, 0, 0.35))
+				draw_circle(hc, 5.5, Color(0.55, 0.56, 0.6))
+				draw_circle(hc, 4.2, Color(0.75, 0.77, 0.82))
+				for k in 6:
+					var a := k * TAU / 6.0 + float(it.seed) * 3.0
+					draw_line(hc + Vector2.from_angle(a) * 1.5, hc + Vector2.from_angle(a) * 4.0, Color(0.45, 0.46, 0.5), 0.8)
+				draw_circle(hc, 1.4, Color(0.35, 0.35, 0.4))
+				draw_line(hc + Vector2(-3, -3), hc + Vector2(-1, -4), Color(1, 1, 1, 0.6), 0.8)
+			"vine":
+				# bougainvillea spilling over the wall top: dark leaves, magenta bracts, swaying a touch
+				var sway := sin(_t * 0.9 + float(it.seed) * 6.0) * 0.8
+				for k in 9:
+					var fx := -9.0 + k * 2.25 + sin(k * 2.3 + float(it.seed) * 5.0) * 1.5
+					var fy := -6.0 + fmod(k * 3.7 + float(it.seed) * 11.0, 9.0)
+					draw_line(p + Vector2(fx, -7), p + Vector2(fx + sway * (fy + 7) * 0.1, fy), Color(0.12, 0.28, 0.12, 0.9), 1.0)
+					draw_circle(p + Vector2(fx + sway * 0.3, fy), 1.8, Color(0.14, 0.34, 0.16))
+					if k % 2 == 0:
+						draw_circle(p + Vector2(fx + 0.8 + sway * 0.3, fy - 0.6), 1.3, Color("e0348a"))
+			"sconce":
+				# a brass lantern with a warm bulb and its pool of light on the wall
+				draw_circle(p + Vector2(0, -2), 7.0, Color(1.0, 0.7, 0.35, 0.08))
+				draw_rect(Rect2(p + Vector2(-1, -8), Vector2(2, 3)), Color(0.45, 0.33, 0.15))
+				draw_rect(Rect2(p + Vector2(-2.5, -5), Vector2(5, 6)), Color(0.5, 0.38, 0.16))
+				draw_rect(Rect2(p + Vector2(-1.5, -4), Vector2(3, 4)), Color(1.0, 0.85, 0.55))
 
 func _draw_neon(it: Dictionary) -> void:
 	var c: Color = it.color

@@ -39,8 +39,15 @@ func check(cond: bool, what: String) -> void:
 	if not cond:
 		failures.append(what)
 
+var _auto_dismiss := false
 func frames(n: int) -> void:
 	for i in n:
+		# teleporting around can walk into a scene trigger (Buck, a tape):
+		# the scene would pause the game, so close it and carry on
+		if _auto_dismiss and Dialogue.active:
+			Dialogue._end()
+		if _auto_dismiss and get_tree().paused and not Dialogue.active and _p() and _p().alive:
+			get_tree().paused = false
 		await get_tree().physics_frame
 
 var _mission := "m01_checkout"
@@ -102,6 +109,7 @@ func _clear_spot(e: Node2D, dist: float) -> Vector2:
 	return e.global_position + Vector2(dist, 0)
 
 func _kill_all(melee: bool, fists := false) -> void:
+	_auto_dismiss = true
 	var p := _p()
 	p.god_mode = true
 	var all := _enemies()
@@ -156,6 +164,7 @@ func _kill_all(melee: bool, fists := false) -> void:
 		if is_instance_valid(e) and e.is_alive():
 			survivors.append(tag)
 			print("    survived: ", tag, " at ", e.global_position, " layer ", e.collision_layer, " hp-armor ", e.armor_left)
+	_auto_dismiss = false
 	check(survivors.is_empty(), ("every m02 enemy dies to %s" % ("fists" if fists else ("melee" if melee else "bullets"))) + ("" if survivors.is_empty() else " - survivors: " + ", ".join(survivors)))
 
 ## A dozing guard and his chair stay put: no look-around, no drift.

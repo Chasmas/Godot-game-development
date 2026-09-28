@@ -759,11 +759,19 @@ class FloorChunk extends Node2D:
 				if h % 9 == 0:
 					draw_line(p + Vector2(2 + h % 6, 3 + (h >> 4) % 9), p + Vector2(9 + h % 6, 4 + (h >> 4) % 9), Color(0.16, 0.15, 0.2), 1.0)
 				if h % 37 == 4:
-					# a spike mark: two crossed strips of coloured tape
-					var tc: Color = [Color(1.0, 0.3, 0.45), Color(0.3, 0.9, 1.0), Color(1.0, 0.85, 0.3)][h % 3]
+					# a spike mark: where an actor stands - a scuffed T or corner of
+					# faded gaffer tape, never a clean cross (that read as a pickup)
+					var tc: Color = [Color(0.62, 0.3, 0.36), Color(0.36, 0.5, 0.55), Color(0.62, 0.55, 0.3)][h % 3]
+					tc.a = 0.6
 					var cc := p + Vector2(8, 8)
-					draw_line(cc - Vector2(4, 0), cc + Vector2(4, 0), tc, 2.0)
-					draw_line(cc - Vector2(0, 4), cc + Vector2(0, 4), tc, 2.0)
+					if (h >> 2) % 2 == 0:
+						draw_line(cc + Vector2(-4, -2), cc + Vector2(3, -2), tc, 1.5)       # T: the bar...
+						draw_line(cc + Vector2(-0.5, -2), cc + Vector2(-0.5, 3), tc, 1.5)   # ...and the stem
+					else:
+						draw_line(cc + Vector2(-3, -3), cc + Vector2(3, -3), tc, 1.5)       # L: a corner
+						draw_line(cc + Vector2(-3, -3), cc + Vector2(-3, 2), tc, 1.5)
+					# torn tape ends
+					draw_rect(Rect2(cc + Vector2(2.5, -2.8), Vector2(1, 1)), Color(tc, 0.35))
 				if y % 8 == 0 and h % 3 == 0:
 					draw_rect(Rect2(p + Vector2(0, 7), Vector2(T2, 1)), Color(1, 1, 1, 0.04))
 			_:

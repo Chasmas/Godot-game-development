@@ -265,6 +265,7 @@ func _ready() -> void:
 	elif Game.attempts <= 1 and st.is_empty():
 		# the chapter's spotlight: box art, title, place and a line of story
 		var li := LevelIntro.new()
+		li.visible = not Engine.has_meta("trailer")
 		li.mission = mission
 		li.time_text = tr(str(data.get("time_text", "11:48 PM")))
 		add_child(li)

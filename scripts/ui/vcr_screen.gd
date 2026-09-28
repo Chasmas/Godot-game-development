@@ -7,6 +7,8 @@ extends Control
 ## with the deck's on-screen display, tracking noise on every cut and the
 ## tape's words typed along the bottom. Photos come up on the screen as
 ## stills. Tapes you haven't found are blank spines.
+## Second shelf (left / right): the POSTER COLLECTION - every movie poster
+## you've stopped to read on a wall, hung big in a lit frame.
 
 signal closed
 
@@ -56,6 +58,21 @@ var _deck := Rect2()
 var _glitch := 0.0
 var _hiss: AudioStreamPlayer
 var _over: Control
+var _tab := "tapes"           ## tapes | posters
+var _psel := 0
+var _prects: Array = []
+
+func _poster_ids() -> Array:
+	return WallArt.POSTER_DEFS.keys()
+
+func _poster_found(id: String) -> bool:
+	return id in SaveManager.data.get("posters", [])
+
+func _switch_tab(t: String) -> void:
+	if t == _tab or _state != "idle":
+		return
+	_tab = t
+	Audio.play("tape_slide", -8.0, 1.2)
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -102,6 +119,30 @@ func _input(e: InputEvent) -> void:
 			_eject()
 		else:
 			_close()
+	elif _state == "idle" and (e.is_action_pressed("ui_left") or e.is_action_pressed("move_left")):
+		_switch_tab("tapes")
+	elif _state == "idle" and (e.is_action_pressed("ui_right") or e.is_action_pressed("move_right")):
+		_switch_tab("posters")
+	elif _tab == "posters" and _state == "idle" and (e.is_action_pressed("ui_down") or e.is_action_pressed("move_down")):
+		_psel = posmod(_psel + 1, _poster_ids().size())
+		Audio.play("ui_move", -10.0)
+	elif _tab == "posters" and _state == "idle" and (e.is_action_pressed("ui_up") or e.is_action_pressed("move_up")):
+		_psel = posmod(_psel - 1, _poster_ids().size())
+		Audio.play("ui_move", -10.0)
+	elif _tab == "posters" and e.is_action_pressed("ui_accept"):
+		pass
+	elif _tab == "posters" and e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+		for i in _prects.size():
+			if (_prects[i] as Rect2).has_point(e.position):
+				_psel = i
+				Audio.play("ui_move", -10.0)
+		_click_tabs(e.position)
+	elif _tab == "posters" and e is InputEventMouseMotion:
+		for i in _prects.size():
+			if (_prects[i] as Rect2).has_point(e.position) and i != _psel:
+				_psel = i
+				Audio.play("ui_move", -12.0)
+		handled = false
 	elif _state == "idle" and (e.is_action_pressed("ui_down") or e.is_action_pressed("move_down")):
 		_move(1)
 	elif _state == "idle" and (e.is_action_pressed("ui_up") or e.is_action_pressed("move_up")):
@@ -120,6 +161,7 @@ func _input(e: InputEvent) -> void:
 		handled = false
 	elif e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
 		if _state == "idle":
+			_click_tabs(e.position)
 			for i in _items.size():
 				var r: Rect2 = _items[i].get("rect", Rect2())
 				if r.has_point(e.position):
@@ -131,6 +173,12 @@ func _input(e: InputEvent) -> void:
 		handled = false
 	if handled:
 		get_viewport().set_input_as_handled()
+
+var _tab_rects := {}
+func _click_tabs(p: Vector2) -> void:
+	for t in _tab_rects.keys():
+		if (_tab_rects[t] as Rect2).has_point(p):
+			_switch_tab(t)
 
 func _move(d: int) -> void:
 	_sel = posmod(_sel + d, _items.size())
@@ -252,6 +300,8 @@ func _draw_over() -> void:
 	var scr := _tv.grow(-18.0)
 	var on := _state in ["warm", "play"]
 	var c := _over
+	if _tab == "posters":
+		return
 	c.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	if on and _state == "play":
 		# the deck's on-screen display, the tracking noise, the words
@@ -285,10 +335,26 @@ func _draw() -> void:
 		draw_rect(Rect2(0, vs.y * i / 12.0, vs.x, 2), Color(1, 0.3, 0.6, 0.015))
 	draw_rect(Rect2(vs.x * 0.36, 0, 6, vs.y), Color(1.0, 0.25, 0.6, 0.06 + 0.02 * sin(_t * 2.0)))
 	draw_string(fd, Vector2(40, 60), tr("PLAY VIDEOTAPE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 38, UIStyle.PINK)
+	# the two shelves, as tabs
+	var tx := 42.0
+	for t in [["tapes", tr("TAPES & PHOTOS")], ["posters", tr("POSTER COLLECTION")]]:
+		var tw := fb.get_string_size(t[1], HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x
+		var tr2 := Rect2(tx - 6, 70, tw + 12, 22)
+		_tab_rects[t[0]] = tr2
+		var act: bool = _tab == t[0]
+		if act:
+			draw_rect(tr2, Color(UIStyle.PINK, 0.18))
+			draw_rect(Rect2(tr2.position.x, tr2.end.y - 2, tr2.size.x, 2), UIStyle.PINK)
+		draw_string(fb, Vector2(tx, 86), t[1], HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.PAPER if act else UIStyle.DIM)
+		tx += tw + 28.0
+	draw_string(fm, Vector2(tx + 6, 86), "◀ ▶", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, UIStyle.DIM)
+	if _tab == "posters":
+		_draw_posters()
+		return
 	var got := _items.filter(func(it): return it.found).size()
-	draw_string(fm, Vector2(42, 86), tr("%d OF %d FOUND") % [got, _items.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 14, UIStyle.DIM)
+	draw_string(fm, Vector2(42, 112), tr("%d OF %d FOUND") % [got, _items.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 14, UIStyle.DIM)
 	# the shelf, by chapter: tapes as spines, photos as little polaroids
-	var y := 116.0
+	var y := 132.0
 	var x0 := 40.0
 	var w := vs.x * 0.34
 	var last_ch := ""
@@ -373,3 +439,71 @@ func _draw() -> void:
 	draw_string(fb, Vector2(0, vs.y - 30), hint, HORIZONTAL_ALIGNMENT_CENTER, vs.x, 14, Color(1, 1, 1, 0.55))
 	if got == 0:
 		draw_string(fb, Vector2(_tv.position.x, _deck.end.y + 40), tr("Tapes and photos are hidden in every job. Find them and they'll be waiting here."), HORIZONTAL_ALIGNMENT_LEFT, _tv.size.x, 14, UIStyle.DIM)
+
+
+## The poster collection: the list on the left (a thumbnail and a title per
+## poster, blanks for the ones still out on some wall), and the focused one
+## hung big on the right in a lit frame, with its tagline.
+func _draw_posters() -> void:
+	var vs := size
+	var fd := UIStyle.font_display()
+	var fb := UIStyle.font_bold()
+	var fm := UIStyle.font_mono()
+	var ids := _poster_ids()
+	var got := ids.filter(func(i): return _poster_found(i)).size()
+	draw_string(fm, Vector2(42, 112), tr("%d OF %d FOUND") % [got, ids.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 14, UIStyle.DIM)
+	_prects.clear()
+	var x0 := 40.0
+	var w := vs.x * 0.34
+	var rowh := minf(46.0, (vs.y - 190.0) / ids.size())
+	var y := 128.0
+	for i in ids.size():
+		var id: String = ids[i]
+		var found := _poster_found(id)
+		var d: Array = WallArt.POSTER_DEFS[id]
+		var focus := i == _psel
+		var r := Rect2(Vector2(x0 + (12.0 if focus else 0.0), y), Vector2(w - 20.0, rowh - 6.0))
+		_prects.append(r)
+		draw_rect(r, Color(0.08, 0.06, 0.1) if found else Color(0.05, 0.04, 0.06))
+		var th := Rect2(r.position + Vector2(4, 3), Vector2((r.size.y - 6.0) * 0.72, r.size.y - 6.0))
+		var tex := StoryShot.painted_tex("poster_" + id) if found else null
+		if tex:
+			var pw := float(tex.get_width())
+			var ph := float(tex.get_height())
+			var sw := ph * th.size.x / th.size.y
+			draw_texture_rect_region(tex, th, Rect2((pw - sw) * 0.5, 0, sw, ph))
+		else:
+			draw_rect(th, Color(0.14, 0.12, 0.16))
+			draw_string(fb, th.position + Vector2(0, th.size.y * 0.66), "?", HORIZONTAL_ALIGNMENT_CENTER, th.size.x, 14, UIStyle.DIM)
+		draw_string(fb, Vector2(th.end.x + 10, r.position.y + r.size.y * 0.62), str(d[0]) if found else "? ? ?", HORIZONTAL_ALIGNMENT_LEFT, r.size.x - th.size.x - 20, 13, UIStyle.PAPER if found else UIStyle.DIM)
+		if focus:
+			draw_rect(r.grow(3), Color(UIStyle.PINK, 0.7 + 0.3 * sin(_t * 5.0)), false, 2.0)
+		y += rowh
+	# the big frame on the right
+	var id2: String = ids[_psel]
+	var d2: Array = WallArt.POSTER_DEFS[id2]
+	var found2 := _poster_found(id2)
+	var fh := vs.y * 0.66
+	var fr := Rect2(Vector2(vs.x * 0.69 - fh * 0.36, vs.y * 0.12), Vector2(fh * 0.72, fh))
+	# a picture light over it and its glow on the wallpaper
+	draw_circle(fr.get_center(), fr.size.y * 0.62, Color(1.0, 0.85, 0.6, 0.035))
+	draw_rect(Rect2(fr.get_center().x - 40, fr.position.y - 22, 80, 8), Color(0.55, 0.45, 0.25))
+	draw_rect(fr.grow(14), Color(0.03, 0.02, 0.03))
+	draw_rect(fr.grow(10), Color(0.12, 0.1, 0.12))
+	draw_rect(fr.grow(10), Color(0.4, 0.34, 0.3), false, 1.5)
+	var tex2 := StoryShot.painted_tex("poster_" + id2) if found2 else null
+	if tex2:
+		var pw2 := float(tex2.get_width())
+		var ph2 := float(tex2.get_height())
+		var sw2 := ph2 * fr.size.x / fr.size.y
+		draw_texture_rect_region(tex2, fr, Rect2((pw2 - sw2) * 0.5, 0, sw2, ph2))
+		# glass glare
+		draw_colored_polygon(PackedVector2Array([fr.position + Vector2(fr.size.x * 0.1, 0), fr.position + Vector2(fr.size.x * 0.3, 0), fr.position + Vector2(fr.size.x * 0.05, fr.size.y * 0.4), fr.position + Vector2(0, fr.size.y * 0.4), fr.position + Vector2(0, fr.size.y * 0.25)]), Color(1, 1, 1, 0.05))
+	else:
+		draw_rect(fr, Color(0.06, 0.05, 0.07))
+		draw_string(fd, Vector2(fr.position.x, fr.get_center().y), "?", HORIZONTAL_ALIGNMENT_CENTER, fr.size.x, 90, Color(1, 1, 1, 0.08))
+	var cy := fr.end.y + 44.0
+	draw_string(fd, Vector2(fr.position.x - 80, cy), str(d2[0]) if found2 else tr("NOT FOUND YET"), HORIZONTAL_ALIGNMENT_CENTER, fr.size.x + 160, 28, UIStyle.GOLD if found2 else UIStyle.DIM)
+	var sub := "\"" + tr(str(d2[1])) + "\"" if found2 else tr("It's up on a wall somewhere. Stop and read it.")
+	draw_string(fb, Vector2(fr.position.x - 120, cy + 28), sub, HORIZONTAL_ALIGNMENT_CENTER, fr.size.x + 240, 14, UIStyle.PAPER if found2 else UIStyle.DIM)
+	draw_string(fb, Vector2(0, vs.y - 30), tr("UP / DOWN  BROWSE     LEFT  TAPES     ESC  BACK"), HORIZONTAL_ALIGNMENT_CENTER, vs.x, 14, Color(1, 1, 1, 0.55))

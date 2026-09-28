@@ -29,11 +29,13 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				root.add_child(vs)
 			"neon":
 				var ns := NeonSign.new()
-				ns.position = p
 				ns.text = str(it.get("text", "OPEN"))
 				ns.color = Color.html("#" + str(it.get("color", "ff3d7f")))
 				ns.font_size = int(it.get("size", 14))
 				ns.zone = builder.zone_at_cell(int(it.pos[0]), int(it.pos[1]))
+				var spot := mount_sign(builder, int(it.pos[0]), int(it.pos[1]), ns.board_size().x)
+				ns.position = spot.pos
+				ns.mount = spot.mount
 				root.add_child(ns)
 	var pool := PoolFX.new()
 	pool.builder = builder
@@ -299,12 +301,54 @@ class PalmShadow extends Node2D:
 		draw_set_transform_matrix(Transform2D.IDENTITY)
 
 
-## Neon lettering with glow, buzz-flicker and its own light.
+## Where a sign really hangs. A sign is never left floating over the floor:
+## it goes on the nearest stretch of plain wall (no doors, no windows) whose
+## face looks toward where the level put it, sliding along the wall to find
+## room; out in the open (lots, drives) it becomes a pylon on two posts.
+static func mount_sign(builder: LevelBuilder, cx: int, cy: int, width_px: float) -> Dictionary:
+	var need := int(ceil((width_px + 10.0) / 16.0))
+	var best := {}
+	var best_cost := 1e9
+	for dy in [-1, 1, -2, 2, -3, 3]:
+		var wy: int = cy + dy
+		var face: int = -1 if dy > 0 else 1        # the wall's face looks back toward the sign
+		if builder.ch(cx, wy + face) == "#" or builder.ch(cx, wy + face) == "W":
+			continue
+		for dx in range(-6, 7):
+			var x0: int = cx + dx - need / 2
+			var ok := true
+			for xx in range(x0, x0 + need):
+				# plain wall, open floor in front of it
+				if builder.ch(xx, wy) != "#" or builder.ch(xx, wy + face) == "#" or builder.ch(xx, wy + face) == "D":
+					ok = false
+					break
+			if not ok:
+				continue
+			var cost := absf(dx) + absf(dy) * 2.5 + (0.0 if face > 0 else 1.5)
+			if cost < best_cost:
+				best_cost = cost
+				var x_mid := (x0 + need * 0.5) * 16.0
+				var y_edge := wy * 16.0 + (16.0 if face > 0 else 0.0)
+				best = {"pos": Vector2(x_mid, y_edge), "mount": "wall_s" if face > 0 else "wall_n"}
+	if best.is_empty():
+		return {"pos": Vector2(cx * 16.0 + 8.0, cy * 16.0 + 8.0), "mount": "pylon"}
+	return best
+
+
+## Neon lettering on a proper sign: a dark metal board with a tube border,
+## bolted to a wall (brackets into the brick, a shadow on the floor) or up on
+## a pylon with two posts. Buzz-flicker and its own light.
 class NeonSign extends Node2D:
 	var text := "OPEN"
 	var color := Color("ff3d7f")
 	var font_size := 14
 	var zone := ""
+	var mount := ""        ## "wall_s" / "wall_n": on a wall's south / north face; "pylon"; "" floats (breach LOCKED)
+
+	func board_size() -> Vector2:
+		var f := UIStyle.font_display()
+		var w := f.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
+		return Vector2(w + 14.0, font_size + 9.0)
 	var _t := 0.0
 	var _on := 1.0
 	var _light: PointLight2D
@@ -317,6 +361,8 @@ class NeonSign extends Node2D:
 		_light.color = color
 		_light.energy = 0.9
 		_light.shadow_enabled = false
+		# the light falls on the floor in front of the board, not inside the wall
+		_light.position = {"wall_s": Vector2(0, 10), "wall_n": Vector2(0, -26), "pylon": Vector2(0, -6)}.get(mount, Vector2.ZERO)
 		add_child(_light)
 
 	func _process(d: float) -> void:
@@ -331,13 +377,46 @@ class NeonSign extends Node2D:
 
 	func _draw() -> void:
 		var f := UIStyle.font_display()
-		var w := f.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
-		var o := Vector2(-w * 0.5, font_size * 0.35)
-		draw_rect(Rect2(o + Vector2(-6, -font_size - 2), Vector2(w + 12, font_size + 8)), Color(0.04, 0.02, 0.07, 0.85))
-		draw_rect(Rect2(o + Vector2(-6, -font_size - 2), Vector2(w + 12, font_size + 8)), Color(color, 0.5 * _on), false, 1.0)
+		var bs := board_size()
+		var w := bs.x - 14.0
+		# the board's centre: half over the wall it hangs on, so it reads as
+		# fixed to the brick and barely reaches over the floor
+		var c := Vector2.ZERO
+		match mount:
+			"wall_s": c = Vector2(0, -bs.y * 0.18)
+			"wall_n": c = Vector2(0, -bs.y * 0.82)
+			"pylon": c = Vector2(0, -12)
+		var r := Rect2(c - bs * 0.5, bs)
+		var metal := Color(0.07, 0.06, 0.09)
+		# shadow thrown on the ground
+		if mount == "pylon":
+			draw_rect(Rect2(r.position + Vector2(7, 14), r.size), Color(0, 0, 0, 0.35))
+			for px in [-bs.x * 0.3, bs.x * 0.3]:
+				draw_line(Vector2(px + 3, r.end.y - 2), Vector2(px + 5, 8), Color(0, 0, 0, 0.3), 3.0)
+				draw_line(Vector2(px, r.end.y - 2), Vector2(px, 6), Color(0.22, 0.2, 0.24), 3.0)
+				draw_line(Vector2(px - 1, r.end.y - 2), Vector2(px - 1, 6), Color(0.4, 0.38, 0.42), 1.0)
+				draw_circle(Vector2(px, 6), 2.5, Color(0.12, 0.11, 0.13))
+		elif mount != "":
+			draw_rect(Rect2(r.position + Vector2(3, 4), r.size), Color(0, 0, 0, 0.4))
+			for bx in [-bs.x * 0.36, bs.x * 0.36]:
+				var by := r.position.y - 2.0 if mount == "wall_s" else r.end.y + 2.0
+				draw_rect(Rect2(bx - 1.5, minf(by, c.y), 3, absf(by - c.y)), Color(0.28, 0.26, 0.3))
+		# the board: dark metal, a lip, rivets
+		draw_rect(r, metal)
+		draw_rect(r.grow(-1.5), Color(0.1, 0.08, 0.13))
+		draw_rect(r, Color(0.3, 0.28, 0.34), false, 1.0)
+		for rv in [r.position + Vector2(3, 3), Vector2(r.end.x - 3, r.position.y + 3), Vector2(r.position.x + 3, r.end.y - 3), r.end - Vector2(3, 3)]:
+			draw_circle(rv, 0.9, Color(0.45, 0.43, 0.5))
+		# the tube border and the glow it throws on the metal
+		draw_rect(r.grow(-3.0), Color(color, 0.08 * _on))
+		draw_rect(r.grow(-2.5), Color(color, 0.7 * _on), false, 1.0)
+		var o := Vector2(c.x - w * 0.5, c.y + font_size * 0.36)
 		for g in [3.0, 2.0, 1.0]:
-			draw_string_outline(f, o, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, int(g * 2.0), Color(color, 0.12 * _on))
-		draw_string(f, o, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, Color(color.lightened(0.5), _on))
+			draw_string_outline(f, o, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, int(g * 2.0), Color(color, 0.14 * _on))
+		draw_string(f, o, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, Color(color.lightened(0.55), _on))
+		# a dead letter now and then: the tube's darker core
+		if _on < 0.9:
+			draw_string(f, o, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, Color(color.darkened(0.6), 0.5))
 
 
 ## Animated caustics and highlights over every pool tile.

@@ -32,6 +32,7 @@ const DEFAULT_SAVE := {
 	"stats": {"kills": 0, "deaths": 0, "executions": 0, "shots": 0, "hits": 0, "play_time": 0.0},
 	"gallery": [],
 	"masks": ["star"],
+	"posters": [],           # movie posters looked at on the walls (PLAY VIDEOTAPE > POSTERS)
 }
 
 var settings: Dictionary = {}
@@ -104,6 +105,16 @@ func add_collectible(id: String) -> bool:
 	data.collectibles.append(id)
 	if not id in data.gallery:
 		data.gallery.append(id)
+	save_game()
+	return true
+
+## A movie poster read on a wall goes into the collection. True if it's new.
+func add_poster(id: String) -> bool:
+	if not data.has("posters"):
+		data["posters"] = []
+	if id in data.posters:
+		return false
+	data.posters.append(id)
 	save_game()
 	return true
 

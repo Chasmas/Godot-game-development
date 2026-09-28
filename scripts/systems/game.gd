@@ -205,6 +205,8 @@ func _process(_delta: float) -> void:
 ## box while a test drives it) unless a test asks for them.
 var force_intro_calls := false
 func intro_calls_enabled() -> bool:
+	if Engine.has_meta("trailer"):
+		return false
 	return force_intro_calls or DisplayServer.get_name() != "headless"
 
 ## Arcade TURBO runs the whole world a notch faster.
