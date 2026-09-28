@@ -147,6 +147,13 @@ class Bus:
         self.L = np.zeros(self.n)
         self.R = np.zeros(self.n)
     def add(self, x, at, g=1.0, pan=0.0):
+        # declick: every note eases in and out over 3 ms (hard onsets crackled)
+        x = np.array(x, dtype=np.float64)
+        f = min(len(x) // 2, int(0.003 * SR))
+        if f > 1:
+            ramp = np.linspace(0.0, 1.0, f)
+            x[:f] *= ramp
+            x[-f:] *= ramp[::-1]
         s = int(at * SR) % self.n
         l = np.cos((pan + 1) * np.pi / 4) * 1.414
         r = np.sin((pan + 1) * np.pi / 4) * 1.414
@@ -182,9 +189,16 @@ class Bus:
         return np.stack([self.L, self.R], axis=1)
 
 def master(x, drive=1.6, peak=0.9):
+    """Clean master: high-pass, normalise, and a soft knee only on the very
+    top 15% of the peaks (the old 'tape' drive squashed everything into
+    distortion and crackle). `drive` is kept for callers, unused."""
     x = np.stack([hp(x[:, 0], 28), hp(x[:, 1], 28)], axis=1)
-    x = sat(x * drive, 1.4)                       # tape
-    return x / (np.max(np.abs(x)) + 1e-9) * peak
+    x = x / (np.max(np.abs(x)) + 1e-9)
+    knee = 0.85
+    a = np.abs(x)
+    over = a > knee
+    x[over] = np.sign(x[over]) * (knee + (1 - knee) * np.tanh((a[over] - knee) / (1 - knee)))
+    return x / (np.max(np.abs(x)) + 1e-9) * min(peak, 0.84)
 
 def write_ogg(name, x, q=4):
     tmp = os.path.join(MUS, name + ".tmp.wav")

@@ -124,6 +124,8 @@ func _ready() -> void:
 			var p3 := get_tree().get_first_node_in_group("player") as Player
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
+			if OS.get_environment("SHOT_UPGRADE") != "":
+				p3.add_upgrade(StringName(OS.get_environment("SHOT_UPGRADE")), true)
 			if OS.get_environment("SHOT_STAMINA") != "":
 				p3.stamina = float(OS.get_environment("SHOT_STAMINA"))
 				p3._stamina_rest = 99.0

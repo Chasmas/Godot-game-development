@@ -256,7 +256,13 @@ for fi in range(total):
             # the game's own sound for this cut, under the score
             ap = subprocess.run([FFMPEG, "-loglevel", "error", "-ss", f"{max(0.0, start):.3f}", "-i", src, "-t", f"{b - a:.3f}",
                                  "-f", "f32le", "-ac", "2", "-ar", "44100", "-"], stdout=subprocess.PIPE)
-            aud = np.frombuffer(ap.stdout, np.float32).reshape(-1, 2)
+            aud = np.frombuffer(ap.stdout, np.float32).reshape(-1, 2).copy()
+            # fade each cut's sound in and out (a hard cut is a click)
+            fl = min(len(aud) // 2, 441)
+            if fl > 1:
+                r = np.linspace(0, 1, fl)[:, None]
+                aud[:fl] *= r
+                aud[-fl:] *= r[::-1]
             s0 = int(a * 44100)
             e0 = min(len(game_audio), s0 + len(aud))
             game_audio[s0:e0] += aud[: e0 - s0]
@@ -317,9 +323,8 @@ with wave.open(os.path.join(WORK, "score.wav"), "rb") as w:
 n = min(len(score), len(game_audio))
 ga = game_audio[:n]
 peak = np.max(np.abs(ga)) + 1e-9
-mix = score[:n] + ga / peak * 0.28           # the gunfire sits under the music
-mix = np.tanh(mix * 1.1) / np.tanh(1.1)
-mix = mix / (np.max(np.abs(mix)) + 1e-9) * 0.95
+mix = score[:n] * 0.9 + ga / peak * 0.18     # the gunfire sits under the music
+mix = mix / (np.max(np.abs(mix)) + 1e-9) * 0.89
 with wave.open(os.path.join(WORK, "mix.wav"), "wb") as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr)
     w.writeframes((mix * 32767).astype(np.int16).tobytes())

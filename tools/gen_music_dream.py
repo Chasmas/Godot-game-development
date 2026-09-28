@@ -134,6 +134,13 @@ class Mix:
         return self.buses[name]
     def add(self, name, x, at, g=1.0, pan=0.0):
         L, R = self.bus(name)
+        # declick: every note eases in and out over 3 ms (hard onsets crackled)
+        x = np.array(x, dtype=np.float64)
+        f = min(len(x) // 2, int(0.003 * SR))
+        if f > 1:
+            ramp = np.linspace(0.0, 1.0, f)
+            x[:f] *= ramp
+            x[-f:] *= ramp[::-1]
         s = int(at * SR) % self.n
         l = np.cos((pan + 1) * np.pi / 4) * 1.414 * g
         r = np.sin((pan + 1) * np.pi / 4) * 1.414 * g
@@ -172,8 +179,7 @@ def sidechain(L, R, kicks, n, beat, depth=0.45):
 
 def write_ogg(name, L, R, peak=0.92, q=5):
     x = np.stack([hp(L, 30), hp(R, 30)], axis=1)
-    x = sat(x * 1.2, 1.2)
-    x = x / (np.max(np.abs(x)) + 1e-9) * peak
+    x = x / (np.max(np.abs(x)) + 1e-9) * min(peak, 0.84)   # clean: no drive on the master
     tmp = os.path.join(MUS, name + ".tmp.wav")
     with wave.open(tmp, "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)

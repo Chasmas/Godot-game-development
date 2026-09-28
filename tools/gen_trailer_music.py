@@ -31,6 +31,13 @@ def add(name, x, at, g=1.0, pan=0.0):
     s = int(at * SR)
     if s >= N:
         return
+    # declick: every note eases in and out over 3 ms (hard onsets crackled)
+    x = np.array(x, dtype=np.float64)
+    f = min(len(x) // 2, int(0.003 * SR))
+    if f > 1:
+        ramp = np.linspace(0.0, 1.0, f)
+        x[:f] *= ramp
+        x[-f:] *= ramp[::-1]
     l = np.cos((pan + 1) * np.pi / 4) * 1.414 * g
     r = np.sin((pan + 1) * np.pi / 4) * 1.414 * g
     e = min(N, s + len(x))
@@ -136,8 +143,8 @@ Rf += bus["drums"][1] * 0.75
 fade = int(3.0 * SR)
 Lf[-fade:] *= np.linspace(1, 0, fade); Rf[-fade:] *= np.linspace(1, 0, fade)
 x = np.stack([D.hp(Lf, 30), D.hp(Rf, 30)], axis=1)
-x = D.sat(x * 1.25, 1.2)
-x = x / (np.max(np.abs(x)) + 1e-9) * 0.93
+# no saturation on the master: clean, with headroom (peaks at -1.5 dB)
+x = x / (np.max(np.abs(x)) + 1e-9) * 0.84
 out = sys.argv[1] if len(sys.argv) > 1 else "trailer_score.wav"
 with wave.open(out, "wb") as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
