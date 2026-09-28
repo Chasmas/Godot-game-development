@@ -118,6 +118,12 @@ const PAINTED := {
 	"b_party":      {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -4)], "z": [[Z.HEAT, 0.3, 0.0, 0.4, 1.0, 1.0, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 0.4, 0.8, 1.4], [Z.BREATHE, 0.0, 0.2, 0.3, 0.8, 0.4, 0.6], [Z.BREATHE, 0.7, 0.2, 0.3, 0.8, 0.4, 0.6]], "fx": ["embers", "smoke"]},
 	"b_embrace":    {"cam": [1.06, Vector2(0, 0), 1.14, Vector2(0, -3)], "z": [[Z.HEAT, 0.2, 0.3, 0.6, 0.7, 0.8, 0.8], [Z.BREATHE, 0.3, 0.1, 0.4, 0.8, 0.5, 1.0], [Z.FLICKER, 0.0, 0.0, 1.0, 1.0, 0.5, 1.2]], "fx": ["embers"]},
 	"b_credits":    {"cam": [1.0, Vector2(0, 0), 1.12, Vector2(-6, 0)], "z": [[Z.TV, 0.1, 0.25, 0.3, 0.5, 1.0, 1.0], [Z.RIPPLE, 0.75, 0.1, 0.25, 0.5, 0.6, 0.6]], "fx": ["rain_window"]},
+	# --- Dog Days' boss
+	"k_yard":       {"cam": [1.02, Vector2(-6, 0), 1.12, Vector2(6, -2)], "z": [[Z.FLICKER, 0.3, 0.0, 0.4, 0.3, 0.5, 1.2], [Z.BREATHE, 0.0, 0.3, 1.0, 0.6, 0.9, 0.8], [Z.DRIFT, 0.0, 0.0, 1.0, 1.0, 0.3, 0.6]], "fx": ["dust"]},
+	"k_buck":       {"cam": [1.02, Vector2(0, 0), 1.14, Vector2(0, -3)], "z": [[Z.BREATHE, 0.3, 0.1, 0.4, 0.9, 0.5, 0.8], [Z.FLICKER, 0.3, 0.0, 0.4, 0.2, 0.5, 1.0]], "fx": ["dust"]},
+	"k_lane":       {"cam": [1.1, Vector2(0, 0), 1.0, Vector2(4, 0)], "z": [[Z.HEAT, 0.6, 0.1, 0.4, 0.6, 1.2, 1.2], [Z.BREATHE, 0.0, 0.4, 0.6, 0.6, 1.4, 1.0], [Z.FLICKER, 0.5, 0.0, 0.5, 0.8, 0.8, 1.6]], "handheld": 1.2, "fx": ["embers"]},
+	"k_down":       {"cam": [1.02, Vector2(0, 0), 1.12, Vector2(-3, -2)], "z": [[Z.BREATHE, 0.2, 0.2, 0.6, 0.8, 0.5, 0.7], [Z.FLICKER, 0.3, 0.0, 0.4, 0.2, 0.4, 0.8]], "fx": ["dust"]},
+	"k_dogs":       {"cam": [1.0, Vector2(0, 0), 1.1, Vector2(0, -2)], "z": [[Z.BREATHE, 0.0, 0.2, 1.0, 0.8, 0.8, 0.9]], "fx": ["dust"]},
 	# --- title-screen vignettes: the camera holds still, only the moment moves
 	"menu_smoke":   {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.FLICKER, 0.25, 0.0, 0.2, 0.6, 0.4, 0.8], [Z.BREATHE, 0.5, 0.05, 0.35, 0.9, 0.35, 0.6], [Z.RIPPLE, 0.35, 0.0, 0.3, 0.5, 0.4, 0.4]], "smoke": [Vector2(0.63, 0.2)], "fx": ["rain_window"]},
 	"menu_revolver": {"cam": [1.0, Vector2.ZERO, 1.0, Vector2.ZERO], "handheld": 0.0, "z": [[Z.SWAY, 0.4, 0.0, 0.2, 0.15, 0.3, 0.6], [Z.BREATHE, 0.45, 0.1, 0.4, 0.8, 0.35, 0.6], [Z.PULSE, 0.4, 0.0, 0.25, 0.25, 0.3, 0.6]], "fx": ["dust"]},
