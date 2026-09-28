@@ -1441,24 +1441,18 @@ class StaminaRing extends Node2D:
 		if denied > 0.0 or player._winded:
 			col = col.lerp(UIStyle.HOT, maxf(denied, 0.6 if player._winded else 0.0))
 		var shake := Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.2 * denied, 0)
-		# five short slanted dashes in a shallow arc under her feet: quiet
-		# (half-see-through) while it's fine, lit neon when it runs low
-		var n := 5
-		var r := 10.0
-		var span := PI * 0.55
-		var start := PI * 0.5 - span * 0.5
+		# four little neon diamonds stacked beside her (screen-up, never
+		# turning with her aim); they empty from the top, glow only when low
 		var low: bool = frac < 0.3 or player._winded or denied > 0.0
-		var alpha := _a * (0.9 if low else 0.45)
-		var roll_seg: int = int(ceil(float(player.ROLL_COST) / player.STAMINA_MAX * n))
+		var alpha := _a * (0.95 if low else 0.55)
+		var n := 4
 		for i in n:
-			var a0 := start + span * (float(i) + 0.15) / n
-			var a1 := start + span * (float(i) + 0.85) / n
+			var c := Vector2(-11.0, 5.0 - i * 4.2) + shake
 			var fill := clampf(frac * n - i, 0.0, 1.0)
-			var p0 := Vector2.from_angle(a0) * r + shake
-			var p1 := Vector2.from_angle(a1) * r + shake
-			draw_line(p0, p1, Color(0, 0, 0, 0.3 * alpha), 2.6, true)
+			var dia := PackedVector2Array([c + Vector2(0, -1.8), c + Vector2(1.6, 0), c + Vector2(0, 1.8), c + Vector2(-1.6, 0)])
+			draw_colored_polygon(dia, Color(0.05, 0.02, 0.08, 0.55 * alpha))
 			if fill > 0.0:
-				var c2: Color = col if i >= roll_seg or frac >= float(player.ROLL_COST) / player.STAMINA_MAX else Color(1.0, 0.65, 0.2)
+				var inner := PackedVector2Array([c + Vector2(0, -1.3 * fill), c + Vector2(1.1 * fill, 0), c + Vector2(0, 1.3 * fill), c + Vector2(-1.1 * fill, 0)])
 				if low:
-					draw_line(p0, p0.lerp(p1, fill), Color(c2, 0.25 * alpha), 4.0, true)   # the glow
-				draw_line(p0, p0.lerp(p1, fill), Color(c2, alpha), 1.3, true)
+					draw_circle(c, 2.6, Color(col, 0.18 * alpha))
+				draw_colored_polygon(inner, Color(col, alpha))

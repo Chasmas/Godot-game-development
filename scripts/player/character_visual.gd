@@ -788,7 +788,7 @@ class DropShadow extends Node2D:
 		show_behind_parent = true
 	func _process(delta: float) -> void:
 		_smooth.update(get_tree(), global_position, delta)
-		_probe = _smooth.top(2)
+		_probe = _smooth.top(1)
 		queue_redraw()
 	func _draw() -> void:
 		var v := get_parent() as CharacterVisual
@@ -801,11 +801,13 @@ class DropShadow extends Node2D:
 		for pr in _probe:
 			var dir: Vector2 = pr.dir
 			var k: float = pr.k
-			var length := 2.0 + 7.0 * float(pr.far)
-			var alpha := clampf(0.12 + 0.3 * k, 0.0, 0.4)
-			var base := Transform2D(0.0, dir * length) * LightProbe.stretch(dir, 1.25 + 0.5 * float(pr.far))
+			# one soft silhouette of the body, from the strongest light only:
+			# drawing every part (legs, torso, gun) stacked darker patches
+			var length := 2.0 + 4.0 * float(pr.far)
+			var alpha := clampf(0.08 + 0.16 * k, 0.0, 0.22)
+			var base := Transform2D(0.0, dir * length) * LightProbe.stretch(dir, 1.1 + 0.25 * float(pr.far))
 			var col := Color(0.0, 0.0, 0.03, alpha)
-			for spr in [v.legs, v.torso, v.weapon_sprite]:
+			for spr in [v.torso]:
 				var sp := spr as Sprite2D
 				if sp == null or sp.texture == null or not sp.visible:
 					continue

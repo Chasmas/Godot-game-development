@@ -124,6 +124,9 @@ func _ready() -> void:
 			var p3 := get_tree().get_first_node_in_group("player") as Player
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
+			if OS.get_environment("SHOT_STAMINA") != "":
+				p3.stamina = float(OS.get_environment("SHOT_STAMINA"))
+				p3._stamina_rest = 99.0
 			var what := OS.get_environment("SHOT_WHAT")
 			if what != "cell" and OS.get_environment("SHOT_CELL") != "":
 				# stage the shot somewhere else (away from the car arrival)
