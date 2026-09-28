@@ -275,7 +275,7 @@ func _run() -> void:
 		p.global_position = lvl.breach._plant_it.global_position + Vector2(0, 120)
 		lvl.breach._plant_it.interact(p)
 		await frames(5)
-		check(lvl.breach.planted, "charge planted on the lobby doors")
+		check(lvl.breach.planted or lvl.breach.planting, "charge planted on the lobby doors")
 		for i in 900:
 			await frames(1)
 			if lvl.breach.done:

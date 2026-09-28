@@ -6,8 +6,13 @@ extends RefCounted
 ## (highlight / base / shade) and a dark ink outline. Lighting is radial
 ## (top-down), so it stays correct as the sprite rotates to aim.
 ## Textures are 2x; CharacterVisual draws them at 0.5 scale.
+## Painted at RES x that again (4 texture pixels per world pixel): the
+## ImageTexture reports the 2x size (set_size_override), so every sprite,
+## offset and hand position stays as it was - there's just four times the
+## detail inside: a 5-step light ramp, fine cloth grain, thin inner line art.
 
 const S := 2.0                  # texture pixels per world pixel
+const RES := 2                  # supersampling on top of S (the painted detail)
 const SIZE := 32                # character canvas (16 world px)
 const INK := Color("0b0710")
 
@@ -69,7 +74,11 @@ static func _baked(key: String) -> Texture2D:
 		return null
 	var path := baked_path(key)
 	if ResourceLoader.exists(path):
-		var t: Texture2D = load(path)
+		var src: Texture2D = load(path)
+		var img := src.get_image()
+		if img == null:
+			return null
+		var t := _tex(img)
 		_cache[key] = t
 		return t
 	return null
@@ -150,53 +159,128 @@ static func cap(a: Vector2, b: Vector2, rad: float, col: Color) -> Shape:
 	s.color = col
 	return s
 
-## Render shapes (painter's order) into an image with cel shading + outline.
+## Mark shapes by material so the painter can give each its own surface:
+## hair gets strands, cloth gets creases and seams, skin stays smooth.
+static func _tag(shapes: Array, P: Dictionary) -> void:
+	var hair: Color = P.get("h", Color(-1, -1, -1))
+	var cloth := [P.get("j", Color(-1, -1, -1)), P.get("J", Color(-1, -1, -1)), P.get("p", Color(-1, -1, -1))]
+	for sh in shapes:
+		var sp := sh as Shape
+		if sp.pattern != "":
+			continue
+		if sp.color.is_equal_approx(hair) or sp.color.is_equal_approx(hair.lightened(0.05)):
+			sp.pattern = "hair"
+		else:
+			for cc in cloth:
+				if sp.color.is_equal_approx(cc):
+					sp.pattern = "cloth"
+
+## A texture from a RES-times painted image, reporting the base size.
+static func _tex(img: Image) -> ImageTexture:
+	var t := ImageTexture.create_from_image(img)
+	t.set_size_override(Vector2i(img.get_width() / RES, img.get_height() / RES))
+	return t
+
+## Render shapes (painter's order) into an image with cel shading + outline,
+## at RES x the canvas size `w` x `h` (shape coordinates stay in canvas px).
 static func _render(shapes: Array, w: int, h: int) -> Image:
 	for sh in shapes:
 		(sh as Shape).finish()
-	var img := Image.create(w, h, false, Image.FORMAT_RGBA8)
+	var W := w * RES
+	var H := h * RES
+	var img := Image.create(W, H, false, Image.FORMAT_RGBA8)
 	img.fill(Color(0, 0, 0, 0))
 	var owner := PackedInt32Array()
-	owner.resize(w * h)
+	owner.resize(W * H)
 	owner.fill(-1)
-	for y in h:
-		for x in w:
-			var p := Vector2(x + 0.5, y + 0.5)
+	var inv := 1.0 / float(RES)
+	for y in H:
+		for x in W:
+			var p := Vector2((x + 0.5) * inv, (y + 0.5) * inv)
 			for i in range(shapes.size() - 1, -1, -1):
 				var s: Shape = shapes[i]
 				if not s.bb.has_point(p):
 					continue
 				if s.sdf(p) <= 0.0:
-					owner[y * w + x] = i
+					owner[y * W + x] = i
 					var c := s.color
+					var rim := s.rim(p)
 					if s.shade:
-						var rim := s.rim(p)
-						# 3-tone cel ramp: highlight core, base, shade rim
-						if rim < 0.38:
-							c = c.lightened(0.22)
-						elif rim > 0.78:
-							c = c.darkened(0.28)
-					if s.pattern == "hawaii" and ((x / 3 + y / 3) % 3 == 0):
-						c = Color("e05a8a") if (x + y) % 2 == 0 else Color("30b0e0")
+						# 5-step light ramp: specular core, lit, base, turning away, rim shadow
+						if rim < 0.2:
+							c = c.lightened(0.3)
+						elif rim < 0.42:
+							c = c.lightened(0.14)
+						elif rim > 0.88:
+							c = c.darkened(0.34)
+						elif rim > 0.7:
+							c = c.darkened(0.16)
+						# light from the top-left of the canvas: a soft cross-light
+						var lit := ((p - s.a).normalized().dot(Vector2(-0.7, -0.7)) if p != s.a else 0.0) * rim
+						c = c.lightened(0.06 * maxf(lit, 0.0)) if lit > 0.0 else c.darkened(0.08 * -lit)
+					# cloth / skin grain: a faint, stable weave
+					var g := float(((x * 7 + y * 13) ^ (x * y)) % 5) / 5.0 - 0.4
+					c = c.lightened(0.03 * g) if g > 0.0 else c.darkened(-0.03 * g)
+					var px := int(p.x)
+					var py := int(p.y)
+					if s.pattern == "hair":
+						# strands combed back from the crown, a sheen along them
+						var dv := p - s.a
+						var ang := atan2(dv.y, dv.x)
+						var strand := sin(ang * 22.0 + dv.length() * 0.9)
+						if strand > 0.55:
+							c = c.darkened(0.22)
+						elif strand < -0.8 and rim < 0.6:
+							c = c.lightened(0.18)
+					elif s.pattern == "cloth":
+						# folds: soft diagonal creases, a seam line down the middle
+						var fold := sin((p.x + p.y * 0.6) * 1.7 + s.a.x)
+						if fold > 0.82:
+							c = c.darkened(0.12)
+						elif fold < -0.9:
+							c = c.lightened(0.07)
+						if absf(p.y - s.a.y) < 0.28 and s.r.y > 3.0:
+							c = c.darkened(0.18)
+					if s.pattern == "hawaii" and ((px / 3 + py / 3) % 3 == 0):
+						c = Color("e05a8a") if (px + py) % 2 == 0 else Color("30b0e0")
 					img.set_pixel(x, y, c)
 					break
-	# ink outline: any empty pixel touching a filled one, plus internal
-	# edges between different shapes (gives the cel "line art" look)
+	# ink outline: empty pixels within one canvas pixel of a filled one (the
+	# silhouette keeps its weight), plus thin internal edges between shapes
+	# (fine line art at the painted resolution)
 	var out := img.duplicate()
-	for y in h:
-		for x in w:
-			var o := owner[y * w + x]
+	for y in H:
+		for x in W:
+			var o := owner[y * W + x]
 			var edge := false
-			for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
-				var nx: int = x + d.x
-				var ny: int = y + d.y
-				var no := -1 if (nx < 0 or ny < 0 or nx >= w or ny >= h) else owner[ny * w + nx]
-				if o == -1 and no != -1 and (shapes[no] as Shape).outline:
-					edge = true
-				elif o != -1 and no != -1 and no != o and o > no and (shapes[o] as Shape).outline:
-					edge = true
-			if edge:
-				out.set_pixel(x, y, INK if o == -1 else img.get_pixel(x, y).darkened(0.55))
+			if o == -1:
+				for dy in range(-RES, RES + 1):
+					for dx in range(-RES, RES + 1):
+						if absi(dx) + absi(dy) > RES:
+							continue
+						var nx: int = x + dx
+						var ny: int = y + dy
+						if nx < 0 or ny < 0 or nx >= W or ny >= H:
+							continue
+						var no := owner[ny * W + nx]
+						if no != -1 and (shapes[no] as Shape).outline:
+							edge = true
+							break
+					if edge:
+						break
+				if edge:
+					out.set_pixel(x, y, INK)
+			else:
+				for d in [Vector2i(1, 0), Vector2i(0, 1)]:
+					var nx2: int = x + d.x
+					var ny2: int = y + d.y
+					if nx2 >= W or ny2 >= H:
+						continue
+					var no2 := owner[ny2 * W + nx2]
+					if no2 != -1 and no2 != o and (shapes[maxi(o, no2)] as Shape).outline:
+						edge = true
+				if edge:
+					out.set_pixel(x, y, img.get_pixel(x, y).darkened(0.5))
 	return out
 
 # ---------------------------------------------------------------- characters
@@ -379,10 +463,11 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		shapes.append(cap(hc + Vector2(0, -5.2), hc + Vector2(0, 5.2), 0.7, Color("2a2a30")))
 		shapes.append(ell(hc + Vector2(0.5, -5.4), Vector2(1.7, 1.5), Color("ff8a20")))
 		shapes.append(ell(hc + Vector2(0.5, 5.4), Vector2(1.7, 1.5), Color("ff8a20")))
+	_tag(shapes, P)
 	var img := _render(shapes, SIZE, SIZE)
 	if "star" in extras:
-		_star(img, hc + Vector2(2.5, 2.2), 2.2, Color("ffd23f"))
-	var tex := ImageTexture.create_from_image(img)
+		_star(img, (hc + Vector2(2.5, 2.2)) * RES, 2.2 * RES, Color("ffd23f"))
+	var tex := _tex(img)
 	_cache[key] = tex
 	return tex
 
@@ -437,7 +522,8 @@ static func legs(frame: int, palette: String) -> Texture2D:
 		cap(hip_l, foot_l, 2.7 * bw, pants), cap(hip_r, foot_r, 2.7 * bw, pants),
 		ell(foot_l + Vector2(1.6, 0), Vector2(2.6, 2.1), shoe), ell(foot_r + Vector2(1.6, 0), Vector2(2.6, 2.1), shoe),
 	]
-	var tex := ImageTexture.create_from_image(_render(shapes, SIZE, SIZE))
+	_tag(shapes, P)
+	var tex := _tex(_render(shapes, SIZE, SIZE))
 	_cache[key] = tex
 	return tex
 
@@ -518,7 +604,8 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 			shapes.append(ell(head_c + Vector2(4.0, 0), Vector2(1.4, 3.0), top_s))    # the cap's peak
 		elif str(st.hair) != "bald":
 			shapes.append(ell(head_c + Vector2(2.2, 0), Vector2(2.6, 4.0), hair))
-	var tex := ImageTexture.create_from_image(_render(shapes, 48, 32))
+	_tag(shapes, P)
+	var tex := _tex(_render(shapes, 48, 32))
 	_cache[key] = tex
 	return tex
 

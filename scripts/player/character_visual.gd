@@ -8,6 +8,7 @@ var palette := "guard"
 var legs: Sprite2D
 var torso: Sprite2D
 var weapon_sprite: Sprite2D
+var _wd := 1.0          ## the held weapon sprite's pixel density (drawn at 1 / _wd)
 var weapon_sprite2: Sprite2D       ## off-hand gun when dual wielding
 var dual := false
 var _hand2 := Vector2(5, -2)
@@ -70,7 +71,10 @@ func _init() -> void:
 	rig.add_child(overlay)
 	legs.scale = Vector2(0.5, 0.5)
 	torso.scale = Vector2(0.5, 0.5)
-	legs.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	legs.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	for spr in [torso, weapon_sprite, weapon_sprite2, overlay]:
+		if spr:
+			spr.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	weapon_sprite.centered = false
 	weapon_sprite2.centered = false
 	weapon_sprite2.flip_v = true
@@ -126,16 +130,20 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 	torso.texture = SpriteLib.torso(pose, palette)
 	weapon_sprite.texture = SpriteLib.weapon(w.sprite_key)
 	weapon_sprite.visible = true
+	_wd = SpriteLib.weapon_density(w.sprite_key)
+	weapon_sprite.scale = Vector2.ONE / _wd
+	weapon_sprite2.scale = weapon_sprite.scale
 	_hand = SpriteForge.hand_world("aim_dual") if dual else SpriteLib.hand_offset(w.hold)
 	var tex_h := weapon_sprite.texture.get_height()
 	# grip sits on the hand: offset so the handle end is at the hand position
-	weapon_sprite.offset = Vector2(-2 if w.is_firearm() else -3, -tex_h * 0.5)
+	# (offset is in texture pixels, the sprite is drawn at 1 / density)
+	weapon_sprite.offset = Vector2((-2 if w.is_firearm() else -3) * _wd, -tex_h * 0.5)
 	weapon_sprite.position = _hand
 	weapon_sprite.rotation = 0.0
 	if dual:
 		_hand2 = SpriteForge.hand_world("aim_dual_l")
 		weapon_sprite2.texture = weapon_sprite.texture
-		weapon_sprite2.offset = Vector2(-2, -tex_h * 0.5)
+		weapon_sprite2.offset = Vector2(-2 * _wd, -tex_h * 0.5)
 		weapon_sprite2.position = _hand2
 		weapon_sprite2.rotation = 0.0
 		weapon_sprite2.visible = true
@@ -459,9 +467,9 @@ func hand_global() -> Vector2:
 
 func muzzle_global(left := false) -> Vector2:
 	if left and dual and weapon_sprite2.texture:
-		return rig.to_global(_hand2 + Vector2(weapon_sprite2.texture.get_width() - 2, 0))
+		return rig.to_global(_hand2 + Vector2(weapon_sprite2.texture.get_width() / _wd - 2, 0))
 	if weapon_sprite.visible and weapon_sprite.texture:
-		var w := weapon_sprite.texture.get_width()
+		var w := weapon_sprite.texture.get_width() / _wd
 		return rig.to_global(_hand + Vector2(w - 2, 0))
 	return rig.to_global(Vector2(10, 0))
 
@@ -584,6 +592,7 @@ func _push_ghost() -> void:
 		_ghosts.append(g)
 	g.texture = weapon_sprite.texture
 	g.offset = weapon_sprite.offset
+	g.scale = weapon_sprite.scale
 	g.position = weapon_sprite.position
 	g.rotation = weapon_sprite.rotation
 	g.modulate = Color(1.6, 1.5, 1.4, 0.45)

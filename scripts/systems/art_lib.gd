@@ -18,10 +18,25 @@ static func _load(path: String) -> Texture2D:
 		_cache[path] = load(path) if ResourceLoader.exists(path) else null
 	return _cache[path]
 
+## Sprites are painted at DENSITY x the old 2 texels per world pixel; they
+## report their old size (set_size_override) so every rect and every
+## get_width() in the game still works in the same units - with the detail.
+const DENSITY := 2
+
 static func sprite(id: String) -> Texture2D:
 	if not enabled():
 		return null
-	return _load("res://assets/art/sprites/%s.png" % id)
+	var key := "sprite:" + id
+	if not _cache.has(key):
+		var src := _load("res://assets/art/sprites/%s.png" % id)
+		var img: Image = src.get_image() if src else null
+		if img:
+			var t := ImageTexture.create_from_image(img)
+			t.set_size_override(Vector2i(img.get_width() / DENSITY, img.get_height() / DENSITY))
+			_cache[key] = t
+		else:
+			_cache[key] = src
+	return _cache[key]
 
 ## `over`: the level's own "floor_textures" (a mansion's tile is marble).
 static func floor_tex(ch: String, over: Dictionary = {}) -> Texture2D:

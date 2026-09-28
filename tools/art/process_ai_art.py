@@ -38,6 +38,11 @@ SPRITE_TILES = {
 EXTRA_SHOTS = {"apartment": "assets/art/cutscenes/apartment_1988.webp", "tv_news": "assets/art/cutscenes/news_1988.webp"}
 
 
+# texel density over the original 2 per world pixel: sprites and floors are
+# made at 2 x 2 = 4 texels per world pixel (ArtLib draws them at the old size)
+DENSITY = 2
+
+
 def out(*p):
     path = os.path.join(ROOT, *p)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -103,7 +108,7 @@ def pixelize(im, size, colors=48):
     # fit inside, keep aspect, pad to the exact size
     k = min((tw - 2) / im.width, (th - 2) / im.height)
     nw, nh = max(1, round(im.width * k)), max(1, round(im.height * k))
-    small = im.resize((nw, nh), Image.LANCZOS)
+    small = im.resize((nw, nh), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
     a = np.asarray(small.getchannel("A"))
     rgb = small.convert("RGB").quantize(colors=colors, method=Image.MEDIANCUT, dither=Image.NONE).convert("RGB")
     arr = np.dstack([np.asarray(rgb), np.where(a > 110, 255, 0).astype(np.uint8)])
@@ -115,6 +120,12 @@ def pixelize(im, size, colors=48):
     grow = np.zeros_like(solid)
     for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
         grow |= np.roll(np.roll(solid, dx, 1), dy, 0)
+    if DENSITY > 1:
+        # the outline keeps its weight at the higher density: two texels
+        g2 = grow.copy()
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            g2 |= np.roll(np.roll(grow, dx, 1), dy, 0)
+        grow = g2
     edge = grow & ~solid
     canvas[edge] = (*INK, 255)
     return Image.fromarray(canvas, "RGBA")
@@ -125,7 +136,7 @@ def sprites():
     for f in glob.glob(os.path.join(RAW, "sprites", "*.webp")):
         sid = os.path.basename(f)[:-5]
         tiles = SPRITE_TILES.get(sid, (1, 1))
-        size = (max(8, int(tiles[0] * 32)), max(8, int(tiles[1] * 32)))
+        size = (max(16, int(tiles[0] * 32 * DENSITY)), max(16, int(tiles[1] * 32 * DENSITY)))
         im = Image.open(f)
         if im.mode != "RGBA":
             # no transparency came back: key out the flat background colour
@@ -135,7 +146,7 @@ def sprites():
             d = np.abs(arr[..., :3] - bg).sum(axis=2)
             arr[..., 3] = np.where(d < 40, 0, 255)
             im = Image.fromarray(arr.astype(np.uint8), "RGBA")
-        pixelize(im, size, 40 if tiles[0] * tiles[1] >= 4 else 24).save(out("assets", "art", "sprites", sid + ".png"))
+        pixelize(im, size, 128 if tiles[0] * tiles[1] >= 4 else 96).save(out("assets", "art", "sprites", sid + ".png"))
         n += 1
     print("sprites:", n)
 
@@ -156,8 +167,8 @@ def textures():
     n = 0
     for f in glob.glob(os.path.join(RAW, "textures", "*.webp")):
         tid = os.path.basename(f)[:-5]
-        im = seamless(Image.open(f).convert("RGB")).resize((256, 256), Image.LANCZOS)
-        im = im.quantize(colors=40, method=Image.MEDIANCUT, dither=Image.NONE).convert("RGB")
+        im = seamless(Image.open(f).convert("RGB")).resize((256 * DENSITY, 256 * DENSITY), Image.LANCZOS)
+        im = im.filter(ImageFilter.UnsharpMask(radius=1.4, percent=70, threshold=2))
         im.save(out("assets", "art", "floors", tid + ".png"))
         n += 1
     print("textures:", n)

@@ -23,6 +23,7 @@ func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> v
 	sprite = Sprite2D.new()
 	sprite.texture = SpriteLib.corpse(palette, missing, randi() % 4)
 	sprite.scale = Vector2(0.5, 0.5)
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	sprite.rotation = dir.angle() + randf_range(-0.4, 0.4)
 	add_child(sprite)
 	_slide = dir.normalized() * 70.0

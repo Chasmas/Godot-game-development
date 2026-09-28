@@ -114,6 +114,8 @@ func _ready() -> void:
 			await _frames(n)
 		"closeup":
 			# SHOT_MISSION, SHOT_ZOOM (camera zoom bias), SHOT_WHAT=dog|guards|dual
+			if OS.get_environment("SHOT_CELL") != "" and OS.get_environment("SHOT_WHAT") != "cell":
+				Game.attempts = 2    # no car arrival: the shot is staged elsewhere
 			Game.start_mission(OS.get_environment("SHOT_MISSION") if OS.get_environment("SHOT_MISSION") != "" else "m02_dog_days")
 			await _frames(30)
 			var lvl2 := get_tree().get_first_node_in_group("level") as Level
@@ -121,6 +123,16 @@ func _ready() -> void:
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
 			var what := OS.get_environment("SHOT_WHAT")
+			if what != "cell" and OS.get_environment("SHOT_CELL") != "":
+				# stage the shot somewhere else (away from the car arrival)
+				var cxy := OS.get_environment("SHOT_CELL").split(",")
+				p3.global_position = Vector2(float(cxy[0]) * 16 + 8, float(cxy[1]) * 16 + 8)
+				p3.visible = true
+				lvl2.camera.target = p3
+				lvl2.camera.snap_to_target()
+				while Dialogue.active:
+					Dialogue._end()
+					await _frames(2)
 			if what == "bone":
 				await _frames(30)
 				var bn := get_tree().get_first_node_in_group("meat_bone_pickups") as Node2D

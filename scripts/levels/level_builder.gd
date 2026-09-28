@@ -635,7 +635,9 @@ class FloorChunk extends Node2D:
 	func _tile_painted(tex: Texture2D, f: String, p: Vector2, x: int, y: int) -> void:
 		var T2 := float(LevelBuilder.T)
 		var h := _h(x, y)
-		var src := Rect2(fposmod(p.x * 2.0, 256.0), fposmod(p.y * 2.0, 256.0), 32, 32)
+		# floors are 4 texels per world pixel (512 px = 8 tiles)
+		var k := float(tex.get_width()) / 128.0
+		var src := Rect2(fposmod(p.x * k, float(tex.get_width())), fposmod(p.y * k, float(tex.get_height())), 16.0 * k, 16.0 * k)
 		draw_texture_rect_region(tex, Rect2(p, Vector2(T2, T2)), src)
 		var tone := float(_h(x / 2, y / 2, 7) % 5) / 4.0
 		draw_rect(Rect2(p, Vector2(T2, T2)), Color(0.05, 0.0, 0.1, 0.04 + 0.05 * tone))

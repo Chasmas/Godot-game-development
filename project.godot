@@ -78,6 +78,6 @@ common/max_physics_steps_per_frame=5
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_filter=1
 environment/defaults/default_clear_color=Color(0.02, 0.01, 0.04, 1)
 2d/snap/snap_2d_vertices_to_pixel=false

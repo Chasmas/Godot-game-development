@@ -33,7 +33,9 @@ func _ready() -> void:
 	add_to_group("pickups")
 	z_index = -2
 	sprite = Sprite2D.new()
-	sprite.texture = SpriteLib.weapon(weapon.data.sprite_key if weapon and weapon.data else "pistol")
+	var sk: String = weapon.data.sprite_key if weapon and weapon.data else "pistol"
+	sprite.texture = SpriteLib.weapon(sk)
+	sprite.scale = Vector2.ONE / SpriteLib.weapon_density(sk)
 	sprite.light_mask = 2
 	add_child(sprite)
 	if thrower is CollisionObject2D:

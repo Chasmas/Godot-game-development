@@ -388,10 +388,26 @@ static func torso(pose: String, palette_name: String) -> Texture2D:
 static func legs(frame: int, palette_name: String) -> Texture2D:
 	return SpriteForge.legs(frame, palette_name)
 
+## Weapons in the world are painted sprites at WEAPON_DENSITY x the pixel
+## density (tools/gen_weapon_sprites.py): draw them at 1 / weapon_density().
+## Anything without one falls back to the pixel map at 1:1.
+const WEAPON_DENSITY := 4.0
+static var _wtex: Dictionary = {}
+
 static func weapon(key: String) -> Texture2D:
 	if OVERRIDES.has(key):
 		return load(OVERRIDES[key])
+	if not _wtex.has(key):
+		var p := "res://assets/art/weapons_world/%s.png" % key
+		_wtex[key] = load(p) if ResourceLoader.exists(p) else null
+	if _wtex[key] != null:
+		return _wtex[key]
 	return make(WEAPONS.get(key, WEAPONS["pistol"]), "guard")
+
+## How many texture pixels to one world pixel for this weapon's sprite.
+static func weapon_density(key: String) -> float:
+	weapon(key)
+	return WEAPON_DENSITY if _wtex.get(key) != null else 1.0
 
 static func corpse(palette_name: String, missing := "", pose := 0) -> Texture2D:
 	return SpriteForge.corpse(palette_name, false, missing, pose)
