@@ -312,7 +312,7 @@ func _page_progress(box: VBoxContainer, title: String) -> void:
 func _page_done(box: VBoxContainer) -> void:
 	box.add_child(_h(tr("That's a wrap."), 34, UIStyle.PINK))
 	box.add_child(_p(tr("HOTSHOT CALIFORNIA is installed. Somebody's filming. Make it look good.")))
-	box.add_child(_p(tr("Installed to:") + " " + _dest.replace("/", "\"), UIStyle.DIM, 12))
+	box.add_child(_p(tr("Installed to:") + " " + _dest.replace("/", "\\"), UIStyle.DIM, 12))
 	var launch := CheckBox.new()
 	launch.text = tr("Launch HOTSHOT CALIFORNIA now")
 	launch.button_pressed = true

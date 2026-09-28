@@ -15,9 +15,9 @@ dest_files=["res://.godot/imported/t_phone.webp-dd276a50d8259e24d08eeed3b8994bbc
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.85
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

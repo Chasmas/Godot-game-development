@@ -15,9 +15,9 @@ dest_files=["res://.godot/imported/holding_tommy.webp-6fbc6ed4fec3e58d158f74c399
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.85
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
