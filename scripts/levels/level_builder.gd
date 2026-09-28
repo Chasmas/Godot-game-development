@@ -827,10 +827,10 @@ class WallChunk extends Node2D:
 				edge = edge * bst * 0.9
 				draw_rect(Rect2(p, Vector2(T2, T2)), top)
 				# painted grain over the colour: concrete read as stucco / plaster
-				var gtex := ArtLib.floor_tex("=")
+				var gtex := ArtLib.wall_tex(str(builder.data.get("id", "")))
 				if gtex:
 					var gk := float(gtex.get_width()) / 128.0
-					draw_texture_rect_region(gtex, Rect2(p, Vector2(T2, T2)), Rect2(fposmod(p.x * gk, float(gtex.get_width())), fposmod(p.y * gk, float(gtex.get_height())), T2 * gk, T2 * gk), Color(top.r * 1.25, top.g * 1.25, top.b * 1.25, 0.45))
+					draw_texture_rect_region(gtex, Rect2(p, Vector2(T2, T2)), Rect2(fposmod(p.x * gk, float(gtex.get_width())), fposmod(p.y * gk, float(gtex.get_height())), T2 * gk, T2 * gk), Color(top.r * 1.35, top.g * 1.35, top.b * 1.35, 0.7))
 				# stucco texture
 				var hh := (x * 928371 + y * 364479) & 0xffff
 				for i in 4:

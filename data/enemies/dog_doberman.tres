@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_data.gd" id="1_s"]
+
+[resource]
+script = ExtResource("1_s")
+id = &"dog_doberman"
+display_name = "Doberman"
+combat = 1
+weapon_id = &""
+palette = "doberman"
+walk_speed = 40.0
+run_speed = 165.0
+reaction_time = 0.2
+melee_windup = 0.36
+view_distance = 150.0
+view_angle_deg = 140.0
+hearing_mult = 1.4
+alert_others_radius = 240.0
+can_be_knocked_down = true
+notes = "Heavy, slower, relentless once it has your scent."

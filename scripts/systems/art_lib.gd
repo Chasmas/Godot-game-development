@@ -44,6 +44,14 @@ static func floor_tex(ch: String, over: Dictionary = {}) -> Texture2D:
 		return null
 	return _load("res://assets/art/floors/%s.png" % str(over.get(ch, FLOORS.get(ch, ""))))
 
+## The painted wall-top texture for a level (floors/wall_<place>.png).
+const WALLS := {"m01_sunset_palms": "wall_motel", "m02_yermo_salvage": "wall_salvage", "m03_khsc_studios": "wall_studio", "m04_villa_estrella": "wall_villa"}
+static func wall_tex(level_id: String) -> Texture2D:
+	if not enabled():
+		return null
+	var t := _load("res://assets/art/floors/%s.png" % str(WALLS.get(level_id, "")))
+	return t if t else _load("res://assets/art/floors/concrete.png")
+
 ## Draw a right-facing sprite into rect r on `ci`, turned to fit the rect
 ## (tall rects get the sprite rotated a quarter turn; `flip` turns it round).
 static func draw_fitted(ci: CanvasItem, tex: Texture2D, r: Rect2, flip := false, mod := Color.WHITE) -> void:

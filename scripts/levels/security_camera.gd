@@ -33,7 +33,55 @@ var _poly := PackedVector2Array()
 var _inner := PackedVector2Array()
 var _beep_t := 0.0
 
+## How far it swings each side: measured against the walls so the cone
+## never looks into brick (see _fit_to_room).
+var sweep := SWEEP
+
+## Look round from where it's mounted: the widest run of directions with a
+## clear view (rays out to most of its range) near where it was pointed. Aim
+## at its middle and swing only as far as the edges allow.
+func _fit_to_room() -> void:
+	var space := get_world_2d().direct_space_state
+	var steps := 72
+	var clear: Array = []
+	for i in steps:
+		var a := TAU * i / steps
+		var q := PhysicsRayQueryParameters2D.create(global_position, global_position + Vector2.from_angle(a) * RANGE * 0.7, Layers.WORLD)
+		clear.append(space.intersect_ray(q).is_empty())
+	# runs of clear directions (wrapping), pick the one nearest the placed aim
+	var best_c := base_angle
+	var best_w := 0.0
+	var best_d := INF
+	var i0 := 0
+	while i0 < steps and clear[i0]:
+		i0 += 1
+	if i0 >= steps:
+		return   # open all round: keep the default
+	var i := i0
+	var done := 0
+	while done < steps:
+		if clear[i % steps]:
+			var start := i
+			while clear[i % steps] and done < steps:
+				i += 1
+				done += 1
+			var w := TAU * (i - start) / steps
+			var c := TAU * (start + (i - start) * 0.5) / steps
+			var d := absf(angle_difference(c, base_angle))
+			if w > deg_to_rad(40.0) and (d < best_d or w > best_w * 1.8):
+				best_c = c
+				best_w = w
+				best_d = d
+		else:
+			i += 1
+			done += 1
+	if best_w > 0.0:
+		base_angle = best_c
+		_aim = base_angle
+		sweep = clampf(best_w * 0.5 - HALF_FOV - deg_to_rad(4.0), 0.0, SWEEP)
+
 func _ready() -> void:
+	_fit_to_room.call_deferred()
 	add_to_group("damageable")
 	add_to_group("security_cameras")
 	collision_layer = Layers.PROP
@@ -89,7 +137,7 @@ func _physics_process(delta: float) -> void:
 			# closer = faster; it stops sweeping and follows you
 			_meter += delta / SPOT_TIME * lerpf(1.8, 0.8, d / RANGE)
 			_aim = lerp_angle(_aim, to.angle(), minf(1.0, delta * 4.0))
-			_aim = clampf(angle_difference(base_angle, _aim), -SWEEP, SWEEP) + base_angle
+			_aim = clampf(angle_difference(base_angle, _aim), -sweep, sweep) + base_angle
 			_beep_t -= delta
 			if _beep_t <= 0.0:
 				_beep_t = lerpf(0.35, 0.08, _meter)
@@ -102,7 +150,7 @@ func _physics_process(delta: float) -> void:
 			# sweep: ease between the ends with a short hold at each
 			var ph := fmod(_t, SWEEP_TIME) / SWEEP_TIME
 			var k := clampf(sin(ph * TAU) * 1.25, -1.0, 1.0)
-			_aim = lerp_angle(_aim, base_angle + SWEEP * k, minf(1.0, delta * 3.0))
+			_aim = lerp_angle(_aim, base_angle + sweep * k, minf(1.0, delta * 3.0))
 	_led += delta
 
 func _raise_alarm(p: Player) -> void:
@@ -178,6 +226,15 @@ func _draw() -> void:
 	draw_line(mount, Vector2.ZERO, ink, 3.0)
 	draw_line(mount, Vector2.ZERO, Color(0.45, 0.45, 0.5), 1.0)
 	draw_set_transform(Vector2.ZERO, _aim, Vector2.ONE)
+	var ctex := ArtLib.sprite("security_camera")
+	if ctex:
+		draw_texture_rect(ctex, Rect2(-5, -5, 12, 10), false)
+		var led2 := fmod(_led, 1.0) < 0.5 or _meter > 0.0 or _cool > 0.0
+		draw_circle(Vector2(-2, -1.5), 1.0, Color(1, 0.1, 0.15) if led2 else Color(0.3, 0.05, 0.05))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		if _meter > 0.0:
+			draw_arc(Vector2(0, -10), 5.0, -PI * 0.5, -PI * 0.5 + TAU * _meter, 16, Color(1, 0.25, 0.15), 2.0)
+		return
 	draw_rect(Rect2(-4, -3, 9, 6), ink)
 	draw_rect(Rect2(-3.5, -2.5, 8, 5), Color(0.82, 0.82, 0.86))
 	draw_rect(Rect2(-3.5, -2.5, 8, 1.5), Color(0.95, 0.95, 1.0))

@@ -249,18 +249,20 @@ func _draw() -> void:
 		match it.kind:
 			"painting":
 				# gilt frame on the wall top, a lamp's warm wash under it
-				var r := Rect2(p + Vector2(-10, -7), Vector2(20, 12))
+				# on the wall itself: its bottom edge just above where the wall meets the floor
+				var r := Rect2(p + Vector2(-7, -9), Vector2(14, 8))
 				draw_rect(r.grow(2.0), Color(0.05, 0.03, 0.02, 0.6))
 				draw_rect(r.grow(1.5), Color(0.72, 0.55, 0.22))
 				draw_rect(r.grow(0.5), Color(0.4, 0.28, 0.1))
 				var tex: Texture2D = it.tex
 				var tw := float(tex.get_width())
 				var th := float(tex.get_height())
-				var src := Rect2(tw * (0.15 + 0.3 * float(it.seed)), th * 0.1, tw * 0.55, th * 0.55 * (12.0 / 20.0) * (tw / th))
+				var src := Rect2(tw * (0.15 + 0.3 * float(it.seed)), th * 0.1, tw * 0.55, th * 0.55 * (8.0 / 14.0) * (tw / th))
 				draw_texture_rect_region(tex, r, src)
 				draw_rect(Rect2(r.position, Vector2(r.size.x, 1)), Color(1, 1, 1, 0.25))
 			"poster":
-				var r2 := Rect2(p + Vector2(-6, -9), Vector2(12, 15))
+				# a one-sheet in proportion (2:3), pinned on the wall, not hanging over the floor
+				var r2 := Rect2(p + Vector2(-3.5, -10), Vector2(7, 10.5))
 				var c: Color = it.color
 				draw_rect(r2.grow(1.0), Color(0.03, 0.02, 0.05, 0.7))
 				var ptex: Texture2D = it.get("tex")
@@ -269,8 +271,9 @@ func _draw() -> void:
 					var ph := float(ptex.get_height())
 					var src_w := ph * r2.size.x / r2.size.y
 					draw_texture_rect_region(ptex, r2, Rect2((pw - src_w) * 0.5, 0, src_w, ph))
-					draw_rect(Rect2(r2.position + Vector2(0, r2.size.y - 3), Vector2(r2.size.x, 3)), Color(0.05, 0.02, 0.08, 0.85))
-					draw_string(UIStyle.font_bold(), r2.position + Vector2(0.5, r2.size.y - 0.6), str(it.title), HORIZONTAL_ALIGNMENT_LEFT, r2.size.x, 3, c.lightened(0.4))
+					# pins at the top corners
+					draw_circle(r2.position + Vector2(1, 1), 0.5, Color(0.9, 0.9, 0.95))
+					draw_circle(r2.position + Vector2(r2.size.x - 1, 1), 0.5, Color(0.9, 0.9, 0.95))
 					continue
 				draw_rect(r2, Color(0.08, 0.05, 0.1))
 				draw_rect(Rect2(r2.position + Vector2(1, 1), Vector2(r2.size.x - 2, 7)), c.darkened(0.35))

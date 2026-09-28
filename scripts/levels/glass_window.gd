@@ -86,6 +86,15 @@ func _draw() -> void:
 				draw_line(tri[0], tri[1], Color(0.9, 0.97, 1.0, 0.9), 0.6)
 				x += w
 		return
+	var gtex := ArtLib.sprite("window_glass")
+	if gtex:
+		if size.x >= size.y:
+			draw_texture_rect(gtex, r, false, Color(1, 1, 1, 0.9))
+		else:
+			draw_set_transform(Vector2.ZERO, PI * 0.5, Vector2.ONE)
+			draw_texture_rect(gtex, Rect2(-size.y * 0.5, -size.x * 0.5, size.y, size.x), false, Color(1, 1, 1, 0.9))
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		return
 	draw_rect(r, Color(0.45, 0.75, 0.95, 0.55))
 	draw_rect(r, Color(0.85, 0.95, 1.0, 0.9), false, 1.0)
 	var hl := Rect2(r.position + Vector2(2, 1), Vector2(maxf(2.0, r.size.x * 0.3), 1)) if size.x > size.y else Rect2(r.position + Vector2(1, 2), Vector2(1, maxf(2.0, r.size.y * 0.3)))

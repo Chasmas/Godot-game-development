@@ -238,6 +238,20 @@ class LootPickup extends Node2D:
 				var tw := absf(sin(_t * 6.0 + k))
 				draw_line(sp - Vector2(2, 0) * tw, sp + Vector2(2, 0) * tw, Color(1, 1, 0.85, tw), 1.0)
 				draw_line(sp - Vector2(0, 2) * tw, sp + Vector2(0, 2) * tw, Color(1, 1, 0.85, tw), 1.0)
+		var art := {"ammo": "pickup_ammo", "flare": "pickup_flare", "cash": "pickup_cash", "guard": "pickup_vest"}
+		if art.has(kind):
+			var lt := ArtLib.sprite(str(art[kind]))
+			if lt:
+				draw_texture_rect(lt, Rect2(-7, -7, 14, 14), false)
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				return
+		if kind == "gun":
+			var gt := SpriteLib.weapon_side("shotgun")
+			if gt:
+				var gsz := Vector2(gt.get_width(), gt.get_height()) / SpriteLib.weapon_density("shotgun") * 0.8
+				draw_texture_rect(gt, Rect2(-gsz * 0.5, gsz), false)
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				return
 		match kind:
 			"upgrade":
 				draw_rect(Rect2(-5, -3, 10, 7), Color("0b0710"))

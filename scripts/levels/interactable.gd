@@ -87,6 +87,12 @@ func _draw() -> void:
 			if not enabled:
 				return
 			_draw_treasure(UIStyle.GOLD, bob)
+			var ct := ArtLib.sprite("pickup_cassette")
+			if ct:
+				draw_set_transform(Vector2(0, bob), sin(_t * 1.4) * 0.35, Vector2.ONE)
+				draw_texture_rect(ct, Rect2(-9, -9, 18, 18), false)
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				return
 			draw_set_transform(Vector2(0, bob), sin(_t * 1.4) * 0.35, Vector2.ONE * 1.35)
 			draw_rect(Rect2(-6, -4, 12, 8), ink)
 			draw_rect(Rect2(-5, -3, 10, 6), Color(0.12, 0.1, 0.12))

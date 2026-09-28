@@ -397,9 +397,22 @@ class DecalChunk extends Node2D:
 			queue_redraw()
 		set_process(false)
 	func _draw() -> void:
+		var blood := ArtLib.sprite("decal_blood")
+		var scorch := ArtLib.sprite("decal_scorch")
 		for s in splats:
 			var p: Vector2 = s[0]
 			var c: Color = s[2]
+			var r: float = s[1]
+			# dark, near-black splats are scorch marks; the rest is blood
+			var is_scorch: bool = c.r < 0.12 and c.g < 0.12
+			var tex: Texture2D = scorch if is_scorch else blood
+			if tex:
+				var ang := float(absi(int(p.x * 13.0 + p.y * 7.0)) % 628) / 100.0
+				draw_set_transform(p, ang, Vector2.ONE)
+				var d := r * (2.6 if is_scorch else 3.0)
+				draw_texture_rect(tex, Rect2(-d * 0.5, -d * 0.5, d, d), false, Color(1, 1, 1, c.a))
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				continue
 			draw_circle(p, s[1], c)
 			for bl in s[3]:
 				draw_circle((p + bl[0]).round(), bl[1], c)

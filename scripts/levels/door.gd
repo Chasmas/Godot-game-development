@@ -366,6 +366,16 @@ func _draw() -> void:
 	var base := Color(0.62, 0.36, 0.18) if not metal else Color(0.45, 0.46, 0.52)
 	var dark := base.darkened(0.35)
 	var pts := PackedVector2Array([n * 1.8, end + n * 1.8, end - n * 1.8, -n * 1.8])
+	var ptex := ArtLib.sprite("door_steel" if metal else "door_wood")
+	if ptex:
+		# the painted door, laid along the leaf (hinge at 0, handle at the far end)
+		draw_set_transform(Vector2.ZERO, a, Vector2.ONE)
+		draw_texture_rect(ptex, Rect2(0, -2.4, length, 4.8), false)
+		draw_rect(Rect2(0, -2.4, length, 4.8), Color(0.05, 0.02, 0.04), false, 0.8)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		draw_circle(Vector2.ZERO, 2.0, Color(0.1, 0.08, 0.1))
+		draw_circle(Vector2.ZERO, 0.8, Color(0.55, 0.5, 0.45))
+		return
 	draw_colored_polygon(pts, base)
 	# grain / panel lines and a darker hinge-side edge give the leaf some depth
 	if not metal:

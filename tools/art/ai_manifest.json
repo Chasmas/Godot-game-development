@@ -921,6 +921,78 @@
      "prompt": "A worn metal folding chair with a cracked red vinyl seat and a backrest, seen from directly above, the backrest along the left edge.",
      "size": "1024x1024",
      "quality": "medium"
+    },
+    "door_wood": {
+     "prompt": "A single wooden motel room door lying flat, seen from directly above as a long thin plank: painted teal wood panel with a brass handle at one end, scuffed. Very long and narrow, horizontal.",
+     "size": "1536x1024"
+    },
+    "door_steel": {
+     "prompt": "A single grey steel security door lying flat, seen from directly above as a long thin slab: rivets, a push bar at one end, scratches. Very long and narrow, horizontal.",
+     "size": "1536x1024"
+    },
+    "window_glass": {
+     "prompt": "A long thin window pane in an aluminium frame seen from directly above: pale blue glass with a diagonal reflection streak, very long and narrow, horizontal.",
+     "size": "1536x1024"
+    },
+    "pickup_ammo": {
+     "prompt": "An olive green metal ammunition box with stencilled 9MM markings and brass cartridges spilling out, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "pickup_flare": {
+     "prompt": "A red road flare stick with a cap, lit end glowing, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "pickup_vest": {
+     "prompt": "A black kevlar bulletproof vest lying flat, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "pickup_cash": {
+     "prompt": "A fat bundle of dollar bills held by a rubber band, a few loose notes, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "pickup_cassette": {
+     "prompt": "A black VHS videocassette tape with a handwritten white label, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "decal_blood": {
+     "prompt": "A dark red splatter of blood on the floor with drips and spray, irregular, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "decal_scorch": {
+     "prompt": "A black soot and scorch burn mark on the floor, charred, irregular round shape, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_suitcase": {
+     "prompt": "A battered brown leather suitcase with straps, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_extinguisher": {
+     "prompt": "A red fire extinguisher lying on its side, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_calendar": {
+     "prompt": "A 1988 wall calendar hanging flat: at the top the classic motivational photo of a fluffy kitten hanging from a branch by its front paws with the words HANG IN THERE, below a month grid of dates with a few days circled in red pen, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_room_plate": {
+     "prompt": "A small brass motel room number plate reading 204, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_key_rack": {
+     "prompt": "A wooden motel key rack board with brass hooks and hanging keys on red fobs, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "prop_trash_bag": {
+     "prompt": "A tied black plastic garbage bag, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "security_camera": {
+     "prompt": "A 1980s white CCTV security camera on a wall bracket, lens pointing right, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "film_camera": {
+     "prompt": "A 1980s professional film camera with a big lens and film magazine on top, pointing right, seen from directly above.",
+     "size": "1024x1024"
     }
    }
   },
@@ -963,6 +1035,18 @@
     },
     "rug": {
      "prompt": "Ornate blood-red Persian rug pattern with gold and black motifs, worn."
+    },
+    "wall_motel": {
+     "prompt": "Seamless texture of the flat top of a painted stucco wall, seen from above: pale salmon-pink rough stucco, hairline cracks, water stains, a few chips. Even lighting, tileable."
+    },
+    "wall_salvage": {
+     "prompt": "Seamless texture of corrugated galvanised steel sheeting seen from above, rusty streaks, dents, bolts in rows. Even lighting, tileable."
+    },
+    "wall_studio": {
+     "prompt": "Seamless texture of the flat top of a painted concrete block wall seen from above: grey painted cinder blocks, scuffs, gaffer tape remnants. Even lighting, tileable."
+    },
+    "wall_villa": {
+     "prompt": "Seamless texture of cream marble with gold and grey veins, polished, seen from above. Even lighting, tileable."
     }
    }
   },
@@ -1287,6 +1371,15 @@
     },
     "dog_rottweiler_down": {
      "prompt": "A Rottweiler dog fast asleep, sprawled flat on its side with its legs stretched out, relaxed, seen straight from above, head to the RIGHT. Black coat with rust markings, spiked collar."
+    },
+    "dog_doberman": {
+     "prompt": "Satellite-style view straight down onto a lean Doberman dog standing still, black and tan coat, cropped ears, a studded collar; spine along the middle, snout to the RIGHT, tail to the left. Not a side view."
+    },
+    "dog_doberman_down": {
+     "prompt": "A Doberman dog fast asleep, sprawled flat on its side with legs stretched out, black and tan coat, seen straight from above, head to the RIGHT."
+    },
+    "fox": {
+     "prompt": "Satellite-style view straight down onto a desert kit fox standing still, sandy coat, big ears, bushy black-tipped tail; spine along the middle, snout to the RIGHT. Not a side view."
     }
    }
   },

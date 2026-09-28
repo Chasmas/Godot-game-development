@@ -64,6 +64,13 @@ func _draw() -> void:
 		return
 	# a camcorder on a little bracket, lens toward the room
 	draw_set_transform(Vector2.ZERO, facing.angle(), Vector2.ONE)
+	var ftex := ArtLib.sprite("film_camera")
+	if ftex:
+		draw_texture_rect(ftex, Rect2(-6, -6, 12, 12), false)
+		var rec2 := fmod(_t, 1.0) < 0.55
+		draw_circle(Vector2(-2.5, -1.2), 0.9, Color(1, 0.1, 0.15) if rec2 else Color(0.3, 0.05, 0.05))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		return
 	draw_rect(Rect2(-4, -2.5, 7, 5), ink)
 	draw_rect(Rect2(-3.5, -2, 6, 4), Color(0.22, 0.22, 0.26))
 	draw_rect(Rect2(3, -1.5, 2, 3), ink)
