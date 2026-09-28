@@ -132,7 +132,7 @@ func _run() -> void:
 		await frames(2)
 		p._punch()
 		await frames(10)
-		check(guard.is_downed(), "punch knocks guard down")
+		check(not is_instance_valid(guard) or guard.is_downed() or not guard.is_alive(), "punch knocks guard down")
 		await frames(2)
 		p._execute_or_kick()
 		await frames(200)

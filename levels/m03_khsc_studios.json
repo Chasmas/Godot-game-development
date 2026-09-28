@@ -689,6 +689,80 @@
     44
    ],
    "size": 0.9
+  },
+  {
+   "type": "pickup",
+   "pos": [
+    46,
+    22
+   ],
+   "rot": -8
+  },
+  {
+   "type": "pickup",
+   "pos": [
+    21,
+    54
+   ],
+   "rot": 172
+  },
+  {
+   "type": "trash",
+   "pos": [
+    36,
+    29
+   ],
+   "radius": 44,
+   "count": 30
+  },
+  {
+   "type": "trash",
+   "pos": [
+    25,
+    13
+   ],
+   "radius": 36
+  },
+  {
+   "type": "trash",
+   "pos": [
+    44,
+    22
+   ],
+   "radius": 30,
+   "count": 16
+  },
+  {
+   "type": "trash",
+   "pos": [
+    12,
+    52
+   ],
+   "radius": 46
+  },
+  {
+   "type": "trash",
+   "pos": [
+    30,
+    49
+   ],
+   "radius": 40
+  },
+  {
+   "type": "trash",
+   "pos": [
+    62,
+    45
+   ],
+   "radius": 36
+  },
+  {
+   "type": "trash",
+   "pos": [
+    47,
+    55
+   ],
+   "radius": 34
   }
  ],
  "cameras": [

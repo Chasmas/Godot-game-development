@@ -74,6 +74,7 @@ var _drops: Array = []      # [pos(view 0..1), speed, length]
 var _flakes: Array = []     # [pos(view 0..1), speed, size, phase]
 var _splashes: Array = []   # [world pos, t]
 var _debris: Array = []     # {p, v, rot, spin, kind, t, life, s, flip}
+var _bits: Array = []       # pieces of debris that broke on a wall
 var _t := 0.0
 var _debris_acc := 0.0
 var bolt: DirectionalLight2D
@@ -304,7 +305,54 @@ func _update_debris(rd: float) -> void:
 		d.rot += d.spin * rd * (0.4 + wind)
 		if d.t > d.life or not r.grow(80.0).has_point(d.p):
 			_debris.remove_at(j)
+		elif d.t > 0.2 and r.has_point(d.p) and not is_outdoor_at(d.p):
+			# it hit a wall / roofline: it breaks up instead of vanishing
+			_shatter(d)
+			_debris.remove_at(j)
 		j -= 1
+	# the pieces: flung out off the wall, tumbling, settling and fading
+	var i := _bits.size() - 1
+	while i >= 0:
+		var b: Dictionary = _bits[i]
+		b.t += rd
+		b.v = (b.v as Vector2) * (1.0 - rd * 3.0) + wind_dir * wind * 40.0 * rd
+		b.p += b.v * rd
+		b.h = maxf(0.0, b.h + b.vh * rd)
+		b.vh -= 60.0 * rd
+		b.rot += b.spin * rd
+		if b.t > b.life:
+			_bits.remove_at(i)
+		i -= 1
+
+## Debris meeting a wall: a leaf tears into flecks, paper into scraps, a
+## frond or a tumbleweed snaps into twigs, an ember bursts into sparks.
+func _shatter(d: Dictionary) -> void:
+	var col := Color(0.35, 0.55, 0.2)
+	var n := 6
+	match str(d.kind):
+		"paper":
+			col = Color(0.86, 0.84, 0.76)
+			n = 7
+		"frond":
+			col = Color(0.55, 0.42, 0.22)
+			n = 8
+		"tumble":
+			col = Color(0.55, 0.42, 0.25)
+			n = 12
+		"ember":
+			col = Color(1.0, 0.6, 0.2)
+			n = 5
+		"ash":
+			col = Color(0.75, 0.72, 0.7)
+			n = 3
+	var back := -(d.v as Vector2).normalized()
+	for k in n:
+		if _bits.size() >= 160:
+			return
+		var dir := back.rotated(randf_range(-1.3, 1.3))
+		_bits.append({"p": d.p + dir * 2.0, "v": dir * randf_range(30.0, 90.0), "h": randf_range(2.0, 6.0), "vh": randf_range(10.0, 40.0),
+			"rot": randf() * TAU, "spin": randf_range(-12.0, 12.0), "t": 0.0, "life": randf_range(0.5, 1.1) * (0.5 if d.kind == "ember" else 1.0),
+			"c": col.lerp(col.darkened(0.3), randf()), "s": randf_range(0.8, 1.6) * float(d.s), "kind": str(d.kind)})
 
 func _strike() -> void:
 	_flash_t = 0.0
@@ -456,6 +504,17 @@ func _draw() -> void:
 					elif d.kind == "frond":
 						col = Color(0.55, 0.42, 0.22, 0.9)
 					draw_line(lp - dir * 2.5 * s, lp + dir * 2.5 * s, col, 2.0 * sq)
+	for b in _bits:
+		var k2: float = 1.0 - b.t / b.life
+		var bp: Vector2 = b.p - Vector2(0, b.h)
+		if b.kind == "ember":
+			draw_rect(Rect2(bp, Vector2(1.5, 1.5)), Color(b.c, k2))
+			continue
+		var dir2 := Vector2.from_angle(b.rot)
+		if b.kind == "frond" or b.kind == "tumble":
+			draw_line(bp - dir2 * 1.8 * b.s, bp + dir2 * 1.8 * b.s, Color(b.c, k2), 0.8)
+		else:
+			draw_colored_polygon(PackedVector2Array([bp + dir2 * 1.4 * b.s, bp + dir2.orthogonal() * 0.9 * b.s, bp - dir2 * 1.1 * b.s]), Color(b.c, k2))
 	# fog: big soft banks drifting with the wind
 	if fog > 0.02:
 		draw_rect(r, Color(0.6, 0.62, 0.72, 0.1 * fog))

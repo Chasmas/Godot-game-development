@@ -89,15 +89,29 @@ func _call_dogs() -> void:
 
 func _draw() -> void:
 	var k := clampf(left / EAT_TIME, 0.0, 1.0)   # meat gets eaten away
-	draw_set_transform(Vector2.ZERO, _rot, Vector2.ONE)
-	draw_line(Vector2(-5, 0), Vector2(5, 0), Color(0.93, 0.89, 0.8), 2.2)
-	for e in [-5.5, 5.5]:
-		draw_circle(Vector2(e, -1.1), 1.4, Color(0.95, 0.92, 0.84))
-		draw_circle(Vector2(e, 1.1), 1.4, Color(0.95, 0.92, 0.84))
-	if k > 0.05:
-		draw_circle(Vector2(0, 0), 3.2 * k + 0.6, Color(0.55, 0.1, 0.1))
-		draw_circle(Vector2(-0.8, -0.8), 2.0 * k, Color(0.78, 0.25, 0.22))
-	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	draw_bone(self, _rot, k)
+
+
+## The painted sprites (tools/gen_meat_bone.py): the full bone, and the one
+## picked clean that shows through as the dogs eat. Cached: a texture held
+## only by a local in _draw gets freed.
+static var _tex_full: Texture2D
+static var _tex_eaten: Texture2D
+const SPRITE_SCALE := 0.3
+
+static func draw_bone(ci: CanvasItem, rot: float, meat: float) -> void:
+	if _tex_full == null:
+		_tex_full = load("res://assets/art/props/meat_bone.png")
+		_tex_eaten = load("res://assets/art/props/meat_bone_eaten.png")
+	ci.draw_set_transform(Vector2(1, 2), rot, Vector2(1, 0.6))
+	ci.draw_circle(Vector2.ZERO, 7.0, Color(0, 0, 0, 0.3))
+	ci.draw_set_transform(Vector2.ZERO, rot, Vector2(SPRITE_SCALE, SPRITE_SCALE))
+	var off := -_tex_full.get_size() * 0.5
+	if meat < 1.0:
+		ci.draw_texture(_tex_eaten, off)
+	if meat > 0.02:
+		ci.draw_texture(_tex_full, off, Color(1, 1, 1, clampf(meat * 1.3, 0.0, 1.0)))
+	ci.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
 ## On the floor, waiting to be picked up.
@@ -116,10 +130,5 @@ class Pickup extends Node2D:
 			Events.tutorial.emit("bone")
 			queue_free()
 	func _draw() -> void:
-		draw_circle(Vector2.ZERO, 7.0 + sin(_t * 3.0), Color(1, 0.5, 0.4, 0.1))
-		draw_line(Vector2(-5, 0), Vector2(5, 0), Color(0.93, 0.89, 0.8), 2.2)
-		for e in [-5.5, 5.5]:
-			draw_circle(Vector2(e, -1.1), 1.4, Color(0.95, 0.92, 0.84))
-			draw_circle(Vector2(e, 1.1), 1.4, Color(0.95, 0.92, 0.84))
-		draw_circle(Vector2.ZERO, 3.8, Color(0.55, 0.1, 0.1))
-		draw_circle(Vector2(-0.8, -0.8), 2.4, Color(0.78, 0.25, 0.22))
+		draw_circle(Vector2.ZERO, 9.0 + sin(_t * 3.0), Color(1, 0.55, 0.35, 0.1))
+		MeatBone.draw_bone(self, 0.35 + sin(_t * 1.5) * 0.05, 1.0)

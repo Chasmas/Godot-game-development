@@ -84,15 +84,17 @@ func _ready() -> void:
 	root.add_child(weapon_icon)
 	UIStyle.place(weapon_icon, Control.PRESET_TOP_RIGHT, Vector2(-156, 10), Vector2(140, 70))
 	weapon_icon.pivot_offset = Vector2(70, 35)
-	weapon_label = _lbl(Vector2(0, 14), 20, UIStyle.PAPER, UIStyle.font_bold())
-	weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 14), Vector2(400, 24))
-	ammo_label = _lbl(Vector2(-566, 38), 28, UIStyle.PINK, UIStyle.font_display())
+	# the weapon's name sits under its picture, the ammo count beside it
+	weapon_label = _lbl(Vector2(0, 14), 18, UIStyle.PAPER, UIStyle.font_bold())
+	weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-172, 80), Vector2(172, 24))
+	weapon_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	ammo_label = _lbl(Vector2(-566, 28), 28, UIStyle.PINK, UIStyle.font_display())
 	ammo_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(ammo_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 38), Vector2(400, 36))
-	holster_label = _lbl(Vector2(-420, 82), 13, UIStyle.DIM, UIStyle.font_mono())
+	UIStyle.place(ammo_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 28), Vector2(400, 36))
+	holster_label = _lbl(Vector2(-420, 106), 13, UIStyle.DIM, UIStyle.font_mono())
 	holster_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	UIStyle.place(holster_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 82), Vector2(400, 18))
+	UIStyle.place(holster_label, Control.PRESET_TOP_RIGHT, Vector2(-420, 106), Vector2(400, 18))
 	# --- ability (bottom left)
 	# the meter draws itself; the old label/bar stay (hidden) for anything
 	# that still reads them

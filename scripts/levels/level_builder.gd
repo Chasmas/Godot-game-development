@@ -445,7 +445,38 @@ func _build_furniture(x: int, y: int, c: String, visited: Dictionary) -> void:
 			if ch(q.x, q.y) == c and not visited.has(key(q.x, q.y)):
 				visited[key(q.x, q.y)] = true
 				stack.append(q)
-	var rect := Rect2(minp.x * T, minp.y * T, (maxp.x - minp.x + 1) * T, (maxp.y - minp.y + 1) * T)
+	# an L or T of counter is several pieces, not its bounding box (which
+	# would cover the floor inside the L - and whoever stands there)
+	var cells := {}
+	for yy in range(minp.y, maxp.y + 1):
+		for xx in range(minp.x, maxp.x + 1):
+			if ch(xx, yy) == c and visited.has(key(xx, yy)):
+				cells[Vector2i(xx, yy)] = true
+	if cells.size() < (maxp.x - minp.x + 1) * (maxp.y - minp.y + 1):
+		for yy in range(minp.y, maxp.y + 1):
+			for xx in range(minp.x, maxp.x + 1):
+				if not cells.has(Vector2i(xx, yy)):
+					continue
+				var x1 := xx
+				while cells.has(Vector2i(x1 + 1, yy)):
+					x1 += 1
+				var y1 := yy
+				var full := true
+				while full:
+					for xq in range(xx, x1 + 1):
+						if not cells.has(Vector2i(xq, y1 + 1)):
+							full = false
+							break
+					if full:
+						y1 += 1
+				for yq in range(yy, y1 + 1):
+					for xq in range(xx, x1 + 1):
+						cells.erase(Vector2i(xq, yq))
+				_add_furniture_piece(c, Rect2(xx * T, yy * T, (x1 - xx + 1) * T, (y1 - yy + 1) * T), xx, yy, Vector2i(xx, yy), Vector2i(x1, y1))
+		return
+	_add_furniture_piece(c, Rect2(minp.x * T, minp.y * T, (maxp.x - minp.x + 1) * T, (maxp.y - minp.y + 1) * T), x, y, minp, maxp)
+
+func _add_furniture_piece(c: String, rect: Rect2, x: int, y: int, minp: Vector2i, maxp: Vector2i) -> void:
 	var f := Furniture.new()
 	var kind: String = FURN[c]
 	var variant := (x * 7 + y * 3) % 5 if kind != "dumpster" else 4
@@ -620,12 +651,6 @@ class FloorChunk extends Node2D:
 			".":
 				if h % 17 == 0:
 					draw_circle(p + Vector2(4 + h % 8, 5 + (h >> 4) % 7), 3.0 + (h % 3), Color(0.25, 0.05, 0.12, 0.4))
-			"-":
-				if h % 37 == 4:
-					var tc: Color = [Color(1.0, 0.3, 0.45), Color(0.3, 0.9, 1.0), Color(1.0, 0.85, 0.3)][h % 3]
-					var cc := p + Vector2(8, 8)
-					draw_line(cc - Vector2(4, 0), cc + Vector2(4, 0), tc, 2.0)
-					draw_line(cc - Vector2(0, 4), cc + Vector2(0, 4), tc, 2.0)
 
 	func _tile(f: String, p: Vector2, x: int, y: int) -> void:
 		var T2 := float(LevelBuilder.T)
@@ -758,20 +783,6 @@ class FloorChunk extends Node2D:
 					draw_rect(Rect2(p + Vector2(float((h >> (i * 3)) % 15), float((h >> (i * 3 + 6)) % 15)), Vector2(1, 1)), Color(0.2, 0.19, 0.24))
 				if h % 9 == 0:
 					draw_line(p + Vector2(2 + h % 6, 3 + (h >> 4) % 9), p + Vector2(9 + h % 6, 4 + (h >> 4) % 9), Color(0.16, 0.15, 0.2), 1.0)
-				if h % 37 == 4:
-					# a spike mark: where an actor stands - a scuffed T or corner of
-					# faded gaffer tape, never a clean cross (that read as a pickup)
-					var tc: Color = [Color(0.62, 0.3, 0.36), Color(0.36, 0.5, 0.55), Color(0.62, 0.55, 0.3)][h % 3]
-					tc.a = 0.6
-					var cc := p + Vector2(8, 8)
-					if (h >> 2) % 2 == 0:
-						draw_line(cc + Vector2(-4, -2), cc + Vector2(3, -2), tc, 1.5)       # T: the bar...
-						draw_line(cc + Vector2(-0.5, -2), cc + Vector2(-0.5, 3), tc, 1.5)   # ...and the stem
-					else:
-						draw_line(cc + Vector2(-3, -3), cc + Vector2(3, -3), tc, 1.5)       # L: a corner
-						draw_line(cc + Vector2(-3, -3), cc + Vector2(-3, 2), tc, 1.5)
-					# torn tape ends
-					draw_rect(Rect2(cc + Vector2(2.5, -2.8), Vector2(1, 1)), Color(tc, 0.35))
 				if y % 8 == 0 and h % 3 == 0:
 					draw_rect(Rect2(p + Vector2(0, 7), Vector2(T2, 1)), Color(1, 1, 1, 0.04))
 			_:

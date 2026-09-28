@@ -8,8 +8,11 @@ extends Node
 ##              "plant": [x, y],          where to set them (by the doors)
 ##              "fuse": 4.0}
 ## Objectives come from "objectives": find_charge / plant / clear_out.
-## Find the charges, plant them, get clear: the doors go up in a storm of
-## splinters, glass and fire, and the boss scene starts straight away.
+## Walk up to the doors: LOCKED pops up over them and Cass thinks out loud
+## - these aren't opening for a shoulder, something that goes boom might.
+## Then the objective: find the charges, plant them (Cass kneels and tapes
+## the satchel to the doors), and a 3-2-1 over the charge. The doors go up
+## in a storm of splinters, glass and fire, and the boss scene starts.
 
 signal breached
 
@@ -17,6 +20,8 @@ var level: Level
 var cfg: Dictionary
 var doors: Array = []
 var has_charge := false
+var discovered := false        ## Cass has tried the doors (or found the charges)
+var planting := false          ## the kneel-and-tape moment
 var planted := false
 var done := false
 var _sign: Node2D
@@ -31,6 +36,7 @@ func setup(p_level: Level, p_cfg: Dictionary, state: Dictionary) -> void:
 	cfg = p_cfg
 	has_charge = bool(state.get("has_charge", false))
 	done = bool(state.get("done", false))
+	discovered = bool(state.get("discovered", false)) or has_charge
 	for c in cfg.get("doors", []):
 		var at := _cell(c)
 		for d in get_tree().get_nodes_in_group("door"):
@@ -43,13 +49,6 @@ func setup(p_level: Level, p_cfg: Dictionary, state: Dictionary) -> void:
 		for d in doors:
 			d._break(Vector2.UP)
 		return
-	_sign = Decor.NeonSign.new()
-	_sign.position = _cell(cfg.get("sign", cfg.doors[0]))
-	_sign.text = "LOCKED"
-	_sign.color = Color("ff2a4f")
-	_sign.font_size = 9
-	_sign.zone = "exterior"
-	level.props_root.add_child(_sign)
 	_plant_it = Interactable.new()
 	_plant_it.setup("plant", "PLANT THE CHARGE", "breach_plant")
 	_plant_it.position = _cell(cfg.plant)
@@ -67,20 +66,44 @@ func _cell(c: Array) -> Vector2:
 	return Vector2(float(c[0]), float(c[1])) * 16.0 + Vector2(8, 8)
 
 func state() -> Dictionary:
-	return {"has_charge": has_charge and not done, "done": done}
+	return {"has_charge": has_charge and not done, "done": done, "discovered": discovered}
 
 ## The objective line while the room is still sealed ("" once it's open).
 func objective() -> String:
 	if done:
 		return ""
-	if planted:
+	if not discovered:
+		return level._obj("find_boss", "FIND THE NIGHT MANAGER")
+	if planted or planting:
 		return tr("GET CLEAR!")
 	if has_charge:
 		return level._obj("plant", "PLANT THE CHARGE ON THE DOORS")
 	return level._obj("find_charge", "FIND SOMETHING TO BLOW THE DOORS")
 
+## The first time Cass comes up to the doors.
+func _discover() -> void:
+	if discovered or done:
+		return
+	discovered = true
+	var mid := Vector2.ZERO
+	for d in doors:
+		mid += (d as Node2D).global_position
+	mid /= maxf(1.0, doors.size())
+	var pop := LockedPopup.new()
+	pop.position = mid + Vector2(0, -22)
+	level.props_root.add_child(pop)
+	Audio.play_at("metal_clang", mid, -4.0)
+	var bl := BarkLayer.find(get_tree())
+	if bl and level.player:
+		bl.say(level.player, tr("Steel, bolted from the inside. Not with my shoulder... something that goes boom, maybe."), 4.0, UIStyle.PINK)
+	get_tree().create_timer(2.2, false).timeout.connect(func():
+		if not has_charge:
+			level.hud.show_banner(tr("NEW OBJECTIVE: FIND EXPLOSIVES"), 2.2, UIStyle.GOLD)
+		level._update_objective())
+
 func _on_take(_it: Interactable, by: Node) -> void:
 	has_charge = true
+	discovered = true
 	_plant_it.enabled = true
 	Audio.play("pickup")
 	Audio.play("upgrade", -6.0)
@@ -90,24 +113,61 @@ func _on_take(_it: Interactable, by: Node) -> void:
 		bl.say(by, tr("HOTSHOT pyro. Harcourt kept the leftovers."), 3.0, UIStyle.PINK)
 	level._update_objective()
 
-func _on_plant(_it: Interactable, _by: Node) -> void:
-	planted = true
-	_fuse_t = float(cfg.get("fuse", 4.0))
-	_blink = ChargeLight.new()
-	_blink.position = _plant_it.position + Vector2(0, -6)
-	level.props_root.add_child(_blink)
-	Audio.play("slide_rack", -2.0, 0.8)
-	level.hud.show_hint(tr("CHARGE SET. GET CLEAR!"), 2.5)
+func _on_plant(_it: Interactable, by: Node) -> void:
+	if planting or planted:
+		return
+	planting = true
+	_plant_it.enabled = false
 	level._update_objective()
+	# Cass kneels and tapes the satchel to the doors: the charge flies from
+	# her hands to the seam, strips of tape go on, the wire, the LED
+	var p := by as Player
+	if p:
+		p.input_enabled = false
+		p.velocity = Vector2.ZERO
+		p.aim_dir = (_plant_it.global_position - p.global_position).normalized()
+	_blink = ChargeLight.new()
+	_blink.global_position = p.global_position if p else _plant_it.global_position
+	level.props_root.add_child(_blink)
+	# on the seam between the doors
+	var to := _plant_it.position + Vector2(0, -6)
+	if not doors.is_empty():
+		var mid := Vector2.ZERO
+		for d in doors:
+			mid += (d as Node2D).global_position
+		to = level.props_root.to_local(mid / doors.size()) + Vector2(0, 5)
+	var tw := _blink.create_tween()
+	tw.tween_property(_blink, "position", to, 0.35).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_callback(func(): Audio.play("slide_rack", -2.0, 0.8))
+	tw.tween_property(_blink, "tape", 1.0, 0.6)
+	tw.parallel().tween_callback(func(): Audio.play_at("tape_slide", _blink.global_position, -6.0, 0.3)).set_delay(0.1)
+	tw.tween_property(_blink, "armed", 1.0, 0.2)
+	tw.tween_callback(func():
+		if p and is_instance_valid(p):
+			p.input_enabled = true
+		planting = false
+		planted = true
+		_fuse_t = float(cfg.get("fuse", 3.0))
+		_blink.fuse_total = _fuse_t
+		Audio.play_at("rec_beep", _blink.global_position, 4.0)
+		level.hud.show_hint(tr("CHARGE SET. GET CLEAR!"), 2.5)
+		level._update_objective())
 
 func _process(delta: float) -> void:
+	if not discovered and not done and level and level.player and is_instance_valid(level.player):
+		for d in doors:
+			if (d as Node2D).global_position.distance_to(level.player.global_position) < 30.0:
+				_discover()
+				break
 	if _fuse_t < 0.0:
 		return
+	if _blink:
+		_blink.fuse_left = _fuse_t
 	_fuse_t -= delta
 	_beep_t -= delta
 	# the beeps speed up as the fuse runs down
 	if _beep_t <= 0.0:
-		_beep_t = clampf(_fuse_t / 5.0, 0.12, 0.7)
+		_beep_t = clampf(_fuse_t / 4.0, 0.1, 0.5)
 		Audio.play_at("rec_beep", _plant_it.global_position, 2.0)
 		if _blink:
 			_blink.pulse()
@@ -191,23 +251,91 @@ func detonate() -> void:
 	breached.emit()
 
 
-## The planted charge: a satchel with a red LED that flashes with each beep.
+## The planted charge: a satchel of pyro sticks taped to the doors, a wire
+## to a little timer with a red LED that flashes with each beep - and a big
+## 3, 2, 1 over it once it's armed.
 class ChargeLight extends Node2D:
 	var _k := 0.0
+	var tape := 0.0          ## 0..1: the strips of tape going on
+	var armed := 0.0         ## 0..1: the timer switched on
+	var fuse_total := 0.0
+	var fuse_left := -1.0
+	var _last_n := 0
+	var _pop := 0.0
 	func _ready() -> void:
-		z_index = 3
+		z_index = 30
 	func pulse() -> void:
 		_k = 1.0
 	func _process(delta: float) -> void:
 		_k = maxf(0.0, _k - delta * 5.0)
+		_pop = maxf(0.0, _pop - delta * 3.0)
+		if fuse_left >= 0.0:
+			var n := int(ceil(fuse_left))
+			if n != _last_n and n > 0:
+				_last_n = n
+				_pop = 1.0
 		queue_redraw()
 	func _draw() -> void:
-		draw_rect(Rect2(-6, -4, 12, 8), Color(0.08, 0.05, 0.05))
-		draw_rect(Rect2(-5, -3, 10, 6), Color(0.55, 0.12, 0.1))
-		draw_line(Vector2(-5, 0), Vector2(5, 0), Color(0.9, 0.8, 0.3), 1.0)
-		draw_circle(Vector2(3, -2), 1.5, Color(1, 0.15, 0.1, 0.4 + 0.6 * _k))
-		if _k > 0.0:
-			draw_circle(Vector2(3, -2), 6.0 * _k, Color(1, 0.1, 0.05, 0.3 * _k))
+		var ink := Color(0.06, 0.04, 0.05)
+		# the sticks, bundled
+		draw_rect(Rect2(-7, -5, 14, 10), ink)
+		for i in 4:
+			draw_rect(Rect2(-6 + i * 3.2, -4, 2.8, 8), Color(0.72, 0.14, 0.12))
+			draw_rect(Rect2(-6 + i * 3.2, -4, 2.8, 1.5), Color(0.86, 0.3, 0.25))
+		# tape strips across them
+		for i in 2:
+			var w := 14.0 * clampf(tape * 2.0 - i, 0.0, 1.0)
+			if w > 0.0:
+				draw_rect(Rect2(-7, -2.5 + i * 4.0, w, 1.6), Color(0.72, 0.72, 0.7))
+		# the timer box and the wire looping to it
+		if armed > 0.0:
+			draw_polyline(PackedVector2Array([Vector2(6, 0), Vector2(9, 3), Vector2(10, 7)]), Color(0.9, 0.8, 0.2), 0.8)
+			draw_rect(Rect2(7, 6, 7, 5), ink)
+			draw_rect(Rect2(8, 7, 5, 3), Color(0.15, 0.3, 0.15))
+			draw_circle(Vector2(12, 8.5), 1.2, Color(1, 0.15, 0.1, 0.4 + 0.6 * _k))
+			if _k > 0.0:
+				draw_circle(Vector2(12, 8.5), 7.0 * _k, Color(1, 0.1, 0.05, 0.3 * _k))
+		# the countdown, big, over the charge
+		if fuse_left > 0.0:
+			var n := int(ceil(fuse_left))
+			var f := UIStyle.font_display()
+			var sz := int(22 + 10 * _pop)
+			var txt := str(n)
+			var w2 := f.get_string_size(txt, HORIZONTAL_ALIGNMENT_LEFT, -1, sz).x
+			var o := Vector2(-w2 * 0.5, -16)
+			draw_string_outline(f, o, txt, HORIZONTAL_ALIGNMENT_LEFT, -1, sz, 6, Color(0.05, 0.0, 0.02, 0.9))
+			draw_string(f, o, txt, HORIZONTAL_ALIGNMENT_LEFT, -1, sz, Color(1.0, 0.25 + 0.5 * (1.0 - _pop), 0.2))
+
+
+## "LOCKED", stamped over the doors the first time Cass tries them: a red
+## plate with a padlock that punches in, holds, and fades.
+class LockedPopup extends Node2D:
+	var _t := 0.0
+	func _ready() -> void:
+		z_index = 60
+	func _process(delta: float) -> void:
+		_t += delta
+		if _t > 3.0:
+			queue_free()
+		queue_redraw()
+	func _draw() -> void:
+		var inn := clampf(_t / 0.18, 0.0, 1.0)
+		var s := 1.6 - 0.6 * (1.0 - pow(1.0 - inn, 3.0))
+		var a := clampf((3.0 - _t) / 0.5, 0.0, 1.0) * inn
+		var f := UIStyle.font_display()
+		var txt := tr("LOCKED")
+		var w := f.get_string_size(txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 12).x
+		draw_set_transform(Vector2(0, -_t * 3.0), -0.06, Vector2(s, s))
+		var r := Rect2(-w * 0.5 - 16, -11, w + 24, 18)
+		draw_rect(r.grow(2), Color(0.05, 0.0, 0.02, 0.85 * a))
+		draw_rect(r, Color(0.78, 0.08, 0.14, a))
+		draw_rect(r.grow(-1.5), Color(1, 0.8, 0.8, 0.6 * a), false, 1.0)
+		# the padlock
+		draw_arc(Vector2(r.position.x + 8, -4), 2.6, PI, TAU, 8, Color(1, 0.95, 0.9, a), 1.3)
+		draw_rect(Rect2(r.position.x + 4.5, -3.5, 7, 6), Color(1, 0.95, 0.9, a))
+		draw_rect(Rect2(r.position.x + 7.5, -1.5, 1, 2), Color(0.78, 0.08, 0.14, a))
+		draw_string(f, Vector2(r.position.x + 14, 3), txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(1, 0.95, 0.9, a))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
 

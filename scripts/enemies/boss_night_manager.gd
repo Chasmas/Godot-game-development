@@ -24,6 +24,24 @@ var _rage_pulse_t := 0.0
 var p2_hits := 2               ## clean hits it takes to drop him in the dark
 var _blind_t := 0.0            ## dazzled by the lights coming back (or doused, or foamed)
 
+## Before the fight he's sitting in his office chair behind the desk,
+## smoking, talking to nobody - or to whoever's on hold. You only hear it
+## if you're close (the bubble is overheard chatter, like the guards').
+const MONOLOGUE := [
+	"Nineteen years behind this desk. Before that I was crew, you know. Continuity. I had an eye for continuity.",
+	"Room 204 again. Nobody checks out of 204. They just... stop paying.",
+	"Every tape that comes through here, I keep a copy. Insurance. Only religion this town ever had.",
+	"The ice machine's been broken since '85. I like it broken. Keeps the guests out of the hallways.",
+	"They want the cameras rolling, the cameras roll. Residuals keep the neon on, sweetheart.",
+	"That stunt girl... if she ever walks in here, I'm on the first bus out of the county.",
+	"You hear that? ...Nah. Just the rain. Always the rain.",
+]
+const HEAR_RADIUS := 190.0
+var _mono_i := 0
+var _mono_t := 1.5
+var _chair: OfficeChair
+var _smoke: IdleActivity
+
 const BARKS_HIT := ["You're bleeding on my carpet!", "SECURITY! Front desk!", "Do you know who OWNS this place?"]
 const BARKS_P2 := ["Let's see how you do in the dark, hotshot."]
 
@@ -39,8 +57,19 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	flashlight.shadow_enabled = true
 	flashlight.visible = false
 	visual.rig.add_child(flashlight)
+	# sat back in his office chair, a cigarette going, gun on the desk
+	_chair = OfficeChair.new()
+	_chair.z_index = -1
+	_chair.rotation = p_facing.angle()
+	add_child(_chair)
+	_smoke = IdleActivity.new()
+	visual.rig.add_child(_smoke)
+	_smoke.setup(visual, IdleActivity.Kind.SMOKE, "harcourt")
+	visual.legs.visible = false
+	visual.weapon_sprite.visible = false
 
 func activate() -> void:
+	_stand_up()
 	active = true
 	_enter_combat()
 	Events.boss_hp.emit(self, hp, max_hp)
@@ -55,6 +84,7 @@ func _physics_process(delta: float) -> void:
 		ft.tween_property(flashlight, "energy", 1.6, 0.22)
 	if not active:
 		visual.set_aim(facing.angle())
+		_monologue(delta)
 		return
 	if _blind_t > 0.0 and not _defeated:
 		# staggering, arm over the eyes: the opening
@@ -237,6 +267,44 @@ func resolve(executed: bool, by: Node) -> void:
 func is_downed() -> bool:
 	return false   # can't be executed with the normal prompt - the finale handles it
 
+## Talking to himself in the chair. Only when Cass is near enough to
+## overhear - nobody reads a bubble from across the motel.
+func _monologue(delta: float) -> void:
+	if _defeated or Dialogue.active:
+		return
+	var p := _player()
+	if p == null or not p.alive or p.global_position.distance_to(global_position) > HEAR_RADIUS:
+		_mono_t = minf(_mono_t, 1.2)
+		return
+	_mono_t -= delta
+	if _mono_t <= 0.0:
+		var line: String = MONOLOGUE[_mono_i % MONOLOGUE.size()]
+		_mono_i += 1
+		_say(line)
+		_bark_t = 5.5
+		var bl := BarkLayer.find(get_tree())
+		if bl:
+			bl.say(self, line, 5.5, Color(1.0, 0.85, 0.7))
+		_mono_t = 7.0
+
+## The fight starts: he kicks the chair back, stubs the cigarette out and
+## picks the revolver up off the desk.
+func _stand_up() -> void:
+	if _smoke and is_instance_valid(_smoke):
+		_smoke.drop()
+		_smoke = null
+	visual.legs.visible = true
+	visual.weapon_sprite.visible = true
+	if _chair and is_instance_valid(_chair):
+		var back := Vector2.from_angle(_chair.rotation) * -12.0
+		var ch := _chair
+		ch.reparent(get_parent())
+		var tw := ch.create_tween().set_parallel(true)
+		tw.tween_property(ch, "position", ch.position + back, 0.35).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		tw.tween_property(ch, "rotation", ch.rotation + 0.9, 0.35)
+		Audio.play_at("door_kick", global_position, -12.0, 0.1)
+		_chair = null
+
 func _say(t: String) -> void:
 	_bark = t
 	_bark_t = 3.0
@@ -247,3 +315,42 @@ func _say(t: String) -> void:
 
 func _draw() -> void:
 	super._draw()
+
+
+## A manager's swivel chair: five-star base, oxblood leather seat with
+## buttoned tufts, a tall back. He sits back in it, ankles crossed on the
+## floor in front.
+class OfficeChair extends Node2D:
+	func _draw() -> void:
+		var ink := Color("0b0710")
+		var chrome := Color(0.55, 0.56, 0.62)
+		var leather := Color(0.42, 0.1, 0.12)
+		draw_set_transform(Vector2(1, 2), 0.0, Vector2(1.0, 0.75))
+		draw_circle(Vector2.ZERO, 10.0, Color(0, 0, 0, 0.32))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		# the five-star base with casters
+		for k in 5:
+			var d := Vector2.from_angle(k * TAU / 5.0 + 0.3)
+			draw_line(Vector2.ZERO, d * 9.0, ink, 2.6)
+			draw_line(Vector2.ZERO, d * 8.5, chrome, 1.2)
+			draw_circle(d * 9.0, 1.4, ink)
+		# the seat and its tufts
+		draw_rect(Rect2(-7, -6.5, 13, 13), ink)
+		draw_rect(Rect2(-6, -5.5, 11, 11), leather)
+		draw_rect(Rect2(-6, -5.5, 11, 2), leather.lightened(0.25))
+		for b in [Vector2(-3, -2), Vector2(1, -2), Vector2(-3, 2), Vector2(1, 2)]:
+			draw_circle(b, 0.6, leather.darkened(0.45))
+		# the tall back behind him, armrests either side
+		draw_rect(Rect2(-11.5, -7.5, 5, 15), ink)
+		draw_rect(Rect2(-10.8, -6.8, 3.6, 13.6), leather.darkened(0.1))
+		draw_rect(Rect2(-10.8, -6.8, 1.2, 13.6), leather.lightened(0.3))
+		for sy in [-8.0, 6.5]:
+			draw_rect(Rect2(-6, sy, 9, 2), ink)
+			draw_rect(Rect2(-5.5, sy + 0.4, 8, 1.2), Color(0.18, 0.12, 0.1))
+		# his shoes out in front, ankles crossed
+		draw_rect(Rect2(6, -3.5, 8, 3), ink)
+		draw_rect(Rect2(6, 0.5, 8, 3), ink)
+		draw_rect(Rect2(6.5, -3, 7, 2), Color(0.16, 0.14, 0.2))
+		draw_rect(Rect2(6.5, 1, 7, 2), Color(0.16, 0.14, 0.2))
+		draw_rect(Rect2(13, -3.8, 2.5, 3.4), Color(0.08, 0.05, 0.04))
+		draw_rect(Rect2(13, 0.4, 2.5, 3.4), Color(0.08, 0.05, 0.04))

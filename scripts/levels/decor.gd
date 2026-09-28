@@ -23,6 +23,28 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
 					sp.z_index = -1
 					root.add_child(sp)
+			"pickup":
+				# an old pickup truck, parked for good: solid, blocks shots
+				var pk := OldPickup.new()
+				pk.position = p
+				pk.rotation = deg_to_rad(float(it.get("rot", 0.0)))
+				root.add_child(pk)
+				var nav: AStarGrid2D = level.get("nav")
+				if nav:
+					var hs := Vector2(26, 14)
+					for yy in range(int((p.y - 20) / 16.0), int((p.y + 20) / 16.0) + 1):
+						for xx in range(int((p.x - 30) / 16.0), int((p.x + 30) / 16.0) + 1):
+							var cc := Vector2(xx * 16 + 8, yy * 16 + 8) - p
+							var lc := cc.rotated(-pk.rotation)
+							if absf(lc.x) < hs.x and absf(lc.y) < hs.y and nav.is_in_boundsv(Vector2i(xx, yy)):
+								nav.set_point_solid(Vector2i(xx, yy), true)
+			"trash":
+				# litter spread around a spot: cans, paper, cups, butts, a tyre
+				var tr := TrashScatter.new()
+				tr.position = p
+				tr.radius = float(it.get("radius", 40.0))
+				tr.count = int(it.get("count", 26))
+				root.add_child(tr)
 			"vacancy":
 				var vs := WallArt.VacancySign.new()
 				vs.position = p
@@ -314,17 +336,24 @@ static func mount_sign(builder: LevelBuilder, cx: int, cy: int, width_px: float)
 		var face: int = -1 if dy > 0 else 1        # the wall's face looks back toward the sign
 		if builder.ch(cx, wy + face) == "#" or builder.ch(cx, wy + face) == "W":
 			continue
-		for dx in range(-6, 7):
+		for dx in range(-10, 11):
 			var x0: int = cx + dx - need / 2
 			var ok := true
+			var over_glass := 0
 			for xx in range(x0, x0 + need):
-				# plain wall, open floor in front of it
-				if builder.ch(xx, wy) != "#" or builder.ch(xx, wy + face) == "#" or builder.ch(xx, wy + face) == "D":
+				# wall (a window's fine to hang over, a door never), open floor in front
+				var wc := builder.ch(xx, wy)
+				if not (wc == "#" or wc == "W") or builder.ch(xx, wy + face) == "#" or builder.ch(xx, wy + face) == "D":
 					ok = false
 					break
+				if wc == "W":
+					over_glass += 1
+			# not flush against a doorway either
+			if ok and (builder.ch(x0 - 1, wy) in ["D", "L"] or builder.ch(x0 + need, wy) in ["D", "L"]):
+				ok = false
 			if not ok:
 				continue
-			var cost := absf(dx) + absf(dy) * 2.5 + (0.0 if face > 0 else 1.5)
+			var cost := absf(dx) + absf(dy) * 2.5 + (0.0 if face > 0 else 1.5) + over_glass * 0.8
 			if cost < best_cost:
 				best_cost = cost
 				var x_mid := (x0 + need * 0.5) * 16.0
@@ -383,8 +412,8 @@ class NeonSign extends Node2D:
 		# fixed to the brick and barely reaches over the floor
 		var c := Vector2.ZERO
 		match mount:
-			"wall_s": c = Vector2(0, -bs.y * 0.18)
-			"wall_n": c = Vector2(0, -bs.y * 0.82)
+			"wall_s": c = Vector2(0, -bs.y * 0.5 - 1.0)
+			"wall_n": c = Vector2(0, bs.y * 0.5 + 1.0)
 			"pylon": c = Vector2(0, -12)
 		var r := Rect2(c - bs * 0.5, bs)
 		var metal := Color(0.07, 0.06, 0.09)
@@ -399,7 +428,7 @@ class NeonSign extends Node2D:
 		elif mount != "":
 			draw_rect(Rect2(r.position + Vector2(3, 4), r.size), Color(0, 0, 0, 0.4))
 			for bx in [-bs.x * 0.36, bs.x * 0.36]:
-				var by := r.position.y - 2.0 if mount == "wall_s" else r.end.y + 2.0
+				var by := r.end.y + 2.0 if mount == "wall_s" else r.position.y - 2.0
 				draw_rect(Rect2(bx - 1.5, minf(by, c.y), 3, absf(by - c.y)), Color(0.28, 0.26, 0.3))
 		# the board: dark metal, a lip, rivets
 		draw_rect(r, metal)
@@ -446,3 +475,135 @@ class PoolFX extends Node2D:
 				for k in 5:
 					pts.append(Vector2(c.x + k * 4.0, y + sin(ph + k * 1.4) * 1.2))
 				draw_polyline(pts, Color(0.55, 0.9, 1.0, 0.28 + 0.12 * sin(ph * 1.7)), 1.0)
+
+
+## An old pickup, abandoned on set: sun-faded two-tone paint, rust along
+## the wheel arches, a cracked windshield, a bed full of junk (tyre, crate,
+## tarp). Solid - cover you can hide behind.
+class OldPickup extends StaticBody2D:
+	const L := 52.0
+	const WD := 26.0
+	func _ready() -> void:
+		collision_layer = Layers.WORLD
+		collision_mask = 0
+		z_index = 2
+		var cs := CollisionShape2D.new()
+		var r := RectangleShape2D.new()
+		r.size = Vector2(L - 2.0, WD - 4.0)
+		cs.shape = r
+		add_child(cs)
+
+	func _draw() -> void:
+		var ink := Color("0b0710")
+		var paint := Color(0.36, 0.55, 0.52)        # faded teal
+		var cream := Color(0.86, 0.82, 0.7)
+		var rust := Color(0.5, 0.24, 0.1)
+		var hl := L * 0.5
+		var hw := WD * 0.5
+		# shadow
+		draw_rect(Rect2(-hl + 3, -hw + 4, L, WD), Color(0, 0, 0, 0.35))
+		# tyres poking out
+		for tx in [-hl + 9, hl - 11]:
+			for ty in [-hw - 1.0, hw - 3.0]:
+				draw_rect(Rect2(tx, ty, 8, 4), ink)
+				draw_rect(Rect2(tx + 1, ty + 1, 6, 2), Color(0.16, 0.16, 0.18))
+		# the body outline and paint
+		draw_rect(Rect2(-hl, -hw + 1, L, WD - 2), ink)
+		draw_rect(Rect2(-hl + 1, -hw + 2, L - 2, WD - 4), paint)
+		# hood (front is +x) with a cream stripe, grille and bumper
+		draw_rect(Rect2(hl - 14, -hw + 2, 13, WD - 4), paint.lightened(0.08))
+		draw_rect(Rect2(hl - 14, -2, 13, 4), cream)
+		draw_rect(Rect2(hl - 2, -hw + 3, 3, WD - 6), Color(0.62, 0.62, 0.66))
+		draw_line(Vector2(hl - 13, -hw + 3), Vector2(hl - 13, hw - 3), paint.darkened(0.35), 1.0)
+		# cab roof and windshield (cracked)
+		draw_rect(Rect2(hl - 26, -hw + 3, 12, WD - 6), paint.darkened(0.12))
+		draw_rect(Rect2(hl - 16, -hw + 4, 3, WD - 8), Color(0.45, 0.6, 0.72))
+		draw_line(Vector2(hl - 15.5, -3), Vector2(hl - 14.2, 1), Color(0.9, 0.95, 1.0, 0.8), 0.6)
+		draw_line(Vector2(hl - 14.2, 1), Vector2(hl - 15.2, 4), Color(0.9, 0.95, 1.0, 0.6), 0.6)
+		draw_rect(Rect2(hl - 27, -hw + 4, 2, WD - 8), Color(0.35, 0.48, 0.58))     # rear window
+		# the bed: dark floor with ribs, and junk
+		var bed := Rect2(-hl + 2, -hw + 3, L - 30, WD - 6)
+		draw_rect(bed, Color(0.18, 0.17, 0.2))
+		for i in 5:
+			draw_line(Vector2(bed.position.x + 1, bed.position.y + 2 + i * 4), Vector2(bed.end.x - 1, bed.position.y + 2 + i * 4), Color(0.24, 0.23, 0.27), 1.0)
+		draw_circle(Vector2(-hl + 9, -3), 4.2, ink)                               # a spare tyre
+		draw_circle(Vector2(-hl + 9, -3), 3.4, Color(0.15, 0.15, 0.17))
+		draw_circle(Vector2(-hl + 9, -3), 1.4, Color(0.5, 0.5, 0.55))
+		draw_rect(Rect2(-hl + 14, 0, 7, 6), Color("8a5a30"))                      # a crate
+		draw_rect(Rect2(-hl + 14, 0, 7, 1.5), Color("a87040"))
+		draw_colored_polygon(PackedVector2Array([Vector2(-hl + 3, 3), Vector2(-hl + 12, 2), Vector2(-hl + 13, 8), Vector2(-hl + 4, 9)]), Color(0.3, 0.38, 0.55))   # tarp
+		# rust along the arches and a primer-grey replacement door
+		for rx in [-hl + 8, hl - 12]:
+			draw_rect(Rect2(rx, -hw + 2, 9, 1.5), rust)
+			draw_rect(Rect2(rx, hw - 3.5, 9, 1.5), rust)
+		draw_rect(Rect2(hl - 26, hw - 4, 11, 1.8), Color(0.55, 0.55, 0.52))
+		# a sheen along the hood
+		draw_line(Vector2(hl - 13, -hw + 3), Vector2(hl - 3, -hw + 3), Color(1, 1, 1, 0.25), 1.0)
+
+
+## Litter: crushed cans, newspaper sheets, paper cups, cigarette butts, a
+## takeaway box, the odd bottle and tyre. Drawn once, flat on the floor.
+class TrashScatter extends Node2D:
+	var radius := 40.0
+	var count := 26
+	var _items: Array = []
+	func _ready() -> void:
+		z_index = -3
+		var rng := RandomNumberGenerator.new()
+		rng.seed = hash(Vector2i(int(position.x), int(position.y)))
+		for i in count:
+			var a := rng.randf() * TAU
+			var r := sqrt(rng.randf()) * radius
+			var kinds := ["can", "can", "paper", "paper", "cup", "butt", "butt", "butt", "box", "bottle", "bag"]
+			if i == 0 and radius > 30.0:
+				_items.append({"k": "tyre", "p": Vector2.from_angle(a) * r * 0.6, "r": rng.randf() * TAU, "c": rng.randi() % 3})
+				continue
+			_items.append({"k": kinds[rng.randi() % kinds.size()], "p": Vector2.from_angle(a) * r, "r": rng.randf() * TAU, "c": rng.randi() % 3})
+	func _draw() -> void:
+		var ink := Color("0b0710")
+		for it in _items:
+			draw_set_transform(it.p, it.r, Vector2.ONE)
+			match str(it.k):
+				"can":
+					var cc: Color = [Color(0.8, 0.12, 0.14), Color(0.2, 0.4, 0.8), Color(0.85, 0.85, 0.88)][it.c]
+					draw_rect(Rect2(-2.5, -1.3, 5, 2.6), ink)
+					draw_rect(Rect2(-2.2, -1.0, 4.4, 2.0), cc)
+					draw_rect(Rect2(-2.2, -1.0, 1.0, 2.0), Color(0.75, 0.75, 0.78))
+					draw_line(Vector2(-0.3, -1.0), Vector2(0.5, 1.0), cc.darkened(0.4), 0.6)      # crushed
+				"paper":
+					var pc := Color(0.84, 0.82, 0.76) if it.c != 2 else Color(0.9, 0.86, 0.6)
+					draw_colored_polygon(PackedVector2Array([Vector2(-4, -3), Vector2(3.5, -3.5), Vector2(4, 2.5), Vector2(-3.5, 3)]), pc)
+					for ln in 3:
+						draw_line(Vector2(-3, -1.8 + ln * 1.6), Vector2(2.6, -2.0 + ln * 1.6), Color(0.3, 0.3, 0.32, 0.5), 0.5)
+					draw_line(Vector2(-4, -3), Vector2(-1.5, -1.0), Color(0.6, 0.58, 0.52), 0.8)   # a fold
+				"cup":
+					draw_circle(Vector2.ZERO, 2.0, ink)
+					draw_circle(Vector2.ZERO, 1.6, Color(0.92, 0.9, 0.86))
+					draw_arc(Vector2.ZERO, 1.4, 0, PI, 6, Color(0.85, 0.2, 0.25), 0.6)
+					draw_rect(Rect2(-0.3, -3.6, 0.6, 2.2), Color(0.9, 0.3, 0.35))   # the straw
+				"butt":
+					draw_rect(Rect2(-1.2, -0.35, 2.4, 0.7), Color(0.92, 0.9, 0.84))
+					draw_rect(Rect2(-1.2, -0.35, 0.9, 0.7), Color(0.85, 0.55, 0.25))
+				"box":
+					draw_rect(Rect2(-3, -2.5, 6, 5), ink)
+					draw_rect(Rect2(-2.6, -2.1, 5.2, 4.2), Color(0.95, 0.94, 0.9))
+					draw_line(Vector2(-2.6, 0), Vector2(2.6, 0), Color(0.75, 0.2, 0.2), 0.8)
+				"bottle":
+					draw_rect(Rect2(-3, -1, 5, 2), ink)
+					draw_rect(Rect2(-2.7, -0.7, 4.2, 1.4), Color(0.25, 0.5, 0.25, 0.9))
+					draw_rect(Rect2(1.5, -0.45, 1.6, 0.9), Color(0.25, 0.5, 0.25, 0.9))
+					draw_line(Vector2(-2.4, -0.4), Vector2(0.5, -0.4), Color(1, 1, 1, 0.5), 0.4)
+				"bag":
+					draw_circle(Vector2.ZERO, 3.2, ink)
+					draw_circle(Vector2.ZERO, 2.8, Color(0.12, 0.12, 0.14))
+					draw_circle(Vector2(-0.8, -0.8), 1.2, Color(0.26, 0.26, 0.3))
+					draw_line(Vector2(2.2, -1.6), Vector2(3.8, -3.0), Color(0.12, 0.12, 0.14), 1.0)
+				"tyre":
+					draw_circle(Vector2(1, 1.5), 6.5, Color(0, 0, 0, 0.3))
+					draw_circle(Vector2.ZERO, 6.2, ink)
+					draw_circle(Vector2.ZERO, 5.4, Color(0.14, 0.14, 0.16))
+					for k in 10:
+						var aa := k * TAU / 10.0
+						draw_line(Vector2.from_angle(aa) * 4.2, Vector2.from_angle(aa) * 5.3, Color(0.22, 0.22, 0.25), 0.8)
+					draw_circle(Vector2.ZERO, 2.4, Color(0.07, 0.06, 0.08))
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)

@@ -121,7 +121,41 @@ func _ready() -> void:
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
 			var what := OS.get_environment("SHOT_WHAT")
-			if what == "dog":
+			if what == "cell":
+				# look at a map cell: SHOT_CELL=x,y
+				var xy := OS.get_environment("SHOT_CELL").split(",")
+				var mk := Node2D.new()
+				mk.global_position = Vector2(float(xy[0]) * 16 + 8, float(xy[1]) * 16 + 8)
+				lvl2.add_child(mk)
+				p3.global_position = mk.global_position + Vector2(-700, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = mk
+				await _frames(10)
+				while Dialogue.active:
+					Dialogue._end()
+					await _frames(2)
+				if OS.get_environment("SHOT_BREACH") != "" and lvl2.breach:
+					# walk up to the doors (LOCKED), take the charges, plant them
+					p3.set_physics_process(true)
+					p3.global_position = lvl2.breach._plant_it.global_position + Vector2(0, 14)
+					await _frames(int(OS.get_environment("SHOT_BREACH_F0")) if OS.get_environment("SHOT_BREACH_F0") != "" else 20)
+					if OS.get_environment("SHOT_BREACH") == "plant":
+						lvl2.breach._on_take(null, p3)
+						lvl2.breach._on_plant(null, p3)
+					await _frames(int(OS.get_environment("SHOT_BREACH_F")) if OS.get_environment("SHOT_BREACH_F") != "" else 30)
+			elif what == "boss":
+				# the boss waiting in his room, before the fight
+				var bs: Node2D = lvl2.boss
+				p3.global_position = bs.global_position + Vector2(-500, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = bs
+				await _frames(10)
+				while Dialogue.active:
+					Dialogue._end()
+					await _frames(2)
+			elif what == "dog":
 				var dog: Dog = null
 				for e in get_tree().get_nodes_in_group("enemies"):
 					if e is Dog and not e.sleeping:
