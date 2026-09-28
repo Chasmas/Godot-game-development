@@ -349,15 +349,20 @@ class ClutterLayer extends Node2D:
 		return Color(c.r * boost, c.g * boost, c.b * boost, c.a) if boost != 1.0 else c
 
 	## Dressing pieces with a painting: kind -> [sprite, size in world px].
-	const PAINTED := {"suitcase": ["prop_suitcase", 11.0], "luggage": ["prop_suitcase", 11.0], "extinguisher": ["prop_extinguisher", 9.0],
-		"calendar": ["prop_calendar", 9.0], "key_rack": ["prop_key_rack", 12.0], "trash": ["prop_trash_bag", 10.0]}
+	const PAINTED := {"suitcase": ["prop_suitcase", 11.0], "luggage": ["prop_suitcase", 11.0], "extinguisher": ["prop_extinguisher", 7.0],
+		"calendar": ["prop_calendar", 7.0], "key_rack": ["prop_key_rack", 8.0], "trash": ["prop_trash_bag", 10.0], "plant_pot": ["plant_pot", 9.0]}
+	## these hang on a wall: drawn standing on the wall's bottom edge, never over the floor
+	const ON_WALL := ["extinguisher", "calendar", "key_rack"]
 
 	func _item(k: String, v: int) -> void:
 		if PAINTED.has(k):
 			var pt := ArtLib.sprite(str(PAINTED[k][0]))
 			if pt:
 				var sz: float = PAINTED[k][1]
-				draw_texture_rect(pt, Rect2(-sz * 0.5, -sz * 0.5, sz, sz), false)
+				if k in ON_WALL:
+					draw_texture_rect(pt, Rect2(-sz * 0.5, -sz + 1.5, sz, sz), false)
+				else:
+					draw_texture_rect(pt, Rect2(-sz * 0.5, -sz * 0.5, sz, sz), false)
 				return
 		var ink := Color(0.06, 0.03, 0.07)
 		match k:

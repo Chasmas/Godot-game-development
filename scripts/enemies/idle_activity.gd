@@ -48,6 +48,9 @@ func setup(p_visual: CharacterVisual, p_kind: int, seed_str: String) -> void:
 		# the chair stays put on the floor
 		_chair = SnoozeChair.new()
 		_chair.z_index = -1
+		var pal: Dictionary = SpriteLib.PALETTES.get(SpriteForge.base_name(str(visual.palette)), {})
+		if pal.has("p"):
+			_chair.pants_col = Color.html("#" + str(pal["p"]))
 		_chair.rotation = visual.rig.rotation
 		var body := visual.get_parent() as Node2D
 		if body:
@@ -273,6 +276,7 @@ class DroppedProp extends Node2D:
 ## Folding metal chair he's sleeping in (rig space: +x is where he faces).
 class SnoozeChair extends Node2D:
 	var tipped := false
+	var pants_col := Color(0.2, 0.2, 0.26)
 	func _ready() -> void:
 		if has_meta("cancelled"):
 			queue_free()
@@ -296,12 +300,14 @@ class SnoozeChair extends Node2D:
 		if ch:
 			# the painted folding chair, backrest behind him
 			draw_texture_rect(ch, Rect2(-9, -7, 14, 14), false)
-			draw_rect(Rect2(6, -3.5, 7, 3), ink)
-			draw_rect(Rect2(6, 0.5, 7, 3), ink)
-			draw_rect(Rect2(6.5, -3, 6, 2), Color(0.2, 0.2, 0.26))
-			draw_rect(Rect2(6.5, 1, 6, 2), Color(0.2, 0.2, 0.26))
-			draw_rect(Rect2(12, -3.8, 2.5, 3.4), Color(0.12, 0.08, 0.06))
-			draw_rect(Rect2(12, 0.4, 2.5, 3.4), Color(0.12, 0.08, 0.06))
+			# his legs stretched out in front, ankles crossed: rounded trouser
+			# legs in his own colour, shoes at the ends
+			var pants := pants_col
+			for lg in [[Vector2(3.5, -1.8), Vector2(10.0, 1.2)], [Vector2(3.5, 1.8), Vector2(10.0, -0.6)]]:
+				draw_line(lg[0], lg[1], ink, 3.6)
+				draw_line(lg[0], lg[1], pants, 2.4)
+				draw_circle(lg[1] + Vector2(1.2, 0), 1.7, ink)
+				draw_circle(lg[1] + Vector2(1.2, 0), 1.2, Color(0.12, 0.08, 0.06))
 			return
 		# seat, backrest behind him, the leg ends poking out
 		draw_rect(Rect2(-6, -5.5, 11, 11), ink)

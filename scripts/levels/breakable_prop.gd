@@ -188,7 +188,11 @@ func _draw() -> void:
 			draw_circle(Vector2.ZERO, 3.5, ink)
 			draw_circle(Vector2.ZERO, 2.5, Color(0.3, 0.3, 0.3) if is_broken else Color(1, 0.95, 0.7))
 		"plant":
-			if is_broken:
+			var ptx := ArtLib.sprite("plant") if not is_broken else null
+			if ptx:
+				draw_circle(Vector2(1, 2), 6.0, Color(0, 0, 0, 0.3))
+				draw_texture_rect(ptx, Rect2(-7, -7, 14, 14), false)
+			elif is_broken:
 				draw_circle(Vector2.ZERO, 3.0, Color(0.35, 0.2, 0.1))
 			else:
 				draw_circle(Vector2.ZERO, 4.5, Color(0.55, 0.28, 0.12))

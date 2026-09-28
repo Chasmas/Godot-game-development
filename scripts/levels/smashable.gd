@@ -98,7 +98,7 @@ func _draw() -> void:
 	draw_set_transform(j, _rot, Vector2.ONE)
 	# contact shadow
 	draw_circle(Vector2(1.5, 2), float(DEFS[kind].r), Color(0, 0, 0, 0.25))
-	var painted := {"box": ["cardboard_box", Vector2(13, 11)], "chair": ["wooden_chair", Vector2(12, 12)]}
+	var painted := {"box": ["cardboard_box", Vector2(13, 11)], "chair": ["wooden_chair", Vector2(12, 12)], "vase": ["vase_flowers", Vector2(11, 11)]}
 	if painted.has(kind):
 		var ptex := ArtLib.sprite(str(painted[kind][0]))
 		if ptex:

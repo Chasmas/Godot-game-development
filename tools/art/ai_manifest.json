@@ -676,7 +676,7 @@
      "size": "1024x1024"
     },
     "plant": {
-     "prompt": "A potted leafy indoor plant in a terracotta pot seen from directly above, square.",
+     "prompt": "A lush potted fiddle-leaf fig plant in a glossy teal ceramic pot, big glossy leaves spreading out, seen from directly above.",
      "size": "1024x1024"
     },
     "arcade": {
@@ -992,6 +992,14 @@
     },
     "film_camera": {
      "prompt": "A 1980s professional film camera with a big lens and film magazine on top, pointing right, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "plant_pot": {
+     "prompt": "A small terracotta flower pot with a bushy green fern, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "vase_flowers": {
+     "prompt": "A white ceramic vase with a bunch of pink carnations, seen from directly above.",
      "size": "1024x1024"
     }
    }
