@@ -27,6 +27,12 @@ var _bounce := 0.0
 var _driving := false
 
 const LANE := 300.0            ## how far out it starts / leaves to
+const SEAT_LOCAL := Vector2(-1, -6)   ## the driver's seat (front left) in the car's frame
+var _seated := false          ## draw her at the wheel (it's a convertible)
+var _driver_tex: Texture2D
+const BODY_HALF_W := 16.0      ## the car's side, from its centre line (world px)
+const DOOR_FRONT := 10.0       ## the driver's door: hinge edge by the windscreen...
+const DOOR_BACK := -9.0        ## ...to its back edge
 
 func _ready() -> void:
 	z_index = 4
@@ -140,7 +146,7 @@ func _drive(pts: Array, dur: float, ease_mode: int, on_step := Callable()) -> Tw
 		0.0, 1.0, dur)
 	return tw
 
-func _swing_door(open: bool, t := 0.28) -> Tween:
+func _swing_door(open: bool, t := 0.42) -> Tween:
 	var tw := create_tween()
 	tw.tween_property(self, "_door", 1.0 if open else 0.0, t).set_trans(Tween.TRANS_BACK if open else Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT if open else Tween.EASE_IN)
 	if not open:
@@ -150,7 +156,16 @@ func _swing_door(open: bool, t := 0.28) -> Tween:
 	return tw
 
 func _seat() -> Vector2:
-	return global_position + _dir.orthogonal() * 3.0 - _dir * 3.0
+	return global_position + _dir * SEAT_LOCAL.x - _dir.orthogonal() * SEAT_LOCAL.y
+
+## Her, at the wheel: the torso art of whoever's driving, hands forward.
+func _take_wheel(player: Node2D, on: bool) -> void:
+	_seated = on
+	if on:
+		var vis: Node = player.get("visual")
+		var pal := str(vis.get("palette")) if vis and vis.get("palette") != null else "cass"
+		_driver_tex = SpriteLib.torso("aim_two", pal)
+	queue_redraw()
 
 func _door_spot() -> Vector2:
 	return global_position + _dir.orthogonal() * 23.0 - _dir * 1.0
@@ -168,6 +183,7 @@ func arrive(player: Node2D) -> void:
 	_driving = true
 	_body.collision_layer = 0
 	player.visible = false
+	_take_wheel(player, true)
 	player.set("input_enabled", false)
 	player.set("respawn_grace", 6.0)
 	var vis: Node2D = player.get("visual")
@@ -195,6 +211,7 @@ func arrive(player: Node2D) -> void:
 	tw.tween_interval(0.3)
 	tw.tween_callback(func():
 		# she's in the seat, low, turned toward the door
+		_take_wheel(player, false)
 		player.global_position = _seat()
 		player.visible = true
 		if vis:
@@ -248,6 +265,7 @@ func depart(player: Node2D) -> void:
 			vis.modulate.a = lerpf(1.0, 0.0, clampf(k * 1.4 - 0.4, 0.0, 1.0)), 0.0, 1.0, 0.35)
 	tw.tween_callback(func():
 		player.visible = false
+		_take_wheel(player, true)
 		if vis:
 			vis.scale = Vector2.ONE
 			vis.modulate.a = 1.0
@@ -327,11 +345,29 @@ func _draw() -> void:
 	if sh < 1.0:
 		var x := lerpf(-34.0, 34.0, sh)
 		draw_line(Vector2(x, -12), Vector2(x - 8, 12), Color(1, 1, 1, 0.18 * sin(sh * PI)), 3.0)
-	# the driver's door swings out on the left
+	# her at the wheel (open top): torso art at the driver's seat
+	if _seated and _driver_tex:
+		draw_set_transform(SEAT_LOCAL * Vector2(sq, 2.0 - sq), 0.0, Vector2(0.45, 0.45))
+		draw_texture(_driver_tex, -_driver_tex.get_size() * 0.5)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	# the driver's door (left side, -y): hinged at its FRONT edge by the
+	# windscreen, the back edge swings out - like a real car door
 	if _door > 0.0:
-		draw_set_transform(Vector2(-2, -12), -_door * 0.9, Vector2.ONE)
-		draw_rect(Rect2(0, -2, 16, 3), Color(0.62, 0.04, 0.08))
-		draw_line(Vector2(0, -2), Vector2(16, -2), Color(0.95, 0.9, 0.85, 0.7), 1.0)
+		var hinge := Vector2(DOOR_FRONT, -BODY_HALF_W)
+		var dl := DOOR_FRONT - DOOR_BACK
+		# the opening in the body: the dark sill, the seat and the dome's glow inside
+		draw_rect(Rect2(DOOR_BACK, -BODY_HALF_W, dl, 3.5), Color(0.05, 0.02, 0.04))
+		draw_rect(Rect2(DOOR_BACK + 3, -BODY_HALF_W + 1, dl - 7, 2.5), Color(0.55, 0.12, 0.14))
+		draw_rect(Rect2(DOOR_BACK + 3, -BODY_HALF_W + 1, dl - 7, 2.5), Color(1.0, 0.85, 0.55, 0.25 * _door))
+		# the door, rotated out about the hinge (0 shut .. ~65 degrees)
+		draw_set_transform(hinge, _door * deg_to_rad(65.0), Vector2.ONE)
+		var ink := Color(0.05, 0.02, 0.04)
+		draw_rect(Rect2(-dl - 0.5, -2.5, dl + 1.0, 4.0), ink)
+		draw_rect(Rect2(-dl, -2.0, dl, 3.0), Color(0.72, 0.05, 0.1))                 # the paint, outside
+		draw_rect(Rect2(-dl, 0.2, dl, 0.8), Color(0.3, 0.05, 0.08))                   # the trim panel, inside
+		draw_line(Vector2(-dl, -1.8), Vector2(0, -1.8), Color(0.95, 0.92, 0.88, 0.8), 0.8)   # chrome strip
+		draw_rect(Rect2(-dl * 0.55, -1.2, dl * 0.45, 1.2), Color(0.55, 0.75, 0.9, 0.7))     # the window glass
+		draw_rect(Rect2(-dl + 2.0, -2.6, 2.5, 0.8), Color(0.9, 0.88, 0.8))              # the handle
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	# tail lights / headlight lenses
 	for side in [-1.0, 1.0]:
@@ -382,6 +418,7 @@ class BoomGate extends Node2D:
 	var level: Node
 	var _bits: Array = []     ## flying pieces of the arm: {p, v, r, w, len, stripe, h, vh}
 	var _bark_cd := 0.0
+	var _push_t := 0.0        ## how long she's been shoving the arm
 	var _body: StaticBody2D
 
 	func _ready() -> void:
@@ -443,7 +480,14 @@ class BoomGate extends Node2D:
 			var rel := p.global_position - global_position
 			var along := rel.dot(axis)
 			var across := absf(rel.dot(axis.orthogonal()))
-			if along > -6.0 and along < span + 6.0 and across < 20.0:
+			# only when she really tries to leave: pressed against the arm and
+			# still pushing into it for a moment - never just walking past
+			var vel: Vector2 = p.get("velocity") if p.get("velocity") != null else Vector2.ZERO
+			var n := axis.orthogonal() * signf(rel.dot(axis.orthogonal()))
+			var pushing := along > -2.0 and along < span + 2.0 and across < 11.0 and vel.dot(-n) > 25.0
+			_push_t = _push_t + delta if pushing else maxf(0.0, _push_t - delta * 2.0)
+			if _push_t > 0.45:
+				_push_t = 0.0
 				_bark_cd = 7.0
 				var done: bool = level != null and level.get("phase") == Level.Phase.ESCAPE
 				var line: String = LINES[1] if done else LINES[0 if randf() < 0.5 else 2]

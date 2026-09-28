@@ -337,8 +337,15 @@ static func _cast(id: String) -> Texture2D:
 	_cache[k] = t
 	return t
 
+## Looks that keep their own drawn silhouette: Cass has to read at a glance
+## (ponytail, gold star, the jacket's sheen) - a painting of red hair on a
+## red jacket turns into a red blob at game size.
+const DRAWN_LOOKS := []
+
 ## A character's painted body from above, if there is one.
 static func _body_image(name: String) -> Image:
+	if name in DRAWN_LOOKS:
+		return null
 	var k := "body|" + name
 	if not _cache.has(k):
 		var pth := "res://assets/art/cast/body_%s.png" % name
@@ -369,8 +376,8 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	var sleeve: Color = P.get("J", top.darkened(0.2))
 	var extras: Array = st.extras
 	# arm targets (texture space, facing +x) per pose
-	var sh_l := c + Vector2(0, -8.5 * bw)     # left shoulder (screen up when facing right)
-	var sh_r := c + Vector2(0, 8.5 * bw)
+	var sh_l := c + Vector2(0, -7.8 * bw)     # left shoulder (screen up when facing right)
+	var sh_r := c + Vector2(0, 7.8 * bw)
 	var hand_l := c + Vector2(6, -7)
 	var hand_r := c + Vector2(6, 7)
 	match pose:
@@ -410,8 +417,9 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		var aimg := _render(shapes, SIZE, SIZE)
 		# sized by the shoulders: the painting spans the arms' roots
 		var bi: Image = hybrid.duplicate()
-		var k := (21.0 * bw * RES) / float(bi.get_height())
-		bi.resize(maxi(1, int(bi.get_width() * k)), maxi(1, int(bi.get_height() * k)), Image.INTERPOLATE_LANCZOS)
+		# slimmer than the painting: less depth front to back, shoulders a touch narrower
+		var k := (19.5 * bw * RES) / float(bi.get_height())
+		bi.resize(maxi(1, int(bi.get_width() * k * 0.92)), maxi(1, int(bi.get_height() * k)), Image.INTERPOLATE_LANCZOS)
 		var at := Vector2i((c + Vector2(0.8, 0)) * RES) - Vector2i(bi.get_width() / 2, bi.get_height() / 2)
 		aimg.blend_rect(bi, Rect2i(Vector2i.ZERO, bi.get_size()), at)
 		# forearms and hands over the painting: that's what shows the pose
@@ -426,16 +434,19 @@ static func torso(pose: String, palette: String) -> Texture2D:
 		_tag(fore, P, base_name(palette))
 		var fimg := _render(fore, SIZE, SIZE)
 		aimg.blend_rect(fimg, Rect2i(Vector2i.ZERO, fimg.get_size()), Vector2i.ZERO)
+		if "star" in extras:
+			# her mark, always readable: the gold star at the top of the head
+			_star(aimg, (c + Vector2(4.0, 1.8)) * RES, 2.2 * RES, Color("ffd23f"))
 		var htex := _tex(aimg)
 		_cache[key] = htex
 		return htex
 	# shoulders / torso
-	var body := ell(c, Vector2(6.0 * bw, 10.5 * bw), top)
+	var body := ell(c, Vector2(4.9 * bw, 9.6 * bw), top)
 	if "hawaii" in extras:
 		body.pattern = "hawaii"
 	shapes.append(body)
 	if "vest" in extras:
-		shapes.append(ell(c + Vector2(0.5, 0), Vector2(5.0 * bw, 8.5 * bw), Color("3a2413")))
+		shapes.append(ell(c + Vector2(0.5, 0), Vector2(4.1 * bw, 7.8 * bw), Color("3a2413")))
 	if "power_shoulders" in extras:
 		# 80s blazer: square padded shoulders stick out past the arms
 		shapes.append(ell(sh_l + Vector2(-0.5, 1.0), Vector2(3.4, 3.2), top.lightened(0.08)))

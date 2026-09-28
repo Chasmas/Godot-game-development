@@ -789,6 +789,118 @@
     "workbench": {
      "prompt": "A cluttered garage workbench seen from directly above: oily wood top, a vice, wrenches, a coffee can of screws, rags, a work lamp.",
      "size": "1536x1024"
+    },
+    "sofa": {
+     "prompt": "A long 1980s velvet sofa in deep magenta with plump cushions and a throw pillow, seen from directly above, its back along the top edge.",
+     "size": "1536x1024"
+    },
+    "coffee_table": {
+     "prompt": "A low glass-and-chrome coffee table with magazines, an ashtray, a bowl of fruit and a champagne glass, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "floor_lamp": {
+     "prompt": "A tall brass floor lamp with a round fabric shade glowing warm, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "potted_palm": {
+     "prompt": "A potted kentia palm in a big glazed ceramic pot, fronds spreading out, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "bar_cart": {
+     "prompt": "A brass bar cart loaded with liquor bottles, glasses, an ice bucket and a cocktail shaker, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "speaker_stack": {
+     "prompt": "A tall black PA speaker cabinet with two woofers, stage-worn, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "cocktail_table": {
+     "prompt": "A small round white cocktail table with two martini glasses, a candle and a pack of cigarettes, and two chrome stools, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "pool_table": {
+     "prompt": "A green felt pool table with balls mid-game, two cues lying across it, wooden rails with brass corners, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "dj_booth": {
+     "prompt": "An 1980s DJ booth: a wide desk with two turntables, a mixer, a crate of vinyl records, coloured lights, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "champagne_tower": {
+     "prompt": "A round banquet table with a white cloth and a pyramid tower of champagne coupes, an open bottle, rose petals, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "buffet_table": {
+     "prompt": "A long banquet buffet table with a white tablecloth covered in silver platters, a roast, fruit, cake, candles, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "sideboard": {
+     "prompt": "A dark walnut sideboard with a crystal decanter, a vase of lilies and framed photos on top, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "bookshelf": {
+     "prompt": "A tall dark wood bookshelf packed with books and a few ornaments, seen from directly above (the top of the shelf and book spines peeking out).",
+     "size": "1536x1024"
+    },
+    "fireplace": {
+     "prompt": "A marble fireplace set into a wall with a low fire burning, brass fireguard, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "statue": {
+     "prompt": "A classical white marble statue on a square plinth, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "grandfather_clock": {
+     "prompt": "A tall grandfather clock in carved dark wood, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "luggage_cart": {
+     "prompt": "A brass hotel luggage cart piled with suitcases and a hatbox, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "dressing_table": {
+     "prompt": "A vanity dressing table with a lit bulb mirror, makeup, perfume bottles, a wig on a stand, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "clothes_rack": {
+     "prompt": "A rolling clothes rack full of colourful 1980s costumes on hangers, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "light_stand": {
+     "prompt": "A film studio light on a tall tripod stand with barn doors, cables on the floor, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "flight_case": {
+     "prompt": "A black flight case with aluminium edges and stencilled KHSC lettering, lid open with cables inside, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "camera_dolly": {
+     "prompt": "A film camera on a wheeled dolly with a seat, on short track rails, seen from directly above.",
+     "size": "1536x1024"
+    },
+    "director_chair": {
+     "prompt": "A wooden folding director's chair with black canvas, DIRECTOR printed on the back, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "scrap_pile": {
+     "prompt": "A heap of scrap metal: car doors, hubcaps, bent pipes, a rusted radiator, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "engine_block": {
+     "prompt": "A greasy V8 engine block on a wooden pallet with spilled oil, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "toolbox_chest": {
+     "prompt": "A red rolling mechanic's tool chest with drawers, a wrench on top, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "filing_cabinet": {
+     "prompt": "A grey metal four-drawer filing cabinet, one drawer open with folders, seen from directly above.",
+     "size": "1024x1024"
+    },
+    "round_rug": {
+     "prompt": "A round Persian rug with ornate red, gold and navy patterns, fringed edge, flat, seen from directly above.",
+     "size": "1024x1024"
     }
    }
   },
@@ -1118,7 +1230,7 @@
    }
   },
   "topdown": {
-   "style": "Top-down video game sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective, the subject facing the RIGHT edge of the image. Isolated on a fully transparent background, no floor, no shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan reflections, crisp silhouette that reads at small size.",
+   "style": "Hand-painted 2D top-down video game character sprite in the style of Hotline Miami meets modern high-detail painted indie art: BOLD SIMPLE SHAPES, strong dark outline, limited palette, a lean athletic build (not round, not chubby), readable at tiny size, lots of small costume detail. Seen from above and slightly behind, the character facing the RIGHT edge of the image. The whole animal, standing, seen straight from above, its back and spine along the middle, snout to the RIGHT. Transparent background, no shadow.",
    "defaults": {
     "size": "1024x1024",
     "quality": "high",
@@ -1149,7 +1261,7 @@
    }
   },
   "bodies": {
-   "style": "Top-down video game character sprite seen from directly overhead: strict orthographic bird's-eye view looking straight down at 90 degrees, no perspective. Only the top of the head, the shoulders and the upper back and chest are visible, facing the RIGHT edge of the image (face towards the right). NO ARMS AND NO HANDS: the arms are cut off cleanly at the shoulders (they are drawn separately by the game). Isolated on a fully transparent background, no floor, no shadow. Detailed realistic painted style, 1980s California at night with subtle magenta and cyan reflections, crisp silhouette that reads at small size.",
+   "style": "Hand-painted 2D top-down video game character sprite in the style of Hotline Miami meets modern high-detail painted indie art: BOLD SIMPLE SHAPES, strong dark outline, limited palette, a lean athletic build (not round, not chubby), readable at tiny size, lots of small costume detail. Seen from above and slightly behind, the character facing the RIGHT edge of the image. Only the head, shoulders and upper torso, NO ARMS (cut cleanly at the shoulders). Transparent background, no shadow.",
    "defaults": {
     "size": "1024x1024",
     "quality": "high",
@@ -1157,7 +1269,7 @@
    },
    "entries": {
     "cass": {
-     "prompt": "Cass Moreno, a woman in her late 20s with long voluminous wavy auburn-red hair (a loose ponytail), a red leather jacket with the collar popped, a shoulder holster strap.",
+     "prompt": "Hand-painted 2D top-down video game character sprite in the style of Hotline Miami meets modern high-detail pixel-painted indie art: BOLD SIMPLE SHAPES, strong dark outline, limited palette, readable at tiny size. Seen from directly above, strict orthographic, facing the RIGHT edge. Only head and shoulders and upper back, NO ARMS (cut cleanly at the shoulders). Transparent background, no shadow. Cass: dark red-brown hair pulled back tight into a long braided ponytail lying down her back to the LEFT, crisp and graphic; a small gold five-pointed star hair clip on the side of her head; a crimson red leather biker jacket with shoulder seams and a popped collar. Strong value contrast between hair and jacket.",
      "refs": [
       "cass"
      ]

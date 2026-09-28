@@ -118,6 +118,8 @@ func _ready() -> void:
 				Game.attempts = 2    # no car arrival: the shot is staged elsewhere
 			Game.start_mission(OS.get_environment("SHOT_MISSION") if OS.get_environment("SHOT_MISSION") != "" else "m02_dog_days")
 			await _frames(30)
+			while get_tree().get_first_node_in_group("player") == null:
+				await _frames(5)
 			var lvl2 := get_tree().get_first_node_in_group("level") as Level
 			var p3 := get_tree().get_first_node_in_group("player") as Player
 			p3.god_mode = true

@@ -287,6 +287,12 @@ func _perceive() -> void:
 	var in_cone := absf(angle_difference(facing.angle(), to.angle())) < deg_to_rad(data.view_angle_deg * 0.5)
 	# you can creep right up behind someone if you move slowly; running is heard/felt
 	var close := 10.0 if (p.is_quiet() or dark) else 34.0
+	# sneaking (the sneak key held): the unaware only catch you in plain view
+	# and close - a shape at the edge of the eye goes unnoticed
+	var sneaking := bool(p.get("sneak_held")) and p.is_quiet() and not aware
+	if sneaking:
+		view *= 0.55
+		close = 0.0
 	# searching guards have their guard up: a little further and a little wider
 	var range_mult := 1.4 if aware else (1.15 if alert_level > 0 else 1.0)
 	if dist < view * range_mult and (in_cone or dist < close or aware) and _clear_line(global_position, p.global_position):
@@ -301,11 +307,13 @@ func _perceive() -> void:
 			var rate := 3.5 if dist < 90.0 else 1.6
 			if alert_level > 0:
 				rate *= 1.4
+			if sneaking:
+				rate *= 0.35
 			_suspicion += 0.1 * rate
 			if _suspicion >= 0.3 and state in [State.IDLE, State.PATROL, State.RETURN]:
 				_set_state(State.SUSPICIOUS)
 				_show_icon("?")
-			if _suspicion >= 0.55 or dist < 50.0:
+			if _suspicion >= 0.55 or (dist < 50.0 and not sneaking) or dist < 22.0:
 				_enter_combat()
 	else:
 		_seen_time = 0.0

@@ -56,6 +56,16 @@ func rebuild() -> void:
 			var ev := spec_to_event(s)
 			if ev:
 				InputMap.action_add_event(action, ev)
+				# the same key still counts with Ctrl (sneak), Shift (sprint) or
+				# Alt held: Godot matches modifiers exactly otherwise, and
+				# holding sneak would stop Cass dead
+				if ev is InputEventKey and not (ev.physical_keycode in [KEY_CTRL, KEY_SHIFT, KEY_ALT, KEY_META]):
+					for mods in [[true, false, false], [false, true, false], [false, false, true], [true, true, false]]:
+						var e2 := (ev as InputEventKey).duplicate() as InputEventKey
+						e2.ctrl_pressed = mods[0]
+						e2.shift_pressed = mods[1]
+						e2.alt_pressed = mods[2]
+						InputMap.action_add_event(action, e2)
 	_setup_ui_actions()
 
 ## Godot's built-in ui_* actions have no gamepad face buttons and only listen
@@ -133,6 +143,8 @@ func remap(action: String, e: InputEvent) -> void:
 	var is_pad: bool = spec[0] == "jb" or spec[0] == "ja"
 	var current: Array = []
 	for ev in InputMap.action_get_events(action):
+		if _is_mod_copy(ev):
+			continue
 		var sp := event_to_spec(ev)
 		if sp.is_empty():
 			continue
@@ -145,6 +157,10 @@ func remap(action: String, e: InputEvent) -> void:
 	SaveManager.set_setting("bindings", b)
 	rebuild()
 
+## The Ctrl/Shift/Alt copies rebuild() adds: not bindings of their own.
+static func _is_mod_copy(ev: InputEvent) -> bool:
+	return ev is InputEventKey and ((ev as InputEventKey).ctrl_pressed or (ev as InputEventKey).shift_pressed or (ev as InputEventKey).alt_pressed)
+
 func reset_bindings() -> void:
 	SaveManager.set_setting("bindings", {})
 	rebuild()
@@ -152,6 +168,8 @@ func reset_bindings() -> void:
 func binding_text(action: String, pad := false) -> String:
 	var parts: Array[String] = []
 	for ev in InputMap.action_get_events(action):
+		if _is_mod_copy(ev):
+			continue
 		var is_pad: bool = ev is InputEventJoypadButton or ev is InputEventJoypadMotion
 		if is_pad != pad:
 			continue

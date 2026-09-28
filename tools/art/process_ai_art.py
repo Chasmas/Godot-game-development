@@ -37,6 +37,12 @@ SPRITE_TILES = {
     "ice_machine": (1, 1), "oil_drum": (1, 1), "pickup_truck": (3.5, 2.34), "cardboard_box": (1, 1),
     "wooden_chair": (1, 1), "jukebox": (1, 1), "pinball": (1, 1.5), "armchair": (1, 1), "tyre_stack": (1, 1),
     "pallet": (1, 1), "workbench": (2, 1.34),
+    "sofa": (3, 2), "coffee_table": (2, 1.34), "floor_lamp": (1, 1), "potted_palm": (1.5, 1.5), "bar_cart": (1, 1),
+    "speaker_stack": (1, 1), "cocktail_table": (1.5, 1.5), "pool_table": (4, 2.67), "dj_booth": (3, 2), "champagne_tower": (2, 2),
+    "buffet_table": (4, 2.67), "sideboard": (2.5, 1.67), "bookshelf": (2.5, 1.67), "fireplace": (2.5, 1.67), "statue": (1.2, 1.2),
+    "grandfather_clock": (1, 1), "luggage_cart": (1.5, 1.5), "dressing_table": (2.5, 1.67), "clothes_rack": (2.5, 1.67),
+    "light_stand": (1.2, 1.2), "flight_case": (1.2, 1.2), "camera_dolly": (2.5, 1.67), "director_chair": (1, 1),
+    "scrap_pile": (2, 2), "engine_block": (1.5, 1.5), "toolbox_chest": (1.5, 1.5), "filing_cabinet": (1, 1), "round_rug": (4, 4),
 }
 # existing hand-made frames reused as painted shots
 EXTRA_SHOTS = {"apartment": "assets/art/cutscenes/apartment_1988.webp", "tv_news": "assets/art/cutscenes/news_1988.webp"}

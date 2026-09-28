@@ -631,12 +631,52 @@ func _build_cameras() -> void:
 		var cam := SecurityCamera.new()
 		cam.base_angle = deg_to_rad(float(c.get("angle", 90)))
 		cam.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - Vector2.from_angle(cam.base_angle) * 4.0
+		var corner := _camera_corner(Vector2i(int(c.cell[0]), int(c.cell[1])))
+		if not corner.is_empty():
+			cam.position = corner.pos
+			cam.base_angle = corner.angle
 		props_root.add_child(cam)
 	for c in data.get("film_cameras", []):
 		var fc := FilmCamera.new()
 		fc.facing = Vector2.from_angle(deg_to_rad(float(c.get("angle", 90))))
 		fc.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - fc.facing * 5.0
 		props_root.add_child(fc)
+
+## Where a security camera really goes: bolted up in the nearest inside
+## corner of the room (walls on two sides), looking diagonally across it -
+## the most floor it can watch, and the most believable spot.
+func _camera_corner(cell: Vector2i) -> Dictionary:
+	var best := {}
+	var best_d := 1e9
+	var wall := func(x: int, y: int) -> bool: return b_ch(x, y) == "#"
+	for dy in range(-5, 6):
+		for dx in range(-5, 6):
+			var x := cell.x + dx
+			var y := cell.y + dy
+			if wall.call(x, y) or b_ch(x, y) in ["D", "W", "L", " "]:
+				continue
+			for cx in [-1, 1]:
+				for cy in [-1, 1]:
+					if wall.call(x + cx, y) and wall.call(x, y + cy):
+						# enough room in front of it to be worth watching
+						var open := 0
+						for k in range(1, 5):
+							if not wall.call(x - cx * k, y - cy * k):
+								open += 1
+						if open < 3:
+							continue
+						var d := float(dx * dx + dy * dy)
+						if d < best_d:
+							best_d = d
+							var inward := Vector2(-cx, -cy).normalized()
+							best = {"pos": Vector2(x, y) * 16.0 + Vector2(8, 8) + Vector2(cx, cy) * 6.0, "angle": inward.angle()}
+	return best
+
+func b_ch(x: int, y: int) -> String:
+	var rows: Array = data.get("map", [])
+	if y < 0 or y >= rows.size() or x < 0 or x >= str(rows[y]).length():
+		return "#"
+	return str(rows[y])[x]
 
 func _build_checkpoint_markers() -> void:
 	var cps: Array = data.get("checkpoints", [])

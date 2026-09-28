@@ -47,6 +47,7 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 		_dress_walls(r, builder, wall_layer, room_no, wall_art)
 	for layer in [glow_layer, floor_layer, wall_layer]:
 		level.add_child(layer)
+	Furnish.build(level, builder, rooms)
 
 # ------------------------------------------------------------------ rooms
 static func _passable(b: LevelBuilder, x: int, y: int) -> bool:

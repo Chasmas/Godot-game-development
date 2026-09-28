@@ -465,17 +465,17 @@ func _show_notes() -> void:
 		f.close()
 		OS.shell_open(p.replace("/", "\\"))
 
-const WHATS_NEW := """HOTSHOT CALIFORNIA - what's new
+const WHATS_NEW := """HOTSHOT CALIFORNIA 0.11 - what's new
 
-- Masks: eleven faces to wear, each with an upside and a price. Earn them, or find them hidden.
-- Every boss has a health bar and a way to beat them with the room itself - and Dog Days has a boss now.
-- A trailer, a new title theme and darker, longer level scores.
-- Cutscenes with more painted frames, boss scenes, and a VCR on the menu for the tapes you find.
-- Cass arrives and leaves in her Eldorado. The lots have roads now, and the world beyond the walls.
-- Dodge roll and stamina, live arms for every punch, stab and swing, kicks, better executions.
-- Tutorial cards, side jobs on every level, guards who talk among themselves, meat bones for the dogs.
-- Arcade: One in the Chamber, Gun Game and Clock's Ticking.
-- Between jobs: Cass's room - the answering machine, the VCR, the mirror, the corkboard.
+- Everyone is painted: Cass, every enemy, the bosses and the dogs, seen from above in far more detail, with cloth you can make out on their sleeves and trousers.
+- Painted weapons in hands and on the floor, painted props everywhere (desks, kennels, jukeboxes, fuel drums, an old pickup), four times the texture resolution on floors and furniture.
+- Fuel drums that blow when you shoot them - some burning on the lid.
+- The lobby: the doors are locked until you find a way in. Tape the charge on, count to three.
+- Harcourt waits in his chair with a cigarette, talking to himself. Get close to hear him.
+- PLAY VIDEOTAPE is Cass's room now: a real TV and deck, tapes on a shelf, the photos you found - and a POSTER COLLECTION.
+- Every level dresses its walls its own way; neon signs hang where signs belong.
+- Portraits of every kind of enemy on the Director's Notes.
+- The meat bone for the dogs, the weapon names under their pictures, debris that breaks on the walls.
 
 Thanks for testing!  - Gilberto"""
 

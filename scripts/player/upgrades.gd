@@ -130,8 +130,7 @@ class LaserBeam extends Node2D:
 		var ws: Sprite2D = player.visual.weapon_sprite
 		if not ws.visible or ws.texture == null:
 			return
-		var tip_local := Vector2(ws.offset.x + ws.texture.get_width() - 0.5, 0.0)
-		var from: Vector2 = ws.to_global(tip_local)
+		var from: Vector2 = player.visual.muzzle_global()
 		var dir: Vector2 = Vector2.from_angle(ws.global_rotation)
 		var space := get_world_2d().direct_space_state
 		var q := PhysicsRayQueryParameters2D.create(from, from + dir * 420.0, Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.ENEMY | Layers.GLASS | Layers.DOWNED, [player.get_rid()])

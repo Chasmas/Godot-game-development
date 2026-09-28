@@ -466,14 +466,45 @@ func hand_global() -> Vector2:
 	return rig.to_global(_hand + Vector2(6, 0))
 
 func muzzle_global(left := false) -> Vector2:
-	if left and dual and weapon_sprite2.texture:
-		return rig.to_global(_hand2 + Vector2(weapon_sprite2.texture.get_width() / _wd - 2, 0))
-	if weapon_sprite.visible and weapon_sprite.texture:
-		var w := weapon_sprite.texture.get_width() / _wd
-		return rig.to_global(_hand + Vector2(w - 2, 0))
+	var sp := weapon_sprite2 if (left and dual and weapon_sprite2.texture) else weapon_sprite
+	if sp.visible and sp.texture:
+		# the barrel's real tip in the picture, through the sprite's own
+		# transform (tilt, recoil, the flip when aiming left)
+		var tip := _barrel_tip(sp.texture)
+		var y := tip.y - sp.texture.get_height() * 0.5
+		if sp.flip_v:
+			y = -y
+		return sp.to_global(Vector2(sp.offset.x + tip.x, sp.offset.y + sp.texture.get_height() * 0.5 + y))
 	return rig.to_global(Vector2(10, 0))
 
+## Where the muzzle is in a weapon picture: the rightmost solid column,
+## halfway down its solid run (painted guns aren't centred on the barrel).
+static var _tips: Dictionary = {}
+static func _barrel_tip(tex: Texture2D) -> Vector2:
+	var k := tex.get_rid()
+	if _tips.has(k):
+		return _tips[k]
+	var img := tex.get_image()
+	var out := Vector2(tex.get_width() - 1, tex.get_height() * 0.5)
+	if img:
+		if img.is_compressed():
+			img.decompress()
+		for x in range(img.get_width() - 1, -1, -1):
+			var ys := []
+			for y in img.get_height():
+				if img.get_pixel(x, y).a > 0.5:
+					ys.append(y)
+			if ys.size() > 0:
+				out = Vector2(x, (float(ys[0]) + float(ys[-1])) * 0.5)
+				break
+	_tips[k] = out
+	return out
+
 func _process(delta: float) -> void:
+	# side-view guns stay the right way up: aiming left, the picture flips
+	var left_aim := cos(rig.global_rotation) < 0.0
+	weapon_sprite.flip_v = left_aim
+	weapon_sprite2.flip_v = not left_aim
 	# recoil: torso pushed back along aim, with a tiny breathing pulse.
 	_hit_t = maxf(0.0, _hit_t - delta)
 	_fall_t = maxf(0.0, _fall_t - delta)
