@@ -1257,6 +1257,12 @@
      "refs": [
       "dutch"
      ]
+    },
+    "dog_shepherd_down": {
+     "prompt": "A German shepherd dog fast asleep, sprawled flat on its side with its legs stretched out, relaxed, seen straight from above, head to the RIGHT. Black saddle and tan coat, red collar."
+    },
+    "dog_rottweiler_down": {
+     "prompt": "A Rottweiler dog fast asleep, sprawled flat on its side with its legs stretched out, relaxed, seen straight from above, head to the RIGHT. Black coat with rust markings, spiked collar."
     }
    }
   },

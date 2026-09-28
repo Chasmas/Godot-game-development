@@ -1440,13 +1440,25 @@ class StaminaRing extends Node2D:
 			col = Color(1.0, 0.65, 0.2)
 		if denied > 0.0 or player._winded:
 			col = col.lerp(UIStyle.HOT, maxf(denied, 0.6 if player._winded else 0.0))
-		var shake := Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.5 * denied, 0)
-		var r := 11.0
-		var start := PI * 0.5 + PI * 0.35
-		var span := PI * 1.3
-		draw_arc(shake, r, start, start + span, 24, Color(0, 0, 0, 0.35 * _a), 3.0, true)
-		draw_arc(shake, r, start, start + span * frac, 24, Color(col, 0.85 * _a), 1.6, true)
-		# the roll cost as a notch: enough for a roll past the notch
-		var notch: float = player.ROLL_COST / player.STAMINA_MAX
-		var np := Vector2.from_angle(start + span * notch) * r + shake
-		draw_circle(np, 1.1, Color(1, 1, 1, 0.5 * _a))
+		var shake := Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.2 * denied, 0)
+		# five short slanted dashes in a shallow arc under her feet: quiet
+		# (half-see-through) while it's fine, lit neon when it runs low
+		var n := 5
+		var r := 10.0
+		var span := PI * 0.55
+		var start := PI * 0.5 - span * 0.5
+		var low: bool = frac < 0.3 or player._winded or denied > 0.0
+		var alpha := _a * (0.9 if low else 0.45)
+		var roll_seg: int = int(ceil(float(player.ROLL_COST) / player.STAMINA_MAX * n))
+		for i in n:
+			var a0 := start + span * (float(i) + 0.15) / n
+			var a1 := start + span * (float(i) + 0.85) / n
+			var fill := clampf(frac * n - i, 0.0, 1.0)
+			var p0 := Vector2.from_angle(a0) * r + shake
+			var p1 := Vector2.from_angle(a1) * r + shake
+			draw_line(p0, p1, Color(0, 0, 0, 0.3 * alpha), 2.6, true)
+			if fill > 0.0:
+				var c2: Color = col if i >= roll_seg or frac >= float(player.ROLL_COST) / player.STAMINA_MAX else Color(1.0, 0.65, 0.2)
+				if low:
+					draw_line(p0, p0.lerp(p1, fill), Color(c2, 0.25 * alpha), 4.0, true)   # the glow
+				draw_line(p0, p0.lerp(p1, fill), Color(c2, alpha), 1.3, true)
