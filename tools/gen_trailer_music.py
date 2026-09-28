@@ -121,12 +121,38 @@ for bar in range(BARS):
         add("fx", H.sat(H.sweep(120, 28, 5.0, 3) * np.exp(-D.T(5.0) * 0.9), 2.0), t0, 1.2)
         for k, (s, m, l) in enumerate([x for x in HOOK if x[0] < 16]):
             add("lead", D.warm_lead(m, ST * l * 1.4) * 0.8, t0 + BAR * 0.5 + s * ST * 1.5, 0.22)
-    # the release card: the chime
-    if bar == 36:
-        chime_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "audio", "sfx", "studio_chime.wav")
-        with wave.open(chime_path, "rb") as w:
-            c = np.frombuffer(w.readframes(w.getnframes()), np.int16) / 32767.0
-        add("fx", c, t0, 0.8)
+# the epic layer: a low sub drone under the mystery, and cinematic "braams"
+# (a stack of detuned saws, the filter opening like a brass swell) on the
+# big turns - the story, the build, the drop, the title
+def braam(root, d=3.2):
+    t = D.T(d)
+    x = np.zeros(len(t))
+    for m, g in ((root, 1.0), (root + 7, 0.6), (root + 12, 0.5), (root - 12, 0.8)):
+        for det in (-0.12, 0.0, 0.11):
+            f = D.mtof(m + det)
+            x += g * (2 * ((t * f) % 1.0) - 1)
+    cut = 180 + 2600 * (1 - np.exp(-t * 2.2)) * np.exp(-t * 0.5)
+    y = np.zeros_like(x)
+    a = 0.0
+    for i in range(len(x)):
+        c = min(0.99, 2 * np.pi * cut[i] / SR)
+        a += c * (x[i] - a)
+        y[i] = a
+    env = np.minimum(1.0, t / 0.08) * np.exp(-t * 0.55)
+    return y * env * 0.12
+
+def drone(d):
+    t = D.T(d)
+    f = D.mtof(28)
+    x = np.sin(2 * np.pi * f * t) + 0.5 * np.sin(2 * np.pi * f * 1.5 * t + np.sin(t * 0.7))
+    return x * np.minimum(1.0, t / 3.0) * 0.18
+
+add("fx", drone(BAR * 8), 0.0, 1.0)
+for at, root in ((9.5, 28), (32.0, 28), (24.0, 31), (64.0, 28)):
+    add("fx", braam(root), at, 1.0)
+# a heartbeat boom under each story cut
+for at in (12.8, 16.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0):
+    add("drums", H.kick(0.9) * 0.9, at, 0.7)
 
 # the chain
 def side(Lx, Rx, depth):

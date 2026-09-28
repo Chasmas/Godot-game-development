@@ -139,9 +139,9 @@ class LaserBeam extends Node2D:
 		var flick := 0.8 + 0.2 * sin(Time.get_ticks_msec() * 0.05)
 		# a hairline core with a faint haze, fading along its length
 		var mid := from.lerp(to, 0.6)
-		draw_line(from, to, Color(1.0, 0.1, 0.2, 0.12 * flick), 1.0)
-		draw_line(from, mid, Color(1.0, 0.3, 0.35, 0.8 * flick), -1.0)
-		draw_line(mid, to, Color(1.0, 0.3, 0.35, 0.45 * flick), -1.0)
+		draw_line(from, to, Color(1.0, 0.1, 0.2, 0.22 * flick), 1.6)
+		draw_line(from, mid, Color(1.0, 0.35, 0.4, 0.95 * flick), 0.7)
+		draw_line(mid, to, Color(1.0, 0.35, 0.4, 0.6 * flick), 0.7)
 		if not hit.is_empty():
 			draw_circle(to, 1.4, Color(1, 0.2, 0.3, 0.35))
 			draw_circle(to, 0.6, Color(1, 0.85, 0.85, 0.95))

@@ -504,7 +504,7 @@ func _process(delta: float) -> void:
 	# side-view guns stay the right way up: aiming left, the picture flips
 	var left_aim := cos(rig.global_rotation) < 0.0
 	weapon_sprite.flip_v = left_aim
-	weapon_sprite2.flip_v = not left_aim
+	weapon_sprite2.flip_v = left_aim   # both guns the same way up
 	# recoil: torso pushed back along aim, with a tiny breathing pulse.
 	_hit_t = maxf(0.0, _hit_t - delta)
 	_fall_t = maxf(0.0, _fall_t - delta)
