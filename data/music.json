@@ -22,7 +22,7 @@
 	},
 	"motel": {
 		"name": "Checkout Time",
-		"bpm": 120,
+		"bpm": 112,
 		"layers": [
 			"res://music/level_checkout_explore.ogg",
 			"res://music/level_checkout_combat.ogg",
@@ -127,7 +127,7 @@
 	},
 	"prime_time": {
 		"name": "Prime Time",
-		"bpm": 132,
+		"bpm": 128,
 		"layers": [
 			"res://music/level_primetime_explore.ogg",
 			"res://music/level_primetime_combat.ogg",
