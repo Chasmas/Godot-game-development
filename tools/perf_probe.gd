@@ -113,6 +113,70 @@ func _ready() -> void:
 		for nd in groups[g]:
 			nd.visible = true
 		print("PERF group %-30s x%-3d  cpu %.2f  gpu %.2f  calls %d" % [g, groups[g].size(), b2[2] - mm[2], b2[3] - mm[3], b2[4] - mm[4]])
+	if OS.get_environment("PERF_PROC") != "":
+		var sig := {}
+		for nd in _all():
+			if (nd.is_processing() or nd.is_physics_processing()) and _key(nd).begins_with("inner"):
+				var anc: Node = nd.get_parent()
+				var chain := ""
+				for i in 4:
+					if anc == null:
+						break
+					var sc2: Script = anc.get_script()
+					chain += "<" + (sc2.resource_path.get_file() if sc2 and sc2.resource_path != "" else anc.get_class())
+					anc = anc.get_parent()
+				var props := ""
+				for pp in nd.get_property_list():
+					if pp.usage & PROPERTY_USAGE_SCRIPT_VARIABLE:
+						props += str(pp.name) + ","
+				var k3: String = chain + " {" + props.left(60) + "}"
+				if not sig.has(k3):
+					sig[k3] = []
+				sig[k3].append(nd)
+		quiet = true
+		var b4: Array = await _measure()
+		var res4: Array = []
+		for k3 in sig:
+			for nd in sig[k3]:
+				nd.set_process(false)
+				nd.set_physics_process(false)
+			var m4: Array = await _measure()
+			for nd in sig[k3]:
+				if is_instance_valid(nd):
+					nd.set_process(true)
+			res4.append([b4[0] - m4[0], k3, sig[k3].size()])
+		res4.sort_custom(func(a, b): return a[0] > b[0])
+		for r4 in res4.slice(0, 12):
+			print("PERF inner saves %.2f ms  x%d  %s" % [r4[0], r4[2], r4[1]])
+	if OS.get_environment("PERF_PROC") == "1":
+		quiet = true
+		var b3: Array = await _measure()
+		var byk := {}
+		for nd in _all():
+			if nd == self or nd is Viewport:
+				continue
+			if nd.is_processing() or nd.is_physics_processing():
+				var kk := _key(nd)
+				if not byk.has(kk):
+					byk[kk] = []
+				byk[kk].append(nd)
+		var out: Array = []
+		for kk in byk:
+			var saved: Array = []
+			for nd in byk[kk]:
+				saved.append([nd, nd.is_processing(), nd.is_physics_processing()])
+				nd.set_process(false)
+				nd.set_physics_process(false)
+			var mm: Array = await _measure()
+			for sv in saved:
+				if is_instance_valid(sv[0]):
+					sv[0].set_process(sv[1])
+					sv[0].set_physics_process(sv[2])
+			out.append([b3[0] - mm[0], kk, byk[kk].size()])
+		out.sort_custom(func(a, b): return a[0] > b[0])
+		print("PERF proc base %.2f ms" % b3[0])
+		for o in out.slice(0, 22):
+			print("PERF proc %-45s x%-4d saves %.2f ms" % [o[1], o[2], o[0]])
 	if OS.get_environment("PERF_CLASSES") != "1":
 		get_tree().quit()
 		return

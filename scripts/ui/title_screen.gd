@@ -159,7 +159,7 @@ func _process(delta: float) -> void:
 	_t += delta
 	press_label.modulate.a = 0.0   # PressStart draws it now
 	if press_fx:
-		press_fx.visible = not _started
+		press_fx.visible = not _started and not panel.visible
 	var flick := 1.0
 	if fmod(_t, 5.1) < 0.08 or fmod(_t, 3.3) < 0.04:
 		flick = 0.35
@@ -288,6 +288,8 @@ func _open_panel(title: String) -> void:
 	for c in panel_body.get_children():
 		c.queue_free()
 	_size_panel(Vector2(760, 420))
+	if press_fx:
+		press_fx.visible = false   # no PRESS ANY BUTTON showing through a panel
 	panel.visible = true
 	menu.visible = false
 	panel_body.add_child(UIStyle.title_label(title, 34))
@@ -305,6 +307,8 @@ func _reveal_panel() -> void:
 
 func _close_panel() -> void:
 	panel.visible = false
+	if press_fx:
+		press_fx.visible = not _started
 	menu.visible = true
 	Audio.play("ui_back")
 	if menu.get_child_count() > 0:
@@ -537,6 +541,12 @@ class ChapterCard extends Button:
 		if e > 0.0:
 			var sx := fmod(_t * 0.7, 1.6) * (art.size.x + 60.0) - 30.0
 			draw_colored_polygon(PackedVector2Array([art.position + Vector2(sx, 0), art.position + Vector2(sx + 14, 0), art.position + Vector2(sx - 6, art.size.y), art.position + Vector2(sx - 20, art.size.y)]), Color(1, 1, 1, 0.07 * e))
+		if info.get("selected", false):
+			# the tape in the slot: gold frame, a strip across the top
+			draw_rect(r.grow(3.0), UIStyle.GOLD, false, 3.0)
+			var ins := Rect2(art.position + Vector2(0, 4), Vector2(art.size.x, 18))
+			draw_rect(ins, Color(UIStyle.GOLD, 0.92))
+			draw_string(UIStyle.font_bold(), ins.position + Vector2(6, 14), "▶ " + tr("IN THE SLOT"), HORIZONTAL_ALIGNMENT_LEFT, ins.size.x - 8, 12, UIStyle.INK)
 		# frame, year band and title strip
 		var col := UIStyle.PINK if open else UIStyle.DIM
 		draw_rect(r, col.lerp(UIStyle.GOLD, e * 0.5) if open else col, false, 2.0)
@@ -546,7 +556,7 @@ class ChapterCard extends Button:
 		var title := tr(str(info.get("title", ""))) if open else "████████"
 		draw_multiline_string(UIStyle.font_display(), Vector2(r.position.x + 6, r.end.y - 30), title, HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 12, 14, 2, UIStyle.PAPER if open else UIStyle.DIM)
 		# how you did, stamped on the box: the best rank, score and time
-		var bst: Dictionary = SaveManager.data.missions.get(str(info.get("mission", "")), {}) if open else {}
+		var bst: Dictionary = SaveManager.data.missions.get(str(info.get("mission", "")), {}) if open and not info.has("selected") else {}
 		if not bst.is_empty():
 			var rk := str(bst.get("best_rank", ""))
 			var sc := Vector2(art.end.x - 22, art.position.y + 22)
@@ -556,7 +566,11 @@ class ChapterCard extends Button:
 			var sl := Rect2(art.position + Vector2(0, art.size.y - 36), Vector2(art.size.x, 16))
 			draw_rect(sl, Color(UIStyle.INK, 0.8))
 			draw_string(UIStyle.font_mono(), sl.position + Vector2(4, 12), "%d  ·  %s" % [int(bst.get("best_score", 0)), TitleScreenClock.clock(float(bst.get("best_time", 0.0)))], HORIZONTAL_ALIGNMENT_LEFT, sl.size.x - 8, 11, UIStyle.PAPER)
-		if open and e > 0.3:
+		if open and e > 0.3 and not info.get("selected", true):
+			var pr := Rect2(art.end - Vector2(62, 20), Vector2(58, 16))
+			draw_rect(pr, Color(UIStyle.INK, 0.85 * e))
+			draw_string(UIStyle.font_mono(), pr.position + Vector2(5, 12), tr("▶ LOAD"), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(UIStyle.GOLD, e * (0.7 + 0.3 * sin(_t * 6.0))))
+		elif open and e > 0.3 and not info.has("selected"):
 			var pr := Rect2(art.end - Vector2(62, 20), Vector2(58, 16))
 			draw_rect(pr, Color(UIStyle.INK, 0.85 * e))
 			draw_string(UIStyle.font_mono(), pr.position + Vector2(5, 12), tr("▶ PLAY"), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(UIStyle.GOLD, e * (0.7 + 0.3 * sin(_t * 6.0))))
@@ -634,50 +648,114 @@ func _arcade_unlocked(mid: String) -> bool:
 	var i := ARCADE_MAPS.find(mid)
 	return i <= 0 or SaveManager.data.missions.has(ARCADE_MAPS[i - 1]) or SaveManager.data.missions.has(mid)
 
+## The four chapters as arcade tapes (their box art), the mode and the
+## modifiers under them, the local top five beside them, START in gold.
+const ARCADE_TAPES := {
+	"m01_checkout": {"year": "1988", "num": "I", "cover": "motel_night", "box": "cover_m01"},
+	"m02_dog_days": {"year": "1988", "num": "I-B", "cover": "salvage_yard", "box": "cover_m02"},
+	"m03_prime_time": {"year": "1988", "num": "I-C", "cover": "burbank_night", "box": "cover_m03"},
+	"m04_sweet_dreams": {"year": "1988", "num": "I-D", "cover": "villa_gate", "box": "cover_m04"},
+}
+
+func _arc_heading(parent: Control, text: String) -> void:
+	parent.add_child(UIStyle.label(tr(text), 13, UIStyle.GOLD, true))
+
 func _show_arcade() -> void:
 	_open_panel("ARCADE")
+	_size_panel(Vector2(1040, 500))
 	var first: Control = null
-	panel_body.add_child(UIStyle.label("MAP", 14, UIStyle.GOLD, true))
-	var maps := HBoxContainer.new()
-	maps.add_theme_constant_override("separation", 8)
-	panel_body.add_child(maps)
+	# --- the tapes, and the board for the one in the slot
+	var top := HBoxContainer.new()
+	top.add_theme_constant_override("separation", 10)
+	panel_body.add_child(top)
 	for mid in ARCADE_MAPS:
 		var md: MissionData = Game.missions.get(mid)
 		if md == null:
 			continue
 		var open := _arcade_unlocked(mid)
-		var b := _arc_toggle(maps, tr(md.title) if open else tr(md.title) + tr("  [LOCKED]"), mid == _arc_map, func():
+		var info: Dictionary = (ARCADE_TAPES.get(mid, {}) as Dictionary).duplicate()
+		info["mission"] = mid
+		info["title"] = md.title
+		info["open"] = open
+		info["selected"] = mid == _arc_map
+		var card := ChapterCard.new()
+		card.info = info
+		card.custom_minimum_size = Vector2(128, 206)
+		card.mouse_entered.connect(func(): card.grab_focus())
+		card.focus_entered.connect(func(): Audio.play("tape_slide", -8.0, randf_range(0.95, 1.05)))
+		card.pressed.connect(func():
+			if not open:
+				Audio.play("ui_back")
+				card.shake()
+				return
+			Audio.play("tape_insert", -4.0)
 			_arc_map = mid
 			_arc_focus = mid
 			_show_arcade())
-		b.disabled = not open
+		top.add_child(card)
 		if (first == null and mid == _arc_map and _arc_focus == "") or _arc_focus == mid:
-			first = b
-	panel_body.add_child(UIStyle.label("MODE", 14, UIStyle.GOLD, true))
-	var modes := HFlowContainer.new()
-	modes.add_theme_constant_override("separation", 8)
-	panel_body.add_child(modes)
+			first = card
+	var board_box := VBoxContainer.new()
+	board_box.custom_minimum_size = Vector2(430, 0)
+	board_box.add_theme_constant_override("separation", 2)
+	top.add_child(board_box)
+	var md2: MissionData = Game.missions.get(_arc_map)
+	_arc_heading(board_box, tr("HIGH SCORES") + "  ·  " + (tr(md2.title) if md2 else "") + "  ·  " + tr(str(ARCADE_MODES[_arc_mode][0])))
+	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ARCADE_MODES[_arc_mode][1].get("rule", "")))
+	var board_id := _arc_map if mode_key == "" else "%s@%s" % [_arc_map, mode_key]
+	var board: Array = SaveManager.data.leaderboards.get(board_id, [])
+	for i in 5:
+		var line := "%d.   ---   ---------   --:--" % (i + 1)
+		var col := UIStyle.DIM
+		if i < board.size():
+			var r: Dictionary = board[i]
+			line = "%d.   %-3s   %9d   %s" % [i + 1, str(r.rank), int(r.score), Level._fmt_time(float(r.time))]
+			col = [UIStyle.GOLD, UIStyle.PAPER, UIStyle.PAPER, UIStyle.DIM, UIStyle.DIM][i]
+		var l := UIStyle.label(line, 16, col)
+		l.add_theme_font_override("font", UIStyle.font_mono())
+		board_box.add_child(l)
+	if board.is_empty():
+		board_box.add_child(UIStyle.label(tr("No runs yet. Be the first name on the tape."), 13, UIStyle.CYAN))
+	var blurb := UIStyle.label(tr(str(ARCADE_MODES[_arc_mode][2])), 14, UIStyle.PAPER)
+	blurb.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	blurb.custom_minimum_size = Vector2(420, 0)
+	board_box.add_child(blurb)
+	# --- mode | modifiers + weather | start
+	var bottom := HBoxContainer.new()
+	bottom.add_theme_constant_override("separation", 26)
+	panel_body.add_child(bottom)
+	var mcol := VBoxContainer.new()
+	mcol.add_theme_constant_override("separation", 0)
+	bottom.add_child(mcol)
+	_arc_heading(mcol, "MODE")
+	var modes := GridContainer.new()
+	modes.columns = 2
+	modes.add_theme_constant_override("h_separation", 6)
+	modes.add_theme_constant_override("v_separation", 0)
+	mcol.add_child(modes)
 	for i in ARCADE_MODES.size():
 		var k := i
 		var mb := _arc_toggle(modes, tr(str(ARCADE_MODES[i][0])), i == _arc_mode, func():
 			_arc_mode = k
 			_arc_focus = "mode%d" % k
 			_show_arcade())
+		mb.add_theme_font_size_override("font_size", 15)
 		if _arc_focus == "mode%d" % i:
 			first = mb
-	var blurb := UIStyle.label(tr(str(ARCADE_MODES[_arc_mode][2])), 14, UIStyle.DIM)
-	blurb.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	blurb.custom_minimum_size = Vector2(720, 0)
-	panel_body.add_child(blurb)
-	panel_body.add_child(UIStyle.label("MODIFIERS", 14, UIStyle.GOLD, true))
+	var ocol := VBoxContainer.new()
+	ocol.add_theme_constant_override("separation", 0)
+	bottom.add_child(ocol)
+	_arc_heading(ocol, "MODIFIERS")
 	var grid := GridContainer.new()
-	grid.columns = 3
-	grid.add_theme_constant_override("h_separation", 18)
-	panel_body.add_child(grid)
+	grid.columns = 2
+	grid.add_theme_constant_override("h_separation", 14)
+	grid.add_theme_constant_override("v_separation", 0)
+	ocol.add_child(grid)
 	for m in ARCADE_MODS:
 		var key: String = m[1]
 		var cb := CheckButton.new()
 		cb.text = tr(str(m[0]))
+		cb.add_theme_font_size_override("font_size", 14)
 		cb.button_pressed = _arc_mods.get(key, false)
 		cb.toggled.connect(func(on: bool):
 			Audio.play("ui_select" if on else "ui_back", -6.0)
@@ -690,9 +768,9 @@ func _show_arcade() -> void:
 		cb.focus_entered.connect(func(): Audio.play("ui_move", -10.0))
 		grid.add_child(cb)
 	var wrow := HBoxContainer.new()
-	wrow.add_theme_constant_override("separation", 12)
-	panel_body.add_child(wrow)
-	wrow.add_child(UIStyle.label("WEATHER", 14, UIStyle.GOLD, true))
+	wrow.add_theme_constant_override("separation", 10)
+	ocol.add_child(wrow)
+	_arc_heading(wrow, "WEATHER")
 	var wopt := OptionButton.new()
 	for w in ARCADE_WEATHER:
 		wopt.add_item(tr(str(w[0])))
@@ -701,7 +779,27 @@ func _show_arcade() -> void:
 		_arc_weather = i
 		Audio.play("ui_select", -6.0))
 	wrow.add_child(wopt)
-	var go := _panel_button("▶ START", func():
+	var scol := VBoxContainer.new()
+	scol.alignment = BoxContainer.ALIGNMENT_CENTER
+	scol.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	bottom.add_child(scol)
+	var go := Button.new()
+	go.text = "▶  " + tr("START")
+	go.custom_minimum_size = Vector2(200, 64)
+	go.add_theme_font_override("font", UIStyle.font_display())
+	go.add_theme_font_size_override("font_size", 30)
+	for fc in ["font_color", "font_focus_color", "font_hover_color", "font_pressed_color"]:
+		go.add_theme_color_override(fc, UIStyle.INK)
+	for st in ["normal", "hover", "focus", "pressed"]:
+		var sb := StyleBoxFlat.new()
+		sb.bg_color = UIStyle.GOLD if st == "normal" else UIStyle.PINK
+		sb.set_corner_radius_all(2)
+		sb.shadow_color = Color(UIStyle.PINK, 0.5)
+		sb.shadow_size = 0 if st == "normal" else 10
+		go.add_theme_stylebox_override(st, sb)
+	go.pressed.connect(func():
+		Audio.play("tape_insert", -2.0)
+		PostFX.vhs_glitch(0.6)
 		var mods: Dictionary = (ARCADE_MODES[_arc_mode][1] as Dictionary).duplicate()
 		mods.merge(_arc_mods, true)
 		var w := str(ARCADE_WEATHER[_arc_weather][1])
@@ -709,20 +807,8 @@ func _show_arcade() -> void:
 			mods["weather"] = w
 		mods["arcade"] = true
 		Game.replay_mission(_arc_map, "cass", mods))
-	go.add_theme_color_override("font_color", UIStyle.PINK)
-	# local board for this map + mode
-	var mode_key: String = str(ARCADE_MODES[_arc_mode][1].get("mode", ARCADE_MODES[_arc_mode][1].get("rule", "")))
-	var board_id := _arc_map if mode_key == "" else "%s@%s" % [_arc_map, mode_key]
-	var board: Array = SaveManager.data.leaderboards.get(board_id, [])
-	var gap := Control.new()
-	gap.custom_minimum_size = Vector2(0, 14)
-	panel_body.add_child(gap)
-	panel_body.add_child(UIStyle.label("LOCAL BOARD", 14, UIStyle.GOLD, true))
-	if board.is_empty():
-		panel_body.add_child(UIStyle.label(tr("No runs yet. Be the first name on the tape."), 14, UIStyle.DIM))
-	for i in mini(board.size(), 5):
-		var r: Dictionary = board[i]
-		panel_body.add_child(UIStyle.label("%2d.  %-4s  %8d   %s   %s" % [i + 1, r.rank, int(r.score), Level._fmt_time(float(r.time)), r.date], 14))
+	go.focus_entered.connect(func(): Audio.play("ui_move", -10.0))
+	scol.add_child(go)
 	_back_button()
 	if first:
 		first.grab_focus()
@@ -730,6 +816,7 @@ func _show_arcade() -> void:
 
 func _arc_toggle(parent: Control, text: String, on: bool, cb: Callable) -> Button:
 	var b := Button.new()
+	b.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	b.text = ("■ " if on else "□ ") + text
 	b.pressed.connect(func():
 		Audio.play("ui_select")

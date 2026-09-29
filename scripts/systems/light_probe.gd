@@ -53,12 +53,20 @@ static func stretch(dir: Vector2, k: float) -> Transform2D:
 class Smoother extends RefCounted:
 	var cur: Dictionary = {}     ## id -> {dir, k, far}
 	var _tgt: Dictionary = {}
-	var _t := 0.0
+	var _t := randf() * 0.15    ## staggered: not every shadow samples on the same frame
+
+	## Straight to the current lights (coming back on screen).
+	func snap(tree: SceneTree, p: Vector2) -> void:
+		cur.clear()
+		for e in LightProbe.sample(tree, p, 3):
+			cur[e.id] = e.duplicate()
+		_tgt = cur.duplicate(true)
+		_t = 0.15
 
 	func update(tree: SceneTree, p: Vector2, delta: float) -> void:
 		_t -= delta
 		if _t <= 0.0:
-			_t = 0.1
+			_t = 0.15
 			_tgt.clear()
 			for e in LightProbe.sample(tree, p, 3):
 				_tgt[e.id] = e

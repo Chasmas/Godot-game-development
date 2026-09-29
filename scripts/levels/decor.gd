@@ -86,6 +86,7 @@ class PalmTree extends Node2D:
 		z_index = 45
 		_seed = randf() * 10.0
 		_next_leaf = randf_range(2.0, 9.0)
+		_vis_t = randf() * 0.25
 		_shadow = PalmShadow.new()
 		_shadow.size = size
 		_shadow.palm = self
@@ -97,54 +98,79 @@ class PalmTree extends Node2D:
 		_ground.z_as_relative = false
 		add_child(_ground)
 
+	## The wind is read once a frame (and only while the tree is on screen):
+	## the crown's 70 vertices, twice over with the shadow, all use it.
+	var _weather: Node
+	var _w := 0.2
+	var _wdir := Vector2(1, 0.25).normalized()
+	var _g := 0.0
+	var _sway := 0.0
+	var _lean := Vector2.ZERO
+	var _breathe := 1.0
+	var _vis_t := 0.0
+
 	func _process(d: float) -> void:
 		_t += d
+		_vis_t -= d
+		if _vis_t <= 0.0:
+			_vis_t = 0.25
+			var vp := get_viewport()
+			visible = vp.get_visible_rect().grow(160.0).has_point(vp.get_canvas_transform() * global_position)
+		if not visible:
+			return
+		_read_wind()
 		_tick_leaves(d)
 		queue_redraw()
 		if Engine.get_process_frames() % 2 == 0:
 			_shadow.queue_redraw()
 
+	func _read_wind() -> void:
+		if _weather == null or not is_instance_valid(_weather):
+			_weather = get_tree().get_first_node_in_group("weather")
+		_w = float(_weather.wind) if _weather else 0.2
+		_wdir = Vector2(1, 0.25).normalized()
+		if _weather and "wind_dir" in _weather:
+			var v = _weather.wind_dir
+			if v is Vector2 and v != Vector2.ZERO:
+				_wdir = v.normalized()
+		var g := 0.55 + 0.3 * sin(_t * 0.37 + _seed) + 0.2 * sin(_t * 0.91 + _seed * 2.3) + 0.1 * sin(_t * 2.3 + _seed * 0.7)
+		_g = _w * clampf(g, 0.1, 1.3)
+		_sway = sin(_t * (0.9 + _g * 0.8) + _seed) * (0.03 + _g * 0.06)
+		_lean = _wdir * _g * 4.0 * size
+		_breathe = 1.0 + sin(_t * 1.7 + _seed) * 0.012 * (1.0 + _w)
+
 	func _wind() -> float:
-		var w = get_tree().get_first_node_in_group("weather")
-		return float(w.wind) if w else 0.2
+		return _w
 
 	func _wind_dir() -> Vector2:
-		var w = get_tree().get_first_node_in_group("weather")
-		if w and "wind_dir" in w:
-			var v = w.wind_dir
-			if v is Vector2 and v != Vector2.ZERO:
-				return v.normalized()
-		return Vector2(1, 0.25).normalized()
+		return _wdir
 
 	## 0..~1.3: the wind as it arrives, in gusts and lulls
 	func gust() -> float:
-		var w := _wind()
-		var g := 0.55 + 0.3 * sin(_t * 0.37 + _seed) + 0.2 * sin(_t * 0.91 + _seed * 2.3) + 0.1 * sin(_t * 2.3 + _seed * 0.7)
-		return w * clampf(g, 0.1, 1.3)
+		return _g
 
 	## Kept for anything that asks for the crown's overall turn.
 	func sway() -> float:
-		var g := gust()
-		return sin(_t * (0.9 + g * 0.8) + _seed) * (0.03 + g * 0.06)
+		return _sway
 
 	func lean() -> Vector2:
-		return _wind_dir() * gust() * 4.0 * size
+		return _lean
 
 	func breathe() -> float:
-		return 1.0 + sin(_t * 1.7 + _seed) * 0.012 * (1.0 + _wind())
+		return _breathe
 
 	## Where a crown point (polar: angle a, radius fraction r 0..1) is now.
 	## `amp` lets the shadow exaggerate a touch.
 	func bend(a: float, r: float, R: float, amp := 1.0) -> Vector2:
-		var g := gust()
+		var g := _g
 		var k := r * r                                   # stiff near the trunk, loose at the tips
 		var frond := sin(_t * (1.3 + g * 1.4) + a * 3.0 + _seed) * (0.05 + g * 0.1)
 		var flutter := sin(_t * (7.0 + g * 6.0) + a * 11.0 + _seed * 3.0) * 0.02 * g
-		var ang := a + sway() + (frond + flutter) * k * amp
+		var ang := a + _sway + (frond + flutter) * k * amp
 		var droop := 1.0 + sin(_t * 1.1 + a * 2.0 + _seed) * 0.04 * k - g * 0.05 * k
-		var pos := Vector2.from_angle(ang) * r * R * droop * breathe()
+		var pos := Vector2.from_angle(ang) * r * R * droop * _breathe
 		# the canopy is pushed downwind, the tips most of all
-		return pos + lean() * (0.35 + k) * amp
+		return pos + _lean * (0.35 + k) * amp
 
 	## The deformed crown as triangles with UVs into the painted texture.
 	func crown_polys(R: float, amp := 1.0) -> Array:

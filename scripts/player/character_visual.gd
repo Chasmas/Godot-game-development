@@ -838,7 +838,18 @@ class DropShadow extends Node2D:
 		z_index = -1
 		z_as_relative = true
 		show_behind_parent = true
+	var _off := false
 	func _process(delta: float) -> void:
+		# off screen nobody sees it: no light sampling, no redraw
+		var vp := get_viewport()
+		var sp := vp.get_canvas_transform() * global_position
+		var off := not vp.get_visible_rect().grow(96.0).has_point(sp)
+		if off:
+			_off = true
+			return
+		if _off:
+			_off = false
+			_smooth.snap(get_tree(), global_position)
 		_smooth.update(get_tree(), global_position, delta)
 		_probe = _smooth.top(1)
 		queue_redraw()
