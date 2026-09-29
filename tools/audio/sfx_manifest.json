@@ -41,7 +41,7 @@
  },
  "empty": {
   "group": "guns",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A dry click of an empty handgun trigger."
  },
  "reload": {
@@ -51,12 +51,12 @@
  },
  "mag_out": {
   "group": "guns",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A pistol magazine pressed out, a metallic click and slide."
  },
  "mag_in": {
   "group": "guns",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A pistol magazine slapped into the grip, firm click."
  },
  "slide_rack": {
@@ -71,7 +71,7 @@
  },
  "shell_insert": {
   "group": "guns",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A shotgun shell pushed into the tube magazine, short slide and click."
  },
  "ricochet": {
@@ -91,12 +91,12 @@
  },
  "punch": {
   "group": "melee",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A hard bare-knuckle punch to the face, meaty smack."
  },
  "swing": {
   "group": "melee",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A fast swish of a baseball bat through the air."
  },
  "swing_heavy": {
@@ -161,7 +161,7 @@
  },
  "throw": {
   "group": "melee",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A heavy object thrown hard, a quick whoosh."
  },
  "door_kick": {
@@ -231,7 +231,7 @@
  },
  "light_switch": {
   "group": "props",
-  "sec": 0.3,
+  "sec": 0.5,
   "prompt": "A plastic wall light switch flicked, one crisp click."
  },
  "explosion": {
@@ -304,7 +304,7 @@
  },
  "slate_clap": {
   "group": "props",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A film clapperboard snapping shut."
  },
  "on_air_buzz": {
@@ -320,7 +320,7 @@
  },
  "pickup": {
   "group": "props",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "Picking up a handgun off the floor, a metallic grab."
  },
  "collect": {
@@ -335,7 +335,7 @@
  },
  "bubble_pop": {
   "group": "props",
-  "sec": 0.3,
+  "sec": 0.5,
   "prompt": "A small wet bubble popping."
  },
  "snore": {
@@ -629,27 +629,27 @@
  },
  "ui_move": {
   "group": "ui",
-  "sec": 0.2,
+  "sec": 0.5,
   "prompt": "A short soft analog synth blip for a menu cursor moving, 1980s."
  },
  "ui_select": {
   "group": "ui",
-  "sec": 0.35,
+  "sec": 0.5,
   "prompt": "A bright analog synth confirmation chirp for selecting a menu item, 1980s."
  },
  "ui_back": {
   "group": "ui",
-  "sec": 0.3,
+  "sec": 0.5,
   "prompt": "A low analog synth blip for going back in a menu, 1980s."
  },
  "blip": {
   "group": "ui",
-  "sec": 0.2,
+  "sec": 0.5,
   "prompt": "A tiny digital blip."
  },
  "alert": {
   "group": "ui",
-  "sec": 0.4,
+  "sec": 0.5,
   "prompt": "A tense two-note synth sting when an enemy spots you."
  },
  "combo": {
@@ -664,12 +664,12 @@
  },
  "type_clack": {
   "group": "ui",
-  "sec": 0.15,
+  "sec": 0.5,
   "prompt": "A single typewriter key clack."
  },
  "beat_tick": {
   "group": "ui",
-  "sec": 0.15,
+  "sec": 0.5,
   "prompt": "A tiny click of a drum machine rim shot."
  },
  "slowmo_in": {

@@ -5,44 +5,1407 @@
    "title": "Neon Vigil (Main Theme)",
    "family": "menu",
    "chunks": [
-    {"text": "[Intro] a lone detuned analog synth plays a slow five-note minor motif {cassette hiss} {distant rain}", "sec": 24,
-     "styles": ["dark synthwave", "cinematic", "mysterious", "E minor", "98 BPM", "detuned analog synth", "cassette tape hiss", "tape wow and flutter", "wide reverb", "1980s", "instrumental"]},
-    {"text": "[Theme] the motif on a brassy analog lead over a slow driving drum machine, gated snare, pulsing octave bass, huge warm pads", "sec": 40,
-     "styles": ["dark synthwave", "outrun", "elegant", "slightly menacing", "LinnDrum", "gated reverb snare", "octave bassline", "Juno pads", "sidechain"]},
-    {"text": "[Swell] the motif doubled by a glassy FM bell, arpeggios climbing, tension rising, one beat of total silence, then everything returns", "sec": 34,
-     "styles": ["cinematic synthwave", "arpeggiator", "DX7 bell", "rising tension", "dramatic stop", "big re-entry"]},
-    {"text": "[Outro] the motif resolves on a long held note, the tape slows down and stops", "sec": 20,
-     "styles": ["ambient synth", "melancholic", "tape slowdown", "fading reverb tail"]}
+    {
+     "text": "[Intro] a lone detuned analog synth plays a slow five-note minor motif {cassette hiss} {distant rain}",
+     "sec": 24,
+     "styles": [
+      "dark synthwave",
+      "cinematic",
+      "mysterious",
+      "E minor",
+      "98 BPM",
+      "detuned analog synth",
+      "cassette tape hiss",
+      "tape wow and flutter",
+      "wide reverb",
+      "1980s",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Theme] the motif on a brassy analog lead over a slow driving drum machine, gated snare, pulsing octave bass, huge warm pads",
+     "sec": 40,
+     "styles": [
+      "dark synthwave",
+      "outrun",
+      "elegant",
+      "slightly menacing",
+      "LinnDrum",
+      "gated reverb snare",
+      "octave bassline",
+      "Juno pads",
+      "sidechain"
+     ]
+    },
+    {
+     "text": "[Swell] the motif doubled by a glassy FM bell, arpeggios climbing, tension rising, one beat of total silence, then everything returns",
+     "sec": 34,
+     "styles": [
+      "cinematic synthwave",
+      "arpeggiator",
+      "DX7 bell",
+      "rising tension",
+      "dramatic stop",
+      "big re-entry"
+     ]
+    },
+    {
+     "text": "[Outro] the motif resolves on a long held note, the tape slows down and stops",
+     "sec": 20,
+     "styles": [
+      "ambient synth",
+      "melancholic",
+      "tape slowdown",
+      "fading reverb tail"
+     ]
+    }
    ]
   },
   "combat_motel": {
    "title": "Checkout Time",
    "family": "combat",
    "chunks": [
-    {"text": "[Cold open] no intro: distorted 909 kick and a squelching acid bass riff hit at once", "sec": 12,
-     "styles": ["dark electro", "acid techno", "140 BPM", "E minor", "distorted TR-909", "TB-303 acid bass", "aggressive", "instrumental", "tape saturation"]},
-    {"text": "[Groove] hypnotic acid bassline, syncopated breakbeat under the four-on-the-floor, heavy sidechain pumping, short synth stabs", "sec": 40,
-     "styles": ["acid synth", "breakbeat", "EBM", "heavy sidechain", "hypnotic", "synth stabs", "dark club"]},
-    {"text": "[Hook] a screaming overdriven analog lead plays the five-note motif over the groove", "sec": 40,
-     "styles": ["dark synthwave", "distorted lead synth", "memorable hook", "driving", "neon night"],
-     "ref": {"track": "main_theme", "start": 4, "end": 24, "strength": "medium"}},
-    {"text": "[Breakdown] the drums drop out, filtered bass, a heartbeat kick, reversed cymbals, a false drop", "sec": 20,
-     "styles": ["breakdown", "filtered", "tension", "reverse effects", "heartbeat"]},
-    {"text": "[Second drop] brutal re-entry, faster hats, more distortion, the motif and the acid line together, climax, ends on the downbeat for a loop", "sec": 40,
-     "styles": ["industrial techno", "dark synthwave", "climax", "distorted drums", "glitch percussion", "loopable ending"]}
+    {
+     "text": "[Cold open] no intro: distorted 909 kick and a squelching acid bass riff hit at once",
+     "sec": 12,
+     "styles": [
+      "dark electro",
+      "acid techno",
+      "140 BPM",
+      "E minor",
+      "distorted TR-909",
+      "TB-303 acid bass",
+      "aggressive",
+      "instrumental",
+      "tape saturation"
+     ]
+    },
+    {
+     "text": "[Groove] hypnotic acid bassline, syncopated breakbeat under the four-on-the-floor, heavy sidechain pumping, short synth stabs",
+     "sec": 40,
+     "styles": [
+      "acid synth",
+      "breakbeat",
+      "EBM",
+      "heavy sidechain",
+      "hypnotic",
+      "synth stabs",
+      "dark club"
+     ]
+    },
+    {
+     "text": "[Hook] a screaming overdriven analog lead plays the five-note motif over the groove",
+     "sec": 40,
+     "styles": [
+      "dark synthwave",
+      "distorted lead synth",
+      "memorable hook",
+      "driving",
+      "neon night"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Breakdown] the drums drop out, filtered bass, a heartbeat kick, reversed cymbals, a false drop",
+     "sec": 20,
+     "styles": [
+      "breakdown",
+      "filtered",
+      "tension",
+      "reverse effects",
+      "heartbeat"
+     ]
+    },
+    {
+     "text": "[Second drop] brutal re-entry, faster hats, more distortion, the motif and the acid line together, climax, ends on the downbeat for a loop",
+     "sec": 40,
+     "styles": [
+      "industrial techno",
+      "dark synthwave",
+      "climax",
+      "distorted drums",
+      "glitch percussion",
+      "loopable ending"
+     ]
+    }
    ]
   },
   "stealth_motel": {
    "title": "Room 204",
    "family": "stealth",
    "chunks": [
-    {"text": "[Drift] a low drone, a slow sub-bass pulse like a heartbeat, small percussive clicks, distant fluorescent hum", "sec": 30,
-     "styles": ["dark ambient", "minimal", "suspense", "100 BPM", "E minor", "sub bass pulse", "analog drone", "instrumental", "cassette texture"]},
-    {"text": "[Watch] fragments of the five-note motif on a muted bell, far away, a reversed sound now and then, a ticking hi-hat", "sec": 30,
-     "styles": ["stealth", "tension", "sparse", "muted FM bell", "reversed textures", "ticking hi-hat"],
-     "ref": {"track": "main_theme", "start": 4, "end": 24, "strength": "low"}},
-    {"text": "[Closer] the pulse tightens, a filtered analog sequence creeps in, tension that never resolves, loop-friendly", "sec": 30,
-     "styles": ["suspense", "analog sequence", "filter sweep", "creeping", "loopable"]}
+    {
+     "text": "[Drift] a low drone, a slow sub-bass pulse like a heartbeat, small percussive clicks, distant fluorescent hum",
+     "sec": 30,
+     "styles": [
+      "dark ambient",
+      "minimal",
+      "suspense",
+      "100 BPM",
+      "E minor",
+      "sub bass pulse",
+      "analog drone",
+      "instrumental",
+      "cassette texture"
+     ]
+    },
+    {
+     "text": "[Watch] fragments of the five-note motif on a muted bell, far away, a reversed sound now and then, a ticking hi-hat",
+     "sec": 30,
+     "styles": [
+      "stealth",
+      "tension",
+      "sparse",
+      "muted FM bell",
+      "reversed textures",
+      "ticking hi-hat"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    },
+    {
+     "text": "[Closer] the pulse tightens, a filtered analog sequence creeps in, tension that never resolves, loop-friendly",
+     "sec": 30,
+     "styles": [
+      "suspense",
+      "analog sequence",
+      "filter sweep",
+      "creeping",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "menu_tapes": {
+   "title": "Tape Deck",
+   "family": "menu",
+   "chunks": [
+    {
+     "text": "[Loop] a lazy analog bass pulse, soft drum machine, warm tape-saturated pads, the five-note motif hummed on a muted synth",
+     "sec": 50,
+     "styles": [
+      "dreamy synthwave",
+      "menu music",
+      "lo-fi cassette",
+      "92 BPM",
+      "E minor",
+      "tape hiss",
+      "warm analog pads",
+      "soft LinnDrum",
+      "elegant",
+      "slightly uneasy"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    },
+    {
+     "text": "[Turn] a glassy arpeggio joins, the pad opens up, then settles back so it loops",
+     "sec": 40,
+     "styles": [
+      "dreamy",
+      "arpeggiator",
+      "filter sweep",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "menu_vcr": {
+   "title": "Rewind",
+   "family": "menu",
+   "chunks": [
+    {
+     "text": "[Static] VHS tracking noise, a VCR motor hum, a slow pulsing synth bass and a detuned bell",
+     "sec": 40,
+     "styles": [
+      "experimental electronic",
+      "VHS texture",
+      "dark ambient",
+      "84 BPM",
+      "A minor",
+      "detuned bell",
+      "tape warble",
+      "mysterious"
+     ]
+    },
+    {
+     "text": "[Play] a soft drum machine enters, a melancholic analog lead drifts, the tape wobbles",
+     "sec": 45,
+     "styles": [
+      "dark synthwave",
+      "melancholic",
+      "tape wobble",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "story_apartment": {
+   "title": "Answering Machine",
+   "family": "story",
+   "chunks": [
+    {
+     "text": "[Room] warm Rhodes electric piano chords in a small apartment, cassette hiss, slow bass, a soft brushed drum machine",
+     "sec": 55,
+     "styles": [
+      "melancholic",
+      "Rhodes piano",
+      "cassette texture",
+      "76 BPM",
+      "D minor",
+      "lonely",
+      "late night",
+      "1980s",
+      "slightly uncomfortable"
+     ]
+    },
+    {
+     "text": "[Message] a detuned synth pad swells under the piano, a lone clean guitar note rings out, then it fades",
+     "sec": 50,
+     "styles": [
+      "dreamlike",
+      "detuned synth",
+      "ambient guitar",
+      "nostalgic",
+      "guilt"
+     ]
+    }
+   ]
+  },
+  "story_firewatch": {
+   "title": "Fire Watch",
+   "family": "story",
+   "chunks": [
+    {
+     "text": "[Memory] distant crackling fire, a low drone, a slow synth choir, a music box plays the five-note motif out of tune",
+     "sec": 50,
+     "styles": [
+      "ambient horror",
+      "cinematic",
+      "68 BPM",
+      "E minor",
+      "music box",
+      "detuned",
+      "haunting",
+      "guilt"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Smoke] a heartbeat sub bass, reversed piano, the drone rises and cuts to silence",
+     "sec": 40,
+     "styles": [
+      "dark ambient",
+      "tension",
+      "reverse piano",
+      "heartbeat"
+     ]
+    }
+   ]
+  },
+  "story_mom": {
+   "title": "Long Distance",
+   "family": "story",
+   "chunks": [
+    {
+     "text": "[Call] a soft drum machine, a warm Juno pad and a gentle picked clean guitar, like a late night phone call home",
+     "sec": 55,
+     "styles": [
+      "dreamy synthwave",
+      "nostalgic",
+      "88 BPM",
+      "G major",
+      "warm pads",
+      "clean guitar",
+      "cassette texture",
+      "tender",
+      "a little sad"
+     ]
+    },
+    {
+     "text": "[Line] a dreamy lead plays a hopeful melody, but a low note keeps pulling it back to minor",
+     "sec": 45,
+     "styles": [
+      "emotional",
+      "bittersweet",
+      "analog lead",
+      "unresolved"
+     ]
+    }
+   ]
+  },
+  "story_tommy": {
+   "title": "Sweet Nothing",
+   "family": "story",
+   "chunks": [
+    {
+     "text": "[Prom] a slow 1980s power ballad on synths: big gated snare, glossy DX7 electric piano, a romantic lead, all slightly too slow",
+     "sec": 55,
+     "styles": [
+      "80s ballad",
+      "dreamy",
+      "70 BPM",
+      "F major",
+      "DX7 piano",
+      "gated snare",
+      "romantic",
+      "tape slowed down",
+      "wrong",
+      "unsettling"
+     ]
+    },
+    {
+     "text": "[Crack] the tape drags and the pitch sinks, the melody turns into the five-note motif in minor, then silence",
+     "sec": 40,
+     "styles": [
+      "tape slowdown",
+      "pitch drop",
+      "haunting",
+      "ambient horror"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    }
+   ]
+  },
+  "aftermath": {
+   "title": "Static Heat",
+   "family": "story",
+   "chunks": [
+    {
+     "text": "[After] silence after violence: a low analog drone, distant sirens, sparse reverbed piano notes, a slow heartbeat kick",
+     "sec": 60,
+     "styles": [
+      "dark ambient",
+      "aftermath",
+      "60 BPM",
+      "E minor",
+      "sparse piano",
+      "drone",
+      "melancholic",
+      "cinematic"
+     ]
+    },
+    {
+     "text": "[Breath] a warm pad resolves, the motif quietly on a bell",
+     "sec": 35,
+     "styles": [
+      "ambient",
+      "resolution",
+      "bell"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "drive_barstow": {
+   "title": "Barstow Nightline",
+   "family": "drive",
+   "chunks": [
+    {
+     "text": "[Road] a hypnotic outrun bassline in eighths, simple drum machine, huge synth pads, night highway, neon passing",
+     "sec": 60,
+     "styles": [
+      "outrun",
+      "night driving",
+      "108 BPM",
+      "A minor",
+      "hypnotic bassline",
+      "LinnDrum",
+      "huge pads",
+      "dreamy lead",
+      "1980s radio"
+     ]
+    },
+    {
+     "text": "[Chorus] a dreamy lead sings the five-note motif over the pads, wet asphalt shimmer",
+     "sec": 50,
+     "styles": [
+      "synthwave",
+      "memorable melody",
+      "chorus",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    }
+   ]
+  },
+  "drive_mojave": {
+   "title": "Mojave 3 AM",
+   "family": "drive",
+   "chunks": [
+    {
+     "text": "[Desert] a slow pulsing bass, a clap on two and four, a lonely analog lead, heat haze, an empty highway",
+     "sec": 55,
+     "styles": [
+      "dark synthwave",
+      "night drive",
+      "96 BPM",
+      "C sharp minor",
+      "analog lead",
+      "desert",
+      "lonely",
+      "tape saturation"
+     ]
+    },
+    {
+     "text": "[Rise] the drums fill out, a second lead doubles an octave up, then the road goes quiet",
+     "sec": 50,
+     "styles": [
+      "outrun",
+      "building",
+      "octave lead",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "drive_burbank": {
+   "title": "Burbank After Hours",
+   "family": "drive",
+   "chunks": [
+    {
+     "text": "[Boulevard] funky slap-style synth bass, crisp drum machine, glittering arpeggios, a pirate radio station at 3 AM",
+     "sec": 55,
+     "styles": [
+      "retro electronic",
+      "night city",
+      "118 BPM",
+      "F sharp minor",
+      "funky synth bass",
+      "arpeggios",
+      "neon",
+      "glamorous",
+      "decadent"
+     ]
+    },
+    {
+     "text": "[Hook] a catchy brassy synth hook, a vocoder-like pad, cool and slightly dangerous",
+     "sec": 50,
+     "styles": [
+      "synthwave",
+      "catchy hook",
+      "brass synth",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "stealth_yard": {
+   "title": "Chain-Link",
+   "family": "stealth",
+   "chunks": [
+    {
+     "text": "[Yard] a hot wind drone, metal creaks, a sub pulse like a slow heartbeat, a distant dog, clicking percussion",
+     "sec": 45,
+     "styles": [
+      "dark ambient",
+      "suspense",
+      "96 BPM",
+      "C sharp minor",
+      "industrial texture",
+      "sub bass pulse",
+      "minimal",
+      "cassette"
+     ]
+    },
+    {
+     "text": "[Prowl] a muted acid bassline creeps in low, filtered, never opening",
+     "sec": 45,
+     "styles": [
+      "minimal techno",
+      "filtered acid",
+      "tension",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "stealth_studio": {
+   "title": "Dead Air",
+   "family": "stealth",
+   "chunks": [
+    {
+     "text": "[Stage] an empty soundstage hum, a ticking clock, a far off laugh track played backwards, low drone",
+     "sec": 45,
+     "styles": [
+      "dark ambient",
+      "suspense",
+      "100 BPM",
+      "F sharp minor",
+      "reversed sounds",
+      "studio hum",
+      "creepy",
+      "minimal"
+     ]
+    },
+    {
+     "text": "[Cue] a tight analog sequence, a rim-shot pattern, the motif on a muted bell, waiting",
+     "sec": 45,
+     "styles": [
+      "stealth",
+      "analog sequence",
+      "tension",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "combat_yard": {
+   "title": "Dog Days",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Intro] 30 seconds of a hot distorted drone and a panting kick before it explodes",
+     "sec": 25,
+     "styles": [
+      "industrial",
+      "tension build",
+      "150 BPM",
+      "C sharp minor",
+      "distortion",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Drop] a galloping distorted bass, a pounding EBM kick, metallic industrial hits, snarling synth",
+     "sec": 45,
+     "styles": [
+      "EBM",
+      "industrial techno",
+      "galloping bass",
+      "aggressive",
+      "metallic percussion",
+      "sidechain"
+     ]
+    },
+    {
+     "text": "[Hook] a howling detuned lead with a memorable call and answer riff",
+     "sec": 40,
+     "styles": [
+      "dark synthwave",
+      "hook",
+      "detuned lead"
+     ]
+    },
+    {
+     "text": "[Switch] the beat flips to a breakbeat for eight bars, then the four-on-the-floor slams back",
+     "sec": 40,
+     "styles": [
+      "breakbeat",
+      "percussion switch",
+      "climax",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_studio": {
+   "title": "Prime Time",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Countdown] a TV countdown blip, then an immediate funky electro groove",
+     "sec": 20,
+     "styles": [
+      "electro",
+      "132 BPM",
+      "F sharp minor",
+      "funky synth bass",
+      "TR-808",
+      "cowbell",
+      "game show",
+      "instrumental",
+      "dangerous"
+     ]
+    },
+    {
+     "text": "[Groove] a slap bass line, stabbing brass synths, glitchy percussion, a grinning showbiz hook",
+     "sec": 45,
+     "styles": [
+      "electro funk",
+      "brass stabs",
+      "glitch",
+      "catchy"
+     ]
+    },
+    {
+     "text": "[Commercial break] everything cuts to a cheesy jingle for two bars, then a brutal distorted drop",
+     "sec": 25,
+     "styles": [
+      "false drop",
+      "sudden silence",
+      "massive re-entry"
+     ]
+    },
+    {
+     "text": "[Finale] the hook on a screaming lead over the full groove, the five-note motif in the brass",
+     "sec": 45,
+     "styles": [
+      "climax",
+      "distorted lead",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "combat_villa": {
+   "title": "Sweet Dreams",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Lullaby] a music box motif, then a slow crushing half-time beat under it",
+     "sec": 25,
+     "styles": [
+      "dark synthwave",
+      "nightmare",
+      "96 BPM",
+      "D minor",
+      "music box",
+      "half-time",
+      "instrumental",
+      "ominous"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Waltz] a distorted bass in three against a four beat, polyrhythmic, dreamlike, violent",
+     "sec": 45,
+     "styles": [
+      "polyrhythm",
+      "industrial",
+      "psychedelic",
+      "heavy"
+     ]
+    },
+    {
+     "text": "[Wake] double-time drums, a detuned lead wailing the lullaby, everything distorts",
+     "sec": 45,
+     "styles": [
+      "dark techno",
+      "climax",
+      "detuned lead",
+      "chaos",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_arcade1": {
+   "title": "High Score",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Insert coin] an arcade coin sound, straight into a fast acid electro groove",
+     "sec": 20,
+     "styles": [
+      "acid electro",
+      "145 BPM",
+      "A minor",
+      "TB-303",
+      "arcade",
+      "aggressive",
+      "instrumental",
+      "tape saturation"
+     ]
+    },
+    {
+     "text": "[Level] a memorable chiptune-flavoured lead over heavy sidechained bass",
+     "sec": 50,
+     "styles": [
+      "dark synthwave",
+      "hook",
+      "sidechain",
+      "arcade synth"
+     ]
+    },
+    {
+     "text": "[Boss wave] bitcrushed drums, the lead doubled, faster hats",
+     "sec": 45,
+     "styles": [
+      "bitcrush",
+      "climax",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_arcade2": {
+   "title": "Endless Night",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Pulse] a relentless four-on-the-floor, a rolling analog bass, dark and hypnotic",
+     "sec": 50,
+     "styles": [
+      "dark techno",
+      "155 BPM",
+      "E minor",
+      "hypnotic",
+      "rolling bass",
+      "instrumental",
+      "club"
+     ]
+    },
+    {
+     "text": "[Spiral] an acid line keeps rising in filter, glitch percussion, reversed hits, never quite peaks",
+     "sec": 55,
+     "styles": [
+      "acid techno",
+      "hypnotic",
+      "glitch",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_arcade3": {
+   "title": "One in the Chamber",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Tension] a single rim shot, a ticking bass, silence between hits",
+     "sec": 20,
+     "styles": [
+      "minimal electro",
+      "125 BPM",
+      "G minor",
+      "tension",
+      "sparse",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Burst] a sudden explosive breakbeat and distorted bass stab, then back to sparse ticks, over and over",
+     "sec": 50,
+     "styles": [
+      "breakbeat",
+      "stop-start",
+      "distorted stabs",
+      "dynamic contrast"
+     ]
+    },
+    {
+     "text": "[Unload] the full beat locks in, a cold sharp lead",
+     "sec": 40,
+     "styles": [
+      "electro",
+      "cold lead",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_arcade4": {
+   "title": "Clock's Ticking",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Clock] a clock tick becomes the hi-hat, the tempo feels like it's accelerating",
+     "sec": 30,
+     "styles": [
+      "industrial techno",
+      "165 BPM",
+      "B minor",
+      "urgent",
+      "clock ticking",
+      "instrumental",
+      "aggressive"
+     ]
+    },
+    {
+     "text": "[Race] a frantic arpeggiator, a pounding kick, a siren-like lead, pure adrenaline",
+     "sec": 60,
+     "styles": [
+      "dark synthwave",
+      "arpeggiator",
+      "adrenaline",
+      "siren lead",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_galaxy": {
+   "title": "Galaxy Palace",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Doors] muffled disco through a wall, then the doors burst open",
+     "sec": 15,
+     "styles": [
+      "italo disco",
+      "dark disco",
+      "124 BPM",
+      "A minor",
+      "muffled",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Floor] a dark italo disco groove: octave bass, handclaps, glittering arpeggios, a sleazy lead",
+     "sec": 55,
+     "styles": [
+      "italo disco",
+      "dark synthwave",
+      "octave bass",
+      "handclaps",
+      "glamorous",
+      "decadent"
+     ]
+    },
+    {
+     "text": "[Blackout] the music cuts, a heartbeat, then the drop returns twice as heavy",
+     "sec": 45,
+     "styles": [
+      "sudden silence",
+      "massive re-entry",
+      "heavy",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "combat_police": {
+   "title": "Barstow PD",
+   "family": "combat",
+   "chunks": [
+    {
+     "text": "[Raid] police radio chatter texture, a stomping EBM beat, marching distorted bass",
+     "sec": 50,
+     "styles": [
+      "EBM",
+      "140 BPM",
+      "D minor",
+      "marching bass",
+      "industrial",
+      "militant",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Siren] a siren-like detuned lead plays the five-note motif, the drums get heavier",
+     "sec": 50,
+     "styles": [
+      "industrial synthwave",
+      "siren lead",
+      "heavy drums",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "massacre_1": {
+   "title": "Spotlight",
+   "family": "extreme",
+   "chunks": [
+    {
+     "text": "[Stage light] slow motion: a deep sub drop, a reverse cymbal, then a massive distorted 909 beat",
+     "sec": 20,
+     "styles": [
+      "industrial techno",
+      "170 BPM",
+      "E minor",
+      "distorted 909",
+      "noise risers",
+      "instrumental",
+      "brutal"
+     ]
+    },
+    {
+     "text": "[Carnage] overdriven acid bass, bitcrushed percussion, metallic hits, the motif screamed by a distorted lead",
+     "sec": 55,
+     "styles": [
+      "acid",
+      "noise",
+      "bitcrush",
+      "chaos",
+      "memorable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Collapse] the beat stutters, pitch drops, then returns even faster",
+     "sec": 30,
+     "styles": [
+      "glitch",
+      "pitch drop",
+      "stutter",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "massacre_2": {
+   "title": "Red Tape",
+   "family": "extreme",
+   "chunks": [
+    {
+     "text": "[Floor] a filthy breakbeat at double speed, a distorted reese bass, tape manipulation, chopped vocal-like synth",
+     "sec": 55,
+     "styles": [
+      "breakcore",
+      "industrial",
+      "175 BPM",
+      "C minor",
+      "reese bass",
+      "tape manipulation",
+      "instrumental",
+      "violent"
+     ]
+    },
+    {
+     "text": "[Floor 2] a four-on-the-floor slams in under the breaks, heavy sidechain, noise wall",
+     "sec": 50,
+     "styles": [
+      "industrial techno",
+      "noise",
+      "sidechain",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "massacre_3": {
+   "title": "No Survivors",
+   "family": "extreme",
+   "chunks": [
+    {
+     "text": "[Pressure] an alarm-like synth, a relentless EBM kick, a sawtooth bass drill",
+     "sec": 45,
+     "styles": [
+      "EBM",
+      "dark techno",
+      "160 BPM",
+      "F minor",
+      "aggressive arpeggiator",
+      "distortion",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Riot] distorted guitar-like power chords from a synth, industrial percussion, a noise riser into a brutal drop",
+     "sec": 55,
+     "styles": [
+      "industrial rock",
+      "synth power chords",
+      "brutal drop",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_harcourt_a": {
+   "title": "Night Manager",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Office] a heavy controlled groove, a cigarette-slow swagger bass, a smoky saxophone-like synth motif",
+     "sec": 55,
+     "styles": [
+      "dark synthwave",
+      "boss",
+      "118 BPM",
+      "C sharp minor",
+      "swagger bassline",
+      "smoky lead",
+      "heavy kick",
+      "instrumental",
+      "menacing"
+     ]
+    },
+    {
+     "text": "[Keys] percussion builds, a key-jangling hi-hat pattern, the lead gets angry",
+     "sec": 45,
+     "styles": [
+      "building",
+      "percussion",
+      "anger",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_harcourt_b": {
+   "title": "Night Manager (Lights Out)",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Dark] the lights die: the same bass now distorted, faster drums, a siren of the motif, collapse",
+     "sec": 55,
+     "styles": [
+      "industrial techno",
+      "boss final phase",
+      "140 BPM",
+      "C sharp minor",
+      "distortion",
+      "chaos",
+      "instrumental",
+      "extreme intensity"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[End] everything crushes into noise and snaps back into the groove",
+     "sec": 40,
+     "styles": [
+      "noise",
+      "collapse",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_fireman_a": {
+   "title": "The Fireman",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Showtime] roaring flame textures, a huge stomping drum machine, a brass-like synth fanfare motif",
+     "sec": 55,
+     "styles": [
+      "industrial synthwave",
+      "boss",
+      "148 BPM",
+      "F sharp minor",
+      "fanfare",
+      "stomping drums",
+      "flame textures",
+      "instrumental",
+      "theatrical"
+     ]
+    },
+    {
+     "text": "[Heat] faster percussion, burning distorted bass, the fanfare turns sinister",
+     "sec": 45,
+     "styles": [
+      "building",
+      "distorted bass",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_fireman_b": {
+   "title": "The Fireman (Burning Man)",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Inferno] everything on fire: double-time drums, a screaming lead of the fanfare, crackling noise, the five-note motif underneath",
+     "sec": 55,
+     "styles": [
+      "industrial techno",
+      "boss final phase",
+      "170 BPM",
+      "F sharp minor",
+      "screaming lead",
+      "noise",
+      "instrumental",
+      "extreme"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    },
+    {
+     "text": "[Ash] the beat collapses and roars back",
+     "sec": 40,
+     "styles": [
+      "collapse",
+      "massive re-entry",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_tommy_a": {
+   "title": "Tommy",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Prom] a distorted 80s prom ballad turned into a slow heavy half-time groove, choir pads, the lullaby motif",
+     "sec": 55,
+     "styles": [
+      "dark synthwave",
+      "boss",
+      "90 BPM",
+      "D minor",
+      "half-time",
+      "choir pads",
+      "distorted ballad",
+      "instrumental",
+      "tragic"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Dance] the half-time doubles, a detuned lead dances around the motif",
+     "sec": 45,
+     "styles": [
+      "psychedelic",
+      "double-time",
+      "detuned lead",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "boss_tommy_b": {
+   "title": "Tommy (Wake Up)",
+   "family": "boss",
+   "chunks": [
+    {
+     "text": "[Wake] tape speeding up and slowing down, pitch unstable, a brutal industrial beat, the ballad melody broken apart",
+     "sec": 55,
+     "styles": [
+      "industrial",
+      "nightmare",
+      "boss final phase",
+      "140 BPM",
+      "D minor",
+      "pitch instability",
+      "tape manipulation",
+      "instrumental"
+     ]
+    },
+    {
+     "text": "[Morning] the beat collapses into silence and one clear note of the motif",
+     "sec": 40,
+     "styles": [
+      "collapse",
+      "silence",
+      "loopable"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    }
+   ]
+  },
+  "nightmare_villa": {
+   "title": "Villa Estrella",
+   "family": "nightmare",
+   "chunks": [
+    {
+     "text": "[Halls] out of tune synths, backwards music, a heartbeat bass, whispers of a melody that feels familiar but wrong",
+     "sec": 55,
+     "styles": [
+      "psychedelic",
+      "ambient horror",
+      "80 BPM",
+      "D minor",
+      "backwards music",
+      "detuned synths",
+      "heartbeat bass",
+      "instrumental",
+      "dreamlike"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "low"
+     }
+    },
+    {
+     "text": "[Deeper] rhythms fade in and vanish, unnatural stereo movement, low rumble",
+     "sec": 50,
+     "styles": [
+      "experimental electronic",
+      "granular",
+      "rumble",
+      "loopable"
+     ]
+    }
+   ]
+  },
+  "nightmare_dream": {
+   "title": "The Hour That Isn't",
+   "family": "nightmare",
+   "chunks": [
+    {
+     "text": "[Sleep] a tape slowed to a crawl, a drone, a lullaby on a warped music box, granular shimmer",
+     "sec": 55,
+     "styles": [
+      "dark ambient",
+      "psychedelic",
+      "60 BPM",
+      "E minor",
+      "tape slowdown",
+      "music box",
+      "granular",
+      "unsettling",
+      "instrumental"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Fall] everything pitches down into a sub rumble, then a single clean breath of silence",
+     "sec": 40,
+     "styles": [
+      "pitch drop",
+      "rumble",
+      "silence"
+     ]
+    }
+   ]
+  },
+  "credits_checkout": {
+   "title": "Checkout",
+   "family": "credits",
+   "chunks": [
+    {
+     "text": "[Credits] a big, melodic, emotional synthwave anthem built on the five-note motif, driving drums, warm bass, huge pads",
+     "sec": 70,
+     "styles": [
+      "synthwave",
+      "anthem",
+      "112 BPM",
+      "E minor",
+      "emotional",
+      "memorable melody",
+      "gated snare",
+      "instrumental",
+      "cinematic"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "high"
+     }
+    },
+    {
+     "text": "[Last drive] the anthem drops to a pad and a lone guitar, then rises one more time and ends",
+     "sec": 60,
+     "styles": [
+      "cinematic",
+      "resolution",
+      "clean guitar",
+      "ending"
+     ]
+    }
+   ]
+  },
+  "credits_rewind": {
+   "title": "Be Kind, Rewind",
+   "family": "credits",
+   "chunks": [
+    {
+     "text": "[Rewind] a dreamy slow outro: Rhodes, tape hiss, a soft drum machine, the motif as a lullaby",
+     "sec": 60,
+     "styles": [
+      "dreamy synthwave",
+      "outro",
+      "84 BPM",
+      "E minor",
+      "Rhodes",
+      "tape hiss",
+      "bittersweet",
+      "instrumental"
+     ],
+     "ref": {
+      "track": "main_theme",
+      "start": 4,
+      "end": 24,
+      "strength": "medium"
+     }
+    },
+    {
+     "text": "[Stop] the tape winds down and clicks off",
+     "sec": 30,
+     "styles": [
+      "tape slowdown",
+      "ending"
+     ]
+    }
    ]
   }
  }

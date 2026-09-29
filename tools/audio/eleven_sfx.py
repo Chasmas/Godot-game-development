@@ -66,7 +66,7 @@ def install(name, mp3, e):
     if not e.get("loop"):
         start = int(np.argmax(np.abs(x) > 0.01))
         x = x[max(0, start - int(0.002 * SR)):]
-        end = len(x) - int(np.argmax(np.abs(x[::-1]) > 0.004))
+        end = len(x) - int(np.argmax(np.abs(x[::-1]) > 0.0012))
         x = x[:max(end, int(0.05 * SR))]
     ref = old_level(name)
     loud = np.abs(x) > 0.02
