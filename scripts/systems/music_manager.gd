@@ -167,6 +167,15 @@ func beat_distance() -> float:
 		return 99.0
 	return minf(ph, 1.0 - ph) * beat_length()
 
+## A boss's later phase: its own collapse theme ("phase2" in music.json),
+## crossfaded in. Safe to call every frame.
+func boss_phase2() -> void:
+	if _base_id == "" or not tracks.has(_base_id):
+		return
+	var nxt := str(tracks[_base_id].get("phase2", ""))
+	if nxt != "" and tracks.has(nxt):
+		play(nxt, false, 1.2)
+
 ## Quiet for a while: the calm companion, slowly. Anyone hunting: the
 ## asked-for track, fast, picked up where it was left.
 func _calm_switch(delta: float) -> void:

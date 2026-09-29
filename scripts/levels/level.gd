@@ -230,7 +230,7 @@ func _ready() -> void:
 	Dialogue.event.connect(_on_dialogue_event)
 	Dialogue.finished.connect(_on_dialogue_finished)
 	# music / intro
-	Music.play(mission.music_track)
+	Music.play(_music_for_mode())
 	PostFX.set_desaturate(0.0)
 	PostFX.set_tint(Color(1, 1, 1, 0))
 	Audio.set_music_muffled(false)
@@ -557,9 +557,19 @@ func _music_intensity() -> void:
 		intensity = 3
 	if phase == Phase.BOSS and boss and boss.phase == 2:
 		intensity = 2
+		Music.boss_phase2()
 	if phase >= Phase.PHONE:
 		intensity = 0
 	Music.set_intensity(intensity)
+
+## Arcade modes have their own themes; the story plays the mission's.
+func _music_for_mode() -> String:
+	var mode := str(Game.modifiers.get("mode", ""))
+	var rule := str(Game.modifiers.get("rule", ""))
+	var pick := {"waves": "arcade_waves", "endless": "arcade_endless"}.get(mode, {"chamber": "arcade_chamber", "clock": "arcade_clock", "gungame": "arcade_gungame"}.get(rule, ""))
+	if pick != "" and Music.tracks.has(pick):
+		return pick
+	return mission.music_track
 
 ## FINAL TAKE: the world drops to slow motion for a moment (real time),
 ## unless the player's own slow-mo is already running.

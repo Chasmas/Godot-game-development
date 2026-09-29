@@ -258,6 +258,7 @@ func _add(text: String, cb: Callable, disabled := false) -> Button:
 	return b
 
 func _show_vcr() -> void:
+	Music.play("vcr", false, 1.2)
 	menu.visible = false
 	var v := VcrScreen.new()
 	add_child(v)
@@ -307,6 +308,7 @@ func _reveal_panel() -> void:
 
 func _close_panel() -> void:
 	panel.visible = false
+	Music.play("title", false, 1.2)
 	if press_fx:
 		press_fx.visible = not _started
 	menu.visible = true
@@ -661,6 +663,7 @@ func _arc_heading(parent: Control, text: String) -> void:
 	parent.add_child(UIStyle.label(tr(text), 13, UIStyle.GOLD, true))
 
 func _show_arcade() -> void:
+	Music.play("menu", false, 1.2)
 	_open_panel("ARCADE")
 	_size_panel(Vector2(1040, 500))
 	var first: Control = null
