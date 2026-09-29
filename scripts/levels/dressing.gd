@@ -45,6 +45,9 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 	for r in rooms:
 		_dress_room(r, builder, floor_layer, glow_layer)
 		_dress_walls(r, builder, wall_layer, room_no, wall_art)
+		_wall_utilities(r, builder, wall_layer)
+	# the floor's own history goes down first, under everything on it
+	floor_layer.items = _floor_wear(builder) + floor_layer.items
 	# nothing piled on a light switch
 	var sws: Array = []
 	for n in level.props_root.get_children():
@@ -61,6 +64,7 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 		level.add_child(layer)
 	# the floor clutter never changes: one texture instead of ~650 draw calls
 	StaticBake.queue(level, floor_layer, Rect2(Vector2.ZERO, Vector2(builder.w, builder.h) * LevelBuilder.T))
+	StaticBake.queue(level, wall_layer, Rect2(Vector2(-16, -16), Vector2(builder.w + 2, builder.h + 2) * LevelBuilder.T))
 	Furnish.build(level, builder, rooms)
 
 # ------------------------------------------------------------------ rooms
@@ -251,6 +255,91 @@ static func _dress_room(r: Room, b: LevelBuilder, layer: ClutterLayer, glow: Clu
 					layer.items.append(["nightstand", lp, 0.0, rng.randi() % 4])
 					glow.items.append(["glow", lp, 0.0, 0])
 				break
+
+# ------------------------------------------------------------------ wear
+## Years of use, by material: cracks and oil on concrete and asphalt, chips
+## in tile, burns and stains in carpet, scuffs in wood, rust on steel, and a
+## worn path where everyone steps through a door. Deterministic per cell.
+static func _floor_wear(b: LevelBuilder) -> Array:
+	var out: Array = []
+	var rng := RandomNumberGenerator.new()
+	for y in b.h:
+		for x in b.w:
+			var f: String = b.floor_grid[y][x]
+			if f == "" or f == "~" or f == "\"" or f == ";":
+				continue
+			var c := b.ch(x, y)
+			if c == "#" or c == "W" or c == " ":
+				continue
+			rng.seed = hash(Vector2i(x, y)) ^ 0x5eed
+			var p := Vector2(x * T + rng.randf_range(3, 13), y * T + rng.randf_range(3, 13))
+			var rot := rng.randf() * TAU
+			var v := rng.randi() % 4
+			var roll := rng.randf()
+			match f:
+				"=", ":":
+					if roll < 0.035:
+						out.append(["w_crack", p, rot, v])
+					elif roll < 0.055:
+						out.append(["w_oil", p, rot, v])
+				",", "+":
+					if roll < 0.03:
+						out.append(["w_chip" if f == "," else "w_rust", p, rot, v])
+					elif roll < 0.045:
+						out.append(["w_stain", p, rot, v])
+				".":
+					if roll < 0.02:
+						out.append(["w_stain", p, rot, v])
+					elif roll < 0.03:
+						out.append(["w_burn", p, rot, v])
+				"_", "-":
+					if roll < 0.04:
+						out.append(["w_scuff", p, rot, v])
+			# the path worn in front of doors, both sides
+			for d in [Vector2i(0, -1), Vector2i(0, 1), Vector2i(-1, 0), Vector2i(1, 0)]:
+				if b.ch(x + d.x, y + d.y) == "D":
+					out.append(["w_worn", Vector2(x * T + 8, y * T + 8), Vector2(d).angle(), v])
+					break
+	return out
+
+## Small services on every room's visible wall faces: power outlets low on
+## the wall, a vent grille, a thermostat by a door; corridors and back
+## rooms get a conduit run with a junction box; old plaster cracks.
+static func _wall_utilities(r: Room, b: LevelBuilder, layer: ClutterLayer) -> void:
+	if r.zone == "exterior" or r.kind in ["lot", "yard", "courtyard"]:
+		return
+	var faces: Array[Vector2i] = []
+	for c in r.cells:
+		var wc := c + Vector2i(0, -1)
+		if b.ch(wc.x, wc.y) == "#" and b.ch(wc.x - 1, wc.y) != "D" and b.ch(wc.x + 1, wc.y) != "D":
+			faces.append(wc)
+	if faces.size() < 3:
+		return
+	faces.sort_custom(func(a, c): return a.x < c.x if a.y == c.y else a.y < c.y)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash("u%d,%d" % [r.rect.position.x, r.rect.position.y])
+	var at := func(wc: Vector2i, dx := 0.0) -> Vector2: return Vector2(wc.x * T + 8 + dx, wc.y * T + T - 2.5)
+	var used := {}
+	# outlets every few tiles, off-centre like real ones
+	for i in range(1, faces.size(), 6):
+		layer.items.append(["u_outlet", at.call(faces[i], rng.randf_range(-4, 4)), 0.0, 0])
+		used[i] = true
+	# one vent grille high on the wall
+	var vi := rng.randi() % faces.size()
+	if not used.has(vi):
+		layer.items.append(["u_vent", at.call(faces[vi]), 0.0, rng.randi() % 2])
+		used[vi] = true
+	if r.kind in ["corridor", "security_office", "control_room", "kennel", "stage", "wardrobe"]:
+		# a conduit run along the wall with a junction box partway
+		for wc in faces:
+			layer.items.append(["u_conduit", at.call(wc), 0.0, 0])
+		layer.items.append(["u_junction", at.call(faces[faces.size() / 3]), 0.0, rng.randi() % 3])
+	elif faces.size() > 5:
+		var ti := faces.size() - 2
+		if not used.has(ti):
+			layer.items.append(["u_thermo", at.call(faces[ti]), 0.0, 0])
+	if rng.randf() < 0.5:
+		layer.items.append(["u_crack", at.call(faces[rng.randi() % faces.size()], rng.randf_range(-5, 5)), 0.0, rng.randi() % 3])
 
 # ------------------------------------------------------------------ walls
 ## Walls are drawn with a visible front face on their south side. Details go
@@ -619,5 +708,71 @@ class ClutterLayer extends Node2D:
 			"exit":
 				draw_rect(Rect2(-5, -2.5, 10, 4), Color(0.1, 0.02, 0.02))
 				draw_string(UIStyle.font_bold(), Vector2(-4.5, 1.0), "EXIT", HORIZONTAL_ALIGNMENT_LEFT, -1, 4, Color(1.0, 0.2, 0.15))
+			# ---- wear on the floor (under everything)
+			"w_crack":
+				var pts := PackedVector2Array([Vector2(-6, 0)])
+				var q := Vector2(-6, 0)
+				for i in 5:
+					q += Vector2(2.4, [0.9, -1.1, 0.6, -0.4, 1.0][(i + v) % 5])
+					pts.append(q)
+				draw_polyline(pts, Color(0.05, 0.03, 0.06, 0.55), 0.8)
+				draw_line(pts[2], pts[2] + Vector2(1.5, 2.2), Color(0.05, 0.03, 0.06, 0.4), 0.6)
+				draw_polyline(pts, Color(1, 1, 1, 0.07), 0.4)
+			"w_oil":
+				draw_circle(Vector2.ZERO, 4.5 + v, Color(0.04, 0.03, 0.06, 0.28))
+				draw_circle(Vector2(1, 0.5), 2.6 + v * 0.6, Color(0.03, 0.02, 0.05, 0.32))
+				draw_arc(Vector2(-1, -1), 2.0, PI, PI * 1.6, 5, Color(0.6, 0.4, 0.9, 0.12), 0.6)
+			"w_stain":
+				draw_circle(Vector2.ZERO, 3.5 + v * 0.8, Color(0.2, 0.1, 0.05, 0.14))
+				draw_circle(Vector2(1.2, 0.6), 2.0 + v * 0.4, Color(0.2, 0.1, 0.05, 0.14))
+			"w_chip":
+				draw_colored_polygon(PackedVector2Array([Vector2(-1.2, -1), Vector2(1.4, -0.6), Vector2(0.8, 1.2), Vector2(-1, 0.9)]), Color(0.3, 0.3, 0.34, 0.5))
+				draw_line(Vector2(-1.2, -1), Vector2(1.4, -0.6), Color(1, 1, 1, 0.25), 0.4)
+			"w_rust":
+				draw_circle(Vector2.ZERO, 3.0 + v * 0.5, Color(0.5, 0.22, 0.08, 0.22))
+				draw_circle(Vector2(1, -0.5), 1.6, Color(0.6, 0.28, 0.1, 0.25))
+			"w_burn":
+				draw_circle(Vector2.ZERO, 1.3, Color(0.05, 0.02, 0.02, 0.7))
+				draw_arc(Vector2.ZERO, 1.8, 0, TAU, 8, Color(0.35, 0.18, 0.08, 0.4), 0.6)
+			"w_scuff":
+				for i in 3:
+					draw_line(Vector2(-4 + i, -1 + i * 0.9), Vector2(3 + i, -1.6 + i * 0.9), Color(0.06, 0.03, 0.02, 0.18), 0.5)
+				draw_line(Vector2(-3, 1.8), Vector2(4, 1.2), Color(1, 0.95, 0.85, 0.08), 0.5)
+			"w_worn":
+				# a soft darker patch where feet land, a little lighter at its centre
+				draw_circle(Vector2(0, 0), 7.5, Color(0.0, 0.0, 0.02, 0.07))
+				draw_circle(Vector2(0, 0), 4.5, Color(0.0, 0.0, 0.02, 0.06))
+				draw_circle(Vector2(0, 0), 2.0, Color(1, 1, 1, 0.025))
+			# ---- services on the wall's front band
+			"u_outlet":
+				draw_rect(Rect2(-1.4, -1.8, 2.8, 3.2), _b(Color(0.86, 0.83, 0.75)))
+				draw_rect(Rect2(-1.4, -1.8, 2.8, 3.2), _b(Color(0.4, 0.38, 0.34)), false, 0.4)
+				draw_rect(Rect2(-0.8, -1.1, 0.4, 0.8), _b(Color(0.15, 0.13, 0.12)))
+				draw_rect(Rect2(0.4, -1.1, 0.4, 0.8), _b(Color(0.15, 0.13, 0.12)))
+			"u_vent":
+				draw_rect(Rect2(-3.5, -4.5, 7, 4), _b(Color(0.55, 0.56, 0.6)))
+				for i in 4:
+					draw_line(Vector2(-3, -3.8 + i * 0.9), Vector2(3, -3.8 + i * 0.9), _b(Color(0.18, 0.18, 0.22)), 0.5)
+				if v == 1:
+					draw_line(Vector2(-3.5, -0.5), Vector2(-2.5, 1.8), _b(Color(0.2, 0.18, 0.16, 0.6)), 0.5)   # a grime streak under it
+			"u_conduit":
+				draw_line(Vector2(-8, -4.2), Vector2(8, -4.2), _b(Color(0.3, 0.31, 0.34)), 1.0)
+				draw_line(Vector2(-8, -4.6), Vector2(8, -4.6), _b(Color(0.62, 0.63, 0.67)), 0.3)
+				draw_rect(Rect2(-0.6, -5.2, 1.2, 2), _b(Color(0.45, 0.46, 0.5)))   # a strap
+			"u_junction":
+				draw_rect(Rect2(-2.5, -5.5, 5, 4.5), _b(Color(0.48, 0.5, 0.46)))
+				draw_rect(Rect2(-2.5, -5.5, 5, 4.5), _b(Color(0.2, 0.21, 0.2)), false, 0.4)
+				for cx in [-1.8, 1.8]:
+					draw_circle(Vector2(cx, -4.8), 0.3, _b(Color(0.75, 0.75, 0.72)))
+				draw_rect(Rect2(-1.8, -3.4, 3.6, 1.1), _b([Color(0.95, 0.8, 0.15), Color(0.9, 0.2, 0.15), Color(0.95, 0.95, 0.9)][v]))
+			"u_thermo":
+				draw_rect(Rect2(-1.8, -4.8, 3.6, 2.8), _b(Color(0.82, 0.8, 0.74)))
+				draw_circle(Vector2(0, -3.4), 0.9, _b(Color(0.35, 0.33, 0.3)))
+				draw_line(Vector2(0, -3.4), Vector2(0.5, -4.0), _b(Color(0.85, 0.2, 0.15)), 0.3)
+			"u_crack":
+				var cp := PackedVector2Array([Vector2(0, -5.5), Vector2(0.8, -4.2), Vector2(0.2, -3.0), Vector2(1.2, -1.6)])
+				if v == 1:
+					cp = PackedVector2Array([Vector2(-1, -5.5), Vector2(-0.2, -4.5), Vector2(-1.1, -3.4), Vector2(-0.4, -2.0)])
+				draw_polyline(cp, _b(Color(0.1, 0.06, 0.08, 0.55)), 0.4)
 			_:
 				RoomKits.draw(self, k, v)

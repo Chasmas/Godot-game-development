@@ -91,9 +91,22 @@ func _build_ui() -> void:
 	box.anchor_bottom = 1.0
 	box.offset_top = -170
 	box.offset_bottom = -24
+	var bsb := StyleBoxFlat.new()
+	bsb.bg_color = Color(0.03, 0.015, 0.06, 0.94)
+	bsb.border_color = Color(UIStyle.PINK, 0.85)
+	bsb.border_width_top = 2
+	bsb.border_width_bottom = 1
+	bsb.shadow_color = Color(0, 0, 0, 0.45)
+	bsb.shadow_size = 10
+	bsb.shadow_offset = Vector2(0, 6)
+	bsb.content_margin_left = 20
+	bsb.content_margin_right = 22
+	bsb.content_margin_top = 16
+	bsb.content_margin_bottom = 12
+	box.add_theme_stylebox_override("panel", bsb)
 	root.add_child(box)
 	var hb := HBoxContainer.new()
-	hb.add_theme_constant_override("separation", 16)
+	hb.add_theme_constant_override("separation", 20)
 	box.add_child(hb)
 	portrait = Portrait.new()
 	portrait.custom_minimum_size = Vector2(124, 124)
@@ -102,6 +115,16 @@ func _build_ui() -> void:
 	vb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	hb.add_child(vb)
 	name_label = UIStyle.label("", 18, UIStyle.PINK, true)
+	# the speaker's name on a tape-label tab in their own colour
+	_name_sb = StyleBoxFlat.new()
+	_name_sb.bg_color = UIStyle.PINK
+	_name_sb.content_margin_left = 10
+	_name_sb.content_margin_right = 12
+	_name_sb.content_margin_top = 1
+	_name_sb.content_margin_bottom = 1
+	_name_sb.skew = Vector2(-0.18, 0)
+	name_label.add_theme_stylebox_override("normal", _name_sb)
+	name_label.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	vb.add_child(name_label)
 	text_label = RichTextLabel.new()
 	text_label.bbcode_enabled = true
@@ -118,6 +141,33 @@ func _build_ui() -> void:
 	hint_label = UIStyle.label("▶", 14, UIStyle.GOLD)
 	hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	vb.add_child(hint_label)
+	_frame = BoxFrame.new()
+	_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	box.add_child(_frame)
+
+var _name_sb: StyleBoxFlat
+var _frame: Control
+var _open_t := 1.0
+
+## Over the box: corner ticks, faint scanlines, and on opening a bright
+## line sweeping down it like a tape head finding the picture.
+class BoxFrame extends Control:
+	var k := 1.0     ## 0 -> 1 as the box opens
+	var t := 0.0
+	func _draw() -> void:
+		var r := Rect2(Vector2.ZERO, size)
+		for y in range(4, int(size.y), 3):
+			draw_line(Vector2(0, y), Vector2(size.x, y), Color(1, 1, 1, 0.018), 1.0)
+		var c := Color(UIStyle.CYAN, 0.7)
+		var L := 14.0
+		for p in [[r.position, Vector2(1, 1)], [Vector2(r.end.x, r.position.y), Vector2(-1, 1)], [Vector2(r.position.x, r.end.y), Vector2(1, -1)], [r.end, Vector2(-1, -1)]]:
+			var o: Vector2 = p[0] + (p[1] as Vector2) * 4.0
+			draw_line(o, o + Vector2((p[1] as Vector2).x * L, 0), c, 1.5)
+			draw_line(o, o + Vector2(0, (p[1] as Vector2).y * L), c, 1.5)
+		if k < 1.0:
+			var y := size.y * k
+			draw_rect(Rect2(0, y - 2, size.x, 3), Color(1, 0.85, 0.95, 0.7 * (1.0 - k)))
+			draw_rect(Rect2(0, y, size.x, size.y - y), Color(0.03, 0.015, 0.06, 0.95))
 
 func load_dialogue(id: String) -> Dictionary:
 	var path := "res://data/dialogue/%s.json" % id
@@ -151,6 +201,8 @@ func start(id: String, pause_game := true) -> void:
 	letterbox_top.visible = pause_game and in_level
 	letterbox_bottom.visible = pause_game and in_level
 	active = true
+	if not root.visible:
+		_open_t = 0.0
 	root.visible = true
 	if _pause_game:
 		get_tree().paused = true
@@ -189,7 +241,10 @@ func _goto(node_id: String) -> void:
 	var spk := str(_node.get("speaker", "narration"))
 	var sd: Dictionary = speakers.get(spk, {"name": spk.to_upper(), "color": "f4f0e8"})
 	name_label.text = tr(str(sd.get("name", "")))
-	name_label.add_theme_color_override("font_color", Color.html("#" + str(sd.get("color", "f4f0e8"))))
+	var scol := Color.html("#" + str(sd.get("color", "f4f0e8")))
+	_name_sb.bg_color = scol
+	name_label.add_theme_color_override("font_color", UIStyle.INK if scol.get_luminance() > 0.35 else UIStyle.PAPER)
+	name_label.visible = spk != "narration" and name_label.text != ""
 	portrait.visible = spk != "narration"
 	portrait.speaker = spk
 	portrait.mood = str(_node.get("mood", _infer_mood(str(_node.get("text", "")))))
@@ -337,6 +392,16 @@ func _process(delta: float) -> void:
 	box.offset_top = -BOX_BOTTOM - maxf(BOX_MIN_H, need)
 	var real := delta / maxf(Engine.time_scale, 0.03) if not get_tree().paused else delta
 	_input_block = maxf(0.0, _input_block - real)
+	# opening: the box rises a little and the tape head sweeps down it
+	_open_t = minf(1.0, _open_t + real / 0.22)
+	var e := 1.0 - pow(1.0 - _open_t, 3.0)
+	box.modulate.a = clampf(_open_t * 2.0, 0.0, 1.0)
+	box.offset_bottom = -BOX_BOTTOM + (1.0 - e) * 18.0
+	box.offset_top += (1.0 - e) * 18.0
+	(_frame as BoxFrame).k = e
+	(_frame as BoxFrame).t += real
+	_frame.queue_redraw()
+	hint_label.modulate.a = 0.55 + 0.45 * sin(Time.get_ticks_msec() * 0.008)
 	_fx.clock += real
 	if is_typing():
 		# a beat on punctuation, like someone drawing breath
