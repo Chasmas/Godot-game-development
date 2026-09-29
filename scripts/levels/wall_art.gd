@@ -458,17 +458,41 @@ class VacancySign extends Node2D:
 		# NO plate on two chains, swinging
 		var sway := sin(_t * 1.8) * (0.12 + _wind() * 0.2)
 		draw_set_transform(Vector2(0, -2), sway, Vector2.ONE)
-		for cx in [-8.0, 8.0]:
-			for k in 3:
-				draw_circle(Vector2(cx, 2 + k * 2.5), 0.9, Color(0.55, 0.52, 0.6))
-		var plate := Rect2(-12, 9, 24, 10)
-		draw_rect(plate.grow(1), ink)
-		draw_rect(plate, Color(0.12, 0.06, 0.1))
 		var nc := Color("ff3d7f")
-		var nw := f.get_string_size("NO", HORIZONTAL_ALIGNMENT_LEFT, -1, 9).x
+		var np := ArtLib.sprite("sign_no_plate")
+		if np:
+			# the painted plate and its chains; lit, the tubes glow over it
+			draw_texture_rect(np, Rect2(-14, 0, 28, 19), false, Color(1, 1, 1) if _no_on > 0.0 else Color(0.55, 0.5, 0.55))
+			if _no_on > 0.0:
+				draw_circle(Vector2(0, 12), 11.0, Color(nc, 0.12))
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			return
+		# two short chains of oval links, alternating face-on and edge-on
+		var steel := Color(0.62, 0.6, 0.66)
+		for cx in [-8.0, 8.0]:
+			for k in 4:
+				var lc := Vector2(cx, 2.0 + k * 1.9)
+				if k % 2 == 0:
+					draw_arc(lc, 0.9, 0, TAU, 8, ink, 1.1)
+					draw_arc(lc, 0.9, 0, TAU, 8, steel, 0.5)
+				else:
+					draw_line(lc - Vector2(0, 1.1), lc + Vector2(0, 1.1), ink, 1.1)
+					draw_line(lc - Vector2(0, 1.0), lc + Vector2(0, 1.0), steel.lightened(0.2), 0.5)
+		# the plate: dented dark tin with a rim, rivets at the chain eyes, rust
+		var plate := Rect2(-12, 9, 24, 10)
+		draw_rect(plate.grow(1.2), ink)
+		draw_rect(plate, Color(0.16, 0.1, 0.14))
+		draw_rect(Rect2(plate.position, Vector2(plate.size.x, 1.2)), Color(0.34, 0.28, 0.34))
+		draw_rect(Rect2(plate.position + Vector2(0, plate.size.y - 1.0), Vector2(plate.size.x, 1.0)), Color(0.08, 0.04, 0.07))
+		draw_rect(Rect2(plate.position + Vector2(17, 6), Vector2(4, 3)), Color(0.45, 0.2, 0.1, 0.5))
+		for rx in [-8.0, 8.0]:
+			draw_circle(Vector2(rx, 10.3), 0.7, steel)
+		# N and O bent in neon tube: lit they glow pink, off they're dull glass
+		var tube := nc.lightened(0.45) if _no_on > 0.0 else Color(0.4, 0.2, 0.28)
+		var nn := PackedVector2Array([Vector2(-6.5, 17), Vector2(-6.5, 11.5), Vector2(-2.5, 17), Vector2(-2.5, 11.5)])
 		if _no_on > 0.0:
-			draw_string_outline(f, Vector2(-nw * 0.5, 17), "NO", HORIZONTAL_ALIGNMENT_LEFT, -1, 9, 5, Color(nc, 0.25))
-			draw_string(f, Vector2(-nw * 0.5, 17), "NO", HORIZONTAL_ALIGNMENT_LEFT, -1, 9, nc.lightened(0.4))
-		else:
-			draw_string(f, Vector2(-nw * 0.5, 17), "NO", HORIZONTAL_ALIGNMENT_LEFT, -1, 9, Color(0.35, 0.15, 0.22))
+			draw_polyline(nn, Color(nc, 0.3), 3.0)
+			draw_arc(Vector2(3.8, 14.2), 2.8, 0, TAU, 16, Color(nc, 0.3), 3.0)
+		draw_polyline(nn, tube, 1.1)
+		draw_arc(Vector2(3.8, 14.2), 2.8, 0, TAU, 16, tube, 1.1)
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)

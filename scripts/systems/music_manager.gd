@@ -33,6 +33,8 @@ func _ready() -> void:
 			tracks = parsed
 
 func play(track_id: String, restart := false) -> void:
+	if OS.has_environment("AUDIO_LOG"):
+		print("[music] ", track_id)
 	if track_id == current_id and not restart and not _players.is_empty():
 		_master_target = 1.0
 		return

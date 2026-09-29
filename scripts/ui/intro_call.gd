@@ -23,6 +23,7 @@ var _shake := 0.0
 var _portrait: TextureRect
 
 func _ready() -> void:
+	add_to_group("intro_call")
 	layer = 55
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_panel = CallPanel.new()

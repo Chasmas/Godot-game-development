@@ -38,6 +38,8 @@ const ROLL_COST := 30.0
 const SPRINT_DRAIN := 20.0      ## per second: five seconds of flat-out running
 const STAMINA_REGEN := 34.0     ## per second, after the pause below
 const STAMINA_DELAY := 0.55
+const STAMINA_COOLDOWN := 2.0   ## run it dry: nothing comes back for this long
+var _stamina_cooldown := 0.0
 var stamina := STAMINA_MAX
 var _stamina_rest := 0.0
 var _winded := false
@@ -193,7 +195,16 @@ func _tick_timers(pd: float) -> void:
 	_fire_cd = maxf(0.0, _fire_cd - pd)
 	_dash_cd = maxf(0.0, _dash_cd - pd)
 	_stamina_denied = maxf(0.0, _stamina_denied - pd * 2.5)
-	if _stamina_rest > 0.0:
+	if stamina <= 0.0 and _stamina_cooldown <= 0.0 and _stamina_rest > -1.0:
+		_stamina_cooldown = STAMINA_COOLDOWN
+		_stamina_rest = -2.0   # marks this dry spell as already counted
+		_winded = true
+	if _stamina_cooldown > 0.0:
+		_stamina_cooldown -= pd
+		if _stamina_cooldown <= 0.0:
+			stamina = 0.01
+			_stamina_rest = 0.0
+	elif _stamina_rest > 0.0:
 		_stamina_rest -= pd
 	elif stamina < STAMINA_MAX:
 		stamina = minf(STAMINA_MAX, stamina + STAMINA_REGEN * pd)
@@ -912,10 +923,12 @@ func _throw_current() -> void:
 		return
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var spd := w.data.throw_speed
-	if w.dual:
-		# toss the off-hand gun (with what's left in it), keep the other
+	if w.dual and (w.ammo > 0 or w.ammo2 > 0):
+		# toss the emptier gun, keep the one with rounds left in it
 		var off := WeaponInstance.create(w.data, false)
-		off.ammo = w.ammo2
+		off.ammo = mini(w.ammo, w.ammo2)
+		off.reserve = 0
+		w.ammo = maxi(w.ammo, w.ammo2)
 		w.dual = false
 		w.ammo2 = 0
 		WeaponPickup.spawn(parent, off, visual.muzzle_global(true), aim_dir * spd + velocity * 0.3, self)
@@ -925,6 +938,14 @@ func _throw_current() -> void:
 		visual.cancel_reload()
 		_refresh_weapon()
 		return
+	if w.dual:
+		# both dry: both go, a little apart
+		var twin := WeaponInstance.create(w.data, false)
+		twin.ammo = 0
+		twin.reserve = 0
+		w.dual = false
+		w.ammo2 = 0
+		WeaponPickup.spawn(parent, twin, visual.muzzle_global(true), (aim_dir.rotated(0.18) * spd + velocity * 0.3), self)
 	WeaponPickup.spawn(parent, w, visual.hand_global(), aim_dir * spd + velocity * 0.3, self)
 	slots[slot] = null
 	Audio.play_at("throw", global_position)
@@ -1286,8 +1307,9 @@ func _die(info: DamageInfo) -> void:
 	corpse.global_position = global_position
 	get_parent().add_child(corpse)
 	Effects.blood(global_position, info.dir, true)
-	Audio.play_at("death", global_position)
-	Audio.play("heartbeat", -4.0)
+	# no tone on her death: the hit, the body hitting the floor, then quiet
+	Audio.play_at("hit_flesh", global_position)
+	get_tree().create_timer(0.18, true, false, true).timeout.connect(func(): Audio.play("body_fall", -2.0))
 	Events.camera_shake.emit(8.0)
 	Events.camera_punch.emit(1.25, 0.8)
 	InputSetup.vibrate(1.0, 1.0, 0.3)
@@ -1416,9 +1438,10 @@ func _on_any_kill(_e: Node, info: Dictionary) -> void:
 		Effects.popup("ADRENALINE", global_position + Vector2(0, -10), Color("ff8a20"))
 
 
-## The stamina indicator: a thin arc round her feet, only there while
-## stamina isn't full. White while it's fine, amber when low, red and
-## shaking when a roll was refused or she's winded; fades once it's back.
+## The stamina indicator: a small disc beside her that empties like a
+## clock, green when full, through amber, to red; only there while stamina
+## isn't full. Run it dry and it sits empty for STAMINA_COOLDOWN seconds,
+## a thin ring ticking round, before it starts filling again.
 class StaminaRing extends Node2D:
 	var player: Node
 	var _a := 0.0
@@ -1435,24 +1458,21 @@ class StaminaRing extends Node2D:
 			return
 		var frac: float = clampf(player.stamina / player.STAMINA_MAX, 0.0, 1.0)
 		var denied: float = player._stamina_denied
-		var col := Color(1, 1, 1)
-		if player._winded or frac < 0.3:
-			col = Color(1.0, 0.65, 0.2)
-		if denied > 0.0 or player._winded:
-			col = col.lerp(UIStyle.HOT, maxf(denied, 0.6 if player._winded else 0.0))
-		var shake := Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.2 * denied, 0)
-		# four little neon diamonds stacked beside her (screen-up, never
-		# turning with her aim); they empty from the top, glow only when low
-		var low: bool = frac < 0.3 or player._winded or denied > 0.0
-		var alpha := _a * (0.95 if low else 0.55)
-		var n := 4
-		for i in n:
-			var c := Vector2(-11.0, 5.0 - i * 4.2) + shake
-			var fill := clampf(frac * n - i, 0.0, 1.0)
-			var dia := PackedVector2Array([c + Vector2(0, -1.8), c + Vector2(1.6, 0), c + Vector2(0, 1.8), c + Vector2(-1.6, 0)])
-			draw_colored_polygon(dia, Color(0.05, 0.02, 0.08, 0.55 * alpha))
-			if fill > 0.0:
-				var inner := PackedVector2Array([c + Vector2(0, -1.3 * fill), c + Vector2(1.1 * fill, 0), c + Vector2(0, 1.3 * fill), c + Vector2(-1.1 * fill, 0)])
-				if low:
-					draw_circle(c, 2.6, Color(col, 0.18 * alpha))
-				draw_colored_polygon(inner, Color(col, alpha))
+		var c := Vector2(-10.0, -9.0) + Vector2(sin(Time.get_ticks_msec() * 0.08) * 1.0 * denied, 0)
+		var r := 3.2
+		var col := Color.from_hsv(0.33 * frac, 0.85, 0.95)
+		draw_circle(c, r + 0.9, Color(0.04, 0.02, 0.06, 0.6 * _a))
+		draw_circle(c, r, Color(col.darkened(0.7), 0.5 * _a))
+		if frac > 0.0:
+			var pts := PackedVector2Array([c])
+			var n := maxi(2, int(24 * frac))
+			for i in n + 1:
+				pts.append(c + Vector2.from_angle(-PI * 0.5 + TAU * frac * float(i) / float(n)) * r)
+			draw_colored_polygon(pts, Color(col, 0.9 * _a))
+		# a glint on top, like a little enamel badge
+		draw_circle(c + Vector2(-1.0, -1.1), 0.7, Color(1, 1, 1, 0.35 * _a))
+		var cd: float = player._stamina_cooldown
+		if cd > 0.0:
+			# spent: the cooldown ticking round the rim
+			var k: float = 1.0 - cd / player.STAMINA_COOLDOWN
+			draw_arc(c, r + 0.5, -PI * 0.5, -PI * 0.5 + TAU * k, 24, Color(1.0, 0.3, 0.25, 0.9 * _a), 0.8)

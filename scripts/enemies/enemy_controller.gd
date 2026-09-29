@@ -134,7 +134,7 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	visual.set_alert_posture(alert_posture())
 	if not patrol_points.is_empty():
 		_set_state(State.PATROL)
-	elif data.combat != EnemyData.Combat.ALERTER and absi(hash(enemy_id + "busy")) % 100 < 65:
+	elif data.combat != EnemyData.Combat.ALERTER and not (self is Dog) and absi(hash(enemy_id + "busy")) % 100 < 65:
 		# calm guards find something to do with their hands
 		idle_activity = IdleActivity.new()
 		visual.rig.add_child(idle_activity)

@@ -1001,6 +1001,21 @@
     "vase_flowers": {
      "prompt": "A white ceramic vase with a bunch of pink carnations, seen from directly above.",
      "size": "1024x1024"
+    },
+    "light_switch": {
+     "prompt": "A cream-coloured 1980s plastic wall light switch plate with a single toggle flicked up and two small screws, a little grime round the toggle, flat and straight-on as if seen from directly above, portrait orientation.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "severed_head": {
+     "prompt": "A horror-movie prop: the severed head of a 1980s mobster lying on its side on the floor, short slicked dark hair, stubble, eyes shut, a ragged dark red neck stump, seen from directly above, the neck pointing RIGHT, gritty and realistic, not cartoonish.",
+     "size": "1024x1024",
+     "quality": "medium"
+    },
+    "sign_no_plate": {
+     "prompt": "A small battered dark metal sign plate with the word NO in pink-red neon tube letters, hanging from two short steel chains at its top corners, seen straight-on, rust and dents, landscape orientation.",
+     "size": "1536x1024",
+     "quality": "medium"
     }
    }
   },

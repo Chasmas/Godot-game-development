@@ -201,7 +201,7 @@ def make_world(C):
     S["light_switch"] = mix((0, click(0.012, 2800), 1.0), (0.01, thump(0.03, 500, 300, 100, 120), 0.4))
     S["spark"] = mix(*[(rng.uniform(0, 0.25), crack(0.03, 3000, 12000, 150), rng.uniform(0.3, 1.0)) for _ in range(9)])
     S["buzz"] = lp(np.sign(np.sin(2 * np.pi * 120 * T(0.8))) * 0.4 + np.sin(2 * np.pi * 240 * T(0.8)) * 0.3, 1800) * (0.7 + 0.3 * np.sin(T(0.8) * 9))
-    S["alarm"] = lp(np.sign(np.sin(2 * np.pi * np.where((T(1.6) * 2.5) % 1.0 < 0.5, 880, 660) * T(1.6))) * 0.5, 3000)
+    # "alarm" stays gen_audio.py's siren (the players liked it)
     S["alert"] = sat(mix((0, lp(tone(1320, 0.12, 20, "sqr"), 4000), 0.8), (0.07, lp(tone(1760, 0.2, 14, "sqr"), 4000), 0.8)), 1.3)
     S["camera_break"] = sat(mix((0, C["glass"][: int(0.5 * SR)], 0.7), (0, crack(0.1, 1500, 9000, 30), 0.8), (0.03, C["spark"] if "spark" in C else S["spark"], 0.5)), 1.6)
     S["tv_break"] = room(sat(mix((0, crack(0.15, 800, 10000, 20), 1.0), (0, thump(0.25, 150, 45, 25, 12), 0.8), (0.02, lp(N(0.6), 5000) * np.exp(-T(0.6) * 6), 0.4),

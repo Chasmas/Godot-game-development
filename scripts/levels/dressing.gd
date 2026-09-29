@@ -45,8 +45,22 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 	for r in rooms:
 		_dress_room(r, builder, floor_layer, glow_layer)
 		_dress_walls(r, builder, wall_layer, room_no, wall_art)
+	# nothing piled on a light switch
+	var sws: Array = []
+	for n in level.props_root.get_children():
+		if n is Power.Switch:
+			sws.append((n as Node2D).position)
+	if not sws.is_empty():
+		for layer in [floor_layer, wall_layer]:
+			layer.items = layer.items.filter(func(it):
+				for sp in sws:
+					if (it[1] as Vector2).distance_to(sp) < 11.0:
+						return false
+				return true)
 	for layer in [glow_layer, floor_layer, wall_layer]:
 		level.add_child(layer)
+	# the floor clutter never changes: one texture instead of ~650 draw calls
+	StaticBake.queue(level, floor_layer, Rect2(Vector2.ZERO, Vector2(builder.w, builder.h) * LevelBuilder.T))
 	Furnish.build(level, builder, rooms)
 
 # ------------------------------------------------------------------ rooms
@@ -339,8 +353,25 @@ class ClutterLayer extends Node2D:
 	var items: Array = []    ## [kind, pos, rot, variant]
 	var boost := 1.0
 
+	## Painted pieces first, grouped by painting (they batch), then the
+	## drawn ones.
 	func _draw() -> void:
+		var drawn: Array = []
+		var by_tex := {}
 		for it in items:
+			var k := str(it[0])
+			var pt: Texture2D = ArtLib.sprite(str(PAINTED[k][0])) if PAINTED.has(k) else null
+			if pt:
+				if not by_tex.has(pt):
+					by_tex[pt] = []
+				by_tex[pt].append(it)
+			else:
+				drawn.append(it)
+		for pt in by_tex:
+			for it in by_tex[pt]:
+				draw_set_transform(it[1], it[2], Vector2.ONE)
+				_item(str(it[0]), int(it[3]))
+		for it in drawn:
 			draw_set_transform(it[1], it[2], Vector2.ONE)
 			_item(str(it[0]), int(it[3]))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)

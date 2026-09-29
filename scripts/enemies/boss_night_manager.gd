@@ -298,6 +298,8 @@ func _stand_up() -> void:
 	if _chair and is_instance_valid(_chair):
 		var back := Vector2.from_angle(_chair.rotation) * -12.0
 		var ch := _chair
+		ch.seated = false
+		ch.queue_redraw()
 		ch.reparent(get_parent())
 		var tw := ch.create_tween().set_parallel(true)
 		tw.tween_property(ch, "position", ch.position + back, 0.35).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -321,6 +323,7 @@ func _draw() -> void:
 ## buttoned tufts, a tall back. He sits back in it, ankles crossed on the
 ## floor in front.
 class OfficeChair extends Node2D:
+	var seated := true
 	func _draw() -> void:
 		var ink := Color("0b0710")
 		var chrome := Color(0.55, 0.56, 0.62)
@@ -334,6 +337,8 @@ class OfficeChair extends Node2D:
 			draw_set_transform(Vector2(-2, 0), -PI * 0.5, Vector2.ONE)
 			draw_texture_rect(pt, Rect2(-11, -11, 22, 22), false)
 			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			if not seated:
+				return
 			draw_rect(Rect2(6, -3.5, 8, 3), ink)
 			draw_rect(Rect2(6, 0.5, 8, 3), ink)
 			draw_rect(Rect2(6.5, -3, 7, 2), Color(0.16, 0.14, 0.2))

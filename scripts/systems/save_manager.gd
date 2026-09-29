@@ -37,10 +37,33 @@ const DEFAULT_SAVE := {
 
 var settings: Dictionary = {}
 var data: Dictionary = {}
+## Where progress and options live. The dev tools (autoplay recordings,
+## screenshots, smoke / edge tests, anything headless) get their own pair of
+## files, so a test run never finishes chapters or sets records in the
+## player's save.
+var save_path := SAVE_PATH
+var settings_path := SETTINGS_PATH
+
+static func is_dev_run() -> bool:
+	if DisplayServer.get_name() == "headless":
+		return true
+	for k in ["AUTOPLAY_MISSION", "AUTOPLAY_TRAILER", "AUTOPLAY_BOSSFIGHT", "AUTOPLAY_SPOTLIGHT", "SHOT_MODE", "SMOKE_M02_ONLY", "HOTSHOT_DEV_SAVE"]:
+		if OS.has_environment(k):
+			return true
+	for a in OS.get_cmdline_args():
+		if "tools/" in a or a.begins_with("--write-movie"):
+			return true
+	return false
 
 func _ready() -> void:
-	settings = _merge(DEFAULT_SETTINGS.duplicate(true), _load_json(SETTINGS_PATH))
-	data = _merge(DEFAULT_SAVE.duplicate(true), _load_json(SAVE_PATH))
+	if is_dev_run():
+		save_path = "user://dev_save.json"
+		settings_path = "user://dev_settings.json"
+		# first dev run: start from the player's options (window, language)
+		if not FileAccess.file_exists(settings_path) and FileAccess.file_exists(SETTINGS_PATH):
+			_write_json(settings_path, _load_json(SETTINGS_PATH))
+	settings = _merge(DEFAULT_SETTINGS.duplicate(true), _load_json(settings_path))
+	data = _merge(DEFAULT_SAVE.duplicate(true), _load_json(save_path))
 	# 0.10: the game opens borderless fullscreen by default (once, for
 	# settings saved before that; the option still turns it off)
 	if not settings.get("fs_default_2", false):
@@ -85,12 +108,12 @@ func apply_video_settings() -> void:
 	get_tree().root.content_scale_factor = clampf(float(settings.get("ui_scale", 1.0)), 0.75, 1.5)
 
 func save_settings() -> void:
-	_write_json(SETTINGS_PATH, settings)
+	_write_json(settings_path, settings)
 
 # ------------------------------------------------------------ progress
 func save_game() -> void:
 	data.version = SAVE_VERSION
-	_write_json(SAVE_PATH, data)
+	_write_json(save_path, data)
 
 func set_flag(flag: String, value: Variant = true) -> void:
 	data.story.flags[flag] = value

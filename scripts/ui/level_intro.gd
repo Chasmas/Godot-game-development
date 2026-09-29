@@ -23,6 +23,7 @@ var _panel: Panel
 var _tex: Texture2D
 
 func _ready() -> void:
+	add_to_group("level_intro")
 	layer = 40
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	var info: Array = INFO.get(String(mission.id), ["", "", ""])

@@ -1031,7 +1031,7 @@ func _on_player_died(_info: Dictionary) -> void:
 	Score.running = false
 	PostFX.set_desaturate(0.6)
 	Audio.set_music_muffled(true)
-	Music.duck(0.5)
+	Music.duck(0.2)
 	SaveManager.add_stat("deaths")
 	_restart_ready = false
 	if arcade:

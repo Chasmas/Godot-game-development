@@ -219,6 +219,21 @@ func _ready() -> void:
 						lvl2.breach._on_take(null, p3)
 						lvl2.breach._on_plant(null, p3)
 					await _frames(int(OS.get_environment("SHOT_BREACH_F")) if OS.get_environment("SHOT_BREACH_F") != "" else 30)
+			elif what == "handler":
+				# a dog handler out walking his dog
+				var hd: Node2D = null
+				for e in get_tree().get_nodes_in_group("enemies"):
+					if e is Handler:
+						hd = e
+						break
+				p3.global_position = hd.global_position + Vector2(-700, 0)
+				p3.input_enabled = false
+				p3.set_physics_process(false)
+				lvl2.camera.target = hd
+				await _frames(10)
+				while Dialogue.active:
+					Dialogue._end()
+					await _frames(2)
 			elif what == "boss":
 				# the boss waiting in his room, before the fight
 				var bs: Node2D = lvl2.boss

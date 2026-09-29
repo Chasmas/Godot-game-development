@@ -112,6 +112,7 @@ func _ready() -> void:
 	root.add_child(boss_bar)
 	Events.boss_hp.connect(boss_bar.on_hp)
 	tutorials = TutorialCards.new()
+	tutorials.hud = self
 	UIStyle.place(tutorials, Control.PRESET_TOP_RIGHT, Vector2(-404, 132), Vector2(388, 560))
 	root.add_child(tutorials)
 	Events.tutorial.connect(func(id): tutorials.show_card(id))
@@ -230,8 +231,32 @@ func _build_map() -> void:
 	map_panel.add_child(map_text)
 
 # ------------------------------------------------------------ updates
+## One voice at a time: while somebody is talking (a call, a dialogue line)
+## no teaching card or director's note comes in, and a card and a note never
+## share the screen - the next waits its turn.
+func talking() -> bool:
+	return Dialogue.active or not get_tree().get_nodes_in_group("intro_call").is_empty() or not get_tree().get_nodes_in_group("level_intro").is_empty()
+
+func may_show(who: Object) -> bool:
+	if talking():
+		return false
+	if who == tutorials and tips and not tips._cur.is_empty():
+		return false
+	if who == tips and tutorials and tutorials.showing():
+		return false
+	return true
+
+var _talk_fade := 1.0
+
 func _process(delta: float) -> void:
 	var rd := delta / maxf(Engine.time_scale, 0.03)
+	# the dialogue box sits over the bottom-left gauges: they step aside
+	_talk_fade = move_toward(_talk_fade, 0.0 if Dialogue.active else 1.0, rd * 5.0)
+	for c in [meter, equip_label]:
+		if c:
+			c.modulate.a = _talk_fade
+	if status:
+		status.modulate.a = _talk_fade
 	if player and is_instance_valid(player):
 		prompt_label.text = player.prompt if player.alive else ""
 		if player.is_reloading():
@@ -543,13 +568,6 @@ class Crosshair extends Control:
 				var d := Vector2.from_angle(a * PI * 0.5 + PI * 0.25)
 				draw_line(p + d * r0, p + d * (r0 + 5.0 + _kill * 3.0), Color(UIStyle.INK, col.a), 3.5)
 				draw_line(p + d * r0, p + d * (r0 + 5.0 + _kill * 3.0), col, 1.6)
-		# easy mode guard pips next to the reticle
-		var gmax := int(Difficulty.value("player_guard_hits"))
-		for i in gmax:
-			var filled := i < hud.player.guard_hits
-			var gp := p + Vector2(spread + 12.0 + i * 7.0, 8.0)
-			draw_rect(Rect2(gp - Vector2(2.5, 2.5), Vector2(5, 5)), UIStyle.INK)
-			draw_rect(Rect2(gp - Vector2(2, 2), Vector2(4, 4)), UIStyle.CYAN if filled else Color(0.4, 0.4, 0.45))
 
 
 ## Arrow to the nearest remaining enemy when only a few are left.
@@ -625,7 +643,7 @@ class StatusPanel extends Control:
 	func _draw() -> void:
 		if hud == null or hud.player == null or not is_instance_valid(hud.player):
 			return
-		var base := Vector2(26, size.y - 126)   # above the SPOTLIGHT meter
+		var base := Vector2(26, size.y - 164)   # above the upgrades row, above the SPOTLIGHT meter
 		# stealth eye
 		if _state != "":
 			var col: Color = {"SPOTTED": UIStyle.HOT, "HIDDEN": UIStyle.CYAN, "SNEAKING": Color("b18cff"), "SHADOW": Color("7a8fb0")}[_state]
@@ -648,7 +666,7 @@ class StatusPanel extends Control:
 			draw_string(f, base + Vector2(26, 5), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, col)
 		# upgrades row
 		var x := 22.0
-		var y := size.y - 118.0
+		var y := size.y - 132.0
 		for id in hud.player.upgrades.keys():
 			var d := Upgrades.def(id)
 			var col2: Color = d.color
@@ -832,7 +850,7 @@ class TipCard extends Control:
 			_check_t = 0.25
 			_watch()
 		if _cur.is_empty():
-			if not _queue.is_empty():
+			if not _queue.is_empty() and hud.may_show(self):
 				_cur = _queue.pop_front()
 				_t = 0.0
 				_clack_i = -1

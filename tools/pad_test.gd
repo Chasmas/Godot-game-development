@@ -34,7 +34,7 @@ func _ready():
 	await get_tree().process_frame
 	await get_tree().process_frame
 	SaveManager.set_setting("crt", false)
-	var f := FileAccess.open(SaveManager.SETTINGS_PATH, FileAccess.READ)
+	var f := FileAccess.open(SaveManager.settings_path, FileAccess.READ)
 	var saved: Dictionary = JSON.parse_string(f.get_as_text())
 	print("crt saved false: ", saved.crt == false)
 	ok = ok and saved.crt == false

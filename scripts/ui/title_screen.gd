@@ -142,6 +142,7 @@ func _ready() -> void:
 	var sc := ScrollContainer.new()
 	sc.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	sc.custom_minimum_size = Vector2(730, 390)
+	_panel_scroll = sc
 	panel.add_child(sc)
 	panel_body = VBoxContainer.new()
 	panel_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -272,9 +273,21 @@ func _show_masks() -> void:
 	ms.closed.connect(_build_menu)
 
 # ------------------------------------------------------------ panels
+var _panel_scroll: ScrollContainer
+
+## Panels are 760 x 420 unless a screen asks for more room (the chapter
+## tapes need the width, and their notes must fit without scrolling).
+func _size_panel(sz: Vector2) -> void:
+	panel.custom_minimum_size = sz
+	UIStyle.place(panel, Control.PRESET_CENTER, -sz * 0.5 + Vector2(0, 10), sz)
+	_panel_scroll.custom_minimum_size = sz - Vector2(30, 30)
+	panel.size = sz
+	panel.pivot_offset = sz * 0.5
+
 func _open_panel(title: String) -> void:
 	for c in panel_body.get_children():
 		c.queue_free()
+	_size_panel(Vector2(760, 420))
 	panel.visible = true
 	menu.visible = false
 	panel_body.add_child(UIStyle.title_label(title, 34))
@@ -343,6 +356,7 @@ func _choose_difficulty() -> void:
 
 func _show_chapters() -> void:
 	_open_panel("CHAPTERS")
+	_size_panel(Vector2(1040, 540))
 	var done: bool = SaveManager.data.missions.has("m01_checkout")
 	var reached: bool = int(SaveManager.data.story.chapter) >= 2 or done
 	var m2_open: bool = done or SaveManager.data.missions.has("m02_dog_days")
@@ -360,12 +374,12 @@ func _show_chapters() -> void:
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	panel_body.add_child(row)
 	var detail := ChapterDetail.new()
-	detail.custom_minimum_size = Vector2(720, 132)
+	detail.custom_minimum_size = Vector2(960, 132)
 	var first: ChapterCard = null
 	for ch in chapters:
 		var card := ChapterCard.new()
 		card.info = ch
-		card.custom_minimum_size = Vector2(140, 236)
+		card.custom_minimum_size = Vector2(132, 224)
 		var info: Dictionary = ch
 		card.focus_entered.connect(func():
 			Audio.play("tape_slide", -6.0, randf_range(0.95, 1.05))

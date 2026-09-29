@@ -140,11 +140,14 @@ func _draw() -> void:
 			var drag := _hump(phase, 0.16, 0.28)
 			var cig := ArtLib.sprite("cigarette")
 			if cig:
-				draw_texture_rect(cig, Rect2(p + Vector2(-0.5, -1.2), Vector2(4.0, 2.4)), false)
+				# the painted cigarette (square sheet, the cigarette across its middle)
+				draw_texture_rect(cig, Rect2(p + Vector2(-1.0, -3.2), Vector2(6.4, 6.4)), false)
 			else:
 				draw_line(p, p + Vector2(2.5, 0.5), Color(0.95, 0.93, 0.88), 1.0)
-			draw_circle(p + Vector2(2.8, 0.5), 0.9 + drag * 0.5, Color(1.0, 0.35 + 0.3 * drag, 0.1))
-			draw_circle(p + Vector2(2.8, 0.5), 2.5 + drag * 2.0, Color(1.0, 0.4, 0.1, 0.18 + 0.25 * drag))
+			# the ember: a pinprick that brightens on the drag
+			var ember := p + Vector2(4.3, 0.2)
+			draw_circle(ember, 0.9 + drag * 0.5, Color(1.0, 0.4, 0.1, 0.1 + 0.15 * drag))
+			draw_circle(ember, 0.35 + drag * 0.15, Color(1.0, 0.45 + 0.35 * drag, 0.15))
 		Kind.DRINK:
 			var tilt := _hump(phase, 0.14, 0.34) * 0.9
 			draw_set_transform(p, tilt, Vector2.ONE)
@@ -261,9 +264,13 @@ class DroppedProp extends Node2D:
 	func _draw() -> void:
 		match kind:
 			IdleActivity.Kind.SMOKE:
-				draw_line(Vector2(-1.2, 0), Vector2(1.2, 0), Color(0.9, 0.88, 0.82), 1.0)
+				var cig := ArtLib.sprite("cigarette")
+				if cig:
+					draw_texture_rect(cig, Rect2(-3.2, -3.2, 6.4, 6.4), false)
+				else:
+					draw_line(Vector2(-1.2, 0), Vector2(1.2, 0), Color(0.9, 0.88, 0.82), 1.0)
 				if t < 8.0:
-					draw_circle(Vector2(1.4, 0), 0.8, Color(1, 0.4, 0.1, 0.6 + 0.4 * sin(t * 6.0)))
+					draw_circle(Vector2(2.1, 0.2), 0.35, Color(1, 0.45, 0.15, 0.6 + 0.4 * sin(t * 6.0)))
 			IdleActivity.Kind.DRINK:
 				draw_rect(Rect2(-2.2, -1.5, 4.4, 3.0), Color("0b0710"))
 				draw_rect(Rect2(-1.8, -1.0, 3.6, 2.0), [Color("c81830"), Color("d8d8e0"), Color("2a6ad0")][variant])
@@ -288,6 +295,11 @@ class SnoozeChair extends Node2D:
 		var ink := Color("0b0710")
 		var frame := Color(0.42, 0.44, 0.5)
 		var seat := Color(0.6, 0.28, 0.2)
+		var chp := ArtLib.sprite("folding_chair")
+		if tipped and chp:
+			# knocked over: the same painted chair, on its side in the shadow
+			draw_texture_rect(chp, Rect2(-8, -7, 14, 14), false, Color(0.72, 0.7, 0.72))
+			return
 		if tipped:
 			draw_rect(Rect2(-6, -5, 11, 10), ink)
 			draw_rect(Rect2(-5, -4, 9, 8), seat.darkened(0.2))

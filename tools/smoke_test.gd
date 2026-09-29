@@ -11,6 +11,7 @@ var step := 0
 
 func _ready() -> void:
 	Engine.set_meta("skip_tasks", true)
+	SaveManager.settings["difficulty"] = 1   # normal: one bullet kills
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	# detach from "current scene" so scene changes don't free the test runner
@@ -354,7 +355,7 @@ func _run() -> void:
 	# save round trip
 	SaveManager.save_game()
 	var copy: Dictionary = SaveManager.data.duplicate(true)
-	SaveManager.data = SaveManager._merge(SaveManager.DEFAULT_SAVE.duplicate(true), SaveManager._load_json(SaveManager.SAVE_PATH))
+	SaveManager.data = SaveManager._merge(SaveManager.DEFAULT_SAVE.duplicate(true), SaveManager._load_json(SaveManager.save_path))
 	check(SaveManager.data.missions.has("m01_checkout"), "save/load keeps mission result")
 	check(SaveManager.data.story.flags.get("harcourt_spared", false) == copy.story.flags.get("harcourt_spared", false), "save/load keeps flags")
 	await frames(30)

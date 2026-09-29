@@ -118,6 +118,12 @@ func build() -> Dictionary:
 				sw.zone = power_zone(x, y)
 				sw.level = level
 				sw.position = center
+				# screwed to the nearest wall, facing into the room
+				for d in [Vector2i(0, -1), Vector2i(-1, 0), Vector2i(1, 0), Vector2i(0, 1)]:
+					if ch(x + d.x, y + d.y) == "#":
+						sw.position = center + Vector2(d) * 5.5
+						sw.rotation = Vector2(d).angle() + PI * 0.5
+						break
 				level.props_root.add_child(sw)
 				out.switches.append(sw)
 			elif c == "U":
@@ -279,6 +285,7 @@ func _build_floor_chunks() -> void:
 			chunk.rect = Rect2i(cx, cy, mini(cs, w - cx), mini(cs, h - cy))
 			chunk.z_index = -10
 			level.floor_root.add_child(chunk)
+			StaticBake.queue(level, chunk, Rect2(Vector2(chunk.rect.position) * T, Vector2(chunk.rect.size) * T))
 
 # ---------------------------------------------------------------- walls
 func _is_wall(x: int, y: int) -> bool:
@@ -590,7 +597,34 @@ class FloorChunk extends Node2D:
 	var builder: LevelBuilder
 	var rect: Rect2i
 
+	## Drawn in passes so the renderer can batch them: every painted tile's
+	## texture first (grouped by texture), then the per-tile tones, then the
+	## procedural tiles and details, then the wall contact shadows. Tile by
+	## tile it was texture / rect / texture / rect - a draw call each.
 	func _draw() -> void:
+		var over: Dictionary = builder.data.get("floor_textures", {})
+		var by_tex := {}
+		for y in range(rect.position.y, rect.end.y):
+			for x in range(rect.position.x, rect.end.x):
+				var f: String = builder.floor_grid[y][x]
+				if f == "":
+					continue
+				var ptex := ArtLib.floor_tex(f, over)
+				if ptex:
+					if not by_tex.has(ptex):
+						by_tex[ptex] = []
+					by_tex[ptex].append(Vector2i(x, y))
+		for tex in by_tex:
+			var t2d: Texture2D = tex
+			var k := float(t2d.get_width()) / 128.0
+			for c in by_tex[tex]:
+				var p := Vector2(c.x * LevelBuilder.T, c.y * LevelBuilder.T)
+				var src := Rect2(fposmod(p.x * k, float(t2d.get_width())), fposmod(p.y * k, float(t2d.get_height())), 16.0 * k, 16.0 * k)
+				draw_texture_rect_region(t2d, Rect2(p, Vector2(LevelBuilder.T, LevelBuilder.T)), src)
+		for tex in by_tex:
+			for c in by_tex[tex]:
+				var tone := float(_h(c.x / 2, c.y / 2, 7) % 5) / 4.0
+				draw_rect(Rect2(Vector2(c.x * LevelBuilder.T, c.y * LevelBuilder.T), Vector2(LevelBuilder.T, LevelBuilder.T)), Color(0.05, 0.0, 0.1, 0.04 + 0.05 * tone))
 		for y in range(rect.position.y, rect.end.y):
 			for x in range(rect.position.x, rect.end.x):
 				var f: String = builder.floor_grid[y][x]
@@ -636,11 +670,7 @@ class FloorChunk extends Node2D:
 		var T2 := float(LevelBuilder.T)
 		var h := _h(x, y)
 		# floors are 4 texels per world pixel (512 px = 8 tiles)
-		var k := float(tex.get_width()) / 128.0
-		var src := Rect2(fposmod(p.x * k, float(tex.get_width())), fposmod(p.y * k, float(tex.get_height())), 16.0 * k, 16.0 * k)
-		draw_texture_rect_region(tex, Rect2(p, Vector2(T2, T2)), src)
-		var tone := float(_h(x / 2, y / 2, 7) % 5) / 4.0
-		draw_rect(Rect2(p, Vector2(T2, T2)), Color(0.05, 0.0, 0.1, 0.04 + 0.05 * tone))
+		# (the texture and the tone went down in _draw's first passes)
 		match f:
 			":":
 				if x % 4 == 0 and builder.is_parking_row(y):

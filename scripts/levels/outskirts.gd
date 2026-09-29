@@ -102,15 +102,56 @@ func _outside_point(rng: RandomNumberGenerator) -> Vector2:
 		return p
 	return Vector2.INF
 
+## The ground and the clutter are drawn once; only what moves (tumbleweeds,
+## the fog, flickering candles and glows) is redrawn, on a child layer.
+var _anim: Node2D
+
+class _AnimLayer extends Node2D:
+	var o: Outskirts
+	func _draw() -> void:
+		o._draw_anim(self)
+
+func _ready() -> void:
+	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	_anim = _AnimLayer.new()
+	_anim.o = self
+	add_child(_anim)
+
 func _process(delta: float) -> void:
 	_t += delta
-	if theme == "motel" or theme == "dream":
-		for w in _weeds:
-			w.p += w.v * delta
-			w.r += delta * 4.0
-			if w.p.x > _rect.end.x + BAND:
-				w.p.x = _rect.position.x - BAND
-		queue_redraw()
+	for w in _weeds:
+		w.p += w.v * delta
+		w.r += delta * 4.0
+		if w.p.x > _rect.end.x + BAND:
+			w.p.x = _rect.position.x - BAND
+	if Engine.get_process_frames() % 2 == 0:
+		_anim.queue_redraw()
+
+func _draw_anim(c: CanvasItem) -> void:
+	for w in _weeds:
+		if w.p == Vector2.INF:
+			continue
+		c.draw_set_transform(w.p, w.r, Vector2.ONE)
+		for k in 6:
+			c.draw_arc(Vector2.ZERO, 5.0 + k * 0.6, k, k + 2.2, 6, Color(0.45, 0.35, 0.25, 0.8), 1.0)
+		c.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	for pr in _props:
+		var p: Vector2 = pr[1]
+		match str(pr[0]):
+			"billboard":
+				c.draw_circle(p + Vector2(48, 44), 20.0, Color(1, 0.75, 0.4, 0.06 + 0.02 * sin(_t * 3.0)))
+			"candle":
+				var fl := 0.8 + 0.2 * sin(_t * 9.0 + p.x)
+				c.draw_circle(p, 12.0 * fl, Color(1.0, 0.5, 0.2, 0.08))
+				c.draw_circle(p + Vector2(0, -3), 1.2 * fl, Color(1.0, 0.8, 0.4))
+	if theme == "dream":
+		# red fog lying in bands, drifting
+		var outer := _rect.grow(BAND)
+		for i in 7:
+			var y := outer.position.y + fmod(i * 173.0 + _t * 6.0, outer.size.y)
+			c.draw_rect(Rect2(outer.position.x, y, outer.size.x, 40.0), Color(0.5, 0.05, 0.08, 0.05))
+
+const GROUND_TEX := {"motel": ";", "yard": ";", "studio": ":", "dream": "\""}
 
 func _ground() -> Color:
 	return {"motel": Color(0.34, 0.25, 0.24), "yard": Color(0.38, 0.29, 0.22), "studio": Color(0.2, 0.2, 0.24), "dream": Color(0.1, 0.15, 0.11)}[theme]
@@ -119,32 +160,30 @@ func _draw() -> void:
 	var g := _ground()
 	var outer := _rect.grow(BAND)
 	# four strips round the map (the map itself draws its own floor)
-	draw_rect(Rect2(outer.position, Vector2(outer.size.x, BAND)), g)
-	draw_rect(Rect2(Vector2(outer.position.x, _rect.end.y), Vector2(outer.size.x, BAND)), g)
-	draw_rect(Rect2(Vector2(outer.position.x, _rect.position.y), Vector2(BAND, _rect.size.y)), g)
-	draw_rect(Rect2(Vector2(_rect.end.x, _rect.position.y), Vector2(BAND, _rect.size.y)), g)
+	var strips := [Rect2(outer.position, Vector2(outer.size.x, BAND)), Rect2(Vector2(outer.position.x, _rect.end.y), Vector2(outer.size.x, BAND)),
+		Rect2(Vector2(outer.position.x, _rect.position.y), Vector2(BAND, _rect.size.y)), Rect2(Vector2(_rect.end.x, _rect.position.y), Vector2(BAND, _rect.size.y))]
+	var gt := ArtLib.floor_tex(str(GROUND_TEX[theme]))
+	if gt:
+		# the painted ground, tiled at the floors' density (4 texels a pixel),
+		# darkened toward the place's own ground colour
+		var tint := Color(0.62, 0.58, 0.6) if theme != "dream" else Color(0.3, 0.35, 0.32)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2(0.25, 0.25))
+		for r in strips:
+			draw_texture_rect(gt, Rect2(r.position * 4.0, r.size * 4.0), true, tint)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	else:
+		for r in strips:
+			draw_rect(r, g)
 	# ground texture: a scatter of lighter and darker specks, seeded
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 77
-	for i in 900:
+	for i in (0 if gt else 900):
 		var p := Vector2(rng.randf_range(outer.position.x, outer.end.x), rng.randf_range(outer.position.y, outer.end.y))
 		if _rect.has_point(p):
 			continue
 		draw_circle(p, rng.randf_range(0.8, 2.6), g.lightened(0.12) if rng.randf() < 0.5 else g.darkened(0.3))
 	for pr in _props:
 		_prop(pr)
-	for w in _weeds:
-		if w.p == Vector2.INF:
-			continue
-		draw_set_transform(w.p, w.r, Vector2.ONE)
-		for k in 6:
-			draw_arc(Vector2.ZERO, 5.0 + k * 0.6, k, k + 2.2, 6, Color(0.45, 0.35, 0.25, 0.8), 1.0)
-		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-	if theme == "dream":
-		# red fog lying in bands, drifting
-		for i in 7:
-			var y := outer.position.y + fmod(i * 173.0 + _t * 6.0, outer.size.y)
-			draw_rect(Rect2(outer.position.x, y, outer.size.x, 40.0), Color(0.5, 0.05, 0.08, 0.05))
 
 func _sprite(id: String, p: Vector2, rot: float, sc: float) -> bool:
 	var tex := ArtLib.sprite(id)
@@ -184,7 +223,6 @@ func _prop(pr: Array) -> void:
 			draw_rect(Rect2(p, Vector2(96, 36)), Color(0.12, 0.08, 0.1))
 			draw_rect(Rect2(p + Vector2(3, 3), Vector2(90, 30)), Color(0.55, 0.12, 0.25))
 			draw_string(UIStyle.font_display(), p + Vector2(8, 24), "SUNSET PALMS  2 MI", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(1, 0.85, 0.5))
-			draw_circle(p + Vector2(48, 44), 20.0, Color(1, 0.75, 0.4, 0.06 + 0.02 * sin(_t * 3.0)))
 		"tyres":
 			for k in 3:
 				var q := p + Vector2(k * 5.0 - 5.0, sin(k + rot) * 3.0)
@@ -228,10 +266,7 @@ func _prop(pr: Array) -> void:
 			if not _sprite("grave", p, 0.0, sc * 0.8):
 				draw_rect(Rect2(p - Vector2(5, 7), Vector2(10, 14)), Color(0.35, 0.33, 0.36))
 		"candle":
-			var fl := 0.8 + 0.2 * sin(_t * 9.0 + p.x)
-			draw_circle(p, 12.0 * fl, Color(1.0, 0.5, 0.2, 0.08))
 			draw_rect(Rect2(p - Vector2(1, 2), Vector2(2, 4)), Color(0.9, 0.85, 0.75))
-			draw_circle(p + Vector2(0, -3), 1.2 * fl, Color(1.0, 0.8, 0.4))
 		"lamp":
 			draw_circle(p + Vector2(3, 3), 4.0, shade)
 			draw_circle(p, 3.5, Color(0.2, 0.2, 0.22))

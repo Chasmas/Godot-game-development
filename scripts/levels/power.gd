@@ -88,17 +88,36 @@ class Switch extends Node2D:
 	func _draw() -> void:
 		var ink := Color("0b0710")
 		var on := is_on()
-		draw_rect(Rect2(-4.5, -5.5, 9, 11), ink)
-		draw_rect(Rect2(-3.5, -4.5, 7, 9), Color(0.78, 0.74, 0.66))
-		draw_rect(Rect2(-3.5, 1.5, 7, 3), Color(0.62, 0.58, 0.52))
-		draw_rect(Rect2(-1.5, -3.0 if on else 0.0, 3, 3), ink)
-		draw_rect(Rect2(-1.0, -2.5 if on else 0.5, 2, 2), Color(0.95, 0.92, 0.85))
 		var led := Color(0.3, 1.0, 0.4) if on else Color(1.0, 0.25, 0.2)
 		if is_dead():
 			led = Color(0.25, 0.05, 0.05)
-		draw_circle(Vector2(0, -6.5), 1.2, led)
+		var pt := ArtLib.sprite("light_switch")
+		if pt:
+			# the painted plate (toggle up); flipped down it's drawn upside down
+			draw_texture_rect(pt, Rect2(-4.5, -5.5, 9, 11), false)
+			if not on:
+				draw_rect(Rect2(-1.3, -1.0, 2.6, 3.4), Color(0.2, 0.18, 0.16, 0.9))
+			draw_circle(Vector2(0, -6.8), 0.9, led)
+			if not is_dead() and fmod(_t, 1.4) < 0.7:
+				draw_circle(Vector2(0, -6.8), 2.0, Color(led, 0.25))
+			return
+		# a cream bakelite plate: bevel, two screws, the toggle with its shadow
+		draw_rect(Rect2(-3.2, -4.2, 7.6, 9.6), Color(0, 0, 0, 0.35))
+		draw_rect(Rect2(-4.0, -5.0, 8.0, 10.0), ink)
+		draw_rect(Rect2(-3.4, -4.4, 6.8, 8.8), Color(0.86, 0.82, 0.72))
+		draw_rect(Rect2(-3.4, -4.4, 6.8, 1.0), Color(0.95, 0.93, 0.86))
+		draw_rect(Rect2(-3.4, 3.4, 6.8, 1.0), Color(0.66, 0.62, 0.54))
+		for sy in [-3.4, 3.2]:
+			draw_circle(Vector2(0, sy), 0.55, Color(0.55, 0.5, 0.45))
+			draw_line(Vector2(-0.4, sy), Vector2(0.4, sy), Color(0.3, 0.27, 0.24), 0.3)
+		draw_rect(Rect2(-1.3, -1.8, 2.6, 3.6), Color(0.35, 0.32, 0.28))
+		var ty := -2.4 if on else 0.6
+		draw_rect(Rect2(-1.0, ty + 0.4, 2.0, 2.0), Color(0, 0, 0, 0.35))
+		draw_rect(Rect2(-1.0, ty, 2.0, 2.0), Color(0.97, 0.95, 0.9))
+		draw_rect(Rect2(-1.0, ty + 1.5, 2.0, 0.5), Color(0.75, 0.72, 0.66))
+		draw_circle(Vector2(0, -6.2), 0.9, led)
 		if not is_dead() and fmod(_t, 1.4) < 0.7:
-			draw_circle(Vector2(0, -6.5), 2.4, Color(led, 0.25))
+			draw_circle(Vector2(0, -6.2), 2.0, Color(led, 0.25))
 
 
 ## Dark overlay over zones whose power is off.

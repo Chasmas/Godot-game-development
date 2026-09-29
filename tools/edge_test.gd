@@ -799,7 +799,7 @@ func bark_stays_on_screen() -> void:
 func language_persists() -> void:
 	var before := Loc.current()
 	Loc.apply("pt_PT")
-	var f := FileAccess.get_file_as_string(SaveManager.SETTINGS_PATH)
+	var f := FileAccess.get_file_as_string(SaveManager.settings_path)
 	var parsed: Variant = JSON.parse_string(f)
 	check(parsed is Dictionary and str(parsed.get("language", "")) == "pt_PT", "choosing Português is written to settings.json")
 	check(TranslationServer.translate("OPTIONS") == "OPÇÕES", "and the game is in Portuguese (%s)" % TranslationServer.translate("OPTIONS"))

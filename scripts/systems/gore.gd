@@ -386,16 +386,37 @@ class Gib extends Node2D:
 		var dred := Color(0.36, 0.0, 0.05)
 		match kind:
 			"head":
+				var hp := ArtLib.sprite("severed_head")
+				if hp:
+					# the painting (neck to the right); the hair takes the palette
+					draw_texture_rect(hp, Rect2(-5.5, -5.5, 11, 11), false)
+					return
+				# lying on its side: the skull an egg, hair over the crown,
+				# an ear, the shut eye, and a torn neck with the spine showing
+				draw_set_transform(Vector2(0.8, 1.2), 0.0, Vector2(1.0, 0.8))
+				draw_circle(Vector2.ZERO, 4.4, Color(0, 0, 0, 0.3))
+				draw_set_transform(Vector2(-0.3, 0), 0.0, Vector2(1.15, 0.92))
 				draw_circle(Vector2.ZERO, 3.9, ink)
-				draw_circle(Vector2.ZERO, 3.2, skin)
-				draw_circle(Vector2(0.8, 0.8), 2.2, shade)
-				draw_circle(Vector2(-0.7, -0.7), 1.2, skin.lightened(0.2))
+				draw_circle(Vector2.ZERO, 3.3, skin)
+				draw_circle(Vector2(0.6, 0.9), 2.4, shade)
+				draw_circle(Vector2(0.2, -1.2), 1.3, skin.lightened(0.18))
+				draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 				if palette != "heavy":
-					draw_circle(Vector2(-1.2, 0), 2.4, hair)
-				draw_circle(Vector2(2.4, 0), 1.6, red)      # neck stump
-				draw_circle(Vector2(2.6, 0), 0.8, Color(0.95, 0.9, 0.85))
-				draw_rect(Rect2(0.4, -1.6, 0.9, 0.9), ink)   # eyes
-				draw_rect(Rect2(0.4, 0.8, 0.9, 0.9), ink)
+					var cap := PackedVector2Array([Vector2(-4.4, -0.2), Vector2(-3.9, -2.6), Vector2(-2.2, -3.8), Vector2(-0.2, -3.9), Vector2(0.6, -2.9),
+						Vector2(-0.6, -2.4), Vector2(-1.2, -0.6), Vector2(-0.8, 1.4), Vector2(0.2, 3.0), Vector2(-1.4, 3.6), Vector2(-3.4, 2.8)])
+					draw_colored_polygon(cap, hair)
+					for k in 4:
+						var a0 := Vector2(-3.6 + k * 0.7, -2.4 + k * 1.3)
+						draw_line(a0, a0 + Vector2(1.5, 0.3), hair.lightened(0.25), 0.4)
+				draw_circle(Vector2(0.4, -3.1), 0.9, shade.darkened(0.2))     # ear
+				draw_line(Vector2(1.2, -0.9), Vector2(2.0, -0.6), ink, 0.45)  # shut eye
+				draw_line(Vector2(1.2, 1.1), Vector2(2.0, 0.9), ink, 0.45)
+				draw_circle(Vector2(2.6, 0.1), 0.6, shade)                     # nose
+				var stump := PackedVector2Array([Vector2(2.9, -2.4), Vector2(4.3, -2.0), Vector2(4.0, -0.9), Vector2(4.7, 0.1), Vector2(4.1, 1.2), Vector2(4.4, 2.2), Vector2(2.9, 2.5)])
+				draw_colored_polygon(stump, red)
+				draw_polyline(stump, dred, 0.5)
+				draw_circle(Vector2(3.6, 0.1), 0.9, dred)
+				draw_circle(Vector2(3.7, 0.1), 0.45, Color(0.92, 0.88, 0.8))   # spine
 			"dog_head":
 				draw_circle(Vector2.ZERO, 3.4, ink)
 				draw_circle(Vector2.ZERO, 2.8, Color(0.16, 0.12, 0.1))

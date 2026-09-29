@@ -27,7 +27,11 @@ const DEFS := {
 	"weapon": ["WEAPONS", "Guns have limited rounds - throw an empty one, it still knocks people down. Melee weapons break after a few hits.", ["fire", "secondary", "swap"]],
 	"reload": ["RELOAD", "Out of rounds in the magazine: reload, or swap to your other weapon - swapping is faster.", ["reload", "swap"]],
 }
-const MAX_ON := 2
+const MAX_ON := 1
+var hud: Node
+
+func showing() -> bool:
+	return not _cards.is_empty()
 
 var _queue: Array = []
 var _cards: Array = []     ## {id, t, dur, y, a}
@@ -62,7 +66,7 @@ func _body(id: String) -> String:
 func _process(delta: float) -> void:
 	var rd := delta / maxf(Engine.time_scale, 0.03)
 	_t += rd
-	while _cards.size() < MAX_ON and not _queue.is_empty():
+	while _cards.size() < MAX_ON and not _queue.is_empty() and (hud == null or hud.may_show(self)):
 		var id: String = _queue.pop_front()
 		var words := _body(id).split(" ").size()
 		_cards.append({"id": id, "t": 0.0, "dur": clampf(3.5 + words * 0.28, 5.0, 11.0), "y": -1.0, "a": 0.0})

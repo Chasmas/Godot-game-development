@@ -102,11 +102,15 @@ func _throttled(sfx_name: String) -> bool:
 	_last_play[sfx_name] = now
 	return false
 
+static var _log := OS.has_environment("AUDIO_LOG")
+
 ## Positional sound in the world.
 func play_at(sfx_name: String, pos: Vector2, volume_db := 0.0, pitch_var := 0.08) -> void:
 	var s := get_stream(sfx_name)
 	if s == null or _throttled(sfx_name):
 		return
+	if _log:
+		print("[sfx] ", sfx_name)
 	var far := listener_pos().distance_to(pos) > FAR_DIST
 	var p: AudioStreamPlayer2D
 	if far:
@@ -136,6 +140,8 @@ func play(sfx_name: String, volume_db := 0.0, pitch := 1.0) -> void:
 	var s := get_stream(sfx_name)
 	if s == null or _throttled(sfx_name):
 		return
+	if _log:
+		print("[sfx] ", sfx_name)
 	var p := _pool_ui[_iui]
 	_iui = (_iui + 1) % POOL_UI
 	p.stream = s
