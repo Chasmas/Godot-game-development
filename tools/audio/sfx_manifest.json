@@ -1,0 +1,810 @@
+{
+ "pistol": {
+  "group": "guns",
+  "sec": 1.0,
+  "prompt": "A single 9mm pistol gunshot indoors, sharp crack with a short room slap, no echo tail."
+ },
+ "revolver": {
+  "group": "guns",
+  "sec": 1.2,
+  "prompt": "A single .357 revolver shot indoors, heavy deep boom with a metallic ring, short room reflection."
+ },
+ "smg": {
+  "group": "guns",
+  "sec": 0.6,
+  "prompt": "One shot of a compact submachine gun, tight snappy crack, meant to be repeated in rapid fire."
+ },
+ "rifle": {
+  "group": "guns",
+  "sec": 1.2,
+  "prompt": "One assault rifle shot in a building, loud supersonic crack with a punchy low end."
+ },
+ "shotgun": {
+  "group": "guns",
+  "sec": 1.4,
+  "prompt": "A pump shotgun blast indoors, huge boom with a thick low end and a short rattle of pellets."
+ },
+ "sniper": {
+  "group": "guns",
+  "sec": 1.8,
+  "prompt": "A high-powered sniper rifle shot from far away, a deep thump and a long crack rolling across a parking lot."
+ },
+ "sniper_charge": {
+  "group": "guns",
+  "sec": 1.2,
+  "prompt": "A rising electronic whine of a laser sight locking on, thin and tense."
+ },
+ "suppressed": {
+  "group": "guns",
+  "sec": 0.7,
+  "prompt": "A suppressed pistol shot: a muffled cough, the slide clacking back."
+ },
+ "empty": {
+  "group": "guns",
+  "sec": 0.4,
+  "prompt": "A dry click of an empty handgun trigger."
+ },
+ "reload": {
+  "group": "guns",
+  "sec": 1.0,
+  "prompt": "A pistol reloaded quickly: magazine out, magazine slapped in, slide released."
+ },
+ "mag_out": {
+  "group": "guns",
+  "sec": 0.4,
+  "prompt": "A pistol magazine pressed out, a metallic click and slide."
+ },
+ "mag_in": {
+  "group": "guns",
+  "sec": 0.4,
+  "prompt": "A pistol magazine slapped into the grip, firm click."
+ },
+ "slide_rack": {
+  "group": "guns",
+  "sec": 0.5,
+  "prompt": "A pistol slide racked back and released, crisp metal."
+ },
+ "shell": {
+  "group": "guns",
+  "sec": 0.5,
+  "prompt": "A single spent brass shell casing bouncing on a hard floor."
+ },
+ "shell_insert": {
+  "group": "guns",
+  "sec": 0.4,
+  "prompt": "A shotgun shell pushed into the tube magazine, short slide and click."
+ },
+ "ricochet": {
+  "group": "guns",
+  "sec": 0.8,
+  "prompt": "A bullet ricochet whining off metal."
+ },
+ "flame_ignite": {
+  "group": "guns",
+  "sec": 0.8,
+  "prompt": "A flamethrower igniting with a whoosh and a roar of burning gas."
+ },
+ "flame_burst": {
+  "group": "guns",
+  "sec": 1.0,
+  "prompt": "A short burst of a flamethrower, roaring fire jet."
+ },
+ "punch": {
+  "group": "melee",
+  "sec": 0.4,
+  "prompt": "A hard bare-knuckle punch to the face, meaty smack."
+ },
+ "swing": {
+  "group": "melee",
+  "sec": 0.4,
+  "prompt": "A fast swish of a baseball bat through the air."
+ },
+ "swing_heavy": {
+  "group": "melee",
+  "sec": 0.6,
+  "prompt": "A heavy slow swing of a sledgehammer through the air, deep whoosh."
+ },
+ "hit_blunt": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A baseball bat hitting a person's body, a deep dull thud."
+ },
+ "hit_blade": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A knife slashing into flesh, a sharp wet cut."
+ },
+ "hit_flesh": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A bullet hitting a body, a wet punchy thwack."
+ },
+ "execute": {
+  "group": "melee",
+  "sec": 0.8,
+  "prompt": "A brutal finishing blow in a fight, a heavy crunch with a bone crack."
+ },
+ "neck_snap": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A neck snapped in a choke hold, a sharp dry crack."
+ },
+ "gore": {
+  "group": "melee",
+  "sec": 0.8,
+  "prompt": "Gory wet splatter of flesh and blood hitting a floor."
+ },
+ "splat": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A wet splat of blood on a wall."
+ },
+ "body_fall": {
+  "group": "melee",
+  "sec": 0.8,
+  "prompt": "A limp body collapsing onto a hard floor, heavy thud."
+ },
+ "shield_block": {
+  "group": "melee",
+  "sec": 0.6,
+  "prompt": "A bullet slamming into a riot shield, a hard metallic clang."
+ },
+ "armor_break": {
+  "group": "melee",
+  "sec": 0.8,
+  "prompt": "A bullet hitting a kevlar vest, a dull impact and a crunch of ceramic plate."
+ },
+ "dash": {
+  "group": "melee",
+  "sec": 0.5,
+  "prompt": "A quick dodge roll on the floor, cloth rustle and a body thump."
+ },
+ "throw": {
+  "group": "melee",
+  "sec": 0.4,
+  "prompt": "A heavy object thrown hard, a quick whoosh."
+ },
+ "door_kick": {
+  "group": "props",
+  "sec": 1.0,
+  "prompt": "A wooden motel door kicked open hard: a heavy boot thud, the lock splintering, the door banging into the wall."
+ },
+ "door_open": {
+  "group": "props",
+  "sec": 1.0,
+  "prompt": "A wooden door pushed open, a creaking hinge."
+ },
+ "door_slam": {
+  "group": "props",
+  "sec": 0.8,
+  "prompt": "A door slammed shut hard."
+ },
+ "door_break": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "A wooden door smashed to pieces, splintering wood."
+ },
+ "glass": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "A window pane shattering, glass shards falling on the floor."
+ },
+ "bottle_break": {
+  "group": "props",
+  "sec": 0.8,
+  "prompt": "A glass beer bottle smashing on a head, shards."
+ },
+ "metal_clang": {
+  "group": "props",
+  "sec": 0.7,
+  "prompt": "A metal can or pipe clanging on a concrete floor."
+ },
+ "tv_break": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "An old CRT television smashed: glass bursting, a high-pitched electric whine dying, sparks."
+ },
+ "camera_break": {
+  "group": "props",
+  "sec": 0.9,
+  "prompt": "A security camera shot to pieces, plastic cracking, a spark and a fizz."
+ },
+ "spark": {
+  "group": "props",
+  "sec": 0.7,
+  "prompt": "Electric sparks crackling from a broken wire."
+ },
+ "buzz": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "A faulty fluorescent light buzzing and flickering."
+ },
+ "power_down": {
+  "group": "props",
+  "sec": 1.5,
+  "prompt": "A building's power cutting out: a deep electrical clunk and hum winding down."
+ },
+ "power_up": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "Power coming back on: a relay clunk and a rising hum, lights flickering on."
+ },
+ "light_switch": {
+  "group": "props",
+  "sec": 0.3,
+  "prompt": "A plastic wall light switch flicked, one crisp click."
+ },
+ "explosion": {
+  "group": "props",
+  "sec": 2.5,
+  "prompt": "A big explosion inside a building: a deep boom, debris, glass raining down."
+ },
+ "breach_boom": {
+  "group": "props",
+  "sec": 3.0,
+  "prompt": "Demolition charges blowing a lobby door apart: a massive boom, splinters and glass raining for a second."
+ },
+ "fire_loop": {
+  "group": "props",
+  "sec": 6.0,
+  "prompt": "Fire burning steadily, crackling wood and roaring flames.",
+  "loop": true
+ },
+ "sprinkler": {
+  "group": "props",
+  "sec": 1.2,
+  "prompt": "A fire sprinkler head spluttering and hissing dry, no water."
+ },
+ "alarm": {
+  "group": "props",
+  "sec": 2.0,
+  "loop": true,
+  "gain": -4.0,
+  "prompt": "A building intruder alarm heard from down the hall: a clear two-tone electronic warble, urgent but not piercing, a little muffled by walls, steady rhythm."
+ },
+ "intercom": {
+  "group": "props",
+  "sec": 0.8,
+  "prompt": "An old intercom buzzing on with a two-tone chime."
+ },
+ "phone_ring": {
+  "group": "props",
+  "sec": 2.0,
+  "prompt": "A 1980s rotary telephone ringing, one double ring."
+ },
+ "phone_pickup": {
+  "group": "props",
+  "sec": 0.6,
+  "prompt": "An old telephone handset lifted off its cradle, plastic clack."
+ },
+ "tape_insert": {
+  "group": "props",
+  "sec": 1.0,
+  "prompt": "A VHS tape pushed into a VCR, the mechanism whirring and clunking shut."
+ },
+ "tape_rewind": {
+  "group": "props",
+  "sec": 1.4,
+  "prompt": "A VCR rewinding a tape at high speed, whirring, ending with a clunk."
+ },
+ "tape_slide": {
+  "group": "props",
+  "sec": 0.5,
+  "prompt": "A VHS tape case sliding across a shelf."
+ },
+ "vhs_static": {
+  "group": "props",
+  "sec": 1.0,
+  "prompt": "VHS tape static noise and tracking hiss."
+ },
+ "rec_beep": {
+  "group": "props",
+  "sec": 0.5,
+  "prompt": "A 1980s camcorder record beep, two short beeps."
+ },
+ "slate_clap": {
+  "group": "props",
+  "sec": 0.4,
+  "prompt": "A film clapperboard snapping shut."
+ },
+ "on_air_buzz": {
+  "group": "props",
+  "sec": 0.8,
+  "prompt": "A TV studio ON AIR light buzzer."
+ },
+ "tv_hum": {
+  "group": "props",
+  "sec": 4.0,
+  "prompt": "An old CRT television humming with a high whine in an empty room.",
+  "loop": true
+ },
+ "pickup": {
+  "group": "props",
+  "sec": 0.4,
+  "prompt": "Picking up a handgun off the floor, a metallic grab."
+ },
+ "collect": {
+  "group": "props",
+  "sec": 0.6,
+  "prompt": "Picking up a VHS cassette, plastic clack."
+ },
+ "upgrade": {
+  "group": "props",
+  "sec": 1.0,
+  "prompt": "A briefcase snapping open with two latches."
+ },
+ "bubble_pop": {
+  "group": "props",
+  "sec": 0.3,
+  "prompt": "A small wet bubble popping."
+ },
+ "snore": {
+  "group": "props",
+  "sec": 1.6,
+  "prompt": "A man snoring loudly while dozing in a chair."
+ },
+ "whoosh": {
+  "group": "props",
+  "sec": 0.6,
+  "prompt": "A fast cinematic whoosh."
+ },
+ "firework_pop": {
+  "group": "props",
+  "sec": 2.0,
+  "prompt": "A firework bursting in the night sky over a city, crackles."
+ },
+ "applause": {
+  "group": "props",
+  "sec": 3.0,
+  "prompt": "A studio audience applauding and cheering."
+ },
+ "laugh_track": {
+  "group": "props",
+  "sec": 2.5,
+  "prompt": "An 1980s sitcom canned laugh track."
+ },
+ "tote_ding": {
+  "group": "props",
+  "sec": 0.6,
+  "prompt": "An old game show bell ding."
+ },
+ "car_arrive": {
+  "group": "cars",
+  "sec": 4.0,
+  "prompt": "A 1970s Cadillac V8 driving in and coming to a stop on gravel, engine rumble."
+ },
+ "car_brake": {
+  "group": "cars",
+  "sec": 1.5,
+  "prompt": "A car braking hard to a stop with a short tyre squeal."
+ },
+ "car_door": {
+  "group": "cars",
+  "sec": 0.8,
+  "prompt": "A heavy 1970s car door opened and slammed shut."
+ },
+ "car_idle": {
+  "group": "cars",
+  "sec": 4.0,
+  "prompt": "A big old V8 car engine idling, low rumble.",
+  "loop": true
+ },
+ "car_pass": {
+  "group": "cars",
+  "sec": 3.0,
+  "prompt": "A car driving past on a wet road at night."
+ },
+ "car_peel": {
+  "group": "cars",
+  "sec": 2.5,
+  "prompt": "A V8 car peeling out, tyres screeching, engine roaring away."
+ },
+ "tire_skid": {
+  "group": "cars",
+  "sec": 1.2,
+  "prompt": "Car tyres skidding on asphalt."
+ },
+ "siren_loop": {
+  "group": "cars",
+  "sec": 6.0,
+  "prompt": "A distant 1980s American police siren wailing across the city.",
+  "loop": true
+ },
+ "bark": {
+  "group": "animals",
+  "sec": 0.8,
+  "prompt": "A big German Shepherd barking once, aggressive."
+ },
+ "growl": {
+  "group": "animals",
+  "sec": 1.5,
+  "prompt": "A guard dog growling low and threatening."
+ },
+ "dog_bite": {
+  "group": "animals",
+  "sec": 0.6,
+  "prompt": "A dog biting and snarling, a snap of jaws."
+ },
+ "yelp": {
+  "group": "animals",
+  "sec": 0.6,
+  "prompt": "A dog yelping in pain."
+ },
+ "vox_dog_die0": {
+  "group": "animals",
+  "sec": 1.0,
+  "prompt": "A dog whining in pain as it collapses."
+ },
+ "vox_dog_die1": {
+  "group": "animals",
+  "sec": 1.0,
+  "prompt": "A hurt dog letting out a last whimper."
+ },
+ "vox_dog_die2": {
+  "group": "animals",
+  "sec": 1.0,
+  "prompt": "A dog yelping then going quiet."
+ },
+ "vox_hurt_m0": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A man grunting in pain as he is hit hard, no words."
+ },
+ "vox_hurt_m1": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A man knocked down, a sharp pained grunt, no words."
+ },
+ "vox_hurt_m2": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A man winded by a blow, a gasp and a groan, no words."
+ },
+ "vox_hurt_m3": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A man hit in the face, an angry pained grunt, no words."
+ },
+ "vox_hurt_m4": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A heavy man grunting as he falls, no words."
+ },
+ "vox_hurt_m5": {
+  "group": "voices",
+  "sec": 0.8,
+  "prompt": "A young man crying out briefly in pain, no words."
+ },
+ "vox_die_m0": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man shot, a short strangled cry of pain cut off as he falls, no words."
+ },
+ "vox_die_m1": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man dying with a gurgling groan, no words."
+ },
+ "vox_die_m2": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man screaming briefly as he is killed, no words."
+ },
+ "vox_die_m3": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man's last choked breath and groan, no words."
+ },
+ "vox_die_m4": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man crying out in agony, then silence, no words."
+ },
+ "vox_die_m5": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A thug gasping and collapsing, a dying groan, no words."
+ },
+ "vox_hurt_f0": {
+  "group": "voices",
+  "sec": 0.7,
+  "prompt": "A woman grunting in pain as she is hit, tough, no words."
+ },
+ "vox_hurt_f1": {
+  "group": "voices",
+  "sec": 0.7,
+  "prompt": "A woman gasping sharply in pain, no words."
+ },
+ "vox_hurt_f2": {
+  "group": "voices",
+  "sec": 0.7,
+  "prompt": "A woman hissing through her teeth in pain, no words."
+ },
+ "vox_hurt_f3": {
+  "group": "voices",
+  "sec": 0.7,
+  "prompt": "A woman knocked back, a short pained cry, no words."
+ },
+ "vox_die_f0": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A woman shot, a short cry of pain as she falls, no words."
+ },
+ "vox_die_f1": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A woman's last pained gasp as she collapses, no words."
+ },
+ "vox_die_f2": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A woman crying out in agony, cut short, no words."
+ },
+ "vox_boss_die0": {
+  "group": "voices",
+  "sec": 2.0,
+  "prompt": "A huge man bellowing in pain and rage as he dies, a long deep roar fading, no words."
+ },
+ "vox_boss_die1": {
+  "group": "voices",
+  "sec": 2.0,
+  "prompt": "A big man's long dying groan, deep and ragged, no words."
+ },
+ "scream_m": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A man screaming in terror, no words."
+ },
+ "scream_f": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A woman screaming in terror, no words."
+ },
+ "cry": {
+  "group": "voices",
+  "sec": 1.5,
+  "prompt": "Someone sobbing quietly."
+ },
+ "moan": {
+  "group": "voices",
+  "sec": 1.5,
+  "prompt": "A zombie-like guttural moan."
+ },
+ "roar": {
+  "group": "voices",
+  "sec": 1.8,
+  "prompt": "A monstrous demonic roar."
+ },
+ "shriek": {
+  "group": "voices",
+  "sec": 1.2,
+  "prompt": "A ghostly high shriek."
+ },
+ "rain_loop": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "Steady night rain on asphalt and a motel roof.",
+  "loop": true
+ },
+ "wind_loop": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "Hot desert wind gusting, sand hiss.",
+  "loop": true
+ },
+ "room_tone": {
+  "group": "ambience",
+  "sec": 6.0,
+  "prompt": "The room tone of an empty motel room at night, a fridge hum.",
+  "loop": true
+ },
+ "amb_interior": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "Interior of a cheap motel at 3 AM: distant traffic, a humming ice machine, a TV through the wall.",
+  "loop": true
+ },
+ "amb_exterior": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "A Californian motel parking lot at night: crickets, a distant highway, a buzzing neon sign.",
+  "loop": true
+ },
+ "amb_industrial": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "Inside a junkyard warehouse at night: metal creaks, a generator hum, distant dogs.",
+  "loop": true
+ },
+ "amb_kennel": {
+  "group": "ambience",
+  "sec": 8.0,
+  "prompt": "Kennels at night: dogs shifting, chains rattling, a dog whining far off.",
+  "loop": true
+ },
+ "thunder": {
+  "group": "ambience",
+  "sec": 3.0,
+  "prompt": "A roll of thunder over a city at night."
+ },
+ "ui_move": {
+  "group": "ui",
+  "sec": 0.2,
+  "prompt": "A short soft analog synth blip for a menu cursor moving, 1980s."
+ },
+ "ui_select": {
+  "group": "ui",
+  "sec": 0.35,
+  "prompt": "A bright analog synth confirmation chirp for selecting a menu item, 1980s."
+ },
+ "ui_back": {
+  "group": "ui",
+  "sec": 0.3,
+  "prompt": "A low analog synth blip for going back in a menu, 1980s."
+ },
+ "blip": {
+  "group": "ui",
+  "sec": 0.2,
+  "prompt": "A tiny digital blip."
+ },
+ "alert": {
+  "group": "ui",
+  "sec": 0.4,
+  "prompt": "A tense two-note synth sting when an enemy spots you."
+ },
+ "combo": {
+  "group": "ui",
+  "sec": 0.5,
+  "prompt": "A punchy arcade synth hit for a combo milestone."
+ },
+ "rank_stamp": {
+  "group": "ui",
+  "sec": 0.6,
+  "prompt": "A heavy rubber stamp slammed on paper."
+ },
+ "type_clack": {
+  "group": "ui",
+  "sec": 0.15,
+  "prompt": "A single typewriter key clack."
+ },
+ "beat_tick": {
+  "group": "ui",
+  "sec": 0.15,
+  "prompt": "A tiny click of a drum machine rim shot."
+ },
+ "slowmo_in": {
+  "group": "ui",
+  "sec": 0.8,
+  "prompt": "Time slowing down: a deep downward pitch sweep whoosh."
+ },
+ "slowmo_out": {
+  "group": "ui",
+  "sec": 0.6,
+  "prompt": "Time speeding back up: an upward whoosh."
+ },
+ "ear_ring": {
+  "group": "ui",
+  "sec": 2.0,
+  "prompt": "A high tinnitus ringing after an explosion, fading."
+ },
+ "step_carpet0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a thick motel carpet, soft muffled, take 1."
+ },
+ "step_carpet1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a thick motel carpet, soft muffled, take 2."
+ },
+ "step_carpet2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a thick motel carpet, soft muffled, take 3."
+ },
+ "step_wood0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on old wooden floorboards, a hollow knock, take 1."
+ },
+ "step_wood1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on old wooden floorboards, a hollow knock, take 2."
+ },
+ "step_wood2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on old wooden floorboards, a hollow knock, take 3."
+ },
+ "step_tile0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on bathroom tiles, a sharp heel click, take 1."
+ },
+ "step_tile1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on bathroom tiles, a sharp heel click, take 2."
+ },
+ "step_tile2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on bathroom tiles, a sharp heel click, take 3."
+ },
+ "step_metal0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a metal grating, a ringing clank, take 1."
+ },
+ "step_metal1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a metal grating, a ringing clank, take 2."
+ },
+ "step_metal2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on a metal grating, a ringing clank, take 3."
+ },
+ "step_hard0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on concrete, a gritty scuff, take 1."
+ },
+ "step_hard1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on concrete, a gritty scuff, take 2."
+ },
+ "step_hard2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on concrete, a gritty scuff, take 3."
+ },
+ "step_dirt0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on gravel, a crunch, take 1."
+ },
+ "step_dirt1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on gravel, a crunch, take 2."
+ },
+ "step_dirt2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on gravel, a crunch, take 3."
+ },
+ "step_grass0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on grass, a soft swish, take 1."
+ },
+ "step_grass1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on grass, a soft swish, take 2."
+ },
+ "step_grass2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot on grass, a soft swish, take 3."
+ },
+ "step_water0": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot in a shallow puddle, a small splash, take 1."
+ },
+ "step_water1": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot in a shallow puddle, a small splash, take 2."
+ },
+ "step_water2": {
+  "group": "steps",
+  "sec": 0.5,
+  "prompt": "A single footstep of a boot in a shallow puddle, a small splash, take 3."
+ }
+}

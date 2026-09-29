@@ -42,6 +42,10 @@ var using_gamepad := false
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	rebuild()
+	Input.joy_connection_changed.connect(_on_joy_connection)
+	var pads := Input.get_connected_joypads()
+	if not pads.is_empty():
+		pad_family = family_of(pads[0])
 
 func rebuild() -> void:
 	var saved: Dictionary = SaveManager.get_setting("bindings", {})
@@ -182,17 +186,61 @@ func event_text(ev: InputEvent) -> String:
 	if ev is InputEventMouseButton:
 		return tr({MOUSE_BUTTON_LEFT: "LMB", MOUSE_BUTTON_RIGHT: "RMB", MOUSE_BUTTON_MIDDLE: "MMB", MOUSE_BUTTON_XBUTTON1: "M4", MOUSE_BUTTON_XBUTTON2: "M5"}.get(ev.button_index, tr("Mouse %d") % ev.button_index))
 	if ev is InputEventJoypadButton:
-		return {JOY_BUTTON_A: "A", JOY_BUTTON_B: "B", JOY_BUTTON_X: "X", JOY_BUTTON_Y: "Y", JOY_BUTTON_LEFT_SHOULDER: "LB",
-			JOY_BUTTON_RIGHT_SHOULDER: "RB", JOY_BUTTON_START: "Start", JOY_BUTTON_BACK: "Back", JOY_BUTTON_LEFT_STICK: "L3",
-			JOY_BUTTON_RIGHT_STICK: "R3"}.get(ev.button_index, "Btn %d" % ev.button_index)
+		return (PAD_BUTTONS[pad_family] as Dictionary).get(ev.button_index, "Btn %d" % ev.button_index)
 	if ev is InputEventJoypadMotion:
-		return {JOY_AXIS_TRIGGER_LEFT: "LT", JOY_AXIS_TRIGGER_RIGHT: "RT", JOY_AXIS_LEFT_X: "LS", JOY_AXIS_LEFT_Y: "LS",
-			JOY_AXIS_RIGHT_X: "RS", JOY_AXIS_RIGHT_Y: "RS"}.get(ev.axis, "Axis")
+		return (PAD_AXES[pad_family] as Dictionary).get(ev.axis, "Axis")
 	return "?"
+
+## Which controller's names to show: the one last used / plugged in.
+## Godot's buttons are positions (A = bottom face button, B = right...), so
+## a PlayStation pad's bottom button is ✕ and a Nintendo pad's is B.
+var pad_family := "xbox"
+const PAD_BUTTONS := {
+	"xbox": {JOY_BUTTON_A: "A", JOY_BUTTON_B: "B", JOY_BUTTON_X: "X", JOY_BUTTON_Y: "Y", JOY_BUTTON_LEFT_SHOULDER: "LB",
+		JOY_BUTTON_RIGHT_SHOULDER: "RB", JOY_BUTTON_START: "Menu", JOY_BUTTON_BACK: "View", JOY_BUTTON_LEFT_STICK: "LS",
+		JOY_BUTTON_RIGHT_STICK: "RS", JOY_BUTTON_DPAD_UP: "D-Pad ↑", JOY_BUTTON_DPAD_DOWN: "D-Pad ↓", JOY_BUTTON_DPAD_LEFT: "D-Pad ←", JOY_BUTTON_DPAD_RIGHT: "D-Pad →"},
+	"ps": {JOY_BUTTON_A: "✕", JOY_BUTTON_B: "○", JOY_BUTTON_X: "□", JOY_BUTTON_Y: "△", JOY_BUTTON_LEFT_SHOULDER: "L1",
+		JOY_BUTTON_RIGHT_SHOULDER: "R1", JOY_BUTTON_START: "Options", JOY_BUTTON_BACK: "Create", JOY_BUTTON_LEFT_STICK: "L3",
+		JOY_BUTTON_RIGHT_STICK: "R3", JOY_BUTTON_TOUCHPAD: "Touchpad", JOY_BUTTON_DPAD_UP: "↑", JOY_BUTTON_DPAD_DOWN: "↓", JOY_BUTTON_DPAD_LEFT: "←", JOY_BUTTON_DPAD_RIGHT: "→"},
+	"nintendo": {JOY_BUTTON_A: "B", JOY_BUTTON_B: "A", JOY_BUTTON_X: "Y", JOY_BUTTON_Y: "X", JOY_BUTTON_LEFT_SHOULDER: "L",
+		JOY_BUTTON_RIGHT_SHOULDER: "R", JOY_BUTTON_START: "+", JOY_BUTTON_BACK: "−", JOY_BUTTON_LEFT_STICK: "L-Stick",
+		JOY_BUTTON_RIGHT_STICK: "R-Stick", JOY_BUTTON_DPAD_UP: "↑", JOY_BUTTON_DPAD_DOWN: "↓", JOY_BUTTON_DPAD_LEFT: "←", JOY_BUTTON_DPAD_RIGHT: "→"},
+}
+const PAD_AXES := {
+	"xbox": {JOY_AXIS_TRIGGER_LEFT: "LT", JOY_AXIS_TRIGGER_RIGHT: "RT", JOY_AXIS_LEFT_X: "LS", JOY_AXIS_LEFT_Y: "LS", JOY_AXIS_RIGHT_X: "RS", JOY_AXIS_RIGHT_Y: "RS"},
+	"ps": {JOY_AXIS_TRIGGER_LEFT: "L2", JOY_AXIS_TRIGGER_RIGHT: "R2", JOY_AXIS_LEFT_X: "L", JOY_AXIS_LEFT_Y: "L", JOY_AXIS_RIGHT_X: "R", JOY_AXIS_RIGHT_Y: "R"},
+	"nintendo": {JOY_AXIS_TRIGGER_LEFT: "ZL", JOY_AXIS_TRIGGER_RIGHT: "ZR", JOY_AXIS_LEFT_X: "L-Stick", JOY_AXIS_LEFT_Y: "L-Stick", JOY_AXIS_RIGHT_X: "R-Stick", JOY_AXIS_RIGHT_Y: "R-Stick"},
+}
+
+static func family_of(device: int) -> String:
+	var n := Input.get_joy_name(device).to_lower()
+	for k in ["playstation", "dualshock", "dualsense", "ps4", "ps5", "ps3", "sony", "wireless controller"]:
+		if k in n:
+			return "ps"
+	for k in ["nintendo", "switch", "pro controller", "joy-con", "joycon"]:
+		if k in n:
+			return "nintendo"
+	return "xbox"
+
+func _on_joy_connection(device: int, connected: bool) -> void:
+	if connected:
+		# a pad plugged in: its prompts, straight away
+		pad_family = family_of(device)
+		using_gamepad = true
+		device_changed.emit(true)
+	elif Input.get_connected_joypads().is_empty() and using_gamepad:
+		using_gamepad = false
+		device_changed.emit(false)
 
 func _input(event: InputEvent) -> void:
 	var pad: bool = event is InputEventJoypadButton or (event is InputEventJoypadMotion and absf(event.axis_value) > 0.4)
 	var kbm: bool = event is InputEventKey or event is InputEventMouseButton or (event is InputEventMouseMotion and event.relative.length() > 2.0)
+	if pad:
+		var fam := family_of(event.device)
+		if fam != pad_family:
+			pad_family = fam
+			if using_gamepad:
+				device_changed.emit(true)
 	if pad and not using_gamepad:
 		using_gamepad = true
 		device_changed.emit(true)

@@ -36,6 +36,7 @@ func _ready():
 	SaveManager.set_setting("crt", false)
 	var f := FileAccess.open(SaveManager.settings_path, FileAccess.READ)
 	var saved: Dictionary = JSON.parse_string(f.get_as_text())
+	f.close()
 	print("crt saved false: ", saved.crt == false)
 	ok = ok and saved.crt == false
 	SaveManager.set_setting("crt", true)
@@ -44,8 +45,7 @@ func _ready():
 	bb.button_index = JOY_BUTTON_B
 	bb.pressed = true
 	Input.parse_input_event(bb)
-	await get_tree().process_frame
-	await get_tree().process_frame
+	await get_tree().create_timer(0.3).timeout   # it fades out first
 	print("options closed by B: ", not is_instance_valid(om) or om.is_queued_for_deletion())
 	ok = ok and (not is_instance_valid(om) or om.is_queued_for_deletion())
 	print("PAD TEST ", "PASS" if ok else "FAIL")

@@ -527,7 +527,14 @@ class PromptFX extends Control:
 			draw_rect(kr, Color(0.1, 0.06, 0.14, 0.95 * a))
 			draw_rect(Rect2(kr.position, Vector2(kr.size.x, 2)), Color(1, 1, 1, 0.12 * a))
 			draw_rect(kr, Color(UIStyle.GOLD, a * (0.75 + 0.25 * sin(_t * 5.0))), false, 1.5)
-			draw_string(fb, Vector2(kr.position.x + 7, y), key, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.GOLD, a))
+			# face buttons in their pad's own colours
+			var kc := UIStyle.GOLD
+			if InputSetup.using_gamepad:
+				var fam: String = InputSetup.pad_family
+				var cols := {"ps": {"✕": Color("7aa7ff"), "○": Color("ff5a6a"), "□": Color("ff8ad8"), "△": Color("4fe0b0")},
+					"xbox": {"A": Color("6bd04a"), "B": Color("ff5048"), "X": Color("4aa8ff"), "Y": Color("ffd23f")}}
+				kc = (cols.get(fam, {}) as Dictionary).get(key, UIStyle.GOLD)
+			draw_string(fb, Vector2(kr.position.x + 7, y), key, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(kc, a))
 		var ax := x + kw + gap
 		draw_string_outline(fb, Vector2(ax, y + 1), action, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 5, Color(UIStyle.INK, a))
 		draw_string(fb, Vector2(ax, y + 1), action, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(UIStyle.PAPER, a))
