@@ -388,6 +388,22 @@ func _nearest_open(c: Vector2i) -> Vector2i:
 					return q
 	return c
 
+## What's underfoot at a world point, for footsteps: carpet, wood, tile,
+## metal, hard (concrete / asphalt), dirt, grass, water.
+const STEP_SURFACE := {".": "carpet", "_": "wood", "-": "wood", ",": "tile", "+": "metal", "=": "hard", ":": "hard", ";": "dirt", "\"": "grass", "~": "water"}
+func surface_at(p: Vector2) -> String:
+	if builder == null:
+		return "hard"
+	var x := int(p.x / 16.0)
+	var y := int(p.y / 16.0)
+	if y < 0 or y >= builder.floor_grid.size() or x < 0 or x >= builder.floor_grid[y].size():
+		return "dirt"   # the outskirts
+	var f: String = builder.floor_grid[y][x]
+	var over: Dictionary = builder.data.get("floor_textures", {})
+	if over.get(f, "") in ["marble", "tile"]:
+		return "tile"
+	return str(STEP_SURFACE.get(f, "hard"))
+
 func zone_at(p: Vector2) -> String:
 	if builder == null:
 		return ""

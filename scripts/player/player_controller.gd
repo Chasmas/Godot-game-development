@@ -510,7 +510,9 @@ func _footsteps(pd: float) -> void:
 	_step_t -= pd * (sp / data.move_speed)
 	if _step_t <= 0.0:
 		_step_t = 0.27
-		Audio.play_at("step%d" % (randi() % 3), global_position, -24.0 if is_quiet() else -16.0)
+		# the floor under her decides the sound: carpet, wood, tile, a grating...
+		var surf: String = level.surface_at(global_position) if level and level.has_method("surface_at") else "hard"
+		Audio.play_at("step_%s%d" % [surf, randi() % 3], global_position, (-24.0 if is_quiet() else -15.0) + (3.0 if surf == "metal" else 0.0), 0.1)
 		var sprinting := sp > data.move_speed * 1.1
 		if is_quiet():
 			return
