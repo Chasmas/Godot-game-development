@@ -355,13 +355,13 @@ TL.append([31.0, 32.0, "black", {}])
 play(32.0, 34.0, "m01", "BRUTAL.", 1)
 play(34.0, 36.0, "m03w", None, 0)
 play(36.0, 38.0, "m02w", None, 1)
-play_file(38.0, 40.0, "dodge", 8.5, "FAST.", 1.3)
-play_file(40.0, 42.0, "breach", 4.4, None, 1.08)
-play_file(42.0, 44.0, "breach", 6.3, "UNFORGIVING.", 1.08)
+play(38.0, 40.0, "m02w", "FAST.", 5)
+play_file(40.0, 42.0, "breach", 3.2, None, 1.08)
+play_file(42.0, 44.0, "breach", 4.9, "UNFORGIVING.", 1.08)
 play_file(44.0, 46.0, "menu_masks_" + GAME_LANG, 3.4, "PICK A FACE. PAY THE PRICE.", 1.0)
 play_file(46.0, 48.0, "menu_vcr_" + GAME_LANG, 7.0, "EVERY TAPE TELLS ON SOMEBODY.", 1.0)
 play(48.0, 50.0, "m04", "A NIGHTMARE OR TWO.", 0)
-play_file(50.0, 52.0, "spot", 10.5, "SPOTLIGHT.", 1.2)
+play_file(50.0, 52.0, "spot", 26.9, "SPOTLIGHT.", 1.15)
 play_file(52.0, 54.0, "menu_arcade_" + GAME_LANG, 3.6, "ARCADE. SEVEN WAYS TO PLAY.", 1.0)
 play(54.0, 56.0, "m03w", None, 1)
 order = [("m01", 2), ("m02w", 2), ("m03w", 2), ("m04", 1), ("m01", 3), ("m02w", 3), ("m03w", 3), ("m04", 2),
@@ -377,8 +377,8 @@ while t < 64.0 - 1e-6:
     play(t, t + step, k, "ONE HIT. ONE LIFE. ONE MORE TRY." if abs(t - 56.0) < 1e-6 else None, idx)
     t += step
 TL.append([64.0, 68.0, "title", {}])
-play_file(68.0, 70.0, "boss", 3.0, None, 1.05)
-play_file(70.0, 72.0, "boss", 24.0, "BOSSES THAT FIGHT DIRTY.", 1.15)
+play_file(68.0, 70.0, "boss", 2.3, None, 1.0)
+play_file(70.0, 72.0, "boss", 12.4, "BOSSES THAT FIGHT DIRTY.", 1.0)
 TL.append([72.0, 82.0, "release", {}])
 
 # ------------------------------------------------------------------ render

@@ -45,6 +45,11 @@ func _ready() -> void:
 	Dialogue.finished.connect(_on_finished)
 
 func _process(delta: float) -> void:
+	# the phone waits for the chapter card to leave: one thing at a time
+	if _state == "ring" and _rings == 0 and not get_tree().get_nodes_in_group("level_intro").is_empty():
+		_panel.visible = false
+		return
+	_panel.visible = true
 	_t += delta
 	_shake = maxf(0.0, _shake - delta * 3.0)
 	match _state:

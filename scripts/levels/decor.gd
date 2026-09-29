@@ -118,6 +118,11 @@ class PalmTree extends Node2D:
 			visible = vp.get_visible_rect().grow(160.0).has_point(vp.get_canvas_transform() * global_position)
 		if not visible:
 			return
+		# the crown thins out when she's under it, so nothing hides there
+		# (a switch on the wall, a gun on the floor, a guard)
+		var pl := get_tree().get_first_node_in_group("player") as Node2D
+		var under := pl != null and pl.global_position.distance_to(global_position) < 30.0 * size
+		modulate.a = move_toward(modulate.a, 0.35 if under else 1.0, d * 3.0)
 		_read_wind()
 		_tick_leaves(d)
 		queue_redraw()
