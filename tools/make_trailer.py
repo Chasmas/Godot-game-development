@@ -251,6 +251,18 @@ def typed(img, s, y, size, col, t0, t, cps=30.0):
         dr.rectangle([x, y + 8, x + size * 0.45, y + size * 1.05], fill=col)
     return img
 
+def caption(img, s, since, dur):
+    """a clean lower-third line: fades up with a small rise, holds, fades"""
+    al = min(1.0, max(0.0, (since - 0.12) / 0.25), max(0.0, (dur - since) / 0.25))
+    if al <= 0.01:
+        return img
+    rise = int((1.0 - min(1.0, max(0.0, (since - 0.12) / 0.35))) * 14)
+    # a soft dark band behind it, so it reads over anything
+    band = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(band).rectangle([0, H - 250, W, H - 90], fill=int(120 * al))
+    img = Image.composite(Image.new("RGB", (W, H), (4, 2, 8)), img, band.filter(ImageFilter.GaussianBlur(40)))
+    return text_center(img, s, H - 200 + rise, 60, GOLD, al)
+
 def badge(kind, h=86):
     """A store badge in the store's own look (colours, type, shape)."""
     fb = font("Poppins-BoldItalic.ttf", int(h * 0.42))
@@ -318,67 +330,56 @@ def play_file(a, b, name, at, cap=None, zoom=1.0):
     """A fixed stretch of one recording (menus, the boss)."""
     TL.append([a, b, "clip", {"file": os.path.join(WORK, name + ".avi"), "at": at, "cap": L(cap), "zoom": zoom}])
 
-# 0-9.5: studio, creator
+# The shape (bars of 2 s, tools/gen_trailer_music.py):
+#   0-9.5   the studio and the creator (the game's own splash)
+#   9.5-22  the story on the paintings, slow, one line each
+#   22-31   the build: paintings and the first glimpses of play, faster
+#   31-32   silence
+#   32-56   the drop: play, one cut a bar, a line every few bars
+#   56-64   frenzy: a cut a beat, then two
+#   64-68   the title
+#   68-72   the Fireman walks on: the stinger
+#   72-82   release card
 TL.append([0.0, 9.5, "splash", {}])
-# 9.5-32: the story, no spoilers
-story(9.5, 12.8, "t_drive", "CALIFORNIA, 1988.", (1, 0))
-story(12.8, 16.0, "t_tape", "SOMEBODY SENT HER A TAPE.", (-1, 0))
-story(16.0, 20.0, "t_star", "SHE KNOWS WHAT IT MEANS.")
-story(20.0, 22.0, "t_arsenal", "EVERY NAME ON THE CALL SHEET", (1, 0))
-story(22.0, 24.0, "menu_revolver", "IS GOING TO ANSWER FOR IT.")
-story(24.0, 26.0, "t_corridor")
+story(9.5, 12.5, "t_drive", "CALIFORNIA, 1988.", (1, 0))
+story(12.5, 15.5, "t_tape", "SOMEBODY SENT HER A TAPE.", (-1, 0))
+story(15.5, 18.5, "t_star", "SHE KNOWS WHAT IT MEANS.")
+story(18.5, 20.5, "t_arsenal", "EVERY NAME ON THE CALL SHEET", (1, 0))
+story(20.5, 22.0, "menu_revolver", "IS GOING TO ANSWER FOR IT.")
+story(22.0, 24.0, "t_corridor")
+play(24.0, 26.0, "m01", None, 0)
 story(26.0, 28.0, "t_dogs")
-story(28.0, 30.0, "t_studio")
-story(30.0, 31.5, "t_monitors", "AND SOMEBODY IS FILMING EVERYTHING.")
-TL.append([31.5, 32.0, "black", {}])
-# 32-64: the drop - gameplay cut to the bar, then the beat
-order = [("m01", 0), ("m03w", 0), ("m02w", 0), ("m01", 1), ("m04", 0), ("m03w", 1), ("m02w", 1), ("m04", 1),
-         ("m01", 2), ("m03w", 2), ("m02w", 2), ("m04", 2), ("m03w", 3), ("m01", 3), ("m02w", 3), ("m04", 3),
-         ("m03w", 4), ("m01", 4), ("m02w", 4), ("m04", 4), ("m03w", 5), ("m01", 5), ("m02w", 5), ("m04", 5)]
-caps = {32.0: "BRUTAL.", 56.0: "ONE HIT. ONE LIFE. ONE MORE TRY."}
-t = 32.0
+play(28.0, 30.0, "m02w", None, 0)
+story(30.0, 31.0, "t_monitors", "AND SOMEBODY IS FILMING EVERYTHING.")
+TL.append([31.0, 32.0, "black", {}])
+play(32.0, 34.0, "m01", "BRUTAL.", 1)
+play(34.0, 36.0, "m03w", None, 0)
+play(36.0, 38.0, "m02w", None, 1)
+play_file(38.0, 40.0, "dodge", 8.5, "FAST.", 1.3)
+play_file(40.0, 42.0, "breach", 4.4, None, 1.08)
+play_file(42.0, 44.0, "breach", 6.3, "UNFORGIVING.", 1.08)
+play_file(44.0, 46.0, "menu_masks_" + GAME_LANG, 3.4, "PICK A FACE. PAY THE PRICE.", 1.0)
+play_file(46.0, 48.0, "menu_vcr_" + GAME_LANG, 7.0, "EVERY TAPE TELLS ON SOMEBODY.", 1.0)
+play(48.0, 50.0, "m04", "A NIGHTMARE OR TWO.", 0)
+play_file(50.0, 52.0, "spot", 10.5, "SPOTLIGHT.", 1.2)
+play_file(52.0, 54.0, "menu_arcade_" + GAME_LANG, 3.6, "ARCADE. SEVEN WAYS TO PLAY.", 1.0)
+play(54.0, 56.0, "m03w", None, 1)
+order = [("m01", 2), ("m02w", 2), ("m03w", 2), ("m04", 1), ("m01", 3), ("m02w", 3), ("m03w", 3), ("m04", 2),
+         ("m01", 4), ("m02w", 4), ("m03w", 4), ("m04", 3)]
+t = 56.0
 oi = 0
 while t < 64.0 - 1e-6:
-    step = BAR if t < 56.0 else (BAR / 2 if t < 60.0 else BEAT)
+    step = 1.0 if t < 60.0 else 0.5
     k, idx = order[oi % len(order)]
     oi += 1
     if k not in moments or not moments[k]:
         k = next(iter(moments))
-    cap = None
-    for ct, cs in caps.items():
-        if abs(ct - t) < 1e-6:
-            cap = L(cs)
-    if abs(t - 54.0) < 1e-6:
-        # the SPOTLIGHT: the world goes to stage light
-        play_file(54.0, 56.0, "spot", 10.5, "SPOTLIGHT.", 1.25)
-        t = 56.0
-        continue
-    if abs(t - 38.0) < 1e-6:
-        # the dodge roll, then the lobby doors going up
-        play_file(38.0, 40.0, "dodge", 8.5, "FAST.", 1.4)
-        play_file(40.0, 42.0, "breach", 4.4, None, 1.1)
-        play_file(42.0, 44.0, "breach", 6.3, "UNFORGIVING.", 1.1)
-        t = 44.0
-        continue
-    if abs(t - 44.0) < 1e-6:
-        # the game's own screens: the masks shelf, a tape in the deck
-        play_file(44.0, 46.0, "menu_masks_" + GAME_LANG, 3.4, "PICK A FACE. PAY THE PRICE.")
-        play_file(46.0, 48.0, "menu_vcr_" + GAME_LANG, 7.0, "EVERY TAPE TELLS ON SOMEBODY.")
-        t = 48.0
-        continue
-    elif abs(t - 48.0) < 1e-6:
-        # the Fireman: his painted entrance, then the fight on the stage
-        play_file(48.0, 49.5, "boss", 3.0, None)
-        play_file(49.5, 52.0, "boss", 24.0, "BOSSES THAT FIGHT DIRTY.", 1.25)
-        play_file(52.0, 54.0, "menu_arcade_" + GAME_LANG, 3.6, "ARCADE. SEVEN WAYS TO PLAY.")
-        t = 54.0
-        continue
-    else:
-        play(t, t + step, k, cap, idx)
+    play(t, t + step, k, "ONE HIT. ONE LIFE. ONE MORE TRY." if abs(t - 56.0) < 1e-6 else None, idx)
     t += step
-# 64-72: the title; 72-80: the release card
-TL.append([64.0, 72.0, "title", {}])
-TL.append([72.0, 80.0, "release", {}])
+TL.append([64.0, 68.0, "title", {}])
+play_file(68.0, 70.0, "boss", 3.0, None, 1.05)
+play_file(70.0, 72.0, "boss", 24.0, "BOSSES THAT FIGHT DIRTY.", 1.15)
+TL.append([72.0, 82.0, "release", {}])
 
 # ------------------------------------------------------------------ render
 MASKS = [Image.open(os.path.join(ROOT, "assets", "art", "masks", m + ".png")).convert("RGBA") for m in
@@ -386,9 +387,9 @@ MASKS = [Image.open(os.path.join(ROOT, "assets", "art", "masks", m + ".png")).co
 
 enc = subprocess.Popen([FFMPEG, "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                         "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", os.path.join(WORK, "video.mp4")], stdin=subprocess.PIPE)
-game_audio = np.zeros((int(80 * 44100), 2), np.float32)
+game_audio = np.zeros((int(82 * 44100), 2), np.float32)
 clips = {}
-total = int(80 * FPS)
+total = int(82 * FPS)
 for fi in range(total):
     tt = fi / FPS
     seg = next((s for s in TL if s[0] <= tt < s[1]), TL[-1])
@@ -405,17 +406,7 @@ for fi in range(total):
             if key not in clips:
                 clips[key] = Clip(os.path.join(WORK, "splash_%s.avi" % GAME_LANG), 0.0, 7.6)
             img = clips[key].frame().copy()
-            # the credit gets a pulse of glitch on the beats and a light sweep
-            if st > 3.6:
-                beat = (tt % 0.5) / 0.5
-                img = vhs(img, max(0.0, 0.6 - beat * 2.0) if st < 7.0 else 0.0, tt, 0.03)
-                sweep = Image.new("L", (W, H), 0)
-                x = int((st - 3.6) / 3.4 * (W + 600)) - 300
-                ImageDraw.Draw(sweep).polygon([(x, 0), (x + 160, 0), (x - 140, H), (x - 300, H)], fill=70)
-                img = Image.composite(Image.new("RGB", (W, H), (255, 220, 240)), img, sweep.filter(ImageFilter.GaussianBlur(30)))
-                img = particles(img, tt, warm=True, amount=0.4)
-            else:
-                img = vhs(img, 0.0, tt, 0.03)
+            img = vhs(img, 0.0, tt, 0.025)
     elif kind == "card":
         img = Image.new("RGB", (W, H), (6, 2, 12))
         al = env(tt, a, b, 0.5)
@@ -428,31 +419,22 @@ for fi in range(total):
         img = Image.new("RGB", (W, H), (0, 0, 0))
     elif kind == "still":
         pan = p.get("pan", (0, 0))
-        # a faster, livelier push-in, and a jolt on the cut
-        img = kenburns(still(p["id"]), k, 1.03, 1.16, pan=pan)
-        if since_cut < 0.2:
-            j = (1.0 - since_cut / 0.2) * 14
-            img = img.transform((W, H), Image.AFFINE, (1, 0, np.sin(tt * 90) * j, 0, 1, np.cos(tt * 70) * j * 0.5))
-        # the painting's own lights breathing: neon, lamps, screens, fire
+        img = kenburns(still(p["id"]), k, 1.02, 1.1, pan=pan)
         g = glow_of(p["id"])
         if g is not None:
-            gm = kenburns_l(g, k, 1.03, 1.16, pan)
-            pulse = 0.55 + 0.35 * np.sin(tt * 5.0) * np.sin(tt * 1.7 + 1.0)
-            glow = Image.merge("RGB", [gm.point(lambda v: int(v * 0.9 * pulse)), gm.point(lambda v: int(v * 0.35 * pulse)), gm.point(lambda v: int(v * 0.7 * pulse))])
-            img = ImageChops.add(img, glow.filter(ImageFilter.GaussianBlur(8)))
-        img = darken(img, 0.1)
-        img = light_leak(img, tt, 0.8)
-        img = particles(img, tt, warm=p["id"] not in ("t_drive", "t_tape"), amount=0.7)
-        # a white flash through the cut
-        if since_cut < 0.09 and a > 9.6:
-            img = Image.blend(img, Image.new("RGB", (W, H), (255, 245, 250)), 0.7 * (1.0 - since_cut / 0.09))
-        if p.get("flash") and since_cut < 0.15:
-            img = Image.blend(img, Image.new("RGB", (W, H), (255, 240, 220)), 1.0 - since_cut / 0.15)
+            gm = kenburns_l(g, k, 1.02, 1.1, pan)
+            pulse = 0.45 + 0.2 * np.sin(tt * 2.2)
+            glow = Image.merge("RGB", [gm.point(lambda v: int(v * 0.8 * pulse)), gm.point(lambda v: int(v * 0.3 * pulse)), gm.point(lambda v: int(v * 0.6 * pulse))])
+            img = ImageChops.add(img, glow.filter(ImageFilter.GaussianBlur(10)))
+        img = darken(img, 0.08)
+        # dip to black through each cut between paintings
+        dip = max(0.0, 1.0 - since_cut / 0.25) if a > 9.6 else 0.0
+        if tt > b - 0.2:
+            dip = max(dip, (tt - (b - 0.2)) / 0.2)
         if p.get("cap"):
-            img = typed(img, p["cap"], H - 190, 58, GOLD, a + 0.15, tt)
-            if tt > b - 0.25:
-                img = darken(img, (tt - (b - 0.25)) / 0.25 * 0.4)
-        img = vhs(img, glitch, tt)
+            img = caption(img, p["cap"], since_cut, b - a)
+        img = darken(img, dip * 0.9)
+        img = vhs(img, 0.0, tt, 0.035)
     elif kind == "clip":
         key = id(seg)
         if key not in clips:
@@ -482,13 +464,14 @@ for fi in range(total):
             game_audio[s0:e0] += aud[: e0 - s0]
         img = clips[key].frame()
         # a punch-in on every cut
-        z = float(p.get("zoom", 1.12)) + 0.06 * max(0.0, 1.0 - since_cut / 0.25)   # a little closer than the game camera, and a punch on the cut
+        z = float(p.get("zoom", 1.1)) + 0.025 * max(0.0, 1.0 - since_cut / 0.3)   # a little closer than the game camera, and a punch on the cut
         if z > 1.001:
             cw, ch = W / z, H / z
             img = img.resize((W, H), Image.BICUBIC, box=((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2))
-        if p.get("cap"):
-            img = text_center(img, p["cap"], H - 170, 66, GOLD, env(tt, a + 0.1, a + BAR * 1.9, 0.2))
-        img = vhs(img, glitch * 0.7, tt, 0.04)
+        cap_seg = next((q for q in TL if q[2] == "clip" and q[3].get("cap") and q[0] <= tt < q[0] + 2.0), None)
+        if cap_seg is not None:
+            img = caption(img, cap_seg[3]["cap"], tt - cap_seg[0], 2.0)
+        img = vhs(img, 0.0, tt, 0.03)
     elif kind == "masks":
         img = Image.new("RGB", (W, H), (8, 3, 14))
         n = len(MASKS)

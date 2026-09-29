@@ -283,14 +283,19 @@ func _perceive() -> void:
 		view *= 0.45
 	if _dark_confused > 0.0:
 		view *= 0.5
-	if p.persona:
-		view *= p.persona.enemy_sight_mult   # the ghost fades, the star shines
-	var in_cone := absf(angle_difference(facing.angle(), to.angle())) < deg_to_rad(data.view_angle_deg * 0.5)
-	# you can creep right up behind someone if you move slowly; running is heard/felt
-	var close := 10.0 if (p.is_quiet() or dark) else 34.0
 	# sneaking (the sneak key held): the unaware only catch you in plain view
 	# and close - a shape at the edge of the eye goes unnoticed
 	var sneaking := bool(p.get("sneak_held")) and p.is_quiet() and not aware
+	if p.persona:
+		# the ghost fades, the star shines. The ghost's edge is going unseen
+		# at full speed: sneaking already hides you, so it barely stacks
+		var sm: float = p.persona.enemy_sight_mult
+		if sneaking and sm < 1.0:
+			sm = lerpf(1.0, sm, 0.3)
+		view *= sm
+	var in_cone := absf(angle_difference(facing.angle(), to.angle())) < deg_to_rad(data.view_angle_deg * 0.5)
+	# you can creep right up behind someone if you move slowly; running is heard/felt
+	var close := 10.0 if (p.is_quiet() or dark) else 34.0
 	if sneaking:
 		view *= 0.55
 		close = 0.0

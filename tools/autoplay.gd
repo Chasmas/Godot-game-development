@@ -48,6 +48,10 @@ func _ready() -> void:
 	if OS.get_environment("AUTOPLAY_TRAILER") == "1":
 		Engine.set_meta("trailer", true)
 		SaveManager.set_setting("tips", false, false)
+		# the trailer has its own score: record the game's sound without its music
+		var mb := AudioServer.get_bus_index("Music")
+		if mb >= 0:
+			AudioServer.set_bus_mute(mb, true)
 		Game.force_intro_calls = false
 	if only != "":
 		var mods := {}

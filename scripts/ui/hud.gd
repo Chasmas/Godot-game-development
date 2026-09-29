@@ -240,6 +240,10 @@ func talking() -> bool:
 func may_show(who: Object) -> bool:
 	if talking():
 		return false
+	# the checkpoint tape has the right-hand corner while it's up
+	for c in root.get_children():
+		if c is CheckpointStamp:
+			return false
 	if who == tutorials and tips and not tips._cur.is_empty():
 		return false
 	if who == tips and tutorials and tutorials.showing():
@@ -1033,7 +1037,7 @@ class CheckpointStamp extends Control:
 		var out := clampf((_t - (LIFE - 0.35)) / 0.35, 0.0, 1.0)
 		var a := 1.0 - out * out
 		var centre_x := size.x - 40.0 - W * S * 0.5
-		var top := 92.0
+		var top := 150.0   # below the weapon's name and rounds
 		# neon title underneath: the area, between two pink rules
 		if _t > 0.45 and area != "":
 			var ta := a * clampf((_t - 0.45) / 0.25, 0.0, 1.0)

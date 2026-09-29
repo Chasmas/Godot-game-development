@@ -66,6 +66,8 @@ static func build(level: Node, b: LevelBuilder, rooms: Array) -> void:
 		if r.cells.size() < 12:
 			continue
 		var used := {}
+		if kind == "ballroom":
+			_ballroom(r, b, blocked, used, layer, rng)
 		_centre(r, b, th[1], blocked, used, layer, rng)
 		_walls(r, b, th[0], blocked, used, layer, rng)
 		if OS.get_environment("FURNISH_DEBUG") != "":
@@ -209,6 +211,40 @@ static func _walls(r, b: LevelBuilder, pieces: Array, blocked: Dictionary, used:
 			budget -= 1
 			break
 
+## A ballroom: a marble dance floor inlaid in the middle (under everything,
+## so the fight still has its space) and round tables laid for a party all
+## round it, each with its chairs.
+static func _ballroom(r, b: LevelBuilder, blocked: Dictionary, used: Dictionary, layer, rng: RandomNumberGenerator) -> void:
+	var inner: Rect2i = r.rect.grow(-4)
+	if inner.size.x >= 6 and inner.size.y >= 5:
+		var df := DanceFloor.new()
+		df.rect = Rect2(Vector2(inner.position) * T, Vector2(inner.size) * T)
+		df.z_index = -9
+		b.level.add_child(df)
+		StaticBake.queue(b.level, df, df.rect.grow(8.0))
+	# a ring of tables between the walls and the dance floor
+	var spots: Array = []
+	for x in range(r.rect.position.x + 2, r.rect.end.x - 2, 5):
+		spots.append(Vector2i(x, r.rect.position.y + 2))
+		spots.append(Vector2i(x, r.rect.end.y - 3))
+	for y in range(r.rect.position.y + 6, r.rect.end.y - 5, 5):
+		spots.append(Vector2i(r.rect.position.x + 2, y))
+		spots.append(Vector2i(r.rect.end.x - 3, y))
+	for c in spots:
+		var tr := Rect2i(c, Vector2i(2, 2))
+		if not _free(r, b, tr.grow(1), blocked, used):
+			continue
+		layer.add("cocktail_table", Rect2(Vector2(tr.position) * T + Vector2(3, 3), Vector2(tr.size) * T - Vector2(6, 6)), rng.randf_range(-0.4, 0.4), true)
+		# chairs round it, turned to face the table, one pushed back
+		var mid := (Vector2(tr.position) + Vector2(1, 1)) * T
+		for k in 4:
+			var a := k * PI * 0.5 + PI * 0.25 + rng.randf_range(-0.15, 0.15)
+			var dist := 19.0 + (6.0 if k == rng.randi() % 4 else 0.0)
+			var p := mid + Vector2.from_angle(a) * dist
+			layer.add("wooden_chair", Rect2(p - Vector2(6, 6), Vector2(12, 12)), a + PI * 0.5, false)
+		_claim(tr, used, 1)
+		_solid(b, tr)
+
 static func _solid(b: LevelBuilder, rect: Rect2i) -> void:
 	var lvl: Node = b.level
 	var body := StaticBody2D.new()
@@ -228,6 +264,46 @@ static func _solid(b: LevelBuilder, rect: Rect2i) -> void:
 				nav.set_point_solid(Vector2i(x, y), true)
 			if y >= 0 and y < b.solid_grid.size() and x >= 0 and x < b.solid_grid[y].size():
 				b.solid_grid[y][x] = true
+
+
+## The ballroom's dance floor: black and white marble in a checker, a brass
+## border, and the villa's star inlaid in the middle in gold.
+class DanceFloor extends Node2D:
+	var rect := Rect2()
+	func _draw() -> void:
+		var marble := ArtLib.floor_tex("m", {"m": "marble"})
+		var n := Vector2i(int(rect.size.x / T), int(rect.size.y / T))
+		# pale squares, then dark ones (the same painting, tinted: they batch)
+		for pass_dark in [false, true]:
+			for y in n.y:
+				for x in n.x:
+					if ((x + y) % 2 == 1) != pass_dark:
+						continue
+					var cell := Rect2(rect.position + Vector2(x, y) * T, Vector2(T, T))
+					var col := Color(0.2, 0.17, 0.22, 0.92) if pass_dark else Color(1, 0.97, 0.94, 0.92)
+					if marble:
+						var src := Rect2(fposmod(cell.position.x * 4.0, 512.0), fposmod(cell.position.y * 4.0, 512.0), 64, 64)
+						draw_texture_rect_region(marble, cell, src, col)
+					else:
+						draw_rect(cell, col)
+		# the brass border
+		var gold := Color(0.85, 0.66, 0.28)
+		draw_rect(rect.grow(2.0), Color(0.1, 0.06, 0.04), false, 3.0)
+		draw_rect(rect.grow(0.5), gold, false, 1.5)
+		# the star medallion
+		var c := rect.get_center()
+		var R := minf(rect.size.x, rect.size.y) * 0.22
+		draw_circle(c, R * 1.15, Color(0.1, 0.06, 0.08, 0.9))
+		draw_arc(c, R * 1.15, 0, TAU, 48, gold, 2.0)
+		draw_arc(c, R * 1.02, 0, TAU, 48, Color(gold, 0.6), 1.0)
+		var pts := PackedVector2Array()
+		for i in 10:
+			var a := -PI * 0.5 + i * PI / 5.0
+			pts.append(c + Vector2.from_angle(a) * (R if i % 2 == 0 else R * 0.42))
+		draw_colored_polygon(pts, gold)
+		for i in 5:
+			var a := -PI * 0.5 + i * TAU / 5.0
+			draw_line(c, c + Vector2.from_angle(a) * R, Color(1, 0.9, 0.55, 0.7), 1.0)
 
 
 ## Draws every piece once: a soft contact shadow, then the painting fitted

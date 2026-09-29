@@ -1437,5 +1437,11 @@
  "Not yet finished.": "Ainda não terminado.",
  "Best rank %s   ·   Best score %d   ·   Best time %s": "Melhor rank %s   ·   Melhor pontuação %d   ·   Melhor tempo %s",
  "best %s": "melhor %s",
- "not reached yet": "ainda não alcançado"
+ "not reached yet": "ainda não alcançado",
+ "HIGH SCORES": "MELHORES PONTUAÇÕES",
+ "IN THE SLOT": "NA RANHURA",
+ "▶ LOAD": "▶ CARREGAR",
+ "START": "COMEÇAR",
+ "Silent steps. Enemies see 40% less far, even at a walk.": "Passos silenciosos. Os inimigos veem 40% menos longe, mesmo a andar.",
+ "Silent footsteps; enemies see 40% less far - walking, not only sneaking.": "Passos silenciosos; os inimigos veem 40% menos longe - a andar, não só furtivamente."
 }
