@@ -32,26 +32,58 @@ func _ready() -> void:
 		if parsed is Dictionary:
 			tracks = parsed
 
-func play(track_id: String, restart := false) -> void:
+## The track the game asked for. With a "calm" companion (music.json) the
+## companion plays while nobody is hunting you and the asked-for track
+## takes over the moment somebody is - crossfaded, never cut.
+var _base_id := ""
+var _calm_t := 0.0
+var _fade_speed := 1.2
+var _outgoing: Array = []          ## [players, level] fading out
+var _resume: Dictionary = {}       ## track id -> where it was left
+
+func play(track_id: String, restart := false, fade := 0.8) -> void:
 	if OS.has_environment("AUDIO_LOG"):
 		print("[music] ", track_id)
-	if track_id == current_id and not restart and not _players.is_empty():
+	if track_id == _base_id and not restart and not _players.is_empty():
 		_master_target = 1.0
 		return
-	stop(0.0)
 	if not tracks.has(track_id):
 		push_warning("Unknown music track %s" % track_id)
 		return
-	current_id = track_id
+	_base_id = track_id
+	_calm_t = 0.0
+	var start_id := track_id
+	var calm := str(tracks[track_id].get("calm", ""))
+	if calm != "" and tracks.has(calm) and intensity == 0:
+		start_id = calm
+	if restart:
+		_resume.erase(start_id)
+	_switch(start_id, fade, false)
+
+## Crossfade from whatever is playing to `id`. `resume`: pick it up where
+## it was last left (a combat track coming back after a quiet spell).
+func _switch(id: String, fade: float, resume: bool) -> void:
+	if not _players.is_empty():
+		if current_id != "":
+			_resume[current_id] = _players[0].get_playback_position()
+		if fade > 0.0:
+			_outgoing.append([_players.duplicate(), _levels.duplicate(), _master_fade, 1.0 / fade])
+		else:
+			for p in _players:
+				p.queue_free()
+		_players.clear()
+		_targets.clear()
+		_levels.clear()
+	current_id = id
 	if synthwave:
 		# the runtime bed is opt-in per track ("procedural_bed": true in
 		# music.json) and always locked to that track's own tempo: under an
 		# authored score at a different bpm it would fight the beat grid
-		if bool(tracks[track_id].get("procedural_bed", false)):
-			synthwave.start(float(tracks[track_id].get("bpm", 110.0)))
+		if bool(tracks[id].get("procedural_bed", false)):
+			synthwave.start(float(tracks[id].get("bpm", 110.0)))
 		else:
 			synthwave.stop()
-	var layers: Array = tracks[track_id].layers
+	var layers: Array = tracks[id].layers
 	for i in layers.size():
 		var p := AudioStreamPlayer.new()
 		p.bus = "Music"
@@ -68,14 +100,17 @@ func play(track_id: String, restart := false) -> void:
 		_targets.append(1.0 if i == 0 else 0.0)
 		_levels.append(1.0 if i == 0 else 0.0)
 		p.volume_db = 0.0 if i == 0 else SILENT_DB
+	var at := float(_resume.get(id, 0.0)) if resume else 0.0
 	for p in _players:
 		if p.stream:
-			p.play()
-	_master_fade = 1.0
+			p.play(at)
+	_master_fade = 0.0 if fade > 0.0 else 1.0
+	_fade_speed = 1.0 / fade if fade > 0.0 else 1.2
 	_master_target = 1.0
-	set_intensity(0, true)
+	set_intensity(intensity, true)
 
 func stop(fade_time := 1.0) -> void:
+	_base_id = ""
 	if fade_time <= 0.0:
 		for p in _players:
 			p.queue_free()
@@ -85,13 +120,14 @@ func stop(fade_time := 1.0) -> void:
 		if synthwave:
 			synthwave.stop()
 		current_id = ""
-	else:
-		_master_target = 0.0
-		var t := get_tree().create_timer(fade_time, true, false, true)
-		var id := current_id
-		t.timeout.connect(func():
-			if current_id == id and _master_target == 0.0:
-				stop(0.0))
+	elif not _players.is_empty():
+		_outgoing.append([_players.duplicate(), _levels.duplicate(), _master_fade, 1.0 / fade_time])
+		_players.clear()
+		_targets.clear()
+		_levels.clear()
+		current_id = ""
+		if synthwave:
+			synthwave.stop()
 
 func set_intensity(level: int, instant := false) -> void:
 	intensity = clampi(level, 0, 3)
@@ -131,6 +167,23 @@ func beat_distance() -> float:
 		return 99.0
 	return minf(ph, 1.0 - ph) * beat_length()
 
+## Quiet for a while: the calm companion, slowly. Anyone hunting: the
+## asked-for track, fast, picked up where it was left.
+func _calm_switch(delta: float) -> void:
+	if _base_id == "" or not tracks.has(_base_id):
+		return
+	var calm := str(tracks[_base_id].get("calm", ""))
+	if calm == "" or not tracks.has(calm):
+		return
+	if intensity == 0:
+		_calm_t += delta
+		if current_id != calm and _calm_t > float(tracks[_base_id].get("calm_after", 8.0)):
+			_switch(calm, 3.0, true)
+	else:
+		_calm_t = 0.0
+		if current_id != _base_id:
+			_switch(_base_id, 0.35, true)
+
 func set_pitch(p: float) -> void:
 	for pl in _players:
 		pl.pitch_scale = p
@@ -139,9 +192,19 @@ func duck(amount: float) -> void:
 	_master_target = amount
 
 func _process(delta: float) -> void:
+	for o in _outgoing:
+		o[2] = maxf(0.0, float(o[2]) - delta * float(o[3]))
+		for i in (o[0] as Array).size():
+			var lin: float = float(o[1][i]) * float(o[2])
+			(o[0][i] as AudioStreamPlayer).volume_db = linear_to_db(lin) if lin > 0.001 else SILENT_DB
+	for o in _outgoing.filter(func(q): return float(q[2]) <= 0.0):
+		for p in o[0]:
+			(p as Node).queue_free()
+	_outgoing = _outgoing.filter(func(q): return float(q[2]) > 0.0)
+	_calm_switch(delta)
 	if _players.is_empty():
 		return
-	_master_fade = move_toward(_master_fade, _master_target, delta * 1.2)
+	_master_fade = move_toward(_master_fade, _master_target, delta * (_fade_speed if _master_target > _master_fade else 1.2))
 	for i in _players.size():
 		_levels[i] = move_toward(_levels[i], _targets[i], delta * FADE_SPEED)
 		var lin := _levels[i] * _master_fade

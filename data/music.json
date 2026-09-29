@@ -8,10 +8,8 @@
 	},
 	"title": {
 		"name": "Neon Vigil",
-		"layers": [
-			"res://music/title_neon_vigil.ogg"
-		],
-		"bpm": 108
+		"layers": ["res://music/st_main_theme.ogg"],
+		"bpm": 98
 	},
 	"apartment": {
 		"name": "Answering Machine",
@@ -22,39 +20,15 @@
 	},
 	"motel": {
 		"name": "Checkout Time",
-		"bpm": 112,
-		"layers": [
-			"res://music/level_checkout_explore.ogg",
-			"res://music/level_checkout_combat.ogg",
-			"res://music/level_checkout_combo.ogg",
-			"res://music/level_checkout_danger.ogg"
-		],
-		"intensity": [
-			[
-				1.0,
-				0.0,
-				0.0,
-				0.0
-			],
-			[
-				1.0,
-				1.0,
-				0.0,
-				0.0
-			],
-			[
-				1.0,
-				1.0,
-				1.0,
-				0.0
-			],
-			[
-				1.0,
-				1.0,
-				1.0,
-				1.0
-			]
-		]
+		"bpm": 140,
+		"layers": ["res://music/st_motel_combat.ogg"],
+		"calm": "motel_stealth",
+		"calm_after": 8.0
+	},
+	"motel_stealth": {
+		"name": "Room 204",
+		"bpm": 100,
+		"layers": ["res://music/st_motel_stealth.ogg"]
 	},
 	"boss": {
 		"name": "The Night Manager",
