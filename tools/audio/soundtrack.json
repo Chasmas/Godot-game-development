@@ -1,0 +1,49 @@
+{
+ "identity": "HOTSHOT CALIFORNIA, 1988. Signature: a five-note minor motif (up a fourth, up a minor third, down a step, down a fourth - 'the Star'), a detuned brassy analog lead, gated LinnDrum snare, cassette hiss and tape wobble, huge sub under a clean kick. Dark, elegant, dangerous.",
+ "tracks": {
+  "main_theme": {
+   "title": "Neon Vigil (Main Theme)",
+   "family": "menu",
+   "chunks": [
+    {"text": "[Intro] a lone detuned analog synth plays a slow five-note minor motif {cassette hiss} {distant rain}", "sec": 24,
+     "styles": ["dark synthwave", "cinematic", "mysterious", "E minor", "98 BPM", "detuned analog synth", "cassette tape hiss", "tape wow and flutter", "wide reverb", "1980s", "instrumental"]},
+    {"text": "[Theme] the motif on a brassy analog lead over a slow driving drum machine, gated snare, pulsing octave bass, huge warm pads", "sec": 40,
+     "styles": ["dark synthwave", "outrun", "elegant", "slightly menacing", "LinnDrum", "gated reverb snare", "octave bassline", "Juno pads", "sidechain"]},
+    {"text": "[Swell] the motif doubled by a glassy FM bell, arpeggios climbing, tension rising, one beat of total silence, then everything returns", "sec": 34,
+     "styles": ["cinematic synthwave", "arpeggiator", "DX7 bell", "rising tension", "dramatic stop", "big re-entry"]},
+    {"text": "[Outro] the motif resolves on a long held note, the tape slows down and stops", "sec": 20,
+     "styles": ["ambient synth", "melancholic", "tape slowdown", "fading reverb tail"]}
+   ]
+  },
+  "combat_motel": {
+   "title": "Checkout Time",
+   "family": "combat",
+   "chunks": [
+    {"text": "[Cold open] no intro: distorted 909 kick and a squelching acid bass riff hit at once", "sec": 12,
+     "styles": ["dark electro", "acid techno", "140 BPM", "E minor", "distorted TR-909", "TB-303 acid bass", "aggressive", "instrumental", "tape saturation"]},
+    {"text": "[Groove] hypnotic acid bassline, syncopated breakbeat under the four-on-the-floor, heavy sidechain pumping, short synth stabs", "sec": 40,
+     "styles": ["acid synth", "breakbeat", "EBM", "heavy sidechain", "hypnotic", "synth stabs", "dark club"]},
+    {"text": "[Hook] a screaming overdriven analog lead plays the five-note motif over the groove", "sec": 40,
+     "styles": ["dark synthwave", "distorted lead synth", "memorable hook", "driving", "neon night"],
+     "ref": {"track": "main_theme", "start": 4, "end": 24, "strength": "medium"}},
+    {"text": "[Breakdown] the drums drop out, filtered bass, a heartbeat kick, reversed cymbals, a false drop", "sec": 20,
+     "styles": ["breakdown", "filtered", "tension", "reverse effects", "heartbeat"]},
+    {"text": "[Second drop] brutal re-entry, faster hats, more distortion, the motif and the acid line together, climax, ends on the downbeat for a loop", "sec": 40,
+     "styles": ["industrial techno", "dark synthwave", "climax", "distorted drums", "glitch percussion", "loopable ending"]}
+   ]
+  },
+  "stealth_motel": {
+   "title": "Room 204",
+   "family": "stealth",
+   "chunks": [
+    {"text": "[Drift] a low drone, a slow sub-bass pulse like a heartbeat, small percussive clicks, distant fluorescent hum", "sec": 30,
+     "styles": ["dark ambient", "minimal", "suspense", "100 BPM", "E minor", "sub bass pulse", "analog drone", "instrumental", "cassette texture"]},
+    {"text": "[Watch] fragments of the five-note motif on a muted bell, far away, a reversed sound now and then, a ticking hi-hat", "sec": 30,
+     "styles": ["stealth", "tension", "sparse", "muted FM bell", "reversed textures", "ticking hi-hat"],
+     "ref": {"track": "main_theme", "start": 4, "end": 24, "strength": "low"}},
+    {"text": "[Closer] the pulse tightens, a filtered analog sequence creeps in, tension that never resolves, loop-friendly", "sec": 30,
+     "styles": ["suspense", "analog sequence", "filter sweep", "creeping", "loopable"]}
+   ]
+  }
+ }
+}
