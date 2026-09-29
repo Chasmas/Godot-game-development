@@ -127,6 +127,12 @@ func _ready() -> void:
 	prompt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt_label.add_theme_constant_override("outline_size", 6)
 	UIStyle.place(prompt_label, Control.PRESET_CENTER_BOTTOM, Vector2(-300, -64), Vector2(600, 24))
+	prompt_label.modulate.a = 0.0   # PromptFX draws it
+	prompt_fx = PromptFX.new()
+	prompt_fx.hud = self
+	prompt_fx.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	prompt_fx.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(prompt_fx)
 	# --- hint / objective (top centre)
 	objective_label = _lbl(Vector2.ZERO, 14, UIStyle.CYAN, UIStyle.font_bold())
 	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -470,6 +476,79 @@ func _on_player_died(_info: Dictionary) -> void:
 	death_title.pivot_offset = death_title.size * 0.5
 	var tw := create_tween()
 	tw.tween_property(death_title, "scale", Vector2.ONE, 0.25).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+
+var prompt_fx: Control
+
+## The action prompt: the key drawn as a little keycap, the action beside
+## it, rising in when it appears; and in the world, four corner ticks
+## closing round whatever it's about.
+class PromptFX extends Control:
+	var hud: HUD
+	var _a := 0.0
+	var _pop := 0.0
+	var _last := ""
+	var _t := 0.0
+	var _wpos := Vector2.ZERO
+	func _process(delta: float) -> void:
+		var rd := delta / maxf(Engine.time_scale, 0.03)
+		_t += rd
+		var txt: String = hud.prompt_label.text
+		if txt != _last and txt != "":
+			_pop = 1.0
+		if txt != "":
+			_last = txt
+		_a = move_toward(_a, 1.0 if txt != "" else 0.0, rd * (9.0 if txt != "" else 6.0))
+		_pop = move_toward(_pop, 0.0, rd * 4.0)
+		queue_redraw()
+	func _draw() -> void:
+		if _a <= 0.01 or _last == "":
+			return
+		var key := ""
+		var action := _last
+		if _last.begins_with("[") and _last.find("]") > 0:
+			key = _last.substr(1, _last.find("]") - 1)
+			action = _last.substr(_last.find("]") + 1).strip_edges()
+		var fb := UIStyle.font_bold()
+		var fs := 16
+		var kw := fb.get_string_size(key, HORIZONTAL_ALIGNMENT_LEFT, -1, 14).x + 14.0 if key != "" else 0.0
+		var aw := fb.get_string_size(action, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+		var gap := 10.0 if key != "" else 0.0
+		var total := kw + gap + aw
+		var rise := (1.0 - _a) * 10.0 - sin(_pop * PI) * 4.0
+		var y := size.y - 70.0 + rise
+		var x := (size.x - total) * 0.5
+		var a := _a
+		# a soft band so it reads over anything
+		draw_rect(Rect2(x - 16, y - 20, total + 32, 30), Color(0.02, 0.01, 0.05, 0.45 * a))
+		if key != "":
+			var kr := Rect2(x, y - 17, kw, 22)
+			draw_rect(Rect2(kr.position + Vector2(0, 3), kr.size), Color(0, 0, 0, 0.5 * a))
+			draw_rect(kr, Color(0.1, 0.06, 0.14, 0.95 * a))
+			draw_rect(Rect2(kr.position, Vector2(kr.size.x, 2)), Color(1, 1, 1, 0.12 * a))
+			draw_rect(kr, Color(UIStyle.GOLD, a * (0.75 + 0.25 * sin(_t * 5.0))), false, 1.5)
+			draw_string(fb, Vector2(kr.position.x + 7, y), key, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.GOLD, a))
+		var ax := x + kw + gap
+		draw_string_outline(fb, Vector2(ax, y + 1), action, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 5, Color(UIStyle.INK, a))
+		draw_string(fb, Vector2(ax, y + 1), action, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(UIStyle.PAPER, a))
+		# the thing in the world it's about
+		var p: Node = hud.player
+		if p == null or not is_instance_valid(p):
+			return
+		var tgt = p.get("prompt_target")
+		if tgt != null and is_instance_valid(tgt) and tgt is Node2D and (tgt as Node2D).is_inside_tree():
+			var ct := (tgt as Node2D).get_viewport().get_canvas_transform()
+			_wpos = ct * (tgt as Node2D).global_position
+			var s := ct.get_scale().x
+			var r := (9.0 + 3.0 * _pop + sin(_t * 4.0) * 0.8) * s * 0.5 + 8.0
+			var col := Color(UIStyle.GOLD, 0.85 * a)
+			for i in 4:
+				var d := Vector2.from_angle(i * PI * 0.5 + PI * 0.25)
+				var c := _wpos + d * r
+				var ax2 := Vector2(-signf(d.x), 0) * 6.0
+				var ay2 := Vector2(0, -signf(d.y)) * 6.0
+				draw_polyline(PackedVector2Array([c + ax2, c, c + ay2]), Color(UIStyle.INK, 0.6 * a), 3.5)
+				draw_polyline(PackedVector2Array([c + ax2, c, c + ay2]), col, 1.6)
 
 
 ## Mouse / aim reticle.

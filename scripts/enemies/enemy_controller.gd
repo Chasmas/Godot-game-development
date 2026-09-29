@@ -926,6 +926,7 @@ func _react_to_attack(info: DamageInfo) -> void:
 
 func knock_down(info: DamageInfo) -> void:
 	_windup_t = -1.0
+	Audio.play_at(hurt_voice(), global_position, -5.0, 0.08)
 	_set_state(State.DOWNED)
 	_down_t = DOWN_TIME
 	_knock = info.dir * info.knockback
@@ -985,6 +986,19 @@ func finish_execution(by: Node, weapon_id: StringName, finisher := "") -> void:
 	info.set_meta("finisher", finisher)
 	_die(info)
 
+## Voices (tools/gen_sfx_voice.py): which one this body makes dying / hurt.
+func death_voice() -> String:
+	if self is Dog:
+		return "vox_dog_die%d" % (randi() % 3)
+	if self is BossNightManager:
+		return "vox_boss_die%d" % (randi() % 2)
+	return "vox_die_m%d" % (randi() % 6)
+
+func hurt_voice() -> String:
+	if self is Dog:
+		return "yelp"
+	return "vox_hurt_m%d" % (randi() % 6)
+
 func _die(info: DamageInfo) -> void:
 	# a body can be claimed by two killers in one frame (an execution
 	# finishing as a bullet or blast lands): only the first one counts
@@ -1010,6 +1024,9 @@ func _die(info: DamageInfo) -> void:
 	_spawn_corpse(info, missing)
 	Effects.blood(global_position, info.dir, info.type in [DamageInfo.Type.EXPLOSIVE, DamageInfo.Type.BALLISTIC] or info.method == &"execution")
 	Audio.play_at("death", global_position, -3.0)
+	# the last sound they make: a cry, a groan - nothing if the neck went
+	if str(info.get_meta("finisher", "")) != "neck":
+		Audio.play_at(death_voice(), global_position, -2.0 if self is BossNightManager else -4.0, 0.06)
 	if weapon and info.method != &"execution":
 		_drop_weapon(info.dir * 60.0)
 	var p := _player()

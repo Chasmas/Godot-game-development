@@ -121,6 +121,7 @@ func take_damage(info: DamageInfo) -> String:
 	get_parent().add_child(corpse)
 	Effects.blood(global_position, info.dir, true)
 	Audio.play_at("death", global_position)
+	Audio.play_at("vox_die_m%d" % (randi() % 6), global_position, -4.0, 0.08)
 	if info.from_player:
 		Score.add_bonus("COLLATERAL", -1000, global_position)
 		SaveManager.set_flag("killed_civilian_" + npc_id, true)

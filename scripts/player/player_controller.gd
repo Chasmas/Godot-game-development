@@ -1254,6 +1254,7 @@ func take_damage(info: DamageInfo) -> String:
 		visual.flash()
 		Score.on_player_hurt()
 		Events.camera_shake.emit(3.0)
+		_hurt_voice()
 		return "hurt"
 	if armor_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
 		armor_hits -= 1
@@ -1263,6 +1264,7 @@ func take_damage(info: DamageInfo) -> String:
 		_stagger = 0.25
 		Effects.sparks(global_position + info.dir * -3.0, -info.dir)
 		Audio.play_at("armor_break", global_position)
+		_hurt_voice()
 		Events.camera_shake.emit(6.0)
 		Events.hit_stop.emit(0.08)
 		InputSetup.vibrate(0.8, 0.8, 0.2)
@@ -1280,6 +1282,7 @@ func take_damage(info: DamageInfo) -> String:
 		visual.flash(0.3)
 		Score.on_player_hurt()
 		Audio.play_at("hit_blunt", global_position)
+		_hurt_voice()
 		Events.camera_shake.emit(6.0)
 		Events.hit_stop.emit(0.07)
 		PostFX.flash(Color(0.8, 0.1, 0.15, 0.6), 0.2)
@@ -1292,9 +1295,19 @@ func take_damage(info: DamageInfo) -> String:
 		Score.on_player_hurt()
 		Events.camera_shake.emit(5.0)
 		Audio.play_at("hit_blunt", global_position)
+		_hurt_voice()
 		return "absorbed"
 	_die(info)
 	return "killed"
+
+## Cass's own voice when she's hit (tools/gen_sfx_voice.py), never twice at once.
+var _voice_cd := 0
+func _hurt_voice() -> void:
+	var now := Time.get_ticks_msec()
+	if now - _voice_cd < 350:
+		return
+	_voice_cd = now
+	Audio.play("vox_hurt_f%d" % (randi() % 4), -5.0, randf_range(0.96, 1.04))
 
 func _die(info: DamageInfo) -> void:
 	alive = false
@@ -1309,6 +1322,7 @@ func _die(info: DamageInfo) -> void:
 	Effects.blood(global_position, info.dir, true)
 	# no tone on her death: the hit, the body hitting the floor, then quiet
 	Audio.play_at("hit_flesh", global_position)
+	Audio.play("vox_die_f%d" % (randi() % 3), -3.0)
 	get_tree().create_timer(0.18, true, false, true).timeout.connect(func(): Audio.play("body_fall", -2.0))
 	Events.camera_shake.emit(8.0)
 	Events.camera_punch.emit(1.25, 0.8)
@@ -1332,21 +1346,30 @@ func _emit_weapon() -> void:
 	else:
 		Events.weapon_changed.emit(&"", 0, 0)
 
+## What the prompt is about (the HUD frames it in the world).
+var prompt_target: Node2D = null
+
 func _update_prompt() -> void:
 	prompt = ""
-	if _find_downed():
+	prompt_target = null
+	var dn = _find_downed()
+	if dn:
 		prompt = tr("[%s] EXECUTE") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
+		prompt_target = dn as Node2D
 		return
 	var td := _find_takedown()
 	if td:
 		prompt = tr("[%s] TAKEDOWN") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
+		prompt_target = td as Node2D
 		return
 	var it := _nearest_interactable()
 	if it and it.has_method("get_prompt"):
 		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), tr(it.get_prompt())]
+		prompt_target = it as Node2D
 		return
 	var pk := WeaponPickup.nearest(global_position, get_tree())
 	if pk:
+		prompt_target = pk
 		var what := tr(pk.weapon.data.display_name).to_upper()
 		if can_dual_with(pk):
 			what = tr("DUAL WIELD  ") + what
