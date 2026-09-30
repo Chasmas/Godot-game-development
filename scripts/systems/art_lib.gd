@@ -6,7 +6,7 @@ extends RefCounted
 ## falls back to the procedural drawing when a file is missing or the
 ## "Painted props & floors" option is off.
 
-const FLOORS := {".": "carpet", ",": "tile", "_": "wood", ":": "asphalt", "=": "concrete", "\"": "grass", ";": "dirt", "+": "steel", "-": "stage"}
+const FLOORS := {".": "carpet", ",": "tile", "_": "wood", ":": "asphalt", "=": "concrete", "\"": "grass", ";": "dirt", "+": "steel", "-": "stage", "~": "pool_water"}
 const CARS := ["car_red", "car_blue", "car_white", "car_black", "dumpster"]
 static var _cache: Dictionary = {}
 
@@ -15,7 +15,9 @@ static func enabled() -> bool:
 
 static func _load(path: String) -> Texture2D:
 	if not _cache.has(path):
-		_cache[path] = load(path) if ResourceLoader.exists(path) else null
+		var pixel_path := path.replace("res://assets/art/", "res://assets/art/pixellab_world/")
+		var source := pixel_path if ResourceLoader.exists(pixel_path) else path
+		_cache[path] = load(source) if ResourceLoader.exists(source) else null
 	return _cache[path]
 
 ## Sprites are painted at DENSITY x the old 2 texels per world pixel; they

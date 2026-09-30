@@ -18,10 +18,10 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				if tex:
 					var sp := Sprite2D.new()
 					sp.texture = tex
-					sp.scale = Vector2(0.5, 0.5)
+					sp.scale = Vector2.ONE * float(it.get("size", 0.5))
 					sp.position = p
 					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
-					sp.z_index = -1
+					sp.z_index = -5 if it.get("floor", false) else -1
 					root.add_child(sp)
 			"pickup":
 				# an old pickup truck, parked for good: solid, blocks shots

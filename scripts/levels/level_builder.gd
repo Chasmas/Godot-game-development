@@ -672,6 +672,13 @@ class FloorChunk extends Node2D:
 		# floors are 4 texels per world pixel (512 px = 8 tiles)
 		# (the texture and the tone went down in _draw's first passes)
 		match f:
+			"~":
+				# PixelLab water, with the existing high-contrast coping at its edge.
+				for d in [Vector2i(0, -1), Vector2i(0, 1), Vector2i(-1, 0), Vector2i(1, 0)]:
+					if builder.ch(x + d.x, y + d.y) != "~" and builder.floor_grid[y + d.y][x + d.x] != "~":
+						var er := Rect2(p, Vector2(T2, 3)) if d.y == -1 else (Rect2(p + Vector2(0, T2 - 3), Vector2(T2, 3)) if d.y == 1 else (Rect2(p, Vector2(3, T2)) if d.x == -1 else Rect2(p + Vector2(T2 - 3, 0), Vector2(3, T2))))
+						draw_rect(er, Color(0.92, 0.96, 1.0))
+						draw_rect(er.grow(-1), Color(0.55, 0.85, 0.95))
 			":":
 				if x % 4 == 0 and builder.is_parking_row(y):
 					draw_rect(Rect2(p, Vector2(1.5, T2)), Color(0.95, 0.9, 0.6, 0.85))

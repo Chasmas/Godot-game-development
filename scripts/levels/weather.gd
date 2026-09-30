@@ -128,7 +128,10 @@ func _ready() -> void:
 		_flakes.append([Vector2(randf(), randf()), randf_range(0.6, 1.4), randf_range(0.8, 2.2), randf() * TAU])
 	for k in DEBRIS_TEX:
 		var p := "res://assets/art/sprites/%s.png" % DEBRIS_TEX[k]
-		if ResourceLoader.exists(p):
+		var pixel_path := "res://assets/art/pixellab_world/sprites/%s.png" % DEBRIS_TEX[k]
+		if ResourceLoader.exists(pixel_path):
+			_tex[k] = load(pixel_path)
+		elif ResourceLoader.exists(p):
 			_tex[k] = load(p)
 	_soft = SpriteLib.light_texture(128, 1.2)
 	_advance_state()

@@ -1,0 +1,850 @@
+{
+  "m01_sunset_palms": {
+    "theme": "Motel: adjoining guest rooms, service circuit and reception core",
+    "tension_zones": {
+      "breach": "west laundry/service entrance",
+      "gauntlet": "courtyard and adjoining guest wings",
+      "core": "office and reception"
+    },
+    "edits": [
+      {
+        "at": [
+          15,
+          5
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          26,
+          5
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          39,
+          5
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          53,
+          3
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          58,
+          10
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          59,
+          18
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          59,
+          26
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#D"
+      },
+      {
+        "at": [
+          53,
+          33
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#D"
+      },
+      {
+        "at": [
+          19,
+          28
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          41,
+          28
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          19,
+          38
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          28,
+          37
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          41,
+          37
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          11,
+          31
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          20,
+          31
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          33,
+          31
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          42,
+          31
+        ],
+        "length": 3,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          53,
+          19
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          53,
+          11
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      }
+    ],
+    "decor": [
+      {
+        "type": "sprite",
+        "id": "motel_exit_arrow",
+        "pos": [
+          8,
+          46
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_exit_arrow",
+        "pos": [
+          6,
+          32
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_exit_arrow",
+        "pos": [
+          45,
+          12
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          19,
+          14
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          35,
+          19
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          40,
+          16
+        ],
+        "size": 0.8,
+        "floor": true
+      }
+    ]
+  },
+  "m02_yermo_salvage": {
+    "theme": "Salvage: warehouse aisles, kennel loop and foreman/office cross-links",
+    "tension_zones": {
+      "breach": "south gate and wreck screening",
+      "gauntlet": "warehouse and kennels",
+      "core": "foreman office, trailer and generator shed"
+    },
+    "edits": [
+      {
+        "at": [
+          27,
+          19
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          48,
+          6
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          31,
+          12
+        ],
+        "length": 4,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          58,
+          11
+        ],
+        "length": 4,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          48,
+          14
+        ],
+        "length": 3,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      }
+    ],
+    "decor": [
+      {
+        "type": "sprite",
+        "id": "yard_k9_warning",
+        "pos": [
+          10,
+          22
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_k9_warning",
+        "pos": [
+          33,
+          20
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_k9_warning",
+        "pos": [
+          51,
+          20
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_spill",
+        "pos": [
+          25,
+          29
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_spill",
+        "pos": [
+          50,
+          35
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_spill",
+        "pos": [
+          14,
+          13
+        ],
+        "size": 0.8,
+        "floor": true
+      }
+    ]
+  },
+  "m03_khsc_studios": {
+    "theme": "Studio: acoustic partitions divide Stage Nine into two interlocking circulation loops",
+    "tension_zones": {
+      "breach": "prop warehouse loading bay",
+      "gauntlet": "stage wings and scenic flats",
+      "core": "north soundstage and control room"
+    },
+    "edits": [
+      {
+        "at": [
+          14,
+          5
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          50,
+          3
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          21,
+          11
+        ],
+        "length": 29,
+        "axis": "h",
+        "tile": "#",
+        "from": "-"
+      },
+      {
+        "at": [
+          35,
+          11
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          40,
+          11
+        ],
+        "length": 6,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          23,
+          7
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#W"
+      },
+      {
+        "at": [
+          33,
+          7
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          21,
+          23
+        ],
+        "length": 29,
+        "axis": "h",
+        "tile": "#",
+        "from": "-"
+      },
+      {
+        "at": [
+          28,
+          23
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          41,
+          23
+        ],
+        "length": 6,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          38,
+          24
+        ],
+        "length": 17,
+        "axis": "v",
+        "tile": "#",
+        "from": "-"
+      },
+      {
+        "at": [
+          38,
+          26
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          38,
+          32
+        ],
+        "length": 5,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          21,
+          29
+        ],
+        "length": 17,
+        "axis": "h",
+        "tile": "#",
+        "from": "-"
+      },
+      {
+        "at": [
+          28,
+          29
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          22,
+          29
+        ],
+        "length": 4,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          50,
+          8
+        ],
+        "length": 3,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          54,
+          24
+        ],
+        "length": 3,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          21,
+          3
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "#",
+        "from": "-"
+      },
+      {
+        "at": [
+          20,
+          7
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          7,
+          16
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "#",
+        "from": "D"
+      },
+      {
+        "at": [
+          3,
+          21
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          14,
+          13
+        ],
+        "length": 8,
+        "axis": "v",
+        "tile": "#",
+        "from": "."
+      },
+      {
+        "at": [
+          14,
+          16
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          10,
+          21
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "W",
+        "from": "D"
+      }
+    ],
+    "decor": [
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          33,
+          27
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          43,
+          18
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          27,
+          35
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_reel",
+        "pos": [
+          46,
+          9
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_reel",
+        "pos": [
+          52,
+          26
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_reel",
+        "pos": [
+          8,
+          36
+        ],
+        "size": 0.8,
+        "floor": true
+      }
+    ]
+  },
+  "m04_villa_estrella": {
+    "theme": "Villa: coat-check and foyer split around a central screen, looping through both wings",
+    "tension_zones": {
+      "breach": "service entrance and dining room",
+      "gauntlet": "foyer, dining, library and chapel circulation loop",
+      "core": "screened foyer breach into Tommy’s ballroom arena"
+    },
+    "edits": [
+      {
+        "at": [
+          35,
+          21
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "#",
+        "from": "D"
+      },
+      {
+        "at": [
+          27,
+          21
+        ],
+        "length": 2,
+        "axis": "h",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          34,
+          22
+        ],
+        "length": 12,
+        "axis": "v",
+        "tile": "#",
+        "from": ","
+      },
+      {
+        "at": [
+          34,
+          27
+        ],
+        "length": 2,
+        "axis": "v",
+        "tile": "D",
+        "from": "#"
+      },
+      {
+        "at": [
+          22,
+          16
+        ],
+        "length": 4,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          50,
+          13
+        ],
+        "length": 4,
+        "axis": "v",
+        "tile": "W",
+        "from": "#"
+      },
+      {
+        "at": [
+          61,
+          11
+        ],
+        "length": 4,
+        "axis": "h",
+        "tile": "W",
+        "from": "#"
+      }
+    ],
+    "decor": [
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          38,
+          13
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          28,
+          27
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          58,
+          17
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          39,
+          17
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          60,
+          30
+        ],
+        "size": 0.8,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          11,
+          29
+        ],
+        "size": 0.8,
+        "floor": true
+      }
+    ]
+  }
+}

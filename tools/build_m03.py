@@ -245,3 +245,10 @@ out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
 json.dump(level, open(out, "w"), indent=1)
 print("\n".join(rows))
 print(W, H, "enemies:", sum(r.count(c) for r in rows for c in "gmhHsrB"))
+
+# Preserve authored flow when regenerating this data file.
+from polish_layouts import apply_layout
+with open(out, encoding="utf-8") as layout_source:
+    polished = apply_layout(json.load(layout_source))
+with open(out, "w", encoding="utf-8") as layout_target:
+    json.dump(polished, layout_target, indent=1, ensure_ascii=False)
