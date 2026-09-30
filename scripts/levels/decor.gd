@@ -5,6 +5,7 @@ extends RefCounted
 
 static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array) -> void:
 	for it in items:
+		var cell := Vector2i(int(it.pos[0]), int(it.pos[1]))
 		var p := Vector2(float(it.pos[0]) * 16.0 + 8.0, float(it.pos[1]) * 16.0 + 8.0)
 		match str(it.type):
 			"palm":
@@ -14,6 +15,11 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				root.add_child(pt)
 			"sprite":
 				# a painted prop laid on the floor (studio cameras, lights...)
+				# Never render a floor piece on the wall top or in a doorway. A
+				# malformed decor entry should fail quietly instead of producing a
+				# floating prop over the room divider.
+				if it.get("floor", false) and not _valid_floor_sprite(builder, cell):
+					continue
 				var tex := ArtLib.sprite(str(it.get("id", "")))
 				if tex:
 					var sp := Sprite2D.new()
@@ -62,6 +68,17 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 	var pool := PoolFX.new()
 	pool.builder = builder
 	root.add_child(pool)
+
+static func _valid_floor_sprite(builder: LevelBuilder, cell: Vector2i) -> bool:
+	if cell.x < 0 or cell.y < 0 or cell.x >= builder.w or cell.y >= builder.h:
+		return false
+	if not LevelBuilder.FLOORS.contains(builder.ch(cell.x, cell.y)):
+		return false
+	for d in [Vector2i(0, -1), Vector2i(0, 1), Vector2i(-1, 0), Vector2i(1, 0)]:
+		var n := builder.ch(cell.x + d.x, cell.y + d.y)
+		if n == "D" or n == "L" or n == "W":
+			return false
+	return true
 
 
 ## Top-down palm: canopy of fronds above everything, with a soft ground

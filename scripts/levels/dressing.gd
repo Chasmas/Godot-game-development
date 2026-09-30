@@ -230,7 +230,10 @@ static func _dress_room(r: Room, b: LevelBuilder, layer: ClutterLayer, glow: Clu
 		var pos := Vector2(c.x * T + 8, c.y * T + 8)
 		var rot := rng.randf_range(-0.5, 0.5)
 		if kind in WALL_ITEMS and wall_dir != Vector2i.ZERO:
-			pos += Vector2(wall_dir) * 3.5
+			# The cell already shares an edge with the wall.  Pulling a large
+			# suitcase or drum towards it made its painted silhouette bleed over
+			# the wall face. Keep a small, intentional floor gap instead.
+			pos -= Vector2(wall_dir) * 2.5
 			rot = Vector2(wall_dir).angle() + PI * 0.5 + rng.randf_range(-0.12, 0.12)
 		else:
 			pos += Vector2(rng.randf_range(-4, 4), rng.randf_range(-4, 4))
@@ -318,7 +321,10 @@ static func _wall_utilities(r: Room, b: LevelBuilder, layer: ClutterLayer) -> vo
 	faces.sort_custom(func(a, c): return a.x < c.x if a.y == c.y else a.y < c.y)
 	var rng := RandomNumberGenerator.new()
 	rng.seed = hash("u%d,%d" % [r.rect.position.x, r.rect.position.y])
-	var at := func(wc: Vector2i, dx := 0.0) -> Vector2: return Vector2(wc.x * T + 8 + dx, wc.y * T + T - 2.5)
+	# Keep utility silhouettes inside the wall tile.  Their previous baseline
+	# dipped into the room by a few pixels, which read as a prop sitting on a
+	# wall rather than a fixture attached to it.
+	var at := func(wc: Vector2i, dx := 0.0) -> Vector2: return Vector2(wc.x * T + 8 + dx, wc.y * T + T - 5.0)
 	var used := {}
 	# outlets every few tiles, off-centre like real ones
 	for i in range(1, faces.size(), 6):
@@ -356,8 +362,9 @@ static func _dress_walls(r: Room, b: LevelBuilder, layer: ClutterLayer, room_no:
 			faces.append(wc)
 	if faces.is_empty():
 		return
-	# the wall's visible front band is its bottom 6 px: hang things there
-	var face_pos := func(wc: Vector2i) -> Vector2: return Vector2(wc.x * T + 8, wc.y * T + T - 2.5)
+	# the wall's visible front band is its bottom 6 px: hang things wholly
+	# within it, never across the floor-facing edge.
+	var face_pos := func(wc: Vector2i) -> Vector2: return Vector2(wc.x * T + 8, wc.y * T + T - 5.0)
 	# faces sorted left to right: placements below are composed, not random
 	faces.sort_custom(func(a, c): return a.x < c.x if a.y == c.y else a.y < c.y)
 	var mid_face: Vector2i = faces[faces.size() / 2]
