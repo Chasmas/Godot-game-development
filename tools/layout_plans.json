@@ -223,8 +223,8 @@
         "type": "sprite",
         "id": "motel_exit_arrow",
         "pos": [
-          45,
-          12
+        40,
+        13
         ],
         "size": 0.8,
         "floor": true

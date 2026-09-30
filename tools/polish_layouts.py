@@ -40,6 +40,18 @@ def audit(data):
         for p in neighbors(queue.popleft()):
             if valid(p) and p not in reached and at(p) not in BLOCK:reached.add(p);queue.append(p)
     inaccessible=[(x,y,c) for y,row in enumerate(rows) for x,c in enumerate(row) if c in 'gmhHsrBdyzuMqvPU$&OXR@' and (x,y) not in reached]
+    # Floor decals are set dressing, never a substitute for a wall fixture.
+    # Keep them off structural cells and clear of doors and glass.
+    bad_floor_decor=[]
+    for item in data.get('decor', []):
+        if item.get('type') != 'sprite' or not item.get('floor', False):
+            continue
+        x,y=item.get('pos', [-1,-1])
+        if not valid((x,y)) or at((x,y)) not in '.,:_=\\+-;':
+            bad_floor_decor.append(item)
+            continue
+        if any(valid(p) and at(p) in 'DLW' for p in neighbors((x,y))):
+            bad_floor_decor.append(item)
     # Room interiors stop at portals. Glass is NOT counted as an ordinary exit.
     seen=set(); rooms=[]
     for y,row in enumerate(rows):
@@ -60,7 +72,7 @@ def audit(data):
             if len(cells)>3:
                 bounds=[min(p[0] for p in cells),min(p[1] for p in cells),max(p[0] for p in cells),max(p[1] for p in cells)]
                 rooms.append({'bounds':bounds,'cells':len(cells),'exits':count})
-    return {'id':data['id'],'reachable_cells':len(reached),'inaccessible_entities':inaccessible,'rooms':rooms}
+    return {'id':data['id'],'reachable_cells':len(reached),'inaccessible_entities':inaccessible,'bad_floor_decor':bad_floor_decor,'rooms':rooms}
 
 def main():
     reports=[]
@@ -68,6 +80,7 @@ def main():
         old=json.loads(path.read_text(encoding='utf-8'));new=apply_layout(old)
         report=audit(new);reports.append(report)
         assert not report['inaccessible_entities'], report
+        assert not report['bad_floor_decor'], report
         assert all(r['exits']>=2 for r in report['rooms']),report
         # Courtyards and long shared corridors serve several rooms. Enclosed
         # combat rooms should expose two or three distinct escape routes.
