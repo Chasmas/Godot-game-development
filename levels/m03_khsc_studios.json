@@ -766,32 +766,32 @@
   },
   {
    "type": "sprite",
-   "id": "studio_tape_marks",
+   "id": "studio_block_x",
    "pos": [
     33,
     27
    ],
-   "size": 0.8,
+   "size": 0.28,
    "floor": true
   },
   {
    "type": "sprite",
-   "id": "studio_tape_marks",
+   "id": "studio_block_x",
    "pos": [
     43,
     18
    ],
-   "size": 0.8,
+   "size": 0.28,
    "floor": true
   },
   {
    "type": "sprite",
-   "id": "studio_tape_marks",
+   "id": "studio_block_x",
    "pos": [
     27,
     35
    ],
-   "size": 0.8,
+   "size": 0.28,
    "floor": true
   },
   {
