@@ -328,6 +328,11 @@ func camera_blind_spot() -> void:
 	cam.base_angle = PI * 0.5
 	cam.position = at
 	lvl.props_root.add_child(cam)
+	await frames(2) # let the deferred room-fitting finish
+	# This fixture deliberately uses the verified downward sight line.
+	cam.base_angle = PI * 0.5
+	cam._aim = cam.base_angle
+	p.respawn_grace = 0.0
 	for e in _enemies():
 		e.global_position += Vector2(4000, 4000)   # nobody else in the way
 	p.global_position = at + Vector2(0, 14)       # right under the lens
@@ -337,7 +342,7 @@ func camera_blind_spot() -> void:
 	p.global_position = at + Vector2(0, 70)       # out in the cone
 	# the lens sweeps: give it one full pass to come round to you
 	var seen := false
-	for i in 30:
+	for i in int(ceil(SecurityCamera.SWEEP_TIME * Engine.physics_ticks_per_second / 15.0)) + 2:
 		await frames(15)
 		if cam._meter > 0.0 or cam._cool > 0.0:
 			seen = true

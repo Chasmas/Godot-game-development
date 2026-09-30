@@ -141,7 +141,7 @@ func _mission3() -> void:
 	for i in 4:
 		boss.take_damage(DamageInfo.make(DamageInfo.Type.BALLISTIC, p, boss.global_position, Vector2.RIGHT, &"pistol"))
 		await frames(12)
-	check(boss.phase == 2, "phase 2 at 60% of the bar (%.1f / %.1f)" % [boss.hp, boss.max_hp])
+	check(boss.phase == 2, "phase 2 at 60%% of the bar (%.1f / %.1f)" % [boss.hp, boss.max_hp])
 	check(boss.hp > 0.0 and not boss._defeated, "hits take a piece, not the whole bar")
 	await frames(120)
 	check(get_tree().get_nodes_in_group("fires").size() >= 8, "the stage is on fire")

@@ -1318,7 +1318,7 @@ func _die(info: DamageInfo) -> void:
 	collision_mask = 0
 	visual.visible = false
 	var corpse := Corpse.new()
-	corpse.setup(data.palette, info.dir, true)
+	corpse.setup(data.palette, info.dir, true, "", aim_dir.angle())
 	corpse.global_position = global_position
 	get_parent().add_child(corpse)
 	Effects.blood(global_position, info.dir, true)

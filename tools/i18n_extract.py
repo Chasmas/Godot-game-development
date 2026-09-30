@@ -47,6 +47,9 @@ NOT_TEXT = {"DOOR", "MACHINE", "BOARD", "SHOT_MODE", "%d:%02d", "BOSS", " else &
             "LT", "RT", "RS", "L3", "R3", "HOTSHOT", "California", "GILBERTO LOPES", "INVERTED  INDEX",
             "S   T   U   D   I   O", "VACANCY", "NO", "Barks", "Ambience", "%s#%d", "%s_%s%d", "%s_%d", "HOTSHOT  —  1988", "◀◀ %d:%02d:%02d", "SP", "%d%%", "REC", "00:00:%02d:%02d", "%s  ·  %s  ·  %s", "I", "II", "III", "IV", "I-B", "position:x", "position:y", "1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440"}
 
+# Hardware labels and non-translatable format / audio identifiers.
+NOT_TEXT.update(['%d  ·  %s', '%d.   %-3s   %9d   %s', '%d.   ---   ---------   --:--', 'Create', 'D-Pad ←', 'D-Pad ↑', 'D-Pad →', 'D-Pad ↓', 'L-Stick', 'L1', 'L2', 'Menu', 'Options', 'R-Stick', 'R1', 'R2', 'Touchpad', 'VHS  ·  SP  ·  0:%02d:%02d', 'View', 'ZL', 'ZR', 'joy-con', 'pro controller', 'vox_die_f%d', 'vox_die_m%d', 'vox_hurt_f%d', 'wireless controller'])
+
 def looks_like_text(s):
     if s in NOT_TEXT or re.match(r"^(civilian#|reinf_|debug_|step|%s:%d)", s):
         return False

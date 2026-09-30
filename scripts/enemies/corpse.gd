@@ -5,6 +5,8 @@ extends Node2D
 ## a lost head / arm (the stump is painted into the sprite). Dogs draw
 ## themselves (see Dog.draw_dead).
 
+var _cast: CastSprite
+var _cast_time := 0.0
 var discovered := false
 var is_player := false
 var is_dog := false
@@ -17,7 +19,7 @@ var _twitch := 0.0
 var _settle_t := 0.32
 var _settle_rot := 0.0
 
-func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> void:
+func setup(palette: String, dir: Vector2, player := false, p_missing := "", facing := 0.0) -> void:
 	is_player = player
 	missing = p_missing
 	sprite = Sprite2D.new()
@@ -28,6 +30,17 @@ func setup(palette: String, dir: Vector2, player := false, p_missing := "") -> v
 	add_child(sprite)
 	_slide = dir.normalized() * 70.0
 	_settle_rot = randf_range(-0.18, 0.18)
+	if player and palette == "cass" and missing.is_empty():
+		var candidate := CastSprite.new()
+		if candidate.configure("cass"):
+			sprite.queue_free()
+			_cast = candidate
+			sprite = candidate
+			add_child(sprite)
+			sprite.rotation = facing
+			_cast.play_sample("death", 0.0, 0.0)
+		else:
+			candidate.free()
 
 func setup_dog(colors: Dictionary, dir: Vector2, p_missing := "") -> void:
 	is_dog = true
@@ -42,7 +55,10 @@ func _ready() -> void:
 	z_index = -4
 
 func _process(delta: float) -> void:
-	if _settle_t > 0.0 and sprite:
+	if _cast:
+		_cast_time += delta
+		_cast.play_sample("death", delta, minf(_cast_time / 0.75, 1.0))
+	if _settle_t > 0.0 and sprite and not _cast:
 		_settle_t -= delta
 		var k := clampf(1.0 - _settle_t / 0.32, 0.0, 1.0)
 		sprite.scale = Vector2(0.5 + sin(k * PI) * 0.035, 0.5 - sin(k * PI) * 0.045)
@@ -58,7 +74,8 @@ func _process(delta: float) -> void:
 		_twitch -= delta
 		queue_redraw()
 		return
-	set_process(false)
+	if not _cast or _cast_time >= 0.75:
+		set_process(false)
 
 func _draw() -> void:
 	if is_dog:

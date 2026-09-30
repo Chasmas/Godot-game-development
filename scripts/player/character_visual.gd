@@ -5,6 +5,8 @@ extends Node2D
 ## melee swings, punches and hit flashes. Shared by player, enemies, NPCs.
 
 var palette := "guard"
+var cast_sprite: CastSprite
+var _cast_velocity := Vector2.ZERO
 var legs: Sprite2D
 var torso: Sprite2D
 var weapon_sprite: Sprite2D
@@ -105,10 +107,27 @@ var _manner_off := 0.0
 var _speed_k := 0.0
 
 func setup(p_palette: String) -> void:
+	if cast_sprite:
+		cast_sprite.queue_free()
+		cast_sprite = null
+	legs.visible = true
+	torso.visible = true
 	palette = p_palette
 	_manner = MANNER.get(SpriteForge.base_name(p_palette), {"sway": 0.04, "lean": 0.5, "bounce": 0.3})
 	legs.texture = SpriteLib.legs(0, palette)
 	set_weapon(null)
+	# Opt in only Cass; all other palettes retain the existing renderer.
+	if p_palette == "cass" and OS.get_environment("CAST_LEGACY") != "1":
+		var candidate := CastSprite.new()
+		if candidate.configure("cass"):
+			cast_sprite = candidate
+			rig.add_child(cast_sprite)
+			rig.move_child(cast_sprite, 0)
+			cast_sprite.play_sample("idle", 0.0)
+			legs.visible = false
+			torso.visible = false
+		else:
+			candidate.free()
 
 func set_persona_overlay(enabled: bool) -> void:
 	overlay.visible = false   # v2 art bakes the persona into the sprite
@@ -157,6 +176,10 @@ func set_aim(angle: float) -> void:
 	rig.rotation = angle + _twist + _manner_off
 
 func update_move(vel: Vector2, delta: float) -> void:
+	if cast_sprite:
+		_cast_velocity = vel
+		_still_t = _still_t + delta if vel.length() < 8.0 and _roll_t < 0.0 and _swing_t < 0.0 and _punch_t < 0.0 else 0.0
+		return
 	# mannerisms: shoulders sway with the stride, torso leans into the walk
 	_speed_k = move_toward(_speed_k, clampf(vel.length() / 150.0, 0.0, 1.2), delta * 6.0)
 	if not _manner.is_empty():
@@ -334,22 +357,36 @@ class CigaretteFx extends Node2D:
 	var _t := 0.0
 	var _puffs: Array = []
 	var _out := -1.0
+	var art: Texture2D
+	var _mouth := Vector2.ZERO
+	var _emit_t := 0.0
 	func _ready() -> void:
 		z_index = 4
 		position = Vector2(4.5, -1.0)
+		art = load("res://assets/art/sprites/cigarette_pixellab.png") as Texture2D
+		texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	func put_out() -> void:
 		_out = 0.0
 	func _process(delta: float) -> void:
 		_t += delta
+		if vis.cast_sprite != null and _out < 0.0:
+			position = vis.cast_sprite.grip()
 		if _out >= 0.0:
 			_out += delta
 			if _out > 0.6:
 				queue_free()
-		elif fmod(_t, 0.35) < delta:
-			_puffs.append({"p": Vector2.ZERO, "t": 0.0, "d": Vector2(randf_range(-2, 2), randf_range(-6, -3))})
+		else:
+			var phase := fposmod(float(vis.cast_sprite.clock), 4.0) / 4.0 if vis.cast_sprite != null else fposmod(_t, 4.0) / 4.0
+			if phase >= 0.22 and phase <= 0.48:
+				_mouth = to_global(Vector2.ZERO)
+			var exhale := phase > 0.50 and phase < 0.68 and _mouth != Vector2.ZERO
+			_emit_t -= delta
+			if _emit_t <= 0.0:
+				_emit_t = 0.12 if exhale else 0.55
+				_puffs.append({"p": _mouth if exhale else to_global(Vector2(2.8, 0)), "t": 0.0, "big": exhale, "d": Vector2(randf_range(-1.5, 1.5), randf_range(-5, -3))})
 		for p in _puffs:
 			p.t = float(p.t) + delta
-			p.p = (p.p as Vector2) + (p.d as Vector2) * delta + Vector2(sin(_t * 2.0 + float(p.t) * 3.0) * 3.0 * delta, 0)
+			p.p = (p.p as Vector2) + (p.d as Vector2) * delta + Vector2(sin(_t * 2.0 + float(p.t) * 3.0) * delta, 0)
 		_puffs = _puffs.filter(func(p): return float(p.t) < 2.2)
 		queue_redraw()
 	func _draw() -> void:
@@ -357,9 +394,14 @@ class CigaretteFx extends Node2D:
 		var a := 1.0 - clampf(_out / 0.6, 0.0, 1.0) if _out >= 0.0 else 1.0
 		for p in _puffs:
 			var k: float = float(p.t) / 2.2
-			draw_circle((p.p as Vector2).rotated(-global_rotation), 0.8 + k * 3.0, Color(0.8, 0.8, 0.85, 0.22 * (1.0 - k) * a))
-		draw_line(Vector2.ZERO, Vector2(2.5, 0), Color(0.95, 0.93, 0.88, a), 1.0)
-		draw_circle(Vector2(2.8, 0), 0.8 if not draw_ else 1.1, Color(1.0, 0.45 if draw_ else 0.3, 0.1, a))
+			draw_circle(to_local(p.p as Vector2), (0.6 + k * 1.7) if p.big else (0.25 + k * 0.8), Color(0.8, 0.8, 0.85, (0.23 if p.big else 0.12) * (1.0 - k) * a))
+		if art:
+			draw_set_transform(Vector2.ZERO, 0.98, Vector2.ONE * 0.12)
+			draw_texture(art, Vector2(-7, -28), Color(1, 1, 1, a))
+			draw_set_transform(Vector2.ZERO)
+		else:
+			draw_line(Vector2.ZERO, Vector2(2.5, 0), Color(0.95, 0.93, 0.88, a), 1.0)
+		draw_circle(Vector2(2.8, 0), 0.18 if not draw_ else 0.28, Color(1.0, 0.45 if draw_ else 0.3, 0.1, a))
 
 # ---------------------------------------------------------------- the roll
 var _roll_t := -1.0
@@ -542,6 +584,9 @@ static func _barrel_tip(tex: Texture2D) -> Vector2:
 	return out
 
 func _process(delta: float) -> void:
+	if cast_sprite:
+		_process_cast(delta)
+		return
 	# side-view guns stay the right way up: aiming left, the picture flips
 	var left_aim := cos(rig.global_rotation) < 0.0
 	# one gun: kept the right way up. Two guns: a mirrored pair with both
@@ -870,7 +915,7 @@ class DropShadow extends Node2D:
 			var alpha := clampf(0.08 + 0.16 * k, 0.0, 0.22)
 			var base := Transform2D(0.0, dir * length) * LightProbe.stretch(dir, 1.1 + 0.25 * float(pr.far))
 			var col := Color(0.0, 0.0, 0.03, alpha)
-			for spr in [v.torso]:
+			for spr in [v.cast_sprite if v.cast_sprite else v.torso]:
 				var sp := spr as Sprite2D
 				if sp == null or sp.texture == null or not sp.visible:
 					continue
@@ -974,3 +1019,86 @@ class KickLeg extends Node2D:
 		var knee := hip + Vector2(3.5 + 2.5 * chamber + 3.0 * ext, 1.5 - 1.0 * ext)
 		var foot := knee + Vector2(-2.5 * (1.0 - ext) + 6.0 * ext, 1.0 - 1.5 * ext)
 		_seg(hip, knee, foot, pants, shoe)
+
+
+## Full-body playback uses the same action timers and weapon nodes as before.
+func _process_cast(delta: float) -> void:
+	var one_hand_melee := weapon_sprite.visible and not _firearm and _hold != WeaponData.Hold.MELEE_TWO
+	var name := ("aim_dual" if dual else ("aim_melee" if one_hand_melee else "aim")) if weapon_sprite.visible else "idle"
+	var progress := -1.0
+	var speed := _cast_velocity.length()
+	if speed > 8.0:
+		name = "run" if speed > 145.0 else ("sneak" if speed < 85.0 else "walk")
+		if weapon_sprite.visible:
+			name = ("armed_dual_" if dual else ("armed_melee_" if one_hand_melee else "armed_")) + name
+	rig.rotation = aim_angle
+	if _roll_t >= 0.0:
+		_roll_t += delta
+		name = "roll"
+		progress = clampf(_roll_t / _roll_dur, 0.0, 1.0)
+		rig.rotation = _roll_dir.angle()
+		if progress >= 1.0:
+			_roll_t = -1.0
+	elif _kick_leg_t > 0.0:
+		_kick_leg_t = maxf(0.0, _kick_leg_t - delta)
+		name = "kick"
+		progress = 1.0 - _kick_leg_t / KICK_TIME
+	elif _swing_t >= 0.0:
+		_swing_t += delta
+		name = "punch" if _stab else "melee"
+		progress = clampf(_swing_t / _swing_dur, 0.0, 1.0)
+		if progress >= 1.0:
+			_swing_t = -1.0
+	elif _punch_t >= 0.0:
+		_punch_t += delta
+		name = "punch_left" if _punch_left else "punch"
+		progress = clampf(_punch_t / 0.2, 0.0, 1.0)
+		if progress >= 1.0:
+			_punch_t = -1.0
+	elif _fall_t > 0.0:
+		_fall_t = maxf(0.0, _fall_t - delta)
+		name = "knocked"
+		progress = 1.0 - _fall_t / 0.24
+	if _reload_k >= 0.0 and _roll_t < 0.0:
+		name = "reload_" + _reload_kind
+		progress = clampf(_reload_k, 0.0, 1.0)
+	if name == "idle" and idle_fidgets and _still_t > 9.0:
+		name = "smoke"
+	cast_sprite.play_sample(name, delta, progress)
+	_hand = cast_sprite.grip()
+	_hand2 = cast_sprite.grip(true)
+	_kick = move_toward(_kick, 0.0, delta * 30.0)
+	_gun_kick = move_toward(_gun_kick, 0.0, delta * 26.0)
+	_gun_kick2 = move_toward(_gun_kick2, 0.0, delta * 26.0)
+	rig.position = Vector2.RIGHT.rotated(rig.rotation) * -_kick
+	rig.scale = Vector2.ONE
+	weapon_sprite.position = _hand - Vector2(_gun_kick, 0)
+	weapon_sprite2.position = _hand2 - Vector2(_gun_kick2, 0)
+	weapon_sprite.rotation = cast_sprite.weapon_angle() if name == "melee" else -0.09 * _gun_kick
+	weapon_sprite2.rotation = -0.09 * _gun_kick2
+	weapon_sprite.modulate.a = 0.0 if name == "roll" else 1.0
+	weapon_sprite2.modulate.a = weapon_sprite.modulate.a
+	_update_reload(delta)
+	if name.begins_with("reload_"):
+		weapon_sprite.position = _hand - Vector2(_gun_kick, 0)
+		weapon_sprite2.position = _hand2 - Vector2(_gun_kick2, 0)
+	# The rendered body already contains its limbs.
+	_arm.visible = false
+	_leg.visible = false
+	legs.visible = false
+	torso.visible = false
+	if _flash > 0.0:
+		_flash = maxf(0.0, _flash - delta)
+		modulate = Color(3, 3, 3) if _flash > 0.0 else Color.WHITE
+
+	if name == "smoke":
+		if _cig == null:
+			_cig = CigaretteFx.new()
+			_cig.vis = self
+			rig.add_child(_cig)
+			_sfx("light_switch", -22.0)
+		_cig.position = cast_sprite.grip()
+	elif _cig:
+		_cig.put_out()
+		_cig = null
+
