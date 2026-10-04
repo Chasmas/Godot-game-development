@@ -46,7 +46,7 @@ func _ready() -> void:
 	_base_energy = energy
 	halo = PointLight2D.new()
 	halo.texture = SpriteLib.light_texture(256)
-	halo.texture_scale = radius_px * 3.4 / 256.0
+	halo.texture_scale = radius_px * 2.6 / 256.0
 	halo.color = Color(color.r, color.g, color.b).lerp(Color(color.r * 1.2, color.g * 0.85, color.b * 0.9), 0.35)
 	halo.energy = energy * 0.34
 	halo.shadow_enabled = false

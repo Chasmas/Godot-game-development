@@ -277,7 +277,7 @@ func _light_color(x: int, y: int) -> Color:
 
 # ---------------------------------------------------------------- floors
 func _build_floor_chunks() -> void:
-	var cs := 16
+	var cs := 8   # small enough that no chunk is touched by more lights than an item can take
 	for cy in range(0, h, cs):
 		for cx in range(0, w, cs):
 			var chunk := FloorChunk.new()
@@ -365,7 +365,7 @@ func _build_walls() -> void:
 			pit.add_child(pshape)
 			level.walls_root.add_child(pit)
 	# wall visuals, chunked
-	var cs := 16
+	var cs := 8   # small enough that no chunk is touched by more lights than an item can take
 	for cy in range(0, h, cs):
 		for cx in range(0, w, cs):
 			var wc := WallChunk.new()
@@ -631,7 +631,7 @@ class FloorChunk extends Node2D:
 				var cols := PackedColorArray()
 				for d in [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1), Vector2i(0, 1)]:
 					var n := _grime(c.x + d.x, c.y + d.y)
-					cols.append(Color(0.03, 0.0, 0.06, 0.02 + 0.5 * n * n * n))
+					cols.append(Color(0.03, 0.0, 0.06, 0.02 + 0.32 * n * n * n))
 				draw_polygon(pts, cols)
 		for y in range(rect.position.y, rect.end.y):
 			for x in range(rect.position.x, rect.end.x):
