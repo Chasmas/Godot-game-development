@@ -1613,27 +1613,37 @@
     },
     {
       "type": "sprite",
-      "id": "hq_directors_chairs",
+      "id": "hq_light_stand",
       "pos": [
-        25,
-        31
+        29,
+        26
       ],
       "size": 0.72,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_directors_chairs",
+      "id": "hq_light_stand",
       "pos": [
-        45,
-        13
+        41,
+        26
       ],
       "size": 0.72,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_directors_chairs",
+      "id": "hq_light_stand",
+      "pos": [
+        26,
+        32
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_light_stand",
       "pos": [
         44,
         32
@@ -1643,10 +1653,130 @@
     },
     {
       "type": "sprite",
-      "id": "hq_catering_table",
+      "id": "hq_crate_stack",
       "pos": [
-        27,
+        21,
+        10
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        49,
+        40
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        36,
+        24
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        21,
+        39
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_costume_rack",
+      "pos": [
+        29,
+        20
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_costume_rack",
+      "pos": [
+        45,
+        13
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_makeup_station",
+      "pos": [
+        21,
+        24
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        32,
         25
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        47,
+        15
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        35,
+        8
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        42,
+        30
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        38,
+        18
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_directors_chairs",
+      "pos": [
+        32,
+        36
       ],
       "size": 0.72,
       "auto": true
@@ -1655,8 +1785,28 @@
       "type": "sprite",
       "id": "hq_catering_table",
       "pos": [
-        47,
-        15
+        32,
+        32
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_catering_table",
+      "pos": [
+        48,
+        18
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_catering_table",
+      "pos": [
+        33,
+        14
       ],
       "size": 0.72,
       "auto": true

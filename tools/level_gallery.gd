@@ -24,7 +24,9 @@ func _ready() -> void:
  level.add_child(probe)
  probe.global_position = points.get(mid, Vector2(500,300))
  level.camera.target = probe
- level.camera.zoom_bias = 1.0
+ level.camera.zoom_bias = float(OS.get_environment("GALLERY_ZOOM")) if OS.get_environment("GALLERY_ZOOM") != "" else 1.0
+ if OS.get_environment("GALLERY_AT") == "player":
+  probe.global_position = (get_tree().get_first_node_in_group("player") as Node2D).global_position
  level.camera.snap_to_target()
  if level.hud: level.hud.visible = false
  for i in 20: await get_tree().process_frame
