@@ -8,6 +8,7 @@ extends Node
 
 const SCALE := 2.0          ## texels per world pixel in the baked texture
 const MAX_TEX := 4096
+const TILE := 128.0         ## world pixels per baked tile
 
 var jobs: Array = []        ## [node, world rect]
 
@@ -60,17 +61,26 @@ func _ready() -> void:
 		parent.add_child(node)
 		parent.move_child(node, mini(int(p[5]), parent.get_child_count() - 1))
 		if img and not img.is_empty():
-			var s := Sprite2D.new()
-			s.name = str(node.name) + "Baked"
-			s.texture = ImageTexture.create_from_image(img)
-			s.centered = false
-			s.position = world.position
-			s.scale = Vector2(1.0 / k, 1.0 / k)
-			s.z_index = node.z_index
-			s.z_as_relative = node.z_as_relative
-			s.light_mask = node.light_mask
-			s.material = node.material
-			s.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-			parent.add_child(s)
+			# shown as tiles: a canvas item only takes so many lights, and one
+			# level-sized sprite would drop most of them
+			var tex := ImageTexture.create_from_image(img)
+			var step := int(TILE * k)
+			for ty in range(0, img.get_height(), step):
+				for tx in range(0, img.get_width(), step):
+					var reg := Rect2(tx, ty, mini(step, img.get_width() - tx), mini(step, img.get_height() - ty))
+					var s := Sprite2D.new()
+					s.name = str(node.name) + "Baked"
+					s.texture = tex
+					s.region_enabled = true
+					s.region_rect = reg
+					s.centered = false
+					s.position = world.position + reg.position / k
+					s.scale = Vector2(1.0 / k, 1.0 / k)
+					s.z_index = node.z_index
+					s.z_as_relative = node.z_as_relative
+					s.light_mask = node.light_mask
+					s.material = node.material
+					s.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+					parent.add_child(s)
 			node.visible = false
 		vp.queue_free()
