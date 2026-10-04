@@ -12,7 +12,7 @@ SOLID_NEAR = set("DW")           # keep doorways and windows clear
 # (sprite id, count, zone, floor chars, extra)  extra: wall=True hugs a wall, size, clear=cells of free floor around
 RULES = {
  "m01_sunset_palms": [
-  ("motel_pool_lounger", 6, "courtyard", "=", dict(size=0.9, edge_of="~")),
+  ("motel_pool_lounger", 6, "courtyard", "=", dict(size=0.9, edge_of="~", mode="row", gap=3)),
   ("motel_pool_umbrella", 3, "courtyard", "=", dict(size=0.9, edge_of="~")),
   ("motel_pool_float_flamingo", 1, "courtyard", "~", dict(size=0.7, floor=True)),
   ("motel_bedside_lamp", 5, "north_wing", ".", dict(size=0.5, near="b")),
@@ -41,10 +41,10 @@ RULES = {
  ],
  "m04_villa_estrella": [
   ("villa_fountain", 1, "exterior", "\"", dict(size=1.0, clear=3)),
-  ("villa_garden_statue", 4, "exterior", "\"", dict(size=0.8, clear=1)),
-  ("villa_flower_bed", 4, "exterior", "\"", dict(size=0.9, clear=1)),
+  ("villa_garden_statue", 4, "exterior", "\"", dict(size=0.8, clear=1, mode="mirror", gap=10)),
+  ("villa_flower_bed", 4, "exterior", "\"", dict(size=0.9, clear=2, mode="mirror", gap=8)),
   ("villa_wine_glasses", 3, "ballroom", "_.,", dict(size=0.6, floor=True)),
-  ("candelabra", 5, "ballroom", "_.,", dict(size=0.6, wall=True)),
+  ("candelabra", 6, "ballroom", "_.,", dict(size=0.6, wall=True, mode="mirror", gap=5)),
   ("candelabra", 3, "foyer", "_.,", dict(size=0.6, wall=True)),
   ("villa_candle_ring", 2, "foyer", "_.,", dict(size=0.7, floor=True, clear=1)),
   ("piano", 1, "west_wing", "_.,", dict(size=0.9, wall=True, clear=1)),
@@ -55,7 +55,7 @@ HQ = os.path.join(ROOT, "assets", "art", "pixellab_world", "sprites_hq")
 # the big dense kit (tools/art/pixellab_props_hq.py); rules whose sprite isn't generated yet are skipped
 RULES_HQ = {
  "m01_sunset_palms": [
-  ("hq_pool_lounger_set", 3, "courtyard", "=", dict(size=1.0, clear=2, edge_of="~")),
+  ("hq_pool_lounger_set", 3, "courtyard", "=", dict(size=1.0, clear=2, edge_of="~", mode="row", gap=5)),
   ("hq_pool_cooler", 2, "courtyard", "=", dict(size=1.0)),
   ("hq_palm_planter", 4, "courtyard", "=", dict(size=1.0, clear=1)),
   ("hq_motel_dresser", 4, "north_wing", ".", dict(size=1.0, wall=True, clear=1)),
@@ -74,7 +74,7 @@ RULES_HQ = {
   ("hq_generator", 2, "warehouse", "+:", dict(size=1.0, wall=True, clear=1)),
  ],
  "m03_khsc_studios": [
-  ("hq_light_stand", 4, "stage", "-:", dict(size=1.0, clear=1)),
+  ("hq_light_stand", 4, "stage", "-:", dict(size=1.0, clear=1, mode="mirror", gap=6)),
   ("hq_camera_dolly", 2, "stage", "-:", dict(size=1.0, clear=2)),
   ("hq_directors_chairs", 3, "stage", "-:", dict(size=1.0, clear=1)),
   ("hq_set_flat", 2, "stage", "-", dict(size=1.0, wall=True, clear=1)),
@@ -91,9 +91,9 @@ RULES_HQ = {
   ("hq_display_cabinet", 2, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
   ("hq_bar_cabinet", 1, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
   ("hq_stair_runner", 1, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
-  ("hq_grand_planter", 4, "foyer", "_.,", dict(size=1.0, clear=1)),
-  ("hq_garden_bench", 4, "exterior", "\"", dict(size=1.0, clear=1)),
-  ("hq_hedge", 6, "exterior", "\"", dict(size=1.0, clear=1)),
+  ("hq_grand_planter", 4, "foyer", "_.,", dict(size=1.0, clear=1, mode="mirror", gap=4)),
+  ("hq_garden_bench", 4, "exterior", "\"", dict(size=1.0, clear=1, mode="mirror", gap=8)),
+  ("hq_hedge", 6, "exterior", "\"", dict(size=1.0, clear=1, mode="row", gap=4)),
   ("hq_sun_loungers", 2, "exterior", "\"", dict(size=1.0, clear=1, edge_of="~")),
   ("hq_grand_planter", 3, "exterior", "\"", dict(size=1.0, clear=1)),
  ],
@@ -149,32 +149,60 @@ def build(name):
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
     rules = list(RULES[name]) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
-    for sid, count, zone, chars, ex in rules:
-        zx, zy, zw, zh = d["zones"][zone]
-        cells = [(x, y) for y in range(zy, min(zy + zh, H)) for x in range(zx, min(zx + zw, W)) if ch(x, y) in chars]
-        rng.shuffle(cells)
+
+    def ok(x, y, ex):
         clear = ex.get("clear", 1)
+        if ch(x, y) not in ex["chars"]: return False
+        ring = [(x + dx, y + dy) for dy in range(-clear, clear + 1) for dx in range(-clear, clear + 1)]
+        if any(ch(a, b) in SOLID_NEAR for a, b in ring): return False
+        if ex.get("edge_of"):
+            if not any(ch(a, b) == ex["edge_of"] for a, b in ring): return False
+            ring = [(a, b) for a, b in ring if ch(a, b) != ex["edge_of"]]
+        okc = (FLOORS if ("~" in ex["chars"] or ex.get("edge_of")) else FLOORS - {"~"}) | ({"#"} if ex.get("wall") else set()) | ({ex["near"]} if ex.get("near") else set())
+        if not all(ch(a, b) in okc for a, b in ring if (a, b) != (x, y)): return False
+        if ex.get("near"):
+            if not any(ch(x + dx, y + dy) == ex["near"] for dx in range(-2, 3) for dy in range(-2, 3)): return False
+            if any(ch(x + dx, y + dy) == "#" for dx in (-1, 0, 1) for dy in (-1, 0, 1)): return False
+        near_wall = any(ch(a, b) == "#" for a, b in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)])
+        if ex.get("wall") and not near_wall: return False
+        if not ex.get("wall") and near_wall and clear > 1: return False
+        if any(abs(x - tx) + abs(y - ty) < 4 for tx, ty in taken): return False
+        if any(abs(x - kx) < 4 and abs(y - ky) < 4 for kx, ky in keep_clear): return False
+        return True
+
+    def spread(cands, count, gap):
+        """Even spacing: farthest-point sampling, so pieces read as laid out, not scattered."""
+        if not cands: return []
+        picks = [min(cands, key=lambda c: (c[0], c[1]))]
+        while len(picks) < count:
+            best = max(cands, key=lambda c: min(abs(c[0]-p[0]) + abs(c[1]-p[1]) for p in picks))
+            if min(abs(best[0]-p[0]) + abs(best[1]-p[1]) for p in picks) < gap: break
+            picks.append(best)
+        return picks
+
+    for sid, count, zone, chars, ex in rules:
+        ex = dict(ex, chars=chars)
+        zx, zy, zw, zh = d["zones"][zone]
+        cells = [(x, y) for y in range(zy, min(zy + zh, H)) for x in range(zx, min(zx + zw, W)) if ok(x, y, ex)]
+        mode = ex.get("mode", "spread")
+        if mode == "row":     # one straight aligned row (loungers by the pool, planters along a wall)
+            rows = {}
+            for c in cells: rows.setdefault(c[1], []).append(c)
+            best = max(rows.values(), key=len) if rows else []
+            picks = spread(best, count, ex.get("gap", 3) + 1)
+        elif mode == "mirror":   # pairs either side of the zone's centre line
+            cx2 = zx * 2 + zw - 1
+            half = [c for c in cells if c[0] * 2 < cx2 and ok(cx2 - c[0], c[1], ex) and (cx2 - c[0], c[1]) != c]
+            picks = []
+            for c in spread(half, max(1, count // 2), ex.get("gap", 4) + 2):
+                picks += [c, (cx2 - c[0], c[1])]
+        else:
+            picks = spread(cells, count, ex.get("gap", 4))
         placed = 0
-        for x, y in cells:
-            if placed >= count: break
-            ring = [(x + dx, y + dy) for dy in range(-clear, clear + 1) for dx in range(-clear, clear + 1)]
-            if any(ch(a, b) in SOLID_NEAR for a, b in ring): continue
-            if ex.get("edge_of"):
-                if not any(ch(a, b) == ex["edge_of"] for a, b in ring): continue
-                ring = [(a, b) for a, b in ring if ch(a, b) != ex["edge_of"]]
-            okc = (FLOORS if ("~" in chars or ex.get("edge_of")) else FLOORS - {"~"}) | ({"#"} if ex.get("wall") else set()) | ({ex["near"]} if ex.get("near") else set())
-            if not all(ch(a, b) in okc for a, b in ring if (a, b) != (x, y)): continue
-            if ex.get("near"):
-                if not any(ch(x + dx, y + dy) == ex["near"] for dx in range(-2, 3) for dy in range(-2, 3)): continue
-                if any(ch(x + dx, y + dy) == "#" for dx in (-1, 0, 1) for dy in (-1, 0, 1)): continue
-            near_wall = any(ch(a, b) == "#" for a, b in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)])
-            if ex.get("wall") and not near_wall: continue
-            if not ex.get("wall") and near_wall and clear > 1: continue
-            if any(abs(x - tx) + abs(y - ty) < 4 for tx, ty in taken): continue
-            if any(abs(x - kx) < 4 and abs(y - ky) < 4 for kx, ky in keep_clear): continue
+        for x, y in picks[:count]:
             it = {"type": "sprite", "id": sid, "pos": [x, y], "size": ex.get("size", 1.0), "auto": True}
             if ex.get("floor"): it["floor"] = True
-            if ex.get("rot"): it["rot"] = rng.choice([0, 25, 45, 90, 135])
+            if ex.get("rot"): it["rot"] = rng.choice([0, 25, 45, 90, 135]) if mode == "spread" else 0
             d["decor"].append(it); taken.append((x, y)); placed += 1; added += 1
         if placed < count: print(f"  {name}: {sid} placed {placed}/{count}")
     json.dump(d, open(path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)

@@ -1318,8 +1318,8 @@
       "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
-        9,
-        30
+        3,
+        27
       ],
       "size": 1.0,
       "auto": true
@@ -1328,8 +1328,8 @@
       "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
-        34,
-        34
+        62,
+        35
       ],
       "size": 1.0,
       "auto": true
@@ -1338,8 +1338,8 @@
       "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
-        56,
-        23
+        28,
+        37
       ],
       "size": 1.0,
       "auto": true
@@ -1348,8 +1348,8 @@
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        27,
-        38
+        2,
+        21
       ],
       "size": 0.8,
       "auto": true
@@ -1358,7 +1358,17 @@
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        25,
+        63,
+        32
+      ],
+      "size": 0.8,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        26,
         41
       ],
       "size": 0.8,
@@ -1368,18 +1378,8 @@
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        18,
-        37
-      ],
-      "size": 0.8,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "yard_oil_barrel_cluster",
-      "pos": [
-        25,
-        36
+        37,
+        21
       ],
       "size": 0.8,
       "auto": true
@@ -1388,8 +1388,8 @@
       "type": "sprite",
       "id": "yard_tire_stack",
       "pos": [
-        5,
-        37
+        2,
+        33
       ],
       "size": 0.7,
       "auto": true
@@ -1398,8 +1398,18 @@
       "type": "sprite",
       "id": "yard_tire_stack",
       "pos": [
-        19,
-        29
+        63,
+        23
+      ],
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tire_stack",
+      "pos": [
+        37,
+        41
       ],
       "size": 0.7,
       "auto": true
@@ -1409,17 +1419,7 @@
       "id": "yard_tire_stack",
       "pos": [
         22,
-        30
-      ],
-      "size": 0.7,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "yard_tire_stack",
-      "pos": [
-        38,
-        41
+        22
       ],
       "size": 0.7,
       "auto": true
@@ -1428,7 +1428,27 @@
       "type": "sprite",
       "id": "yard_scrap_pile",
       "pos": [
-        23,
+        4,
+        35
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_scrap_pile",
+      "pos": [
+        57,
+        22
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_scrap_pile",
+      "pos": [
+        38,
         38
       ],
       "size": 0.9,
@@ -1438,28 +1458,8 @@
       "type": "sprite",
       "id": "yard_scrap_pile",
       "pos": [
-        29,
-        36
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "yard_scrap_pile",
-      "pos": [
-        61,
-        34
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "yard_scrap_pile",
-      "pos": [
         18,
-        23
+        22
       ],
       "size": 0.9,
       "auto": true
@@ -1468,8 +1468,8 @@
       "type": "sprite",
       "id": "yard_storage_container",
       "pos": [
-        50,
-        27
+        6,
+        29
       ],
       "size": 1.0,
       "auto": true
@@ -1478,8 +1478,8 @@
       "type": "sprite",
       "id": "yard_storage_container",
       "pos": [
-        62,
-        29
+        56,
+        38
       ],
       "size": 1.0,
       "auto": true
@@ -1488,8 +1488,8 @@
       "type": "sprite",
       "id": "yard_welder_sparks",
       "pos": [
-        11,
-        16
+        2,
+        6
       ],
       "size": 0.7,
       "auto": true,
@@ -1499,8 +1499,8 @@
       "type": "sprite",
       "id": "yard_welder_sparks",
       "pos": [
-        9,
-        14
+        29,
+        10
       ],
       "size": 0.7,
       "auto": true,
@@ -1511,7 +1511,7 @@
       "id": "yard_oil_barrel_cluster",
       "pos": [
         1,
-        13
+        9
       ],
       "size": 0.8,
       "auto": true
@@ -1520,8 +1520,8 @@
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        9,
-        18
+        27,
+        1
       ],
       "size": 0.8,
       "auto": true
@@ -1530,8 +1530,8 @@
       "type": "sprite",
       "id": "hq_junk_heap",
       "pos": [
-        22,
-        22
+        9,
+        30
       ],
       "size": 1.0,
       "auto": true
@@ -1540,8 +1540,8 @@
       "type": "sprite",
       "id": "hq_junk_heap",
       "pos": [
-        3,
-        34
+        62,
+        28
       ],
       "size": 1.0,
       "auto": true
@@ -1550,47 +1550,7 @@
       "type": "sprite",
       "id": "hq_junk_heap",
       "pos": [
-        3,
-        27
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        40,
-        38
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        2,
-        23
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        46,
-        38
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        31,
+        32,
         40
       ],
       "size": 1.0,
@@ -1600,27 +1560,47 @@
       "type": "sprite",
       "id": "hq_crate_stack",
       "pos": [
-        58,
-        26
+        5,
+        38
       ],
       "size": 1.0,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_fire_barrel",
+      "id": "hq_crate_stack",
       "pos": [
-        6,
-        29
+        54,
+        21
       ],
       "size": 1.0,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_fire_barrel",
+      "id": "hq_crate_stack",
       "pos": [
-        7,
+        33,
+        33
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        15,
+        21
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        50,
         39
       ],
       "size": 1.0,
@@ -1630,8 +1610,8 @@
       "type": "sprite",
       "id": "hq_fire_barrel",
       "pos": [
-        56,
-        31
+        6,
+        33
       ],
       "size": 1.0,
       "auto": true
@@ -1640,8 +1620,28 @@
       "type": "sprite",
       "id": "hq_fire_barrel",
       "pos": [
-        57,
-        35
+        58,
+        25
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        29,
+        21
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        42,
+        41
       ],
       "size": 1.0,
       "auto": true
@@ -1650,8 +1650,8 @@
       "type": "sprite",
       "id": "hq_forklift",
       "pos": [
-        42,
-        25
+        12,
+        29
       ],
       "size": 1.0,
       "auto": true
@@ -1670,8 +1670,8 @@
       "type": "sprite",
       "id": "hq_tire_wall",
       "pos": [
-        63,
-        24
+        7,
+        40
       ],
       "size": 1.0,
       "auto": true
@@ -1680,8 +1680,8 @@
       "type": "sprite",
       "id": "hq_tire_wall",
       "pos": [
-        16,
-        21
+        60,
+        30
       ],
       "size": 1.0,
       "auto": true
@@ -1691,7 +1691,7 @@
       "id": "hq_workbench",
       "pos": [
         1,
-        18
+        13
       ],
       "size": 1.0,
       "auto": true
@@ -1700,8 +1700,8 @@
       "type": "sprite",
       "id": "hq_workbench",
       "pos": [
-        9,
-        1
+        30,
+        4
       ],
       "size": 1.0,
       "auto": true
@@ -1709,39 +1709,39 @@
     {
       "type": "sprite",
       "id": "hq_engine_block",
+      "pos": [
+        2,
+        16
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_engine_block",
+      "pos": [
+        28,
+        6
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_generator",
+      "pos": [
+        8,
+        1
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_generator",
       "pos": [
         26,
-        10
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_engine_block",
-      "pos": [
-        22,
-        7
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_generator",
-      "pos": [
-        25,
-        1
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_generator",
-      "pos": [
-        19,
-        1
+        11
       ],
       "size": 1.0,
       "auto": true

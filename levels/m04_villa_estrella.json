@@ -1634,8 +1634,8 @@
       "type": "sprite",
       "id": "villa_fountain",
       "pos": [
-        56,
-        46
+        16,
+        52
       ],
       "size": 1.0,
       "auto": true
@@ -1644,8 +1644,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        69,
-        55
+        5,
+        37
       ],
       "size": 0.8,
       "auto": true
@@ -1654,8 +1654,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        28,
-        39
+        66,
+        37
       ],
       "size": 0.8,
       "auto": true
@@ -1664,7 +1664,7 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        25,
+        33,
         52
       ],
       "size": 0.8,
@@ -1674,8 +1674,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        10,
-        47
+        38,
+        52
       ],
       "size": 0.8,
       "auto": true
@@ -1684,37 +1684,7 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        23,
-        57
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_flower_bed",
-      "pos": [
-        19,
-        52
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_flower_bed",
-      "pos": [
-        68,
-        46
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_flower_bed",
-      "pos": [
-        42,
+        22,
         37
       ],
       "size": 0.9,
@@ -1722,21 +1692,40 @@
     },
     {
       "type": "sprite",
-      "id": "villa_wine_glasses",
+      "id": "villa_flower_bed",
       "pos": [
-        40,
-        11
+        49,
+        37
       ],
-      "size": 0.6,
-      "auto": true,
-      "floor": true
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_flower_bed",
+      "pos": [
+        33,
+        40
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_flower_bed",
+      "pos": [
+        38,
+        40
+      ],
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "villa_wine_glasses",
       "pos": [
-        47,
-        14
+        24,
+        5
       ],
       "size": 0.6,
       "auto": true,
@@ -1747,7 +1736,18 @@
       "id": "villa_wine_glasses",
       "pos": [
         48,
-        6
+        15
+      ],
+      "size": 0.6,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_wine_glasses",
+      "pos": [
+        31,
+        19
       ],
       "size": 0.6,
       "auto": true,
@@ -1757,27 +1757,7 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
-        30,
-        20
-      ],
-      "size": 0.6,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "candelabra",
-      "pos": [
-        44,
-        20
-      ],
-      "size": 0.6,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "candelabra",
-      "pos": [
-        43,
+        23,
         1
       ],
       "size": 0.6,
@@ -1787,8 +1767,28 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
-        26,
+        49,
         1
+      ],
+      "size": 0.6,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "candelabra",
+      "pos": [
+        34,
+        20
+      ],
+      "size": 0.6,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "candelabra",
+      "pos": [
+        38,
+        20
       ],
       "size": 0.6,
       "auto": true
@@ -1807,18 +1807,8 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
-        42,
-        22
-      ],
-      "size": 0.6,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "candelabra",
-      "pos": [
-        35,
-        22
+        37,
+        1
       ],
       "size": 0.6,
       "auto": true
@@ -1835,10 +1825,30 @@
     },
     {
       "type": "sprite",
+      "id": "candelabra",
+      "pos": [
+        47,
+        33
+      ],
+      "size": 0.6,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "candelabra",
+      "pos": [
+        40,
+        22
+      ],
+      "size": 0.6,
+      "auto": true
+    },
+    {
+      "type": "sprite",
       "id": "villa_candle_ring",
       "pos": [
-        38,
-        27
+        24,
+        28
       ],
       "size": 0.7,
       "auto": true,
@@ -1848,8 +1858,8 @@
       "type": "sprite",
       "id": "villa_candle_ring",
       "pos": [
-        47,
-        32
+        45,
+        31
       ],
       "size": 0.7,
       "auto": true,
@@ -1859,8 +1869,8 @@
       "type": "sprite",
       "id": "piano",
       "pos": [
-        21,
-        30
+        5,
+        6
       ],
       "size": 0.9,
       "auto": true
@@ -1869,8 +1879,8 @@
       "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
-        41,
-        14
+        27,
+        18
       ],
       "size": 1.0,
       "auto": true
@@ -1879,11 +1889,22 @@
       "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
+        47,
+        6
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_persian_rug",
+      "pos": [
         31,
         14
       ],
       "size": 1.0,
-      "auto": true
+      "auto": true,
+      "floor": true
     },
     {
       "type": "sprite",
@@ -1898,20 +1919,9 @@
     },
     {
       "type": "sprite",
-      "id": "hq_persian_rug",
-      "pos": [
-        27,
-        18
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "hq_ornate_sofa",
       "pos": [
-        38,
+        25,
         20
       ],
       "size": 1.0,
@@ -1921,7 +1931,7 @@
       "type": "sprite",
       "id": "hq_ornate_sofa",
       "pos": [
-        49,
+        45,
         1
       ],
       "size": 1.0,
@@ -1931,8 +1941,198 @@
       "type": "sprite",
       "id": "hq_ornate_sofa",
       "pos": [
-        25,
+        44,
         20
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fireplace",
+      "pos": [
+        27,
+        1
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_display_cabinet",
+      "pos": [
+        23,
+        31
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_display_cabinet",
+      "pos": [
+        36,
+        22
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_bar_cabinet",
+      "pos": [
+        33,
+        32
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_garden_bench",
+      "pos": [
+        10,
+        57
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_garden_bench",
+      "pos": [
+        61,
+        57
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_garden_bench",
+      "pos": [
+        31,
+        37
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_garden_bench",
+      "pos": [
+        40,
+        37
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        10,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        69,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        39,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        24,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        55,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_hedge",
+      "pos": [
+        47,
+        49
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_sun_loungers",
+      "pos": [
+        31,
+        42
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_sun_loungers",
+      "pos": [
+        40,
+        46
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        4,
+        41
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        69,
+        57
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        44,
+        37
       ],
       "size": 1.0,
       "auto": true

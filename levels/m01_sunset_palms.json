@@ -1343,26 +1343,6 @@
       "type": "sprite",
       "id": "motel_pool_lounger",
       "pos": [
-        23,
-        14
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_pool_lounger",
-      "pos": [
-        31,
-        21
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_pool_lounger",
-      "pos": [
         19,
         21
       ],
@@ -1371,10 +1351,30 @@
     },
     {
       "type": "sprite",
-      "id": "motel_pool_float_flamingo",
+      "id": "motel_pool_lounger",
+      "pos": [
+        33,
+        21
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_umbrella",
       "pos": [
         23,
-        18
+        14
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_float_flamingo",
+      "pos": [
+        20,
+        17
       ],
       "size": 0.7,
       "auto": true,
@@ -1384,7 +1384,17 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        50,
+        6,
+        3
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        51,
         6
       ],
       "size": 0.5,
@@ -1395,27 +1405,7 @@
       "id": "motel_bedside_lamp",
       "pos": [
         48,
-        4
-      ],
-      "size": 0.5,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        51,
         3
-      ],
-      "size": 0.5,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        6,
-        4
       ],
       "size": 0.5,
       "auto": true
@@ -1434,8 +1424,28 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        17,
-        37
+        7,
+        6
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        14,
+        39
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        50,
+        29
       ],
       "size": 0.5,
       "auto": true
@@ -1452,19 +1462,9 @@
     },
     {
       "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        22,
-        38
-      ],
-      "size": 0.5,
-      "auto": true
-    },
-    {
-      "type": "sprite",
       "id": "motel_tv_crt",
       "pos": [
-        14,
+        5,
         8
       ],
       "size": 0.7,
@@ -1474,8 +1474,8 @@
       "type": "sprite",
       "id": "motel_tv_crt",
       "pos": [
-        5,
-        7
+        44,
+        2
       ],
       "size": 0.7,
       "auto": true
@@ -1484,7 +1484,7 @@
       "type": "sprite",
       "id": "motel_tv_crt",
       "pos": [
-        41,
+        22,
         2
       ],
       "size": 0.7,
@@ -1494,7 +1494,19 @@
       "type": "sprite",
       "id": "motel_suitcase_open",
       "pos": [
-        42,
+        9,
+        8
+      ],
+      "size": 0.7,
+      "auto": true,
+      "floor": true,
+      "rot": 45
+    },
+    {
+      "type": "sprite",
+      "id": "motel_suitcase_open",
+      "pos": [
+        46,
         5
       ],
       "size": 0.7,
@@ -1512,26 +1524,14 @@
       "size": 0.7,
       "auto": true,
       "floor": true,
-      "rot": 45
-    },
-    {
-      "type": "sprite",
-      "id": "motel_suitcase_open",
-      "pos": [
-        12,
-        5
-      ],
-      "size": 0.7,
-      "auto": true,
-      "floor": true,
       "rot": 135
     },
     {
       "type": "sprite",
       "id": "motel_ice_bucket_full",
       "pos": [
-        59,
-        35
+        55,
+        14
       ],
       "size": 0.5,
       "auto": true,
@@ -1541,8 +1541,8 @@
       "type": "sprite",
       "id": "motel_ice_bucket_full",
       "pos": [
-        62,
-        32
+        64,
+        36
       ],
       "size": 0.5,
       "auto": true,
@@ -1550,10 +1550,10 @@
     },
     {
       "type": "sprite",
-      "id": "hq_pool_cooler",
+      "id": "hq_pool_lounger_set",
       "pos": [
-        47,
-        18
+        29,
+        22
       ],
       "size": 1.0,
       "auto": true
@@ -1562,7 +1562,17 @@
       "type": "sprite",
       "id": "hq_pool_cooler",
       "pos": [
-        29,
+        6,
+        15
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_pool_cooler",
+      "pos": [
+        51,
         23
       ],
       "size": 1.0,
@@ -1572,38 +1582,58 @@
       "type": "sprite",
       "id": "hq_palm_planter",
       "pos": [
+        7,
+        23
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        51,
+        14
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        32,
+        24
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
         16,
-        24
+        13
       ],
       "size": 1.0,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_palm_planter",
+      "id": "hq_motel_dresser",
       "pos": [
-        20,
-        24
+        14,
+        8
       ],
       "size": 1.0,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_palm_planter",
+      "id": "hq_motel_dresser",
       "pos": [
-        9,
-        22
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_palm_planter",
-      "pos": [
-        39,
-        21
+        40,
+        2
       ],
       "size": 1.0,
       "auto": true
@@ -1620,10 +1650,10 @@
     },
     {
       "type": "sprite",
-      "id": "hq_motel_dresser",
+      "id": "hq_motel_vending",
       "pos": [
-        22,
-        2
+        54,
+        17
       ],
       "size": 1.0,
       "auto": true
@@ -1632,17 +1662,7 @@
       "type": "sprite",
       "id": "hq_motel_vending",
       "pos": [
-        65,
-        16
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_motel_vending",
-      "pos": [
-        65,
+        58,
         36
       ],
       "size": 1.0,
