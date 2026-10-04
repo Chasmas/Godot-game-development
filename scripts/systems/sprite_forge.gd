@@ -766,7 +766,7 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 	# finished body read like a toy skeleton at gameplay scale.  A severed part
 	# is still represented by blood and a single contextual gib; the body stays
 	# a readable clothed silhouette.
-	if not downed:
+	if not downed or missing == "":
 		var pc := _cast("corpse_" + base_name(palette))
 		if pc:
 			_cache[key] = pc
