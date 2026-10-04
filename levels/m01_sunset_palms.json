@@ -715,36 +715,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_exit_arrow",
-      "pos": [
-        8,
-        46
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_exit_arrow",
-      "pos": [
-        6,
-        32
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_exit_arrow",
-      "pos": [
-        40,
-        13
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "motel_water_ring",
       "pos": [
         19,
@@ -842,46 +812,6 @@
       ],
       "size": 0.34,
       "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        19,
-        14
-      ],
-      "size": 0.8,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        35,
-        19
-      ],
-      "size": 0.8,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_towel_cart",
-      "pos": [
-        45,
-        22
-      ],
-      "size": 0.48,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_room_key_spill",
-      "pos": [
-        34,
-        13
-      ],
-      "size": 0.34,
-      "floor": false
     },
     {
       "type": "sprite",

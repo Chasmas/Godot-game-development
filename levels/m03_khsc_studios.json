@@ -841,26 +841,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_cable_spool",
-      "pos": [
-        30,
-        30
-      ],
-      "size": 0.3,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_fern",
-      "pos": [
-        61,
-        15
-      ],
-      "size": 0.36,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_overhead_light_rig",
       "pos": [
         2,

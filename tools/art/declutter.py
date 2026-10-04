@@ -16,6 +16,7 @@ SMALL = {
 BIG_HINTS = ("table", "sofa", "piano", "cabinet", "station", "rack", "bench", "bed", "desk", "planter", "coffin",
              "monitor", "teleprompter", "screen", "fountain", "statue", "lounger", "rig", "crate", "chairs", "bar", "rug", "mirror")
 WALLS = set("#W%")
+DROP = {"motel_exit_arrow"}   # reads as a road marking on a pool deck
 
 def main(dry):
     for name in LEVELS:
@@ -29,7 +30,16 @@ def main(dry):
                         return True
             return False
         bigs = [e["pos"] for e in d["decor"] if e.get("type") == "sprite" and any(h in str(e.get("id", "")) for h in BIG_HINTS)]
-        kept, smalls, count, dropped = [], [], {}, 0
+        # the same sprite placed twice on the same spot draws twice: keep one
+        seen, uniq = set(), []
+        for e in d["decor"]:
+            k = (e.get("type"), e.get("id"), tuple(e.get("pos", [])))
+            if e.get("type") == "sprite" and k in seen:
+                continue
+            seen.add(k); uniq.append(e)
+        dupes = len(d["decor"]) - len(uniq)
+        d["decor"] = [e for e in uniq if e.get("id") not in DROP]
+        kept, smalls, count, dropped = [], [], {}, dupes
         # visit anchored pieces first so the cap keeps the best-placed ones
         def score(e):
             x, y = e["pos"]

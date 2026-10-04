@@ -976,16 +976,6 @@
     },
     {
       "type": "sprite",
-      "id": "villa_ivy_planter",
-      "pos": [
-        6,
-        10
-      ],
-      "size": 0.34,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "villa_ivy_wall_cluster",
       "pos": [
         5,
