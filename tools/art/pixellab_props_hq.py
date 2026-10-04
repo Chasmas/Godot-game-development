@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """High-quality dense prop sprites (3/4 view, highly detailed) via PixelLab pixflux.
   python tools/art/pixellab_props_hq.py <name> [<name> ...] [--out dir]
-Edit PROPS below; output defaults to assets/art/Artwork/pixellab/hq/<name>.png (review first, then promote).
+Edit PROPS below; output goes to assets/art/pixellab_world/sprites_hq/<name>.png (ArtLib shows them at 1/4 size: 160px = 40 game px).
 """
 import base64, io, json, os, sys, time, urllib.request, urllib.error
 from PIL import Image
@@ -11,17 +11,70 @@ STYLE = ("highly detailed isometric-style pixel art game asset, three-quarter vi
          "rich material texture, dense small details, strong warm and cool rim lighting, ambient occlusion, "
          "clean silhouette, limited but rich colour ramps, crisp pixels, no background")
 PROPS = {
-  "hq_persian_rug": (192, 128, "ornate persian rug seen from above, deep red and gold geometric border, intricate medallion pattern, worn fringe tassels"),
-  "hq_bookshelf_full": (128, 160, "tall wooden bookshelf crammed with colourful books, vinyl records, trophies, a small lamp and potted plant on top"),
-  "hq_motel_bed": (160, 128, "1980s motel double bed with rumpled orange floral bedspread, two pillows, a worn blanket, bedside shadow"),
-  "hq_bar_counter": (192, 96, "retro bar counter with rows of liquor bottles behind, glowing neon pink and blue light strip, bar stools, glasses on the surface"),
-  "hq_sofa_velvet": (160, 96, "plush teal velvet sofa with throw cushions and a magazine, polished wood legs"),
-  "hq_crt_wall": (192, 128, "wall of stacked CRT televisions all playing different colourful static and test patterns, cables hanging"),
+  # --- motel ---
+  "hq_motel_bed": (160, 128, "1980s motel double bed, rumpled orange floral bedspread, two pillows, wooden headboard against a wall"),
+  "hq_persian_rug": (192, 128, "ornate persian rug seen from above, deep red and gold geometric border, intricate medallion, worn fringe tassels"),
+  "hq_motel_dresser": (128, 96, "wooden motel dresser with a CRT television, a lamp, an ice bucket, a bible and a phone on top"),
+  "hq_motel_vending": (96, 128, "glowing retro soda and snack vending machine, neon label, coins slot, scratches"),
+  "hq_motel_ice_machine": (96, 112, "motel ice machine, stainless steel, frost, a scoop and bucket beside it, humming"),
+  "hq_neon_beer_sign": (96, 64, "neon beer sign glowing red and blue in a dark window frame"),
+  "hq_motel_curtains": (128, 128, "heavy 1980s motel window with thick mustard curtains, venetian blinds, neon light leaking through"),
+  "hq_pool_lounger_set": (128, 96, "two white pool loungers with towels, a small side table with cocktails and an umbrella shadow"),
+  "hq_pool_cooler": (64, 64, "red and white beach cooler box with bottles and ice, open lid"),
+  "hq_palm_planter": (96, 128, "large terracotta planter with a leafy palm and ferns, little pebbles"),
+  # --- salvage yard ---
+  "hq_workbench": (160, 96, "cluttered mechanic workbench, vise, wrenches, tool wall pegboard above, oil stains, a hanging work lamp"),
+  "hq_engine_block": (128, 96, "engine block on a stand with pistons and hoses, oil dripping, hoist chain"),
+  "hq_forklift": (160, 128, "old rusty yellow forklift, forks raised, hazard stripes, wooden pallet"),
+  "hq_crate_stack": (128, 128, "stack of wooden shipping crates with stencilled markings, rope, tarp corner"),
+  "hq_generator": (128, 96, "diesel generator with fuel cans, cables and a glowing gauge, sparks"),
+  "hq_fire_barrel": (80, 112, "steel oil drum burning with orange flames and embers, soot stains, glowing rim"),
+  "hq_junk_heap": (192, 128, "huge heap of scrap metal, crushed car doors, tyres, pipes, wire, rust and rim light"),
+  "hq_tire_wall": (160, 112, "wall of stacked tyres with a hand-painted warning sign"),
+  "hq_chainlink_gate": (160, 96, "chain-link fence section with barbed wire and a padlocked gate, shadows"),
+  # --- studio ---
+  "hq_directors_chairs": (128, 96, "two canvas director chairs with names stencilled, a clapperboard on a small table, coffee cups"),
+  "hq_camera_dolly": (160, 112, "film camera on a dolly track with a tripod, lens, monitor and cables"),
+  "hq_light_stand": (96, 144, "tall studio light stand with a big fresnel spotlight, barn doors, cables, warm beam"),
+  "hq_monitor_bank": (192, 128, "wall of CRT monitors in a control room desk, mixing console, glowing buttons, coffee cup"),
+  "hq_costume_rack": (160, 112, "wheeled costume rack crammed with colourful 1980s outfits, hats on top, shoes below"),
+  "hq_makeup_station": (160, 112, "makeup station with big mirror ringed in light bulbs, brushes, cosmetics, a chair"),
+  "hq_catering_table": (160, 96, "catering table with coffee urn, donuts, sandwiches, paper cups, a tablecloth"),
+  "hq_set_flat": (160, 128, "film set flat, painted wooden fake wall with a window, braced from behind, scuffs"),
+  # --- villa ---
+  "hq_banquet_table": (192, 112, "long banquet table with white cloth, gold candelabras, wine glasses, plates, roses, red chairs"),
+  "hq_ornate_sofa": (160, 96, "ornate burgundy velvet sofa with gold trim, tassel cushions, carved wooden feet"),
+  "hq_fireplace": (160, 128, "stone fireplace with roaring orange fire, mantel with candles and a gilded mirror above"),
+  "hq_gilt_mirror": (96, 128, "tall ornate gilt-framed mirror reflecting warm candlelight"),
+  "hq_display_cabinet": (128, 128, "glass display cabinet with crystal glasses, porcelain, silver trophies, warm interior light"),
+  "hq_bar_cabinet": (160, 112, "mansion drinks cabinet with decanters, whisky bottles, ice bucket, a lit shelf"),
+  "hq_garden_bench": (128, 80, "wrought iron garden bench with moss, fallen petals, small lantern beside it"),
+  "hq_hedge": (128, 64, "trimmed topiary hedge section with small white flowers and fairy lights"),
+  "hq_stair_runner": (96, 128, "short ornate staircase with red carpet runner and brass rods, balustrade, candle glow"),
+  "hq_grand_planter": (112, 128, "large stone urn planter with lush ferns and orchids, ivy trailing"),
+  "hq_sun_loungers": (160, 96, "two teak sun loungers with striped cushions beside a pool edge, a drink on a side table"),
+  "hq_chandelier_big": (192, 192, "grand crystal chandelier with many lit candles, glittering crystals, warm golden glow"),
 }
 
 def key():
     k = os.environ.get("PIXELLAB_API_KEY", "")
     return k or open(os.path.join(os.path.expanduser("~"), ".pixellab_key"), encoding="utf-8-sig").read().strip()
+
+def clear_backdrop(im):
+    px = im.load(); w, h = im.size
+    corners = [px[0, 0], px[w - 1, 0], px[0, h - 1], px[w - 1, h - 1]]
+    if all(c[3] < 10 for c in corners): return im
+    bg = corners[0]
+    if any(abs(c[i] - bg[i]) > 10 for c in corners for i in range(3)): return im
+    near = lambda c: c[3] > 0 and all(abs(c[i] - bg[i]) <= 14 for i in range(3))
+    stack = [(x, 0) for x in range(w)] + [(x, h - 1) for x in range(w)] + [(0, y) for y in range(h)] + [(w - 1, y) for y in range(h)]
+    seen = set()
+    while stack:
+        x, y = stack.pop()
+        if (x, y) in seen or not (0 <= x < w and 0 <= y < h) or not near(px[x, y]): continue
+        seen.add((x, y)); px[x, y] = (0, 0, 0, 0)
+        stack += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+    return im
 
 def gen(name, out):
     w, h, desc = PROPS[name]
@@ -41,11 +94,14 @@ def gen(name, out):
         return False
     im = Image.open(io.BytesIO(base64.b64decode(r["image"]["base64"].split(",")[-1]))).convert("RGBA")
     os.makedirs(out, exist_ok=True)
+    im = clear_backdrop(im)
     im.save(os.path.join(out, name + ".png"))
     return True
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    out = a[a.index("--out") + 1] if "--out" in a else os.path.join(ROOT, "assets", "art", "Artwork", "pixellab", "hq")
-    for n in [x for x in a if x in PROPS]:
+    out = a[a.index("--out") + 1] if "--out" in a else os.path.join(ROOT, "assets", "art", "pixellab_world", "sprites_hq")
+    names = list(PROPS) if "--all" in a else [x for x in a if x in PROPS]
+    for n in names:
+        if os.path.exists(os.path.join(out, n + ".png")): continue
         print(n, "ok" if gen(n, out) else "FAILED", flush=True)
