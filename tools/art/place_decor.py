@@ -15,25 +15,23 @@ RULES = {
   ("motel_pool_lounger", 6, "courtyard", "=", dict(size=0.9, edge_of="~")),
   ("motel_pool_umbrella", 3, "courtyard", "=", dict(size=0.9, edge_of="~")),
   ("motel_pool_float_flamingo", 1, "courtyard", "~", dict(size=0.7, floor=True)),
-  ("motel_bedside_lamp", 5, "north_wing", ".", dict(size=0.5, wall=True)),
-  ("motel_bedside_lamp", 3, "ground_floor", ".", dict(size=0.5, wall=True)),
+  ("motel_bedside_lamp", 5, "north_wing", ".", dict(size=0.5, near="b")),
+  ("motel_bedside_lamp", 3, "ground_floor", ".", dict(size=0.5, near="b")),
   ("motel_tv_crt", 3, "north_wing", ".", dict(size=0.7, wall=True)),
-  ("motel_telephone", 3, "north_wing", ".", dict(size=0.5, floor=True)),
+  ("motel_telephone", 3, "north_wing", ".", dict(size=0.5, floor=True, near="b")),
   ("motel_suitcase_open", 3, "north_wing", ".", dict(size=0.7, floor=True, rot=True)),
   ("motel_ice_bucket_full", 2, "lobby", ",", dict(size=0.5, floor=True)),
-  ("motel_bedside_lamp", 2, "lobby", ",", dict(size=0.55, wall=True)),
  ],
  "m02_yermo_salvage": [
   ("yard_car_stack", 3, "exterior", ";", dict(size=1.0, clear=2)),
   ("yard_oil_barrel_cluster", 4, "exterior", ";+", dict(size=0.8)),
-  ("yard_tire_stack", 4, "exterior", ";", dict(size=0.9)),
+  ("yard_tire_stack", 4, "exterior", ";", dict(size=0.7)),
   ("yard_scrap_pile", 4, "exterior", ";", dict(size=0.9, clear=2)),
   ("yard_storage_container", 2, "exterior", ";", dict(size=1.0, clear=2)),
   ("yard_welder_sparks", 2, "warehouse", "+:", dict(size=0.7, floor=True)),
   ("yard_oil_barrel_cluster", 2, "warehouse", "+:", dict(size=0.8, wall=True)),
  ],
  "m03_khsc_studios": [
-  ("studio_camera_crane", 2, "stage", "-:", dict(size=0.9, clear=2)),
   ("studio_green_screen", 1, "stage", "-", dict(size=1.0, wall=True)),
   ("studio_clapperboard", 3, "stage", "-:", dict(size=0.5, floor=True)),
   ("studio_teleprompter", 2, "stage", "-", dict(size=0.7)),
@@ -76,8 +74,11 @@ def build(name):
             if ex.get("edge_of"):
                 if not any(ch(a, b) == ex["edge_of"] for a, b in ring): continue
                 ring = [(a, b) for a, b in ring if ch(a, b) != ex["edge_of"]]
-            okc = FLOORS | ({"#"} if ex.get("wall") else set())
+            okc = (FLOORS if ("~" in chars or ex.get("edge_of")) else FLOORS - {"~"}) | ({"#"} if ex.get("wall") else set()) | ({ex["near"]} if ex.get("near") else set())
             if not all(ch(a, b) in okc for a, b in ring if (a, b) != (x, y)): continue
+            if ex.get("near"):
+                if not any(ch(x + dx, y + dy) == ex["near"] for dx in range(-2, 3) for dy in range(-2, 3)): continue
+                if any(ch(x + dx, y + dy) == "#" for dx in (-1, 0, 1) for dy in (-1, 0, 1)): continue
             near_wall = any(ch(a, b) == "#" for a, b in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)])
             if ex.get("wall") and not near_wall: continue
             if not ex.get("wall") and near_wall and clear > 1: continue

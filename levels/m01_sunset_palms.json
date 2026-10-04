@@ -1569,8 +1569,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        5,
-        7
+        50,
+        6
       ],
       "size": 0.5,
       "auto": true
@@ -1579,8 +1579,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        14,
-        8
+        48,
+        4
       ],
       "size": 0.5,
       "auto": true
@@ -1589,17 +1589,7 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        23,
-        2
-      ],
-      "size": 0.5,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        40,
+        51,
         3
       ],
       "size": 0.5,
@@ -1609,8 +1599,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        43,
-        2
+        10,
+        3
       ],
       "size": 0.5,
       "auto": true
@@ -1619,8 +1609,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        33,
-        28
+        7,
+        5
       ],
       "size": 0.5,
       "auto": true
@@ -1629,8 +1619,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        49,
-        30
+        17,
+        37
       ],
       "size": 0.5,
       "auto": true
@@ -1639,8 +1629,18 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        44,
-        36
+        48,
+        39
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        22,
+        38
       ],
       "size": 0.5,
       "auto": true
@@ -1649,60 +1649,37 @@
       "type": "sprite",
       "id": "motel_tv_crt",
       "pos": [
-        11,
-        2
-      ],
-      "size": 0.7,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_tv_crt",
-      "pos": [
-        35,
-        2
-      ],
-      "size": 0.7,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_telephone",
-      "pos": [
-        51,
-        6
-      ],
-      "size": 0.5,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_telephone",
-      "pos": [
-        41,
-        7
-      ],
-      "size": 0.5,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_telephone",
-      "pos": [
-        33,
+        14,
         8
       ],
-      "size": 0.5,
-      "auto": true,
-      "floor": true
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_tv_crt",
+      "pos": [
+        5,
+        7
+      ],
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_tv_crt",
+      "pos": [
+        41,
+        2
+      ],
+      "size": 0.7,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "motel_suitcase_open",
       "pos": [
-        12,
+        42,
         5
       ],
       "size": 0.7,
@@ -1714,8 +1691,8 @@
       "type": "sprite",
       "id": "motel_suitcase_open",
       "pos": [
-        18,
-        5
+        24,
+        4
       ],
       "size": 0.7,
       "auto": true,
@@ -1726,7 +1703,7 @@
       "type": "sprite",
       "id": "motel_suitcase_open",
       "pos": [
-        36,
+        12,
         5
       ],
       "size": 0.7,
@@ -1755,26 +1732,6 @@
       "size": 0.5,
       "auto": true,
       "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        65,
-        35
-      ],
-      "size": 0.55,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "motel_bedside_lamp",
-      "pos": [
-        65,
-        16
-      ],
-      "size": 0.55,
-      "auto": true
     }
   ],
   "cameras": [

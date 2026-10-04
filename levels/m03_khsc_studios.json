@@ -710,7 +710,7 @@
       "type": "trash",
       "pos": [
         36,
-        29
+        30
       ],
       "radius": 44,
       "count": 30
@@ -1547,30 +1547,10 @@
     },
     {
       "type": "sprite",
-      "id": "studio_camera_crane",
-      "pos": [
-        43,
-        26
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_camera_crane",
-      "pos": [
-        39,
-        17
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
       "id": "studio_green_screen",
       "pos": [
-        24,
-        22
+        34,
+        28
       ],
       "size": 1.0,
       "auto": true
@@ -1579,8 +1559,8 @@
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        32,
-        36
+        33,
+        14
       ],
       "size": 0.5,
       "auto": true,
@@ -1589,52 +1569,63 @@
     {
       "type": "sprite",
       "id": "studio_clapperboard",
+      "pos": [
+        42,
+        15
+      ],
+      "size": 0.5,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_clapperboard",
+      "pos": [
+        38,
+        18
+      ],
+      "size": 0.5,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_teleprompter",
+      "pos": [
+        32,
+        36
+      ],
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_teleprompter",
       "pos": [
         48,
         32
       ],
-      "size": 0.5,
-      "auto": true,
-      "floor": true
+      "size": 0.7,
+      "auto": true
     },
     {
       "type": "sprite",
-      "id": "studio_clapperboard",
-      "pos": [
-        41,
-        30
-      ],
-      "size": 0.5,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_teleprompter",
+      "id": "studio_spotlight_beam",
       "pos": [
         35,
         9
       ],
-      "size": 0.7,
-      "auto": true
+      "size": 0.8,
+      "auto": true,
+      "floor": true
     },
     {
       "type": "sprite",
-      "id": "studio_teleprompter",
+      "id": "studio_spotlight_beam",
       "pos": [
         32,
         32
       ],
-      "size": 0.7,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_spotlight_beam",
-      "pos": [
-        47,
-        19
-      ],
       "size": 0.8,
       "auto": true,
       "floor": true
@@ -1643,19 +1634,8 @@
       "type": "sprite",
       "id": "studio_spotlight_beam",
       "pos": [
-        24,
-        31
-      ],
-      "size": 0.8,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_spotlight_beam",
-      "pos": [
-        36,
-        36
+        29,
+        26
       ],
       "size": 0.8,
       "auto": true,
@@ -1665,8 +1645,8 @@
       "type": "sprite",
       "id": "studio_film_reel_pair",
       "pos": [
-        67,
-        17
+        65,
+        15
       ],
       "size": 0.6,
       "auto": true,
@@ -1687,8 +1667,8 @@
       "type": "sprite",
       "id": "studio_film_reel_pair",
       "pos": [
-        53,
-        19
+        67,
+        26
       ],
       "size": 0.6,
       "auto": true,

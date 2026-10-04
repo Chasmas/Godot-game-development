@@ -1715,8 +1715,8 @@
       "type": "sprite",
       "id": "villa_fountain",
       "pos": [
-        40,
-        45
+        38,
+        38
       ],
       "size": 1.0,
       "auto": true
