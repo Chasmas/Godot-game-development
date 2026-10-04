@@ -8,7 +8,7 @@ extends Node
 
 const SCALE := 2.0          ## texels per world pixel in the baked texture
 const MAX_TEX := 4096
-const TILE := 128.0         ## world pixels per baked tile
+const TILE := 64.0         ## world pixels per baked tile
 
 var jobs: Array = []        ## [node, world rect]
 

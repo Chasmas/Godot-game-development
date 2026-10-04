@@ -277,7 +277,7 @@ func _light_color(x: int, y: int) -> Color:
 
 # ---------------------------------------------------------------- floors
 func _build_floor_chunks() -> void:
-	var cs := 8   # small enough that no chunk is touched by more lights than an item can take
+	var cs := 4   # small: a canvas item only takes a few lights, bigger chunks show hard seams
 	for cy in range(0, h, cs):
 		for cx in range(0, w, cs):
 			var chunk := FloorChunk.new()
@@ -365,7 +365,7 @@ func _build_walls() -> void:
 			pit.add_child(pshape)
 			level.walls_root.add_child(pit)
 	# wall visuals, chunked
-	var cs := 8   # small enough that no chunk is touched by more lights than an item can take
+	var cs := 16
 	for cy in range(0, h, cs):
 		for cx in range(0, w, cs):
 			var wc := WallChunk.new()

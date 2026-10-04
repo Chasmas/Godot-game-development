@@ -44,6 +44,13 @@ func _ready() -> void:
 	light.shadow_item_cull_mask = 1
 	add_child(light)
 	_base_energy = energy
+	# one halo per cluster of lamps: they overlap anyway, and every extra light
+	# pushes floor tiles past the per-item light limit (hard seams)
+	for other in get_tree().get_nodes_in_group("light_halos"):
+		if (other as Node2D).global_position.distance_to(global_position) < 120.0:
+			_ready_motes()
+			return
+	add_to_group("light_halos")
 	halo = PointLight2D.new()
 	halo.texture = SpriteLib.light_texture(256)
 	halo.texture_scale = radius_px * 2.6 / 256.0
@@ -52,6 +59,9 @@ func _ready() -> void:
 	halo.shadow_enabled = false
 	halo.range_item_cull_mask = 1
 	add_child(halo)
+	_ready_motes()
+
+func _ready_motes() -> void:
 	if zone != "exterior" and radius_px < 140.0:
 		# dust motes drifting through the light
 		var m := CPUParticles2D.new()
@@ -83,7 +93,8 @@ func set_on(v: bool) -> void:
 		return
 	on = v
 	light.visible = v
-	halo.visible = v
+	if halo:
+		halo.visible = v
 	if not v:
 		factor = 1.0
 	if has_node("Motes"):
@@ -121,7 +132,8 @@ func _process(delta: float) -> void:
 				_stutter = randf_range(0.15, 0.6)
 			_buzz()
 	light.energy = _base_energy * factor
-	halo.energy = _base_energy * 0.34 * factor
+	if halo:
+		halo.energy = _base_energy * 0.34 * factor
 	if has_node("Motes"):
 		get_node("Motes").emitting = factor > 0.3
 
