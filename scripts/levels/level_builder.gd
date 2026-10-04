@@ -109,7 +109,7 @@ func build() -> Dictionary:
 				var ext := zone == "exterior"
 				var fz: Array = data.get("flicker_zones", [])
 				var flick := c == "^" or (fz.has(zone) and randf() < 0.6) or randf() < 0.05
-				lf2.setup(zone, col, 150.0 if ext else 118.0, 1.35 if ext else 0.72, true, flick)
+				lf2.setup(zone, col, 160.0 if ext else 136.0, 1.35 if ext else 0.9, true, flick)
 				lf2.position = center
 				level.lights_root.add_child(lf2)
 				out.lights.append(lf2)

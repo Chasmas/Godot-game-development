@@ -2,9 +2,9 @@
   "id": "m03_khsc_studios",
   "name": "KHSC Studios - Stage Nine",
   "ambient": [
+    0.31,
     0.27,
-    0.23,
-    0.36
+    0.4
   ],
   "map": [
     "######################################################################",
@@ -1549,96 +1549,149 @@
       "type": "sprite",
       "id": "studio_camera_crane",
       "pos": [
-        22,
-        12
+        43,
+        26
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "studio_camera_crane",
       "pos": [
-        38,
-        20
+        39,
+        17
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "studio_green_screen",
       "pos": [
-        18,
-        8
+        24,
+        22
       ],
-      "size": 1.0
+      "size": 1.0,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        28,
-        10
+        32,
+        36
       ],
       "size": 0.5,
+      "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        44,
-        14
+        48,
+        32
       ],
       "size": 0.5,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_clapperboard",
+      "pos": [
+        41,
+        30
+      ],
+      "size": 0.5,
+      "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
       "id": "studio_teleprompter",
       "pos": [
-        25,
-        14
-      ],
-      "size": 0.7
-    },
-    {
-      "type": "sprite",
-      "id": "studio_spotlight_beam",
-      "pos": [
-        32,
-        10
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_spotlight_beam",
-      "pos": [
-        50,
-        18
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_film_reel_pair",
-      "pos": [
-        46,
+        35,
         9
       ],
-      "size": 0.6,
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_teleprompter",
+      "pos": [
+        32,
+        32
+      ],
+      "size": 0.7,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_spotlight_beam",
+      "pos": [
+        47,
+        19
+      ],
+      "size": 0.8,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_spotlight_beam",
+      "pos": [
+        24,
+        31
+      ],
+      "size": 0.8,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_spotlight_beam",
+      "pos": [
+        36,
+        36
+      ],
+      "size": 0.8,
+      "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
       "id": "studio_film_reel_pair",
       "pos": [
-        8,
-        36
+        67,
+        17
       ],
       "size": 0.6,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_film_reel_pair",
+      "pos": [
+        66,
+        20
+      ],
+      "size": 0.6,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_film_reel_pair",
+      "pos": [
+        53,
+        19
+      ],
+      "size": 0.6,
+      "auto": true,
       "floor": true
     }
   ],

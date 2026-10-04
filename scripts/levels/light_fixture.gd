@@ -14,6 +14,7 @@ var shadows := true
 var flicker := false
 var on := true
 var light: PointLight2D
+var halo: PointLight2D          ## wide, soft, unshadowed bloom: coloured pools of light on the floor
 var _t := 0.0
 var _base_energy := 1.0
 var factor := 1.0            ## current brightness 0..1 (flicker)
@@ -43,6 +44,14 @@ func _ready() -> void:
 	light.shadow_item_cull_mask = 1
 	add_child(light)
 	_base_energy = energy
+	halo = PointLight2D.new()
+	halo.texture = SpriteLib.light_texture(256)
+	halo.texture_scale = radius_px * 3.4 / 256.0
+	halo.color = Color(color.r, color.g, color.b).lerp(Color(color.r * 1.2, color.g * 0.85, color.b * 0.9), 0.35)
+	halo.energy = energy * 0.34
+	halo.shadow_enabled = false
+	halo.range_item_cull_mask = 1
+	add_child(halo)
 	if zone != "exterior" and radius_px < 140.0:
 		# dust motes drifting through the light
 		var m := CPUParticles2D.new()
@@ -74,6 +83,7 @@ func set_on(v: bool) -> void:
 		return
 	on = v
 	light.visible = v
+	halo.visible = v
 	if not v:
 		factor = 1.0
 	if has_node("Motes"):
@@ -111,6 +121,7 @@ func _process(delta: float) -> void:
 				_stutter = randf_range(0.15, 0.6)
 			_buzz()
 	light.energy = _base_energy * factor
+	halo.energy = _base_energy * 0.34 * factor
 	if has_node("Motes"):
 		get_node("Motes").emitting = factor > 0.3
 

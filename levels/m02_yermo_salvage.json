@@ -2,9 +2,9 @@
   "id": "m02_yermo_salvage",
   "name": "Yermo Salvage & K-9",
   "ambient": [
-    0.29,
-    0.28,
-    0.22
+    0.33,
+    0.31,
+    0.26
   ],
   "map": [
     "##################################################################",
@@ -1400,111 +1400,213 @@
       "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
-        15,
-        10
+        9,
+        30
       ],
-      "size": 1.0
+      "size": 1.0,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
-        26,
-        8
+        34,
+        34
       ],
-      "size": 1.0
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_car_stack",
+      "pos": [
+        56,
+        23
+      ],
+      "size": 1.0,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        20,
-        14
+        27,
+        38
       ],
-      "size": 0.8
+      "size": 0.8,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_oil_barrel_cluster",
       "pos": [
-        45,
-        18
+        25,
+        41
       ],
-      "size": 0.8
+      "size": 0.8,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        18,
+        37
+      ],
+      "size": 0.8,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        25,
+        36
+      ],
+      "size": 0.8,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_tire_stack",
       "pos": [
-        10,
-        8
+        5,
+        37
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tire_stack",
+      "pos": [
+        19,
+        29
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tire_stack",
+      "pos": [
+        22,
+        30
+      ],
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_tire_stack",
       "pos": [
         38,
-        12
+        41
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_scrap_pile",
       "pos": [
-        32,
-        18
+        23,
+        38
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_scrap_pile",
       "pos": [
-        48,
-        12
+        29,
+        36
       ],
-      "size": 0.9
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
-      "id": "yard_storage_container",
+      "id": "yard_scrap_pile",
+      "pos": [
+        61,
+        34
+      ],
+      "size": 0.9,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_scrap_pile",
       "pos": [
         18,
-        4
+        23
       ],
-      "size": 1.0
+      "size": 0.9,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_storage_container",
       "pos": [
-        30,
-        4
+        50,
+        27
       ],
-      "size": 1.0
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_storage_container",
+      "pos": [
+        62,
+        29
+      ],
+      "size": 1.0,
+      "auto": true
     },
     {
       "type": "sprite",
       "id": "yard_welder_sparks",
       "pos": [
-        22,
-        20
+        11,
+        16
       ],
       "size": 0.7,
+      "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
       "id": "yard_welder_sparks",
       "pos": [
-        42,
-        22
+        9,
+        14
       ],
       "size": 0.7,
+      "auto": true,
       "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        1,
+        13
+      ],
+      "size": 0.8,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        9,
+        18
+      ],
+      "size": 0.8,
+      "auto": true
     }
   ],
   "cameras": [
