@@ -121,6 +121,10 @@ def tidy(name, d):
             if name == "m04_villa_estrella":
                 if sid == "villa_orange_peel" and c == "~": drop = True
                 if sid == "villa_ivy_wall_cluster" and not any(ch(x + dx, y + dy) == "#" for dx, dy in ((1,0),(-1,0),(0,1),(0,-1))): drop = True
+        if it.get("type") == "sprite" and not it.get("auto") and any(k in sid for k in ("fern", "planter", "plant")) and "wall_cluster" not in sid:
+            near_wall = any(ch(x + dx, y + dy) == "#" for dx, dy in ((1,0),(-1,0),(0,1),(0,-1)))
+            outdoors = zone_of(x, y).startswith("exterior") or c in ':=;'
+            if c in ':;' or (outdoors and not near_wall and c != '"'): drop = True
         if drop: print("  tidy:", name, sid, [x, y])
         else: out.append(it)
     d["decor"] = out

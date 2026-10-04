@@ -795,16 +795,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_palm_planter",
-      "pos": [
-        10,
-        21
-      ],
-      "size": 0.42,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "motel_hasty_checkout",
       "pos": [
         32,
@@ -881,16 +871,6 @@
         22
       ],
       "size": 0.48,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_palm_planter",
-      "pos": [
-        10,
-        21
-      ],
-      "size": 0.42,
       "floor": false
     },
     {
@@ -989,16 +969,6 @@
       "pos": [
         6,
         20
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_palm_planter",
-      "pos": [
-        34,
-        23
       ],
       "size": 0.38,
       "floor": false
@@ -1139,16 +1109,6 @@
       "pos": [
         38,
         49
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_palm_planter",
-      "pos": [
-        12,
-        52
       ],
       "size": 0.38,
       "floor": false
@@ -1587,6 +1547,116 @@
       "size": 0.5,
       "auto": true,
       "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_pool_cooler",
+      "pos": [
+        47,
+        18
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_pool_cooler",
+      "pos": [
+        29,
+        23
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        16,
+        24
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        20,
+        24
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        9,
+        22
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        39,
+        21
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_dresser",
+      "pos": [
+        34,
+        2
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_dresser",
+      "pos": [
+        22,
+        2
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_vending",
+      "pos": [
+        65,
+        16
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_vending",
+      "pos": [
+        65,
+        36
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_ice_machine",
+      "pos": [
+        62,
+        17
+      ],
+      "size": 1.0,
+      "auto": true
     }
   ],
   "cameras": [

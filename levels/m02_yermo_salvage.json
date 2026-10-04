@@ -1525,6 +1525,226 @@
       ],
       "size": 0.8,
       "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_junk_heap",
+      "pos": [
+        22,
+        22
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_junk_heap",
+      "pos": [
+        3,
+        34
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_junk_heap",
+      "pos": [
+        3,
+        27
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        40,
+        38
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        2,
+        23
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        46,
+        38
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        31,
+        40
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        58,
+        26
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        6,
+        29
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        7,
+        39
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        56,
+        31
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        57,
+        35
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_forklift",
+      "pos": [
+        42,
+        25
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_forklift",
+      "pos": [
+        52,
+        23
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_tire_wall",
+      "pos": [
+        63,
+        24
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_tire_wall",
+      "pos": [
+        16,
+        21
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_workbench",
+      "pos": [
+        1,
+        18
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_workbench",
+      "pos": [
+        9,
+        1
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_engine_block",
+      "pos": [
+        26,
+        10
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_engine_block",
+      "pos": [
+        22,
+        7
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_generator",
+      "pos": [
+        25,
+        1
+      ],
+      "size": 1.0,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_generator",
+      "pos": [
+        19,
+        1
+      ],
+      "size": 1.0,
+      "auto": true
     }
   ],
   "cameras": [
