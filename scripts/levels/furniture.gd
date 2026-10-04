@@ -68,7 +68,7 @@ func _painted() -> Texture2D:
 		"car":
 			return ArtLib.sprite(ArtLib.CARS[variant % ArtLib.CARS.size()])
 		"table":
-			return ArtLib.sprite("table_dining" if style == "dining" else "table")
+			return ArtLib.sprite("table_" + style if style != "" else "table")
 		"wreck", "bed", "lounger", "washer", "crate", "desk", "cage":
 			return ArtLib.sprite(kind)
 	return null
