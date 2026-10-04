@@ -25,6 +25,9 @@ func _ready() -> void:
  probe.global_position = points.get(mid, Vector2(500,300))
  level.camera.target = probe
  level.camera.zoom_bias = float(OS.get_environment("GALLERY_ZOOM")) if OS.get_environment("GALLERY_ZOOM") != "" else 1.0
+ if OS.get_environment("GALLERY_CELL") != "":
+  var gc := OS.get_environment("GALLERY_CELL").split(",")
+  probe.global_position = Vector2(float(gc[0]) * 16 + 8, float(gc[1]) * 16 + 8)
  if OS.get_environment("GALLERY_AT") == "player":
   probe.global_position = (get_tree().get_first_node_in_group("player") as Node2D).global_position
  level.camera.snap_to_target()

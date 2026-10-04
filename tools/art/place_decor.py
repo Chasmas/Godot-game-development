@@ -53,6 +53,7 @@ RULES = {
 
 HQ = os.path.join(ROOT, "assets", "art", "pixellab_world", "sprites_hq")
 # the big dense kit (tools/art/pixellab_props_hq.py); rules whose sprite isn't generated yet are skipped
+ROAD_ZONES = {"m01_sunset_palms": ("exterior", ":"), "m02_yermo_salvage": ("exterior", ":"), "m03_khsc_studios": ("exterior", ":"), "m04_villa_estrella": ("exterior", ";")}
 RULES_HQ = {
  "m01_sunset_palms": [
   ("hq_pool_lounger_set", 3, "courtyard", "=", dict(size=0.72, clear=2, edge_of="~", mode="row", gap=5)),
@@ -100,6 +101,18 @@ RULES_HQ = {
   ("hq_grand_planter", 3, "exterior", "\"", dict(size=0.72, clear=1)),
  ],
 }
+
+
+def road_rules(zone, chars, n=1):
+    r = dict(floor=True, clear=1)
+    return [
+        ("road_manhole", 3 * n, zone, chars, dict(r, size=1.0, gap=9, mode="row")),
+        ("road_arrow", 2 * n, zone, chars, dict(r, size=1.0, gap=10)),
+        ("road_pothole", 3 * n, zone, chars, dict(r, size=0.9, gap=10)),
+        ("road_patch", 3 * n, zone, chars, dict(r, size=1.2, gap=11)),
+        ("road_sand", 3 * n, zone, chars, dict(r, size=1.4, gap=10)),
+        ("road_stop_line", 2 * n, zone, chars, dict(r, size=1.2, gap=14)),
+    ]
 
 def tidy(name, d):
     """Drop older decor that sits somewhere it makes no sense (found by a close-up audit)."""
@@ -150,7 +163,7 @@ def build(name):
             keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
-    rules = list(RULES[name]) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
+    rules = list(RULES[name]) + road_rules(*ROAD_ZONES[name]) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
 
     def ok(x, y, ex):
         clear = ex.get("clear", 1)

@@ -1877,6 +1877,160 @@
     },
     {
       "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        10,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        69,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        40,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        13,
+        51
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        61,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        18,
+        50
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        57,
+        50
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        36,
+        54
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        21,
+        51
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        54,
+        51
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        37,
+        49
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        24,
+        50
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        47,
+        50
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_stop_line",
+      "pos": [
+        27,
+        51
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
         31,
@@ -2092,7 +2246,7 @@
       "id": "hq_sun_loungers",
       "pos": [
         40,
-        48
+        46
       ],
       "size": 0.72,
       "auto": true

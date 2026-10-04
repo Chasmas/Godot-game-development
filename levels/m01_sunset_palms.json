@@ -1550,6 +1550,182 @@
     },
     {
       "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        12,
+        52
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        65,
+        52
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        39,
+        52
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        5,
+        44
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        61,
+        58
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        10,
+        44
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        60,
+        55
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        29,
+        58
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        11,
+        48
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        58,
+        57
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        37,
+        44
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        12,
+        56
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        65,
+        47
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        41,
+        54
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_stop_line",
+      "pos": [
+        13,
+        45
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_stop_line",
+      "pos": [
+        63,
+        50
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
       "id": "hq_pool_lounger_set",
       "pos": [
         29,

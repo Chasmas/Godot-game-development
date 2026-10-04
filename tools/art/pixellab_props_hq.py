@@ -11,6 +11,19 @@ STYLE = ("highly detailed isometric-style pixel art game asset, three-quarter vi
          "rich material texture, dense small details, strong warm and cool rim lighting, ambient occlusion, "
          "clean silhouette, limited but rich colour ramps, crisp pixels, no background")
 PROPS = {
+  # --- road decals (seen from directly above, painted on asphalt) ---
+  "road_manhole": (64, 64, "round cast iron manhole cover on dark asphalt seen from directly above, rust, concentric ridges, worn"),
+  "road_crosswalk": (128, 96, "zebra crosswalk white stripes painted on dark worn asphalt seen from directly above, chipped paint, tyre scuffs"),
+  "road_drain": (64, 48, "street storm drain grate in a concrete gutter seen from directly above, dark water, leaves"),
+  "road_arrow": (64, 96, "faded white painted road arrow on dark asphalt seen from directly above, cracked and chipped paint"),
+  "road_patch": (96, 80, "rectangular repaired asphalt patch, darker fresh tar over cracked old asphalt, seen from directly above"),
+  "road_pothole": (64, 56, "pothole in asphalt with broken edges and a dark puddle seen from directly above, cracks radiating"),
+  "road_skid": (128, 64, "black curved tyre skid marks on asphalt seen from directly above, rubber streaks, a little smoke stain"),
+  "road_oil": (80, 64, "oil and petrol stain on asphalt with rainbow sheen seen from directly above, irregular puddle"),
+  "road_puddle": (96, 64, "rain puddle on asphalt reflecting neon pink and blue light seen from directly above, ripples"),
+  "road_cracks": (96, 96, "network of deep cracks in dark asphalt with weeds sprouting seen from directly above"),
+  "road_sand": (96, 64, "drift of desert sand and gravel blown across asphalt seen from directly above"),
+  "road_stop_line": (128, 32, "painted white stop line with faded yellow double centre line on asphalt seen from directly above"),
   "grave": (128, 192, "weathered grey stone headstone with a rounded top and a carved cross, cracked, patches of moss, fresh red roses and a small candle at its foot, mound of dark soil"),
   # --- motel ---
   "hq_motel_bed": (160, 128, "1980s motel double bed, rumpled orange floral bedspread, two pillows, wooden headboard against a wall"),
@@ -79,7 +92,7 @@ def clear_backdrop(im):
 
 def gen(name, out):
     w, h, desc = PROPS[name]
-    body = {"description": desc + ", " + STYLE, "negative_description": "blurry, flat, noisy, text, watermark, low detail, front view, side view",
+    body = {"description": desc + ", " + (STYLE if not name.startswith("road_") else STYLE.replace("three-quarter view from above","view straight down from directly above, flat top-down")), "negative_description": "blurry, flat, noisy, text, watermark, low detail, front view, side view",
             "image_size": {"width": w, "height": h}, "no_background": True,
             "detail": "highly detailed", "shading": "highly detailed shading", "outline": "single color black outline",
             "text_guidance_scale": 8.0}

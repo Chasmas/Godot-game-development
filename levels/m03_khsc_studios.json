@@ -1573,6 +1573,182 @@
     },
     {
       "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        9,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        64,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_manhole",
+      "pos": [
+        42,
+        50
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        4,
+        44
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_arrow",
+      "pos": [
+        65,
+        53
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        9,
+        46
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        63,
+        55
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_pothole",
+      "pos": [
+        31,
+        55
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        11,
+        48
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        67,
+        44
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_patch",
+      "pos": [
+        43,
+        55
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        13,
+        55
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        66,
+        47
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_sand",
+      "pos": [
+        37,
+        45
+      ],
+      "size": 1.4,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_stop_line",
+      "pos": [
+        14,
+        44
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "road_stop_line",
+      "pos": [
+        62,
+        52
+      ],
+      "size": 1.2,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
       "id": "hq_light_stand",
       "pos": [
         26,
