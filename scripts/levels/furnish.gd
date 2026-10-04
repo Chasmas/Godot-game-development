@@ -73,6 +73,8 @@ static func build(level: Node, b: LevelBuilder, rooms: Array) -> void:
 		if OS.get_environment("FURNISH_DEBUG") != "":
 			print("furnish ", kind, " ", r.zone, " cells ", r.cells.size(), " rect ", r.rect, " items ", layer.items.size())
 	layer.queue_redraw()
+	# never changes: baked into tiles, so every piece gets the lights near it
+	StaticBake.queue(level, layer, Rect2(Vector2(-16, -16), Vector2(b.w + 2, b.h + 2) * LevelBuilder.T))
 
 ## Cells nothing may cover: every map character that isn't plain floor
 ## (spawns, enemies, pickups, props, doors) with a margin, patrol points,
