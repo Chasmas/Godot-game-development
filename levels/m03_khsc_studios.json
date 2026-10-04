@@ -1578,7 +1578,7 @@
         26,
         17
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1588,7 +1588,7 @@
         44,
         17
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1598,7 +1598,7 @@
         34,
         34
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1608,27 +1608,7 @@
         36,
         34
       ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_camera_dolly",
-      "pos": [
-        38,
-        15
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_camera_dolly",
-      "pos": [
-        43,
-        26
-      ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1638,7 +1618,7 @@
         25,
         31
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1648,7 +1628,7 @@
         45,
         13
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1658,27 +1638,7 @@
         44,
         32
       ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_set_flat",
-      "pos": [
-        21,
-        10
-      ],
-      "size": 1.0,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_set_flat",
-      "pos": [
-        49,
-        40
-      ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1688,7 +1648,7 @@
         27,
         25
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1698,7 +1658,7 @@
         47,
         15
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1708,7 +1668,7 @@
         51,
         13
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1718,7 +1678,7 @@
         68,
         20
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1728,7 +1688,7 @@
         2,
         10
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1738,7 +1698,7 @@
         17,
         19
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1748,7 +1708,7 @@
         1,
         19
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     },
     {
@@ -1758,7 +1718,7 @@
         15,
         8
       ],
-      "size": 1.0,
+      "size": 0.72,
       "auto": true
     }
   ],
