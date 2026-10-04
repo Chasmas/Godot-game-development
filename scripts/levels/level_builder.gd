@@ -621,10 +621,18 @@ class FloorChunk extends Node2D:
 				var p := Vector2(c.x * LevelBuilder.T, c.y * LevelBuilder.T)
 				var src := Rect2(fposmod(p.x * k, float(t2d.get_width())), fposmod(p.y * k, float(t2d.get_height())), 16.0 * k, 16.0 * k)
 				draw_texture_rect_region(t2d, Rect2(p, Vector2(LevelBuilder.T, LevelBuilder.T)), src)
+		# grime and wear: soft patches several tiles wide, blended across tile
+		# corners so no grid shows
+		var T2 := float(LevelBuilder.T)
 		for tex in by_tex:
 			for c in by_tex[tex]:
-				var tone := float(_h(c.x / 2, c.y / 2, 7) % 5) / 4.0
-				draw_rect(Rect2(Vector2(c.x * LevelBuilder.T, c.y * LevelBuilder.T), Vector2(LevelBuilder.T, LevelBuilder.T)), Color(0.05, 0.0, 0.1, 0.04 + 0.05 * tone))
+				var p := Vector2(c.x * T2, c.y * T2)
+				var pts := PackedVector2Array([p, p + Vector2(T2, 0), p + Vector2(T2, T2), p + Vector2(0, T2)])
+				var cols := PackedColorArray()
+				for d in [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1), Vector2i(0, 1)]:
+					var n := _grime(c.x + d.x, c.y + d.y)
+					cols.append(Color(0.03, 0.0, 0.06, 0.02 + 0.5 * n * n * n))
+				draw_polygon(pts, cols)
 		for y in range(rect.position.y, rect.end.y):
 			for x in range(rect.position.x, rect.end.x):
 				var f: String = builder.floor_grid[y][x]
@@ -646,21 +654,37 @@ class FloorChunk extends Node2D:
 		var c := builder.ch(x, y)
 		return c == "#" or c == "W" or c == "%" or c == " "
 
-	## soft contact shadows where the floor meets a wall (cel-style banding)
+	## smooth value noise in 0..1 on a 5-tile lattice (tile-corner coordinates)
+	func _grime(x: int, y: int) -> float:
+		var S := 5
+		var gx := floori(float(x) / S)
+		var gy := floori(float(y) / S)
+		var fx := smoothstep(0.0, 1.0, float(x - gx * S) / S)
+		var fy := smoothstep(0.0, 1.0, float(y - gy * S) / S)
+		var v := func(i: int, j: int) -> float: return float(_h(i, j, 31) % 1000) / 999.0
+		var a: float = lerpf(v.call(gx, gy), v.call(gx + 1, gy), fx)
+		var b: float = lerpf(v.call(gx, gy + 1), v.call(gx + 1, gy + 1), fx)
+		return lerpf(a, b, fy)
+
+	## soft contact shadows where the floor meets a wall: a smooth falloff,
+	## deepest under the wall above (light comes from overhead and ahead)
 	func _ao(p: Vector2, x: int, y: int) -> void:
 		var T2 := float(LevelBuilder.T)
-		var bands := [0.26, 0.15, 0.07]
-		for i in 3:
-			var a: float = bands[i]
-			var w := 2.0
-			if _solid(x, y - 1):
-				draw_rect(Rect2(p + Vector2(0, i * w), Vector2(T2, w)), Color(0.02, 0.0, 0.05, a))
-			if _solid(x - 1, y):
-				draw_rect(Rect2(p + Vector2(i * w, 0), Vector2(w, T2)), Color(0.02, 0.0, 0.05, a * 0.85))
-			if _solid(x + 1, y):
-				draw_rect(Rect2(p + Vector2(T2 - (i + 1) * w, 0), Vector2(w, T2)), Color(0.02, 0.0, 0.05, a * 0.6))
-			if _solid(x, y + 1):
-				draw_rect(Rect2(p + Vector2(0, T2 - (i + 1) * w), Vector2(T2, w)), Color(0.02, 0.0, 0.05, a * 0.45))
+		var ink := Color(0.02, 0.0, 0.05, 0.0)
+		var sides := [
+			[_solid(x, y - 1), 0.62, Vector2(0, 0), Vector2(T2, 0), Vector2(0, 1)],
+			[_solid(x - 1, y), 0.5, Vector2(0, 0), Vector2(0, T2), Vector2(1, 0)],
+			[_solid(x + 1, y), 0.4, Vector2(T2, 0), Vector2(T2, T2), Vector2(-1, 0)],
+			[_solid(x, y + 1), 0.28, Vector2(0, T2), Vector2(T2, T2), Vector2(0, -1)]]
+		for s in sides:
+			if not s[0]:
+				continue
+			var a: float = s[1]
+			var e0: Vector2 = p + s[2]
+			var e1: Vector2 = p + s[3]
+			var inward: Vector2 = s[4] * 12.0
+			var dark := Color(ink, a)
+			draw_polygon(PackedVector2Array([e0, e1, e1 + inward, e0 + inward]), PackedColorArray([dark, dark, ink, ink]))
 
 	## Painted floor tile (ArtLib): the seamless texture sampled in world
 	## space, a little per-tile tone so it never reads as wallpaper, and the
