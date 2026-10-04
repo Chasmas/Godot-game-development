@@ -53,7 +53,7 @@ RULES = {
 
 HQ = os.path.join(ROOT, "assets", "art", "pixellab_world", "sprites_hq")
 # the big dense kit (tools/art/pixellab_props_hq.py); rules whose sprite isn't generated yet are skipped
-ROAD_ZONES = {"m01_sunset_palms": ("exterior", ":"), "m02_yermo_salvage": ("exterior", ":"), "m03_khsc_studios": ("exterior", ":"), "m04_villa_estrella": ("exterior", ";")}
+ROAD_ZONES = {"m01_sunset_palms": ("exterior", ":"), "m03_khsc_studios": ("exterior", ":")}   # asphalt only; the yard and villa roads are dirt
 RULES_HQ = {
  "m01_sunset_palms": [
   ("hq_pool_lounger_set", 3, "courtyard", "=", dict(size=0.72, clear=2, edge_of="~", mode="row", gap=5)),
@@ -163,7 +163,7 @@ def build(name):
             keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
-    rules = list(RULES[name]) + road_rules(*ROAD_ZONES[name]) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
+    rules = list(RULES[name]) + (road_rules(*ROAD_ZONES[name]) if name in ROAD_ZONES else []) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
 
     def ok(x, y, ex):
         clear = ex.get("clear", 1)
