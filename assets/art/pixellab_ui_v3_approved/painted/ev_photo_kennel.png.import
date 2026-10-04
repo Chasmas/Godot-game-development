@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://05CGjSBoibZ9"
-path="res://.godot/imported/ev_photo_kennel.png-eaa2c566222d4481dbb0316f4a282b93.ctex"
+uid="uid://ddtdjclapf38o"
+path="res://.godot/imported/ev_photo_kennel.png-141657e7bf3125c001ea7d9aab6c96d6.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/ev_photo_kennel.png"
-dest_files=["res://.godot/imported/ev_photo_kennel.png-eaa2c566222d4481dbb0316f4a282b93.ctex"]
+dest_files=["res://.godot/imported/ev_photo_kennel.png-141657e7bf3125c001ea7d9aab6c96d6.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

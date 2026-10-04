@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://09lVoSjIA0fo"
-path="res://.godot/imported/harcourt_office.png-b2a02ab7ff07606bc10a3c67095aaef9.ctex"
+uid="uid://bdh6h3rrnqoy7"
+path="res://.godot/imported/harcourt_office.png-ebebb2a5ba20b72508bdd32fac2390d5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/harcourt_office.png"
-dest_files=["res://.godot/imported/harcourt_office.png-b2a02ab7ff07606bc10a3c67095aaef9.ctex"]
+dest_files=["res://.godot/imported/harcourt_office.png-ebebb2a5ba20b72508bdd32fac2390d5.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://00c84wNLNdE0"
-path="res://.godot/imported/studio_spotlight_beam.png-308aeaf3db85e269cfa32e82d31e39c1.ctex"
+uid="uid://dlkoa6hqinlon"
+path="res://.godot/imported/studio_spotlight_beam.png-abaa5799fb44c5d3a47279704e72cc3d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/studio_spotlight_beam.png"
-dest_files=["res://.godot/imported/studio_spotlight_beam.png-308aeaf3db85e269cfa32e82d31e39c1.ctex"]
+dest_files=["res://.godot/imported/studio_spotlight_beam.png-abaa5799fb44c5d3a47279704e72cc3d.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

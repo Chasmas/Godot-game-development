@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0kZOZEksmAF7"
-path="res://.godot/imported/tv_mansion.png-9359171bcdeeb121c64a4cab3befbd0e.ctex"
+uid="uid://nrb2oqiyoj5c"
+path="res://.godot/imported/tv_mansion.png-4eef14af94c3bd4f3aed4f9cea233128.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/tv_mansion.png"
-dest_files=["res://.godot/imported/tv_mansion.png-9359171bcdeeb121c64a4cab3befbd0e.ctex"]
+dest_files=["res://.godot/imported/tv_mansion.png-4eef14af94c3bd4f3aed4f9cea233128.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

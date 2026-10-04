@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://00BHyDWUknA1"
-path="res://.godot/imported/h_reveal.png-080dbbd470bc8cf5d1a4f07353099649.ctex"
+uid="uid://bq0ouab2jkw4q"
+path="res://.godot/imported/h_reveal.png-39cb25acdaa8c19173e98b118e9d138a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/h_reveal.png"
-dest_files=["res://.godot/imported/h_reveal.png-080dbbd470bc8cf5d1a4f07353099649.ctex"]
+dest_files=["res://.godot/imported/h_reveal.png-39cb25acdaa8c19173e98b118e9d138a.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://07lVRP2KRvxQ"
-path="res://.godot/imported/fire_windshield.png-8b15bcfa92907634e9d79be910a0bd99.ctex"
+uid="uid://cki1mdp2sdvdk"
+path="res://.godot/imported/fire_windshield.png-dacee26e5159cced26b648abe7101c53.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/fire_windshield.png"
-dest_files=["res://.godot/imported/fire_windshield.png-8b15bcfa92907634e9d79be910a0bd99.ctex"]
+dest_files=["res://.godot/imported/fire_windshield.png-dacee26e5159cced26b648abe7101c53.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0kNcJssP37oQ"
-path="res://.godot/imported/galaxy_palace.png-21b75b3cbe8ebfac8ac79d3d5d1cf8c2.ctex"
+uid="uid://b1q0khi4rwi6w"
+path="res://.godot/imported/galaxy_palace.png-f900e5e1f3b7e0756bd1e137e958c3dd.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_ui_v3_approved/painted/galaxy_palace.png"
-dest_files=["res://.godot/imported/galaxy_palace.png-21b75b3cbe8ebfac8ac79d3d5d1cf8c2.ctex"]
+dest_files=["res://.godot/imported/galaxy_palace.png-f900e5e1f3b7e0756bd1e137e958c3dd.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
