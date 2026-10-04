@@ -153,6 +153,9 @@ func _ready() -> void:
 				lvl2.hud.visible = false
 			p3.god_mode = true
 			lvl2.camera.zoom_bias = float(OS.get_environment("SHOT_ZOOM")) if OS.get_environment("SHOT_ZOOM") != "" else 3.0
+			if OS.get_environment("SHOT_STAMP") != "":
+				lvl2.hud.show_checkpoint("WAREHOUSE")
+				await _frames(75)
 			if OS.get_environment("SHOT_UPGRADE") != "":
 				p3.add_upgrade(StringName(OS.get_environment("SHOT_UPGRADE")), true)
 			if OS.get_environment("SHOT_STAMINA") != "":

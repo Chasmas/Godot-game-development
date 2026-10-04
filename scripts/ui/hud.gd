@@ -1146,7 +1146,7 @@ class CheckpointStamp extends Control:
 			var fd := UIStyle.font_display()
 			var title := area.to_upper()
 			var tw := fd.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, 18).x
-			var ty := top + (H - 6.0) * S
+			var ty := top + (H + 12.0) * S
 			var glow := 0.55 + 0.45 * sin(_t * 6.0)
 			# a dark band so the name reads over anything
 			var band := Rect2(centre_x - maxf(tw * 0.5 + 14.0, W * S * 0.5 + 8.0), ty - 22.0, maxf(tw + 28.0, W * S + 16.0), 44.0)
@@ -1179,6 +1179,7 @@ class CheckpointStamp extends Control:
 		draw_rect(Rect2(body.position + Vector2(3, 4), body.size), Color(0, 0, 0, 0.45 * a))   # shadow
 		draw_rect(body, Color(0.07, 0.06, 0.09, a))
 		draw_rect(body, Color(0.35, 0.3, 0.4, a), false, 1.0)
+		draw_colored_polygon(PackedVector2Array([body.position + Vector2(24, 64), body.position + Vector2(W - 24, 64), body.position + Vector2(W - 34, 72), body.position + Vector2(34, 72)]), Color(0.1, 0.09, 0.13, a))
 		for i in 4:   # screw heads
 			var sp := body.position + Vector2(6 + (W - 12) * (i % 2), 6 + 52 * (i / 2))
 			draw_circle(sp, 1.6, Color(0.5, 0.48, 0.55, a))
@@ -1190,7 +1191,7 @@ class CheckpointStamp extends Control:
 		var f := UIStyle.font_bold()
 		draw_string(f, lab.position + Vector2(5, 14), tr("CHECKPOINT"), HORIZONTAL_ALIGNMENT_LEFT, lab.size.x * 0.5, 11, Color(ink, a))
 		# window with two reels; tape winds from one to the other
-		var win := Rect2(c + Vector2(40, 36), Vector2(W - 80, 22))
+		var win := Rect2(c + Vector2(30, 34), Vector2(W - 60, 26))
 		draw_rect(win, Color(0.18, 0.14, 0.2, a))
 		draw_rect(win, Color(0.45, 0.4, 0.5, a), false, 1.0)
 		var spin := (_t - 0.5) * (-18.0 if rewind else 7.0) if _t > 0.5 else 0.0
@@ -1198,14 +1199,14 @@ class CheckpointStamp extends Control:
 		if rewind:
 			wind = 1.0 - wind
 		for side in 2:
-			var rc := win.position + Vector2(18 + (win.size.x - 36) * side, 11)
-			var tape_r := lerpf(9.0, 5.0, wind if side == 0 else 1.0 - wind)
+			var rc := win.position + Vector2(20 + (win.size.x - 40) * side, 13)
+			var tape_r := lerpf(11.0, 6.0, wind if side == 0 else 1.0 - wind)
 			draw_circle(rc, tape_r, Color(0.28, 0.16, 0.12, a))
-			draw_circle(rc, 4.2, Color(0.9, 0.88, 0.85, a))
+			draw_circle(rc, 5.2, Color(0.9, 0.88, 0.85, a))
 			for k in 6:
 				var ang := spin + k * TAU / 6.0
-				draw_line(rc + Vector2.from_angle(ang) * 1.5, rc + Vector2.from_angle(ang) * 3.8, Color(ink, a), 1.0)
-		draw_line(win.position + Vector2(18, 20), win.position + Vector2(win.size.x - 18, 20), Color(0.28, 0.16, 0.12, a), 1.0)
+				draw_line(rc + Vector2.from_angle(ang) * 1.8, rc + Vector2.from_angle(ang) * 4.8, Color(ink, a), 1.0)
+		draw_line(win.position + Vector2(20, 24), win.position + Vector2(win.size.x - 20, 24), Color(0.28, 0.16, 0.12, a), 1.0)
 		# OSD once it plays: ▶ PLAY / ◀◀ REWIND, blinking, with tracking noise
 		if _t > 0.55:
 			var osd_a := a * clampf((_t - 0.55) / 0.12, 0.0, 1.0)
