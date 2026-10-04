@@ -2040,6 +2040,131 @@
           ]
         }
       ]
+    },
+    "stealth_yard_v2": {
+      "title": "Yermo Yard, night (remade)",
+      "family": "stealth",
+      "chunks": [
+        {
+          "text": "[Night yard] desert wind and distant dog barks, a slow metallic industrial pulse, a warm detuned analog pad, sparse twangy lonely guitar-like synth notes, rusty clanks",
+          "sec": 40,
+          "styles": [
+            "dark synthwave",
+            "1980s",
+            "analog synthesizers",
+            "tape hiss",
+            "wide stereo",
+            "instrumental",
+            "suspense",
+            "ambient",
+            "Mojave desert",
+            "industrial",
+            "78 BPM",
+            "A minor"
+          ]
+        },
+        {
+          "text": "[Prowl] a steady rubbery bass and muted arpeggio creep in, soft brushed drum machine ticks, eerie rising pad, the lonely lead hints at a menacing melody, never resolves",
+          "sec": 50,
+          "styles": [
+            "dark synthwave",
+            "1980s",
+            "analog synthesizers",
+            "tape hiss",
+            "wide stereo",
+            "instrumental",
+            "stalking",
+            "tense",
+            "78 BPM",
+            "A minor",
+            "minimal drums"
+          ]
+        }
+      ]
+    },
+    "combat_yard_v2": {
+      "title": "Yermo Yard, combat (remade)",
+      "family": "combat",
+      "chunks": [
+        {
+          "text": "[Attack] instant aggressive synthwave: pounding kick, gated snare, distorted grinding bass, metallic industrial percussion hits and dog-bark rhythm stabs",
+          "sec": 24,
+          "styles": [
+            "dark synthwave",
+            "1980s",
+            "analog synthesizers",
+            "tape hiss",
+            "wide stereo",
+            "instrumental",
+            "aggressive",
+            "driving",
+            "140 BPM",
+            "A minor",
+            "industrial",
+            "gated reverb snare"
+          ]
+        },
+        {
+          "text": "[Chase] a gritty brassy detuned lead plays a fast relentless riff over double-time hi-hats and octave bass, siren-like synth sweeps, adrenaline",
+          "sec": 48,
+          "styles": [
+            "dark synthwave",
+            "1980s",
+            "analog synthesizers",
+            "tape hiss",
+            "wide stereo",
+            "instrumental",
+            "relentless",
+            "140 BPM",
+            "A minor",
+            "catchy riff",
+            "chase"
+          ]
+        },
+        {
+          "text": "[Heat] a short filtered breakdown with a heartbeat kick and risers, then the full beat slams back harder and loops cleanly",
+          "sec": 36,
+          "styles": [
+            "dark synthwave",
+            "1980s",
+            "analog synthesizers",
+            "tape hiss",
+            "wide stereo",
+            "instrumental",
+            "tension",
+            "risers",
+            "140 BPM",
+            "A minor"
+          ]
+        }
+      ]
+    },
+    "intro_teaser_v2": {
+      "title": "Coming Attractions (trailer, remade)",
+      "family": "menu",
+      "chunks": [
+        {
+          "text": "[Trailer] tape click, low drone, 128 BPM four-on-the-floor kick, pulsing sub bass, riser, hits on the beat, huge impact, then brassy lead over pounding drums, one massive final hit",
+          "sec": 22,
+          "styles": [
+            "dark synthwave",
+            "cinematic trailer",
+            "128 BPM",
+            "E minor",
+            "1980s",
+            "analog synthesizers",
+            "gated reverb snare",
+            "heavy sub bass",
+            "tape hiss",
+            "instrumental",
+            "trailer",
+            "impact hits",
+            "riser",
+            "building tension",
+            "tight steady tempo"
+          ]
+        }
+      ]
     }
   }
 }
