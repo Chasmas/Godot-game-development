@@ -51,10 +51,37 @@ RULES = {
  ],
 }
 
+def tidy(name, d):
+    """Drop older decor that sits somewhere it makes no sense (found by a close-up audit)."""
+    m = d["map"]; H, W = len(m), len(m[0])
+    ch = lambda x, y: m[y][x] if 0 <= y < H and 0 <= x < W else "#"
+    zones = d["zones"]
+    def zone_of(x, y):
+        for z, (zx, zy, zw, zh) in zones.items():
+            if zx <= x < zx + zw and zy <= y < zy + zh: return z
+        return ""
+    out = []
+    for it in d["decor"]:
+        sid = it.get("id", ""); x, y = (int(round(v)) for v in it.get("pos", [0, 0])); c = ch(x, y)
+        drop = False
+        if it.get("type") == "sprite" and not it.get("auto"):
+            if name == "m01_sunset_palms":
+                if sid == "motel_water_ring" and not any(ch(x + dx, y + dy) == "~" for dx in range(-6, 7) for dy in range(-6, 7)): drop = True
+                if sid == "motel_neon_vacancy_sign" and not zone_of(x, y).startswith("exterior"): drop = True
+            if name == "m02_yermo_salvage" and sid.startswith("yard_") and c in ".,": drop = True
+            if name == "m03_khsc_studios" and sid == "studio_acoustic_wall_panel": drop = True
+            if name == "m04_villa_estrella":
+                if sid == "villa_orange_peel" and c == "~": drop = True
+                if sid == "villa_ivy_wall_cluster" and not any(ch(x + dx, y + dy) == "#" for dx, dy in ((1,0),(-1,0),(0,1),(0,-1))): drop = True
+        if drop: print("  tidy:", name, sid, [x, y])
+        else: out.append(it)
+    d["decor"] = out
+
 def build(name):
     path = os.path.join(ROOT, "levels", name + ".json")
     d = json.load(open(path, encoding="utf-8"))
     d["decor"] = [it for it in d["decor"] if not it.get("auto")]
+    tidy(name, d)
     m = d["map"]; H, W = len(m), len(m[0])
     ch = lambda x, y: m[y][x] if 0 <= y < H and 0 <= x < W else "#"
     taken = [tuple(it["pos"]) for it in d["decor"] if "pos" in it]

@@ -817,16 +817,6 @@
     },
     {
       "type": "sprite",
-      "id": "yard_pipe_manifold",
-      "pos": [
-        63,
-        2
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "yard_utility_control_box",
       "pos": [
         62,
@@ -857,46 +847,6 @@
     },
     {
       "type": "sprite",
-      "id": "yard_copper_scraps",
-      "pos": [
-        59,
-        6
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "yard_parts_tags",
-      "pos": [
-        58,
-        7
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "yard_tail_light_debris",
-      "pos": [
-        57,
-        8
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "yard_chain_cable_spill",
-      "pos": [
-        56,
-        9
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "clutter_floor_stains",
       "pos": [
         59,
@@ -911,16 +861,6 @@
       "pos": [
         21,
         12
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "yard_pipe_manifold",
-      "pos": [
-        40,
-        13
       ],
       "size": 0.38,
       "floor": false
@@ -1200,17 +1140,6 @@
     },
     {
       "type": "sprite",
-      "id": "yard_welded_safety_railing",
-      "pos": [
-        41,
-        6
-      ],
-      "size": 0.34,
-      "rot": -5,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "yard_oil_rags",
       "pos": [
         19,
@@ -1251,17 +1180,6 @@
       ],
       "size": 0.38,
       "rot": -5,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "yard_chain_cable_spill",
-      "pos": [
-        40,
-        16
-      ],
-      "size": 0.42000000000000004,
-      "rot": -12,
       "floor": false
     },
     {

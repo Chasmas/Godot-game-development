@@ -1168,16 +1168,6 @@
       "type": "sprite",
       "id": "villa_ivy_wall_cluster",
       "pos": [
-        8,
-        8
-      ],
-      "size": 0.56,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "villa_ivy_wall_cluster",
-      "pos": [
         5,
         2
       ],
@@ -1276,16 +1266,6 @@
     },
     {
       "type": "sprite",
-      "id": "villa_ivy_wall_cluster",
-      "pos": [
-        15,
-        19
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "villa_tea_service",
       "pos": [
         6,
@@ -1376,16 +1356,6 @@
     },
     {
       "type": "sprite",
-      "id": "villa_ivy_wall_cluster",
-      "pos": [
-        30,
-        38
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "villa_tea_service",
       "pos": [
         47,
@@ -1436,16 +1406,6 @@
     },
     {
       "type": "sprite",
-      "id": "villa_orange_peel",
-      "pos": [
-        32,
-        46
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "villa_candle_ring",
       "pos": [
         49,
@@ -1470,16 +1430,6 @@
       "pos": [
         15,
         50
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "villa_ivy_wall_cluster",
-      "pos": [
-        32,
-        51
       ],
       "size": 0.38,
       "floor": false
@@ -1522,17 +1472,6 @@
         56
       ],
       "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "villa_ivy_wall_cluster",
-      "pos": [
-        8,
-        2
-      ],
-      "size": 0.34,
-      "rot": -12,
       "floor": false
     },
     {
@@ -1755,8 +1694,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        6,
-        57
+        33,
+        38
       ],
       "size": 0.8,
       "auto": true
@@ -1795,8 +1734,8 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        62,
-        56
+        6,
+        58
       ],
       "size": 0.9,
       "auto": true

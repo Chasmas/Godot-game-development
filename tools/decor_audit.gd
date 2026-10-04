@@ -24,7 +24,8 @@ func _ready() -> void:
 	DirAccess.make_dir_recursive_absolute(out)
 	var n := 0
 	for it in level.data.get("decor", []):
-		if not it.get("auto", false): continue
+		if OS.get_environment("AUDIT_ALL") == "" and not it.get("auto", false): continue
+		if it.get("type", "") != "sprite": continue
 		var p: Array = it["pos"]
 		probe.global_position = Vector2(float(p[0]) * 16 + 8, float(p[1]) * 16 + 8)
 		level.camera.snap_to_target()

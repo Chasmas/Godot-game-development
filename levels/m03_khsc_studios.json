@@ -946,30 +946,10 @@
     },
     {
       "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        52,
-        16
-      ],
-      "size": 0.52,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_overhead_light_rig",
       "pos": [
         2,
         2
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        38,
-        3
       ],
       "size": 0.38,
       "floor": false
@@ -1066,16 +1046,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        27,
-        21
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_gaffer_scraps",
       "pos": [
         60,
@@ -1160,16 +1130,6 @@
       "pos": [
         45,
         35
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        4,
-        37
       ],
       "size": 0.38,
       "floor": false
@@ -1266,16 +1226,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        54,
-        50
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_gaffer_scraps",
       "pos": [
         4,
@@ -1323,17 +1273,6 @@
       ],
       "size": 0.34,
       "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        31,
-        4
-      ],
-      "size": 0.38,
-      "rot": 0,
       "floor": false
     },
     {
@@ -1433,17 +1372,6 @@
       ],
       "size": 0.38,
       "rot": 9,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_acoustic_wall_panel",
-      "pos": [
-        27,
-        33
-      ],
-      "size": 0.42000000000000004,
-      "rot": -5,
       "floor": false
     },
     {
@@ -1549,8 +1477,8 @@
       "type": "sprite",
       "id": "studio_green_screen",
       "pos": [
-        34,
-        28
+        39,
+        1
       ],
       "size": 1.0,
       "auto": true
@@ -1570,8 +1498,8 @@
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        42,
-        15
+        32,
+        27
       ],
       "size": 0.5,
       "auto": true,
@@ -1581,8 +1509,8 @@
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        38,
-        18
+        42,
+        15
       ],
       "size": 0.5,
       "auto": true,
@@ -1656,8 +1584,8 @@
       "type": "sprite",
       "id": "studio_film_reel_pair",
       "pos": [
-        66,
-        20
+        52,
+        19
       ],
       "size": 0.6,
       "auto": true,
@@ -1667,8 +1595,8 @@
       "type": "sprite",
       "id": "studio_film_reel_pair",
       "pos": [
-        67,
-        26
+        66,
+        20
       ],
       "size": 0.6,
       "auto": true,

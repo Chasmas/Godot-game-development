@@ -765,16 +765,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        40,
-        16
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "motel_ice_bucket",
       "pos": [
         30,
@@ -885,16 +875,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        40,
-        16
-      ],
-      "size": 0.8,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_towel_cart",
       "pos": [
         45,
@@ -927,16 +907,6 @@
       "type": "sprite",
       "id": "motel_neon_vacancy_sign",
       "pos": [
-        8,
-        8
-      ],
-      "size": 0.58,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_neon_vacancy_sign",
-      "pos": [
         2,
         2
       ],
@@ -949,16 +919,6 @@
       "pos": [
         29,
         3
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        55,
-        4
       ],
       "size": 0.38,
       "floor": false
@@ -1025,30 +985,10 @@
     },
     {
       "type": "sprite",
-      "id": "motel_neon_vacancy_sign",
-      "pos": [
-        62,
-        17
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_towel_cart",
       "pos": [
         6,
         20
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        60,
-        21
       ],
       "size": 0.38,
       "floor": false
@@ -1115,30 +1055,10 @@
     },
     {
       "type": "sprite",
-      "id": "motel_neon_vacancy_sign",
-      "pos": [
-        61,
-        33
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_towel_cart",
       "pos": [
         5,
         36
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        35,
-        37
       ],
       "size": 0.38,
       "floor": false
@@ -1225,16 +1145,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        57,
-        50
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_palm_planter",
       "pos": [
         12,
@@ -1295,17 +1205,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_neon_vacancy_sign",
-      "pos": [
-        5,
-        2
-      ],
-      "size": 0.34,
-      "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_towel_cart",
       "pos": [
         32,
@@ -1313,17 +1212,6 @@
       ],
       "size": 0.38,
       "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        61,
-        6
-      ],
-      "size": 0.42000000000000004,
-      "rot": 9,
       "floor": false
     },
     {
@@ -1394,17 +1282,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_neon_vacancy_sign",
-      "pos": [
-        5,
-        29
-      ],
-      "size": 0.34,
-      "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_towel_cart",
       "pos": [
         26,
@@ -1412,17 +1289,6 @@
       ],
       "size": 0.38,
       "rot": 9,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        49,
-        34
-      ],
-      "size": 0.42000000000000004,
-      "rot": -5,
       "floor": false
     },
     {
@@ -1515,17 +1381,6 @@
     },
     {
       "type": "sprite",
-      "id": "motel_water_ring",
-      "pos": [
-        54,
-        58
-      ],
-      "size": 0.42000000000000004,
-      "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "motel_pool_lounger",
       "pos": [
         23,
@@ -1599,8 +1454,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        10,
-        3
+        6,
+        4
       ],
       "size": 0.5,
       "auto": true
@@ -1609,8 +1464,8 @@
       "type": "sprite",
       "id": "motel_bedside_lamp",
       "pos": [
-        7,
-        5
+        10,
+        3
       ],
       "size": 0.5,
       "auto": true
@@ -1726,8 +1581,8 @@
       "type": "sprite",
       "id": "motel_ice_bucket_full",
       "pos": [
-        59,
-        15
+        62,
+        32
       ],
       "size": 0.5,
       "auto": true,
