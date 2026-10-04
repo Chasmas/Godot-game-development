@@ -948,8 +948,8 @@
       "type": "sprite",
       "id": "villa_seating_card",
       "pos": [
-        41,
-        29
+        42.6,
+        28.2
       ],
       "size": 0.34,
       "floor": true
@@ -958,10 +958,10 @@
       "type": "sprite",
       "id": "combat_poker_table",
       "pos": [
-        41,
-        29
+        42,
+        28
       ],
-      "size": 0.36,
+      "size": 0.62,
       "floor": true
     },
     {
@@ -982,16 +982,6 @@
         10
       ],
       "size": 0.34,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "villa_orchid_planter",
-      "pos": [
-        48,
-        27
-      ],
-      "size": 0.32,
       "floor": false
     },
     {
@@ -1698,6 +1688,67 @@
       ],
       "size": 0.72,
       "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_ornate_sofa",
+      "pos": [
+        28,
+        25.6
+      ],
+      "size": 0.95,
+      "comp": "foyer"
+    },
+    {
+      "type": "sprite",
+      "id": "hq_gilt_mirror",
+      "pos": [
+        30,
+        22
+      ],
+      "size": 0.8,
+      "comp": "foyer"
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        33,
+        23
+      ],
+      "size": 0.8,
+      "comp": "foyer"
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        23,
+        33
+      ],
+      "size": 0.8,
+      "comp": "foyer"
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fireplace",
+      "pos": [
+        43,
+        22
+      ],
+      "size": 0.95,
+      "comp": "foyer"
+    },
+    {
+      "type": "sprite",
+      "id": "hq_bar_cabinet",
+      "pos": [
+        49,
+        31
+      ],
+      "size": 0.8,
+      "rot": -90,
+      "comp": "foyer"
     }
   ],
   "film_cameras": [

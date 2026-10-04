@@ -300,6 +300,10 @@ static func draw(ci: CanvasItem, k: String, v: int) -> bool:
 			ci.draw_rect(Rect2(-3, -3, 6, 6), Color(0.45, 0.1, 0.12))
 			ci.draw_rect(Rect2(-3, -3, 6, 2), Color(0.55, 0.4, 0.15))
 		"rug_grand":
+			var rug_tex := ArtLib.sprite("hq_persian_rug")
+			if rug_tex:
+				ci.draw_texture_rect(rug_tex, Rect2(-40, -25, 80, 50), false)
+				return true
 			ci.draw_rect(Rect2(-30, -18, 60, 36), Color(0.35, 0.05, 0.08))
 			ci.draw_rect(Rect2(-27, -15, 54, 30), Color(0.55, 0.1, 0.12))
 			ci.draw_rect(Rect2(-20, -9, 40, 18), Color(0.7, 0.55, 0.2), false, 1.0)
