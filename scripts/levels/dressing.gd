@@ -217,13 +217,16 @@ static func _dress_room(r: Room, b: LevelBuilder, layer: ClutterLayer, glow: Clu
 		return
 	var area := r.cells.size()
 	# guest rooms get a little loose clutter; their furniture comes from RoomKits
-	var n := clampi(area / (14 if r.kind == "guest_room" else 9), 1, 16)
-	if r.kind in ["lot", "yard", "courtyard"]:
+	# indoors, loose things collect along the walls, not sprinkled mid-floor
+	var outdoors: bool = r.kind in ["lot", "yard", "courtyard"]
+	var n := clampi(area / (16 if r.kind == "guest_room" else 18), 1, 9)
+	if outdoors:
 		n = clampi(area / 30, 2, 18)
 	var used := {}
 	for i in n:
 		var kind: String = vocab[rng.randi() % vocab.size()]
-		var pool: Array[Vector2i] = wall_free if (kind in WALL_ITEMS and not wall_free.is_empty()) else free
+		var to_wall: bool = (kind in WALL_ITEMS or not outdoors) and not wall_free.is_empty()
+		var pool: Array[Vector2i] = wall_free if to_wall else free
 		var c: Vector2i = pool[rng.randi() % pool.size()]
 		if used.has(c):
 			continue
@@ -237,6 +240,9 @@ static func _dress_room(r: Room, b: LevelBuilder, layer: ClutterLayer, glow: Clu
 			# the wall face. Keep a small, intentional floor gap instead.
 			pos -= Vector2(wall_dir) * 2.5
 			rot = Vector2(wall_dir).angle() + PI * 0.5 + rng.randf_range(-0.12, 0.12)
+		elif wall_dir != Vector2i.ZERO:
+			# slide along the wall, never into it
+			pos += Vector2(wall_dir).orthogonal() * rng.randf_range(-4, 4) - Vector2(wall_dir) * 1.5
 		else:
 			pos += Vector2(rng.randf_range(-4, 4), rng.randf_range(-4, 4))
 		layer.items.append([kind, pos, rot, rng.randi() % 4])

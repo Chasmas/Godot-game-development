@@ -712,8 +712,8 @@
         36,
         30
       ],
-      "radius": 44,
-      "count": 30
+      "radius": 20,
+      "count": 10
     },
     {
       "type": "trash",
@@ -721,7 +721,8 @@
         25,
         13
       ],
-      "radius": 36
+      "radius": 20,
+      "count": 10
     },
     {
       "type": "trash",
@@ -729,8 +730,8 @@
         44,
         22
       ],
-      "radius": 30,
-      "count": 16
+      "radius": 20,
+      "count": 10
     },
     {
       "type": "trash",
@@ -738,7 +739,8 @@
         12,
         52
       ],
-      "radius": 46
+      "radius": 34,
+      "count": 16
     },
     {
       "type": "trash",
@@ -746,7 +748,8 @@
         30,
         49
       ],
-      "radius": 40
+      "radius": 34,
+      "count": 16
     },
     {
       "type": "trash",
@@ -754,7 +757,8 @@
         62,
         45
       ],
-      "radius": 36
+      "radius": 34,
+      "count": 16
     },
     {
       "type": "trash",
@@ -762,37 +766,8 @@
         47,
         55
       ],
-      "radius": 34
-    },
-    {
-      "type": "sprite",
-      "id": "studio_reel",
-      "pos": [
-        46,
-        9
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_reel",
-      "pos": [
-        52,
-        26
-      ],
-      "size": 0.8,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_reel",
-      "pos": [
-        8,
-        36
-      ],
-      "size": 0.8,
-      "floor": true
+      "radius": 34,
+      "count": 16
     },
     {
       "type": "sprite",
@@ -826,16 +801,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        25,
-        14
-      ],
-      "size": 0.42,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "studio_makeup_station",
       "pos": [
         8,
@@ -860,26 +825,6 @@
       "pos": [
         39,
         28
-      ],
-      "size": 0.34,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        22,
-        20
-      ],
-      "size": 0.34,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        57,
-        22
       ],
       "size": 0.34,
       "floor": true
@@ -916,70 +861,10 @@
     },
     {
       "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        25,
-        14
-      ],
-      "size": 0.42,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        22,
-        20
-      ],
-      "size": 0.34,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        57,
-        22
-      ],
-      "size": 0.34,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_overhead_light_rig",
       "pos": [
         2,
         2
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        5,
-        5
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        37,
-        6
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_moth",
-      "pos": [
-        10,
-        8
       ],
       "size": 0.38,
       "floor": false
@@ -1006,26 +891,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_tape_marks",
-      "pos": [
-        36,
-        13
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        29,
-        15
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "paper",
       "pos": [
         34,
@@ -1046,30 +911,10 @@
     },
     {
       "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        60,
-        22
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_script_trail",
       "pos": [
         48,
         24
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_moth",
-      "pos": [
-        24,
-        26
       ],
       "size": 0.38,
       "floor": false
@@ -1096,26 +941,6 @@
     },
     {
       "type": "sprite",
-      "id": "studio_tape_marks",
-      "pos": [
-        35,
-        31
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        61,
-        32
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "paper",
       "pos": [
         19,
@@ -1130,26 +955,6 @@
       "pos": [
         45,
         35
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        34,
-        38
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        55,
-        39
       ],
       "size": 0.38,
       "floor": false
@@ -1176,70 +981,10 @@
     },
     {
       "type": "sprite",
-      "id": "studio_tape_marks",
-      "pos": [
-        56,
-        45
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        6,
-        47
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "paper",
-      "pos": [
-        22,
-        48
-      ],
-      "size": 0.3,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_overhead_light_rig",
       "pos": [
         38,
         49
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        4,
-        52
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        20,
-        53
-      ],
-      "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_moth",
-      "pos": [
-        36,
-        54
       ],
       "size": 0.38,
       "floor": false
@@ -1253,28 +998,6 @@
       ],
       "size": 0.34,
       "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        66,
-        6
-      ],
-      "size": 0.42000000000000004,
-      "rot": 9,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        56,
-        9
-      ],
-      "size": 0.34,
-      "rot": -5,
       "floor": false
     },
     {
@@ -1323,67 +1046,12 @@
     },
     {
       "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        15,
-        25
-      ],
-      "size": 0.42000000000000004,
-      "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "paper",
-      "pos": [
-        56,
-        27
-      ],
-      "size": 0.27,
-      "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "studio_overhead_light_rig",
       "pos": [
         2,
         31
       ],
       "size": 0.38,
-      "rot": 9,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_gaffer_scraps",
-      "pos": [
-        63,
-        35
-      ],
-      "size": 0.34,
-      "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_script_trail",
-      "pos": [
-        42,
-        38
-      ],
-      "size": 0.38,
-      "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_moth",
-      "pos": [
-        60,
-        40
-      ],
-      "size": 0.42000000000000004,
       "rot": 9,
       "floor": false
     },
@@ -1396,39 +1064,6 @@
       ],
       "size": 0.38,
       "rot": -12,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_tape_marks",
-      "pos": [
-        57,
-        48
-      ],
-      "size": 0.42000000000000004,
-      "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "studio_makeup_spill",
-      "pos": [
-        12,
-        51
-      ],
-      "size": 0.34,
-      "rot": 9,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "paper",
-      "pos": [
-        33,
-        53
-      ],
-      "size": 0.27,
-      "rot": -5,
       "floor": false
     },
     {

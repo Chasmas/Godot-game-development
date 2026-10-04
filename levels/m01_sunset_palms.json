@@ -1055,16 +1055,6 @@
     },
     {
       "type": "sprite",
-      "id": "paper",
-      "pos": [
-        46,
-        42
-      ],
-      "size": 0.3,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "clutter_bottles",
       "pos": [
         65,
@@ -1121,16 +1111,6 @@
         53
       ],
       "size": 0.38,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "paper",
-      "pos": [
-        50,
-        54
-      ],
-      "size": 0.3,
       "floor": false
     },
     {
@@ -1198,17 +1178,6 @@
     },
     {
       "type": "sprite",
-      "id": "paper",
-      "pos": [
-        9,
-        17
-      ],
-      "size": 0.27,
-      "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
       "id": "clutter_bottles",
       "pos": [
         27,
@@ -1271,17 +1240,6 @@
       ],
       "size": 0.38,
       "rot": 0,
-      "floor": false
-    },
-    {
-      "type": "sprite",
-      "id": "paper",
-      "pos": [
-        56,
-        43
-      ],
-      "size": 0.27,
-      "rot": 9,
       "floor": false
     },
     {
