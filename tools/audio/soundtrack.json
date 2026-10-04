@@ -1949,6 +1949,97 @@
           ]
         }
       ]
+    },
+    "main_theme_v2": {
+      "title": "Neon Vigil (Main Theme, remade)",
+      "family": "menu",
+      "chunks": [
+        {
+          "text": "[Intro] low pulsing sub bass and a cold arpeggiated synth, rain and a distant siren, a lone brassy lead states a bold memorable five-note minor melody {cassette hiss}",
+          "sec": 22,
+          "styles": [
+            "dark synthwave",
+            "outrun",
+            "cinematic",
+            "E minor",
+            "100 BPM",
+            "1980s",
+            "analog synthesizers",
+            "gated reverb snare",
+            "LinnDrum",
+            "heavy sub bass",
+            "wide stereo",
+            "instrumental",
+            "suspense",
+            "tape hiss",
+            "rain ambience"
+          ]
+        },
+        {
+          "text": "[Main theme] drums slam in: kick, huge gated snare, driving eighth-note octave bass; the brassy detuned lead plays the soaring heroic-but-dangerous melody with a clear catchy hook, lush pad chords underneath",
+          "sec": 44,
+          "styles": [
+            "dark synthwave",
+            "outrun",
+            "cinematic",
+            "E minor",
+            "100 BPM",
+            "1980s",
+            "analog synthesizers",
+            "gated reverb snare",
+            "LinnDrum",
+            "heavy sub bass",
+            "wide stereo",
+            "instrumental",
+            "anthemic",
+            "driving",
+            "catchy melody",
+            "brass synth lead"
+          ]
+        },
+        {
+          "text": "[Bridge] the beat drops to bass and shimmering FM bells, a counter-melody on a warm saxophone-like synth, tension builds with rising arpeggios and a snare roll",
+          "sec": 30,
+          "styles": [
+            "dark synthwave",
+            "outrun",
+            "cinematic",
+            "E minor",
+            "100 BPM",
+            "1980s",
+            "analog synthesizers",
+            "gated reverb snare",
+            "LinnDrum",
+            "heavy sub bass",
+            "wide stereo",
+            "instrumental",
+            "tension",
+            "FM bells",
+            "saxophone synth"
+          ]
+        },
+        {
+          "text": "[Final] the full theme returns bigger, double-tracked lead, pounding drums, then it slows and resolves on one long held note as the tape winds down",
+          "sec": 24,
+          "styles": [
+            "dark synthwave",
+            "outrun",
+            "cinematic",
+            "E minor",
+            "100 BPM",
+            "1980s",
+            "analog synthesizers",
+            "gated reverb snare",
+            "LinnDrum",
+            "heavy sub bass",
+            "wide stereo",
+            "instrumental",
+            "epic",
+            "cinematic",
+            "tape slow down"
+          ]
+        }
+      ]
     }
   }
 }
