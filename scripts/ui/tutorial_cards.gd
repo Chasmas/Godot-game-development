@@ -98,10 +98,35 @@ func _lines(id: String) -> PackedStringArray:
 	out.append(line)
 	return out
 
+func _key_label(act: String) -> String:
+	if act == "move_up":
+		return "WASD" if not InputSetup.using_gamepad else "L-STICK"
+	return InputSetup.binding_text(act, InputSetup.using_gamepad)
+
+## Chip widths -> which row each key lands on (rows wrap inside the card).
+func _key_rows(id: String) -> Array:
+	var fm := UIStyle.font_mono()
+	var fb := UIStyle.font_bold()
+	var keys: Array = DEFS[id][2] if DEFS.has(id) else []
+	var out: Array = []
+	var row := 0
+	var kx := 16.0
+	for act in keys:
+		var kw := fm.get_string_size(_key_label(str(act)), HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x + 14.0
+		var nm := tr(str(InputSetup.ACTIONS.get(str(act), [str(act)])[0])).to_upper()
+		var nw := fb.get_string_size(nm, HORIZONTAL_ALIGNMENT_LEFT, -1, 11).x
+		if kx + kw + 6.0 + nw > W - 12.0 and kx > 16.0:
+			row += 1
+			kx = 16.0
+		out.append({"row": row, "x": kx, "w": kw, "nw": nw, "name": nm, "label": _key_label(str(act))})
+		kx += kw + nw + 18.0
+	return out
+
 func _height(c: Dictionary) -> float:
 	var id: String = c.id
-	var keys: Array = DEFS[id][2] if DEFS.has(id) else []
-	return 40.0 + _lines(id).size() * 18.0 + (30.0 if not keys.is_empty() else 0.0) + 12.0
+	var rows := _key_rows(id)
+	var nrows: int = (int(rows[-1].row) + 1) if not rows.is_empty() else 0
+	return 40.0 + _lines(id).size() * 18.0 + nrows * 28.0 + 12.0
 
 func _draw() -> void:
 	var fd := UIStyle.font_display()
@@ -125,21 +150,13 @@ func _draw() -> void:
 			draw_string(fb, Vector2(r.position.x + 16, ly), l, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(UIStyle.PAPER, 0.92 * a))
 			ly += 18.0
 		# the keys, as chips
-		var keys: Array = DEFS[id][2] if DEFS.has(id) else []
-		var kx := r.position.x + 16.0
-		for act in keys:
-			var label := InputSetup.binding_text(str(act), InputSetup.using_gamepad)
-			if str(act) == "move_up":
-				label = "WASD" if not InputSetup.using_gamepad else "L-STICK"
-			var name := tr(str(InputSetup.ACTIONS.get(str(act), [str(act)])[0])).to_upper()
-			var kw := fm.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x + 14.0
-			var chip := Rect2(Vector2(kx, ly - 2), Vector2(kw, 20))
+		for kr in _key_rows(id):
+			var cy: float = ly - 2 + float(kr.row) * 28.0
+			var chip := Rect2(Vector2(r.position.x + float(kr.x), cy), Vector2(float(kr.w), 20))
 			draw_rect(chip, Color(UIStyle.CYAN, 0.18 * a))
 			draw_rect(chip, Color(UIStyle.CYAN, 0.8 * a), false, 1.0)
-			draw_string(fm, chip.position + Vector2(7, 15), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(UIStyle.CYAN, a))
-			var nw := fb.get_string_size(name, HORIZONTAL_ALIGNMENT_LEFT, -1, 11).x
-			draw_string(fb, Vector2(chip.end.x + 6, ly + 12), name, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(UIStyle.DIM, a))
-			kx = chip.end.x + nw + 18.0
+			draw_string(fm, chip.position + Vector2(7, 15), str(kr.label), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(UIStyle.CYAN, a))
+			draw_string(fb, Vector2(chip.end.x + 6, cy + 14), str(kr.name), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(UIStyle.DIM, a))
 		# the time left, draining
 		var k := clampf(1.0 - float(c.t) / float(c.dur), 0.0, 1.0)
 		draw_rect(Rect2(r.position.x, r.end.y - 3, W * k, 3), Color(UIStyle.PINK, 0.9 * a))
