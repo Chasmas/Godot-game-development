@@ -90,7 +90,7 @@ static func _baked(key: String) -> Texture2D:
 ## recoiling and placing a weapon at its existing hand coordinates.
 static func has_pose_art(palette: String) -> bool:
 	var look := base_name(palette)
-	return look in ["cass", "guard", "civilian", "welder"] and ResourceLoader.exists(PIXELLAB_POSE_DIR + "%s_unarmed.png" % look)
+	return look in ["cass", "guard", "civilian", "welder", "security", "bellhop", "biker", "gunner", "handler", "heavy", "hunter", "riot", "scout", "scrapper", "sniper", "stagehand"] and ResourceLoader.exists(PIXELLAB_POSE_DIR + "%s_unarmed.png" % look)
 
 static func _pose_art(palette: String, pose: String) -> Texture2D:
 	if not has_pose_art(palette):
