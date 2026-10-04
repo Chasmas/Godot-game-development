@@ -216,7 +216,7 @@ static func painted_tex(id: String) -> Texture2D:
 	var key := "paint/" + id
 	if not _cache.has(key):
 		var pixel_path := PIXELLAB_PAINT % id
-		var p := pixel_path if ResourceLoader.exists(pixel_path) else PAINT % id
+		var p := PAINT % id if ResourceLoader.exists(PAINT % id) else pixel_path
 		_cache[key] = load(p) if ResourceLoader.exists(p) else null
 	return _cache[key]
 

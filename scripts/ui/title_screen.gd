@@ -988,10 +988,8 @@ class TitleEntry extends Button:
 			draw_colored_polygon(plate, Color(UIStyle.PINK, 0.85 * e))
 			draw_line(Vector2(8 + w + 12, 2), Vector2(8 + w, h - 2), Color(UIStyle.CYAN, e), 2.0)
 		var dis := disabled
-		var ix := "%02d" % index
-		draw_string(fm, Vector2(14, h * 0.5 + 6), ix, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(UIStyle.CYAN, 0.35 if dis else (0.6 + 0.4 * e)))
 		var col := UIStyle.DIM if dis else Color.WHITE.lerp(UIStyle.INK, e)
-		var x := 46.0 + 8.0 * e
+		var x := 26.0 + 8.0 * e
 		draw_string(fd, Vector2(x + 2, h * 0.5 + 9), label_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Color(0, 0, 0, 0.6 * (1.0 - e)))
 		draw_string(fd, Vector2(x, h * 0.5 + 7), label_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, col)
 		if e > 0.5 and fmod(_t, 0.9) < 0.55:

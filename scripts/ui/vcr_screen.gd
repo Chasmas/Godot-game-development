@@ -233,7 +233,7 @@ func _scroll_to_sel() -> void:
 	var ys := _shelf_y_positions()
 	if ys.is_empty():
 		return
-	var item_y := ys[_sel]
+	var item_y: float = ys[_sel]
 	var shelf_h := size.y - 132.0 - 55.0
 	_scroll_y = clampf(_scroll_y, item_y - maxf(0.0, shelf_h - 40.0), item_y)
 	_scroll_y = clampf(_scroll_y, 0.0, _max_scroll())
