@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbxtuvea2i8l1"
-path="res://.godot/imported/candelabra.png-4e6baf7be1d91bd225a7bf47760582a0.ctex"
+uid="uid://0g1QKOblIZCH"
+path="res://.godot/imported/candelabra.png-fb2c93426636d36381567e5e1847643c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/candelabra.png"
-dest_files=["res://.godot/imported/candelabra.png-4e6baf7be1d91bd225a7bf47760582a0.ctex"]
+dest_files=["res://.godot/imported/candelabra.png-fb2c93426636d36381567e5e1847643c.ctex"]
 
 [params]
 

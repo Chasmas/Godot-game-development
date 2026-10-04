@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://644npoxpfqdw"
-path="res://.godot/imported/stage.png-84590d2e352ea339169164191d194656.ctex"
+uid="uid://0i0FPR77FzIk"
+path="res://.godot/imported/stage.png-15070b256988eef1ced977b111080fb0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/stage.png"
-dest_files=["res://.godot/imported/stage.png-84590d2e352ea339169164191d194656.ctex"]
+dest_files=["res://.godot/imported/stage.png-15070b256988eef1ced977b111080fb0.ctex"]
 
 [params]
 

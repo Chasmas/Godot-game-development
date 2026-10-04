@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyuqdqwkxpru8"
-path="res://.godot/imported/grass.png-cbc21f283d9d83a9b792bec399fcd667.ctex"
+uid="uid://0cl1T0cwPP98"
+path="res://.godot/imported/grass.png-f62d90e88832dbe6ce015a090c876da7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/grass.png"
-dest_files=["res://.godot/imported/grass.png-cbc21f283d9d83a9b792bec399fcd667.ctex"]
+dest_files=["res://.godot/imported/grass.png-f62d90e88832dbe6ce015a090c876da7.ctex"]
 
 [params]
 

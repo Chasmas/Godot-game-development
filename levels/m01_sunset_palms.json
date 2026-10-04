@@ -1,1701 +1,1823 @@
 {
- "id": "m01_sunset_palms",
- "name": "Sunset Palms Motel",
- "ambient": [
-  0.34,
-  0.25,
-  0.43
- ],
- "map": [
-  "####################################################################",
-  "#===################################################################",
-  "#===#..........#..........#............#.............#............##",
-  "#===#..bb....@.#.0..*.....#.....H....4.#......*..bb..D..bb.....&..##",
-  "#===#..bb......#......h...#......*.....#.........bb..D..bb........##",
-  "#===#....*.....D..........D....TTT.....D.............%......G.....##",
-  "#===#.....g....D..........D....TTT.....D....g........%............##",
-  "#===#..........#..m....bb.#.........m..#........$....#........o...##",
-  "#===#.......t..#.......bb.#.E..........#.......t...U.#.....t......##",
-  "#===#..........#..........#............#.............#............##",
-  "#===##WW#DD#WW###WW#DD#WW###WW#DD##WW####WW##DD###WW######DD########",
-  "#===#\"S\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"W,,,,,,,,,,,,##",
-  "#===#A\"\"\"\"\"s\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"I\"\"W,2,,,,,,,,F,##",
-  "#=========================*=========EE===============#,,,,,*,,,,,,##",
-  "#=========TT=================================h=======D,,,,,,,g,,,,##",
-  "#===#===============~~~~~~~~~~~~~~===================D,,,,,,,,,,,,##",
-  "#===#===============~~~~~~~~~~~~~~===================#,,EE,,,,,,,,##",
-  "#===#=======*==l=l==~~~~~~~~~~~~~~==l=l===*======Y===#,,,,,,,,,,,,##",
-  "#===#==========l=l==~~~~~~*~~~~~~~==l=l==============######DD#######",
-  "#===#===============~~~~~~~~~~~~~~===================W____________##",
-  "#=*=#===Y===========~~~~~~~~~~~~~~===================W_____*____o_##",
-  "#===#========d==============================TT=======#____kkk_____##",
-  "#===#===========E=========*==========================D____________##",
-  "#===#===================================g============D_________g__##",
-  "#=y=#F\"\"\"\"\"\"\"=====================5=========\"\"\"\"\"\"\"\"\"#_Y_____6____##",
-  "#===#\"\"\"\"\"\"\"\"===============================\"\"\"\"\"\"\"\"\"#__________R_##",
-  "#===#########################DD############################DD#######",
-  "#===#,,,,,#....*...#.9..*...#,,,#...*...Y#.t..*...bb.#,,,,,,,,,,,,##",
-  "#===#ww,,,#..@..bb.D.....h..#,*,#..gTT...D........bb.#,,O,B,,C,,,,##",
-  "#===#,,,7,#.....bb.D.bb.....#,,,#...TTg..D.....H.....#,,,,,,,C,*,,##",
-  "#===#ww,,,#.t......#.bb.....#,,,#.3......#..........Y#,CCCCCCC,,,,##",
-  "#===#,,,,,#WW#DD####WW#DD####,,,#WW#DD####WWW#DD######,,,,,,,,,,,,##",
-  "#===#,,,g,#,,,,,*,,,,,,,,,,,,,*,,,,,,,,,,,,,*,,,,,,,,#,,,,,,,,,,,V##",
-  "#=*=#,,,,,D,,,,,,,,,g,,,,,,,,,,,,,,,,,,,,,,,,,,m,,,,,D,,,,*,,,,,,,##",
-  "#===#,,^,,D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,D,,,,,,,,,,,,##",
-  "#===#,,,,,######DD###DD##########DD##############DD###,,,,,,,,,,,,##",
-  "#===#,,!,,#........#bb......#A_____QQ____#...........#,,,#,,,,#,,,##",
-  "#===D,,,,,#.U.*....#bb....*.D_V___*____I_D.....*...E.#,Y,,,,,,,,,,##",
-  "#===D,,,TT#.....bb.D....m...D_____s______D....g..bb..#,,,,*,,,,,,,##",
-  "#===#,,,,,#.8...bb.D........#___TT___TT__#.!.....bb..#,R,,,,,,,,,R##",
-  "#===#S,,,,#........#........#___________Y#...........#,,,,,,,,,,Y,##",
-  "#===#########WWWW#####WWWW#####WWWWWWWW#####WWWW#######WW#LL##WW####",
-  "#==================================================================#",
-  "#==g===============================================================#",
-  "#:::::::::::::::::::::::*:::::::::::::::::::::*::::::::::::::::::::#",
-  "#:ZZ::::::::::::::::::::::::::::::::::::g::::::::::::::::::::::::::#",
-  "#:ZZ:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "::::::::::::::::KKKK::::::::KKKK::::::::::::KKKK:::::::::::::::::::#",
-  ":::U::::::::::::KKKK::::::::KKKK::::::::::::KKKK:::::::::::::::::::#",
-  "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*::::::::#",
-  ":::::::::::::*::::::::?::::::::::::::::::::::::::::::::::::::::::::#",
-  "#:::::::::::::::::::::::::::::::::*::::::::::::::::::::::::::::::::#",
-  "#::::::::::::::::::::::::::::::::::::::::::::::::::::::KK::::::::::#",
-  "#:::::::X::::::::::::::::::::::::::::::::::::::::::::::KK::::::::::#",
-  "#::::::::P::::::::::::::::::::::::::KKKK:::::::::::::::KK::::::::::#",
-  "#:::::::::::::::::::::::::::::::::::KKKK:::::::::::::::KK::::::::::#",
-  ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "####################################################################"
- ],
- "zones": {
-  "exterior": [
-   0,
-   42,
-   68,
-   19
+  "id": "m01_sunset_palms",
+  "name": "Sunset Palms Motel",
+  "ambient": [
+    0.34,
+    0.25,
+    0.43
   ],
-  "exterior_alley": [
-   0,
-   0,
-   4,
-   42
+  "map": [
+    "####################################################################",
+    "#===################################################################",
+    "#===#..........#..........#............#.............#............##",
+    "#===#..bb....@.#.0..*.....#.....H....4.#......*..bb..D..bb.....&..##",
+    "#===#..bb......#......h...#......*.....#.........bb..D..bb........##",
+    "#===#....*.....D..........D....TTT.....D.............%......G.....##",
+    "#===#.....g....D..........D....TTT.....D....g........%............##",
+    "#===#..........#..m....bb.#.........m..#........$....#........o...##",
+    "#===#.......t..#.......bb.#.E..........#.......t...U.#.....t......##",
+    "#===#..........#..........#............#.............#............##",
+    "#===##WW#DD#WW###WW#DD#WW###WW#DD##WW####WW##DD###WW######DD########",
+    "#===#\"S\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"W,,,,,,,,,,,,##",
+    "#===#A\"\"\"\"\"s\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"I\"\"W,2,,,,,,,,F,##",
+    "#=========================*=========EE===============#,,,,,*,,,,,,##",
+    "#=========TT=================================h=======D,,,,,,,g,,,,##",
+    "#===#===============~~~~~~~~~~~~~~===================D,,,,,,,,,,,,##",
+    "#===#===============~~~~~~~~~~~~~~===================#,,EE,,,,,,,,##",
+    "#===#=======*==l=l==~~~~~~~~~~~~~~==l=l===*======Y===#,,,,,,,,,,,,##",
+    "#===#==========l=l==~~~~~~*~~~~~~~==l=l==============######DD#######",
+    "#===#===============~~~~~~~~~~~~~~===================W____________##",
+    "#=*=#===Y===========~~~~~~~~~~~~~~===================W_____*____o_##",
+    "#===#========d==============================TT=======#____kkk_____##",
+    "#===#===========E=========*==========================D____________##",
+    "#===#===================================g============D_________g__##",
+    "#=y=#F\"\"\"\"\"\"\"=====================5=========\"\"\"\"\"\"\"\"\"#_Y_____6____##",
+    "#===#\"\"\"\"\"\"\"\"===============================\"\"\"\"\"\"\"\"\"#__________R_##",
+    "#===#########################DD############################DD#######",
+    "#===#,,,,,#....*...#.9..*...#,,,#...*...Y#.t..*...bb.#,,,,,,,,,,,,##",
+    "#===#ww,,,#..@..bb.D.....h..#,*,#..gTT...D........bb.#,,O,B,,C,,,,##",
+    "#===#,,,7,#.....bb.D.bb.....#,,,#...TTg..D.....H.....#,,,,,,,C,*,,##",
+    "#===#ww,,,#.t......#.bb.....#,,,#.3......#..........Y#,CCCCCCC,,,,##",
+    "#===#,,,,,#WW#DD####WW#DD####,,,#WW#DD####WWW#DD######,,,,,,,,,,,,##",
+    "#===#,,,g,#,,,,,*,,,,,,,,,,,,,*,,,,,,,,,,,,,*,,,,,,,,#,,,,,,,,,,,V##",
+    "#=*=#,,,,,D,,,,,,,,,g,,,,,,,,,,,,,,,,,,,,,,,,,,m,,,,,D,,,,*,,,,,,,##",
+    "#===#,,^,,D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,D,,,,,,,,,,,,##",
+    "#===#,,,,,######DD###DD##########DD##############DD###,,,,,,,,,,,,##",
+    "#===#,,!,,#........#bb......#A_____QQ____#...........#,,,#,,,,#,,,##",
+    "#===D,,,,,#.U.*....#bb....*.D_V___*____I_D.....*...E.#,Y,,,,,,,,,,##",
+    "#===D,,,TT#.....bb.D....m...D_____s______D....g..bb..#,,,,*,,,,,,,##",
+    "#===#,,,,,#.8...bb.D........#___TT___TT__#.!.....bb..#,R,,,,,,,,,R##",
+    "#===#S,,,,#........#........#___________Y#...........#,,,,,,,,,,Y,##",
+    "#===#########WWWW#####WWWW#####WWWWWWWW#####WWWW#######WW#LL##WW####",
+    "#==================================================================#",
+    "#==g===============================================================#",
+    "#:::::::::::::::::::::::*:::::::::::::::::::::*::::::::::::::::::::#",
+    "#:ZZ::::::::::::::::::::::::::::::::::::g::::::::::::::::::::::::::#",
+    "#:ZZ:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "::::::::::::::::KKKK::::::::KKKK::::::::::::KKKK:::::::::::::::::::#",
+    ":::U::::::::::::KKKK::::::::KKKK::::::::::::KKKK:::::::::::::::::::#",
+    "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*::::::::#",
+    ":::::::::::::*::::::::?::::::::::::::::::::::::::::::::::::::::::::#",
+    "#:::::::::::::::::::::::::::::::::*::::::::::::::::::::::::::::::::#",
+    "#::::::::::::::::::::::::::::::::::::::::::::::::::::::KK::::::::::#",
+    "#:::::::X::::::::::::::::::::::::::::::::::::::::::::::KK::::::::::#",
+    "#::::::::P::::::::::::::::::::::::::KKKK:::::::::::::::KK::::::::::#",
+    "#:::::::::::::::::::::::::::::::::::KKKK:::::::::::::::KK::::::::::#",
+    ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "####################################################################"
   ],
-  "lobby": [
-   53,
-   0,
-   15,
-   42
-  ],
-  "north_wing": [
-   4,
-   0,
-   50,
-   11
-  ],
-  "courtyard": [
-   4,
-   11,
-   50,
-   15
-  ],
-  "ground_floor": [
-   4,
-   26,
-   50,
-   16
-  ]
- },
- "power": {
-  "6,11": "north_wing",
-  "5,40": "ground_floor",
-  "5,24": "courtyard"
- },
- "flicker_zones": [
-  "ground_floor"
- ],
- "parking_rows": [
-  [
-   46,
-   49
-  ],
-  [
-   52,
-   55
-  ]
- ],
- "inside_rect": [
-  4,
-  0,
-  200,
-  42
- ],
- "time_text": "11:48 PM",
- "light_colors": {
-  ".": "f0a36d",
-  ",": "9edaf2",
-  "_": "eeb77e",
-  ":": "c86d48",
-  "=": "e85a9d",
-  "\"": "46bddd",
-  "~": "39c9e9"
- },
- "enemies": {
-  "40,45": {
-   "kind": "handler",
-   "patrol": [
-    [
-     40,
-     45
+  "zones": {
+    "exterior": [
+      0,
+      42,
+      68,
+      19
     ],
-    [
-     52,
-     45
+    "exterior_alley": [
+      0,
+      0,
+      4,
+      42
     ],
-    [
-     52,
-     50
+    "lobby": [
+      53,
+      0,
+      15,
+      42
     ],
-    [
-     26,
-     51
+    "north_wing": [
+      4,
+      0,
+      50,
+      11
     ],
-    [
-     26,
-     45
+    "courtyard": [
+      4,
+      11,
+      50,
+      15
+    ],
+    "ground_floor": [
+      4,
+      26,
+      50,
+      16
     ]
-   ]
   },
-  "8,32": {
-   "kind": "biker",
-   "facing": "up"
+  "power": {
+    "6,11": "north_wing",
+    "5,40": "ground_floor",
+    "5,24": "courtyard"
   },
-  "20,33": {
-   "patrol": [
-    [
-     20,
-     33
-    ],
-    [
-     44,
-     33
-    ]
-   ]
-  },
-  "47,33": {
-   "facing": "left"
-  },
-  "25,28": {
-   "facing": "left"
-  },
-  "35,28": {
-   "kind": "bellhop",
-   "facing": "right"
-  },
-  "38,29": {
-   "kind": "bellhop",
-   "facing": "left"
-  },
-  "47,29": {
-   "facing": "down"
-  },
-  "24,38": {
-   "facing": "down"
-  },
-  "34,38": {
-   "facing": "down"
-  },
-  "46,38": {
-   "patrol": [
-    [
-     46,
-     38
-    ],
-    [
-     44,
-     37
-    ],
-    [
-     51,
-     39
-    ]
-   ]
-  },
-  "26,22": {
-   "patrol": [
-    [
-     26,
-     22
-    ],
-    [
-     34,
-     22
-    ],
-    [
-     34,
-     13
-    ],
-    [
-     19,
-     13
-    ],
-    [
-     19,
-     22
-    ]
-   ]
-  },
-  "11,12": {
-   "facing": "right"
-  },
-  "45,14": {
-   "facing": "left"
-  },
-  "40,23": {
-   "patrol": [
-    [
-     40,
-     23
-    ],
-    [
-     48,
-     23
-    ],
-    [
-     48,
-     14
-    ]
-   ]
-  },
-  "10,6": {
-   "kind": "biker",
-   "facing": "down"
-  },
-  "22,4": {
-   "facing": "down"
-  },
-  "18,7": {
-   "facing": "right"
-  },
-  "32,3": {
-   "facing": "down"
-  },
-  "36,7": {
-   "facing": "left"
-  },
-  "44,6": {
-   "kind": "bellhop",
-   "facing": "right"
-  },
-  "61,14": {
-   "patrol": [
-    [
-     61,
-     14
-    ],
-    [
-     58,
-     12
-    ],
-    [
-     62,
-     16
-    ]
-   ]
-  },
-  "63,23": {
-   "kind": "sniper",
-   "facing": "left"
-  },
-  "58,28": {
-   "facing": "down",
-   "boss": true
-  },
-  "13,21": {
-   "sleep": true,
-   "facing": "left"
-  },
-  "2,24": {
-   "sniff": true
-  },
-  "3,43": {
-   "facing": "left"
-  }
- },
- "npcs": {
-  "13,28": {
-   "id": "earl",
-   "palette": "civilian",
-   "lines": [
-    "Room's paid through Sunday. I'm not moving for anybody.",
-    "Harcourt's been jumpy all week. Keeps checking the parking lot like he's waiting for somebody.",
-    "Room 204? Tape starts by itself after midnight. Same scream, same fire, every night."
-   ]
-  },
-  "13,3": {
-   "id": "dolores",
-   "palette": "scout",
-   "lines": [
-    "Housekeeping stopped servicing this floor months ago, honey. Manager's orders.",
-    "Harcourt keeps 204 locked even when it's empty. Sometimes I hear a projector through the wall.",
-    "If you're looking for him, try the office. If you're looking for answers... don't let him see you asking."
-   ]
-  }
- },
- "collectibles": {
-  "48,7": {
-   "id": "tape_roll7",
-   "kind": "tape",
-   "title": "VHS: HOTSHOT — CAMERA B / ROLL 7",
-   "text": "Unedited stunt footage. A Cadillac burns on a desert road. Cass walks out of frame, coughing. Tommy is still inside the car.\nA voice behind the camera says: 'Don't cut. Aurelio wants the whole take.'\nThe image buckles into static."
-  },
-  "63,3": {
-   "id": "photo_harcourt",
-   "kind": "photo",
-   "title": "POLAROID: HOTSHOT WRAP PARTY — 1987",
-   "text": "Harcourt, younger, wearing a HOTSHOT crew jacket. Beside him stands a man whose face has been gouged away with a key.\nOn the back, in blue ink: 'A.V. knows who changed the fire gag. Residuals due.'"
-  }
- },
- "phone": {
-  "pos": [
-   56,
-   28
+  "flicker_zones": [
+    "ground_floor"
   ],
-  "dialogue": "m01_phone"
- },
- "checkpoints": [
-  {
-   "rect": [
-    5,
-    27,
-    48,
-    14
-   ],
-   "name": "MOTEL - GROUND FLOOR"
-  },
-  {
-   "rect": [
-    5,
-    11,
-    48,
-    15
-   ],
-   "name": "COURTYARD"
-  },
-  {
-   "rect": [
-    5,
-    2,
-    48,
-    8
-   ],
-   "name": "UPSTAIRS WING"
-  },
-  {
-   "rect": [
-    54,
-    11,
-    12,
-    30
-   ],
-   "name": "FRONT OFFICE"
-  }
- ],
- "boss_trigger": [],
- "boss_cover": [
-  [
-   58,
-   28
+  "parking_rows": [
+    [
+      46,
+      49
+    ],
+    [
+      52,
+      55
+    ]
   ],
-  [
-   63,
-   38
-  ],
-  [
-   56,
-   35
-  ],
-  [
-   62,
-   22
-  ],
-  [
-   55,
-   38
-  ]
- ],
- "hints": [
-  {
-   "rect": [
-    5,
-    44,
-    12,
-    14
-   ],
-   "id": "move",
-   "text": "WASD / LEFT STICK  move    ·    MOUSE / RIGHT STICK  aim"
-  },
-  {
-   "rect": [
-    1,
-    42,
-    6,
-    6
-   ],
-   "id": "sneak",
-   "text": "He hasn't seen you.  Hold [CTRL] (or tilt the stick gently) to SNEAK behind him, then [F] TAKEDOWN.  Or PUNCH him down and [F] EXECUTE"
-  },
-  {
-   "rect": [
-    20,
-    44,
-    16,
-    12
-   ],
-   "id": "lock",
-   "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  tap again to switch target (or flick the right stick)  ·  hold to release"
-  },
-  {
-   "rect": [
+  "inside_rect": [
     4,
-    36,
-    3,
-    5
-   ],
-   "id": "switch",
-   "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark — but someone may walk over to turn them back on."
-  },
-  {
-   "rect": [
-    1,
-    27,
-    3,
-    6
-   ],
-   "id": "dog",
-   "text": "A DOG. It smells you if you rush past. SNEAK, or take it down from behind. Dogs bark for their owners."
-  },
-  {
-   "rect": [
-    1,
-    46,
-    5,
-    4
-   ],
-   "id": "upgrade",
-   "text": "BRIEFCASES hold random upgrades — they last the whole mission."
-  },
-  {
-   "rect": [
-    11,
-    42,
-    20,
-    3
-   ],
-   "id": "window",
-   "text": "[SPACE] DASH  —  dive through windows, vault tables, dodge bullets"
-  },
-  {
-   "rect": [
-    1,
-    34,
-    3,
-    7
-   ],
-   "id": "doors",
-   "text": "Walk into doors to open them.  [F] near a door KICKS it into whoever is behind"
-  },
-  {
-   "rect": [
-    20,
-    45,
-    5,
-    8
-   ],
-   "id": "brick",
-   "text": "[E] pick up  ·  [RMB] THROW — anything you throw knocks people down"
-  },
-  {
-   "rect": [
-    54,
-    42,
-    10,
-    3
-   ],
-   "id": "m01_locked",
-   "text": "The lobby doors are chained shut from inside. Harcourt kept pyro charges from the shoot - try the boiler room."
-  }
- ],
- "exit": [
-  8,
-  53
- ],
- "weather": {
-  "schedule": [
-   [
-    "drizzle",
-    20
-   ],
-   [
-    "storm",
-    55
-   ],
-   [
-    "rain",
-    30
-   ],
-   [
-    "clear",
-    25
-   ],
-   [
-    "storm",
-    40
-   ]
-  ]
- },
- "decor": [
-  {
-   "type": "neon",
-   "pos": [
-    59,
-    44
-   ],
-   "text": "SUNSET PALMS",
-   "color": "ff3d7f",
-   "size": 16
-  },
-  {
-   "type": "vacancy",
-   "pos": [
-    50,
-    44
-   ]
-  },
-  {
-   "type": "neon",
-   "pos": [
-    33,
-    12
-   ],
-   "text": "POOL",
-   "color": "35e0ff",
-   "size": 9
-  },
-  {
-   "type": "neon",
-   "pos": [
-    20,
-    44
-   ],
-   "text": "OFFICE ->",
-   "color": "ffd23f",
-   "size": 8
-  },
-  {
-   "type": "lamp",
-   "pos": [
-    8,
-    47
-   ],
-   "size": 0.62
-  },
-  {
-   "type": "lamp",
-   "pos": [
-    26,
-    47
-   ],
-   "size": 0.62
-  },
-  {
-   "type": "lamp",
-   "pos": [
-    38,
-    47
-   ],
-   "size": 0.62
-  },
-  {
-   "type": "lamp",
-   "pos": [
-    56,
-    47
-   ],
-   "size": 0.62
-  },
-  {
-   "type": "arcade",
-   "pos": [
-    60,
-    28
-   ],
-   "size": 0.72
-  },
-  {
-   "type": "arcade",
-   "pos": [
-    64,
-    29
-   ],
-   "size": 0.72
-  },
-  {
-   "type": "dumpster",
-   "pos": [
-    50,
-    43
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "palm",
-   "pos": [
-    2,
-    47
-   ],
-   "size": 1.1
-  },
-  {
-   "type": "palm",
-   "pos": [
-    14,
-    58
-   ],
-   "size": 1
-  },
-  {
-   "type": "palm",
-   "pos": [
-    42,
-    58
-   ],
-   "size": 1.2
-  },
-  {
-   "type": "palm",
-   "pos": [
-    64,
-    57
-   ],
-   "size": 1
-  },
-  {
-   "type": "palm",
-   "pos": [
-    62,
-    45
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "palm",
-   "pos": [
-    7,
-    12
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "palm",
-   "pos": [
-    47,
-    24
-   ],
-   "size": 1
-  },
-  {
-   "type": "palm",
-   "pos": [
-    2,
-    26
-   ],
-   "size": 0.8
-  },
-  {
-   "type": "sprite",
-   "id": "motel_exit_arrow",
-   "pos": [
-    8,
-    46
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_exit_arrow",
-   "pos": [
-    6,
-    32
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_exit_arrow",
-   "pos": [
-    40,
-    13
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    19,
-    14
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    35,
-    19
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    40,
-    16
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_ice_bucket",
-   "pos": [
-    30,
-    14
-   ],
-   "size": 0.32,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    45,
-    22
-   ],
-   "size": 0.48,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_pool_float",
-   "pos": [
-    29,
-    17
-   ],
-   "size": 0.42,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    10,
-    21
-   ],
-   "size": 0.42,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_hasty_checkout",
-   "pos": [
-    32,
-    14
-   ],
-   "size": 0.38,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_housekeeping_cart",
-   "pos": [
-    43,
-    14
-   ],
-   "size": 0.38,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_ice_machine",
-   "pos": [
-    11,
-    20
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    34,
-    13
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_pool_party_ruin",
-   "pos": [
-    39,
-    15
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    19,
-    14
-   ],
-   "size": 0.8,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    35,
-    19
-   ],
-   "size": 0.8,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    40,
-    16
-   ],
-   "size": 0.8,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    45,
-    22
-   ],
-   "size": 0.48,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    10,
-    21
-   ],
-   "size": 0.42,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    34,
-    13
-   ],
-   "size": 0.34,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    8,
-    8
-   ],
-   "size": 0.58,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    2,
-    2
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    29,
-    3
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    55,
-    4
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    22,
-    6
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    54,
-    7
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    27,
-    9
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    58,
-    11
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    61,
-    13
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    2,
-    16
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    62,
-    17
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    6,
-    20
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    60,
-    21
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    34,
-    23
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    2,
-    25
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    24,
-    27
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    54,
-    28
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    23,
-    30
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    34,
-    32
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    61,
-    33
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    5,
-    36
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    35,
-    37
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    62,
-    38
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    26,
-    40
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    46,
+    0,
+    200,
     42
-   ],
-   "size": 0.3,
-   "floor": false
+  ],
+  "time_text": "11:48 PM",
+  "light_colors": {
+    ".": "f0a36d",
+    ",": "9edaf2",
+    "_": "eeb77e",
+    ":": "c86d48",
+    "=": "e85a9d",
+    "\"": "46bddd",
+    "~": "39c9e9"
   },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    65,
-    43
-   ],
-   "size": 0.38,
-   "floor": false
+  "enemies": {
+    "40,45": {
+      "kind": "handler",
+      "patrol": [
+        [
+          40,
+          45
+        ],
+        [
+          52,
+          45
+        ],
+        [
+          52,
+          50
+        ],
+        [
+          26,
+          51
+        ],
+        [
+          26,
+          45
+        ]
+      ]
+    },
+    "8,32": {
+      "kind": "biker",
+      "facing": "up"
+    },
+    "20,33": {
+      "patrol": [
+        [
+          20,
+          33
+        ],
+        [
+          44,
+          33
+        ]
+      ]
+    },
+    "47,33": {
+      "facing": "left"
+    },
+    "25,28": {
+      "facing": "left"
+    },
+    "35,28": {
+      "kind": "bellhop",
+      "facing": "right"
+    },
+    "38,29": {
+      "kind": "bellhop",
+      "facing": "left"
+    },
+    "47,29": {
+      "facing": "down"
+    },
+    "24,38": {
+      "facing": "down"
+    },
+    "34,38": {
+      "facing": "down"
+    },
+    "46,38": {
+      "patrol": [
+        [
+          46,
+          38
+        ],
+        [
+          44,
+          37
+        ],
+        [
+          51,
+          39
+        ]
+      ]
+    },
+    "26,22": {
+      "patrol": [
+        [
+          26,
+          22
+        ],
+        [
+          34,
+          22
+        ],
+        [
+          34,
+          13
+        ],
+        [
+          19,
+          13
+        ],
+        [
+          19,
+          22
+        ]
+      ]
+    },
+    "11,12": {
+      "facing": "right"
+    },
+    "45,14": {
+      "facing": "left"
+    },
+    "40,23": {
+      "patrol": [
+        [
+          40,
+          23
+        ],
+        [
+          48,
+          23
+        ],
+        [
+          48,
+          14
+        ]
+      ]
+    },
+    "10,6": {
+      "kind": "biker",
+      "facing": "down"
+    },
+    "22,4": {
+      "facing": "down"
+    },
+    "18,7": {
+      "facing": "right"
+    },
+    "32,3": {
+      "facing": "down"
+    },
+    "36,7": {
+      "facing": "left"
+    },
+    "44,6": {
+      "kind": "bellhop",
+      "facing": "right"
+    },
+    "61,14": {
+      "patrol": [
+        [
+          61,
+          14
+        ],
+        [
+          58,
+          12
+        ],
+        [
+          62,
+          16
+        ]
+      ]
+    },
+    "63,23": {
+      "kind": "sniper",
+      "facing": "left"
+    },
+    "58,28": {
+      "facing": "down",
+      "boss": true
+    },
+    "13,21": {
+      "sleep": true,
+      "facing": "left"
+    },
+    "2,24": {
+      "sniff": true
+    },
+    "3,43": {
+      "facing": "left"
+    }
   },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    30,
-    45
-   ],
-   "size": 0.38,
-   "floor": false
+  "npcs": {
+    "13,28": {
+      "id": "earl",
+      "palette": "civilian",
+      "lines": [
+        "Room's paid through Sunday. I'm not moving for anybody.",
+        "Harcourt's been jumpy all week. Keeps checking the parking lot like he's waiting for somebody.",
+        "Room 204? Tape starts by itself after midnight. Same scream, same fire, every night."
+      ]
+    },
+    "13,3": {
+      "id": "dolores",
+      "palette": "scout",
+      "lines": [
+        "Housekeeping stopped servicing this floor months ago, honey. Manager's orders.",
+        "Harcourt keeps 204 locked even when it's empty. Sometimes I hear a projector through the wall.",
+        "If you're looking for him, try the office. If you're looking for answers... don't let him see you asking."
+      ]
+    }
   },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    54,
-    46
-   ],
-   "size": 0.38,
-   "floor": false
+  "collectibles": {
+    "48,7": {
+      "id": "tape_roll7",
+      "kind": "tape",
+      "title": "VHS: HOTSHOT — CAMERA B / ROLL 7",
+      "text": "Unedited stunt footage. A Cadillac burns on a desert road. Cass walks out of frame, coughing. Tommy is still inside the car.\nA voice behind the camera says: 'Don't cut. Aurelio wants the whole take.'\nThe image buckles into static."
+    },
+    "63,3": {
+      "id": "photo_harcourt",
+      "kind": "photo",
+      "title": "POLAROID: HOTSHOT WRAP PARTY — 1987",
+      "text": "Harcourt, younger, wearing a HOTSHOT crew jacket. Beside him stands a man whose face has been gouged away with a key.\nOn the back, in blue ink: 'A.V. knows who changed the fire gag. Residuals due.'"
+    }
   },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    19,
-    48
-   ],
-   "size": 0.38,
-   "floor": false
+  "phone": {
+    "pos": [
+      56,
+      28
+    ],
+    "dialogue": "m01_phone"
   },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    38,
-    49
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    57,
-    50
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    12,
-    52
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    31,
+  "checkpoints": [
+    {
+      "rect": [
+        5,
+        27,
+        48,
+        14
+      ],
+      "name": "MOTEL - GROUND FLOOR"
+    },
+    {
+      "rect": [
+        5,
+        11,
+        48,
+        15
+      ],
+      "name": "COURTYARD"
+    },
+    {
+      "rect": [
+        5,
+        2,
+        48,
+        8
+      ],
+      "name": "UPSTAIRS WING"
+    },
+    {
+      "rect": [
+        54,
+        11,
+        12,
+        30
+      ],
+      "name": "FRONT OFFICE"
+    }
+  ],
+  "boss_trigger": [],
+  "boss_cover": [
+    [
+      58,
+      28
+    ],
+    [
+      63,
+      38
+    ],
+    [
+      56,
+      35
+    ],
+    [
+      62,
+      22
+    ],
+    [
+      55,
+      38
+    ]
+  ],
+  "hints": [
+    {
+      "rect": [
+        5,
+        44,
+        12,
+        14
+      ],
+      "id": "move",
+      "text": "WASD / LEFT STICK  move    ·    MOUSE / RIGHT STICK  aim"
+    },
+    {
+      "rect": [
+        1,
+        42,
+        6,
+        6
+      ],
+      "id": "sneak",
+      "text": "He hasn't seen you.  Hold [CTRL] (or tilt the stick gently) to SNEAK behind him, then [F] TAKEDOWN.  Or PUNCH him down and [F] EXECUTE"
+    },
+    {
+      "rect": [
+        20,
+        44,
+        16,
+        12
+      ],
+      "id": "lock",
+      "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  tap again to switch target (or flick the right stick)  ·  hold to release"
+    },
+    {
+      "rect": [
+        4,
+        36,
+        3,
+        5
+      ],
+      "id": "switch",
+      "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark — but someone may walk over to turn them back on."
+    },
+    {
+      "rect": [
+        1,
+        27,
+        3,
+        6
+      ],
+      "id": "dog",
+      "text": "A DOG. It smells you if you rush past. SNEAK, or take it down from behind. Dogs bark for their owners."
+    },
+    {
+      "rect": [
+        1,
+        46,
+        5,
+        4
+      ],
+      "id": "upgrade",
+      "text": "BRIEFCASES hold random upgrades — they last the whole mission."
+    },
+    {
+      "rect": [
+        11,
+        42,
+        20,
+        3
+      ],
+      "id": "window",
+      "text": "[SPACE] DASH  —  dive through windows, vault tables, dodge bullets"
+    },
+    {
+      "rect": [
+        1,
+        34,
+        3,
+        7
+      ],
+      "id": "doors",
+      "text": "Walk into doors to open them.  [F] near a door KICKS it into whoever is behind"
+    },
+    {
+      "rect": [
+        20,
+        45,
+        5,
+        8
+      ],
+      "id": "brick",
+      "text": "[E] pick up  ·  [RMB] THROW — anything you throw knocks people down"
+    },
+    {
+      "rect": [
+        54,
+        42,
+        10,
+        3
+      ],
+      "id": "m01_locked",
+      "text": "The lobby doors are chained shut from inside. Harcourt kept pyro charges from the shoot - try the boiler room."
+    }
+  ],
+  "exit": [
+    8,
     53
-   ],
-   "size": 0.38,
-   "floor": false
+  ],
+  "weather": {
+    "schedule": [
+      [
+        "drizzle",
+        20
+      ],
+      [
+        "storm",
+        55
+      ],
+      [
+        "rain",
+        30
+      ],
+      [
+        "clear",
+        25
+      ],
+      [
+        "storm",
+        40
+      ]
+    ]
   },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    50,
-    54
-   ],
-   "size": 0.3,
-   "floor": false
+  "decor": [
+    {
+      "type": "neon",
+      "pos": [
+        59,
+        44
+      ],
+      "text": "SUNSET PALMS",
+      "color": "ff3d7f",
+      "size": 16
+    },
+    {
+      "type": "vacancy",
+      "pos": [
+        50,
+        44
+      ]
+    },
+    {
+      "type": "neon",
+      "pos": [
+        33,
+        12
+      ],
+      "text": "POOL",
+      "color": "35e0ff",
+      "size": 9
+    },
+    {
+      "type": "neon",
+      "pos": [
+        20,
+        44
+      ],
+      "text": "OFFICE ->",
+      "color": "ffd23f",
+      "size": 8
+    },
+    {
+      "type": "lamp",
+      "pos": [
+        8,
+        47
+      ],
+      "size": 0.62
+    },
+    {
+      "type": "lamp",
+      "pos": [
+        26,
+        47
+      ],
+      "size": 0.62
+    },
+    {
+      "type": "lamp",
+      "pos": [
+        38,
+        47
+      ],
+      "size": 0.62
+    },
+    {
+      "type": "lamp",
+      "pos": [
+        56,
+        47
+      ],
+      "size": 0.62
+    },
+    {
+      "type": "arcade",
+      "pos": [
+        60,
+        28
+      ],
+      "size": 0.72
+    },
+    {
+      "type": "arcade",
+      "pos": [
+        64,
+        29
+      ],
+      "size": 0.72
+    },
+    {
+      "type": "dumpster",
+      "pos": [
+        50,
+        43
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "palm",
+      "pos": [
+        2,
+        47
+      ],
+      "size": 1.1
+    },
+    {
+      "type": "palm",
+      "pos": [
+        14,
+        58
+      ],
+      "size": 1
+    },
+    {
+      "type": "palm",
+      "pos": [
+        42,
+        58
+      ],
+      "size": 1.2
+    },
+    {
+      "type": "palm",
+      "pos": [
+        64,
+        57
+      ],
+      "size": 1
+    },
+    {
+      "type": "palm",
+      "pos": [
+        62,
+        45
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "palm",
+      "pos": [
+        7,
+        12
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "palm",
+      "pos": [
+        47,
+        24
+      ],
+      "size": 1
+    },
+    {
+      "type": "palm",
+      "pos": [
+        2,
+        26
+      ],
+      "size": 0.8
+    },
+    {
+      "type": "sprite",
+      "id": "motel_exit_arrow",
+      "pos": [
+        8,
+        46
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_exit_arrow",
+      "pos": [
+        6,
+        32
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_exit_arrow",
+      "pos": [
+        40,
+        13
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        19,
+        14
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        35,
+        19
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        40,
+        16
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_ice_bucket",
+      "pos": [
+        30,
+        14
+      ],
+      "size": 0.32,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        45,
+        22
+      ],
+      "size": 0.48,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_float",
+      "pos": [
+        29,
+        17
+      ],
+      "size": 0.42,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        10,
+        21
+      ],
+      "size": 0.42,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_hasty_checkout",
+      "pos": [
+        32,
+        14
+      ],
+      "size": 0.38,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_housekeeping_cart",
+      "pos": [
+        43,
+        14
+      ],
+      "size": 0.38,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_ice_machine",
+      "pos": [
+        11,
+        20
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        34,
+        13
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_party_ruin",
+      "pos": [
+        39,
+        15
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        19,
+        14
+      ],
+      "size": 0.8,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        35,
+        19
+      ],
+      "size": 0.8,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        40,
+        16
+      ],
+      "size": 0.8,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        45,
+        22
+      ],
+      "size": 0.48,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        10,
+        21
+      ],
+      "size": 0.42,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        34,
+        13
+      ],
+      "size": 0.34,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        8,
+        8
+      ],
+      "size": 0.58,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        2,
+        2
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        29,
+        3
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        55,
+        4
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        22,
+        6
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        54,
+        7
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        27,
+        9
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        58,
+        11
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        61,
+        13
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        2,
+        16
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        62,
+        17
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        6,
+        20
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        60,
+        21
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        34,
+        23
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        2,
+        25
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        24,
+        27
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        54,
+        28
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        23,
+        30
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        34,
+        32
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        61,
+        33
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        5,
+        36
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        35,
+        37
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        62,
+        38
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        26,
+        40
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        46,
+        42
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        65,
+        43
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        30,
+        45
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        54,
+        46
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        19,
+        48
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        38,
+        49
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        57,
+        50
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        12,
+        52
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        31,
+        53
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        50,
+        54
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        5,
+        56
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        24,
+        57
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        43,
+        58
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        5,
+        2
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        32,
+        4
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        61,
+        6
+      ],
+      "size": 0.42000000000000004,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        38,
+        9
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        27,
+        13
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        9,
+        17
+      ],
+      "size": 0.27,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        27,
+        20
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        23,
+        23
+      ],
+      "size": 0.38,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        49,
+        25
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        5,
+        29
+      ],
+      "size": 0.34,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        26,
+        32
+      ],
+      "size": 0.38,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        49,
+        34
+      ],
+      "size": 0.42000000000000004,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_palm_planter",
+      "pos": [
+        11,
+        38
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_gecko",
+      "pos": [
+        40,
+        40
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        56,
+        43
+      ],
+      "size": 0.27,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_bottles",
+      "pos": [
+        34,
+        46
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_ashtray",
+      "pos": [
+        6,
+        49
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_room_key_spill",
+      "pos": [
+        34,
+        51
+      ],
+      "size": 0.42000000000000004,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_neon_vacancy_sign",
+      "pos": [
+        62,
+        53
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_towel_cart",
+      "pos": [
+        31,
+        56
+      ],
+      "size": 0.38,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_water_ring",
+      "pos": [
+        54,
+        58
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_lounger",
+      "pos": [
+        19,
+        8
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_lounger",
+      "pos": [
+        22,
+        8
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_lounger",
+      "pos": [
+        25,
+        8
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_umbrella",
+      "pos": [
+        21,
+        10
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "motel_pool_float_flamingo",
+      "pos": [
+        19,
+        14
+      ],
+      "size": 0.7,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        30,
+        14
+      ],
+      "size": 0.5
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        33,
+        14
+      ],
+      "size": 0.5
+    },
+    {
+      "type": "sprite",
+      "id": "motel_tv_crt",
+      "pos": [
+        31,
+        18
+      ],
+      "size": 0.7
+    },
+    {
+      "type": "sprite",
+      "id": "motel_telephone",
+      "pos": [
+        30,
+        15
+      ],
+      "size": 0.5,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_suitcase_open",
+      "pos": [
+        35,
+        14
+      ],
+      "size": 0.7,
+      "rot": 45
+    },
+    {
+      "type": "sprite",
+      "id": "motel_ice_bucket_full",
+      "pos": [
+        40,
+        19
+      ],
+      "size": 0.5,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bedside_lamp",
+      "pos": [
+        49,
+        22
+      ],
+      "size": 0.55
+    },
+    {
+      "type": "sprite",
+      "id": "motel_telephone",
+      "pos": [
+        46,
+        22
+      ],
+      "size": 0.5,
+      "floor": true
+    }
+  ],
+  "cameras": [
+    {
+      "cell": [
+        18,
+        32
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        40,
+        32
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        65,
+        27
+      ],
+      "angle": 125
+    }
+  ],
+  "film_cameras": [
+    {
+      "cell": [
+        5,
+        2
+      ],
+      "angle": 45
+    },
+    {
+      "cell": [
+        65,
+        11
+      ],
+      "angle": 135
+    }
+  ],
+  "intro_call": {
+    "dialogue": "call_m01",
+    "caller": "voice",
+    "device": "phone"
   },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    5,
-    56
-   ],
-   "size": 0.38,
-   "floor": false
+  "breach": {
+    "doors": [
+      [
+        58,
+        41
+      ],
+      [
+        59,
+        41
+      ]
+    ],
+    "sign": [
+      55,
+      42
+    ],
+    "charge": [
+      62,
+      16
+    ],
+    "plant": [
+      58,
+      42
+    ],
+    "fuse": 3.0
   },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    24,
-    57
-   ],
-   "size": 0.38,
-   "floor": false
+  "objectives": {
+    "find_charge": "FIND EXPLOSIVES (BOILER ROOM)",
+    "plant": "PLANT THE CHARGE ON THE LOBBY DOORS",
+    "find_boss": "FIND THE NIGHT MANAGER"
   },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    43,
-    58
-   ],
-   "size": 0.38,
-   "floor": false
+  "tasks": [
+    {
+      "id": "feeds",
+      "kind": "film_cameras",
+      "text": "SMASH THE FILM CAMERAS"
+    }
+  ],
+  "hero_car": {
+    "pos": [
+      7.0,
+      54.0
+    ],
+    "axis": "vertical",
+    "route_in": [
+      [
+        -12,
+        57.8
+      ],
+      [
+        0,
+        57.8
+      ],
+      [
+        4.2,
+        58.2
+      ],
+      [
+        7.6,
+        57.2
+      ],
+      [
+        7.2,
+        55.6
+      ],
+      [
+        7,
+        54
+      ]
+    ],
+    "route_out": [
+      [
+        7,
+        54
+      ],
+      [
+        7,
+        51.6
+      ],
+      [
+        6.2,
+        49.6
+      ],
+      [
+        3.6,
+        48.4
+      ],
+      [
+        0,
+        48.6
+      ],
+      [
+        -12,
+        48.6
+      ]
+    ],
+    "gates": [
+      [
+        0,
+        56,
+        0,
+        59
+      ],
+      [
+        0,
+        47,
+        0,
+        50
+      ]
+    ]
   },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    5,
-    2
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    32,
-    4
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    61,
-    6
-   ],
-   "size": 0.42000000000000004,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    38,
-    9
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    27,
-    13
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    9,
-    17
-   ],
-   "size": 0.27,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    27,
-    20
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    23,
-    23
-   ],
-   "size": 0.38,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    49,
-    25
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    5,
-    29
-   ],
-   "size": 0.34,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    26,
-    32
-   ],
-   "size": 0.38,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    49,
-    34
-   ],
-   "size": 0.42000000000000004,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_palm_planter",
-   "pos": [
-    11,
-    38
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_gecko",
-   "pos": [
-    40,
-    40
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    56,
-    43
-   ],
-   "size": 0.27,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_bottles",
-   "pos": [
-    34,
-    46
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_ashtray",
-   "pos": [
-    6,
-    49
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_room_key_spill",
-   "pos": [
-    34,
-    51
-   ],
-   "size": 0.42000000000000004,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_neon_vacancy_sign",
-   "pos": [
-    62,
-    53
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_towel_cart",
-   "pos": [
-    31,
-    56
-   ],
-   "size": 0.38,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "motel_water_ring",
-   "pos": [
-    54,
-    58
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
+  "boss_props": [
+    {
+      "kind": "breaker",
+      "pos": [
+        55,
+        38
+      ]
+    }
+  ],
+  "boss_weapon": "shotgun",
+  "layout_revision": 1,
+  "layout_design": {
+    "theme": "Motel: adjoining guest rooms, service circuit and reception core",
+    "tension_zones": {
+      "breach": "west laundry/service entrance",
+      "gauntlet": "courtyard and adjoining guest wings",
+      "core": "office and reception"
+    }
   }
- ],
- "cameras": [
-  {
-   "cell": [
-    18,
-    32
-   ],
-   "angle": 90
-  },
-  {
-   "cell": [
-    40,
-    32
-   ],
-   "angle": 90
-  },
-  {
-   "cell": [
-    65,
-    27
-   ],
-   "angle": 125
-  }
- ],
- "film_cameras": [
-  {
-   "cell": [
-    5,
-    2
-   ],
-   "angle": 45
-  },
-  {
-   "cell": [
-    65,
-    11
-   ],
-   "angle": 135
-  }
- ],
- "intro_call": {
-  "dialogue": "call_m01",
-  "caller": "voice",
-  "device": "phone"
- },
- "breach": {
-  "doors": [
-   [
-    58,
-    41
-   ],
-   [
-    59,
-    41
-   ]
-  ],
-  "sign": [
-   55,
-   42
-  ],
-  "charge": [
-   62,
-   16
-  ],
-  "plant": [
-   58,
-   42
-  ],
-  "fuse": 3.0
- },
- "objectives": {
-  "find_charge": "FIND EXPLOSIVES (BOILER ROOM)",
-  "plant": "PLANT THE CHARGE ON THE LOBBY DOORS",
-  "find_boss": "FIND THE NIGHT MANAGER"
- },
- "tasks": [
-  {
-   "id": "feeds",
-   "kind": "film_cameras",
-   "text": "SMASH THE FILM CAMERAS"
-  }
- ],
- "hero_car": {
-  "pos": [
-   7.0,
-   54.0
-  ],
-  "axis": "vertical",
-  "route_in": [
-   [
-    -12,
-    57.8
-   ],
-   [
-    0,
-    57.8
-   ],
-   [
-    4.2,
-    58.2
-   ],
-   [
-    7.6,
-    57.2
-   ],
-   [
-    7.2,
-    55.6
-   ],
-   [
-    7,
-    54
-   ]
-  ],
-  "route_out": [
-   [
-    7,
-    54
-   ],
-   [
-    7,
-    51.6
-   ],
-   [
-    6.2,
-    49.6
-   ],
-   [
-    3.6,
-    48.4
-   ],
-   [
-    0,
-    48.6
-   ],
-   [
-    -12,
-    48.6
-   ]
-  ],
-  "gates": [
-   [
-    0,
-    56,
-    0,
-    59
-   ],
-   [
-    0,
-    47,
-    0,
-    50
-   ]
-  ]
- },
- "boss_props": [
-  {
-   "kind": "breaker",
-   "pos": [
-    55,
-    38
-   ]
-  }
- ],
- "boss_weapon": "shotgun",
- "layout_revision": 1,
- "layout_design": {
-  "theme": "Motel: adjoining guest rooms, service circuit and reception core",
-  "tension_zones": {
-   "breach": "west laundry/service entrance",
-   "gauntlet": "courtyard and adjoining guest wings",
-   "core": "office and reception"
-  }
- }
 }

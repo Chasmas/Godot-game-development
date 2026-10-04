@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0ps43vee2vs"
-path="res://.godot/imported/steel.png-2e4a59bc11c160e66c38bf9157be9a85.ctex"
+uid="uid://02wKE7OKGTrf"
+path="res://.godot/imported/steel.png-20e87bf5abac30e0e169b41c9857a223.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/steel.png"
-dest_files=["res://.godot/imported/steel.png-2e4a59bc11c160e66c38bf9157be9a85.ctex"]
+dest_files=["res://.godot/imported/steel.png-20e87bf5abac30e0e169b41c9857a223.ctex"]
 
 [params]
 

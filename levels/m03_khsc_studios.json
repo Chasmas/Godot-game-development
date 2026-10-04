@@ -1,1710 +1,1806 @@
 {
- "id": "m03_khsc_studios",
- "name": "KHSC Studios - Stage Nine",
- "ambient": [
-  0.27,
-  0.23,
-  0.36
- ],
- "map": [
-  "######################################################################",
-  "#,,,,,,#......#.....#-----------------------------#_________________R#",
-  "#,,,@,,#.TTTT.#.TTT.#A---------------------------F#__t_t_t_t____&____#",
-  "#,c,,c,#......#.....##############---____________-D__kkkkkkkk______o_#",
-  "#,c,,c,#..*...#..*..#--#.......t.#---___t____t___-D__________________#",
-  "#,c*,c,D..h...D.....#--#..$......#-*-__CCCCCCCC__-#_____*______g_____#",
-  "#,c,,c,D......D.....#--#....bb...#---____________-W__________________#",
-  "#,c,,c,#......#..m..D--D....bb...D---_____g______-W__kkkkkkkk________#",
-  "#,c,,c,#......#.....D--D.........D---__________2_-W_____________*____#",
-  "#,,,,,,#.Y..o.#.....#--#.o.......#---____________-W_______________m__#",
-  "#,,,,,,#......#4..Y.#--#.........#----------------W__________________#",
-  "#,,,,,,#......#.....###############DD###WWWWWW#####__________________#",
-  "#,c,,c,###DD####DD###-s-------------------*-------########DD##########",
-  "#,c,,c,#......#.....#-------*-------------g-------#..................#",
-  "#,c,,c,#.!....#...V.#----------H-----------------U#.........VQ.....Y.#",
-  "#,c*,c,#......#.....D-----------------------------#..TTT.............#",
-  "#,c,,c,#.....*Dg....D--------------*--------------#..TTT.............#",
-  "#,c,,c,#......D.....#-------------------------h---%.............*....#",
-  "#,,,,,,#......#....U#---h-------------------------%....*.............#",
-  "#,,g,,,#.TTTT.#.....#--------------B--------------#...........TTT....#",
-  "#,,,,,,#......#.....#------*---E-------E---*------#......@....TTT....#",
-  "###DD#####WW#########------------jjjjj------------#..g...............#",
-  "#R++++++++++++++++++#------------jjjjj------------#...............h.7#",
-  "#+++++++++++++++++++########DD###########WWWWWW####..................#",
-  "#++cccc+++++cccc+EE+#---------E-------#-E---------####WWW#DD##########",
-  "#++cccc+++++cccc++++#-----------------#---------3-#,A,,,,,,,,,,,,,,,,#",
-  "#++++*++++8+++*+++++#---^----------E--D-------^---D,,,,g*,,,,,,,*,,,,#",
-  "#+++++++++++++++++++#-----------------D-----------D,,,,,,,,,,,,,,s,,,#",
-  "#++cccc+++++cccc++++#------g----------#-----------#,,,,,,,,,,,,,,,,,,#",
-  "#++cccc+++++cccc++++##WWWW##DD#########-----m-----########DD##########",
-  "#+++++++++++++++++5+#-6------------*--#-----------#===5==============#",
-  "#+++++++h+++++++++++D-----------------#-----------#=========tt=====F=#",
-  "#+++++++++++++++++++D-------*---------W---*-------#==kkkkk===========#",
-  "#+0+++++++*+++++H+++#-----------------W-----------#==================#",
-  "#++jjjj+++++++++++++#--CCCCCCCC-------W-CCCCCCCCC-#=====*=======r====#",
-  "#++jjjj+++++jjjj++++#-----------------W-----------#====H=============#",
-  "#S++++++++++jjjj++++#S-CCCCCCCC-------W-CCCCCCCCC-#===============R==#",
-  "#+++++++++++++++++++#-----------------#-----------#=============*====#",
-  "#++++g+++E++++++++++#--CCCCCCCC-------#-CCCCCCCCCr#=======m=======g==#",
-  "#+++*+++++++++++*m++#-----*-----------#-----*-----#=R================#",
-  "#+++++++++++++++++++#----g------------#-----------#==================#",
-  "###WW###DD#####WW########WW######DDDD#######WW########WW######DD##WW##",
-  "#====================================================================#",
-  "#====================================================================#",
-  "#::::::::::::::::::::::::::::::::::::::::::::::::::::::h:::::::::::::#",
-  "#ZZ:::::::::?:::::::::*:::::::::::::::::::::*:::::::::::::::::::*::::#",
-  "#ZZ:::::::::::::::::g::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "::::::::::::::KKKK::::::::KKKK:::1::::::::::::::::::::::::KKKK:::::::#",
-  "::::::::::::::KKKK::::::::KKKK::::::::::::::::::::::::::::KKKK:::::::#",
-  "::::::::::::::::::::::::::::::::::::::::g::::::::::::::::::::::::::::#",
-  "::::::::::::*:::::::::::::::::::::::::::::::::::::::::::::::::::::ZZ:#",
-  "#:::::X:::::::::::::::::::::::*:::::::::::::::::::::::::*:::::::::ZZ:#",
-  "#:::::::P:::::::::::::::::::::::::::::::::::::KKKK:::::::::::::::::::#",
-  "#:::::::::::::::::::::::::::::::::::::KKKK::::KKKK:::::::::::::::::::#",
-  "#:::::::::::::::::::::::::::::::::::::KKKK:::::::::::::::::::::::::::#",
-  "#::U:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "####::::::############################################################"
- ],
- "zones": {
-  "exterior": [
-   0,
-   42,
-   70,
-   16
+  "id": "m03_khsc_studios",
+  "name": "KHSC Studios - Stage Nine",
+  "ambient": [
+    0.27,
+    0.23,
+    0.36
   ],
-  "wardrobe": [
-   0,
-   0,
-   21,
-   21
+  "map": [
+    "######################################################################",
+    "#,,,,,,#......#.....#-----------------------------#_________________R#",
+    "#,,,@,,#.TTTT.#.TTT.#A---------------------------F#__t_t_t_t____&____#",
+    "#,c,,c,#......#.....##############---____________-D__kkkkkkkk______o_#",
+    "#,c,,c,#..*...#..*..#--#.......t.#---___t____t___-D__________________#",
+    "#,c*,c,D..h...D.....#--#..$......#-*-__CCCCCCCC__-#_____*______g_____#",
+    "#,c,,c,D......D.....#--#....bb...#---____________-W__________________#",
+    "#,c,,c,#......#..m..D--D....bb...D---_____g______-W__kkkkkkkk________#",
+    "#,c,,c,#......#.....D--D.........D---__________2_-W_____________*____#",
+    "#,,,,,,#.Y..o.#.....#--#.o.......#---____________-W_______________m__#",
+    "#,,,,,,#......#4..Y.#--#.........#----------------W__________________#",
+    "#,,,,,,#......#.....###############DD###WWWWWW#####__________________#",
+    "#,c,,c,###DD####DD###-s-------------------*-------########DD##########",
+    "#,c,,c,#......#.....#-------*-------------g-------#..................#",
+    "#,c,,c,#.!....#...V.#----------H-----------------U#.........VQ.....Y.#",
+    "#,c*,c,#......#.....D-----------------------------#..TTT.............#",
+    "#,c,,c,#.....*Dg....D--------------*--------------#..TTT.............#",
+    "#,c,,c,#......D.....#-------------------------h---%.............*....#",
+    "#,,,,,,#......#....U#---h-------------------------%....*.............#",
+    "#,,g,,,#.TTTT.#.....#--------------B--------------#...........TTT....#",
+    "#,,,,,,#......#.....#------*---E-------E---*------#......@....TTT....#",
+    "###DD#####WW#########------------jjjjj------------#..g...............#",
+    "#R++++++++++++++++++#------------jjjjj------------#...............h.7#",
+    "#+++++++++++++++++++########DD###########WWWWWW####..................#",
+    "#++cccc+++++cccc+EE+#---------E-------#-E---------####WWW#DD##########",
+    "#++cccc+++++cccc++++#-----------------#---------3-#,A,,,,,,,,,,,,,,,,#",
+    "#++++*++++8+++*+++++#---^----------E--D-------^---D,,,,g*,,,,,,,*,,,,#",
+    "#+++++++++++++++++++#-----------------D-----------D,,,,,,,,,,,,,,s,,,#",
+    "#++cccc+++++cccc++++#------g----------#-----------#,,,,,,,,,,,,,,,,,,#",
+    "#++cccc+++++cccc++++##WWWW##DD#########-----m-----########DD##########",
+    "#+++++++++++++++++5+#-6------------*--#-----------#===5==============#",
+    "#+++++++h+++++++++++D-----------------#-----------#=========tt=====F=#",
+    "#+++++++++++++++++++D-------*---------W---*-------#==kkkkk===========#",
+    "#+0+++++++*+++++H+++#-----------------W-----------#==================#",
+    "#++jjjj+++++++++++++#--CCCCCCCC-------W-CCCCCCCCC-#=====*=======r====#",
+    "#++jjjj+++++jjjj++++#-----------------W-----------#====H=============#",
+    "#S++++++++++jjjj++++#S-CCCCCCCC-------W-CCCCCCCCC-#===============R==#",
+    "#+++++++++++++++++++#-----------------#-----------#=============*====#",
+    "#++++g+++E++++++++++#--CCCCCCCC-------#-CCCCCCCCCr#=======m=======g==#",
+    "#+++*+++++++++++*m++#-----*-----------#-----*-----#=R================#",
+    "#+++++++++++++++++++#----g------------#-----------#==================#",
+    "###WW###DD#####WW########WW######DDDD#######WW########WW######DD##WW##",
+    "#====================================================================#",
+    "#====================================================================#",
+    "#::::::::::::::::::::::::::::::::::::::::::::::::::::::h:::::::::::::#",
+    "#ZZ:::::::::?:::::::::*:::::::::::::::::::::*:::::::::::::::::::*::::#",
+    "#ZZ:::::::::::::::::g::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "::::::::::::::KKKK::::::::KKKK:::1::::::::::::::::::::::::KKKK:::::::#",
+    "::::::::::::::KKKK::::::::KKKK::::::::::::::::::::::::::::KKKK:::::::#",
+    "::::::::::::::::::::::::::::::::::::::::g::::::::::::::::::::::::::::#",
+    "::::::::::::*:::::::::::::::::::::::::::::::::::::::::::::::::::::ZZ:#",
+    "#:::::X:::::::::::::::::::::::*:::::::::::::::::::::::::*:::::::::ZZ:#",
+    "#:::::::P:::::::::::::::::::::::::::::::::::::KKKK:::::::::::::::::::#",
+    "#:::::::::::::::::::::::::::::::::::::KKKK::::KKKK:::::::::::::::::::#",
+    "#:::::::::::::::::::::::::::::::::::::KKKK:::::::::::::::::::::::::::#",
+    "#::U:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "####::::::############################################################"
   ],
-  "warehouse": [
-   0,
-   21,
-   21,
-   21
-  ],
-  "stage": [
-   20,
-   0,
-   31,
-   42
-  ],
-  "offices": [
-   50,
-   0,
-   20,
-   42
-  ]
- },
- "power": {
-  "1,36": "warehouse",
-  "21,36": "stage",
-  "49,2": "stage",
-  "67,31": "offices"
- },
- "flicker_zones": [
-  "warehouse"
- ],
- "parking_rows": [
-  [
-   46,
-   49
-  ],
-  [
-   51,
-   55
-  ]
- ],
- "inside_rect": [
-  0,
-  0,
-  70,
-  42
- ],
- "time_text": "10:58 PM",
- "wall_colors": {
-  "stage": [
-   "3a3448",
-   "1c1826",
-   "ff3d7f"
-  ],
-  "warehouse": [
-   "8a93a0",
-   "3e4654",
-   "ffb030"
-  ],
-  "wardrobe": [
-   "d8a0b8",
-   "7a4058",
-   "ffd23f"
-  ],
-  "offices": [
-   "b0a898",
-   "5a5048",
-   "35e0ff"
-  ],
-  "default": [
-   "c89880",
-   "6a4838",
-   "ff5aa0"
-  ]
- },
- "light_colors": {
-  ".": "dd986e",
-  ",": "79c9e6",
-  "_": "c68c62",
-  ":": "a95a45",
-  "=": "d64f91",
-  "-": "e5bd76",
-  "+": "6ca6bf"
- },
- "objectives": {
-  "infiltrate": "GET ONTO THE LOT",
-  "clear": "CLEAR STAGE NINE",
-  "find_boss": "FIND THE FIREMAN",
-  "boss": "PUT OUT THE FIREMAN",
-  "escape": "GET OUT BEFORE THE ROOF COMES DOWN",
-  "cleared": "STAGE NINE IS DARK",
-  "escape_hint": "THE STAGE IS BURNING. BACK TO THE CAR."
- },
- "intro_call": {
-  "dialogue": "call_m03",
-  "caller": "rudy",
-  "device": "walkie"
- },
- "boss": {
-  "intro": "m03_boss_intro",
-  "down": "m03_boss_down"
- },
- "enemies": {
-  "20,46": {
-   "kind": "security",
-   "patrol": [
-    [
-     20,
-     46
+  "zones": {
+    "exterior": [
+      0,
+      42,
+      70,
+      16
     ],
-    [
-     34,
-     46
+    "wardrobe": [
+      0,
+      0,
+      21,
+      21
     ],
-    [
-     34,
-     51
+    "warehouse": [
+      0,
+      21,
+      21,
+      21
     ],
-    [
-     20,
-     51
+    "stage": [
+      20,
+      0,
+      31,
+      42
+    ],
+    "offices": [
+      50,
+      0,
+      20,
+      42
     ]
-   ]
   },
-  "40,49": {
-   "kind": "security",
-   "patrol": [
+  "power": {
+    "1,36": "warehouse",
+    "21,36": "stage",
+    "49,2": "stage",
+    "67,31": "offices"
+  },
+  "flicker_zones": [
+    "warehouse"
+  ],
+  "parking_rows": [
     [
-     40,
-     49
+      46,
+      49
     ],
     [
-     54,
-     49
-    ],
-    [
-     54,
-     45
-    ],
-    [
-     40,
-     45
+      51,
+      55
     ]
-   ]
-  },
-  "55,44": {
-   "kind": "stagehand",
-   "facing": "left"
-  },
-  "8,31": {
-   "kind": "stagehand",
-   "patrol": [
-    [
-     8,
-     31
-    ],
-    [
-     8,
-     37
-    ],
-    [
-     17,
-     37
-    ],
-    [
-     17,
-     31
-    ]
-   ]
-  },
-  "16,33": {
-   "facing": "left"
-  },
-  "5,38": {
-   "kind": "security",
-   "facing": "up"
-  },
-  "17,39": {
-   "facing": "left"
-  },
-  "3,19": {
-   "kind": "security",
-   "facing": "up"
-  },
-  "10,5": {
-   "kind": "stagehand",
-   "facing": "down"
-  },
-  "17,7": {
-   "facing": "left"
-  },
-  "15,16": {
-   "kind": "security",
-   "patrol": [
-    [
-     15,
-     16
-    ],
-    [
-     9,
-     16
-    ],
-    [
-     9,
-     19
-    ],
-    [
-     18,
-     19
-    ]
-   ]
-  },
-  "24,18": {
-   "kind": "stagehand",
-   "facing": "right"
-  },
-  "46,17": {
-   "kind": "stagehand",
-   "facing": "left"
-  },
-  "27,28": {
-   "kind": "security",
-   "patrol": [
-    [
-     27,
-     28
-    ],
-    [
-     27,
-     31
-    ],
-    [
-     43,
-     31
-    ],
-    [
-     43,
-     28
-    ]
-   ]
-  },
-  "44,29": {
-   "facing": "up"
-  },
-  "22,12": {
-   "facing": "right"
-  },
-  "49,38": {
-   "facing": "left"
-  },
-  "25,40": {
-   "kind": "security",
-   "facing": "up"
-  },
-  "31,14": {
-   "facing": "down"
-  },
-  "42,13": {
-   "kind": "security",
-   "facing": "down"
-  },
-  "42,7": {
-   "kind": "security",
-   "facing": "down"
-  },
-  "35,19": {
-   "kind": "fireman",
-   "facing": "down"
-  },
-  "63,5": {
-   "kind": "security",
-   "facing": "left"
-  },
-  "66,9": {
-   "facing": "left"
-  },
-  "66,22": {
-   "kind": "stagehand",
-   "facing": "left"
-  },
-  "53,21": {
-   "kind": "security",
-   "facing": "right"
-  },
-  "55,26": {
-   "kind": "security",
-   "patrol": [
-    [
-     55,
-     26
-    ],
-    [
-     66,
-     26
-    ]
-   ]
-  },
-  "65,27": {
-   "facing": "left"
-  },
-  "55,35": {
-   "facing": "up"
-  },
-  "64,34": {
-   "facing": "left"
-  },
-  "58,38": {
-   "facing": "up"
-  },
-  "66,38": {
-   "kind": "security",
-   "facing": "left"
-  }
- },
- "npcs": {
-  "57,20": {
-   "id": "rudy",
-   "palette": "civilian",
-   "lines": [
-    "I'm not here. I'm a coat rack. Coat racks don't testify.",
-    "Mr. Kowalski's on the Cadillac. He's been talking to it.",
-    "The booth said you'd come in through the elephant doors. They had a whole shot planned."
-   ]
-  },
-  "4,2": {
-   "id": "bev",
-   "palette": "scout",
-   "lines": [
-    "Hold still, your star's smudged. ...Sorry. Habit.",
-    "They made me paint twenty of those stars tonight. For the extras. The extras didn't come back."
-   ]
-  }
- },
- "collectibles": {
-  "26,5": {
-   "id": "tape_pilot",
-   "kind": "tape",
-   "title": "VHS: 'HOTSHOT CALIFORNIA' - PILOT, ROUGH CUT",
-   "text": "The motel, from four angles. Your face in a doorway. A laugh track where the gunshots are. A title card: 'NEXT WEEK - THE DOGS.' Dated a week before you went to Yermo."
-  },
-  "64,2": {
-   "id": "photo_casting",
-   "kind": "photo",
-   "title": "POLAROIDS: 'CASTING - 1990 / 91'",
-   "text": "A clipped stack of Polaroids. A girl in a jester's collar at an arcade machine: 'THE FOOL.' A tired policewoman at a desk: 'D. PRUITT - STAR?' On the last one, a gold star over a face that has been cut out."
-  }
- },
- "checkpoints": [
-  {
-   "rect": [
-    1,
-    44,
-    67,
-    12
-   ],
-   "name": "THE BACKLOT"
-  },
-  {
-   "rect": [
-    1,
-    22,
-    19,
-    19
-   ],
-   "name": "PROP WAREHOUSE"
-  },
-  {
-   "rect": [
-    1,
-    1,
-    19,
-    20
-   ],
-   "name": "WARDROBE"
-  },
-  {
-   "rect": [
-    21,
-    1,
-    29,
-    40
-   ],
-   "name": "STAGE NINE"
-  },
-  {
-   "rect": [
-    51,
-    1,
-    18,
-    40
-   ],
-   "name": "THE OFFICES"
-  }
- ],
- "boss_trigger": [
-  26,
-  14,
-  20,
-  16
- ],
- "boss_cover": [
-  [
-   35,
-   19
   ],
-  [
-   28,
-   22
-  ],
-  [
-   42,
-   22
-  ],
-  [
-   35,
-   28
-  ],
-  [
-   26,
-   16
-  ],
-  [
-   44,
-   16
-  ]
- ],
- "fire_points": [
-  [
-   24,
-   5
-  ],
-  [
-   32,
-   9
-  ],
-  [
-   38,
-   6
-  ],
-  [
-   47,
-   6
-  ],
-  [
-   24,
-   34
-  ],
-  [
-   29,
-   38
-  ],
-  [
-   41,
-   36
-  ],
-  [
-   47,
-   38
-  ],
-  [
-   22,
-   22
-  ],
-  [
-   48,
-   22
-  ],
-  [
-   33,
-   23
-  ],
-  [
-   37,
-   20
-  ]
- ],
- "hints": [
-  {
-   "rect": [
-    3,
-    48,
-    10,
-    8
-   ],
-   "id": "m03_wind",
-   "text": "Santa Ana winds. The whole lot is loud tonight - gunfire carries less far outside."
-  },
-  {
-   "rect": [
-    30,
-    40,
-    10,
-    3
-   ],
-   "id": "m03_cameras",
-   "text": "The show's cameras are rolling. Shoot them out, or give them something to film."
-  },
-  {
-   "rect": [
-    26,
-    14,
-    20,
-    3
-   ],
-   "id": "m03_fire",
-   "text": "FIRE kills. Don't stand in it - DASH through a flame to get past it. Propane tanks hurt him."
-  }
- ],
- "exit": [
-  6,
-  51
- ],
- "weather": {
-  "preset": "santa_ana"
- },
- "decor": [
-  {
-   "type": "neon",
-   "pos": [
-    35,
-    43
-   ],
-   "text": "STAGE 9",
-   "color": "ff3d7f",
-   "size": 14
-  },
-  {
-   "type": "neon",
-   "pos": [
-    58,
-    43
-   ],
-   "text": "KHSC  CHANNEL 9",
-   "color": "35e0ff",
-   "size": 10
-  },
-  {
-   "type": "neon",
-   "pos": [
-    35,
-    1
-   ],
-   "text": "ON AIR",
-   "color": "ff3030",
-   "size": 10
-  },
-  {
-   "type": "neon",
-   "pos": [
-    42,
-    10
-   ],
-   "text": "EYEWITNESS 9",
-   "color": "35e0ff",
-   "size": 8
-  },
-  {
-   "type": "neon",
-   "pos": [
-    10,
-    43
-   ],
-   "text": "LOADING",
-   "color": "ffd23f",
-   "size": 8
-  },
-  {
-   "type": "palm",
-   "pos": [
-    2,
-    56
-   ],
-   "size": 1.1
-  },
-  {
-   "type": "palm",
-   "pos": [
-    24,
-    56
-   ],
-   "size": 1.0
-  },
-  {
-   "type": "palm",
-   "pos": [
-    52,
-    56
-   ],
-   "size": 1.2
-  },
-  {
-   "type": "palm",
-   "pos": [
-    67,
-    55
-   ],
-   "size": 1.0
-  },
-  {
-   "type": "palm",
-   "pos": [
-    34,
-    50
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "palm",
-   "pos": [
-    62,
-    44
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "pickup",
-   "pos": [
-    46,
-    22
-   ],
-   "rot": -8
-  },
-  {
-   "type": "pickup",
-   "pos": [
-    21,
-    54
-   ],
-   "rot": 172
-  },
-  {
-   "type": "trash",
-   "pos": [
-    36,
-    29
-   ],
-   "radius": 44,
-   "count": 30
-  },
-  {
-   "type": "trash",
-   "pos": [
-    25,
-    13
-   ],
-   "radius": 36
-  },
-  {
-   "type": "trash",
-   "pos": [
-    44,
-    22
-   ],
-   "radius": 30,
-   "count": 16
-  },
-  {
-   "type": "trash",
-   "pos": [
-    12,
-    52
-   ],
-   "radius": 46
-  },
-  {
-   "type": "trash",
-   "pos": [
-    30,
-    49
-   ],
-   "radius": 40
-  },
-  {
-   "type": "trash",
-   "pos": [
-    62,
-    45
-   ],
-   "radius": 36
-  },
-  {
-   "type": "trash",
-   "pos": [
-    47,
-    55
-   ],
-   "radius": 34
-  },
-  {
-   "type": "sprite",
-   "id": "studio_reel",
-   "pos": [
-    46,
-    9
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_reel",
-   "pos": [
-    52,
-    26
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_reel",
-   "pos": [
-    8,
-    36
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    30,
-    30
-   ],
-   "size": 0.3,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    61,
-    15
-   ],
-   "size": 0.36,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_flower_arrangement",
-   "pos": [
-    58,
-    16
-   ],
-   "size": 0.28,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    25,
-    14
-   ],
-   "size": 0.42,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_station",
-   "pos": [
-    8,
-    16
-   ],
-   "size": 0.36,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_costume_rack",
-   "pos": [
-    61,
-    5
-   ],
-   "size": 0.36,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_craft_table",
-   "pos": [
-    39,
-    28
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    22,
-    20
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    57,
-    22
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    31,
-    18
-   ],
-   "size": 0.55,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    30,
-    30
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    61,
-    15
-   ],
-   "size": 0.36,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    25,
-    14
-   ],
-   "size": 0.42,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    22,
-    20
-   ],
-   "size": 0.34,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    57,
-    22
-   ],
-   "size": 0.34,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    52,
-    16
-   ],
-   "size": 0.52,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    2,
-    2
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    38,
-    3
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    5,
-    5
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    37,
-    6
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    10,
-    8
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    41,
-    9
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    9,
-    11
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_tape_marks",
-   "pos": [
-    36,
-    13
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    29,
-    15
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    34,
-    17
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    35,
-    19
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    27,
-    21
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    60,
-    22
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    48,
-    24
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    24,
-    26
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    61,
-    27
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    49,
-    29
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_tape_marks",
-   "pos": [
-    35,
-    31
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    61,
-    32
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    19,
-    34
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    45,
-    35
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    4,
-    37
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    34,
-    38
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    55,
-    39
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    8,
+  "inside_rect": [
+    0,
+    0,
+    70,
     42
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    24,
-    43
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    40,
-    44
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_tape_marks",
-   "pos": [
-    56,
-    45
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    6,
-    47
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    22,
-    48
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    38,
-    49
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    54,
-    50
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    4,
-    52
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    20,
-    53
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    36,
-    54
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    52,
-    55
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    5,
-    2
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    31,
-    4
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    66,
-    6
-   ],
-   "size": 0.42000000000000004,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    56,
-    9
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    48,
-    12
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    12,
-    16
-   ],
-   "size": 0.42000000000000004,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    13,
-    19
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_tape_marks",
-   "pos": [
-    14,
-    22
-   ],
-   "size": 0.38,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    15,
-    25
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    56,
-    27
-   ],
-   "size": 0.27,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    2,
-    31
-   ],
-   "size": 0.38,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_acoustic_wall_panel",
-   "pos": [
-    27,
-    33
-   ],
-   "size": 0.42000000000000004,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_gaffer_scraps",
-   "pos": [
-    63,
-    35
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_script_trail",
-   "pos": [
-    42,
-    38
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_moth",
-   "pos": [
-    60,
-    40
-   ],
-   "size": 0.42000000000000004,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_fern",
-   "pos": [
-    5,
-    44
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_cable_spool",
-   "pos": [
-    31,
-    46
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_tape_marks",
-   "pos": [
-    57,
-    48
-   ],
-   "size": 0.42000000000000004,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_makeup_spill",
-   "pos": [
-    12,
-    51
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "paper",
-   "pos": [
-    33,
-    53
-   ],
-   "size": 0.27,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "studio_overhead_light_rig",
-   "pos": [
-    49,
-    55
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
-  }
- ],
- "cameras": [
-  {
-   "cell": [
-    21,
-    1
-   ],
-   "angle": 45
-  },
-  {
-   "cell": [
-    68,
-    25
-   ],
-   "angle": 180
-  },
-  {
-   "cell": [
-    1,
-    22
-   ],
-   "angle": 45
-  }
- ],
- "film_cameras": [
-  {
-   "cell": [
-    27,
-    13
-   ],
-   "angle": 270
-  },
-  {
-   "cell": [
-    43,
-    16
-   ],
-   "angle": 200
-  },
-  {
-   "cell": [
-    35,
-    31
-   ],
-   "angle": 270
-  },
-  {
-   "cell": [
-    30,
-    11
-   ],
-   "angle": 90
-  },
-  {
-   "cell": [
-    45,
-    11
-   ],
-   "angle": 270
-  }
- ],
- "tasks": [
-  {
-   "id": "feeds",
-   "kind": "film_cameras",
-   "text": "KILL THE LIVE FEEDS"
-  },
-  {
-   "id": "tape",
-   "kind": "collect",
-   "item": "tape_pilot",
-   "text": "STEAL THE PILOT TAPE"
-  }
- ],
- "hero_car": {
-  "pos": [
-   5.0,
-   52.0
   ],
-  "axis": "vertical",
-  "route_in": [
-   [
-    8.5,
-    68
-   ],
-   [
-    8.5,
-    59
-   ],
-   [
-    7.8,
-    56.6
-   ],
-   [
-    5.4,
-    55.6
-   ],
-   [
-    4.8,
-    54
-   ],
-   [
-    5,
-    52
-   ]
+  "time_text": "10:58 PM",
+  "wall_colors": {
+    "stage": [
+      "3a3448",
+      "1c1826",
+      "ff3d7f"
+    ],
+    "warehouse": [
+      "8a93a0",
+      "3e4654",
+      "ffb030"
+    ],
+    "wardrobe": [
+      "d8a0b8",
+      "7a4058",
+      "ffd23f"
+    ],
+    "offices": [
+      "b0a898",
+      "5a5048",
+      "35e0ff"
+    ],
+    "default": [
+      "c89880",
+      "6a4838",
+      "ff5aa0"
+    ]
+  },
+  "light_colors": {
+    ".": "dd986e",
+    ",": "79c9e6",
+    "_": "c68c62",
+    ":": "a95a45",
+    "=": "d64f91",
+    "-": "e5bd76",
+    "+": "6ca6bf"
+  },
+  "objectives": {
+    "infiltrate": "GET ONTO THE LOT",
+    "clear": "CLEAR STAGE NINE",
+    "find_boss": "FIND THE FIREMAN",
+    "boss": "PUT OUT THE FIREMAN",
+    "escape": "GET OUT BEFORE THE ROOF COMES DOWN",
+    "cleared": "STAGE NINE IS DARK",
+    "escape_hint": "THE STAGE IS BURNING. BACK TO THE CAR."
+  },
+  "intro_call": {
+    "dialogue": "call_m03",
+    "caller": "rudy",
+    "device": "walkie"
+  },
+  "boss": {
+    "intro": "m03_boss_intro",
+    "down": "m03_boss_down"
+  },
+  "enemies": {
+    "20,46": {
+      "kind": "security",
+      "patrol": [
+        [
+          20,
+          46
+        ],
+        [
+          34,
+          46
+        ],
+        [
+          34,
+          51
+        ],
+        [
+          20,
+          51
+        ]
+      ]
+    },
+    "40,49": {
+      "kind": "security",
+      "patrol": [
+        [
+          40,
+          49
+        ],
+        [
+          54,
+          49
+        ],
+        [
+          54,
+          45
+        ],
+        [
+          40,
+          45
+        ]
+      ]
+    },
+    "55,44": {
+      "kind": "stagehand",
+      "facing": "left"
+    },
+    "8,31": {
+      "kind": "stagehand",
+      "patrol": [
+        [
+          8,
+          31
+        ],
+        [
+          8,
+          37
+        ],
+        [
+          17,
+          37
+        ],
+        [
+          17,
+          31
+        ]
+      ]
+    },
+    "16,33": {
+      "facing": "left"
+    },
+    "5,38": {
+      "kind": "security",
+      "facing": "up"
+    },
+    "17,39": {
+      "facing": "left"
+    },
+    "3,19": {
+      "kind": "security",
+      "facing": "up"
+    },
+    "10,5": {
+      "kind": "stagehand",
+      "facing": "down"
+    },
+    "17,7": {
+      "facing": "left"
+    },
+    "15,16": {
+      "kind": "security",
+      "patrol": [
+        [
+          15,
+          16
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          9,
+          19
+        ],
+        [
+          18,
+          19
+        ]
+      ]
+    },
+    "24,18": {
+      "kind": "stagehand",
+      "facing": "right"
+    },
+    "46,17": {
+      "kind": "stagehand",
+      "facing": "left"
+    },
+    "27,28": {
+      "kind": "security",
+      "patrol": [
+        [
+          27,
+          28
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          43,
+          31
+        ],
+        [
+          43,
+          28
+        ]
+      ]
+    },
+    "44,29": {
+      "facing": "up"
+    },
+    "22,12": {
+      "facing": "right"
+    },
+    "49,38": {
+      "facing": "left"
+    },
+    "25,40": {
+      "kind": "security",
+      "facing": "up"
+    },
+    "31,14": {
+      "facing": "down"
+    },
+    "42,13": {
+      "kind": "security",
+      "facing": "down"
+    },
+    "42,7": {
+      "kind": "security",
+      "facing": "down"
+    },
+    "35,19": {
+      "kind": "fireman",
+      "facing": "down"
+    },
+    "63,5": {
+      "kind": "security",
+      "facing": "left"
+    },
+    "66,9": {
+      "facing": "left"
+    },
+    "66,22": {
+      "kind": "stagehand",
+      "facing": "left"
+    },
+    "53,21": {
+      "kind": "security",
+      "facing": "right"
+    },
+    "55,26": {
+      "kind": "security",
+      "patrol": [
+        [
+          55,
+          26
+        ],
+        [
+          66,
+          26
+        ]
+      ]
+    },
+    "65,27": {
+      "facing": "left"
+    },
+    "55,35": {
+      "facing": "up"
+    },
+    "64,34": {
+      "facing": "left"
+    },
+    "58,38": {
+      "facing": "up"
+    },
+    "66,38": {
+      "kind": "security",
+      "facing": "left"
+    }
+  },
+  "npcs": {
+    "57,20": {
+      "id": "rudy",
+      "palette": "civilian",
+      "lines": [
+        "I'm not here. I'm a coat rack. Coat racks don't testify.",
+        "Mr. Kowalski's on the Cadillac. He's been talking to it.",
+        "The booth said you'd come in through the elephant doors. They had a whole shot planned."
+      ]
+    },
+    "4,2": {
+      "id": "bev",
+      "palette": "scout",
+      "lines": [
+        "Hold still, your star's smudged. ...Sorry. Habit.",
+        "They made me paint twenty of those stars tonight. For the extras. The extras didn't come back."
+      ]
+    }
+  },
+  "collectibles": {
+    "26,5": {
+      "id": "tape_pilot",
+      "kind": "tape",
+      "title": "VHS: 'HOTSHOT CALIFORNIA' - PILOT, ROUGH CUT",
+      "text": "The motel, from four angles. Your face in a doorway. A laugh track where the gunshots are. A title card: 'NEXT WEEK - THE DOGS.' Dated a week before you went to Yermo."
+    },
+    "64,2": {
+      "id": "photo_casting",
+      "kind": "photo",
+      "title": "POLAROIDS: 'CASTING - 1990 / 91'",
+      "text": "A clipped stack of Polaroids. A girl in a jester's collar at an arcade machine: 'THE FOOL.' A tired policewoman at a desk: 'D. PRUITT - STAR?' On the last one, a gold star over a face that has been cut out."
+    }
+  },
+  "checkpoints": [
+    {
+      "rect": [
+        1,
+        44,
+        67,
+        12
+      ],
+      "name": "THE BACKLOT"
+    },
+    {
+      "rect": [
+        1,
+        22,
+        19,
+        19
+      ],
+      "name": "PROP WAREHOUSE"
+    },
+    {
+      "rect": [
+        1,
+        1,
+        19,
+        20
+      ],
+      "name": "WARDROBE"
+    },
+    {
+      "rect": [
+        21,
+        1,
+        29,
+        40
+      ],
+      "name": "STAGE NINE"
+    },
+    {
+      "rect": [
+        51,
+        1,
+        18,
+        40
+      ],
+      "name": "THE OFFICES"
+    }
   ],
-  "route_out": [
-   [
-    5,
-    52
-   ],
-   [
-    5,
-    50.3
-   ],
-   [
-    4,
-    48.8
-   ],
-   [
-    1.6,
-    48.4
-   ],
-   [
-    -12,
-    48.6
-   ]
-  ],
-  "gates": [
-   [
-    4,
-    57,
-    9,
-    57
-   ],
-   [
-    0,
-    47,
-    0,
-    50
-   ]
-  ]
- },
- "boss_props": [
-  {
-   "kind": "valve",
-   "pos": [
+  "boss_trigger": [
     26,
+    14,
+    20,
     16
-   ]
+  ],
+  "boss_cover": [
+    [
+      35,
+      19
+    ],
+    [
+      28,
+      22
+    ],
+    [
+      42,
+      22
+    ],
+    [
+      35,
+      28
+    ],
+    [
+      26,
+      16
+    ],
+    [
+      44,
+      16
+    ]
+  ],
+  "fire_points": [
+    [
+      24,
+      5
+    ],
+    [
+      32,
+      9
+    ],
+    [
+      38,
+      6
+    ],
+    [
+      47,
+      6
+    ],
+    [
+      24,
+      34
+    ],
+    [
+      29,
+      38
+    ],
+    [
+      41,
+      36
+    ],
+    [
+      47,
+      38
+    ],
+    [
+      22,
+      22
+    ],
+    [
+      48,
+      22
+    ],
+    [
+      33,
+      23
+    ],
+    [
+      37,
+      20
+    ]
+  ],
+  "hints": [
+    {
+      "rect": [
+        3,
+        48,
+        10,
+        8
+      ],
+      "id": "m03_wind",
+      "text": "Santa Ana winds. The whole lot is loud tonight - gunfire carries less far outside."
+    },
+    {
+      "rect": [
+        30,
+        40,
+        10,
+        3
+      ],
+      "id": "m03_cameras",
+      "text": "The show's cameras are rolling. Shoot them out, or give them something to film."
+    },
+    {
+      "rect": [
+        26,
+        14,
+        20,
+        3
+      ],
+      "id": "m03_fire",
+      "text": "FIRE kills. Don't stand in it - DASH through a flame to get past it. Propane tanks hurt him."
+    }
+  ],
+  "exit": [
+    6,
+    51
+  ],
+  "weather": {
+    "preset": "santa_ana"
+  },
+  "decor": [
+    {
+      "type": "neon",
+      "pos": [
+        35,
+        43
+      ],
+      "text": "STAGE 9",
+      "color": "ff3d7f",
+      "size": 14
+    },
+    {
+      "type": "neon",
+      "pos": [
+        58,
+        43
+      ],
+      "text": "KHSC  CHANNEL 9",
+      "color": "35e0ff",
+      "size": 10
+    },
+    {
+      "type": "neon",
+      "pos": [
+        35,
+        1
+      ],
+      "text": "ON AIR",
+      "color": "ff3030",
+      "size": 10
+    },
+    {
+      "type": "neon",
+      "pos": [
+        42,
+        10
+      ],
+      "text": "EYEWITNESS 9",
+      "color": "35e0ff",
+      "size": 8
+    },
+    {
+      "type": "neon",
+      "pos": [
+        10,
+        43
+      ],
+      "text": "LOADING",
+      "color": "ffd23f",
+      "size": 8
+    },
+    {
+      "type": "palm",
+      "pos": [
+        2,
+        56
+      ],
+      "size": 1.1
+    },
+    {
+      "type": "palm",
+      "pos": [
+        24,
+        56
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "palm",
+      "pos": [
+        52,
+        56
+      ],
+      "size": 1.2
+    },
+    {
+      "type": "palm",
+      "pos": [
+        67,
+        55
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "palm",
+      "pos": [
+        34,
+        50
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "palm",
+      "pos": [
+        62,
+        44
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "pickup",
+      "pos": [
+        46,
+        22
+      ],
+      "rot": -8
+    },
+    {
+      "type": "pickup",
+      "pos": [
+        21,
+        54
+      ],
+      "rot": 172
+    },
+    {
+      "type": "trash",
+      "pos": [
+        36,
+        29
+      ],
+      "radius": 44,
+      "count": 30
+    },
+    {
+      "type": "trash",
+      "pos": [
+        25,
+        13
+      ],
+      "radius": 36
+    },
+    {
+      "type": "trash",
+      "pos": [
+        44,
+        22
+      ],
+      "radius": 30,
+      "count": 16
+    },
+    {
+      "type": "trash",
+      "pos": [
+        12,
+        52
+      ],
+      "radius": 46
+    },
+    {
+      "type": "trash",
+      "pos": [
+        30,
+        49
+      ],
+      "radius": 40
+    },
+    {
+      "type": "trash",
+      "pos": [
+        62,
+        45
+      ],
+      "radius": 36
+    },
+    {
+      "type": "trash",
+      "pos": [
+        47,
+        55
+      ],
+      "radius": 34
+    },
+    {
+      "type": "sprite",
+      "id": "studio_reel",
+      "pos": [
+        46,
+        9
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_reel",
+      "pos": [
+        52,
+        26
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_reel",
+      "pos": [
+        8,
+        36
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        30,
+        30
+      ],
+      "size": 0.3,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        61,
+        15
+      ],
+      "size": 0.36,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_flower_arrangement",
+      "pos": [
+        58,
+        16
+      ],
+      "size": 0.28,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        25,
+        14
+      ],
+      "size": 0.42,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_station",
+      "pos": [
+        8,
+        16
+      ],
+      "size": 0.36,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_costume_rack",
+      "pos": [
+        61,
+        5
+      ],
+      "size": 0.36,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_craft_table",
+      "pos": [
+        39,
+        28
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        22,
+        20
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        57,
+        22
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        31,
+        18
+      ],
+      "size": 0.55,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        30,
+        30
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        61,
+        15
+      ],
+      "size": 0.36,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        25,
+        14
+      ],
+      "size": 0.42,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        22,
+        20
+      ],
+      "size": 0.34,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        57,
+        22
+      ],
+      "size": 0.34,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        52,
+        16
+      ],
+      "size": 0.52,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        2,
+        2
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        38,
+        3
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        5,
+        5
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        37,
+        6
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        10,
+        8
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        41,
+        9
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        9,
+        11
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_tape_marks",
+      "pos": [
+        36,
+        13
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        29,
+        15
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        34,
+        17
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        35,
+        19
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        27,
+        21
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        60,
+        22
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        48,
+        24
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        24,
+        26
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        61,
+        27
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        49,
+        29
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_tape_marks",
+      "pos": [
+        35,
+        31
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        61,
+        32
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        19,
+        34
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        45,
+        35
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        4,
+        37
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        34,
+        38
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        55,
+        39
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        8,
+        42
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        24,
+        43
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        40,
+        44
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_tape_marks",
+      "pos": [
+        56,
+        45
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        6,
+        47
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        22,
+        48
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        38,
+        49
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        54,
+        50
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        4,
+        52
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        20,
+        53
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        36,
+        54
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        52,
+        55
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        5,
+        2
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        31,
+        4
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        66,
+        6
+      ],
+      "size": 0.42000000000000004,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        56,
+        9
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        48,
+        12
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        12,
+        16
+      ],
+      "size": 0.42000000000000004,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        13,
+        19
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_tape_marks",
+      "pos": [
+        14,
+        22
+      ],
+      "size": 0.38,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        15,
+        25
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        56,
+        27
+      ],
+      "size": 0.27,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        2,
+        31
+      ],
+      "size": 0.38,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_acoustic_wall_panel",
+      "pos": [
+        27,
+        33
+      ],
+      "size": 0.42000000000000004,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_gaffer_scraps",
+      "pos": [
+        63,
+        35
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_script_trail",
+      "pos": [
+        42,
+        38
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_moth",
+      "pos": [
+        60,
+        40
+      ],
+      "size": 0.42000000000000004,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_fern",
+      "pos": [
+        5,
+        44
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_cable_spool",
+      "pos": [
+        31,
+        46
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_tape_marks",
+      "pos": [
+        57,
+        48
+      ],
+      "size": 0.42000000000000004,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_makeup_spill",
+      "pos": [
+        12,
+        51
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "paper",
+      "pos": [
+        33,
+        53
+      ],
+      "size": 0.27,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_overhead_light_rig",
+      "pos": [
+        49,
+        55
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "studio_camera_crane",
+      "pos": [
+        22,
+        12
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "studio_camera_crane",
+      "pos": [
+        38,
+        20
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "studio_green_screen",
+      "pos": [
+        18,
+        8
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "sprite",
+      "id": "studio_clapperboard",
+      "pos": [
+        28,
+        10
+      ],
+      "size": 0.5,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_clapperboard",
+      "pos": [
+        44,
+        14
+      ],
+      "size": 0.5,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_teleprompter",
+      "pos": [
+        25,
+        14
+      ],
+      "size": 0.7
+    },
+    {
+      "type": "sprite",
+      "id": "studio_spotlight_beam",
+      "pos": [
+        32,
+        10
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_spotlight_beam",
+      "pos": [
+        50,
+        18
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_film_reel_pair",
+      "pos": [
+        46,
+        9
+      ],
+      "size": 0.6,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_film_reel_pair",
+      "pos": [
+        8,
+        36
+      ],
+      "size": 0.6,
+      "floor": true
+    }
+  ],
+  "cameras": [
+    {
+      "cell": [
+        21,
+        1
+      ],
+      "angle": 45
+    },
+    {
+      "cell": [
+        68,
+        25
+      ],
+      "angle": 180
+    },
+    {
+      "cell": [
+        1,
+        22
+      ],
+      "angle": 45
+    }
+  ],
+  "film_cameras": [
+    {
+      "cell": [
+        27,
+        13
+      ],
+      "angle": 270
+    },
+    {
+      "cell": [
+        43,
+        16
+      ],
+      "angle": 200
+    },
+    {
+      "cell": [
+        35,
+        31
+      ],
+      "angle": 270
+    },
+    {
+      "cell": [
+        30,
+        11
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        45,
+        11
+      ],
+      "angle": 270
+    }
+  ],
+  "tasks": [
+    {
+      "id": "feeds",
+      "kind": "film_cameras",
+      "text": "KILL THE LIVE FEEDS"
+    },
+    {
+      "id": "tape",
+      "kind": "collect",
+      "item": "tape_pilot",
+      "text": "STEAL THE PILOT TAPE"
+    }
+  ],
+  "hero_car": {
+    "pos": [
+      5.0,
+      52.0
+    ],
+    "axis": "vertical",
+    "route_in": [
+      [
+        8.5,
+        68
+      ],
+      [
+        8.5,
+        59
+      ],
+      [
+        7.8,
+        56.6
+      ],
+      [
+        5.4,
+        55.6
+      ],
+      [
+        4.8,
+        54
+      ],
+      [
+        5,
+        52
+      ]
+    ],
+    "route_out": [
+      [
+        5,
+        52
+      ],
+      [
+        5,
+        50.3
+      ],
+      [
+        4,
+        48.8
+      ],
+      [
+        1.6,
+        48.4
+      ],
+      [
+        -12,
+        48.6
+      ]
+    ],
+    "gates": [
+      [
+        4,
+        57,
+        9,
+        57
+      ],
+      [
+        0,
+        47,
+        0,
+        50
+      ]
+    ]
+  },
+  "boss_props": [
+    {
+      "kind": "valve",
+      "pos": [
+        26,
+        16
+      ]
+    }
+  ],
+  "boss_weapon": "rifle",
+  "layout_revision": 1,
+  "layout_design": {
+    "theme": "Studio: acoustic partitions divide Stage Nine into two interlocking circulation loops",
+    "tension_zones": {
+      "breach": "prop warehouse loading bay",
+      "gauntlet": "stage wings and scenic flats",
+      "core": "north soundstage and control room"
+    }
   }
- ],
- "boss_weapon": "rifle",
- "layout_revision": 1,
- "layout_design": {
-  "theme": "Studio: acoustic partitions divide Stage Nine into two interlocking circulation loops",
-  "tension_zones": {
-   "breach": "prop warehouse loading bay",
-   "gauntlet": "stage wings and scenic flats",
-   "core": "north soundstage and control room"
-  }
- }
 }

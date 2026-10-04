@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2yu6dg45rt3i"
-path="res://.godot/imported/concrete.png-ee65cac545d5ca6c6a8862a1c20e7952.ctex"
+uid="uid://00q68LMbA6gc"
+path="res://.godot/imported/concrete.png-fc1ef3b3e20043e902eac70a4d0e73e3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/concrete.png"
-dest_files=["res://.godot/imported/concrete.png-ee65cac545d5ca6c6a8862a1c20e7952.ctex"]
+dest_files=["res://.godot/imported/concrete.png-fc1ef3b3e20043e902eac70a4d0e73e3.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2g4iollrfcl2"
-path="res://.godot/imported/asphalt.png-919b1325c33c8b43daccd62db53d873b.ctex"
+uid="uid://08LCESGmkyMq"
+path="res://.godot/imported/asphalt.png-bc99a17b57544619d1aea05c9cf7424d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/asphalt.png"
-dest_files=["res://.godot/imported/asphalt.png-919b1325c33c8b43daccd62db53d873b.ctex"]
+dest_files=["res://.godot/imported/asphalt.png-bc99a17b57544619d1aea05c9cf7424d.ctex"]
 
 [params]
 

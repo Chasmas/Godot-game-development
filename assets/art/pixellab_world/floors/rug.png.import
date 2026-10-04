@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b34kv5yubc5p1"
-path="res://.godot/imported/rug.png-7b7208f4932b78d9d28e83324cc9b3b9.ctex"
+uid="uid://0h4PJsKH3fyn"
+path="res://.godot/imported/rug.png-78c6790117ab6c7cd79632ae4b4a5b7c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/rug.png"
-dest_files=["res://.godot/imported/rug.png-7b7208f4932b78d9d28e83324cc9b3b9.ctex"]
+dest_files=["res://.godot/imported/rug.png-78c6790117ab6c7cd79632ae4b4a5b7c.ctex"]
 
 [params]
 

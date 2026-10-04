@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0nw8psoa14gx"
-path="res://.godot/imported/wall_motel.png-fd46dca314a947cc4c229720d9a503d7.ctex"
+uid="uid://07xCXyuYyxQz"
+path="res://.godot/imported/wall_motel.png-fcac8358b5c31d5cc33470c4f80bc5c8.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/wall_motel.png"
-dest_files=["res://.godot/imported/wall_motel.png-fd46dca314a947cc4c229720d9a503d7.ctex"]
+dest_files=["res://.godot/imported/wall_motel.png-fcac8358b5c31d5cc33470c4f80bc5c8.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4c6pn1lbf0uf"
-path="res://.godot/imported/desk.png-4c82ade23d2cfacbaee45300a44e7dbd.ctex"
+uid="uid://04uX0ExjBkqk"
+path="res://.godot/imported/desk.png-4e0ea6833da97b87434f0d6f9832f6e4.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/desk.png"
-dest_files=["res://.godot/imported/desk.png-4c82ade23d2cfacbaee45300a44e7dbd.ctex"]
+dest_files=["res://.godot/imported/desk.png-4e0ea6833da97b87434f0d6f9832f6e4.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1yv8acf5e827"
-path="res://.godot/imported/chandelier.png-b305c50cfa63f7dcf81c8613463b2e80.ctex"
+uid="uid://0geUGEJv7Arn"
+path="res://.godot/imported/chandelier.png-98d34375fe1fd31bce172aadcdd5c823.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/chandelier.png"
-dest_files=["res://.godot/imported/chandelier.png-b305c50cfa63f7dcf81c8613463b2e80.ctex"]
+dest_files=["res://.godot/imported/chandelier.png-98d34375fe1fd31bce172aadcdd5c823.ctex"]
 
 [params]
 

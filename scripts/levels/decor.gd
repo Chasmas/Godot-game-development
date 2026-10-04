@@ -29,6 +29,16 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
 					sp.z_index = -5 if it.get("floor", false) else -1
 					root.add_child(sp)
+					# Light-emitting props cast a PointLight2D so they feel like
+					# real sources instead of painted decoration.
+					var lc := _light_cfg(str(it.get("id", "")))
+					if not lc.is_empty():
+						var lf := LightFixture.new()
+						lf.setup(builder.zone_at_cell(cell.x, cell.y),
+							lc["color"], lc["radius"], lc["energy"],
+							lc.get("shadows", false), lc.get("flicker", false))
+						lf.position = p + lc.get("offset", Vector2.ZERO)
+						root.add_child(lf)
 			"pickup":
 				# an old pickup truck, parked for good: solid, blocks shots
 				var pk := OldPickup.new()
@@ -68,6 +78,39 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 	var pool := PoolFX.new()
 	pool.builder = builder
 	root.add_child(pool)
+
+## Light colour/radius for props that are real light sources.
+## Keeps Decor self-contained — no data file needed.
+static func _light_cfg(id: String) -> Dictionary:
+	match id:
+		"candelabra":
+			return {"color": Color(1.0, 0.72, 0.35), "radius": 52.0, "energy": 0.65, "flicker": true}
+		"villa_candle_ring":
+			return {"color": Color(1.0, 0.68, 0.28), "radius": 44.0, "energy": 0.55, "flicker": true}
+		"villa_wax_and_petals":
+			return {"color": Color(1.0, 0.72, 0.38), "radius": 34.0, "energy": 0.45, "flicker": true}
+		"yard_burn_barrel":
+			return {"color": Color(1.0, 0.42, 0.06), "radius": 64.0, "energy": 0.9, "shadows": true, "flicker": true}
+		"studio_overhead_light_rig":
+			return {"color": Color(0.88, 0.92, 1.0), "radius": 88.0, "energy": 1.1, "shadows": true}
+		"floor_lamp":
+			return {"color": Color(1.0, 0.82, 0.52), "radius": 72.0, "energy": 0.8}
+		"chandelier":
+			return {"color": Color(1.0, 0.88, 0.62), "radius": 96.0, "energy": 0.85}
+		"motel_neon_vacancy_sign":
+			return {"color": Color(1.0, 0.2, 0.6), "radius": 48.0, "energy": 0.7, "flicker": true, "offset": Vector2(0, -8)}
+		"motel_bedside_lamp":
+			return {"color": Color(1.0, 0.78, 0.45), "radius": 44.0, "energy": 0.6}
+		"coffin":
+			return {"color": Color(0.35, 0.9, 0.55), "radius": 38.0, "energy": 0.3}
+		"villa_fountain":
+			return {"color": Color(0.55, 0.82, 1.0), "radius": 56.0, "energy": 0.4}
+		"studio_spotlight_beam":
+			return {"color": Color(0.95, 0.98, 1.0), "radius": 72.0, "energy": 1.2}
+		"yard_welder_sparks":
+			return {"color": Color(1.0, 0.65, 0.1), "radius": 40.0, "energy": 1.4, "flicker": true}
+		_:
+			return {}
 
 static func _valid_floor_sprite(builder: LevelBuilder, cell: Vector2i) -> bool:
 	if cell.x < 0 or cell.y < 0 or cell.x >= builder.w or cell.y >= builder.h:

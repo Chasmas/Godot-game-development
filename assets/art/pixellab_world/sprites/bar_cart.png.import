@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkrfpj56tntt"
-path="res://.godot/imported/bar_cart.png-19d54f7ab7e78b7ef24b05a8cd58e07e.ctex"
+uid="uid://09TcjbDxnAik"
+path="res://.godot/imported/bar_cart.png-165bf7f5fb8dfb8023516d21d3c5b3c3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/bar_cart.png"
-dest_files=["res://.godot/imported/bar_cart.png-19d54f7ab7e78b7ef24b05a8cd58e07e.ctex"]
+dest_files=["res://.godot/imported/bar_cart.png-165bf7f5fb8dfb8023516d21d3c5b3c3.ctex"]
 
 [params]
 

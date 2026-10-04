@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpenfypc2sl7f"
-path="res://.godot/imported/floor_lamp.png-137085a351532c076783279c02120262.ctex"
+uid="uid://0dpDQM4gWacy"
+path="res://.godot/imported/floor_lamp.png-199fcfd53d8e8d3e5309f16f2a6efdf6.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/floor_lamp.png"
-dest_files=["res://.godot/imported/floor_lamp.png-137085a351532c076783279c02120262.ctex"]
+dest_files=["res://.godot/imported/floor_lamp.png-199fcfd53d8e8d3e5309f16f2a6efdf6.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu4utx38r4nkk"
-path="res://.godot/imported/motel_pool_umbrella.png-ea2d3742dcce22d647df2fce92f3c5f6.ctex"
+uid="uid://0lTEIeYRZGrj"
+path="res://.godot/imported/motel_pool_umbrella.png-d9f7418d7e999d5f0a5fd04be3c61bcf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/motel_pool_umbrella.png"
-dest_files=["res://.godot/imported/motel_pool_umbrella.png-ea2d3742dcce22d647df2fce92f3c5f6.ctex"]
+dest_files=["res://.godot/imported/motel_pool_umbrella.png-d9f7418d7e999d5f0a5fd04be3c61bcf.ctex"]
 
 [params]
 

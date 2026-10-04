@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://15qb0bqu6oj3"
-path="res://.godot/imported/carpet.png-9361e95b05f715ca50b39d03f0a55ade.ctex"
+uid="uid://04n37egBDykQ"
+path="res://.godot/imported/carpet.png-d7a9fa53df82fdc500cc9f1c546fed64.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/carpet.png"
-dest_files=["res://.godot/imported/carpet.png-9361e95b05f715ca50b39d03f0a55ade.ctex"]
+dest_files=["res://.godot/imported/carpet.png-d7a9fa53df82fdc500cc9f1c546fed64.ctex"]
 
 [params]
 

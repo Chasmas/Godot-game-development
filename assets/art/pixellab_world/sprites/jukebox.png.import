@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wbfn08kovp1w"
-path="res://.godot/imported/jukebox.png-2ac20c5fc1ce12052d2ffbba48625928.ctex"
+uid="uid://0ltyxMvPhO4b"
+path="res://.godot/imported/jukebox.png-92153838aca6e229bdc5c013cdc0dbc5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/jukebox.png"
-dest_files=["res://.godot/imported/jukebox.png-2ac20c5fc1ce12052d2ffbba48625928.ctex"]
+dest_files=["res://.godot/imported/jukebox.png-92153838aca6e229bdc5c013cdc0dbc5.ctex"]
 
 [params]
 

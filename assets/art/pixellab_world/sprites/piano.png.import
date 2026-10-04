@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c07jobqq03vid"
-path="res://.godot/imported/piano.png-e1f468e6574a5d648bb70526ebc4b894.ctex"
+uid="uid://0jDXcRQa0sfX"
+path="res://.godot/imported/piano.png-948f660dde05b8fea26d6e4ffe53bea1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/piano.png"
-dest_files=["res://.godot/imported/piano.png-e1f468e6574a5d648bb70526ebc4b894.ctex"]
+dest_files=["res://.godot/imported/piano.png-948f660dde05b8fea26d6e4ffe53bea1.ctex"]
 
 [params]
 

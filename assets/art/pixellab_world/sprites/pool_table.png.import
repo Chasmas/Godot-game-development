@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://24dv0f7et1xg"
-path="res://.godot/imported/pool_table.png-1522a0c739457ed30a1a4c23462d85c1.ctex"
+uid="uid://06ZLcEyjXBVu"
+path="res://.godot/imported/pool_table.png-90957532e69bffb2f8cc92d4339c6783.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/pool_table.png"
-dest_files=["res://.godot/imported/pool_table.png-1522a0c739457ed30a1a4c23462d85c1.ctex"]
+dest_files=["res://.godot/imported/pool_table.png-90957532e69bffb2f8cc92d4339c6783.ctex"]
 
 [params]
 

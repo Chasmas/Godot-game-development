@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btx54sp5sjn3k"
-path="res://.godot/imported/villa_fountain.png-c29cdb4009357e6b8ef497829ea07044.ctex"
+uid="uid://0jNtAqNfsnAb"
+path="res://.godot/imported/villa_fountain.png-9ef0223d773a89a8484f1ee910638934.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/villa_fountain.png"
-dest_files=["res://.godot/imported/villa_fountain.png-c29cdb4009357e6b8ef497829ea07044.ctex"]
+dest_files=["res://.godot/imported/villa_fountain.png-9ef0223d773a89a8484f1ee910638934.ctex"]
 
 [params]
 

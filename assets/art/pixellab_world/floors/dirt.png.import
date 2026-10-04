@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvcwf4a2whvx5"
-path="res://.godot/imported/dirt.png-1a04ea1d0fa46d023a074b50b5335f46.ctex"
+uid="uid://0ej0Q9rqtgHO"
+path="res://.godot/imported/dirt.png-80ee5719702f78ccf39ed4ae3c827d27.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/dirt.png"
-dest_files=["res://.godot/imported/dirt.png-1a04ea1d0fa46d023a074b50b5335f46.ctex"]
+dest_files=["res://.godot/imported/dirt.png-80ee5719702f78ccf39ed4ae3c827d27.ctex"]
 
 [params]
 

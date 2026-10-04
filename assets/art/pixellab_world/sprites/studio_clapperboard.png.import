@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo50yl0cc7nlp"
-path="res://.godot/imported/studio_clapperboard.png-1c8d681d2d7813c404714ffcbc940408.ctex"
+uid="uid://07YKxSeai7SP"
+path="res://.godot/imported/studio_clapperboard.png-2e44465ce1baa2ac91c64ba3da7e03d7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/studio_clapperboard.png"
-dest_files=["res://.godot/imported/studio_clapperboard.png-1c8d681d2d7813c404714ffcbc940408.ctex"]
+dest_files=["res://.godot/imported/studio_clapperboard.png-2e44465ce1baa2ac91c64ba3da7e03d7.ctex"]
 
 [params]
 

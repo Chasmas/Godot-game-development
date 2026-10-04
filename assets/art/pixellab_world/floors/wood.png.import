@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://burxgcys3hymd"
-path="res://.godot/imported/wood.png-fcbc662e01276682143260f92f1749c9.ctex"
+uid="uid://0aWCSJuq9OUG"
+path="res://.godot/imported/wood.png-917712242b7e1d6ad905460cdadec7d2.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/floors/wood.png"
-dest_files=["res://.godot/imported/wood.png-fcbc662e01276682143260f92f1749c9.ctex"]
+dest_files=["res://.godot/imported/wood.png-917712242b7e1d6ad905460cdadec7d2.ctex"]
 
 [params]
 

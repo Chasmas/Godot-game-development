@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crv4xwfqm1pdr"
-path="res://.godot/imported/armchair.png-5457fa06948750ecb522e44e069602ba.ctex"
+uid="uid://0aYgJ2evBqms"
+path="res://.godot/imported/armchair.png-830061ef1c8ca2fb9dd7ba2a854ccb03.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/art/pixellab_world/sprites/armchair.png"
-dest_files=["res://.godot/imported/armchair.png-5457fa06948750ecb522e44e069602ba.ctex"]
+dest_files=["res://.godot/imported/armchair.png-830061ef1c8ca2fb9dd7ba2a854ccb03.ctex"]
 
 [params]
 

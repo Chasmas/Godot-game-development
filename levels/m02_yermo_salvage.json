@@ -1,1599 +1,1709 @@
 {
- "id": "m02_yermo_salvage",
- "name": "Yermo Salvage & K-9",
- "ambient": [
-  0.29,
-  0.28,
-  0.22
- ],
- "map": [
-  "##################################################################",
-  "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,,,#................#",
-  "#++++++++++^h++++++++++++++++U+#,nnn,nnn,nnn,nnn#.A.......&..bb..#",
-  "#+++++++++++++++++++++++ccccc++#,nnn,nnn,nnn,nnn#......kkk...bb..#",
-  "#+++cccccc++++cccccc++++ccccc++#,nnn,nnn,nnn,nnn#...*........bb..#",
-  "#+++cccccc++++cccccc+++++++++++#,,,,,,,,,,,,,,,,#.......s...*....#",
-  "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,0,D................#",
-  "#+++++*+g+++++++*+++++++++*++++#,,,,*,,,,,,,*,,,D................#",
-  "#++++++++++++++++++++++++++++++D,,g,,,,,B,,,,,,,#...d.......t....#",
-  "#+++cccccc++++cccccc+++++++++++D,,,,,,,TTT,,,,,,#.S............U.#",
-  "#+++cccccc++++cccccc+++++++++++#,,,,d,,,,,,,d,,,#................#",
-  "#++++++++++++++++++++++++++++++#,,,,,,,,h,,,,,,,######DD##WWWW####",
-  "#+++++++++++++++H+++++#########WS,,,*,,,,,,,*,,,#++++++++++++++++#",
-  "#+++++++++++++++++++++#______5_W,,,,,,,,,,,,,,,,#+FF+F+++++++++++#",
-  "#+++++++++++++++++++++#___kkk__W,nnn,,,,,,,nnnn,W+++++++++++++E++#",
-  "#+++++*+++++++++*+++++D___m____W,nnn,,,,,,,nnnn,W+++++++*+++++E++#",
-  "#+++++++++++++++++++++D___*____#,nnn,,,,,,,nnnn,W++++++++g+++++++#",
-  "#+++++++++++++++++++++#______$_#,nnn,,,,,,,nnnn,#+++++++++++2++++#",
-  "#+++++++++++S+++++++++#________#,,,,,,,,,,,,,,,,#++++++++++++++++#",
-  "#####WW######DD#######WW###DD##########DD#################DD######",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;9;;;;;*;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
-  "#;;;;;y;;;*;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;d;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;m;;;;;;;;;g;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;!;;;;;;;;cc;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;*;;;;;;;;;;;;*;;;;;;;;;ZZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;#",
-  "#;;U;;;;;7;;;;;;;;;;;;;;;;;;ZZ;;;;;;;;;;*;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "########;;;;##############################################%#######",
-  ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  ":::::::X:::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "::R::::::::::::*:::::::::::::::::::*:::::::::::::::::::*:::::::R:#",
-  "::::::::P::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
-  "########::::######################################################"
- ],
- "zones": {
-  "warehouse": [
-   0,
-   0,
-   31,
-   19
+  "id": "m02_yermo_salvage",
+  "name": "Yermo Salvage & K-9",
+  "ambient": [
+    0.29,
+    0.28,
+    0.22
   ],
-  "kennels": [
-   31,
-   0,
-   18,
-   19
+  "map": [
+    "##################################################################",
+    "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,,,#................#",
+    "#++++++++++^h++++++++++++++++U+#,nnn,nnn,nnn,nnn#.A.......&..bb..#",
+    "#+++++++++++++++++++++++ccccc++#,nnn,nnn,nnn,nnn#......kkk...bb..#",
+    "#+++cccccc++++cccccc++++ccccc++#,nnn,nnn,nnn,nnn#...*........bb..#",
+    "#+++cccccc++++cccccc+++++++++++#,,,,,,,,,,,,,,,,#.......s...*....#",
+    "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,0,D................#",
+    "#+++++*+g+++++++*+++++++++*++++#,,,,*,,,,,,,*,,,D................#",
+    "#++++++++++++++++++++++++++++++D,,g,,,,,B,,,,,,,#...d.......t....#",
+    "#+++cccccc++++cccccc+++++++++++D,,,,,,,TTT,,,,,,#.S............U.#",
+    "#+++cccccc++++cccccc+++++++++++#,,,,d,,,,,,,d,,,#................#",
+    "#++++++++++++++++++++++++++++++#,,,,,,,,h,,,,,,,######DD##WWWW####",
+    "#+++++++++++++++H+++++#########WS,,,*,,,,,,,*,,,#++++++++++++++++#",
+    "#+++++++++++++++++++++#______5_W,,,,,,,,,,,,,,,,#+FF+F+++++++++++#",
+    "#+++++++++++++++++++++#___kkk__W,nnn,,,,,,,nnnn,W+++++++++++++E++#",
+    "#+++++*+++++++++*+++++D___m____W,nnn,,,,,,,nnnn,W+++++++*+++++E++#",
+    "#+++++++++++++++++++++D___*____#,nnn,,,,,,,nnnn,W++++++++g+++++++#",
+    "#+++++++++++++++++++++#______$_#,nnn,,,,,,,nnnn,#+++++++++++2++++#",
+    "#+++++++++++S+++++++++#________#,,,,,,,,,,,,,,,,#++++++++++++++++#",
+    "#####WW######DD#######WW###DD##########DD#################DD######",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;9;;;;;*;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
+    "#;;;;;y;;;*;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;d;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;m;;;;;;;;;g;;;;;;#",
+    "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+    "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+    "#;;!;;;;;;;;cc;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;*;;;;;;;;;;;;*;;;;;;;;;ZZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;#",
+    "#;;U;;;;;7;;;;;;;;;;;;;;;;;;ZZ;;;;;;;;;;*;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+    "########;;;;##############################################%#######",
+    ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    ":::::::X:::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "::R::::::::::::*:::::::::::::::::::*:::::::::::::::::::*:::::::R:#",
+    "::::::::P::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+    "########::::######################################################"
   ],
-  "office": [
-   49,
-   0,
-   17,
-   11
-  ],
-  "shed": [
-   49,
-   11,
-   17,
-   8
-  ],
-  "exterior": [
-   0,
-   19,
-   66,
-   31
-  ]
- },
- "power": {
-  "12,18": "warehouse",
-  "32,12": "kennels",
-  "50,9": "office",
-  "50,13": "warehouse",
-  "51,13": "kennels",
-  "53,13": "exterior"
- },
- "flicker_zones": [
-  "kennels"
- ],
- "wall_colors": {
-  "warehouse": [
-   "8a93a0",
-   "3e4654",
-   "ffb030"
-  ],
-  "shed": [
-   "8a93a0",
-   "3e4654",
-   "ffd23f"
-  ],
-  "kennels": [
-   "d8cfa0",
-   "7a6a40",
-   "ff5aa0"
-  ],
-  "office": [
-   "a07850",
-   "5a3a22",
-   "35e0ff"
-  ],
-  "default": [
-   "b0a898",
-   "5a5048",
-   "ff5aa0"
-  ]
- },
- "light_colors": {
-  "+": "9cb9c8",
-  ",": "bfd3d4",
-  ".": "d89b68",
-  "_": "c6925d",
-  ";": "c7753d",
-  ":": "a95a38"
- },
- "inside_rect": [
-  0,
-  0,
-  66,
-  43
- ],
- "time_text": "2:15 AM",
- "objectives": {
-  "infiltrate": "GET INTO THE SALVAGE YARD",
-  "clear": "CLEAR THE YARD",
-  "escape": "GET BACK TO THE CAR",
-  "cleared": "YARD CLEARED",
-  "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR.",
-  "find_boss": "FIND THE KENNEL MASTER",
-  "boss": "DEAL WITH BUCK"
- },
- "enemies": {
-  "20,31": {
-   "kind": "scrapper",
-   "patrol": [
-    [
-     20,
-     31
+  "zones": {
+    "warehouse": [
+      0,
+      0,
+      31,
+      19
     ],
-    [
-     40,
-     33
+    "kennels": [
+      31,
+      0,
+      18,
+      19
     ],
-    [
-     40,
-     26
+    "office": [
+      49,
+      0,
+      17,
+      11
     ],
-    [
-     20,
-     26
+    "shed": [
+      49,
+      11,
+      17,
+      8
+    ],
+    "exterior": [
+      0,
+      19,
+      66,
+      31
     ]
-   ]
   },
-  "21,32": {
-   "patrol": [
-    [
-     21,
-     32
+  "power": {
+    "12,18": "warehouse",
+    "32,12": "kennels",
+    "50,9": "office",
+    "50,13": "warehouse",
+    "51,13": "kennels",
+    "53,13": "exterior"
+  },
+  "flicker_zones": [
+    "kennels"
+  ],
+  "wall_colors": {
+    "warehouse": [
+      "8a93a0",
+      "3e4654",
+      "ffb030"
     ],
-    [
-     41,
-     34
+    "shed": [
+      "8a93a0",
+      "3e4654",
+      "ffd23f"
     ],
-    [
-     41,
-     27
+    "kennels": [
+      "d8cfa0",
+      "7a6a40",
+      "ff5aa0"
     ],
-    [
-     21,
-     27
+    "office": [
+      "a07850",
+      "5a3a22",
+      "35e0ff"
+    ],
+    "default": [
+      "b0a898",
+      "5a5048",
+      "ff5aa0"
     ]
-   ]
   },
-  "6,26": {
-   "sleep": true,
-   "facing": "right"
+  "light_colors": {
+    "+": "9cb9c8",
+    ",": "bfd3d4",
+    ".": "d89b68",
+    "_": "c6925d",
+    ";": "c7753d",
+    ":": "a95a38"
   },
-  "48,33": {
-   "facing": "left"
+  "inside_rect": [
+    0,
+    0,
+    66,
+    43
+  ],
+  "time_text": "2:15 AM",
+  "objectives": {
+    "infiltrate": "GET INTO THE SALVAGE YARD",
+    "clear": "CLEAR THE YARD",
+    "escape": "GET BACK TO THE CAR",
+    "cleared": "YARD CLEARED",
+    "escape_hint": "NOBODY LEFT TO FEED THE DOGS. BACK TO THE CAR.",
+    "find_boss": "FIND THE KENNEL MASTER",
+    "boss": "DEAL WITH BUCK"
   },
-  "58,33": {
-   "kind": "sniper",
-   "facing": "left"
+  "enemies": {
+    "20,31": {
+      "kind": "scrapper",
+      "patrol": [
+        [
+          20,
+          31
+        ],
+        [
+          40,
+          33
+        ],
+        [
+          40,
+          26
+        ],
+        [
+          20,
+          26
+        ]
+      ]
+    },
+    "21,32": {
+      "patrol": [
+        [
+          21,
+          32
+        ],
+        [
+          41,
+          34
+        ],
+        [
+          41,
+          27
+        ],
+        [
+          21,
+          27
+        ]
+      ]
+    },
+    "6,26": {
+      "sleep": true,
+      "facing": "right"
+    },
+    "48,33": {
+      "facing": "left"
+    },
+    "58,33": {
+      "kind": "sniper",
+      "facing": "left"
+    },
+    "41,21": {
+      "kind": "welder",
+      "facing": "down"
+    },
+    "16,12": {
+      "facing": "down"
+    },
+    "8,7": {
+      "kind": "handler",
+      "patrol": [
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          20,
+          12
+        ],
+        [
+          20,
+          7
+        ]
+      ]
+    },
+    "26,15": {
+      "kind": "welder",
+      "facing": "left"
+    },
+    "12,2": {
+      "facing": "right"
+    },
+    "40,11": {
+      "facing": "down"
+    },
+    "34,8": {
+      "kind": "scrapper",
+      "facing": "right"
+    },
+    "36,10": {
+      "sniff": true
+    },
+    "44,10": {
+      "patrol": [
+        [
+          44,
+          10
+        ],
+        [
+          34,
+          11
+        ],
+        [
+          34,
+          6
+        ],
+        [
+          44,
+          6
+        ]
+      ]
+    },
+    "56,5": {
+      "facing": "down"
+    },
+    "52,8": {
+      "sleep": true,
+      "facing": "up"
+    },
+    "57,16": {
+      "kind": "scrapper",
+      "patrol": [
+        [
+          57,
+          16
+        ],
+        [
+          51,
+          15
+        ],
+        [
+          61,
+          13
+        ]
+      ]
+    },
+    "40,8": {
+      "kind": "kennel_master",
+      "facing": "down"
+    }
   },
-  "41,21": {
-   "kind": "welder",
-   "facing": "down"
+  "collectibles": {
+    "29,17": {
+      "id": "tape_vance",
+      "kind": "tape",
+      "title": "VHS: 'HOTSHOT' - STUNT REHEARSAL",
+      "text": "Arlo Vance walks a young man to the edge of a rooftop. 'Don't think about the ground, Tommy.' Tommy laughs. Off-camera, a voice you know: 'Keep rolling. He doesn't need to know the pad's not there.'"
+    },
+    "58,2": {
+      "id": "photo_kennel",
+      "kind": "photo",
+      "title": "POLAROID: 'EMPLOYEE OF THE MONTH'",
+      "text": "A rottweiler in a HOTSHOT crew jacket. Someone has written on the back: 'Better loyalty than the cast. - A.V.'"
+    }
   },
-  "16,12": {
-   "facing": "down"
-  },
-  "8,7": {
-   "kind": "handler",
-   "patrol": [
-    [
-     8,
-     7
-    ],
-    [
-     8,
-     12
-    ],
-    [
-     20,
-     12
-    ],
-    [
-     20,
-     7
-    ]
-   ]
-  },
-  "26,15": {
-   "kind": "welder",
-   "facing": "left"
-  },
-  "12,2": {
-   "facing": "right"
-  },
-  "40,11": {
-   "facing": "down"
-  },
-  "34,8": {
-   "kind": "scrapper",
-   "facing": "right"
-  },
-  "36,10": {
-   "sniff": true
-  },
-  "44,10": {
-   "patrol": [
-    [
-     44,
-     10
-    ],
-    [
-     34,
-     11
-    ],
-    [
-     34,
-     6
-    ],
-    [
-     44,
-     6
-    ]
-   ]
-  },
-  "56,5": {
-   "facing": "down"
-  },
-  "52,8": {
-   "sleep": true,
-   "facing": "up"
-  },
-  "57,16": {
-   "kind": "scrapper",
-   "patrol": [
-    [
-     57,
-     16
-    ],
-    [
-     51,
-     15
-    ],
-    [
-     61,
-     13
-    ]
-   ]
-  },
-  "40,8": {
-   "kind": "kennel_master",
-   "facing": "down"
-  }
- },
- "collectibles": {
-  "29,17": {
-   "id": "tape_vance",
-   "kind": "tape",
-   "title": "VHS: 'HOTSHOT' - STUNT REHEARSAL",
-   "text": "Arlo Vance walks a young man to the edge of a rooftop. 'Don't think about the ground, Tommy.' Tommy laughs. Off-camera, a voice you know: 'Keep rolling. He doesn't need to know the pad's not there.'"
-  },
-  "58,2": {
-   "id": "photo_kennel",
-   "kind": "photo",
-   "title": "POLAROID: 'EMPLOYEE OF THE MONTH'",
-   "text": "A rottweiler in a HOTSHOT crew jacket. Someone has written on the back: 'Better loyalty than the cast. - A.V.'"
-  }
- },
- "checkpoints": [
-  {
-   "rect": [
-    1,
-    20,
-    64,
-    22
-   ],
-   "name": "THE YARD"
-  },
-  {
-   "rect": [
-    1,
-    1,
-    30,
-    18
-   ],
-   "name": "WAREHOUSE"
-  },
-  {
-   "rect": [
-    32,
-    1,
-    16,
-    18
-   ],
-   "name": "KENNELS"
-  },
-  {
-   "rect": [
-    49,
-    1,
-    16,
-    18
-   ],
-   "name": "THE OFFICE"
-  }
- ],
- "hints": [
-  {
-   "rect": [
-    6,
-    38,
-    8,
-    5
-   ],
-   "id": "m02_dogs",
-   "text": "Yermo Salvage & K-9. Listen for barking. Dogs SMELL you if you run - sneak, or put them down before they wake the whole yard."
-  },
-  {
-   "rect": [
-    49,
-    12,
+  "checkpoints": [
+    {
+      "rect": [
+        1,
+        20,
+        64,
+        22
+      ],
+      "name": "THE YARD"
+    },
+    {
+      "rect": [
+        1,
+        1,
+        30,
+        18
+      ],
+      "name": "WAREHOUSE"
+    },
+    {
+      "rect": [
+        32,
+        1,
+        16,
+        18
+      ],
+      "name": "KENNELS"
+    },
+    {
+      "rect": [
+        49,
+        1,
+        16,
+        18
+      ],
+      "name": "THE OFFICE"
+    }
+  ],
+  "hints": [
+    {
+      "rect": [
+        6,
+        38,
+        8,
+        5
+      ],
+      "id": "m02_dogs",
+      "text": "Yermo Salvage & K-9. Listen for barking. Dogs SMELL you if you run - sneak, or put them down before they wake the whole yard."
+    },
+    {
+      "rect": [
+        49,
+        12,
+        7,
+        4
+      ],
+      "id": "m02_fuse",
+      "text": "FUSE BOXES: cut the warehouse, the kennels or the yard floodlights. Smashed boxes stay dead - nobody can switch them back on."
+    },
+    {
+      "rect": [
+        30,
+        5,
+        3,
+        7
+      ],
+      "id": "m02_kennel",
+      "text": "The kennel lights are on their last legs. When they die, so do the handlers' eyes."
+    }
+  ],
+  "exit": [
     7,
-    4
-   ],
-   "id": "m02_fuse",
-   "text": "FUSE BOXES: cut the warehouse, the kennels or the yard floodlights. Smashed boxes stay dead - nobody can switch them back on."
-  },
-  {
-   "rect": [
-    30,
-    5,
-    3,
-    7
-   ],
-   "id": "m02_kennel",
-   "text": "The kennel lights are on their last legs. When they die, so do the handlers' eyes."
-  }
- ],
- "exit": [
-  7,
-  45
- ],
- "weather": {
-  "preset": "desert_wind"
- },
- "decor": [
-  {
-   "type": "neon",
-   "pos": [
-    33,
     45
-   ],
-   "text": "YERMO SALVAGE & K-9",
-   "color": "ffd23f",
-   "size": 14
-  },
-  {
-   "type": "neon",
-   "pos": [
-    10,
-    42
-   ],
-   "text": "BEWARE OF DOG",
-   "color": "ff3d7f",
-   "size": 9
-  },
-  {
-   "type": "neon",
-   "pos": [
-    40,
-    20
-   ],
-   "text": "K-9",
-   "color": "35e0ff",
-   "size": 10
-  },
-  {
-   "type": "palm",
-   "pos": [
-    62,
-    48
-   ],
-   "size": 1.0
-  },
-  {
-   "type": "palm",
-   "pos": [
-    26,
-    48
-   ],
-   "size": 0.9
-  },
-  {
-   "type": "palm",
-   "pos": [
-    1,
-    48
-   ],
-   "size": 1.1
-  },
-  {
-   "type": "sprite",
-   "id": "yard_k9_warning",
-   "pos": [
-    10,
-    22
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_k9_warning",
-   "pos": [
-    33,
-    20
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_k9_warning",
-   "pos": [
-    51,
-    20
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_spill",
-   "pos": [
-    25,
-    29
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_spill",
-   "pos": [
-    50,
-    35
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_spill",
-   "pos": [
-    14,
-    13
-   ],
-   "size": 0.8,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_burn_barrel",
-   "pos": [
-    38,
-    32
-   ],
-   "size": 0.45,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_agave",
-   "pos": [
-    14,
-    35
-   ],
-   "size": 0.32,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_raven",
-   "pos": [
-    45,
-    30
-   ],
-   "size": 0.22,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    24,
-    25
-   ],
-   "size": 0.42,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_bin",
-   "pos": [
-    20,
-    25
-   ],
-   "size": 0.38,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welding_cart",
-   "pos": [
-    38,
-    26
-   ],
-   "size": 0.36,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_windshield_stack",
-   "pos": [
-    55,
-    27
-   ],
-   "size": 0.36,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chopshop_ledger",
-   "pos": [
-    25,
-    21
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    43,
-    22
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "combat_blood_shells",
-   "pos": [
-    45,
-    31
-   ],
-   "size": 0.34,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    31,
-    24
-   ],
-   "size": 0.28,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    17,
-    31
-   ],
-   "size": 0.3,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    54,
-    34
-   ],
-   "size": 0.28,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_steam_vent_overlay",
-   "pos": [
-    37,
-    35
-   ],
-   "size": 0.38,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_workbench_cluster",
-   "pos": [
-    25,
-    23
-   ],
-   "size": 0.62,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tarps_tools",
-   "pos": [
-    15,
-    28
-   ],
-   "size": 0.54,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_engine_hoist",
-   "pos": [
-    35,
-    30
-   ],
-   "size": 0.5,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welding_cart",
-   "pos": [
-    21,
-    35
-   ],
-   "size": 0.46,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_windshield_stack",
-   "pos": [
-    43,
-    37
-   ],
-   "size": 0.48,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    29,
-    26
-   ],
-   "size": 0.55,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    47,
-    25
-   ],
-   "size": 0.5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    39,
-    33
-   ],
-   "size": 0.6,
-   "floor": true
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    24,
-    25
-   ],
-   "size": 0.42,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    43,
-    22
-   ],
-   "size": 0.34,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    31,
-    24
-   ],
-   "size": 0.28,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    17,
-    31
-   ],
-   "size": 0.3,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    54,
-    34
-   ],
-   "size": 0.28,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    29,
-    26
-   ],
-   "size": 0.55,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    39,
-    33
-   ],
-   "size": 0.6,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    50,
-    12
-   ],
-   "size": 0.62,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    2,
-    2
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    63,
-    2
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    62,
-    3
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    61,
-    4
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    60,
-    5
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    59,
-    6
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    58,
-    7
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    57,
-    8
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    56,
-    9
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_floor_stains",
-   "pos": [
-    59,
-    10
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    21,
-    12
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    40,
-    13
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    54,
-    14
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    59,
-    15
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    59,
-    16
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    59,
-    17
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    6,
-    20
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    48,
-    21
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    35,
-    23
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_floor_stains",
-   "pos": [
-    14,
-    25
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    35,
-    27
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    29,
-    29
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    4,
-    31
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    30,
-    32
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    27,
-    34
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    8,
-    36
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    59,
-    37
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    61,
-    38
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    63,
-    39
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_floor_stains",
-   "pos": [
-    60,
-    40
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    57,
-    41
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    54,
-    42
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    47,
-    44
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    44,
-    45
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    41,
-    46
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    38,
-    47
-   ],
-   "size": 0.38,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    5,
-    2
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    35,
-    3
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    11,
-    5
-   ],
-   "size": 0.42000000000000004,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    41,
-    6
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    19,
-    8
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    50,
-    9
-   ],
-   "size": 0.42000000000000004,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    4,
-    12
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    44,
-    14
-   ],
-   "size": 0.38,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    40,
-    16
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_floor_stains",
-   "pos": [
-    21,
-    18
-   ],
-   "size": 0.34,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    61,
-    21
-   ],
-   "size": 0.38,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_pipe_manifold",
-   "pos": [
-    9,
-    25
-   ],
-   "size": 0.42000000000000004,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_utility_control_box",
-   "pos": [
-    41,
-    28
-   ],
-   "size": 0.34,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_welded_safety_railing",
-   "pos": [
-    51,
-    31
-   ],
-   "size": 0.38,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_oil_rags",
-   "pos": [
-    11,
-    35
-   ],
-   "size": 0.42000000000000004,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_copper_scraps",
-   "pos": [
-    34,
-    38
-   ],
-   "size": 0.34,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_parts_tags",
-   "pos": [
-    17,
-    40
-   ],
-   "size": 0.38,
-   "rot": -12,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_tail_light_debris",
-   "pos": [
-    48,
-    41
-   ],
-   "size": 0.42000000000000004,
-   "rot": 0,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_chain_cable_spill",
-   "pos": [
-    29,
-    44
-   ],
-   "size": 0.34,
-   "rot": 9,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "clutter_floor_stains",
-   "pos": [
-    16,
-    46
-   ],
-   "size": 0.38,
-   "rot": -5,
-   "floor": false
-  },
-  {
-   "type": "sprite",
-   "id": "yard_desert_scrub_cluster",
-   "pos": [
-    60,
-    47
-   ],
-   "size": 0.42000000000000004,
-   "rot": -12,
-   "floor": false
-  }
- ],
- "cameras": [
-  {
-   "cell": [
-    1,
-    1
-   ],
-   "angle": 45
-  },
-  {
-   "cell": [
-    30,
-    20
-   ],
-   "angle": 90
-  },
-  {
-   "cell": [
-    47,
-    1
-   ],
-   "angle": 130
-  }
- ],
- "film_cameras": [
-  {
-   "cell": [
-    47,
-    12
-   ],
-   "angle": 135
-  },
-  {
-   "cell": [
-    64,
-    20
-   ],
-   "angle": 135
-  }
- ],
- "intro_call": {
-  "dialogue": "call_m02",
-  "caller": "mom",
-  "device": "phone"
- },
- "tasks": [
-  {
-   "id": "feeds",
-   "kind": "film_cameras",
-   "text": "SMASH THE FILM CAMERAS"
-  },
-  {
-   "id": "tape",
-   "kind": "collect",
-   "item": "tape_vance",
-   "text": "FIND ARLO'S TAPE"
-  }
- ],
- "hero_car": {
-  "pos": [
-   5.0,
-   46.0
   ],
-  "axis": "horizontal",
-  "route_in": [
-   [
-    9.5,
-    62
-   ],
-   [
-    9.5,
-    51
-   ],
-   [
-    10.2,
-    48.4
-   ],
-   [
-    8.6,
-    46.3
-   ],
-   [
-    6.4,
-    45.8
-   ],
-   [
-    5,
-    46
-   ]
+  "weather": {
+    "preset": "desert_wind"
+  },
+  "decor": [
+    {
+      "type": "neon",
+      "pos": [
+        33,
+        45
+      ],
+      "text": "YERMO SALVAGE & K-9",
+      "color": "ffd23f",
+      "size": 14
+    },
+    {
+      "type": "neon",
+      "pos": [
+        10,
+        42
+      ],
+      "text": "BEWARE OF DOG",
+      "color": "ff3d7f",
+      "size": 9
+    },
+    {
+      "type": "neon",
+      "pos": [
+        40,
+        20
+      ],
+      "text": "K-9",
+      "color": "35e0ff",
+      "size": 10
+    },
+    {
+      "type": "palm",
+      "pos": [
+        62,
+        48
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "palm",
+      "pos": [
+        26,
+        48
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "palm",
+      "pos": [
+        1,
+        48
+      ],
+      "size": 1.1
+    },
+    {
+      "type": "sprite",
+      "id": "yard_k9_warning",
+      "pos": [
+        10,
+        22
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_k9_warning",
+      "pos": [
+        33,
+        20
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_k9_warning",
+      "pos": [
+        51,
+        20
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_spill",
+      "pos": [
+        25,
+        29
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_spill",
+      "pos": [
+        50,
+        35
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_spill",
+      "pos": [
+        14,
+        13
+      ],
+      "size": 0.8,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_burn_barrel",
+      "pos": [
+        38,
+        32
+      ],
+      "size": 0.45,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_agave",
+      "pos": [
+        14,
+        35
+      ],
+      "size": 0.32,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_raven",
+      "pos": [
+        45,
+        30
+      ],
+      "size": 0.22,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        24,
+        25
+      ],
+      "size": 0.42,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_bin",
+      "pos": [
+        20,
+        25
+      ],
+      "size": 0.38,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welding_cart",
+      "pos": [
+        38,
+        26
+      ],
+      "size": 0.36,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_windshield_stack",
+      "pos": [
+        55,
+        27
+      ],
+      "size": 0.36,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chopshop_ledger",
+      "pos": [
+        25,
+        21
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        43,
+        22
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "combat_blood_shells",
+      "pos": [
+        45,
+        31
+      ],
+      "size": 0.34,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        31,
+        24
+      ],
+      "size": 0.28,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        17,
+        31
+      ],
+      "size": 0.3,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        54,
+        34
+      ],
+      "size": 0.28,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_steam_vent_overlay",
+      "pos": [
+        37,
+        35
+      ],
+      "size": 0.38,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_workbench_cluster",
+      "pos": [
+        25,
+        23
+      ],
+      "size": 0.62,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tarps_tools",
+      "pos": [
+        15,
+        28
+      ],
+      "size": 0.54,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_engine_hoist",
+      "pos": [
+        35,
+        30
+      ],
+      "size": 0.5,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welding_cart",
+      "pos": [
+        21,
+        35
+      ],
+      "size": 0.46,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_windshield_stack",
+      "pos": [
+        43,
+        37
+      ],
+      "size": 0.48,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        29,
+        26
+      ],
+      "size": 0.55,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        47,
+        25
+      ],
+      "size": 0.5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        39,
+        33
+      ],
+      "size": 0.6,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        24,
+        25
+      ],
+      "size": 0.42,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        43,
+        22
+      ],
+      "size": 0.34,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        31,
+        24
+      ],
+      "size": 0.28,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        17,
+        31
+      ],
+      "size": 0.3,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        54,
+        34
+      ],
+      "size": 0.28,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        29,
+        26
+      ],
+      "size": 0.55,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        39,
+        33
+      ],
+      "size": 0.6,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        50,
+        12
+      ],
+      "size": 0.62,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        2,
+        2
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        63,
+        2
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        62,
+        3
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        61,
+        4
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        60,
+        5
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        59,
+        6
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        58,
+        7
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        57,
+        8
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        56,
+        9
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_floor_stains",
+      "pos": [
+        59,
+        10
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        21,
+        12
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        40,
+        13
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        54,
+        14
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        59,
+        15
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        59,
+        16
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        59,
+        17
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        6,
+        20
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        48,
+        21
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        35,
+        23
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_floor_stains",
+      "pos": [
+        14,
+        25
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        35,
+        27
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        29,
+        29
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        4,
+        31
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        30,
+        32
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        27,
+        34
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        8,
+        36
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        59,
+        37
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        61,
+        38
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        63,
+        39
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_floor_stains",
+      "pos": [
+        60,
+        40
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        57,
+        41
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        54,
+        42
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        47,
+        44
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        44,
+        45
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        41,
+        46
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        38,
+        47
+      ],
+      "size": 0.38,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        5,
+        2
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        35,
+        3
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        11,
+        5
+      ],
+      "size": 0.42000000000000004,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        41,
+        6
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        19,
+        8
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        50,
+        9
+      ],
+      "size": 0.42000000000000004,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        4,
+        12
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        44,
+        14
+      ],
+      "size": 0.38,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        40,
+        16
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_floor_stains",
+      "pos": [
+        21,
+        18
+      ],
+      "size": 0.34,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        61,
+        21
+      ],
+      "size": 0.38,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_pipe_manifold",
+      "pos": [
+        9,
+        25
+      ],
+      "size": 0.42000000000000004,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_utility_control_box",
+      "pos": [
+        41,
+        28
+      ],
+      "size": 0.34,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welded_safety_railing",
+      "pos": [
+        51,
+        31
+      ],
+      "size": 0.38,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_rags",
+      "pos": [
+        11,
+        35
+      ],
+      "size": 0.42000000000000004,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_copper_scraps",
+      "pos": [
+        34,
+        38
+      ],
+      "size": 0.34,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_parts_tags",
+      "pos": [
+        17,
+        40
+      ],
+      "size": 0.38,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tail_light_debris",
+      "pos": [
+        48,
+        41
+      ],
+      "size": 0.42000000000000004,
+      "rot": 0,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_chain_cable_spill",
+      "pos": [
+        29,
+        44
+      ],
+      "size": 0.34,
+      "rot": 9,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "clutter_floor_stains",
+      "pos": [
+        16,
+        46
+      ],
+      "size": 0.38,
+      "rot": -5,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_desert_scrub_cluster",
+      "pos": [
+        60,
+        47
+      ],
+      "size": 0.42000000000000004,
+      "rot": -12,
+      "floor": false
+    },
+    {
+      "type": "sprite",
+      "id": "yard_car_stack",
+      "pos": [
+        15,
+        10
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "sprite",
+      "id": "yard_car_stack",
+      "pos": [
+        26,
+        8
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        20,
+        14
+      ],
+      "size": 0.8
+    },
+    {
+      "type": "sprite",
+      "id": "yard_oil_barrel_cluster",
+      "pos": [
+        45,
+        18
+      ],
+      "size": 0.8
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tire_stack",
+      "pos": [
+        10,
+        8
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tire_stack",
+      "pos": [
+        38,
+        12
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "yard_scrap_pile",
+      "pos": [
+        32,
+        18
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "yard_scrap_pile",
+      "pos": [
+        48,
+        12
+      ],
+      "size": 0.9
+    },
+    {
+      "type": "sprite",
+      "id": "yard_storage_container",
+      "pos": [
+        18,
+        4
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "sprite",
+      "id": "yard_storage_container",
+      "pos": [
+        30,
+        4
+      ],
+      "size": 1.0
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welder_sparks",
+      "pos": [
+        22,
+        20
+      ],
+      "size": 0.7,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_welder_sparks",
+      "pos": [
+        42,
+        22
+      ],
+      "size": 0.7,
+      "floor": true
+    }
   ],
-  "route_out": [
-   [
-    5,
-    46
-   ],
-   [
-    2.4,
-    46.2
-   ],
-   [
-    0,
-    45.6
-   ],
-   [
-    -12,
-    45.4
-   ]
+  "cameras": [
+    {
+      "cell": [
+        1,
+        1
+      ],
+      "angle": 45
+    },
+    {
+      "cell": [
+        30,
+        20
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        47,
+        1
+      ],
+      "angle": 130
+    }
   ],
-  "gates": [
-   [
-    8,
-    49,
-    11,
-    49
-   ],
-   [
-    0,
-    44,
-    0,
-    47
-   ]
-  ]
- },
- "boss": {
-  "intro": "m02_boss_intro",
-  "down": "m02_boss_down"
- },
- "boss_trigger": [
-  32,
-  5,
-  16,
-  8
- ],
- "boss_cover": [
-  [
-   36,
-   6
+  "film_cameras": [
+    {
+      "cell": [
+        47,
+        12
+      ],
+      "angle": 135
+    },
+    {
+      "cell": [
+        64,
+        20
+      ],
+      "angle": 135
+    }
   ],
-  [
-   44,
-   6
+  "intro_call": {
+    "dialogue": "call_m02",
+    "caller": "mom",
+    "device": "phone"
+  },
+  "tasks": [
+    {
+      "id": "feeds",
+      "kind": "film_cameras",
+      "text": "SMASH THE FILM CAMERAS"
+    },
+    {
+      "id": "tape",
+      "kind": "collect",
+      "item": "tape_vance",
+      "text": "FIND ARLO'S TAPE"
+    }
   ],
-  [
-   40,
-   10
-  ],
-  [
-   34,
-   12
-  ],
-  [
-   46,
-   12
-  ]
- ],
- "kennel_cages": [
-  [
-   33,
-   3
-  ],
-  [
-   37,
-   3
-  ],
-  [
-   41,
-   3
-  ],
-  [
-   45,
-   3
-  ],
-  [
-   33,
-   15
-  ],
-  [
-   43,
-   15
-  ]
- ],
- "boss_props": [
-  {
-   "kind": "dinner_bell",
-   "pos": [
+  "hero_car": {
+    "pos": [
+      5.0,
+      46.0
+    ],
+    "axis": "horizontal",
+    "route_in": [
+      [
+        9.5,
+        62
+      ],
+      [
+        9.5,
+        51
+      ],
+      [
+        10.2,
+        48.4
+      ],
+      [
+        8.6,
+        46.3
+      ],
+      [
+        6.4,
+        45.8
+      ],
+      [
+        5,
+        46
+      ]
+    ],
+    "route_out": [
+      [
+        5,
+        46
+      ],
+      [
+        2.4,
+        46.2
+      ],
+      [
+        0,
+        45.6
+      ],
+      [
+        -12,
+        45.4
+      ]
+    ],
+    "gates": [
+      [
+        8,
+        49,
+        11,
+        49
+      ],
+      [
+        0,
+        44,
+        0,
+        47
+      ]
+    ]
+  },
+  "boss": {
+    "intro": "m02_boss_intro",
+    "down": "m02_boss_down"
+  },
+  "boss_trigger": [
     32,
-    9
-   ]
+    5,
+    16,
+    8
+  ],
+  "boss_cover": [
+    [
+      36,
+      6
+    ],
+    [
+      44,
+      6
+    ],
+    [
+      40,
+      10
+    ],
+    [
+      34,
+      12
+    ],
+    [
+      46,
+      12
+    ]
+  ],
+  "kennel_cages": [
+    [
+      33,
+      3
+    ],
+    [
+      37,
+      3
+    ],
+    [
+      41,
+      3
+    ],
+    [
+      45,
+      3
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      43,
+      15
+    ]
+  ],
+  "boss_props": [
+    {
+      "kind": "dinner_bell",
+      "pos": [
+        32,
+        9
+      ]
+    }
+  ],
+  "boss_weapon": "shotgun",
+  "layout_revision": 1,
+  "layout_design": {
+    "theme": "Salvage: warehouse aisles, kennel loop and foreman/office cross-links",
+    "tension_zones": {
+      "breach": "south gate and wreck screening",
+      "gauntlet": "warehouse and kennels",
+      "core": "foreman office, trailer and generator shed"
+    }
   }
- ],
- "boss_weapon": "shotgun",
- "layout_revision": 1,
- "layout_design": {
-  "theme": "Salvage: warehouse aisles, kennel loop and foreman/office cross-links",
-  "tension_zones": {
-   "breach": "south gate and wreck screening",
-   "gauntlet": "warehouse and kennels",
-   "core": "foreman office, trailer and generator shed"
-  }
- }
 }
