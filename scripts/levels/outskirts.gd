@@ -239,6 +239,10 @@ func _prop(pr: Array) -> void:
 			draw_circle(p, 5.5, Color(0.35, 0.22, 0.12))
 			draw_arc(p, 4.0, 0, TAU, 12, Color(0.2, 0.12, 0.08), 1.0)
 		"truck":
+			if _sprite("pickup_truck", p, rot, sc * 1.6):
+				return
+			if cos(rot) < 0.0:
+				rot += PI   # keep the lettering upright
 			draw_set_transform(p, rot, Vector2.ONE)
 			draw_rect(Rect2(-40, -14, 80, 28), Color(0.85, 0.85, 0.82))
 			draw_rect(Rect2(28, -12, 14, 24), Color(0.2, 0.3, 0.55))
