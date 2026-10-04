@@ -1,16 +1,26 @@
-; HOTSHOT CALIFORNIA - Godot 4.x project
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
 config/name="HOTSHOT CALIFORNIA"
 config/description="A fast, violent, surreal top-down action game. California, 1988-1992."
 config/version="0.12.0"
+run/main_scene="res://scenes/boot.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="HOTSHOT CALIFORNIA Codex Preview"
-run/main_scene="res://scenes/boot.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.02, 0.01, 0.04, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
@@ -32,11 +42,11 @@ DebugMenu="*res://scripts/systems/debug_menu.gd"
 
 [debug]
 
-gdscript/warnings/inference_on_variant=1
-gdscript/warnings/unused_parameter=0
 gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_parameter=0
 gdscript/warnings/integer_division=0
 gdscript/warnings/narrowing_conversion=0
+gdscript/warnings/inference_on_variant=1
 
 [display]
 
@@ -46,18 +56,6 @@ window/size/window_width_override=1600
 window/size/window_height_override=900
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[gui]
-
-theme/default_font_multichannel_signed_distance_field=false
-
-[internationalization]
-
-locale/fallback="en"
-
-[input_devices]
-
-pointing/emulate_touch_from_mouse=false
 
 [layer_names]
 
@@ -80,6 +78,4 @@ common/max_physics_steps_per_frame=5
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/canvas_textures/default_texture_filter=1
 environment/defaults/default_clear_color=Color(0.02, 0.01, 0.04, 1)
-2d/snap/snap_2d_vertices_to_pixel=false

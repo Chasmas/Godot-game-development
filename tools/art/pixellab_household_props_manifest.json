@@ -1,0 +1,8 @@
+{
+  "assets": [
+    {"name":"motel_pizza_box","size":"32x32","prompt":"Top-down pixel art style, half-open motel pizza box, made of greasy cardboard, featuring one pepperoni slice, folded lid, red delivery stamp and a tiny sauce cup, warm amber light with violet shadow, clean outlines, transparent background."},
+    {"name":"motel_room_service_tray","size":"32x32","prompt":"Top-down pixel art style, motel room service tray, made of brushed metal, featuring coffee cup, folded napkin, receipt and small jam packet, cool cyan rim light with warm plate highlights, clean outlines, transparent background."},
+    {"name":"laundry_basket_clothes","size":"32x32","prompt":"Top-down pixel art style, overflowing motel laundry basket, made of woven plastic, featuring folded towels, one sock, brass tag and a loose thread, soft pink neon highlight with deep navy shadow, clean outlines, transparent background."},
+    {"name":"laundry_detergent_bottle","size":"32x32","prompt":"Top-down pixel art style, vintage laundry detergent bottle, made of cloudy plastic, featuring blue label, orange cap, scuffed corners and a small spilled powder trail, cool blue light with crisp dark outline, transparent background."}
+  ]
+}

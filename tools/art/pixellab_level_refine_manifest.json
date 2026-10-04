@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "queue": [
+    {
+      "id": "motel_power_siphon_v2",
+      "level": "m01_sunset_palms",
+      "canvas": "64x64",
+      "category": "B_functional_prop",
+      "reference": "assets/art/pixellab_world/sprites/motel_ice_machine.png",
+      "reference_strength": 560,
+      "prompt": "Pixel art style, strict 90-degree overhead top-down view of a compact illegal motel power-siphon fitted beside an ice machine, made of dull aluminium, cracked plastic and coiled black cable, featuring a bypass plug, taped junction box, small water drops and a faded warning sticker. Preserve the reference's top-down footprint and readable silhouette. No front face, no side view, no perspective. Cool cyan pool reflection with a tiny magenta neon edge, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "motel_stucco_cap_v2",
+      "level": "m01_sunset_palms",
+      "canvas": "128x128",
+      "category": "A_structural",
+      "reference": "assets/art/pixellab_world/floors/wall_motel.png",
+      "reference_strength": 620,
+      "prompt": "Pixel art style, strict flat top-down seamless wall-cap material for a rain-soaked 1980s motel, made of faded salmon stucco and chipped poolside concrete. Preserve the reference's flat tiled surface. Add only hairline cracks, rain streaks, tiny rust spots and faint cyan reflected pool light. No building facade, door, window, horizon, objects, perspective or characters. Even texture lighting, clean pixel clusters, seamless tile."
+    },
+    {
+      "id": "studio_bootleg_vcr_v2",
+      "level": "m03_khsc_studios",
+      "canvas": "64x64",
+      "category": "B_functional_prop",
+      "reference": "assets/art/pixellab_world/sprites/tv_crt.png",
+      "reference_strength": 580,
+      "prompt": "Pixel art style, strict 90-degree overhead top-down view of a battered 1980s VCR bootleg-recording rig, made of charcoal plastic, brushed steel and coiled black cable. Preserve the reference's top-down footprint. Add labelled cassette tapes, a blinking red record light, gaffer-tape repair and a grease-pencil note. No front face, no side view, no perspective. Cyan monitor bounce and warm studio-lamp highlights, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "studio_dust_beam_v2",
+      "level": "m03_khsc_studios",
+      "canvas": "128x128",
+      "category": "D_atmospheric_overlay",
+      "prompt": "Pixel art style, soft translucent top-down atmospheric overlay of sparse dust motes drifting through a broad rectangular stage-light cone, made only of tiny irregular particles and low-opacity haze. No starburst, no rays, no explosion, no hard center, no solid background. Warm amber tint from upper-left with faint cyan edge, subtle readable pixels, transparent background."
+    },
+    {
+      "id": "motel_hasty_checkout",
+      "level": "m01_sunset_palms",
+      "canvas": "32x32",
+      "category": "C_micro_clutter",
+      "prompt": "Pixel art style, strict overhead top-down small hasty motel checkout clutter cluster, made of wet paper, cheap plastic and tarnished brass, featuring a curled room key tag, a damp receipt, one lost earring, cigarette butt and two rain droplets. Cyan pool reflection with a small amber lamp highlight, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_dog_station",
+      "level": "m02_yermo_salvage",
+      "canvas": "64x64",
+      "category": "B_functional_prop",
+      "prompt": "Pixel art style, strict 90-degree overhead top-down dog-handler station for a desert salvage yard, made of dented galvanised steel, rubber and dusty concrete, featuring a water bowl, chewed lead, clipped warning tag, frayed rope and dog hair caught in a drain. No animal, no front view, no perspective. Sodium-lamp amber with welding-blue rim light, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_weld_sparks",
+      "level": "m02_yermo_salvage",
+      "canvas": "64x64",
+      "category": "D_atmospheric_overlay",
+      "prompt": "Pixel art style, sparse top-down atmospheric overlay of a few short welding sparks and drifting metal dust, made of tiny cyan and pale amber pixels with faint transparent smoke. No explosion, no starburst, no hard edge, no background. Clean pixel clusters, asset isolated on transparent background."
+    },
+    {
+      "id": "studio_script_trail",
+      "level": "m03_khsc_studios",
+      "canvas": "32x32",
+      "category": "C_micro_clutter",
+      "prompt": "Pixel art style, strict overhead top-down small television-studio script-page clutter cluster, made of off-white paper, graphite and black headset cable, featuring two curled cue sheets, a broken pencil, a tiny earpiece and a red grease-pencil correction mark. Cyan monitor glow and warm lamp edge, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "villa_memorial_curtain",
+      "level": "m04_villa_estrella",
+      "canvas": "64x64",
+      "category": "D_atmospheric_overlay",
+      "prompt": "Pixel art style, top-down atmospheric overlay of a thin velvet curtain edge casting irregular moonlit shadow over a hidden villa memorial, made of translucent dark burgundy fabric silhouette and sparse dust. No perspective, no visible wall, no hard rectangle or solid background. Moonlit navy edge and faint candle-gold flecks, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "villa_gardener_alcove",
+      "level": "m04_villa_estrella",
+      "canvas": "32x32",
+      "category": "C_micro_clutter",
+      "prompt": "Pixel art style, strict overhead top-down gardener's hidden sleeping-alcove clutter cluster, made of tarnished steel, worn leather and folded newspaper, featuring a small thermos, pruning glove, orange peel, a key ring and a carefully folded newspaper. Moonlit navy with warm candle edge, clean outlines, asset isolated on transparent background."
+    }
+  ]
+}

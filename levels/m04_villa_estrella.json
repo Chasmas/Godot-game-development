@@ -7,9 +7,9 @@
   ".": "rug"
  },
  "ambient": [
-  0.34,
-  0.22,
-  0.36
+  0.19,
+  0.17,
+  0.29
  ],
  "map": [
   "########################################################################",
@@ -148,13 +148,13 @@
   ]
  },
  "light_colors": {
-  ".": "ff9a70",
-  ",": "d8c8ff",
-  "_": "ffb070",
-  "=": "ff5a5a",
-  "\"": "c03a4a",
-  ";": "ff7a50",
-  "~": "ff3050"
+  ".": "d98970",
+  ",": "aeb7e0",
+  "_": "c79161",
+  "=": "a84a55",
+  "\"": "783044",
+  ";": "a66349",
+  "~": "c83f62"
  },
  "objectives": {
   "infiltrate": "GET INTO THE HOUSE",
@@ -923,6 +923,793 @@
    ],
    "size": 0.8,
    "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    29,
+    16
+   ],
+   "size": 0.35,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_tree",
+   "pos": [
+    12,
+    27
+   ],
+   "size": 0.42,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_peacock",
+   "pos": [
+    56,
+    30
+   ],
+   "size": 0.28,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    31,
+    25
+   ],
+   "size": 0.46,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    6,
+    10
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_champagne_bucket",
+   "pos": [
+    26,
+    8
+   ],
+   "size": 0.32,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_marble_bust",
+   "pos": [
+    31,
+    23
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    48,
+    27
+   ],
+   "size": 0.32,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    52,
+    25
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    41,
+    29
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "combat_poker_table",
+   "pos": [
+    41,
+    29
+   ],
+   "size": 0.36,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    49,
+    29
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    38,
+    13
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    28,
+    27
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    58,
+    17
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    39,
+    17
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    60,
+    30
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    11,
+    29
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    29,
+    16
+   ],
+   "size": 0.35,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    31,
+    25
+   ],
+   "size": 0.46,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    6,
+    10
+   ],
+   "size": 0.34,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    48,
+    27
+   ],
+   "size": 0.32,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    52,
+    25
+   ],
+   "size": 0.34,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    49,
+    29
+   ],
+   "size": 0.34,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    8,
+    8
+   ],
+   "size": 0.56,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    5,
+    2
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    31,
+    3
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    57,
+    4
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    31,
+    6
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    11,
+    8
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    54,
+    9
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    33,
+    11
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    28,
+    13
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    25,
+    15
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "plant",
+   "pos": [
+    20,
+    17
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    15,
+    19
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    6,
+    21
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    66,
+    22
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    46,
+    24
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    60,
+    26
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    35,
+    29
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    6,
+    32
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    43,
+    33
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    64,
+    35
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "plant",
+   "pos": [
+    13,
+    37
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    30,
+    38
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    47,
+    39
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    64,
+    40
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    49,
+    42
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    66,
+    43
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    15,
+    45
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    32,
+    46
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    49,
+    47
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    66,
+    48
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "plant",
+   "pos": [
+    15,
+    50
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    32,
+    51
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    49,
+    52
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    66,
+    53
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    15,
+    55
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    32,
+    56
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    8,
+    2
+   ],
+   "size": 0.34,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    28,
+    4
+   ],
+   "size": 0.38,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    65,
+    6
+   ],
+   "size": 0.27,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    16,
+    10
+   ],
+   "size": 0.27,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    18,
+    13
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    34,
+    16
+   ],
+   "size": 0.42000000000000004,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    47,
+    19
+   ],
+   "size": 0.34,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_candle_ring",
+   "pos": [
+    10,
+    23
+   ],
+   "size": 0.38,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_planter",
+   "pos": [
+    18,
+    26
+   ],
+   "size": 0.42000000000000004,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "plant",
+   "pos": [
+    31,
+    30
+   ],
+   "size": 0.34,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_ivy_wall_cluster",
+   "pos": [
+    51,
+    33
+   ],
+   "size": 0.38,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_tea_service",
+   "pos": [
+    61,
+    36
+   ],
+   "size": 0.42000000000000004,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_rose_petals",
+   "pos": [
+    20,
+    39
+   ],
+   "size": 0.27,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_wax_and_petals",
+   "pos": [
+    56,
+    41
+   ],
+   "size": 0.27,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_seating_card",
+   "pos": [
+    3,
+    44
+   ],
+   "size": 0.42000000000000004,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orchid_planter",
+   "pos": [
+    25,
+    46
+   ],
+   "size": 0.34,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "villa_orange_peel",
+   "pos": [
+    52,
+    48
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
   }
  ],
  "film_cameras": [

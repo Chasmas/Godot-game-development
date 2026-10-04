@@ -72,9 +72,15 @@ func _process(delta: float) -> void:
 		card.modulate.a = move_toward(card.modulate.a, 0.0 if shot else 0.35, delta)
 	if art:
 		art.pivot_offset = art.size * 0.5
+		# Treat single-frame key art like a held film shot: a slow breathing
+		# push-in plus a barely perceptible handheld drift keeps it alive without
+		# making text or character silhouettes wobble.
 		var k := 1.012 + sin(_t * 0.12) * 0.003
 		art.scale = Vector2.ONE * k
 		art.position = Vector2(sin(_t * 0.10) * 2.5, cos(_t * 0.08) * 1.5)
+		if art_shade:
+			var pulse := 0.10 + sin(_t * 0.55) * 0.018
+			art_shade.color = Color(0.01, 0.0, 0.025, pulse)
 
 ## Each line can cut to a new shot ("shot" on the dialogue node).
 func _on_line(_speaker: String, _text: String) -> void:

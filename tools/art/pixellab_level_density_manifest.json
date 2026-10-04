@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "placement_policy": "Review every output at native size. Micro assets are decoration only and use floor:true. Never place one on #, D, L, W, an objective, a pickup lane, or inside a combat loop.",
+  "queue": [
+    {
+      "id": "motel_stucco_cap",
+      "level": "m01_sunset_palms",
+      "category": "A_structural",
+      "canvas": "128x128",
+      "proposed_story": "Rain and neglect have slowly worn the motel's exterior skin.",
+      "prompt": "Pixel art style, rain-soaked 1980s motel stucco wall cap and poolside concrete foundation, made of faded salmon plaster and chipped pale concrete, featuring hairline cracks, dark rain streaks, tiny rusted screw heads and a faint cyan pool-light reflection, top-down orthographic lighting with a soft magenta neon bleed from upper-left and shadow falling down-right, clean outlines, seamless tileable texture with no objects or text."
+    },
+    {
+      "id": "motel_power_siphon",
+      "level": "m01_sunset_palms",
+      "category": "B_functional_prop",
+      "canvas": "64x64",
+      "proposed_story": "Illegal power siphon behind reception.",
+      "prompt": "Pixel art style, improvised motel ice-machine power siphon, made of dented aluminium, cracked plastic and tangled extension cable, featuring a bypass plug, wet cardboard, taped junction box, faded warning sticker and tiny condensation puddle, top-down orthographic lighting with cyan pool bounce and faint magenta neon bleed, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_parts_tags",
+      "level": "m02_yermo_salvage",
+      "category": "C_micro_clutter",
+      "canvas": "32x32",
+      "proposed_story": "A rushed chop-shop dismantling marked by numbered tags.",
+      "prompt": "Pixel art style, small salvage-yard parts-tag debris cluster, made of greasy paper, oxidised steel and dusty concrete grit, featuring numbered parts tags, loose washers, a cable tie, black oil droplets and a snapped red tail-light fragment, top-down orthographic lighting with welding-blue edge light and shadow falling down-right, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "studio_bootleg_vcr",
+      "level": "m03_khsc_studios",
+      "category": "B_functional_prop",
+      "canvas": "64x64",
+      "proposed_story": "A junior technician records a stolen broadcast feed.",
+      "prompt": "Pixel art style, battered 1980s broadcast VCR recording rig, made of charcoal plastic, brushed steel and coiled black cable, featuring labelled bootleg tapes, a blinking red record light, gaffer-tape repairs, a cooling desk fan and a grease-pencil note, top-down orthographic lighting with cyan monitor glow and warm studio-lamp highlights, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "villa_wax_and_petals",
+      "level": "m04_villa_estrella",
+      "category": "C_micro_clutter",
+      "canvas": "32x32",
+      "proposed_story": "A private memorial hidden behind the ballroom curtain.",
+      "prompt": "Pixel art style, small private memorial clutter cluster, made of candle wax, wilted rose petals and tarnished brass, featuring wax tears, a burnt matchstick, a tiny music-box key, one orange peel and a torn seating card, top-down orthographic lighting with warm candle gold and moonlit navy rim light, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "studio_dust_beam",
+      "level": "m03_khsc_studios",
+      "category": "D_atmospheric_overlay",
+      "canvas": "128x128",
+      "proposed_story": "Dust makes the unused stage lights feel tangible.",
+      "prompt": "Pixel art style, sparse dust motes drifting through a narrow theatrical spotlight beam, made of translucent dust and faint smoke, featuring uneven particle density and no solid background, top-down compatible atmospheric overlay with warm amber light from upper-left and a faint cyan edge, clean outlines, asset isolated on transparent background."
+    }
+  ]
+}

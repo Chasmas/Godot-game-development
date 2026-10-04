@@ -138,9 +138,12 @@ static func _set_piece(r, b: LevelBuilder, id: String, c: Vector2i, blocked: Dic
 	var rect := Rect2i(c.x - w / 2, c.y - h / 2, w, h)
 	if not _free(r, b, rect.grow(1), blocked, used):
 		return
-	# the rug under it
-	var rug := rect.grow(1)
-	layer.add("round_rug", Rect2(Vector2(rug.position) * T, Vector2(rug.size) * T), 0.0, false, true)
+	# Rugs belong to deliberate interior seating and entertainment vignettes.
+	# The old universal rug made salvage and service props look repeated and
+	# disconnected from their setting.
+	if id in ["pool_table", "coffee_table", "cocktail_table", "dj_booth", "champagne_tower", "buffet_table"]:
+		var rug := rect.grow(1)
+		layer.add("round_rug", Rect2(Vector2(rug.position) * T, Vector2(rug.size) * T), 0.0, false, true)
 	layer.add(id, Rect2(Vector2(rect.position) * T + Vector2(2, 2), Vector2(rect.size) * T - Vector2(4, 4)), 0.0, bool(d[2]))
 	_claim(rect, used, 2)
 	if bool(d[2]):

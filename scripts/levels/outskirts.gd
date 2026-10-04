@@ -38,7 +38,10 @@ func setup(p_level: Node, map_size: Vector2i, mission_id: String) -> void:
 	rng.seed = hash(mission_id + "outskirts")
 	var kinds: Dictionary = {
 		"motel": [["scrub", 70], ["rock", 30], ["cactus", 18], ["palm", 6]],
-		"yard": [["tyres", 36], ["wreck", 22], ["scrub", 26], ["drum", 20], ["rock", 14]],
+		# The yard is built from authored in-level salvage clusters.  Keep the
+		# distant perimeter sparse so it frames the map instead of repeating the
+		# same wreck silhouette around every edge.
+		"yard": [["tyres", 12], ["wreck", 5], ["scrub", 18], ["drum", 8], ["rock", 10]],
 		"studio": [["truck", 14], ["tower", 8], ["palm", 18], ["cone", 26], ["crate", 18]],
 		"dream": [["cypress", 40], ["grave", 34], ["candle", 16], ["hedge", 16]],
 	}

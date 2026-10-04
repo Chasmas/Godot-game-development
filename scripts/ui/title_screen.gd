@@ -477,7 +477,8 @@ class ChapterCard extends Button:
 		if id == "":
 			return null
 		if not _boxes.has(id):
-			var p := "res://assets/art/covers/%s.webp" % id
+			var pixel_path := "res://assets/art/pixellab_ui_v3_approved/covers/%s.png" % id
+			var p := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/art/covers/%s.webp" % id
 			_boxes[id] = load(p) if ResourceLoader.exists(p) else null
 		return _boxes[id]
 	func _process(delta: float) -> void:

@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "placement_policy": "Review at native size before promotion. All outputs are top-down, transparent and used only on open floor cells, away from doors, objectives and patrol lanes.",
+  "queue": [
+    {
+      "id": "yard_wreck_sedan_rusted",
+      "level": "m02_yermo_salvage",
+      "category": "B_functional_prop",
+      "canvas": "128x128",
+      "proposed_story": "A stripped sedan shows the yard has been operating all night.",
+      "prompt": "Pixel art style, strictly orthographic top-down 90-degree camera, matching the supplied footprint stripped 1980s sedan wreck, made of oxidised maroon steel and cracked smoky glass, featuring a missing driver door, exposed engine bay, one flat tyre, a dangling yellow parts tag, welded patch panels and small oil drips, dramatic sodium-orange light from upper-left with welding-blue rim light and shadow falling down-right, crisp readable pixel clusters, clean outlines, asset isolated on transparent background.",
+      "reference": "assets/art/pixellab_world/sprites/wreck.png",
+      "reference_strength": 720
+    },
+    {
+      "id": "yard_wreck_pickup_stripped",
+      "level": "m02_yermo_salvage",
+      "category": "B_functional_prop",
+      "canvas": "128x128",
+      "proposed_story": "A stripped pickup creates a distinct cover anchor rather than another repeated car.",
+      "prompt": "Pixel art style, strictly orthographic top-down 90-degree camera, matching the supplied footprint stripped compact pickup truck wreck, made of faded teal paint, rusted steel and black rubber, featuring an empty cargo bed full of cables, a smashed windscreen, removed front bumper, loose hubcap, amber reflector and grease stains, dramatic sunset-orange lighting from upper-left with cyan welding highlights and shadow falling down-right, crisp readable pixel clusters, clean outlines, asset isolated on transparent background.",
+      "reference": "assets/art/pixellab_world/sprites/wreck.png",
+      "reference_strength": 720
+    },
+    {
+      "id": "yard_workbench_cluster",
+      "level": "m02_yermo_salvage",
+      "category": "B_functional_prop",
+      "canvas": "96x96",
+      "proposed_story": "A mechanic abandoned a dismantling job mid-task.",
+      "prompt": "Pixel art style, strictly orthographic top-down 90-degree camera, matching the supplied footprint salvage-yard mechanic workbench cluster, made of dented steel, stained timber and coiled rubber cable, featuring a vice, open socket set, half disassembled alternator, welding mask, oily rag, paper parts invoice and a single hanging work lamp, orange sodium light with cyan welding edge light and shadow falling down-right, clean outlines, asset isolated on transparent background.",
+      "reference": "assets/art/pixellab_world/sprites/engine_block.png",
+      "reference_strength": 720
+    },
+    {
+      "id": "yard_tarps_tools",
+      "level": "m02_yermo_salvage",
+      "category": "B_functional_prop",
+      "canvas": "64x64",
+      "proposed_story": "A tarpaulin hides parts intended for an unrecorded sale.",
+      "prompt": "Pixel art style, strictly orthographic top-down 90-degree camera, matching the supplied footprint folded blue tarpaulin covering car parts, made of wet canvas, chrome trim and greasy steel, featuring a tyre iron, red-handled pliers, frayed rope, torn corner, rain grit and two small oil spots, warm desert-orange light from upper-left with cool cyan reflections and shadow down-right, clean outlines, asset isolated on transparent background.",
+      "reference": "assets/art/pixellab_world/sprites/scrap_pile.png",
+      "reference_strength": 720
+    },
+    {
+      "id": "yard_tail_light_debris",
+      "level": "m02_yermo_salvage",
+      "category": "C_micro_clutter",
+      "canvas": "32x32",
+      "proposed_story": "A fresh break in the dismantling line is visible in the dust.",
+      "prompt": "Pixel art style, top-down tiny salvage-yard debris cluster, made of red tail-light shards, loose screws, dusty grit and black cable, featuring one numbered paper tag, two washers, a small chrome fragment and an oil fleck, warm orange overhead light with a subtle cyan rim and compact shadow down-right, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_oil_rags",
+      "level": "m02_yermo_salvage",
+      "category": "C_micro_clutter",
+      "canvas": "32x32",
+      "proposed_story": "An oil-soaked rag trail points from the gate toward the hidden workshop.",
+      "prompt": "Pixel art style, top-down tiny oil-soaked rag and grease-puddle cluster, made of frayed cloth, dusty concrete and dark motor oil, featuring a rag twist, two boot-print smudges, tiny metal filings and a reflected amber highlight, dramatic orange light from upper-left and shadow down-right, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_chain_cable_spill",
+      "level": "m02_yermo_salvage",
+      "category": "C_micro_clutter",
+      "canvas": "32x32",
+      "proposed_story": "A cut chain and jumper lead imply the crew left in a hurry.",
+      "prompt": "Pixel art style, top-down small cut chain and jumper-cable spill, made of oxidised links, cracked red insulation and dusty concrete, featuring one broken padlock, loose copper strands, a cable tie and a shallow rain puddle, sodium-orange overhead light with blue rim reflection and shadow down-right, clean outlines, asset isolated on transparent background."
+    },
+    {
+      "id": "yard_steam_vent_overlay",
+      "level": "m02_yermo_salvage",
+      "category": "D_atmospheric_overlay",
+      "canvas": "64x64",
+      "proposed_story": "Steam from a hidden compressor gives the workshop a pulse.",
+      "prompt": "Pixel art style, sparse top-down steam plume and dust motes from a leaking compressor vent, made of translucent pale smoke and glowing grit, featuring irregular wisps, no solid objects and no background, orange sodium glow from upper-left with faint cyan edge light, clean outlines, asset isolated on transparent background."
+    }
+  ]
+}

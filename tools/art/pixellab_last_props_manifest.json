@@ -1,0 +1,6 @@
+{
+  "assets": [
+    {"name":"kennel_hay_bundle","size":"32x32","prompt":"Top-down pixel art style, small kennel hay bundle, made of dry straw tied with faded red twine, featuring loose strands, dusty floor flecks and a tiny metal tag, warm amber edge light with cool violet shadow, clean outlines, transparent background."},
+    {"name":"motel_pool_flamingo","size":"32x32","prompt":"Top-down pixel art style, small pink motel pool flamingo float, made of glossy worn rubber, featuring cyan reflected highlights, a tiny patch repair and a dark water shadow, neon magenta accent with cool blue rim light, clean outlines, transparent background."}
+  ]
+}

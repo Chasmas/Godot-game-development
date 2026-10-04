@@ -13,6 +13,7 @@ var viewport: SubViewport
 var world: Node3D
 var camera: Camera3D
 var props: Node3D
+var sun: DirectionalLight3D
 var _time := 0.0
 
 var _materials: Dictionary = {}
@@ -22,7 +23,7 @@ func setup(p_level: Node2D, p_camera: Camera2D, level_data: Dictionary) -> void:
 	level = p_level
 	follow_camera = p_camera
 	_build_viewport()
-	_build_environment()
+	_build_environment(str(level_data.get("id", "")))
 	_build_decor(level_data)
 	set_process(true)
 
@@ -58,23 +59,34 @@ func _build_viewport() -> void:
 	props.name = "LowPolyDressing"
 	world.add_child(props)
 
-	var sun := DirectionalLight3D.new()
+	sun = DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-55.0, -25.0, 0.0)
 	sun.light_energy = 1.7
 	sun.light_color = Color(1.0, 0.78, 0.88)
 	sun.shadow_enabled = false
 	world.add_child(sun)
 
-func _build_environment() -> void:
+func _build_environment(level_id: String) -> void:
+	# Per-level palette keeps the shared neon-noir language while giving every
+	# place a distinct night, industrial, broadcast or garden atmosphere.
+	var palette := {
+		"m01_sunset_palms": {"ambient": Color("#29233d"), "sun": Color("#ffbfaf"), "energy": 1.45},
+		"m02_yermo_salvage": {"ambient": Color("#303023"), "sun": Color("#ffd08a"), "energy": 1.55},
+		"m03_khsc_studios": {"ambient": Color("#202940"), "sun": Color("#ffc66d"), "energy": 1.70},
+		"m04_villa_estrella": {"ambient": Color("#1a2630"), "sun": Color("#d8d9ff"), "energy": 1.35}
+	}.get(level_id, {"ambient": Color("#342840"), "sun": Color("#ffc7b8"), "energy": 1.5}) as Dictionary
 	var env := Environment.new()
 	env.background_mode = Environment.BG_COLOR
 	env.background_color = Color(0, 0, 0, 0)
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color(0.34, 0.22, 0.40)
+	env.ambient_light_color = palette["ambient"]
 	env.ambient_light_energy = 1.15
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.glow_enabled = false
 	viewport.world_3d.environment = env
+	if sun:
+		sun.light_color = palette["sun"]
+		sun.light_energy = float(palette["energy"])
 
 func _build_decor(level_data: Dictionary) -> void:
 	var decor: Array = level_data.get("decor", [])

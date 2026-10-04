@@ -223,8 +223,8 @@
         "type": "sprite",
         "id": "motel_exit_arrow",
         "pos": [
-        40,
-        13
+          40,
+          13
         ],
         "size": 0.8,
         "floor": true
@@ -237,7 +237,7 @@
           14
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -247,7 +247,7 @@
           19
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -257,7 +257,698 @@
           16
         ],
         "size": 0.8,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_ice_bucket",
+        "pos": [
+          30,
+          14
+        ],
+        "size": 0.32,
         "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          45,
+          22
+        ],
+        "size": 0.48,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_pool_float",
+        "pos": [
+          29,
+          17
+        ],
+        "size": 0.42,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          10,
+          21
+        ],
+        "size": 0.42,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_hasty_checkout",
+        "pos": [
+          32,
+          14
+        ],
+        "size": 0.38,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_housekeeping_cart",
+        "pos": [
+          43,
+          14
+        ],
+        "size": 0.38,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_ice_machine",
+        "pos": [
+          11,
+          20
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          34,
+          13
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_pool_party_ruin",
+        "pos": [
+          39,
+          15
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          8,
+          8
+        ],
+        "size": 0.58,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          2,
+          2
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          29,
+          3
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          55,
+          4
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          22,
+          6
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          54,
+          7
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          27,
+          9
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          58,
+          11
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          61,
+          13
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          2,
+          16
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          62,
+          17
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          6,
+          20
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          60,
+          21
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          34,
+          23
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          2,
+          25
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          24,
+          27
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          54,
+          28
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          23,
+          30
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          34,
+          32
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          61,
+          33
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          5,
+          36
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          35,
+          37
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          62,
+          38
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          26,
+          40
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          46,
+          42
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          65,
+          43
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          30,
+          45
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          54,
+          46
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          19,
+          48
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          38,
+          49
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          57,
+          50
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          12,
+          52
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          31,
+          53
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          50,
+          54
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          5,
+          56
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          24,
+          57
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          43,
+          58
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          5,
+          2
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          32,
+          4
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          61,
+          6
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          38,
+          9
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          27,
+          13
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          9,
+          17
+        ],
+        "size": 0.27,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          27,
+          20
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          23,
+          23
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          49,
+          25
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          5,
+          29
+        ],
+        "size": 0.34,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          26,
+          32
+        ],
+        "size": 0.38,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          49,
+          34
+        ],
+        "size": 0.42000000000000004,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_palm_planter",
+        "pos": [
+          11,
+          38
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_gecko",
+        "pos": [
+          40,
+          40
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          56,
+          43
+        ],
+        "size": 0.27,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_bottles",
+        "pos": [
+          34,
+          46
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_ashtray",
+        "pos": [
+          6,
+          49
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_room_key_spill",
+        "pos": [
+          34,
+          51
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_neon_vacancy_sign",
+        "pos": [
+          62,
+          53
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_towel_cart",
+        "pos": [
+          31,
+          56
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "motel_water_ring",
+        "pos": [
+          54,
+          58
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
       }
     ]
   },
@@ -380,6 +1071,827 @@
         ],
         "size": 0.8,
         "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_burn_barrel",
+        "pos": [
+          38,
+          32
+        ],
+        "size": 0.45,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_agave",
+        "pos": [
+          14,
+          35
+        ],
+        "size": 0.32,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_raven",
+        "pos": [
+          45,
+          30
+        ],
+        "size": 0.22,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          24,
+          25
+        ],
+        "size": 0.42,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_bin",
+        "pos": [
+          20,
+          25
+        ],
+        "size": 0.38,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welding_cart",
+        "pos": [
+          38,
+          26
+        ],
+        "size": 0.36,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_windshield_stack",
+        "pos": [
+          55,
+          27
+        ],
+        "size": 0.36,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chopshop_ledger",
+        "pos": [
+          25,
+          21
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          43,
+          22
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "combat_blood_shells",
+        "pos": [
+          45,
+          31
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          31,
+          24
+        ],
+        "size": 0.28,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          17,
+          31
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          54,
+          34
+        ],
+        "size": 0.28,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_steam_vent_overlay",
+        "pos": [
+          37,
+          35
+        ],
+        "size": 0.38,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_workbench_cluster",
+        "pos": [
+          25,
+          23
+        ],
+        "size": 0.62,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tarps_tools",
+        "pos": [
+          15,
+          28
+        ],
+        "size": 0.54,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_engine_hoist",
+        "pos": [
+          35,
+          30
+        ],
+        "size": 0.5,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welding_cart",
+        "pos": [
+          21,
+          35
+        ],
+        "size": 0.46,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_windshield_stack",
+        "pos": [
+          43,
+          37
+        ],
+        "size": 0.48,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          29,
+          26
+        ],
+        "size": 0.55,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          47,
+          25
+        ],
+        "size": 0.5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          39,
+          33
+        ],
+        "size": 0.6,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          50,
+          12
+        ],
+        "size": 0.62,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          2,
+          2
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          63,
+          2
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          62,
+          3
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          61,
+          4
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          60,
+          5
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          59,
+          6
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          58,
+          7
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          57,
+          8
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          56,
+          9
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_floor_stains",
+        "pos": [
+          59,
+          10
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          21,
+          12
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          40,
+          13
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          54,
+          14
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          59,
+          15
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          59,
+          16
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          59,
+          17
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          6,
+          20
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          48,
+          21
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          35,
+          23
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_floor_stains",
+        "pos": [
+          14,
+          25
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          35,
+          27
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          29,
+          29
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          4,
+          31
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          30,
+          32
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          27,
+          34
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          8,
+          36
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          59,
+          37
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          61,
+          38
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          63,
+          39
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_floor_stains",
+        "pos": [
+          60,
+          40
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          57,
+          41
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          54,
+          42
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          47,
+          44
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          44,
+          45
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          41,
+          46
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          38,
+          47
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          5,
+          2
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          35,
+          3
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          11,
+          5
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          41,
+          6
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          19,
+          8
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          50,
+          9
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          4,
+          12
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          44,
+          14
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          40,
+          16
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_floor_stains",
+        "pos": [
+          21,
+          18
+        ],
+        "size": 0.34,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          61,
+          21
+        ],
+        "size": 0.38,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_pipe_manifold",
+        "pos": [
+          9,
+          25
+        ],
+        "size": 0.42000000000000004,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_utility_control_box",
+        "pos": [
+          41,
+          28
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_welded_safety_railing",
+        "pos": [
+          51,
+          31
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_oil_rags",
+        "pos": [
+          11,
+          35
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_copper_scraps",
+        "pos": [
+          34,
+          38
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_parts_tags",
+        "pos": [
+          17,
+          40
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_tail_light_debris",
+        "pos": [
+          48,
+          41
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_chain_cable_spill",
+        "pos": [
+          29,
+          44
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "clutter_floor_stains",
+        "pos": [
+          16,
+          46
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "yard_desert_scrub_cluster",
+        "pos": [
+          60,
+          47
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
       }
     ]
   },
@@ -645,36 +2157,6 @@
     "decor": [
       {
         "type": "sprite",
-        "id": "studio_block_x",
-        "pos": [
-          33,
-          27
-        ],
-        "size": 0.28,
-        "floor": true
-      },
-      {
-        "type": "sprite",
-        "id": "studio_block_x",
-        "pos": [
-          43,
-          18
-        ],
-        "size": 0.28,
-        "floor": true
-      },
-      {
-        "type": "sprite",
-        "id": "studio_block_x",
-        "pos": [
-          27,
-          35
-        ],
-        "size": 0.28,
-        "floor": true
-      },
-      {
-        "type": "sprite",
         "id": "studio_reel",
         "pos": [
           46,
@@ -702,6 +2184,707 @@
         ],
         "size": 0.8,
         "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          30,
+          30
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          61,
+          15
+        ],
+        "size": 0.36,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_flower_arrangement",
+        "pos": [
+          58,
+          16
+        ],
+        "size": 0.28,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          25,
+          14
+        ],
+        "size": 0.42,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_station",
+        "pos": [
+          8,
+          16
+        ],
+        "size": 0.36,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_costume_rack",
+        "pos": [
+          61,
+          5
+        ],
+        "size": 0.36,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_craft_table",
+        "pos": [
+          39,
+          28
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          22,
+          20
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          57,
+          22
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          31,
+          18
+        ],
+        "size": 0.55,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          52,
+          16
+        ],
+        "size": 0.52,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          2,
+          2
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          38,
+          3
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          5,
+          5
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          37,
+          6
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          10,
+          8
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          41,
+          9
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          9,
+          11
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          36,
+          13
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          29,
+          15
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          34,
+          17
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          35,
+          19
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          27,
+          21
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          60,
+          22
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          48,
+          24
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          24,
+          26
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          61,
+          27
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          49,
+          29
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          35,
+          31
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          61,
+          32
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          19,
+          34
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          45,
+          35
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          4,
+          37
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          34,
+          38
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          55,
+          39
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          8,
+          42
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          24,
+          43
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          40,
+          44
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          56,
+          45
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          6,
+          47
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          22,
+          48
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          38,
+          49
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          54,
+          50
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          4,
+          52
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          20,
+          53
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          36,
+          54
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          52,
+          55
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          5,
+          2
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          31,
+          4
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          66,
+          6
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          56,
+          9
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          48,
+          12
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          12,
+          16
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          13,
+          19
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          14,
+          22
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          15,
+          25
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          56,
+          27
+        ],
+        "size": 0.27,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          2,
+          31
+        ],
+        "size": 0.38,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_acoustic_wall_panel",
+        "pos": [
+          27,
+          33
+        ],
+        "size": 0.42000000000000004,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_gaffer_scraps",
+        "pos": [
+          63,
+          35
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_script_trail",
+        "pos": [
+          42,
+          38
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_moth",
+        "pos": [
+          60,
+          40
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_fern",
+        "pos": [
+          5,
+          44
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_cable_spool",
+        "pos": [
+          31,
+          46
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_tape_marks",
+        "pos": [
+          57,
+          48
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_makeup_spill",
+        "pos": [
+          12,
+          51
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "paper",
+        "pos": [
+          33,
+          53
+        ],
+        "size": 0.27,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "studio_overhead_light_rig",
+        "pos": [
+          49,
+          55
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
       }
     ]
   },
@@ -710,7 +2893,7 @@
     "tension_zones": {
       "breach": "service entrance and dining room",
       "gauntlet": "foyer, dining, library and chapel circulation loop",
-      "core": "screened foyer breach into Tommy’s ballroom arena"
+      "core": "screened foyer breach into TommyÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s ballroom arena"
     },
     "edits": [
       {
@@ -793,7 +2976,7 @@
           13
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -803,7 +2986,7 @@
           27
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -813,7 +2996,7 @@
           17
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -823,7 +3006,7 @@
           17
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -833,7 +3016,7 @@
           30
         ],
         "size": 0.8,
-        "floor": true
+        "floor": false
       },
       {
         "type": "sprite",
@@ -843,7 +3026,664 @@
           29
         ],
         "size": 0.8,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          29,
+          16
+        ],
+        "size": 0.35,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_tree",
+        "pos": [
+          12,
+          27
+        ],
+        "size": 0.42,
         "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_peacock",
+        "pos": [
+          56,
+          30
+        ],
+        "size": 0.28,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          31,
+          25
+        ],
+        "size": 0.46,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_planter",
+        "pos": [
+          6,
+          10
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_champagne_bucket",
+        "pos": [
+          26,
+          8
+        ],
+        "size": 0.32,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_marble_bust",
+        "pos": [
+          31,
+          23
+        ],
+        "size": 0.34,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          48,
+          27
+        ],
+        "size": 0.32,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          52,
+          25
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          49,
+          29
+        ],
+        "size": 0.34,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "combat_poker_table",
+        "pos": [
+          41,
+          29
+        ],
+        "size": 0.36,
+        "floor": true
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          8,
+          8
+        ],
+        "size": 0.56,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          5,
+          2
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          31,
+          3
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          57,
+          4
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          31,
+          6
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          11,
+          8
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          54,
+          9
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          33,
+          11
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          28,
+          13
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_planter",
+        "pos": [
+          25,
+          15
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "plant",
+        "pos": [
+          20,
+          17
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          15,
+          19
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          6,
+          21
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          66,
+          22
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          46,
+          24
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          60,
+          26
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          35,
+          29
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          6,
+          32
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          43,
+          33
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_planter",
+        "pos": [
+          64,
+          35
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "plant",
+        "pos": [
+          13,
+          37
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          30,
+          38
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          47,
+          39
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          64,
+          40
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          49,
+          42
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          66,
+          43
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          15,
+          45
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          32,
+          46
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          49,
+          47
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_planter",
+        "pos": [
+          66,
+          48
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "plant",
+        "pos": [
+          15,
+          50
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          32,
+          51
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          49,
+          52
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          66,
+          53
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          15,
+          55
+        ],
+        "size": 0.3,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          32,
+          56
+        ],
+        "size": 0.38,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          8,
+          2
+        ],
+        "size": 0.34,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          28,
+          4
+        ],
+        "size": 0.38,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          65,
+          6
+        ],
+        "size": 0.27,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          16,
+          10
+        ],
+        "size": 0.27,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          18,
+          13
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          34,
+          16
+        ],
+        "size": 0.42000000000000004,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          47,
+          19
+        ],
+        "size": 0.34,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_candle_ring",
+        "pos": [
+          10,
+          23
+        ],
+        "size": 0.38,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_planter",
+        "pos": [
+          18,
+          26
+        ],
+        "size": 0.42000000000000004,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "plant",
+        "pos": [
+          31,
+          30
+        ],
+        "size": 0.34,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_ivy_wall_cluster",
+        "pos": [
+          51,
+          33
+        ],
+        "size": 0.38,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_tea_service",
+        "pos": [
+          61,
+          36
+        ],
+        "size": 0.42000000000000004,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_rose_petals",
+        "pos": [
+          20,
+          39
+        ],
+        "size": 0.27,
+        "rot": -12,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_wax_and_petals",
+        "pos": [
+          56,
+          41
+        ],
+        "size": 0.27,
+        "rot": 0,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_seating_card",
+        "pos": [
+          3,
+          44
+        ],
+        "size": 0.42000000000000004,
+        "rot": 9,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orchid_planter",
+        "pos": [
+          25,
+          46
+        ],
+        "size": 0.34,
+        "rot": -5,
+        "floor": false
+      },
+      {
+        "type": "sprite",
+        "id": "villa_orange_peel",
+        "pos": [
+          52,
+          48
+        ],
+        "size": 0.38,
+        "rot": -12,
+        "floor": false
       }
     ]
   }

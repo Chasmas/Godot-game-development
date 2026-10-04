@@ -1,279 +1,279 @@
 {
-	"teaser": {
-		"name": "Coming Attractions",
-		"layers": [
-			"res://music/intro_teaser.ogg"
-		],
-		"bpm": 128
-	},
-	"title": {
-		"name": "Neon Vigil (Main Theme)",
-		"bpm": 98,
-		"layers": [
-			"res://music/st_main_theme.ogg"
-		]
-	},
-	"apartment": {
-		"name": "Answering Machine",
-		"bpm": 76,
-		"layers": [
-			"res://music/st_story_apartment.ogg"
-		]
-	},
-	"motel": {
-		"name": "Checkout Time",
-		"bpm": 140,
-		"layers": [
-			"res://music/st_motel_combat.ogg"
-		],
-		"calm": "motel_stealth",
-		"calm_after": 8.0
-	},
-	"motel_stealth": {
-		"name": "Room 204",
-		"bpm": 100,
-		"layers": [
-			"res://music/st_motel_stealth.ogg"
-		]
-	},
-	"boss": {
-		"name": "Night Manager",
-		"bpm": 118,
-		"layers": [
-			"res://music/st_boss_harcourt.ogg"
-		],
-		"phase2": "boss_dark"
-	},
-	"aftermath": {
-		"name": "Static Heat",
-		"bpm": 60,
-		"layers": [
-			"res://music/st_aftermath.ogg"
-		]
-	},
-	"yard": {
-		"name": "Dog Days",
-		"bpm": 150,
-		"layers": [
-			"res://music/st_yard_combat.ogg"
-		],
-		"calm": "yard_stealth",
-		"calm_after": 8.0
-	},
-	"prime_time": {
-		"name": "Prime Time",
-		"bpm": 132,
-		"layers": [
-			"res://music/st_studio_combat.ogg"
-		],
-		"calm": "studio_stealth",
-		"calm_after": 8.0
-	},
-	"boss_fireman": {
-		"name": "The Fireman",
-		"bpm": 148,
-		"layers": [
-			"res://music/st_boss_fireman.ogg"
-		],
-		"phase2": "boss_fireman_fire"
-	},
-	"nightmare": {
-		"name": "Sweet Dreams",
-		"bpm": 96,
-		"layers": [
-			"res://music/st_villa_combat.ogg"
-		],
-		"calm": "villa_nightmare",
-		"calm_after": 8.0
-	},
-	"boss_nightmare": {
-		"name": "Tommy",
-		"bpm": 90,
-		"layers": [
-			"res://music/st_boss_tommy.ogg"
-		],
-		"phase2": "boss_nightmare_wake"
-	},
-	"menu": {
-		"name": "Tape Deck",
-		"bpm": 92,
-		"layers": [
-			"res://music/st_menu_tapes.ogg"
-		]
-	},
-	"vcr": {
-		"name": "Rewind",
-		"bpm": 84,
-		"layers": [
-			"res://music/st_menu_vcr.ogg"
-		]
-	},
-	"story_firewatch": {
-		"name": "Fire Watch",
-		"bpm": 68,
-		"layers": [
-			"res://music/st_story_firewatch.ogg"
-		]
-	},
-	"story_mom": {
-		"name": "Long Distance",
-		"bpm": 88,
-		"layers": [
-			"res://music/st_story_mom.ogg"
-		]
-	},
-	"story_tommy": {
-		"name": "Sweet Nothing",
-		"bpm": 70,
-		"layers": [
-			"res://music/st_story_tommy.ogg"
-		]
-	},
-	"drive_barstow": {
-		"name": "Barstow Nightline",
-		"bpm": 108,
-		"layers": [
-			"res://music/st_drive_barstow.ogg"
-		]
-	},
-	"drive_mojave": {
-		"name": "Mojave 3 AM",
-		"bpm": 96,
-		"layers": [
-			"res://music/st_drive_mojave.ogg"
-		]
-	},
-	"drive_burbank": {
-		"name": "Burbank After Hours",
-		"bpm": 118,
-		"layers": [
-			"res://music/st_drive_burbank.ogg"
-		]
-	},
-	"yard_stealth": {
-		"name": "Chain-Link",
-		"bpm": 96,
-		"layers": [
-			"res://music/st_yard_stealth.ogg"
-		]
-	},
-	"studio_stealth": {
-		"name": "Dead Air",
-		"bpm": 100,
-		"layers": [
-			"res://music/st_studio_stealth.ogg"
-		]
-	},
-	"villa_nightmare": {
-		"name": "Villa Estrella",
-		"bpm": 80,
-		"layers": [
-			"res://music/st_villa_nightmare.ogg"
-		]
-	},
-	"dream": {
-		"name": "The Hour That Isn't",
-		"bpm": 60,
-		"layers": [
-			"res://music/st_dream.ogg"
-		]
-	},
-	"boss_dark": {
-		"name": "Night Manager (Lights Out)",
-		"bpm": 140,
-		"layers": [
-			"res://music/st_boss_harcourt_dark.ogg"
-		]
-	},
-	"boss_fireman_fire": {
-		"name": "The Fireman (Burning Man)",
-		"bpm": 170,
-		"layers": [
-			"res://music/st_boss_fireman_fire.ogg"
-		]
-	},
-	"boss_nightmare_wake": {
-		"name": "Tommy (Wake Up)",
-		"bpm": 140,
-		"layers": [
-			"res://music/st_boss_tommy_wake.ogg"
-		]
-	},
-	"arcade_waves": {
-		"name": "High Score",
-		"bpm": 145,
-		"layers": [
-			"res://music/st_arcade1.ogg"
-		]
-	},
-	"arcade_endless": {
-		"name": "Endless Night",
-		"bpm": 155,
-		"layers": [
-			"res://music/st_arcade2.ogg"
-		]
-	},
-	"arcade_chamber": {
-		"name": "One in the Chamber",
-		"bpm": 125,
-		"layers": [
-			"res://music/st_arcade3.ogg"
-		]
-	},
-	"arcade_clock": {
-		"name": "Clock's Ticking",
-		"bpm": 165,
-		"layers": [
-			"res://music/st_arcade4.ogg"
-		]
-	},
-	"arcade_gungame": {
-		"name": "Red Tape",
-		"bpm": 175,
-		"layers": [
-			"res://music/st_massacre2.ogg"
-		]
-	},
-	"massacre": {
-		"name": "Spotlight",
-		"bpm": 170,
-		"layers": [
-			"res://music/st_massacre1.ogg"
-		]
-	},
-	"massacre_late": {
-		"name": "No Survivors",
-		"bpm": 160,
-		"layers": [
-			"res://music/st_massacre3.ogg"
-		]
-	},
-	"galaxy": {
-		"name": "Galaxy Palace",
-		"bpm": 124,
-		"layers": [
-			"res://music/st_galaxy_combat.ogg"
-		]
-	},
-	"police": {
-		"name": "Barstow PD",
-		"bpm": 140,
-		"layers": [
-			"res://music/st_police_combat.ogg"
-		]
-	},
-	"credits": {
-		"name": "Checkout",
-		"bpm": 112,
-		"layers": [
-			"res://music/st_credits.ogg"
-		]
-	},
-	"credits_rewind": {
-		"name": "Be Kind, Rewind",
-		"bpm": 84,
-		"layers": [
-			"res://music/st_credits_rewind.ogg"
-		]
-	}
+  "teaser": {
+    "name": "Coming Attractions",
+    "layers": [
+      "res://music/intro_teaser.ogg"
+    ],
+    "bpm": 128
+  },
+  "title": {
+    "name": "Neon Vigil (Main Theme)",
+    "bpm": 98,
+    "layers": [
+      "res://music/st_main_theme.ogg"
+    ]
+  },
+  "apartment": {
+    "name": "Answering Machine",
+    "bpm": 76,
+    "layers": [
+      "res://music/st_story_apartment.ogg"
+    ]
+  },
+  "motel": {
+    "name": "Checkout Time",
+    "bpm": 120,
+    "layers": [
+      "res://music/st_motel_combat.ogg"
+    ],
+    "calm": "motel_stealth",
+    "calm_after": 8.0
+  },
+  "motel_stealth": {
+    "name": "Room 204",
+    "bpm": 100,
+    "layers": [
+      "res://music/st_motel_stealth.ogg"
+    ]
+  },
+  "boss": {
+    "name": "Night Manager",
+    "bpm": 118,
+    "layers": [
+      "res://music/st_boss_harcourt.ogg"
+    ],
+    "phase2": "boss_dark"
+  },
+  "aftermath": {
+    "name": "Static Heat",
+    "bpm": 60,
+    "layers": [
+      "res://music/st_aftermath.ogg"
+    ]
+  },
+  "yard": {
+    "name": "Dog Days",
+    "bpm": 118,
+    "layers": [
+      "res://music/st_yard_combat.ogg"
+    ],
+    "calm": "yard_stealth",
+    "calm_after": 8.0
+  },
+  "prime_time": {
+    "name": "Prime Time",
+    "bpm": 122,
+    "layers": [
+      "res://music/st_studio_combat.ogg"
+    ],
+    "calm": "studio_stealth",
+    "calm_after": 8.0
+  },
+  "boss_fireman": {
+    "name": "The Fireman",
+    "bpm": 148,
+    "layers": [
+      "res://music/st_boss_fireman.ogg"
+    ],
+    "phase2": "boss_fireman_fire"
+  },
+  "nightmare": {
+    "name": "Sweet Dreams",
+    "bpm": 104,
+    "layers": [
+      "res://music/st_villa_combat.ogg"
+    ],
+    "calm": "villa_nightmare",
+    "calm_after": 8.0
+  },
+  "boss_nightmare": {
+    "name": "Tommy",
+    "bpm": 90,
+    "layers": [
+      "res://music/st_boss_tommy.ogg"
+    ],
+    "phase2": "boss_nightmare_wake"
+  },
+  "menu": {
+    "name": "Tape Deck",
+    "bpm": 92,
+    "layers": [
+      "res://music/st_menu_tapes.ogg"
+    ]
+  },
+  "vcr": {
+    "name": "Rewind",
+    "bpm": 84,
+    "layers": [
+      "res://music/st_menu_vcr.ogg"
+    ]
+  },
+  "story_firewatch": {
+    "name": "Fire Watch",
+    "bpm": 68,
+    "layers": [
+      "res://music/st_story_firewatch.ogg"
+    ]
+  },
+  "story_mom": {
+    "name": "Long Distance",
+    "bpm": 88,
+    "layers": [
+      "res://music/st_story_mom.ogg"
+    ]
+  },
+  "story_tommy": {
+    "name": "Sweet Nothing",
+    "bpm": 70,
+    "layers": [
+      "res://music/st_story_tommy.ogg"
+    ]
+  },
+  "drive_barstow": {
+    "name": "Barstow Nightline",
+    "bpm": 108,
+    "layers": [
+      "res://music/st_drive_barstow.ogg"
+    ]
+  },
+  "drive_mojave": {
+    "name": "Mojave 3 AM",
+    "bpm": 96,
+    "layers": [
+      "res://music/st_drive_mojave.ogg"
+    ]
+  },
+  "drive_burbank": {
+    "name": "Burbank After Hours",
+    "bpm": 118,
+    "layers": [
+      "res://music/st_drive_burbank.ogg"
+    ]
+  },
+  "yard_stealth": {
+    "name": "Chain-Link",
+    "bpm": 96,
+    "layers": [
+      "res://music/st_yard_stealth.ogg"
+    ]
+  },
+  "studio_stealth": {
+    "name": "Dead Air",
+    "bpm": 100,
+    "layers": [
+      "res://music/st_studio_stealth.ogg"
+    ]
+  },
+  "villa_nightmare": {
+    "name": "Villa Estrella",
+    "bpm": 80,
+    "layers": [
+      "res://music/st_villa_nightmare.ogg"
+    ]
+  },
+  "dream": {
+    "name": "The Hour That Isn't",
+    "bpm": 60,
+    "layers": [
+      "res://music/st_dream.ogg"
+    ]
+  },
+  "boss_dark": {
+    "name": "Night Manager (Lights Out)",
+    "bpm": 140,
+    "layers": [
+      "res://music/st_boss_harcourt_dark.ogg"
+    ]
+  },
+  "boss_fireman_fire": {
+    "name": "The Fireman (Burning Man)",
+    "bpm": 156,
+    "layers": [
+      "res://music/st_boss_fireman_fire.ogg"
+    ]
+  },
+  "boss_nightmare_wake": {
+    "name": "Tommy (Wake Up)",
+    "bpm": 140,
+    "layers": [
+      "res://music/st_boss_tommy_wake.ogg"
+    ]
+  },
+  "arcade_waves": {
+    "name": "High Score",
+    "bpm": 145,
+    "layers": [
+      "res://music/st_arcade1.ogg"
+    ]
+  },
+  "arcade_endless": {
+    "name": "Endless Night",
+    "bpm": 155,
+    "layers": [
+      "res://music/st_arcade2.ogg"
+    ]
+  },
+  "arcade_chamber": {
+    "name": "One in the Chamber",
+    "bpm": 125,
+    "layers": [
+      "res://music/st_arcade3.ogg"
+    ]
+  },
+  "arcade_clock": {
+    "name": "Clock's Ticking",
+    "bpm": 165,
+    "layers": [
+      "res://music/st_arcade4.ogg"
+    ]
+  },
+  "arcade_gungame": {
+    "name": "Red Tape",
+    "bpm": 168,
+    "layers": [
+      "res://music/st_massacre2.ogg"
+    ]
+  },
+  "massacre": {
+    "name": "Spotlight",
+    "bpm": 164,
+    "layers": [
+      "res://music/st_massacre1.ogg"
+    ]
+  },
+  "massacre_late": {
+    "name": "No Survivors",
+    "bpm": 160,
+    "layers": [
+      "res://music/st_massacre3.ogg"
+    ]
+  },
+  "galaxy": {
+    "name": "Galaxy Palace",
+    "bpm": 124,
+    "layers": [
+      "res://music/st_galaxy_combat.ogg"
+    ]
+  },
+  "police": {
+    "name": "Barstow PD",
+    "bpm": 140,
+    "layers": [
+      "res://music/st_police_combat.ogg"
+    ]
+  },
+  "credits": {
+    "name": "Checkout",
+    "bpm": 112,
+    "layers": [
+      "res://music/st_credits.ogg"
+    ]
+  },
+  "credits_rewind": {
+    "name": "Be Kind, Rewind",
+    "bpm": 84,
+    "layers": [
+      "res://music/st_credits_rewind.ogg"
+    ]
+  }
 }

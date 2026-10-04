@@ -249,7 +249,7 @@ func _video_tab() -> void:
 	_toggle(p, "Painted props & floors", "painted_props", true)
 	_slider(p, "Brightness", "brightness", 0.6, 1.4, 0.05)
 	_toggle(p, "Show FPS", "show_fps")
-	_choice(p, "Window size", "window_size", ["1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440"], 1)
+	_choice(p, "Window size", "window_size", ["1280 x 720", "1600 x 900", "1920 x 1080", "2560 x 1440", "3840 x 2160 (4K)"], 1)
 
 func _gameplay_tab() -> void:
 	var p := _page("GAMEPLAY")

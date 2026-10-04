@@ -1,0 +1,8 @@
+{
+  "assets": [
+    {"name":"yard_pipe_manifold","size":"64x64","prompt":"Top-down pixel art style, industrial salvage-yard pipe manifold, made of dark steel and oxidized copper, featuring four bolted elbows, wrapped insulation, oil streaks, cable ties and chipped hazard paint, cyan ambient shadow with hot orange reflected light from below, clean outlines, transparent background."},
+    {"name":"yard_utility_control_box","size":"64x64","prompt":"Top-down pixel art style, battered industrial utility control box, made of painted steel, featuring a cracked glass meter, toggle switches, warning labels, exposed wire bundle and rust around bolts, cool blue shadow with a single amber status light, clean outlines, transparent background."},
+    {"name":"studio_overhead_light_rig","size":"64x64","prompt":"Top-down pixel art style, film studio overhead light rig, made of black aluminium and cable, featuring barn doors, coiled power lead, gaffer tape and a warm lamp face, strong violet rim light and a crisp contact shadow, clean outlines, transparent background."},
+    {"name":"yard_welded_safety_railing","size":"64x64","prompt":"Top-down pixel art style, welded safety railing segment, made of square steel tubing, featuring chipped yellow paint, red warning stripe, three bolts and a small hanging chain, hard blue shadow with orange edge light, clean outlines, transparent background."}
+  ]
+}

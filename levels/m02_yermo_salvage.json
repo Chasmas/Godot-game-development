@@ -2,9 +2,9 @@
  "id": "m02_yermo_salvage",
  "name": "Yermo Salvage & K-9",
  "ambient": [
-  0.36,
-  0.34,
-  0.54
+  0.29,
+  0.28,
+  0.22
  ],
  "map": [
   "##################################################################",
@@ -30,22 +30,22 @@
   "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
   "#;;;;;;;;;;;;;;;;;;;;;;;;;;9;;;;;*;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;#",
   "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;jjjj;;;;;;;;;;;;;;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;jjjj;;;;;;;;;;;;;;;;jjjj;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
+  "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+  "#;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
   "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;cc;;;;;;jj;;;;;;;;;;;;cc;;;#",
   "#;;;;;y;;;*;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;jj;;;;;;;;;;;;;*;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
-  "#;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
-  "#;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;g;;;;;;;;;;;;;jjjj;;;;;;;;;;;;*;;;;;;;;;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;;jj;;;;;;;;;;;;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;g;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;;;;;;;;;;;#",
   "#;;;;;;;;;;;;;;;;;;;;d;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
   "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;m;;;;;;;;;g;;;;;;#",
   "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8;;;;;;;;;;;;;;;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;;;;;;jj;;;;;;;;;;jjjj;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
-  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;jj;;;;;;;;;;;#",
-  "#;;!;;;;;;;;cc;;;;;;;;;;;;;;;;;;;;;;;;;;;;jjjj;;;;;;jj;;;;;;;;;;;#",
+  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+  "#;;;;;;;jj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+  "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
+  "#;;!;;;;;;;;cc;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;jj;;;;;;;;;;;#",
   "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
   "#;;;;*;;;;;;;;;;;;*;;;;;;;;;ZZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*;;;;#",
   "#;;U;;;;;7;;;;;;;;;;;;;;;;;;ZZ;;;;;;;;;;*;;;;;;;;;;;;;;;;;;;;;;;;#",
@@ -129,12 +129,12 @@
   ]
  },
  "light_colors": {
-  "+": "c8e0ff",
-  ",": "d8f0ff",
-  ".": "ffb070",
-  "_": "ffc080",
-  ";": "ffa040",
-  ":": "ff9a40"
+  "+": "9cb9c8",
+  ",": "bfd3d4",
+  ".": "d89b68",
+  "_": "c6925d",
+  ";": "c7753d",
+  ":": "a95a38"
  },
  "inside_rect": [
   0,
@@ -504,6 +504,897 @@
    ],
    "size": 0.8,
    "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_burn_barrel",
+   "pos": [
+    38,
+    32
+   ],
+   "size": 0.45,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_agave",
+   "pos": [
+    14,
+    35
+   ],
+   "size": 0.32,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_raven",
+   "pos": [
+    45,
+    30
+   ],
+   "size": 0.22,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    24,
+    25
+   ],
+   "size": 0.42,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_bin",
+   "pos": [
+    20,
+    25
+   ],
+   "size": 0.38,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welding_cart",
+   "pos": [
+    38,
+    26
+   ],
+   "size": 0.36,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_windshield_stack",
+   "pos": [
+    55,
+    27
+   ],
+   "size": 0.36,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chopshop_ledger",
+   "pos": [
+    25,
+    21
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    43,
+    22
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "combat_blood_shells",
+   "pos": [
+    45,
+    31
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    31,
+    24
+   ],
+   "size": 0.28,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    17,
+    31
+   ],
+   "size": 0.3,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    54,
+    34
+   ],
+   "size": 0.28,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_steam_vent_overlay",
+   "pos": [
+    37,
+    35
+   ],
+   "size": 0.38,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_workbench_cluster",
+   "pos": [
+    25,
+    23
+   ],
+   "size": 0.62,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tarps_tools",
+   "pos": [
+    15,
+    28
+   ],
+   "size": 0.54,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_engine_hoist",
+   "pos": [
+    35,
+    30
+   ],
+   "size": 0.5,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welding_cart",
+   "pos": [
+    21,
+    35
+   ],
+   "size": 0.46,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_windshield_stack",
+   "pos": [
+    43,
+    37
+   ],
+   "size": 0.48,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    29,
+    26
+   ],
+   "size": 0.55,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    47,
+    25
+   ],
+   "size": 0.5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    39,
+    33
+   ],
+   "size": 0.6,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    24,
+    25
+   ],
+   "size": 0.42,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    43,
+    22
+   ],
+   "size": 0.34,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    31,
+    24
+   ],
+   "size": 0.28,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    17,
+    31
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    54,
+    34
+   ],
+   "size": 0.28,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    29,
+    26
+   ],
+   "size": 0.55,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    39,
+    33
+   ],
+   "size": 0.6,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    50,
+    12
+   ],
+   "size": 0.62,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    2,
+    2
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    63,
+    2
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    62,
+    3
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    61,
+    4
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    60,
+    5
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    59,
+    6
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    58,
+    7
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    57,
+    8
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    56,
+    9
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_floor_stains",
+   "pos": [
+    59,
+    10
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    21,
+    12
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    40,
+    13
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    54,
+    14
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    59,
+    15
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    59,
+    16
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    59,
+    17
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    6,
+    20
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    48,
+    21
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    35,
+    23
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_floor_stains",
+   "pos": [
+    14,
+    25
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    35,
+    27
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    29,
+    29
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    4,
+    31
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    30,
+    32
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    27,
+    34
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    8,
+    36
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    59,
+    37
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    61,
+    38
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    63,
+    39
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_floor_stains",
+   "pos": [
+    60,
+    40
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    57,
+    41
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    54,
+    42
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    47,
+    44
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    44,
+    45
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    41,
+    46
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    38,
+    47
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    5,
+    2
+   ],
+   "size": 0.34,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    35,
+    3
+   ],
+   "size": 0.38,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    11,
+    5
+   ],
+   "size": 0.42000000000000004,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    41,
+    6
+   ],
+   "size": 0.34,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    19,
+    8
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    50,
+    9
+   ],
+   "size": 0.42000000000000004,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    4,
+    12
+   ],
+   "size": 0.34,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    44,
+    14
+   ],
+   "size": 0.38,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    40,
+    16
+   ],
+   "size": 0.42000000000000004,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_floor_stains",
+   "pos": [
+    21,
+    18
+   ],
+   "size": 0.34,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    61,
+    21
+   ],
+   "size": 0.38,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_pipe_manifold",
+   "pos": [
+    9,
+    25
+   ],
+   "size": 0.42000000000000004,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_utility_control_box",
+   "pos": [
+    41,
+    28
+   ],
+   "size": 0.34,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_welded_safety_railing",
+   "pos": [
+    51,
+    31
+   ],
+   "size": 0.38,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_oil_rags",
+   "pos": [
+    11,
+    35
+   ],
+   "size": 0.42000000000000004,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_copper_scraps",
+   "pos": [
+    34,
+    38
+   ],
+   "size": 0.34,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_parts_tags",
+   "pos": [
+    17,
+    40
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_tail_light_debris",
+   "pos": [
+    48,
+    41
+   ],
+   "size": 0.42000000000000004,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_chain_cable_spill",
+   "pos": [
+    29,
+    44
+   ],
+   "size": 0.34,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_floor_stains",
+   "pos": [
+    16,
+    46
+   ],
+   "size": 0.38,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "yard_desert_scrub_cluster",
+   "pos": [
+    60,
+    47
+   ],
+   "size": 0.42000000000000004,
+   "rot": -12,
+   "floor": false
   }
  ],
  "cameras": [

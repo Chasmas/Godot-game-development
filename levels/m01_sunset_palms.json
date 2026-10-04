@@ -2,9 +2,9 @@
  "id": "m01_sunset_palms",
  "name": "Sunset Palms Motel",
  "ambient": [
-  0.42,
-  0.38,
-  0.6
+  0.34,
+  0.25,
+  0.43
  ],
  "map": [
   "####################################################################",
@@ -133,13 +133,13 @@
  ],
  "time_text": "11:48 PM",
  "light_colors": {
-  ".": "ffb070",
-  ",": "d8f0ff",
-  "_": "ffc080",
-  ":": "ff9a40",
-  "=": "ff5aa0",
-  "\"": "50e0ff",
-  "~": "40d8ff"
+  ".": "f0a36d",
+  ",": "9edaf2",
+  "_": "eeb77e",
+  ":": "c86d48",
+  "=": "e85a9d",
+  "\"": "46bddd",
+  "~": "39c9e9"
  },
  "enemies": {
   "40,45": {
@@ -772,6 +772,757 @@
    ],
    "size": 0.8,
    "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_ice_bucket",
+   "pos": [
+    30,
+    14
+   ],
+   "size": 0.32,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    45,
+    22
+   ],
+   "size": 0.48,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_pool_float",
+   "pos": [
+    29,
+    17
+   ],
+   "size": 0.42,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    10,
+    21
+   ],
+   "size": 0.42,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_hasty_checkout",
+   "pos": [
+    32,
+    14
+   ],
+   "size": 0.38,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_housekeeping_cart",
+   "pos": [
+    43,
+    14
+   ],
+   "size": 0.38,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_ice_machine",
+   "pos": [
+    11,
+    20
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    34,
+    13
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_pool_party_ruin",
+   "pos": [
+    39,
+    15
+   ],
+   "size": 0.34,
+   "floor": true
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    19,
+    14
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    35,
+    19
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    40,
+    16
+   ],
+   "size": 0.8,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    45,
+    22
+   ],
+   "size": 0.48,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    10,
+    21
+   ],
+   "size": 0.42,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    34,
+    13
+   ],
+   "size": 0.34,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    8,
+    8
+   ],
+   "size": 0.58,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    2,
+    2
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    29,
+    3
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    55,
+    4
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    22,
+    6
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    54,
+    7
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    27,
+    9
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    58,
+    11
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    61,
+    13
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    2,
+    16
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    62,
+    17
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    6,
+    20
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    60,
+    21
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    34,
+    23
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    2,
+    25
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    24,
+    27
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    54,
+    28
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    23,
+    30
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    34,
+    32
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    61,
+    33
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    5,
+    36
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    35,
+    37
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    62,
+    38
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    26,
+    40
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    46,
+    42
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    65,
+    43
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    30,
+    45
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    54,
+    46
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    19,
+    48
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    38,
+    49
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    57,
+    50
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    12,
+    52
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    31,
+    53
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    50,
+    54
+   ],
+   "size": 0.3,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    5,
+    56
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    24,
+    57
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    43,
+    58
+   ],
+   "size": 0.38,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    5,
+    2
+   ],
+   "size": 0.34,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    32,
+    4
+   ],
+   "size": 0.38,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    61,
+    6
+   ],
+   "size": 0.42000000000000004,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    38,
+    9
+   ],
+   "size": 0.34,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    27,
+    13
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    9,
+    17
+   ],
+   "size": 0.27,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    27,
+    20
+   ],
+   "size": 0.34,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    23,
+    23
+   ],
+   "size": 0.38,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    49,
+    25
+   ],
+   "size": 0.42000000000000004,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    5,
+    29
+   ],
+   "size": 0.34,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    26,
+    32
+   ],
+   "size": 0.38,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    49,
+    34
+   ],
+   "size": 0.42000000000000004,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_palm_planter",
+   "pos": [
+    11,
+    38
+   ],
+   "size": 0.34,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_gecko",
+   "pos": [
+    40,
+    40
+   ],
+   "size": 0.38,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "paper",
+   "pos": [
+    56,
+    43
+   ],
+   "size": 0.27,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_bottles",
+   "pos": [
+    34,
+    46
+   ],
+   "size": 0.34,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "clutter_ashtray",
+   "pos": [
+    6,
+    49
+   ],
+   "size": 0.38,
+   "rot": -12,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_room_key_spill",
+   "pos": [
+    34,
+    51
+   ],
+   "size": 0.42000000000000004,
+   "rot": 0,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_neon_vacancy_sign",
+   "pos": [
+    62,
+    53
+   ],
+   "size": 0.34,
+   "rot": 9,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_towel_cart",
+   "pos": [
+    31,
+    56
+   ],
+   "size": 0.38,
+   "rot": -5,
+   "floor": false
+  },
+  {
+   "type": "sprite",
+   "id": "motel_water_ring",
+   "pos": [
+    54,
+    58
+   ],
+   "size": 0.42000000000000004,
+   "rot": -12,
+   "floor": false
   }
  ],
  "cameras": [

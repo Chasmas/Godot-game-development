@@ -658,7 +658,8 @@ static var _bodies: Dictionary = {}
 func _painted_body() -> Texture2D:
 	var id := "dog_" + str(data.palette if data else "shepherd")
 	if not _bodies.has(id):
-		var pth := "res://assets/art/cast/%s.png" % id
+		var pixel_path := "res://assets/art/pixellab_cast_v3_approved/%s.png" % id
+		var pth := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/art/cast/%s.png" % id
 		_bodies[id] = load(pth) if ResourceLoader.exists(pth) else null
 	return _bodies[id]
 
@@ -750,7 +751,8 @@ static func draw_dead(ci: CanvasItem, C: Dictionary, twitch: float, missing := "
 	var tex: Texture2D = null
 	if breed != null:
 		var key := "dog_%s_down" % str(breed)
-		var pth := "res://assets/art/cast/%s.png" % key
+		var pixel_path := "res://assets/art/pixellab_cast_v3_approved/%s.png" % key
+		var pth := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/art/cast/%s.png" % key
 		if not _bodies.has(key):
 			_bodies[key] = load(pth) if ResourceLoader.exists(pth) else null
 		tex = _bodies[key]

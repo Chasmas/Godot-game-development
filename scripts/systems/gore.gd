@@ -89,19 +89,16 @@ static func spatter_around(pos: Vector2, amount := 1.0) -> void:
 		var r := randf_range(0.6, 1.6) if d > 12.0 else randf_range(1.0, 2.6)
 		fx.decals.add_splat(pos + Vector2.from_angle(a) * d, r, Color(0.42 + randf() * 0.2, 0.01, 0.06, 0.9))
 
-## Head burst: skull pieces, brain, an eye, a big fan of blood.
+## Head burst: blood and a small amount of contextual debris.  The floor is
+## readable after a fight; it must not become covered in cartoon bone shards.
 static func head_burst(pos: Vector2, dir: Vector2, palette := "guard") -> void:
 	splatter(pos, dir, 2.5)
 	pool(pos + dir * 6.0, 10.0)
 	Audio.play_at("gore", pos, -2.0)
-	for i in 3:
-		gib(pos, dir.rotated(randf_range(-0.9, 0.9)) * randf_range(90, 190), "bone", palette)
-	for i in 2:
-		gib(pos, dir.rotated(randf_range(-0.7, 0.7)) * randf_range(70, 160), "brain", palette)
-	gib(pos, dir.rotated(randf_range(-0.5, 0.5)) * randf_range(60, 130), "eye", palette)
+	if randf() < 0.25:
+		gib(pos, dir.rotated(randf_range(-0.8, 0.8)) * randf_range(70, 130), "chunk", palette)
 	for i in 3:
 		gib(pos, dir.rotated(randf_range(-1.2, 1.2)) * randf_range(60, 200), "chunk", palette)
-	gib(pos, dir.rotated(randf_range(-1.0, 1.0)) * 120.0, "teeth", palette)
 
 static func decapitate(pos: Vector2, dir: Vector2, palette := "guard", dog := false) -> void:
 	splatter(pos, dir, 1.6)
@@ -113,8 +110,6 @@ static func dismember(pos: Vector2, dir: Vector2, palette := "guard", part := "a
 	splatter(pos, dir, 1.3)
 	gib(pos, dir.rotated(randf_range(-0.8, 0.8)) * randf_range(100, 180), part, palette)
 	gib(pos, dir.rotated(randf_range(-1.2, 1.2)) * randf_range(60, 140), "chunk", palette)
-	if randf() < 0.5:
-		gib(pos, dir.rotated(randf_range(-1.2, 1.2)) * randf_range(60, 140), "bone", palette)
 	spray(pos, dir.orthogonal() * (1.0 if randf() > 0.5 else -1.0), 0.5, 0.7)
 	Audio.play_at("gore", pos, -5.0)
 
@@ -127,7 +122,7 @@ static func gut(pos: Vector2, dir: Vector2, palette := "guard") -> void:
 static func explode_body(pos: Vector2, dir: Vector2, palette := "guard") -> void:
 	splatter(pos, dir, 3.0)
 	pool(pos, 14.0)
-	var parts := ["arm", "leg", "chunk", "chunk", "bone", "chunk"]
+	var parts := ["arm", "leg", "chunk", "chunk", "chunk"]
 	if randf() < 0.5:
 		parts.append("arm")
 	for k in parts:

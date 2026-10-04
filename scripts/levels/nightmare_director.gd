@@ -99,7 +99,10 @@ func _scare(s: Dictionary) -> void:
 					level.set_zone_lights(zone, true, "boss"))
 		"apparition":
 			var who := str(s.get("who", "tommy"))
-			var tex: Texture2D = load("res://assets/characters/portraits/%s.png" % APPARITIONS.get(who, who))
+			var portrait_id := str(APPARITIONS.get(who, who))
+			var pixel_path := "res://assets/art/pixellab_ui_v3_approved/portraits/%s.png" % portrait_id
+			var source_path := "res://assets/characters/portraits/%s.png" % portrait_id
+			var tex: Texture2D = load(pixel_path if ResourceLoader.exists(pixel_path) else source_path)
 			if tex:
 				_face.texture = tex
 				_face_t = FACE_TIME

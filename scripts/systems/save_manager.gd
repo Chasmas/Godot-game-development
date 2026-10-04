@@ -8,7 +8,9 @@ extends Node
 const SAVE_PATH := "user://save.json"
 const SETTINGS_PATH := "user://settings.json"
 const SAVE_VERSION := 1
-const WINDOW_SIZES := [Vector2i(1280, 720), Vector2i(1600, 900), Vector2i(1920, 1080), Vector2i(2560, 1440)]
+## Windowed presets.  Fullscreen follows the display's native resolution;
+## the 4K entry is also useful for capture and high-DPI windowed displays.
+const WINDOW_SIZES := [Vector2i(1280, 720), Vector2i(1600, 900), Vector2i(1920, 1080), Vector2i(2560, 1440), Vector2i(3840, 2160)]
 
 const DEFAULT_SETTINGS := {
 	"master_volume": 0.9, "music_volume": 0.8, "sfx_volume": 0.9, "dialogue_volume": 0.9,

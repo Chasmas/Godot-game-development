@@ -12,21 +12,23 @@ BLOCK='#~WL%TCblwkcnKZjVtQIYFoE '
 PROTECTED=set('gmhHsrBdyzuMqv1234567890!?G()PAFS^*U$&OXR@L')
 def apply_layout(data):
     plan=PLANS.get(data['id'])
-    if not plan or data.get('layout_revision')==1:return data
-    result=copy.deepcopy(data); grid=[list(row) for row in data['map']]
-    for edit in plan['edits']:
-        x,y=edit['at']
-        for i in range(edit['length']):
-            u=x+(i if edit['axis']=='h' else 0);v=y+(i if edit['axis']=='v' else 0)
-            old=grid[v][u]
-            assert old in edit['from'],f"{data['id']} unexpected {old!r} at {u},{v} (expected {edit['from']!r})"
-            assert old not in PROTECTED,f'Would replace gameplay entity {u},{v}'
-            grid[v][u]=edit['tile']
-    result['map']=[''.join(row) for row in grid]
+    if not plan:return data
+    result=copy.deepcopy(data)
+    if data.get('layout_revision') != 1:
+        grid=[list(row) for row in data['map']]
+        for edit in plan['edits']:
+            x,y=edit['at']
+            for i in range(edit['length']):
+                u=x+(i if edit['axis']=='h' else 0);v=y+(i if edit['axis']=='v' else 0)
+                old=grid[v][u]
+                assert old in edit['from'],f"{data['id']} unexpected {old!r} at {u},{v} (expected {edit['from']!r})"
+                assert old not in PROTECTED,f'Would replace gameplay entity {u},{v}'
+                grid[v][u]=edit['tile']
+        result['map']=[''.join(row) for row in grid]
+        result['layout_revision']=1
+        result['layout_design']={k:v for k,v in plan.items() if k!='edits'}
     # No entity, objective, checkpoint, trigger or power-zone dictionary is rewritten.
     result['decor'] = result.get('decor', []) + [item for item in plan.get('decor', []) if item not in result.get('decor', [])]
-    result['layout_revision']=1
-    result['layout_design']={k:v for k,v in plan.items() if k!='edits'}
     return result
 
 def audit(data):
@@ -47,7 +49,12 @@ def audit(data):
         if item.get('type') != 'sprite' or not item.get('floor', False):
             continue
         x,y=item.get('pos', [-1,-1])
-        if not valid((x,y)) or at((x,y)) not in '.,:_=\\+-;':
+        allowed = '.,:_=\\+-;'
+        # The motel float is deliberately set on pool water; it is a visual
+        # layer only and must still stay clear of portals.
+        if item.get('id') == 'motel_pool_float':
+            allowed += '~'
+        if not valid((x,y)) or at((x,y)) not in allowed:
             bad_floor_decor.append(item)
             continue
         if any(valid(p) and at(p) in 'DLW' for p in neighbors((x,y))):

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "queue": [
+    {
+      "id": "coffee_table",
+      "level": "shared",
+      "category": "B_functional_prop",
+      "canvas": "64x64",
+      "reference": "assets/art/pixellab_world/sprites/table.png",
+      "reference_strength": 700,
+      "prompt": "Pixel art style, strict 90-degree overhead top-down compact 1980s lounge coffee table, made of dark walnut wood, smoked glass and brass, featuring a thin brass rim, one folded newspaper, a square ashtray, a condensation ring and two tiny scratches, preserve the reference top-down footprint, no front face, no side view, no perspective, clean outlines, asset isolated on transparent background."
+    }
+  ]
+}

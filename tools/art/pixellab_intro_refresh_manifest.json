@@ -1,0 +1,10 @@
+{
+  "assets": [
+    {"name":"mom_kitchen","size":"128x128","prompt":"Pixel art cinematic story frame, 1988 California apartment kitchen at night, mother at a cluttered counter beside a ringing wall phone, warm tungsten pool against deep indigo window shadows, magnets, unpaid bills, coffee mug and red curtains, readable silhouettes, clean outlines, transparent background not required."},
+    {"name":"phone_cass","size":"128x128","prompt":"Pixel art cinematic story frame, young woman Cass answering a beige rotary phone in a motel room, crimson jacket and gold star pin, cyan neon through blinds, cigarette smoke, cassette tapes and peeling wallpaper, readable face and hands, clean outlines, dark synthwave palette."},
+    {"name":"lobby_phone","size":"128x128","prompt":"Pixel art cinematic story frame, empty motel lobby after midnight with a ringing desk phone, vacancy board, brass bell, key rack and rain-lit glass doors, magenta and cyan neon reflections, clean outlines, atmospheric but readable."},
+    {"name":"yermo_office","size":"128x128","prompt":"Pixel art cinematic story frame, salvage-yard office built from corrugated steel, ledger desk, radio, dusty blinds and pinned vehicle tags, amber desk lamp against blue night, oil stains and cable clutter, clean outlines, readable focal object."},
+    {"name":"tv_mansion","size":"128x128","prompt":"Pixel art cinematic story frame, dark villa sitting room with a CRT television broadcasting breaking news, velvet sofa, marble side table, palm silhouettes beyond glass and red emergency reflections, clean outlines, strong focal lighting."},
+    {"name":"casting_1990","size":"128x128","prompt":"Pixel art cinematic story frame, 1990 film casting room with a nervous actor under a harsh spotlight, folding chairs, clipboard, VHS camera and corkboard headshots, warm key light against violet shadows, clean outlines, readable character silhouette."}
+  ]
+}

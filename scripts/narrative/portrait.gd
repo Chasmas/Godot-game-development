@@ -107,7 +107,8 @@ static var _art_cache: Dictionary = {}
 
 func _art(id: String) -> Texture2D:
 	if not _art_cache.has(id):
-		var path := "res://assets/characters/portraits/%s.png" % id
+		var pixel_path := "res://assets/art/pixellab_ui_v3_approved/portraits/%s.png" % id
+		var path := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/characters/portraits/%s.png" % id
 		_art_cache[id] = load(path) if ResourceLoader.exists(path) else null
 	return _art_cache[id]
 

@@ -117,7 +117,7 @@ static func compose(kind: String, r, b: LevelBuilder, layer, glow, used: Diction
 			_one(layer, used, south, "rubber_duck", 0.0, Vector2.ZERO, rng)
 		"crypt":
 			_row(layer, used, south, "candles", 3, 0.0, Vector2(0, 1), rng)
-			_row(layer, used, north, "bones", 4, 0.0, Vector2(0, -1), rng)
+			_row(layer, used, north, "candles", 4, 0.0, Vector2(0, -1), rng)
 
 static func _wall_cells(r, b: LevelBuilder, used: Dictionary, dir: Vector2i) -> Array[Vector2i]:
 	var out: Array[Vector2i] = []
@@ -328,13 +328,6 @@ static func draw(ci: CanvasItem, k: String, v: int) -> bool:
 			ci.draw_circle(Vector2.ZERO, 2.0, Color(1.0, 0.85, 0.1))
 			ci.draw_circle(Vector2(1.5, -1), 1.2, Color(1.0, 0.85, 0.1))
 			ci.draw_rect(Rect2(2.4, -1.2, 1.2, 0.6), Color(1.0, 0.5, 0.1))
-		"bones":
-			ci.draw_line(Vector2(-4, 1), Vector2(3, -1), Color(0.9, 0.88, 0.8), 1.2)
-			ci.draw_circle(Vector2(-4, 1), 1.0, Color(0.9, 0.88, 0.8))
-			ci.draw_circle(Vector2(3, -1), 1.0, Color(0.9, 0.88, 0.8))
-			ci.draw_circle(Vector2(1, 3), 1.8, Color(0.88, 0.85, 0.78))
-			ci.draw_circle(Vector2(0.4, 2.8), 0.4, ink)
-			ci.draw_circle(Vector2(1.6, 2.8), 0.4, ink)
 		_:
 			return false
 	return true

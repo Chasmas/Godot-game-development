@@ -5,6 +5,7 @@ extends RefCounted
 ## art never prevents a scene from running.
 
 const ROOT := "res://assets/art/"
+const PIXELLAB_ROOT := "res://assets/art/pixellab_ui_v3_approved/"
 
 const TITLE := ROOT + "title/hotshot_title.webp"
 
@@ -23,6 +24,16 @@ const PAINTED := {
 static func texture_for(path: String) -> Texture2D:
 	if path == "" or not ResourceLoader.exists(path):
 		return null
+	var id := path.get_basename().get_file() + ".png"
+	# Full-screen cutscenes are kept in their own reviewed folder, while title
+	# art remains at the PixelLab root.  Check both so approved assets never
+	# depend on an accidental mirrored source directory.
+	var reviewed_cutscene := PIXELLAB_ROOT + "cutscenes/" + id
+	var reviewed_root := PIXELLAB_ROOT + id
+	if ResourceLoader.exists(reviewed_cutscene):
+		return load(reviewed_cutscene) as Texture2D
+	if ResourceLoader.exists(reviewed_root):
+		return load(reviewed_root) as Texture2D
 	return load(path) as Texture2D
 
 static func cutscene_texture(id: String) -> Texture2D:
@@ -42,6 +53,9 @@ static func title_texture() -> Texture2D:
 static func make_fullscreen(tex: Texture2D) -> TextureRect:
 	var r := TextureRect.new()
 	r.texture = tex
+	# The authored frame is deliberately low-resolution pixel art.  Preserve
+	# its clusters when a 4K or ultrawide viewport scales it up.
+	r.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	r.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	r.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	r.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED

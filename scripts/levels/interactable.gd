@@ -115,10 +115,14 @@ func _draw() -> void:
 			if enabled:
 				draw_arc(Vector2.ZERO, 12.0, 0, TAU, 20, Color(UIStyle.GOLD, 0.4 + 0.3 * sin(_t * 6.0)), 1.5)
 		"valve":
-			draw_circle(Vector2.ZERO, 7.0, ink)
-			draw_circle(Vector2.ZERO, 6.0, Color(0.75, 0.1, 0.12))
-			for k in 4:
-				draw_line(Vector2.ZERO, Vector2.from_angle(k * PI * 0.5 + (_t * 2.0 if not enabled else 0.0)) * 6.0, ink, 1.5)
+			var valve_tex := ArtLib.sprite("studio_sprinkler_valve")
+			if valve_tex:
+				draw_texture_rect(valve_tex, Rect2(-9, -9, 18, 18), false)
+			else:
+				draw_circle(Vector2.ZERO, 7.0, ink)
+				draw_circle(Vector2.ZERO, 6.0, Color(0.75, 0.1, 0.12))
+				for k in 4:
+					draw_line(Vector2.ZERO, Vector2.from_angle(k * PI * 0.5 + (_t * 2.0 if not enabled else 0.0)) * 6.0, ink, 1.5)
 			if enabled:
 				draw_arc(Vector2.ZERO, 12.0, 0, TAU, 20, Color(UIStyle.CYAN, 0.4 + 0.3 * sin(_t * 6.0)), 1.5)
 		"extinguisher":

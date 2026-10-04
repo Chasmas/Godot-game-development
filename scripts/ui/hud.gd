@@ -1023,7 +1023,8 @@ class TipCard extends Control:
 		if id == "":
 			return null
 		if not _faces.has(id):
-			var pth := "res://assets/characters/portraits/%s.png" % id
+			var pixel_path := "res://assets/art/pixellab_ui_v3_approved/portraits/%s.png" % id
+			var pth := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/characters/portraits/%s.png" % id
 			_faces[id] = load(pth) if ResourceLoader.exists(pth) else null
 		return _faces[id]
 

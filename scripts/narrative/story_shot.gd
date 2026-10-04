@@ -43,6 +43,10 @@ const SHOTS := {
 ## Extras: "fireworks" rect, "eyes" points, "reddot" point, "papers",
 ## "rumble" / "handheld" camera motion, "glow" mask strength.
 const PAINT := "res://assets/art/painted/%s.webp"
+## PixelLab equivalents are generated alongside the source paintings.  Loading
+## them first keeps every cinematic frame in one visual language while the
+## authored file remains a safe fallback during incremental generation.
+const PIXELLAB_PAINT := "res://assets/art/pixellab_ui_v3_approved/painted/%s.png"
 const PAINT_GLOW := "res://assets/art/painted/%s_glow.png"
 const PAINT_SHADER := preload("res://shaders/painted_shot.gdshader")
 enum Z { SWAY, RIPPLE, FLICKER, PULSE, TV, HEAT, BLINK, BREATHE, SIREN, DRIFT }
@@ -211,7 +215,8 @@ static func has_shot(id: String) -> bool:
 static func painted_tex(id: String) -> Texture2D:
 	var key := "paint/" + id
 	if not _cache.has(key):
-		var p := PAINT % id
+		var pixel_path := PIXELLAB_PAINT % id
+		var p := pixel_path if ResourceLoader.exists(pixel_path) else PAINT % id
 		_cache[key] = load(p) if ResourceLoader.exists(p) else null
 	return _cache[key]
 

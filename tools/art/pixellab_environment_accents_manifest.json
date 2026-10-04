@@ -1,0 +1,8 @@
+{
+  "assets": [
+    {"name":"villa_ivy_wall_cluster","size":"64x64","prompt":"Top-down pixel art style, villa stone wall ivy cluster, made of weathered limestone and deep green leaves, featuring tiny pink flowers, cracked mortar, a brass wall hook and warm window bounce light, cool violet shadow under leaves, clean outlines, transparent background."},
+    {"name":"studio_acoustic_wall_panel","size":"64x64","prompt":"Top-down pixel art style, film studio acoustic wall panel, made of dark blue felt and black framing, featuring stitched seams, two pinned call sheets, cable clips and a small amber indicator, magenta rim light with cool navy shadow, clean outlines, transparent background."},
+    {"name":"motel_neon_vacancy_sign","size":"64x64","prompt":"Top-down pixel art style, motel vacancy sign fragment, made of painted metal and red glass tubing, featuring chipped lettering, loose cable, rain streaks and a buzzing cyan edge glow, hard purple cast shadow, clean outlines, transparent background."},
+    {"name":"yard_desert_scrub_cluster","size":"64x64","prompt":"Top-down pixel art style, salvage-yard desert scrub cluster, made of dusty soil, dry agave and thorny brush, featuring small discarded bolts, a sun-bleached tag and two stones, teal night shadow with orange sodium rim light, clean outlines, transparent background."}
+  ]
+}

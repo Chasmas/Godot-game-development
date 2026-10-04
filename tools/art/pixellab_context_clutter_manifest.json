@@ -1,0 +1,9 @@
+{
+  "style": "top-down Hotline Miami inspired pixel art, crisp 1px outlines, neon synthwave palette, readable at 64px, transparent background",
+  "assets": [
+    {"name":"motel_towel_folded","size":"32x32","prompt":"Pixel art style, folded motel towel, made of faded white terry cloth with a single coral stripe, featuring tiny stitched edge, damp blue shadow, and one loose thread, cool violet ambient light from upper left, clean outlines, asset isolated on transparent background."},
+    {"name":"studio_coffee_cup","size":"32x32","prompt":"Pixel art style, chipped studio coffee cup with saucer, made of cream ceramic, featuring brown coffee surface, lipstick mark, tiny steam curl and a paper call sheet underneath, warm amber key light from upper right, clean outlines, asset isolated on transparent background."},
+    {"name":"studio_costume_pile","size":"64x64","prompt":"Pixel art style, small costume clothing pile, made of denim, canvas and crimson fabric, featuring visible jacket sleeve, brass button, loose thread and scuffed shoes tucked underneath, magenta rim light with deep navy shadow, clean outlines, asset isolated on transparent background."},
+    {"name":"motel_shoes_pair","size":"32x32","prompt":"Pixel art style, pair of worn motel guest shoes, made of dark leather and rubber, featuring mismatched laces, dusty soles and a motel key tag looped through one lace, cyan neon edge light, clean outlines, asset isolated on transparent background."}
+  ]
+}

@@ -23,6 +23,9 @@ func setup(palette: String, dir: Vector2, player := false, p_missing := "", faci
 	is_player = player
 	missing = p_missing
 	sprite = Sprite2D.new()
+	# SpriteLib exposes final corpses as (palette, missing_part, pose). Its
+	# wrapper selects SpriteForge's authored final-death painting rather than
+	# the downed procedural pose.
 	sprite.texture = SpriteLib.corpse(palette, missing, randi() % 4)
 	sprite.scale = Vector2(0.5, 0.5)
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR

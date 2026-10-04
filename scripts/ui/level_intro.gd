@@ -27,7 +27,8 @@ func _ready() -> void:
 	layer = 40
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	var info: Array = INFO.get(String(mission.id), ["", "", ""])
-	var p := "res://assets/art/covers/%s.webp" % info[1]
+	var pixel_path := "res://assets/art/pixellab_ui_v3_approved/covers/%s.png" % info[1]
+	var p := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/art/covers/%s.webp" % info[1]
 	_tex = load(p) if ResourceLoader.exists(p) else null
 	_panel = Panel.new()
 	_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)

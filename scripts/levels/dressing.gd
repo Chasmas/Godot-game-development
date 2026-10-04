@@ -162,7 +162,9 @@ const VOCAB := {
 	"office":     ["papers", "papers", "boxes", "coffee", "binder", "trash", "papers"],
 	"lounge":     ["bottle", "bottle", "cans", "ashtray", "cards", "glasses", "butts", "rug"],
 	"industrial": ["drum", "toolbox", "oil", "oil", "tires", "chain", "boxes", "wrench", "puddle"],
-	"kennel":     ["bowl", "bone", "hay", "hay", "chew", "bone", "bowl"],
+	# Keep kennels readable without turning every pen into a cartoon bone pile.
+	# The functional dog-lure pickup is placed separately by the mission logic.
+	"kennel":     ["bowl", "hay", "hay", "chew", "leash", "bowl", "chew"],
 	"courtyard":  ["towel", "cans", "leaves", "flamingo", "butts", "sandals"],
 	"lot":        ["trash", "cans", "newspaper", "hubcap", "oil"],
 	"yard":       ["tires", "scrap", "hubcap", "scrap", "drum", "oil"],
@@ -175,10 +177,10 @@ const VOCAB := {
 	"ballroom":   ["glasses", "bottle", "leaves", "cards"],
 	"foyer":      ["leaves", "newspaper", "glasses"],
 	"library":    ["book_stack", "papers", "book_stack", "candles"],
-	"dining":     ["glasses", "bottle", "bones"],
+	"dining":     ["glasses", "bottle", "candles"],
 	"nursery":    ["toy_car", "crayons", "teddy"],
 	"bathroom":   ["towel", "puddle", "towel"],
-	"crypt":      ["bones", "candles", "leaves"],
+	"crypt":      ["candles", "candles", "leaves"],
 }
 ## Items that sit against a wall (the rest can go anywhere free).
 const WALL_ITEMS := ["suitcase", "boxes", "drum", "tires", "cart", "plant_pot", "basket", "detergent", "binder", "luggage", "hay", "toolbox"]
@@ -476,8 +478,27 @@ class ClutterLayer extends Node2D:
 		return Color(c.r * boost, c.g * boost, c.b * boost, c.a) if boost != 1.0 else c
 
 	## Dressing pieces with a painting: kind -> [sprite, size in world px].
+	# Prefer an authored PixelLab sprite anywhere a matching prop exists.  The
+	# procedural cases below now cover only tiny effects that have no dedicated
+	# sprite yet, rather than alternating visual languages in one room.
 	const PAINTED := {"suitcase": ["prop_suitcase", 11.0], "luggage": ["prop_suitcase", 11.0], "extinguisher": ["prop_extinguisher", 7.0],
-		"calendar": ["prop_calendar", 7.0], "key_rack": ["prop_key_rack", 8.0], "trash": ["prop_trash_bag", 10.0], "plant_pot": ["plant_pot", 9.0]}
+		"calendar": ["prop_calendar", 7.0], "key_rack": ["prop_key_rack", 8.0], "trash": ["prop_trash_bag", 10.0], "plant_pot": ["plant_pot", 9.0],
+		"papers": ["paper", 8.5], "newspaper": ["paper", 8.5], "magazine": ["paper", 7.5],
+		"boxes": ["cardboard_box", 10.0], "drum": ["oil_drum", 10.0], "toolbox": ["toolbox_chest", 10.0],
+		"tires": ["tyre_stack", 11.0], "scrap": ["scrap_pile", 11.0], "cart": ["motel_housekeeping_cart", 11.0],
+		"bottle": ["clutter_bottles", 8.0], "cans": ["clutter_cans", 8.0], "ashtray": ["clutter_ashtray", 7.0],
+		"wrench": ["clutter_tools", 8.0], "chain": ["clutter_chain", 7.0], "hubcap": ["clutter_hubcap", 7.0],
+		"bowl": ["clutter_dog_bowl", 8.0], "chew": ["clutter_dog_bowl", 6.5], "oil": ["clutter_floor_stains", 9.0],
+		"butts": ["clutter_ashtray", 6.5],
+		"towel": ["motel_towel_folded", 7.0], "coffee": ["studio_coffee_cup", 6.5],
+		"clothes": ["studio_costume_pile", 8.0], "shoes": ["motel_shoes_pair", 7.0], "sandals": ["motel_shoes_pair", 6.5],
+		"puddle": ["motel_water_ring", 9.0], "binder": ["paper", 8.0],
+		"pizza_box": ["motel_pizza_box", 7.0], "tray": ["motel_room_service_tray", 7.0],
+		"basket": ["laundry_basket_clothes", 8.0], "detergent": ["laundry_detergent_bottle", 6.5],
+		"hay": ["kennel_hay_bundle", 7.0], "flamingo": ["motel_pool_flamingo", 7.0],
+		# Shared micro props keep the same PixelLab treatment in villa/studio rooms.
+		"leaves": ["plant", 8.0], "cards": ["villa_seating_card", 6.0], "glasses": ["villa_tea_service", 7.0],
+		"candles": ["villa_candle_ring", 7.0]}
 	## these hang on a wall: drawn standing on the wall's bottom edge, never over the floor
 	const ON_WALL := ["extinguisher", "calendar", "key_rack"]
 

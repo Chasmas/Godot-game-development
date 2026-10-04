@@ -1,0 +1,18 @@
+{
+ "preview": "01a0ee35-2108-7441-a165-9001b7c36c32",
+ "refine": "01a0ee36-3766-734e-9bba-e0c5031a6f2f",
+ "rig": "01a0ee37-00a3-76e5-a903-fa53929b8d2a",
+ "anim_idle": "01a0ee37-fa98-7137-aa77-e34e8964c8b6",
+ "anim_run": "01a0ee38-8fc3-711e-9618-8b182bb7cdd6",
+ "anim_walk": "01a0ee3c-d692-7081-b13a-09c825106af3",
+ "anim_aim": "01a0ee3d-84eb-7605-b050-8ae472bde9ed",
+ "anim_sneak": "01a0ee3d-cf7e-73fb-8c63-3e44417ba8cc",
+ "anim_punch": "01a0ee3e-3ad5-71f8-80b7-64eefba95c3d",
+ "anim_melee": "01a0ee3e-a6e8-7672-a1a7-53efae8d0b22",
+ "anim_kick": "01a0ee3e-f121-717f-a6ee-3bbe8409d880",
+ "anim_death": "01a0ee3f-3b0c-75c4-adfa-fc211d8432e6",
+ "anim_death_back": "01a0ee3f-8597-761d-b4c4-524db0ae3cbb",
+ "anim_knocked": "01a0ee3f-cfb6-7014-9218-cd3c50a6a398",
+ "anim_roll": "01a0ee40-1a13-73f7-b224-1557c4510c43",
+ "anim_doze": "01a0ee40-63df-7108-8498-262f2a464517"
+}

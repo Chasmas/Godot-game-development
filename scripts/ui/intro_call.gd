@@ -21,6 +21,7 @@ var _rings := 0
 var _ring_t := 0.2
 var _shake := 0.0
 var _portrait: TextureRect
+var _portrait_home := Vector2(12, 12)
 
 func _ready() -> void:
 	add_to_group("intro_call")
@@ -31,13 +32,14 @@ func _ready() -> void:
 	_panel.position = Vector2(-420, 150)
 	_panel.size = Vector2(380, 96)
 	add_child(_panel)
-	var tex_path := "res://assets/characters/portraits/%s.png" % caller
+	var pixel_path := "res://assets/art/pixellab_ui_v3_approved/portraits/%s.png" % caller
+	var tex_path := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/characters/portraits/%s.png" % caller
 	_portrait = TextureRect.new()
 	if ResourceLoader.exists(tex_path):
 		_portrait.texture = load(tex_path)
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	_portrait.position = Vector2(12, 12)
+	_portrait.position = _portrait_home
 	_portrait.size = Vector2(72, 72)
 	_panel.add_child(_portrait)
 	var tw := create_tween()
@@ -51,6 +53,14 @@ func _process(delta: float) -> void:
 		return
 	_panel.visible = true
 	_t += delta
+	# A live caller should never read as a pasted card: the portrait breathes
+	# while the line is open and reacts sharply to each ring.
+	if _portrait:
+		var talking := _state == "talk" and Dialogue.active and Dialogue.is_typing()
+		var breath := sin(_t * (8.0 if talking else 2.0))
+		_portrait.position = _portrait_home + Vector2(0, breath * (1.4 if talking else 0.45))
+		_portrait.rotation = breath * (0.012 if talking else 0.004) + sin(_t * 45.0) * 0.025 * _shake
+		_portrait.scale = Vector2.ONE * (1.0 + (0.018 if talking else 0.006) * maxf(0.0, breath))
 	_shake = maxf(0.0, _shake - delta * 3.0)
 	match _state:
 		"ring":

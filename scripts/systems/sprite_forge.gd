@@ -64,6 +64,7 @@ static func variant_of(palette: String) -> int:
 
 static var _cache: Dictionary = {}
 const BAKE_DIR := "res://assets/characters/baked/"
+const PIXELLAB_POSE_DIR := "res://assets/art/pixellab_cast_v4/"
 
 static func baked_path(key: String) -> String:
 	return BAKE_DIR + key.replace("|", "_").replace("#", "-v") + ".png"
@@ -83,6 +84,22 @@ static func _baked(key: String) -> Texture2D:
 		_cache[key] = t
 		return t
 	return null
+
+## Approved 2D PixelLab poses.  They are deliberately small top-down sheets
+## (64 px at the forge's 2x density), so the normal rig can keep rotating,
+## recoiling and placing a weapon at its existing hand coordinates.
+static func has_pose_art(palette: String) -> bool:
+	var look := base_name(palette)
+	return look in ["cass", "guard", "civilian", "welder"] and ResourceLoader.exists(PIXELLAB_POSE_DIR + "%s_unarmed.png" % look)
+
+static func _pose_art(palette: String, pose: String) -> Texture2D:
+	if not has_pose_art(palette):
+		return null
+	var pth := PIXELLAB_POSE_DIR + "%s_%s.png" % [base_name(palette), pose]
+	if not ResourceLoader.exists(pth):
+		return null
+	var img := (load(pth) as Texture2D).get_image()
+	return _tex(img) if img else null
 
 static func _pal(name: String) -> Dictionary:
 	var p: Dictionary = SpriteLib.PALETTES.get(base_name(name), SpriteLib.PALETTES["guard"])
@@ -408,7 +425,8 @@ static func _body_image(name: String) -> Image:
 		return null
 	var k := "body|" + name
 	if not _cache.has(k):
-		var pth := "res://assets/art/cast/body_%s.png" % name
+		var pixel_path := "res://assets/art/pixellab_cast_v3_approved/body_%s.png" % name
+		var pth := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/art/cast/body_%s.png" % name
 		_cache[k] = (load(pth) as Texture2D).get_image() if ResourceLoader.exists(pth) else null
 	return _cache[k]
 
@@ -416,6 +434,10 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	var key := "t|%s|%s" % [palette, pose]
 	if _cache.has(key):
 		return _cache[key]
+	var pose_tex := _pose_art(palette, pose)
+	if pose_tex:
+		_cache[key] = pose_tex
+		return pose_tex
 	# baked PNGs already hold the painted-body version (the bake paints fresh)
 	var bk := _baked(key)
 	if bk:
@@ -739,9 +761,12 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 	var key := "c2|%s|%s|%d" % [palette, downed, pose] + ("" if missing == "" else "|" + missing)
 	if _cache.has(key):
 		return _cache[key]
-	# a whole body gets its painting (tools/art "corpses"); a dismembered
-	# one or a downed (still breathing) one keeps the painted-by-shapes look
-	if not downed and missing == "":
+	# Prefer the authored corpse painting for every final death pose.  The
+	# procedural dismemberment fallback exposed pale bone shapes and made a
+	# finished body read like a toy skeleton at gameplay scale.  A severed part
+	# is still represented by blood and a single contextual gib; the body stays
+	# a readable clothed silhouette.
+	if not downed:
 		var pc := _cast("corpse_" + base_name(palette))
 		if pc:
 			_cache[key] = pc
