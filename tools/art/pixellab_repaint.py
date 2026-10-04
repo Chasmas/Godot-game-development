@@ -9,7 +9,7 @@ character, the camera stays straight overhead so it can rotate freely.
   unarmed aim_one aim_two aim_dual / melee punch_l legs0 legs1
 Results: assets/art/Artwork/pixellab/<look>_<pose>.png (+ a comparison sheet).
 """
-import base64, io, json, os, sys, urllib.request, urllib.error
+import base64, io, json, os, sys, time, urllib.request, urllib.error
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -21,6 +21,18 @@ LOOKS = {
     "cass": "Cass, a young woman in a crimson red leather jacket, a dark auburn braided ponytail down her back, a small gold star pin, blue jeans, black boots",
     "guard": "a motel security guard in a charcoal navy security shirt, short sleeves, shoulder radio, black trousers, black shoes and a small brass badge",
     "civilian": "a civilian witness in a muted 1980s casual jacket, faded jeans, simple shoes and no tactical equipment",
+    "bellhop": "a hotel bellhop in a crimson red double-breasted uniform jacket with gold buttons, white shirt, black trousers, black shoes",
+    "biker": "a biker in a worn black leather jacket over a white tee, faded blue jeans, a red bandana, scuffed boots, long dark hair",
+    "gunner": "a gunman in a purple 1980s suit, bare chest under the jacket, purple trousers, black shoes, slicked dark hair",
+    "handler": "a kennel handler in an orange hunting vest over a grey tee, thick brown work trousers, brown boots, leather gloves",
+    "heavy": "a heavy bruiser, bare chest under an open brown leather vest, blue jeans, heavy boots, thick arms, shaved head",
+    "hunter": "a hunter in a dirty white tank top, faded blue jeans, brown boots, short dark beard",
+    "riot": "a riot cop in navy blue body armour, helmet with visor, kneepads, black gloves and boots",
+    "scout": "a young man in a loud yellow and orange floral shirt, light blue jeans, white sneakers, curly blond hair",
+    "scrapper": "a scrapyard worker in an olive green work shirt, blue jeans, brown boots, grimy forearms, short hair",
+    "security": "a studio security man in a maroon blazer, white shirt and loose dark tie, navy trousers, black shoes",
+    "sniper": "a sniper in an olive drab field jacket, a red scarf, dark trousers, boots, short dark hair",
+    "stagehand": "a stagehand all in black: black tee, black cargo trousers, black shoes, a headset, a tool belt",
     "welder": "a salvage-yard welder in a soot-dark canvas work jacket, leather gloves, heavy brown work boots and a raised welding visor",
 }
 
@@ -56,11 +68,18 @@ def main():
         }
         req = urllib.request.Request("https://api.pixellab.ai/v2/create-image-bitforge", data=json.dumps(body).encode(),
                                      headers={"Authorization": "Bearer " + key(), "Content-Type": "application/json"})
-        try:
-            r = json.load(urllib.request.urlopen(req, timeout=300))
-        except urllib.error.HTTPError as e:
-            print(f"  ! {pose}: HTTP {e.code} {e.read()[:400]}")
-            continue
+        r = None
+        for attempt in range(8):
+            try:
+                r = json.load(urllib.request.urlopen(req, timeout=300)); break
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    time.sleep(20 * (attempt + 1))
+                    req = urllib.request.Request("https://api.pixellab.ai/v2/create-image-bitforge", data=json.dumps(body).encode(),
+                                                 headers={"Authorization": "Bearer " + key(), "Content-Type": "application/json"})
+                    continue
+                print(f"  ! {pose}: HTTP {e.code} {e.read()[:400]}"); break
+        if r is None: continue
         data = r["image"]["base64"].split(",")[-1]
         im = Image.open(io.BytesIO(base64.b64decode(data))).convert("RGBA")
         im.save(os.path.join(OUT, f"{look}_{pose}.png"))
