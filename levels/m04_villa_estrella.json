@@ -1654,8 +1654,8 @@
       "type": "sprite",
       "id": "villa_fountain",
       "pos": [
-        38,
-        38
+        56,
+        46
       ],
       "size": 1.0,
       "auto": true
@@ -1664,8 +1664,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        30,
-        44
+        69,
+        55
       ],
       "size": 0.8,
       "auto": true
@@ -1674,17 +1674,7 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        24,
-        52
-      ],
-      "size": 0.8,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_garden_statue",
-      "pos": [
-        42,
+        28,
         39
       ],
       "size": 0.8,
@@ -1694,8 +1684,18 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        33,
-        38
+        25,
+        52
+      ],
+      "size": 0.8,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_garden_statue",
+      "pos": [
+        10,
+        47
       ],
       "size": 0.8,
       "auto": true
@@ -1704,8 +1704,8 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        6,
-        49
+        23,
+        57
       ],
       "size": 0.9,
       "auto": true
@@ -1714,8 +1714,8 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        27,
-        49
+        19,
+        52
       ],
       "size": 0.9,
       "auto": true
@@ -1724,8 +1724,8 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        44,
-        49
+        68,
+        46
       ],
       "size": 0.9,
       "auto": true
@@ -1734,40 +1734,40 @@
       "type": "sprite",
       "id": "villa_flower_bed",
       "pos": [
-        6,
-        58
+        42,
+        37
       ],
       "size": 0.9,
       "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_wine_glasses",
+      "pos": [
+        40,
+        11
+      ],
+      "size": 0.6,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "villa_wine_glasses",
+      "pos": [
+        47,
+        14
+      ],
+      "size": 0.6,
+      "auto": true,
+      "floor": true
     },
     {
       "type": "sprite",
       "id": "villa_wine_glasses",
       "pos": [
         48,
-        15
-      ],
-      "size": 0.6,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_wine_glasses",
-      "pos": [
-        27,
-        19
-      ],
-      "size": 0.6,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_wine_glasses",
-      "pos": [
-        45,
-        11
+        6
       ],
       "size": 0.6,
       "auto": true,
@@ -1777,7 +1777,7 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
-        33,
+        30,
         20
       ],
       "size": 0.6,
@@ -1787,8 +1787,8 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
-        47,
-        1
+        44,
+        20
       ],
       "size": 0.6,
       "auto": true
@@ -1817,8 +1817,18 @@
       "type": "sprite",
       "id": "candelabra",
       "pos": [
+        35,
+        1
+      ],
+      "size": 0.6,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "candelabra",
+      "pos": [
         42,
-        20
+        22
       ],
       "size": 0.6,
       "auto": true
@@ -1839,16 +1849,6 @@
       "pos": [
         23,
         25
-      ],
-      "size": 0.6,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "candelabra",
-      "pos": [
-        44,
-        22
       ],
       "size": 0.6,
       "auto": true

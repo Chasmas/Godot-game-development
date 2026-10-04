@@ -87,6 +87,14 @@ def build(name):
     taken = [tuple(it["pos"]) for it in d["decor"] if "pos" in it]
     taken += [tuple(e["pos"]) for e in d.get("enemies", []) if "pos" in e]
     rng = random.Random(name)
+    hc = d.get("hero_car") or {}
+    keep_clear = []
+    for key in ("route_in", "route_out"):
+        r = hc.get(key, [])
+        for (ax, ay), (bx, by) in zip(r, r[1:]):
+            n = max(1, int(max(abs(bx - ax), abs(by - ay)) * 2))
+            keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
+    if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
     for sid, count, zone, chars, ex in RULES[name]:
         zx, zy, zw, zh = d["zones"][zone]
@@ -110,6 +118,7 @@ def build(name):
             if ex.get("wall") and not near_wall: continue
             if not ex.get("wall") and near_wall and clear > 1: continue
             if any(abs(x - tx) + abs(y - ty) < 4 for tx, ty in taken): continue
+            if any(abs(x - kx) < 4 and abs(y - ky) < 4 for kx, ky in keep_clear): continue
             it = {"type": "sprite", "id": sid, "pos": [x, y], "size": ex.get("size", 1.0), "auto": True}
             if ex.get("floor"): it["floor"] = True
             if ex.get("rot"): it["rot"] = rng.choice([0, 25, 45, 90, 135])
