@@ -117,6 +117,10 @@ func _simulate(b: Bullet, step: float) -> bool:
 			info.amount = b.weapon.damage
 			info.knockback = b.weapon.knockback
 			result = str(col.take_damage(info))
+		if b.shooter is Player and (result == "killed" or result == "hurt"):
+			# hit confirm: a beat of weight when the player's shot lands
+			Events.camera_shake.emit(1.6 if result == "killed" else 0.7)
+			Events.hit_stop.emit(0.04 if result == "killed" else 0.015)
 		match result:
 			"killed", "hurt", "absorbed":
 				_resolve_group(b.group, true)
