@@ -8,6 +8,7 @@ var kind := "table"
 var rect_size := Vector2(16, 16)
 var tint := Color.WHITE
 var variant := 0
+var style := ""
 
 func setup(p_kind: String, rect: Rect2, p_variant := 0) -> void:
 	kind = p_kind
@@ -66,7 +67,9 @@ func _painted() -> Texture2D:
 	match kind:
 		"car":
 			return ArtLib.sprite(ArtLib.CARS[variant % ArtLib.CARS.size()])
-		"wreck", "bed", "lounger", "washer", "crate", "table", "desk", "cage":
+		"table":
+			return ArtLib.sprite("table_dining" if style == "dining" else "table")
+		"wreck", "bed", "lounger", "washer", "crate", "desk", "cage":
 			return ArtLib.sprite(kind)
 	return null
 

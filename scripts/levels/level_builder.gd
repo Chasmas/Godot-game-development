@@ -495,6 +495,8 @@ func _add_furniture_piece(c: String, rect: Rect2, x: int, y: int, minp: Vector2i
 		if variant == 4:
 			variant = 2
 	f.setup("car" if kind == "dumpster" else kind, rect, variant)
+	if kind == "table" and str(data.get("id", "")) == "m04_villa_estrella":
+		f.style = "dining"   # linen, not diner laminate
 	level.props_root.add_child(f)
 
 # ---------------------------------------------------------------- actors
