@@ -124,7 +124,11 @@ class CallPanel extends Control:
 		var blink := line._state != "ring" or fmod(line._t, 0.6) < 0.4
 		if blink:
 			draw_string(UIStyle.font_bold(), Vector2(98, 30), head, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
-		draw_string(UIStyle.font_display(), Vector2(98, 58), who, HORIZONTAL_ALIGNMENT_LEFT, 240, 20, Color.html("#" + str(sd.get("color", "f4f0e8"))))
+		var name_fs := 20
+		var name_room := size.x - 98.0 - 84.0   # keep clear of the handset
+		while name_fs > 11 and UIStyle.font_display().get_string_size(who, HORIZONTAL_ALIGNMENT_LEFT, -1, name_fs).x > name_room:
+			name_fs -= 1
+		draw_string(UIStyle.font_display(), Vector2(98, 58), who, HORIZONTAL_ALIGNMENT_LEFT, name_room, name_fs, Color.html("#" + str(sd.get("color", "f4f0e8"))))
 		# the handset: a neon line drawing (walkie or phone), shaking per ring
 		var c := Vector2(size.x - 46, 46) + Vector2(sin(line._t * 70.0), cos(line._t * 55.0)) * 3.0 * line._shake
 		var rot := -0.5 + sin(line._t * 40.0) * 0.25 * line._shake

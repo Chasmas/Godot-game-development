@@ -11,6 +11,7 @@ STYLE = ("highly detailed isometric-style pixel art game asset, three-quarter vi
          "rich material texture, dense small details, strong warm and cool rim lighting, ambient occlusion, "
          "clean silhouette, limited but rich colour ramps, crisp pixels, no background")
 PROPS = {
+  "grave": (128, 192, "weathered grey stone headstone with a rounded top and a carved cross, cracked, patches of moss, fresh red roses and a small candle at its foot, mound of dark soil"),
   # --- motel ---
   "hq_motel_bed": (160, 128, "1980s motel double bed, rumpled orange floral bedspread, two pillows, wooden headboard against a wall"),
   "hq_persian_rug": (192, 128, "ornate persian rug seen from above, deep red and gold geometric border, intricate medallion, worn fringe tassels"),

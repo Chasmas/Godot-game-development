@@ -137,7 +137,9 @@ func _ready() -> void:
 	objective_label = _lbl(Vector2.ZERO, 14, UIStyle.CYAN, UIStyle.font_bold())
 	objective_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	objective_label.add_theme_constant_override("outline_size", 5)
-	UIStyle.place(objective_label, Control.PRESET_CENTER_TOP, Vector2(-300, 12), Vector2(600, 20))
+	objective_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	objective_label.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	UIStyle.place(objective_label, Control.PRESET_CENTER_TOP, Vector2(-250, 10), Vector2(500, 36))
 	hint_label = _lbl(Vector2.ZERO, 15, UIStyle.PAPER, UIStyle.font_bold())
 	hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	hint_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
