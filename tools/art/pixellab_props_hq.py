@@ -11,6 +11,20 @@ STYLE = ("highly detailed isometric-style pixel art game asset, three-quarter vi
          "rich material texture, dense small details, strong warm and cool rim lighting, ambient occlusion, "
          "clean silhouette, limited but rich colour ramps, crisp pixels, no background")
 PROPS = {
+  # --- dirt road details (yard) ---
+  "dirt_ruts": (128, 64, "two parallel dark tyre ruts pressed into dry orange desert dirt seen from directly above, dust"),
+  "dirt_pebbles": (96, 64, "scatter of small stones and pebbles on dry desert dirt seen from directly above, long shadows"),
+  "dirt_tracks": (96, 64, "boot prints and dog paw prints pressed in dusty dirt seen from directly above"),
+  "dirt_weeds": (64, 64, "dry desert weeds and a small tuft of dead grass on dirt seen from directly above"),
+  "dirt_oilspill": (80, 64, "dark dried oil stain soaked into desert dirt seen from directly above, blackish brown"),
+  "dirt_boards": (96, 64, "a few broken wooden planks lying on dirt seen from directly above, nails, splinters"),
+  # --- villa path details ---
+  "path_pavers": (96, 64, "a patch of old terracotta paving stones with moss between them seen from directly above"),
+  "path_petals": (96, 64, "fallen red rose petals scattered on a stone path seen from directly above"),
+  "path_leaves": (96, 64, "dry brown leaves and a few twigs on a stone path seen from directly above"),
+  "path_puddle": (96, 64, "shallow puddle on a terracotta path reflecting warm lantern light seen from directly above, ripples, transparent edges"),
+  "path_crack": (96, 80, "crack in an old stone paving with a tuft of grass and tiny white flowers seen from directly above"),
+  "path_lantern_pool": (96, 96, "round pool of warm golden lantern light spilling on a stone path seen from directly above, soft glow"),
   # --- road decals (seen from directly above, painted on asphalt) ---
   "road_manhole": (64, 64, "round cast iron manhole cover on dark asphalt seen from directly above, rust, concentric ridges, worn"),
   "road_crosswalk": (128, 96, "zebra crosswalk white stripes painted on dark worn asphalt seen from directly above, chipped paint, tyre scuffs"),
@@ -92,7 +106,7 @@ def clear_backdrop(im):
 
 def gen(name, out):
     w, h, desc = PROPS[name]
-    body = {"description": desc + ", " + (STYLE if not name.startswith("road_") else STYLE.replace("three-quarter view from above","view straight down from directly above, flat top-down")), "negative_description": "blurry, flat, noisy, text, watermark, low detail, front view, side view",
+    body = {"description": desc + ", " + (STYLE if not name.startswith(("road_", "dirt_", "path_")) else STYLE.replace("three-quarter view from above","view straight down from directly above, flat top-down")), "negative_description": "blurry, flat, noisy, text, watermark, low detail, front view, side view",
             "image_size": {"width": w, "height": h}, "no_background": True,
             "detail": "highly detailed", "shading": "highly detailed shading", "outline": "single color black outline",
             "text_guidance_scale": 8.0}

@@ -1877,6 +1877,61 @@
     },
     {
       "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        10,
+        50
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        69,
+        51
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        40,
+        50
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        25,
+        51
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        55,
+        50
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
         31,
@@ -2092,7 +2147,7 @@
       "id": "hq_sun_loungers",
       "pos": [
         40,
-        48
+        46
       ],
       "size": 0.72,
       "auto": true

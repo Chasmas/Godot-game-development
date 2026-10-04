@@ -114,6 +114,13 @@ def road_rules(zone, chars, n=1):
         ("road_stop_line", 2 * n, zone, chars, dict(r, size=1.2, gap=14)),
     ]
 
+PATH_RULES = {
+ "m02_yermo_salvage": [("dirt_pebbles", 6, "exterior", ";", dict(floor=True, size=1.0, gap=7)),
+                       ("dirt_weeds", 6, "exterior", ";", dict(floor=True, size=0.9, gap=7)),
+                       ("dirt_boards", 3, "exterior", ";", dict(floor=True, size=1.0, gap=10))],
+ "m04_villa_estrella": [("path_crack", 5, "exterior", ";", dict(floor=True, size=0.9, gap=8))],
+}
+
 def tidy(name, d):
     """Drop older decor that sits somewhere it makes no sense (found by a close-up audit)."""
     m = d["map"]; H, W = len(m), len(m[0])
@@ -163,7 +170,7 @@ def build(name):
             keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
-    rules = list(RULES[name]) + (road_rules(*ROAD_ZONES[name]) if name in ROAD_ZONES else []) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
+    rules = list(RULES[name]) + (road_rules(*ROAD_ZONES[name]) if name in ROAD_ZONES else []) + PATH_RULES.get(name, []) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
 
     def ok(x, y, ex):
         clear = ex.get("clear", 1)
