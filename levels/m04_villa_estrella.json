@@ -1879,8 +1879,8 @@
       "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
-        27,
-        18
+        31,
+        14
       ],
       "size": 0.72,
       "auto": true
@@ -1889,37 +1889,55 @@
       "type": "sprite",
       "id": "hq_banquet_table",
       "pos": [
-        47,
-        6
+        41,
+        14
       ],
       "size": 0.72,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_persian_rug",
+      "id": "hq_grand_planter",
       "pos": [
-        31,
-        14
+        26,
+        2
       ],
       "size": 0.72,
-      "auto": true,
-      "floor": true
+      "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_persian_rug",
+      "id": "hq_grand_planter",
       "pos": [
-        39,
-        3
+        46,
+        2
       ],
       "size": 0.72,
-      "auto": true,
-      "floor": true
+      "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_ornate_sofa",
+      "id": "hq_grand_planter",
+      "pos": [
+        34,
+        8
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_grand_planter",
+      "pos": [
+        38,
+        8
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_gilt_mirror",
       "pos": [
         25,
         20
@@ -1929,9 +1947,9 @@
     },
     {
       "type": "sprite",
-      "id": "hq_ornate_sofa",
+      "id": "hq_gilt_mirror",
       "pos": [
-        45,
+        43,
         1
       ],
       "size": 0.72,
@@ -1939,7 +1957,7 @@
     },
     {
       "type": "sprite",
-      "id": "hq_ornate_sofa",
+      "id": "hq_gilt_mirror",
       "pos": [
         44,
         20
@@ -1949,10 +1967,42 @@
     },
     {
       "type": "sprite",
-      "id": "hq_fireplace",
+      "id": "hq_persian_rug",
       "pos": [
         27,
+        18
+      ],
+      "size": 0.72,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_persian_rug",
+      "pos": [
+        47,
+        6
+      ],
+      "size": 0.72,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_ornate_sofa",
+      "pos": [
+        29,
         1
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_ornate_sofa",
+      "pos": [
+        49,
+        8
       ],
       "size": 0.72,
       "auto": true

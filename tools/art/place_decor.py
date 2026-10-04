@@ -85,7 +85,9 @@ RULES_HQ = {
   ("hq_makeup_station", 2, "wardrobe", ".,_", dict(size=0.72, wall=True, clear=1)),
  ],
  "m04_villa_estrella": [
-  ("hq_banquet_table", 2, "ballroom", "_.,", dict(size=0.72, clear=2)),
+  ("hq_banquet_table", 4, "ballroom", "_.,", dict(size=0.72, clear=2, mode="mirror", gap=6)),
+  ("hq_grand_planter", 4, "ballroom", "_.,", dict(size=0.72, clear=1, mode="mirror", gap=6)),
+  ("hq_gilt_mirror", 3, "ballroom", "_.,", dict(size=0.72, clear=1, wall=True)),
   ("hq_persian_rug", 2, "ballroom", "_.", dict(size=0.72, floor=True, clear=2)),
   ("hq_ornate_sofa", 3, "ballroom", "_.,", dict(size=0.72, wall=True, clear=1)),
   ("hq_fireplace", 1, "ballroom", "_.,", dict(size=0.72, wall=True, clear=1)),
