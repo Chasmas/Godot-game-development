@@ -243,8 +243,20 @@ func _build_map() -> void:
 func talking() -> bool:
 	return Dialogue.active or not get_tree().get_nodes_in_group("intro_call").is_empty() or not get_tree().get_nodes_in_group("level_intro").is_empty()
 
+var _tip_busy := false
+var _tip_quiet_until := 0.0
+
+## Prompts come one at a time with a breath between them, so the first minutes aren't a wall of text.
+func _track_tip_gap() -> void:
+	var busy: bool = (tips != null and not tips._cur.is_empty()) or (tutorials != null and tutorials.showing())
+	if _tip_busy and not busy:
+		_tip_quiet_until = Time.get_ticks_msec() / 1000.0 + 9.0
+	_tip_busy = busy
+
 func may_show(who: Object) -> bool:
 	if talking():
+		return false
+	if (who == tips or who == tutorials) and Time.get_ticks_msec() / 1000.0 < _tip_quiet_until:
 		return false
 	# the checkpoint tape has the right-hand corner while it's up
 	for c in root.get_children():
@@ -259,6 +271,7 @@ func may_show(who: Object) -> bool:
 var _talk_fade := 1.0
 
 func _process(delta: float) -> void:
+	_track_tip_gap()
 	var rd := delta / maxf(Engine.time_scale, 0.03)
 	# the dialogue box sits over the bottom-left gauges: they step aside
 	_talk_fade = move_toward(_talk_fade, 0.0 if Dialogue.active else 1.0, rd * 5.0)
