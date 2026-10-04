@@ -116,10 +116,9 @@ func setup(p_palette: String) -> void:
 	_manner = MANNER.get(SpriteForge.base_name(p_palette), {"sway": 0.04, "lean": 0.5, "bounce": 0.3})
 	legs.texture = SpriteLib.legs(0, palette)
 	set_weapon(null)
-	# Cass now has an approved top-down PixelLab pose set.  Keep her in the
-	# normal 2D combat rig when it is present: that preserves weapon grips,
-	# recoil and smooth aiming instead of swapping to the older 3D cast.
-	if p_palette == "cass" and not SpriteForge.has_pose_art(p_palette) and OS.get_environment("CAST_LEGACY") != "1":
+	# Cass is the rendered full-body clips (the same look as her death); the
+	# 2D pose rig is only for CAST_2D=1.
+	if p_palette == "cass" and OS.get_environment("CAST_2D") != "1":
 		var candidate := CastSprite.new()
 		if candidate.configure("cass"):
 			cast_sprite = candidate
