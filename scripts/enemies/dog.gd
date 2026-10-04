@@ -51,6 +51,7 @@ var _eye_light: PointLight2D
 func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	super(p_data, p_level, p_facing)
 	visual.visible = false
+	light_mask = 2   # same light layer as the other characters, or room lights blow the painting out
 	hit_radius = 5.5
 	colors = DOG_COLORS.get(data.palette, DOG_COLORS["shepherd"])
 	_t = randf() * 10.0
