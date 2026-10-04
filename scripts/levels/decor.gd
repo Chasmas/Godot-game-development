@@ -79,6 +79,18 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 	pool.builder = builder
 	root.add_child(pool)
 
+## A soft dark pool under a standing prop so it sits on the floor instead of floating.
+static func _contact_shadow(p: Vector2, sz: Vector2, rot: float) -> Sprite2D:
+	var sh := Sprite2D.new()
+	sh.texture = SpriteLib.light_texture(128)
+	sh.modulate = Color(0, 0, 0, 0.42)
+	sh.position = p + Vector2(1.5, sz.y * 0.28)
+	sh.rotation = rot
+	sh.scale = Vector2(sz.x * 1.05, sz.y * 0.62) / 128.0
+	sh.z_index = -6
+	sh.light_mask = 2
+	return sh
+
 ## Light colour/radius for props that are real light sources.
 ## Keeps Decor self-contained — no data file needed.
 static func _light_cfg(id: String) -> Dictionary:
