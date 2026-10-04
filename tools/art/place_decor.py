@@ -51,6 +51,54 @@ RULES = {
  ],
 }
 
+HQ = os.path.join(ROOT, "assets", "art", "pixellab_world", "sprites_hq")
+# the big dense kit (tools/art/pixellab_props_hq.py); rules whose sprite isn't generated yet are skipped
+RULES_HQ = {
+ "m01_sunset_palms": [
+  ("hq_pool_lounger_set", 3, "courtyard", "=", dict(size=1.0, clear=2, edge_of="~")),
+  ("hq_pool_cooler", 2, "courtyard", "=", dict(size=1.0)),
+  ("hq_palm_planter", 4, "courtyard", "=", dict(size=1.0, clear=1)),
+  ("hq_motel_dresser", 4, "north_wing", ".", dict(size=1.0, wall=True, clear=1)),
+  ("hq_persian_rug", 3, "north_wing", ".", dict(size=1.0, floor=True, clear=2)),
+  ("hq_motel_vending", 2, "lobby", ",", dict(size=1.0, wall=True)),
+  ("hq_motel_ice_machine", 1, "lobby", ",", dict(size=1.0, wall=True)),
+ ],
+ "m02_yermo_salvage": [
+  ("hq_junk_heap", 3, "exterior", ";", dict(size=1.0, clear=2)),
+  ("hq_crate_stack", 5, "exterior", ";", dict(size=1.0, clear=1)),
+  ("hq_fire_barrel", 4, "exterior", ";", dict(size=1.0, clear=1)),
+  ("hq_forklift", 2, "exterior", ";", dict(size=1.0, clear=2)),
+  ("hq_tire_wall", 2, "exterior", ";", dict(size=1.0, clear=1)),
+  ("hq_workbench", 2, "warehouse", "+:", dict(size=1.0, wall=True, clear=1)),
+  ("hq_engine_block", 2, "warehouse", "+:", dict(size=1.0, clear=1)),
+  ("hq_generator", 2, "warehouse", "+:", dict(size=1.0, wall=True, clear=1)),
+ ],
+ "m03_khsc_studios": [
+  ("hq_light_stand", 4, "stage", "-:", dict(size=1.0, clear=1)),
+  ("hq_camera_dolly", 2, "stage", "-:", dict(size=1.0, clear=2)),
+  ("hq_directors_chairs", 3, "stage", "-:", dict(size=1.0, clear=1)),
+  ("hq_set_flat", 2, "stage", "-", dict(size=1.0, wall=True, clear=1)),
+  ("hq_catering_table", 2, "stage", "-:", dict(size=1.0, clear=1)),
+  ("hq_monitor_bank", 2, "offices", ".,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_costume_rack", 2, "wardrobe", ".,_", dict(size=1.0, clear=1)),
+  ("hq_makeup_station", 2, "wardrobe", ".,_", dict(size=1.0, wall=True, clear=1)),
+ ],
+ "m04_villa_estrella": [
+  ("hq_banquet_table", 2, "ballroom", "_.,", dict(size=1.0, clear=2)),
+  ("hq_persian_rug", 2, "ballroom", "_.", dict(size=1.0, floor=True, clear=2)),
+  ("hq_ornate_sofa", 3, "ballroom", "_.,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_fireplace", 1, "ballroom", "_.,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_display_cabinet", 2, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_bar_cabinet", 1, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_stair_runner", 1, "foyer", "_.,", dict(size=1.0, wall=True, clear=1)),
+  ("hq_grand_planter", 4, "foyer", "_.,", dict(size=1.0, clear=1)),
+  ("hq_garden_bench", 4, "exterior", "\"", dict(size=1.0, clear=1)),
+  ("hq_hedge", 6, "exterior", "\"", dict(size=1.0, clear=1)),
+  ("hq_sun_loungers", 2, "exterior", "\"", dict(size=1.0, clear=1, edge_of="~")),
+  ("hq_grand_planter", 3, "exterior", "\"", dict(size=1.0, clear=1)),
+ ],
+}
+
 def tidy(name, d):
     """Drop older decor that sits somewhere it makes no sense (found by a close-up audit)."""
     m = d["map"]; H, W = len(m), len(m[0])
@@ -96,7 +144,8 @@ def build(name):
             keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
-    for sid, count, zone, chars, ex in RULES[name]:
+    rules = list(RULES[name]) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
+    for sid, count, zone, chars, ex in rules:
         zx, zy, zw, zh = d["zones"][zone]
         cells = [(x, y) for y in range(zy, min(zy + zh, H)) for x in range(zx, min(zx + zw, W)) if ch(x, y) in chars]
         rng.shuffle(cells)

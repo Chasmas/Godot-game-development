@@ -105,6 +105,24 @@ static func _light_cfg(id: String) -> Dictionary:
 			return {"color": Color(1.0, 0.42, 0.06), "radius": 64.0, "energy": 0.9, "shadows": true, "flicker": true}
 		"studio_overhead_light_rig":
 			return {"color": Color(0.88, 0.92, 1.0), "radius": 88.0, "energy": 1.1, "shadows": true}
+		"hq_fire_barrel":
+			return {"color": Color(1.0, 0.45, 0.08), "radius": 70.0, "energy": 0.95, "shadows": true, "flicker": true, "offset": Vector2(0, -6)}
+		"hq_fireplace":
+			return {"color": Color(1.0, 0.5, 0.15), "radius": 100.0, "energy": 1.0, "flicker": true}
+		"hq_chandelier_big":
+			return {"color": Color(1.0, 0.86, 0.58), "radius": 110.0, "energy": 0.9}
+		"hq_light_stand":
+			return {"color": Color(0.95, 0.97, 1.0), "radius": 96.0, "energy": 1.1, "shadows": true}
+		"hq_neon_beer_sign":
+			return {"color": Color(1.0, 0.25, 0.35), "radius": 54.0, "energy": 0.7, "flicker": true}
+		"hq_motel_vending":
+			return {"color": Color(0.5, 0.85, 1.0), "radius": 48.0, "energy": 0.6}
+		"hq_monitor_bank":
+			return {"color": Color(0.4, 0.85, 1.0), "radius": 70.0, "energy": 0.7, "flicker": true}
+		"hq_display_cabinet", "hq_bar_cabinet":
+			return {"color": Color(1.0, 0.8, 0.5), "radius": 52.0, "energy": 0.5}
+		"hq_makeup_station":
+			return {"color": Color(1.0, 0.88, 0.7), "radius": 60.0, "energy": 0.7}
 		"floor_lamp":
 			return {"color": Color(1.0, 0.82, 0.52), "radius": 72.0, "energy": 0.8}
 		"chandelier":
