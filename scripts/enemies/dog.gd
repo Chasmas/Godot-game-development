@@ -672,6 +672,19 @@ func _draw_sleeping(C: Dictionary, rot: float, ink: Color) -> void:
 	# flopped over, tail trailing - it reads as "dog, asleep" at a glance
 	var br := sin(_t * 1.8)
 	var ribs := 1.0 + br * 0.07
+	var key := "dog_%s_down" % str(data.palette if data else "shepherd")
+	if not _bodies.has(key):
+		var pth := "res://assets/art/cast/%s.png" % key
+		_bodies[key] = load(pth) if ResourceLoader.exists(pth) else null
+	var tex: Texture2D = _bodies[key]
+	if tex:
+		# the breed's painting lying on its side, flanks rising and falling
+		var L := 30.0
+		var H := L * float(tex.get_height()) / float(tex.get_width())
+		draw_set_transform(Vector2.ZERO, rot, Vector2(1.0, ribs) * DRAW_SCALE)
+		draw_texture_rect(tex, Rect2(Vector2(-L * 0.5, -H * 0.5), Vector2(L, H)), false)
+		_draw_zzz()
+		return
 	var base: Color = C.base
 	var shade: Color = C.shade
 	var light: Color = C.light
@@ -724,7 +737,9 @@ func _draw_sleeping(C: Dictionary, rot: float, ink: Color) -> void:
 	var eye := PackedVector2Array([(hd + Vector2(1.0, -0.6)).rotated(rot), (hd + Vector2(1.6, -0.25)).rotated(rot), (hd + Vector2(2.2, -0.6)).rotated(rot)])
 	draw_polyline(eye, ink, 0.7)
 	draw_line((hd + Vector2(-2.9, -1.4)).rotated(rot), (hd + Vector2(-2.6, 1.8)).rotated(rot), C.get("collar", Color(0.7, 0.1, 0.1)), 1.2)
-	# Zzz
+	_draw_zzz()
+
+func _draw_zzz() -> void:
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	var zt := fmod(_t * 0.6, 1.0)
 	for i in 2:
