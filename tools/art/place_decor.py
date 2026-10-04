@@ -40,9 +40,9 @@ RULES = {
   ("studio_film_reel_pair", 1, "warehouse", "_.", dict(size=0.6, floor=True)),
  ],
  "m04_villa_estrella": [
-  ("villa_fountain", 1, "exterior", "\"", dict(size=1.0, clear=3)),
-  ("villa_garden_statue", 4, "exterior", "\"", dict(size=0.8, clear=1, mode="mirror", gap=10)),
-  ("villa_flower_bed", 4, "exterior", "\"", dict(size=0.9, clear=2, mode="mirror", gap=8)),
+  ("villa_fountain", 1, "exterior", "\"", dict(size=1.0, clear=3, avoid=";~")),
+  ("villa_garden_statue", 4, "exterior", "\"", dict(size=0.8, clear=1, avoid=";~", mode="mirror", gap=10)),
+  ("villa_flower_bed", 4, "exterior", "\"", dict(size=0.9, clear=2, avoid=";~", mode="mirror", gap=8)),
   ("villa_wine_glasses", 3, "ballroom", "_.,", dict(size=0.6, floor=True)),
   ("candelabra", 6, "ballroom", "_.,", dict(size=0.6, wall=True, mode="mirror", gap=5)),
   ("candelabra", 3, "foyer", "_.,", dict(size=0.6, wall=True)),
@@ -96,9 +96,9 @@ RULES_HQ = {
   ("hq_bar_cabinet", 1, "foyer", "_.,", dict(size=0.72, wall=True, clear=1)),
   ("hq_stair_runner", 1, "foyer", "_.,", dict(size=0.72, wall=True, clear=1)),
   ("hq_grand_planter", 4, "foyer", "_.,", dict(size=0.72, clear=1, mode="mirror", gap=4)),
-  ("hq_garden_bench", 4, "exterior", "\"", dict(size=0.72, clear=1, mode="mirror", gap=8)),
+  ("hq_garden_bench", 4, "exterior", "\"", dict(size=0.72, clear=1, avoid=";~", mode="mirror", gap=8)),
   ("hq_sun_loungers", 2, "exterior", "\"", dict(size=0.72, clear=1, edge_of="~")),
-  ("hq_grand_planter", 3, "exterior", "\"", dict(size=0.72, clear=1)),
+  ("hq_grand_planter", 3, "exterior", "\"", dict(size=0.72, clear=1, avoid=";~")),
  ],
 }
 
@@ -182,6 +182,7 @@ def build(name):
             ring = [(a, b) for a, b in ring if ch(a, b) != ex["edge_of"]]
         okc = (FLOORS if ("~" in ex["chars"] or ex.get("edge_of")) else FLOORS - {"~"}) | ({"#"} if ex.get("wall") else set()) | ({ex["near"]} if ex.get("near") else set())
         if not all(ch(a, b) in okc for a, b in ring if (a, b) != (x, y)): return False
+        if ex.get("avoid") and any(ch(a, b) in ex["avoid"] for a, b in ring): return False
         if ex.get("near"):
             if not any(ch(x + dx, y + dy) == ex["near"] for dx in range(-2, 3) for dy in range(-2, 3)): return False
             if any(ch(x + dx, y + dy) == "#" for dx in (-1, 0, 1) for dy in (-1, 0, 1)): return False

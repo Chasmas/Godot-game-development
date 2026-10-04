@@ -1634,8 +1634,8 @@
       "type": "sprite",
       "id": "villa_fountain",
       "pos": [
-        16,
-        52
+        56,
+        45
       ],
       "size": 1.0,
       "auto": true
@@ -1664,8 +1664,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        33,
-        52
+        31,
+        53
       ],
       "size": 0.8,
       "auto": true
@@ -1674,8 +1674,8 @@
       "type": "sprite",
       "id": "villa_garden_statue",
       "pos": [
-        38,
-        52
+        40,
+        53
       ],
       "size": 0.8,
       "auto": true
@@ -1696,26 +1696,6 @@
       "pos": [
         49,
         37
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_flower_bed",
-      "pos": [
-        33,
-        40
-      ],
-      "size": 0.9,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "villa_flower_bed",
-      "pos": [
-        38,
-        40
       ],
       "size": 0.9,
       "auto": true
@@ -1901,7 +1881,18 @@
       "type": "sprite",
       "id": "path_crack",
       "pos": [
-        40,
+        37,
+        39
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "path_crack",
+      "pos": [
+        47,
         50
       ],
       "size": 0.9,
@@ -1912,19 +1903,8 @@
       "type": "sprite",
       "id": "path_crack",
       "pos": [
-        25,
+        28,
         51
-      ],
-      "size": 0.9,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "path_crack",
-      "pos": [
-        55,
-        50
       ],
       "size": 0.9,
       "auto": true,
@@ -2147,7 +2127,7 @@
       "id": "hq_sun_loungers",
       "pos": [
         40,
-        46
+        48
       ],
       "size": 0.72,
       "auto": true
