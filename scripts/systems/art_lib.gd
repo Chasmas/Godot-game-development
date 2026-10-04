@@ -30,11 +30,18 @@ static func sprite(id: String) -> Texture2D:
 		return null
 	var key := "sprite:" + id
 	if not _cache.has(key):
-		var src := _load("res://assets/art/sprites/%s.png" % id)
+		var density := DENSITY
+		var hq_path := "res://assets/art/pixellab_world/sprites_hq/%s.png" % id
+		var src: Texture2D
+		if ResourceLoader.exists(hq_path):
+			src = load(hq_path)
+			density = DENSITY * 2   # quality redo: twice the pixels, same size on screen
+		else:
+			src = _load("res://assets/art/sprites/%s.png" % id)
 		var img: Image = src.get_image() if src else null
 		if img:
 			var t := ImageTexture.create_from_image(img)
-			t.set_size_override(Vector2i(img.get_width() / DENSITY, img.get_height() / DENSITY))
+			t.set_size_override(Vector2i(img.get_width() / density, img.get_height() / density))
 			_cache[key] = t
 		else:
 			_cache[key] = src
