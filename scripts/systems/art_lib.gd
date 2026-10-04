@@ -25,6 +25,11 @@ static func _load(path: String) -> Texture2D:
 ## get_width() in the game still works in the same units - with the detail.
 const DENSITY := 2
 
+## The original painting beats both PixelLab redos for these: keep it.
+const KEEP_ORIGINAL := ["bar_cart", "cigarette", "desk", "ice_machine", "paper", "pickup_cash", "pickup_cassette",
+	"plant", "plant_pot", "potted_palm", "prop_calendar", "prop_room_plate", "security_camera", "statue",
+	"vase_flowers", "pallet", "prop_trash_bag", "tv_crt", "folding_chair", "chandelier", "jukebox"]
+
 static func sprite(id: String) -> Texture2D:
 	if not enabled():
 		return null
@@ -33,7 +38,10 @@ static func sprite(id: String) -> Texture2D:
 		var density := DENSITY
 		var hq_path := "res://assets/art/pixellab_world/sprites_hq/%s.png" % id
 		var src: Texture2D
-		if ResourceLoader.exists(hq_path):
+		if id in KEEP_ORIGINAL:
+			var orig := "res://assets/art/sprites/%s.png" % id
+			src = load(orig) if ResourceLoader.exists(orig) else null
+		elif ResourceLoader.exists(hq_path):
 			src = load(hq_path)
 			density = DENSITY * 2   # quality redo: twice the pixels, same size on screen
 		else:

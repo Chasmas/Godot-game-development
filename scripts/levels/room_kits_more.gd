@@ -176,6 +176,11 @@ const PAINTED := {
 	"jukebox": ["jukebox", Vector2(13, 11)], "pinball": ["pinball", Vector2(9, 14)],
 	"pallet": ["pallet", Vector2(15, 11)], "workbench": ["workbench", Vector2(19, 9)],
 	"tires": ["tyre_stack", Vector2(10, 10)],
+	"chair_ornate": ["wooden_chair", Vector2(9, 9)], "filing": ["filing_cabinet", Vector2(10, 11)],
+	"forklift": ["hq_forklift", Vector2(18, 15)], "makeup_table": ["hq_makeup_station", Vector2(16, 11)],
+	"monitor_stack": ["tv_crt", Vector2(11, 9)], "director_chair": ["director_chair", Vector2(10, 9)],
+	"apple_box": ["studio_apple_box", Vector2(9, 7)], "coat_rack": ["clothes_rack", Vector2(10, 10)],
+	"barrel_trio": ["yard_oil_barrel_cluster", Vector2(15, 13)], "reading_lamp": ["floor_lamp", Vector2(8, 8)],
 }
 
 static func draw_painted(ci: CanvasItem, k: String) -> bool:
