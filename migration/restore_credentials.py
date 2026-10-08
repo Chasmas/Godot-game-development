@@ -12,4 +12,10 @@ for name,value in data.items():
             with winreg.CreateKey(winreg.HKEY_CURRENT_USER,'Environment') as reg:winreg.SetValueEx(reg,name,0,winreg.REG_SZ,value)
         filename={'ELEVENLABS_API_KEY':'.elevenlabs_key','PIXELLAB_API_KEY':'.pixellab_key','MESHY_API_KEY':'.meshy_key'}.get(name)
         if filename:(Path.home()/filename).write_text(value,encoding='utf-8')
+if os.name=='nt':
+    import ctypes
+    result=ctypes.c_size_t()
+    send=ctypes.windll.user32.SendMessageTimeoutW
+    send.argtypes=[ctypes.c_void_p,ctypes.c_uint,ctypes.c_size_t,ctypes.c_wchar_p,ctypes.c_uint,ctypes.c_uint,ctypes.POINTER(ctypes.c_size_t)]
+    send(0xffff,0x001A,0,'Environment',2,5000,ctypes.byref(result))
 print('Credentials restored locally. Restart Codex so it receives updated environment variables.')

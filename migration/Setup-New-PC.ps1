@@ -14,7 +14,11 @@ function Install-Package([string]$Id) {
 if (-not $CheckOnly) {
     if (-not (Get-Command winget -ErrorAction SilentlyContinue)) { throw 'Install Windows App Installer first.' }
     if (-not (Get-Command git -ErrorAction SilentlyContinue)) { Install-Package 'Git.Git' }
-    if (-not (Get-Command py -ErrorAction SilentlyContinue)) { Install-Package 'Python.Python.3.13' }
+    $python313Present = $false
+    if (Get-Command py -ErrorAction SilentlyContinue) {
+        try { & py -3.13 -c 'import sys; assert sys.version_info[:2] == (3,13)' 2>$null; $python313Present = ($LASTEXITCODE -eq 0) } catch { $python313Present = $false }
+    }
+    if (-not $python313Present) { Install-Package 'Python.Python.3.13' }
     if (-not (Get-Command winget -ErrorAction SilentlyContinue)) { throw 'Install Windows App Installer (winget), then reopen this launcher.' }
     $env:Path = [Environment]::GetEnvironmentVariable('Path','Machine')+';'+[Environment]::GetEnvironmentVariable('Path','User')
     Run-Native 'git' @('lfs','install','--local')

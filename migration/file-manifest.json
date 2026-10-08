@@ -143999,7 +143999,7 @@
     },
     {
       "path": "migration/RESUME_HANDOFF.md",
-      "size": 6640
+      "size": 7231
     },
     {
       "path": "migration/START-HERE.cmd",
@@ -144011,7 +144011,7 @@
     },
     {
       "path": "migration/Setup-New-PC.ps1",
-      "size": 4800
+      "size": 5038
     },
     {
       "path": "migration/blender-current-windows.zip",
@@ -144034,6 +144034,54 @@
       "size": 86239930
     },
     {
+      "path": "migration/reference-images/3649787-witchbrook1.webp",
+      "size": 411228
+    },
+    {
+      "path": "migration/reference-images/Sem t\u00edtulo.png",
+      "size": 4005519
+    },
+    {
+      "path": "migration/reference-images/StockCake-Automated_Pixel_Factory-2131862-medium.jpg",
+      "size": 83991
+    },
+    {
+      "path": "migration/reference-images/cc344b2f-1fed-4d1f-b019-86580f64ab28.jpg",
+      "size": 334828
+    },
+    {
+      "path": "migration/reference-images/codex-clipboard-9183a8c1-7ed2-48af-8ef3-b5dc84b95fbd.png",
+      "size": 203004
+    },
+    {
+      "path": "migration/reference-images/codex-clipboard-b53e4389-5e9e-4353-b8de-b7530e1b1514.png",
+      "size": 1038055
+    },
+    {
+      "path": "migration/reference-images/dcfef195-388f-48aa-9246-88ccc9f6d8be.jpg",
+      "size": 285406
+    },
+    {
+      "path": "migration/reference-images/df67fe3d-d907-4b15-bc94-dd755b3261a9.jpg",
+      "size": 193072
+    },
+    {
+      "path": "migration/reference-images/images.jpg",
+      "size": 17299
+    },
+    {
+      "path": "migration/reference-images/inventory.json",
+      "size": 1969
+    },
+    {
+      "path": "migration/reference-images/isometric-view-industrial-pixel-art-factory-molten-metal-glowing-furnaces-ai-generative-isometric-view-industrial-363065938.jpg",
+      "size": 208249
+    },
+    {
+      "path": "migration/reference-images/pixel-art-game-level-background-bit-landscape-arcade-video-game-mountains-trees-platforms-pixel-art-game-level-background-bit-326265746.webp",
+      "size": 49234
+    },
+    {
       "path": "migration/relink_blender_sources.py",
       "size": 1191
     },
@@ -144047,7 +144095,7 @@
     },
     {
       "path": "migration/restore_credentials.py",
-      "size": 1040
+      "size": 1372
     },
     {
       "path": "migration/secret-scan.json",

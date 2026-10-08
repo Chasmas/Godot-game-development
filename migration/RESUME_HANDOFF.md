@@ -31,3 +31,7 @@ The user explicitly authorizes continuing with full project/filesystem/network/A
 Use SOL medium only if available in the new host model selector, as requested by the user. No model selector is available in this current tool interface.
 
 Godot AI MCP is configured by setup using pinned godot-ai 4.2.3 and the transferred addons/godot_ai project addon, ports 8001/8002. Existing Codex server config is preserved. Built-in node_repl is supplied by Codex, not migrated from this machine.
+
+Before rendering an unpacked Blender source on the new PC, use migration/relink_blender_sources.py via Blender --background --python ... -- <source.blend>. It maps only known old project-root image paths, makes them relative, and refuses to save if any image remains unresolved. It does not guess ambiguous image matches or replace textures.
+
+Original user-supplied environment quality references (including pool and angel screenshots) are preserved in migration/reference-images; use them as references, not commercial shipping textures. Eleven explicit originals copied successfully.
