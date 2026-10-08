@@ -6,5 +6,6 @@
   "credential_round_trip": "passed for four configured services",
   "working_source_inventory": "all listed files present and size matched",
   "fresh_pc_install": "not yet run; launcher must be executed on new PC",
-  "github_upload": "in progress; final remote verification required"
+  "github_upload": "in progress; final remote verification required",
+  "godot_source_import": "passed: zero ERROR, SCRIPT ERROR or Parse Error lines"
 }

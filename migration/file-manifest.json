@@ -28654,6 +28654,10 @@
       "size": 2237370
     },
     {
+      "path": "assets/art/materials/m01/batch_v1/guest_room_rebuild_direction_v2.png.import",
+      "size": 1031
+    },
+    {
       "path": "assets/art/materials/m01/batch_v1/guest_room_rebuild_direction_v2.prompt.txt",
       "size": 1941
     },
@@ -41214,8 +41218,16 @@
       "size": 919651
     },
     {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_camera_review_v1/room_elevation50_yaw00.png.import",
+      "size": 1046
+    },
+    {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_camera_review_v1/room_elevation50_yaw30.png",
       "size": 931316
+    },
+    {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_camera_review_v1/room_elevation50_yaw30.png.import",
+      "size": 1045
     },
     {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v1/guest_room_composition.blend",
@@ -41224,6 +41236,10 @@
     {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v1/guest_room_composition.png",
       "size": 1649219
+    },
+    {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v1/guest_room_composition.png.import",
+      "size": 1042
     },
     {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v1/review.json",
@@ -41242,6 +41258,10 @@
       "size": 1595474
     },
     {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v2/guest_room_composition.png.import",
+      "size": 1044
+    },
+    {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v2/review.json",
       "size": 407
     },
@@ -41254,6 +41274,10 @@
       "size": 1595647
     },
     {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v3/guest_room_composition.png.import",
+      "size": 1043
+    },
+    {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v3/review.json",
       "size": 407
     },
@@ -41264,6 +41288,10 @@
     {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v4/guest_room_composition.png",
       "size": 1573172
+    },
+    {
+      "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v4/guest_room_composition.png.import",
+      "size": 1044
     },
     {
       "path": "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v4/review.json",
@@ -84626,6 +84654,10 @@
       "size": 3591433
     },
     {
+      "path": "build/m01_bedside_east_rooms_exposure_0.65.png.import",
+      "size": 1018
+    },
+    {
       "path": "build/m01_bedside_southeast_rooms.png",
       "size": 3777207
     },
@@ -84636,6 +84668,10 @@
     {
       "path": "build/m01_bedside_southeast_rooms_exposure_0.65.png",
       "size": 3777569
+    },
+    {
+      "path": "build/m01_bedside_southeast_rooms_exposure_0.65.png.import",
+      "size": 1033
     },
     {
       "path": "build/m01_bedside_southwest_rooms.png",
@@ -84650,6 +84686,10 @@
       "size": 3958309
     },
     {
+      "path": "build/m01_bedside_southwest_rooms_exposure_0.65.png.import",
+      "size": 1033
+    },
+    {
       "path": "build/m01_bedside_west_rooms.png",
       "size": 3945008
     },
@@ -84660,6 +84700,10 @@
     {
       "path": "build/m01_bedside_west_rooms_exposure_0.65.png",
       "size": 3951125
+    },
+    {
+      "path": "build/m01_bedside_west_rooms_exposure_0.65.png.import",
+      "size": 1018
     },
     {
       "path": "build/m01_candidatedresser_0_composition.png",
@@ -85052,6 +85096,10 @@
     {
       "path": "build/m01_native_beds_runtime.png",
       "size": 4171327
+    },
+    {
+      "path": "build/m01_native_beds_runtime.png.import",
+      "size": 979
     },
     {
       "path": "build/m01_native_beds_runtime_review.json",
@@ -143986,6 +144034,10 @@
       "size": 36759
     },
     {
+      "path": "migration/.gdignore",
+      "size": 0
+    },
+    {
       "path": "migration/Bootstrap-New-PC.ps1",
       "size": 1407
     },
@@ -144038,36 +144090,72 @@
       "size": 411228
     },
     {
+      "path": "migration/reference-images/3649787-witchbrook1.webp.import",
+      "size": 991
+    },
+    {
       "path": "migration/reference-images/Sem t\u00edtulo.png",
       "size": 4005519
+    },
+    {
+      "path": "migration/reference-images/Sem t\u00edtulo.png.import",
+      "size": 964
     },
     {
       "path": "migration/reference-images/StockCake-Automated_Pixel_Factory-2131862-medium.jpg",
       "size": 83991
     },
     {
+      "path": "migration/reference-images/StockCake-Automated_Pixel_Factory-2131862-medium.jpg.import",
+      "size": 1075
+    },
+    {
       "path": "migration/reference-images/cc344b2f-1fed-4d1f-b019-86580f64ab28.jpg",
       "size": 334828
+    },
+    {
+      "path": "migration/reference-images/cc344b2f-1fed-4d1f-b019-86580f64ab28.jpg.import",
+      "size": 1038
     },
     {
       "path": "migration/reference-images/codex-clipboard-9183a8c1-7ed2-48af-8ef3-b5dc84b95fbd.png",
       "size": 203004
     },
     {
+      "path": "migration/reference-images/codex-clipboard-9183a8c1-7ed2-48af-8ef3-b5dc84b95fbd.png.import",
+      "size": 1087
+    },
+    {
       "path": "migration/reference-images/codex-clipboard-b53e4389-5e9e-4353-b8de-b7530e1b1514.png",
       "size": 1038055
+    },
+    {
+      "path": "migration/reference-images/codex-clipboard-b53e4389-5e9e-4353-b8de-b7530e1b1514.png.import",
+      "size": 1087
     },
     {
       "path": "migration/reference-images/dcfef195-388f-48aa-9246-88ccc9f6d8be.jpg",
       "size": 285406
     },
     {
+      "path": "migration/reference-images/dcfef195-388f-48aa-9246-88ccc9f6d8be.jpg.import",
+      "size": 1039
+    },
+    {
       "path": "migration/reference-images/df67fe3d-d907-4b15-bc94-dd755b3261a9.jpg",
       "size": 193072
     },
     {
+      "path": "migration/reference-images/df67fe3d-d907-4b15-bc94-dd755b3261a9.jpg.import",
+      "size": 1038
+    },
+    {
       "path": "migration/reference-images/images.jpg",
       "size": 17299
+    },
+    {
+      "path": "migration/reference-images/images.jpg.import",
+      "size": 949
     },
     {
       "path": "migration/reference-images/inventory.json",
@@ -144078,8 +144166,16 @@
       "size": 208249
     },
     {
+      "path": "migration/reference-images/isometric-view-industrial-pixel-art-factory-molten-metal-glowing-furnaces-ai-generative-isometric-view-industrial-363065938.jpg.import",
+      "size": 1299
+    },
+    {
       "path": "migration/reference-images/pixel-art-game-level-background-bit-landscape-arcade-video-game-mountains-trees-platforms-pixel-art-game-level-background-bit-326265746.webp",
       "size": 49234
+    },
+    {
+      "path": "migration/reference-images/pixel-art-game-level-background-bit-landscape-arcade-video-game-mountains-trees-platforms-pixel-art-game-level-background-bit-326265746.webp.import",
+      "size": 1339
     },
     {
       "path": "migration/relink_blender_sources.py",
@@ -144103,7 +144199,7 @@
     },
     {
       "path": "migration/setup-validation.json",
-      "size": 499
+      "size": 582
     },
     {
       "path": "migration/verify_migration.py",
@@ -148856,6 +148952,10 @@
     {
       "path": "tools/m01_native_beds_runtime_review.gd",
       "size": 3277
+    },
+    {
+      "path": "tools/m01_native_beds_runtime_review.gd.uid",
+      "size": 20
     },
     {
       "path": "tools/m01_native_beds_runtime_review.tscn",
