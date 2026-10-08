@@ -1,0 +1,114 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 23 looks in 2527 ms
+-- gunshot_is_local
+  ok   three pistol shots outside don't wake the map (1 / 26 reacted)
+  ok   nobody learns the player's exact position from a sound (0 did)
+-- walls_muffle
+  ok   a pistol shot ~290px away behind two walls is not heard (0/60)
+  ok   the same shot in the open usually is (41/60)
+  ok   a heard sound gives an estimate, not the exact spot
+-- kill_mid_investigation
+  ok   enemy A investigating (INVESTIGATE)
+  ok   enemy B searching (SEARCH)
+  ok   both die cleanly mid-behaviour
+-- rapid_fire
+  ok   30 shots in 30 frames leave every listener in a valid state
+-- spawn_while_shooting
+  ok   firing while reinforcements spawn
+[level] prewarmed 23 looks in 1 ms
+-- door_kick_hits_enemy
+  ok   kick accepted
+  ok   enemy behind the door is flattened (DOWNED)
+  ok   door comes to rest (omega -0.005)
+  ok   door stays within its hinge limit
+  ok   no kicks through the wall
+-- doorway_traffic
+  ok   two enemies pass the same doorway (closest 12 / 23 px, 280 ticks)
+  ok   and never stand inside each other (closest 14.5 px)
+-- dodge_into_wall
+  ok   dodging into a wall never ends inside it
+  ok   and doesn't slide off along it (2.9 px)
+  ok   dodge distance 52.1 px (was ~64.5)
+-- double_death
+  ok   an enemy killed twice in one frame dies once (1)
+-- shout_is_local
+  ok   one guard shouting doesn't alert guards >400px away (0 of 17)
+-- difficulty_scales
+  ok   normal uses the archetype as authored
+  ok   reaction time scales (0.55 / 0.38 / 0.27)
+  ok   aim error scales
+  ok   the source resource is never modified
+-- enemies_miss
+  ok   settled aim at 150px hits some, misses some (0.40)
+  ok   long range misses more (0.17)
+  ok   a running target is harder to hit (0.26)
+  ok   the first shots after spotting you rarely land (0.14)
+  ok   difficulty sets accuracy (0.27 / 0.40 / 0.55)
+  ok   about a third to two thirds of 400 settled shots land (162)
+-- dual_wield
+  ok   a second pistol offers dual wielding
+  ok   picking it up pairs the guns (both magazines full)
+  ok   the guns take turns (18 left)
+  ok   a dry gun hands off to the other
+  ok   reload fills both magazines (12 | 12)
+  ok   and takes longer than one gun
+  ok   swapping away mid-reload cancels it (no free ammo)
+  ok   throwing tosses the off-hand gun only
+  ok   checkpoints keep the pair and its ammo
+  ok   shotguns don't pair
+-- language_switch_mid_dialogue
+  ok   the next line after switching is Portuguese (Ora bem. Tu não és da limpeza, de certez)
+  ok   speaker name follows the language
+  ok   dialogue ran in English before the switch
+-- long_text_fits
+  ok   dialogue box stays on screen with the longest Portuguese line (240 chars)
+  ok   and the text fits inside the box
+-- bark_stays_on_screen
+  ok   speech bubbles stay fully on screen at the corners and for off-screen speakers
+  ok   bubbles render above the world (layer 45)
+-- language_persists
+  ok   choosing Português is written to settings.json
+  ok   and the game is in Portuguese (OPÇÕES)
+  ok   translation table loaded (1444 entries)
+-- hud_in_portuguese
+  ok   score label ok (0 PTS)
+  ok   weapon name translated (9MM DE SERVIÇO)
+  ok   objective translated (ENTRA NO SUNSET PALMS  ·  SMASH THE FILM CAMERAS 0/2)
+-- alarm_caps_responders
+  ok   level has an alarm panel
+  ok   alarm sends at most 3 (answered 3 + reinforcements 0)
+-- camera_blind_spot
+  ok   hugging the wall under the camera is not seen (meter 0.00)
+  ok   standing in the cone is seen within one sweep
+[level] prewarmed 21 looks in 623 ms
+-- m02_all_killable_gun
+  ok   m02 has its enemies (18)
+  ok   every m02 enemy dies to bullets
+-- m02_all_killable_melee
+  ok   m02 has its enemies (18)
+  ok   every m02 enemy dies to melee
+-- m02_all_killable_fists
+  ok   m02 has its enemies (18)
+  ok   every m02 enemy dies to fists
+-- aim_forgiveness
+  ok   shot 7 deg off at 60 px connects
+  ok   shot 35 deg off at 60 px still misses
+  ok   shot 4 deg off at 140 px connects
+  ok   shot 16 deg off at 140 px still misses
+  ok   bat swing 70 deg off lands
+-- checkpoint_respawn
+  ok   guard back at his post after respawn
+  ok   guard faces the way he was placed
+  ok   player respawns at the checkpoint with a grace period
+  ok   nobody opens fire in the first two seconds
+  ok   the guard does notice after the grace (COMBAT)
+-- snooze_chair_still
+  ok   the chair sits on the body, not the aiming rig
+  ok   still asleep after 8 s
+  ok   chair and sleeper stay still (moved 0.00)
+=== EDGE TEST DONE: 0 failures ===
+WARNING: 12 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 6 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

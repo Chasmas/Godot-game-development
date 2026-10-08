@@ -1,0 +1,29 @@
+{
+  "runtime_approved": false,
+  "footprint_metres": [
+    1.576,
+    0.75
+  ],
+  "pixels_per_metre": 269.4736842105263,
+  "frames": [
+    {
+      "file": "rug_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        256.00006103515625
+      ]
+    },
+    {
+      "file": "rug_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        256.00006103515625
+      ]
+    }
+  ],
+  "source_kind": "Blender wool backing and fringe with ImageGen albedo",
+  "solid_collision": false,
+  "reason": "Flat textile is walkable floor dressing"
+}

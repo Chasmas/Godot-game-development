@@ -1,0 +1,20 @@
+{
+  "approved": false,
+  "resolution": [
+    2048,
+    2048
+  ],
+  "small_or_dark_triangles": [
+    {
+      "polygon": 25717,
+      "texel_area": 6.066635221242905,
+      "mesh_area": 0.014882647364748862,
+      "centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "scope": "UV triangle area and centroid sample only; not a full raster coverage or seam audit."
+}

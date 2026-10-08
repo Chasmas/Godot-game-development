@@ -1,0 +1,40 @@
+{
+  "approved": false,
+  "frames": 8,
+  "phases": [
+    0.22,
+    0.3,
+    0.38,
+    0.46,
+    0.54,
+    0.62,
+    0.78,
+    0.995
+  ],
+  "size": [
+    256,
+    256
+  ],
+  "world_size_px": 80,
+  "origin": "actor floor anchor",
+  "projection": "already projected from runtime fixed 50-degree camera; no second projection",
+  "source": "../actual_weapon_paths.json",
+  "overlay_reviewed": true,
+  "overlay_artifact": "build/melee_trail_review/measured/overlay.png",
+  "review_phase": 0.62,
+  "headings_degrees": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+  ],
+  "remaining": [
+    "Review animated phase transitions",
+    "Validate intermediate headings and live moving body",
+    "Validate actual level lighting before integration"
+  ]
+}

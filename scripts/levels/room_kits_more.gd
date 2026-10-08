@@ -181,6 +181,7 @@ const PAINTED := {
 	"monitor_stack": ["tv_crt", Vector2(11, 9)], "director_chair": ["director_chair", Vector2(10, 9)],
 	"apple_box": ["studio_apple_box", Vector2(9, 7)], "coat_rack": ["clothes_rack", Vector2(10, 10)],
 	"barrel_trio": ["yard_oil_barrel_cluster", Vector2(15, 13)], "reading_lamp": ["floor_lamp", Vector2(8, 8)],
+	"dog_bed": ["kennel_dog_bed", Vector2(12, 10)], "bowl": ["kennel_dog_bowl", Vector2(10, 6)],
 }
 
 static func draw_painted(ci: CanvasItem, k: String) -> bool:

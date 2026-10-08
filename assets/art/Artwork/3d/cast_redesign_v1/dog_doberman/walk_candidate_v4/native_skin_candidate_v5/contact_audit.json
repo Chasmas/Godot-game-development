@@ -1,0 +1,10 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "sampled_frames": 31,
+  "maximum_paw_endpoint_error_m": 1.904744973284236e-05,
+  "maximum_planted_sole_slip_per_frame_m": 1.3584673069999553e-05,
+  "minimum_full_cycle_mesh_height_m": -1.9050041373702697e-05,
+  "mesh_loop_seam_m": 1.1967404134338722e-07,
+  "scope": "Existing shoulder-refined Blender animation, all integer-frame contacts; no export or visual playback approval"
+}

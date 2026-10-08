@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "contact_solver_approved": false,
+  "decision": "stance_subset_retained_for_gait_authoring",
+  "inspected_views": [
+    "pose_review/neutral_stance.png",
+    "pose_review/side_shift.png",
+    "pose_review/upper_stance.png"
+  ],
+  "findings": [
+    "Silhouette and limb continuity retained in all three inspected quarter-angle poses",
+    "Rigid sole weights and ankle orientation eliminate previous sampled sole penetration",
+    "Ten-millimetre lowered neutral stance supplies bend reserve; movement envelope explicitly measured"
+  ],
+  "limitations": [
+    "Only five body-shift samples and one camera angle",
+    "No walking contact timing, toe roll, footfall audio or exported constraint bake validation"
+  ],
+  "next": "Author four-beat walk with physical stride-to-speed correspondence; measure stance slip and whole-cycle ground clearance, then render both side angles"
+}

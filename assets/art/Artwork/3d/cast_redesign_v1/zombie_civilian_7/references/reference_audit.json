@@ -1,0 +1,51 @@
+{
+  "character": "zombie_civilian_7",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_civilian_7_isolated_turnaround_v2.png",
+  "source_sha256": "42dfa3a099aab74b8ad417cfb9415d39ee380b2bbc82a0b0ca35702a2022616b",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        610,
+        1024
+      ],
+      "width": 610,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_7\\references\\front.png",
+      "sha256": "a759973be867d52c17a3fbe735d3c28074700c0f8d0f762934b4e145de622eb6"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        635,
+        0,
+        910,
+        1024
+      ],
+      "width": 275,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_7\\references\\side.png",
+      "sha256": "6f3cec9b5a819aa9c6a99aa4d2ceab01c8378bf6afb9a2abc0cfbee3b15bb5fc"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        940,
+        0,
+        1450,
+        1024
+      ],
+      "width": 510,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_7\\references\\back.png",
+      "sha256": "0d7ebf630817c182978cddc85abd8f7cbff43e5590b73d5f775d7ba71a23b808"
+    }
+  ],
+  "visual_review": "Isolated v2 sheet and three Blender crops directly inspected. Complete figures and apron, no portrait fragments. Modeling input approval only, no mesh or rig approval."
+}

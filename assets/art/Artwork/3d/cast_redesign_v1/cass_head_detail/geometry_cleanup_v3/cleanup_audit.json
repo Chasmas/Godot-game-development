@@ -1,0 +1,10 @@
+{
+  "operation": "Weighted local eyelid/brow smoothing on geometry LOD v2",
+  "affected_vertices": 44,
+  "factor": 0.3,
+  "iterations": 6,
+  "runtime_approved": false,
+  "visual_validation": "pending independent neutral clay comparison",
+  "limitations": "Smoothing alone does not create eyelid loops or an animation-ready facial rig",
+  "previous_candidates_unchanged": true
+}

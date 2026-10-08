@@ -1,0 +1,591 @@
+{
+  "duration_seconds": 0.6,
+  "vertices": 1488,
+  "contacts": [
+    {
+      "frame": 1,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 2,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 3,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 4,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 5,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 6,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 7,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 8,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 9,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 10,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 11,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 12,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 13,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 14,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 15,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 16,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 17,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 18,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 19,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 20,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 21,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 22,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 23,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 24,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 25,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 26,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 27,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 28,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 29,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 30,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 31,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 32,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 33,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 34,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 35,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 36,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 37,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 38,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 39,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 40,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 41,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 42,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 43,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 44,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 45,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 46,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 47,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 48,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 49,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 50,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 51,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 52,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 53,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 54,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 55,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 56,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 57,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 58,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 59,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 60,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 61,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 62,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 63,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 64,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 65,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 66,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 67,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 68,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 69,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 70,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 71,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 72,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 73,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 74,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 75,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 76,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 77,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 78,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 79,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 80,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 81,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 82,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 83,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 84,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 85,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 86,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 87,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 88,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 89,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 90,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 91,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 92,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 93,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 94,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 95,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 96,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 97,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 98,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 99,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 100,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 101,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 102,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 103,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 104,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 105,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 106,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 107,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 108,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 109,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 110,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 111,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 112,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 113,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 114,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 115,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 116,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 117,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 118,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 119,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 120,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 121,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 122,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 123,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 124,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 125,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 126,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 127,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 128,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 129,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 130,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 131,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 132,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 133,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 134,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 135,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 136,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 137,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 138,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 139,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 140,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 141,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 142,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 143,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 144,
+      "minimum_z": 0.0
+    },
+    {
+      "frame": 145,
+      "minimum_z": 0.0
+    }
+  ],
+  "runtime_approved": true,
+  "runtime_path": "assets/art/props3d/folding_chair.glb",
+  "runtime_sha256": "bb910c45672212a877059ccbd167e0061174d7739de212e48f288b73a50485f6",
+  "visual_review": "build/chair_tip_review/godot_review.png",
+  "runtime_regression": "build/chair_tip_review/runtime_activity.log"
+}

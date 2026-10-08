@@ -1,0 +1,194 @@
+[
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.0915031805634499,
+        "hip_height_m": 0.547148525714874,
+        "knee_bend_degrees": 94.3306702873464,
+        "knee_height_m": 0.504182815551758
+      },
+      "Right": {
+        "ankle_height_m": 0.0898768231272697,
+        "hip_height_m": 0.548803806304932,
+        "knee_bend_degrees": 93.9860189418276,
+        "knee_height_m": 0.506852924823761
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "heavy#1",
+    "pelvis_local_px": [
+      -6.65470695495605,
+      0.00000029088647579556
+    ],
+    "pose_override": "",
+    "position": [
+      520.0,
+      56.0
+    ],
+    "selected_pose": "doze"
+  },
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.023796958848834,
+        "hip_height_m": 0.430664420127869,
+        "knee_bend_degrees": 90.2933181481952,
+        "knee_height_m": 0.381851047277451
+      },
+      "Right": {
+        "ankle_height_m": 0.0171866994351149,
+        "hip_height_m": 0.432968080043793,
+        "knee_bend_degrees": 89.3649998173421,
+        "knee_height_m": 0.38432115316391
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "hunter#1",
+    "pelvis_local_px": [
+      -5.36599588394165,
+      0.000000234555130873559
+    ],
+    "pose_override": "",
+    "position": [
+      360.0,
+      72.0
+    ],
+    "selected_pose": "doze"
+  },
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.00698471069335938,
+        "hip_height_m": 0.504783034324646,
+        "knee_bend_degrees": 80.9634026853628,
+        "knee_height_m": 0.440560936927795
+      },
+      "Right": {
+        "ankle_height_m": 0.0214289464056492,
+        "hip_height_m": 0.503178715705872,
+        "knee_bend_degrees": 81.7757307437308,
+        "knee_height_m": 0.438385903835297
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "biker#0",
+    "pelvis_local_px": [
+      -6.13737297058105,
+      0.000000268273083747772
+    ],
+    "pose_override": "",
+    "position": [
+      168.0,
+      104.0
+    ],
+    "selected_pose": "doze"
+  },
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.023796958848834,
+        "hip_height_m": 0.430664420127869,
+        "knee_bend_degrees": 90.2933181481952,
+        "knee_height_m": 0.381851047277451
+      },
+      "Right": {
+        "ankle_height_m": 0.0171866994351149,
+        "hip_height_m": 0.432968080043793,
+        "knee_bend_degrees": 89.3649998173421,
+        "knee_height_m": 0.38432115316391
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "hunter#3",
+    "pelvis_local_px": [
+      0.000000810242852367082,
+      5.36599588394165
+    ],
+    "pose_override": "",
+    "position": [
+      728.0,
+      232.0
+    ],
+    "selected_pose": "doze"
+  },
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.0402096174657345,
+        "hip_height_m": 0.405052185058594,
+        "knee_bend_degrees": 110.334500191982,
+        "knee_height_m": 0.397910505533218
+      },
+      "Right": {
+        "ankle_height_m": 0.0460345074534416,
+        "hip_height_m": 0.404317766427994,
+        "knee_bend_degrees": 92.0223190648814,
+        "knee_height_m": 0.397134810686111
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "bellhop#3",
+    "pelvis_local_px": [
+      0.000000768669224271434,
+      5.0906662940979
+    ],
+    "pose_override": "",
+    "position": [
+      616.0,
+      472.0
+    ],
+    "selected_pose": "doze"
+  },
+  {
+    "active_clip": "doze",
+    "clip_clock": 7.22372366666668,
+    "doze_available": true,
+    "leg_geometry": {
+      "Left": {
+        "ankle_height_m": 0.00698471069335938,
+        "hip_height_m": 0.504783034324646,
+        "knee_bend_degrees": 80.9634026853628,
+        "knee_height_m": 0.440560936927795
+      },
+      "Right": {
+        "ankle_height_m": 0.0214289464056492,
+        "hip_height_m": 0.503178715705872,
+        "knee_bend_degrees": 81.7757307437308,
+        "knee_height_m": 0.438385903835297
+      }
+    },
+    "move_speed": 0.0,
+    "native_model": true,
+    "palette": "biker#2",
+    "pelvis_local_px": [
+      6.13737297058105,
+      0.000000268273083747772
+    ],
+    "pose_override": "",
+    "position": [
+      136.0,
+      520.0
+    ],
+    "selected_pose": "doze"
+  }
+]

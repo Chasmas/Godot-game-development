@@ -24,7 +24,7 @@ func _ready() -> void:
 	add_to_group("interactable")
 	add_to_group("damageable")
 	collision_layer = Layers.ENEMY
-	collision_mask = Layers.WORLD | Layers.LOW | Layers.GLASS | Layers.PIT | Layers.PROP
+	collision_mask = Layers.WORLD | Layers.DOOR | Layers.LOW | Layers.GLASS | Layers.PIT | Layers.PROP
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	var cs := CollisionShape2D.new()
 	var c := CircleShape2D.new()
@@ -49,13 +49,13 @@ func _drop_activity() -> void:
 	_activity = null
 
 func can_interact(_p: Node) -> bool:
-	return alive and not lines.is_empty()
+	return alive and not panicking and not lines.is_empty()
 
 func get_prompt() -> String:
 	return "TALK"
 
 func interact(_p: Node) -> void:
-	if lines.is_empty():
+	if not can_interact(_p):
 		return
 	_say(str(lines[_line_i % lines.size()]))
 	_line_i += 1
@@ -77,12 +77,16 @@ func _on_noise(pos: Vector2, radius: float, kind: StringName, _src: Node) -> voi
 			_drop_activity()
 			_say(["Oh God--", "Don't shoot! DON'T SHOOT!", "I didn't see nothing!", "Mama..."][randi() % 4])
 		_panic_t = 3.0
+		cowering = false
 		_flee_dir = (global_position - pos).normalized()
+		if _flee_dir.length_squared() < .01:
+			_flee_dir = facing.normalized() if facing.length_squared() > .01 else Vector2.DOWN
 
 func _physics_process(delta: float) -> void:
 	if not alive:
 		return
 	_bark_t = maxf(0.0, _bark_t - delta)
+	var travelled := Vector2.ZERO
 	if panicking:
 		_panic_t -= delta
 		if _panic_t > 1.2:
@@ -91,14 +95,21 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			cowering = true
 		move_and_slide()
+		travelled = get_real_velocity()
 		if get_slide_collision_count() > 0:
-			_flee_dir = _flee_dir.rotated(randf_range(1.0, 2.2))
+			var normal := get_slide_collision(0).get_normal()
+			var escape := _flee_dir.slide(normal)
+			if escape.length_squared() < 0.01:
+				# A head-on impact chooses one stable side instead of turning
+				# randomly every frame and repeatedly running into the wall.
+				escape = normal.orthogonal() * (1.0 if absi(hash(npc_id)) % 2 == 0 else -1.0)
+			_flee_dir = escape.normalized()
 		if _panic_t <= 0.0:
 			panicking = false
-	if velocity.length() > 5.0:
-		facing = velocity.normalized()
+	if travelled.length() > 5.0:
+		facing = travelled.normalized()
 	visual.set_aim(facing.angle())
-	visual.update_move(velocity, delta)
+	visual.update_move(travelled, delta)
 	visual.scale = Vector2(0.85, 0.85) if cowering else Vector2.ONE
 	if _bark_t > 0.0 or Engine.get_physics_frames() % 10 == 0:
 		queue_redraw()
@@ -108,7 +119,8 @@ func take_damage(info: DamageInfo) -> String:
 		return "pass"
 	if not info.lethal and info.type == DamageInfo.Type.PUNCH:
 		_say("OW! What the hell?!")
-		_on_noise(global_position, 100.0, &"gunshot", null)
+		var away := info.dir.normalized() if info.dir.length_squared() > .01 else facing
+		_on_noise(global_position - away * 8.0, 100.0, &"gunshot", null)
 		return "hurt"
 	alive = false
 	_drop_activity()

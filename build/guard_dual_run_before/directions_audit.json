@@ -1,0 +1,57 @@
+{
+	"clip": "armed_dual_run",
+	"failures": [],
+	"passed": true,
+	"rows": [
+		{
+			"degrees": 0,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.26617157459259,
+			"minimum_hand_separation_m": 0.399845480918884
+		},
+		{
+			"degrees": 45,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.266171604394913,
+			"minimum_hand_separation_m": 0.399845540523529
+		},
+		{
+			"degrees": 90,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.266171544790268,
+			"minimum_hand_separation_m": 0.399845480918884
+		},
+		{
+			"degrees": 135,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.266171604394913,
+			"minimum_hand_separation_m": 0.399845510721207
+		},
+		{
+			"degrees": 180,
+			"minimum_below_head_m": 0.176046133041382,
+			"minimum_hand_forward_m": 0.26617157459259,
+			"minimum_hand_separation_m": 0.399845480918884
+		},
+		{
+			"degrees": 225,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.266171604394913,
+			"minimum_hand_separation_m": 0.399845510721207
+		},
+		{
+			"degrees": 270,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.266171604394913,
+			"minimum_hand_separation_m": 0.399845480918884
+		},
+		{
+			"degrees": 315,
+			"minimum_below_head_m": 0.176046252250671,
+			"minimum_hand_forward_m": 0.26617157459259,
+			"minimum_hand_separation_m": 0.399845480918884
+		}
+	],
+	"scope": "33 phases in eight directions; wrist-linked weapon origins and geometric arm posture",
+	"source": "res://assets/art/cast3d_rt/guard/guard.glb"
+}

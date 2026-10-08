@@ -4,6 +4,8 @@ extends Control
 
 var backdrop: TitleBackdrop
 var shot: StoryShot
+var sequence: FrameSequence
+var _sequence_key := ""
 var _lines := 0
 var _slam: Label               ## the big ACTION! card          ## illustrated shots, when the dialogue names them
 var art: TextureRect         ## authored full-frame art (CinematicArt), when present
@@ -20,15 +22,36 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	id = Game.current_cutscene
 	var d := Dialogue.load_dialogue(id)
+	# Blender-rendered sequences are opt-in. A folder with numbered PNGs takes
+	# priority over the procedural/still shot while preserving the same dialogue.
+	var sequence_path := "res://assets/art/animated/cutscenes/%s" % id
+	var has_sequence := DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(sequence_path))
+	if has_sequence:
+		sequence = FrameSequence.new()
+		sequence.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		var configured := sequence.configure_reviewed(sequence_path)
+		if configured:
+			add_child(sequence)
+			sequence.play()
+			_sequence_key = "whole_scene"
+		else:
+			sequence.queue_free()
+			sequence = null
 	# authored key art wins when its PNG is in the project; otherwise the
 	# illustrated StoryShot sequence; otherwise the procedural backdrop
 	var art_tex := CinematicArt.cutscene_texture(id)
-	if StoryShot.has_shot(str(d.get("shot", ""))):
+	var initial_shot := str(d.get("shot", ""))
+	if initial_shot == "":
+		initial_shot = str(d.get("nodes", {}).get(str(d.get("start", "")), {}).get("shot", ""))
+	if sequence:
+		# Keep the film clean behind dialogue; the sequence itself supplies the
+		# camera, character motion, rain/fire and composited lighting.
+		sequence.show_behind_parent = true
+	elif StoryShot.has_shot(initial_shot):
 		shot = StoryShot.new()
 		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		add_child(shot)
-		shot.show_shot(str(d.shot), true)
-		Dialogue.line_shown.connect(_on_line)
+		shot.show_shot(initial_shot, true)
 	elif art_tex:
 		backdrop = TitleBackdrop.new()
 		backdrop.mode = str(d.get("bg", "black"))
@@ -46,6 +69,7 @@ func _ready() -> void:
 		backdrop.mode = str(d.get("bg", "black"))
 		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		add_child(backdrop)
+	Dialogue.line_shown.connect(_on_line)
 	osd = UIStyle.label("PLAY ▶", 20, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
@@ -67,7 +91,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	osd.text = "PLAY ▶   %d:%02d" % [int(_t) / 60, int(_t) % 60]
+	var now := Time.get_time_dict_from_system()
+	osd.text = "PLAY ▶   SP   %02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
 	if _t > 4.0:
 		card.modulate.a = move_toward(card.modulate.a, 0.0 if shot else 0.35, delta)
 	if art:
@@ -81,12 +106,47 @@ func _process(delta: float) -> void:
 		if art_shade:
 			var pulse := 0.10 + sin(_t * 0.55) * 0.018
 			art_shade.color = Color(0.01, 0.0, 0.025, pulse)
+	if sequence:
+		sequence.queue_redraw()
 
 ## Each line can cut to a new shot ("shot" on the dialogue node).
 func _on_line(_speaker: String, _text: String) -> void:
 	var sid := str(Dialogue._node.get("shot", ""))
+	if _sequence_key == "whole_scene" or sid == "":
+		return
+	if sid == _sequence_key and sequence and sequence.visible:
+		return
+	var candidate := FrameSequence.new()
+	var path := "res://assets/art/animated/cutscenes/%s/%s" % [id, sid]
+	if candidate.configure_reviewed(path, sid):
+		if sequence:
+			sequence.queue_free()
+		sequence = candidate
+		sequence.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(sequence)
+		sequence.show_behind_parent = true
+		sequence.play()
+		_sequence_key = sid
+		if shot:
+			shot.visible = false
+		if art:
+			art.visible = false
+		return
+	candidate.free()
+	if sequence:
+		sequence.pause()
+		sequence.visible = false
+	_sequence_key = ""
+	if shot == null and StoryShot.has_shot(sid):
+		shot = StoryShot.new()
+		shot.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(shot)
+		shot.show_behind_parent = true
+		if art:
+			art.visible = false
 	if shot == null:
 		return
+	shot.visible = true
 	if sid != "" and StoryShot.resolve(sid) != shot.shot_id:
 		shot.show_shot(sid)
 	elif _lines > 0:

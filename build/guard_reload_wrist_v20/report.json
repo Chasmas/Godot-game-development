@@ -1,0 +1,16 @@
+{
+  "approved": false,
+  "base_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c",
+  "rows": [
+    {
+      "clip": "reload_dual",
+      "changed_bones": [
+        "LeftHand",
+        "RightHand"
+      ],
+      "samples": 65,
+      "duration": 3.25
+    }
+  ],
+  "scope": "Only six arm rotation channels changed; hips, legs, spine and other clips retained. Whole-body clearance and visual motion unverified."
+}

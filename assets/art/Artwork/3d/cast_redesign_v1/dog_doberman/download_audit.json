@@ -1,0 +1,36 @@
+{
+  "task_id": "01a11971-da76-7222-9aa7-20f3936b777a",
+  "outputs": [
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\model.glb",
+      "bytes": 22484656,
+      "sha256": "705ab4c1541157747d9c51f4eda4a5dd2aaa1aa24ae0d120cde1245d892d68b6"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\pre_remeshed.glb",
+      "bytes": 7275972,
+      "sha256": "cb270e1143b06b8745a785450192f09510fb3a0ac2963e0455811800e064fa11"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\texture_0_base_color.png",
+      "bytes": 10581254,
+      "sha256": "f4c07aa247824c9ab0cdc6d2afef869b9d3cf5d8b9e4465ca1b130d63782c7d6"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\texture_0_metallic.png",
+      "bytes": 74357,
+      "sha256": "dafcd7e2b443289c5c099cd3a86d7eef7557439fac97b9b69d0557a61caecb55"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\texture_0_roughness.png",
+      "bytes": 626120,
+      "sha256": "de576c23e9d5c6a5d483aa714e7ce29043c8c5dad11316527f45613b7954491f"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\texture_0_normal.png",
+      "bytes": 10070829,
+      "sha256": "f05deca503105005e9a4b7fa144d4f734ef3e622592b5bba26bde512a6306e01"
+    }
+  ],
+  "runtime_approved": false
+}

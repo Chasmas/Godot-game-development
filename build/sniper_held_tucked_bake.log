@@ -1,0 +1,20 @@
+22:25:02 | INFO: Data are loaded, start creating Blender stuff
+22:25:02 | INFO: Blender create Mesh node Mesh_0
+22:25:02 | INFO: glTF import finished in 0.18s
+ELBOW held Right 3.142 (-0.045248281210660934, -0.19869227707386017, 1.2352403402328491)
+ELBOW held Left 0.0 (-0.044652704149484634, 0.2145354449748993, 1.2215092182159424)
+anim held 20 frames (baked)
+22:25:03 | INFO: Data are loaded, start creating Blender stuff
+22:25:03 | INFO: Blender create Mesh node Mesh_0
+22:25:03 | INFO: glTF import finished in 0.18s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+22:25:03 | INFO: Starting glTF 2.0 export
+22:25:03 | INFO: Extracting primitive: Mesh_0
+22:25:03 | INFO: Primitives created: 1
+22:25:03 | INFO: Finished glTF 2.0 export in 0.3558378219604492 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\sniper_held_tucked\sniper.glb clips: ['held']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

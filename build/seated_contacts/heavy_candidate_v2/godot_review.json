@@ -1,0 +1,76 @@
+{
+  "rows": [
+    {
+      "candidate": false,
+      "chair_contact_error_px": 0.0,
+      "facing": 0
+    },
+    {
+      "candidate": false,
+      "chair_contact_error_px": 0.0,
+      "facing": 1
+    },
+    {
+      "candidate": false,
+      "chair_contact_error_px": 0.0,
+      "facing": 2
+    },
+    {
+      "candidate": false,
+      "chair_contact_error_px": 0.0,
+      "facing": 3
+    },
+    {
+      "candidate": true,
+      "chair_contact_error_px": 0.0,
+      "facing": 0
+    },
+    {
+      "candidate": true,
+      "chair_contact_error_px": 0.0,
+      "facing": 1
+    },
+    {
+      "candidate": true,
+      "chair_contact_error_px": 0.0,
+      "facing": 2
+    },
+    {
+      "candidate": true,
+      "chair_contact_error_px": 0.0,
+      "facing": 3
+    }
+  ],
+  "runtime_approved": false,
+  "scope": "Top production, bottom full corrected candidate; scripted wake, locomotion and stab transitions verified; full level behavior pending",
+  "transitions": [
+    {
+      "attack_clip": "stab",
+      "attack_resumed": true,
+      "facing": 0,
+      "wake_preserves_chair": true,
+      "walk_resumed": true
+    },
+    {
+      "attack_clip": "stab",
+      "attack_resumed": true,
+      "facing": 1,
+      "wake_preserves_chair": true,
+      "walk_resumed": true
+    },
+    {
+      "attack_clip": "stab",
+      "attack_resumed": true,
+      "facing": 2,
+      "wake_preserves_chair": true,
+      "walk_resumed": true
+    },
+    {
+      "attack_clip": "stab",
+      "attack_resumed": true,
+      "facing": 3,
+      "wake_preserves_chair": true,
+      "walk_resumed": true
+    }
+  ]
+}

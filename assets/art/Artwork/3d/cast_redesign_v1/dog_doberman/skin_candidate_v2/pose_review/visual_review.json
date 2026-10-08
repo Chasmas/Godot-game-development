@@ -1,0 +1,19 @@
+{
+  "rig_approved": false,
+  "status": "deformation_revision_required",
+  "reviewed_views": [
+    "rest.png",
+    "front_paw_bend.png",
+    "rear_hip_bend.png",
+    "head_turn.png",
+    "tail_bend.png"
+  ],
+  "findings": [
+    "Front lower-paw bend stays independent and retains recognizable silhouette",
+    "Rear-hip probe exposes a thin stretched triangle near the hock",
+    "Tail probe exposes the same leg-area spike, suggesting mixed tail/leg weights across a region boundary",
+    "Head-turn probe pulls chest/shoulder vertices and needs a narrower neck/head transition"
+  ],
+  "next_action": "Replace hard region boundaries with topology-aware connected-region masks; inspect spike vertex weights and restrict head influence before locomotion",
+  "runtime_approved": false
+}

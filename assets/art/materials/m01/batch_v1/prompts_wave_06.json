@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "gunner_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms character visual reference for later Blender reconstruction, not final animated sprite. Adult human motel gunner enemy, lean build, short dark hair, grey work shirt beneath dark utility vest, dark trousers and boots, distinct readable face. Neutral standing pose with empty hands. Full body single character visible, natural adult anatomy and joint proportions, finely authored fabric seams, restrained wear, consistent premium indie handcrafted 3D diorama finish and 1980s Californian motel setting. Orthographic three-quarter view, neutral soft studio light. Genuinely transparent background, no floor or external shadow, no extra objects, weapons, smoking, UI, text, watermark or collage."
+    },
+    {
+      "id": "heavy_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms character visual reference for later Blender reconstruction, not final animated sprite. Adult human heavy security enemy, tall broad muscular build, dark navy reinforced uniform, visible protective vest, heavy boots, distinct readable face. Neutral standing pose with empty hands. Full body single character visible, natural adult anatomy and joint proportions, finely authored fabric seams, restrained wear, consistent premium indie handcrafted 3D diorama finish and 1980s Californian motel setting. Orthographic three-quarter view, neutral soft studio light. Genuinely transparent background, no floor or external shadow, no extra objects, weapons, smoking, UI, text, watermark or collage."
+    },
+    {
+      "id": "scout_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms character visual reference for later Blender reconstruction, not final animated sprite. Adult human scout enemy, agile slim build, faded teal utility jacket, dark fitted trousers, lightweight boots, short practical hair, distinct readable face. Neutral standing pose with empty hands. Full body single character visible, natural adult anatomy and joint proportions, finely authored fabric seams, restrained wear, consistent premium indie handcrafted 3D diorama finish and 1980s Californian motel setting. Orthographic three-quarter view, neutral soft studio light. Genuinely transparent background, no floor or external shadow, no extra objects, weapons, smoking, UI, text, watermark or collage."
+    },
+    {
+      "id": "riot_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms character visual reference for later Blender reconstruction, not final animated sprite. Adult human riot security enemy, dark navy padded uniform, realistic protective vest and helmet with raised visor exposing natural face, boots. Neutral standing pose with empty hands, no shield. Full body single character visible, natural adult anatomy and joint proportions, finely authored fabric seams, restrained wear, consistent premium indie handcrafted 3D diorama finish and 1980s Californian motel setting. Orthographic three-quarter view, neutral soft studio light. Genuinely transparent background, no floor or external shadow, no extra objects, weapons, smoking, UI, text, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "gunner_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-d0ec089a-0791-4b1d-bff3-a78e6f5239fa.png"
+    },
+    {
+      "id": "heavy_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-fb32d797-66f0-4dfd-8329-0eeb8fee522e.png"
+    },
+    {
+      "id": "scout_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-7b145143-fc62-417c-bed7-00586f43ffe7.png"
+    },
+    {
+      "id": "riot_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-ab6dc433-bf6e-4a69-b9ea-fea295a0d6bb.png"
+    }
+  ]
+}

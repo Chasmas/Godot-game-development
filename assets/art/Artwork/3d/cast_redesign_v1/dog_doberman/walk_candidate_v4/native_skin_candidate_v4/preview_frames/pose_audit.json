@@ -1,0 +1,19 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Three sampled walk poses; no continuous playback or gait approval",
+  "probes": [
+    {
+      "render": "walk_001.png",
+      "frame": 1
+    },
+    {
+      "render": "walk_009.png",
+      "frame": 9
+    },
+    {
+      "render": "walk_021.png",
+      "frame": 21
+    }
+  ]
+}

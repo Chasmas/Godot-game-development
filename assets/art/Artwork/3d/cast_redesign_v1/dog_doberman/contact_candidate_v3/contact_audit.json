@@ -1,0 +1,109 @@
+{
+  "runtime_approved": false,
+  "contact_solver_approved": false,
+  "scope": "Four ankle IK contacts with grounded paw orientation and rigid soles, five body-shift probes around a 10mm lower neutral stance; visual review and locomotion pending",
+  "sole_sample_vertices": 5791,
+  "maximum_paw_endpoint_error_m": 1.5273690223693848e-07,
+  "samples": [
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 1.4975481660844222e-07,
+        "front_positive_x": 1.5273690223693848e-07,
+        "rear_negative_x": 4.998001405968792e-08,
+        "rear_positive_x": 3.650024149988857e-08
+      },
+      "actual_body_offset_m": [
+        0.0,
+        0.0,
+        -0.009999999776482582
+      ],
+      "maximum_sole_displacement_m": 2.1696418193818683e-07,
+      "minimum_mesh_height_m": 4.889053784040698e-08
+    },
+    {
+      "body_offset_m": [
+        0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 1.037745794444093e-07,
+        "front_positive_x": 9.685754776000977e-08,
+        "rear_negative_x": 3.0719530773294423e-08,
+        "rear_positive_x": 5.4241045484546706e-08
+      },
+      "actual_body_offset_m": [
+        0.004999999888241291,
+        0.0,
+        -0.004999999888241291
+      ],
+      "maximum_sole_displacement_m": 1.6961324867356137e-07,
+      "minimum_mesh_height_m": 3.07975263069693e-08
+    },
+    {
+      "body_offset_m": [
+        -0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 1.2128666487410446e-07,
+        "front_positive_x": 1.3519262754637043e-07,
+        "rear_negative_x": 6.188917057900187e-08,
+        "rear_positive_x": 6.828569911354542e-08
+      },
+      "actual_body_offset_m": [
+        -0.004999999888241291,
+        0.0,
+        -0.004999999888241291
+      ],
+      "maximum_sole_displacement_m": 1.9715903136729064e-07,
+      "minimum_mesh_height_m": 2.3346935051904438e-08
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0.01
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 9.215859231988326e-08,
+        "front_positive_x": 1.2128666487410446e-07,
+        "rear_negative_x": 1.4901161193847656e-08,
+        "rear_positive_x": 3.0719530773294423e-08
+      },
+      "actual_body_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_sole_displacement_m": 1.9001034799127994e-07,
+      "minimum_mesh_height_m": 4.1439967901624186e-08
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 1.4975481660844222e-07,
+        "front_positive_x": 1.5273690223693848e-07,
+        "rear_negative_x": 4.998001405968792e-08,
+        "rear_positive_x": 3.650024149988857e-08
+      },
+      "actual_body_offset_m": [
+        0.0,
+        0.0,
+        -0.009999999776482582
+      ],
+      "maximum_sole_displacement_m": 2.1696418193818683e-07,
+      "minimum_mesh_height_m": 4.889053784040698e-08
+    }
+  ]
+}

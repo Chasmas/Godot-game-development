@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS new panic leaves crouched pose before fleeing
+PASS fleeing civilian cannot cross closed door
+PASS civilian faces actual travel after collision
+PASS head-on collision becomes movement along door surface
+PASS open doorway permits normal escape
+PASS settling panic stops movement and returns cowering pose
+NPC DOOR FLEE REVIEW: 0 failures

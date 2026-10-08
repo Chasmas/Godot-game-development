@@ -1,0 +1,10 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "changed_vertices": 12641,
+  "maximum_displacement_m": 0.004668678249190918,
+  "relaxation_iterations": 64,
+  "sole_geometry_unchanged": true,
+  "topology_and_uvs_unchanged": true,
+  "scope": "Local shoulder surface candidate; silhouette, normals, export and animated contacts require review"
+}

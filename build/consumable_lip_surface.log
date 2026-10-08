@@ -1,0 +1,11 @@
+05:17:08 | INFO: Data are loaded, start creating Blender stuff
+05:17:08 | INFO: Blender create Mesh node Mesh_0
+05:17:08 | INFO: glTF import finished in 0.43s
+00:08.031  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_head_landmarks\front.png'
+00:14.234  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_head_landmarks\side.png'
+HEAD_METRES (-0.036527689546346664, 0.11780275404453278, 1.4714345932006836)
+LIP_SURFACE (-0.1220276802778244, -0.06712009012699127, 1.4287556409835815) HEAD_LOCAL (6.829709053039551, 18.234853744506836, 7.3571271896362305)
+Info: Saved as "landmark_review.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

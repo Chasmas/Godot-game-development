@@ -1,0 +1,14 @@
+{
+  "approved": true,
+  "scope": "Smoke only; preserved seated pose and 24 existing clips",
+  "baseline_sha256": "9e2f5b4ecf05a055eba36f0a6c13d29f076511372867b08dc7170af5807bb251",
+  "integrated_sha256": "5be260040f47575a937748994ae63277a69ba4bbb4682cb3973a72f5de34655e",
+  "backup": "build\\boss_smoke_fitted_isolated\\boss_before_9e2f5b4ecf05.glb",
+  "pose_samples": 257,
+  "max_elbow_step_m": 0.0262162913,
+  "contact_elbow_below_shoulder_m": 0.1305135489,
+  "visual_reviews": [
+    "build/boss_idle_review.png",
+    "build/boss_idle_review_directions.png"
+  ]
+}

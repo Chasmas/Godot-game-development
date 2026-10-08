@@ -1,0 +1,23 @@
+voice coverage: 167/167 spoken lines (100.0%), fallback lines 0
+  apartment_1988: 14 human / 0 fallback
+  call_m01: 4 human / 0 fallback
+  call_m02: 4 human / 0 fallback
+  call_m03: 5 human / 0 fallback
+  call_m04: 5 human / 0 fallback
+  m01_boss_down: 9 human / 0 fallback
+  m01_boss_intro: 5 human / 0 fallback
+  m01_phone: 6 human / 0 fallback
+  m02_boss_down: 5 human / 0 fallback
+  m02_boss_intro: 5 human / 0 fallback
+  m03_boss_down: 11 human / 0 fallback
+  m03_boss_intro: 5 human / 0 fallback
+  m04_boss_down: 7 human / 0 fallback
+  m04_boss_intro: 5 human / 0 fallback
+  motel_dream: 3 human / 0 fallback
+  news_1988: 12 human / 0 fallback
+  news_1988b: 8 human / 0 fallback
+  prologue: 13 human / 0 fallback
+  salvage_1988: 9 human / 0 fallback
+  studio_1988: 11 human / 0 fallback
+  wake_1988: 6 human / 0 fallback
+  yermo_after: 15 human / 0 fallback

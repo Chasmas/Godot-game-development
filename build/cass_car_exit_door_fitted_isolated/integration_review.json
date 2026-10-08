@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "scope": "Wrist support during rise on open door only; no closing-door gesture approval",
+  "baseline_sha256": "0e39111f1fc37d0b19961ec0caaa20a1ebfc4e64bd4fd9e413c1c294ca3aface",
+  "integrated_sha256": "6a5f588270975e213af4e6f1e27ad389783ebf561dbbef53fdfb7811b8791cde",
+  "contact_review": "build/car_exit_review/door_fitted_contact.json",
+  "actual_level_review": "build/car_exit_review/door_fitted_arrival"
+}

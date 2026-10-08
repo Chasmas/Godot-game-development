@@ -1,0 +1,1157 @@
+[
+  {
+    "look": "bellhop",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      21,
+      16
+    ],
+    "game_size": [
+      5.25,
+      4.0
+    ],
+    "sha256": "d547df7ab283d78afd1abdb64db51495f0cf06da2eb23a62883a68b85a342d38",
+    "source_model_sha256": "1193e624f34a3b417b0bd8d84328d3ccd540f0182ce8149dc7df25bd9ef0f618"
+  },
+  {
+    "look": "bellhop",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      23,
+      36
+    ],
+    "game_size": [
+      5.75,
+      9.0
+    ],
+    "sha256": "d24ecc1d28e4566e347b9465739d0d66e5126c546a0470a3ef2cf59053ec14c2",
+    "source_model_sha256": "1193e624f34a3b417b0bd8d84328d3ccd540f0182ce8149dc7df25bd9ef0f618"
+  },
+  {
+    "look": "bellhop",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      72,
+      30
+    ],
+    "game_size": [
+      18.0,
+      7.5
+    ],
+    "sha256": "22b829cffdeb2489e18a0e7132b672b5d5cd1b7923fc51722cf01fc6a55b94a9",
+    "source_model_sha256": "1193e624f34a3b417b0bd8d84328d3ccd540f0182ce8149dc7df25bd9ef0f618"
+  },
+  {
+    "look": "biker",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      19,
+      20
+    ],
+    "game_size": [
+      4.75,
+      5.0
+    ],
+    "sha256": "81594db09c1b3516e78772f28887cc772abc9ecc766a8a5968e47044c153a03a",
+    "source_model_sha256": "4a14d2aadd316c3b5376421cfa14358a0c84082b336e774dd2fd81b466b0e2e9"
+  },
+  {
+    "look": "biker",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      33,
+      42
+    ],
+    "game_size": [
+      8.25,
+      10.5
+    ],
+    "sha256": "1e0af786878d03091042b208b2e914ab29af46801334826fcac5a2f1e04d8ad7",
+    "source_model_sha256": "4a14d2aadd316c3b5376421cfa14358a0c84082b336e774dd2fd81b466b0e2e9"
+  },
+  {
+    "look": "biker",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      74,
+      31
+    ],
+    "game_size": [
+      18.5,
+      7.75
+    ],
+    "sha256": "962ffa3b61957fef83a6272305e0c92d4248793ab325f1a051806721a2ff254c",
+    "source_model_sha256": "4a14d2aadd316c3b5376421cfa14358a0c84082b336e774dd2fd81b466b0e2e9"
+  },
+  {
+    "look": "boss",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      19,
+      17
+    ],
+    "game_size": [
+      4.75,
+      4.25
+    ],
+    "sha256": "86e9f7b29c6c93eee5e352a86778f8bd927e3582afe2beb3a0204f79abf7ef96",
+    "source_model_sha256": "5be260040f47575a937748994ae63277a69ba4bbb4682cb3973a72f5de34655e"
+  },
+  {
+    "look": "boss",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      34,
+      44
+    ],
+    "game_size": [
+      8.5,
+      11.0
+    ],
+    "sha256": "aaea11df5a49fbed34277ef79a01cb957da2106597fc4220f20309ad972c2ebb",
+    "source_model_sha256": "5be260040f47575a937748994ae63277a69ba4bbb4682cb3973a72f5de34655e"
+  },
+  {
+    "look": "boss",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      74,
+      27
+    ],
+    "game_size": [
+      18.5,
+      6.75
+    ],
+    "sha256": "55665f7b37edee83a45c005f6b8902e6ee25900ed672f090b7d6e429e75b27a6",
+    "source_model_sha256": "5be260040f47575a937748994ae63277a69ba4bbb4682cb3973a72f5de34655e"
+  },
+  {
+    "look": "buck",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      22,
+      25
+    ],
+    "game_size": [
+      5.5,
+      6.25
+    ],
+    "sha256": "5d82fce2f3374870d4b07e19b68e2ad7d3021cd738fb4c1fcdded0c23319cba6",
+    "source_model_sha256": "c603133ec3a2d474d415f6b2927fbf5570c415d3d5821e8764830bf42f6e4a58"
+  },
+  {
+    "look": "buck",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      29,
+      46
+    ],
+    "game_size": [
+      7.25,
+      11.5
+    ],
+    "sha256": "f0f155053515f2aae9dbe2f375d59f354b305e1094f21d7c21e00cb1f0518409",
+    "source_model_sha256": "c603133ec3a2d474d415f6b2927fbf5570c415d3d5821e8764830bf42f6e4a58"
+  },
+  {
+    "look": "buck",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      79,
+      36
+    ],
+    "game_size": [
+      19.75,
+      9.0
+    ],
+    "sha256": "bfc44c1a3a21bba7c95dc6da4f536063458090376eeff07a4ceca13a0fe9eaea",
+    "source_model_sha256": "c603133ec3a2d474d415f6b2927fbf5570c415d3d5821e8764830bf42f6e4a58"
+  },
+  {
+    "look": "burnt",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      20,
+      15
+    ],
+    "game_size": [
+      5.0,
+      3.75
+    ],
+    "sha256": "4507b1761ec3bc5dabbab63b5f0f81596aa19220e9d137e4e2f72cfcb7d20660",
+    "source_model_sha256": "b02bf30549afd75eb613755c09efca34178e69b032989226de33b5b3ec940f28"
+  },
+  {
+    "look": "burnt",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      25,
+      37
+    ],
+    "game_size": [
+      6.25,
+      9.25
+    ],
+    "sha256": "5a00de20e01958cbb0b3c00cb4203ca7cd5652e31d1e3f34f024a1c47eb45f79",
+    "source_model_sha256": "b02bf30549afd75eb613755c09efca34178e69b032989226de33b5b3ec940f28"
+  },
+  {
+    "look": "burnt",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      73,
+      26
+    ],
+    "game_size": [
+      18.25,
+      6.5
+    ],
+    "sha256": "05922128efc729563e967bcbab55540b2b5761a701a1fb5b65b57d82aea14529",
+    "source_model_sha256": "b02bf30549afd75eb613755c09efca34178e69b032989226de33b5b3ec940f28"
+  },
+  {
+    "look": "cass",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      41,
+      28
+    ],
+    "game_size": [
+      10.25,
+      7.0
+    ],
+    "sha256": "65a945cf0d2f2dcc32f5d6dfd316b4d10c09bea061fae6079ed58b0ff669a939",
+    "source_model_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba"
+  },
+  {
+    "look": "cass",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      19,
+      23
+    ],
+    "game_size": [
+      4.75,
+      5.75
+    ],
+    "sha256": "353a3c93c7d7ba70015dfa0f24e6ad0f371c328d740814fb74b71b16001da85d",
+    "source_model_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba"
+  },
+  {
+    "look": "cass",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      67,
+      25
+    ],
+    "game_size": [
+      16.75,
+      6.25
+    ],
+    "sha256": "f1df8c043618c2991d3b60b09dd8735f80a12f4a4be9f24f7dbf932a94b91e18",
+    "source_model_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba"
+  },
+  {
+    "look": "civilian",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      18,
+      17
+    ],
+    "game_size": [
+      4.5,
+      4.25
+    ],
+    "sha256": "f509d9284cba56d4b7f35ad20dff856a29a4baac69c270f871a5c4a844d714f7",
+    "source_model_sha256": "a049091530fab8c905844f16cf67f9a7c787da0645e73272d2a976333f06f182"
+  },
+  {
+    "look": "civilian",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      21,
+      35
+    ],
+    "game_size": [
+      5.25,
+      8.75
+    ],
+    "sha256": "ade749cf13402f5d9c5187fb8677ddb95b3c80c21fccebb8190942335155f8a2",
+    "source_model_sha256": "a049091530fab8c905844f16cf67f9a7c787da0645e73272d2a976333f06f182"
+  },
+  {
+    "look": "civilian",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      70,
+      26
+    ],
+    "game_size": [
+      17.5,
+      6.5
+    ],
+    "sha256": "512694493d0c811445cc8f40a08caba70fe538f663287e8803a3292ae60e947e",
+    "source_model_sha256": "a049091530fab8c905844f16cf67f9a7c787da0645e73272d2a976333f06f182"
+  },
+  {
+    "look": "cultist",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      20,
+      19
+    ],
+    "game_size": [
+      5.0,
+      4.75
+    ],
+    "sha256": "8dfd0d97a159ccd109ace941aba8c081f9c4fb7159e76fac98094f7c99d4783e",
+    "source_model_sha256": "b3f9e0d0c2463833718aacbf363978af858a3d09877dd171305262a7f9de9da7"
+  },
+  {
+    "look": "cultist",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      28,
+      41
+    ],
+    "game_size": [
+      7.0,
+      10.25
+    ],
+    "sha256": "1843ca54fe083882143afee4ed11c1c34ac1053b3585e7ca885cbf2fbcdcfe23",
+    "source_model_sha256": "b3f9e0d0c2463833718aacbf363978af858a3d09877dd171305262a7f9de9da7"
+  },
+  {
+    "look": "cultist",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      81,
+      42
+    ],
+    "game_size": [
+      20.25,
+      10.5
+    ],
+    "sha256": "7ac49d75901e4a5cc4887b43dbce80c1a2819bc357445cc8881ccd78ae51fcf9",
+    "source_model_sha256": "b3f9e0d0c2463833718aacbf363978af858a3d09877dd171305262a7f9de9da7"
+  },
+  {
+    "look": "demon",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      41,
+      30
+    ],
+    "game_size": [
+      10.25,
+      7.5
+    ],
+    "sha256": "4edbb4ef58228959f0fa554c6abb3289d3a41668098dbe4d3d732745aea2671e",
+    "source_model_sha256": "d53be5d50b75f18ffee5f9ad38b1957a6c5b8a49c2583c911df3dc800fc5f90f"
+  },
+  {
+    "look": "demon",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      73,
+      59
+    ],
+    "game_size": [
+      18.25,
+      14.75
+    ],
+    "sha256": "6797d6aa0596b96d1757fcda3d2c088986568cb1f3c096e6833eb0056e5f8392",
+    "source_model_sha256": "d53be5d50b75f18ffee5f9ad38b1957a6c5b8a49c2583c911df3dc800fc5f90f"
+  },
+  {
+    "look": "demon",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      91,
+      44
+    ],
+    "game_size": [
+      22.75,
+      11.0
+    ],
+    "sha256": "cadd8cba22fb54846e265c307da5bd6b6c384757f163d91a6c30c1ecd7c875f3",
+    "source_model_sha256": "d53be5d50b75f18ffee5f9ad38b1957a6c5b8a49c2583c911df3dc800fc5f90f"
+  },
+  {
+    "look": "fireman",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      25,
+      18
+    ],
+    "game_size": [
+      6.25,
+      4.5
+    ],
+    "sha256": "c9fcfa3961f21a13d3c2b2b3d9c457880de0861ca60bc9662b59db5b13daa8db",
+    "source_model_sha256": "bdf1151da862491c137e4c2dcaaa70dfbc90aa8bed200511f79322b1c0e5b42a"
+  },
+  {
+    "look": "fireman",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      30,
+      42
+    ],
+    "game_size": [
+      7.5,
+      10.5
+    ],
+    "sha256": "8ad48157a499cab339f7c2865f54d9b7c03bf29a655e8743a55f1a650e76df5b",
+    "source_model_sha256": "bdf1151da862491c137e4c2dcaaa70dfbc90aa8bed200511f79322b1c0e5b42a"
+  },
+  {
+    "look": "fireman",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      78,
+      29
+    ],
+    "game_size": [
+      19.5,
+      7.25
+    ],
+    "sha256": "a1a61f583ef5556538ebeffaa5f47c1c476e40227986d381d5919bd5a92cc56b",
+    "source_model_sha256": "bdf1151da862491c137e4c2dcaaa70dfbc90aa8bed200511f79322b1c0e5b42a"
+  },
+  {
+    "look": "ghoul",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      18,
+      16
+    ],
+    "game_size": [
+      4.5,
+      4.0
+    ],
+    "sha256": "4c5ed347c3c2027fc357dfb5adb2f4c6bafef6259e409f4122f13c040285c737",
+    "source_model_sha256": "18f8f6d879e03a4ce879657cc8a3f55c13433a66de6ccb8dddccfe6bf1ca47d4"
+  },
+  {
+    "look": "ghoul",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      35,
+      36
+    ],
+    "game_size": [
+      8.75,
+      9.0
+    ],
+    "sha256": "af03982bf5645672242a08bd3abe285ef92a7cbf2002061d24dfab9da6f83f48",
+    "source_model_sha256": "18f8f6d879e03a4ce879657cc8a3f55c13433a66de6ccb8dddccfe6bf1ca47d4"
+  },
+  {
+    "look": "ghoul",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      74,
+      29
+    ],
+    "game_size": [
+      18.5,
+      7.25
+    ],
+    "sha256": "9728149ce178c754369108306ce11b7d5ed182878c7352ad04e195241224d7cc",
+    "source_model_sha256": "18f8f6d879e03a4ce879657cc8a3f55c13433a66de6ccb8dddccfe6bf1ca47d4"
+  },
+  {
+    "look": "guard",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      27,
+      22
+    ],
+    "game_size": [
+      6.75,
+      5.5
+    ],
+    "sha256": "a8e166fe5f7d05b75791a015af38c3e72b5db24b9820f02ee6db7e5cd3125101",
+    "source_model_sha256": "0386b3b8a9a3a650495975eb939337f049cb896ded5e570a594183c15c7e53a1"
+  },
+  {
+    "look": "guard",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      23,
+      38
+    ],
+    "game_size": [
+      5.75,
+      9.5
+    ],
+    "sha256": "1f7e830c25de0e1175c384f8ce527c38b5482a16f1aac71db1397877f2fffba6",
+    "source_model_sha256": "0386b3b8a9a3a650495975eb939337f049cb896ded5e570a594183c15c7e53a1"
+  },
+  {
+    "look": "guard",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      77,
+      32
+    ],
+    "game_size": [
+      19.25,
+      8.0
+    ],
+    "sha256": "b0e5d47574b5ad46cd29db5e27c70117fba240b2ce7ca57c3851895ba3f80421",
+    "source_model_sha256": "0386b3b8a9a3a650495975eb939337f049cb896ded5e570a594183c15c7e53a1"
+  },
+  {
+    "look": "gunner",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      25,
+      20
+    ],
+    "game_size": [
+      6.25,
+      5.0
+    ],
+    "sha256": "c75f3172b7ea18fabd26e7a917552608e8453890202bd5641972651f111209dd",
+    "source_model_sha256": "b39b51c2be668648e4ad2217505c9b1a154663eba996b15b32cbff10994a2fa6"
+  },
+  {
+    "look": "gunner",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      33,
+      46
+    ],
+    "game_size": [
+      8.25,
+      11.5
+    ],
+    "sha256": "8622df5eb97ebb653fa2c892f98e36a060768c2b0fe3120430e79b6b64fff143",
+    "source_model_sha256": "b39b51c2be668648e4ad2217505c9b1a154663eba996b15b32cbff10994a2fa6"
+  },
+  {
+    "look": "gunner",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      79,
+      30
+    ],
+    "game_size": [
+      19.75,
+      7.5
+    ],
+    "sha256": "b75074d4c93bc75dc9a1a9a9a214999c8ae45c59e74b52f8231b382042283a1b",
+    "source_model_sha256": "b39b51c2be668648e4ad2217505c9b1a154663eba996b15b32cbff10994a2fa6"
+  },
+  {
+    "look": "handler",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      18,
+      17
+    ],
+    "game_size": [
+      4.5,
+      4.25
+    ],
+    "sha256": "c57938eb09a5f5bcaee8bc1288622c454e65570960123e59b2e2b4c6d22cae70",
+    "source_model_sha256": "33e50b5b93e4c976dbc6e6b9acc6927af238b0305f3d3bac0b338ea5d8a5d2f3"
+  },
+  {
+    "look": "handler",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      24,
+      36
+    ],
+    "game_size": [
+      6.0,
+      9.0
+    ],
+    "sha256": "0713506a623d79a93c8b94101f21f0f045cd769af26f345f9f6c39f3f288c1d2",
+    "source_model_sha256": "33e50b5b93e4c976dbc6e6b9acc6927af238b0305f3d3bac0b338ea5d8a5d2f3"
+  },
+  {
+    "look": "handler",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      80,
+      26
+    ],
+    "game_size": [
+      20.0,
+      6.5
+    ],
+    "sha256": "b1ceaf93f911d2878dc04dae964f9d670c7ff1f335747a18c9689d5c96b1771b",
+    "source_model_sha256": "33e50b5b93e4c976dbc6e6b9acc6927af238b0305f3d3bac0b338ea5d8a5d2f3"
+  },
+  {
+    "look": "heavy",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      24,
+      19
+    ],
+    "game_size": [
+      6.0,
+      4.75
+    ],
+    "sha256": "9e23b37a0ff55505006108e48d08e82d2f713a4bb2b094866c03f3d093d32cdc",
+    "source_model_sha256": "e186c0db281aef3a4cd29089ac6e16788006acd6bfdf2761298bc191f94bc2cd"
+  },
+  {
+    "look": "heavy",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      28,
+      39
+    ],
+    "game_size": [
+      7.0,
+      9.75
+    ],
+    "sha256": "09ffd83c43c3528ab05474d48ce32ebdb3cd7b880e9be5299020db5daa067f74",
+    "source_model_sha256": "e186c0db281aef3a4cd29089ac6e16788006acd6bfdf2761298bc191f94bc2cd"
+  },
+  {
+    "look": "heavy",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      81,
+      36
+    ],
+    "game_size": [
+      20.25,
+      9.0
+    ],
+    "sha256": "79a0f675b1402ed6a7fcd2ac8df3b8bdebb9f44083e2ecf555d1496ec3518cf9",
+    "source_model_sha256": "e186c0db281aef3a4cd29089ac6e16788006acd6bfdf2761298bc191f94bc2cd"
+  },
+  {
+    "look": "hunter",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      20,
+      18
+    ],
+    "game_size": [
+      5.0,
+      4.5
+    ],
+    "sha256": "16cbce5fdb4dc85d61b83a731c40fc0ced1dd63df0b717290ae3de2908c1e10a",
+    "source_model_sha256": "9651f5e1233717677786be4f0ca6be9a22b9cdfbce57bb8ad6614e06557fc0ad"
+  },
+  {
+    "look": "hunter",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      22,
+      35
+    ],
+    "game_size": [
+      5.5,
+      8.75
+    ],
+    "sha256": "be6f272b8758556e8ae68e0e40bfc3080fd5fb87a29df80676f117c51f5cb109",
+    "source_model_sha256": "9651f5e1233717677786be4f0ca6be9a22b9cdfbce57bb8ad6614e06557fc0ad"
+  },
+  {
+    "look": "hunter",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      68,
+      24
+    ],
+    "game_size": [
+      17.0,
+      6.0
+    ],
+    "sha256": "58b426c36d09116163948f2d50be0cd393a1288329da3489c0736dff52d08be8",
+    "source_model_sha256": "9651f5e1233717677786be4f0ca6be9a22b9cdfbce57bb8ad6614e06557fc0ad"
+  },
+  {
+    "look": "riot",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      24,
+      20
+    ],
+    "game_size": [
+      6.0,
+      5.0
+    ],
+    "sha256": "53c03b16d36478638425c3f2188e237c607195cdc37d0fb9b5932c4572add025",
+    "source_model_sha256": "85b93dcf4ce0ba32a87d3aa3ef3b4dd4014a8bf422b1450f30fe84f7825f0b85"
+  },
+  {
+    "look": "riot",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      27,
+      40
+    ],
+    "game_size": [
+      6.75,
+      10.0
+    ],
+    "sha256": "fc08fd9f07a638a0ebc3374ee8a1283191ec0eb0110dcaf23f746e63c0719838",
+    "source_model_sha256": "85b93dcf4ce0ba32a87d3aa3ef3b4dd4014a8bf422b1450f30fe84f7825f0b85"
+  },
+  {
+    "look": "riot",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      73,
+      31
+    ],
+    "game_size": [
+      18.25,
+      7.75
+    ],
+    "sha256": "183519abb841ecbfffa3749ac3b5ef0b288933a1be948d8afe17433f002743fc",
+    "source_model_sha256": "85b93dcf4ce0ba32a87d3aa3ef3b4dd4014a8bf422b1450f30fe84f7825f0b85"
+  },
+  {
+    "look": "scout",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching character appearance after shared scout stage energy correction; wound caps pending",
+    "pixels": [
+      23,
+      18
+    ],
+    "game_size": [
+      5.75,
+      4.5
+    ],
+    "sha256": "93f809c9824210faa3bd058fef8f6ca77392d7ddb5a80c8b80c618d9624775cd",
+    "source_model_sha256": "a846441c6c80c0c484972483c79b6dd25ea864f3c1c2057113fbc13c4cf5509e",
+    "stage_energy": 0.24
+  },
+  {
+    "look": "scout",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching character appearance after shared scout stage energy correction; wound caps pending",
+    "pixels": [
+      29,
+      34
+    ],
+    "game_size": [
+      7.25,
+      8.5
+    ],
+    "sha256": "ad5b862cf750ac88cb8c0469bf3a989fd7a41eface7c8a026e2d13a737d93dbf",
+    "source_model_sha256": "a846441c6c80c0c484972483c79b6dd25ea864f3c1c2057113fbc13c4cf5509e",
+    "stage_energy": 0.24
+  },
+  {
+    "look": "scout",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching character appearance after shared scout stage energy correction; wound caps pending",
+    "pixels": [
+      75,
+      32
+    ],
+    "game_size": [
+      18.75,
+      8.0
+    ],
+    "sha256": "818f1180fa14dc45f715c319fb0008d4a35b5eb7be54f61565b7b667aa73b12d",
+    "source_model_sha256": "a846441c6c80c0c484972483c79b6dd25ea864f3c1c2057113fbc13c4cf5509e",
+    "stage_energy": 0.24
+  },
+  {
+    "look": "scrapper",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      22,
+      19
+    ],
+    "game_size": [
+      5.5,
+      4.75
+    ],
+    "sha256": "66a867d08cd8545955c342b3c926631873b63dcef3a4b5cfd23617ac3f30f31b",
+    "source_model_sha256": "1775272785e5314617ec02ded343c9dc7f0541678c5a27a898902b014b0fb5f2"
+  },
+  {
+    "look": "scrapper",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      24,
+      35
+    ],
+    "game_size": [
+      6.0,
+      8.75
+    ],
+    "sha256": "adcedba0a0b7b31831a49cb25a0445be50991b2362e30e14557b54f75736cebd",
+    "source_model_sha256": "1775272785e5314617ec02ded343c9dc7f0541678c5a27a898902b014b0fb5f2"
+  },
+  {
+    "look": "scrapper",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      77,
+      36
+    ],
+    "game_size": [
+      19.25,
+      9.0
+    ],
+    "sha256": "8495741dd1ca833a5ee3d28beee79175e209adc812d8406469288f4d31832200",
+    "source_model_sha256": "1775272785e5314617ec02ded343c9dc7f0541678c5a27a898902b014b0fb5f2"
+  },
+  {
+    "look": "security",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      22,
+      16
+    ],
+    "game_size": [
+      5.5,
+      4.0
+    ],
+    "sha256": "5f1c2774cc9c215b9fcbef4784e4c5d9f56e50d0e48d98b1d9692243475a26ae",
+    "source_model_sha256": "089dfa10ef09d200239ec5c409934b244e1481ac3c9981391d9b89dd76e343d9"
+  },
+  {
+    "look": "security",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      27,
+      44
+    ],
+    "game_size": [
+      6.75,
+      11.0
+    ],
+    "sha256": "f17856280c1a880c17938c34bec04f0b1c7b1198474e421d5887cefba1ec9b48",
+    "source_model_sha256": "089dfa10ef09d200239ec5c409934b244e1481ac3c9981391d9b89dd76e343d9"
+  },
+  {
+    "look": "security",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      74,
+      30
+    ],
+    "game_size": [
+      18.5,
+      7.5
+    ],
+    "sha256": "c6df107e60cad947c0c955d936ff8f014015a9b35e3f0ff2d3baf6303825ca22",
+    "source_model_sha256": "089dfa10ef09d200239ec5c409934b244e1481ac3c9981391d9b89dd76e343d9"
+  },
+  {
+    "look": "sniper",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      27,
+      16
+    ],
+    "game_size": [
+      6.75,
+      4.0
+    ],
+    "sha256": "1c2ef6066b90501bff92d6f2da0a59ea36e240ee284905b90cd00fb5577bb613",
+    "source_model_sha256": "435a5e410b70b1c113adf682edef4b2a5eb5f91860e7a103d53c3b16c5b6a6ac"
+  },
+  {
+    "look": "sniper",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      23,
+      36
+    ],
+    "game_size": [
+      5.75,
+      9.0
+    ],
+    "sha256": "1f918284f14209d2134dfefe42e1e049a3a5ff0a58dcb2a7751743af2a04b62a",
+    "source_model_sha256": "435a5e410b70b1c113adf682edef4b2a5eb5f91860e7a103d53c3b16c5b6a6ac"
+  },
+  {
+    "look": "sniper",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      73,
+      28
+    ],
+    "game_size": [
+      18.25,
+      7.0
+    ],
+    "sha256": "a2e69c389a90907a4b53019dd624c86fac2ae5b4eedf0fa8d817170440ec5782",
+    "source_model_sha256": "435a5e410b70b1c113adf682edef4b2a5eb5f91860e7a103d53c3b16c5b6a6ac"
+  },
+  {
+    "look": "stagehand",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      29,
+      21
+    ],
+    "game_size": [
+      7.25,
+      5.25
+    ],
+    "sha256": "1a8f11db95b1ef40566d604155fe77f3feb05b8da185abf0b124b37f2e2b1171",
+    "source_model_sha256": "e49705fab9d4d22b17b2b38417bf000497968960afe2c06477a852793bc52957"
+  },
+  {
+    "look": "stagehand",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      35,
+      39
+    ],
+    "game_size": [
+      8.75,
+      9.75
+    ],
+    "sha256": "146c481b2392e7eee77e6c33d94c9404c8694e87a9833cfcae4c95d7c009d67a",
+    "source_model_sha256": "e49705fab9d4d22b17b2b38417bf000497968960afe2c06477a852793bc52957"
+  },
+  {
+    "look": "stagehand",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      61,
+      23
+    ],
+    "game_size": [
+      15.25,
+      5.75
+    ],
+    "sha256": "3113a031279a1bbf858a1a3518baa3f75a3ae40af6241a4a9e46d28ce0273ff2",
+    "source_model_sha256": "e49705fab9d4d22b17b2b38417bf000497968960afe2c06477a852793bc52957"
+  },
+  {
+    "look": "welder",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      24,
+      19
+    ],
+    "game_size": [
+      6.0,
+      4.75
+    ],
+    "sha256": "af9a4982b7cb6fea3a4b9b83f662cf6819b0796a75186e818805476ecbe38f1a",
+    "source_model_sha256": "3a65c074f80d6577b4a1f08c51f0c8ce148b4df5bd883756bb4493e1c1dc17e9"
+  },
+  {
+    "look": "welder",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      23,
+      35
+    ],
+    "game_size": [
+      5.75,
+      8.75
+    ],
+    "sha256": "b3b6501210d0ecce2b5840e93d3128063c8031ab6b2696f570635770b358717c",
+    "source_model_sha256": "3a65c074f80d6577b4a1f08c51f0c8ce148b4df5bd883756bb4493e1c1dc17e9"
+  },
+  {
+    "look": "welder",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      74,
+      31
+    ],
+    "game_size": [
+      18.5,
+      7.75
+    ],
+    "sha256": "1b8bc02389cde27a22a8145e1a705e4094011254c77471c790955291f987d877",
+    "source_model_sha256": "3a65c074f80d6577b4a1f08c51f0c8ce148b4df5bd883756bb4493e1c1dc17e9"
+  },
+  {
+    "look": "zombie",
+    "part": "head",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      22,
+      17
+    ],
+    "game_size": [
+      5.5,
+      4.25
+    ],
+    "sha256": "5778f4657fed688481c7f9a520ec0dba3ff1bb4776d27f6d4b79f9c81e000429",
+    "source_model_sha256": "73f4bccdc7780f2f690888aba9649c917a847d9e39319e590ce857ad5b345b43"
+  },
+  {
+    "look": "zombie",
+    "part": "arm",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      30,
+      42
+    ],
+    "game_size": [
+      7.5,
+      10.5
+    ],
+    "sha256": "3d3973acf8ff27e468b32f84f8b62b27a1001be2229b15b87534334721902281",
+    "source_model_sha256": "73f4bccdc7780f2f690888aba9649c917a847d9e39319e590ce857ad5b345b43"
+  },
+  {
+    "look": "zombie",
+    "part": "leg",
+    "approved": true,
+    "approved_scope": "matching appearance only; wound caps pending",
+    "pixels": [
+      77,
+      26
+    ],
+    "game_size": [
+      19.25,
+      6.5
+    ],
+    "sha256": "32b6b62efcabe6466565f4991e2c53214beeda14308904c08200dd7e30421964",
+    "source_model_sha256": "73f4bccdc7780f2f690888aba9649c917a847d9e39319e590ce857ad5b345b43"
+  }
+]

@@ -1,0 +1,25 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+[level] prewarmed 24 looks in 2297 ms
+CHECKPOINT { "mission": "m01_checkout", "index": 0, "name": "MOTEL - GROUND FLOOR", "position": [90.0, 608.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m01_checkout", "index": 1, "name": "COURTYARD", "position": [480.0, 406.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m01_checkout", "index": 2, "name": "UPSTAIRS WING", "position": [160.0, 150.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m01_checkout", "index": 3, "name": "FRONT OFFICE", "position": [874.0, 544.0], "inside_trigger": true, "overlaps": [] }
+[level] prewarmed 21 looks in 478 ms
+CHECKPOINT { "mission": "m02_dog_days", "index": 0, "name": "THE YARD", "position": [224.0, 330.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m02_dog_days", "index": 1, "name": "WAREHOUSE", "position": [224.0, 294.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m02_dog_days", "index": 2, "name": "KENNELS", "position": [640.0, 294.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m02_dog_days", "index": 3, "name": "THE OFFICE", "position": [794.0, 112.0], "inside_trigger": true, "overlaps": [] }
+[level] prewarmed 16 looks in 389 ms
+CHECKPOINT { "mission": "m03_prime_time", "index": 0, "name": "THE BACKLOT", "position": [136.0, 888.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m03_prime_time", "index": 1, "name": "PROP WAREHOUSE", "position": [144.0, 646.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m03_prime_time", "index": 2, "name": "WARDROBE", "position": [64.0, 326.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m03_prime_time", "index": 3, "name": "STAGE NINE", "position": [346.0, 512.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m03_prime_time", "index": 4, "name": "THE OFFICES", "position": [826.0, 432.0], "inside_trigger": true, "overlaps": [] }
+[level] prewarmed 14 looks in 810 ms
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 0, "name": "THE LAWN", "position": [152.0, 920.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 1, "name": "THE FOYER", "position": [378.0, 448.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 2, "name": "WEST WING", "position": [176.0, 534.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 3, "name": "EAST WING", "position": [826.0, 448.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT PLACEMENT: 17 actual positions captured

@@ -1,0 +1,37 @@
+{
+  "approved": false,
+  "scope": "Actual Godot OpenGL powered-cutting pose, Cass eight headings at enlarged scale",
+  "image": "build/chainsaw_facings.png",
+  "issues": [
+    "Generic aim pose leaves support hand off front wrap handle",
+    "2D top-view weapon rotates in screen plane while cast uses oblique perspective",
+    "Requires authored two-hand low forward carry and contact pose; no procedural arm overlay"
+  ],
+  "next": "Author isolated Blender candidate action and review all headings before integration",
+  "candidate": "build/chainsaw_pose_candidate/cass.glb",
+  "candidate_image": "build/chainsaw_pose_candidate/facings.png",
+  "candidate_approved": false,
+  "candidate_changes": [
+    "Standing rest base, aim treated as authored static clip",
+    "Both grip targets at common waist height",
+    "Idle source rig used for aim instead of firing source"
+  ],
+  "remaining": "Support grip and 2D weapon do not coincide in multiple headings. Need 3D weapon attached to skeleton, not more screen-plane offsets.",
+  "geometry_bounds_m": [
+    1.105,
+    0.375,
+    0.315
+  ],
+  "fixed_scale_candidate": 0.65,
+  "fixed_scale_image": "build/chainsaw_pose_candidate/fixed_3d.png",
+  "diagnosis": "Dynamic two-grip fit shrinks model (observed wrist span ~0.149m vs original anchors ~0.444m). Geometry import dimensions correct. Fixed 0.65 scale and model-forward orientation restores readable weapon; support hand still does not meet front handle.",
+  "standing_candidate": {
+    "image": "build/chainsaw_pose_candidate/fitted_3d.png",
+    "headings": 8,
+    "support_gap_max_m": 0.00449214736,
+    "support_gap_threshold_m": 0.005,
+    "measured_pass": true,
+    "scope": "Wrist origin to front crossbar centre at one settled standing sample per heading. Not palm/finger contact, gait, cutting animation or complete visual approval."
+  },
+  "runtime_change": "Powered chainsaw no longer selects one-hand aim_melee; uses existing two-hand aim until candidate integration."
+}

@@ -1,0 +1,16 @@
+{
+  "runtime_approved": false,
+  "source_unchanged": true,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "vertices_before": 70610,
+      "vertices_after": 59866,
+      "boundary_edges": 16,
+      "nonmanifold_edges": 25
+    }
+  ],
+  "operation": "Coincident seam weld and degenerate edge cleanup; no voxel remesh or global smoothing",
+  "visual_review": "Pending independent textured and clay renders",
+  "limitations": "Remaining nonmanifold edges require inspection; topology counts do not approve anatomy or animation"
+}

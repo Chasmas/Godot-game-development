@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 14 looks in 1606 ms
+PASS  mausoleum walking lane x=120.0 end=(120.0, 738.3372)
+PASS  mausoleum walking lane x=216.0 end=(216.0, 738.3372)
+PASS  mausoleum walking lane x=168.0 end=(168.0, 797.0054)
+PASS  active guard detour nearest=10.8710708618164 crossed footprint=false
+MAUSOLEUM COLLISION REVIEW: 0 failures; detour points=10

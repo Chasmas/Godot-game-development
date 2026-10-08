@@ -1,0 +1,167 @@
+{
+  "approved": false,
+  "runtime_sha256": "5bf7c179fa8d170eacb13e82d03fe07abe30765d693d169f543a317878ec050d",
+  "scope": "Lateral stride and 32 headings, phase .30-.78, 8 recent poses, nearest heading translation only; does not prove all actions or level visual quality.",
+  "results": [
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 0.0,
+      "max_error_px": 1.0748187490997083
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 0.392699081698724,
+      "max_error_px": 1.073316991662142
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 0.785398163397448,
+      "max_error_px": 1.0681305683278375
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 1.17809724509617,
+      "max_error_px": 1.0620701258185135
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 1.5707963267949,
+      "max_error_px": 1.0668316942581413
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 1.96349540849362,
+      "max_error_px": 1.0632757187291995
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 2.35619449019234,
+      "max_error_px": 1.0654408950228194
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 2.74889357189107,
+      "max_error_px": 1.0713599153114557
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 3.14159265358979,
+      "max_error_px": 1.0796649681608779
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 3.53429173528852,
+      "max_error_px": 1.0858916096435849
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 3.92699081698724,
+      "max_error_px": 1.0878992885063987
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 4.31968989868597,
+      "max_error_px": 1.0857756017113218
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 4.71238898038469,
+      "max_error_px": 1.0817023016318368
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 5.10508806208341,
+      "max_error_px": 1.077644943633365
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 5.49778714378214,
+      "max_error_px": 1.0749993506477615
+    },
+    {
+      "source": "heavy_moving_paths_16.json",
+      "angle": 5.89048622548086,
+      "max_error_px": 1.0747520439365563
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 0.196349540849362,
+      "max_error_px": 1.6492414450300155
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 0.589048622548086,
+      "max_error_px": 1.6743024680278682
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 0.98174770424681,
+      "max_error_px": 1.6501136363392337
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 1.37444678594553,
+      "max_error_px": 1.5921305355802489
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 1.76714586764426,
+      "max_error_px": 1.3812468064430963
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 2.15984494934298,
+      "max_error_px": 1.4792795954436289
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 2.55254403104171,
+      "max_error_px": 1.5015901228670308
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 2.94524311274043,
+      "max_error_px": 1.5580971011658933
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 3.33794219443916,
+      "max_error_px": 1.5658943049885368
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 3.73064127613788,
+      "max_error_px": 1.5152895891973424
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 4.1233403578366,
+      "max_error_px": 1.6662261139418097
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 4.51603943953533,
+      "max_error_px": 1.354977970943914
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 4.90873852123405,
+      "max_error_px": 1.562162194027932
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 5.30143760293278,
+      "max_error_px": 1.3880524761780226
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 5.6941366846315,
+      "max_error_px": 1.4744375753768746
+    },
+    {
+      "source": "heavy_moving_midpoint_paths_16.json",
+      "angle": 6.08683576633022,
+      "max_error_px": 1.5902073888780681
+    }
+  ]
+}

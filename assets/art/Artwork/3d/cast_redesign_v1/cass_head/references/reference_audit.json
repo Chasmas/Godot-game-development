@@ -1,0 +1,51 @@
+{
+  "character": "cass_head",
+  "height_m": 0.35,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\cass_turnaround.png",
+  "source_sha256": "753f7d4b61e92dc2c1759e86f95d2b849584dba8a53894077b3f92e81dff5e50",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": false,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        215,
+        0,
+        410,
+        215
+      ],
+      "width": 195,
+      "height": 215,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head\\references\\front.png",
+      "sha256": "6f1905e8941c0c91c93202e11a3d83592f471b0a9954af41d6eb65875aa14533"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        675,
+        0,
+        885,
+        215
+      ],
+      "width": 210,
+      "height": 215,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head\\references\\side.png",
+      "sha256": "a93c19cb493a8bf709d761f4b06272a14bece0a8f645616633203f056b6200f0"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        1110,
+        0,
+        1340,
+        215
+      ],
+      "width": 230,
+      "height": 215,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head\\references\\back.png",
+      "sha256": "db6735fa49bf1566577ec2068fb74b80fc3e4e96f520db03323aa53481ce42a6"
+    }
+  ],
+  "disposition": "Superseded modeling reference; intentionally unapproved for API. Use cass_head_detail reviewed high-resolution references instead."
+}

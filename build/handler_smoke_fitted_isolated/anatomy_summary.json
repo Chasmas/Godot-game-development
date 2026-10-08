@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/handler_smoke_fitted_isolated/handler.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.000329474003775465,
+    "Hips": 0.0,
+    "LeftArm": 0.0002473204863310168,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00017627838337214163,
+    "LeftHand": 5.6937805018147616e-05,
+    "Neck": 0.00019451622253361113,
+    "RightArm": 0.0002360943286555419,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.024399498345026763,
+    "RightHand": 0.018203254701263792
+  },
+  "loop_gap_m": {
+    "Head": 0.0004196832252383666,
+    "Hips": 0.0,
+    "LeftArm": 0.00031502371240315046,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00022359074852555685,
+    "LeftHand": 5.6978375517901295e-05,
+    "Neck": 0.00024773140895707356,
+    "RightArm": 0.00030062741883000977,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.0002025381455022857,
+    "RightHand": 3.3458509825665047e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.16056597232819003,
+  "contact_hand_minus_head_m": [
+    -0.03500211238860995,
+    -0.034996986389159934
+  ]
+}

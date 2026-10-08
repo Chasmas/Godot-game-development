@@ -1,0 +1,37 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Static skin deformation probes; no walk/run cycle or gameplay validation",
+  "probes": [
+    {
+      "render": "opposite_front_paw.png",
+      "bone": "front_negative_x_lower",
+      "axis": 0,
+      "degrees": 25
+    },
+    {
+      "render": "opposite_rear_hip.png",
+      "bone": "rear_negative_x_upper",
+      "axis": 0,
+      "degrees": 20
+    },
+    {
+      "render": "opposite_head_turn.png",
+      "bone": "head",
+      "axis": 2,
+      "degrees": -20
+    },
+    {
+      "render": "tail_moderate_positive.png",
+      "bone": "tail_1",
+      "axis": 0,
+      "degrees": 12
+    },
+    {
+      "render": "tail_moderate_negative.png",
+      "bone": "tail_1",
+      "axis": 0,
+      "degrees": -12
+    }
+  ]
+}

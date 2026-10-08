@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 	# A live caller should never read as a pasted card: the portrait breathes
 	# while the line is open and reacts sharply to each ring.
 	if _portrait:
-		var talking := _state == "talk" and Dialogue.active and Dialogue.is_typing()
+		var talking := _caller_talking()
 		var breath := sin(_t * (8.0 if talking else 2.0))
 		_portrait.position = _portrait_home + Vector2(0, breath * (1.4 if talking else 0.45))
 		_portrait.rotation = breath * (0.012 if talking else 0.004) + sin(_t * 45.0) * 0.025 * _shake
@@ -79,6 +79,23 @@ func _process(delta: float) -> void:
 			if not Dialogue.active or Dialogue._id != dialogue_id:
 				_hang_up()
 	_panel.queue_redraw()
+
+func _caller_talking() -> bool:
+	return _state == "talk" and Dialogue._id == dialogue_id and Dialogue.is_speaking(caller)
+
+func _unhandled_input(e: InputEvent) -> void:
+	# Calls are atmospheric, never a hard gate. Escape/pause or a click lets
+	# the player dismiss the incoming-call card immediately.
+	if _state == "hangup":
+		return
+	var skip := e.is_action_pressed("ui_cancel") or e.is_action_pressed("pause")
+	if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+		skip = true
+	if skip:
+		get_viewport().set_input_as_handled()
+		if Dialogue.active and Dialogue._id == dialogue_id:
+			Dialogue._end()
+		_hang_up()
 
 func _pick_up() -> void:
 	_state = "talk"
@@ -143,7 +160,7 @@ class CallPanel extends Control:
 		if icon:
 			# the neon handset / walkie: jumps on each ring, glow breathing,
 			# dim while the line is quiet, bright while someone's talking
-			var talking := line._state == "talk" and Dialogue.active and Dialogue.is_typing()
+			var talking := line._caller_talking()
 			var lit := 1.0 if line._state == "ring" or talking else 0.7
 			var isz := Vector2(64, 64)
 			draw_set_transform(c, sin(line._t * 40.0) * 0.15 * line._shake, Vector2.ONE * (1.0 + 0.08 * line._shake))
@@ -196,7 +213,7 @@ class CallPanel extends Control:
 			draw_arc(c, 16.0 + k * 18.0, -0.9, 0.9, 12, Color(UIStyle.PINK, 1.0 - k), 2.0)
 			draw_arc(c, 16.0 + k * 18.0, PI - 0.9, PI + 0.9, 12, Color(UIStyle.PINK, 1.0 - k), 2.0)
 		elif line._state == "talk":
-			var talking := Dialogue.active and Dialogue.is_typing()
+			var talking := line._caller_talking()
 			for i in 5:
 				var hgt := 4.0 + (10.0 * absf(sin(line._t * 9.0 + i * 1.3)) if talking else 2.0)
 				draw_rect(Rect2(98 + i * 7, 84 - hgt, 4, hgt), UIStyle.CYAN)

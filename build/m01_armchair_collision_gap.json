@@ -1,0 +1,15 @@
+{
+  "scope": "M01 native armchair collider integration audit",
+  "source": "scripts/levels/m01_native_armchairs.gd",
+  "finding": "The native replacement only updates an existing collider for solid Furnish rectangles. Decorative Dressing armchairs receive a sprite but no collider.",
+  "evidence": "tools/m01_native_armchair_review.gd expects 11 native sprites and previously checks one solid collider",
+  "requirement": "Standing furniture that occupies floor space must block walking and navigation",
+  "resolved": true,
+  "next_steps": [
+    "Give decorative armchairs grounded collision footprints",
+    "Reserve matching navigation cells",
+    "Validate door clearance and reachable seating sides after adding colliders",
+    "Test player movement against each footprint"
+  ],
+  "validation": "tools/m01_native_armchair_review.tscn passed: 11 native colliders detected by player mask, matching nav cells reserved; chair approaches remain accessible; sampled door/wall overlaps zero. Physical movement sweep remains separate."
+}

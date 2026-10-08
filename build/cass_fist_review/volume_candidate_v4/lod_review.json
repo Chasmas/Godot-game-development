@@ -1,0 +1,9 @@
+{
+  "runtime_promoted": false,
+  "visual_approved": false,
+  "source_faces": 31844,
+  "candidate_faces": 12791,
+  "sampled_bidirectional_surface_deviation_m": 0.00019610716844908893,
+  "surface_deviation_under_2mm": true,
+  "scope": "Mesh LOD surface samples; does not prove silhouette, rig, texture or anatomical quality"
+}

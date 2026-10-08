@@ -14,13 +14,17 @@ RULES = {
  "m01_sunset_palms": [
   ("motel_pool_lounger", 6, "courtyard", "=", dict(size=0.9, edge_of="~", mode="row", gap=3)),
   ("motel_pool_umbrella", 3, "courtyard", "=", dict(size=0.9, edge_of="~")),
-  ("motel_pool_float_flamingo", 1, "courtyard", "~", dict(size=0.7, floor=True)),
+  # The flamingo is a world-space pool object, never a floor decal.
+  ("motel_pool_float_flamingo", 1, "courtyard", "~", dict(size=0.7)),
   ("motel_bedside_lamp", 5, "north_wing", ".", dict(size=0.5, near="b")),
   ("motel_bedside_lamp", 3, "ground_floor", ".", dict(size=0.5, near="b")),
   ("motel_tv_crt", 3, "north_wing", ".", dict(size=0.7, wall=True)),
-  ("motel_telephone", 3, "north_wing", ".", dict(size=0.5, floor=True, near="b")),
+  ("motel_telephone", 2, "lobby", ",", dict(size=0.5, wall=True, clear=1)),
   ("motel_suitcase_open", 3, "north_wing", ".", dict(size=0.7, floor=True, rot=True)),
   ("motel_ice_bucket_full", 2, "lobby", ",", dict(size=0.5, floor=True)),
+  # Exterior colour and room storytelling: both remain away from doors and beds.
+  ("motel_bougainvillea", 3, "courtyard", "=", dict(size=0.72, clear=1, gap=6)),
+  ("hq_motel_bed", 2, "north_wing", ".", dict(size=0.72, wall=True, clear=1)),
  ],
  "m02_yermo_salvage": [
   ("yard_car_stack", 3, "exterior", ";", dict(size=1.0, clear=2)),
@@ -28,6 +32,7 @@ RULES = {
   ("yard_tire_stack", 4, "exterior", ";", dict(size=0.7)),
   ("yard_scrap_pile", 4, "exterior", ";", dict(size=0.9, clear=2)),
   ("yard_storage_container", 2, "exterior", ";", dict(size=1.0, clear=2)),
+  ("yard_tumbleweed", 5, "exterior", ";", dict(size=0.58, floor=True, gap=6)),
   ("yard_welder_sparks", 2, "warehouse", "+:", dict(size=0.7, floor=True)),
   ("yard_oil_barrel_cluster", 2, "warehouse", "+:", dict(size=0.8, wall=True)),
  ],
@@ -36,6 +41,9 @@ RULES = {
   ("studio_clapperboard", 3, "stage", "-:", dict(size=0.5, floor=True)),
   ("studio_teleprompter", 2, "stage", "-", dict(size=0.7)),
   ("studio_spotlight_beam", 3, "stage", "-", dict(size=0.8, floor=True)),
+  # A pair of small tape marks reads as blocking guidance; a field of large Xs reads as noise.
+  ("studio_block_x", 2, "stage", "-:", dict(size=0.34, floor=True, gap=9)),
+  ("studio_boom_mic", 2, "stage", "-:", dict(size=0.72, clear=1, wall=True)),
   ("studio_film_reel_pair", 3, "offices", ".,", dict(size=0.6, floor=True)),
   ("studio_film_reel_pair", 1, "warehouse", "_.", dict(size=0.6, floor=True)),
  ],
@@ -47,7 +55,8 @@ RULES = {
   ("candelabra", 6, "ballroom", "_.,", dict(size=0.6, wall=True, mode="mirror", gap=5)),
   ("candelabra", 3, "foyer", "_.,", dict(size=0.6, wall=True)),
   ("villa_candle_ring", 2, "foyer", "_.,", dict(size=0.7, floor=True, clear=1)),
-  ("piano", 1, "west_wing", "_.,", dict(size=0.9, wall=True, clear=1)),
+  ("villa_grand_piano", 1, "west_wing", "_.,", dict(size=0.9, wall=True, clear=1)),
+  ("villa_coat_check", 1, "foyer", "_.,", dict(size=0.78, wall=True, clear=1)),
  ],
 }
 
@@ -121,6 +130,25 @@ PATH_RULES = {
  "m04_villa_estrella": [("path_crack", 5, "exterior", ";", dict(floor=True, size=0.9, gap=8))],
 }
 
+# Hand-authored anchors keep the large open spaces readable as places with a
+# purpose.  They are placed before the ambient pass, so the latter fills the
+# edges without breaking the combat lanes between these mini-scenes.
+COMPOSITIONS = {
+ "m02_yermo_salvage": [
+  # A field repair station: bench, fuel and sparks imply a job interrupted.
+  ("hq_workbench", 1, "exterior", ";", dict(at=[10, 30], size=0.72, clear=1)),
+  ("yard_oil_barrel_cluster", 1, "exterior", ";", dict(at=[14, 30], size=0.78, clear=1)),
+  ("yard_welder_sparks", 1, "exterior", ";", dict(at=[12, 34], size=0.62, clear=1, floor=True)),
+  # A salvage intake: stacked chassis and tyres create a flanking anchor.
+  ("yard_car_stack", 1, "exterior", ";", dict(at=[34, 27], size=0.92, clear=2)),
+  ("yard_tire_stack", 1, "exterior", ";", dict(at=[39, 27], size=0.72, clear=1)),
+  ("hq_junk_heap", 1, "exterior", ";", dict(at=[37, 32], size=0.72, clear=1)),
+  # The night shift's watch point: container, heat and a deliberate open lane.
+  ("yard_storage_container", 1, "exterior", ";", dict(at=[52, 29], size=0.92, clear=2)),
+  ("hq_fire_barrel", 1, "exterior", ";", dict(at=[58, 32], size=0.72, clear=1)),
+ ],
+}
+
 def tidy(name, d):
     """Drop older decor that sits somewhere it makes no sense (found by a close-up audit)."""
     m = d["map"]; H, W = len(m), len(m[0])
@@ -170,7 +198,7 @@ def build(name):
             keep_clear += [(ax + (bx - ax) * k / n, ay + (by - ay) * k / n) for k in range(n + 1)]
     if hc.get("pos"): keep_clear.append(tuple(hc["pos"]))
     added = 0
-    rules = list(RULES[name]) + (road_rules(*ROAD_ZONES[name]) if name in ROAD_ZONES else []) + PATH_RULES.get(name, []) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
+    rules = list(COMPOSITIONS.get(name, [])) + list(RULES[name]) + (road_rules(*ROAD_ZONES[name]) if name in ROAD_ZONES else []) + PATH_RULES.get(name, []) + [r for r in RULES_HQ.get(name, []) if os.path.exists(os.path.join(HQ, r[0] + ".png"))]
 
     def ok(x, y, ex):
         clear = ex.get("clear", 1)
@@ -206,7 +234,11 @@ def build(name):
     for sid, count, zone, chars, ex in rules:
         ex = dict(ex, chars=chars)
         zx, zy, zw, zh = d["zones"][zone]
-        cells = [(x, y) for y in range(zy, min(zy + zh, H)) for x in range(zx, min(zx + zw, W)) if ok(x, y, ex)]
+        if ex.get("at"):
+            x, y = ex["at"]
+            cells = [(x, y)] if ok(x, y, ex) else []
+        else:
+            cells = [(x, y) for y in range(zy, min(zy + zh, H)) for x in range(zx, min(zx + zw, W)) if ok(x, y, ex)]
         mode = ex.get("mode", "spread")
         if mode == "row":     # one straight aligned row (loungers by the pool, planters along a wall)
             rows = {}

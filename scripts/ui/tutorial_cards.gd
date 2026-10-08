@@ -10,7 +10,7 @@ extends Control
 const DEFS := {
 	"move": ["MOVE & AIM", "Walk with the movement keys, aim with the mouse or right stick. You're faster than anyone here - use it.", ["move_up", "fire"]],
 	"sneak": ["SNEAK UP", "He hasn't seen you. Hold SNEAK to move silently, get behind him and press EXECUTE for a takedown. Or punch him down first, then EXECUTE.", ["sneak", "execute"]],
-	"lock": ["LOCK-ON", "Lock onto the nearest enemy so every swing and shot goes to them. Tap again to switch target, hold to let go.", ["lock_on"]],
+	"lock": ["LOCK-ON", "Lock onto the nearest enemy so every swing and shot goes to them. Tap again to release. Flick the right stick to switch target.", ["lock_on"]],
 	"switch": ["LIGHT SWITCHES", "Kill the lights: guards who haven't spotted you are blind in the dark. Somebody may walk over to turn them back on - be waiting.", ["interact"]],
 	"dog": ["DOGS", "Dogs smell you if you run past. Sneak, take them from behind, or throw a MEAT BONE to keep them eating for a minute. They don't count toward clearing a floor.", ["sneak", "equipment"]],
 	"upgrade": ["BRIEFCASES", "Briefcases hold a random upgrade that lasts the whole job. Smash or open them.", ["interact"]],

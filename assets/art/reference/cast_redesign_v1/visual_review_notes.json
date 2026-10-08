@@ -1,0 +1,60 @@
+{
+  "scope": "Direct visual inspection of selected reference sheets; not full cast approval or runtime validation.",
+  "inspected": [
+    {
+      "next": "Check body at gameplay camera and preserve red jacket.",
+      "id": "cass",
+      "finding": "Red leather jacket, auburn curls, dark shirt/denim and recognizable face; current redesign shorter hair than historical long-haired portrait. User authorizes redesign, but future portraits/FMV must use same design."
+    },
+    {
+      "next": "Use base Cass turnaround for full hand anatomy; use this sheet for face paint/story-state material, not as sole modeling reference.",
+      "id": "cass_star",
+      "finding": "Gold painted star is over anatomical left eye in front and profile views; face/clothing remain recognizably Cass. Leftmost hand and rear-view outer hand partly at sheet border."
+    },
+    {
+      "next": "Keep same revised clothing/face across Tommy and burnt variant/portraits; do not silently mix old varsity portrait with new model.",
+      "id": "tommy",
+      "finding": "Curly brown hair and consistent recognizable face; jacket is denim in redesign, versus satin varsity in old design."
+    },
+    {
+      "next": "Derive actual Blender material effects and character acting; keep face consistent.",
+      "id": "burnt",
+      "finding": "Tommy identity recognizable; scorched denim and soot with warm rim lighting, intact face. A supernatural art variant, not finished gore geometry."
+    },
+    {
+      "next": "Build using living guard identity and undead materials/poses after concept lot completes.",
+      "id": "zombie_guard",
+      "finding": "Recognizable guard face/hair/moustache/teal uniform preserved, pale eyes, intact grey skin and stained/torn cloth; no cigarette."
+    },
+    {
+      "finding": "Distinct mullet/goatee and purple streetwear with white sneakers.",
+      "id": "gunner"
+    },
+    {
+      "finding": "Balding lean older adult, ivory tank, olive trousers; arms anatomically ordinary in concept. Does not fix old runtime weapon alignment.",
+      "id": "hunter"
+    },
+    {
+      "finding": "Broad heavyset man, moustache, brown work jacket.",
+      "id": "heavy"
+    },
+    {
+      "finding": "Young curly-haired adult, red uniform and pillbox hat; resembles Tommy in broad hair category, needs identity separation in final head models.",
+      "id": "bellhop"
+    },
+    {
+      "finding": "Older long-grey-haired moustached man, black leather vest and jeans.",
+      "id": "biker"
+    },
+    {
+      "finding": "Broad workman with lifted welding visor, leather apron and gloves.",
+      "id": "welder"
+    },
+    {
+      "finding": "Bald older dark-skinned guard in burgundy uniform; distinct from teal motel guard.",
+      "id": "security"
+    }
+  ],
+  "runtime_replacements": false,
+  "approval": "pending_full_gallery_and_blender_validation"
+}

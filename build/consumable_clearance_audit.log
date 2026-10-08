@@ -1,0 +1,59 @@
+05:57:58 | INFO: Data are loaded, start creating Blender stuff
+05:57:58 | INFO: Blender create Mesh node Mesh_0
+05:57:58 | INFO: glTF import finished in 0.37s
+MOTION_MESH 0 0 {}
+MOTION_MESH 1 0 {}
+MOTION_MESH 2 0 {}
+MOTION_MESH 3 0 {}
+MOTION_MESH 4 0 {}
+MOTION_MESH 5 0 {}
+MOTION_MESH 6 0 {}
+MOTION_MESH 7 0 {}
+MOTION_MESH 8 0 {}
+MOTION_MESH 9 0 {}
+MOTION_MESH 10 0 {}
+MOTION_MESH 11 0 {}
+MOTION_MESH 12 0 {}
+MOTION_MESH 13 0 {}
+MOTION_MESH 14 0 {}
+MOTION_MESH 15 0 {}
+MOTION_MESH 16 0 {}
+MOTION_MESH 17 0 {}
+MOTION_MESH 18 0 {}
+MOTION_MESH 19 0 {}
+MOTION_MESH 20 0 {}
+MOTION_MESH 21 0 {}
+MOTION_MESH 22 0 {}
+MOTION_MESH 23 0 {}
+MOTION_MESH 24 0 {}
+MOTION_MESH 25 0 {}
+MOTION_MESH 26 0 {}
+MOTION_MESH 27 0 {}
+MOTION_MESH 28 0 {}
+MOTION_MESH 29 0 {}
+MOTION_MESH 30 0 {}
+MOTION_MESH 31 0 {}
+MOTION_MESH 32 0 {}
+MOTION_MESH 33 0 {}
+MOTION_MESH 34 0 {}
+MOTION_MESH 35 0 {}
+MOTION_MESH 36 0 {}
+MOTION_MESH 37 0 {}
+MOTION_MESH 38 0 {}
+MOTION_MESH 39 0 {}
+MOTION_MESH 40 0 {}
+MOTION_MESH 41 0 {}
+MOTION_MESH 42 0 {}
+MOTION_MESH 43 0 {}
+MOTION_MESH 44 0 {}
+MOTION_MESH 45 0 {}
+MOTION_MESH 46 0 {}
+MOTION_MESH 47 0 {}
+MOTION_MESH 48 0 {}
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\audit_consumable_motion.py:79: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('MotionStudio');scene.world.use_nodes=True
+00:14.109  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_clearance_audit\sip_native.png'
+Info: Saved as "sip_review.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

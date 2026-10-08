@@ -1,0 +1,13 @@
+{
+  "approved": true,
+  "scope": "Authored short door push, supported lean and controller/call timing; not full-game or finger/sole quality approval",
+  "max_endpoint_joint_gap": 0.002394620378190573,
+  "max_ankle_motion": 0.005253824518135677,
+  "contact_error_samples": {
+    "12": 0.008691129046001245,
+    "16": 0.0012942338030314936,
+    "20": 0.005049176614853559
+  },
+  "runtime_test": "close_supported_handoff.log",
+  "intro_call_test": "close_supported_call.log"
+}

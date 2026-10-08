@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "breached_wall_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual damaged-state visual source for later Blender reconstruction for M01 Sunset Palms. One modular aged salmon stucco motel wall segment with a person-sized breach through its centre, believable broken plaster edges exposing masonry, walnut skirting interrupted at breach, a small scatter of matching rubble near base. Whole subject fully visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Finely authored physically believable material detail, premium indie handcrafted 3D diorama finish, restrained coral cream teal walnut palette and neutral studio illumination. No people, extra props, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "damaged_fuse_box_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual damaged-state visual source for later Blender reconstruction for M01 Sunset Palms. One damaged wall-mounted grey metal motel fuse box, cover hanging at an angle on one hinge, blackened internal breaker area and bent conduit fitting, modest scorch marks, no active fire or sparks. Whole subject fully visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Finely authored physically believable material detail, premium indie handcrafted 3D diorama finish, restrained coral cream teal walnut palette and neutral studio illumination. No people, extra props, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "broken_planter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual damaged-state visual source for later Blender reconstruction for M01 Sunset Palms. One shattered terracotta motel planter with a small leafy tropical plant fallen sideways, coherent broken pot pieces and a compact spill of dark soil, natural leaf shapes, no fire. Whole subject fully visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Finely authored physically believable material detail, premium indie handcrafted 3D diorama finish, restrained coral cream teal walnut palette and neutral studio illumination. No people, extra props, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "damaged_lamp_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual damaged-state visual source for later Blender reconstruction for M01 Sunset Palms. One damaged 1980s brass motel bedside lamp, bent neck, torn cream fabric shade partly collapsed, disconnected bulb and a few small glass fragments, realistic material wear. Whole subject fully visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Finely authored physically believable material detail, premium indie handcrafted 3D diorama finish, restrained coral cream teal walnut palette and neutral studio illumination. No people, extra props, UI, text overlays, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "breached_wall_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-e3ca806a-5cf0-46d9-8a3c-7a6669c0beed.png"
+    },
+    {
+      "id": "damaged_fuse_box_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-ff65ed47-968a-4722-9f86-96f8f6a1ddaa.png"
+    },
+    {
+      "id": "broken_planter_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5e540b7b-18fa-4116-a49d-5ce001be37e9.png"
+    },
+    {
+      "id": "damaged_lamp_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-107fd7b2-6674-4e3c-b6ff-d5e48cc5c2eb.png"
+    }
+  ]
+}

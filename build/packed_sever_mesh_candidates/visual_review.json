@@ -1,0 +1,10 @@
+{
+  "status": "reviewed_candidate_ready_for_runtime_validation",
+  "scope": "Actual saved compressed resources loaded into original skinned models in Godot OpenGL: 24 looks x head/arm at .15/.5/.995 and leg/legs at .995. No surface-load errors in final logs; wound caps present and demon wings retained in reviewed arm images. Other poses, gameplay and performance not yet verified.",
+  "packing": "512 surfaces reduced to 195 across 96 cuts",
+  "pending": [
+    "Promote resources with self-contained runtime paths",
+    "Integrate body meshes and matching 72 detached PNGs together",
+    "Verify real corpse/gib behavior and performance"
+  ]
+}

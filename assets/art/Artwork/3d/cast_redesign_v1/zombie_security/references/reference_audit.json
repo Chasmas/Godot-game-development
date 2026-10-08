@@ -1,0 +1,51 @@
+{
+  "character": "zombie_security",
+  "height_m": 1.84,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_security_turnaround.png",
+  "source_sha256": "5b9c780acabaff130effa1eafd2d3b502dacbf58196e657ce94f6fcc1f3932c4",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        375,
+        1024
+      ],
+      "width": 375,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_security\\references\\front.png",
+      "sha256": "c46357ad664ece9b4589a1db25ae3ae19d5782955ff27cf02526fae7f7592db1"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        380,
+        0,
+        570,
+        1024
+      ],
+      "width": 190,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_security\\references\\side.png",
+      "sha256": "6f8832e1c302981c4d42870eb83907ede0a1c1017a1e2bd4393740b7667be21f"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        580,
+        0,
+        930,
+        1024
+      ],
+      "width": 350,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_security\\references\\back.png",
+      "sha256": "98c86aa94f5a663ca7cc2b4fa53fb4b2ac1d97d585998b541e636e9ad12289a9"
+    }
+  ],
+  "visual_review": "Original sheet and front/profile/back saved Blender crops directly inspected. Full isolated figures, no adjacent fourth figure or portrait contamination. Modeling reference approval only, no geometry or runtime approval."
+}

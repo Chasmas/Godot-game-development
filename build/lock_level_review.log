@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 23 looks in 2218 ms
+LOCK FIXTURE alive=true input=true candidates=1
+PASS Real enemy visible for acquisition
+PASS Real candidate discovery acquires enemy
+PASS Real level tap releases enemy
+PASS Inserted wall blocks actual physics ray
+PASS Brief obstruction keeps lock
+PASS Sustained obstruction returns free aim
+LOCK LEVEL REVIEW: 0 failures []

@@ -1,0 +1,12 @@
+{
+  "status": "experiment_reviewed_not_promoted",
+  "reviewed_render": "review/face_front.png",
+  "findings": [
+    "Welding coincident vertices before smoothing resolves the seam cracks observed in the rejected first experiment",
+    "Restrained facial smoothing produces only a modest change; eye/nose/chin texture projection irregularities remain",
+    "Reducing normal map strength to zero or 0.25 also failed to remove these defects"
+  ],
+  "next_action": "Correct facial texture projection and author clean eyelid/mouth surfaces in Blender before facial rigging. Do not increase indiscriminate smoothing or approve this static experiment as a finished character.",
+  "runtime_approved": false,
+  "source_models_unchanged": true
+}

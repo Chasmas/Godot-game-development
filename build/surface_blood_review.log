@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS Blood rays attach to real wall
+PASS Stain follows moving surface
+PASS Stain persists without continuous processing
+PASS Stain limit preserves existing blood
+PASS Gore off creates no surface blood
+PASS Reduced gore retains complete corpse
+PASS Full gore removes exploded head from corpse
+SURFACE BLOOD REVIEW: 0 failures

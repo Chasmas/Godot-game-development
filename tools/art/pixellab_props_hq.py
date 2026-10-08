@@ -60,6 +60,7 @@ PROPS = {
   "hq_junk_heap": (192, 128, "huge heap of scrap metal, crushed car doors, tyres, pipes, wire, rust and rim light"),
   "hq_tire_wall": (160, 112, "wall of stacked tyres with a hand-painted warning sign"),
   "hq_chainlink_gate": (160, 96, "chain-link fence section with barbed wire and a padlocked gate, shadows"),
+  "table_kennel": (160, 96, "strict overhead top-down rectangular stainless-steel kennel feed-preparation worktable, scuffed metal surface, sealed kibble bin, folded clean leash, small measuring scoop and clipboard arranged clearly, sturdy legs barely visible under the tabletop, no sink, no animal, no person, no bone"),
   # --- studio ---
   "hq_directors_chairs": (128, 96, "two canvas director chairs with names stencilled, a clapperboard on a small table, coffee cups"),
   "hq_camera_dolly": (160, 112, "film camera on a dolly track with a tripod, lens, monitor and cables"),

@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "contact_progress_but_visual_deformation_revision_required",
+  "inspected_frames": [
+    1,
+    9,
+    21
+  ],
+  "inspected_angles": [
+    "positive_x_side",
+    "negative_x_side"
+  ],
+  "findings": [
+    "Four-beat gait contacts improved numerically",
+    "Front shoulder-to-chest transition produces visible hard fold/panel in several frames",
+    "40mm lower body stance appears excessively flexed; refine skeleton reach and anatomy instead of retaining posture for numerical success"
+  ],
+  "next": "Smooth authored shoulder weight transitions across welded adjacency, preserve rigid sole weights; revise reachable posture, render whole cycle and bake constraints before Godot import"
+}

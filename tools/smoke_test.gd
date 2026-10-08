@@ -19,6 +19,18 @@ func _ready() -> void:
 	ph.name = "Placeholder"
 	get_tree().root.add_child(ph)
 	get_tree().current_scene = ph
+	if OS.has_environment("SMOKE_MOVEMENT_ONLY"):
+		InputSetup.using_gamepad = true
+		Game.campaign_mode = false
+		Game.start_mission("m01_checkout")
+		await frames(60)
+		await _movement_collision_regression(_player())
+		await _reload_transition_regression(_player())
+		await _attack_transition_regression(_player())
+		await _shoot_aim_regression(_player())
+		print("MOVEMENT COLLISION REGRESSION: ", failures.size(), " failures")
+		Game.request_quit(1 if not failures.is_empty() else 0)
+		return
 	if OS.has_environment("SMOKE_M02_ONLY"):
 		InputSetup.using_gamepad = true
 		Game.campaign_mode = false
@@ -29,7 +41,7 @@ func _ready() -> void:
 	print("=== SMOKE TEST DONE: %d failures ===" % failures.size())
 	for f in failures:
 		print("  FAIL: ", f)
-	get_tree().quit(1 if not failures.is_empty() else 0)
+	Game.request_quit(1 if not failures.is_empty() else 0)
 
 func check(cond: bool, what: String) -> void:
 	if cond:
@@ -37,6 +49,177 @@ func check(cond: bool, what: String) -> void:
 	else:
 		print("  FAIL ", what)
 		failures.append(what)
+
+func _movement_collision_regression(p: Player) -> void:
+	var restore := p.global_position
+	var wall := StaticBody2D.new()
+	wall.collision_layer = Layers.WORLD
+	var shape := CollisionShape2D.new()
+	var rect := RectangleShape2D.new()
+	rect.size = Vector2(16, 200)
+	shape.shape = rect
+	wall.add_child(shape)
+	wall.position = Vector2(-900, -1000)
+	get_tree().current_scene.add_child(wall)
+	p.global_position = Vector2(-960, -1000)
+	p.velocity = Vector2.ZERO
+	Input.action_press("move_right")
+	await frames(90)
+	check(p.global_position.x < -910, "solid wall stops player")
+	check(p.visual._cast_velocity.length() < 1.5, "blocked player animation stops stepping")
+	check(p.velocity.length() < 1.5, "wall collision clears blocked movement momentum")
+	check(p.is_quiet(), "blocked player produces no walking detection noise")
+	var step_clock := p._step_t
+	await frames(12)
+	check(is_equal_approx(step_clock, p._step_t), "blocked player footstep clock stops")
+	p.stamina = Player.STAMINA_MAX
+	Input.action_press("sprint")
+	await frames(60)
+	check(p.stamina > Player.STAMINA_MAX - 0.1, "blocked sprint does not waste stamina")
+	Input.action_release("sprint")
+	var wall_y := p.global_position.y
+	Input.action_press("move_up")
+	await frames(24)
+	check(p.global_position.y < wall_y - 8.0 and p.velocity.y < -20.0, "wall contact preserves movement along the surface")
+	check(absf(p.velocity.x) < 1.5, "diagonal wall movement clears only blocked momentum")
+	Input.action_release("move_up")
+	await frames(12)
+	p._dash_cd = 0.0
+	p._pending_melee = 0.1
+	p.visual.swing(false, true)
+	p._start_dash()
+	check(p.visual.is_rolling(), "dodge starts its visual roll")
+	check(p._pending_melee < 0.0 and not p.visual.is_swinging(), "dodge cancels an unlanded strike and its pose")
+	await frames(12)
+	check(not p.is_dashing() and not p.visual.is_rolling(), "wall contact ends motion and visual roll together")
+	Input.action_release("move_right")
+	p._last_move = Vector2.ZERO
+	p._end_dash()
+	check(p.velocity == Vector2.ZERO, "roll recovery stops when movement is released")
+	p._last_move = Vector2.LEFT
+	Input.action_press("sneak")
+	p._end_dash()
+	check(p.velocity.x < 0.0 and p.velocity.length() <= p.data.move_speed * (p.persona.move_mult if p.persona else 1.0) * 0.45, "roll recovery follows direction and crouch speed")
+	Input.action_release("sneak")
+	p._last_move = Vector2.ZERO
+	wall.queue_free()
+	p.global_position = restore
+	p.velocity = Vector2.ZERO
+	p._dash_cd = 0.0
+	p.stamina = Player.STAMINA_MAX
+	p._iframes = 0.0
+	p.visual.pose_override = "grab"
+	p.visual.pose_progress = 0.5
+	p._exec_target = null
+	p._locked_t = 0.1
+	p._process_execution(1.0 / 60.0)
+	check(p.visual.pose_override == "" and p._locked_t == 0.0, "interrupted execution releases pose and input")
+	await frames(2)
+
+func _attack_transition_regression(p: Player) -> void:
+	var saved_slots := p.slots.duplicate()
+	var saved_slot := p.slot
+	var saved_position := p.global_position
+	p.global_position = Vector2(-1300, -1300)
+	var bat := WeaponInstance.create(DB.weapon(&"bat"))
+	p.slots = [bat, WeaponInstance.create(DB.weapon(&"knife"))]
+	p.slot = 0
+	p._refresh_weapon()
+	p._melee_cd = 0.0
+	p._melee_attack(false)
+	var serial := p.visual.attack_serial
+	p._heavy_ready = true
+	p._swap()
+	p._swap()
+	check(p.current() == bat and p._pending_melee < 0.0, "swapping away and back cannot resurrect a queued strike")
+	check(not p.visual.is_swinging() and p.visual.attack_serial > serial and not p._heavy_ready, "weapon swap cancels attack pose, effects and charge")
+	p._melee_cd = 0.0
+	p._melee_attack(false)
+	p._throw_current()
+	check(p._pending_melee < 0.0 and not p.visual.is_swinging(), "throwing during windup cancels the old strike")
+	check(p.visual._punch_t >= 0.0, "throw gesture is not masked by the old swing")
+	p.slots = [null, null]
+	p.slot = 0
+	p._refresh_weapon()
+	p._melee_cd = 0.0
+	p._punch()
+	var pickup := WeaponPickup.spawn(p.get_parent(), WeaponInstance.create(DB.weapon(&"knife")), p.global_position)
+	p._pick_up(pickup)
+	check(p._pending_melee < 0.0 and p.visual._punch_t < 0.0, "picking up a weapon cancels an unfinished punch")
+	p._cancel_melee()
+	p.slots = saved_slots
+	p.slot = saved_slot
+	p.global_position = saved_position
+	p.velocity = Vector2.ZERO
+	p._melee_cd = 0.0
+	p._refresh_weapon()
+	await frames(2)
+
+func _shoot_aim_regression(p: Player) -> void:
+	var saved_slots := p.slots.duplicate()
+	var saved_slot := p.slot
+	var saved_position := p.global_position
+	var saved_aim := p.aim_dir
+	p.global_position = Vector2(-1400, -1400)
+	p.velocity = Vector2.ZERO
+	p.slots = [WeaponInstance.create(DB.weapon(&"pistol")), null]
+	p.slot = 0
+	p._refresh_weapon()
+	for heading in [0.0, 90.0, 180.0, 270.0]:
+		p.visual.set_aim(deg_to_rad(heading + 90.0))
+		p.aim_dir = Vector2.from_angle(deg_to_rad(heading))
+		p._fire_cd = 0.0
+		var before: int = p.current().ammo
+		p._try_shoot(p.current())
+		check(p.current().ammo == before - 1, "rapid aim change fires normally")
+		check(absf(angle_difference(p.visual.aim_angle, p.aim_dir.angle())) < 0.001, "shot synchronizes visual aim in the firing tick")
+	p.slots = saved_slots
+	p.slot = saved_slot
+	p.global_position = saved_position
+	p.aim_dir = saved_aim
+	p._fire_cd = 0.0
+	p._bloom = 0.0
+	p._refresh_weapon()
+	await frames(2)
+
+func _reload_transition_regression(p: Player) -> void:
+	var saved_slots := p.slots.duplicate()
+	var saved_slot := p.slot
+	var saved_position := p.global_position
+	p.global_position = Vector2(-1200, -1200)
+	var gun := WeaponInstance.create(DB.weapon(&"pistol"), false)
+	gun.ammo = 2
+	gun.reserve = 8
+	p.slots = [gun, WeaponInstance.create(DB.weapon(&"knife"))]
+	p.slot = 0
+	p._refresh_weapon()
+	p._start_reload()
+	check(p.is_reloading() and p.visual._reload_k >= 0.0, "reload starts with matching visual")
+	p._dash_cd = 0.0
+	p.stamina = Player.STAMINA_MAX
+	p._start_dash()
+	check(not p.is_reloading() and p.visual._reload_k < 0.0 and p._reload_weapon == null, "dodge cancels reload and held magazine")
+	await frames(int(ceil(gun.data.reload_time * Engine.physics_ticks_per_second)) + 30)
+	check(gun.ammo == 2 and gun.reserve == 8, "cancelled reload does not grant ammunition")
+	p._start_reload()
+	check(p.is_reloading(), "reload restarts after dodge")
+	await frames(int(ceil(p._reload_t * Engine.physics_ticks_per_second)) + 15)
+	check(gun.ammo == 10 and gun.reserve == 0, "reload can finish normally after dodge")
+	gun.ammo = 2
+	gun.reserve = 8
+	p._start_reload()
+	p._swap()
+	await frames(int(ceil(gun.data.reload_time * Engine.physics_ticks_per_second)) + 30)
+	check(gun.ammo == 2 and gun.reserve == 8 and not p.is_reloading() and p.visual._reload_k < 0.0, "weapon swap cancels reload without ammunition transfer")
+	p.slots = saved_slots
+	p.slot = saved_slot
+	p.global_position = saved_position
+	p.velocity = Vector2.ZERO
+	p._dash_cd = 0.0
+	p.stamina = Player.STAMINA_MAX
+	p._reload_weapon = null
+	p._refresh_weapon()
+	await frames(30)
 
 func _compile_all() -> void:
 	print("-- compile")
@@ -102,6 +285,7 @@ func _run() -> void:
 	var p := _player()
 	check(lvl != null, "level scene built")
 	check(p != null and p.alive, "player spawned")
+	check(lvl != null and lvl.get_node_or_null("ApprovedM01GroundPlate") != null, "approved M01 ground plate integrated")
 	if lvl == null or p == null:
 		return
 	check(lvl.enemies.size() >= 20, "enemies spawned (%d)" % lvl.enemies.size())
@@ -110,17 +294,31 @@ func _run() -> void:
 	check(lvl.nav != null, "nav grid built")
 	check(get_tree().get_nodes_in_group("door").size() > 10, "doors built")
 	check(get_tree().get_nodes_in_group("pickups").size() > 8, "weapon pickups placed")
+	# Ambient pool props are visual-only, but must still animate in the live
+	# scene so the Blender/runtime mood survives the gameplay build.
+	var animated_props := lvl.find_children("*", "AnimatedProp", true, false)
+	check(animated_props.size() > 0, "animated ambient props built")
+	if not animated_props.is_empty():
+		var ambient_prop := animated_props[0] as Node2D
+		var ambient_start := ambient_prop.position
+		await frames(24)
+		check(ambient_prop.position.distance_to(ambient_start) > 0.01, "ambient prop bobs in runtime")
 	# movement
 	var start := p.global_position
 	Input.action_press("move_right")
 	await frames(40)
 	Input.action_release("move_right")
 	check(p.global_position.x > start.x + 20.0, "player moves right")
+	await _movement_collision_regression(p)
+	await _attack_transition_regression(p)
+	await _shoot_aim_regression(p)
 	# dash
 	var before := p.global_position
 	await press("dash")
 	await frames(20)
 	check(p.global_position.distance_to(before) > 10.0, "dash moves the player")
+	await frames(60)
+	check(not p.is_dashing(), "roll finishes before the next interaction")
 	# fists: punch the tutorial guard from behind and execute him
 	var guard: Enemy = null
 	for e in lvl.enemies:
@@ -129,12 +327,20 @@ func _run() -> void:
 	check(guard != null, "tutorial guard exists")
 	if guard:
 		p.global_position = guard.global_position + Vector2(12, 0)
+		p.velocity = Vector2.ZERO
 		p.aim_dir = Vector2.LEFT
 		await frames(2)
 		p._punch()
-		await frames(10)
+		await frames(24)
+		if is_instance_valid(guard):
+			print("    punch contact: player alive=", p.alive, " guard=", guard.state_name(), " distance=", p.global_position.distance_to(guard.global_position), " pending=", p._pending_melee, " aim=", p._pending_aim)
 		check(not is_instance_valid(guard) or guard.is_downed() or not guard.is_alive(), "punch knocks guard down")
 		await frames(2)
+		# Follow the knocked-back body before attempting the close interaction.
+		if is_instance_valid(guard) and guard.is_downed():
+			p.global_position = guard.global_position + Vector2(12, 0)
+			p.velocity = Vector2.ZERO
+			check(p._find_downed() == guard, "downed guard is reachable for execution")
 		p._execute_or_kick()
 		await frames(200)
 		check(not is_instance_valid(guard) or not guard.is_alive(), "execution kills guard")
@@ -210,6 +416,21 @@ func _run() -> void:
 		var info := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, glass.global_position, Vector2.UP)
 		glass.take_damage(info)
 		check(glass.broken, "window breaks when shot")
+	# environmental props: authored TVs/arcades/vending machines must react to
+	# ballistic damage without changing the level footprint or navigation.
+	for prop_kind in ["tv", "arcade", "vending", "plant"]:
+		var breakable_prop: BreakableProp = null
+		for prop in get_tree().get_nodes_in_group("props"):
+			if prop is BreakableProp and prop.kind == prop_kind and not prop.is_broken:
+				breakable_prop = prop
+				break
+		if breakable_prop:
+			var pi := DamageInfo.make(DamageInfo.Type.BALLISTIC, p, breakable_prop.global_position, Vector2.UP)
+			for _hit in range(5):
+				if breakable_prop.is_broken:
+					break
+				breakable_prop.take_damage(pi)
+			check(breakable_prop.is_broken, "%s breaks when shot" % prop_kind)
 	# from here the level is live (cameras, snipers, handlers): keep the
 	# player alive through the environment checks and the AI run below
 	p.god_mode = true
@@ -368,6 +589,7 @@ func _run_m02() -> void:
 	var lvl := _level()
 	var p := _player()
 	check(lvl != null and lvl.mission.id == &"m02_dog_days", "mission 2 loads")
+	check(lvl == null or lvl.get_node_or_null("ApprovedM01GroundPlate") == null, "M01 ground plate stays out of mission 2")
 	if lvl == null or p == null:
 		return
 	p.god_mode = true
@@ -414,17 +636,21 @@ func _run_m02() -> void:
 		Input.action_release("lock_on")
 		await frames(2)
 		check(p.lock_target != null, "lock-on grabs a target")
-		var first = p.lock_target
 		Input.action_press("lock_on")
 		await frames(2)
 		Input.action_release("lock_on")
 		await frames(2)
-		check(p.lock_target != null and (p.lock_target != first or p._lock_candidates().size() < 2), "tap switches lock target")
+		check(p.lock_target == null, "tap releases lock")
 		Input.action_press("lock_on")
 		await frames(70)
 		Input.action_release("lock_on")
 		await frames(2)
-		check(p.lock_target == null, "hold releases lock")
+		check(p.lock_target != null, "held acquisition does not toggle off repeatedly")
+		Input.action_press("lock_on")
+		await frames(2)
+		Input.action_release("lock_on")
+		await frames(2)
+		check(p.lock_target == null, "tap releases reacquired lock")
 	# --- stealth takedown from behind
 	var victim: Enemy = null
 	for e in lvl.enemies:
@@ -436,8 +662,27 @@ func _run_m02() -> void:
 		p.velocity = Vector2.ZERO
 		await frames(2)
 		check(p._find_takedown() == victim, "unaware guard can be taken down from behind")
+		p._melee_cd = 0.0
+		p._punch()
+		check(p._pending_melee >= 0.0, "strike queued before execution transition")
+		p.visual._face_angle = victim.facing.angle() + PI
+		victim.visual._face_angle = victim.facing.angle() + PI
+		var held_weapon := victim.weapon
 		p._execute_or_kick()
-		await frames(220)
+		check(not victim.visual.weapon_sprite.visible and not victim.visual.weapon_sprite2.visible and victim.weapon == held_weapon, "paired hold hides weapon while preserving its death drop")
+		check(p._pending_melee < 0.0 and p.visual._punch_t < 0.0, "execution cancels unfinished strike")
+		check(p.velocity.length() < 0.01, "execution stops inherited attack momentum immediately")
+		check(p.prompt == "" and p.prompt_target == null, "execution clears stale interaction prompt")
+		var held_at := victim.global_position
+		victim._sep = Vector2(120, 40)
+		await frames(6)
+		check(victim.global_position.distance_to(held_at) < 0.1, "held target stays aligned despite crowd pressure")
+		if str(p._exec_move.get("anim", "")) == "grab":
+			check(p.visual.pose_override == "grab" and p.visual.pose_progress > 0.0, "rear hold plays authored grab pose")
+			check(absf(angle_difference(p.visual.rig.rotation, p.visual.aim_angle)) < 0.001, "Cass immediately faces the paired hold direction")
+			if victim.visual.has_clip("held"):
+				check(absf(angle_difference(victim.visual.rig.rotation, victim.visual.aim_angle)) < 0.001, "held guard immediately faces the paired hold direction")
+		await frames(214)
 		check(not is_instance_valid(victim) or not victim.is_alive(), "takedown kills")
 		check(Score.stats.silent_kills > kills_before, "takedown counts as silent")
 	# --- sleeping dog

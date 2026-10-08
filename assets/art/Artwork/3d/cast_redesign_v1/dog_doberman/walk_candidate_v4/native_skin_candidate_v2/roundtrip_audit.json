@@ -1,0 +1,204 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "source_unchanged": true,
+  "weights_per_vertex_limit": 4,
+  "deformation": "linear",
+  "sampled_frames": 31,
+  "animation_channel_optimization": false,
+  "source_vertices": 69131,
+  "reimport_vertices": 69141,
+  "maximum_reimport_base_difference_m": 2.457633172525675e-07,
+  "maximum_reimport_animation_difference_m": 1.8549668311607093e-05,
+  "scope": "Independent Blender GLB reimport compared with native-skin authoring mesh; Godot visual/anatomy and gameplay validation pending",
+  "samples": [
+    {
+      "source_frame": 1,
+      "reimport_frame": 0,
+      "maximum_mesh_difference_m": 1.5205859199340921e-05,
+      "p99_mesh_difference_m": 8.041985211093561e-07
+    },
+    {
+      "source_frame": 2,
+      "reimport_frame": 1,
+      "maximum_mesh_difference_m": 1.762688407325186e-05,
+      "p99_mesh_difference_m": 8.694224220562319e-07
+    },
+    {
+      "source_frame": 3,
+      "reimport_frame": 2,
+      "maximum_mesh_difference_m": 1.8536409697844647e-05,
+      "p99_mesh_difference_m": 9.047207640833221e-07
+    },
+    {
+      "source_frame": 4,
+      "reimport_frame": 3,
+      "maximum_mesh_difference_m": 1.8169241229770705e-05,
+      "p99_mesh_difference_m": 7.700710966673796e-07
+    },
+    {
+      "source_frame": 5,
+      "reimport_frame": 4,
+      "maximum_mesh_difference_m": 1.6050613339757547e-05,
+      "p99_mesh_difference_m": 7.353403930210334e-07
+    },
+    {
+      "source_frame": 6,
+      "reimport_frame": 5,
+      "maximum_mesh_difference_m": 1.301798693020828e-05,
+      "p99_mesh_difference_m": 5.825386892865936e-07
+    },
+    {
+      "source_frame": 7,
+      "reimport_frame": 6,
+      "maximum_mesh_difference_m": 1.1668192200886551e-05,
+      "p99_mesh_difference_m": 3.235483063690481e-07
+    },
+    {
+      "source_frame": 8,
+      "reimport_frame": 7,
+      "maximum_mesh_difference_m": 1.3683747056347784e-05,
+      "p99_mesh_difference_m": 4.703907450220868e-07
+    },
+    {
+      "source_frame": 9,
+      "reimport_frame": 8,
+      "maximum_mesh_difference_m": 1.6029287507990375e-05,
+      "p99_mesh_difference_m": 3.9207401414387277e-07
+    },
+    {
+      "source_frame": 10,
+      "reimport_frame": 9,
+      "maximum_mesh_difference_m": 1.7357731849187985e-05,
+      "p99_mesh_difference_m": 3.4819009897546493e-07
+    },
+    {
+      "source_frame": 11,
+      "reimport_frame": 10,
+      "maximum_mesh_difference_m": 1.7689048036118038e-05,
+      "p99_mesh_difference_m": 4.284454746539268e-07
+    },
+    {
+      "source_frame": 12,
+      "reimport_frame": 11,
+      "maximum_mesh_difference_m": 1.7383787053404376e-05,
+      "p99_mesh_difference_m": 5.495782033904106e-07
+    },
+    {
+      "source_frame": 13,
+      "reimport_frame": 12,
+      "maximum_mesh_difference_m": 1.639455513213761e-05,
+      "p99_mesh_difference_m": 5.695479785572388e-07
+    },
+    {
+      "source_frame": 14,
+      "reimport_frame": 13,
+      "maximum_mesh_difference_m": 1.5278450518962927e-05,
+      "p99_mesh_difference_m": 5.998899155201798e-07
+    },
+    {
+      "source_frame": 15,
+      "reimport_frame": 14,
+      "maximum_mesh_difference_m": 1.425642676622374e-05,
+      "p99_mesh_difference_m": 7.16844965609198e-07
+    },
+    {
+      "source_frame": 16,
+      "reimport_frame": 15,
+      "maximum_mesh_difference_m": 1.5190960766631179e-05,
+      "p99_mesh_difference_m": 8.070844046415004e-07
+    },
+    {
+      "source_frame": 17,
+      "reimport_frame": 16,
+      "maximum_mesh_difference_m": 1.7468351870775223e-05,
+      "p99_mesh_difference_m": 8.89595185071812e-07
+    },
+    {
+      "source_frame": 18,
+      "reimport_frame": 17,
+      "maximum_mesh_difference_m": 1.8549668311607093e-05,
+      "p99_mesh_difference_m": 8.756032912060618e-07
+    },
+    {
+      "source_frame": 19,
+      "reimport_frame": 18,
+      "maximum_mesh_difference_m": 1.817321935959626e-05,
+      "p99_mesh_difference_m": 7.652615181541478e-07
+    },
+    {
+      "source_frame": 20,
+      "reimport_frame": 19,
+      "maximum_mesh_difference_m": 1.6074302038759924e-05,
+      "p99_mesh_difference_m": 7.611270689267258e-07
+    },
+    {
+      "source_frame": 21,
+      "reimport_frame": 20,
+      "maximum_mesh_difference_m": 1.30184589579585e-05,
+      "p99_mesh_difference_m": 5.766170261267689e-07
+    },
+    {
+      "source_frame": 22,
+      "reimport_frame": 21,
+      "maximum_mesh_difference_m": 1.1680624083965085e-05,
+      "p99_mesh_difference_m": 3.135805570764205e-07
+    },
+    {
+      "source_frame": 23,
+      "reimport_frame": 22,
+      "maximum_mesh_difference_m": 1.362598777632229e-05,
+      "p99_mesh_difference_m": 4.3064306964879506e-07
+    },
+    {
+      "source_frame": 24,
+      "reimport_frame": 23,
+      "maximum_mesh_difference_m": 1.5774659914313816e-05,
+      "p99_mesh_difference_m": 3.5935053688262997e-07
+    },
+    {
+      "source_frame": 25,
+      "reimport_frame": 24,
+      "maximum_mesh_difference_m": 1.7321766790701076e-05,
+      "p99_mesh_difference_m": 3.4873210097430274e-07
+    },
+    {
+      "source_frame": 26,
+      "reimport_frame": 25,
+      "maximum_mesh_difference_m": 1.7489457604824565e-05,
+      "p99_mesh_difference_m": 4.4739181248587556e-07
+    },
+    {
+      "source_frame": 27,
+      "reimport_frame": 26,
+      "maximum_mesh_difference_m": 1.7278871382586658e-05,
+      "p99_mesh_difference_m": 5.147160209162394e-07
+    },
+    {
+      "source_frame": 28,
+      "reimport_frame": 27,
+      "maximum_mesh_difference_m": 1.6348525605280884e-05,
+      "p99_mesh_difference_m": 5.666314564223285e-07
+    },
+    {
+      "source_frame": 29,
+      "reimport_frame": 28,
+      "maximum_mesh_difference_m": 1.5169442121987231e-05,
+      "p99_mesh_difference_m": 5.982596462672518e-07
+    },
+    {
+      "source_frame": 30,
+      "reimport_frame": 29,
+      "maximum_mesh_difference_m": 1.4308104255178478e-05,
+      "p99_mesh_difference_m": 7.189495363491005e-07
+    },
+    {
+      "source_frame": 31,
+      "reimport_frame": 30,
+      "maximum_mesh_difference_m": 1.5251243894454092e-05,
+      "p99_mesh_difference_m": 8.080015732048196e-07
+    }
+  ],
+  "strict_roundtrip_tolerance_m": 1e-05,
+  "roundtrip_passed": false
+}

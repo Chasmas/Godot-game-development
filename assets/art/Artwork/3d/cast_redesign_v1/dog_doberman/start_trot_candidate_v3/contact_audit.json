@@ -1,0 +1,139 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "duration_seconds": 0.6,
+  "samples": [
+    {
+      "frame": 1,
+      "minimum_sole_height_m": -4.365407590967152e-08
+    },
+    {
+      "frame": 2,
+      "minimum_sole_height_m": 3.8415484596043825e-05
+    },
+    {
+      "frame": 3,
+      "minimum_sole_height_m": 3.704140544869006e-05
+    },
+    {
+      "frame": 4,
+      "minimum_sole_height_m": 2.9041617381153628e-05
+    },
+    {
+      "frame": 5,
+      "minimum_sole_height_m": 2.8729762561852112e-05
+    },
+    {
+      "frame": 6,
+      "minimum_sole_height_m": 2.223178671556525e-05
+    },
+    {
+      "frame": 7,
+      "minimum_sole_height_m": 3.3747208362910897e-05
+    },
+    {
+      "frame": 8,
+      "minimum_sole_height_m": 3.236564589315094e-05
+    },
+    {
+      "frame": 9,
+      "minimum_sole_height_m": 0.00022724710288457572
+    },
+    {
+      "frame": 10,
+      "minimum_sole_height_m": 0.00022719497792422771
+    },
+    {
+      "frame": 11,
+      "minimum_sole_height_m": 0.00022718084801454097
+    },
+    {
+      "frame": 12,
+      "minimum_sole_height_m": 0.00022716517560184002
+    },
+    {
+      "frame": 13,
+      "minimum_sole_height_m": 0.00022716517560184002
+    },
+    {
+      "frame": 14,
+      "minimum_sole_height_m": 0.00022714948863722384
+    },
+    {
+      "frame": 15,
+      "minimum_sole_height_m": 3.510172064125072e-08
+    },
+    {
+      "frame": 16,
+      "minimum_sole_height_m": -8.517442751099225e-08
+    },
+    {
+      "frame": 17,
+      "minimum_sole_height_m": -2.3436058427250828e-08
+    },
+    {
+      "frame": 18,
+      "minimum_sole_height_m": -2.3436058427250828e-08
+    },
+    {
+      "frame": 19,
+      "minimum_sole_height_m": -2.2369192720361752e-08
+    }
+  ],
+  "sequential_first_steps": true,
+  "moving_body": true,
+  "forward_travel_m": 0.13636363636363635,
+  "blocked_stop": false,
+  "blocked_source_frame": null,
+  "blocked_source_pose_difference_m": null,
+  "idle_handoff_mesh_difference_m": null,
+  "handoff_speed_m_per_s": 0.45454545454545453,
+  "maximum_support_slip_per_frame_m": 0.004240327213643741,
+  "maximum_world_sole_step_m": 0.05285439259668757,
+  "maximum_walk_handoff_mesh_difference_m": 1.0893064789814542e-05,
+  "minimum_sole_height_m": -8.517442751099225e-08,
+  "scope": "Blender IK bridge from idle to walk frame 1; world-space sole samples and optional object travel. Export, handoff and visual validation pending",
+  "largest_support_errors": [
+    {
+      "frame": 14,
+      "paw": "front_positive_x",
+      "slip_m": 0.004240327213643741
+    },
+    {
+      "frame": 13,
+      "paw": "front_positive_x",
+      "slip_m": 0.004084100514112435
+    },
+    {
+      "frame": 12,
+      "paw": "front_positive_x",
+      "slip_m": 0.0038785784488301143
+    },
+    {
+      "frame": 11,
+      "paw": "front_positive_x",
+      "slip_m": 0.0036308955536768547
+    },
+    {
+      "frame": 10,
+      "paw": "front_positive_x",
+      "slip_m": 0.0033445330767219476
+    },
+    {
+      "frame": 15,
+      "paw": "front_positive_x",
+      "slip_m": 0.0029213909494519713
+    },
+    {
+      "frame": 18,
+      "paw": "front_negative_x",
+      "slip_m": 1.3479726026381802e-05
+    },
+    {
+      "frame": 7,
+      "paw": "front_negative_x",
+      "slip_m": 1.1577161804481695e-05
+    }
+  ],
+  "handoff_source_frame": 13
+}

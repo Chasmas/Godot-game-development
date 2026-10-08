@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "scope": "Reduced ankle sliding during support phase only. Hand/door choreography and final steps remain unfinished.",
+  "baseline_sha256": "5255554f2f0d44c0e1c5e4cd328b7e4c438c593b59aa7857d72c4962284d0ba0",
+  "integrated_sha256": "0e39111f1fc37d0b19961ec0caaa20a1ebfc4e64bd4fd9e413c1c294ca3aface",
+  "foot_motion_review": "build/car_exit_review/planted_foot_motion.json",
+  "actual_level_review": "build/car_exit_review/planted_arrival"
+}

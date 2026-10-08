@@ -1,0 +1,12 @@
+{
+  "runtime_approved": false,
+  "scope": "Base normal preservation only, not animated normal deformation or visual approval",
+  "matched_export_vertices": 69145,
+  "unmatched_export_vertices": 0,
+  "source_custom_normals": true,
+  "source_smooth_faces": 119706,
+  "source_faces": 119722,
+  "maximum_normal_angle_difference_degrees": 0.004829580108231087,
+  "p99_normal_angle_difference_degrees": 0.0036143875266349975,
+  "normal_errors_over_one_degree": 0
+}

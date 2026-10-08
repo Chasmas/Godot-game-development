@@ -1,0 +1,289 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS animated guard loads
+PASS morph GLB loads
+PASS authored grip morph exists
+PASS guard mesh has matching skin binding count
+BIND_ROUNDTRIP_ERROR 0 0.00002499595939
+PASS skin bone matches and native matrix roundtrip error below .002: 0
+BIND_ROUNDTRIP_ERROR 1 0.00078274763655
+PASS skin bone matches and native matrix roundtrip error below .002: 1
+BIND_ROUNDTRIP_ERROR 2 0.00077937659808
+PASS skin bone matches and native matrix roundtrip error below .002: 2
+BIND_ROUNDTRIP_ERROR 3 0.00078021752415
+PASS skin bone matches and native matrix roundtrip error below .002: 3
+BIND_ROUNDTRIP_ERROR 4 0.00084288680227
+PASS skin bone matches and native matrix roundtrip error below .002: 4
+BIND_ROUNDTRIP_ERROR 5 0.00157195178326
+PASS skin bone matches and native matrix roundtrip error below .002: 5
+BIND_ROUNDTRIP_ERROR 6 0.00151529512368
+PASS skin bone matches and native matrix roundtrip error below .002: 6
+BIND_ROUNDTRIP_ERROR 7 0.00152083521243
+PASS skin bone matches and native matrix roundtrip error below .002: 7
+BIND_ROUNDTRIP_ERROR 8 0.00132706190925
+PASS skin bone matches and native matrix roundtrip error below .002: 8
+BIND_ROUNDTRIP_ERROR 9 0.00011451479804
+PASS skin bone matches and native matrix roundtrip error below .002: 9
+BIND_ROUNDTRIP_ERROR 10 0.00012977419829
+PASS skin bone matches and native matrix roundtrip error below .002: 10
+BIND_ROUNDTRIP_ERROR 11 0.00024497578852
+PASS skin bone matches and native matrix roundtrip error below .002: 11
+BIND_ROUNDTRIP_ERROR 12 0.000305235415
+PASS skin bone matches and native matrix roundtrip error below .002: 12
+BIND_ROUNDTRIP_ERROR 13 0.00039549783105
+PASS skin bone matches and native matrix roundtrip error below .002: 13
+BIND_ROUNDTRIP_ERROR 14 0.00033781616366
+PASS skin bone matches and native matrix roundtrip error below .002: 14
+BIND_ROUNDTRIP_ERROR 15 0.000144153164
+PASS skin bone matches and native matrix roundtrip error below .002: 15
+BIND_ROUNDTRIP_ERROR 16 0.00024488547933
+PASS skin bone matches and native matrix roundtrip error below .002: 16
+BIND_ROUNDTRIP_ERROR 17 0.00023700293968
+PASS skin bone matches and native matrix roundtrip error below .002: 17
+BIND_ROUNDTRIP_ERROR 18 0.00032308031223
+PASS skin bone matches and native matrix roundtrip error below .002: 18
+BIND_ROUNDTRIP_ERROR 19 0.00025021377951
+PASS skin bone matches and native matrix roundtrip error below .002: 19
+BIND_ROUNDTRIP_ERROR 20 0.00026178415283
+PASS skin bone matches and native matrix roundtrip error below .002: 20
+BIND_ROUNDTRIP_ERROR 21 0.00024921391741
+PASS skin bone matches and native matrix roundtrip error below .002: 21
+BIND_ROUNDTRIP_ERROR 22 0.00068689975888
+PASS skin bone matches and native matrix roundtrip error below .002: 22
+BIND_ROUNDTRIP_ERROR 23 0.00062156160129
+PASS skin bone matches and native matrix roundtrip error below .002: 23
+PASS CanGrip accessible in Godot
+PASS normal hand is default
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS drink grip closes through full cycle
+PASS normal hand restored for aim
+PASS normal hand restored for walk
+PASS normal hand restored for punch
+PASS normal hand restored for smoke
+PASS normal hand restored for eat
+CONSUMABLE GRIP MORPH REVIEW: 0 failures

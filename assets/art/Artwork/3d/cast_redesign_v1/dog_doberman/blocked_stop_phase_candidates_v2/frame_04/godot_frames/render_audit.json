@@ -1,0 +1,8 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 19,
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/Artwork/3d/cast_redesign_v1/dog_doberman/blocked_stop_phase_candidates_v2/frame_04/baked_candidate_v1/dog_doberman_walk_baked.glb",
+  "source_sha256": "abbed443055d9b6bd2699b384ea0ada714f6eaa99c1683a8fe6e17988f091139"
+}

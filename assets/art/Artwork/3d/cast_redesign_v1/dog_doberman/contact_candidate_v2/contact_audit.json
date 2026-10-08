@@ -1,0 +1,81 @@
+{
+  "runtime_approved": false,
+  "contact_solver_approved": false,
+  "scope": "Four ankle IK contacts with paw orientation, five small body-shift probes; full mesh contacts and locomotion pending",
+  "maximum_paw_endpoint_error_m": 0.007155806148526694,
+  "samples": [
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 9.215859231988326e-08,
+        "front_positive_x": 1.2128666487410446e-07,
+        "rear_negative_x": 1.4901161193847656e-08,
+        "rear_positive_x": 3.0719530773294423e-08
+      },
+      "minimum_mesh_height_m": 4.430804878552408e-08
+    },
+    {
+      "body_offset_m": [
+        0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 0.0022240321436441577,
+        "front_positive_x": 0.002142650750558721,
+        "rear_negative_x": 7.450580596923828e-09,
+        "rear_positive_x": 7.450580596923828e-09
+      },
+      "minimum_mesh_height_m": 0.00019103997328784317
+    },
+    {
+      "body_offset_m": [
+        -0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 0.00214702508776666,
+        "front_positive_x": 0.0022247848340499515,
+        "rear_negative_x": 3.0719530773294423e-08,
+        "rear_positive_x": 1.666000468656264e-08
+      },
+      "minimum_mesh_height_m": 0.00021104664483573288
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0.01
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 0.007155806148526694,
+        "front_positive_x": 0.007153936283397237,
+        "rear_negative_x": 3.414284955677271e-08,
+        "rear_positive_x": 2.9802322387695312e-08
+      },
+      "minimum_mesh_height_m": 0.0001930878934217617
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 9.215859231988326e-08,
+        "front_positive_x": 1.2128666487410446e-07,
+        "rear_negative_x": 1.4901161193847656e-08,
+        "rear_positive_x": 3.0719530773294423e-08
+      },
+      "minimum_mesh_height_m": 4.430804878552408e-08
+    }
+  ],
+  "decision": "not_promoted_contact_revision_required",
+  "reason": "Paw orientation prevents floor penetration in tested probes but nearly straight forelegs cannot reach 10mm elevated body; front endpoints miss target by up to 7.16mm",
+  "next": "Inspect foreleg joint bend and reachable motion envelope; author leg geometry/joint alignment before gait"
+}

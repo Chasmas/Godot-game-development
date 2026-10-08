@@ -1,0 +1,95 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "exterior_stucco_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless PBR base-color texture for Blender motel exterior walls, M01 Sunset Palms, 1980s Californian roadside motel. Square orthographic flat scan filling entire image. Aged warm pale salmon stucco, finely irregular plaster aggregate, subtle repaired patches and gentle weathering, restrained believable material variation. Rich authored surface detail suited to premium detailed pixel-rendered 3D environments. Uniform neutral diffuse lighting, no shadows, highlights, ambient occlusion, perspective, objects, borders, text or watermark. Opposite edges must match for seamless tiling. This is albedo material data, NOT a scene or wall illustration. No neon baked into texture."
+    },
+    {
+      "id": "guest_wallpaper_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless square base-color texture for Blender walls of 1980s Sunset Palms motel guest rooms. Flat orthographic surface scan, full bleed: faded cream wallpaper with fine vertical muted teal pinstripes and sparse small tasteful ochre fan-shaped botanical motifs, elegant but inexpensive vintage motel wallpaper. Delicate paper fibre, subtle age and tiny scuffs, restrained contrast. Uniform neutral diffuse illumination. Opposite edges match. No perspective, no furniture, no wall borders, no text, no shadows, highlights, lighting or watermark. Albedo material data only, for detailed premium indie pixel-rendered environment."
+    },
+    {
+      "id": "reception_wood_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless square albedo texture for Blender reception wall panelling in 1980s Californian Sunset Palms motel. Orthographic flat surface scan, full bleed. Narrow vertical dark honey walnut wood boards with fine natural grain, thin recessed joins, slightly worn satin varnish and restrained scratches. Rich believable crafted material, premium indie environment detail. Uniform neutral diffuse illumination, no baked highlights, shadows, occlusion, furniture, perspective, borders, text or watermark. Opposite edges match for tiling. Base color data only; lighting will be added in Blender."
+    },
+    {
+      "id": "bathroom_wall_tiles_albedo",
+      "prompt": "Use case: stylized-concept. Seamless square Blender base-color texture for 1980s Sunset Palms motel bathroom walls. Orthographic full-bleed scan of small pale mint ceramic square tiles, thin warm gray grout, subtle glaze color differences, a few tiny worn chips and faint age. Fine believable material details. Uniform neutral diffuse lighting; no baked shadows, reflections, highlights, perspective, objects, text, border or watermark. Matching opposite edges. Albedo only, not a room scene."
+    },
+    {
+      "id": "guest_bedspread_albedo",
+      "prompt": "Use case: stylized-concept. Seamless square Blender albedo texture for guest bedspreads of 1980s Sunset Palms Californian motel. Flat full-bleed orthographic textile scan: faded burnt coral woven fabric with a small repeating muted cream and dark teal geometric fan pattern, fine visible thread grain and understated wear. Restrained contrast, premium detailed game material. Neutral uniform diffuse lighting. Matching opposite edges. No folds, perspective, shadows, highlights, objects, borders, text or watermark. Color material data only."
+    },
+    {
+      "id": "reception_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A detailed cutaway reception of a 1980s Californian roadside motel Sunset Palms: walnut reception counter, brass service bell, pigeonhole key rack, ledgers, rotary phone, small CRT security monitor, warm desk lamp, teal upholstered sofa, potted palms, coral stucco and walnut panel walls, checker tiled floor, leaflet rack and functional clutter. Clear walking lane. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    },
+    {
+      "id": "guest_room_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A detailed cutaway guest bedroom in a 1980s Californian Sunset Palms motel: cream wallpaper with fine teal stripes and ochre fan motifs, coral geometric bedspread, walnut bedside tables, warm shaded lamps, rotary telephone, small CRT television on dresser, suitcase rack, curtains, framed palm print, scuffed carpet, wall air conditioner. Small lived-in details, clear walking lane. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    },
+    {
+      "id": "laundry_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A detailed cutaway service laundry in a 1980s Californian Sunset Palms motel: two aged cream front-loading industrial washers with real drum windows, controls and pipe connections; folded towels, wheeled canvas laundry cart, steel work bench with four labelled detergent bottles, stocked open shelving, mop bucket, floor drain, pale mint and ivory tiles, pipes and electrical junction boxes, warm wall lamp. Clear central passage. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    },
+    {
+      "id": "pool_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A richly detailed cutaway tropical pool courtyard of 1980s Sunset Palms Californian roadside motel at night: believable turquoise pool with tiled lining and underwater steps, stainless ladder, weathered beige paving, red cream striped parasols, loungers, pool towels, dense layered palms and planters, two storey coral motel facade with doors windows railings and warm wall sconces, small neon sign, string lights, realistic wet reflections. Clear wide circulation lanes. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    },
+    {
+      "id": "corridor_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A detailed cutaway 1980s Californian Sunset Palms motel corridor: aged coral stucco walls, cream guest doors with metal number plates, door jambs, windows with blinds, walnut skirting and trim, warm wall sconces, low maintenance cupboard, a fire extinguisher and utility panel, subdued worn patterned carpet, restrained lived-in details. Clear continuous combat and traversal lane. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    },
+    {
+      "id": "entrance_direction",
+      "prompt": "Use case: stylized-concept. Asset type: environment art direction for subsequent authored Blender reconstruction, not a final gameplay background. A richly detailed cutaway entrance and parking of 1980s Sunset Palms Californian roadside motel at night: red convertible and dark sedan with coherent proportions, weathered asphalt and painted parking bays, curb, motel entrance doors, coral stucco exterior, neon motel sign, layered palms, planters, drain grates, trash bins and subtle maintenance clutter. Warm entrance sconces contrast restrained cyan magenta sign reflections. Wide clear entry route. No people. Style: high quality detailed handcrafted 3D diorama with finely resolved pixel-art-like material detail, rich physical surfaces, beveled edges, believable contact shadows, premium indie game finish. Orthographic three-quarter elevated view, entire area visible, no fisheye, cohesive coral teal amber walnut palette, controlled highlights, strong readability. Landscape composition. No labels, UI, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "exterior_stucco_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-4a2d99e9-f277-4e72-bd2b-3fd921e4dd94.png"
+    },
+    {
+      "id": "guest_wallpaper_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-856b711c-0971-412b-869e-201ebb2dcfb1.png"
+    },
+    {
+      "id": "reception_wood_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-141d4959-2fee-46ab-9472-c0b2bff65e5c.png"
+    },
+    {
+      "id": "bathroom_wall_tiles_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b847f9e7-b6a1-4234-aa7e-35ed3519e646.png"
+    },
+    {
+      "id": "guest_bedspread_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0e62448f-d0da-43ee-b1fc-ef3796721192.png"
+    },
+    {
+      "id": "reception_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-094572eb-1379-4d36-b54e-4f06aee142e8.png"
+    },
+    {
+      "id": "guest_room_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-15713007-e40f-47d8-9f4f-0e5ced331b4c.png"
+    },
+    {
+      "id": "laundry_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-986096d5-141d-4824-ab58-175a6055a515.png"
+    },
+    {
+      "id": "pool_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-1f95cf9f-7aca-474d-9a9c-4e916ba4a42d.png"
+    },
+    {
+      "id": "corridor_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c37ac0d7-39bb-41ca-9653-d4b2cf71cfd2.png"
+    },
+    {
+      "id": "entrance_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-250e314e-6240-4cad-a26e-9e8ff18ebcac.png"
+    }
+  ]
+}

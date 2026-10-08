@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "535a9169f88892ae5c86bbd1cff2ff415ff96446494390e9f6e1494dca9e9438",
+  "integrated_sha256": "9e2f5b4ecf05a055eba36f0a6c13d29f076511372867b08dc7170af5807bb251",
+  "backup": "build\\boss_doze_runtime_verified\\boss_before_535a9169f888.glb",
+  "visual_review": "build/boss_idle_review_directions.png",
+  "mechanics": "build/boss_doze_supported_isolated/regression.log"
+}

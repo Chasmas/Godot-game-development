@@ -1,0 +1,14 @@
+{
+ "preview": "01a10c38-be3f-7259-8c9c-96a16c1e7286",
+ "refine": "01a10c39-d4d9-7731-9315-7dab3d6fc44b",
+ "rig": "01a10c3a-aef6-75ed-aaa1-7fd1b08669c2",
+ "anim_idle": "01a10c3b-16f5-7565-b9ec-54b577ddb385",
+ "anim_walk": "01a10c3b-3f05-7239-8b76-ed3b407c77e4",
+ "anim_run": "01a10c3b-8890-7128-8914-df88c3cb0e7c",
+ "anim_aim": "01a10c3b-b07d-7269-8c3a-a28cca83a80e",
+ "anim_melee": "01a10c3b-d905-7796-99f1-f9eb69c312c6",
+ "anim_punch": "01a10c3c-0149-779e-b53f-e9a92ae74664",
+ "anim_death": "01a10c3c-2942-730b-a26c-0873e05e0a84",
+ "anim_death_back": "01a10c3c-51a6-755e-a111-55e353ec727e",
+ "anim_knocked": "01a10c3c-7918-70e6-9b55-d5e05d077077"
+}

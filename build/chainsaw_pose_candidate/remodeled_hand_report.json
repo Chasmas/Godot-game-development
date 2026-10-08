@@ -1,0 +1,45 @@
+{
+  "approved": false,
+  "parts": [
+    {
+      "side": "Left",
+      "vertices": 756,
+      "boundary_edges": 0
+    },
+    {
+      "side": "Right",
+      "vertices": 756,
+      "boundary_edges": 0
+    }
+  ],
+  "skin_colour": [
+    0.9490196704864502,
+    0.7529412508010864,
+    0.6509804129600525
+  ],
+  "source_skin_samples": 494,
+  "uv_transfer_samples": 2477,
+  "skin_material": "Material_1",
+  "remaining": "Texture/forearm visual polish, equip/unequip lifecycle, gameplay integration and broader NPC compatibility remain pending.",
+  "finger_curve": "Centred around actual handle cross-section in each hand space; radius2.6cm Left/2.8cm Right.",
+  "contact_probe": {
+    "Left": {
+      "deepest_aabb_penetration_m": 0.0,
+      "deepest_triangle_penetration_m": 0.0,
+      "mesh_found": true,
+      "vertices_inside_handle_aabb": 0,
+      "vertices_inside_triangles": 0
+    },
+    "Right": {
+      "deepest_aabb_penetration_m": 0.0,
+      "deepest_triangle_penetration_m": 0.0,
+      "mesh_found": true,
+      "vertices_inside_handle_aabb": 0,
+      "vertices_inside_triangles": 0
+    }
+  },
+  "continuous_contact_gate_passed": true,
+  "bidirectional_edge_gate_passed": true,
+  "transition_mesh_samples": 128,
+  "transition_mesh_failures": 0
+}

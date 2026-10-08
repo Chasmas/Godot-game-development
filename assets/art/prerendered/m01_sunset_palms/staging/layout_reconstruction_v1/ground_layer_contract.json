@@ -1,0 +1,33 @@
+{
+  "source_level_sha256": "7fbd0bd73a18b4f5edd01c5b85e5e8d8c7704690eb219757e0d8aa8c9a9820d0",
+  "image": "ground_layer_candidate.png",
+  "size_px": [
+    1088,
+    976
+  ],
+  "godot_position_px": [
+    0,
+    0
+  ],
+  "godot_sprite_centered": false,
+  "godot_scale": [
+    1,
+    1
+  ],
+  "pixels_per_cell": 16,
+  "included_meshes": [
+    "Floor_\"_resolved_from_game",
+    "Floor_,_resolved_from_game",
+    "Floor_._resolved_from_game",
+    "Floor_:_resolved_from_game",
+    "Floor_=_resolved_from_game",
+    "Floor___resolved_from_game"
+  ],
+  "water_excluded": true,
+  "runtime_approved": false,
+  "pending": [
+    "pixel alignment capture in Godot",
+    "lighting and scale review",
+    "performance and interaction checks"
+  ]
+}

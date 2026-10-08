@@ -1,0 +1,23 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\render_melee_trails.py:24: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+00:02.875  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\000.png'
+00:03.046  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\001.png'
+00:03.218  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\002.png'
+00:03.359  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\003.png'
+00:03.515  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\004.png'
+00:03.656  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\005.png'
+00:03.812  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\006.png'
+00:03.953  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\swing\007.png'
+00:04.140  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\000.png'
+00:04.296  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\001.png'
+00:04.437  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\002.png'
+00:04.593  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\003.png'
+00:04.734  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\004.png'
+00:04.890  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\005.png'
+00:05.031  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\006.png'
+00:05.187  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\melee_trail_review\thrust\007.png'
+Info: Saved as "swing.blend"
+Info: Saved as "thrust.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

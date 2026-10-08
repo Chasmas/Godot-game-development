@@ -1,0 +1,82 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+[level] prewarmed 24 looks in 2337 ms
+M01_REVIEW_FREEZE: e_61,14 state=PATROL previous animation velocity=(-51.75293, -18.60901)
+M01_REVIEW_FREEZE: e_25,22 state=PATROL previous animation velocity=(-41.74804, -4.616088)
+M01_REVIEW_FREEZE: e_40,23 state=PATROL previous animation velocity=(-38.61328, 39.16626)
+M01_REVIEW_FREEZE: e_46,38 state=PATROL previous animation velocity=(53.70117, 11.87988)
+M01_REVIEW_FREEZE: e_40,45 state=PATROL previous animation velocity=(-54.41894, -5.280761)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/layout_reconstruction_v1/ground_layer_candidate_v2.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_architecture_game_review.gd:255)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/layout_reconstruction_v1/wall_layer_candidate_v1.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_architecture_game_review.gd:270)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door_leaf_topdown.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_architecture_game_review.gd:287)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door_debris_topdown.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_architecture_game_review.gd:288)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_000.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_270.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] preview_armchairs (res://tools/m01_architecture_game_review.gd:67)
+       [1] _ready (res://tools/m01_architecture_game_review.gd:322)
+M01_ARMCHAIR_MAP_REVIEW: 11 visual replacements; existing collision unchanged; preview only
+M01_ARCHITECTURE_REVIEW: floor and 30 wooden doors captured; preview only

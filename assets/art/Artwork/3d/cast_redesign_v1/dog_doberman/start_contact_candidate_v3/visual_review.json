@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "source_glb_sha256": "ac05bec83e218ca8e739773b5de24b0f82696e3848e92d01f8a8fab3dff23bca",
+  "captured_frames_per_side": 19,
+  "reviewed_frames": [
+    "godot_frames/idle_010.png",
+    "godot_frames_opposite/idle_018.png"
+  ],
+  "findings": [
+    "Object translation now survives the pose bake",
+    "Shoulder folds still require refinement"
+  ],
+  "remaining": [
+    "Independent Godot world-space contact reconstruction",
+    "Visual review of continuous start-to-walk playback",
+    "Runtime movement extraction and collision validation"
+  ],
+  "scope": "Isolated exported contact pilot; no production integration"
+}

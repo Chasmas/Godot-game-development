@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2225 ms
+CONTACT knife visual phase=0.64814814814815 expected=0.62
+PASS knife animation reaches strike when controller resolves contact
+PASS knife controller resolves contact
+CONTACT heavy_knife visual phase=0.58333333333333 expected=0.58
+PASS heavy_knife animation reaches strike when controller resolves contact
+PASS heavy_knife controller resolves contact
+CONTACT punch visual phase=0.55416666666667 expected=0.53
+PASS punch animation reaches strike when controller resolves contact
+PASS punch controller resolves contact
+PASS real controller starts Spotlight roll
+PASS roll pose keeps pace with roll movement during Spotlight
+PASS roll animation recovers when controller roll ends
+GAIT actual=0.76086956521739 player-clock reference=0.76086956521739
+PASS Cass gait follows player time rather than slowed world time
+PASS ordinary actor retains world animation speed
+PASS animation returns to world time after Spotlight ends
+SPOTLIGHT ANIMATION REVIEW: 0 failures

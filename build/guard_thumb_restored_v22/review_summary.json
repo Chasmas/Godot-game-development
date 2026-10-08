@@ -1,0 +1,85 @@
+{
+  "approved": false,
+  "candidate_sha256": "bc0e5a5a727195421757d35799bf0e8d23211810fab7d9e7bb350c84d2a36e53",
+  "production_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c",
+  "contact_phases": {
+    "aim_dual": [
+      0.0
+    ],
+    "armed_dual_walk": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "armed_dual_run": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "reload_dual": [
+      0.0,
+      0.5,
+      1.0
+    ]
+  },
+  "wrist_samples_per_clip": 65,
+  "wrist_area_ratios": {
+    "aim_dual": {
+      "min": 0.5207746405261795,
+      "max": 3.4057473874591695,
+      "extreme_samples": 0
+    },
+    "armed_dual_walk": {
+      "min": 0.5207669222544751,
+      "max": 3.405760082227285,
+      "extreme_samples": 0
+    },
+    "armed_dual_run": {
+      "min": 0.5207735992096892,
+      "max": 3.405759981951524,
+      "extreme_samples": 0
+    },
+    "reload_dual": {
+      "min": 0.456426569843091,
+      "max": 5.618699037925045,
+      "extreme_samples": 0
+    }
+  },
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "punch_left",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "remaining": [
+    "Polish thumb/palm attachment and anatomical silhouette.",
+    "Review both hands and full reload performance in Godot.",
+    "Check additional contact phases before integration."
+  ],
+  "limitations": [
+    "Contact sampling does not exclude containment or coplanar overlap.",
+    "Area ratios are diagnostic, not anatomical approval.",
+    "No production mesh or weapon renderer is changed."
+  ]
+}

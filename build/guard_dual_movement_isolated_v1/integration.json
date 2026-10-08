@@ -1,0 +1,51 @@
+{
+  "approved": true,
+  "base_sha256": "13db0c04d8b7ac818b6d4b37349cc611c64cc975e5316d5b866d9687f18c9730",
+  "candidate_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c",
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "punch_left",
+    "aim_dual",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "changed_clips": [
+    "armed_dual_walk",
+    "armed_dual_run"
+  ],
+  "added_clips": [],
+  "rig_geometry_bind_preserved": true,
+  "pose_space_checks": [
+    {
+      "clip": "armed_dual_walk",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 0
+    },
+    {
+      "clip": "armed_dual_run",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 0
+    }
+  ],
+  "approval_scope": "Guard dual walking/running arm channels; current mesh/weapons unchanged. Eight directions each, 264 posture phases each, three-loop playback reviewed."
+}

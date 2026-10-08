@@ -1,0 +1,9 @@
+05:14:39 | INFO: Data are loaded, start creating Blender stuff
+05:14:39 | INFO: Blender create Mesh node Mesh_0
+05:14:39 | INFO: glTF import finished in 0.37s
+00:07.984  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_head_landmarks\front.png'
+00:14.156  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_head_landmarks\side.png'
+HEAD_METRES (-0.036527689546346664, 0.11780275404453278, 1.4714345932006836)
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

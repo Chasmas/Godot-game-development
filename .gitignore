@@ -8,3 +8,15 @@ HOTSHOT_CALIFORNIA_Setup.exe
 *.exe
 .godot/
 data/i18n/_keys.txt
+
+# PC-local setup and secrets
+.toolchain/
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+# Old game export artifacts are not part of this source migration
+releases/*.zip
+build/*.pck
+build/*.tmp

@@ -1,0 +1,24 @@
+{
+  "runtime_approved": false,
+  "asset": "dog_doberman_native_skin.glb",
+  "godot_import_settings": {
+    "animation/fps": 30,
+    "_subresources": {
+      "nodes": {
+        "PATH:AnimationPlayer": {
+          "optimizer/enabled": false
+        }
+      }
+    }
+  },
+  "verified_project": "build/doberman_idle_probe",
+  "evidence": [
+    "godot_contact_audit.json",
+    "godot_direct_contact_audit.json",
+    "godot_no_compression_contact_audit.json",
+    "godot_no_optimizer_contact_audit.json"
+  ],
+  "reason": "Default animation key optimization changes carefully planted foot contacts; mesh compression toggle had no effect in this isolated test",
+  "source_checked": "https://raw.githubusercontent.com/godotengine/godot/master/editor/import/3d/resource_importer_scene.cpp",
+  "scope": "Per-asset validated import profile; no blanket import changes"
+}

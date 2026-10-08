@@ -1,0 +1,20 @@
+06:43:41 | INFO: Data are loaded, start creating Blender stuff
+06:43:41 | INFO: Blender create Mesh node Mesh_0
+06:43:41 | INFO: glTF import finished in 0.17s
+ELBOW aim_dual Right 3.142 (0.05079609528183937, -0.2702241539955139, 1.1893692016601562)
+ELBOW aim_dual Left 0.0 (0.057363107800483704, 0.27992069721221924, 1.1892789602279663)
+anim aim_dual 2 frames (baked)
+06:43:41 | INFO: Data are loaded, start creating Blender stuff
+06:43:41 | INFO: Blender create Mesh node Mesh_0
+06:43:42 | INFO: glTF import finished in 0.17s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+06:43:42 | INFO: Starting glTF 2.0 export
+06:43:42 | INFO: Extracting primitive: Mesh_0
+06:43:42 | INFO: Primitives created: 1
+06:43:42 | INFO: Finished glTF 2.0 export in 0.307847261428833 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\guard_dual_palmar_bake\guard.glb clips: ['aim_dual']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,13 @@
+04:12:12 | INFO: Data are loaded, start creating Blender stuff
+04:12:12 | INFO: Blender create Mesh node char1
+04:12:12 | INFO: glTF import finished in 0.13s
+Traceback (most recent call last):
+  File "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\model_chainsaw_hands.py", line 12, in <module>
+    uv_name=uv_name
+            ^^^^^^^
+NameError: name 'uv_name' is not defined
+
+Error: script failed, file: 'tools/blender/model_chainsaw_hands.py', exiting.
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

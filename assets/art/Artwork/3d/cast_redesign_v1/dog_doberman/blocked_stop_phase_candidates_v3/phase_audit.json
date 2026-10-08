@@ -1,0 +1,59 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "sampled_source_frames": 7,
+  "stop_frames_per_candidate": 19,
+  "contact_and_endpoint_checks_passed": true,
+  "samples": [
+    {
+      "blocked_source_frame": 1,
+      "blocked_source_pose_difference_m": 3.4434258962545823e-07,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 0,
+      "minimum_sole_height_m": -1.7991436607189826e-07
+    },
+    {
+      "blocked_source_frame": 4,
+      "blocked_source_pose_difference_m": 1.3451674049486671e-05,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1387820228665043e-06,
+      "minimum_sole_height_m": -1.1365058526280336e-05
+    },
+    {
+      "blocked_source_frame": 7,
+      "blocked_source_pose_difference_m": 1.0658622590655336e-05,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1298757557959244e-06,
+      "minimum_sole_height_m": -1.4032678336661775e-05
+    },
+    {
+      "blocked_source_frame": 10,
+      "blocked_source_pose_difference_m": 1.7839328890138143e-05,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1298757557959244e-06,
+      "minimum_sole_height_m": -5.176302693143953e-06
+    },
+    {
+      "blocked_source_frame": 13,
+      "blocked_source_pose_difference_m": 9.74986973777932e-06,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1298757557959244e-06,
+      "minimum_sole_height_m": -5.1756087486865e-06
+    },
+    {
+      "blocked_source_frame": 16,
+      "blocked_source_pose_difference_m": 1.4413954534186299e-05,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1369775759827753e-06,
+      "minimum_sole_height_m": -5.158394287718693e-06
+    },
+    {
+      "blocked_source_frame": 19,
+      "blocked_source_pose_difference_m": 1.0882707324358435e-05,
+      "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+      "maximum_support_slip_per_frame_m": 3.1387820228665043e-06,
+      "minimum_sole_height_m": -5.16699583386071e-06
+    }
+  ],
+  "scope": "Seven Blender interruption sources; no proof for every source time, Godot export, visual quality, or gameplay"
+}

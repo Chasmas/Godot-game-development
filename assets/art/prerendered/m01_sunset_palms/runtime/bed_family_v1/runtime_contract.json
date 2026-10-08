@@ -1,0 +1,57 @@
+{
+  "runtime_approved": true,
+  "source_kind": "Authored Blender geometry with existing ImageGen walnut, bedspread and linen colour sources",
+  "footprint_metres": [
+    1.72,
+    2.16
+  ],
+  "camera_elevation_degrees": 49.72,
+  "pixels_per_metre": 236.30769230769232,
+  "frames": [
+    {
+      "file": "bed_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        384.0,
+        437.47242736816406
+      ]
+    },
+    {
+      "file": "bed_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        384.0,
+        437.47242736816406
+      ]
+    },
+    {
+      "file": "bed_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        384.0,
+        437.47242736816406
+      ]
+    },
+    {
+      "file": "bed_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        384.0,
+        437.47242736816406
+      ]
+    }
+  ],
+  "pending": [
+    "visual review",
+    "game-scale projection",
+    "mapping all existing bed variants",
+    "collision and navigation validation"
+  ],
+  "approval_scope": "M01 ten existing functional bed bodies; shared Blender family, preserve original collision geometry and isotropic render scale.",
+  "display_brightness": 0.65,
+  "brightness_review": {
+    "capture": "build/m01_bedside_west_rooms_exposure_0.65.png",
+    "scope": "Godot sprite RGB modulation, preserving alpha; not a change to level lights or Blender textures",
+    "finding": "Reduced blown-out pillow and linen highlights while retaining bed pattern readability"
+  }
+}

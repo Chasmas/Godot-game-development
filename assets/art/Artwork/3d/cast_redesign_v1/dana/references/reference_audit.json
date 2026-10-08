@@ -1,0 +1,51 @@
+{
+  "character": "dana",
+  "height_m": 1.69,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\dana_turnaround.png",
+  "source_sha256": "9c4c22856f7a2c4ff79e336d47ebabd7912838113b0ac054cf0982ebd5c2b595",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        370,
+        0,
+        555,
+        780
+      ],
+      "width": 185,
+      "height": 780,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dana\\references\\side.png",
+      "sha256": "d755239d133ec7447314888b55548caae5effefa5da4d5664059113bf30096d3"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        565,
+        0,
+        888,
+        780
+      ],
+      "width": 323,
+      "height": 780,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dana\\references\\back.png",
+      "sha256": "03ade809e59ff6819605ac43dadd74804cb27f232d7c0bc13e83680a9f9c4b05"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        340,
+        780
+      ],
+      "width": 340,
+      "height": 780,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dana\\references\\front.png",
+      "sha256": "06a4b240e6accc1c6e6b7d0f7017fe31fc1e2504a93bab4c91ba98a1d20f6c89"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops directly inspected: complete bodies, hands, feet and no neighboring detail fragments. Modeling input approval only; no runtime, geometry or rig approval."
+}

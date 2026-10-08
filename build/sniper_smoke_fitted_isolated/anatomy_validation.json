@@ -1,0 +1,22 @@
+{
+  "approved": true,
+  "scope": "Sniper smoke wrist height, stationary ankles and loop continuity; excludes full-game or all-NPC approval",
+  "max_elbow_sample_step": 0.06146656439644151,
+  "max_ankle_drift": 0.0,
+  "max_loop_joint_gap": 0.00029388369306626225,
+  "contact_wrist_below_head": [
+    0.035000205039970034,
+    0.035000443458560015,
+    0.035000681877140005,
+    0.035000681877140005,
+    0.035000443458560015,
+    0.035000443458560015,
+    0.035000443458550023,
+    0.03500056266785001,
+    0.035000443458560015,
+    0.035000681877140005,
+    0.03500080108642001,
+    0.035000681877140005,
+    0.03500103950500999
+  ]
+}

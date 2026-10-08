@@ -1,0 +1,15 @@
+[
+  {
+    "approved": false,
+    "game_size": [
+      9.75,
+      10.75
+    ],
+    "look": "demon",
+    "part": "arm",
+    "pixels": [
+      39,
+      43
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+23:25:27 | INFO: Data are loaded, start creating Blender stuff
+23:25:27 | INFO: Blender create Mesh node Mesh_0
+23:25:27 | INFO: glTF import finished in 0.15s
+ELBOW doze Right 3.142 (0.015547310002148151, -0.36272069811820984, 0.7165016531944275)
+ELBOW doze Left 0.0 (0.014396240934729576, 0.15827028453350067, 0.7258639335632324)
+anim doze 192 frames (baked)
+23:25:28 | INFO: Data are loaded, start creating Blender stuff
+23:25:28 | INFO: Blender create Mesh node Mesh_0
+23:25:28 | INFO: glTF import finished in 0.15s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:25:28 | INFO: Starting glTF 2.0 export
+23:25:28 | INFO: Extracting primitive: Mesh_0
+23:25:29 | INFO: Primitives created: 1
+23:25:29 | INFO: Finished glTF 2.0 export in 0.4000692367553711 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\zombie_doze\zombie.glb clips: ['doze']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

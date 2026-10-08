@@ -1,0 +1,226 @@
+{
+  "status": "art_direction_pending_blender_and_runtime_validation",
+  "runtime_implemented": false,
+  "identity_variants": {
+    "enemies": [
+      "guard",
+      "gunner",
+      "hunter",
+      "heavy",
+      "bellhop",
+      "biker",
+      "welder",
+      "security"
+    ],
+    "civilians": [
+      "civilian_1",
+      "civilian_2",
+      "civilian_3",
+      "civilian_4",
+      "civilian_5",
+      "civilian_6",
+      "civilian_7",
+      "civilian_8"
+    ]
+  },
+  "eligibility": "Use previously killed campaign victims. Preserve source identity, clothes and body build. Living civilians must never appear as undead victims.",
+  "appearance_layers": [
+    "Recent victim: recognizable face, torn clothes and localized wounds",
+    "Buried victim: soil, damp cloth and weathered skin",
+    "Burned victim: scorched clothing and authored burn materials",
+    "Mutilated victim: authored missing-limb meshes with matching sockets"
+  ],
+  "motion_variants": [
+    "Slow upright shamble with asymmetric steps",
+    "Limp with a consistent injured supporting leg",
+    "Hunched advance with restrained shoulder movement",
+    "Ground crawl with authored hand and knee contacts"
+  ],
+  "requirements": [
+    "ImageGen reference followed by Blender materials, meshes and animation",
+    "No cigarettes or smoking animations",
+    "No arbitrary scaling or detached replacement arms",
+    "Locomotion must match actual displacement; stationary bodies use idle poses",
+    "Silhouette differences remain readable at the gameplay camera",
+    "Validate limb contacts, collisions and attack timing before runtime approval"
+  ],
+  "additional_variants": [
+    {
+      "id": "dust_bound",
+      "appearance": "Recognizable victim covered in cemetery dust, chalky skin, frayed original clothing and cobwebs caught in seams",
+      "motion": "Slow upright walk with short steps and a restrained head turn; grounded stationary idle",
+      "combat": "Visible shoulder and hand anticipation before a standard close-range attack",
+      "context": "Authored cemetery nightmare treatment; preserve the victim's original build and outfit"
+    },
+    {
+      "id": "overgrown",
+      "appearance": "Recognizable victim with moss on clothing, fine roots around shoes and damp earth on the original outfit",
+      "motion": "Weighted asymmetric steps; root and cloth movement follow the body without stretching limbs",
+      "combat": "Readable upright silhouette and standard collision rules",
+      "context": "Cemetery emergence sites only; visual roots must not suggest an unimplemented immobilizing ability"
+    },
+    {
+      "id": "night_attendant",
+      "appearance": "Former bellhop or security victim retaining name badge, uniform trim and keys; faded cloth and exhausted facial expression",
+      "motion": "Stooped measured walk, occasional restrained searching glance, separate still idle",
+      "combat": "Telegraphed reaching attack with both arms attached to the authored rig",
+      "context": "Eligible killed bellhop or security identities only"
+    },
+    {
+      "id": "shrouded",
+      "appearance": "Recognizable victim partially draped in a torn burial cloth, with face and signature clothing details visible",
+      "motion": "Careful uneven steps; authored cloth animation keeps feet and attack hands readable",
+      "combat": "Cloth cannot hide attack anticipation, hitboxes or the direction of movement",
+      "context": "Authored burial nightmare treatment; cloth is an added layer, not a replacement identity"
+    },
+    {
+      "motion": "Heavy uneven steps; water drips stop after drying",
+      "appearance": "Waterlogged motel victim: wet recognizable clothes, pale swollen skin, algae and dripping cloth",
+      "id": "waterlogged",
+      "combat": "Standard attack timings; no hidden stat change"
+    },
+    {
+      "motion": "Authored emergence from soil followed by a restrained shamble",
+      "appearance": "Cemetery victim: earth in seams, damaged burial clothes and exposed roots",
+      "id": "grave_risen",
+      "combat": "Telegraphed emergence with fair player reaction time"
+    },
+    {
+      "motion": "Injury-specific limp or protective posture",
+      "appearance": "Recent campaign victim: wounds consistent with recorded death, recognizable face and outfit",
+      "id": "fresh_wounded",
+      "combat": "Preserve readable attack anticipation"
+    },
+    {
+      "motion": "Hand-driven crawl with grounded contacts and matching displacement",
+      "appearance": "Recognizable victim with authored lower-body injury and matching gore sockets",
+      "id": "broken_crawler",
+      "combat": "Distinct silhouette and telegraphed low attack"
+    },
+    {
+      "motion": "Stiff torso and asymmetric reach without limb stretching",
+      "appearance": "Scorched victim with recognizable surviving clothing and authored charred materials",
+      "id": "burned_survivor",
+      "combat": "Standard collision rules and visible wind-up"
+    },
+    {
+      "id": "rain_soaked",
+      "appearance": "Original victim outfit soaked by cemetery rain; mud on hems, wet hair and muted skin tones; preserve face and signature clothing",
+      "motion": "Measured upright steps with restrained head movements and a separate motionless idle",
+      "combat": "Clearly visible hand and shoulder anticipation; rain and cloth cannot hide the attack",
+      "context": "Exterior nightmare weather treatment; does not imply a drowning death"
+    },
+    {
+      "id": "ceremonial",
+      "appearance": "Original recognizable victim with wilted funeral flowers caught on clothing and a loose memorial ribbon; face, hands and footwear remain visible",
+      "motion": "Uneven upright shamble with subtle secondary ribbon movement",
+      "combat": "Standard collision and attack timings; accessories remain outside the readable hand silhouette",
+      "context": "Cemetery nightmare staging; source identity and death history remain unchanged"
+    },
+    {
+      "id": "one_armed",
+      "appearance": "Eligible victim retaining original outfit and body proportions with a specifically authored missing arm and matching closed injury socket",
+      "motion": "Balanced asymmetric locomotion and an authored attack using the surviving arm; separate idle and recovery",
+      "combat": "No invisible second-hand hit; collision and attack reach must match the surviving limb",
+      "context": "Only victims whose recorded death or dismemberment supports the missing arm; never choose the absent limb randomly"
+    },
+    {
+      "id": "funeral_guest",
+      "appearance": "Recognizable killed civilian wearing their original outfit beneath a weathered formal jacket, loosened tie or memorial scarf; no replacement face or anonymous uniform",
+      "motion": "Restrained upright shamble with a slight forward lean, planted idle and clearly separated reaching attack",
+      "combat": "Standard readable wind-up and collision; accessories cannot obscure hands",
+      "context": "Previously killed civilians only; nightmare funeral styling must retain the source identity"
+    },
+    {
+      "id": "crypt_dried",
+      "appearance": "Recognizable victim with dried, weathered skin, dusty original clothing and brittle cloth edges; preserve body proportions and facial landmarks",
+      "motion": "Stiff measured steps with restrained joint range, without stretching limbs; separate stationary idle",
+      "combat": "Deliberate visible anticipation followed by a short reach; no unvalidated speed or health increase",
+      "context": "Authored mausoleum nightmare treatment; compatible intact-limb identities only"
+    },
+    {
+      "id": "shattered_limp",
+      "appearance": "Recognizable victim retaining original clothes, with an authored injured leg and localized damage consistent with recorded victim history",
+      "motion": "Consistent injured side, shortened step and weight transfer onto the healthy leg; planted contacts and separate idle",
+      "combat": "Attack stance supports the injured leg; no sliding or sudden full-speed lunge",
+      "context": "Only compatible recorded leg injuries; do not infer injury from a random seed"
+    },
+    {
+      "id": "pool_residue",
+      "appearance": "Recognizable motel victim retaining original outfit, with dried pool mineral marks, discolored wet fabric and small strands of algae around hems; preserve face and build",
+      "motion": "Heavy deliberate steps, subtly uneven shoulders and a separate planted idle; no continuous walking while stationary",
+      "combat": "Visible reaching wind-up; effects never obscure hands or contact distance",
+      "context": "Authored pool-related nightmare context only; distinguish from rain-soaked and waterlogged treatments without claiming a recorded drowning"
+    },
+    {
+      "id": "industrial_ash",
+      "appearance": "Recognizable killed welder or factory worker retaining workwear, protective equipment and identifying details, covered in soot and oxidized dust with authored local heat damage",
+      "motion": "Weighted short steps and restrained torso turns; separate grounded idle and attack recovery",
+      "combat": "Standard validated reach and timing; no automatic fire damage or concealed strength bonus",
+      "context": "Eligible killed industrial identities; actual burn wounds require matching victim history"
+    },
+    {
+      "id": "wax_mourner",
+      "appearance": "Recognizable victim in original clothing with cooled cemetery candle wax on shoulders and sleeves, dark memorial ribbons and subtle pale weathering; face and hands remain visible",
+      "motion": "Slow upright advance with a restrained head tilt; wax is attached material detail, not floating geometry",
+      "combat": "Unobstructed shoulder and hand anticipation with standard collision rules",
+      "context": "Authored cemetery ritual nightmare treatment; preserve the victim identity and avoid replacing them with an anonymous monster"
+    },
+    {
+      "id": "motel_guest",
+      "appearance": "Recognizable killed motel guest retaining patterned sleepwear or travel clothes, a damaged room key tag and dusty slippers; preserve facial landmarks",
+      "motion": "Uneven short steps with a restrained searching glance and planted idle",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Previously killed motel guest identities only"
+    },
+    {
+      "id": "garden_entangled",
+      "appearance": "Original victim clothing caught in dry thorn stems and cemetery ivy, with soil-stained shoes; hands and face remain unobstructed",
+      "motion": "Hunched measured walk with authored trailing foliage and separate stationary idle",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Cemetery nightmare dressing; vegetation must not imply a new binding ability"
+    },
+    {
+      "id": "mirror_echo",
+      "appearance": "Recognizable victim with the original outfit and localized nightmare discoloration resembling cracked reflections; no duplicate limbs or changed proportions",
+      "motion": "Restrained head turn and asymmetric upright steps; effects remain attached to the surface",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Authored dream treatment; reflective detail must remain readable under gameplay lighting"
+    },
+    {
+      "id": "vault_keeper",
+      "appearance": "Eligible killed security victim retaining uniform, belt and badge with stone dust, cobwebs and faded fabric",
+      "motion": "Heavy planted steps, careful torso rotation and a distinct still idle",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Previously killed security identities in mausoleum staging only"
+    },
+    {
+      "id": "mourning_veil",
+      "appearance": "Recognizable killed victim wearing original clothes beneath a torn translucent mourning veil; face outline and both attack hands stay visible",
+      "motion": "Measured upright shamble with authored veil motion kept clear of feet and hands",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Cemetery nightmare styling; retain identity rather than replacing it with an anonymous figure"
+    },
+    {
+      "id": "red_dust",
+      "appearance": "Recognizable victim with brick dust and weathered original clothes, retaining characteristic hair, accessories and body build",
+      "motion": "Short asymmetric steps with separate anticipation, contact and recovery poses",
+      "combat": "Standard validated reach and collision; silhouette and hands must clearly telegraph attacks. No hidden stat changes.",
+      "context": "Authored ruined-villa nightmare context; wounds must match recorded victim history"
+    }
+  ],
+  "variation_rules": [
+    "Choose identity from the campaign victim ledger before appearance or motion variation",
+    "Only use burned, waterlogged or mutilated treatments when supported by victim history or authored nightmare context",
+    "Use compatible authored combinations; never randomize limb proportions or scale",
+    "Keep civilian victims identifiable and separate from hostile campaign archetypes",
+    "Visual variation does not imply faster movement or extra health without explicit balance validation"
+  ],
+  "production_gate": {
+    "reference_art": "pending per variant",
+    "blender_mesh_materials": "pending per variant",
+    "authored_animation": "pending per variant",
+    "runtime_integration": "pending victim ledger and validated assets",
+    "note": "Art direction is not an implemented gameplay feature."
+  }
+}

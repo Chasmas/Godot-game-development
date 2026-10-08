@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+Palm socket shifts in game pixels: [1.4399995803833, 1.44000005722046]
+Wrist forward vs weapon screen direction: [1.0, 1.0]
+MODEL angle=0.0 rotation=(0.0, 1.570796, 0.0) camera_basis=[X: (1.0, 0.0, 0.0), Y: (0.0, 0.642788, -0.766044), Z: (0.0, 0.766044, 0.642788)]
+HAND forward world=(1.0, -0.0, -0.0)
+HAND forward world=(1.0, 0.0, 0.0)
+WeaponGrip transition checks: 3

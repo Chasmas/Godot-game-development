@@ -1,0 +1,162 @@
+[
+  {
+    "weapon": "bat",
+    "heading_deg": 0.0,
+    "tip_anchored_shape_error_px": 0.855
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 22.5,
+    "tip_anchored_shape_error_px": 6.932
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 45.0,
+    "tip_anchored_shape_error_px": 0.874
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 67.5,
+    "tip_anchored_shape_error_px": 6.775
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 90.0,
+    "tip_anchored_shape_error_px": 0.903
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 112.5,
+    "tip_anchored_shape_error_px": 6.495
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 135.0,
+    "tip_anchored_shape_error_px": 0.884
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 157.5,
+    "tip_anchored_shape_error_px": 5.838
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 180.0,
+    "tip_anchored_shape_error_px": 0.864
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 202.5,
+    "tip_anchored_shape_error_px": 5.853
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 225.0,
+    "tip_anchored_shape_error_px": 0.872
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 247.5,
+    "tip_anchored_shape_error_px": 5.537
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 270.0,
+    "tip_anchored_shape_error_px": 0.874
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 292.5,
+    "tip_anchored_shape_error_px": 6.558
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 315.0,
+    "tip_anchored_shape_error_px": 0.863
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 337.5,
+    "tip_anchored_shape_error_px": 6.692
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 0.0,
+    "tip_anchored_shape_error_px": 0.706
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 22.5,
+    "tip_anchored_shape_error_px": 0.93
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 45.0,
+    "tip_anchored_shape_error_px": 0.711
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 67.5,
+    "tip_anchored_shape_error_px": 1.103
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 90.0,
+    "tip_anchored_shape_error_px": 0.728
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 112.5,
+    "tip_anchored_shape_error_px": 1.094
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 135.0,
+    "tip_anchored_shape_error_px": 0.72
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 157.5,
+    "tip_anchored_shape_error_px": 1.086
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 180.0,
+    "tip_anchored_shape_error_px": 0.714
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 202.5,
+    "tip_anchored_shape_error_px": 0.992
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 225.0,
+    "tip_anchored_shape_error_px": 0.703
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 247.5,
+    "tip_anchored_shape_error_px": 1.146
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 270.0,
+    "tip_anchored_shape_error_px": 0.689
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 292.5,
+    "tip_anchored_shape_error_px": 1.09
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 315.0,
+    "tip_anchored_shape_error_px": 0.691
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 337.5,
+    "tip_anchored_shape_error_px": 0.908
+  }
+]

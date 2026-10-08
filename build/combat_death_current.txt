@@ -1,0 +1,40 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS chainsaw kills through damage receiver mode=2
+PASS death interrupts actions before corpse/drop mode=2
+PASS one corpse after duplicate damage mode=2
+PASS exact carried weapon drops once mode=2
+PASS cut obeys gore mode=2
+PASS death uses matching authored wound mesh
+PASS chainsaw kills through damage receiver mode=1
+PASS death interrupts actions before corpse/drop mode=1
+PASS one corpse after duplicate damage mode=1
+PASS exact carried weapon drops once mode=1
+PASS cut obeys gore mode=1
+PASS chainsaw kills through damage receiver mode=0
+PASS death interrupts actions before corpse/drop mode=0
+PASS one corpse after duplicate damage mode=0
+PASS exact carried weapon drops once mode=0
+PASS cut obeys gore mode=0
+PASS armed archetype carries its configured weapon: guard
+PASS configured weapon drops exactly once: guard
+PASS armed archetype carries its configured weapon: gunner
+PASS configured weapon drops exactly once: gunner
+PASS armed archetype carries its configured weapon: hunter
+PASS configured weapon drops exactly once: hunter
+PASS armed archetype carries its configured weapon: heavy
+PASS configured weapon drops exactly once: heavy
+PASS armed archetype carries its configured weapon: security
+PASS configured weapon drops exactly once: security
+PASS armed archetype carries its configured weapon: bellhop
+PASS configured weapon drops exactly once: bellhop
+PASS armed archetype carries its configured weapon: biker
+PASS configured weapon drops exactly once: biker
+PASS armed archetype carries its configured weapon: welder
+PASS configured weapon drops exactly once: welder
+PASS armed archetype carries its configured weapon: sniper
+PASS configured weapon drops exactly once: sniper
+PASS armed archetype carries its configured weapon: handler
+PASS configured weapon drops exactly once: handler
+PASS handler death immediately releases the surviving dog
+COMBAT DEATH INTEGRATION: 0 failures

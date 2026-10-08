@@ -1,0 +1,33 @@
+{
+  "approved": false,
+  "base_sha256": "13db0c04d8b7ac818b6d4b37349cc611c64cc975e5316d5b866d9687f18c9730",
+  "rows": [
+    {
+      "clip": "armed_dual_walk",
+      "changed_bones": [
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightArm",
+        "RightForeArm",
+        "RightHand"
+      ],
+      "samples": 65,
+      "duration": 4.125
+    },
+    {
+      "clip": "armed_dual_run",
+      "changed_bones": [
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightArm",
+        "RightForeArm",
+        "RightHand"
+      ],
+      "samples": 65,
+      "duration": 0.6666666865348816
+    }
+  ],
+  "scope": "Only six arm rotation channels changed; hips, legs, spine and other clips retained. Whole-body clearance and visual motion unverified."
+}

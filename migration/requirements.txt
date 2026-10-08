@@ -1,0 +1,7 @@
+Pillow
+numpy
+scipy
+requests
+cryptography
+trimesh
+pygltflib

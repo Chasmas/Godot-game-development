@@ -1,0 +1,16 @@
+{
+  "runtime_approved": false,
+  "capture": "build/m01_bedside_west_rooms.png",
+  "review": "Actual Godot GPU capture with production beds and staging nightstands",
+  "findings": [
+    "Bed and cabinets share warm walnut and orange textile palette",
+    "Lamp and linen highlights clip visually under current lighting",
+    "Legacy walls, televisions and scattered props remain inconsistent",
+    "Some cabinets read as freestanding bedside pieces; full room composition still requires revision"
+  ],
+  "next_required": [
+    "Review lamp exposure with identical framing",
+    "Complete coherent room furniture and wall assembly",
+    "Validate final authored placements before runtime promotion"
+  ]
+}

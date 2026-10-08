@@ -40,6 +40,19 @@ func _ready() -> void:
 	Events.settings_changed.connect(apply_volumes)
 	apply_volumes()
 
+func _exit_tree() -> void:
+	shutdown()
+
+func shutdown() -> void:
+	# Release pooled playback before the audio server shuts down.
+	for player in _pool2d + _poolfar:
+		player.stop()
+		player.stream = null
+	for player in _pool_ui:
+		player.stop()
+		player.stream = null
+	_cache.clear()
+
 ## Sounds further than this from the listener go through the SFX_Far bus
 ## (low-passed, a little reverb) so a distant gunshot sounds distant, not
 ## just quieter.
@@ -106,6 +119,8 @@ static var _log := OS.has_environment("AUDIO_LOG")
 
 ## Positional sound in the world.
 func play_at(sfx_name: String, pos: Vector2, volume_db := 0.0, pitch_var := 0.08) -> void:
+	if Game.quitting:
+		return
 	var s := get_stream(sfx_name)
 	if s == null or _throttled(sfx_name):
 		return
@@ -137,6 +152,8 @@ func listener_pos() -> Vector2:
 
 ## Flat UI / player-centric sound.
 func play(sfx_name: String, volume_db := 0.0, pitch := 1.0) -> void:
+	if Game.quitting:
+		return
 	var s := get_stream(sfx_name)
 	if s == null or _throttled(sfx_name):
 		return

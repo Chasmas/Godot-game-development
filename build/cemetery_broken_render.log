@@ -1,0 +1,9 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_cemetery_grave_review.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_cemetery_grave_review.py:78: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('neutral cemetery review');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.28,.32,.4,1);world.node_tree.nodes['Background'].inputs[1].default_value=.45;sc.world=world
+00:06.500  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cemetery_prop_review\grave_broken.png'
+Info: Saved as "grave_broken.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

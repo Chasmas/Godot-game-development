@@ -190,7 +190,20 @@ func _input(e: InputEvent) -> void:
 	elif _tab == "tapes" and _state == "idle" and e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_WHEEL_UP:
 		_scroll_y = clampf(_scroll_y - 40.0, 0.0, _max_scroll())
 	elif e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
-		if _state == "idle":
+		# The on-screen transport legend is also a mouse target: left half is
+		# ENTER/PLAY (or NEXT while running), right half is ESC/BACK (or EJECT).
+		if e.position.y >= size.y - 64.0:
+			if e.position.x < size.x * 0.5:
+				if _state == "idle":
+					_play_selected()
+				elif _state == "play":
+					_next_frame()
+			else:
+				if _state in ["play", "warm", "insert"]:
+					_eject()
+				else:
+					_close()
+		elif _state == "idle":
 			_click_tabs(e.position)
 			for i in _items.size():
 				var r: Rect2 = _items[i].get("rect", Rect2())
@@ -366,7 +379,12 @@ func _draw_over() -> void:
 		# the deck's on-screen display, the tracking noise, the words
 		var secs := int(_st)
 		c.draw_string(fm, scr.position + Vector2(18, 30), "PLAY ▶", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color(1, 1, 1, 0.9))
-		c.draw_string(fm, scr.position + Vector2(scr.size.x - 150, 30), "SP  0:%02d:%02d" % [_frame, secs], HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color(1, 1, 1, 0.8))
+		# A real VCR clock makes the archive feel like it is running in the
+		# player's room. Godot returns local system time, so it updates naturally
+		# without tying this cosmetic readout to tape playback.
+		var now := Time.get_time_dict_from_system()
+		var system_clock := "%02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
+		c.draw_string(fm, scr.position + Vector2(scr.size.x - 150, 30), "SP  " + system_clock, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color(1, 1, 1, 0.8))
 		if _glitch > 0.0:
 			var rng2 := RandomNumberGenerator.new()
 			rng2.seed = int(_t * 50.0)
@@ -601,7 +619,9 @@ func _draw_info(vs: Vector2, fd: Font, fb: Font, fm: Font) -> void:
 		return
 	var it: Dictionary = _items[_sel]
 	var def: Dictionary = it.def
-	var card := Rect2(_tv.position.x + 20, _deck.end.y + 14, _tv.size.x - 40, 100)
+	# Leave room for a two-line locked-item hint.  The old 100px card drew the
+	# hint with unlimited width, allowing long localised text to escape right.
+	var card := Rect2(_tv.position.x + 20, _deck.end.y + 14, _tv.size.x - 40, 132)
 	card.position.y = minf(card.position.y, vs.y - 44 - card.size.y)
 	draw_rect(card, Color(0.04, 0.02, 0.07, 0.86))
 	draw_rect(Rect2(card.position, Vector2(4, card.size.y)), def.get("col", UIStyle.PINK) if it.found else UIStyle.DIM)
@@ -617,18 +637,22 @@ func _draw_info(vs: Vector2, fd: Font, fb: Font, fm: Font) -> void:
 		draw_string(fd, Vector2(still.position.x, still.get_center().y + 10), "?", HORIZONTAL_ALIGNMENT_CENTER, still.size.x, 30, UIStyle.DIM)
 	var tx := still.end.x + 18
 	var title := tr(str(def.label)) if it.found else tr("NOT FOUND YET")
-	draw_string(fd, Vector2(tx, card.position.y + 36), title, HORIZONTAL_ALIGNMENT_LEFT, card.end.x - tx - 12, 16, UIStyle.PAPER if it.found else UIStyle.DIM)
+	var text_w := card.end.x - tx - 12
+	# Keep the title in its own two-line lane so a long chapter name cannot
+	# collide with the chapter line beneath it.
+	draw_multiline_string(fd, Vector2(tx, card.position.y + 28), title, HORIZONTAL_ALIGNMENT_LEFT, text_w, 14, 2, UIStyle.PAPER if it.found else UIStyle.DIM)
 	var chn := ""
 	for c in CHAPTERS:
 		if c[0] == def.ch:
 			chn = c[1]
-	draw_string(fb, Vector2(tx, card.position.y + 60), tr("CH.") + " %s  -  %s" % [def.ch, tr(chn)], HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.GOLD)
+	# The chapter/title pair must also survive the 960px reference layout.
+	draw_multiline_string(fb, Vector2(tx, card.position.y + 67), tr("CH.") + " %s  -  %s" % [def.ch, tr(chn)], HORIZONTAL_ALIGNMENT_LEFT, text_w, 10, 2, UIStyle.GOLD)
 	var meta := ""
 	if it.kind == "tape":
 		meta = "VHS  ·  SP  ·  0:%02d:%02d" % [def.frames.size() * 14 / 60, (def.frames.size() * 14) % 60]
 	else:
 		meta = tr("PHOTOGRAPH")
-	draw_string(fm, Vector2(tx, card.position.y + 84), meta if it.found else tr("Hidden somewhere in this job."), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, UIStyle.DIM)
+	draw_multiline_string(fm, Vector2(tx, card.position.y + 99), meta if it.found else tr("Hidden somewhere in this job."), HORIZONTAL_ALIGNMENT_LEFT, text_w, 11, 2, UIStyle.DIM)
 
 
 ## The poster collection: the list on the left (a thumbnail and a title per

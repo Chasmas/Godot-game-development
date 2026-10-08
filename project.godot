@@ -57,6 +57,10 @@ window/size/window_height_override=900
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [layer_names]
 
 2d_physics/layer_1="world"

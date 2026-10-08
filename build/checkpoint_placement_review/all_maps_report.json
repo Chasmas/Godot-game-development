@@ -1,0 +1,189 @@
+[
+  {
+    "index": 0,
+    "inside_trigger": true,
+    "mission": "m01_checkout",
+    "name": "MOTEL - GROUND FLOOR",
+    "overlaps": [],
+    "position": [
+      90.0,
+      608.0
+    ]
+  },
+  {
+    "index": 1,
+    "inside_trigger": true,
+    "mission": "m01_checkout",
+    "name": "COURTYARD",
+    "overlaps": [],
+    "position": [
+      480.0,
+      406.0
+    ]
+  },
+  {
+    "index": 2,
+    "inside_trigger": true,
+    "mission": "m01_checkout",
+    "name": "UPSTAIRS WING",
+    "overlaps": [],
+    "position": [
+      160.0,
+      150.0
+    ]
+  },
+  {
+    "index": 3,
+    "inside_trigger": true,
+    "mission": "m01_checkout",
+    "name": "FRONT OFFICE",
+    "overlaps": [],
+    "position": [
+      874.0,
+      544.0
+    ]
+  },
+  {
+    "index": 0,
+    "inside_trigger": true,
+    "mission": "m02_dog_days",
+    "name": "THE YARD",
+    "overlaps": [],
+    "position": [
+      224.0,
+      330.0
+    ]
+  },
+  {
+    "index": 1,
+    "inside_trigger": true,
+    "mission": "m02_dog_days",
+    "name": "WAREHOUSE",
+    "overlaps": [],
+    "position": [
+      224.0,
+      294.0
+    ]
+  },
+  {
+    "index": 2,
+    "inside_trigger": true,
+    "mission": "m02_dog_days",
+    "name": "KENNELS",
+    "overlaps": [],
+    "position": [
+      640.0,
+      294.0
+    ]
+  },
+  {
+    "index": 3,
+    "inside_trigger": true,
+    "mission": "m02_dog_days",
+    "name": "THE OFFICE",
+    "overlaps": [],
+    "position": [
+      794.0,
+      112.0
+    ]
+  },
+  {
+    "index": 0,
+    "inside_trigger": true,
+    "mission": "m03_prime_time",
+    "name": "THE BACKLOT",
+    "overlaps": [],
+    "position": [
+      136.0,
+      888.0
+    ]
+  },
+  {
+    "index": 1,
+    "inside_trigger": true,
+    "mission": "m03_prime_time",
+    "name": "PROP WAREHOUSE",
+    "overlaps": [],
+    "position": [
+      144.0,
+      646.0
+    ]
+  },
+  {
+    "index": 2,
+    "inside_trigger": true,
+    "mission": "m03_prime_time",
+    "name": "WARDROBE",
+    "overlaps": [],
+    "position": [
+      64.0,
+      326.0
+    ]
+  },
+  {
+    "index": 3,
+    "inside_trigger": true,
+    "mission": "m03_prime_time",
+    "name": "STAGE NINE",
+    "overlaps": [],
+    "position": [
+      346.0,
+      512.0
+    ]
+  },
+  {
+    "index": 4,
+    "inside_trigger": true,
+    "mission": "m03_prime_time",
+    "name": "THE OFFICES",
+    "overlaps": [],
+    "position": [
+      826.0,
+      432.0
+    ]
+  },
+  {
+    "index": 0,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "THE LAWN",
+    "overlaps": [],
+    "position": [
+      152.0,
+      920.0
+    ]
+  },
+  {
+    "index": 1,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "THE FOYER",
+    "overlaps": [],
+    "position": [
+      378.0,
+      448.0
+    ]
+  },
+  {
+    "index": 2,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "WEST WING",
+    "overlaps": [],
+    "position": [
+      176.0,
+      534.0
+    ]
+  },
+  {
+    "index": 3,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "EAST WING",
+    "overlaps": [],
+    "position": [
+      826.0,
+      448.0
+    ]
+  }
+]

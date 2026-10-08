@@ -1,0 +1,178 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "washer_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One aged cream industrial front-loading washing machine, circular glass drum door showing folded towels, mechanically believable hinges, control knobs and meter, rear pipe fittings, subtle scratches and enamel chips. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "vending_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One 1980s motel vending machine, dark teal housing, glazed product window with distinguishable rows of cans, coin slot, selection buttons, coral trim, believable wear. No brand logos. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "ice_machine_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One 1980s motel ice dispensing machine, cream enamel metal housing, stainless dispensing recess and drip tray, grilles, readable mechanical controls, subtle rust around seams. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "housekeeping_cart_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One motel housekeeping trolley with four casters, steel frame, canvas laundry bag, two shelves of neatly folded white towels, detergent bottles and cleaning supplies, believable cloth folds. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "bed_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One complete motel double bed with walnut headboard, mattress, two cream pillows, coral teal geometric woven bedspread with natural folds and tucked edges, sturdy low bed frame. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "pool_lounger_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One cream metal pool lounger with teal fabric cushions, articulated reclining back, believable hinges and feet, one loosely folded white towel resting on its seat. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "pool_umbrella_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One open red and cream striped pool parasol with articulated canopy ribs, fine canvas weave, metal pole and heavy round concrete base, believable fabric tension. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "palm_planter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One lush mature tropical palm in a large weathered terracotta planter, layered naturally varied green fronds, fibrous trunk, visible soil and subtle mineral deposits on pot. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "crt_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One 1980s small tabletop CRT television, walnut effect housing, convex glass dark screen, control knobs and ventilation slats, cable, physically believable proportions. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "guest_door_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One complete cream painted motel door and walnut jamb assembly, small brass number plate reading 204, brass handle and lock, kickplate, fine paint wear, no surrounding room. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "window_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One complete motel window assembly with aluminium frame, glass, partly closed cream venetian blinds and faded teal curtains, curtain rod and sill, physically consistent layers. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "neon_sign_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. One roadside motel neon sign reading SUNSET PALMS, small VACANCY panel below, simple palm motif, weathered metal housing, actual thin neon tubing coral cyan amber, mounting brackets, controlled soft glow. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "cass_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. Full body female protagonist Cass Moreno, adult auburn-haired woman with red leather jacket, dark practical trousers and black boots. Athletic natural proportions, distinctive readable face, empty relaxed hands, neutral standing pose. Costume seams and restrained wear. No weapons. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "earl_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. Full body civilian Earl, older stocky motel guest in his late sixties, balding grey hair, tired kind face, faded short sleeve checked shirt, beige trousers and slippers, empty hands, natural relaxed standing pose. Clearly noncombatant. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "dolores_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. Full body civilian Dolores, older female motel housekeeper in her late fifties, greying tied hair, teal work dress with cream apron and comfortable shoes, natural practical proportions, kind watchful face, empty hands, relaxed standing pose. Clearly noncombatant. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "guard_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual game asset visual reference for subsequent Blender reconstruction. Full body human motel security guard in dark navy work uniform with sleeve patch, utility belt, sturdy shoes, natural adult proportions and readable face, neutral relaxed standing pose with empty hands suitable for animation rigging. No smoking, no weapons attached. Entire single subject visible in three-quarter orthographic elevated view, isolated with actual transparent background, no floor or cast shadow outside the subject, no extra objects, no collage. Rich handcrafted physically believable surface detail, beveled edges, premium detailed indie 3D diorama finish, consistent 1980s Californian Sunset Palms motel art direction, neutral soft studio lighting, restrained teal coral walnut cream palette. No UI or watermark."
+    },
+    {
+      "id": "corridor_carpet_albedo",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: Blender base color material data. Seamless square flat orthographic texture scan: worn muted dark teal motel carpet with small coral ochre geometric pattern, fine woven pile and subtle age. Full bleed matching edges, neutral uniform illumination, no folds, shadows, highlights, objects or perspective. No text, borders or baked lighting; not a scene. No UI or watermark."
+    },
+    {
+      "id": "asphalt_albedo",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: Blender base color material data. Seamless square flat orthographic texture scan: dark charcoal aged motel parking asphalt, fine aggregate, subtle repaired cracks and restrained tonal variation. Full bleed matching edges, neutral illumination, no road markings, puddles, objects, shadows, highlights or perspective. No text, borders or baked lighting; not a scene. No UI or watermark."
+    },
+    {
+      "id": "towel_fabric_albedo",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: Blender base color material data. Seamless square flat orthographic texture scan: warm ivory cotton terrycloth towel fabric, fine looped fibres with subtle variation, clean gently worn material. Full bleed matching edges, neutral illumination, no folds, shadows, highlights, objects or perspective. No text, borders or baked lighting; not a scene. No UI or watermark."
+    }
+  ],
+  "sources": [
+    {
+      "id": "washer_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-602c3efd-360f-4819-8fc2-f8ef7e933361.png"
+    },
+    {
+      "id": "vending_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-51038910-beba-4487-8d50-48bd680d9f65.png"
+    },
+    {
+      "id": "ice_machine_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-9b722ccc-8bcd-461d-8056-6cee7bca5fee.png"
+    },
+    {
+      "id": "housekeeping_cart_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-8698046c-2ae1-4593-a00e-d063b51f2377.png"
+    },
+    {
+      "id": "bed_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-3b7b6fd4-6265-41cf-b97a-9b4b6baa9804.png"
+    },
+    {
+      "id": "pool_lounger_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-390ca3dd-b512-4a88-bdc6-0591b9d5fea3.png"
+    },
+    {
+      "id": "pool_umbrella_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-19637f08-8000-4377-950a-04842a3f97bc.png"
+    },
+    {
+      "id": "palm_planter_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5f748d7b-2ed8-4844-98dd-0a9f0fef374e.png"
+    },
+    {
+      "id": "crt_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-dfdbee76-d11d-4e05-b68c-42d243cd36b3.png"
+    },
+    {
+      "id": "guest_door_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-90eebf23-9659-4328-b52b-3abd3ef7eac2.png"
+    },
+    {
+      "id": "window_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5408bfc6-0d1c-45c9-b147-700eb38986d7.png"
+    },
+    {
+      "id": "neon_sign_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-cf3dd6fe-e707-4aef-8f2b-11e06cccc1b8.png"
+    },
+    {
+      "id": "cass_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5b433192-73eb-4386-bdfb-ecc9baa47491.png"
+    },
+    {
+      "id": "earl_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-787e7585-4ea1-42dc-b6fd-ae60d59e9422.png"
+    },
+    {
+      "id": "dolores_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0360b026-4c14-46c6-adfb-59b5a0b13c2b.png"
+    },
+    {
+      "id": "guard_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c8112023-09f6-42a6-963b-dff5eee670aa.png"
+    },
+    {
+      "id": "corridor_carpet_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-03c8492b-db72-402e-972a-74dd69e595e4.png"
+    },
+    {
+      "id": "asphalt_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-eaf3e404-e2c3-41a4-83cc-7f9c0378e582.png"
+    },
+    {
+      "id": "towel_fabric_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-006164de-9e5a-4283-bb60-934c794bdfe0.png"
+    }
+  ]
+}

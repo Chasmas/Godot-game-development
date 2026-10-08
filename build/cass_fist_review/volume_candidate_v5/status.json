@@ -1,0 +1,21 @@
+{
+  "reference": "assets/art/reference/cass_fist/hands_anatomy_v1.png",
+  "runtime_promoted": false,
+  "visual_approved": false,
+  "scope": "Fist volume study; thumb placement, knuckle planes, finger curvature, skin texture, wrist seam and rigging still need review",
+  "vertices": 28504,
+  "topology": {
+    "connected_components": [
+      28504
+    ],
+    "nonmanifold_edges": 0
+  },
+  "visual_review": [
+    "Finger closure is more compact in profile than v4",
+    "Thumb remains outside folded fingers",
+    "Knuckle definition and anatomical proportions still need refinement",
+    "No wrist binding, skin texture or punch-animation validation yet"
+  ],
+  "production_cass_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba",
+  "production_cass_unchanged_from_inventory": true
+}

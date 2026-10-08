@@ -1,0 +1,51 @@
+{
+  "character": "zombie_guard",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_guard_turnaround.png",
+  "source_sha256": "0aba90133cbe6c919960b06e4398f48974502bc14c40e794c5a39334296be417",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        455,
+        1024
+      ],
+      "width": 455,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_guard\\references\\front.png",
+      "sha256": "c3f1fd54839d38e16588d5c146e3034e99389c2c89885ad7c4ed69dae8bdaaba"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        465,
+        0,
+        695,
+        1024
+      ],
+      "width": 230,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_guard\\references\\side.png",
+      "sha256": "54cbc02e270833427439fb6345f99673eef5d67e6fcdd8ed6e26578429c5e516"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        700,
+        0,
+        1140,
+        1024
+      ],
+      "width": 440,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_guard\\references\\back.png",
+      "sha256": "58a5de1c752e4728304ef43c3cd37962912e518088b7ab6e6336b72d09a6ab66"
+    }
+  ],
+  "visual_review": "Original sheet and all three Blender crops directly inspected: complete isolated figures, matching uniform and body build, no cigarette. Reference approval only; no mesh, rig or runtime approval."
+}

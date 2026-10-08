@@ -1,0 +1,18 @@
+{
+  "LeftFoot": {
+    "samples": 29,
+    "max_horizontal_drift_m": 5.099019513597884e-06,
+    "ankle_height_range_m": [
+      0.069981,
+      0.07
+    ]
+  },
+  "RightFoot": {
+    "samples": 29,
+    "max_horizontal_drift_m": 5.099019513625101e-06,
+    "ankle_height_range_m": [
+      0.069988,
+      0.070001
+    ]
+  }
+}

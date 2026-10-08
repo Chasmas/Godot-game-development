@@ -50,7 +50,7 @@ func _fire_at(point: Vector2) -> void:
 	if bs:
 		bs.fire(origin, aim, weapon.data, self, 0.3)
 	visual.kick_recoil(3.0)
-	Effects.muzzle(origin, aim, weapon.data.muzzle_color, false, 1.4)
+	Effects.muzzle(origin + visual.muzzle_lift(), aim, weapon.data.muzzle_color, false, 1.4)
 	Effects.gun_smoke(origin, aim, 1.2)
 	Audio.play_at("rifle", global_position, 2.0, 0.02)
 	Events.noise.emit(global_position, weapon.data.noise_radius, &"gunshot", self)
@@ -81,6 +81,9 @@ class SniperLaser extends Node2D:
 		var q := PhysicsRayQueryParameters2D.create(from, from + dir * 700.0, Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.PLAYER, [sniper.get_rid()])
 		var hit := space.intersect_ray(q)
 		var to: Vector2 = hit.position if not hit.is_empty() else from + dir * 700.0
+		var lift: Vector2 = sniper.visual.muzzle_lift()   # drawn at the rifle's height
+		from += lift
+		to += lift
 		var flick := 0.8 + 0.2 * sin(Time.get_ticks_msec() * 0.06)
 		var w := 0.8 + k * 2.2
 		draw_line(from, to, Color(1.0, 0.05, 0.1, (0.12 + 0.3 * k) * flick), w * 3.0)

@@ -1,0 +1,10 @@
+{
+  "operation": "Blender decimation of pre-remeshed source and nearest-surface UV/material transfer",
+  "high_source_polygons": 1243984,
+  "candidate_polygons": 118178,
+  "candidate_vertices": 58383,
+  "uv_layers": 1,
+  "runtime_approved": false,
+  "visual_validation": "pending rendered comparison",
+  "source_models_unchanged": true
+}

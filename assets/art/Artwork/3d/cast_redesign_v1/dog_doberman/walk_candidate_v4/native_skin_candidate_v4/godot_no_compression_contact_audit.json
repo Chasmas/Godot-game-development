@@ -1,0 +1,13 @@
+{
+  "animation_approved": false,
+  "animation_tracks": 22,
+  "maximum_planted_sole_slip_per_frame_m": 0.000670571578666568,
+  "mesh_loop_seam_m": 0.000000179433740754575,
+  "minimum_full_cycle_mesh_height_m": -0.0001692358055152,
+  "mode": "imported_resource",
+  "runtime_approved": false,
+  "sampled_frames": 31,
+  "scope": "CPU linear skin reconstruction from actual Godot imported arrays, skin bindings and animated skeleton; no GPU vertex readback or gameplay approval",
+  "surface_format": 34359745559,
+  "vertices": 69141
+}

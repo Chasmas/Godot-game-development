@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/riot_smoke_fitted_isolated/riot.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.00030228708588181684,
+    "Hips": 0.0,
+    "LeftArm": 0.00021748435428891745,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00012798696789154823,
+    "LeftHand": 3.079906571111797e-05,
+    "Neck": 0.00024747622909027664,
+    "RightArm": 0.00022642972460901656,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.024214422492097484,
+    "RightHand": 0.01730843498212251
+  },
+  "loop_gap_m": {
+    "Head": 0.00038511869342191683,
+    "Hips": 0.0,
+    "LeftArm": 0.00027697795315526113,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00014717566691819183,
+    "LeftHand": 1.8424359742680467e-05,
+    "Neck": 0.0003152999379441184,
+    "RightArm": 0.00028840232306008286,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00016814152826405816,
+    "RightHand": 3.519363825029409e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.16656017303465998,
+  "contact_hand_minus_head_m": [
+    -0.03500056266784002,
+    -0.03499984741211004
+  ]
+}

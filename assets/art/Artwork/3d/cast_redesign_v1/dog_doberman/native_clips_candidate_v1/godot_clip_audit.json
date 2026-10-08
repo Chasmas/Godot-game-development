@@ -1,0 +1,23 @@
+{
+  "animation_approved": false,
+  "clips": {
+    "idle": {
+      "length_seconds": 2.40000009536743,
+      "loop_basis_column_difference": 0.00000000000000000513022627143247,
+      "loop_morph_difference": 0.0,
+      "loop_translation_difference_m": 0.00000000000000000008555032767268
+    },
+    "walk": {
+      "length_seconds": 1.0,
+      "loop_basis_column_difference": 0.0,
+      "loop_morph_difference": 0.0,
+      "loop_translation_difference_m": 0.0
+    }
+  },
+  "idle_peak_breath": 1.0,
+  "idle_start_breath_after_walk": 0.0,
+  "runtime_approved": false,
+  "scope": "Direct GLTF skeleton endpoints and morph reset; blended transition contact and visual validation pending",
+  "source_glb_sha256": "e3d8ddbe0e7d2f8de289e3c00b615e9ed3e8bfa951c1cea3af8f1f8a56566cb5",
+  "walk_breath_after_idle": 0.0
+}

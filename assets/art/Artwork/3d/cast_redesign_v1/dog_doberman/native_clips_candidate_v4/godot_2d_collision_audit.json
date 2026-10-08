@@ -1,0 +1,29 @@
+{
+  "animation_approved": false,
+  "cases": [
+    {
+      "achieved_travel_px": 1.47692310810089,
+      "blocked_frame": -1,
+      "carrier_residual_m": 0.0,
+      "collider_front_x": 6.97692310810089,
+      "final_clip": "",
+      "wall_near_face_x": null,
+      "wall_present": false
+    },
+    {
+      "achieved_travel_px": 0.999563813209534,
+      "blocked_frame": 15,
+      "carrier_residual_m": 0.0,
+      "collider_front_x": 6.49956381320953,
+      "final_clip": "idle",
+      "wall_near_face_x": 6.5,
+      "wall_present": true
+    }
+  ],
+  "contact_tolerance_px": 0.01,
+  "passed": true,
+  "pixels_per_metre": 16,
+  "runtime_approved": false,
+  "scope": "Isolated CharacterBody2D contact prototype with dog-sized circle, GLB travel extraction and blocked idle reset. Production navigation, visual contact continuity and input handling remain unverified.",
+  "source_glb_sha256": "cd0a61f8bc0bc3545d46764a0ef72d259cffd2d3dd116e1e317b3dbfdfd7078a"
+}

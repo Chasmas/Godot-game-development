@@ -5,6 +5,8 @@ extends Node2D
 ## melee swings, punches and hit flashes. Shared by player, enemies, NPCs.
 
 var palette := "guard"
+## The actor's clock relative to world time (Cass compensates during Spotlight).
+var animation_time_mult := 1.0
 var cast_sprite: CastSprite
 var _cast_velocity := Vector2.ZERO
 var legs: Sprite2D
@@ -12,6 +14,10 @@ var torso: Sprite2D
 var weapon_sprite: Sprite2D
 var _wd := 1.0          ## the held weapon sprite's pixel density (drawn at 1 / _wd)
 var weapon_sprite2: Sprite2D       ## off-hand gun when dual wielding
+var _powered_weapon := false
+var powered_cutting := false
+var _chain_clock := 0.0
+var _chain_frames: Array[Texture2D] = []
 var dual := false
 var _hand2 := Vector2(5, -2)
 var _gun_kick := 0.0               ## per-hand slide recoil (right, left)
@@ -25,16 +31,30 @@ var _walk_t := 0.0
 var _breath_t := 0.0
 var _move_blend := 0.0
 var _kick := 0.0
+const PUNCH_DURATION := 0.2
+const PUNCH_CONTACT := 0.53
 var _swing_t := -1.0
 var _swing_dur := 0.14
 var _swing_dir := 1.0
 var _swing_arc := 1.9
 var _punch_t := -1.0
 var _punch_left := true
+var _attack_angle := 0.0
+var attack_serial := 0
 var _flash := 0.0
 var _hit_t := 0.0
 var _hit_dir := Vector2.ZERO
 var _fall_t := 0.0
+var _downed := false     ## knocked down until recover(): rendered bodies stay on the floor
+## Scripted clip for rendered casts ("drive", "car_exit"), with its progress 0..1
+## (-1 loops). Empty: the clip follows movement, aim and actions as usual.
+var pose_override := ""
+var pose_progress := -1.0
+var idle_activity_progress := -1.0
+
+## Whether this body can play a scripted clip (rendered casts that have it).
+func has_clip(clip_name: String) -> bool:
+	return cast_sprite != null and cast_sprite.clips.has(clip_name)
 var _death_t := 0.0
 var _death_dir := Vector2.ZERO
 var _hold: int = WeaponData.Hold.NONE
@@ -116,19 +136,19 @@ func setup(p_palette: String) -> void:
 	_manner = MANNER.get(SpriteForge.base_name(p_palette), {"sway": 0.04, "lean": 0.5, "bounce": 0.3})
 	legs.texture = SpriteLib.legs(0, palette)
 	set_weapon(null)
-	# Cass is the rendered full-body clips (the same look as her death); the
-	# 2D pose rig is only for CAST_2D=1.
-	if p_palette == "cass" and OS.get_environment("CAST_2D") != "1":
-		var candidate := CastSprite.new()
-		if candidate.configure("cass"):
+	# Anyone with rendered full-body clips (assets/art/cast3d/<look>/) uses them:
+	# Cass from straight above, the oblique cast in rendered facings. The 2D pose
+	# rig is the fallback, and Cass's only with CAST_2D=1.
+	var cast_id := SpriteForge.base_name(p_palette)
+	if not (cast_id == "cass" and OS.get_environment("CAST_2D") == "1"):
+		var candidate := CastModel.create(cast_id)
+		if candidate:
 			cast_sprite = candidate
 			rig.add_child(cast_sprite)
 			rig.move_child(cast_sprite, 0)
 			cast_sprite.play_sample("idle", 0.0)
 			legs.visible = false
 			torso.visible = false
-		else:
-			candidate.free()
 
 func set_persona_overlay(enabled: bool) -> void:
 	overlay.visible = false   # v2 art bakes the persona into the sprite
@@ -136,9 +156,33 @@ func set_persona_overlay(enabled: bool) -> void:
 	if enabled:
 		overlay.texture = SpriteLib.persona_overlay(palette)
 
+func set_powered_cutting(on: bool) -> void:
+	powered_cutting = on and _powered_weapon
+	if powered_cutting:
+		_aim_hold_t = 0.3
+
+func _animate_chain(delta: float) -> void:
+	if not _powered_weapon or _chain_frames.is_empty():
+		return
+	_chain_clock = fmod(_chain_clock + delta * 32.0, float(_chain_frames.size())) if powered_cutting else 0.0
+	weapon_sprite.texture = _chain_frames[int(_chain_clock)]
+
 func set_weapon(w: WeaponData, p_dual := false) -> void:
+	_native_pistol_equipped = w != null and w.id == &"pistol"
+	_firearm = w != null and w.is_firearm()
+	_powered_weapon = w != null and w.id == &"chainsaw"
+	powered_cutting = false
+	_chain_clock = 0.0
+	if _powered_weapon and _chain_frames.is_empty():
+		for i in 4:
+			var path := "res://assets/art/weapons_world/chainsaw_chain%d.png" % i
+			if ResourceLoader.exists(path):
+				_chain_frames.append(load(path) as Texture2D)
 	dual = p_dual and w != null and w.is_firearm()
 	weapon_sprite2.visible = false
+	# Weapon changes can be followed by firing in the same frame. Clear the
+	# native pair immediately so muzzle queries cannot use the previous gun.
+	_update_native_pistols()
 	if w == null:
 		_hold = WeaponData.Hold.NONE
 		torso.texture = SpriteLib.torso("unarmed", palette)
@@ -152,7 +196,7 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 	weapon_sprite.visible = true
 	_wd = SpriteLib.weapon_density(w.sprite_key)
 	# a touch smaller than the painting's scale: guns in hand, not guns as big as her
-	weapon_sprite.scale = Vector2.ONE * (0.8 if w.is_firearm() else 0.9) / _wd
+	weapon_sprite.scale = Vector2.ONE * (0.8 if w.is_firearm() else 0.9) * w.held_scale / _wd
 	weapon_sprite2.scale = weapon_sprite.scale
 	_hand = SpriteForge.hand_world("aim_dual") if dual else SpriteLib.hand_offset(w.hold)
 	var tex_h := weapon_sprite.texture.get_height()
@@ -172,6 +216,13 @@ func set_weapon(w: WeaponData, p_dual := false) -> void:
 
 func set_aim(angle: float) -> void:
 	aim_angle = angle
+	if pose_override in ["grab", "held"]:
+		_face_angle = angle
+		rig.rotation = angle
+		return
+	if cast_sprite and (_swing_t >= 0.0 or _punch_t >= 0.0) and _roll_t < 0.0:
+		rig.rotation = _attack_angle
+		return
 	if _roll_t >= 0.0:
 		return   # mid-roll the body turns with the roll, not the aim
 	rig.rotation = angle + _twist + _manner_off
@@ -208,7 +259,9 @@ func update_move(vel: Vector2, delta: float) -> void:
 	else:
 		_still_t = 0.0
 	_breath_t += delta * (1.2 + _move_blend * 4.0)
-	if speed > 8.0:
+	# Very slow/crouched movement still needs a foot cycle; the old 8 px/s
+	# cutoff made the body slide while the collision body continued moving.
+	if speed > 1.5:
 		_walk_t += delta * speed * 0.09
 		legs.rotation = vel.angle()
 		var f := int(_walk_t) % 4
@@ -230,6 +283,7 @@ func set_alert_posture(p: int) -> void:
 
 ## Front kick: the leading leg snaps out along the aim and the body leans in.
 func kick_leg() -> void:
+	cancel_attack()
 	_kick_leg_t = KICK_TIME
 	_kick = 2.0   # she leans back to put the foot through
 
@@ -255,8 +309,16 @@ func kick_recoil(amount := 2.0) -> void:
 	_kick = amount
 
 ## One gun's slide/recoil when firing (the body kick is kick_recoil).
+## A rendered body faces where it is going; for a moment after a shot or a
+## blow it turns to the aim instead (Hotline Miami style torso).
+const AIM_HOLD := 0.6
+var _aim_hold_t := 0.0
+var _face_angle := 0.0     ## where the rendered body's upper half is turned (eases toward its target)
+
 func gun_recoil(left: bool, amount: float) -> void:
 	_still_t = 0.0
+	_aim_hold_t = AIM_HOLD
+	_face_angle = aim_angle   # snap round to fire: the gun points where the shot goes
 	if left:
 		_gun_kick2 = amount
 	else:
@@ -277,7 +339,10 @@ var _reload_step := 0
 var _mag: Node2D = null
 
 func swing(heavy := false, stab := false) -> void:
+	cancel_attack()
+	_attack_angle = aim_angle
 	_swing_t = 0.0
+	_aim_hold_t = AIM_HOLD
 	# the live arms do the work: the torso drops its baked-in holding arms
 	# for the blow and gets them back after
 	if _rest_torso == null:
@@ -286,9 +351,11 @@ func swing(heavy := false, stab := false) -> void:
 	_stab = stab and not heavy
 	# a touch longer than before: the extra time is anticipation and
 	# follow-through, the strike itself is as fast as ever
-	_swing_dur = 0.19 if heavy else (0.09 if _stab else 0.12)
+	# Give the anticipation and follow-through enough screen time to read at
+	# the game's zoom; the old 0.12s tap looked like a pose pop.
+	_swing_dur = 0.28 if heavy else (0.24 if _stab else 0.22)
 	_swing_arc = 3.2 if heavy else 2.5
-	_swing_dir *= -1.0
+	_swing_dir = 1.0 if cast_sprite is CastModel else -_swing_dir
 	_heavy_swing = heavy
 	_kick = -4.5 if _stab else -3.0   # body lunges forward with the blow
 	if is_inside_tree() and palette.begins_with("cass"):
@@ -297,6 +364,12 @@ func swing(heavy := false, stab := false) -> void:
 # ---------------------------------------------------------------- idle
 ## Only the player's character fidgets (idle_fidgets is set by Player).
 var idle_fidgets := false
+
+func allows_human_idle() -> bool:
+	return SpriteForge.base_name(palette) not in ["zombie", "ghoul", "demon"]
+## Optional pose requested by an attached idle activity (for example a guard
+## seated in the snooze chair). Kept separate from movement/combat state.
+var idle_activity_pose := ""
 var _still_t := 0.0
 var _fidget := ""
 var _fidget_t := 0.0
@@ -307,7 +380,7 @@ var _cig: CigaretteFx
 ## a boxer's; left long enough she lights a cigarette. Anything she does
 ## breaks it off at once.
 func _apply_idle(delta: float) -> void:
-	if not idle_fidgets:
+	if not idle_fidgets or not allows_human_idle():
 		return
 	if _still_t < 2.5:
 		if _fidget != "":
@@ -410,11 +483,28 @@ var _roll_dur := 0.3
 var _roll_dir := Vector2.RIGHT
 var _roll_ghost_t := 0.0
 
+func cancel_attack() -> void:
+	# Invalidate attached effects and all superseded attack timers.
+	attack_serial += 1
+	_swing_t = -1.0
+	_punch_t = -1.0
+	_kick_leg_t = -1.0
+	if _leg: _leg.visible = _mount and cast_sprite == null
+	_twist = 0.0
+	_arm.visible = false
+	if _rest_torso:
+		torso.texture = _rest_torso
+		_rest_torso = null
+	torso.scale = Vector2(0.5, 0.5)
+	weapon_sprite.position = _hand
+	weapon_sprite.rotation = 0.0
+
 ## A dodge roll: she tucks, goes over her shoulder in the direction of travel
 ## and comes up facing her aim again. Seen from above: the body squashes into
 ## a ball, turns a full circle along the roll, the legs fold away, the gun
 ## is tucked in, dust kicks up at the push-off and the landing.
 func roll(dir: Vector2, dur: float) -> void:
+	cancel_attack()
 	_roll_t = 0.0
 	_roll_dur = maxf(dur, 0.12)
 	_roll_dir = dir.normalized() if dir != Vector2.ZERO else Vector2.RIGHT
@@ -423,16 +513,24 @@ func roll(dir: Vector2, dur: float) -> void:
 func is_rolling() -> bool:
 	return _roll_t >= 0.0
 
+func finish_roll() -> void:
+	_roll_t = -1.0
+	_roll_ghost_t = 0.0
+	weapon_sprite.modulate.a = 1.0
+	shadow.scale = Vector2.ONE
+	if cast_sprite == null:
+		legs.visible = true
+		rig.scale = Vector2.ONE
+		rig.position = Vector2.ZERO
+		rig.rotation = aim_angle
+
 func _apply_roll(delta: float) -> void:
 	if _roll_t < 0.0:
 		return
 	_roll_t += delta
 	var k := clampf(_roll_t / _roll_dur, 0.0, 1.0)
 	if k >= 1.0:
-		_roll_t = -1.0
-		legs.visible = true
-		weapon_sprite.modulate.a = 1.0
-		shadow.scale = Vector2.ONE
+		finish_roll()
 		return
 	# ease: quick tuck, the turn over the shoulder, a soft unfold
 	var tuck := sin(k * PI)
@@ -466,7 +564,10 @@ func pump() -> void:
 	_kick = minf(_kick, -1.0)
 
 func punch() -> void:
+	cancel_attack()
+	_attack_angle = aim_angle
 	_punch_t = 0.0
+	_aim_hold_t = AIM_HOLD
 	_kick = -3.5
 	torso.scale = Vector2(0.54, 0.48)
 	create_tween().tween_property(torso, "scale", Vector2(0.5, 0.5), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
@@ -474,7 +575,7 @@ func punch() -> void:
 	# the arm is drawn live (out from the shoulder and back); the torso keeps
 	# its guard pose so there's never a second, frozen arm
 	torso.texture = SpriteLib.torso("unarmed", palette)
-	_arm.visible = true
+	_arm.visible = cast_sprite == null
 	_arm.queue_redraw()
 
 func flash(t := 0.08) -> void:
@@ -488,11 +589,13 @@ func hit_react(dir: Vector2, heavy := false, duration := 0.12) -> void:
 
 func fall(dir: Vector2) -> void:
 	_fall_t = 0.24
+	_downed = true
 	_hit_dir = dir.normalized()
 	weapon_sprite.visible = false
 
 func recover() -> void:
 	_fall_t = 0.0
+	_downed = false
 	_death_t = 0.0
 	modulate = Color.WHITE
 	scale = Vector2.ONE
@@ -510,8 +613,31 @@ func is_swinging() -> bool:
 func hand_global() -> Vector2:
 	return rig.to_global(_hand + Vector2(6, 0))
 
+## Floor projection of the hand for thrown-weapon collision trajectories.
+func hand_floor_global() -> Vector2:
+	return hand_global() - muzzle_lift()
+
+## How far up the screen the gun is drawn above the floor point its shots use.
+func muzzle_lift(left := false) -> Vector2:
+	if cast_sprite is CastModel:
+		var points := (cast_sprite as CastModel).native_pistol_points(left)
+		if not points.is_empty(): return rig.to_global(points[0]) - rig.to_global(points[1])
+	return cast_sprite.grip_lift(left) if cast_sprite else Vector2.ZERO
+
+## The barrel tip as drawn: where flashes, casings and the laser come from.
+func muzzle_tip_global(left := false) -> Vector2:
+	return muzzle_global(left) + muzzle_lift(left)
+
+## The floor point under the barrel tip: where shots start (they fly and hit
+## along the floor; BulletSystem draws them back up at the gun's height).
 func muzzle_global(left := false) -> Vector2:
+	if cast_sprite is CastModel:
+		var points := (cast_sprite as CastModel).native_pistol_points(left)
+		if not points.is_empty(): return rig.to_global(points[1])
 	var sp := weapon_sprite2 if (left and dual and weapon_sprite2.texture) else weapon_sprite
+	# an oblique body holds the gun at chest height: drawn higher up the screen
+	# than the floor it fires along. Shots start on the floor under the barrel.
+	var lift := cast_sprite.grip_lift(left) if cast_sprite else Vector2.ZERO
 	if sp.visible and sp.texture:
 		# the barrel's real tip in the picture, through the sprite's own
 		# transform (tilt, recoil, the flip when aiming left)
@@ -519,10 +645,23 @@ func muzzle_global(left := false) -> Vector2:
 		var y := tip.y - sp.texture.get_height() * 0.5
 		if sp.flip_v:
 			y = -y
-		return sp.to_global(Vector2(sp.offset.x + tip.x, sp.offset.y + sp.texture.get_height() * 0.5 + y))
+		return sp.to_global(Vector2(sp.offset.x + tip.x, sp.offset.y + sp.texture.get_height() * 0.5 + y)) - lift
 	return rig.to_global(Vector2(10, 0))
 
 var _firearm := true
+var _native_pistol_equipped := false
+
+func attach_native_dual_pistols(path: String) -> bool:
+	return cast_sprite is CastModel and (cast_sprite as CastModel).attach_dual_pistols(path)
+
+func _update_native_pistols() -> void:
+	if not cast_sprite is CastModel: return
+	var cast := cast_sprite as CastModel
+	if cast._held_pistols.is_empty(): return
+	var active := _native_pistol_equipped and dual and cast.clip in ["aim_dual", "armed_dual_walk", "armed_dual_run", "reload_dual"]
+	cast.update_dual_pistols(active, Vector2(_gun_kick, _gun_kick2))
+	weapon_sprite.self_modulate.a = 0.0 if active else 1.0
+	weapon_sprite2.self_modulate.a = 0.0 if active else 1.0
 
 ## Offset (texture px) that puts a weapon picture's grip on the hand. For a
 ## gun: the lowest solid point is the bottom of the handle; the hand holds
@@ -585,8 +724,11 @@ static func _barrel_tip(tex: Texture2D) -> Vector2:
 	return out
 
 func _process(delta: float) -> void:
+	delta *= animation_time_mult
+	_animate_chain(delta)
 	if cast_sprite:
 		_process_cast(delta)
+		_update_native_pistols()
 		return
 	# side-view guns stay the right way up: aiming left, the picture flips
 	var left_aim := cos(rig.global_rotation) < 0.0
@@ -749,6 +891,7 @@ func reload_anim(dur: float, kind := "mag") -> void:
 func cancel_reload() -> void:
 	if _reload_k >= 0.0:
 		_reload_k = -1.0
+		_arm.visible = false
 		weapon_sprite.rotation = 0.0
 		weapon_sprite.position = _hand
 		if _mag:
@@ -842,13 +985,13 @@ func _drop_mag() -> void:
 
 
 class _MagInHand extends Node2D:
+	const ART = preload("res://assets/art/blender_reload/magazine_loaded.png")
 	func _draw() -> void:
-		draw_rect(Rect2(-1.5, -2.5, 3, 5), Color("0b0710"))
-		draw_rect(Rect2(-1, -2, 2, 4), Color("3a3a44"))
-		draw_rect(Rect2(-1, -2, 2, 1), Color("c8a040"))
+		draw_texture_rect(ART, Rect2(-3.5, -3.5, 7, 7), false)
 
 
 class _DroppedMag extends Node2D:
+	const ART = preload("res://assets/art/blender_reload/magazine_empty.png")
 	var vel := Vector2.ZERO
 	var start_pos := Vector2.ZERO
 	var t := 0.0
@@ -868,8 +1011,7 @@ class _DroppedMag extends Node2D:
 				queue_free()
 		queue_redraw()
 	func _draw() -> void:
-		draw_rect(Rect2(-1.5, -2.5, 3, 5), Color("0b0710"))
-		draw_rect(Rect2(-1, -2, 2, 4), Color("2a2a32"))
+		draw_texture_rect(ART, Rect2(-3.5, -3.5, 7, 7), false)
 
 
 ## Soft elliptical contact shadow (does not rotate), grounds the character.
@@ -1022,22 +1164,73 @@ class KickLeg extends Node2D:
 		_seg(hip, knee, foot, pants, shoe)
 
 
+## A still of the rendered body (its viewport's current frame), left in the
+## world and faded out: pink at the start of a roll, cyan by the end.
+func _cast_ghost(k: float) -> void:
+	var tex := cast_sprite.texture
+	if tex == null or not is_inside_tree():
+		return
+	var g := Sprite2D.new()
+	# Keep the viewport texture directly. Reading it back through get_image()
+	# races the render target in headless validation and produces a null texture;
+	# the fading ghost still gives the same live roll trail in the game.
+	g.texture = tex
+	g.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	g.offset = cast_sprite.offset
+	g.top_level = true
+	g.global_position = cast_sprite.global_position
+	g.global_scale = cast_sprite.global_scale
+	g.z_index = z_index
+	g.modulate = Color("ff2d95").lerp(Color("35e0ff"), k) * Color(1.6, 1.6, 1.6, 0.55)
+	get_parent().add_child(g)
+	var tw := g.create_tween()
+	tw.tween_property(g, "modulate:a", 0.0, 0.22)
+	tw.tween_callback(g.queue_free)
+
 ## Full-body playback uses the same action timers and weapon nodes as before.
 func _process_cast(delta: float) -> void:
-	var one_hand_melee := weapon_sprite.visible and not _firearm and _hold != WeaponData.Hold.MELEE_TWO
+	var one_hand_melee := weapon_sprite.visible and not _firearm and not _powered_weapon and _hold != WeaponData.Hold.MELEE_TWO
 	var name := ("aim_dual" if dual else ("aim_melee" if one_hand_melee else "aim")) if weapon_sprite.visible else "idle"
 	var progress := -1.0
 	var speed := _cast_velocity.length()
-	if speed > 8.0:
+	if speed > 1.5:
 		name = "run" if speed > 145.0 else ("sneak" if speed < 85.0 else "walk")
 		if weapon_sprite.visible:
 			name = ("armed_dual_" if dual else ("armed_melee_" if one_hand_melee else "armed_")) + name
-	rig.rotation = aim_angle
-	if _roll_t >= 0.0:
+	# walking or running she faces where she's going; for a moment after a shot
+	# or a blow she turns to the aim (the torso twists, the legs keep going)
+	_aim_hold_t = maxf(0.0, _aim_hold_t - delta)
+	var facing_move := speed > 1.5 and _aim_hold_t <= 0.0 and pose_override == ""
+	_face_angle = lerp_angle(_face_angle, _cast_velocity.angle() if facing_move else aim_angle, 1.0 - exp(-delta * 16.0))
+	# Paired holds must face together immediately; interpolation separates the arms.
+	if pose_override in ["grab", "held"]:
+		_face_angle = aim_angle
+	# Commit the authored blow to its damage direction while the aim remains free.
+	if (_swing_t >= 0.0 or _punch_t >= 0.0) and _roll_t < 0.0 and pose_override == "":
+		_face_angle = _attack_angle
+	rig.rotation = _face_angle
+	if pose_override != "":
+		# a scripted moment (in the car, climbing out) plays its own clip
+		name = pose_override
+		progress = pose_progress
+	elif _roll_t >= 0.0:
 		_roll_t += delta
 		name = "roll"
 		progress = clampf(_roll_t / _roll_dur, 0.0, 1.0)
-		rig.rotation = _roll_dir.angle()
+		# rolling away from where she aims: she keeps facing the aim and goes
+		# over backwards instead of turning her back
+		# any direction: ahead of the aim a forward roll, away from it a back
+		# roll, across it a side roll - always facing the aim except going forward
+		var off := angle_difference(aim_angle, _roll_dir.angle())
+		var mode := 0 if absf(off) < deg_to_rad(55.0) else (1 if absf(off) > deg_to_rad(125.0) else (2 if off > 0.0 else 3))
+		rig.rotation = _roll_dir.angle() if mode == 0 else aim_angle
+		if cast_sprite is CastModel:
+			(cast_sprite as CastModel).roll_mode = mode
+		# afterimages: the body as it was a moment ago, left behind in neon
+		_roll_ghost_t -= delta
+		if _roll_ghost_t <= 0.0 and progress < 0.9:
+			_roll_ghost_t = 0.035
+			_cast_ghost(progress)
 		if progress >= 1.0:
 			_roll_t = -1.0
 	elif _kick_leg_t > 0.0:
@@ -1046,26 +1239,42 @@ func _process_cast(delta: float) -> void:
 		progress = 1.0 - _kick_leg_t / KICK_TIME
 	elif _swing_t >= 0.0:
 		_swing_t += delta
-		name = "punch" if _stab else "melee"
+		name = ("stab" if cast_sprite.clips.has("stab") else "punch") if _stab else "melee"
 		progress = clampf(_swing_t / _swing_dur, 0.0, 1.0)
 		if progress >= 1.0:
 			_swing_t = -1.0
 	elif _punch_t >= 0.0:
 		_punch_t += delta
 		name = "punch_left" if _punch_left else "punch"
-		progress = clampf(_punch_t / 0.2, 0.0, 1.0)
+		progress = clampf(_punch_t / PUNCH_DURATION, 0.0, 1.0)
 		if progress >= 1.0:
 			_punch_t = -1.0
-	elif _fall_t > 0.0:
+	elif _fall_t > 0.0 or _downed:
 		_fall_t = maxf(0.0, _fall_t - delta)
 		name = "knocked"
 		progress = 1.0 - _fall_t / 0.24
-	if _reload_k >= 0.0 and _roll_t < 0.0:
+	if _reload_k >= 0.0 and _roll_t < 0.0 and pose_override == "":
 		name = "reload_" + _reload_kind
 		progress = clampf(_reload_k, 0.0, 1.0)
-	if name == "idle" and idle_fidgets and _still_t > 9.0:
+	if name == "idle" and idle_fidgets and allows_human_idle() and _still_t > 9.0:
 		name = "smoke"
+	if name in ["idle", "aim", "aim_melee", "aim_dual"] and speed < 1.5 and idle_activity_pose != "" and pose_override == "":
+		name = idle_activity_pose
+		progress = idle_activity_progress
+	# Native Blender idle clips have planted feet and can keep their breathing.
+	# Hold the old baked fallback still until its frames are also reviewed.
+	if name == "idle" and not cast_sprite is CastModel and not idle_fidgets and speed < 1.5 and pose_override == "":
+		progress = 0.0
+	if cast_sprite is CastModel:
+		(cast_sprite as CastModel).moving = speed > 1.5 and pose_override == ""
+		(cast_sprite as CastModel).move_angle = _cast_velocity.angle()
+		(cast_sprite as CastModel).move_speed = speed
 	cast_sprite.play_sample(name, delta, progress)
+	if cast_sprite.is_oblique():
+		# facing away from the camera the body hides the gun: draw it first
+		var away := sin(rig.global_rotation) < -0.25
+		if (cast_sprite.get_index() != 0) != away:
+			rig.move_child(cast_sprite, rig.get_child_count() - 1 if away else 0)
 	_hand = cast_sprite.grip()
 	_hand2 = cast_sprite.grip(true)
 	_kick = move_toward(_kick, 0.0, delta * 30.0)
@@ -1084,7 +1293,10 @@ func _process_cast(delta: float) -> void:
 		weapon_sprite.position = _hand - Vector2(_gun_kick, 0)
 		weapon_sprite2.position = _hand2 - Vector2(_gun_kick2, 0)
 	# The rendered body already contains its limbs.
-	_arm.visible = false
+	# Rendered 3D cast models already contain authored arm motion for melee;
+	# drawing the 2D fallback over them creates the stray/random arm seen in
+	# the swing. Keep the live overlay only for the 2D fallback rig.
+	_arm.visible = cast_sprite == null and (_swing_t >= 0.0 or _punch_t >= 0.0)
 	_leg.visible = false
 	legs.visible = false
 	torso.visible = false
@@ -1092,7 +1304,9 @@ func _process_cast(delta: float) -> void:
 		_flash = maxf(0.0, _flash - delta)
 		modulate = Color(3, 3, 3) if _flash > 0.0 else Color.WHITE
 
-	if name == "smoke":
+	# NPC activities own their cigarette/ember. The extra fidget effect is
+	# only for the player; spawning both duplicates the prop and lighter SFX.
+	if name == "smoke" and idle_fidgets:
 		if _cig == null:
 			_cig = CigaretteFx.new()
 			_cig.vis = self
@@ -1102,4 +1316,5 @@ func _process_cast(delta: float) -> void:
 	elif _cig:
 		_cig.put_out()
 		_cig = null
+
 

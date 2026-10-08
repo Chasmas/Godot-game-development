@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 24 other clips including seated pose preserved",
+  "baseline_sha256": "42bd18af4b6aef0af52351753cd1f5c5584f17cbc0f434b0e46d8556bd035031",
+  "integrated_sha256": "3a65c074f80d6577b4a1f08c51f0c8ce148b4df5bd883756bb4493e1c1dc17e9",
+  "backup": "build\\welder_smoke_fitted_isolated\\welder_before_42bd18af4b6a.glb",
+  "visual_review": "build/welder_idle_review_directions.png",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/welder_smoke_fitted_isolated/welder.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.0002966487792177056,
+      "Hips": 0.0,
+      "LeftArm": 0.00021046003430103848,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00012586706288639135,
+      "LeftHand": 4.5973958957267545e-05,
+      "Neck": 0.00024240064503591158,
+      "RightArm": 0.00021436377779688343,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.023401660221433376,
+      "RightHand": 0.017145419612057514
+    },
+    "loop_gap_m": {
+      "Head": 0.0003779558673526186,
+      "Hips": 0.0,
+      "LeftArm": 0.000268096625264138,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00016410829538793554,
+      "LeftHand": 5.389323386094673e-05,
+      "Neck": 0.00030883825000546146,
+      "RightArm": 0.0002731018975752527,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00015871663775750473,
+      "RightHand": 4.6704750298885994e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.13830971717833984,
+    "contact_hand_minus_head_m": [
+      -0.035001397132879974,
+      -0.03499543666839999
+    ]
+  }
+}

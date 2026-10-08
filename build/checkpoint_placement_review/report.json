@@ -1,0 +1,46 @@
+[
+  {
+    "index": 0,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "THE LAWN",
+    "overlaps": [],
+    "position": [
+      152.0,
+      920.0
+    ]
+  },
+  {
+    "index": 1,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "THE FOYER",
+    "overlaps": [],
+    "position": [
+      378.0,
+      448.0
+    ]
+  },
+  {
+    "index": 2,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "WEST WING",
+    "overlaps": [],
+    "position": [
+      176.0,
+      534.0
+    ]
+  },
+  {
+    "index": 3,
+    "inside_trigger": true,
+    "mission": "m04_sweet_dreams",
+    "name": "EAST WING",
+    "overlaps": [],
+    "position": [
+      826.0,
+      448.0
+    ]
+  }
+]

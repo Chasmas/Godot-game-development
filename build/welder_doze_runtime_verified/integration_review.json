@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "14fe31d1e21fc84e4da3c779b02f577b724c6c7e0a867d33e8cc2ef1568930f9",
+  "integrated_sha256": "42bd18af4b6aef0af52351753cd1f5c5584f17cbc0f434b0e46d8556bd035031",
+  "backup": "build\\welder_doze_runtime_verified\\welder_before_14fe31d1e21f.glb",
+  "visual_review": "build/welder_idle_review_directions.png",
+  "mechanics": "build/welder_doze_supported_isolated/regression.log"
+}

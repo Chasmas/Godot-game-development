@@ -1,0 +1,2286 @@
+{
+  "scope": "Actual Godot OpenGL 24 looks x head/arm/leg in settled death pose; leg membranes visibly elongated across removed area and not approved",
+  "integration_approved": false,
+  "surfaces": [
+    {
+      "index": 0,
+      "look": "bellhop",
+      "part": "head",
+      "extent": [
+        0.18130000000000002,
+        0.06459999999999999,
+        0.17830000000000001
+      ],
+      "nonplanarity_ratio": 0.17117851836084666,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 1,
+      "look": "bellhop",
+      "part": "head",
+      "extent": [
+        0.0046,
+        0.0026999999999999247,
+        0.0016000000000000007
+      ],
+      "nonplanarity_ratio": 0.12458279320410164,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 2,
+      "look": "bellhop",
+      "part": "arm",
+      "extent": [
+        0.1277,
+        0.2984,
+        0.20350000000000001
+      ],
+      "nonplanarity_ratio": 0.19598243500267223,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 3,
+      "look": "bellhop",
+      "part": "leg",
+      "extent": [
+        0.2526,
+        0.4093999999999999,
+        0.3022
+      ],
+      "nonplanarity_ratio": 0.2574802871467495,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 4,
+      "look": "bellhop",
+      "part": "legs",
+      "extent": [
+        0.3339,
+        0.14019999999999988,
+        0.28300000000000003
+      ],
+      "nonplanarity_ratio": 0.24244150397449313,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 5,
+      "look": "biker",
+      "part": "head",
+      "extent": [
+        0.138,
+        0.07299999999999995,
+        0.1922
+      ],
+      "nonplanarity_ratio": 0.1939570315910253,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 6,
+      "look": "biker",
+      "part": "head",
+      "extent": [
+        0.002800000000000004,
+        0.0039000000000000146,
+        0.004600000000000007
+      ],
+      "nonplanarity_ratio": 5.2258539770849066e-14,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 7,
+      "look": "biker",
+      "part": "arm",
+      "extent": [
+        0.1974,
+        0.4184000000000001,
+        0.2631
+      ],
+      "nonplanarity_ratio": 0.2603642969671478,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 8,
+      "look": "biker",
+      "part": "leg",
+      "extent": [
+        0.2061,
+        0.3536999999999999,
+        0.2569
+      ],
+      "nonplanarity_ratio": 0.24851800400825436,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 9,
+      "look": "biker",
+      "part": "leg",
+      "extent": [
+        0.1021,
+        0.08179999999999987,
+        0.29
+      ],
+      "nonplanarity_ratio": 0.12809935961932536,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 10,
+      "look": "biker",
+      "part": "leg",
+      "extent": [
+        0.014699999999999998,
+        0.029299999999999993,
+        0.05450000000000002
+      ],
+      "nonplanarity_ratio": 0.14853130992275723,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 11,
+      "look": "biker",
+      "part": "legs",
+      "extent": [
+        0.379,
+        0.09149999999999991,
+        0.317
+      ],
+      "nonplanarity_ratio": 0.09919596652342466,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 12,
+      "look": "biker",
+      "part": "legs",
+      "extent": [
+        0.3336,
+        0.1068,
+        0.229
+      ],
+      "nonplanarity_ratio": 0.19582618289094902,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 13,
+      "look": "biker",
+      "part": "legs",
+      "extent": [
+        0.010200000000000015,
+        0.0035000000000000586,
+        0.01100000000000001
+      ],
+      "nonplanarity_ratio": 0.09952062295150742,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 14,
+      "look": "boss",
+      "part": "head",
+      "extent": [
+        0.12,
+        0.07450000000000001,
+        0.16799999999999998
+      ],
+      "nonplanarity_ratio": 0.21396815766027402,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 15,
+      "look": "boss",
+      "part": "arm",
+      "extent": [
+        0.1873,
+        0.48450000000000015,
+        0.2763
+      ],
+      "nonplanarity_ratio": 0.2391315859566254,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 16,
+      "look": "boss",
+      "part": "leg",
+      "extent": [
+        0.2741,
+        0.44009999999999994,
+        0.3291
+      ],
+      "nonplanarity_ratio": 0.29094244600441577,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 17,
+      "look": "boss",
+      "part": "leg",
+      "extent": [
+        0.009000000000000008,
+        0.0031999999999998696,
+        0.0074
+      ],
+      "nonplanarity_ratio": 7.593928907700209e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 18,
+      "look": "boss",
+      "part": "legs",
+      "extent": [
+        0.3842,
+        0.15259999999999996,
+        0.305
+      ],
+      "nonplanarity_ratio": 0.21786170972511812,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 19,
+      "look": "boss",
+      "part": "legs",
+      "extent": [
+        0.009000000000000008,
+        0.0031999999999998696,
+        0.0074
+      ],
+      "nonplanarity_ratio": 7.593928907700209e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 20,
+      "look": "boss",
+      "part": "legs",
+      "extent": [
+        0.0126,
+        0.0028000000000000247,
+        0.002599999999999998
+      ],
+      "nonplanarity_ratio": 0.05655201098844115,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 21,
+      "look": "boss",
+      "part": "legs",
+      "extent": [
+        0.009600000000000001,
+        0.017199999999999993,
+        0.0063
+      ],
+      "nonplanarity_ratio": 0.15174746107162815,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 22,
+      "look": "buck",
+      "part": "head",
+      "extent": [
+        0.1191,
+        0.026000000000000023,
+        0.0632
+      ],
+      "nonplanarity_ratio": 0.15023677877449182,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 23,
+      "look": "buck",
+      "part": "head",
+      "extent": [
+        0.1712,
+        0.06410000000000005,
+        0.1699
+      ],
+      "nonplanarity_ratio": 0.16086223534856334,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 24,
+      "look": "buck",
+      "part": "head",
+      "extent": [
+        0.008500000000000008,
+        0.012799999999999923,
+        0.039900000000000005
+      ],
+      "nonplanarity_ratio": 0.1267710289437293,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 25,
+      "look": "buck",
+      "part": "arm",
+      "extent": [
+        0.23800000000000002,
+        0.4405000000000001,
+        0.2726
+      ],
+      "nonplanarity_ratio": 0.27001844566496536,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 26,
+      "look": "buck",
+      "part": "leg",
+      "extent": [
+        0.293,
+        0.46919999999999995,
+        0.2752
+      ],
+      "nonplanarity_ratio": 0.3133619470561025,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 27,
+      "look": "buck",
+      "part": "leg",
+      "extent": [
+        0.007199999999999998,
+        0.0014999999999998348,
+        0.008400000000000001
+      ],
+      "nonplanarity_ratio": 0.10418459316539963,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 28,
+      "look": "buck",
+      "part": "legs",
+      "extent": [
+        0.3411,
+        0.11759999999999993,
+        0.275
+      ],
+      "nonplanarity_ratio": 0.17503480736401303,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 29,
+      "look": "buck",
+      "part": "legs",
+      "extent": [
+        0.007199999999999998,
+        0.0014999999999998348,
+        0.008400000000000001
+      ],
+      "nonplanarity_ratio": 0.10418459316539963,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 30,
+      "look": "buck",
+      "part": "legs",
+      "extent": [
+        0.015899999999999997,
+        0.03300000000000003,
+        0.017
+      ],
+      "nonplanarity_ratio": 0.2338303628377632,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 31,
+      "look": "burnt",
+      "part": "head",
+      "extent": [
+        0.1115,
+        0.06170000000000009,
+        0.15569999999999998
+      ],
+      "nonplanarity_ratio": 0.21620122688284737,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 32,
+      "look": "burnt",
+      "part": "arm",
+      "extent": [
+        0.1509,
+        0.3567,
+        0.24020000000000002
+      ],
+      "nonplanarity_ratio": 0.17689324739368706,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 33,
+      "look": "burnt",
+      "part": "leg",
+      "extent": [
+        0.2347,
+        0.3067000000000001,
+        0.2445
+      ],
+      "nonplanarity_ratio": 0.23253041852220552,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 34,
+      "look": "burnt",
+      "part": "legs",
+      "extent": [
+        0.40869999999999995,
+        0.14400000000000002,
+        0.2589
+      ],
+      "nonplanarity_ratio": 0.18641782283716377,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 35,
+      "look": "cass",
+      "part": "head",
+      "extent": [
+        0.0077000000000000055,
+        0.01419999999999999,
+        0.009899999999999999
+      ],
+      "nonplanarity_ratio": 0.2381353342376633,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 36,
+      "look": "cass",
+      "part": "head",
+      "extent": [
+        0.005200000000000003,
+        0.007000000000000117,
+        0.0040999999999999995
+      ],
+      "nonplanarity_ratio": 0.28440493060047756,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 37,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.015699999999999992,
+        0.027800000000000047,
+        0.020699999999999996
+      ],
+      "nonplanarity_ratio": 0.21018615055592305,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 38,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.06939999999999999,
+        0.31679999999999997,
+        0.2406
+      ],
+      "nonplanarity_ratio": 0.14166734125597982,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 39,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.027399999999999994,
+        0.027800000000000047,
+        0.023400000000000004
+      ],
+      "nonplanarity_ratio": 0.1825889165152872,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 40,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.026999999999999996,
+        0.048899999999999944,
+        0.044399999999999995
+      ],
+      "nonplanarity_ratio": 0.1723070489673927,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 41,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.014500000000000013,
+        0.0031999999999998696,
+        0.019199999999999995
+      ],
+      "nonplanarity_ratio": 0.011177737189291678,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 42,
+      "look": "cass",
+      "part": "arm",
+      "extent": [
+        0.004200000000000009,
+        0.004999999999999893,
+        0.004799999999999999
+      ],
+      "nonplanarity_ratio": 3.1144608715449696e-14,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 43,
+      "look": "cass",
+      "part": "leg",
+      "extent": [
+        0.1586,
+        0.19420000000000015,
+        0.2179
+      ],
+      "nonplanarity_ratio": 0.20778182855079996,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 44,
+      "look": "cass",
+      "part": "legs",
+      "extent": [
+        0.3237,
+        0.1573000000000001,
+        0.2187
+      ],
+      "nonplanarity_ratio": 0.3090384126988511,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 45,
+      "look": "civilian",
+      "part": "head",
+      "extent": [
+        0.1101,
+        0.0383,
+        0.1569
+      ],
+      "nonplanarity_ratio": 0.13799272330048576,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 46,
+      "look": "civilian",
+      "part": "arm",
+      "extent": [
+        0.0867,
+        0.29479999999999995,
+        0.1528
+      ],
+      "nonplanarity_ratio": 0.16086421470875176,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 47,
+      "look": "civilian",
+      "part": "leg",
+      "extent": [
+        0.2258,
+        0.2265999999999999,
+        0.2432
+      ],
+      "nonplanarity_ratio": 0.2529089557534156,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 48,
+      "look": "civilian",
+      "part": "legs",
+      "extent": [
+        0.3373,
+        0.12629999999999986,
+        0.2383
+      ],
+      "nonplanarity_ratio": 0.17521298533438093,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 49,
+      "look": "civilian",
+      "part": "legs",
+      "extent": [
+        0.007499999999999979,
+        0.0017000000000000348,
+        0.012899999999999995
+      ],
+      "nonplanarity_ratio": 0.10177123080059176,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 50,
+      "look": "civilian",
+      "part": "legs",
+      "extent": [
+        0.011800000000000005,
+        0.005499999999999838,
+        0.01780000000000001
+      ],
+      "nonplanarity_ratio": 0.10509905374169859,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 51,
+      "look": "civilian",
+      "part": "legs",
+      "extent": [
+        0.011699999999999988,
+        0.0032000000000000917,
+        0.012199999999999989
+      ],
+      "nonplanarity_ratio": 0.04767747375759246,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 52,
+      "look": "cultist",
+      "part": "head",
+      "extent": [
+        0.014199999999999999,
+        0.0035000000000000586,
+        0.001800000000000003
+      ],
+      "nonplanarity_ratio": 0.06074939463147723,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 53,
+      "look": "cultist",
+      "part": "head",
+      "extent": [
+        0.2837,
+        0.07889999999999997,
+        0.24120000000000003
+      ],
+      "nonplanarity_ratio": 0.14976076106556307,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 54,
+      "look": "cultist",
+      "part": "arm",
+      "extent": [
+        0.01129999999999999,
+        0.0036000000000000476,
+        0.016699999999999993
+      ],
+      "nonplanarity_ratio": 0.028621304895762225,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 55,
+      "look": "cultist",
+      "part": "arm",
+      "extent": [
+        0.126,
+        0.3549,
+        0.2555
+      ],
+      "nonplanarity_ratio": 0.21712934490345315,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 56,
+      "look": "cultist",
+      "part": "leg",
+      "extent": [
+        0.1904,
+        1.1701,
+        0.5369
+      ],
+      "nonplanarity_ratio": 0.08691522135374735,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 57,
+      "look": "cultist",
+      "part": "leg",
+      "extent": [
+        0.0046,
+        0.0014000000000000123,
+        0.009099999999999997
+      ],
+      "nonplanarity_ratio": 2.6631826281289698e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 58,
+      "look": "cultist",
+      "part": "leg",
+      "extent": [
+        0.0201,
+        0.12079999999999999,
+        0.0426
+      ],
+      "nonplanarity_ratio": 0.1273560537266057,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 59,
+      "look": "cultist",
+      "part": "leg",
+      "extent": [
+        0.028999999999999998,
+        0.0953,
+        0.027100000000000013
+      ],
+      "nonplanarity_ratio": 0.12442438127508591,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 60,
+      "look": "cultist",
+      "part": "legs",
+      "extent": [
+        0.2845,
+        0.1604000000000001,
+        0.31520000000000004
+      ],
+      "nonplanarity_ratio": 0.13189775959591213,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 61,
+      "look": "cultist",
+      "part": "legs",
+      "extent": [
+        0.008,
+        0.0027999999999999137,
+        0.0068999999999999895
+      ],
+      "nonplanarity_ratio": 1.9789299277799722e-14,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 62,
+      "look": "demon",
+      "part": "head",
+      "extent": [
+        0.0417,
+        0.02069999999999994,
+        0.017500000000000016
+      ],
+      "nonplanarity_ratio": 0.08008772926823512,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 63,
+      "look": "demon",
+      "part": "head",
+      "extent": [
+        0.17930000000000001,
+        0.16949999999999998,
+        0.2344
+      ],
+      "nonplanarity_ratio": 0.22288683015165575,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 64,
+      "look": "demon",
+      "part": "head",
+      "extent": [
+        0.08509999999999998,
+        0.1008,
+        0.10980000000000001
+      ],
+      "nonplanarity_ratio": 0.21933550413884592,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 65,
+      "look": "demon",
+      "part": "arm",
+      "extent": [
+        0.21439999999999998,
+        0.41390000000000016,
+        0.3331
+      ],
+      "nonplanarity_ratio": 0.2393275523366099,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 66,
+      "look": "demon",
+      "part": "arm",
+      "extent": [
+        0.0567,
+        0.06880000000000008,
+        0.048
+      ],
+      "nonplanarity_ratio": 0.2888206688278876,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 67,
+      "look": "demon",
+      "part": "leg",
+      "extent": [
+        0.0827,
+        0.1059,
+        0.0919
+      ],
+      "nonplanarity_ratio": 0.5540889724579715,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 68,
+      "look": "demon",
+      "part": "leg",
+      "extent": [
+        0.3016,
+        0.5325000000000001,
+        0.3501
+      ],
+      "nonplanarity_ratio": 0.20703212827734133,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 69,
+      "look": "demon",
+      "part": "leg",
+      "extent": [
+        0.0763,
+        0.11080000000000012,
+        0.0741
+      ],
+      "nonplanarity_ratio": 0.21169503152347477,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 70,
+      "look": "demon",
+      "part": "legs",
+      "extent": [
+        0.4274,
+        0.1663,
+        0.2552
+      ],
+      "nonplanarity_ratio": 0.20564478830688476,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 71,
+      "look": "demon",
+      "part": "legs",
+      "extent": [
+        0.08049999999999999,
+        0.11080000000000012,
+        0.0741
+      ],
+      "nonplanarity_ratio": 0.17788023502042702,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 72,
+      "look": "demon",
+      "part": "legs",
+      "extent": [
+        0.06339999999999998,
+        0.06540000000000012,
+        0.0618
+      ],
+      "nonplanarity_ratio": 0.1707666935365004,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 73,
+      "look": "fireman",
+      "part": "head",
+      "extent": [
+        0.1707,
+        0.07760000000000011,
+        0.1861
+      ],
+      "nonplanarity_ratio": 0.17937864004336165,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 74,
+      "look": "fireman",
+      "part": "head",
+      "extent": [
+        0.001899999999999999,
+        0.006399999999999961,
+        0.0019000000000000024
+      ],
+      "nonplanarity_ratio": 3.046422004958871e-14,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 75,
+      "look": "fireman",
+      "part": "arm",
+      "extent": [
+        0.1104,
+        0.3295000000000001,
+        0.2682
+      ],
+      "nonplanarity_ratio": 0.19570731173522496,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 76,
+      "look": "fireman",
+      "part": "leg",
+      "extent": [
+        0.23509999999999998,
+        0.4175000000000001,
+        0.3076
+      ],
+      "nonplanarity_ratio": 0.21166630084916765,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 77,
+      "look": "fireman",
+      "part": "legs",
+      "extent": [
+        0.37339999999999995,
+        0.1358999999999999,
+        0.25770000000000004
+      ],
+      "nonplanarity_ratio": 0.18920737798860032,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 78,
+      "look": "ghoul",
+      "part": "head",
+      "extent": [
+        0.09530000000000001,
+        0.04569999999999985,
+        0.09540000000000001
+      ],
+      "nonplanarity_ratio": 0.25904455453660086,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 79,
+      "look": "ghoul",
+      "part": "head",
+      "extent": [
+        0.0288,
+        0.0046999999999999265,
+        0.015700000000000002
+      ],
+      "nonplanarity_ratio": 0.16388143107047257,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 80,
+      "look": "ghoul",
+      "part": "arm",
+      "extent": [
+        0.05609999999999998,
+        0.07440000000000002,
+        0.08439999999999999
+      ],
+      "nonplanarity_ratio": 0.3456361853480078,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 81,
+      "look": "ghoul",
+      "part": "arm",
+      "extent": [
+        0.009199999999999986,
+        0.04180000000000006,
+        0.012299999999999991
+      ],
+      "nonplanarity_ratio": 0.20993219509839223,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 82,
+      "look": "ghoul",
+      "part": "leg",
+      "extent": [
+        0.1903,
+        0.4303,
+        0.2511
+      ],
+      "nonplanarity_ratio": 0.18541893167469742,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 83,
+      "look": "ghoul",
+      "part": "leg",
+      "extent": [
+        0.020500000000000004,
+        0.06620000000000004,
+        0.027200000000000002
+      ],
+      "nonplanarity_ratio": 0.22828337355017372,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 84,
+      "look": "ghoul",
+      "part": "leg",
+      "extent": [
+        0.013999999999999957,
+        0.0405000000000002,
+        0.024499999999999994
+      ],
+      "nonplanarity_ratio": 0.25396213089545994,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 85,
+      "look": "ghoul",
+      "part": "leg",
+      "extent": [
+        0.0418,
+        0.05489999999999995,
+        0.022899999999999997
+      ],
+      "nonplanarity_ratio": 0.09106234152906796,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 86,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.2993,
+        0.15250000000000008,
+        0.20889999999999997
+      ],
+      "nonplanarity_ratio": 0.15852570526118356,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 87,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.009,
+        0.0041999999999999815,
+        0.0040999999999999925
+      ],
+      "nonplanarity_ratio": 2.7709018877731046e-14,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 88,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.0684,
+        0.038000000000000034,
+        0.0132
+      ],
+      "nonplanarity_ratio": 0.15587341236123708,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 89,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.0288,
+        0.00529999999999986,
+        0.0092
+      ],
+      "nonplanarity_ratio": 4.5963526689403766e-18,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 90,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.013999999999999957,
+        0.0405000000000002,
+        0.024499999999999994
+      ],
+      "nonplanarity_ratio": 0.25396213089545994,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 91,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.0403,
+        0.03960000000000008,
+        0.020499999999999997
+      ],
+      "nonplanarity_ratio": 0.10082196905855871,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 92,
+      "look": "ghoul",
+      "part": "legs",
+      "extent": [
+        0.018100000000000005,
+        0.035700000000000065,
+        0.029799999999999993
+      ],
+      "nonplanarity_ratio": 0.4641132502866218,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 93,
+      "look": "guard",
+      "part": "head",
+      "extent": [
+        0.0162,
+        0.02090000000000014,
+        0.026699999999999995
+      ],
+      "nonplanarity_ratio": 3.631028556987548e-15,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 94,
+      "look": "guard",
+      "part": "head",
+      "extent": [
+        0.22699999999999998,
+        0.13069999999999982,
+        0.2155
+      ],
+      "nonplanarity_ratio": 0.17317662843098372,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 95,
+      "look": "guard",
+      "part": "head",
+      "extent": [
+        0.004500000000000004,
+        0.02980000000000005,
+        0.0268
+      ],
+      "nonplanarity_ratio": 0.01818496335566506,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 96,
+      "look": "guard",
+      "part": "head",
+      "extent": [
+        0.0039000000000000007,
+        0.022299999999999986,
+        0.016
+      ],
+      "nonplanarity_ratio": 0.024909242752925196,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 97,
+      "look": "guard",
+      "part": "head",
+      "extent": [
+        0.0049,
+        0.0041999999999999815,
+        0.014299999999999993
+      ],
+      "nonplanarity_ratio": 0.015077593791766916,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 98,
+      "look": "guard",
+      "part": "arm",
+      "extent": [
+        0.0794,
+        0.3167,
+        0.2867
+      ],
+      "nonplanarity_ratio": 0.21821879587502685,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 99,
+      "look": "guard",
+      "part": "leg",
+      "extent": [
+        0.017100000000000004,
+        0.028200000000000003,
+        0.010399999999999993
+      ],
+      "nonplanarity_ratio": 0.11847994448219043,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 100,
+      "look": "guard",
+      "part": "leg",
+      "extent": [
+        0.04210000000000001,
+        0.02100000000000013,
+        0.0363
+      ],
+      "nonplanarity_ratio": 0.1932969955383972,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 101,
+      "look": "guard",
+      "part": "leg",
+      "extent": [
+        0.2149,
+        0.4413,
+        0.30310000000000004
+      ],
+      "nonplanarity_ratio": 0.18228999265330487,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 102,
+      "look": "guard",
+      "part": "leg",
+      "extent": [
+        0.024599999999999997,
+        0.027800000000000047,
+        0.023499999999999993
+      ],
+      "nonplanarity_ratio": 0.25121152499794397,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 103,
+      "look": "guard",
+      "part": "leg",
+      "extent": [
+        0.008000000000000007,
+        0.0026999999999999247,
+        0.008099999999999996
+      ],
+      "nonplanarity_ratio": 0.17352912561276693,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 104,
+      "look": "guard",
+      "part": "legs",
+      "extent": [
+        0.3605,
+        0.1267999999999998,
+        0.2942
+      ],
+      "nonplanarity_ratio": 0.21367795666769696,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 105,
+      "look": "gunner",
+      "part": "head",
+      "extent": [
+        0.1377,
+        0.15270000000000006,
+        0.20329999999999998
+      ],
+      "nonplanarity_ratio": 0.11496334004113486,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 106,
+      "look": "gunner",
+      "part": "arm",
+      "extent": [
+        0.1888,
+        0.4607000000000001,
+        0.2883
+      ],
+      "nonplanarity_ratio": 0.2221229538143087,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 107,
+      "look": "gunner",
+      "part": "arm",
+      "extent": [
+        0.0383,
+        0.029199999999999893,
+        0.0518
+      ],
+      "nonplanarity_ratio": 0.24082285885582014,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 108,
+      "look": "gunner",
+      "part": "arm",
+      "extent": [
+        0.037700000000000004,
+        0.1493,
+        0.0627
+      ],
+      "nonplanarity_ratio": 0.1407456191832194,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 109,
+      "look": "gunner",
+      "part": "leg",
+      "extent": [
+        0.24739999999999998,
+        0.5485000000000001,
+        0.3099
+      ],
+      "nonplanarity_ratio": 0.2954251353548968,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 110,
+      "look": "gunner",
+      "part": "leg",
+      "extent": [
+        0.09870000000000001,
+        0.02190000000000003,
+        0.103
+      ],
+      "nonplanarity_ratio": 0.10540493201680938,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 111,
+      "look": "gunner",
+      "part": "legs",
+      "extent": [
+        0.3573,
+        0.14060000000000006,
+        0.2664
+      ],
+      "nonplanarity_ratio": 0.2207315063972348,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 112,
+      "look": "gunner",
+      "part": "legs",
+      "extent": [
+        0.00849999999999998,
+        0.0046999999999999265,
+        0.022699999999999998
+      ],
+      "nonplanarity_ratio": 0.137745675733599,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 113,
+      "look": "gunner",
+      "part": "legs",
+      "extent": [
+        0.011200000000000015,
+        0.006099999999999994,
+        0.0032999999999999974
+      ],
+      "nonplanarity_ratio": 0.11974266274470516,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 114,
+      "look": "gunner",
+      "part": "legs",
+      "extent": [
+        0.0032999999999999974,
+        0.0025999999999999357,
+        0.0023999999999999994
+      ],
+      "nonplanarity_ratio": 2.782877016083563e-14,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 115,
+      "look": "handler",
+      "part": "head",
+      "extent": [
+        0.12840000000000001,
+        0.05899999999999994,
+        0.183
+      ],
+      "nonplanarity_ratio": 0.21580982405043458,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 116,
+      "look": "handler",
+      "part": "arm",
+      "extent": [
+        0.0595,
+        0.24439999999999995,
+        0.1751
+      ],
+      "nonplanarity_ratio": 0.10189845108227125,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 117,
+      "look": "handler",
+      "part": "leg",
+      "extent": [
+        0.22920000000000001,
+        0.47430000000000005,
+        0.29429999999999995
+      ],
+      "nonplanarity_ratio": 0.21790330218718887,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 118,
+      "look": "handler",
+      "part": "legs",
+      "extent": [
+        0.011099999999999999,
+        0.011099999999999888,
+        0.008899999999999998
+      ],
+      "nonplanarity_ratio": 0.05677573828304,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 119,
+      "look": "handler",
+      "part": "legs",
+      "extent": [
+        0.3841,
+        0.3357,
+        0.2918
+      ],
+      "nonplanarity_ratio": 0.26036254434488276,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 120,
+      "look": "heavy",
+      "part": "head",
+      "extent": [
+        0.1694,
+        0.17699999999999982,
+        0.16749999999999998
+      ],
+      "nonplanarity_ratio": 0.14476007338883048,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 121,
+      "look": "heavy",
+      "part": "arm",
+      "extent": [
+        0.11200000000000002,
+        0.3428,
+        0.2197
+      ],
+      "nonplanarity_ratio": 0.147225700694384,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 122,
+      "look": "heavy",
+      "part": "arm",
+      "extent": [
+        0.0033999999999999864,
+        0.022599999999999953,
+        0.013600000000000001
+      ],
+      "nonplanarity_ratio": 0.06594764873487129,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 123,
+      "look": "heavy",
+      "part": "leg",
+      "extent": [
+        0.27,
+        0.5001,
+        0.321
+      ],
+      "nonplanarity_ratio": 0.19173522308837923,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 124,
+      "look": "heavy",
+      "part": "leg",
+      "extent": [
+        0.006799999999999987,
+        0.000700000000000145,
+        0.004899999999999988
+      ],
+      "nonplanarity_ratio": 1.9122406085758344e-14,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 125,
+      "look": "heavy",
+      "part": "legs",
+      "extent": [
+        0.4113,
+        0.13769999999999993,
+        0.3079
+      ],
+      "nonplanarity_ratio": 0.1912821410709095,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 126,
+      "look": "heavy",
+      "part": "legs",
+      "extent": [
+        0.0194,
+        0.005900000000000016,
+        0.016100000000000003
+      ],
+      "nonplanarity_ratio": 0.03176210539646624,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 127,
+      "look": "hunter",
+      "part": "head",
+      "extent": [
+        0.1193,
+        0.06390000000000007,
+        0.1942
+      ],
+      "nonplanarity_ratio": 0.2108130512300934,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 128,
+      "look": "hunter",
+      "part": "arm",
+      "extent": [
+        0.07219999999999999,
+        0.1481999999999999,
+        0.13319999999999999
+      ],
+      "nonplanarity_ratio": 0.1573480953835398,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 129,
+      "look": "hunter",
+      "part": "arm",
+      "extent": [
+        0.0050000000000000044,
+        0.012399999999999967,
+        0.009700000000000014
+      ],
+      "nonplanarity_ratio": 2.085780955617741e-14,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 130,
+      "look": "hunter",
+      "part": "leg",
+      "extent": [
+        0.1674,
+        0.28060000000000007,
+        0.2715
+      ],
+      "nonplanarity_ratio": 0.2131403666948445,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 131,
+      "look": "hunter",
+      "part": "legs",
+      "extent": [
+        0.03660000000000001,
+        0.015099999999999891,
+        0.020699999999999996
+      ],
+      "nonplanarity_ratio": 0.06269351786886378,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 132,
+      "look": "hunter",
+      "part": "legs",
+      "extent": [
+        0.3129,
+        0.16460000000000008,
+        0.22849999999999998
+      ],
+      "nonplanarity_ratio": 0.2532434369832912,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 133,
+      "look": "riot",
+      "part": "head",
+      "extent": [
+        0.1946,
+        0.07850000000000001,
+        0.2061
+      ],
+      "nonplanarity_ratio": 0.1660143314442953,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 134,
+      "look": "riot",
+      "part": "arm",
+      "extent": [
+        0.11430000000000001,
+        0.33309999999999995,
+        0.1935
+      ],
+      "nonplanarity_ratio": 0.16456031247327202,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 135,
+      "look": "riot",
+      "part": "arm",
+      "extent": [
+        0.028700000000000003,
+        0.03510000000000013,
+        0.060899999999999996
+      ],
+      "nonplanarity_ratio": 0.2596897486919384,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 136,
+      "look": "riot",
+      "part": "leg",
+      "extent": [
+        0.24509999999999998,
+        0.3053000000000001,
+        0.2741
+      ],
+      "nonplanarity_ratio": 0.22421017676164207,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 137,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.3378,
+        0.14149999999999996,
+        0.26239999999999997
+      ],
+      "nonplanarity_ratio": 0.2361156908327238,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 138,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.010399999999999993,
+        0.021199999999999886,
+        0.030399999999999996
+      ],
+      "nonplanarity_ratio": 0.19618382645211288,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 139,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.0167,
+        0.014699999999999935,
+        0.001899999999999999
+      ],
+      "nonplanarity_ratio": 0.042618844093133185,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 140,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.012399999999999994,
+        0.0048000000000001375,
+        0.01380000000000002
+      ],
+      "nonplanarity_ratio": 6.490613717260582e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 141,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.008800000000000002,
+        0.01419999999999999,
+        0.004199999999999999
+      ],
+      "nonplanarity_ratio": 0.15502062384860613,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 142,
+      "look": "riot",
+      "part": "legs",
+      "extent": [
+        0.025999999999999995,
+        0.021700000000000053,
+        0.0291
+      ],
+      "nonplanarity_ratio": 0.3309934681612995,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 143,
+      "look": "scout",
+      "part": "head",
+      "extent": [
+        0.2324,
+        0.07420000000000004,
+        0.16040000000000001
+      ],
+      "nonplanarity_ratio": 0.2641102918328296,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 144,
+      "look": "scout",
+      "part": "arm",
+      "extent": [
+        0.11,
+        0.3862000000000001,
+        0.24509999999999998
+      ],
+      "nonplanarity_ratio": 0.16978944855251063,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 145,
+      "look": "scout",
+      "part": "leg",
+      "extent": [
+        0.2417,
+        0.5287,
+        0.2891
+      ],
+      "nonplanarity_ratio": 0.21970812233300294,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 146,
+      "look": "scout",
+      "part": "legs",
+      "extent": [
+        0.3774,
+        0.1745000000000001,
+        0.28600000000000003
+      ],
+      "nonplanarity_ratio": 0.283626407008218,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 147,
+      "look": "scrapper",
+      "part": "head",
+      "extent": [
+        0.2197,
+        0.06989999999999985,
+        0.2197
+      ],
+      "nonplanarity_ratio": 0.15224471593302133,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 148,
+      "look": "scrapper",
+      "part": "arm",
+      "extent": [
+        0.08080000000000001,
+        0.2841,
+        0.22110000000000002
+      ],
+      "nonplanarity_ratio": 0.15472359509784286,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 149,
+      "look": "scrapper",
+      "part": "leg",
+      "extent": [
+        0.0005999999999999964,
+        0.008700000000000041,
+        0.006000000000000005
+      ],
+      "nonplanarity_ratio": 1.2078280969624602e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 150,
+      "look": "scrapper",
+      "part": "leg",
+      "extent": [
+        0.2779,
+        0.5682000000000001,
+        0.31220000000000003
+      ],
+      "nonplanarity_ratio": 0.20033263824210282,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 151,
+      "look": "scrapper",
+      "part": "legs",
+      "extent": [
+        0.4291,
+        0.11980000000000013,
+        0.3257
+      ],
+      "nonplanarity_ratio": 0.16949766594563465,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 152,
+      "look": "security",
+      "part": "head",
+      "extent": [
+        0.0805,
+        0.04200000000000004,
+        0.1239
+      ],
+      "nonplanarity_ratio": 0.25094891158635657,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 153,
+      "look": "security",
+      "part": "head",
+      "extent": [
+        0.1085,
+        0.054400000000000004,
+        0.17679999999999998
+      ],
+      "nonplanarity_ratio": 0.1548416048247853,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 154,
+      "look": "security",
+      "part": "arm",
+      "extent": [
+        0.1446,
+        0.41569999999999996,
+        0.2378
+      ],
+      "nonplanarity_ratio": 0.18477685742393093,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 155,
+      "look": "security",
+      "part": "arm",
+      "extent": [
+        0.1398,
+        0.40180000000000016,
+        0.205
+      ],
+      "nonplanarity_ratio": 0.24806324817002004,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 156,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.0018,
+        0.0643,
+        0.043300000000000005
+      ],
+      "nonplanarity_ratio": 0.01361388588241626,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 157,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.04179999999999999,
+        0.08319999999999994,
+        0.12140000000000001
+      ],
+      "nonplanarity_ratio": 0.2348887601560953,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 158,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.2172,
+        0.373,
+        0.274
+      ],
+      "nonplanarity_ratio": 0.24410737878866814,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 159,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.031200000000000002,
+        0.0855,
+        0.03320000000000001
+      ],
+      "nonplanarity_ratio": 0.042781946578010675,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 160,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.1318,
+        0.1774,
+        0.1901
+      ],
+      "nonplanarity_ratio": 0.1974420091158677,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 161,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.016399999999999998,
+        0.0952,
+        0.020199999999999996
+      ],
+      "nonplanarity_ratio": 0.04270830720396892,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 162,
+      "look": "security",
+      "part": "leg",
+      "extent": [
+        0.0192,
+        0.1653,
+        0.0345
+      ],
+      "nonplanarity_ratio": 0.012382649538759529,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 163,
+      "look": "security",
+      "part": "legs",
+      "extent": [
+        0.2821,
+        0.1299999999999999,
+        0.16010000000000002
+      ],
+      "nonplanarity_ratio": 0.27083408249623714,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 164,
+      "look": "security",
+      "part": "legs",
+      "extent": [
+        0.3206,
+        0.18279999999999985,
+        0.2495
+      ],
+      "nonplanarity_ratio": 0.3035872609266359,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 165,
+      "look": "security",
+      "part": "legs",
+      "extent": [
+        0.1998,
+        0.06709999999999994,
+        0.1468
+      ],
+      "nonplanarity_ratio": 0.14956502571229077,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 166,
+      "look": "sniper",
+      "part": "head",
+      "extent": [
+        0.003799999999999998,
+        0.0043999999999999595,
+        0.01730000000000001
+      ],
+      "nonplanarity_ratio": 2.930996748808165e-14,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 167,
+      "look": "sniper",
+      "part": "head",
+      "extent": [
+        0.038599999999999995,
+        0.03300000000000014,
+        0.03560000000000001
+      ],
+      "nonplanarity_ratio": 0.16023269417941077,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 168,
+      "look": "sniper",
+      "part": "head",
+      "extent": [
+        0.1383,
+        0.07079999999999997,
+        0.1479
+      ],
+      "nonplanarity_ratio": 0.14853299443355616,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 169,
+      "look": "sniper",
+      "part": "head",
+      "extent": [
+        0.0367,
+        0.027099999999999902,
+        0.0365
+      ],
+      "nonplanarity_ratio": 0.44533961142731604,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 170,
+      "look": "sniper",
+      "part": "arm",
+      "extent": [
+        0.03710000000000002,
+        0.24639999999999995,
+        0.20990000000000003
+      ],
+      "nonplanarity_ratio": 0.08203242554163832,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 171,
+      "look": "sniper",
+      "part": "leg",
+      "extent": [
+        0.24639999999999998,
+        0.4182000000000001,
+        0.2719
+      ],
+      "nonplanarity_ratio": 0.21454137190824601,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 172,
+      "look": "sniper",
+      "part": "leg",
+      "extent": [
+        0.031100000000000017,
+        0.008199999999999985,
+        0.03
+      ],
+      "nonplanarity_ratio": 3.827266129314961e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 173,
+      "look": "sniper",
+      "part": "legs",
+      "extent": [
+        0.34519999999999995,
+        0.18049999999999988,
+        0.26539999999999997
+      ],
+      "nonplanarity_ratio": 0.2655986092398938,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 174,
+      "look": "stagehand",
+      "part": "head",
+      "extent": [
+        0.2578,
+        0.15250000000000008,
+        0.2797
+      ],
+      "nonplanarity_ratio": 0.3557860655640659,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 175,
+      "look": "stagehand",
+      "part": "arm",
+      "extent": [
+        0.1353,
+        0.29969999999999986,
+        0.2149
+      ],
+      "nonplanarity_ratio": 0.16224404903249987,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 176,
+      "look": "stagehand",
+      "part": "leg",
+      "extent": [
+        0.19340000000000002,
+        0.14270000000000005,
+        0.2237
+      ],
+      "nonplanarity_ratio": 0.13623684042470338,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 177,
+      "look": "stagehand",
+      "part": "legs",
+      "extent": [
+        0.3716,
+        0.1632,
+        0.3003
+      ],
+      "nonplanarity_ratio": 0.20884758439279322,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 178,
+      "look": "welder",
+      "part": "head",
+      "extent": [
+        0.0416,
+        0.04459999999999997,
+        0.0583
+      ],
+      "nonplanarity_ratio": 0.05291289611631686,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 179,
+      "look": "welder",
+      "part": "head",
+      "extent": [
+        0.2788,
+        0.07750000000000012,
+        0.2367
+      ],
+      "nonplanarity_ratio": 0.15259745379575237,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 180,
+      "look": "welder",
+      "part": "arm",
+      "extent": [
+        0.1068,
+        0.23350000000000004,
+        0.1753
+      ],
+      "nonplanarity_ratio": 0.15940284532231097,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 181,
+      "look": "welder",
+      "part": "leg",
+      "extent": [
+        0.0249,
+        0.0262,
+        0.01920000000000001
+      ],
+      "nonplanarity_ratio": 2.6582632874637405e-15,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 182,
+      "look": "welder",
+      "part": "leg",
+      "extent": [
+        0.2168,
+        0.5598,
+        0.29869999999999997
+      ],
+      "nonplanarity_ratio": 0.23964930646139657,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 183,
+      "look": "welder",
+      "part": "legs",
+      "extent": [
+        0.3262,
+        0.14739999999999998,
+        0.2701
+      ],
+      "nonplanarity_ratio": 0.1951745927329716,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 184,
+      "look": "zombie",
+      "part": "head",
+      "extent": [
+        0.1614,
+        0.07210000000000005,
+        0.1237
+      ],
+      "nonplanarity_ratio": 0.17043438228830032,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 185,
+      "look": "zombie",
+      "part": "arm",
+      "extent": [
+        0.1467,
+        0.3138000000000001,
+        0.2175
+      ],
+      "nonplanarity_ratio": 0.26021113369625637,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 186,
+      "look": "zombie",
+      "part": "arm",
+      "extent": [
+        0.013700000000000004,
+        0.026000000000000023,
+        0.0184
+      ],
+      "nonplanarity_ratio": 0.11208455386233022,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 187,
+      "look": "zombie",
+      "part": "arm",
+      "extent": [
+        0.008799999999999988,
+        0.015600000000000058,
+        0.013000000000000005
+      ],
+      "nonplanarity_ratio": 0.17882972540157338,
+      "status": "needs_close_visual_review"
+    },
+    {
+      "index": 188,
+      "look": "zombie",
+      "part": "leg",
+      "extent": [
+        0.2519,
+        0.44200000000000006,
+        0.2578
+      ],
+      "nonplanarity_ratio": 0.25889457379691605,
+      "status": "rejected_for_integration"
+    },
+    {
+      "index": 189,
+      "look": "zombie",
+      "part": "legs",
+      "extent": [
+        0.3105,
+        0.17919999999999991,
+        0.24259999999999998
+      ],
+      "nonplanarity_ratio": 0.23826544217726559,
+      "status": "rejected_for_integration"
+    }
+  ]
+}

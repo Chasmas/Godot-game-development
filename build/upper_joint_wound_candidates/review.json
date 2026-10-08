@@ -1,0 +1,150 @@
+{
+  "status": "candidate",
+  "scope": "Rest-space triangulated closed contour geometry; ambiguous borders omitted. Skin binding, missing border reconstruction, orientation, visual review and integration pending.",
+  "cuts": [
+    {
+      "look": "bellhop",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "biker",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "boss",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "buck",
+      "part": "arm",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "burnt",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cass",
+      "part": "arm",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "civilian",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cultist",
+      "part": "arm",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "arm",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "fireman",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "ghoul",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "guard",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "arm",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "handler",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "heavy",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "hunter",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "riot",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scout",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scrapper",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "security",
+      "part": "arm",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "sniper",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "stagehand",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "welder",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "zombie",
+      "part": "arm",
+      "surfaces": 5,
+      "ambiguous_components": 0
+    }
+  ]
+}

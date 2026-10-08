@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+chair contact 0.0 lowest=0.0
+chair contact 0.1 lowest=-0.00000001490116
+chair contact 0.2 lowest=0.00000281771645
+chair contact 0.36 lowest=-0.00004500895739
+chair contact 0.45 lowest=-0.00001093558967
+chair contact 0.6 lowest=0.00003570504487
+chair contact 0.0 lowest=0.0
+chair contact 0.1 lowest=-0.00000001490116
+chair contact 0.2 lowest=0.00000281771645
+chair contact 0.36 lowest=-0.00004500895739
+chair contact 0.45 lowest=-0.00001093558967
+chair contact 0.6 lowest=0.00003570504487
+chair contact 0.0 lowest=0.0
+chair contact 0.1 lowest=-0.00000001490116
+chair contact 0.2 lowest=0.00000281771645
+chair contact 0.36 lowest=-0.00004500895739
+chair contact 0.45 lowest=-0.00001093558967
+chair contact 0.6 lowest=0.00003570504487
+CHAIR TIP REVIEW: 0 failures

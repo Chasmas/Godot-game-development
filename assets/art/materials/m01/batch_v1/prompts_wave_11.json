@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "fire_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: visual reference for later Blender VFX reconstruction for M01 Sunset Palms detailed indie action game. One compact natural flame plume with fine layered orange amber tongues and pale yellow core, restrained wisps and tiny embers, readable silhouette, no object or background. Entire effect visible with clear margins, genuinely transparent background, physically believable fine detail and restrained small-game-scale readability. Single still reference, not a sprite sheet. No scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "impact_dust_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: visual reference for later Blender VFX reconstruction for M01 Sunset Palms detailed indie action game. One small burst of pale grey beige plaster impact dust with a few tiny masonry fragments, irregular expanding translucent eddies, soft tapering edges, no object. Entire effect visible with clear margins, genuinely transparent background, physically believable fine detail and restrained small-game-scale readability. Single still reference, not a sprite sheet. No scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "water_splash_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: visual reference for later Blender VFX reconstruction for M01 Sunset Palms detailed indie action game. One small physically believable turquoise clear water splash, curved droplets and thin translucent sheets, fine restrained pale highlights, no pool or ground. Entire effect visible with clear margins, genuinely transparent background, physically believable fine detail and restrained small-game-scale readability. Single still reference, not a sprite sheet. No scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "blood_splatter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: visual reference for later Blender VFX reconstruction for M01 Sunset Palms detailed indie action game. One irregular dark crimson blood splatter decal viewed straight from above, varied fine droplets and a compact central wet stain, believable fluid edges and restrained glints. No body, injury, limb or floor. Entire effect visible with clear margins, genuinely transparent background, physically believable fine detail and restrained small-game-scale readability. Single still reference, not a sprite sheet. No scene, floor, UI, labels, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fire_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-500554b4-3a17-4b7a-9b04-4f0825b8c896.png"
+    },
+    {
+      "id": "impact_dust_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-d69fe3bc-605e-4eb8-a778-f6807a31798e.png"
+    },
+    {
+      "id": "water_splash_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-818b3fba-d339-4835-b00a-2a426008f8d3.png"
+    },
+    {
+      "id": "blood_splatter_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-2522d5f5-daf6-4b02-a818-4a53b7a02e51.png"
+    }
+  ]
+}

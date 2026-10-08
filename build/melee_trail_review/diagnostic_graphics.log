@@ -1,0 +1,169 @@
+WorkerThreadPool: 8 threads, 2 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Accessibility: AccessKit driver loaded.
+Native OpenGL API detected: 3.3: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+NVAPI: Init OK!
+NVAPI: Application not found in profile, creating...
+NVAPI: Error creating application: NVAPI_EXECUTABLE_ALREADY_IN_USE(code -167)
+Accessibility: window 0 adapter created.
+SDL: Init OK!
+Using "winink" pen tablet driver...
+Shader 'CanvasSdfShaderGLES3' SHA256: cf5edc6a9445e9cebc106b29d842026c324881b3a833e91ca5308bd00d59df10
+Shader 'SkeletonShaderGLES3' SHA256: 22bddc0192dd5aac3939c541b0190d87ba34cbdb26d5010213336989e2146afc
+Shader 'ParticlesShaderGLES3' SHA256: e667843968bf3f7ac7ece5de6494c582bc1a48127e91c8c21d9505e363252e66
+Shader 'ParticlesCopyShaderGLES3' SHA256: 859da4324e13357957fb9612242039c09a326408529c9183e89ad41b5297024e
+Shader 'CopyShaderGLES3' SHA256: 8c5e007c67fb0ec3499271b0565d141801c56692f3bb5f2f2219cea634204044
+Shader 'CubemapFilterShaderGLES3' SHA256: 8f404847769d484c3ade73a023c5988b1a19b87b611119a7d7d9baf4c2dfab1c
+Shader 'GlowShaderGLES3' SHA256: 12b683c9faf9a759cd63a81e7a721141a014b7fca34c561dcbea099919569e86
+Shader 'PostShaderGLES3' SHA256: 758506c99e77a53c9d43afb72d25ef7d9affb259f9ad48506550f5c1c9791063
+Shader 'FeedShaderGLES3' SHA256: d0cddbb077f89548f98a0d974c4d46ba049227d662a400fd35dd1ef61591a94c
+Shader 'CanvasShaderGLES3' SHA256: e682eafc0c04aade42f886e5be7b2dba3be5bea461b6c4bbeaf386790007b6c4
+Shader 'CanvasOcclusionShaderGLES3' SHA256: 2241df6d91c335d06ff92bb51031591e4277aeb36cf0dd01b6c7e3f2a03aa8f1
+Shader 'SceneShaderGLES3' SHA256: eb7816d258235555c1f091149671a4bc49103aa5f8daea1fdc237ada22df33b3
+Shader 'SkyShaderGLES3' SHA256: 1e3359386348849fd42d87bc811068a81aa82f85c5dc8c2692da491b20a08c9d
+Shader 'TexBlitShaderGLES3' SHA256: eae226bb9e43f6b5f76c7677daef0f9005446d9caada75a07ca06cc44b351eec
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+WASAPI: Activated output_device using IAudioClient3 interface
+WASAPI: wFormatTag = 65534
+WASAPI: nChannels = 2
+WASAPI: nSamplesPerSec = 48000
+WASAPI: nAvgBytesPerSec = 384000
+WASAPI: nBlockAlign = 8
+WASAPI: wBitsPerSample = 32
+WASAPI: cbSize = 22
+WASAPI: mix_rate = 48000
+WASAPI: fundamental_period_frames = 480
+WASAPI: min_period_frames = 480
+WASAPI: max_period_frames = 480
+WASAPI: selected a period frame size of 480
+WASAPI: detected 2 channels
+WASAPI: audio buffer frames: 480 calculated latency: 10ms
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/systems/events.gd remapped: res://scripts/systems/events.gd
+Completed load for: 'res://scripts/systems/events.gd' remapped 'res://scripts/systems/events.gd' at thread -1
+Loading resource: res://scripts/systems/save_manager.gd remapped: res://scripts/systems/save_manager.gd
+Completed load for: 'res://scripts/systems/save_manager.gd' remapped 'res://scripts/systems/save_manager.gd' at thread -1
+Loading resource: res://scripts/systems/loc.gd remapped: res://scripts/systems/loc.gd
+Completed load for: 'res://scripts/systems/loc.gd' remapped 'res://scripts/systems/loc.gd' at thread -1
+Loading resource: res://scripts/systems/input_setup.gd remapped: res://scripts/systems/input_setup.gd
+Completed load for: 'res://scripts/systems/input_setup.gd' remapped 'res://scripts/systems/input_setup.gd' at thread -1
+Loading resource: res://scripts/systems/audio_manager.gd remapped: res://scripts/systems/audio_manager.gd
+Loading resource: res://shaders/painted_shot.gdshader remapped: res://shaders/painted_shot.gdshader
+Completed load for: 'res://shaders/painted_shot.gdshader' remapped 'res://shaders/painted_shot.gdshader' at thread -1
+Completed load for: 'res://scripts/systems/audio_manager.gd' remapped 'res://scripts/systems/audio_manager.gd' at thread -1
+Loading resource: res://scripts/systems/debug_menu.gd remapped: res://scripts/systems/debug_menu.gd
+Loading resource: res://assets/art/blender_reload/magazine_loaded.png remapped: res://assets/art/blender_reload/magazine_loaded.png
+Loading resource: res://.godot/imported/magazine_loaded.png-8469977a1886b31a8c4a5dc4ebbcf468.ctex remapped: res://.godot/imported/magazine_loaded.png-8469977a1886b31a8c4a5dc4ebbcf468.ctex
+Completed load for: 'res://assets/art/blender_reload/magazine_loaded.png' remapped 'res://assets/art/blender_reload/magazine_loaded.png' at thread -1
+Loading resource: res://assets/art/blender_reload/magazine_empty.png remapped: res://assets/art/blender_reload/magazine_empty.png
+Loading resource: res://.godot/imported/magazine_empty.png-fd99d028b77cb0abc8ea30841b27a255.ctex remapped: res://.godot/imported/magazine_empty.png-fd99d028b77cb0abc8ea30841b27a255.ctex
+Completed load for: 'res://assets/art/blender_reload/magazine_empty.png' remapped 'res://assets/art/blender_reload/magazine_empty.png' at thread -1
+Loading resource: res://assets/art/blender_reload/spent_brass.png remapped: res://assets/art/blender_reload/spent_brass.png
+Loading resource: res://.godot/imported/spent_brass.png-4585a41500456798d748c97a309dc6e3.ctex remapped: res://.godot/imported/spent_brass.png-4585a41500456798d748c97a309dc6e3.ctex
+Completed load for: 'res://assets/art/blender_reload/spent_brass.png' remapped 'res://assets/art/blender_reload/spent_brass.png' at thread -1
+Loading resource: res://assets/art/blender_reload/spent_shotgun.png remapped: res://assets/art/blender_reload/spent_shotgun.png
+Loading resource: res://.godot/imported/spent_shotgun.png-452c6a80372193add59f8f3b778b7511.ctex remapped: res://.godot/imported/spent_shotgun.png-452c6a80372193add59f8f3b778b7511.ctex
+Completed load for: 'res://assets/art/blender_reload/spent_shotgun.png' remapped 'res://assets/art/blender_reload/spent_shotgun.png' at thread -1
+Completed load for: 'res://scripts/systems/debug_menu.gd' remapped 'res://scripts/systems/debug_menu.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://tools/melee_trail_review.tscn remapped: res://tools/melee_trail_review.tscn
+Loading resource: res://tools/melee_trail_review.gd remapped: res://tools/melee_trail_review.gd
+Completed load for: 'res://tools/melee_trail_review.gd' remapped 'res://tools/melee_trail_review.gd' at thread -1
+Completed load for: 'res://tools/melee_trail_review.tscn' remapped 'res://tools/melee_trail_review.tscn' at thread -1
+Loading resource: res://data/missions/m01_checkout.tres remapped: res://data/missions/m01_checkout.tres
+Completed load for: 'res://data/missions/m01_checkout.tres' remapped 'res://data/missions/m01_checkout.tres' at thread -1
+Loading resource: res://data/missions/m02_dog_days.tres remapped: res://data/missions/m02_dog_days.tres
+Completed load for: 'res://data/missions/m02_dog_days.tres' remapped 'res://data/missions/m02_dog_days.tres' at thread -1
+Loading resource: res://data/missions/m03_prime_time.tres remapped: res://data/missions/m03_prime_time.tres
+Completed load for: 'res://data/missions/m03_prime_time.tres' remapped 'res://data/missions/m03_prime_time.tres' at thread -1
+Loading resource: res://data/missions/m04_sweet_dreams.tres remapped: res://data/missions/m04_sweet_dreams.tres
+Completed load for: 'res://data/missions/m04_sweet_dreams.tres' remapped 'res://data/missions/m04_sweet_dreams.tres' at thread -1
+Loading resource: res://data/characters/bobby.tres remapped: res://data/characters/bobby.tres
+Completed load for: 'res://data/characters/bobby.tres' remapped 'res://data/characters/bobby.tres' at thread -1
+Loading resource: res://data/characters/cass.tres remapped: res://data/characters/cass.tres
+Completed load for: 'res://data/characters/cass.tres' remapped 'res://data/characters/cass.tres' at thread -1
+Loading resource: res://data/characters/dana.tres remapped: res://data/characters/dana.tres
+Completed load for: 'res://data/characters/dana.tres' remapped 'res://data/characters/dana.tres' at thread -1
+Loading resource: res://data/characters/deacon.tres remapped: res://data/characters/deacon.tres
+Completed load for: 'res://data/characters/deacon.tres' remapped 'res://data/characters/deacon.tres' at thread -1
+Loading resource: res://data/characters/director.tres remapped: res://data/characters/director.tres
+Completed load for: 'res://data/characters/director.tres' remapped 'res://data/characters/director.tres' at thread -1
+Loading resource: res://data/characters/luz.tres remapped: res://data/characters/luz.tres
+Completed load for: 'res://data/characters/luz.tres' remapped 'res://data/characters/luz.tres' at thread -1
+Loading resource: res://data/characters/marv.tres remapped: res://data/characters/marv.tres
+Completed load for: 'res://data/characters/marv.tres' remapped 'res://data/characters/marv.tres' at thread -1
+Loading resource: res://data/characters/nadia.tres remapped: res://data/characters/nadia.tres
+Completed load for: 'res://data/characters/nadia.tres' remapped 'res://data/characters/nadia.tres' at thread -1
+Loading resource: res://data/characters/tilly.tres remapped: res://data/characters/tilly.tres
+Completed load for: 'res://data/characters/tilly.tres' remapped 'res://data/characters/tilly.tres' at thread -1
+Loading resource: res://data/characters/wes.tres remapped: res://data/characters/wes.tres
+Completed load for: 'res://data/characters/wes.tres' remapped 'res://data/characters/wes.tres' at thread -1
+Loading resource: res://shaders/crt_vhs.gdshader remapped: res://shaders/crt_vhs.gdshader
+Completed load for: 'res://shaders/crt_vhs.gdshader' remapped 'res://shaders/crt_vhs.gdshader' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono.ttf remapped: res://assets/fonts/DejaVuSansMono.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata remapped: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono.ttf' remapped 'res://assets/fonts/DejaVuSansMono.ttf' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono-Bold.ttf remapped: res://assets/fonts/DejaVuSansMono-Bold.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata remapped: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono-Bold.ttf' remapped 'res://assets/fonts/DejaVuSansMono-Bold.ttf' at thread -1
+TRAIL REVIEW: setup
+Loading resource: res://build/melee_trail_review/swing/000.png remapped: res://build/melee_trail_review/swing/000.png
+Loading resource: res://.godot/imported/000.png-5fe3de401284a94d186802f2d1fd2aea.ctex remapped: res://.godot/imported/000.png-5fe3de401284a94d186802f2d1fd2aea.ctex
+Completed load for: 'res://build/melee_trail_review/swing/000.png' remapped 'res://build/melee_trail_review/swing/000.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/001.png remapped: res://build/melee_trail_review/swing/001.png
+Loading resource: res://.godot/imported/001.png-3975026ee1fed38095c6605bf3eecf28.ctex remapped: res://.godot/imported/001.png-3975026ee1fed38095c6605bf3eecf28.ctex
+Completed load for: 'res://build/melee_trail_review/swing/001.png' remapped 'res://build/melee_trail_review/swing/001.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/002.png remapped: res://build/melee_trail_review/swing/002.png
+Loading resource: res://.godot/imported/002.png-28c28e94a9ef37494ee75582ba001345.ctex remapped: res://.godot/imported/002.png-28c28e94a9ef37494ee75582ba001345.ctex
+Completed load for: 'res://build/melee_trail_review/swing/002.png' remapped 'res://build/melee_trail_review/swing/002.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/003.png remapped: res://build/melee_trail_review/swing/003.png
+Loading resource: res://.godot/imported/003.png-c59f3cd0272d21e6f23751438559b149.ctex remapped: res://.godot/imported/003.png-c59f3cd0272d21e6f23751438559b149.ctex
+Completed load for: 'res://build/melee_trail_review/swing/003.png' remapped 'res://build/melee_trail_review/swing/003.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/004.png remapped: res://build/melee_trail_review/swing/004.png
+Loading resource: res://.godot/imported/004.png-dae4544df120c55a60f7bc8cdf8aa33f.ctex remapped: res://.godot/imported/004.png-dae4544df120c55a60f7bc8cdf8aa33f.ctex
+Completed load for: 'res://build/melee_trail_review/swing/004.png' remapped 'res://build/melee_trail_review/swing/004.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/005.png remapped: res://build/melee_trail_review/swing/005.png
+Loading resource: res://.godot/imported/005.png-6ed06d926a0f3f59bb307bb62c2ce224.ctex remapped: res://.godot/imported/005.png-6ed06d926a0f3f59bb307bb62c2ce224.ctex
+Completed load for: 'res://build/melee_trail_review/swing/005.png' remapped 'res://build/melee_trail_review/swing/005.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/006.png remapped: res://build/melee_trail_review/swing/006.png
+Loading resource: res://.godot/imported/006.png-4132f2661e05c5869e81f9b84baa619d.ctex remapped: res://.godot/imported/006.png-4132f2661e05c5869e81f9b84baa619d.ctex
+Completed load for: 'res://build/melee_trail_review/swing/006.png' remapped 'res://build/melee_trail_review/swing/006.png' at thread -1
+Loading resource: res://build/melee_trail_review/swing/007.png remapped: res://build/melee_trail_review/swing/007.png
+Loading resource: res://.godot/imported/007.png-cfe864f4404cebfaa0bd917b4eed63cb.ctex remapped: res://.godot/imported/007.png-cfe864f4404cebfaa0bd917b4eed63cb.ctex
+Completed load for: 'res://build/melee_trail_review/swing/007.png' remapped 'res://build/melee_trail_review/swing/007.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/000.png remapped: res://build/melee_trail_review/thrust/000.png
+Loading resource: res://.godot/imported/000.png-55df47cf14a79b60ffa42f7577a37fd2.ctex remapped: res://.godot/imported/000.png-55df47cf14a79b60ffa42f7577a37fd2.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/000.png' remapped 'res://build/melee_trail_review/thrust/000.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/001.png remapped: res://build/melee_trail_review/thrust/001.png
+Loading resource: res://.godot/imported/001.png-64e541643b8f855937d0d21eec8870bd.ctex remapped: res://.godot/imported/001.png-64e541643b8f855937d0d21eec8870bd.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/001.png' remapped 'res://build/melee_trail_review/thrust/001.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/002.png remapped: res://build/melee_trail_review/thrust/002.png
+Loading resource: res://.godot/imported/002.png-7d7f66d3c1cb57b2b68e8f7a6378efdb.ctex remapped: res://.godot/imported/002.png-7d7f66d3c1cb57b2b68e8f7a6378efdb.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/002.png' remapped 'res://build/melee_trail_review/thrust/002.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/003.png remapped: res://build/melee_trail_review/thrust/003.png
+Loading resource: res://.godot/imported/003.png-f2337da26bb62b9502ffcf75343f3633.ctex remapped: res://.godot/imported/003.png-f2337da26bb62b9502ffcf75343f3633.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/003.png' remapped 'res://build/melee_trail_review/thrust/003.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/004.png remapped: res://build/melee_trail_review/thrust/004.png
+Loading resource: res://.godot/imported/004.png-c2c14fcb31d17f29fc94143a54090a45.ctex remapped: res://.godot/imported/004.png-c2c14fcb31d17f29fc94143a54090a45.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/004.png' remapped 'res://build/melee_trail_review/thrust/004.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/005.png remapped: res://build/melee_trail_review/thrust/005.png
+Loading resource: res://.godot/imported/005.png-c8b4b32030727580aa082db1cded3650.ctex remapped: res://.godot/imported/005.png-c8b4b32030727580aa082db1cded3650.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/005.png' remapped 'res://build/melee_trail_review/thrust/005.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/006.png remapped: res://build/melee_trail_review/thrust/006.png
+Loading resource: res://.godot/imported/006.png-11bb7152908053b8650e5af46bd8a977.ctex remapped: res://.godot/imported/006.png-11bb7152908053b8650e5af46bd8a977.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/006.png' remapped 'res://build/melee_trail_review/thrust/006.png' at thread -1
+Loading resource: res://build/melee_trail_review/thrust/007.png remapped: res://build/melee_trail_review/thrust/007.png
+Loading resource: res://.godot/imported/007.png-2f99553b22920d609dc9003c999d1d4b.ctex remapped: res://.godot/imported/007.png-2f99553b22920d609dc9003c999d1d4b.ctex
+Completed load for: 'res://build/melee_trail_review/thrust/007.png' remapped 'res://build/melee_trail_review/thrust/007.png' at thread -1
+TRAIL REVIEW: assets loaded
+TRAIL REVIEW: rendered frames
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Accessibility: window 0 adapter destroyed.

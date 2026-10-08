@@ -1,0 +1,521 @@
+{
+  "source_reference": "assets/art/materials/m01/batch_v1/guest_room_direction.png",
+  "fabric_source": "assets/art/materials/m01/batch_v1/armchair_sage_fabric_albedo_v1.png",
+  "camera_elevation_degrees": 50,
+  "pixels_per_metre": 365.7142857142857,
+  "game_pixels_per_metre": 16,
+  "sprite_scale": 0.04375,
+  "runtime_approved": true,
+  "frames": [
+    {
+      "file": "armchair_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    }
+  ],
+  "collision_footprint_metres": [
+    0.7299998998641968,
+    0.6799684464931488
+  ],
+  "collision_center_metres": [
+    0.0,
+    0.019984230399131775
+  ],
+  "geometry_bounds_metres": {
+    "minimum": [
+      -0.3649999499320984,
+      -0.3199999928474426,
+      0.04332774132490158
+    ],
+    "maximum": [
+      0.3649999499320984,
+      0.3599684536457062,
+      0.9181655645370483
+    ]
+  },
+  "placements": [
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@441",
+          "position": [
+            72.0,
+            120.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 24.0,
+      "clear_player_approaches": 3,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 73.7563552856445,
+      "opaque_samples": 4495,
+      "original_position": [
+        96.0,
+        112.0
+      ],
+      "physical_footprint_overlaps": 1,
+      "position": [
+        96.0,
+        112.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint"
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@438",
+          "position": [
+            576.0,
+            24.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@2010",
+          "position": [
+            56.0,
+            40.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@719",
+          "position": [
+            128.0,
+            64.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 1,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 134.238586425781,
+      "opaque_samples": 4441,
+      "original_position": [
+        88.0,
+        40.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        88.0,
+        46.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@438",
+          "position": [
+            576.0,
+            24.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@444",
+          "position": [
+            248.0,
+            56.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 37.576587677002,
+      "opaque_samples": 4441,
+      "original_position": [
+        264.0,
+        40.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        264.0,
+        46.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@438",
+          "position": [
+            576.0,
+            24.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@450",
+          "position": [
+            632.0,
+            56.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@1947",
+          "position": [
+            696.0,
+            40.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 1,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 37.576587677002,
+      "opaque_samples": 4441,
+      "original_position": [
+        648.0,
+        40.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        648.0,
+        46.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@438",
+          "position": [
+            576.0,
+            24.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@778",
+          "position": [
+            912.0,
+            64.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@778",
+          "position": [
+            912.0,
+            64.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 1,
+      "clear_player_side_passages": 2,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 38.0,
+      "opaque_samples": 4441,
+      "original_position": [
+        872.0,
+        40.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        894.0,
+        54.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@546",
+          "position": [
+            272.0,
+            424.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@558",
+          "position": [
+            168.0,
+            480.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 70.4556579589844,
+      "opaque_samples": 4441,
+      "original_position": [
+        184.0,
+        440.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        184.0,
+        446.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@546",
+          "position": [
+            272.0,
+            424.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@2024",
+          "position": [
+            408.0,
+            440.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@564",
+          "position": [
+            456.0,
+            472.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 1,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 32.5576400756836,
+      "opaque_samples": 4495,
+      "original_position": [
+        440.0,
+        440.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        440.0,
+        446.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint"
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@549",
+          "position": [
+            672.0,
+            424.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@570",
+          "position": [
+            664.0,
+            440.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 1,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 38.0,
+      "opaque_samples": 4441,
+      "original_position": [
+        680.0,
+        440.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        702.0,
+        450.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@603",
+          "position": [
+            208.0,
+            568.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@2030",
+          "position": [
+            152.0,
+            600.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 0,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 34.0,
+      "opaque_samples": 4441,
+      "original_position": [
+        184.0,
+        584.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        184.0,
+        590.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@660",
+          "position": [
+            336.0,
+            664.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@648",
+          "position": [
+            312.0,
+            656.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 1,
+      "facing_index": 0,
+      "nearest_door_leaf_px": 17.8885440826416,
+      "opaque_samples": 5321,
+      "original_position": [
+        328.0,
+        648.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        328.0,
+        648.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint"
+    },
+    {
+      "approach_blockers": [
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@612",
+          "position": [
+            672.0,
+            568.0
+          ]
+        },
+        {
+          "class": "StaticBody2D",
+          "name": "@StaticBody2D@627",
+          "position": [
+            664.0,
+            584.0
+          ]
+        }
+      ],
+      "approach_stop_distance_px": 14.0,
+      "clear_player_approaches": 2,
+      "clear_player_side_passages": 1,
+      "facing_index": 1,
+      "nearest_door_leaf_px": 38.0525970458984,
+      "opaque_samples": 4441,
+      "original_position": [
+        680.0,
+        584.0
+      ],
+      "physical_footprint_overlaps": 0,
+      "position": [
+        702.0,
+        590.0
+      ],
+      "projected_wall_samples": 0,
+      "reachable_door_arc_overlaps": 0,
+      "scope": "projected silhouette, not physical footprint",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+    }
+  ],
+  "source_sha256": {
+    "armchair_000.png": "3dcdb1c8ac1d99569091f6ccad61aaf66fd7ac7b87f1465bd30e0c6ca032a18c",
+    "armchair_090.png": "24543e1a732df4ae31f2bc130f7be4b24299e1cd22c020caeb1835919d0045c9",
+    "armchair_180.png": "3effa3b9077df29e5a831b3603d3319686584d047ec06a224acfaac6894a2e9b",
+    "armchair_270.png": "b4238c8a7f475dec1dbf126b5f867ab18e1f1f08e7e1244ac2b46c04f6dccf70"
+  }
+}

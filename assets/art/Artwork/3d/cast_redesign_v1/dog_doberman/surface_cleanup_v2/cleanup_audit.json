@@ -1,0 +1,18 @@
+{
+  "runtime_approved": false,
+  "source_unchanged": true,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "vertices_before": 70610,
+      "vertices_after": 59858,
+      "removed_flap_faces": 8,
+      "removed_isolated_faces": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    }
+  ],
+  "operation": "Coincident seam weld, eight audited flap faces and one isolated paw fragment removed; no global smoothing",
+  "visual_review": "Pending independent textured and clay renders",
+  "limitations": "Remaining nonmanifold edges require inspection; topology counts do not approve anatomy or animation"
+}

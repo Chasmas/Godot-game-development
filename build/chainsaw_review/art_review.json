@@ -1,0 +1,19 @@
+{
+  "source": "tools/blender/build_chainsaw.py",
+  "source_scene": "build/chainsaw_review/chainsaw.blend",
+  "scope": "Initial Blender-derived weapon art and static held scale reviewed. Dedicated body cutting animation, moving chain, final engine sound and full level visual acceptance pending.",
+  "images": [
+    {
+      "path": "assets/art/weapons_world/chainsaw.png",
+      "sha256": "638f92f6bdbb611add80131df81c78146782e58888a051a0ce50b291e938242c"
+    },
+    {
+      "path": "assets/art/weapons_side/chainsaw.png",
+      "sha256": "f08e0d2944157490b214d4e1f3515fef94f6ddcfed331faa1a974cd376f05ddc"
+    },
+    {
+      "path": "assets/art/weapons/chainsaw.png",
+      "sha256": "e964782675cb0fc901d5d5e33cf9b2d6fe4359e5eec361b6455ba6df05f97cdc"
+    }
+  ]
+}

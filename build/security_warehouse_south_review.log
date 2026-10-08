@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 21 looks in 2173 ms
+PASS { "lane": 216.0, "end": [216.0, 199.3369140625], "camera_alarm": false, "peak": 0.0, "door_swing": 0.85081074357593, "passed": true }
+PASS { "lane": 232.0, "end": [232.0, 199.3369140625], "camera_alarm": false, "peak": 0.0, "door_swing": 1.83259571459405, "passed": true }
+WAREHOUSE SOUTH ENTRY: 0 failures

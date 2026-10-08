@@ -1,0 +1,159 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS m01_sunset_palms 40,45 configuration has a real spawn
+PASS m01_sunset_palms 40,45 patrol [40.0, 45.0] is off furniture/walls
+PASS m01_sunset_palms 40,45 patrol [52.0, 45.0] is off furniture/walls
+PASS m01_sunset_palms 40,45 patrol [52.0, 50.0] is off furniture/walls
+PASS m01_sunset_palms 40,45 patrol [26.0, 51.0] is off furniture/walls
+PASS m01_sunset_palms 40,45 patrol [26.0, 45.0] is off furniture/walls
+PASS m01_sunset_palms 8,32 configuration has a real spawn
+PASS m01_sunset_palms 20,33 configuration has a real spawn
+PASS m01_sunset_palms 20,33 patrol [20.0, 33.0] is off furniture/walls
+PASS m01_sunset_palms 20,33 patrol [44.0, 33.0] is off furniture/walls
+PASS m01_sunset_palms 47,33 configuration has a real spawn
+PASS m01_sunset_palms 25,28 configuration has a real spawn
+PASS m01_sunset_palms 35,28 configuration has a real spawn
+PASS m01_sunset_palms 38,29 configuration has a real spawn
+PASS m01_sunset_palms 47,29 configuration has a real spawn
+PASS m01_sunset_palms 24,38 configuration has a real spawn
+PASS m01_sunset_palms 34,38 configuration has a real spawn
+PASS m01_sunset_palms 46,38 configuration has a real spawn
+PASS m01_sunset_palms 46,38 patrol [46.0, 38.0] is off furniture/walls
+PASS m01_sunset_palms 46,38 patrol [44.0, 37.0] is off furniture/walls
+PASS m01_sunset_palms 46,38 patrol [51.0, 39.0] is off furniture/walls
+PASS m01_sunset_palms 25,22 configuration has a real spawn
+PASS m01_sunset_palms 25,22 patrol [25.0, 22.0] is off furniture/walls
+PASS m01_sunset_palms 25,22 patrol [34.0, 22.0] is off furniture/walls
+PASS m01_sunset_palms 25,22 patrol [34.0, 13.0] is off furniture/walls
+PASS m01_sunset_palms 25,22 patrol [19.0, 13.0] is off furniture/walls
+PASS m01_sunset_palms 25,22 patrol [19.0, 22.0] is off furniture/walls
+PASS m01_sunset_palms 11,12 configuration has a real spawn
+PASS m01_sunset_palms 45,14 configuration has a real spawn
+PASS m01_sunset_palms 40,23 configuration has a real spawn
+PASS m01_sunset_palms 40,23 patrol [40.0, 23.0] is off furniture/walls
+PASS m01_sunset_palms 40,23 patrol [48.0, 23.0] is off furniture/walls
+PASS m01_sunset_palms 40,23 patrol [48.0, 14.0] is off furniture/walls
+PASS m01_sunset_palms 10,6 configuration has a real spawn
+PASS m01_sunset_palms 22,4 configuration has a real spawn
+PASS m01_sunset_palms 18,7 configuration has a real spawn
+PASS m01_sunset_palms 32,3 configuration has a real spawn
+PASS m01_sunset_palms 36,7 configuration has a real spawn
+PASS m01_sunset_palms 44,6 configuration has a real spawn
+PASS m01_sunset_palms 61,14 configuration has a real spawn
+PASS m01_sunset_palms 61,14 patrol [61.0, 14.0] is off furniture/walls
+PASS m01_sunset_palms 61,14 patrol [58.0, 12.0] is off furniture/walls
+PASS m01_sunset_palms 61,14 patrol [62.0, 16.0] is off furniture/walls
+PASS m01_sunset_palms 63,23 configuration has a real spawn
+PASS m01_sunset_palms 58,28 configuration has a real spawn
+PASS m01_sunset_palms 13,21 configuration has a real spawn
+PASS m01_sunset_palms 2,24 configuration has a real spawn
+PASS m01_sunset_palms 3,43 configuration has a real spawn
+PASS m01_sunset_palms camera stays in designed cell (18, 32)
+PASS m01_sunset_palms camera stays in designed cell (40, 32)
+PASS m01_sunset_palms camera stays in designed cell (65, 27)
+PASS m02_yermo_salvage 20,31 configuration has a real spawn
+PASS m02_yermo_salvage 20,31 patrol [20.0, 31.0] is off furniture/walls
+PASS m02_yermo_salvage 20,31 patrol [40.0, 33.0] is off furniture/walls
+PASS m02_yermo_salvage 20,31 patrol [40.0, 26.0] is off furniture/walls
+PASS m02_yermo_salvage 20,31 patrol [20.0, 26.0] is off furniture/walls
+PASS m02_yermo_salvage 21,32 configuration has a real spawn
+PASS m02_yermo_salvage 21,32 patrol [21.0, 32.0] is off furniture/walls
+PASS m02_yermo_salvage 21,32 patrol [41.0, 34.0] is off furniture/walls
+PASS m02_yermo_salvage 21,32 patrol [41.0, 27.0] is off furniture/walls
+PASS m02_yermo_salvage 21,32 patrol [21.0, 27.0] is off furniture/walls
+PASS m02_yermo_salvage 6,26 configuration has a real spawn
+PASS m02_yermo_salvage 48,33 configuration has a real spawn
+PASS m02_yermo_salvage 58,33 configuration has a real spawn
+PASS m02_yermo_salvage 41,21 configuration has a real spawn
+PASS m02_yermo_salvage 16,12 configuration has a real spawn
+PASS m02_yermo_salvage 8,7 configuration has a real spawn
+PASS m02_yermo_salvage 8,7 patrol [8.0, 7.0] is off furniture/walls
+PASS m02_yermo_salvage 8,7 patrol [8.0, 12.0] is off furniture/walls
+PASS m02_yermo_salvage 8,7 patrol [20.0, 12.0] is off furniture/walls
+PASS m02_yermo_salvage 8,7 patrol [20.0, 7.0] is off furniture/walls
+PASS m02_yermo_salvage 26,15 configuration has a real spawn
+PASS m02_yermo_salvage 12,2 configuration has a real spawn
+PASS m02_yermo_salvage 40,11 configuration has a real spawn
+PASS m02_yermo_salvage 34,8 configuration has a real spawn
+PASS m02_yermo_salvage 36,10 configuration has a real spawn
+PASS m02_yermo_salvage 44,10 configuration has a real spawn
+PASS m02_yermo_salvage 44,10 patrol [44.0, 10.0] is off furniture/walls
+PASS m02_yermo_salvage 44,10 patrol [34.0, 11.0] is off furniture/walls
+PASS m02_yermo_salvage 44,10 patrol [34.0, 6.0] is off furniture/walls
+PASS m02_yermo_salvage 44,10 patrol [44.0, 6.0] is off furniture/walls
+PASS m02_yermo_salvage 56,5 configuration has a real spawn
+PASS m02_yermo_salvage 52,8 configuration has a real spawn
+PASS m02_yermo_salvage 57,16 configuration has a real spawn
+PASS m02_yermo_salvage 57,16 patrol [57.0, 16.0] is off furniture/walls
+PASS m02_yermo_salvage 57,16 patrol [51.0, 15.0] is off furniture/walls
+PASS m02_yermo_salvage 57,16 patrol [61.0, 13.0] is off furniture/walls
+PASS m02_yermo_salvage 40,8 configuration has a real spawn
+PASS m02_yermo_salvage camera stays in designed cell (1, 1)
+PASS m02_yermo_salvage camera stays in designed cell (30, 20)
+PASS m02_yermo_salvage camera stays in designed cell (47, 1)
+PASS m03_khsc_studios 20,46 configuration has a real spawn
+PASS m03_khsc_studios 20,46 patrol [20.0, 46.0] is off furniture/walls
+PASS m03_khsc_studios 20,46 patrol [34.0, 46.0] is off furniture/walls
+PASS m03_khsc_studios 20,46 patrol [34.0, 51.0] is off furniture/walls
+PASS m03_khsc_studios 20,46 patrol [20.0, 51.0] is off furniture/walls
+PASS m03_khsc_studios 40,49 configuration has a real spawn
+PASS m03_khsc_studios 40,49 patrol [40.0, 49.0] is off furniture/walls
+PASS m03_khsc_studios 40,49 patrol [54.0, 49.0] is off furniture/walls
+PASS m03_khsc_studios 40,49 patrol [54.0, 45.0] is off furniture/walls
+PASS m03_khsc_studios 40,49 patrol [40.0, 45.0] is off furniture/walls
+PASS m03_khsc_studios 55,44 configuration has a real spawn
+PASS m03_khsc_studios 8,31 configuration has a real spawn
+PASS m03_khsc_studios 8,31 patrol [8.0, 31.0] is off furniture/walls
+PASS m03_khsc_studios 8,31 patrol [8.0, 37.0] is off furniture/walls
+PASS m03_khsc_studios 8,31 patrol [17.0, 37.0] is off furniture/walls
+PASS m03_khsc_studios 8,31 patrol [17.0, 31.0] is off furniture/walls
+PASS m03_khsc_studios 16,33 configuration has a real spawn
+PASS m03_khsc_studios 5,38 configuration has a real spawn
+PASS m03_khsc_studios 17,39 configuration has a real spawn
+PASS m03_khsc_studios 3,19 configuration has a real spawn
+PASS m03_khsc_studios 10,5 configuration has a real spawn
+PASS m03_khsc_studios 17,7 configuration has a real spawn
+PASS m03_khsc_studios 15,16 configuration has a real spawn
+PASS m03_khsc_studios 15,16 patrol [15.0, 16.0] is off furniture/walls
+PASS m03_khsc_studios 15,16 patrol [9.0, 16.0] is off furniture/walls
+PASS m03_khsc_studios 15,16 patrol [9.0, 18.0] is off furniture/walls
+PASS m03_khsc_studios 15,16 patrol [18.0, 19.0] is off furniture/walls
+PASS m03_khsc_studios 24,18 configuration has a real spawn
+PASS m03_khsc_studios 46,17 configuration has a real spawn
+PASS m03_khsc_studios 27,28 configuration has a real spawn
+PASS m03_khsc_studios 27,28 patrol [27.0, 28.0] is off furniture/walls
+PASS m03_khsc_studios 27,28 patrol [27.0, 31.0] is off furniture/walls
+PASS m03_khsc_studios 27,28 patrol [43.0, 31.0] is off furniture/walls
+PASS m03_khsc_studios 27,28 patrol [43.0, 28.0] is off furniture/walls
+PASS m03_khsc_studios 44,29 configuration has a real spawn
+PASS m03_khsc_studios 22,12 configuration has a real spawn
+PASS m03_khsc_studios 49,38 configuration has a real spawn
+PASS m03_khsc_studios 25,40 configuration has a real spawn
+PASS m03_khsc_studios 31,14 configuration has a real spawn
+PASS m03_khsc_studios 42,13 configuration has a real spawn
+PASS m03_khsc_studios 42,7 configuration has a real spawn
+PASS m03_khsc_studios 35,19 configuration has a real spawn
+PASS m03_khsc_studios 63,5 configuration has a real spawn
+PASS m03_khsc_studios 66,9 configuration has a real spawn
+PASS m03_khsc_studios 66,22 configuration has a real spawn
+PASS m03_khsc_studios 53,21 configuration has a real spawn
+PASS m03_khsc_studios 55,26 configuration has a real spawn
+PASS m03_khsc_studios 55,26 patrol [55.0, 26.0] is off furniture/walls
+PASS m03_khsc_studios 55,26 patrol [66.0, 26.0] is off furniture/walls
+PASS m03_khsc_studios 65,27 configuration has a real spawn
+PASS m03_khsc_studios 55,35 configuration has a real spawn
+PASS m03_khsc_studios 64,34 configuration has a real spawn
+PASS m03_khsc_studios 58,38 configuration has a real spawn
+PASS m03_khsc_studios 66,38 configuration has a real spawn
+PASS m03_khsc_studios camera stays in designed cell (21, 1)
+PASS m03_khsc_studios camera stays in designed cell (68, 25)
+PASS m03_khsc_studios camera stays in designed cell (1, 22)
+PASS m04_villa_estrella 36,8 configuration has a real spawn
+PASS m04_villa_estrella 8,21 configuration has a real spawn
+PASS m04_villa_estrella 11,21 configuration has a real spawn
+PASS m04_villa_estrella 14,21 configuration has a real spawn
+PASS m04_villa_estrella 17,21 configuration has a real spawn
+PASS m04_villa_estrella 9,24 configuration has a real spawn
+PASS m04_villa_estrella 12,24 configuration has a real spawn
+PASS m04_villa_estrella 15,24 configuration has a real spawn
+ENCOUNTER LAYOUT REVIEW: 0 failures

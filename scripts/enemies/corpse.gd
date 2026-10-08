@@ -7,6 +7,7 @@ extends Node2D
 
 var _cast: CastSprite
 var _cast_time := 0.0
+var _death_clip := "death"
 var discovered := false
 var is_player := false
 var is_dog := false
@@ -18,34 +19,47 @@ var _pooled := false
 var _twitch := 0.0
 var _settle_t := 0.32
 var _settle_rot := 0.0
+var _bleed_left := 2.8
+var _bleed_wait := 0.18
+var _bleed_dir := Vector2.RIGHT
 
 func setup(palette: String, dir: Vector2, player := false, p_missing := "", facing := 0.0) -> void:
+	_bleed_dir = dir.normalized() if dir.length_squared() > 0.001 else Vector2.RIGHT
 	is_player = player
 	missing = p_missing
+	_slide = dir.normalized() * 70.0
+	_settle_rot = randf_range(-0.18, 0.18)
+	# Prefer the animated model before generating a painted fallback corpse.
+	var cast_id := SpriteForge.base_name(palette)
+	if player or cast_id != "cass":
+		var candidate := CastModel.create(cast_id)
+		if candidate and not missing.is_empty() and candidate.sever_part(missing) == 0:
+			candidate.free()
+			candidate = null
+		if candidate:
+			_cast = candidate
+			sprite = candidate
+			if candidate.is_oblique():
+				var pivot := Node2D.new()
+				pivot.rotation = facing if player else (-dir).angle()
+				add_child(pivot)
+				pivot.add_child(sprite)
+				if not player and candidate.clips.has("death_back"):
+					_death_clip = "death_back"
+			else:
+				add_child(sprite)
+				sprite.rotation = facing
+			_cast.play_sample(_death_clip, 0.0, 0.0)
+			return
 	sprite = Sprite2D.new()
-	# SpriteLib exposes final corpses as (palette, missing_part, pose). Its
-	# wrapper selects SpriteForge's authored final-death painting rather than
-	# the downed procedural pose.
 	sprite.texture = SpriteLib.corpse(palette, missing, randi() % 4)
 	sprite.scale = Vector2(0.5, 0.5)
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	sprite.rotation = dir.angle() + randf_range(-0.4, 0.4)
 	add_child(sprite)
-	_slide = dir.normalized() * 70.0
-	_settle_rot = randf_range(-0.18, 0.18)
-	if player and palette == "cass" and missing.is_empty():
-		var candidate := CastSprite.new()
-		if candidate.configure("cass"):
-			sprite.queue_free()
-			_cast = candidate
-			sprite = candidate
-			add_child(sprite)
-			sprite.rotation = facing
-			_cast.play_sample("death", 0.0, 0.0)
-		else:
-			candidate.free()
 
 func setup_dog(colors: Dictionary, dir: Vector2, p_missing := "") -> void:
+	_bleed_dir = dir.normalized() if dir.length_squared() > 0.001 else Vector2.RIGHT
 	is_dog = true
 	dog_colors = colors
 	missing = p_missing
@@ -58,9 +72,16 @@ func _ready() -> void:
 	z_index = -4
 
 func _process(delta: float) -> void:
+	if _bleed_left > 0.0:
+		_bleed_left = maxf(0.0, _bleed_left - delta)
+		_bleed_wait -= delta
+		if _bleed_wait <= 0.0 and Gore.level() > 0:
+			_bleed_wait = lerpf(0.65, 0.28, _bleed_left / 2.8)
+			var strength := lerpf(0.12, 0.38, _bleed_left / 2.8)
+			Gore.spray(global_position + _bleed_dir * 3.0, _bleed_dir.rotated(randf_range(-0.5, 0.5)), 0.18, strength)
 	if _cast:
 		_cast_time += delta
-		_cast.play_sample("death", delta, minf(_cast_time / 0.75, 1.0))
+		_cast.play_sample(_death_clip, delta, minf(_cast_time / 0.75, 1.0))
 	if _settle_t > 0.0 and sprite and not _cast:
 		_settle_t -= delta
 		var k := clampf(1.0 - _settle_t / 0.32, 0.0, 1.0)
@@ -77,7 +98,7 @@ func _process(delta: float) -> void:
 		_twitch -= delta
 		queue_redraw()
 		return
-	if not _cast or _cast_time >= 0.75:
+	if _bleed_left <= 0.0 and (not _cast or _cast_time >= 0.75):
 		set_process(false)
 
 func _draw() -> void:

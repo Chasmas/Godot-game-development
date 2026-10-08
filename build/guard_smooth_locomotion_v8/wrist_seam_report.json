@@ -1,0 +1,23 @@
+{
+  "approved": false,
+  "source": "build\\guard_smooth_locomotion_v8\\guard.glb",
+  "rows": [
+    {
+      "side": "Right",
+      "cut_ring_vertices": 88,
+      "cut_ring_boundary_edges_after_diagnostic_weld": 0,
+      "max_cut_ring_morph_displacement_native_units": 0.0,
+      "wrist_texture_samples": 790,
+      "dark_or_green_samples": 0
+    },
+    {
+      "side": "Left",
+      "cut_ring_vertices": 91,
+      "cut_ring_boundary_edges_after_diagnostic_weld": 0,
+      "max_cut_ring_morph_displacement_native_units": 0.0,
+      "wrist_texture_samples": 850,
+      "dark_or_green_samples": 0
+    }
+  ],
+  "scope": "Rest cut ring and nearest UV texels only; not a full topology or texture approval."
+}

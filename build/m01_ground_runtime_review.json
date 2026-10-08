@@ -1,0 +1,11 @@
+{
+	"candidate": "ground_layer_candidate_v3.png",
+	"frame_median_ms": 23.931,
+	"frame_p95_ms": 27.782,
+	"map_extent_px": [
+		1088,
+		976
+	],
+	"scope": "frozen actors, compatibility renderer, capped 60 fps; visual fixture, not gameplay benchmark",
+	"texture_bytes": 67960832
+}

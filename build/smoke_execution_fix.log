@@ -1,0 +1,106 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+-- compile
+-- title
+  ok   title screen loads
+-- cutscene
+  ok   dialogue starts in cutscene
+-- mission
+[level] prewarmed 23 looks in 2384 ms
+  ok   level scene built
+  ok   player spawned
+  ok   approved M01 ground plate integrated
+  ok   enemies spawned (27)
+  ok   nav grid built
+  ok   doors built
+  ok   weapon pickups placed
+  ok   animated ambient props built
+  ok   ambient prop bobs in runtime
+  ok   player moves right
+  ok   dash moves the player
+  ok   tutorial guard exists
+  ok   punch knocks guard down
+  ok   execution kills guard
+  ok   score awarded (1170)
+  ok   weapon given
+  ok   shooting uses ammo
+  ok   bullet kills guard
+  ok   throw spawns a flying pickup
+  ok   throw empties hands
+  ok   pick up weapon with interact
+    hunter state before swing: IDLE dist 14.0
+  ok   bat kills hunter
+  ok   kicked door swings (1.79)
+  ok   window breaks when shot
+  ok   tv breaks when shot
+  ok   arcade breaks when shot
+  ok   vending breaks when shot
+  ok   plant breaks when shot
+  ok   propane tank explodes
+  ok   enemy investigates gunshot (INVESTIGATE)
+  ok   god mode survives AI fire
+  ok   checkpoint saved on entering the motel
+  ok   player dies to one bullet
+  ok   restart rebuilds level (2351 ms)
+  ok   checkpoint keeps dead enemies dead
+  ok   all regular enemies can be killed
+  ok   boss exists
+  ok   lobby sealed until the breach
+  ok   picked up the pyro charges
+  ok   charge planted on the lobby doors
+  ok   the doors blow
+  ok   the lobby doors are destroyed
+  ok   the breach starts Harcourt's scene
+  ok   boss activated
+  ok   boss enters phase 2 at 60% of his bar (6.0)
+  ok   Harcourt takes a hit in the dark and keeps coming
+  ok   boss-down dialogue plays
+  ok   sparing Harcourt sets story flag
+  ok   phone phase
+  ok   phone rings when floor is clear
+  ok   escape phase after phone
+  ok   car exit enabled
+  ok   results screen after driving away
+  ok   rank computed: SSS
+  ok   save/load keeps mission result
+  ok   save/load keeps flags
+-- mission 2: dogs, stealth, power, upgrades, gore
+[level] prewarmed 21 looks in 481 ms
+  ok   mission 2 loads
+  ok   M01 ground plate stays out of mission 2
+  ok   m02 enemies spawned (19)
+  ok   dogs spawned (6)
+  ok   light switches built (3)
+  ok   upgrade briefcases rolled (3)
+  ok   picked up upgrade soft_soles
+  ok   kevlar vest survives a bullet
+  ok   vest is used up
+  ok   lock-on grabs a target
+  ok   tap switches lock target
+  ok   hold releases lock
+  ok   unaware guard can be taken down from behind
+  ok   takedown kills
+  ok   takedown counts as silent
+  ok   a dog is asleep
+  ok   sneaking up doesn't wake the dog
+  ok   sleeping dog put down
+  ok   dog notices a player next to it (COMBAT)
+  ok   dog dies to a bullet
+  ok   warehouse switch exists
+  ok   switch kills the warehouse lights
+  ok   warehouse is dark
+  ok   darkness overlay active
+  ok   a guard walks over and turns the lights back on
+  ok   fuse box kills kennel power for good
+  ok   dead zone can't be switched back on
+  ok   decapitation throws a head
+  ok   blood pools spread
+  ok   Buck is in the kennels
+  ok   Buck fights
+  ok   a hit opens a cage
+  ok   the dinner bell leaves him alone
+  ok   Buck's last scene plays
+  ok   clearing the yard opens the escape (5)
+  ok   m02 car exit enabled
+  ok   m02 results screen
+=== SMOKE TEST DONE: 0 failures ===

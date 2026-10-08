@@ -1,0 +1,51 @@
+{
+  "character": "tommy",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\tommy_turnaround.png",
+  "source_sha256": "5e3cea5c7de67e1a828be7960216375dce07d2767b098dca252965f15cbd698e",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        440,
+        0,
+        640,
+        1024
+      ],
+      "width": 200,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\tommy\\references\\side.png",
+      "sha256": "fe9e1c59dd5f70743a9800ab1af9e45cef9755e876b92874f06f3f9c9331ccbf"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        650,
+        0,
+        1067,
+        1024
+      ],
+      "width": 417,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\tommy\\references\\back.png",
+      "sha256": "a760a3710820014786f8fde2dd004fdd146628485f03fb75170a4c6df45b776d"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        430,
+        1024
+      ],
+      "width": 430,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\tommy\\references\\front.png",
+      "sha256": "55496459ab8ee022d05d8916999698c5389d7a8481ee3581e57c6d7ec60703d8"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops directly inspected: complete bodies, hands, feet and no neighboring detail fragments. Modeling input approval only; no runtime, geometry or rig approval."
+}

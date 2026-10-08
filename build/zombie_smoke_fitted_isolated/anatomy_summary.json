@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/zombie_smoke_fitted_isolated/zombie.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.0002736096786322477,
+    "Hips": 0.0,
+    "LeftArm": 0.00015398606552249533,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.0001614163224105101,
+    "LeftHand": 1.790582744863096e-05,
+    "Neck": 0.00020342963101339288,
+    "RightArm": 0.0002347772105026041,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.01952980667819194,
+    "RightHand": 0.016682028729333467
+  },
+  "loop_gap_m": {
+    "Head": 0.0003485873928384498,
+    "Hips": 0.0,
+    "LeftArm": 0.00019621094538392766,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00011569984538794562,
+    "LeftHand": 1.4915913491998121e-05,
+    "Neck": 0.000259157825649151,
+    "RightArm": 0.0002989925773676827,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.000301101983878369,
+    "RightHand": 1.250033358118011e-06
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.21389555931091997,
+  "contact_hand_minus_head_m": [
+    -0.035001635551459964,
+    -0.035000205039980026
+  ]
+}

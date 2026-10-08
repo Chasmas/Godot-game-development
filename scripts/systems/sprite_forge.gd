@@ -70,6 +70,12 @@ static func baked_path(key: String) -> String:
 	return BAKE_DIR + key.replace("|", "_").replace("#", "-v") + ".png"
 
 static var bake_disabled := false   ## the bake tool paints fresh, ignoring old PNGs
+## Draw humans as the plain top-down rig: head from above at the centre, shoulders
+## either side, arms forward. The rig rotates the torso with the aim, so the older
+## oblique paintings (face toward the camera, far arm drawn over the head) turned
+## upside down and read as a fist on the head. They and the v4 pose layers built
+## from them stay on disk but are skipped while this is on.
+static var plain_topdown := true
 
 static func _baked(key: String) -> Texture2D:
 	if bake_disabled:
@@ -90,6 +96,10 @@ static func _baked(key: String) -> Texture2D:
 ## recoiling and placing a weapon at its existing hand coordinates.
 static func has_pose_art(palette: String) -> bool:
 	var look := base_name(palette)
+	# A newly reviewed modular body supersedes the older pose sheet. This keeps
+	# one consistent torso while the rig supplies pose-specific arms and weapons.
+	if ResourceLoader.exists("res://assets/art/pixellab_cast_v3_approved/body_%s.png" % look):
+		return false
 	return look in ["cass", "guard", "civilian", "welder", "security", "bellhop", "biker", "gunner", "handler", "heavy", "hunter", "riot", "scout", "scrapper", "sniper", "stagehand"] and ResourceLoader.exists(PIXELLAB_POSE_DIR + "%s_unarmed.png" % look)
 
 static func _pose_art(palette: String, pose: String) -> Texture2D:
@@ -345,7 +355,8 @@ static func _cast(id: String) -> Texture2D:
 	var k := "cast|" + id
 	if _cache.has(k):
 		return _cache[k]
-	var pth := "res://assets/art/cast/%s.png" % id
+	var approved_path := "res://assets/art/pixellab_cast_v3_approved/%s.png" % id
+	var pth := approved_path if ResourceLoader.exists(approved_path) else "res://assets/art/cast/%s.png" % id
 	var t: Texture2D = null
 	if ResourceLoader.exists(pth):
 		var img: Image = (load(pth) as Texture2D).get_image()
@@ -434,15 +445,22 @@ static func torso(pose: String, palette: String) -> Texture2D:
 	var key := "t|%s|%s" % [palette, pose]
 	if _cache.has(key):
 		return _cache[key]
-	var pose_tex := _pose_art(palette, pose)
+	var pose_tex := null if plain_topdown else _pose_art(palette, pose)
 	if pose_tex:
 		_cache[key] = pose_tex
 		return pose_tex
-	# baked PNGs already hold the painted-body version (the bake paints fresh)
-	var bk := _baked(key)
-	if bk:
-		return bk
-	var hybrid := _body_image(base_name(palette))
+	# A reviewed PixelLab body must override an older baked torso. Historical
+	# unreviewed body paintings still stay behind the baked gameplay sprites.
+	var approved_hybrid: Image = null
+	var approved_path := "res://assets/art/pixellab_cast_v3_approved/body_%s.png" % base_name(palette)
+	if ResourceLoader.exists(approved_path) and not plain_topdown:
+		approved_hybrid = (load(approved_path) as Texture2D).get_image()
+	if approved_hybrid == null and not plain_topdown:
+		# baked PNGs already hold the painted-body version (the bake paints fresh)
+		var bk := _baked(key)
+		if bk:
+			return bk
+	var hybrid: Image = null if plain_topdown else (approved_hybrid if approved_hybrid != null else _body_image(base_name(palette)))
 	if hybrid == null and BOSS_ART.has(base_name(palette)):
 		var bt := _cast(BOSS_ART[base_name(palette)])
 		if bt:
@@ -766,7 +784,7 @@ static func corpse(palette: String, downed := false, missing := "", pose := 0) -
 	# finished body read like a toy skeleton at gameplay scale.  A severed part
 	# is still represented by blood and a single contextual gib; the body stays
 	# a readable clothed silhouette.
-	if not downed or missing == "":
+	if missing == "":
 		var pc := _cast("corpse_" + base_name(palette))
 		if pc:
 			_cache[key] = pc

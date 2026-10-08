@@ -1,0 +1,24 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "native_skin_authoring_revision_required",
+  "godot_capture_frames_per_angle": 30,
+  "inspected_full_size_frames": {
+    "positive_x_side": [
+      0,
+      8,
+      20
+    ],
+    "negative_x_side": [
+      8,
+      20
+    ]
+  },
+  "findings": [
+    "Imported one-second cycle and 26-bone endpoint check passed",
+    "Planted paw export difference is submicrometre in all31 source mesh samples",
+    "Four-weight linear skin differs from full-weight dual-quaternion by up to11.94mm on body",
+    "Residual chest and shoulder shape changes require authoring and validation with engine-compatible skinning"
+  ],
+  "next": "Create sibling authoring blend with normalized four-influence linear skin, retain original; refine body deformation and validate export against that actual native-skin source before further locomotion or runtime integration"
+}

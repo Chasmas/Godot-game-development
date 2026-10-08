@@ -1,0 +1,16 @@
+22:23:06 | INFO: Data are loaded, start creating Blender stuff
+22:23:06 | INFO: Blender create Mesh node Mesh_0
+22:23:06 | INFO: glTF import finished in 0.37s
+00:02.688  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\guard_hand_unwrap_v27\guard_hand_skin_review.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "guard_hand_skin_review.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+22:23:08 | INFO: Starting glTF 2.0 export
+22:23:08 | INFO: Extracting primitive: Mesh_0
+22:23:08 | INFO: Primitives created: 2
+22:23:12 | INFO: Finished glTF 2.0 export in 4.491312265396118 s
+
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

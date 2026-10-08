@@ -1,0 +1,9 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 19,
+  "clip": "stop_01",
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "C:\\Users\\gil_n\\Documents\\GitHub\\Godot-game-development-codex\\assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\native_clips_candidate_v7\\dog_doberman_native_clips.glb",
+  "source_sha256": "ecbdd2cbe5a86fde6e9f200d84b4fa290d76aded2737870b33bc7db1b3406eed"
+}

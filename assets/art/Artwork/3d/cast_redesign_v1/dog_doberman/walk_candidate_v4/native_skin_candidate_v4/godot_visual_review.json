@@ -1,0 +1,22 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "native_import_contacts_verified_anatomy_and_gameplay_pending",
+  "captured_frames_per_angle": 30,
+  "inspected_frames": {
+    "positive_x_side": [
+      8,
+      20
+    ],
+    "negative_x_side": [
+      8,
+      20
+    ]
+  },
+  "findings": [
+    "Godot imported skin arrays, bindings and animated skeleton retain contacts after targeted optimizer disable",
+    "Direct GLTF and corrected imported-resource contact metrics agree",
+    "Residual chest/shoulder shape and game-camera performance remain to refine"
+  ],
+  "next": "Refine native-source chest/shoulder shape and additional animations; preserve four-weight skin, rigid soles and validated per-asset import profile before any runtime promotion"
+}

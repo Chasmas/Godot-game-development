@@ -1,0 +1,15 @@
+22:25:57 | INFO: Data are loaded, start creating Blender stuff
+22:25:57 | INFO: Blender create Mesh node Mesh_0
+22:25:58 | INFO: glTF import finished in 0.37s
+Skin-only UV triangles 1232 of 1246
+Restored untouched custom-normal faces 21950
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+22:26:03 | INFO: Starting glTF 2.0 export
+22:26:03 | INFO: Extracting primitive: Mesh_0
+22:26:04 | INFO: Primitives created: 1
+22:26:04 | INFO: Finished glTF 2.0 export in 0.29225897789001465 s
+
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

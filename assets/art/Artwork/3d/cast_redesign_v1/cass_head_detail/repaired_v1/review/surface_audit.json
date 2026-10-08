@@ -1,0 +1,38 @@
+{
+  "scope": "Surface topology diagnostic on an analysis copy; no original GLB or character model modified.",
+  "interpretation": "Boundary loops may be intentional, including the base of an isolated bust. Topology counts do not approve anatomy, UV quality, animation or runtime integration.",
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\repaired_v1\\cass_head_detail_surface_candidate.glb",
+  "runtime_approved": false,
+  "meshes": [
+    {
+      "mesh": "cass_head_detail_BlendAuthored_LOD_Candidate",
+      "vertices_before": 524730,
+      "vertices_welded_for_analysis": 358953,
+      "boundary_components": [
+        {
+          "edges": 4,
+          "closed_loop": true,
+          "perimeter_source_units": 4.3306019961164566e-06,
+          "center_blender": [
+            -0.31999996304512024,
+            -0.32799994945526123,
+            -0.6160001754760742
+          ],
+          "bounds": {
+            "lower": [
+              -0.3200003206729889,
+              -0.32800033688545227,
+              -0.6160007119178772
+            ],
+            "upper": [
+              -0.3199996054172516,
+              -0.3279995918273926,
+              -0.6159995794296265
+            ]
+          }
+        }
+      ],
+      "nonmanifold_edges_after_weld": 4
+    }
+  ]
+}

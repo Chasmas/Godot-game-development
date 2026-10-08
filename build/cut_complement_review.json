@@ -1,0 +1,870 @@
+{
+  "cuts": [
+    {
+      "body_area": 2.18170965374946,
+      "detached_area": 0.164796237897555,
+      "look": "bellhop",
+      "original_area": 2.34650593736959,
+      "part": "head",
+      "relative_error": 0.0000000194853823130347,
+      "valid": true
+    },
+    {
+      "body_area": 2.09655157161524,
+      "detached_area": 0.249954298432584,
+      "look": "bellhop",
+      "original_area": 2.34650593736959,
+      "part": "arm",
+      "relative_error": 0.0000000286902168416501,
+      "valid": true
+    },
+    {
+      "body_area": 1.83527756861378,
+      "detached_area": 0.511228302947039,
+      "look": "bellhop",
+      "original_area": 2.34650593736959,
+      "part": "leg",
+      "relative_error": 0.0000000280454308429039,
+      "valid": true
+    },
+    {
+      "body_area": 1.32731126463059,
+      "detached_area": 1.01919455036242,
+      "look": "bellhop",
+      "original_area": 2.34650593736959,
+      "part": "legs",
+      "relative_error": 0.0000000521526783178533,
+      "valid": true
+    },
+    {
+      "body_area": 2.78715301701914,
+      "detached_area": 0.175268350830521,
+      "look": "biker",
+      "original_area": 2.96242142071446,
+      "part": "head",
+      "relative_error": 0.0000000178451311454587,
+      "valid": true
+    },
+    {
+      "body_area": 2.66353625211039,
+      "detached_area": 0.298884986952725,
+      "look": "biker",
+      "original_area": 2.96242142071446,
+      "part": "arm",
+      "relative_error": 0.0000000613185372328919,
+      "valid": true
+    },
+    {
+      "body_area": 2.35968506633627,
+      "detached_area": 0.602736203674368,
+      "look": "biker",
+      "original_area": 2.96242142071446,
+      "part": "leg",
+      "relative_error": 0.000000050871840449856,
+      "valid": true
+    },
+    {
+      "body_area": 1.78534909491846,
+      "detached_area": 1.1770720938632,
+      "look": "biker",
+      "original_area": 2.96242142071446,
+      "part": "legs",
+      "relative_error": 0.0000000782916336242153,
+      "valid": true
+    },
+    {
+      "body_area": 2.41117837523566,
+      "detached_area": 0.157043147671288,
+      "look": "boss",
+      "original_area": 2.56822159366484,
+      "part": "head",
+      "relative_error": 0.0000000275513188443753,
+      "valid": true
+    },
+    {
+      "body_area": 2.29940727336898,
+      "detached_area": 0.26881424714675,
+      "look": "boss",
+      "original_area": 2.56822159366484,
+      "part": "arm",
+      "relative_error": 0.0000000284823981158297,
+      "valid": true
+    },
+    {
+      "body_area": 2.09659658822502,
+      "detached_area": 0.471624852866299,
+      "look": "boss",
+      "original_area": 2.56822159366484,
+      "part": "leg",
+      "relative_error": 0.0000000594082409096106,
+      "valid": true
+    },
+    {
+      "body_area": 1.62830014491919,
+      "detached_area": 0.93992121241471,
+      "look": "boss",
+      "original_area": 2.56822159366484,
+      "part": "legs",
+      "relative_error": 0.000000092021244694558,
+      "valid": true
+    },
+    {
+      "body_area": 2.40731602855578,
+      "detached_area": 0.386920385080813,
+      "look": "buck",
+      "original_area": 2.79423643435666,
+      "part": "head",
+      "relative_error": 0.00000000741528719920125,
+      "valid": true
+    },
+    {
+      "body_area": 2.49218905999456,
+      "detached_area": 0.302047335145886,
+      "look": "buck",
+      "original_area": 2.79423643435666,
+      "part": "arm",
+      "relative_error": 0.0000000140346812984284,
+      "valid": true
+    },
+    {
+      "body_area": 2.18783120552547,
+      "detached_area": 0.606405047677022,
+      "look": "buck",
+      "original_area": 2.79423643435666,
+      "part": "leg",
+      "relative_error": 0.0000000648313680788979,
+      "valid": true
+    },
+    {
+      "body_area": 1.68978148730675,
+      "detached_area": 1.10445476614799,
+      "look": "buck",
+      "original_area": 2.79423643435666,
+      "part": "legs",
+      "relative_error": 0.000000064741095592256,
+      "valid": true
+    },
+    {
+      "body_area": 1.97465097016571,
+      "detached_area": 0.164692145147242,
+      "look": "burnt",
+      "original_area": 2.13934312871567,
+      "part": "head",
+      "relative_error": 0.0000000062648724505003,
+      "valid": true
+    },
+    {
+      "body_area": 1.90013051673031,
+      "detached_area": 0.239212552419183,
+      "look": "burnt",
+      "original_area": 2.13934312871567,
+      "part": "arm",
+      "relative_error": 0.0000000278432048074538,
+      "valid": true
+    },
+    {
+      "body_area": 1.71337767857072,
+      "detached_area": 0.425965284441531,
+      "look": "burnt",
+      "original_area": 2.13934312871567,
+      "part": "leg",
+      "relative_error": 0.0000000774552757136214,
+      "valid": true
+    },
+    {
+      "body_area": 1.29131872237098,
+      "detached_area": 0.848024189290811,
+      "look": "burnt",
+      "original_area": 2.13934312871567,
+      "part": "legs",
+      "relative_error": 0.000000101458186219816,
+      "valid": true
+    },
+    {
+      "body_area": 1.93193520946268,
+      "detached_area": 0.467022019512562,
+      "look": "cass",
+      "original_area": 2.39895729561562,
+      "part": "head",
+      "relative_error": 0.0000000277788917367701,
+      "valid": true
+    },
+    {
+      "body_area": 2.2031739238468,
+      "detached_area": 0.195783312508482,
+      "look": "cass",
+      "original_area": 2.39895729561562,
+      "part": "arm",
+      "relative_error": 0.0000000247025364248048,
+      "valid": true
+    },
+    {
+      "body_area": 2.02618609842182,
+      "detached_area": 0.372771041670809,
+      "look": "cass",
+      "original_area": 2.39895729561562,
+      "part": "leg",
+      "relative_error": 0.0000000648294116473362,
+      "valid": true
+    },
+    {
+      "body_area": 1.65195834558364,
+      "detached_area": 0.746998794639332,
+      "look": "cass",
+      "original_area": 2.39895729561562,
+      "part": "legs",
+      "relative_error": 0.0000000647750788921488,
+      "valid": true
+    },
+    {
+      "body_area": 1.85427160972529,
+      "detached_area": 0.173223370163583,
+      "look": "civilian",
+      "original_area": 2.02749497894365,
+      "part": "head",
+      "relative_error": 0.000000000466201297829806,
+      "valid": true
+    },
+    {
+      "body_area": 1.8343188423527,
+      "detached_area": 0.193175986599151,
+      "look": "civilian",
+      "original_area": 2.02749497894365,
+      "part": "arm",
+      "relative_error": 0.0000000739788754570321,
+      "valid": true
+    },
+    {
+      "body_area": 1.5818552460467,
+      "detached_area": 0.445639683955633,
+      "look": "civilian",
+      "original_area": 2.02749497894365,
+      "part": "leg",
+      "relative_error": 0.0000000241388103473958,
+      "valid": true
+    },
+    {
+      "body_area": 1.14595457193458,
+      "detached_area": 0.881540297433446,
+      "look": "civilian",
+      "original_area": 2.02749497894365,
+      "part": "legs",
+      "relative_error": 0.0000000540448291250664,
+      "valid": true
+    },
+    {
+      "body_area": 3.55617374749968,
+      "detached_area": 0.213004464413636,
+      "look": "cultist",
+      "original_area": 3.76917835154217,
+      "part": "head",
+      "relative_error": 0.0000000370449046071462,
+      "valid": true
+    },
+    {
+      "body_area": 3.49230067365939,
+      "detached_area": 0.276877585925842,
+      "look": "cultist",
+      "original_area": 3.76917835154217,
+      "part": "arm",
+      "relative_error": 0.0000000243970779537566,
+      "valid": true
+    },
+    {
+      "body_area": 2.56890492528326,
+      "detached_area": 1.20027318894181,
+      "look": "cultist",
+      "original_area": 3.76917835154217,
+      "part": "leg",
+      "relative_error": 0.0000000629625540684453,
+      "valid": true
+    },
+    {
+      "body_area": 1.48251200546117,
+      "detached_area": 2.28666605079547,
+      "look": "cultist",
+      "original_area": 3.76917835154217,
+      "part": "legs",
+      "relative_error": 0.0000000783421449945736,
+      "valid": true
+    },
+    {
+      "body_area": 5.57152269176841,
+      "detached_area": 0.408950517058656,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "head",
+      "relative_error": 0.00000000426775464888286,
+      "valid": true
+    },
+    {
+      "body_area": 4.87890831899331,
+      "detached_area": 1.10156482394351,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "arm",
+      "relative_error": 0.0000000152853194627724,
+      "valid": true
+    },
+    {
+      "body_area": 5.23210124819156,
+      "detached_area": 0.748371807456806,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "leg",
+      "relative_error": 0.0000000298808949379569,
+      "valid": true
+    },
+    {
+      "body_area": 4.21023739283905,
+      "detached_area": 1.77023559035881,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "legs",
+      "relative_error": 0.0000000419954051821458,
+      "valid": true
+    },
+    {
+      "body_area": 2.5324337340295,
+      "detached_area": 0.222421784883956,
+      "look": "fireman",
+      "original_area": 2.75485588829457,
+      "part": "head",
+      "relative_error": 0.000000134083645187716,
+      "valid": true
+    },
+    {
+      "body_area": 2.47495730480255,
+      "detached_area": 0.279898481023082,
+      "look": "fireman",
+      "original_area": 2.75485588829457,
+      "part": "arm",
+      "relative_error": 0.0000000371957526558113,
+      "valid": true
+    },
+    {
+      "body_area": 2.13739708531175,
+      "detached_area": 0.617458724042905,
+      "look": "fireman",
+      "original_area": 2.75485588829457,
+      "part": "leg",
+      "relative_error": 0.0000000286548272181702,
+      "valid": true
+    },
+    {
+      "body_area": 1.51393031644729,
+      "detached_area": 1.24092549168941,
+      "look": "fireman",
+      "original_area": 2.75485588829457,
+      "part": "legs",
+      "relative_error": 0.0000000290969394605551,
+      "valid": true
+    },
+    {
+      "body_area": 2.36205194638853,
+      "detached_area": 0.119422217408626,
+      "look": "ghoul",
+      "original_area": 2.48147423992879,
+      "part": "head",
+      "relative_error": 0.0000000306800018735043,
+      "valid": true
+    },
+    {
+      "body_area": 2.28487510030214,
+      "detached_area": 0.196599137069896,
+      "look": "ghoul",
+      "original_area": 2.48147423992879,
+      "part": "arm",
+      "relative_error": 0.00000000103033345458341,
+      "valid": true
+    },
+    {
+      "body_area": 1.95212305548916,
+      "detached_area": 0.529350885677893,
+      "look": "ghoul",
+      "original_area": 2.48147423992879,
+      "part": "leg",
+      "relative_error": 0.000000120396869415277,
+      "valid": true
+    },
+    {
+      "body_area": 1.40920614702148,
+      "detached_area": 1.07226770357533,
+      "look": "ghoul",
+      "original_area": 2.48147423992879,
+      "part": "legs",
+      "relative_error": 0.000000156895433436795,
+      "valid": true
+    },
+    {
+      "body_area": 2.58495721127028,
+      "detached_area": 0.234955420788673,
+      "look": "guard",
+      "original_area": 2.81991276250369,
+      "part": "head",
+      "relative_error": 0.0000000462584308242017,
+      "valid": true
+    },
+    {
+      "body_area": 2.59870318037685,
+      "detached_area": 0.221209508740685,
+      "look": "guard",
+      "original_area": 2.81991276250369,
+      "part": "arm",
+      "relative_error": 0.0000000260242639482765,
+      "valid": true
+    },
+    {
+      "body_area": 2.23362380072066,
+      "detached_area": 0.586288901559278,
+      "look": "guard",
+      "original_area": 2.81991276250369,
+      "part": "leg",
+      "relative_error": 0.000000021356602116458,
+      "valid": true
+    },
+    {
+      "body_area": 1.65503500414882,
+      "detached_area": 1.16487765149059,
+      "look": "guard",
+      "original_area": 2.81991276250369,
+      "part": "legs",
+      "relative_error": 0.0000000378963061723372,
+      "valid": true
+    },
+    {
+      "body_area": 2.46338390894886,
+      "detached_area": 0.176445178507755,
+      "look": "gunner",
+      "original_area": 2.6398293035919,
+      "part": "head",
+      "relative_error": 0.0000000818747195504048,
+      "valid": true
+    },
+    {
+      "body_area": 2.38957493364095,
+      "detached_area": 0.250254152985697,
+      "look": "gunner",
+      "original_area": 2.6398293035919,
+      "part": "arm",
+      "relative_error": 0.0000000821891200505545,
+      "valid": true
+    },
+    {
+      "body_area": 2.05972074730362,
+      "detached_area": 0.580108448607291,
+      "look": "gunner",
+      "original_area": 2.6398293035919,
+      "part": "leg",
+      "relative_error": 0.0000000407908896833701,
+      "valid": true
+    },
+    {
+      "body_area": 1.52450024350132,
+      "detached_area": 1.11532895221994,
+      "look": "gunner",
+      "original_area": 2.6398293035919,
+      "part": "legs",
+      "relative_error": 0.0000000408627318139744,
+      "valid": true
+    },
+    {
+      "body_area": 2.78790151468777,
+      "detached_area": 0.133134607708897,
+      "look": "handler",
+      "original_area": 2.92103612405006,
+      "part": "head",
+      "relative_error": 0.000000000566028711502943,
+      "valid": true
+    },
+    {
+      "body_area": 2.66276584342987,
+      "detached_area": 0.258270280886165,
+      "look": "handler",
+      "original_area": 2.92103612405006,
+      "part": "arm",
+      "relative_error": 0.0000000000910558620234715,
+      "valid": true
+    },
+    {
+      "body_area": 2.2134926473331,
+      "detached_area": 0.707543112756227,
+      "look": "handler",
+      "original_area": 2.92103612405006,
+      "part": "leg",
+      "relative_error": 0.000000124599875402968,
+      "valid": true
+    },
+    {
+      "body_area": 1.58027967789124,
+      "detached_area": 1.34075596798485,
+      "look": "handler",
+      "original_area": 2.92103612405006,
+      "part": "legs",
+      "relative_error": 0.000000163700123175193,
+      "valid": true
+    },
+    {
+      "body_area": 3.16316501207638,
+      "detached_area": 0.179521774341389,
+      "look": "heavy",
+      "original_area": 3.34268681035354,
+      "part": "head",
+      "relative_error": 0.0000000071606397445748,
+      "valid": true
+    },
+    {
+      "body_area": 3.03054134762971,
+      "detached_area": 0.312145418237304,
+      "look": "heavy",
+      "original_area": 3.34268681035354,
+      "part": "arm",
+      "relative_error": 0.0000000133086144587427,
+      "valid": true
+    },
+    {
+      "body_area": 2.57072038250096,
+      "detached_area": 0.771966264831789,
+      "look": "heavy",
+      "original_area": 3.34268681035354,
+      "part": "leg",
+      "relative_error": 0.0000000487693889849482,
+      "valid": true
+    },
+    {
+      "body_area": 1.79871117716436,
+      "detached_area": 1.54397545905426,
+      "look": "heavy",
+      "original_area": 3.34268681035354,
+      "part": "legs",
+      "relative_error": 0.0000000520942986960977,
+      "valid": true
+    },
+    {
+      "body_area": 2.17578852505506,
+      "detached_area": 0.168574961978308,
+      "look": "hunter",
+      "original_area": 2.34436348834737,
+      "part": "head",
+      "relative_error": 0.000000000560493107124819,
+      "valid": true
+    },
+    {
+      "body_area": 2.16441973577271,
+      "detached_area": 0.179943749457635,
+      "look": "hunter",
+      "original_area": 2.34436348834737,
+      "part": "arm",
+      "relative_error": 0.00000000132958182448253,
+      "valid": true
+    },
+    {
+      "body_area": 1.69979425274215,
+      "detached_area": 0.644569057826857,
+      "look": "hunter",
+      "original_area": 2.34436348834737,
+      "part": "leg",
+      "relative_error": 0.0000000758322527021618,
+      "valid": true
+    },
+    {
+      "body_area": 1.20793093493515,
+      "detached_area": 1.1364323545706,
+      "look": "hunter",
+      "original_area": 2.34436348834737,
+      "part": "legs",
+      "relative_error": 0.0000000848168909245593,
+      "valid": true
+    },
+    {
+      "body_area": 2.93064869000227,
+      "detached_area": 0.309694564933352,
+      "look": "riot",
+      "original_area": 3.24034329658059,
+      "part": "head",
+      "relative_error": 0.0000000128520230033233,
+      "valid": true
+    },
+    {
+      "body_area": 2.92544593517977,
+      "detached_area": 0.314897318786787,
+      "look": "riot",
+      "original_area": 3.24034329658059,
+      "part": "arm",
+      "relative_error": 0.0000000131510848505813,
+      "valid": true
+    },
+    {
+      "body_area": 2.61224273588752,
+      "detached_area": 0.628100453239995,
+      "look": "riot",
+      "original_area": 3.24034329658059,
+      "part": "leg",
+      "relative_error": 0.0000000331610159589964,
+      "valid": true
+    },
+    {
+      "body_area": 1.93595172978297,
+      "detached_area": 1.30439142370903,
+      "look": "riot",
+      "original_area": 3.24034329658059,
+      "part": "legs",
+      "relative_error": 0.0000000441584645329386,
+      "valid": true
+    },
+    {
+      "body_area": 1.9556833392361,
+      "detached_area": 0.235764274672448,
+      "look": "scout",
+      "original_area": 2.19144761506098,
+      "part": "head",
+      "relative_error": 0.000000000525879040245548,
+      "valid": true
+    },
+    {
+      "body_area": 1.97292474467154,
+      "detached_area": 0.218522870609249,
+      "look": "scout",
+      "original_area": 2.19144761506098,
+      "part": "arm",
+      "relative_error": 0.000000000100305158665008,
+      "valid": true
+    },
+    {
+      "body_area": 1.72570902034631,
+      "detached_area": 0.465738527706705,
+      "look": "scout",
+      "original_area": 2.19144761506098,
+      "part": "leg",
+      "relative_error": 0.0000000305770335163108,
+      "valid": true
+    },
+    {
+      "body_area": 1.28050471994704,
+      "detached_area": 0.910942828010022,
+      "look": "scout",
+      "original_area": 2.19144761506098,
+      "part": "legs",
+      "relative_error": 0.0000000306208181317302,
+      "valid": true
+    },
+    {
+      "body_area": 2.82047521855043,
+      "detached_area": 0.20690969209069,
+      "look": "scrapper",
+      "original_area": 3.0273849270211,
+      "part": "head",
+      "relative_error": 0.00000000541060544428137,
+      "valid": true
+    },
+    {
+      "body_area": 2.74723924304396,
+      "detached_area": 0.280145658707127,
+      "look": "scrapper",
+      "original_area": 3.0273849270211,
+      "part": "arm",
+      "relative_error": 0.00000000834714434252813,
+      "valid": true
+    },
+    {
+      "body_area": 2.36800853964481,
+      "detached_area": 0.659376272062502,
+      "look": "scrapper",
+      "original_area": 3.0273849270211,
+      "part": "leg",
+      "relative_error": 0.0000000380902325357292,
+      "valid": true
+    },
+    {
+      "body_area": 1.75076022300425,
+      "detached_area": 1.27662449917449,
+      "look": "scrapper",
+      "original_area": 3.0273849270211,
+      "part": "legs",
+      "relative_error": 0.0000000676631383951035,
+      "valid": true
+    },
+    {
+      "body_area": 3.26990309532941,
+      "detached_area": 0.209308595934907,
+      "look": "security",
+      "original_area": 3.47921182198951,
+      "part": "head",
+      "relative_error": 0.0000000375732198442614,
+      "valid": true
+    },
+    {
+      "body_area": 3.16856464708579,
+      "detached_area": 0.310647018378745,
+      "look": "security",
+      "original_area": 3.47921182198951,
+      "part": "arm",
+      "relative_error": 0.0000000449886297665295,
+      "valid": true
+    },
+    {
+      "body_area": 2.819005072327,
+      "detached_area": 0.660206416410475,
+      "look": "security",
+      "original_area": 3.47921182198951,
+      "part": "leg",
+      "relative_error": 0.0000000957837731058504,
+      "valid": true
+    },
+    {
+      "body_area": 2.10602581993994,
+      "detached_area": 1.37318558232532,
+      "look": "security",
+      "original_area": 3.47921182198951,
+      "part": "legs",
+      "relative_error": 0.000000120637737112762,
+      "valid": true
+    },
+    {
+      "body_area": 2.59595938082109,
+      "detached_area": 0.157298372074621,
+      "look": "sniper",
+      "original_area": 2.75325777541491,
+      "part": "head",
+      "relative_error": 0.00000000817911156151801,
+      "valid": true
+    },
+    {
+      "body_area": 2.49712314292265,
+      "detached_area": 0.256134585989344,
+      "look": "sniper",
+      "original_area": 2.75325777541491,
+      "part": "arm",
+      "relative_error": 0.0000000168901434744855,
+      "valid": true
+    },
+    {
+      "body_area": 2.13474866813276,
+      "detached_area": 0.618509058043834,
+      "look": "sniper",
+      "original_area": 2.75325777541491,
+      "part": "leg",
+      "relative_error": 0.0000000178836565812362,
+      "valid": true
+    },
+    {
+      "body_area": 1.59837696908663,
+      "detached_area": 1.15488075728977,
+      "look": "sniper",
+      "original_area": 2.75325777541491,
+      "part": "legs",
+      "relative_error": 0.000000017811086326798,
+      "valid": true
+    },
+    {
+      "body_area": 2.12600560245318,
+      "detached_area": 0.267397000118194,
+      "look": "stagehand",
+      "original_area": 2.39340263195948,
+      "part": "head",
+      "relative_error": 0.0000000122787967231391,
+      "valid": true
+    },
+    {
+      "body_area": 2.06260122182842,
+      "detached_area": 0.330801182873365,
+      "look": "stagehand",
+      "original_area": 2.39340263195948,
+      "part": "arm",
+      "relative_error": 0.0000000949517157758747,
+      "valid": true
+    },
+    {
+      "body_area": 1.91278655602285,
+      "detached_area": 0.480616075298514,
+      "look": "stagehand",
+      "original_area": 2.39340263195948,
+      "part": "leg",
+      "relative_error": 0.000000000266612061320538,
+      "valid": true
+    },
+    {
+      "body_area": 1.3839075682877,
+      "detached_area": 1.0094950551424,
+      "look": "stagehand",
+      "original_area": 2.39340263195948,
+      "part": "legs",
+      "relative_error": 0.00000000356370307379638,
+      "valid": true
+    },
+    {
+      "body_area": 2.59963888899542,
+      "detached_area": 0.294174816877756,
+      "look": "welder",
+      "original_area": 2.89381379035495,
+      "part": "head",
+      "relative_error": 0.0000000291939227475159,
+      "valid": true
+    },
+    {
+      "body_area": 2.63918871148122,
+      "detached_area": 0.254625078498918,
+      "look": "welder",
+      "original_area": 2.89381379035495,
+      "part": "arm",
+      "relative_error": 0.000000000129524021134351,
+      "valid": true
+    },
+    {
+      "body_area": 2.21793460601138,
+      "detached_area": 0.675879062828372,
+      "look": "welder",
+      "original_area": 2.89381379035495,
+      "part": "leg",
+      "relative_error": 0.0000000419913679606122,
+      "valid": true
+    },
+    {
+      "body_area": 1.60707643371421,
+      "detached_area": 1.28673712870591,
+      "look": "welder",
+      "original_area": 2.89381379035495,
+      "part": "legs",
+      "relative_error": 0.0000000787662407422101,
+      "valid": true
+    },
+    {
+      "body_area": 2.27619373259607,
+      "detached_area": 0.181713698826201,
+      "look": "zombie",
+      "original_area": 2.45790747088051,
+      "part": "head",
+      "relative_error": 0.0000000160535916680264,
+      "valid": true
+    },
+    {
+      "body_area": 2.18290356371315,
+      "detached_area": 0.27500390735554,
+      "look": "zombie",
+      "original_area": 2.45790747088051,
+      "part": "arm",
+      "relative_error": 0.000000000076561115651474,
+      "valid": true
+    },
+    {
+      "body_area": 1.91172398912263,
+      "detached_area": 0.54618320183603,
+      "look": "zombie",
+      "original_area": 2.45790747088051,
+      "part": "leg",
+      "relative_error": 0.000000113886243714145,
+      "valid": true
+    },
+    {
+      "body_area": 1.41443590948792,
+      "detached_area": 1.04347125308841,
+      "look": "zombie",
+      "original_area": 2.45790747088051,
+      "part": "legs",
+      "relative_error": 0.000000125433599132622,
+      "valid": true
+    }
+  ],
+  "failures": 0,
+  "scope": "Uncapped source surface area equals body plus complementary detached part across 24 looks and four cuts. Does not prove cap appearance, all animated seams, disconnected fragments or runtime performance."
+}

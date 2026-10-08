@@ -1,0 +1,50 @@
+03:44:04 | INFO: Data are loaded, start creating Blender stuff
+03:44:04 | INFO: Blender create Mesh node char1
+03:44:04 | INFO: glTF import finished in 0.19s
+ELBOW aim Right 0.785 (-0.05021461099386215, -0.244440957903862, 1.1702215671539307)
+ELBOW aim Left 2.356 (0.15095485746860504, 0.003318068338558078, 1.2747788429260254)
+anim aim 10 frames (baked)
+03:44:04 | INFO: Data are loaded, start creating Blender stuff
+03:44:04 | INFO: Blender create Mesh node char1
+03:44:04 | INFO: glTF import finished in 0.18s
+ELBOW idle Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW idle Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim idle 77 frames (baked)
+03:44:04 | INFO: Data are loaded, start creating Blender stuff
+03:44:04 | INFO: Blender create Mesh node char1
+03:44:05 | INFO: glTF import finished in 0.19s
+ELBOW armed_walk Right 0.524 (0.0014584703603759408, -0.26320526003837585, 1.2459667921066284)
+ELBOW armed_walk Left 2.094 (0.16222602128982544, 0.029217764735221863, 1.267510175704956)
+anim armed_walk 101 frames (baked)
+03:44:05 | INFO: Data are loaded, start creating Blender stuff
+03:44:05 | INFO: Blender create Mesh node char1
+03:44:05 | INFO: glTF import finished in 0.17s
+ELBOW armed_run Right 0.0 (-0.025056391954421997, -0.18949203193187714, 1.220296025276184)
+ELBOW armed_run Left 2.88 (0.17305636405944824, 0.02801148220896721, 1.1381129026412964)
+anim armed_run 18 frames (baked)
+03:44:05 | INFO: Data are loaded, start creating Blender stuff
+03:44:05 | INFO: Blender create Mesh node char1
+03:44:05 | INFO: glTF import finished in 0.18s
+ELBOW armed_sneak Right 0.0 (-0.00954767968505621, -0.24745729565620422, 0.9633038640022278)
+ELBOW armed_sneak Left 3.142 (0.16833926737308502, 0.01929199881851673, 0.9642409086227417)
+anim armed_sneak 69 frames (baked)
+03:44:05 | INFO: Data are loaded, start creating Blender stuff
+03:44:05 | INFO: Blender create Mesh node char1
+03:44:06 | INFO: glTF import finished in 0.18s
+ELBOW chainsaw_raise Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW chainsaw_raise Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim chainsaw_raise 11 frames (baked)
+03:44:06 | INFO: Data are loaded, start creating Blender stuff
+03:44:06 | INFO: Blender create Mesh node char1
+03:44:06 | INFO: glTF import finished in 0.12s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+03:44:06 | INFO: Starting glTF 2.0 export
+03:44:06 | INFO: Extracting primitive: char1
+03:44:07 | INFO: Primitives created: 2
+03:44:07 | INFO: Finished glTF 2.0 export in 0.924492597579956 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\chainsaw_pose_candidate\cass.glb clips: ['aim', 'idle', 'armed_walk', 'armed_run', 'armed_sneak', 'chainsaw_raise']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -15,13 +15,17 @@ var _hit_this_throw: Array = []
 var sprite: Sprite2D
 var _t := 0.0
 var _exclude: Array[RID] = []
+var _flight_lift := Vector2.ZERO
+var _lift_elapsed := 0.0
+const LIFT_SETTLE_TIME := 0.22
 
-static func spawn(parent: Node, w: WeaponInstance, pos: Vector2, vel := Vector2.ZERO, by: Node = null) -> WeaponPickup:
+static func spawn(parent: Node, w: WeaponInstance, pos: Vector2, vel := Vector2.ZERO, by: Node = null, draw_lift := Vector2.ZERO) -> WeaponPickup:
 	var p := WeaponPickup.new()
 	p.weapon = w
 	p.position = pos
 	p.velocity = vel
 	p.thrower = by
+	p._flight_lift = draw_lift
 	p.thrown = vel.length() > 80.0
 	p.rotation = randf() * TAU
 	if p.thrown:
@@ -38,22 +42,32 @@ func _ready() -> void:
 	# just as they do in her hand
 	sprite.texture = SpriteLib.weapon(sk) if sk in ["bottle", "broken_bottle"] else SpriteLib.weapon_side(sk)
 	sprite.scale = Vector2.ONE / SpriteLib.weapon_density(sk)
+	if weapon and weapon.data.id == &"chainsaw":
+		sprite.scale *= 0.9 * weapon.data.held_scale
 	sprite.light_mask = 2
 	add_child(sprite)
+	_update_draw_lift()
 	if thrower is CollisionObject2D:
 		_exclude.append((thrower as CollisionObject2D).get_rid())
+
+func _update_draw_lift() -> void:
+	var t := clampf(_lift_elapsed / LIFT_SETTLE_TIME, 0.0, 1.0)
+	var lift := _flight_lift * (1.0 - t * t * (3.0 - 2.0 * t))
+	sprite.position = to_local(global_position + lift)
 
 func can_pick_up() -> bool:
 	return not thrown and velocity.length() < 60.0
 
 func _physics_process(delta: float) -> void:
 	_t += delta
+	_lift_elapsed += delta
 	if velocity.length() < 1.0:
 		velocity = Vector2.ZERO
 		if thrown:
 			thrown = false
 			z_index = -2
 		# gentle pulse so weapons read on busy floors
+		_update_draw_lift()
 		sprite.modulate = Color(1, 1, 1).lerp(Color(1.6, 1.5, 1.2), 0.5 + 0.5 * sin(_t * 5.0))
 		return
 	var step := velocity * delta
@@ -71,6 +85,7 @@ func _physics_process(delta: float) -> void:
 			if r == "pass":
 				_exclude.append(hit.rid)
 				position += step
+				_update_draw_lift()
 				return
 			Audio.play_at(weapon.data.sfx_hit if weapon.data.throw_lethal else "hit_blunt", hit.position)
 			if weapon.data.id == &"bottle":
@@ -91,6 +106,7 @@ func _physics_process(delta: float) -> void:
 	rotation += spin * delta
 	spin = move_toward(spin, 0.0, delta * 30.0)
 	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta * (0.5 if thrown else 1.4))
+	_update_draw_lift()
 	if thrown and velocity.length() < 160.0:
 		thrown = false
 
@@ -105,10 +121,13 @@ static func nearest(from: Vector2, tree: SceneTree, radius := PICKUP_RADIUS) -> 
 	var bd := radius
 	for n in tree.get_nodes_in_group("pickups"):
 		var p := n as WeaponPickup
-		if p == null or not p.can_pick_up():
+		if p == null or p.is_queued_for_deletion() or not p.can_pick_up():
 			continue
 		var d := p.global_position.distance_to(from)
 		if d < bd:
+			var ray := PhysicsRayQueryParameters2D.create(from, p.global_position, Layers.WORLD | Layers.DOOR)
+			if not p.get_world_2d().direct_space_state.intersect_ray(ray).is_empty():
+				continue
 			bd = d
 			best = p
 	return best

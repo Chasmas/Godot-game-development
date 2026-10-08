@@ -1,0 +1,123 @@
+{
+  "source": "C:\\Users\\gil_n\\Documents\\GitHub\\Godot-game-development-codex\\assets\\art\\cast3d_rt\\cass\\cass.glb",
+  "sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba",
+  "hand_and_finger_bones": [
+    "LeftHand",
+    "RightHand"
+  ],
+  "meshes": [
+    {
+      "mesh": "char1",
+      "weighted_vertices_per_hand_bone": {
+        "LeftHand": 983,
+        "RightHand": 1001
+      }
+    },
+    {
+      "mesh": "Icosphere",
+      "weighted_vertices_per_hand_bone": {}
+    }
+  ],
+  "hand_bounds": [
+    {
+      "mesh": "char1",
+      "hand": "LeftHand",
+      "bone_length_native": 2039.025634765625,
+      "weighted_region_min_native": [
+        -3.9758129119873047,
+        -0.020084023475646973,
+        -7.16033411026001
+      ],
+      "weighted_region_max_native": [
+        3.222212314605713,
+        17.71383285522461,
+        6.0116376876831055
+      ],
+      "wrist_band_bounds_native": {
+        "min": [
+          -3.9758129119873047,
+          -0.020084023475646973,
+          -4.402498245239258
+        ],
+        "max": [
+          0.8592782020568848,
+          1.9038264751434326,
+          2.8941965103149414
+        ]
+      },
+      "bone_tail_length_is_fit_reference": false,
+      "fit_reference": "Use mesh wrist cross-section and hand width; imported bone tails are much longer than the actual hand",
+      "scope": "Weighted region includes blended wrist; not an anatomical finger segmentation"
+    },
+    {
+      "mesh": "char1",
+      "hand": "RightHand",
+      "bone_length_native": 1962.7325439453125,
+      "weighted_region_min_native": [
+        -3.2066268920898438,
+        -0.21220946311950684,
+        -7.376429557800293
+      ],
+      "weighted_region_max_native": [
+        4.169063568115234,
+        17.529144287109375,
+        5.850098609924316
+      ],
+      "wrist_band_bounds_native": {
+        "min": [
+          -0.5147972106933594,
+          -0.21220946311950684,
+          -4.708789825439453
+        ],
+        "max": [
+          4.169063568115234,
+          1.9092936515808105,
+          2.660397529602051
+        ]
+      },
+      "bone_tail_length_is_fit_reference": false,
+      "fit_reference": "Use mesh wrist cross-section and hand width; imported bone tails are much longer than the actual hand",
+      "scope": "Weighted region includes blended wrist; not an anatomical finger segmentation"
+    }
+  ],
+  "actions": [
+    "aim",
+    "aim_dual",
+    "aim_melee",
+    "armed_dual_run",
+    "armed_dual_sneak",
+    "armed_dual_walk",
+    "armed_melee_run",
+    "armed_melee_sneak",
+    "armed_melee_walk",
+    "armed_run",
+    "armed_sneak",
+    "armed_walk",
+    "car_close",
+    "car_exit",
+    "death",
+    "death_back",
+    "doze",
+    "drive",
+    "grab",
+    "held",
+    "idle",
+    "kick",
+    "knocked",
+    "melee",
+    "punch",
+    "punch_left",
+    "reload_dual",
+    "reload_mag",
+    "reload_shell",
+    "roll",
+    "run",
+    "smoke",
+    "sneak",
+    "stab",
+    "walk"
+  ],
+  "source_unchanged": true,
+  "runtime_promoted": false,
+  "scope": "Rig and skin-weight inventory; does not approve fist shape or animation."
+}

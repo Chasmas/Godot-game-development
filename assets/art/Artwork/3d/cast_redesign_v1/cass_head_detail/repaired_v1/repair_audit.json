@@ -1,0 +1,10 @@
+{
+  "operation": "Blender voxel surface reconstruction",
+  "high_source_polygons": 7747940,
+  "candidate_polygons": 350602,
+  "candidate_vertices": 358996,
+  "uv_layers": 1,
+  "runtime_approved": false,
+  "visual_validation": "pending rendered comparison",
+  "source_models_unchanged": true
+}

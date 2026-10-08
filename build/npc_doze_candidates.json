@@ -1,0 +1,169 @@
+{
+  "scope": "Staged supported poses; approval and runtime integration outstanding except explicitly integrated rows",
+  "looks": [
+    {
+      "look": "boss",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/boss_doze_runtime_verified/boss.glb",
+      "visual_review": "build/boss_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/boss_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "buck",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/buck_doze_runtime_verified/buck.glb",
+      "visual_review": "build/buck_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/buck_doze_runtime_verified/runtime.log"
+    },
+    {
+      "look": "burnt",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/burnt_doze_runtime_verified/burnt.glb",
+      "visual_review": "build/burnt_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/burnt_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "civilian",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/civilian_doze_runtime_verified/civilian.glb",
+      "visual_review": "build/civilian_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/civilian_doze_runtime_verified/runtime.log"
+    },
+    {
+      "look": "cultist",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/cultist_doze_runtime_verified/cultist.glb",
+      "visual_review": "build/cultist_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/cultist_doze_runtime_verified/runtime.log"
+    },
+    {
+      "look": "demon",
+      "mechanics_pass": true,
+      "approved": false,
+      "source": "build/demon_doze_isolated/demon.glb",
+      "visual_review": "build/demon_idle_review_directions.png",
+      "visual_review_completed": true,
+      "approval_pending": "Leg posture needs anatomical review despite mechanics pass",
+      "activity_enabled": false,
+      "reason": "Creature ambient activities disabled by user rule; existing unused clip does not enable sleeping"
+    },
+    {
+      "look": "fireman",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/fireman_doze_runtime_verified/fireman.glb",
+      "visual_review": "build/fireman_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/fireman_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "ghoul",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/ghoul_doze_runtime_verified/ghoul.glb",
+      "visual_review": "build/ghoul_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/ghoul_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding",
+      "activity_enabled": false,
+      "reason": "Undead creature; human ambient activities disabled"
+    },
+    {
+      "look": "riot",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/riot_doze_runtime_verified/riot.glb",
+      "visual_review": "build/riot_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/riot_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "scout",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/scout_doze_runtime_verified/scout.glb",
+      "visual_review": "build/scout_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/scout_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "scrapper",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/scrapper_doze_runtime_verified/scrapper.glb",
+      "visual_review": "build/scrapper_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/scrapper_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "stagehand",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/stagehand_doze_supported_isolated/stagehand.glb",
+      "visual_review": "build/stagehand_idle_review_directions.png",
+      "runtime_integrated": true,
+      "approval_scope": "Seated pose only, eight-heading visual and ankle-height support review; smoking remains outstanding"
+    },
+    {
+      "look": "welder",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/welder_doze_runtime_verified/welder.glb",
+      "visual_review": "build/welder_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/welder_doze_runtime_verified/runtime.log",
+      "approval_scope": "Seated pose only; smoking remains outstanding"
+    },
+    {
+      "look": "zombie",
+      "mechanics_pass": true,
+      "approved": true,
+      "source": "build/zombie_doze_runtime_verified/zombie.glb",
+      "visual_review": "build/zombie_idle_review_directions.png",
+      "grounding_audit": "build/npc_doze_support_audit.json",
+      "visual_review_completed": true,
+      "runtime_integrated": true,
+      "runtime_review": "build/zombie_doze_runtime_verified/runtime.log",
+      "activity_enabled": false,
+      "reason": "Creature ambient activities disabled by user rule; existing unused clip does not enable sleeping"
+    }
+  ]
+}

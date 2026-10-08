@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+CHAIR_FACING aim=0.0 chair_yaw=-1.5707963267949 cast_yaw=1.57079637050629
+CHAIR_CONTACT look=guard pelvis_height_m=0.5594927072525 floor_pixel=(0.0, 0.0) chair_offset_px=(0.000002, 0.759872)
+CHAIR_FACING aim=1.57079637050629 chair_yaw=-3.14159269730118 cast_yaw=0.12296827882528
+CHAIR_CONTACT look=guard pelvis_height_m=0.5594927072525 floor_pixel=(0.0, 0.0) chair_offset_px=(-0.019703, 0.746521)
+CHAIR_FACING aim=-3.14159250259399 chair_yaw=1.5707961757991 cast_yaw=4.46645212173462
+CHAIR_CONTACT look=guard pelvis_height_m=0.5594927072525 floor_pixel=(0.0, 0.0) chair_offset_px=(0.004829, 0.729904)
+CHAIR_FACING aim=-1.57079637050629 chair_yaw=0.00000004371139 cast_yaw=3.0186243057251
+CHAIR_CONTACT look=guard pelvis_height_m=0.5594927072525 floor_pixel=(0.0, 0.0) chair_offset_px=(0.019699, 0.746521)
+CHAIR FACING REVIEW: four occupied chairs rendered

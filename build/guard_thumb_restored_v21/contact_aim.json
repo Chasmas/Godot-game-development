@@ -1,0 +1,57 @@
+{
+  "approved": false,
+  "source": "build/guard_thumb_restored_v21/guard.glb",
+  "clip": "aim_dual",
+  "phase": 0.0,
+  "rows": [
+    {
+      "side": "Right",
+      "hand_triangles": 1369,
+      "pierced_hand_triangles": 27,
+      "crossing_pairs_by_part": {
+        "Frame pin": 12,
+        "Grip side panel": 38,
+        "Polymer grip": 20,
+        "Receiver": 24
+      },
+      "body_crossing_pairs_by_part": {},
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          0.025331854820251465,
+          0.057326607406139374,
+          0.015949184074997902
+        ],
+        "max": [
+          0.037926752120256424,
+          0.06896542757749557,
+          0.025131171569228172
+        ]
+      }
+    },
+    {
+      "side": "Left",
+      "hand_triangles": 1375,
+      "pierced_hand_triangles": 27,
+      "crossing_pairs_by_part": {
+        "Frame pin.001": 12,
+        "Grip side panel.001": 38,
+        "Polymer grip": 20,
+        "Receiver": 26
+      },
+      "body_crossing_pairs_by_part": {},
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          -0.037927042692899704,
+          0.05723843723535538,
+          0.01641993038356304
+        ],
+        "max": [
+          -0.025332098826766014,
+          0.06896601617336273,
+          0.025141235440969467
+        ]
+      }
+    }
+  ],
+  "scope": "Sampled phase, fully hand-weighted faces distal to 5 cm and evaluated non-hand body; segment-triangle crossings in both directions. Does not prove absence of containment, coplanar overlap or contact in other poses."
+}

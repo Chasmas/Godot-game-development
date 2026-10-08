@@ -1,0 +1,59 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+HEADING 0
+THROW geometry start=(6.418347, 2.80063) velocity=(520.0, 0.0) target=(60.0, 0.0)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 1
+THROW geometry start=(1.951974, 6.44839) velocity=(367.6955, 367.6955) target=(42.42641, 42.42641)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 2
+THROW geometry start=(-3.655784, 6.318909) velocity=(-0.000023, 520.0) target=(-0.000003, 60.0)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 3
+THROW geometry start=(-7.122034, 2.48788) velocity=(-367.6955, 367.6955) target=(-42.42641, 42.42641)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 4
+THROW geometry start=(-6.416295, -2.800492) velocity=(-520.0, -0.000045) target=(-60.0, -0.000005)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 5
+THROW geometry start=(-1.951976, -6.448372) velocity=(-367.6956, -367.6955) target=(-42.42641, -42.4264)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 6
+THROW geometry start=(3.655784, -6.318892) velocity=(0.000006, -520.0) target=(0.000001, -60.0)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+HEADING 7
+THROW geometry start=(7.122034, -2.487881) velocity=(367.6955, -367.6956) target=(42.4264, -42.42641)
+PASS throw creates recoverable same weapon
+PASS physical flight hits guard exactly once
+PASS impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+CHAINSAW THROW PHYSICS: 0 failures

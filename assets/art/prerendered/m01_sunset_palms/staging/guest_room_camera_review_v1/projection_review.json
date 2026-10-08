@@ -1,0 +1,47 @@
+{
+  "runtime_approved": false,
+  "views": [
+    {
+      "yaw_degrees": 0,
+      "elevation_degrees": 50,
+      "ground_projection_probes_px": {
+        "origin": [
+          480.0,
+          384.1513395309448
+        ],
+        "one_metre_x": [
+          594.2857360839844,
+          384.1513395309448
+        ],
+        "one_metre_y": [
+          480.0,
+          296.6033935546875
+        ]
+      }
+    },
+    {
+      "yaw_degrees": 30,
+      "elevation_degrees": 50,
+      "ground_projection_probes_px": {
+        "origin": [
+          471.42863273620605,
+          382.39211082458496
+        ],
+        "one_metre_x": [
+          570.402946472168,
+          426.1660623550415
+        ],
+        "one_metre_y": [
+          528.5714721679688,
+          306.5733575820923
+        ]
+      }
+    }
+  ],
+  "requirements": [
+    "Chosen yaw requires consistent world-to-screen mapping for floors, objects, characters, aim and collisions",
+    "Do not rotate or squash background alone",
+    "Check actor occlusion and clear door approaches in an actual gameplay prototype"
+  ],
+  "scope": "Blender composition comparison only; does not demonstrate runtime camera compatibility"
+}

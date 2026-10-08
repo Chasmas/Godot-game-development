@@ -1,0 +1,166 @@
+{
+  "approved": false,
+  "scope": "Lateral stride and 32 headings, phase .30-.78, 16 recent poses, nearest heading translation only; does not prove all actions or level visual quality.",
+  "results": [
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 0.0,
+      "max_error_px": 1.4104171459649073
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 0.392699081698724,
+      "max_error_px": 1.4207926277119847
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 0.785398163397448,
+      "max_error_px": 1.4197706990180425
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 1.17809724509617,
+      "max_error_px": 1.4137639871938052
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 1.5707963267949,
+      "max_error_px": 1.4521267229322241
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 1.96349540849362,
+      "max_error_px": 1.4427733588238318
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 2.35619449019234,
+      "max_error_px": 1.4365242251686172
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 2.74889357189107,
+      "max_error_px": 1.4301968279151098
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 3.14159265358979,
+      "max_error_px": 1.426365593310873
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 3.53429173528852,
+      "max_error_px": 1.4179435447691373
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 3.92699081698724,
+      "max_error_px": 1.404693322728678
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 4.31968989868597,
+      "max_error_px": 1.3897252126462105
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 4.71238898038469,
+      "max_error_px": 1.378409999598804
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 5.10508806208341,
+      "max_error_px": 1.375345986753791
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 5.49778714378214,
+      "max_error_px": 1.3820991306391333
+    },
+    {
+      "source": "moving_weapon_paths.json",
+      "angle": 5.89048622548086,
+      "max_error_px": 1.3956606948717016
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 0.196349540849362,
+      "max_error_px": 1.4092948654955346
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 0.589048622548086,
+      "max_error_px": 1.4884382950952355
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 0.98174770424681,
+      "max_error_px": 1.5394346454369854
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 1.37444678594553,
+      "max_error_px": 1.5353631027382617
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 1.76714586764426,
+      "max_error_px": 1.6352532359786223
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 2.15984494934298,
+      "max_error_px": 1.425156651440252
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 2.55254403104171,
+      "max_error_px": 1.6311406440605816
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 2.94524311274043,
+      "max_error_px": 1.4151778958631245
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 3.33794219443916,
+      "max_error_px": 1.4957738376006662
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 3.73064127613788,
+      "max_error_px": 1.4665803746362094
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 4.1233403578366,
+      "max_error_px": 1.5481127002595354
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 4.51603943953533,
+      "max_error_px": 1.5634768984255956
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 4.90873852123405,
+      "max_error_px": 1.4855125864316467
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 5.30143760293278,
+      "max_error_px": 1.6531541595740689
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 5.6941366846315,
+      "max_error_px": 1.626042092980667
+    },
+    {
+      "source": "moving_weapon_paths_32_midpoints.json",
+      "angle": 6.08683576633022,
+      "max_error_px": 1.3996563158086182
+    }
+  ]
+}

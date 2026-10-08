@@ -1,0 +1,66 @@
+{
+  "source_glb_sha256": "46de46c75c75bc37e221311155fe4f273f58811d00b273ba77c4cc3a9d1f791d",
+  "runtime_approved": false,
+  "animation_approved": false,
+  "captured_frames_per_side": 30,
+  "reviewed_full_size_frames": [
+    "godot_frames/walk_008.png",
+    "godot_frames_opposite/walk_020.png"
+  ],
+  "visual_findings": [
+    "Recognizable silhouette on both sides",
+    "Residual shoulder folds require further anatomy review"
+  ],
+  "import_profile": {
+    "AnimationPlayer.optimizer/enabled": false,
+    "meshes/force_disable_compression": false
+  },
+  "scope": "Isolated Godot walk candidate; CPU skin contacts, skeleton endpoints and GPU captures. No gameplay validation.",
+  "next_work": [
+    "Unify idle and walk on this refined skin",
+    "Review shoulder deformation through the full cycle",
+    "Author and validate remaining canine actions before runtime replacement"
+  ],
+  "audits": {
+    "godot_contact_audit": {
+      "animation_approved": false,
+      "animation_tracks": 22,
+      "maximum_planted_sole_slip_per_frame_m": 1.34600568344467e-05,
+      "mesh_loop_seam_m": 1.79433740754575e-07,
+      "minimum_full_cycle_mesh_height_m": -1.92300067283213e-05,
+      "mode": "imported_resource",
+      "runtime_approved": false,
+      "sampled_frames": 31,
+      "scope": "CPU linear skin reconstruction from actual Godot imported arrays, skin bindings and animated skeleton; no GPU vertex readback or gameplay approval",
+      "source_glb_sha256": "46de46c75c75bc37e221311155fe4f273f58811d00b273ba77c4cc3a9d1f791d",
+      "surface_format": 34359745559,
+      "vertices": 69141
+    },
+    "godot_direct_contact_audit": {
+      "animation_approved": false,
+      "animation_tracks": 22,
+      "maximum_planted_sole_slip_per_frame_m": 1.34600568344467e-05,
+      "mesh_loop_seam_m": 1.79433740754575e-07,
+      "minimum_full_cycle_mesh_height_m": -1.92300067283213e-05,
+      "mode": "direct_gltf",
+      "runtime_approved": false,
+      "sampled_frames": 31,
+      "scope": "CPU linear skin reconstruction from actual Godot imported arrays, skin bindings and animated skeleton; no GPU vertex readback or gameplay approval",
+      "source_glb_sha256": "46de46c75c75bc37e221311155fe4f273f58811d00b273ba77c4cc3a9d1f791d",
+      "surface_format": 34359745559,
+      "vertices": 69141
+    },
+    "godot_loop_audit": {
+      "animation_approved": false,
+      "bones": 26,
+      "clip": "Animation",
+      "length_seconds": 1.0,
+      "loop_basis_column_difference": 1.68628545793581e-07,
+      "loop_translation_difference_m": 0.0,
+      "runtime_approved": false,
+      "scope": "Imported skeleton endpoint check; no gameplay or vertex contact approval",
+      "source_glb_sha256": "46de46c75c75bc37e221311155fe4f273f58811d00b273ba77c4cc3a9d1f791d",
+      "tracks": 22
+    }
+  }
+}

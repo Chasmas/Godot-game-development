@@ -1,0 +1,199 @@
+{
+  "base_source": "actual_weapon_paths_16.json",
+  "moving_source": "moving_weapon_paths.json",
+  "scope": "lateral stride warmup, attack preparation/contact/recovery window .22-.78; eight-point recent trail history; does not prove level lighting or all actions",
+  "results": [
+    {
+      "weapon": "bat",
+      "heading_deg": 0.0,
+      "fixed_origin_error_px": 3.001386486783311,
+      "tip_anchored_shape_error_px": 0.8548241548760693
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 22.5,
+      "fixed_origin_error_px": 2.996846898241327,
+      "tip_anchored_shape_error_px": 0.8677177061698366
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 45.0,
+      "fixed_origin_error_px": 2.994303451092772,
+      "tip_anchored_shape_error_px": 0.8735805569614573
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 67.5,
+      "fixed_origin_error_px": 2.9938786056970197,
+      "tip_anchored_shape_error_px": 0.8736465716207166
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 90.0,
+      "fixed_origin_error_px": 2.9923914131046385,
+      "tip_anchored_shape_error_px": 0.9029888904811775
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 112.5,
+      "fixed_origin_error_px": 2.9956149340699456,
+      "tip_anchored_shape_error_px": 0.8939112591302429
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 135.0,
+      "fixed_origin_error_px": 2.9984863365506476,
+      "tip_anchored_shape_error_px": 0.8840982066512059
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 157.5,
+      "fixed_origin_error_px": 3.0003278769922828,
+      "tip_anchored_shape_error_px": 0.873187235782383
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 180.0,
+      "fixed_origin_error_px": 3.001426834320262,
+      "tip_anchored_shape_error_px": 0.8639933685685733
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 202.5,
+      "fixed_origin_error_px": 3.0034072954763134,
+      "tip_anchored_shape_error_px": 0.864655225370101
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 225.0,
+      "fixed_origin_error_px": 3.006999862171775,
+      "tip_anchored_shape_error_px": 0.8718577287946376
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 247.5,
+      "fixed_origin_error_px": 3.0121587462373793,
+      "tip_anchored_shape_error_px": 0.8753748516327964
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 270.0,
+      "fixed_origin_error_px": 3.017149476954879,
+      "tip_anchored_shape_error_px": 0.8741822411525141
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 292.5,
+      "fixed_origin_error_px": 3.0194537893778426,
+      "tip_anchored_shape_error_px": 0.869562629822694
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 315.0,
+      "fixed_origin_error_px": 3.0172597132577916,
+      "tip_anchored_shape_error_px": 0.8630428604180256
+    },
+    {
+      "weapon": "bat",
+      "heading_deg": 337.5,
+      "fixed_origin_error_px": 3.010374349623273,
+      "tip_anchored_shape_error_px": 0.8554919462837303
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 0.0,
+      "fixed_origin_error_px": 4.217814232831376,
+      "tip_anchored_shape_error_px": 0.7059186635705985
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 22.5,
+      "fixed_origin_error_px": 4.213397425036765,
+      "tip_anchored_shape_error_px": 0.7113370131100919
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 45.0,
+      "fixed_origin_error_px": 4.211378267355884,
+      "tip_anchored_shape_error_px": 0.7108530342342102
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 67.5,
+      "fixed_origin_error_px": 4.211952846014811,
+      "tip_anchored_shape_error_px": 0.7077759763547165
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 90.0,
+      "fixed_origin_error_px": 4.210800087500079,
+      "tip_anchored_shape_error_px": 0.7282242317985945
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 112.5,
+      "fixed_origin_error_px": 4.214981972909083,
+      "tip_anchored_shape_error_px": 0.7232817006701105
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 135.0,
+      "fixed_origin_error_px": 4.217743188137481,
+      "tip_anchored_shape_error_px": 0.7198667273023912
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 157.5,
+      "fixed_origin_error_px": 4.218336331631547,
+      "tip_anchored_shape_error_px": 0.7163920881532558
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 180.0,
+      "fixed_origin_error_px": 4.2173523412301455,
+      "tip_anchored_shape_error_px": 0.7142617536167352
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 202.5,
+      "fixed_origin_error_px": 4.2165005468108,
+      "tip_anchored_shape_error_px": 0.7097994291567359
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 225.0,
+      "fixed_origin_error_px": 4.217197261615838,
+      "tip_anchored_shape_error_px": 0.7028924422590628
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 247.5,
+      "fixed_origin_error_px": 4.21974912307327,
+      "tip_anchored_shape_error_px": 0.6951195073268179
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 270.0,
+      "fixed_origin_error_px": 4.223128194170478,
+      "tip_anchored_shape_error_px": 0.6891979421932246
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 292.5,
+      "fixed_origin_error_px": 4.225533079200556,
+      "tip_anchored_shape_error_px": 0.6876974353868411
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 315.0,
+      "fixed_origin_error_px": 4.225405607150111,
+      "tip_anchored_shape_error_px": 0.6911712339949194
+    },
+    {
+      "weapon": "knife",
+      "heading_deg": 337.5,
+      "fixed_origin_error_px": 4.2224780041531425,
+      "tip_anchored_shape_error_px": 0.6982292686911797
+    }
+  ]
+}

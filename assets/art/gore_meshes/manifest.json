@@ -1,0 +1,1485 @@
+{
+  "cuts": [
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/bellhop_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/bellhop_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/bellhop_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/bellhop_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/biker_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/biker_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/biker_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/biker_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/boss_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/boss_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/boss_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/boss_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/buck_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/buck_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/buck_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/buck_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/burnt_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/burnt_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/burnt_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 12.0,
+      "expected_caps": 12.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/burnt_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 12.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/cass_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://assets/art/gore_meshes/cass_arm_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://assets/art/gore_meshes/cass_leg_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://assets/art/gore_meshes/cass_legs_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/civilian_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/civilian_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/civilian_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/civilian_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/cultist_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/cultist_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/cultist_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/cultist_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/demon_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/demon_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/demon_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/demon_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/fireman_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/fireman_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/fireman_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/fireman_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/ghoul_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/ghoul_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 16.0,
+      "expected_caps": 16.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/ghoul_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 16.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 15.0,
+      "expected_caps": 15.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/ghoul_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 15.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/guard_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/guard_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/guard_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/guard_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/gunner_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/gunner_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/gunner_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/gunner_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/handler_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/handler_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/handler_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 10.0,
+      "expected_caps": 10.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/handler_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 10.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/heavy_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/heavy_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/heavy_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/heavy_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/hunter_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/hunter_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/hunter_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/hunter_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/riot_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/riot_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/riot_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/riot_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scout_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scout_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scout_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scout_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scrapper_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scrapper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scrapper_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/scrapper_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/security_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/security_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 13.0,
+      "expected_caps": 13.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/security_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 13.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 11.0,
+      "expected_caps": 11.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/security_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 11.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/sniper_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/sniper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/sniper_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/sniper_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/stagehand_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/stagehand_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/stagehand_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/stagehand_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/welder_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/welder_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/welder_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/welder_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/zombie_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/zombie_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/zombie_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://assets/art/gore_meshes/zombie_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    }
+  ],
+  "failures": 0.0,
+  "packing": {
+    "failures": 0,
+    "scope": "Wound triangles batched per source mesh and binary resource compressed. Not runtime performance or visual equivalence approval.",
+    "surfaces_after": 195,
+    "surfaces_before": 512
+  },
+  "scope": "Precomputed source mesh with independently built wound surfaces, retaining original skin bind indices. Requires saved-resource equivalence, body binding, visual and gameplay validation.",
+  "status": "integrated_runtime_fixture_validated",
+  "source_sha256": {
+    "bellhop": "1193e624f34a3b417b0bd8d84328d3ccd540f0182ce8149dc7df25bd9ef0f618",
+    "biker": "4a14d2aadd316c3b5376421cfa14358a0c84082b336e774dd2fd81b466b0e2e9",
+    "boss": "5be260040f47575a937748994ae63277a69ba4bbb4682cb3973a72f5de34655e",
+    "buck": "c603133ec3a2d474d415f6b2927fbf5570c415d3d5821e8764830bf42f6e4a58",
+    "burnt": "b02bf30549afd75eb613755c09efca34178e69b032989226de33b5b3ec940f28",
+    "cass": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba",
+    "civilian": "a049091530fab8c905844f16cf67f9a7c787da0645e73272d2a976333f06f182",
+    "cultist": "b3f9e0d0c2463833718aacbf363978af858a3d09877dd171305262a7f9de9da7",
+    "demon": "d53be5d50b75f18ffee5f9ad38b1957a6c5b8a49c2583c911df3dc800fc5f90f",
+    "fireman": "bdf1151da862491c137e4c2dcaaa70dfbc90aa8bed200511f79322b1c0e5b42a",
+    "ghoul": "18f8f6d879e03a4ce879657cc8a3f55c13433a66de6ccb8dddccfe6bf1ca47d4",
+    "guard": "0386b3b8a9a3a650495975eb939337f049cb896ded5e570a594183c15c7e53a1",
+    "gunner": "b39b51c2be668648e4ad2217505c9b1a154663eba996b15b32cbff10994a2fa6",
+    "handler": "33e50b5b93e4c976dbc6e6b9acc6927af238b0305f3d3bac0b338ea5d8a5d2f3",
+    "heavy": "e186c0db281aef3a4cd29089ac6e16788006acd6bfdf2761298bc191f94bc2cd",
+    "hunter": "9651f5e1233717677786be4f0ca6be9a22b9cdfbce57bb8ad6614e06557fc0ad",
+    "riot": "85b93dcf4ce0ba32a87d3aa3ef3b4dd4014a8bf422b1450f30fe84f7825f0b85",
+    "scout": "a846441c6c80c0c484972483c79b6dd25ea864f3c1c2057113fbc13c4cf5509e",
+    "scrapper": "1775272785e5314617ec02ded343c9dc7f0541678c5a27a898902b014b0fb5f2",
+    "security": "089dfa10ef09d200239ec5c409934b244e1481ac3c9981391d9b89dd76e343d9",
+    "sniper": "435a5e410b70b1c113adf682edef4b2a5eb5f91860e7a103d53c3b16c5b6a6ac",
+    "stagehand": "e49705fab9d4d22b17b2b38417bf000497968960afe2c06477a852793bc52957",
+    "welder": "3a65c074f80d6577b4a1f08c51f0c8ce148b4df5bd883756bb4493e1c1dc17e9",
+    "zombie": "73f4bccdc7780f2f690888aba9649c917a847d9e39319e590ce857ad5b345b43"
+  },
+  "runtime_validation": {
+    "cases": 96,
+    "fixture": "build/runtime_sever_review/review.json",
+    "dependencies": "build/runtime_sever_review/dependencies.json",
+    "scope": "Actual corpse/gib fixture with full gore, five-pose source skinning review, saved-resource visual review; not complete combat or all map performance approval."
+  }
+}

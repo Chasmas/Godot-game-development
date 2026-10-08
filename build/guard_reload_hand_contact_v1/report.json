@@ -1,0 +1,58 @@
+{
+  "approved": false,
+  "contact_passed": false,
+  "phase": 0.25,
+  "left_palm_to_right_magazine_m": 0.39025181467877923,
+  "magazine_world": [
+    -0.1560491919517517,
+    -0.34055376052856445,
+    1.286795735359192
+  ],
+  "left_palm_world": [
+    0.1133592426776886,
+    -0.06788864731788635,
+    1.2135201692581177
+  ],
+  "ik_chain": {
+    "LeftArm": {
+      "length_native": 2606.269775390625,
+      "head": [
+        19.804536819458008,
+        4.064896583557129,
+        141.6470947265625
+      ],
+      "tail": [
+        1184.7891845703125,
+        86.1720199584961,
+        -2188.31201171875
+      ]
+    },
+    "LeftForeArm": {
+      "length_native": 2548.559814453125,
+      "head": [
+        31.45435905456543,
+        4.885956764221191,
+        118.34748840332031
+      ],
+      "tail": [
+        1623.59228515625,
+        200.0101318359375,
+        -1862.1015625
+      ]
+    },
+    "LeftHand": {
+      "length_native": 2548.56005859375,
+      "head": [
+        47.37569808959961,
+        6.837190628051758,
+        98.54296112060547
+      ],
+      "tail": [
+        1668.8309326171875,
+        -380.7754211425781,
+        -1829.096923828125
+      ]
+    }
+  },
+  "scope": "Single Blender IK diagnostic only; contact must pass before animation authoring. Requires elbow/palm collision review, holstered off-hand gun, individual hand grasp morphs, full keyframe animation and Godot validation."
+}

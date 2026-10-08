@@ -1,0 +1,746 @@
+{
+  "legacy_decorative_beds": [],
+  "legacy_nightstands_pending": [],
+  "nearby_dressing": [
+    {
+      "kind": "w_stain",
+      "layer": "Dressing",
+      "position": [
+        105.494720458984,
+        133.818939208984
+      ]
+    }
+  ],
+  "nightstand_count": 21,
+  "nightstand_navigation": {
+    "newly_reserved_cells": 28,
+    "passed": true,
+    "placement_trace": [
+      {
+        "position": [
+          118.0,
+          40.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          118.0,
+          88.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          374.0,
+          104.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          790.0,
+          40.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          790.0,
+          88.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          902.0,
+          40.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          902.0,
+          88.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          262.0,
+          440.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          262.0,
+          488.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          792.0,
+          438.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          840.0,
+          438.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          230.0,
+          600.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          758.0,
+          600.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          104.0,
+          64.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          824.0,
+          112.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          776.0,
+          64.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          168.0,
+          64.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          120.0,
+          112.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          232.0,
+          640.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          808.0,
+          488.0
+        ],
+        "split_components_after_placement": []
+      },
+      {
+        "position": [
+          776.0,
+          640.0
+        ],
+        "split_components_after_placement": []
+      }
+    ],
+    "scope": "Exact nav connectivity before/after bedside volumes; physical player-radius clearance and dynamic doors pending",
+    "split_original_components": []
+  },
+  "nightstand_physics": [
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 1,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        118.0,
+        40.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        118.0,
+        88.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        374.0,
+        104.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 1,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        790.0,
+        40.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        790.0,
+        88.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        902.0,
+        40.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        902.0,
+        88.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        262.0,
+        440.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        262.0,
+        488.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        792.0,
+        438.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 1,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        840.0,
+        438.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        230.0,
+        600.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        758.0,
+        600.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 1,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        104.0,
+        64.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 3,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        824.0,
+        112.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        776.0,
+        64.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        168.0,
+        64.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        120.0,
+        112.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        232.0,
+        640.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 0,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        808.0,
+        488.0
+      ],
+      "registered_solid": true
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "blockers": [],
+      "clear_player_approaches": 2,
+      "conservative_door_arc_hits": 0,
+      "four_sides_safe_fractions": [
+        0.65625,
+        0.65625,
+        0.69921875,
+        0.69921875
+      ],
+      "measured_footprint_with_leaf_thickness_hits": 0,
+      "overlap_free": true,
+      "position": [
+        776.0,
+        640.0
+      ],
+      "registered_solid": true
+    }
+  ],
+  "placements": [
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        128.0,
+        64.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        800.0,
+        64.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        912.0,
+        64.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        384.0,
+        128.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        816.0,
+        448.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        272.0,
+        464.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        352.0,
+        480.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        336.0,
+        592.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        272.0,
+        624.0
+      ]
+    },
+    {
+      "collider_px": [
+        30.0,
+        30.0
+      ],
+      "facing_index": 1,
+      "footprint_px": [
+        30.0,
+        23.8888893127441
+      ],
+      "position": [
+        800.0,
+        624.0
+      ]
+    }
+  ],
+  "runtime_approved": false,
+  "scope": "Staging furniture assembly: original bed colliders retained; bedside volumes, four-side isolated sweeps, live actor overlap and navigation connectivity checked. Full visual composition and lighting approval remain pending."
+}

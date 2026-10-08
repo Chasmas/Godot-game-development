@@ -1,0 +1,23 @@
+{
+  "scope": "Boss smoking clip only",
+  "source": "res://build/boss_smoke_fitted_isolated/boss.glb",
+  "pose_samples": 257,
+  "max_elbow_step_m": 0.02621629130859014,
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "loop_joint_gap_m": {
+    "Head": 0.0004139766828583437,
+    "Hips": 0.0,
+    "LeftArm": 0.00028491341770234887,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00017135392686565233,
+    "LeftHand": 5.463372162894752e-05,
+    "Neck": 0.0002939497515466198,
+    "RightArm": 0.00028399418913616965,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00016876414532468565,
+    "RightHand": 4.162753213677993e-05
+  }
+}

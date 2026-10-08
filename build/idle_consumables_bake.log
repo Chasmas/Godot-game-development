@@ -1,0 +1,133 @@
+00:01.766  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\idle_consumables_candidate\donut.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+05:02:52 | INFO: Starting glTF 2.0 export
+05:02:52 | INFO: Extracting primitive: Torus
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: irregular icing
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.001
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.002
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.003
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.004
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.005
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.006
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.007
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.008
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.009
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.010
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.011
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.012
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.013
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.014
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.015
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.016
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.017
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.018
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.019
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.020
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.021
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.022
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.023
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.024
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.025
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.026
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.027
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.028
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.029
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.030
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.031
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.032
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.033
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.034
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.035
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.036
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.037
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.038
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.039
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.040
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.041
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.042
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.043
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.044
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.045
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.046
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.047
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.048
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.049
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.050
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.051
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.052
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.053
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.054
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.055
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.056
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Extracting primitive: Sphere.057
+05:02:52 | INFO: Primitives created: 1
+05:02:52 | INFO: Finished glTF 2.0 export in 0.12621164321899414 s
+
+Info: Saved as "donut_textured.blend"
+CONSUMABLE TEXTURES BAKED
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

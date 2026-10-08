@@ -1,0 +1,934 @@
+{
+  "failures": 0,
+  "rows": [
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 0.0,
+      "left_nearest_vertex_m": 0.0217401403933764,
+      "max_entry_gap_m": 0.000000161180707891617,
+      "max_steady_gap_m": 0.000000181891849138083,
+      "right_nearest_vertex_m": 0.0237196087837219
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 45.0,
+      "left_nearest_vertex_m": 0.0217402540147305,
+      "max_entry_gap_m": 0.000000171201307352931,
+      "max_steady_gap_m": 0.000000223020165890375,
+      "right_nearest_vertex_m": 0.0237196665257216
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 90.0,
+      "left_nearest_vertex_m": 0.0217402447015047,
+      "max_entry_gap_m": 0.000000166600045758969,
+      "max_steady_gap_m": 0.000000200474616462998,
+      "right_nearest_vertex_m": 0.0237196069210768
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 135.0,
+      "left_nearest_vertex_m": 0.0217400211840868,
+      "max_entry_gap_m": 0.000000245756240246919,
+      "max_steady_gap_m": 0.000000240389482542014,
+      "right_nearest_vertex_m": 0.0237196162343025
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 180.0,
+      "left_nearest_vertex_m": 0.0217401497066021,
+      "max_entry_gap_m": 0.000000150171246104946,
+      "max_steady_gap_m": 0.000000269871520686138,
+      "right_nearest_vertex_m": 0.0237194914370775
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 225.0,
+      "left_nearest_vertex_m": 0.0217400211840868,
+      "max_entry_gap_m": 0.000000149754811218372,
+      "max_steady_gap_m": 0.000000298116333397047,
+      "right_nearest_vertex_m": 0.0237196162343025
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 270.0,
+      "left_nearest_vertex_m": 0.0217402447015047,
+      "max_entry_gap_m": 0.000000210239747389096,
+      "max_steady_gap_m": 0.000000206476542530254,
+      "right_nearest_vertex_m": 0.0237197261303663
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 315.0,
+      "left_nearest_vertex_m": 0.0217402502894402,
+      "max_entry_gap_m": 0.000000240274005136598,
+      "max_steady_gap_m": 0.000000254740143645904,
+      "right_nearest_vertex_m": 0.0237197317183018
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 0.0,
+      "left_nearest_vertex_m": 0.0217401366680861,
+      "max_entry_gap_m": 0.00000018907454091277,
+      "max_steady_gap_m": 0.000000225002594334001,
+      "right_nearest_vertex_m": 0.0237196329981089
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 45.0,
+      "left_nearest_vertex_m": 0.0217400938272476,
+      "max_entry_gap_m": 0.000000215036720874195,
+      "max_steady_gap_m": 0.000000266976257989882,
+      "right_nearest_vertex_m": 0.0237194169312716
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 90.0,
+      "left_nearest_vertex_m": 0.0217401199042797,
+      "max_entry_gap_m": 0.000000152691470134414,
+      "max_steady_gap_m": 0.000000240735630541167,
+      "right_nearest_vertex_m": 0.0237195137888193
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 135.0,
+      "left_nearest_vertex_m": 0.0217401199042797,
+      "max_entry_gap_m": 0.000000242115220316919,
+      "max_steady_gap_m": 0.000000213352166156255,
+      "right_nearest_vertex_m": 0.0237195249646902
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 180.0,
+      "left_nearest_vertex_m": 0.0217401199042797,
+      "max_entry_gap_m": 0.00000027516759359969,
+      "max_steady_gap_m": 0.000000256369276030455,
+      "right_nearest_vertex_m": 0.0237195119261742
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 225.0,
+      "left_nearest_vertex_m": 0.02174012362957,
+      "max_entry_gap_m": 0.000000281253250022928,
+      "max_steady_gap_m": 0.000000268220901489258,
+      "right_nearest_vertex_m": 0.0237195231020451
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 270.0,
+      "left_nearest_vertex_m": 0.02174012362957,
+      "max_entry_gap_m": 0.000000210239747389096,
+      "max_steady_gap_m": 0.000000245756240246919,
+      "right_nearest_vertex_m": 0.0237195249646902
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 315.0,
+      "left_nearest_vertex_m": 0.0217401217669249,
+      "max_entry_gap_m": 0.000000266976257989882,
+      "max_steady_gap_m": 0.000000281549148439808,
+      "right_nearest_vertex_m": 0.0237195063382387
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 0.0,
+      "left_nearest_vertex_m": 0.0217401366680861,
+      "max_entry_gap_m": 0.000000168587391158326,
+      "max_steady_gap_m": 0.000000247556670274207,
+      "right_nearest_vertex_m": 0.023719534277916
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 45.0,
+      "left_nearest_vertex_m": 0.0217401403933764,
+      "max_entry_gap_m": 0.000000287403196352898,
+      "max_steady_gap_m": 0.000000247556670274207,
+      "right_nearest_vertex_m": 0.0237194951623678
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 90.0,
+      "left_nearest_vertex_m": 0.0217401348054409,
+      "max_entry_gap_m": 0.000000200474616462998,
+      "max_steady_gap_m": 0.000000256369276030455,
+      "right_nearest_vertex_m": 0.0237196199595928
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 135.0,
+      "left_nearest_vertex_m": 0.0217401366680861,
+      "max_entry_gap_m": 0.000000151276140059053,
+      "max_steady_gap_m": 0.000000255066794352388,
+      "right_nearest_vertex_m": 0.0237195193767548
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 180.0,
+      "left_nearest_vertex_m": 0.0217401366680861,
+      "max_entry_gap_m": 0.000000238418579101563,
+      "max_steady_gap_m": 0.000000292001942625575,
+      "right_nearest_vertex_m": 0.0237196423113346
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 225.0,
+      "left_nearest_vertex_m": 0.0217401254922152,
+      "max_entry_gap_m": 0.00000023853496600168,
+      "max_steady_gap_m": 0.000000246207576992674,
+      "right_nearest_vertex_m": 0.0237196143716574
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 270.0,
+      "left_nearest_vertex_m": 0.0217402577400208,
+      "max_entry_gap_m": 0.000000240735630541167,
+      "max_steady_gap_m": 0.000000252881079632061,
+      "right_nearest_vertex_m": 0.0237195137888193
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 315.0,
+      "left_nearest_vertex_m": 0.0217399969696999,
+      "max_entry_gap_m": 0.00000024978896817629,
+      "max_steady_gap_m": 0.000000256801968134823,
+      "right_nearest_vertex_m": 0.0237196162343025
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 0.0,
+      "left_nearest_vertex_m": 0.0217401497066021,
+      "max_entry_gap_m": 0.000000216964181731782,
+      "max_steady_gap_m": 0.000000338489314799517,
+      "right_nearest_vertex_m": 0.0237197317183018
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 45.0,
+      "left_nearest_vertex_m": 0.0217401180416346,
+      "max_entry_gap_m": 0.000000181891849138083,
+      "max_steady_gap_m": 0.000000332616480136494,
+      "right_nearest_vertex_m": 0.0237198639661074
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 90.0,
+      "left_nearest_vertex_m": 0.0217402167618275,
+      "max_entry_gap_m": 0.000000210734242500621,
+      "max_steady_gap_m": 0.00000038165595128703,
+      "right_nearest_vertex_m": 0.0237197317183018
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 135.0,
+      "left_nearest_vertex_m": 0.0217400155961514,
+      "max_entry_gap_m": 0.000000192132546317225,
+      "max_steady_gap_m": 0.000000352625846744559,
+      "right_nearest_vertex_m": 0.0237197075039148
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 180.0,
+      "left_nearest_vertex_m": 0.0217401199042797,
+      "max_entry_gap_m": 0.000000190827975643515,
+      "max_steady_gap_m": 0.000000256801968134823,
+      "right_nearest_vertex_m": 0.0237197354435921
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 225.0,
+      "left_nearest_vertex_m": 0.0217401497066021,
+      "max_entry_gap_m": 0.000000306924135884401,
+      "max_steady_gap_m": 0.000000420479494778192,
+      "right_nearest_vertex_m": 0.0237197279930115
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 270.0,
+      "left_nearest_vertex_m": 0.0217402186244726,
+      "max_entry_gap_m": 0.000000273142802598159,
+      "max_steady_gap_m": 0.00000038165595128703,
+      "right_nearest_vertex_m": 0.0237197354435921
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "handle_aabb_probe": {
+        "Left": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        },
+        "Right": {
+          "deepest_aabb_penetration_m": 0.0,
+          "deepest_triangle_penetration_m": 0.0,
+          "hand_edges_crossing_handle": 0,
+          "handle_edges_crossing_hand": 0,
+          "mesh_found": true,
+          "vertices_inside_handle_aabb": 0,
+          "vertices_inside_triangles": 0
+        }
+      },
+      "heading": 315.0,
+      "left_nearest_vertex_m": 0.0217401217669249,
+      "max_entry_gap_m": 0.000000200474616462998,
+      "max_steady_gap_m": 0.000000360411007704897,
+      "right_nearest_vertex_m": 0.0237197894603014
+    }
+  ],
+  "scope": "Remodeled hand candidate with powered AnimationLibrary and contact IK, 540 real process frames, animation advanced at 60Hz through at least two loops per clip. Entry gaps recorded separately; no input or physical locomotion."
+}

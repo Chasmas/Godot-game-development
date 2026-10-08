@@ -1,0 +1,93 @@
+19:15:23 | INFO: Data are loaded, start creating Blender stuff
+19:15:23 | INFO: Blender create Mesh node Mesh_0
+19:15:23 | INFO: glTF import finished in 0.34s
+Info: Saved as "boss.blend"
+PLANTED AIM boss {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:23 | INFO: Data are loaded, start creating Blender stuff
+19:15:23 | INFO: Blender create Mesh node Mesh_0
+19:15:24 | INFO: glTF import finished in 0.34s
+Info: Saved as "buck.blend"
+PLANTED AIM buck {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:24 | INFO: Data are loaded, start creating Blender stuff
+19:15:24 | INFO: Blender create Mesh node Mesh_0
+19:15:24 | INFO: glTF import finished in 0.32s
+Info: Saved as "burnt.blend"
+PLANTED AIM burnt {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:25 | INFO: Data are loaded, start creating Blender stuff
+19:15:25 | INFO: Blender create Mesh node Mesh_0
+19:15:25 | INFO: glTF import finished in 0.36s
+Info: Saved as "civilian.blend"
+PLANTED AIM civilian {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:25 | INFO: Data are loaded, start creating Blender stuff
+19:15:25 | INFO: Blender create Mesh node Mesh_0
+19:15:26 | INFO: glTF import finished in 0.32s
+Info: Saved as "cultist.blend"
+PLANTED AIM cultist {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:26 | INFO: Data are loaded, start creating Blender stuff
+19:15:26 | INFO: Blender create Mesh node Mesh_0
+19:15:26 | INFO: glTF import finished in 0.33s
+Info: Saved as "demon.blend"
+PLANTED AIM demon {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:27 | INFO: Data are loaded, start creating Blender stuff
+19:15:27 | INFO: Blender create Mesh node Mesh_0
+19:15:27 | INFO: glTF import finished in 0.32s
+Info: Saved as "fireman.blend"
+PLANTED AIM fireman {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:27 | INFO: Data are loaded, start creating Blender stuff
+19:15:27 | INFO: Blender create Mesh node Mesh_0
+19:15:28 | INFO: glTF import finished in 0.34s
+Info: Saved as "ghoul.blend"
+PLANTED AIM ghoul {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:28 | INFO: Data are loaded, start creating Blender stuff
+19:15:28 | INFO: Blender create Mesh node Mesh_0
+19:15:28 | INFO: glTF import finished in 0.34s
+Info: Saved as "gunner.blend"
+PLANTED AIM gunner {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:28 | INFO: Data are loaded, start creating Blender stuff
+19:15:29 | INFO: Blender create Mesh node Mesh_0
+19:15:29 | INFO: glTF import finished in 0.36s
+Info: Saved as "handler.blend"
+PLANTED AIM handler {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:29 | INFO: Data are loaded, start creating Blender stuff
+19:15:29 | INFO: Blender create Mesh node Mesh_0
+19:15:29 | INFO: glTF import finished in 0.34s
+Info: Saved as "riot.blend"
+PLANTED AIM riot {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:30 | INFO: Data are loaded, start creating Blender stuff
+19:15:30 | INFO: Blender create Mesh node Mesh_0
+19:15:30 | INFO: glTF import finished in 0.37s
+Info: Saved as "scout.blend"
+PLANTED AIM scout {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:31 | INFO: Data are loaded, start creating Blender stuff
+19:15:31 | INFO: Blender create Mesh node Mesh_0
+19:15:31 | INFO: glTF import finished in 0.34s
+Info: Saved as "scrapper.blend"
+PLANTED AIM scrapper {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:31 | INFO: Data are loaded, start creating Blender stuff
+19:15:31 | INFO: Blender create Mesh node Mesh_0
+19:15:32 | INFO: glTF import finished in 0.34s
+Info: Saved as "security.blend"
+PLANTED AIM security {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:32 | INFO: Data are loaded, start creating Blender stuff
+19:15:32 | INFO: Blender create Mesh node Mesh_0
+19:15:32 | INFO: glTF import finished in 0.35s
+Info: Saved as "sniper.blend"
+PLANTED AIM sniper {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:33 | INFO: Data are loaded, start creating Blender stuff
+19:15:33 | INFO: Blender create Mesh node char1
+19:15:33 | INFO: glTF import finished in 0.31s
+Info: Saved as "stagehand.blend"
+PLANTED AIM stagehand {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:33 | INFO: Data are loaded, start creating Blender stuff
+19:15:33 | INFO: Blender create Mesh node Mesh_0
+19:15:34 | INFO: glTF import finished in 0.33s
+Info: Saved as "welder.blend"
+PLANTED AIM welder {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+19:15:34 | INFO: Data are loaded, start creating Blender stuff
+19:15:34 | INFO: Blender create Mesh node Mesh_0
+19:15:34 | INFO: glTF import finished in 0.33s
+Info: Saved as "zombie.blend"
+PLANTED AIM zombie {'aim': {'LeftFoot': 0.0, 'RightFoot': 0.0}, 'aim_dual': {'LeftFoot': 0.0, 'RightFoot': 0.0}}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

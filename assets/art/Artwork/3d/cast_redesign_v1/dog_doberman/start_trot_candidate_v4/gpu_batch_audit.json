@@ -1,0 +1,25 @@
+{
+  "runtime_approved": false,
+  "source_sha256": "2564d3f96819a4cd86ecfb448d73ead30657b185d692233c97b834b3811914ba",
+  "captures": [
+    {
+      "camera": "positive_x_side",
+      "captured_frames": 19,
+      "clip": "Animation",
+      "runtime_approved": false,
+      "scope": "GPU render capture only; visual review and gameplay validation separate",
+      "source_path": "C:\\Users\\gil_n\\Documents\\GitHub\\Godot-game-development-codex\\assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\start_trot_candidate_v4\\baked_candidate_v1\\dog_doberman_walk_baked.glb",
+      "source_sha256": "2564d3f96819a4cd86ecfb448d73ead30657b185d692233c97b834b3811914ba"
+    },
+    {
+      "camera": "negative_x_side",
+      "captured_frames": 19,
+      "clip": "Animation",
+      "runtime_approved": false,
+      "scope": "GPU render capture only; visual review and gameplay validation separate",
+      "source_path": "C:\\Users\\gil_n\\Documents\\GitHub\\Godot-game-development-codex\\assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\start_trot_candidate_v4\\baked_candidate_v1\\dog_doberman_walk_baked.glb",
+      "source_sha256": "2564d3f96819a4cd86ecfb448d73ead30657b185d692233c97b834b3811914ba"
+    }
+  ],
+  "scope": "38 GPU frames captured; review and production approval separate"
+}

@@ -1,0 +1,20 @@
+23:24:56 | INFO: Data are loaded, start creating Blender stuff
+23:24:56 | INFO: Blender create Mesh node Mesh_0
+23:24:56 | INFO: glTF import finished in 0.14s
+ELBOW doze Right 3.142 (-0.07297635078430176, -0.1896505057811737, 0.8824458718299866)
+ELBOW doze Left 0.0 (-0.06437155604362488, 0.19746150076389313, 0.8692662715911865)
+anim doze 192 frames (baked)
+23:24:56 | INFO: Data are loaded, start creating Blender stuff
+23:24:56 | INFO: Blender create Mesh node Mesh_0
+23:24:56 | INFO: glTF import finished in 0.14s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:24:57 | INFO: Starting glTF 2.0 export
+23:24:57 | INFO: Extracting primitive: Mesh_0
+23:24:57 | INFO: Primitives created: 1
+23:24:57 | INFO: Finished glTF 2.0 export in 0.39620256423950195 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\fireman_doze\fireman.glb clips: ['doze']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

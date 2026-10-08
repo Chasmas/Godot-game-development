@@ -1,0 +1,10 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_laundry_batch.py:26: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+00:02.891  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\laundry_batch\detergent_teal.png'
+00:03.656  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\laundry_batch\detergent_ochre.png'
+00:04.437  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\laundry_batch\detergent_red.png'
+00:05.203  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\laundry_batch\detergent_ivory.png'
+LAUNDRY PROP BATCH: exported four variants and projected ground anchors
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

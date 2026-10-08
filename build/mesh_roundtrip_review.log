@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+guard leg preserved=10828 missing=6079 geometry_missing=0
+guard legs preserved=5940 missing=3398 geometry_missing=0
+LIMB PRESERVATION REVIEW: 9477 failures / 26245 protected triangles

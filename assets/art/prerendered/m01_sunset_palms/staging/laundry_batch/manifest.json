@@ -1,0 +1,73 @@
+{
+  "status": "staging_unapproved",
+  "source_label": "assets/art/materials/m01/palm_fresh_label_v1.png",
+  "camera": "orthographic south, approximately 49 degrees elevation",
+  "assets": [
+    {
+      "file": "detergent_teal.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "ground_anchor": [
+        128.0,
+        184.459
+      ],
+      "suggested_canvas_width_px": 16
+    },
+    {
+      "file": "detergent_ochre.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "ground_anchor": [
+        128.0,
+        184.459
+      ],
+      "suggested_canvas_width_px": 16
+    },
+    {
+      "file": "detergent_red.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "ground_anchor": [
+        128.0,
+        184.459
+      ],
+      "suggested_canvas_width_px": 16
+    },
+    {
+      "file": "detergent_ivory.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "ground_anchor": [
+        128.0,
+        184.459
+      ],
+      "suggested_canvas_width_px": 16
+    }
+  ],
+  "assembly": {
+    "file": "detergent_service_bench.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "ground_anchor": [
+      256.0,
+      350.07
+    ],
+    "suggested_canvas_width_px": 48,
+    "footprint_px": [
+      -18,
+      -5,
+      36,
+      10
+    ]
+  }
+}

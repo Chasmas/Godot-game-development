@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "glass_shards_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: single VFX visual reference for later Blender animated reconstruction for detailed indie motel game. One coherent small scatter of broken clear glass shards with physically plausible irregular sharp pieces, restrained blue teal edge reflections, delicate transparency, no blood. Entire effect visible with generous clear margins, genuinely transparent background. Physically believable detailed effect, restrained palette and readable silhouette suitable for small game scale. Not an animation sprite sheet. No background scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "smoke_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: single VFX visual reference for later Blender animated reconstruction for detailed indie motel game. One restrained plume of soft grey smoke, layered wisps and fine turbulent eddies, irregular translucent edges, tapering as it rises, no fire or object. Entire effect visible with generous clear margins, genuinely transparent background. Physically believable detailed effect, restrained palette and readable silhouette suitable for small game scale. Not an animation sprite sheet. No background scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "steam_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: single VFX visual reference for later Blender animated reconstruction for detailed indie motel game. One delicate plume of pale warm white laundry steam, thin translucent wisps with fine naturally varied turbulence and soft disappearing edges, no object. Entire effect visible with generous clear margins, genuinely transparent background. Physically believable detailed effect, restrained palette and readable silhouette suitable for small game scale. Not an animation sprite sheet. No background scene, floor, UI, labels, watermark or collage."
+    },
+    {
+      "id": "electrical_sparks_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: single VFX visual reference for later Blender animated reconstruction for detailed indie motel game. One small burst of electrical sparks, bright pale yellow white cores with restrained cyan accent, varied short arcing streaks and sparse tiny glowing fragments, controlled bloom, no object. Entire effect visible with generous clear margins, genuinely transparent background. Physically believable detailed effect, restrained palette and readable silhouette suitable for small game scale. Not an animation sprite sheet. No background scene, floor, UI, labels, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "glass_shards_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c3773de8-4304-4666-8f51-686b081e13e6.png"
+    },
+    {
+      "id": "smoke_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-58fbf400-528b-4fe1-b2a7-13936db331fb.png"
+    },
+    {
+      "id": "steam_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-137c216a-48ec-4eb7-9845-98e41ae20b56.png"
+    },
+    {
+      "id": "electrical_sparks_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-db916092-dbb2-453e-a834-5d5f42169207.png"
+    }
+  ]
+}

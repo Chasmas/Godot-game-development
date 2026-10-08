@@ -1,0 +1,9 @@
+{
+  "approved": false,
+  "resolution": [
+    2048,
+    2048
+  ],
+  "small_or_dark_triangles": [],
+  "scope": "UV triangle area and centroid sample only; not a full raster coverage or seam audit."
+}

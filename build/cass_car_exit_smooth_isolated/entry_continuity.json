@@ -1,0 +1,12 @@
+{
+  "approved": false,
+  "scope": "First-pose joint positions only; no grounding/door/handoff approval",
+  "displacements_m": {
+    "Hips": 1.459814946431875e-07,
+    "LeftHand": 3.3086284873939187e-06,
+    "RightHand": 6.392844287764907e-06,
+    "LeftFoot": 7.399537773664794e-06,
+    "RightFoot": 8.081774408507854e-06,
+    "Head": 8.212305497474291e-07
+  }
+}

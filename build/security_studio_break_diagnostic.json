@@ -1,0 +1,44 @@
+{
+  "failures": 0,
+  "results": [
+    {
+      "disabled": true,
+      "mission": "m03_prime_time",
+      "mount": [
+        338.0,
+        18.0
+      ],
+      "responders": [
+        {
+          "arrived": true,
+          "closest": 9.8781566619873,
+          "end_state": 4,
+          "goal": [
+            356.957092285156,
+            33.991584777832
+          ],
+          "initial_state": 3,
+          "start": [
+            280.0,
+            120.0
+          ]
+        },
+        {
+          "arrived": true,
+          "closest": 9.09084701538086,
+          "end_state": 4,
+          "goal": [
+            361.343994140625,
+            32.1710548400879
+          ],
+          "initial_state": 3,
+          "start": [
+            360.0,
+            200.0
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "All nine actual surveillance mounts, real damage and active AI, eight seconds per mount; no combat balance approval"
+}

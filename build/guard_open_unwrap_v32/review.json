@@ -1,0 +1,8 @@
+{
+  "approved": false,
+  "selected_hand_faces": 4093,
+  "uv_repeat": 4.0,
+  "material": "GuardHandSkin_ImageGen_v1",
+  "albedo": "assets/art/materials/characters/guard_hand_skin_v1/albedo.png",
+  "scope": "Blender staging export only. Re-exported rig animations require isolation before any integration. Wrist material transition, UV distortion, both hand views and motion review pending."
+}

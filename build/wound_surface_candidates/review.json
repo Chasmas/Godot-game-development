@@ -1,0 +1,592 @@
+{
+  "status": "candidate",
+  "scope": "Rest-space triangulated closed contour geometry; ambiguous borders omitted. Skin binding, missing border reconstruction, orientation, visual review and integration pending.",
+  "cuts": [
+    {
+      "look": "bellhop",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "bellhop",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "bellhop",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "bellhop",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "biker",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "biker",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "biker",
+      "part": "leg",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "biker",
+      "part": "legs",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "boss",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "boss",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "boss",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "boss",
+      "part": "legs",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "buck",
+      "part": "head",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "buck",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "buck",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "buck",
+      "part": "legs",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "burnt",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "burnt",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "burnt",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "burnt",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cass",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "cass",
+      "part": "arm",
+      "surfaces": 6,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cass",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cass",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "civilian",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "civilian",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "civilian",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "civilian",
+      "part": "legs",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cultist",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cultist",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cultist",
+      "part": "leg",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "cultist",
+      "part": "legs",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "head",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "leg",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "legs",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "fireman",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "fireman",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "fireman",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "fireman",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "ghoul",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "ghoul",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "ghoul",
+      "part": "leg",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "ghoul",
+      "part": "legs",
+      "surfaces": 7,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "guard",
+      "part": "head",
+      "surfaces": 5,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "guard",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "guard",
+      "part": "leg",
+      "surfaces": 5,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "guard",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "arm",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "legs",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "handler",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "handler",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "handler",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "handler",
+      "part": "legs",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "heavy",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "heavy",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "heavy",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "heavy",
+      "part": "legs",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "hunter",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "hunter",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "hunter",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "hunter",
+      "part": "legs",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "riot",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "riot",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "riot",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "riot",
+      "part": "legs",
+      "surfaces": 6,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scout",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scout",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scout",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scout",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scrapper",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scrapper",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scrapper",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "scrapper",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "security",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "security",
+      "part": "arm",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "security",
+      "part": "leg",
+      "surfaces": 7,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "security",
+      "part": "legs",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "sniper",
+      "part": "head",
+      "surfaces": 4,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "sniper",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "sniper",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "sniper",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "stagehand",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "stagehand",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "stagehand",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "stagehand",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "welder",
+      "part": "head",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "welder",
+      "part": "arm",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "welder",
+      "part": "leg",
+      "surfaces": 2,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "welder",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "zombie",
+      "part": "head",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "zombie",
+      "part": "arm",
+      "surfaces": 3,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "zombie",
+      "part": "leg",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "zombie",
+      "part": "legs",
+      "surfaces": 1,
+      "ambiguous_components": 0
+    }
+  ],
+  "binding_review": "binding_review.json",
+  "integration_approved": false,
+  "remaining_requirements": [
+    "Redesign leg cut contour/capping: visual review rejects elongated membranes despite valid skin bindings",
+    "Resolve four open boundary combinations",
+    "Validate animated seams and normals across all looks",
+    "Review wound material in combat and at game scale",
+    "Integrate runtime caps and rebuild matching detached-part renders"
+  ],
+  "appearance_review": "appearance_review.json"
+}

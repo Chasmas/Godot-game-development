@@ -1,0 +1,51 @@
+{
+  "character": "zombie_hunter",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_hunter_turnaround.png",
+  "source_sha256": "4867f926fa38ba4f765ffea39580b8ba0c6f11b0a6861ac5e52f11620d46c63b",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        495,
+        1024
+      ],
+      "width": 495,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_hunter\\references\\front.png",
+      "sha256": "33a01fb4ffbee261b2368078ba09569536ebe47d1686cfa4966bd1539bdc6d83"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        515,
+        0,
+        735,
+        1024
+      ],
+      "width": 220,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_hunter\\references\\side.png",
+      "sha256": "51837cc43eda2898a60ca118b969c9d277393fc7bb96d1359731b1eea010456b"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        740,
+        0,
+        1165,
+        1024
+      ],
+      "width": 425,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_hunter\\references\\back.png",
+      "sha256": "54057e312a131e015e6e5391ccd23c0321d09913138f010924b349de1068acd6"
+    }
+  ],
+  "visual_review": "Original sheet and all three saved Blender crops directly inspected. Complete isolated figures with matching body build and clothing. No adjacent fragments or clipped extremities. Modeling input approval only; no mesh, rig or runtime approval."
+}

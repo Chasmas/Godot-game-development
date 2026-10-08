@@ -1,0 +1,12 @@
+{
+  "animation_approved": false,
+  "extracted_travel_m": 0.136363640427589,
+  "handoff_mesh_difference_with_carrier_reset_m": 0.0000107987780211261,
+  "handoff_mesh_difference_without_carrier_reset_m": 0.136364430189133,
+  "runtime_approved": false,
+  "scope": "CPU full-mesh start-end/walk-start comparison with zero breath morph and explicit one-time world travel extraction. No collision, continuous velocity or gameplay approval.",
+  "source_glb_sha256": "b3d7bfeebd4ccf3a486b834a8fec44a2931a28e50b1498b390a6a1c6a3c0f0a4",
+  "target_clip": "trot",
+  "target_phase_seconds": 0.4,
+  "vertices": 69148
+}

@@ -1,0 +1,5 @@
+00:02.047  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\canine_review\shepherd\walk_candidate.blend"
+{'candidate_only': True, 'runtime_approved': False, 'maximum_torso_displacement_m': 0.0764896715169377, 'maximum_ankle_target_error_m': 2.4559789923784525e-05, 'limitation': 'Measurements cover this candidate at native stride speed; gameplay scale, turning, acceleration and other gaits still require review.', 'stance_sole_height_variation_m': {'FrontPaw.L': 3.5762786865234375e-06, 'FrontPaw.R': 3.5762786865234375e-06, 'HindPaw.L': 2.980232238769531e-07, 'HindPaw.R': 3.5762786865234375e-07}, 'stance_world_slip_m': {'FrontPaw.L': 6.73453600108509e-07, 'FrontPaw.R': 3.891521029864009e-07, 'HindPaw.L': 3.1004947348423073e-07, 'HindPaw.R': 2.4867384396110026e-07}, 'native_forward_speed_mps': 0.3555555555555556}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

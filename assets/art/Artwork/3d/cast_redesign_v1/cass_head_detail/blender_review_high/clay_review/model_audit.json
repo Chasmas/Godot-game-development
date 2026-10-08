@@ -1,0 +1,36 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\pre_remeshed.glb",
+  "runtime_approved": false,
+  "normalized_height_m": 0.48,
+  "source_bounds": {
+    "lower": [
+      -0.7238908410072327,
+      -0.68984454870224,
+      -0.9499606490135193
+    ],
+    "upper": [
+      0.722837507724762,
+      0.7229947447776794,
+      0.9618901610374451
+    ]
+  },
+  "mesh_objects": 1,
+  "vertices": 3858306,
+  "polygons": 7747940,
+  "smooth_polygons": 7747940,
+  "armature_objects": 0,
+  "materials": [
+    {
+      "name": "Material_0",
+      "textures": []
+    }
+  ],
+  "scope": "Static imported model and reference renders; no rig, facial animation, weapon contacts or Godot gameplay validation.",
+  "renders": [
+    "front_clay.png",
+    "side_clay.png",
+    "back_clay.png",
+    "face_front_clay.png"
+  ],
+  "material_override": "Neutral clay; geometry diagnostic only"
+}

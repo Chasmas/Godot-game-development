@@ -1,0 +1,37 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Five static skin deformation probes; no walk/run cycle or gameplay validation",
+  "probes": [
+    {
+      "render": "rest.png",
+      "bone": null,
+      "axis": 0,
+      "degrees": 0
+    },
+    {
+      "render": "front_paw_bend.png",
+      "bone": "front_positive_x_lower",
+      "axis": 0,
+      "degrees": 25
+    },
+    {
+      "render": "rear_hip_bend.png",
+      "bone": "rear_positive_x_upper",
+      "axis": 0,
+      "degrees": 20
+    },
+    {
+      "render": "head_turn.png",
+      "bone": "head",
+      "axis": 2,
+      "degrees": 20
+    },
+    {
+      "render": "tail_bend.png",
+      "bone": "tail_1",
+      "axis": 0,
+      "degrees": 25
+    }
+  ]
+}

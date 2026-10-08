@@ -1,0 +1,13 @@
+{
+  "approved": true,
+  "scope": "Smoke pose: head-fitted wrist, neutral elbow pole search, static feet; 25 other clips preserved. All-NPC smoking remains in progress.",
+  "baseline_sha256": "bd4d3d60285a576275021b4fd61d2022a7da7c681d3ab7b270eec6b0f1226c1c",
+  "integrated_sha256": "435a5e410b70b1c113adf682edef4b2a5eb5f91860e7a103d53c3b16c5b6a6ac",
+  "preserved_clips": 25,
+  "visual_reviews": [
+    "visual.log",
+    "phases.log"
+  ],
+  "mechanics": "regression.log",
+  "anatomy": "build/sniper_smoke_anatomy.json"
+}

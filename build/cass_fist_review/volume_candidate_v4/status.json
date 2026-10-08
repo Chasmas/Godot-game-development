@@ -1,0 +1,13 @@
+{
+  "reference": "assets/art/reference/cass_fist/hands_anatomy_v1.png",
+  "runtime_promoted": false,
+  "visual_approved": false,
+  "scope": "Fist volume study; thumb placement, knuckle planes, finger curvature, skin texture, wrist seam and rigging still need review",
+  "vertices": 31840,
+  "topology": {
+    "connected_components": [
+      31840
+    ],
+    "nonmanifold_edges": 0
+  }
+}

@@ -55,6 +55,7 @@ enum Hold { ONE_HAND, TWO_HAND, MELEE_ONE, MELEE_TWO, NONE }
 @export var muzzle_color := Color(1.0, 0.85, 0.4)
 @export var tracer_color := Color(1.0, 0.95, 0.6)
 @export var sprite_key := "pistol"
+@export var held_scale := 1.0  ## Per-weapon correction relative to character hand size.
 @export var score_tag := "gun"
 @export var muzzle_scale := 1.0           ## flash size: whisper tiny, shotgun huge
 @export var ejects_shells := true         ## revolvers keep their brass

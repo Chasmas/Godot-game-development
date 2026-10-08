@@ -1,0 +1,102 @@
+08:06:10 | INFO: Data are loaded, start creating Blender stuff
+08:06:10 | INFO: Blender create Mesh node Mesh_0
+08:06:10 | INFO: glTF import finished in 0.33s
+SEATED CONTACT bellhop [('Left', -0.1012), ('Right', -0.0916)]
+08:06:11 | INFO: Data are loaded, start creating Blender stuff
+08:06:11 | INFO: Blender create Mesh node Mesh_0
+08:06:11 | INFO: glTF import finished in 0.36s
+SEATED CONTACT biker [('Left', -0.1431), ('Right', -0.1377)]
+08:06:12 | INFO: Data are loaded, start creating Blender stuff
+08:06:12 | INFO: Blender create Mesh node Mesh_0
+08:06:12 | INFO: glTF import finished in 0.32s
+SEATED CONTACT boss [('Left', 0.0), ('Right', 0.0009)]
+08:06:13 | INFO: Data are loaded, start creating Blender stuff
+08:06:13 | INFO: Blender create Mesh node Mesh_0
+08:06:13 | INFO: glTF import finished in 0.33s
+SEATED CONTACT buck [('Left', 0.0077), ('Right', 0.0021)]
+08:06:13 | INFO: Data are loaded, start creating Blender stuff
+08:06:13 | INFO: Blender create Mesh node Mesh_0
+08:06:14 | INFO: glTF import finished in 0.32s
+SEATED CONTACT burnt [('Left', 0.0001), ('Right', 0.0005)]
+08:06:14 | INFO: Data are loaded, start creating Blender stuff
+08:06:14 | INFO: Blender create Mesh node char1
+08:06:15 | INFO: glTF import finished in 0.40s
+SEATED CONTACT cass [('Left', -0.1136), ('Right', -0.1065)]
+08:06:15 | INFO: Data are loaded, start creating Blender stuff
+08:06:15 | INFO: Blender create Mesh node Mesh_0
+08:06:16 | INFO: glTF import finished in 0.33s
+SEATED CONTACT civilian [('Left', 0.0), ('Right', 0.0005)]
+08:06:16 | INFO: Data are loaded, start creating Blender stuff
+08:06:16 | INFO: Blender create Mesh node Mesh_0
+08:06:17 | INFO: glTF import finished in 0.33s
+SEATED CONTACT cultist [('Left', 0.0004), ('Right', 0.0004)]
+08:06:17 | INFO: Data are loaded, start creating Blender stuff
+08:06:17 | INFO: Blender create Mesh node Mesh_0
+08:06:18 | INFO: glTF import finished in 0.37s
+08:06:18 | INFO: Data are loaded, start creating Blender stuff
+08:06:18 | INFO: Blender create Mesh node Mesh_0
+08:06:18 | INFO: Blender create Mesh node Door
+08:06:18 | INFO: glTF import finished in 0.11s
+08:06:18 | INFO: Data are loaded, start creating Blender stuff
+08:06:18 | INFO: Blender create Mesh node Mesh_0
+08:06:18 | INFO: glTF import finished in 0.32s
+SEATED CONTACT fireman [('Left', -0.0), ('Right', 0.0032)]
+08:06:19 | INFO: Data are loaded, start creating Blender stuff
+08:06:19 | INFO: Blender create Mesh node Mesh_0
+08:06:19 | INFO: glTF import finished in 0.32s
+SEATED CONTACT ghoul [('Left', 0.0019), ('Right', 0.0)]
+08:06:20 | INFO: Data are loaded, start creating Blender stuff
+08:06:20 | INFO: Blender create Mesh node Mesh_0
+08:06:20 | INFO: glTF import finished in 0.36s
+SEATED CONTACT guard [('Left', 0.0043), ('Right', 0.0091)]
+08:06:21 | INFO: Data are loaded, start creating Blender stuff
+08:06:21 | INFO: Blender create Mesh node Mesh_0
+08:06:21 | INFO: glTF import finished in 0.34s
+SEATED CONTACT gunner [('Left', -0.1802), ('Right', -0.1745)]
+08:06:22 | INFO: Data are loaded, start creating Blender stuff
+08:06:22 | INFO: Blender create Mesh node Mesh_0
+08:06:22 | INFO: glTF import finished in 0.35s
+SEATED CONTACT handler [('Left', -0.1788), ('Right', -0.1796)]
+08:06:23 | INFO: Data are loaded, start creating Blender stuff
+08:06:23 | INFO: Blender create Mesh node Mesh_0
+08:06:23 | INFO: glTF import finished in 0.34s
+SEATED CONTACT heavy [('Left', -0.0875), ('Right', -0.0993)]
+08:06:23 | INFO: Data are loaded, start creating Blender stuff
+08:06:23 | INFO: Blender create Mesh node Mesh_0
+08:06:24 | INFO: glTF import finished in 0.33s
+SEATED CONTACT hunter [('Left', -0.1304), ('Right', -0.1403)]
+08:06:24 | INFO: Data are loaded, start creating Blender stuff
+08:06:24 | INFO: Blender create Mesh node Mesh_0
+08:06:25 | INFO: glTF import finished in 0.34s
+SEATED CONTACT riot [('Left', -0.0), ('Right', 0.0001)]
+08:06:25 | INFO: Data are loaded, start creating Blender stuff
+08:06:25 | INFO: Blender create Mesh node Mesh_0
+08:06:26 | INFO: glTF import finished in 0.31s
+SEATED CONTACT scout [('Left', 0.0), ('Right', 0.0001)]
+08:06:26 | INFO: Data are loaded, start creating Blender stuff
+08:06:26 | INFO: Blender create Mesh node Mesh_0
+08:06:27 | INFO: glTF import finished in 0.33s
+SEATED CONTACT scrapper [('Left', -0.0001), ('Right', 0.0007)]
+08:06:27 | INFO: Data are loaded, start creating Blender stuff
+08:06:27 | INFO: Blender create Mesh node Mesh_0
+08:06:27 | INFO: glTF import finished in 0.34s
+SEATED CONTACT security [('Left', -0.1167), ('Right', -0.1278)]
+08:06:28 | INFO: Data are loaded, start creating Blender stuff
+08:06:28 | INFO: Blender create Mesh node Mesh_0
+08:06:28 | INFO: glTF import finished in 0.34s
+SEATED CONTACT sniper [('Left', -0.1851), ('Right', -0.1958)]
+08:06:29 | INFO: Data are loaded, start creating Blender stuff
+08:06:29 | INFO: Blender create Mesh node char1
+08:06:29 | INFO: glTF import finished in 0.31s
+SEATED CONTACT stagehand [('Left', -0.0436), ('Right', -0.0561)]
+08:06:30 | INFO: Data are loaded, start creating Blender stuff
+08:06:30 | INFO: Blender create Mesh node Mesh_0
+08:06:30 | INFO: glTF import finished in 0.33s
+SEATED CONTACT welder [('Left', 0.0037), ('Right', 0.0041)]
+08:06:31 | INFO: Data are loaded, start creating Blender stuff
+08:06:31 | INFO: Blender create Mesh node Mesh_0
+08:06:31 | INFO: glTF import finished in 0.32s
+SEATED CONTACT zombie [('Left', 0.0004), ('Right', 0.0005)]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

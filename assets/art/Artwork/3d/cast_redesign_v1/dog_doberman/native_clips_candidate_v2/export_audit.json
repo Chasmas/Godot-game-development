@@ -1,0 +1,19 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "clips": {
+    "idle": {
+      "duration_seconds": 2.4,
+      "channels": 79
+    },
+    "walk": {
+      "duration_seconds": 1,
+      "channels": 79
+    },
+    "start": {
+      "duration_seconds": 0.6,
+      "channels": 79
+    }
+  },
+  "scope": "Combined GLB structure; transition validation pending"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "assets/art/Artwork/3d/hellhound/model.glb",
+  "blender_review": "build/canine_review/source_review.blend",
+  "render_review": "build/canine_review/source_review.png",
+  "reviewed": true,
+  "runtime_ready": false,
+  "suitable_breed": "hellhound",
+  "unsuitable_breeds": ["shepherd", "doberman", "rottweiler"],
+  "blocking_requirements": [
+    "Quadruped armature and skin weights; source has neither",
+    "Grounded paw contacts and tested shoulder/hip/knee deformation",
+    "Authored idle, walk, trot, gallop, bite, sniff, sleep and death clips",
+    "Review from the actual game camera at runtime size",
+    "Gait cadence synchronized to travelled distance, including collision and leash following"
+  ],
+  "visual_notes": "Textured supernatural canine with glowing fissures and dorsal spikes; must remain exclusive to the hellhound. No runtime replacement approved."
+}

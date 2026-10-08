@@ -1,0 +1,14 @@
+{
+  "integration_approved": false,
+  "scope": "Actual Godot OpenGL settled pose of all24 looks x single/both-leg joint-plane candidate cuts",
+  "findings": [
+    "Previously elongated single-leg membranes are substantially reduced in reviewed views",
+    "48 cuts audited; 12 still have incomplete boundary topology",
+    "Broader directions, animated seams and matching detached parts remain unverified"
+  ],
+  "images": [
+    "cast_0.png",
+    "cast_1.png",
+    "cast_2.png"
+  ]
+}

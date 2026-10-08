@@ -37,6 +37,9 @@ var dead_zones: Dictionary = {}      ## zones whose fuse box was destroyed
 var switches: Array = []
 var upgrade_pickups: Array = []
 
+const APPROVED_M01_GROUND_PLATE := "res://assets/art/prerendered/m01_sunset_palms/layers/ground_no_pool_review.png"
+const APPROVED_M01_GROUND_PLATE_ALPHA := 0.12
+
 var floor_root: Node2D
 var walls_root: Node2D
 var doors_root: Node2D
@@ -95,6 +98,16 @@ func _ready() -> void:
 	ok.setup(self, Vector2i(mw, data.get("map", []).size()), String(mission.id))
 	var decor_root := _root("Decor")
 	Decor.build(self, decor_root, b, data.get("decor", []))
+	if data.get("ground_mist", false):
+		var exterior: Array = data.get("zones", {}).get("exterior", [])
+		if exterior.size() == 4:
+			var mist := Node2D.new()
+			mist.set_script(load("res://scripts/levels/ground_mist.gd"))
+			mist.area = Rect2(float(exterior[0])*16.0,float(exterior[1])*16.0,float(exterior[2])*16.0,float(exterior[3])*16.0)
+			decor_root.add_child(mist)
+	var ambient_events := AmbientEventDirector.new()
+	ambient_events.name = "AmbientEventDirector"
+	decor_root.add_child(ambient_events)
 
 	var wall_art: WallArt = null
 	if data.get("wall_art", true) and SaveManager.get_setting("set_dressing", true):
@@ -104,6 +117,10 @@ func _ready() -> void:
 		wall_art.build(b)
 	if SaveManager.get_setting("set_dressing", true):
 		Dressing.build(self, b, wall_art)
+		M01NativeArmchairs.build(self)
+		M01NativeBeds.build(self)
+	_add_approved_m01_ground_plate()
+	M01NativeGround.build(self)
 	var motes := AmbientMotes.new()
 	motes.level = self
 	add_child(motes)
@@ -132,7 +149,11 @@ func _ready() -> void:
 	for base in ["guard", "gunner"]:   # reinforcements can arrive in any variant
 		for v in 4:
 			looks["%s#%d" % [base, v]] = true
+	Effects.MeasuredTrail.prewarm()
+	Effects.MeasuredKnifeTrail.prewarm()
+	Effects.MeasuredHeavyKnifeTrail.prewarm()
 	var warm_ms := SpriteForge.prewarm(looks.keys())
+	preload("res://scripts/player/sever_meshes.gd").prefetch(looks.keys())
 	if OS.is_debug_build() and warm_ms > 1.0:
 		print("[level] prewarmed %d looks in %.0f ms" % [looks.size(), warm_ms])
 	for e in enemies:
@@ -302,6 +323,8 @@ func _ready() -> void:
 	var ic: Dictionary = data.get("intro_call", {})
 	if not ic.is_empty() and arcade == null and rules == null and Game.attempts <= 1 and st.is_empty() and Game.intro_calls_enabled():
 		get_tree().create_timer(3.4, false).timeout.connect(func():
+			if is_instance_valid(hero_car) and hero_car.arrival_in_progress:
+				await hero_car.arrived
 			if not is_inside_tree() or not player.alive:
 				return
 			var call := IntroCall.new()
@@ -317,6 +340,27 @@ func _load_level(path: String) -> Dictionary:
 		return {"map": ["#####", "#P..#", "#####"]}
 	var parsed: Variant = JSON.parse_string(f.get_as_text())
 	return parsed if parsed is Dictionary else {}
+
+func _add_approved_m01_ground_plate() -> void:
+	# Approved, reversible M01-only pavement ownership pass. It supplies the
+	# road/courtyard texture while the live pool and gameplay props remain the
+	# authoritative landmarks. No other mission can load this plate.
+	if mission == null or mission.id != &"m01_checkout":
+		return
+	var plate_texture := load(APPROVED_M01_GROUND_PLATE) as Texture2D
+	if plate_texture == null:
+		push_warning("Approved M01 ground plate could not be loaded")
+		return
+	var plate := Sprite2D.new()
+	plate.name = "ApprovedM01GroundPlate"
+	plate.texture = plate_texture
+	plate.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	plate.centered = true
+	plate.position = Vector2(464, 296)
+	plate.scale = Vector2.ONE * 0.333333
+	plate.modulate.a = APPROVED_M01_GROUND_PLATE_ALPHA
+	plate.z_index = -30
+	add_child(plate)
 
 func _make_roots() -> void:
 	floor_root = _root("Floor")
@@ -340,26 +384,76 @@ func _make_roots() -> void:
 func _root(n: String) -> Node2D:
 	var r := Node2D.new()
 	r.name = n
+	# Oblique view: whoever stands lower on the screen is in front. Nested
+	# y-sorted roots merge, so actors and standing props (same z_index) sort
+	# together; floors, walls and effects keep their own z_index layers.
+	if n in ["Props", "Pickups", "Doors", "Actors"]:
+		r.y_sort_enabled = true
+		if _ysorted == null:
+			_ysorted = Node2D.new()
+			_ysorted.name = "YSorted"
+			_ysorted.y_sort_enabled = true
+			add_child(_ysorted)
+		_ysorted.add_child(r)
+		return r
 	add_child(r)
 	return r
+
+var _ysorted: Node2D
 
 func pickup_root() -> Node:
 	return pickups_root
 
 # ======================================================================= queries for AI
 func get_nav_path(from: Vector2, to: Vector2) -> PackedVector2Array:
+	# Temporary reservations follow movable/reparented props without stale cells.
+	# This query is synchronous; always restore the static navigation grid.
+	var changed := _reserve_navigation_obstacles()
+	var path := _get_nav_path_static(from,to)
+	for cell in changed:nav.set_point_solid(cell,false)
+	return path
+
+func _reserve_navigation_obstacles() -> Array[Vector2i]:
+	var changed: Array[Vector2i]=[]
+	if nav==null:return changed
+	for body in get_tree().get_nodes_in_group("navigation_obstacles"):
+		if not is_ancestor_of(body):continue
+		var shape := body.get_child(0) as CollisionShape2D
+		if shape==null or not shape.shape is RectangleShape2D:continue
+		var half: Vector2=shape.shape.size*.5
+		var bounds := Rect2(shape.to_global(-half),Vector2.ZERO)
+		for corner in [Vector2(-1,-1),Vector2(1,-1),Vector2(1,1),Vector2(-1,1)]:
+			bounds=bounds.expand(shape.to_global(corner*half))
+		for y in range(floori(bounds.position.y/16),ceili(bounds.end.y/16)):
+			for x in range(floori(bounds.position.x/16),ceili(bounds.end.x/16)):
+				var cell := Vector2i(x,y)
+				if nav.is_in_boundsv(cell) and not nav.is_point_solid(cell):
+					changed.append(cell);nav.set_point_solid(cell,true)
+	return changed
+
+func _get_nav_path_static(from: Vector2, to: Vector2) -> PackedVector2Array:
 	if nav == null:
 		return PackedVector2Array([to])
-	var a := Vector2i(int(from.x / 16.0), int(from.y / 16.0))
-	var b := Vector2i(int(to.x / 16.0), int(to.y / 16.0))
+	var a := Vector2i(floori(from.x / 16.0), floori(from.y / 16.0))
+	var b := Vector2i(floori(to.x / 16.0), floori(to.y / 16.0))
 	if not nav.is_in_boundsv(a) or not nav.is_in_boundsv(b):
-		return PackedVector2Array([to])
+		return PackedVector2Array()
+	var target_cell := b
 	b = _nearest_open(b)
 	a = _nearest_open(a)
-	var path := nav.get_point_path(a, b, true)
+	if nav.is_point_solid(a) or nav.is_point_solid(b):
+		return PackedVector2Array()
+	var path := nav.get_point_path(a, b, false)
+	# No route is not permission to walk straight through a blocked room.
+	if path.is_empty():
+		return PackedVector2Array()
 	if path.size() > 0:
 		path.remove_at(0)
-	path.append(to)
+	# A blocked destination was projected onto open floor above. Do not append
+	# the original point inside furniture and send the final step into its collider.
+	var endpoint := Vector2(b) * 16.0 + Vector2(8,8) if b != target_cell else to
+	if path.is_empty() or path[path.size()-1].distance_to(endpoint) > 0.01:
+		path.append(endpoint)
 	return path
 
 ## Closest walkable point to p (cell centre), or fallback if p is deep in a
@@ -367,7 +461,7 @@ func get_nav_path(from: Vector2, to: Vector2) -> PackedVector2Array:
 func nearest_open_point(p: Vector2, fallback: Vector2) -> Vector2:
 	if nav == null:
 		return p
-	var c := Vector2i(int(p.x / 16.0), int(p.y / 16.0))
+	var c := Vector2i(floori(p.x / 16.0), floori(p.y / 16.0))
 	if not nav.is_in_boundsv(c):
 		return fallback
 	if not nav.is_point_solid(c):
@@ -646,6 +740,9 @@ func _scatter_smashables() -> void:
 		if not clear:
 			continue
 		var kinds: Array = SMASH_BY_FLOOR[f]
+		if str(data.get("id", "")) == "m04_villa_estrella" and f in [";", "+", "_"] and rng.randf() < 0.32:
+			kinds = kinds.duplicate()
+			kinds.append("coffin")
 		var sm := Smashable.new()
 		sm.setup(str(kinds[rng.randi() % kinds.size()]), c, self, rng.randi() % 1000)
 		props_root.add_child(sm)
@@ -658,6 +755,8 @@ func _scatter_smashables() -> void:
 func _build_cameras() -> void:
 	for c in data.get("cameras", []):
 		var cam := SecurityCamera.new()
+		cam.power_zone = str(c.get("power_zone", builder.zone_at_cell(int(c.cell[0]), int(c.cell[1]))))
+		cam.powered = not is_zone_dark(cam.power_zone)
 		cam.base_angle = deg_to_rad(float(c.get("angle", 90)))
 		cam.position = Vector2(float(c.cell[0]), float(c.cell[1])) * 16.0 + Vector2(8, 8) - Vector2.from_angle(cam.base_angle) * 4.0
 		var corner := _camera_corner(Vector2i(int(c.cell[0]), int(c.cell[1])))
@@ -674,32 +773,26 @@ func _build_cameras() -> void:
 ## Where a security camera really goes: bolted up in the nearest inside
 ## corner of the room (walls on two sides), looking diagonally across it -
 ## the most floor it can watch, and the most believable spot.
+## Only fit a corner at the authored cell. Searching neighbouring rooms
+## moved corridor cameras across walls and invalidated encounter design.
 func _camera_corner(cell: Vector2i) -> Dictionary:
-	var best := {}
-	var best_d := 1e9
-	var wall := func(x: int, y: int) -> bool: return b_ch(x, y) == "#"
-	for dy in range(-5, 6):
-		for dx in range(-5, 6):
-			var x := cell.x + dx
-			var y := cell.y + dy
-			if wall.call(x, y) or b_ch(x, y) in ["D", "W", "L", " "]:
+	var x := cell.x
+	var y := cell.y
+	if b_ch(x, y) in ["#", "D", "W", "L", " "]:
+		return {}
+	for cx in [-1, 1]:
+		for cy in [-1, 1]:
+			if b_ch(x + cx, y) != "#" or b_ch(x, y + cy) != "#":
 				continue
-			for cx in [-1, 1]:
-				for cy in [-1, 1]:
-					if wall.call(x + cx, y) and wall.call(x, y + cy):
-						# enough room in front of it to be worth watching
-						var open := 0
-						for k in range(1, 5):
-							if not wall.call(x - cx * k, y - cy * k):
-								open += 1
-						if open < 3:
-							continue
-						var d := float(dx * dx + dy * dy)
-						if d < best_d:
-							best_d = d
-							var inward := Vector2(-cx, -cy).normalized()
-							best = {"pos": Vector2(x, y) * 16.0 + Vector2(8, 8) + Vector2(cx, cy) * 6.0, "angle": inward.angle()}
-	return best
+			var open := 0
+			for k in range(1, 5):
+				if b_ch(x - cx * k, y - cy * k) != "#":
+					open += 1
+			if open < 3:
+				continue
+			var inward := Vector2(-cx, -cy).normalized()
+			return {"pos": Vector2(cell) * 16.0 + Vector2(8, 8) + Vector2(cx, cy) * 6.0, "angle": inward.angle()}
+	return {}
 
 func b_ch(x: int, y: int) -> String:
 	var rows: Array = data.get("map", [])
@@ -1116,6 +1209,8 @@ func _on_collectible(it: Interactable, _by: Node) -> void:
 	Events.collectible_found.emit(StringName(it.item_id))
 	hud.show_banner(tr(str(it.get_meta("title", ""))), 2.0, UIStyle.GOLD)
 	await get_tree().create_timer(0.4).timeout
+	if not is_inside_tree() or not is_instance_valid(player) or not player.alive:
+		return
 	var tmp := {"start": "a", "nodes": {"a": {"speaker": "narration", "text": str(it.get_meta("text", "")), "shot": "ev_" + str(it.item_id)}}}
 	_run_inline_dialogue(tmp)
 
@@ -1286,18 +1381,13 @@ func _on_boss_prop(it: Interactable, _by: Node) -> void:
 			boss.blind(4.5, "NO! Get back here, you mutts! WORK!")
 			hud.show_hint("DINNER TIME. HE'S ALONE NOW.", 2.5)
 		"extinguisher":
-			# a blast of foam in the direction she's facing
+			# a few seconds of foam where she aims: point it at him
 			Audio.play_at("sprinkler", player.global_position, 0.0, 0.2)
-			for i in 10:
-				Effects.smoke(player.global_position + player.aim_dir * (10.0 + i * 8.0) + Vector2(randf_range(-6, 6), randf_range(-6, 6)))
-			var to := boss.global_position - player.global_position
-			if to.length() < 110.0 and absf(angle_difference(player.aim_dir.angle(), to.angle())) < 0.9:
-				var info := DamageInfo.make(DamageInfo.Type.MELEE, player, boss.global_position, to.normalized(), &"extinguisher", &"environment")
-				info.from_player = true
-				info.set_meta("foam", true)
-				boss.take_damage(info)
-			else:
-				hud.show_hint("TOO FAR. GET HIM CLOSER TO THE NEXT ONE.", 2.0)
+			var spray := FoamSpray.new()
+			spray.player = player
+			spray.target = boss
+			add_child(spray)
+			hud.show_hint("FOAM HIM! AIM AT THE FIRE.", 2.0)
 
 func _on_boss_defeated(_b: BossNightManager) -> void:
 	phase = Phase.BOSS_DOWN
@@ -1306,6 +1396,8 @@ func _on_boss_defeated(_b: BossNightManager) -> void:
 	_update_objective()
 	Music.stop(1.5)
 	await get_tree().create_timer(0.9).timeout
+	if not is_inside_tree() or not is_instance_valid(player) or not player.alive or phase != Phase.BOSS_DOWN:
+		return
 	Dialogue.start(_boss_dialogue("down"))
 
 func _on_dialogue_event(ev: String) -> void:

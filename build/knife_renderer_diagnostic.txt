@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2257 ms
+KNIFE REVIEW RENDERER: res://scripts/player/cast_model.gd
+PASS atlas prewarmed before gameplay
+PASS actual controller creates Blender trail
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS actual controller creates Blender trail
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS actual controller creates Blender trail
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS actual controller creates Blender trail
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS heavy knife does not borrow stab artwork
+PASS weapon swap cancels runtime trail
+PASS bat does not borrow knife artwork
+PASS roll cancels runtime trail
+RUNTIME BLENDER KNIFE: 0 failures

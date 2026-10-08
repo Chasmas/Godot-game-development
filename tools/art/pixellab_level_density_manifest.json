@@ -16,7 +16,7 @@
       "category": "B_functional_prop",
       "canvas": "64x64",
       "proposed_story": "Illegal power siphon behind reception.",
-      "prompt": "Pixel art style, improvised motel ice-machine power siphon, made of dented aluminium, cracked plastic and tangled extension cable, featuring a bypass plug, wet cardboard, taped junction box, faded warning sticker and tiny condensation puddle, top-down orthographic lighting with cyan pool bounce and faint magenta neon bleed, clean outlines, asset isolated on transparent background."
+      "prompt": "Pixel art style, horizontal improvised electrical power-siphon assembly lying flat against a motel service-room floor, made of dented aluminium junction boxes, cracked black plugs and tangled extension cables, featuring two taped cable splices, a bypass plug, wet cardboard and a small condensation puddle, exact 90-degree overhead orthographic view, zero visible side faces, cyan pool bounce and faint magenta neon bleed, clean readable silhouette, asset isolated on transparent background."
     },
     {
       "id": "yard_parts_tags",
@@ -48,7 +48,7 @@
       "category": "D_atmospheric_overlay",
       "canvas": "128x128",
       "proposed_story": "Dust makes the unused stage lights feel tangible.",
-      "prompt": "Pixel art style, sparse dust motes drifting through a narrow theatrical spotlight beam, made of translucent dust and faint smoke, featuring uneven particle density and no solid background, top-down compatible atmospheric overlay with warm amber light from upper-left and a faint cyan edge, clean outlines, asset isolated on transparent background."
+      "prompt": "Pixel art style, long narrow translucent cone of theatrical light crossing an empty dark stage floor, made only of faint amber haze and sparse individual dust motes, featuring a soft feathered gradient, large transparent gaps and a subtle cyan rim, overhead atmospheric overlay with no solid centre, no burst and no impact shape, no outline around the beam, asset isolated on transparent background."
     }
   ]
 }

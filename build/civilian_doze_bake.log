@@ -1,0 +1,20 @@
+23:24:42 | INFO: Data are loaded, start creating Blender stuff
+23:24:42 | INFO: Blender create Mesh node Mesh_0
+23:24:42 | INFO: glTF import finished in 0.16s
+ELBOW doze Right 3.142 (0.08730451762676239, -0.1833522617816925, 0.7561649084091187)
+ELBOW doze Left 0.0 (0.08656144142150879, 0.15772663056850433, 0.7619921565055847)
+anim doze 192 frames (baked)
+23:24:43 | INFO: Data are loaded, start creating Blender stuff
+23:24:43 | INFO: Blender create Mesh node Mesh_0
+23:24:43 | INFO: glTF import finished in 0.16s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:24:43 | INFO: Starting glTF 2.0 export
+23:24:43 | INFO: Extracting primitive: Mesh_0
+23:24:43 | INFO: Primitives created: 1
+23:24:44 | INFO: Finished glTF 2.0 export in 0.4050717353820801 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\civilian_doze\civilian.glb clips: ['doze']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

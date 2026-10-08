@@ -1,0 +1,51 @@
+{
+  "character": "zombie_biker",
+  "height_m": 1.82,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_biker_isolated_turnaround_v2.png",
+  "source_sha256": "8d18ac32117183a2dc795e9dcaeb6ef37928d134751104ca5833c941b59a2fed",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        550,
+        1024
+      ],
+      "width": 550,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_biker\\references\\front.png",
+      "sha256": "fbf3de26dc751a092eb3e347bd72124323feaa14211c8c0bae869564604e8408"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        625,
+        0,
+        900,
+        1024
+      ],
+      "width": 275,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_biker\\references\\side.png",
+      "sha256": "cb6058307a26fd28bcb8ee84cc183f003801fb0788d99835fef57891c92b063a"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        985,
+        0,
+        1500,
+        1024
+      ],
+      "width": 515,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_biker\\references\\back.png",
+      "sha256": "5bae8c4eca2fb071025c64d9b0a4a7ead95b90e8c685bea90446d20282c43f5e"
+    }
+  ],
+  "visual_review": "New isolated ImageGen sheet and all three saved Blender crops directly inspected. Complete extremities and hair, no portrait contamination. Identity retained with minor generated surface variations. Modeling input approval only."
+}

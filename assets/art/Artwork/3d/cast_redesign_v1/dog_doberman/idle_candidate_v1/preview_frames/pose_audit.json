@@ -1,0 +1,105 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Idle sequence preview at 10fps; no gameplay approval",
+  "probes": [
+    {
+      "render": "idle_001.png",
+      "frame": 1
+    },
+    {
+      "render": "idle_004.png",
+      "frame": 4
+    },
+    {
+      "render": "idle_007.png",
+      "frame": 7
+    },
+    {
+      "render": "idle_010.png",
+      "frame": 10
+    },
+    {
+      "render": "idle_013.png",
+      "frame": 13
+    },
+    {
+      "render": "idle_016.png",
+      "frame": 16
+    },
+    {
+      "render": "idle_019.png",
+      "frame": 19
+    },
+    {
+      "render": "idle_022.png",
+      "frame": 22
+    },
+    {
+      "render": "idle_025.png",
+      "frame": 25
+    },
+    {
+      "render": "idle_028.png",
+      "frame": 28
+    },
+    {
+      "render": "idle_031.png",
+      "frame": 31
+    },
+    {
+      "render": "idle_034.png",
+      "frame": 34
+    },
+    {
+      "render": "idle_037.png",
+      "frame": 37
+    },
+    {
+      "render": "idle_040.png",
+      "frame": 40
+    },
+    {
+      "render": "idle_043.png",
+      "frame": 43
+    },
+    {
+      "render": "idle_046.png",
+      "frame": 46
+    },
+    {
+      "render": "idle_049.png",
+      "frame": 49
+    },
+    {
+      "render": "idle_052.png",
+      "frame": 52
+    },
+    {
+      "render": "idle_055.png",
+      "frame": 55
+    },
+    {
+      "render": "idle_058.png",
+      "frame": 58
+    },
+    {
+      "render": "idle_061.png",
+      "frame": 61
+    },
+    {
+      "render": "idle_064.png",
+      "frame": 64
+    },
+    {
+      "render": "idle_067.png",
+      "frame": 67
+    },
+    {
+      "render": "idle_070.png",
+      "frame": 70
+    }
+  ],
+  "preview_fps": 10,
+  "duration_seconds": 2.4
+}

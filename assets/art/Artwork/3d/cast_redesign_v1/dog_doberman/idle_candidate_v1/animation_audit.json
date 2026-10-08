@@ -1,0 +1,14 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "clip": "doberman_idle_skeleton_pilot",
+  "duration_seconds": 2.4,
+  "frames": 72,
+  "loop_duplicate_frame": 73,
+  "sampled_frames": 73,
+  "paw_sample_vertices": 5791,
+  "maximum_sampled_paw_displacement_m": 0.0,
+  "maximum_mesh_loop_seam_m": 0.0,
+  "scope": "Authored idle animation and numerical evaluated-mesh checks; playback visual validation pending",
+  "jaw_animation_ready": false
+}

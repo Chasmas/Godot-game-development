@@ -1,0 +1,51 @@
+{
+  "character": "biker",
+  "height_m": 1.82,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\biker_turnaround.png",
+  "source_sha256": "5a586079393b5d787e31505fd1ecef81c250965e23ac3aaa83f44f708aa7130e",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        580,
+        1024
+      ],
+      "width": 580,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\biker\\references\\front.png",
+      "sha256": "ed204bed60cf0b36a8299e069dd20a5bbfe56cae4126d14104a3a0498937dff4"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        595,
+        0,
+        940,
+        1024
+      ],
+      "width": 345,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\biker\\references\\side.png",
+      "sha256": "f0cc52ebf835401a3dc87dc0fb15fe2b32c636f2a7c94ad15bab13a8a5a92e83"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        955,
+        0,
+        1536,
+        1024
+      ],
+      "width": 581,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\biker\\references\\back.png",
+      "sha256": "4d71e19f6877d421291745e3ec992b60b7e591638e70a5e0fbf43531bc4b9d6a"
+    }
+  ],
+  "visual_review": "All saved front/profile/back views directly inspected: complete single figure including head, hands and boots; no adjacent fragments. API-input approval only."
+}

@@ -1,0 +1,10 @@
+05:31:44 | INFO: Data are loaded, start creating Blender stuff
+05:31:44 | INFO: Blender create Mesh node Mesh_0
+05:31:45 | INFO: glTF import finished in 0.37s
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\review_consumable_hand.py:33: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+00:07.313  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_hand_anatomy\palm.png'
+00:13.188  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_hand_anatomy\edge.png'
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -56,6 +56,10 @@ func add_charge(v: float) -> void:
 	_emit()
 
 func can_activate() -> bool:
+	if owner_player is Player:
+		var player := owner_player as Player
+		if not player.alive or not player.input_enabled or player.is_dashing() or player._locked_t > 0.0:
+			return false
 	if Game.modifiers.get("no_ability", false):
 		return false
 	return not active and charge >= float(DEFS[id].cost) - 0.001
@@ -87,7 +91,7 @@ func _process(delta: float) -> void:
 		return
 	# measure in real time so slow-mo doesn't extend itself
 	var real := delta / maxf(Engine.time_scale, 0.01)
-	time_left -= real
+	time_left = maxf(0.0, time_left - real)
 	_emit()
 	if time_left <= 0.0:
 		_end()
@@ -100,6 +104,9 @@ func _on_kill_in_light(_e: Node, _info: Dictionary) -> void:
 
 func _end() -> void:
 	active = false
+	time_left = 0.0
+	if Events.enemy_killed.is_connected(_on_kill_in_light):
+		Events.enemy_killed.disconnect(_on_kill_in_light)
 	match id:
 		&"spotlight":
 			Game.set_slowmo(1.0)
@@ -122,7 +129,7 @@ func player_time_mult() -> float:
 func _emit() -> void:
 	var shown := charge
 	if active and float(DEFS[id].duration) > 0.0:
-		shown = time_left / float(DEFS[id].duration)
+		shown = clampf(time_left / float(DEFS[id].duration), 0.0, 1.0)
 	Events.ability_changed.emit(shown, active)
 
 func display_name() -> String:

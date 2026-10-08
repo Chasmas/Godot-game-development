@@ -1,0 +1,702 @@
+[
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      -4.88881206512451,
+      3.05323767662048
+    ],
+    "id": "e_32,3",
+    "idle_pose": "doze",
+    "look": "heavy#1",
+    "position": [
+      520.0,
+      56.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "shotgun",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      -3.3157811164856,
+      2.85920882225037
+    ],
+    "id": "e_22,4",
+    "idle_pose": "doze",
+    "look": "hunter#1",
+    "position": [
+      360.0,
+      72.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "machete",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      -4.4651198387146,
+      2.90989661216736
+    ],
+    "id": "e_10,6",
+    "idle_pose": "doze",
+    "look": "biker#0",
+    "position": [
+      168.0,
+      104.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "bat",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "smoke",
+    "hand": [
+      0.457697749137878,
+      -6.42922830581665
+    ],
+    "id": "e_44,6",
+    "idle_pose": "smoke",
+    "look": "bellhop#3",
+    "position": [
+      712.0,
+      104.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "knife",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim",
+    "hand": [
+      5.98665285110474,
+      -13.6279907226563
+    ],
+    "id": "e_18,7",
+    "idle_pose": "",
+    "look": "gunner#1",
+    "position": [
+      296.0,
+      120.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "smg",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim",
+    "hand": [
+      5.98678255081177,
+      11.3599739074707
+    ],
+    "id": "e_36,7",
+    "idle_pose": "",
+    "look": "gunner#1",
+    "position": [
+      584.0,
+      120.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "smg",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "idle",
+    "hand": [
+      0.282768547534943,
+      -6.5540452003479
+    ],
+    "id": "e_11,12",
+    "idle_pose": "",
+    "look": "scout#2",
+    "position": [
+      184.0,
+      200.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      2.15710687637329,
+      7.16893339157104
+    ],
+    "id": "e_45,14",
+    "idle_pose": "doze",
+    "look": "hunter#3",
+    "position": [
+      728.0,
+      232.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "machete",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      12.8338394165039,
+      11.2982788085938
+    ],
+    "id": "e_61,14",
+    "idle_pose": "",
+    "look": "guard#1",
+    "position": [
+      949.697082519531,
+      212.711532592773
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      4.48330307006836,
+      -11.8105144500732
+    ],
+    "id": "e_25,22",
+    "idle_pose": "",
+    "look": "riot",
+    "position": [
+      439.790130615234,
+      360.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pipe",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      4.47948741912842,
+      -11.6981811523438
+    ],
+    "id": "e_40,23",
+    "idle_pose": "",
+    "look": "guard#2",
+    "position": [
+      689.258666992188,
+      376.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim",
+    "hand": [
+      6.19173097610474,
+      10.7570810317993
+    ],
+    "id": "e_63,23",
+    "idle_pose": "",
+    "look": "sniper",
+    "position": [
+      1016.0,
+      376.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "rifle",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim_melee",
+    "hand": [
+      3.83963775634766,
+      14.187331199646
+    ],
+    "id": "e_25,28",
+    "idle_pose": "",
+    "look": "hunter#2",
+    "position": [
+      408.0,
+      456.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "machete",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "smoke",
+    "hand": [
+      1.59928214550018,
+      -14.2744750976563
+    ],
+    "id": "e_35,28",
+    "idle_pose": "smoke",
+    "look": "bellhop#3",
+    "position": [
+      568.0,
+      456.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "knife",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "drive",
+    "hand": [
+      -4.31451320648193,
+      2.71977186203003
+    ],
+    "id": "e_58,28",
+    "idle_pose": "smoke",
+    "look": "boss",
+    "position": [
+      936.0,
+      456.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "revolver",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      2.13678956031799,
+      6.99881458282471
+    ],
+    "id": "e_38,29",
+    "idle_pose": "doze",
+    "look": "bellhop#3",
+    "position": [
+      616.0,
+      472.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "knife",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim",
+    "hand": [
+      -8.90198421478271,
+      -1.22370505332947
+    ],
+    "id": "e_47,29",
+    "idle_pose": "",
+    "look": "heavy#3",
+    "position": [
+      760.0,
+      472.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "shotgun",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "doze",
+    "hand": [
+      7.31025886535645,
+      2.91032290458679
+    ],
+    "id": "e_8,32",
+    "idle_pose": "doze",
+    "look": "biker#2",
+    "position": [
+      136.0,
+      520.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "bat",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      4.4794921875,
+      -11.6981811523438
+    ],
+    "id": "e_20,33",
+    "idle_pose": "",
+    "look": "guard#1",
+    "position": [
+      369.261322021484,
+      536.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "aim",
+    "hand": [
+      5.98678255081177,
+      11.3599739074707
+    ],
+    "id": "e_47,33",
+    "idle_pose": "",
+    "look": "gunner#2",
+    "position": [
+      760.0,
+      536.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "smg",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "smoke",
+    "hand": [
+      -9.54696941375732,
+      3.28724074363709
+    ],
+    "id": "e_24,38",
+    "idle_pose": "smoke",
+    "look": "gunner#2",
+    "position": [
+      392.0,
+      616.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "smg",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "idle",
+    "hand": [
+      -9.2395544052124,
+      3.78840589523315
+    ],
+    "id": "e_34,38",
+    "idle_pose": "",
+    "look": "scout#3",
+    "position": [
+      552.0,
+      616.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      4.47965049743652,
+      15.1343288421631
+    ],
+    "id": "e_46,38",
+    "idle_pose": "",
+    "look": "guard#2",
+    "position": [
+      702.741333007813,
+      616.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": true
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "smoke",
+    "hand": [
+      0.618403732776642,
+      11.9685430526733
+    ],
+    "id": "e_3,43",
+    "idle_pose": "smoke",
+    "look": "guard#3",
+    "position": [
+      56.0,
+      696.0
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": false
+  },
+  {
+    "cast_scale": [
+      0.319999992847443,
+      0.319999992847443
+    ],
+    "clip": "armed_walk",
+    "hand": [
+      3.56936502456665,
+      -11.8307456970215
+    ],
+    "id": "e_40,45",
+    "idle_pose": "",
+    "look": "handler",
+    "position": [
+      672.091735839844,
+      734.968078613281
+    ],
+    "rig_scale": [
+      1.0,
+      1.0
+    ],
+    "visual_scale": [
+      1.0,
+      1.0
+    ],
+    "weapon": "pistol",
+    "weapon_visible": true
+  }
+]

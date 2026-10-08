@@ -109,7 +109,10 @@ func build() -> Dictionary:
 				var ext := zone == "exterior"
 				var fz: Array = data.get("flicker_zones", [])
 				var flick := c == "^" or (fz.has(zone) and randf() < 0.6) or randf() < 0.05
-				lf2.setup(zone, col, 160.0 if ext else 136.0, 1.35 if ext else 0.9, true, flick)
+				var zone_lights: Dictionary = data.get("light_zones", {})
+				var lighting: Dictionary = zone_lights.get(zone, {})
+				lf2.setup(zone, col, float(lighting.get("radius", 160.0 if ext else 136.0)),
+					float(lighting.get("energy", 1.35 if ext else 0.9)), true, flick)
 				lf2.position = center
 				level.lights_root.add_child(lf2)
 				out.lights.append(lf2)
@@ -496,8 +499,13 @@ func _add_furniture_piece(c: String, rect: Rect2, x: int, y: int, minp: Vector2i
 			variant = 2
 	f.setup("car" if kind == "dumpster" else kind, rect, variant)
 	if kind == "table":
-		# linen in the mansion, wood at the studio; the motel keeps its diner laminate
-		f.style = {"m04_villa_estrella": "dining", "m03_khsc_studios": "office"}.get(str(data.get("id", "")), "")
+		# Level-specific work surfaces prevent one diner-table painting from
+		# reading as sinks or glowing blocks in industrial rooms.
+		f.style = {
+			"m04_villa_estrella": "dining",
+			"m03_khsc_studios": "office",
+			"m02_yermo_salvage": "kennel",
+		}.get(str(data.get("id", "")), "")
 	level.props_root.add_child(f)
 
 # ---------------------------------------------------------------- actors
@@ -538,6 +546,8 @@ func _spawn_enemy(x: int, y: int, c: String, center: Vector2, out: Dictionary) -
 	else:
 		e = Enemy.new()
 	e.enemy_id = id
+	var action := str(cfg.get("idle_action", "auto"))
+	e.idle_action = action if action in ["auto", "watch", "smoke", "drink", "eat", "snooze"] else "watch"
 	e.position = center
 	level.actors_root.add_child(e)
 	if cfg.has("patrol"):

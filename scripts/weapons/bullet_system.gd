@@ -19,6 +19,7 @@ class Bullet:
 	var group := -1
 	var color := Color.WHITE
 	var trail: Vector2
+	var lift := Vector2.ZERO   ## drawn this far up the screen: the gun's height (oblique cast)
 
 var bullets: Array[Bullet] = []
 var tracers: Array = []   # [from, to, color, life]
@@ -36,6 +37,9 @@ func _ready() -> void:
 ## Fire a weapon's full shot (all pellets). Returns nothing; results via signals.
 func fire(origin: Vector2, dir: Vector2, weapon: WeaponData, shooter: Node, spread_deg: float) -> void:
 	var from_player := shooter != null and shooter.is_in_group("player")
+	# bullets fly (and hit) along the floor, but are drawn at the gun's height
+	var vis = shooter.get("visual") if shooter != null else null
+	var lift: Vector2 = (vis as CharacterVisual).muzzle_lift() if vis is CharacterVisual else Vector2.ZERO
 	var gid := -1
 	if from_player:
 		gid = _next_group
@@ -49,6 +53,7 @@ func fire(origin: Vector2, dir: Vector2, weapon: WeaponData, shooter: Node, spre
 		var b := Bullet.new()
 		b.pos = origin
 		b.trail = origin
+		b.lift = lift
 		var speed := weapon.bullet_speed * (randf_range(0.85, 1.1) if weapon.pellets > 1 else 1.0)
 		b.vel = d * speed
 		b.dist_left = weapon.max_range * (randf_range(0.8, 1.0) if weapon.pellets > 1 else 1.0)
@@ -108,7 +113,7 @@ func _simulate(b: Bullet, step: float) -> bool:
 		remaining -= travelled
 		b.dist_left -= travelled
 		if b.weapon.hitscan:
-			tracers.append([b.pos, hp, b.color, 0.08])
+			tracers.append([b.pos - b.lift, hp - b.lift, b.color, 0.08])
 		b.pos = hp
 		var col: Object = hit.collider
 		var result := "wall"
@@ -117,7 +122,9 @@ func _simulate(b: Bullet, step: float) -> bool:
 			info.amount = b.weapon.damage
 			info.knockback = b.weapon.knockback
 			result = str(col.take_damage(info))
-		if b.shooter is Player and (result == "killed" or result == "hurt"):
+		# A bullet can outlive its shooter during boss/death teardown.  Checking
+		# validity before the typed test avoids evaluating a freed Object instance.
+		if is_instance_valid(b.shooter) and b.shooter is Player and (result == "killed" or result == "hurt"):
 			# hit confirm: a beat of weight when the player's shot lands
 			Events.camera_shake.emit(1.6 if result == "killed" else 0.7)
 			Events.hit_stop.emit(0.04 if result == "killed" else 0.015)
@@ -172,9 +179,10 @@ func _resolve_group(gid: int, hit: bool) -> void:
 
 func _draw() -> void:
 	for b in bullets:
-		var tail := b.pos - b.vel.normalized() * minf(10.0, b.pos.distance_to(b.trail) + 4.0)
-		draw_line(tail, b.pos, Color(b.color, 0.35), 3.0)
-		draw_line(tail, b.pos, b.color, 1.2)
+		var head := b.pos - b.lift
+		var tail := head - b.vel.normalized() * minf(10.0, b.pos.distance_to(b.trail) + 4.0)
+		draw_line(tail, head, Color(b.color, 0.35), 3.0)
+		draw_line(tail, head, b.color, 1.2)
 	for t in tracers:
 		var a: float = clampf(t[3] / 0.08, 0.0, 1.0)
 		draw_line(t[0], t[1], Color(t[2], a), 1.5)

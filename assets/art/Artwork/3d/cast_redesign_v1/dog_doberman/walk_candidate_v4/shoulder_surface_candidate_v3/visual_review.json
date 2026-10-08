@@ -1,0 +1,21 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "reviewed_frames": [
+    "godot_clay/walk_008.png",
+    "godot_frames/walk_008.png",
+    "godot_frames_opposite/walk_020.png"
+  ],
+  "findings": [
+    "Fine shading artifacts from zero normal fallback removed in compared clay pose",
+    "Shoulder surface is smoother in inspected side poses",
+    "Godot foot contact audit remains consistent with original walk"
+  ],
+  "remaining": [
+    "Independent export correspondence audit",
+    "Review full-cycle surface and contour",
+    "Apply approved surface consistently to idle/start/stop",
+    "Finish canine action set before runtime replacement"
+  ],
+  "scope": "Three full-size GPU poses and CPU contact cycle; not final runtime approval"
+}

@@ -39,6 +39,10 @@ var hint_label: Label
 var _fx := TextFX.Pop.new()
 var _spk := ""
 var _voice_i := -1
+var _line_voice: AudioStreamPlayer
+var _has_authored_voice := false
+var _silent_line := false
+var _speech_words := RegEx.create_from_string("[\\p{L}\\p{N}]")
 
 func _ready() -> void:
 	layer = 80
@@ -70,6 +74,10 @@ func _build_ui() -> void:
 	cinematic_dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	cinematic_dim.visible = false
 	root.add_child(cinematic_dim)
+	_line_voice = AudioStreamPlayer.new()
+	_line_voice.bus = "Dialogue"
+	_line_voice.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(_line_voice)
 	letterbox_top = ColorRect.new()
 	letterbox_top.color = Color(0, 0, 0, 0.92)
 	letterbox_top.anchor_right = 1.0
@@ -227,6 +235,7 @@ func _goto(node_id: String) -> void:
 		_end()
 		return
 	_node = nodes[node_id]
+	_play_authored_voice(node_id)
 	# conditional redirect
 	if _node.has("if") and not _check(str(_node["if"])):
 		_goto(str(_node.get("else", _node.get("next", ""))))
@@ -272,6 +281,40 @@ func _goto(node_id: String) -> void:
 	_choice_i = 0
 	line_shown.emit(spk, _full)
 
+## Optional human performance generated with ElevenLabs. The file is only
+## played when an authored line exists; otherwise the familiar per-letter
+## timbre remains active. This keeps generation opt-in and separate from music.
+func _play_authored_voice(node_id: String) -> void:
+	# A new line must never display the previous performance's open mouth.
+	if portrait != null:
+		portrait.reset_speech()
+	_has_authored_voice = false
+	_silent_line = _speech_words.search(str(_node.get("text", ""))) == null
+	if _line_voice == null:
+		return
+	_line_voice.stop()
+	_line_voice.stream = null
+	if _silent_line:
+		return
+	var explicit := str(_node.get("voice", ""))
+	var base := explicit if explicit.begins_with("res://") else "res://assets/audio/voice/%s/%s" % [_id, node_id]
+	if explicit.begins_with("res://"):
+		var stream := load(explicit) as AudioStream
+		if stream:
+			_has_authored_voice = true
+			_line_voice.stream = stream
+			_line_voice.volume_db = float(_node.get("voice_db", -1.5))
+			_line_voice.play()
+		return
+	for ext in [".ogg", ".wav", ".mp3"]:
+		var p: String = base + str(ext)
+		if ResourceLoader.exists(p):
+			_has_authored_voice = true
+			_line_voice.stream = load(p) as AudioStream
+			_line_voice.volume_db = float(_node.get("voice_db", -1.5))
+			_line_voice.play()
+			return
+
 ## In a level, a line with a "shot" cuts the frame behind the box to that
 ## painting (animated, faded in with a touch of tape glitch). Story
 ## cutscenes run their own StoryShot, so this only acts inside a level.
@@ -316,6 +359,14 @@ func _text_mood(spk: String, mood: String) -> String:
 ## Still typing the current line out.
 func is_typing() -> bool:
 	return _shown < _full.length()
+
+## Speech follows the recording, which may end before or after the text.
+func is_speaking(speaker := "") -> bool:
+	if not active or (speaker != "" and _spk != speaker):
+		return false
+	if _has_authored_voice:
+		return _line_voice != null and _line_voice.playing
+	return is_typing() and not _silent_line
 
 func _check(cond: String) -> bool:
 	var neg := cond.begins_with("!")
@@ -364,7 +415,14 @@ func _advance() -> void:
 		return
 	_goto(str(_node.get("next", "")))
 
-func _end() -> void:
+func _end(emit_finished := true) -> void:
+	if _line_voice:
+		_line_voice.stop()
+		_line_voice.stream = null
+	if portrait:
+		portrait.talking = false
+		portrait.speech_energy = 0.0
+		portrait._mouth = 0
 	active = false
 	root.visible = false
 	cinematic_art.texture = null
@@ -378,7 +436,8 @@ func _end() -> void:
 		get_tree().paused = false
 	var id := _id
 	_id = ""
-	finished.emit(id)
+	if emit_finished:
+		finished.emit(id)
 
 const BOX_MIN_H := 146.0
 const BOX_BOTTOM := 24.0
@@ -403,28 +462,45 @@ func _process(delta: float) -> void:
 	_frame.queue_redraw()
 	hint_label.modulate.a = 0.55 + 0.45 * sin(Time.get_ticks_msec() * 0.008)
 	_fx.clock += real
+	portrait.speech_energy = -1.0
+	if _has_authored_voice and _line_voice != null:
+		if _line_voice.playing and _line_voice.stream != null:
+			# Follow audible output, rather than the last mixer block's cursor.
+			# This matches the latency correction used by the music beat clock.
+			var audible_time := maxf(0.0,_line_voice.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency())
+			portrait.speech_energy = VoiceEnvelope.sample(_line_voice.stream.resource_path, audible_time)
+		else:
+			portrait.speech_energy = 0.0
 	if is_typing():
 		# a beat on punctuation, like someone drawing breath
 		var at := clampi(int(_shown), 0, _full.length() - 1)
 		var slow := 0.25 if _full[at] in [".", "!", "?", "…"] else (0.5 if _full[at] == "," else 1.0)
 		_shown = minf(_shown + real * _cps * slow, _full.length())
 		_fx.shown = _shown
-		portrait.talking = true
+		portrait.talking = (_line_voice != null and _line_voice.playing) if _has_authored_voice else not _silent_line
 		_speak(int(_shown))
 	else:
 		_fx.shown = _full.length() + TextFX.SETTLE
-
-		portrait.talking = false
+		portrait.talking = _line_voice != null and _line_voice.playing
 		_show_choices()
 		hint_label.visible = _choices.is_empty() and _pause_game
 		if _auto_t >= 0.0 and _choices.is_empty():
 			_auto_t -= real
-			if _auto_t <= 0.0:
+			if _auto_t <= 0.0 and not (_line_voice != null and _line_voice.playing):
 				_advance()
+	# Human performances can outlive the typewriter. Keep lip, blink and
+	# portrait motion alive until the recorded line actually ends.
+	if _line_voice != null and _line_voice.playing:
+		portrait.talking = true
 
 ## Babble: one grain every other spoken letter (the vowel follows the text),
 ## narration gets a typewriter key instead.
 func _speak(i: int) -> void:
+	# Authored ElevenLabs performances replace the procedural letter grains.
+	# Keeping both layers active creates the garbled, doubled voice heard
+	# underneath the clean recording.
+	if _has_authored_voice or _silent_line:
+		return
 	if i == _voice_i or not TextFX.speaks(_full, i):
 		return
 	_voice_i = i
@@ -444,4 +520,5 @@ func _unhandled_input(e: InputEvent) -> void:
 	var pressed := (e.is_action_pressed("ui_confirm") or e.is_action_pressed("fire") or e.is_action_pressed("interact") or e.is_action_pressed("ui_accept"))
 	if pressed:
 		get_viewport().set_input_as_handled()
+		_input_block = 0.12
 		_advance()

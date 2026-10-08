@@ -1,0 +1,34 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "bathroom_direction",
+      "subject": "A detailed cutaway small guest bathroom of 1980s Sunset Palms Californian motel: pale mint ceramic wall tiles, ivory mint tiled floor, bathtub with shower curtain and shower fittings, modest cream basin with metal taps, framed mirror, toilet, folded towels, toilet roll holder, soap dish, warm practical lamp, vent grille, subtle plumbing and believable age. Functional compact arrangement, clear access to fixtures.",
+      "prompt": "Use case: stylized-concept. Asset type: environment direction for subsequent authored Blender reconstruction, not a final gameplay level plate. A detailed cutaway small guest bathroom of 1980s Sunset Palms Californian motel: pale mint ceramic wall tiles, ivory mint tiled floor, bathtub with shower curtain and shower fittings, modest cream basin with metal taps, framed mirror, toilet, folded towels, toilet roll holder, soap dish, warm practical lamp, vent grille, subtle plumbing and believable age. Functional compact arrangement, clear access to fixtures. High quality handcrafted 3D diorama with finely resolved material detail and pixel-art-like clarity, matching Sunset Palms pool reference richness. Orthographic elevated three-quarter view, entire area visible, believable proportions and contact shadows, cohesive coral teal cream walnut palette, controlled highlights. No labels, UI, collage or watermark."
+    },
+    {
+      "id": "back_office_direction",
+      "subject": "A richly detailed cutaway manager's back office of 1980s Sunset Palms Californian motel: walnut desk and chair, rotary telephone, ledgers, filing cabinets, key lockbox, wall safe, CRT security monitor, cork board with pinned mundane paperwork, warm desk lamp, shelves, blinds, coral plaster and worn teal carpet. Clear route from entrance to desk. No people.",
+      "prompt": "Use case: stylized-concept. Asset type: environment direction for subsequent authored Blender reconstruction, not a final gameplay level plate. A richly detailed cutaway manager's back office of 1980s Sunset Palms Californian motel: walnut desk and chair, rotary telephone, ledgers, filing cabinets, key lockbox, wall safe, CRT security monitor, cork board with pinned mundane paperwork, warm desk lamp, shelves, blinds, coral plaster and worn teal carpet. Clear route from entrance to desk. No people. High quality handcrafted 3D diorama with finely resolved material detail and pixel-art-like clarity, matching Sunset Palms pool reference richness. Orthographic elevated three-quarter view, entire area visible, believable proportions and contact shadows, cohesive coral teal cream walnut palette, controlled highlights. No labels, UI, collage or watermark."
+    },
+    {
+      "id": "service_alley_direction",
+      "subject": "A richly detailed cutaway service alley behind 1980s Sunset Palms Californian motel at night: aged coral stucco, closed utility door, small high windows, organised exposed pipes and electrical conduits, dumpster, cardboard cartons, gas utility cabinet, drain grates, fire escape stair and weathered asphalt, subtle scattered litter and damp patches. Warm service lamps, restrained cool ambient light, clear traversable route. No people.",
+      "prompt": "Use case: stylized-concept. Asset type: environment direction for subsequent authored Blender reconstruction, not a final gameplay level plate. A richly detailed cutaway service alley behind 1980s Sunset Palms Californian motel at night: aged coral stucco, closed utility door, small high windows, organised exposed pipes and electrical conduits, dumpster, cardboard cartons, gas utility cabinet, drain grates, fire escape stair and weathered asphalt, subtle scattered litter and damp patches. Warm service lamps, restrained cool ambient light, clear traversable route. No people. High quality handcrafted 3D diorama with finely resolved material detail and pixel-art-like clarity, matching Sunset Palms pool reference richness. Orthographic elevated three-quarter view, entire area visible, believable proportions and contact shadows, cohesive coral teal cream walnut palette, controlled highlights. No labels, UI, collage or watermark."
+    }
+  ],
+  "sources": [
+    {
+      "id": "bathroom_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-23f1815b-6aed-4131-841c-e5f1521f3657.png"
+    },
+    {
+      "id": "back_office_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-3398e386-4952-4167-ad8c-357c0d840074.png"
+    },
+    {
+      "id": "service_alley_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-572badee-6d02-439e-80a9-3f52a8b474a2.png"
+    }
+  ]
+}

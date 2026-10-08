@@ -1,0 +1,12 @@
+{
+  "runtime_approved": true,
+  "source_sha256": "6fcae55529fbeda18ae30e5992381e4cdd1f3c97d732b07e325b87f1b9726c68",
+  "candidate_sha256": "ca8e739ab23a5991e6ca26074d6cd3ee54e614be8d1b4f14617d907600eef0dd",
+  "original_binary_prefix_preserved": true,
+  "other_clips_unchanged": true,
+  "geometry_materials_skins_unchanged": true,
+  "clips": 28,
+  "max_bind_probe_error_m": 1.7944050651638746e-05,
+  "bind_tolerance_m": 0.0001,
+  "approval_scope": "Doze leg/sole contacts only; original other animation channels and visual geometry preserved. Four-facing comparison reviewed and scripted wake/walk/attack passed."
+}

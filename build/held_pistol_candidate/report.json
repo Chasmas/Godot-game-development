@@ -1,0 +1,17 @@
+{
+  "approved": false,
+  "parts": 115,
+  "grip_origin": [
+    0,
+    0,
+    0
+  ],
+  "gltf_forward_axis": "X",
+  "gltf_up_axis": "Y",
+  "gltf_muzzle": [
+    0.169,
+    0.055,
+    0
+  ],
+  "scope": "Native detailed prop; hand contact, runtime muzzle and all facing validation pending."
+}

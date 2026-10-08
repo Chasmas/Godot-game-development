@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2231 ms
+PASS authored corridor camera found at (296.0, 516.0)
+ROUTE mount=(296.0, 516.0) direction=-1.0 start=(344.0, 536.0) end=(238.6704, 536.0) peak=0.37008692432964 cooldown=0.0
+PASS real movement crosses corridor mount
+PASS wall-side crossing avoids alarm
+ROUTE mount=(296.0, 516.0) direction=1.0 start=(248.0, 536.0) end=(353.3296, 536.0) peak=0.46583727046295 cooldown=0.0
+PASS real movement crosses corridor mount
+PASS wall-side crossing avoids alarm
+PASS waiting position has clear lens view
+PASS lingering in clear view triggers alarm
+PASS authored corridor camera found at (648.0, 516.0)
+ROUTE mount=(648.0, 516.0) direction=-1.0 start=(696.0, 536.0) end=(590.6704, 536.0) peak=0.37008691959911 cooldown=0.0
+PASS real movement crosses corridor mount
+PASS wall-side crossing avoids alarm
+ROUTE mount=(648.0, 516.0) direction=1.0 start=(600.0, 536.0) end=(705.3296, 536.0) peak=0.46583727046295 cooldown=0.0
+PASS real movement crosses corridor mount
+PASS wall-side crossing avoids alarm
+PASS waiting position has clear lens view
+PASS lingering in clear view triggers alarm
+CORRIDOR COUNTERPLAY: 0 failures

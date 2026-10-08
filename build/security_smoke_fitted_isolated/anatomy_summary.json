@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/security_smoke_fitted_isolated/security.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.00031926084276182905,
+    "Hips": 0.0,
+    "LeftArm": 0.0002203964371700705,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00013765266385703758,
+    "LeftHand": 4.369022054239973e-05,
+    "Neck": 0.00020901067684155392,
+    "RightArm": 0.0002177885411829187,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.021539740146376232,
+    "RightHand": 0.017843145626854625
+  },
+  "loop_gap_m": {
+    "Head": 0.00040667322292180393,
+    "Hips": 0.0,
+    "LeftArm": 0.0002807860124519122,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.0001636087269061155,
+    "LeftHand": 3.338187072929959e-05,
+    "Neck": 0.00026628528292932293,
+    "RightArm": 0.00027742737478929987,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00017629790155289002,
+    "RightHand": 5.5235888267863e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.1262679100036601,
+  "contact_hand_minus_head_m": [
+    -0.03500223159789995,
+    -0.03499865531921009
+  ]
+}

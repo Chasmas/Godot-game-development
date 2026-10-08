@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS wall blocks close downed execution selection
+PASS wall blocks execution HUD target
+PASS closed door blocks downed execution selection
+PASS clear close downed enemy remains selectable
+PASS clear target shows execution prompt
+PASS stagger hides unavailable execution prompt
+PASS disabled control clears old interaction prompt
+PASS paired animation hides interaction prompt
+PASS closed door blocks standing takedown selection
+PASS clear unaware guard can still be grabbed from behind
+EXECUTION ACCESSIBILITY REVIEW: 0 failures

@@ -1,0 +1,9 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_cemetery_angel.py:9: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  def limb(name,a,b,r):
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_cemetery_angel.py:47: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world=bpy.data.worlds.new('neutral sculpture review');sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[1].default_value=.4
+00:10.516  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cemetery_prop_review\angel_v1.png'
+Info: Saved as "angel_v1.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

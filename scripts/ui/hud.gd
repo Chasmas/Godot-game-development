@@ -15,6 +15,7 @@ var score_label: Label
 var combo_label: Label
 var combo_bar: ColorRect
 var weapon_label: Label
+var _fitted_weapon_name := ""
 var ammo_label: Label
 var weapon_icon: TextureRect
 static var _icons: Dictionary = {}
@@ -87,8 +88,9 @@ func _ready() -> void:
 	# the weapon's name sits under its picture, the ammo count beside it
 	weapon_label = _lbl(Vector2(0, 14), 18, UIStyle.PAPER, UIStyle.font_bold())
 	weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-172, 80), Vector2(172, 24))
-	weapon_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	weapon_label.clip_text = true
+	UIStyle.place(weapon_label, Control.PRESET_TOP_RIGHT, Vector2(-266, 80), Vector2(250, 24))
+	weapon_label.grow_horizontal = Control.GROW_DIRECTION_BEGIN
 	ammo_label = _lbl(Vector2(-566, 28), 28, UIStyle.PINK, UIStyle.font_display())
 	ammo_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	UIStyle.place(ammo_label, Control.PRESET_TOP_RIGHT, Vector2(-566, 28), Vector2(400, 36))
@@ -444,8 +446,19 @@ func _on_weapon_inner(id: StringName, ammo: int, reserve: int) -> void:
 		weapon_label.text = tr(w.data.display_name).to_upper()
 		ammo_label.text = "∞" if w.durability < 0 else tr("%d HITS") % w.durability
 		ammo_label.add_theme_color_override("font_color", UIStyle.PINK)
+	_fit_weapon_name()
 	var other = player.slots[1 - player.slot]
 	holster_label.text = ("[%s] %s" % [InputSetup.binding_text("swap", InputSetup.using_gamepad), tr((other as WeaponInstance).data.display_name)]) if other else ""
+
+func _fit_weapon_name() -> void:
+	if weapon_label.text == _fitted_weapon_name:
+		return
+	_fitted_weapon_name = weapon_label.text
+	var font := weapon_label.get_theme_font("font")
+	var font_size := 18
+	while font_size > 11 and font.get_string_size(weapon_label.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > 242.0:
+		font_size -= 1
+	weapon_label.add_theme_font_size_override("font_size", font_size)
 
 static func weapon_icon_tex(id: String) -> Texture2D:
 	if not _icons.has(id):
@@ -906,8 +919,11 @@ class RecOverlay extends Control:
 			draw_circle(Vector2(m + 24, m + 30), 8.0, Color(1, 0.1, 0.15, a))
 		draw_string(UIStyle.font_bold(), Vector2(m + 40, m + 37), "REC", HORIZONTAL_ALIGNMENT_LEFT, -1, 22, c)
 		draw_string(UIStyle.font_display(), Vector2(size.x * 0.5 - 120, size.y - m - 12), tr("FINAL TAKE"), HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color(UIStyle.PINK, a))
-		var fr := int(_t * 30.0)
-		draw_string(UIStyle.font_mono(), Vector2(size.x - m - 150, m + 37), "00:00:%02d:%02d" % [fr / 30, fr % 30], HORIZONTAL_ALIGNMENT_LEFT, -1, 16, c)
+		# The camcorder OSD uses the real local system clock, matching the VCR
+		# deck and the player's actual recording time rather than a tape counter.
+		var now := Time.get_time_dict_from_system()
+		var system_clock := "%02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
+		draw_string(UIStyle.font_mono(), Vector2(size.x - m - 150, m + 37), system_clock, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, c)
 
 
 ## DIRECTOR'S NOTE cards: short tutorial bits the first time something
@@ -1090,7 +1106,7 @@ class TipCard extends Control:
 			if WHO.has(kind) and str(WHO[kind]) != "" and d < 240.0:
 				offer("who_" + kind, WHO[kind], "enemy_" + kind)
 			if d < 260.0 and p.lock_target == null:
-				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to switch.")
+				offer("lock", "{lock_on} locks on: your aim sticks to the marked target. Press again to release.")
 		for fc in get_tree().get_nodes_in_group("film_cameras"):
 			if view.has_point(fc.global_position) and not fc._broken and fc.global_position.distance_to(p.global_position) < 160.0:
 				offer("film_camera", "A red light in the corner: somebody is filming. Play to it - kills it sees score more - or cut the feed.")

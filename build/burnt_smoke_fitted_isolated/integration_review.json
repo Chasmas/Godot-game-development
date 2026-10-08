@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 24 other clips including seated pose preserved",
+  "baseline_sha256": "2ce40e27c9750bd2c62842f9437cf38699f5a0588612ae5531cb77a661731526",
+  "integrated_sha256": "b02bf30549afd75eb613755c09efca34178e69b032989226de33b5b3ec940f28",
+  "backup": "build\\burnt_smoke_fitted_isolated\\burnt_before_2ce40e27c975.glb",
+  "visual_review": "build/burnt_idle_review_directions.png",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/burnt_smoke_fitted_isolated/burnt.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.00030330855083549074,
+      "Hips": 0.0,
+      "LeftArm": 0.000199336441864575,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00012473167831438125,
+      "LeftHand": 4.1225577981102e-05,
+      "Neck": 0.00022365418911787598,
+      "RightArm": 0.0001970966098487917,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.021491424505023757,
+      "RightHand": 0.017167266515555606
+    },
+    "loop_gap_m": {
+      "Head": 0.0003864350239290156,
+      "Hips": 0.0,
+      "LeftArm": 0.0002538983429753282,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00015330209160271778,
+      "LeftHand": 2.903891440408938e-05,
+      "Neck": 0.00028495177880095035,
+      "RightArm": 0.00025096018135789696,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00013934058163965642,
+      "RightHand": 1.8527017368914504e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.1116641759872401,
+    "contact_hand_minus_head_m": [
+      -0.035000443458560015,
+      -0.03499960899353005
+    ]
+  }
+}

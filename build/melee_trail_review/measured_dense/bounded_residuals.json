@@ -1,0 +1,6242 @@
+[
+  {
+    "error_px": 0.0,
+    "heading": 11.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 33.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 56.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 78.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 101.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 123.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 146.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 168.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 191.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 213.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 236.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 258.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 281.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 303.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 326.25,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0,
+    "heading": 348.75,
+    "phase": 0.0,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.112809121608734,
+    "heading": 11.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.113531924784184,
+    "heading": 33.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.11333342641592,
+    "heading": 56.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.112447686493397,
+    "heading": 78.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.116648979485035,
+    "heading": 101.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.115990452468395,
+    "heading": 123.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.115378476679325,
+    "heading": 146.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.114566519856453,
+    "heading": 168.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.113286375999451,
+    "heading": 191.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.111379384994507,
+    "heading": 213.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.109185732901096,
+    "heading": 236.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.107357889413834,
+    "heading": 258.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.106558635830879,
+    "heading": 281.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.107153110206127,
+    "heading": 303.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.108861111104488,
+    "heading": 326.25,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.110991686582565,
+    "heading": 348.75,
+    "phase": 0.015625,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0981442704796791,
+    "heading": 11.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.091695673763752,
+    "heading": 33.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0851942002773285,
+    "heading": 56.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0816657394170761,
+    "heading": 78.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0754201486706734,
+    "heading": 101.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0812569707632065,
+    "heading": 123.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0886709839105606,
+    "heading": 146.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0946582704782486,
+    "heading": 168.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.097730852663517,
+    "heading": 191.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0983383357524872,
+    "heading": 213.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0978760272264481,
+    "heading": 236.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0979812294244766,
+    "heading": 258.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0995370298624039,
+    "heading": 281.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.101859040558338,
+    "heading": 303.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.103355772793293,
+    "heading": 326.25,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.102350898087025,
+    "heading": 348.75,
+    "phase": 0.03125,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.285729825496674,
+    "heading": 11.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.273462206125259,
+    "heading": 33.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.260352969169617,
+    "heading": 56.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.252229064702988,
+    "heading": 78.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.238371893763542,
+    "heading": 101.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.247939690947533,
+    "heading": 123.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.261899143457413,
+    "heading": 146.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.27432182431221,
+    "heading": 168.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.281246185302734,
+    "heading": 191.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.283015429973602,
+    "heading": 213.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.282117784023285,
+    "heading": 236.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.281999439001083,
+    "heading": 258.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.284851759672165,
+    "heading": 281.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.289857089519501,
+    "heading": 303.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.293772965669632,
+    "heading": 326.25,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.293030828237534,
+    "heading": 348.75,
+    "phase": 0.046875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0607927516102791,
+    "heading": 11.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0611990801990032,
+    "heading": 33.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0611146874725819,
+    "heading": 56.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0609446056187153,
+    "heading": 78.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0633766576647758,
+    "heading": 101.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0630898922681808,
+    "heading": 123.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0625986084342003,
+    "heading": 146.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.06194032356143,
+    "heading": 168.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0610077455639839,
+    "heading": 191.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0598390735685825,
+    "heading": 213.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0586264841258526,
+    "heading": 236.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0577334612607956,
+    "heading": 258.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0573919154703617,
+    "heading": 281.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0577896684408188,
+    "heading": 303.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0587570779025555,
+    "heading": 326.25,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0597991347312927,
+    "heading": 348.75,
+    "phase": 0.0625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0672287121415138,
+    "heading": 11.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0678359419107437,
+    "heading": 33.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0679838284850121,
+    "heading": 56.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0678251385688782,
+    "heading": 78.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0706513449549675,
+    "heading": 101.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0702147260308266,
+    "heading": 123.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.069514125585556,
+    "heading": 146.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0685359835624695,
+    "heading": 168.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0673228204250336,
+    "heading": 191.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0659855231642723,
+    "heading": 213.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.064758412539959,
+    "heading": 236.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0637980177998543,
+    "heading": 258.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0634728148579597,
+    "heading": 281.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0638932436704636,
+    "heading": 303.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.064873181283474,
+    "heading": 326.25,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0661655142903328,
+    "heading": 348.75,
+    "phase": 0.078125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0728976130485535,
+    "heading": 11.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0736163407564163,
+    "heading": 33.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0739890336990356,
+    "heading": 56.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.073920302093029,
+    "heading": 78.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0771320015192032,
+    "heading": 101.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0765680000185966,
+    "heading": 123.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0756527408957481,
+    "heading": 146.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0744285136461258,
+    "heading": 168.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.073213018476963,
+    "heading": 191.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0720523297786713,
+    "heading": 213.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0710805207490921,
+    "heading": 236.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0704281702637672,
+    "heading": 258.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0700551867485046,
+    "heading": 281.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0702283084392548,
+    "heading": 303.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.070861779153347,
+    "heading": 326.25,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0717843174934387,
+    "heading": 348.75,
+    "phase": 0.09375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0767218396067619,
+    "heading": 11.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0778551176190376,
+    "heading": 33.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0788184329867363,
+    "heading": 56.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0793053656816483,
+    "heading": 78.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0832055881619453,
+    "heading": 101.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0824938789010048,
+    "heading": 123.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0811537206172943,
+    "heading": 146.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0795067325234413,
+    "heading": 168.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0781631916761398,
+    "heading": 191.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0773461684584618,
+    "heading": 213.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0769715160131454,
+    "heading": 236.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0766966566443443,
+    "heading": 258.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0763185396790504,
+    "heading": 281.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0758621990680695,
+    "heading": 303.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0755873471498489,
+    "heading": 326.25,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.075848676264286,
+    "heading": 348.75,
+    "phase": 0.109375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0851856768131256,
+    "heading": 11.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0870830565690994,
+    "heading": 33.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0890012383460999,
+    "heading": 56.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0901074707508087,
+    "heading": 78.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0946550443768501,
+    "heading": 101.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0934045016765594,
+    "heading": 123.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0910206288099289,
+    "heading": 146.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0882762894034386,
+    "heading": 168.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0860981494188309,
+    "heading": 191.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0849925950169563,
+    "heading": 213.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0847634077072144,
+    "heading": 236.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0847760811448097,
+    "heading": 258.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0844392478466034,
+    "heading": 281.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0838989987969399,
+    "heading": 303.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0834955796599388,
+    "heading": 326.25,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0838553830981255,
+    "heading": 348.75,
+    "phase": 0.125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0320229604840279,
+    "heading": 11.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0349329821765423,
+    "heading": 33.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0389600917696953,
+    "heading": 56.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0416333675384521,
+    "heading": 78.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0445932373404503,
+    "heading": 101.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0425036698579788,
+    "heading": 123.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0380574278533459,
+    "heading": 146.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0325184315443039,
+    "heading": 168.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0285425558686256,
+    "heading": 191.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0286223571747541,
+    "heading": 213.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0315927974879742,
+    "heading": 236.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0343086533248425,
+    "heading": 258.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0352132618427277,
+    "heading": 281.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0341521725058556,
+    "heading": 303.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0321386642754078,
+    "heading": 326.25,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0324130393564701,
+    "heading": 348.75,
+    "phase": 0.140625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0356755368411541,
+    "heading": 11.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0330413430929184,
+    "heading": 33.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0308841336518526,
+    "heading": 56.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0317407362163067,
+    "heading": 78.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0332937464118004,
+    "heading": 101.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0317460522055626,
+    "heading": 123.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0284363590180874,
+    "heading": 146.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0236775744706392,
+    "heading": 168.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0192042794078588,
+    "heading": 191.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0184845253825188,
+    "heading": 213.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0225323680788279,
+    "heading": 236.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0274399034678936,
+    "heading": 258.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0314875021576881,
+    "heading": 281.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0357829667627811,
+    "heading": 303.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0375127121806145,
+    "heading": 326.25,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0372989252209663,
+    "heading": 348.75,
+    "phase": 0.15625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0360604636371136,
+    "heading": 11.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0325947403907776,
+    "heading": 33.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0293767508119345,
+    "heading": 56.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0270213522017002,
+    "heading": 78.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0261280350387096,
+    "heading": 101.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0245197825133801,
+    "heading": 123.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0223208758980036,
+    "heading": 146.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0188538562506437,
+    "heading": 168.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0144546432420611,
+    "heading": 191.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0128314150497317,
+    "heading": 213.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0183067992329597,
+    "heading": 236.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0264614336192608,
+    "heading": 258.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.033274732530117,
+    "heading": 281.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0385823883116245,
+    "heading": 303.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0402731895446777,
+    "heading": 326.25,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0390983186662197,
+    "heading": 348.75,
+    "phase": 0.171875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0422513447701931,
+    "heading": 11.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0371607877314091,
+    "heading": 33.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0312125869095325,
+    "heading": 56.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0256421435624361,
+    "heading": 78.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0234293974936008,
+    "heading": 101.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0229410976171494,
+    "heading": 123.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0249740201979876,
+    "heading": 146.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.026859674602747,
+    "heading": 168.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0274894498288631,
+    "heading": 191.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0268526654690504,
+    "heading": 213.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0257996190339327,
+    "heading": 236.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0278238411992788,
+    "heading": 258.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0348478481173515,
+    "heading": 281.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0409244000911713,
+    "heading": 303.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0448625199496746,
+    "heading": 326.25,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0451107807457447,
+    "heading": 348.75,
+    "phase": 0.1875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0508619695901871,
+    "heading": 11.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0477950349450111,
+    "heading": 33.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0435194298624992,
+    "heading": 56.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0397441275417805,
+    "heading": 78.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0386297702789307,
+    "heading": 101.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0398193746805191,
+    "heading": 123.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0426438823342323,
+    "heading": 146.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0452288500964642,
+    "heading": 168.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0463844984769821,
+    "heading": 191.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0457989610731602,
+    "heading": 213.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0441709011793137,
+    "heading": 236.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0429847091436386,
+    "heading": 258.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0437557697296143,
+    "heading": 281.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0465323105454445,
+    "heading": 303.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0497981905937195,
+    "heading": 326.25,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0515153892338276,
+    "heading": 348.75,
+    "phase": 0.203125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0869232416152954,
+    "heading": 11.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0820956453680992,
+    "heading": 33.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.079333133995533,
+    "heading": 56.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0782936662435532,
+    "heading": 78.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0785627290606499,
+    "heading": 101.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0769848227500916,
+    "heading": 123.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0744748711585999,
+    "heading": 146.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0714897811412811,
+    "heading": 168.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0697564482688904,
+    "heading": 191.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0708757489919662,
+    "heading": 213.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0759157687425613,
+    "heading": 236.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0840499997138977,
+    "heading": 258.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0922547057271004,
+    "heading": 281.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0970102027058601,
+    "heading": 303.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0967748835682869,
+    "heading": 326.25,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.092594251036644,
+    "heading": 348.75,
+    "phase": 0.21875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.199116855859756,
+    "heading": 11.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.181999921798706,
+    "heading": 33.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.175640940666199,
+    "heading": 56.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.176306188106537,
+    "heading": 78.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.177280440926552,
+    "heading": 101.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.168433666229248,
+    "heading": 123.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.151571854948998,
+    "heading": 146.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.131938233971596,
+    "heading": 168.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.119180947542191,
+    "heading": 191.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.125082775950432,
+    "heading": 213.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.15550322830677,
+    "heading": 236.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.200143158435822,
+    "heading": 258.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.235724925994873,
+    "heading": 281.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.24733579158783,
+    "heading": 303.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.240022644400597,
+    "heading": 326.25,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.221545353531837,
+    "heading": 348.75,
+    "phase": 0.234375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.246431767940521,
+    "heading": 11.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.238835230469704,
+    "heading": 33.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.235689476132393,
+    "heading": 56.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.237974688410759,
+    "heading": 78.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.240435525774956,
+    "heading": 101.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.243051797151566,
+    "heading": 123.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.237259820103645,
+    "heading": 146.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.229186683893204,
+    "heading": 168.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.2169289290905,
+    "heading": 191.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.224105969071388,
+    "heading": 213.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.250485837459564,
+    "heading": 236.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.284742057323456,
+    "heading": 258.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.289106875658035,
+    "heading": 281.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.271846145391464,
+    "heading": 303.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.259455531835556,
+    "heading": 326.25,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.253482729196548,
+    "heading": 348.75,
+    "phase": 0.25,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.15664379298687,
+    "heading": 11.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.159412398934364,
+    "heading": 33.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.164951309561729,
+    "heading": 56.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.173062697052956,
+    "heading": 78.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.185195416212082,
+    "heading": 101.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.198160290718079,
+    "heading": 123.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.214248925447464,
+    "heading": 146.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.229755625128746,
+    "heading": 168.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.238953664898872,
+    "heading": 191.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.244868904352188,
+    "heading": 213.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.235269844532013,
+    "heading": 236.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.208308160305023,
+    "heading": 258.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.18414930999279,
+    "heading": 281.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.168449938297272,
+    "heading": 303.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.159890666604042,
+    "heading": 326.25,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.156435787677765,
+    "heading": 348.75,
+    "phase": 0.265625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0925576761364937,
+    "heading": 11.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.094318263232708,
+    "heading": 33.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0974164679646492,
+    "heading": 56.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.101682677865028,
+    "heading": 78.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.10871908813715,
+    "heading": 101.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.11717663705349,
+    "heading": 123.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.129804447293282,
+    "heading": 146.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.147015631198883,
+    "heading": 168.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.16340534389019,
+    "heading": 191.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.1636583507061,
+    "heading": 213.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.144914999604225,
+    "heading": 236.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.123696528375149,
+    "heading": 258.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.108602181077003,
+    "heading": 281.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0993899703025818,
+    "heading": 303.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0944056287407875,
+    "heading": 326.25,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0923570096492767,
+    "heading": 348.75,
+    "phase": 0.28125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.142391234636307,
+    "heading": 11.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.141713216900826,
+    "heading": 33.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.142218321561813,
+    "heading": 56.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.145015031099319,
+    "heading": 78.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.152707263827324,
+    "heading": 101.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.160557717084885,
+    "heading": 123.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.169750139117241,
+    "heading": 146.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.176904588937759,
+    "heading": 168.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.17620362341404,
+    "heading": 191.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.166028678417206,
+    "heading": 213.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.155214250087738,
+    "heading": 236.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.149346813559532,
+    "heading": 258.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.146665215492249,
+    "heading": 281.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.145083323121071,
+    "heading": 303.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.143980547785759,
+    "heading": 326.25,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.143131345510483,
+    "heading": 348.75,
+    "phase": 0.296875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.167932122945786,
+    "heading": 11.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.169999524950981,
+    "heading": 33.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.173512935638428,
+    "heading": 56.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.179830282926559,
+    "heading": 78.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.193324685096741,
+    "heading": 101.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.210061997175217,
+    "heading": 123.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.233383446931839,
+    "heading": 146.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.258991539478302,
+    "heading": 168.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.271636456251144,
+    "heading": 191.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.255356252193451,
+    "heading": 213.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.221287667751312,
+    "heading": 236.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.193094953894615,
+    "heading": 258.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.177357122302055,
+    "heading": 281.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.169869750738144,
+    "heading": 303.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.16700491309166,
+    "heading": 326.25,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.166705369949341,
+    "heading": 348.75,
+    "phase": 0.3125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0952525064349175,
+    "heading": 11.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0973336398601532,
+    "heading": 33.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.100075550377369,
+    "heading": 56.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.103819452226162,
+    "heading": 78.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.110572300851345,
+    "heading": 101.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.117610201239586,
+    "heading": 123.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.125997185707092,
+    "heading": 146.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.132270753383636,
+    "heading": 168.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.130984514951706,
+    "heading": 191.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.12207792699337,
+    "heading": 213.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.111401796340942,
+    "heading": 236.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.102320075035095,
+    "heading": 258.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0964832827448845,
+    "heading": 281.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0937010645866394,
+    "heading": 303.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0930483490228653,
+    "heading": 326.25,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0937482267618179,
+    "heading": 348.75,
+    "phase": 0.328125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0529148280620575,
+    "heading": 11.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0535935424268246,
+    "heading": 33.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.055394783616066,
+    "heading": 56.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.058625303208828,
+    "heading": 78.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0636402294039726,
+    "heading": 101.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0681428834795952,
+    "heading": 123.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0716959461569786,
+    "heading": 146.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0708686336874962,
+    "heading": 168.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0637244135141373,
+    "heading": 191.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0561142414808273,
+    "heading": 213.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0538726337254047,
+    "heading": 236.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0529328733682632,
+    "heading": 258.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0515677481889725,
+    "heading": 281.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0509330779314041,
+    "heading": 303.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0514291152358055,
+    "heading": 326.25,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0522659346461296,
+    "heading": 348.75,
+    "phase": 0.34375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.049491859972477,
+    "heading": 11.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.047892153263092,
+    "heading": 33.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0486449934542179,
+    "heading": 56.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0522322915494442,
+    "heading": 78.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0575910918414593,
+    "heading": 101.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0611228123307228,
+    "heading": 123.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0612511299550533,
+    "heading": 146.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0554527081549168,
+    "heading": 168.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0443152263760567,
+    "heading": 191.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0363907627761364,
+    "heading": 213.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0387069620192051,
+    "heading": 236.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0438758358359337,
+    "heading": 258.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0468755550682545,
+    "heading": 281.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0487311966717243,
+    "heading": 303.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0501862205564976,
+    "heading": 326.25,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0507099665701389,
+    "heading": 348.75,
+    "phase": 0.359375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0445851981639862,
+    "heading": 11.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0420240983366966,
+    "heading": 33.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0411183759570122,
+    "heading": 56.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0424602665007114,
+    "heading": 78.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0453028045594692,
+    "heading": 101.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0464702062308788,
+    "heading": 123.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0450671575963497,
+    "heading": 146.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0400592163205147,
+    "heading": 168.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0327845104038715,
+    "heading": 191.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0279407054185867,
+    "heading": 213.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0297951847314835,
+    "heading": 236.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0353457741439343,
+    "heading": 258.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.040579441934824,
+    "heading": 281.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0444127358496189,
+    "heading": 303.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0464530475437641,
+    "heading": 326.25,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0464936532080173,
+    "heading": 348.75,
+    "phase": 0.375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.020829213783145,
+    "heading": 11.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0216462798416615,
+    "heading": 33.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0207095351070166,
+    "heading": 56.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0182950124144554,
+    "heading": 78.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0159743223339319,
+    "heading": 101.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0153944650664926,
+    "heading": 123.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0173294190317392,
+    "heading": 146.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0203657504171133,
+    "heading": 168.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0230429396033287,
+    "heading": 191.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0243799742311239,
+    "heading": 213.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.023837611079216,
+    "heading": 236.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0213597808033228,
+    "heading": 258.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0181103646755219,
+    "heading": 281.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0161868669092655,
+    "heading": 303.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0167258530855179,
+    "heading": 326.25,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0188429467380047,
+    "heading": 348.75,
+    "phase": 0.390625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0194773953408003,
+    "heading": 11.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0185051187872887,
+    "heading": 33.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0174877177923918,
+    "heading": 56.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0171056371182203,
+    "heading": 78.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0172315370291471,
+    "heading": 101.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0168191958218813,
+    "heading": 123.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0156577378511429,
+    "heading": 146.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0165191385895014,
+    "heading": 168.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0183064714074135,
+    "heading": 191.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0187974665313959,
+    "heading": 213.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.017757685855031,
+    "heading": 236.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0156102478504181,
+    "heading": 258.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0158901587128639,
+    "heading": 281.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0181424282491207,
+    "heading": 303.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0195396821945906,
+    "heading": 326.25,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.020017609000206,
+    "heading": 348.75,
+    "phase": 0.40625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0221052728593349,
+    "heading": 11.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0203413013368845,
+    "heading": 33.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0194809976965189,
+    "heading": 56.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0196977853775024,
+    "heading": 78.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0203360542654991,
+    "heading": 101.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0197768472135067,
+    "heading": 123.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0176438987255096,
+    "heading": 146.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0149071449413896,
+    "heading": 168.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0141428839415312,
+    "heading": 191.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0133001673966646,
+    "heading": 213.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0129360137507319,
+    "heading": 236.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.015168733894825,
+    "heading": 258.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0193977374583483,
+    "heading": 281.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0224614273756742,
+    "heading": 303.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0238966420292854,
+    "heading": 326.25,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.023676373064518,
+    "heading": 348.75,
+    "phase": 0.421875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0233720075339079,
+    "heading": 11.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0217294301837683,
+    "heading": 33.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.020717091858387,
+    "heading": 56.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0211251005530357,
+    "heading": 78.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0228506103157997,
+    "heading": 101.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0223328806459904,
+    "heading": 123.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0191151704639196,
+    "heading": 146.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0148700093850493,
+    "heading": 168.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0106973666697741,
+    "heading": 191.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0088546397164464,
+    "heading": 213.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0113049894571304,
+    "heading": 236.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0167397446930408,
+    "heading": 258.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0215569660067558,
+    "heading": 281.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0246173720806837,
+    "heading": 303.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0253857281059027,
+    "heading": 326.25,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0245838705450296,
+    "heading": 348.75,
+    "phase": 0.4375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0572095476090908,
+    "heading": 11.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0571710243821144,
+    "heading": 33.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0554658249020576,
+    "heading": 56.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.052247479557991,
+    "heading": 78.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0476221032440662,
+    "heading": 101.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0426345616579056,
+    "heading": 123.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0377623289823532,
+    "heading": 146.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0339804925024509,
+    "heading": 168.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0322302989661694,
+    "heading": 191.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0331000685691834,
+    "heading": 213.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0360905192792416,
+    "heading": 236.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0401946119964123,
+    "heading": 258.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0446224696934223,
+    "heading": 281.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0489705428481102,
+    "heading": 303.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0527216456830502,
+    "heading": 326.25,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.055619403719902,
+    "heading": 348.75,
+    "phase": 0.453125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.069408543407917,
+    "heading": 11.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0703704580664635,
+    "heading": 33.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0696480497717857,
+    "heading": 56.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0668974369764328,
+    "heading": 78.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0615160688757896,
+    "heading": 101.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0539459623396397,
+    "heading": 123.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0447209849953651,
+    "heading": 146.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0358489006757736,
+    "heading": 168.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0307961348444223,
+    "heading": 191.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0322016179561615,
+    "heading": 213.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0381468459963799,
+    "heading": 236.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0453255958855152,
+    "heading": 258.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0522121749818325,
+    "heading": 281.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0582868047058582,
+    "heading": 303.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.063201442360878,
+    "heading": 326.25,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0669722110033035,
+    "heading": 348.75,
+    "phase": 0.46875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0557852573692799,
+    "heading": 11.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0568258948624134,
+    "heading": 33.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0569070503115654,
+    "heading": 56.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0556168779730797,
+    "heading": 78.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0521334111690521,
+    "heading": 101.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0462672747671604,
+    "heading": 123.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0383421517908573,
+    "heading": 146.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0301986820995808,
+    "heading": 168.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0252308174967766,
+    "heading": 191.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0260399971157312,
+    "heading": 213.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0308358781039715,
+    "heading": 236.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0366590060293674,
+    "heading": 258.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0422161556780338,
+    "heading": 281.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.047085378319025,
+    "heading": 303.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0509481951594353,
+    "heading": 326.25,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0538625605404377,
+    "heading": 348.75,
+    "phase": 0.484375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0478169731795788,
+    "heading": 11.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0482085905969143,
+    "heading": 33.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0476629287004471,
+    "heading": 56.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0461558736860752,
+    "heading": 78.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0433433763682842,
+    "heading": 101.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0391761809587479,
+    "heading": 123.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.033921092748642,
+    "heading": 146.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0287606790661812,
+    "heading": 168.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0254591535776854,
+    "heading": 191.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0253330729901791,
+    "heading": 213.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0279479771852493,
+    "heading": 236.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.031899768859148,
+    "heading": 258.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.036235012114048,
+    "heading": 281.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0403872169554234,
+    "heading": 303.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0438160598278046,
+    "heading": 326.25,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0463583581149578,
+    "heading": 348.75,
+    "phase": 0.5,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0569952204823494,
+    "heading": 11.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0566546320915222,
+    "heading": 33.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.054978720843792,
+    "heading": 56.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0524196065962315,
+    "heading": 78.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0489767976105213,
+    "heading": 101.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0445878989994526,
+    "heading": 123.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0394017323851585,
+    "heading": 146.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0341823548078537,
+    "heading": 168.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0303578581660986,
+    "heading": 191.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.029462855309248,
+    "heading": 213.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0318186916410923,
+    "heading": 236.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0364004485309124,
+    "heading": 258.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0419583208858967,
+    "heading": 281.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0475695319473743,
+    "heading": 303.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0522791557013988,
+    "heading": 326.25,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0555640533566475,
+    "heading": 348.75,
+    "phase": 0.515625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0673624277114868,
+    "heading": 11.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0658175423741341,
+    "heading": 33.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0630236268043518,
+    "heading": 56.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0595168434083462,
+    "heading": 78.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0552220903337002,
+    "heading": 101.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0498841591179371,
+    "heading": 123.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0435552895069122,
+    "heading": 146.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0370626747608185,
+    "heading": 168.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0322314575314522,
+    "heading": 191.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0314248129725456,
+    "heading": 213.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0353264324367046,
+    "heading": 236.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.042252741754055,
+    "heading": 258.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0502327755093575,
+    "heading": 281.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0577633753418922,
+    "heading": 303.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0635272264480591,
+    "heading": 326.25,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0667891278862953,
+    "heading": 348.75,
+    "phase": 0.53125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0470029823482037,
+    "heading": 11.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0458210371434689,
+    "heading": 33.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0444402173161507,
+    "heading": 56.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0422087945044041,
+    "heading": 78.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0386963710188866,
+    "heading": 101.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0346343740820885,
+    "heading": 123.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0304612666368485,
+    "heading": 146.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0263430494815111,
+    "heading": 168.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0236495286226273,
+    "heading": 191.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0241325721144676,
+    "heading": 213.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0279461797326803,
+    "heading": 236.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0335909463465214,
+    "heading": 258.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0393141582608223,
+    "heading": 281.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0439608320593834,
+    "heading": 303.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0467329286038876,
+    "heading": 326.25,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0476177707314491,
+    "heading": 348.75,
+    "phase": 0.546875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0106859495863318,
+    "heading": 11.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.010091501288116,
+    "heading": 33.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00962149351835251,
+    "heading": 56.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00919326487928629,
+    "heading": 78.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00887399911880493,
+    "heading": 101.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00815733335912228,
+    "heading": 123.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00738949282094836,
+    "heading": 146.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00690323812887073,
+    "heading": 168.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00702162552624941,
+    "heading": 191.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0078656580299139,
+    "heading": 213.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00910286791622639,
+    "heading": 236.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0104129798710346,
+    "heading": 258.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.011360477656126,
+    "heading": 281.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0118031045421958,
+    "heading": 303.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0117629012092948,
+    "heading": 326.25,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0113270776346326,
+    "heading": 348.75,
+    "phase": 0.5625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00330627150833607,
+    "heading": 11.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00295160384848714,
+    "heading": 33.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00314696040004492,
+    "heading": 56.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00365732167847455,
+    "heading": 78.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00465643033385277,
+    "heading": 101.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00466167135164142,
+    "heading": 123.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00419755978509784,
+    "heading": 146.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00339310965500772,
+    "heading": 168.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00308576808311045,
+    "heading": 191.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00314616714604199,
+    "heading": 213.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00299567868933082,
+    "heading": 236.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00319558242335916,
+    "heading": 258.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00440959073603153,
+    "heading": 281.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00496950652450323,
+    "heading": 303.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00482778530567884,
+    "heading": 326.25,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00414735963568091,
+    "heading": 348.75,
+    "phase": 0.578125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00748035358265042,
+    "heading": 11.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00695449719205499,
+    "heading": 33.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00607097987085581,
+    "heading": 56.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00475376704707742,
+    "heading": 78.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00323380995541811,
+    "heading": 101.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00326745095662773,
+    "heading": 123.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00404189201071858,
+    "heading": 146.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00562429707497358,
+    "heading": 168.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00651714811101556,
+    "heading": 191.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00682136043906212,
+    "heading": 213.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00687021436169744,
+    "heading": 236.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0070037879049778,
+    "heading": 258.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00734247080981731,
+    "heading": 281.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00766905257478356,
+    "heading": 303.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00783361867070198,
+    "heading": 326.25,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0077766920439899,
+    "heading": 348.75,
+    "phase": 0.59375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00791730359196663,
+    "heading": 11.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00713955797255039,
+    "heading": 33.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00641511520370841,
+    "heading": 56.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00542473746463656,
+    "heading": 78.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00369362928904593,
+    "heading": 101.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00309662683866918,
+    "heading": 123.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00437761563807726,
+    "heading": 146.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00559508381411433,
+    "heading": 168.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00629796041175723,
+    "heading": 191.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00670931721106172,
+    "heading": 213.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00771844573318958,
+    "heading": 236.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00919241644442081,
+    "heading": 258.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0104486756026745,
+    "heading": 281.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0107291284948587,
+    "heading": 303.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0100146466866136,
+    "heading": 326.25,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00887992698699236,
+    "heading": 348.75,
+    "phase": 0.609375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00642021279782057,
+    "heading": 11.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00570848677307367,
+    "heading": 33.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00533380126580596,
+    "heading": 56.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0048751924186945,
+    "heading": 78.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00416348734870553,
+    "heading": 101.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00352355954237282,
+    "heading": 123.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00358458678238094,
+    "heading": 146.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0039519271813333,
+    "heading": 168.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00448385206982493,
+    "heading": 191.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00466573284938931,
+    "heading": 213.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00593601725995541,
+    "heading": 236.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00814095512032509,
+    "heading": 258.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00976771768182516,
+    "heading": 281.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0095068272203207,
+    "heading": 303.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00882745161652565,
+    "heading": 326.25,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00756952259689569,
+    "heading": 348.75,
+    "phase": 0.625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00406821770593524,
+    "heading": 11.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00359471468254924,
+    "heading": 33.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00349913141690195,
+    "heading": 56.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00341285415925086,
+    "heading": 78.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00309135648421943,
+    "heading": 101.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00262771872803569,
+    "heading": 123.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00253798603080213,
+    "heading": 146.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00279347621835768,
+    "heading": 168.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00313040404580534,
+    "heading": 191.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00331010390073061,
+    "heading": 213.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00417400384321809,
+    "heading": 236.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00601157499477267,
+    "heading": 258.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00738350348547101,
+    "heading": 281.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00733225233852863,
+    "heading": 303.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00627113506197929,
+    "heading": 326.25,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00503024039790034,
+    "heading": 348.75,
+    "phase": 0.640625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00198195269331336,
+    "heading": 11.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00241323187947273,
+    "heading": 33.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00240381970070302,
+    "heading": 56.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00190286349970847,
+    "heading": 78.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00212708720937371,
+    "heading": 101.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00234158243983984,
+    "heading": 123.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00323393661528826,
+    "heading": 146.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00399970822036266,
+    "heading": 168.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00445402786135674,
+    "heading": 191.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00469164829701185,
+    "heading": 213.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00464938394725323,
+    "heading": 236.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00420012976974249,
+    "heading": 258.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00303056952543557,
+    "heading": 281.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00216892617754638,
+    "heading": 303.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00176889740396291,
+    "heading": 326.25,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00154161604586989,
+    "heading": 348.75,
+    "phase": 0.65625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00110988575033844,
+    "heading": 11.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00146598555147648,
+    "heading": 33.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00153997610323131,
+    "heading": 56.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00124655675608665,
+    "heading": 78.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00144421181175858,
+    "heading": 101.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00151817582082003,
+    "heading": 123.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00208600237965584,
+    "heading": 146.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00262444606050849,
+    "heading": 168.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00300505431368947,
+    "heading": 191.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00329728098586202,
+    "heading": 213.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00348551501519978,
+    "heading": 236.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00348916463553905,
+    "heading": 258.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0029996014200151,
+    "heading": 281.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00199202704243362,
+    "heading": 303.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00110995722934604,
+    "heading": 326.25,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000739651150070131,
+    "heading": 348.75,
+    "phase": 0.671875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000597212463617325,
+    "heading": 11.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000769680249504745,
+    "heading": 33.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000775708758737892,
+    "heading": 56.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000604395638220012,
+    "heading": 78.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000565917755011469,
+    "heading": 101.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000609924958553165,
+    "heading": 123.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000961341371294111,
+    "heading": 146.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0012549179373309,
+    "heading": 168.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00145286170300096,
+    "heading": 191.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00159592693671584,
+    "heading": 213.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00180620944593102,
+    "heading": 236.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00200124434195459,
+    "heading": 258.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00191641645506024,
+    "heading": 281.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00144695595372468,
+    "heading": 303.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000851925753522664,
+    "heading": 326.25,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000438042945461348,
+    "heading": 348.75,
+    "phase": 0.6875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000842425273731351,
+    "heading": 11.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00083198124775663,
+    "heading": 33.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000773504259996116,
+    "heading": 56.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000587616872508079,
+    "heading": 78.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00075311423279345,
+    "heading": 101.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000869305804371834,
+    "heading": 123.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00115304964128882,
+    "heading": 146.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0013306203763932,
+    "heading": 168.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00144864898175001,
+    "heading": 191.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00152031739708036,
+    "heading": 213.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0014630634104833,
+    "heading": 236.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00134515622630715,
+    "heading": 258.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0010619085514918,
+    "heading": 281.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000772181141655892,
+    "heading": 303.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000696119153872132,
+    "heading": 326.25,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000786600867286325,
+    "heading": 348.75,
+    "phase": 0.703125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0011874062474817,
+    "heading": 11.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00122912414371967,
+    "heading": 33.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00110690691508353,
+    "heading": 56.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000831103709060699,
+    "heading": 78.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000860536936670542,
+    "heading": 101.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00101517338771373,
+    "heading": 123.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00141383893787861,
+    "heading": 146.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00173417956102639,
+    "heading": 168.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0019076878670603,
+    "heading": 191.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00200020405463874,
+    "heading": 213.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00199109199456871,
+    "heading": 236.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00218568393029273,
+    "heading": 258.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00214944453909993,
+    "heading": 281.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00174486404284835,
+    "heading": 303.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00137609674129635,
+    "heading": 326.25,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00126027967780828,
+    "heading": 348.75,
+    "phase": 0.71875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00191620516125113,
+    "heading": 11.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00189318088814616,
+    "heading": 33.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00169969850685447,
+    "heading": 56.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00130042212549597,
+    "heading": 78.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000968750799074769,
+    "heading": 101.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00118129851762205,
+    "heading": 123.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0017919207457453,
+    "heading": 146.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00233945809304714,
+    "heading": 168.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0026839089114219,
+    "heading": 191.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00289488956332207,
+    "heading": 213.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00314218108542264,
+    "heading": 236.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00317656225524843,
+    "heading": 258.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00344975292682648,
+    "heading": 281.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00278061721473932,
+    "heading": 303.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00224638939835131,
+    "heading": 326.25,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0020166477188468,
+    "heading": 348.75,
+    "phase": 0.734375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00177016330417246,
+    "heading": 11.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00178151321597397,
+    "heading": 33.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00166545354295522,
+    "heading": 56.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00133865023963153,
+    "heading": 78.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00143617240246385,
+    "heading": 101.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00131806149147451,
+    "heading": 123.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00211587478406727,
+    "heading": 146.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00240130489692092,
+    "heading": 168.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00268096942454576,
+    "heading": 191.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0032575917430222,
+    "heading": 213.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00473476527258754,
+    "heading": 236.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00463525438681245,
+    "heading": 258.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00434007262811065,
+    "heading": 281.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00475490000098944,
+    "heading": 303.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00367845152504742,
+    "heading": 326.25,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00196478143334389,
+    "heading": 348.75,
+    "phase": 0.75,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00242144195362926,
+    "heading": 11.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00220283586531878,
+    "heading": 33.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00209836405701935,
+    "heading": 56.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00204427307471633,
+    "heading": 78.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00129114475566894,
+    "heading": 101.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00189238565508276,
+    "heading": 123.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00177321524824947,
+    "heading": 146.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00233146804384887,
+    "heading": 168.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00274731032550335,
+    "heading": 191.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00362412771210074,
+    "heading": 213.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00612162193283439,
+    "heading": 236.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0040457216091454,
+    "heading": 258.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00296317622996867,
+    "heading": 281.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00452286703512073,
+    "heading": 303.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00455526448786259,
+    "heading": 326.25,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00335540878586471,
+    "heading": 348.75,
+    "phase": 0.765625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00386082846671343,
+    "heading": 11.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00347781949676573,
+    "heading": 33.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00309666944667697,
+    "heading": 56.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00271697505377233,
+    "heading": 78.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00132966449018568,
+    "heading": 101.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.000683116144500673,
+    "heading": 123.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00216632010415196,
+    "heading": 146.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00325043639168143,
+    "heading": 168.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00459796329960227,
+    "heading": 191.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00392944784834981,
+    "heading": 213.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00422836886718869,
+    "heading": 236.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00323532428592443,
+    "heading": 258.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00301754823885858,
+    "heading": 281.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00340421474538744,
+    "heading": 303.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00458224536851048,
+    "heading": 326.25,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00466754287481308,
+    "heading": 348.75,
+    "phase": 0.78125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00435605272650719,
+    "heading": 11.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00480698328465223,
+    "heading": 33.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00355357467196882,
+    "heading": 56.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00257999403402209,
+    "heading": 78.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00129439367447048,
+    "heading": 101.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0007765899063088,
+    "heading": 123.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0017204349860549,
+    "heading": 146.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00282108341343701,
+    "heading": 168.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00351972039788961,
+    "heading": 191.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00367600494064391,
+    "heading": 213.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00331368460319936,
+    "heading": 236.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00283495988696814,
+    "heading": 258.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00292155425995588,
+    "heading": 281.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00312266522087157,
+    "heading": 303.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00388068798929453,
+    "heading": 326.25,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00453365128487349,
+    "heading": 348.75,
+    "phase": 0.796875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00492419069632888,
+    "heading": 11.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00469370791688561,
+    "heading": 33.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0042219222523272,
+    "heading": 56.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00362154725007713,
+    "heading": 78.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00310476776212454,
+    "heading": 101.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00272530619986355,
+    "heading": 123.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0027110269293189,
+    "heading": 146.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00281595881097019,
+    "heading": 168.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.002890172181651,
+    "heading": 191.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00289440527558327,
+    "heading": 213.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00279769161716104,
+    "heading": 236.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00280157988891006,
+    "heading": 258.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00291092554107308,
+    "heading": 281.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00319370278157294,
+    "heading": 303.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00379763985984027,
+    "heading": 326.25,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00454192096367478,
+    "heading": 348.75,
+    "phase": 0.8125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00878170691430569,
+    "heading": 11.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00782805681228638,
+    "heading": 33.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00655574724078178,
+    "heading": 56.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0059078554622829,
+    "heading": 78.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.005560293328017,
+    "heading": 101.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00498918257653713,
+    "heading": 123.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00464435433968902,
+    "heading": 146.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00439208745956421,
+    "heading": 168.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00405803183093667,
+    "heading": 191.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00366590428166091,
+    "heading": 213.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00341994292102754,
+    "heading": 236.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0033465288579464,
+    "heading": 258.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00359408021904528,
+    "heading": 281.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00417165970429778,
+    "heading": 303.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00544370571151376,
+    "heading": 326.25,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00743168499320745,
+    "heading": 348.75,
+    "phase": 0.828125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0103799160569906,
+    "heading": 11.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00769600179046392,
+    "heading": 33.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00613558944314718,
+    "heading": 56.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0059020034968853,
+    "heading": 78.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00605808384716511,
+    "heading": 101.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00598605303093791,
+    "heading": 123.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00506790168583393,
+    "heading": 146.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00436946796253324,
+    "heading": 168.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00375769124366343,
+    "heading": 191.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00331941060721874,
+    "heading": 213.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00285043334588408,
+    "heading": 236.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0027990227099508,
+    "heading": 258.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00300957472063601,
+    "heading": 281.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00359077448956668,
+    "heading": 303.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00496811093762517,
+    "heading": 326.25,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00771787483245134,
+    "heading": 348.75,
+    "phase": 0.84375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0111868903040886,
+    "heading": 11.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0075798905454576,
+    "heading": 33.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00824886653572321,
+    "heading": 56.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00641585374251008,
+    "heading": 78.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00671375123783946,
+    "heading": 101.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00538296857848763,
+    "heading": 123.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00448518805205822,
+    "heading": 146.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00392504315823317,
+    "heading": 168.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00332052307203412,
+    "heading": 191.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00274653802625835,
+    "heading": 213.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00256576668471098,
+    "heading": 236.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00240637920796871,
+    "heading": 258.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00257493648678064,
+    "heading": 281.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00299429171718657,
+    "heading": 303.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00418207282200456,
+    "heading": 326.25,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00687030144035816,
+    "heading": 348.75,
+    "phase": 0.859375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00952553190290928,
+    "heading": 11.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00861665885895491,
+    "heading": 33.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.008108532987535,
+    "heading": 56.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00617919489741325,
+    "heading": 78.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00573190161958337,
+    "heading": 101.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00453196233138442,
+    "heading": 123.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00395816005766392,
+    "heading": 146.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00377008505165577,
+    "heading": 168.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00362226250581443,
+    "heading": 191.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00332316756248474,
+    "heading": 213.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00297038815915585,
+    "heading": 236.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00292933429591358,
+    "heading": 258.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00310223642736673,
+    "heading": 281.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00370842311531305,
+    "heading": 303.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00469404365867376,
+    "heading": 326.25,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00677055865526199,
+    "heading": 348.75,
+    "phase": 0.875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00657774461433291,
+    "heading": 11.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00698896870017052,
+    "heading": 33.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00693072192370892,
+    "heading": 56.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00566266477108002,
+    "heading": 78.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00427885260432959,
+    "heading": 101.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00324756116606295,
+    "heading": 123.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.002848194912076,
+    "heading": 146.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00295434519648552,
+    "heading": 168.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00317744468338788,
+    "heading": 191.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00341332284733653,
+    "heading": 213.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00328372023068368,
+    "heading": 236.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00334021798335016,
+    "heading": 258.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00351376179605722,
+    "heading": 281.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00387445301748812,
+    "heading": 303.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00464494293555617,
+    "heading": 326.25,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00568009214475751,
+    "heading": 348.75,
+    "phase": 0.890625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00447828881442547,
+    "heading": 11.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00554696889594197,
+    "heading": 33.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00599494017660618,
+    "heading": 56.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00578579306602478,
+    "heading": 78.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00605444284155965,
+    "heading": 101.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00590270711109042,
+    "heading": 123.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00536786299198866,
+    "heading": 146.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00460656266659498,
+    "heading": 168.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0039487686008215,
+    "heading": 191.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00345266913063824,
+    "heading": 213.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00310984835959971,
+    "heading": 236.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00279935728758574,
+    "heading": 258.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00248709367588162,
+    "heading": 281.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0025692256167531,
+    "heading": 303.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00300072063691914,
+    "heading": 326.25,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00345947104506195,
+    "heading": 348.75,
+    "phase": 0.90625,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00434050522744656,
+    "heading": 11.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00653617829084396,
+    "heading": 33.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00915734097361565,
+    "heading": 56.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0104876449331641,
+    "heading": 78.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0106698647141457,
+    "heading": 101.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0100776311010122,
+    "heading": 123.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00834334176033735,
+    "heading": 146.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00626117782667279,
+    "heading": 168.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00477694626897573,
+    "heading": 191.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00384706677868962,
+    "heading": 213.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00335872173309326,
+    "heading": 236.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00311414082534611,
+    "heading": 258.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00300822779536247,
+    "heading": 281.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00290110264904797,
+    "heading": 303.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00286376453004777,
+    "heading": 326.25,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00325012230314314,
+    "heading": 348.75,
+    "phase": 0.921875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0048182588070631,
+    "heading": 11.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00967813935130835,
+    "heading": 33.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0125665636733174,
+    "heading": 56.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0103567996993661,
+    "heading": 78.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0108798667788506,
+    "heading": 101.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0135157136246562,
+    "heading": 123.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00965901091694832,
+    "heading": 146.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00555811310186982,
+    "heading": 168.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00358563452027738,
+    "heading": 191.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00266870786435902,
+    "heading": 213.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00240423670038581,
+    "heading": 236.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00230734818615019,
+    "heading": 258.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00224053906276822,
+    "heading": 281.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00227106409147382,
+    "heading": 303.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00235408381558955,
+    "heading": 326.25,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00301052420400083,
+    "heading": 348.75,
+    "phase": 0.9375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00704017607495189,
+    "heading": 11.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0137410704046488,
+    "heading": 33.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0102574694901705,
+    "heading": 56.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00796773284673691,
+    "heading": 78.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0085412822663784,
+    "heading": 101.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0120404539629817,
+    "heading": 123.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.010574565269053,
+    "heading": 146.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00422118883579969,
+    "heading": 168.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00277920579537749,
+    "heading": 191.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00209421245381236,
+    "heading": 213.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00179319083690643,
+    "heading": 236.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00167509086895734,
+    "heading": 258.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00169893074780703,
+    "heading": 281.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00187352148350328,
+    "heading": 303.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00222221878357232,
+    "heading": 326.25,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00326744397170842,
+    "heading": 348.75,
+    "phase": 0.953125,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.42910423874855,
+    "heading": 11.25,
+    "phase": 0.96875,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.0095633352175355,
+    "heading": 33.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00456137303262949,
+    "heading": 56.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0035443224478513,
+    "heading": 78.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00363415549509227,
+    "heading": 101.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00567002920433879,
+    "heading": 123.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0153288990259171,
+    "heading": 146.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00367583916522563,
+    "heading": 168.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00194693461526185,
+    "heading": 191.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0014668864896521,
+    "heading": 213.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00147835945244879,
+    "heading": 236.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00158820941578597,
+    "heading": 258.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00172418530564755,
+    "heading": 281.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00192542257718742,
+    "heading": 303.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00253994483500719,
+    "heading": 326.25,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0046256142668426,
+    "heading": 348.75,
+    "phase": 0.96875,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.377764731645584,
+    "heading": 11.25,
+    "phase": 0.984375,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.00504517322406173,
+    "heading": 33.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00332197174429893,
+    "heading": 56.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00296546588651836,
+    "heading": 78.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00291539495810866,
+    "heading": 101.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00309113832190633,
+    "heading": 123.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.384316325187683,
+    "heading": 146.25,
+    "phase": 0.984375,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.00830014888197184,
+    "heading": 168.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00322816916741431,
+    "heading": 191.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00224366947077215,
+    "heading": 213.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00216003530658782,
+    "heading": 236.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00218832259997725,
+    "heading": 258.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00225450564175844,
+    "heading": 281.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00241943751461804,
+    "heading": 303.75,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00330055085942149,
+    "heading": 326.25,
+    "phase": 0.984375,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.386277467012405,
+    "heading": 348.75,
+    "phase": 0.984375,
+    "translation_fallback": true
+  },
+  {
+    "error_px": 0.00874550919979811,
+    "heading": 11.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00324302236549556,
+    "heading": 33.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00235664425417781,
+    "heading": 56.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00217046937905252,
+    "heading": 78.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00222341041080654,
+    "heading": 101.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00252124923281372,
+    "heading": 123.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00380158051848412,
+    "heading": 146.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.0101772397756577,
+    "heading": 168.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00539188086986542,
+    "heading": 191.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00306533114053309,
+    "heading": 213.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00243635033257306,
+    "heading": 236.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00243140640668571,
+    "heading": 258.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00237070466391742,
+    "heading": 281.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00233067432418466,
+    "heading": 303.75,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.00315919052809477,
+    "heading": 326.25,
+    "phase": 0.995,
+    "translation_fallback": false
+  },
+  {
+    "error_px": 0.322738140821457,
+    "heading": 348.75,
+    "phase": 0.995,
+    "translation_fallback": true
+  }
+]

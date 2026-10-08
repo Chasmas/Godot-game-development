@@ -9,6 +9,24 @@ const MAX_GIBS := 140
 const BLOOD := Color(0.58, 0.02, 0.07, 0.95)
 const BLOOD_DARK := Color(0.32, 0.0, 0.04, 0.95)
 
+static var _part_textures: Dictionary = {}
+
+static func part_texture(palette: String, part: String) -> Texture2D:
+	var key := SpriteForge.base_name(palette) + "_" + part
+	if _part_textures.has(key): return _part_textures[key]
+	var path := "res://assets/art/gore_parts/" + key + ".png"
+	if FileAccess.file_exists(path + ".import") or (not FileAccess.file_exists(path) and ResourceLoader.exists(path)):
+		var imported := load(path) as Texture2D
+		if imported:
+			_part_textures[key] = imported
+			return imported
+	if not FileAccess.file_exists(path): return null
+	var pixels := Image.load_from_file(path)
+	if pixels == null or pixels.is_empty(): return null
+	var texture := ImageTexture.create_from_image(pixels)
+	_part_textures[key] = texture
+	return texture
+
 static func level() -> int:
 	return int(SaveManager.get_setting("gore", 2))
 
@@ -61,6 +79,7 @@ static func splatter(pos: Vector2, dir: Vector2, amount := 1.0) -> void:
 	if level() == 0:
 		fx.emit("debris", pos, dir)
 		return
+	_surface_splatter(pos, dir, amount)
 	fx.emit("blood", pos, dir)
 	if amount > 1.2:
 		fx.emit("blood", pos, dir.rotated(0.5))
@@ -82,12 +101,82 @@ static func spatter_around(pos: Vector2, amount := 1.0) -> void:
 	var fx := _fx()
 	if fx == null or level() == 0:
 		return
+	_surface_splatter(pos, Vector2.RIGHT.rotated(randf() * TAU), amount)
 	var n := int((5.0 + 5.0 * amount) * (1.0 if level() == 2 else 0.5))
 	for i in n:
 		var a := randf() * TAU
 		var d := randf_range(3.0, 10.0) if randf() < 0.7 else randf_range(12.0, 22.0 * amount + 8.0)
 		var r := randf_range(0.6, 1.6) if d > 12.0 else randf_range(1.0, 2.6)
 		fx.decals.add_splat(pos + Vector2.from_angle(a) * d, r, Color(0.42 + randf() * 0.2, 0.01, 0.06, 0.9))
+
+## Painted blood adheres to the collider, including moving doors and props.
+static func _surface_splatter(pos: Vector2, dir: Vector2, amount: float) -> void:
+	var fx := _fx()
+	if fx == null or level() == 0:
+		return
+	var count := clampi(int(5.0 * amount), 3, 14)
+	var forward := dir.normalized() if dir.length_squared() > 0.001 else Vector2.RIGHT
+	for i in count:
+		var angle := lerpf(-0.9, 0.9, float(i) / maxf(count - 1, 1))
+		var ray := PhysicsRayQueryParameters2D.create(pos, pos + forward.rotated(angle) * (32.0 + amount * 22.0), Layers.WORLD | Layers.PROP | Layers.DOOR | Layers.LOW)
+		var hit := fx.get_world_2d().direct_space_state.intersect_ray(ray)
+		if not hit.is_empty():
+			attach_surface_blood(hit.collider as Node2D, hit.position, hit.normal, randf_range(1.8, 3.4) * minf(amount, 1.8))
+
+static func attach_surface_blood(surface: Node2D, point: Vector2, normal: Vector2, radius: float) -> Node2D:
+	if level() == 0 or not is_instance_valid(surface):
+		return null
+	# Keep existing stains; bound new nodes without evicting persistent blood.
+	var stains := int(surface.get_meta("blood_stain_count", 0))
+	if stains >= 32:
+		return null
+	surface.set_meta("blood_stain_count", stains + 1)
+	var stain := SurfaceBlood.new()
+	stain.position = surface.to_local(point - normal * 0.8)
+	stain.rotation = normal.angle() - surface.global_rotation
+	stain.radius = radius * (0.75 if level() == 1 else 1.0)
+	surface.add_child(stain)
+	stain.fit_surface(surface)
+	return stain
+
+class SurfaceBlood extends Node2D:
+	var radius := 3.0
+	var _clip := PackedVector2Array()
+	func fit_surface(surface: Node2D) -> void:
+		var rect := Rect2(Vector2(-radius,-radius*1.5),Vector2(radius*2.,radius*3.))
+		var quad := PackedVector2Array([rect.position,rect.position+Vector2(rect.size.x,0),rect.end,rect.position+Vector2(0,rect.size.y)])
+		for child in surface.get_children():
+			if not child is CollisionShape2D or child.disabled:
+				continue
+			var boundary := PackedVector2Array()
+			if child.shape is RectangleShape2D:
+				var half: Vector2 = child.shape.size*.5
+				boundary=PackedVector2Array([Vector2(-half.x,-half.y),Vector2(half.x,-half.y),half,Vector2(-half.x,half.y)])
+			elif child.shape is CircleShape2D:
+				for i in 24: boundary.append(Vector2.from_angle(float(i)*TAU/24.)*child.shape.radius)
+			else:
+				continue
+			for i in boundary.size(): boundary[i]=to_local(child.to_global(boundary[i]))
+			var intersections := Geometry2D.intersect_polygons(quad,boundary)
+			if not intersections.is_empty():
+				_clip=intersections[0]
+				break
+		queue_redraw()
+	func _ready() -> void:
+		add_to_group("surface_blood")
+		z_index = 2
+		set_process(false)
+	func _draw() -> void:
+		var texture := ArtLib.sprite("decal_blood")
+		if texture:
+			if _clip.is_empty():
+				draw_texture_rect(texture, Rect2(Vector2(-radius,-radius*1.5),Vector2(radius*2.,radius*3.)),false,Color(1,1,1,.92))
+			else:
+				var uv := PackedVector2Array()
+				for point in _clip: uv.append((point+Vector2(radius,radius*1.5))/Vector2(radius*2.,radius*3.))
+				draw_polygon(_clip,PackedColorArray([Color(1,1,1,.92)]),uv,texture)
+		else:
+			draw_circle(Vector2.ZERO, radius, Gore.BLOOD)
 
 ## Head burst: blood and a small amount of contextual debris.  The floor is
 ## readable after a fight; it must not become covered in cartoon bone shards.
@@ -138,6 +227,9 @@ static func on_kill(pos: Vector2, info: DamageInfo, palette: String, source_pos:
 		return ""
 	pool(pos + dir * 4.0, randf_range(9.0, 13.0), 0.35)
 	if g == 0:
+		return ""
+	if g < 2 and finisher in ["decap", "skull", "limb"]:
+		splatter(pos, dir, 1.3)
 		return ""
 	match finisher:
 		"decap":
@@ -197,14 +289,21 @@ static func on_kill(pos: Vector2, info: DamageInfo, palette: String, source_pos:
 				for i in randi_range(1, 2):
 					gib(pos + dir * 3.0, dir.rotated(randf_range(-0.9, 0.9)) * randf_range(70, 150), "chunk", palette)
 		DamageInfo.Type.MELEE:
-			if info.weapon_id == &"machete":
+			if info.weapon_id == &"chainsaw":
+				var cut := "arm" if randf() < 0.55 else "leg"
+				dismember(pos, dir, palette, cut)
+				return cut
+			elif info.weapon_id == &"machete":
 				var r2 := randf()
 				if r2 < 0.3:
 					decapitate(pos + dir * 5.0, dir, palette)
 					return "head"
-				elif r2 < 0.55:
+				elif r2 < 0.65:
 					dismember(pos, dir, palette, "arm")
 					return "arm"
+				elif r2 < 0.85:
+					dismember(pos, dir, palette, "leg")
+					return "leg"
 			elif info.heavy and info.weapon_id in [&"bat", &"pipe", &"brick"] and randf() < 0.3:
 				head_burst(pos + dir * 5.0, dir, palette)
 				return "head"
@@ -346,6 +445,7 @@ class Gib extends Node2D:
 			if kind in ["head", "arm", "leg", "dog_head"]:
 				Gore.pool(global_position, randf_range(3.5, 5.5))
 			return
+		var before := global_position
 		var step := velocity * delta
 		var space := get_world_2d().direct_space_state
 		var q := PhysicsRayQueryParameters2D.create(global_position, global_position + step + step.normalized() * 2.0, Layers.WORLD | Layers.PROP | Layers.DOOR)
@@ -353,13 +453,16 @@ class Gib extends Node2D:
 		if not hit.is_empty():
 			velocity = velocity.bounce(hit.normal) * 0.45
 			spin *= -0.6
-			Effects.get_fx().decals.add_splat(hit.position, 2.0, Color(0.5, 0.02, 0.07, 0.9))
+			# Move only to the contact clearance; stains belong to the hit surface.
+			var travel := clampf(before.distance_to(hit.position) - 2.0, 0.0, step.length())
+			global_position += step.normalized() * travel
+			Gore.attach_surface_blood(hit.collider as Node2D, hit.position, hit.normal, 2.0)
 		else:
 			position += step
 		rotation += spin * delta
 		spin = move_toward(spin, 0.0, delta * 20.0)
 		velocity = velocity.move_toward(Vector2.ZERO, delta * (260.0 + velocity.length() * 1.5))
-		_trail += step.length()
+		_trail += before.distance_to(global_position)
 		if _trail > 4.0 and kind != "teeth":
 			_trail = 0.0
 			var fx := Effects.get_fx()
@@ -370,6 +473,12 @@ class Gib extends Node2D:
 		return pts
 
 	func _draw() -> void:
+		var part_art := Gore.part_texture("tissue", "chunk_%d" % (get_instance_id() % 3)) if kind == "chunk" else Gore.part_texture(palette, kind)
+		if part_art:
+			# Baked at four display pixels per game pixel, with the corpse stage.
+			var size := Vector2(part_art.get_size()) * (0.18 if kind == "chunk" else 0.25)
+			draw_texture_rect(part_art, Rect2(-size * 0.5, size), false)
+			return
 		var ink := Color("0b0710")
 		var skin: Color = _cols.get("s", Color.BISQUE)
 		var shade: Color = _cols.get("S", skin.darkened(0.25))

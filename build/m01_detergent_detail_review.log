@@ -1,0 +1,11 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\build_m01_interiors.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(n); m.diffuse_color=(*c,1); m.use_nodes=True; b=m.node_tree.nodes.get('Principled BSDF'); b.inputs['Base Color'].default_value=(*c,1); b.inputs['Roughness'].default_value=rough; b.inputs['Metallic'].default_value=metal
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\build_m01_interiors.py:589: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world.use_nodes=True; _bg=sc.world.node_tree.nodes.get('Background'); _bg.inputs['Color'].default_value=(.012,.018,.03,1); _bg.inputs['Strength'].default_value=.3
+00:06.781  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\m01_interiors_transitions_staging.png'
+00:07.844  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\m01_reception_detail_staging.png'
+00:08.953  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\m01_service_transition_detail_staging.png'
+Info: Saved as "m01_interiors_transitions_staging.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

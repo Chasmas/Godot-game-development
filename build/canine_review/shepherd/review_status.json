@@ -1,0 +1,37 @@
+{
+  "runtime_approved": false,
+  "reviewed_artifacts": [
+    "trot_01.png",
+    "trot_07.png",
+    "trot_13.png",
+    "trot_19.png",
+    "godot_trot_review.png",
+    "motion/12.png"
+  ],
+  "godot_motion_capture": "godot_trot_motion.gif",
+  "godot_motion_frames": 24,
+  "godot_loop_seam": "All exported bone poses match between the first and last sample",
+  "contact_measurement": "Four sole height variations below 0.000001 m during stance after body height and sole weight adjustments",
+  "weighting": "Voxel proxy heat weights transferred to original textured surface; torso leg influence attenuated and volume preservation enabled.",
+  "remaining_visual_issues": [
+    "Shoulder and chest deformation still visible through the trot cycle",
+    "Knee bend direction and hip shape require anatomical review",
+    "Cycle cadence and stride length need calibration to actual gameplay speed; avoid accelerating this short step excessively"
+  ],
+  "remaining_validation": [
+    "Review complete cycle in motion, including loop seam",
+    "Measure evaluated paw geometry during stance",
+    "Review at gameplay camera and character scale",
+    "Author walk, run, bite, idle, sleep and death"
+  ],
+  "shoulder_trial": "Front joint origin lowered from z=0.27 to z=0.15; restored original torso attenuation after stronger attenuation caused a shoulder crease. Trot rebuilt and exported. Visual review remains provisional.",
+  "stale_after_rig_change": [
+    "godot_trot_motion.gif"
+  ],
+  "regenerated_on_current_rig": [
+    "trot",
+    "walk",
+    "idle"
+  ],
+  "idle_motion_frames": "motion_idle: 24 Godot captures, respiration/head/tail, no paw travel"
+}

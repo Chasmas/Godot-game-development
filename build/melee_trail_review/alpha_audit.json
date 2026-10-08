@@ -1,0 +1,226 @@
+[
+  {
+    "file": "build\\melee_trail_review\\swing\\000.png",
+    "alpha_range": [
+      0,
+      141
+    ],
+    "bbox": [
+      111,
+      57,
+      160,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\001.png",
+    "alpha_range": [
+      0,
+      165
+    ],
+    "bbox": [
+      125,
+      57,
+      186,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\002.png",
+    "alpha_range": [
+      0,
+      203
+    ],
+    "bbox": [
+      142,
+      59,
+      205,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\003.png",
+    "alpha_range": [
+      0,
+      214
+    ],
+    "bbox": [
+      163,
+      64,
+      217,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\004.png",
+    "alpha_range": [
+      0,
+      217
+    ],
+    "bbox": [
+      185,
+      77,
+      220,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\005.png",
+    "alpha_range": [
+      0,
+      217
+    ],
+    "bbox": [
+      203,
+      99,
+      220,
+      156
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\006.png",
+    "alpha_range": [
+      0,
+      166
+    ],
+    "bbox": [
+      189,
+      128,
+      220,
+      174
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\swing\\007.png",
+    "alpha_range": [
+      0,
+      159
+    ],
+    "bbox": [
+      169,
+      157,
+      208,
+      189
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\000.png",
+    "alpha_range": [
+      0,
+      153
+    ],
+    "bbox": [
+      143,
+      124,
+      203,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\001.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      143,
+      124,
+      209,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\002.png",
+    "alpha_range": [
+      0,
+      212
+    ],
+    "bbox": [
+      143,
+      124,
+      214,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\003.png",
+    "alpha_range": [
+      0,
+      220
+    ],
+    "bbox": [
+      143,
+      124,
+      220,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\004.png",
+    "alpha_range": [
+      0,
+      218
+    ],
+    "bbox": [
+      143,
+      124,
+      225,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\005.png",
+    "alpha_range": [
+      0,
+      213
+    ],
+    "bbox": [
+      143,
+      124,
+      231,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\006.png",
+    "alpha_range": [
+      0,
+      180
+    ],
+    "bbox": [
+      143,
+      124,
+      236,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\thrust\\007.png",
+    "alpha_range": [
+      0,
+      165
+    ],
+    "bbox": [
+      143,
+      124,
+      242,
+      132
+    ],
+    "clipped": false
+  }
+]

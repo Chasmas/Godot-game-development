@@ -131,11 +131,16 @@ class LaserBeam extends Node2D:
 		if not ws.visible or ws.texture == null:
 			return
 		var from: Vector2 = player.visual.muzzle_global()
-		var dir: Vector2 = Vector2.from_angle(ws.global_rotation)
+		# along the aim (where shots go), even while she runs facing elsewhere
+		var dir: Vector2 = player.aim_dir if player.aim_dir != Vector2.ZERO else Vector2.from_angle(ws.global_rotation)
 		var space := get_world_2d().direct_space_state
 		var q := PhysicsRayQueryParameters2D.create(from, from + dir * 420.0, Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.ENEMY | Layers.GLASS | Layers.DOWNED, [player.get_rid()])
 		var hit := space.intersect_ray(q)
 		var to: Vector2 = hit.position if not hit.is_empty() else from + dir * 420.0
+		# traced along the floor (where shots fly), drawn at the gun's height
+		var lift: Vector2 = player.visual.muzzle_lift()
+		from += lift
+		to += lift
 		var flick := 0.8 + 0.2 * sin(Time.get_ticks_msec() * 0.05)
 		# a hairline core with a faint haze, fading along its length
 		var mid := from.lerp(to, 0.6)

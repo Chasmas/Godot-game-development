@@ -1,0 +1,17 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS smoker plays authored standing activity
+PASS NPC smoking does not spawn a duplicate player cigarette
+PASS cigarette follows the actual hand socket
+PASS alert releases activity and restores the equipped weapon
+PASS sleeper has lowered hips in the authored seated pose
+Standing hips=1.02271151542664 seated hips=0.57814675569534
+PASS waking an unarmed guard does not reveal a stale weapon
+PASS waking a Blender guard does not reveal fallback legs
+PASS alert reparents and tips the occupied chair
+PASS chair remains at the seated position after alert
+PASS alert plays the runtime Blender chair animation
+PASS chair fall ends instead of looping
+PASS settled chair stops continuous rendering
+PASS settled chair preserves the final fallen pose
+IDLE ACTIVITY REGRESSION: 0 failures

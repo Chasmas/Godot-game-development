@@ -1,0 +1,285 @@
+00:01.750  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\idle_consumables_candidate\can.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+06:04:56 | INFO: Starting glTF 2.0 export
+06:04:56 | INFO: Extracting primitive: Cylinder.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.005
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.006
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh 'CHERRY COLA glyph.006' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.007
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.008
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.009
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: CHERRY COLA glyph.010
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.005
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.006
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.007
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.008
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.009
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.010
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.011
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.012
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.013
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.014
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.015
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.016
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.017
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.018
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.019
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.020
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.021
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.022
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.023
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.024
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.025
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.026
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Sphere.027
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus.005
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: NIGHT glyph
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: NIGHT glyph.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: NIGHT glyph.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: NIGHT glyph.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: NIGHT glyph.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Cylinder.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Cylinder
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Cylinder.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Torus.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: SHIFT glyph
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: SHIFT glyph.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: SHIFT glyph.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: SHIFT glyph.003
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: SHIFT glyph.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: Cylinder.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.010
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.020
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.030
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.040
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.050
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.060
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.001
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.011
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.021
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.031
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.041
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.051
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.061
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.002
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.012
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.022
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.032
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.042
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.052
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.062
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.003
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.003' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.013
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.013' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.023
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.023' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.033
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.033' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.043
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.043' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.053
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.053' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.063
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.063' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.004
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.014
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.024
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.034
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.044
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.054
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.064
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.005
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.015
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.025
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.035
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.045
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.055
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.065
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.006
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.016
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.026
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.036
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.046
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.056
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.066
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.007
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.007' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.017
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.017' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.027
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.027' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.037
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.037' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.047
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.047' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.057
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.057' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.067
+06:04:56 | INFO: Primitives created: 0
+06:04:56 | WARNING: Mesh '||| ||| || glyph.067' has no primitives and will be omitted.
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.008
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.018
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.028
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.038
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.048
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.058
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.068
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.009
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.019
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.029
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.039
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.049
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.059
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Extracting primitive: ||| ||| || glyph.069
+06:04:56 | INFO: Primitives created: 1
+06:04:56 | INFO: Finished glTF 2.0 export in 0.19574809074401855 s
+
+Info: Saved as "idle_can_floor.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

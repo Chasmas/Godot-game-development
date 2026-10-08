@@ -1,0 +1,141 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "scope": "Seven discrete interruption sources, 19 Godot CPU skin samples each; visual transitions and production gameplay pending",
+  "source_hashes_verified": true,
+  "results": [
+    {
+      "source_frame": 1,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 21,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.72529029846191e-08,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -1.77084942265537e-07,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "f4055b38f715f95b7fc52fdfa986be3499c43d1dd1ec5aa5a9921c188df5e713",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 4,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.20569188261288e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -1.12108873508987e-05,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "ac11dbfd5463cd45d5ecf8cf6674b32640f06199209f4bee235d3ffe55a0e527",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 7,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.19181208396913e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -1.39940857479814e-05,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "3450c835728f1551774834d89de28a392140d40732015c1a4e84970273766b8b",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 10,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.19458786179894e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -5.02852435602108e-06,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "c60ff71378c3670cbf9c012c0836bf77b7a289b0109b7d2e2f37745896f3f402",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 13,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.19445757668291e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -5.04927493238938e-06,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "88cc83efc65dc6aceef88dd91bd2f4517d6d1527d41368744213a96fc657b70d",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 16,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.19754144584294e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -5.05771276948508e-06,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "9bce1a11fe75bf0c453ca473f52e0a28ca6e3cc978b282254d88d2a567cc557a",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    },
+    {
+      "source_frame": 19,
+      "audit": {
+        "animation_approved": false,
+        "animation_tracks": 22,
+        "blocked_stop": true,
+        "maximum_planted_sole_slip_per_frame_m": 3.19921446134686e-06,
+        "mesh_loop_seam_m": null,
+        "minimum_full_cycle_mesh_height_m": -5.04686795466114e-06,
+        "mode": "direct_gltf",
+        "moving_start": false,
+        "runtime_approved": false,
+        "sampled_frames": 19,
+        "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+        "source_glb_sha256": "814af0542d905a0c1c2726a72a7a4e610f423d544a70c54642903ad258aa5695",
+        "surface_format": 34359745559,
+        "vertices": 69146
+      }
+    }
+  ]
+}

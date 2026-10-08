@@ -1,0 +1,582 @@
+{
+  "approved": false,
+  "rows": [
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.16359181702137,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.163591831922531,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.16359181702137,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.12648369371891,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.126483708620071,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.126483678817749,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.126483678817749,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.126483678817749,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.126483678817749,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.12648369371891,
+      "phase": 0.25
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.126483678817749,
+      "phase": 0.25
+    },
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.1639234572649,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.163923472166061,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.126712292432785,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.126712307333946,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.126712277531624,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.126712307333946,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.126712277531624,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.126712307333946,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.126712292432785,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.126712307333946,
+      "phase": 0.291666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.16490039229393,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.164900362491608,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.164900377392769,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.127635821700096,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.127635806798935,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.127635806798935,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.127635791897774,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.127635821700096,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.127635806798935,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.127635806798935,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.127635821700096,
+      "phase": 0.333333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.166617810726166,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.166617825627327,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.166617810726166,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.166617810726166,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.166617810726166,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.166617810726166,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.166617795825005,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.166617795825005,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.12898001074791,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.12898001074791,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.128980025649071,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.128979995846748,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.12898001074791,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.12898001074791,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.128979995846748,
+      "phase": 0.375
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.128979995846748,
+      "phase": 0.375
+    },
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.168830916285515,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.168830931186676,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.130929008126259,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.130929037928581,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.130929008126259,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.130929008126259,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.130929008126259,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.130929037928581,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.130928993225098,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.130929008126259,
+      "phase": 0.416666666666667
+    },
+    {
+      "action": "drink",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "drink",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.171408176422119,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 0.0,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 45.0000012522391,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 90.0000025044782,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": 135.000000341623,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -179.999991348578,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -135.000000341623,
+      "mouth_proxy_gap_m": 0.133146107196808,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -90.0000025044782,
+      "mouth_proxy_gap_m": 0.133146092295647,
+      "phase": 0.458333333333333
+    },
+    {
+      "action": "eat",
+      "heading": -45.0000080824283,
+      "mouth_proxy_gap_m": 0.133146092295647,
+      "phase": 0.458333333333333
+    }
+  ],
+  "scope": "Head bone mouth proxy versus prop edge; not actual lip or finger mesh contact"
+}

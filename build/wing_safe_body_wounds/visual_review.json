@@ -1,0 +1,9 @@
+{
+  "status": "candidate_reviewed_not_integrated",
+  "scope": "Actual Godot OpenGL demon arm intact/cut/capped at .15/.5/.995 plus detached arm PNG. Wings no longer bundled in detached arm.",
+  "pending": [
+    "All-cast detached source binding check",
+    "Complement area check updated demon variant",
+    "Runtime gameplay/performance"
+  ]
+}

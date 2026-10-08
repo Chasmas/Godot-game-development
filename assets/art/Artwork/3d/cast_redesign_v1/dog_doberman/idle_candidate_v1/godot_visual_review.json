@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "captured_frames": 24,
+  "inspected_textured_frames": [
+    0,
+    6,
+    18
+  ],
+  "inspected_clay_frames": [
+    6
+  ],
+  "normal_toggle_changed_image": true,
+  "findings": [
+    "Side-view idle retains grounded silhouette; previous broad tail/hind-leg stretching panels absent in inspected frames",
+    "Neck, shoulder and hip surface creases also visible with neutral clay; removing normal map alone does not resolve them",
+    "No locomotion, jaw animation, gameplay collision or all-angle approval"
+  ],
+  "next": "Inspect imported vertex normals against Blender and refine local shoulder/neck/hip geometry; validate full visual playback and locomotion before integration"
+}

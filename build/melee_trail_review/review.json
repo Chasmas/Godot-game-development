@@ -1,0 +1,25 @@
+{
+  "approved": false,
+  "frames": 8,
+  "size": [
+    256,
+    256
+  ],
+  "origin": "center",
+  "ortho_scale": 2.4,
+  "kinds": [
+    "swing",
+    "thrust"
+  ],
+  "source": "Blender ribbons with soft silver body and fine detached filaments",
+  "camera_elevation_degrees": 50,
+  "runtime_approved": false,
+  "godot_review_pending": false,
+  "visual_contact_sheet_reviewed": true,
+  "visual_artifact": "build/melee_trail_review/godot_review.png",
+  "remaining_review": [
+    "Align origin and sweep to actual Cass hand/weapon motion",
+    "Review all headings over actual level lighting",
+    "Check animated timing and readability during gameplay"
+  ]
+}

@@ -1,0 +1,17 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2259 ms
+CONTACT knife visual phase=0.27777777777778 expected=0.62
+FAIL knife animation reaches strike when controller resolves contact
+PASS knife controller resolves contact
+CONTACT heavy_knife visual phase=0.25 expected=0.58
+FAIL heavy_knife animation reaches strike when controller resolves contact
+PASS heavy_knife controller resolves contact
+CONTACT punch visual phase=0.2375 expected=0.53
+FAIL punch animation reaches strike when controller resolves contact
+PASS punch controller resolves contact
+GAIT actual=0.32608695652174 player-clock reference=0.76086956521739
+FAIL Cass gait follows player time rather than slowed world time
+PASS ordinary actor retains world animation speed
+PASS animation returns to world time after Spotlight ends
+SPOTLIGHT ANIMATION REVIEW: 4 failures

@@ -1,0 +1,1255 @@
+{
+  "cuts": [
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/bellhop_head_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/bellhop_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/bellhop_leg_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/bellhop_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "biker",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/biker_head_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "biker",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/biker_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9,
+      "expected_caps": 9,
+      "look": "biker",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/biker_leg_0.res",
+          "source": "char1",
+          "surfaces": 10
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9,
+      "expected_caps": 9,
+      "look": "biker",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/biker_legs_0.res",
+          "source": "char1",
+          "surfaces": 10
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "boss",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/boss_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "boss",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/boss_arm_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6,
+      "expected_caps": 6,
+      "look": "boss",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/boss_leg_0.res",
+          "source": "char1",
+          "surfaces": 7
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "boss",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/boss_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "buck",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/buck_head_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "buck",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/buck_arm_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8,
+      "expected_caps": 8,
+      "look": "buck",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/buck_leg_0.res",
+          "source": "char1",
+          "surfaces": 9
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8,
+      "expected_caps": 8,
+      "look": "buck",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/buck_legs_0.res",
+          "source": "char1",
+          "surfaces": 9
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "burnt",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/burnt_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "burnt",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/burnt_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6,
+      "expected_caps": 6,
+      "look": "burnt",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/burnt_leg_0.res",
+          "source": "char1",
+          "surfaces": 7
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 12,
+      "expected_caps": 12,
+      "look": "burnt",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/burnt_legs_0.res",
+          "source": "char1",
+          "surfaces": 13
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 8,
+      "expected_caps": 8,
+      "look": "cass",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cass_head_0.res",
+          "source": "char1",
+          "surfaces": 9
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "cass",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cass_arm_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "cass",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cass_leg_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "cass",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cass_legs_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "civilian",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/civilian_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "civilian",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/civilian_arm_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "civilian",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/civilian_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "civilian",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/civilian_legs_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "cultist",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cultist_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "cultist",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cultist_arm_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "cultist",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cultist_leg_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "cultist",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/cultist_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "demon",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/demon_head_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 6,
+      "expected_caps": 6,
+      "look": "demon",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/demon_arm_0.res",
+          "source": "char1",
+          "surfaces": 7
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "demon",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/demon_leg_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8,
+      "expected_caps": 8,
+      "look": "demon",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/demon_legs_0.res",
+          "source": "char1",
+          "surfaces": 9
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "fireman",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/fireman_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "fireman",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/fireman_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "fireman",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/fireman_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "fireman",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/fireman_legs_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/ghoul_head_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/ghoul_arm_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 16,
+      "expected_caps": 16,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/ghoul_leg_0.res",
+          "source": "char1",
+          "surfaces": 17
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 15,
+      "expected_caps": 15,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/ghoul_legs_0.res",
+          "source": "char1",
+          "surfaces": 16
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "guard",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/guard_head_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "guard",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/guard_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "guard",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/guard_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "guard",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/guard_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "gunner",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/gunner_head_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "gunner",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/gunner_arm_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "gunner",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/gunner_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "gunner",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/gunner_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "handler",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/handler_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "handler",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/handler_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8,
+      "expected_caps": 8,
+      "look": "handler",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/handler_leg_0.res",
+          "source": "char1",
+          "surfaces": 9
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 10,
+      "expected_caps": 10,
+      "look": "handler",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/handler_legs_0.res",
+          "source": "char1",
+          "surfaces": 11
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "heavy",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/heavy_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "heavy",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/heavy_arm_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "heavy",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/heavy_leg_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "heavy",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/heavy_legs_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "hunter",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/hunter_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "hunter",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/hunter_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9,
+      "expected_caps": 9,
+      "look": "hunter",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/hunter_leg_0.res",
+          "source": "char1",
+          "surfaces": 10
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9,
+      "expected_caps": 9,
+      "look": "hunter",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/hunter_legs_0.res",
+          "source": "char1",
+          "surfaces": 10
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "riot",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/riot_head_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "riot",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/riot_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "riot",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/riot_leg_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "riot",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/riot_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "scout",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scout_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "scout",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scout_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "scout",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scout_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "scout",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scout_legs_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scrapper_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scrapper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scrapper_leg_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/scrapper_legs_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "security",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/security_head_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "security",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/security_arm_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 13,
+      "expected_caps": 13,
+      "look": "security",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/security_leg_0.res",
+          "source": "char1",
+          "surfaces": 14
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 11,
+      "expected_caps": 11,
+      "look": "security",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/security_legs_0.res",
+          "source": "char1",
+          "surfaces": 12
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "sniper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/sniper_head_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "sniper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/sniper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "sniper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/sniper_leg_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7,
+      "expected_caps": 7,
+      "look": "sniper",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/sniper_legs_0.res",
+          "source": "char1",
+          "surfaces": 8
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/stagehand_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2,
+      "expected_caps": 2,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/stagehand_arm_0.res",
+          "source": "char1",
+          "surfaces": 3
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/stagehand_leg_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3,
+      "expected_caps": 3,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/stagehand_legs_0.res",
+          "source": "char1",
+          "surfaces": 4
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4,
+      "expected_caps": 4,
+      "look": "welder",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/welder_head_0.res",
+          "source": "char1",
+          "surfaces": 5
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "welder",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/welder_arm_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "welder",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/welder_leg_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "welder",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/welder_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1,
+      "expected_caps": 1,
+      "look": "zombie",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/zombie_head_0.res",
+          "source": "char1",
+          "surfaces": 2
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "zombie",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/zombie_arm_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "zombie",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/zombie_leg_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5,
+      "expected_caps": 5,
+      "look": "zombie",
+      "meshes": [
+        {
+          "path": "res://build/sever_mesh_candidates/zombie_legs_0.res",
+          "source": "char1",
+          "surfaces": 6
+        }
+      ],
+      "part": "legs"
+    }
+  ],
+  "failures": 0,
+  "scope": "Precomputed source mesh with independently built wound surfaces, retaining original skin bind indices. Requires saved-resource equivalence, body binding, visual and gameplay validation.",
+  "status": "candidate_not_integrated"
+}

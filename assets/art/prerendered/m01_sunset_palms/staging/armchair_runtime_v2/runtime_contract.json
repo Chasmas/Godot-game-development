@@ -1,0 +1,43 @@
+{
+  "source_reference": "assets/art/materials/m01/batch_v1/guest_room_direction.png",
+  "fabric_source": "assets/art/materials/m01/batch_v1/armchair_sage_fabric_albedo_v1.png",
+  "camera_elevation_degrees": 50,
+  "pixels_per_metre": 365.7142857142857,
+  "game_pixels_per_metre": 16,
+  "sprite_scale": 0.04375,
+  "runtime_approved": false,
+  "frames": [
+    {
+      "file": "armchair_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    }
+  ]
+}

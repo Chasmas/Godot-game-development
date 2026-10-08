@@ -1,0 +1,12 @@
+{
+  "animations": [
+    "chainsaw_aim",
+    "chainsaw_raise",
+    "chainsaw_run",
+    "chainsaw_sneak",
+    "chainsaw_walk"
+  ],
+  "failures": [],
+  "max_rest_delta": 0.0,
+  "scope": "Bone rest and animation track resolution on current Cass model; not gameplay/transitions"
+}

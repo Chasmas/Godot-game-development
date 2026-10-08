@@ -1,0 +1,41 @@
+{
+  "voice_id": "g12yXXabMWeFoLMzxPrF",
+  "approved": false,
+  "lines": [
+    {
+      "dialogue": "apartment_1988",
+      "node": "m1",
+      "text": "Cassie, it's Mom. Happy Fourth. The fireworks have the cat under the stove again.",
+      "file": "build\\mom_voice_older\\apartment_1988\\m1.mp3",
+      "bytes": 96174
+    },
+    {
+      "dialogue": "apartment_1988",
+      "node": "m2",
+      "text": "I bought a cake. I know. I know it's silly. He'd be twenty-six today... Anyway. Call me back, sweetheart.",
+      "file": "build\\mom_voice_older\\apartment_1988\\m2.mp3",
+      "bytes": 120834
+    },
+    {
+      "dialogue": "call_m02",
+      "node": "a",
+      "text": "Cassie? It's Mom. I know it's late. A man called about Tommy's car. Arlo something. He says he still has it.",
+      "file": "build\\mom_voice_older\\call_m02\\a.mp3",
+      "bytes": 140060
+    },
+    {
+      "dialogue": "call_m02",
+      "node": "b",
+      "text": "He said you'd come for it tonight. Out in Yermo? At two in the morning?",
+      "file": "build\\mom_voice_older\\call_m02\\b.mp3",
+      "bytes": 75276
+    },
+    {
+      "dialogue": "call_m02",
+      "node": "d",
+      "text": "Bring me something of his. Anything. ...And be nice to the dogs. You know how you get with dogs.",
+      "file": "build\\mom_voice_older\\call_m02\\d.mp3",
+      "bytes": 119162
+    }
+  ]
+}

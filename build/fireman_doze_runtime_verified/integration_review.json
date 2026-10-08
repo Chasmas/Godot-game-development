@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "47614628c0b8c586ccf12aab1d15fc1d8631276a7f238581168779ad67eb8c27",
+  "integrated_sha256": "0705025a2e0bcd8f635a698d4ebe151c6634c23cce7798a529ff1f1b4551456f",
+  "backup": "build\\fireman_doze_runtime_verified\\fireman_before_47614628c0b8.glb",
+  "visual_review": "build/fireman_idle_review_directions.png",
+  "mechanics": "build/fireman_doze_supported_isolated/regression.log"
+}

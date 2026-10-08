@@ -1,0 +1,6 @@
+{
+  "next_action": "Inspect incident faces at reported boundary coordinates; avoid escalating weld distance globally because paws and eyelids are closely spaced",
+  "status": "experiment_not_promoted",
+  "reason": "Coincident seam weld and degenerate-edge cleanup retained 16 boundary edges and 25 nonmanifold edges; no evidence of topology improvement",
+  "runtime_approved": false
+}

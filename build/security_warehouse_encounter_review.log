@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 21 looks in 2188 ms
+PASS { "retreat": true, "alarm_seconds": -1.0, "peak_detection": 0.89512375079135, "end_position": [484.95556640625, 136.0], "moving_enemies": 8, "passed": true }
+PASS { "retreat": false, "alarm_seconds": 0.875, "peak_detection": 0.99648868214517, "end_position": [432.733489990234, 136.0], "moving_enemies": 12, "passed": true }
+WAREHOUSE ENCOUNTER REVIEW: 0 failures

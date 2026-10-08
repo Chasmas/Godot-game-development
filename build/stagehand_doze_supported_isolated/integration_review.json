@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Added doze only with world-space hip lowering, converted leg hinge axes and supported ankle targets. Smoking/other animation quality remains outstanding.",
+  "baseline_sha256": "e4458b6171d6d2a7c891b9fdc40e1fdb676b0fe60856473934a21a90352f695d",
+  "integrated_sha256": "09a078be0f13fc9f7f5e572a316bdbdd11077212a985b117099e7d5625d589f8",
+  "preserved_clips": 24,
+  "review": "visual.log",
+  "mechanics": "regression.log"
+}

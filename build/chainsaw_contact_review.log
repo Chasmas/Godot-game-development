@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS held has no windup damage
+PASS held stays alive before contact
+PASS held contact obeys held trigger and forward arc
+PASS release has no windup damage
+PASS release stays alive before contact
+PASS release contact obeys held trigger and forward arc
+PASS side has no windup damage
+PASS side stays alive before contact
+PASS side contact obeys held trigger and forward arc
+CHAINSAW CONTACT REVIEW: 0 failures

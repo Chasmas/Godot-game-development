@@ -1,0 +1,22 @@
+{
+  "runtime_approved": false,
+  "next_action": "Build quadruped skeleton, inspect collar material and validate deformation, paw contacts and locomotion before integration",
+  "rig_approved": false,
+  "reviewed_views": [
+    "front",
+    "side",
+    "back",
+    "three_quarter",
+    "front_clay",
+    "side_clay",
+    "back_clay",
+    "three_quarter_clay"
+  ],
+  "findings": [
+    "Four textured and four neutral clay renders directly inspected",
+    "Full body, muzzle, paws and tail preserved after local defect removal",
+    "No obvious new surface gaps in these static views",
+    "Coat markings retained; collar shading changed after normal recalculation and requires close material review"
+  ],
+  "status": "surface_cleanup_retained_for_rigging"
+}

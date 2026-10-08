@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+PASS Handler uses authored smoke
+PASS Dog waits at heel
+PASS Leash starts on real left hand
+PASS Leash starts on real left hand
+PASS Leash starts on real left hand
+PASS Leash starts on real left hand
+PASS Leash has simulated particles
+PASS Physics pins hand anchor
+PASS Physics pins collar anchor
+PASS Moving dog pulls physical leash
+PASS Teleport and long frame keep leash stable
+PASS Held handler cannot release dog
+PASS Alert releases dog
+PASS Release clears leash physics
+PASS Alert clears smoking
+PASS Alert restores handler weapon
+PASS Dog enters active combat
+PASS Repeated alert does not repeat release
+HANDLER TRANSITION REVIEW: 0 failures []

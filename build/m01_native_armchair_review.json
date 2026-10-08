@@ -1,0 +1,108 @@
+{
+  "legacy_armchair_paintings": 0,
+  "native_chairs": 11,
+  "native_solid_colliders": 11,
+  "placements": [
+    {
+      "approaches": 1,
+      "door_hits": 0,
+      "position": [
+        88.0,
+        46.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 2,
+      "door_hits": 0,
+      "position": [
+        264.0,
+        46.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 1,
+      "door_hits": 0,
+      "position": [
+        648.0,
+        46.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 1,
+      "door_hits": 0,
+      "position": [
+        894.0,
+        54.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 2,
+      "door_hits": 0,
+      "position": [
+        184.0,
+        446.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 1,
+      "door_hits": 0,
+      "position": [
+        440.0,
+        446.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 2,
+      "door_hits": 0,
+      "position": [
+        702.0,
+        450.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 2,
+      "door_hits": 0,
+      "position": [
+        184.0,
+        590.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 2,
+      "door_hits": 0,
+      "position": [
+        328.0,
+        648.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 1,
+      "door_hits": 0,
+      "position": [
+        702.0,
+        590.0
+      ],
+      "sampled_wall_pixels": 0
+    },
+    {
+      "approaches": 3,
+      "door_hits": 0,
+      "position": [
+        96.0,
+        112.0
+      ],
+      "sampled_wall_pixels": 0
+    }
+  ],
+  "player_sweep_chairs": 11,
+  "player_sweep_failures": 0
+}

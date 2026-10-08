@@ -87,13 +87,21 @@ func _physics_process(delta: float) -> void:
 		queue_redraw()
 	if absf(omega) > 0.01:
 		_integrate(delta)
+		_apply()
+
+func _integrate(delta: float) -> void:
+	# Sample the swept rotation, not just the final leaf ray. A strong kick
+	# during a long frame can otherwise jump past a thin wall entirely.
+	var steps := maxi(1, ceili(maxf(delta * 120.0, absf(omega * delta) / .025)))
+	var step_delta := delta / float(steps)
+	for step in steps:
+		_integrate_step(step_delta)
 		if absf(omega) > SLAM_SPEED:
 			_sweep_hits()
 		else:
 			_knocked.clear()
-		_apply()
 
-func _integrate(delta: float) -> void:
+func _integrate_step(delta: float) -> void:
 	var t := Tuning.get_t()
 	var prev := swing
 	swing += omega * delta
@@ -132,6 +140,7 @@ func _leaf_blocked() -> bool:
 	var space := get_world_2d().direct_space_state
 	var a := leaf_dir()
 	var q := PhysicsRayQueryParameters2D.create(global_position + a * 5.0, global_position + a * (length - 1.0), Layers.WORLD | Layers.PROP)
+	q.exclude = [leaf.get_rid()]
 	return not space.intersect_ray(q).is_empty()
 
 func _push_from_bodies(delta: float) -> void:
@@ -143,11 +152,14 @@ func _push_from_bodies(delta: float) -> void:
 	else:
 		_near.append_array(get_tree().get_nodes_in_group("player"))
 		_near.append_array(get_tree().get_nodes_in_group("enemies"))
+		_near.append_array(get_tree().get_nodes_in_group("npcs"))
 	for b in _near:
 		var body := b as CharacterBody2D
-		if body == null or not is_instance_valid(body) or body.is_in_group("npcs"):
+		if body == null or not is_instance_valid(body):
 			continue
 		if body.has_method("is_alive") and not body.is_alive():
+			continue
+		if body is NPC and not (body as NPC).alive:
 			continue
 		if body is Player and not (body as Player).alive:
 			continue
@@ -203,6 +215,9 @@ func kick(from: Vector2, dir: Vector2) -> bool:
 		return false
 	var space := get_world_2d().direct_space_state
 	var q := PhysicsRayQueryParameters2D.create(from, hp_pos, Layers.WORLD | Layers.PROP)
+	# A locked leaf also belongs to WORLD. It is the intended impact target,
+	# not an obstacle between the boot and itself; other walls still block.
+	q.exclude = [leaf.get_rid()]
 	if not space.intersect_ray(q).is_empty():
 		return false   # wall between the boot and the door
 	var rel := from - global_position
@@ -252,6 +267,7 @@ func _sweep_hits() -> void:
 		crowd.query(global_position, length + 10.0, _near, &"enemies")
 	else:
 		_near.append_array(get_tree().get_nodes_in_group("enemies"))
+		_near.append_array(get_tree().get_nodes_in_group("npcs"))
 	for e in _near:
 		if not is_instance_valid(e) or not e.is_alive() or _knocked.has(e):
 			continue
@@ -261,7 +277,10 @@ func _sweep_hits() -> void:
 			continue
 		if absf(a.cross(rel)) < 9.0:
 			_knocked.append(e)
-			var dir := a.orthogonal() * signf(omega)
+			# Godot's orthogonal() points clockwise in mathematical coordinates;
+			# the derivative of Vector2.from_angle is its negative. Push the
+			# victim with the moving leaf, rather than back into the kicker.
+			var dir := -a.orthogonal() * signf(omega)
 			var info := DamageInfo.make(DamageInfo.Type.DOOR, get_tree().get_first_node_in_group("player") if _slammer_is_player else null, e.global_position, dir, &"door", &"door")
 			info.lethal = false
 			info.knockback = 240.0

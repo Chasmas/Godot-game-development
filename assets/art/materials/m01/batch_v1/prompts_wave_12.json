@@ -1,0 +1,133 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "road_manhole_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One round dark cast iron road manhole cover with embossed geometric grip pattern, recessed rim and restrained rust. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "road_pothole_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One irregular shallow asphalt pothole decal seen from above, crumbling aggregate edges and dark recessed centre, no ground outside its perimeter. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "road_patch_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One irregular repaired asphalt patch decal viewed from above, subtle tar seams and varied dark aggregate, no background ground. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "road_markings_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One worn white parking direction arrow decal viewed straight from above, chipped faded paint with fine asphalt-shaped gaps, genuinely transparent between painted parts. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "room_key_spill_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One small scatter of three brass motel keys with plain numbered cream teal key tags, realistic metal and plastic detail. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "pool_ring_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One small cream teal striped inflatable pool ring, believable air valve, seams and realistic inflated form, no water. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "gecko_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One small natural pale brown wall gecko, fine mottled skin, believable four feet and gently curved tail, fully visible. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "propane_tank_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One squat weathered steel propane cylinder with protective valve collar, handle openings, valve and restrained orange rust at seams. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "office_chair_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One 1980s dark teal padded office chair, textured vinyl, metal swivel pedestal with casters, practical armrests and believable worn upholstery. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "boiler_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One compact aged motel service boiler with cream metal tank, connected pipe fittings, pressure gauge and control box, mechanically coherent proportions. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "collectible_vhs_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One worn black VHS cassette, visible twin spool windows and a cream handwritten label with small illegible marks, realistic casing grooves. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "collectible_photo_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One aged instant photograph object, cream frame and a faded indistinct motel crew photo inside, gently curled corner, no identifiable real person. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "neon_checkpoint_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One small compact VHS cassette icon made of thin cyan magenta neon tubing, two readable spool motifs, tilted three-quarter perspective, restrained glow and crisp silhouette. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    },
+    {
+      "id": "floor_clutter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for subsequent Blender reconstruction. One small contextual scatter of crumpled motel paper, two empty cans and one folded leaflet, natural believable materials and restrained colours. Fully visible single subject or coherent small scatter, genuinely transparent background, no floor, scene or detached shadow. Fine physically believable material detail, premium indie handcrafted 3D finish, neutral soft studio light, restrained motel palette. Orthographic elevated three-quarter view unless specified top down. No UI, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "road_manhole_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-466a6629-9ef5-4374-b684-1f00c24dc9c0.png"
+    },
+    {
+      "id": "road_pothole_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5c0ed1dc-a68f-4b7e-b1a8-ff216ab00c2d.png"
+    },
+    {
+      "id": "road_patch_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-98c4dcd1-c9cf-4ff9-af2a-230b60bb0799.png"
+    },
+    {
+      "id": "road_markings_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-3d1cdc8c-fedc-4c62-8347-6920da99cfa6.png"
+    },
+    {
+      "id": "room_key_spill_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b1f17bdb-b577-4231-ad7e-5785e869d2a4.png"
+    },
+    {
+      "id": "pool_ring_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-335d6bd0-f861-42f7-a6d8-8a57ad9c2365.png"
+    },
+    {
+      "id": "gecko_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0a00861d-8374-48aa-a92a-78e3ce77a2bc.png"
+    },
+    {
+      "id": "propane_tank_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-00aa1adb-0c15-4074-811c-5189c70798ec.png"
+    },
+    {
+      "id": "office_chair_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b5e7fd3e-5e6c-47ad-892b-3b9cadeb082a.png"
+    },
+    {
+      "id": "boiler_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-71d1d15c-ad21-49a3-88d6-4378dc7c8a4d.png"
+    },
+    {
+      "id": "collectible_vhs_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-2e0919a1-f97e-406f-8ced-07fa2c6c28f4.png"
+    },
+    {
+      "id": "collectible_photo_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b5970a72-8531-4c41-b981-bdf2fe7ca496.png"
+    },
+    {
+      "id": "neon_checkpoint_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5192a438-ac26-4984-9627-b2e695ac6ad9.png"
+    },
+    {
+      "id": "floor_clutter_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b555b229-dbea-468d-afe0-b8121691c5d0.png"
+    }
+  ]
+}

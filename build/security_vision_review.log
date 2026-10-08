@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS Clear central corridor is visible
+PASS Under-lens blind zone is safe
+PASS Beyond range is safe
+PASS Behind camera is safe
+PASS Outside cone is safe
+PASS Wall blocks camera detection
+PASS Displayed cone stops at the same wall
+PASS Tall prop blocks camera detection
+PASS Low furniture permits elevated camera view
+PASS Destroyed camera cannot see
+SECURITY VISION REVIEW: 0 failures

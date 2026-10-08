@@ -1,0 +1,10 @@
+{
+  "status": "experiment_not_promoted",
+  "approved_for_rigging": false,
+  "runtime_approved": false,
+  "inspected": [
+    "review/clay_review/front_clay.png"
+  ],
+  "finding": "Localized weighted smoothing affected44 vertices but does not visibly repair malformed eyelid rims and brow surface. Continuous head remains preserved.",
+  "next_action": "Inspect actual eye-region vertex positions and topology; reconstruct usable eyelid loops rather than relying on smoothing alone."
+}

@@ -1,0 +1,10 @@
+{
+  "runtime_approved": false,
+  "source": "Existing ImageGen-backed Blender bed, nightstand and TV dresser families",
+  "scope": "Coherent room composition study with authored opening and existing ImageGen-backed window, curtains and blinds; camera is an art-review view, not an approved gameplay projection",
+  "pending": [
+    "Inspect render",
+    "Adapt to exact gameplay projection and room geometry",
+    "Validate collisions, door clearance and actor placement"
+  ]
+}

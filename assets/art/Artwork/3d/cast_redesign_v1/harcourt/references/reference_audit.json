@@ -1,0 +1,51 @@
+{
+  "character": "harcourt",
+  "height_m": 1.84,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\harcourt_turnaround.png",
+  "source_sha256": "549da64f008f96709834a41dd69019a6809bb6191610c1991fa49200955d97aa",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        445,
+        0,
+        655,
+        1145
+      ],
+      "width": 210,
+      "height": 1145,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\harcourt\\references\\side.png",
+      "sha256": "301469bd8824cba1580166716b56bebe464fc2e40d52d06af2c16d8e3a04389e"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        680,
+        0,
+        1105,
+        1145
+      ],
+      "width": 425,
+      "height": 1145,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\harcourt\\references\\back.png",
+      "sha256": "3b4e9556624e1d0342eb1c72e457215e0e2a19698b06e6b4e2bcfb1f03d3dd67"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        415,
+        1145
+      ],
+      "width": 415,
+      "height": 1145,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\harcourt\\references\\front.png",
+      "sha256": "613d20e3a2a581e999fc58843f9fa18a6e932e6af4ec756a1c11501ded28a476"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops directly inspected: complete bodies, hands, feet and no neighboring detail fragments. Modeling input approval only; no runtime, geometry or rig approval."
+}

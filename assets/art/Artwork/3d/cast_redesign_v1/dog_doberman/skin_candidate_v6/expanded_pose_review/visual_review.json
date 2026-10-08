@@ -1,0 +1,19 @@
+{
+  "reviewed_views": [
+    "opposite_front_paw.png",
+    "opposite_rear_hip.png",
+    "opposite_head_turn.png",
+    "tail_moderate_positive.png",
+    "tail_moderate_negative.png"
+  ],
+  "rig_approved": false,
+  "next_action": "Create grounded idle preview with subtle tail/head motion and inspect continuous playback, include side view for occluded tail; defer walk/run until ground-contact solver",
+  "findings": [
+    "All five opposite-angle renders directly inspected",
+    "Opposite limb bends retain silhouettes without earlier stretched panels",
+    "Moderate tail poses retain hind-leg silhouette; negative pose partly occluded by leg so additional side angle required",
+    "Head turn leaves visible neck/collar crease; inspect closer before character closeups"
+  ],
+  "runtime_approved": false,
+  "status": "static_pose_subset_retained_animation_pending"
+}

@@ -1,0 +1,10 @@
+{
+  "Right": {
+    "samples": 29,
+    "maximum_pole_step_degrees": 10.026761414789423
+  },
+  "Left": {
+    "samples": 29,
+    "maximum_pole_step_degrees": 10.026761414789396
+  }
+}

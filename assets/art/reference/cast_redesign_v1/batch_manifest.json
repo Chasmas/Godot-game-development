@@ -1,0 +1,537 @@
+{
+  "status": "concept_generation_complete_visual_review_pending",
+  "user_order": "Generate all character concepts before Blender; show complete batch together in one response. Then Blender models/materials/rigs; only then full animation review.",
+  "runtime_replacements": false,
+  "presentation": "Consolidated contact sheet/gallery after full image batch; do not present partial batch as complete.",
+  "entries": [
+    {
+      "id": "cass",
+      "brief": "Red leather jacket, auburn layered hair; preserve approved face.",
+      "status": "generated_needs_review",
+      "reference_file": "cass_turnaround.png"
+    },
+    {
+      "id": "guard",
+      "brief": "Teal motel guard uniform; practical worn cloth, distinct calm older face.",
+      "status": "generated_needs_review",
+      "reference_file": "guard_turnaround.png"
+    },
+    {
+      "id": "gunner",
+      "brief": "Purple coordinated streetwear, white shoes; expressive swagger, distinct face.",
+      "status": "generated_needs_review",
+      "reference_file": "gunner_turnaround.png"
+    },
+    {
+      "id": "hunter",
+      "brief": "Ivory tank, olive work trousers, worn boots; lean hardened adult.",
+      "status": "generated_needs_review",
+      "reference_file": "hunter_turnaround.png"
+    },
+    {
+      "id": "heavy",
+      "brief": "Broad strong proportions, brown work jacket, heavy practical boots.",
+      "status": "generated_needs_review",
+      "reference_file": "heavy_turnaround.png"
+    },
+    {
+      "id": "scout",
+      "brief": "Yellow top, ivory trousers; light silhouette, alert expressive face.",
+      "status": "generated_needs_review",
+      "reference_file": "scout_turnaround.png"
+    },
+    {
+      "id": "riot",
+      "brief": "Navy protective uniform, distinct face under helmet, believable articulated armor.",
+      "status": "generated_needs_review",
+      "reference_file": "riot_turnaround.png"
+    },
+    {
+      "id": "boss",
+      "brief": "Harcourt ivory suit, grey slick hair, burgundy accents; established identity.",
+      "status": "shared_reference_needs_review",
+      "reference_file": "harcourt_turnaround.png",
+      "identity_source": "harcourt"
+    },
+    {
+      "id": "sniper",
+      "brief": "Olive discreet long-range marksman clothing; lean silhouette.",
+      "status": "generated_needs_review",
+      "reference_file": "sniper_turnaround.png"
+    },
+    {
+      "id": "burnt",
+      "brief": "Preserve Tommy identity, blue damaged clothing, burned version.",
+      "status": "generated_needs_review",
+      "identity_source": "tommy",
+      "previous_design_reference": "A horror portrait: Tommy Moreno, a young man with curly brown hair, but half his face is charred and glowing with embers like cooling coals, his blue satin varsity jacket scorched, one eye clear and kind, the other a burning ember; smoke curling up. Tragic, not monstrous.",
+      "reference_file": "burnt_turnaround.png"
+    },
+    {
+      "id": "zombie",
+      "brief": "Decay of recognizable person, damaged grey clothing, no smoking.",
+      "status": "generated_needs_review",
+      "reference_file": "zombie_stylized_gore_turnaround.png",
+      "required_revision": "User requires some gore. Generate a fictional stylized zombie variant with restrained dried-blood stains on clothing, pallid skin and torn fabric, no open wounds or exposed anatomy. Existing intact base is not accepted as final zombie art. Respect provider filter; do not claim bypass.",
+      "blender_assembly": "Author separate skin, clothing, surface/material details and assemble coherently in Blender after all ImageGen concepts. This is a modeling workflow, not provider-filter circumvention. User wants grotesque distinctive zombie with stylized gore; intact concept is only a base."
+    },
+    {
+      "id": "ghoul",
+      "brief": "Pale sinewy creature, distinct elongated silhouette, anatomical joints.",
+      "status": "generated_needs_review",
+      "reference_file": "ghoul_turnaround.png"
+    },
+    {
+      "id": "demon",
+      "brief": "Crimson supernatural creature; coherent anatomy, sculpted scarred surfaces.",
+      "status": "generated_needs_review",
+      "reference_file": "demon_turnaround.png"
+    },
+    {
+      "id": "cultist",
+      "brief": "Dark ritual clothing, restrained gold detail, unsettling distinct identity.",
+      "status": "generated_needs_review",
+      "reference_file": "cultist_turnaround.png"
+    },
+    {
+      "id": "fireman",
+      "brief": "Light protective firefighter gear, soot and real fabric construction.",
+      "status": "generated_needs_review",
+      "reference_file": "fireman_turnaround.png"
+    },
+    {
+      "id": "stagehand",
+      "brief": "Black practical stage-worker clothing, utility detail, unique face.",
+      "status": "generated_needs_review",
+      "reference_file": "stagehand_turnaround.png"
+    },
+    {
+      "id": "security",
+      "brief": "Burgundy private-security uniform, brass detail, unique silhouette.",
+      "status": "generated_needs_review",
+      "reference_file": "security_turnaround.png"
+    },
+    {
+      "id": "handler",
+      "brief": "Ochre work jacket, olive trousers, canine-handler utility details.",
+      "status": "generated_needs_review",
+      "reference_file": "handler_turnaround.png"
+    },
+    {
+      "id": "buck",
+      "brief": "Buck Halverson, kennel master boss. Distinct rugged adult face, weathered grey work clothes, brown practical boots, heavy dog-handler build; same gameplay and portrait identity.",
+      "status": "generated_needs_review",
+      "reference_file": "buck_turnaround.png",
+      "gameplay_role": "kennel_master",
+      "previous_design_reference": "Buck Halverson, the kennel master of a Mojave salvage yard: a heavy weathered man in his 60s, a battered brown cowboy hat, grey stubble and a thick grey moustache, sunburnt skin, a grey work shirt under a stained leather apron, a dog whistle on a cord, small hard pale eyes, a dog-bite scar on his cheek."
+    },
+    {
+      "id": "bellhop",
+      "brief": "Red hotel uniform, restrained brass trim, distinct young adult face.",
+      "status": "generated_needs_review",
+      "reference_file": "bellhop_turnaround.png"
+    },
+    {
+      "id": "biker",
+      "brief": "Weathered black leather, indigo denim, recognizable individual face.",
+      "status": "generated_needs_review",
+      "reference_file": "biker_turnaround.png"
+    },
+    {
+      "id": "scrapper",
+      "brief": "Olive work clothes, repaired seams, distinct stocky silhouette.",
+      "status": "generated_needs_review",
+      "reference_file": "scrapper_turnaround.png"
+    },
+    {
+      "id": "welder",
+      "brief": "Brown protective workwear, realistic metal and leather, distinct face.",
+      "status": "generated_needs_review",
+      "reference_file": "welder_turnaround.png"
+    },
+    {
+      "id": "civilian",
+      "brief": "Pink everyday shirt, blue trousers; visibly unarmed civilian.",
+      "status": "shared_reference_needs_review",
+      "reference_file": "earl_turnaround.png",
+      "identity_source": "earl"
+    },
+    {
+      "id": "tommy",
+      "brief": "Preserve approved portrait face and blue clothing.",
+      "status": "generated_needs_review",
+      "reference_file": "tommy_turnaround.png"
+    },
+    {
+      "id": "mom",
+      "brief": "Preserve approved portrait; visibly older mother, mature facial structure.",
+      "status": "generated_needs_review",
+      "reference_file": "mom_turnaround.png",
+      "previous_design_reference": "Cass Moreno's mother: a kind, tired woman in her late 50s with greying auburn hair in a loose bun, reading glasses on a chain, a cardigan over a floral blouse, holding a beige telephone receiver to her ear, warm kitchen light, soft worried smile."
+    },
+    {
+      "id": "pa",
+      "brief": "No person: battered late-1980s studio public-address loudspeaker horn, mounting bracket, cables and red ON AIR lamp; coherent detailed speaker-prop identity.",
+      "status": "generated_needs_review",
+      "previous_design_reference": "No person: a battered 1980s studio public-address loudspeaker horn mounted on a wall, rain-streaked, a red ON AIR light glowing beside it, cables, dramatic lighting.",
+      "reference_file": "pa_turnaround.png"
+    },
+    {
+      "id": "arlo",
+      "brief": "Arlo Vance, former stunt coordinator now running Yermo salvage yard. Distinct weathered adult face, pragmatic older workwear, recognizable experienced film-crew man; preserve coherent narrative identity.",
+      "status": "generated_needs_review",
+      "reference_file": "arlo_turnaround.png",
+      "previous_design_reference": "Arlo Vance: a wiry man in his 60s, grey crew cut, grey horseshoe moustache, sun-leathered deeply lined skin, tired cunning eyes, faded olive film-crew jacket with a small embroidered gold star, a dog whistle on a cord around his neck."
+    },
+    {
+      "id": "anchor",
+      "brief": "Preserve blond broadcast anchor identity, blue suit.",
+      "status": "generated_needs_review",
+      "reference_file": "anchor_turnaround.png"
+    },
+    {
+      "id": "dana",
+      "brief": "Officer Dana Pruitt, a police officer in her early 30s, tired intelligent eyes with dark circles, dark hair in a tight bun, 1980s California police uniform, a paper coffee cup.",
+      "status": "generated_needs_review",
+      "previous_design_reference": "Officer Dana Pruitt, a police officer in her early 30s, tired intelligent eyes with dark circles, dark hair in a tight bun, 1980s California police uniform, a paper coffee cup.",
+      "reference_file": "dana_turnaround.png"
+    },
+    {
+      "id": "director",
+      "brief": "A mysterious film director seen only in silhouette against a blinding projector beam, wearing a flat cap and aviator sunglasses that catch the light, holding a director's megaphone; the face is completely in shadow.",
+      "status": "generated_needs_review",
+      "previous_design_reference": "A mysterious film director seen only in silhouette against a blinding projector beam, wearing a flat cap and aviator sunglasses that catch the light, holding a director's megaphone; the face is completely in shadow.",
+      "reference_file": "director_turnaround.png"
+    },
+    {
+      "id": "dutch",
+      "brief": "Preserve existing portrait identity and established clothing.",
+      "status": "shared_reference_needs_review",
+      "reference_file": "fireman_turnaround.png",
+      "identity_source": "fireman",
+      "previous_design_reference": "Dutch Kowalski, 'The Fireman': a huge bald man in his 50s, shiny burn scars across the left side of his face and scalp, a calm unsettling smile, silver aluminised fireproof pyrotechnics suit, welding goggles pushed up on his forehead, faint orange firelight on his face."
+    },
+    {
+      "id": "earl",
+      "brief": "Balding anxious face, pink casual clothing; preserve approved portrait.",
+      "status": "generated_needs_review",
+      "reference_file": "earl_turnaround.png"
+    },
+    {
+      "id": "harcourt",
+      "brief": "Preserve existing portrait; same identity as boss model.",
+      "status": "generated_needs_review",
+      "reference_file": "harcourt_turnaround.png"
+    },
+    {
+      "id": "marv",
+      "brief": "Preserve slick dark hair, burgundy top and established portrait face.",
+      "status": "generated_needs_review",
+      "reference_file": "marv_turnaround.png"
+    },
+    {
+      "id": "rudy",
+      "brief": "Rudy, a nervous TV floor manager in his 30s: big square glasses, sweaty forehead, curly thinning hair, a headset microphone, beige cardigan over a loud patterned shirt, holding a clipboard to his chest, comic anxious expression.",
+      "status": "generated_needs_review",
+      "previous_design_reference": "Rudy, a nervous TV floor manager in his 30s: big square glasses, sweaty forehead, curly thinning hair, a headset microphone, beige cardigan over a loud patterned shirt, holding a clipboard to his chest, comic anxious expression.",
+      "reference_file": "rudy_turnaround.png"
+    },
+    {
+      "id": "voice",
+      "brief": "Anonymous telephone silhouette; preserve concealed identity.",
+      "status": "generated_needs_review",
+      "reference_file": "voice_turnaround.png"
+    },
+    {
+      "id": "machine",
+      "brief": "Answering machine narrative speaker: detailed authentic late-1980s answering machine prop, not human character.",
+      "status": "generated_needs_review",
+      "reference_file": "machine_turnaround.png"
+    },
+    {
+      "id": "dead",
+      "brief": "An eerie portrait of a ghost: a pale, grey-skinned man in a teal 1980s motel security uniform, faintly translucent, blank milky eyes, a small gold star painted on his forehead, cold blue light, mist around him. Quietly unsettling, not gory.",
+      "status": "generated_needs_review",
+      "previous_design_reference": "An eerie portrait of a ghost: a pale, grey-skinned man in a teal 1980s motel security uniform, faintly translucent, blank milky eyes, a small gold star painted on his forehead, cold blue light, mist around him. Quietly unsettling, not gory.",
+      "reference_file": "dead_turnaround.png"
+    },
+    {
+      "id": "dog_shepherd",
+      "brief": "German shepherd, anatomically correct movement-ready quadruped, distinct coat.",
+      "status": "generated_needs_review",
+      "reference_file": "dog_shepherd_turnaround.png"
+    },
+    {
+      "id": "dog_rott",
+      "brief": "Rottweiler, stocky quadruped, black/tan coat.",
+      "status": "generated_needs_review",
+      "reference_file": "dog_rott_turnaround.png"
+    },
+    {
+      "id": "hellhound",
+      "brief": "Distinct nightmare canine, coherent quadruped anatomy.",
+      "status": "generated_needs_review",
+      "reference_file": "hellhound_turnaround.png"
+    },
+    {
+      "id": "civilian_1",
+      "brief": "Older adult woman, silver curly bob, faded coral cardigan, cream blouse and navy slacks, sensible shoes, unmistakably unarmed guest.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_1_turnaround.png"
+    },
+    {
+      "id": "civilian_2",
+      "brief": "Heavyset middle-aged male tourist, balding head, pastel blue short-sleeved holiday shirt, tan trousers, loafers, clearly unarmed.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_2_turnaround.png"
+    },
+    {
+      "id": "civilian_3",
+      "brief": "Tall slender adult woman with dark skin, short natural curls, mustard linen blouse and dark green skirt, plain flats, unarmed.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_3_turnaround.png"
+    },
+    {
+      "id": "civilian_4",
+      "brief": "Young adult male backpacker, brown wavy hair, faded turquoise T-shirt, blue jeans and worn sneakers, unarmed.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_4_turnaround.png"
+    },
+    {
+      "id": "civilian_5",
+      "brief": "Older adult man with grey moustache and wiry body, beige knit vest over muted checked shirt, brown trousers, unarmed.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_5_turnaround.png"
+    },
+    {
+      "id": "civilian_6",
+      "brief": "Middle-aged adult female worker, black straight hair tied back, pale lavender work blouse, charcoal trousers and practical shoes, unarmed.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_6_turnaround.png"
+    },
+    {
+      "id": "civilian_7",
+      "brief": "Broad adult male cook, warm tan skin, cream cotton shirt and modest white apron, grey trousers, unarmed civilian, no knife.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_7_turnaround.png"
+    },
+    {
+      "id": "civilian_8",
+      "brief": "Adult woman traveller with auburn braided hair, muted striped blouse, denim jacket and dark trousers, unarmed, distinct from Cass red jacket.",
+      "status": "generated_needs_review",
+      "reference_file": "civilian_8_turnaround.png"
+    },
+    {
+      "id": "shadow",
+      "brief": "Inspect existing shadow role and preserve concealed nightmare silhouette.",
+      "status": "generated_needs_review",
+      "reference_file": "shadow_turnaround.png"
+    },
+    {
+      "id": "dog_doberman",
+      "brief": "Doberman: lean recognizable canine, correct quadruped joints and sharp short black/tan coat.",
+      "status": "generated_needs_review",
+      "reference_file": "dog_doberman_turnaround.png"
+    },
+    {
+      "id": "cass_star",
+      "brief": "Same Cass face/body/red jacket as new Cass reference; 1988 gold five-pointed greasepaint star over LEFT eye, clearly readable, separate from pre-star 1987 Cass.",
+      "status": "generated_needs_review",
+      "identity_source": "cass",
+      "reference_file": "cass_star_turnaround.png"
+    },
+    {
+      "id": "zombie_guard",
+      "brief": "Recognizable nightmare undead variant of guard; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "guard",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_guard_turnaround.png"
+    },
+    {
+      "id": "zombie_gunner",
+      "brief": "Recognizable nightmare undead variant of gunner; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "gunner",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_gunner_turnaround.png"
+    },
+    {
+      "id": "zombie_hunter",
+      "brief": "Recognizable nightmare undead variant of hunter; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "hunter",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_hunter_turnaround.png"
+    },
+    {
+      "id": "zombie_heavy",
+      "brief": "Recognizable nightmare undead variant of heavy; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "heavy",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_heavy_turnaround.png"
+    },
+    {
+      "id": "zombie_bellhop",
+      "brief": "Recognizable nightmare undead variant of bellhop; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "bellhop",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_bellhop_turnaround.png"
+    },
+    {
+      "id": "zombie_biker",
+      "brief": "Recognizable nightmare undead variant of biker; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "biker",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_biker_turnaround.png"
+    },
+    {
+      "id": "zombie_welder",
+      "brief": "Recognizable nightmare undead variant of welder; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "welder",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_welder_turnaround.png"
+    },
+    {
+      "id": "zombie_security",
+      "brief": "Recognizable nightmare undead variant of security; preserve face, hair, clothing and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "security",
+      "spawn_requirement": "Real-world victim killed previously; do not spawn as an unrelated replacement.",
+      "reference_file": "zombie_security_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_1",
+      "brief": "Recognizable nightmare undead variant of civilian_1; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_1",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_1_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_2",
+      "brief": "Recognizable nightmare undead variant of civilian_2; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_2",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_2_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_3",
+      "brief": "Recognizable nightmare undead variant of civilian_3; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_3",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_3_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_4",
+      "brief": "Recognizable nightmare undead variant of civilian_4; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_4",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_4_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_5",
+      "brief": "Recognizable nightmare undead variant of civilian_5; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_5",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_5_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_6",
+      "brief": "Recognizable nightmare undead variant of civilian_6; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_6",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_6_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_7",
+      "brief": "Recognizable nightmare undead variant of civilian_7; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_7",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_7_turnaround.png"
+    },
+    {
+      "id": "zombie_civilian_8",
+      "brief": "Recognizable nightmare undead variant of civilian_8; retain original face, clothing, age and silhouette. No smoking.",
+      "status": "generated_needs_review",
+      "identity_source": "civilian_8",
+      "spawn_requirement": "Only eligible when this specific civilian was killed by Cass in a previous real-world level. Surviving civilians excluded.",
+      "reference_file": "zombie_civilian_8_turnaround.png"
+    },
+    {
+      "id": "zombie_base_concept",
+      "brief": "Original intact undead base concept, retained for comparison with the later stained-clothing zombie concept.",
+      "status": "generated_needs_review",
+      "reference_file": "zombie_turnaround.png",
+      "identity_source": "zombie"
+    },
+    {
+      "id": "cass_head_detail_v1",
+      "brief": "Detailed Cass head identity reference for Blender eyelids, lips and hair reconstruction; supplementary to full-body turnaround.",
+      "status": "generated_reference_reviewed_model_pending",
+      "reference_file": "cass_head_detail_v1.png",
+      "prompt_file": "cass_head_detail_v1_prompt.txt"
+    },
+    {
+      "id": "welder_isolated_v2",
+      "brief": "Clean isolated welder modeling views preserving original identity, workwear and lifted helmet; original sheet retained.",
+      "status": "generated_reference_reviewed_model_pending",
+      "reference_file": "welder_isolated_turnaround_v2.png",
+      "prompt_file": "welder_isolated_v2_prompt.txt"
+    },
+    {
+      "id": "zombie_bellhop_isolated_v2",
+      "brief": "Clean isolated three-view undead bellhop reference; preserves uniform and identity.",
+      "status": "generated_reference_views_reviewed",
+      "reference_file": "zombie_bellhop_isolated_turnaround_v2.png",
+      "prompt_file": "zombie_bellhop_isolated_v2_prompt.txt"
+    },
+    {
+      "id": "zombie_biker_isolated_v2",
+      "brief": "Isolated three-view zombie biker reference, preserving identity and leather vest.",
+      "status": "generated_reference_views_reviewed",
+      "reference_file": "zombie_biker_isolated_turnaround_v2.png",
+      "prompt_file": "zombie_biker_isolated_v2_prompt.txt"
+    },
+    {
+      "id": "zombie_welder_isolated_v2",
+      "brief": "Clean isolated undead welder modeling reference.",
+      "status": "generated_reference_views_reviewed",
+      "reference_file": "zombie_welder_isolated_turnaround_v2.png",
+      "prompt_file": "zombie_welder_isolated_v2_prompt.txt"
+    },
+    {
+      "id": "zombie_civilian_4_isolated_v2",
+      "brief": "Isolated three-view young zombie civilian with backpack.",
+      "status": "generated_reference_views_reviewed",
+      "reference_file": "zombie_civilian_4_isolated_turnaround_v2.png",
+      "prompt_file": "zombie_civilian_4_isolated_v2_prompt.txt"
+    },
+    {
+      "id": "zombie_civilian_7_isolated_v2",
+      "brief": "Isolated three-view zombie cook with apron.",
+      "status": "generated_reference_views_reviewed",
+      "reference_file": "zombie_civilian_7_isolated_turnaround_v2.png",
+      "prompt_file": "zombie_civilian_7_isolated_v2_prompt.txt"
+    }
+  ],
+  "portrait_policy": "User authorizes replacing all chatbox portraits to match redesigned cast. Preserve narrative identity and consistent face/hair/clothes between dialogue, gameplay and cutscenes. Derive mouth/expression/blink frames after model design stabilization.",
+  "subsequent_cutscene_phase": "After all ImageGen cast concepts, Blender cast art and full animation review: author genuine detailed Blender-animated FMV replacements for existing cutscenes, using approved cast identities, AI character voices via user API, lipsync/body/hands/camera acting, Godot subtitles/skip/music/input transitions; preserve current fallbacks until each replacement is validated.",
+  "narrative_authorization": "User explicitly authorizes additional story and dialogue for FMV cutscenes where useful. Maintain established character identity, continuity, gameplay objectives and consequences; write final script before voice generation, then validate synchronized acting and transitions.",
+  "subsequent_ui_phase": "User authorizes redesign of all menu art/layouts, HUD, popups, studio Inverted Index symbol and pre-main-intro background through ImageGen/Blender/Godot. Align with approved cast/world art, preserve readable functional navigation and audio routing; studio neon traces icon outline, no detached red orb. Created-by Gilberto Lopes identity retained.",
+  "studio_redesign_authorization": "User explicitly permits changing the logo design, Inverted Index presentation, Created by Gilberto Lopes presentation and background images to match the new art direction. Retain correct studio and creator names, coherent typography, outline-following neon animation and validated splash-to-main-intro/menu transition.",
+  "visual_target": "User requires ImageGen-level visual detail and coherent art across entire game. Evaluate actual Godot gameplay, menus and cutscenes; concept sheets alone are not completion. Use detailed pre-rendered environments plus Blender interactive cast/props, consistent lighting/materials, readable gameplay and measured performance.",
+  "resolution_requirement": "Preserve existing 3840x2160 window preset and native fullscreen support. Validate actual 4K gameplay/UI/FMVs, aspect ratios, readable text, art sharpness and measured performance; do not equate existing output size preset with full visual/performance validation.",
+  "nightmare_victim_variants": "User specifies nightmare zombies are recognizable people Cass killed in real-world levels, with more variants. Derive undead appearances from final living cast identities (face/hair/clothes/silhouette), track real campaign victims individually including look variant and source mission; civilians only if previously killed. Current code stores killed_civilian flags but no full enemy identity ledger observed. Design/logic not implemented or validated yet. Preserve generated generic zombie only as shared material direction, not sole final nightmare population.",
+  "undead_art_workflow": "After living concept batch, derive recognizable zombie concept variants using living identity references and stylized gore/material treatment; Blender variants share rig structure with corresponding living character while keeping creature animation distinct. Do not invent anonymous replacements for known victims or include surviving civilians."
+}

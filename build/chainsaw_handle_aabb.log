@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+SCRIPT ERROR: Parse Error: Expected statement, found "Indent" instead.
+   at: GDScript::reload (res://tools/chainsaw_remodeled_continuous.gd:238)
+ERROR: Failed to load script "res://tools/chainsaw_remodeled_continuous.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)

@@ -1,0 +1,15 @@
+{
+  "source": "Explicit user direction, 2026-10-08",
+  "applies_to": "All future environment and prop revisions across the game",
+  "rules": [
+    "Recompose spaces from coherent detailed ImageGen direction and authored Blender assets rather than inheriting arbitrary legacy prop positions",
+    "Remove obsolete decorative pieces as part of the authored rebuild; do not preserve them merely to fill space",
+    "Preserve or deliberately replace gameplay functions: collisions, navigation, doors, switches, weapons, objectives and checkpoints",
+    "Confirm exact ImageGen and Blender asset coverage before declaring a rebuilt space complete",
+    "Use the approved pool environment, detailed mourning angel and user reference images as minimum quality references",
+    "Validate complete room composition, meaningful furniture orientation, physical volume, lighting and gameplay readability before integration approval"
+  ],
+  "current_reference": "assets/art/materials/m01/batch_v1/guest_room_rebuild_direction_v2.png",
+  "current_reference_status": "User-approved art direction on 2026-10-08; Blender reconstruction and gameplay integration remain pending",
+  "approval_scope": "Guest room visual detail, materials, lighting and composition direction; does not approve current Blender prototype or certify runtime quality"
+}

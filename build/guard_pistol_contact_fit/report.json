@@ -1,0 +1,32 @@
+{
+  "approved": false,
+  "rows": [
+    {
+      "side": "Right",
+      "moved_vertices": 284,
+      "max_shift_m": 0.008695901837266842,
+      "part_hits": {
+        "Polymer grip": 22,
+        "Trigger guard": 198,
+        "Curved trigger": 19,
+        "Slide catch": 1,
+        "Receiver": 58,
+        "Slide catch.001": 6
+      }
+    },
+    {
+      "side": "Left",
+      "moved_vertices": 261,
+      "max_shift_m": 0.006709257691975532,
+      "part_hits": {
+        "Slide catch.001": 1,
+        "Receiver": 65,
+        "Polymer grip": 44,
+        "Trigger guard": 158,
+        "Slide catch": 1,
+        "Curved trigger": 23
+      }
+    }
+  ],
+  "scope": "Vertex-only clearance fit at dual aim frame0. Signed nearest normals assume closed outward parts; triangle crossings, anatomy and animation still unverified."
+}

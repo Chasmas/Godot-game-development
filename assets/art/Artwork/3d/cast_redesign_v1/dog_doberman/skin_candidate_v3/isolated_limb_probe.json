@@ -1,0 +1,47 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "probes": [
+    {
+      "probe_bone": "front_negative_x_lower",
+      "rotation_degrees": 20,
+      "lower_paw_region_max_displacement_m": {
+        "front_negative_x": 0.10960139050897463,
+        "front_positive_x": 0.0,
+        "rear_negative_x": 0.0,
+        "rear_positive_x": 0.0
+      }
+    },
+    {
+      "probe_bone": "front_positive_x_lower",
+      "rotation_degrees": 20,
+      "lower_paw_region_max_displacement_m": {
+        "front_negative_x": 0.0,
+        "front_positive_x": 0.10960585998613193,
+        "rear_negative_x": 0.0,
+        "rear_positive_x": 0.0
+      }
+    },
+    {
+      "probe_bone": "rear_negative_x_lower",
+      "rotation_degrees": 20,
+      "lower_paw_region_max_displacement_m": {
+        "front_negative_x": 0.0,
+        "front_positive_x": 0.0,
+        "rear_negative_x": 0.11415950284304661,
+        "rear_positive_x": 0.0
+      }
+    },
+    {
+      "probe_bone": "rear_positive_x_lower",
+      "rotation_degrees": 20,
+      "lower_paw_region_max_displacement_m": {
+        "front_negative_x": 0.0,
+        "front_positive_x": 0.0,
+        "rear_negative_x": 0.0,
+        "rear_positive_x": 0.11400710197273739
+      }
+    }
+  ],
+  "scope": "Evaluated isolated lower-leg rotation displacements; no visual deformation, gait or collision approval"
+}

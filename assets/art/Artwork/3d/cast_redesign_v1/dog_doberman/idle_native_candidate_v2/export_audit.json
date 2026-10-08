@@ -1,0 +1,19 @@
+{
+  "runtime_approved": false,
+  "scope": "GLB structure only; Godot playback pending",
+  "skins": 1,
+  "animations": [
+    {
+      "name": "Animation",
+      "channels": 79,
+      "paths": [
+        "rotation",
+        "scale",
+        "translation",
+        "weights"
+      ],
+      "duration_seconds": 2.4
+    }
+  ],
+  "bytes": 25277988
+}

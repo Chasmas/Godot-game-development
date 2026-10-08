@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS Watch post keeps weapon and no human distraction
+PASS Authored smoke overrides random activity
+PASS Alert drops cigarette and restores weapon
+PASS sniper cannot receive human rest activity
+PASS zombie cannot receive human rest activity
+PASS ghoul cannot receive human rest activity
+PASS demon cannot receive human rest activity
+AUTHORED IDLE REVIEW: 0 failures

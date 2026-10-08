@@ -1,0 +1,11 @@
+{
+  "source_sha256": "7fbd0bd73a18b4f5edd01c5b85e5e8d8c7704690eb219757e0d8aa8c9a9820d0",
+  "checked_cells": 4148,
+  "visible_wall_cells": 538,
+  "opening_cells": 117,
+  "centre_alpha_mismatches": [],
+  "passed": true,
+  "scope": "cell-centre coverage and all non-wall alpha pixels; no physics or traversal proof",
+  "runtime_approved": false,
+  "opaque_pixels_outside_wall_cells": 0
+}

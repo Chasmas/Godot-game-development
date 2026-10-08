@@ -1,6 +1,9 @@
 {
   "id": "m01_sunset_palms",
   "name": "Sunset Palms Motel",
+  "floor_textures": {
+    "=": "m01_deck_pavers_v1"
+  },
   "ambient": [
     0.37,
     0.28,
@@ -29,7 +32,7 @@
     "#===#===============~~~~~~~~~~~~~~===================W____________##",
     "#=*=#===Y===========~~~~~~~~~~~~~~===================W_____*____o_##",
     "#===#========d==============================TT=======#____kkk_____##",
-    "#===#===========E=========*==========================D____________##",
+    "#===#===========E========r*==========================D____________##",
     "#===#===================================g============D_________g__##",
     "#=y=#F\"\"\"\"\"\"\"=====================5=========\"\"\"\"\"\"\"\"\"#_Y_____6____##",
     "#===#\"\"\"\"\"\"\"\"===============================\"\"\"\"\"\"\"\"\"#__________R_##",
@@ -184,9 +187,11 @@
       ]
     },
     "47,33": {
+      "idle_action": "watch",
       "facing": "left"
     },
     "25,28": {
+      "idle_action": "watch",
       "facing": "left"
     },
     "35,28": {
@@ -198,6 +203,7 @@
       "facing": "left"
     },
     "47,29": {
+      "idle_action": "watch",
       "facing": "down"
     },
     "24,38": {
@@ -222,10 +228,10 @@
         ]
       ]
     },
-    "26,22": {
+    "25,22": {
       "patrol": [
         [
-          26,
+          25,
           22
         ],
         [
@@ -320,6 +326,7 @@
       "sniff": true
     },
     "3,43": {
+      "idle_action": "smoke",
       "facing": "left"
     }
   },
@@ -347,13 +354,13 @@
     "48,7": {
       "id": "tape_roll7",
       "kind": "tape",
-      "title": "VHS: HOTSHOT — CAMERA B / ROLL 7",
+      "title": "VHS: HOTSHOT â€” CAMERA B / ROLL 7",
       "text": "Unedited stunt footage. A Cadillac burns on a desert road. Cass walks out of frame, coughing. Tommy is still inside the car.\nA voice behind the camera says: 'Don't cut. Aurelio wants the whole take.'\nThe image buckles into static."
     },
     "63,3": {
       "id": "photo_harcourt",
       "kind": "photo",
-      "title": "POLAROID: HOTSHOT WRAP PARTY — 1987",
+      "title": "POLAROID: HOTSHOT WRAP PARTY â€” 1987",
       "text": "Harcourt, younger, wearing a HOTSHOT crew jacket. Beside him stands a man whose face has been gouged away with a key.\nOn the back, in blue ink: 'A.V. knows who changed the fire gag. Residuals due.'"
     }
   },
@@ -434,7 +441,7 @@
         14
       ],
       "id": "move",
-      "text": "WASD / LEFT STICK  move    ·    MOUSE / RIGHT STICK  aim"
+      "text": "WASD / LEFT STICK  move    Â·    MOUSE / RIGHT STICK  aim"
     },
     {
       "rect": [
@@ -454,7 +461,7 @@
         12
       ],
       "id": "lock",
-      "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  tap again to switch target (or flick the right stick)  ·  hold to release"
+      "text": "[V] / [R3]  LOCK-ON the nearest enemy  Â·  press again to release  Â·  flick the right stick to switch target"
     },
     {
       "rect": [
@@ -464,7 +471,7 @@
         5
       ],
       "id": "switch",
-      "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark — but someone may walk over to turn them back on."
+      "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark â€” but someone may walk over to turn them back on."
     },
     {
       "rect": [
@@ -484,7 +491,7 @@
         4
       ],
       "id": "upgrade",
-      "text": "BRIEFCASES hold random upgrades — they last the whole mission."
+      "text": "BRIEFCASES hold random upgrades â€” they last the whole mission."
     },
     {
       "rect": [
@@ -494,7 +501,7 @@
         3
       ],
       "id": "window",
-      "text": "[SPACE] DASH  —  dive through windows, vault tables, dodge bullets"
+      "text": "[SPACE] DASH  â€”  dive through windows, vault tables, dodge bullets"
     },
     {
       "rect": [
@@ -514,7 +521,7 @@
         8
       ],
       "id": "brick",
-      "text": "[E] pick up  ·  [RMB] THROW — anything you throw knocks people down"
+      "text": "[E] pick up  Â·  [RMB] THROW â€” anything you throw knocks people down"
     },
     {
       "rect": [
@@ -556,6 +563,29 @@
     ]
   },
   "decor": [
+    {
+      "type": "rendered_prop",
+      "id": "laundry_service_bench",
+      "sort_with_actors": true,
+      "texture": "res://assets/art/prerendered/m01_sunset_palms/laundry_service_bench_v1.png",
+      "pos": [
+        8.25,
+        29.5
+      ],
+      "width": 32,
+      "render_offset": [
+        0,
+        -94.07
+      ],
+      "brightness": 0.65,
+      "collision": "low",
+      "footprint": [
+        -11,
+        -4,
+        22,
+        8
+      ]
+    },
     {
       "type": "neon",
       "pos": [
@@ -1265,8 +1295,7 @@
         17
       ],
       "size": 0.7,
-      "auto": true,
-      "floor": true
+      "auto": true
     },
     {
       "type": "sprite",
@@ -1380,6 +1409,26 @@
     },
     {
       "type": "sprite",
+      "id": "motel_telephone",
+      "pos": [
+        54,
+        17
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_telephone",
+      "pos": [
+        65,
+        37
+      ],
+      "size": 0.5,
+      "auto": true
+    },
+    {
+      "type": "sprite",
       "id": "motel_suitcase_open",
       "pos": [
         9,
@@ -1430,11 +1479,41 @@
       "id": "motel_ice_bucket_full",
       "pos": [
         64,
-        36
+        34
       ],
       "size": 0.5,
       "auto": true,
       "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bougainvillea",
+      "pos": [
+        6,
+        15
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bougainvillea",
+      "pos": [
+        51,
+        23
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "motel_bougainvillea",
+      "pos": [
+        26,
+        24
+      ],
+      "size": 0.72,
+      "auto": true
     },
     {
       "type": "sprite",
@@ -1495,7 +1574,7 @@
       "type": "sprite",
       "id": "road_pothole",
       "pos": [
-        10,
+        9,
         44
       ],
       "size": 0.9,
@@ -1529,7 +1608,7 @@
       "id": "road_patch",
       "pos": [
         11,
-        48
+        46
       ],
       "size": 1.2,
       "auto": true,
@@ -1550,7 +1629,7 @@
       "type": "sprite",
       "id": "road_patch",
       "pos": [
-        37,
+        42,
         44
       ],
       "size": 1.2,
@@ -1583,8 +1662,8 @@
       "type": "sprite",
       "id": "road_sand",
       "pos": [
-        41,
-        54
+        36,
+        44
       ],
       "size": 1.4,
       "auto": true,
@@ -1595,7 +1674,7 @@
       "id": "road_stop_line",
       "pos": [
         13,
-        45
+        44
       ],
       "size": 1.2,
       "auto": true,
@@ -1626,26 +1705,6 @@
       "type": "sprite",
       "id": "hq_pool_cooler",
       "pos": [
-        6,
-        15
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_pool_cooler",
-      "pos": [
-        51,
-        23
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_palm_planter",
-      "pos": [
         7,
         23
       ],
@@ -1654,7 +1713,7 @@
     },
     {
       "type": "sprite",
-      "id": "hq_palm_planter",
+      "id": "hq_pool_cooler",
       "pos": [
         51,
         14
@@ -1666,7 +1725,27 @@
       "type": "sprite",
       "id": "hq_palm_planter",
       "pos": [
-        32,
+        8,
+        17
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        51,
+        19
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_palm_planter",
+      "pos": [
+        31,
         24
       ],
       "size": 0.72,
@@ -1677,27 +1756,7 @@
       "id": "hq_palm_planter",
       "pos": [
         16,
-        13
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_motel_dresser",
-      "pos": [
-        14,
-        8
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_motel_dresser",
-      "pos": [
-        40,
-        2
+        24
       ],
       "size": 0.72,
       "auto": true
@@ -1716,8 +1775,8 @@
       "type": "sprite",
       "id": "hq_motel_vending",
       "pos": [
-        54,
-        17
+        57,
+        35
       ],
       "size": 0.72,
       "auto": true
@@ -1726,8 +1785,8 @@
       "type": "sprite",
       "id": "hq_motel_vending",
       "pos": [
-        58,
-        36
+        65,
+        14
       ],
       "size": 0.72,
       "auto": true

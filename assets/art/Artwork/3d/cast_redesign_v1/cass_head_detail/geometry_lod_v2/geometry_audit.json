@@ -1,0 +1,9 @@
+{
+  "operation": "Blender decimation of preserved high source; no voxel reconstruction or UV transfer",
+  "source_polygons": 7747940,
+  "candidate_polygons": 309916,
+  "candidate_vertices": 139294,
+  "runtime_approved": false,
+  "visual_validation": "Neutral clay required before texture transfer",
+  "source_models_unchanged": true
+}

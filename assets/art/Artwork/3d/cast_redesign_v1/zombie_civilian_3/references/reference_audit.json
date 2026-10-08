@@ -1,0 +1,51 @@
+{
+  "character": "zombie_civilian_3",
+  "height_m": 1.68,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_civilian_3_turnaround.png",
+  "source_sha256": "279baf3368e6069638189878ca5ec1cf952490c1b12568e7abe5461a22460985",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        470,
+        1024
+      ],
+      "width": 470,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_3\\references\\front.png",
+      "sha256": "e48c9883e9999cb123dbf1923a3f54a4e4dcc83d055acfbe54d18a2853e1bc2e"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        520,
+        0,
+        790,
+        1024
+      ],
+      "width": 270,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_3\\references\\side.png",
+      "sha256": "de6b6fcdff8f66099e5883fd5732916c20a5282b3b0cc014bca23b23b7690cd7"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        810,
+        0,
+        1235,
+        1024
+      ],
+      "width": 425,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_3\\references\\back.png",
+      "sha256": "ad3a981715f657571c6907ebf7cf07035fcb5c429461ba19d0f31e6b5a8f4728"
+    }
+  ],
+  "visual_review": "Original sheet and all three saved Blender views directly inspected. Complete figures, clothing and silhouette retained, no clipped extremities or portrait fragments. Modeling input approval only."
+}

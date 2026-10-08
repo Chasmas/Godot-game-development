@@ -1,0 +1,27 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "damaged_crt_reference_v2",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the edit target and the exact intact television design. Create its damaged state, preserving the identical perspective, dimensions, wood cabinet, black carrying handle, top ventilation, four right-hand controls, lower palm sunset emblem, feet and power cable. Crack and puncture the CRT glass with a modest impact near its centre-left; splinter a small cabinet edge. Do not change the model, controls, camera or geometry except local damage. Preserve refined realistic material detail. Isolate the entire television on genuinely transparent background, no studio gradient, no halo, no floor, no detached shadow. No new text or collage.",
+      "edit_target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/crt_reference.png"
+    },
+    {
+      "id": "damaged_door_reference_v2",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the edit target and exact intact motel door. Create the damaged state of THIS SAME door, preserving the identical camera, proportions, cream panelled leaf, walnut frame, brass room plaque reading 204, round peephole, rectangular lock plate and lever, and full brass bottom kick plate. Add split wood around latch and fine cracks across cream panels, door remains closed in the original position. Do not remove or redesign fittings. Preserve finely authored worn materials. Genuinely transparent background with no studio halo, gradient, floor or detached shadow. Entire object visible, no added text or collage.",
+      "edit_target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/guest_door_reference.png"
+    }
+  ],
+  "sources": [
+    {
+      "id": "damaged_crt_reference_v2",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-cd7824f5-cefd-4f96-a0a1-6965205b7256.png"
+    },
+    {
+      "id": "damaged_door_reference_v2",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-f4253910-fc3c-4d4d-9df3-c755f42ae135.png"
+    }
+  ]
+}

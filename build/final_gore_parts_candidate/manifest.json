@@ -1,0 +1,1083 @@
+[
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      5.25,
+      4.0
+    ],
+    "look": "bellhop",
+    "part": "head",
+    "pixels": [
+      21,
+      16
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.75,
+      8.75
+    ],
+    "look": "bellhop",
+    "part": "arm",
+    "pixels": [
+      23,
+      35
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      14.5,
+      6.25
+    ],
+    "look": "bellhop",
+    "part": "leg",
+    "pixels": [
+      58,
+      25
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      4.5,
+      4.25
+    ],
+    "look": "biker",
+    "part": "head",
+    "pixels": [
+      18,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      8.75,
+      9.0
+    ],
+    "look": "biker",
+    "part": "arm",
+    "pixels": [
+      35,
+      36
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      15.5,
+      8.0
+    ],
+    "look": "biker",
+    "part": "leg",
+    "pixels": [
+      62,
+      32
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      4.5,
+      4.25
+    ],
+    "look": "boss",
+    "part": "head",
+    "pixels": [
+      18,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      10.25,
+      9.75
+    ],
+    "look": "boss",
+    "part": "arm",
+    "pixels": [
+      41,
+      39
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      14.75,
+      5.75
+    ],
+    "look": "boss",
+    "part": "leg",
+    "pixels": [
+      59,
+      23
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.25,
+      6.25
+    ],
+    "look": "buck",
+    "part": "head",
+    "pixels": [
+      21,
+      25
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      8.25,
+      9.75
+    ],
+    "look": "buck",
+    "part": "arm",
+    "pixels": [
+      33,
+      39
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      15.75,
+      8.5
+    ],
+    "look": "buck",
+    "part": "leg",
+    "pixels": [
+      63,
+      34
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.0,
+      3.75
+    ],
+    "look": "burnt",
+    "part": "head",
+    "pixels": [
+      20,
+      15
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      7.5,
+      8.5
+    ],
+    "look": "burnt",
+    "part": "arm",
+    "pixels": [
+      30,
+      34
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      15.25,
+      6.25
+    ],
+    "look": "burnt",
+    "part": "leg",
+    "pixels": [
+      61,
+      25
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 7,
+    "expected_caps": 7,
+    "game_size": [
+      10.25,
+      7.0
+    ],
+    "look": "cass",
+    "part": "head",
+    "pixels": [
+      41,
+      28
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.75,
+      9.0
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      23,
+      36
+    ],
+    "view_angle": 3.9269908169872414
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      15.25,
+      6.25
+    ],
+    "look": "cass",
+    "part": "leg",
+    "pixels": [
+      61,
+      25
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      4.0,
+      4.25
+    ],
+    "look": "civilian",
+    "part": "head",
+    "pixels": [
+      16,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      7.75,
+      8.75
+    ],
+    "look": "civilian",
+    "part": "arm",
+    "pixels": [
+      31,
+      35
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      15.0,
+      6.25
+    ],
+    "look": "civilian",
+    "part": "leg",
+    "pixels": [
+      60,
+      25
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      4.5,
+      4.75
+    ],
+    "look": "cultist",
+    "part": "head",
+    "pixels": [
+      18,
+      19
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.25,
+      7.75
+    ],
+    "look": "cultist",
+    "part": "arm",
+    "pixels": [
+      21,
+      31
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      16.25,
+      9.0
+    ],
+    "look": "cultist",
+    "part": "leg",
+    "pixels": [
+      65,
+      36
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      10.25,
+      7.5
+    ],
+    "look": "demon",
+    "part": "head",
+    "pixels": [
+      41,
+      30
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      9.75,
+      10.75
+    ],
+    "look": "demon",
+    "part": "arm",
+    "pixels": [
+      39,
+      43
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      18.25,
+      10.5
+    ],
+    "look": "demon",
+    "part": "leg",
+    "pixels": [
+      73,
+      42
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.75,
+      4.5
+    ],
+    "look": "fireman",
+    "part": "head",
+    "pixels": [
+      23,
+      18
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      6.5,
+      8.5
+    ],
+    "look": "fireman",
+    "part": "arm",
+    "pixels": [
+      26,
+      34
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      16.25,
+      7.25
+    ],
+    "look": "fireman",
+    "part": "leg",
+    "pixels": [
+      65,
+      29
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      4.25,
+      3.5
+    ],
+    "look": "ghoul",
+    "part": "head",
+    "pixels": [
+      17,
+      14
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      10.5,
+      9.0
+    ],
+    "look": "ghoul",
+    "part": "arm",
+    "pixels": [
+      42,
+      36
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 6,
+    "expected_caps": 6,
+    "game_size": [
+      16.25,
+      6.0
+    ],
+    "look": "ghoul",
+    "part": "leg",
+    "pixels": [
+      65,
+      24
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 5,
+    "expected_caps": 5,
+    "game_size": [
+      6.25,
+      5.0
+    ],
+    "look": "guard",
+    "part": "head",
+    "pixels": [
+      25,
+      20
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.5,
+      8.25
+    ],
+    "look": "guard",
+    "part": "arm",
+    "pixels": [
+      22,
+      33
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      15.5,
+      6.75
+    ],
+    "look": "guard",
+    "part": "leg",
+    "pixels": [
+      62,
+      27
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      6.0,
+      4.75
+    ],
+    "look": "gunner",
+    "part": "head",
+    "pixels": [
+      24,
+      19
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      8.75,
+      9.25
+    ],
+    "look": "gunner",
+    "part": "arm",
+    "pixels": [
+      35,
+      37
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      15.75,
+      6.75
+    ],
+    "look": "gunner",
+    "part": "leg",
+    "pixels": [
+      63,
+      27
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      4.25,
+      4.25
+    ],
+    "look": "handler",
+    "part": "head",
+    "pixels": [
+      17,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      6.5,
+      9.0
+    ],
+    "look": "handler",
+    "part": "arm",
+    "pixels": [
+      26,
+      36
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      15.0,
+      6.5
+    ],
+    "look": "handler",
+    "part": "leg",
+    "pixels": [
+      60,
+      26
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.75,
+      4.5
+    ],
+    "look": "heavy",
+    "part": "head",
+    "pixels": [
+      23,
+      18
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      6.25,
+      9.5
+    ],
+    "look": "heavy",
+    "part": "arm",
+    "pixels": [
+      25,
+      38
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      16.75,
+      8.0
+    ],
+    "look": "heavy",
+    "part": "leg",
+    "pixels": [
+      67,
+      32
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      4.75,
+      4.0
+    ],
+    "look": "hunter",
+    "part": "head",
+    "pixels": [
+      19,
+      16
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.5,
+      8.25
+    ],
+    "look": "hunter",
+    "part": "arm",
+    "pixels": [
+      22,
+      33
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      14.5,
+      6.0
+    ],
+    "look": "hunter",
+    "part": "leg",
+    "pixels": [
+      58,
+      24
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      5.75,
+      5.0
+    ],
+    "look": "riot",
+    "part": "head",
+    "pixels": [
+      23,
+      20
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      6.0,
+      9.75
+    ],
+    "look": "riot",
+    "part": "arm",
+    "pixels": [
+      24,
+      39
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      15.5,
+      6.5
+    ],
+    "look": "riot",
+    "part": "leg",
+    "pixels": [
+      62,
+      26
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.5,
+      4.25
+    ],
+    "look": "scout",
+    "part": "head",
+    "pixels": [
+      22,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      6.25,
+      8.0
+    ],
+    "look": "scout",
+    "part": "arm",
+    "pixels": [
+      25,
+      32
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      14.25,
+      7.0
+    ],
+    "look": "scout",
+    "part": "leg",
+    "pixels": [
+      57,
+      28
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.5,
+      4.5
+    ],
+    "look": "scrapper",
+    "part": "head",
+    "pixels": [
+      22,
+      18
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      6.0,
+      8.25
+    ],
+    "look": "scrapper",
+    "part": "arm",
+    "pixels": [
+      24,
+      33
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      15.5,
+      7.5
+    ],
+    "look": "scrapper",
+    "part": "leg",
+    "pixels": [
+      62,
+      30
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      5.0,
+      4.0
+    ],
+    "look": "security",
+    "part": "head",
+    "pixels": [
+      20,
+      16
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      9.5,
+      9.25
+    ],
+    "look": "security",
+    "part": "arm",
+    "pixels": [
+      38,
+      37
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 6,
+    "expected_caps": 6,
+    "game_size": [
+      15.5,
+      6.5
+    ],
+    "look": "security",
+    "part": "leg",
+    "pixels": [
+      62,
+      26
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 3,
+    "expected_caps": 3,
+    "game_size": [
+      6.75,
+      4.0
+    ],
+    "look": "sniper",
+    "part": "head",
+    "pixels": [
+      27,
+      16
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.75,
+      8.75
+    ],
+    "look": "sniper",
+    "part": "arm",
+    "pixels": [
+      23,
+      35
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      15.5,
+      6.5
+    ],
+    "look": "sniper",
+    "part": "leg",
+    "pixels": [
+      62,
+      26
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      7.0,
+      4.5
+    ],
+    "look": "stagehand",
+    "part": "head",
+    "pixels": [
+      28,
+      18
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      11.5,
+      11.75
+    ],
+    "look": "stagehand",
+    "part": "arm",
+    "pixels": [
+      46,
+      47
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      14.75,
+      6.0
+    ],
+    "look": "stagehand",
+    "part": "leg",
+    "pixels": [
+      59,
+      24
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.75,
+      4.75
+    ],
+    "look": "welder",
+    "part": "head",
+    "pixels": [
+      23,
+      19
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.75,
+      8.75
+    ],
+    "look": "welder",
+    "part": "arm",
+    "pixels": [
+      23,
+      35
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      15.0,
+      6.75
+    ],
+    "look": "welder",
+    "part": "leg",
+    "pixels": [
+      60,
+      27
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 1,
+    "expected_caps": 1,
+    "game_size": [
+      5.25,
+      4.25
+    ],
+    "look": "zombie",
+    "part": "head",
+    "pixels": [
+      21,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 5,
+    "expected_caps": 5,
+    "game_size": [
+      9.75,
+      10.75
+    ],
+    "look": "zombie",
+    "part": "arm",
+    "pixels": [
+      39,
+      43
+    ]
+  },
+  {
+    "approved": false,
+    "caps": 2,
+    "expected_caps": 2,
+    "game_size": [
+      15.25,
+      6.5
+    ],
+    "look": "zombie",
+    "part": "leg",
+    "pixels": [
+      61,
+      26
+    ]
+  }
+]

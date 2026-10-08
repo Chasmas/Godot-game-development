@@ -1,0 +1,7 @@
+Tommy speaking frame audit, 2026-10-07
+Source: assets/art/pixellab_ui_v3_approved/portraits/tommy.png (128x128).
+OpenAI generated original: exec-9500f81e-d8b7-4681-9c75-1ae1f16715a9.png.
+Prompt: edit exact128px portrait, only slightly open lips2-3sourcepixels, preserve identity/hair/stubble/eyes/neck/bluejacket/pose/palette/pixelclusters/purplebackground/framing; no smile/headmotion/newdetail.
+REJECTED for animation integration: generated image introduces different hair/forehead clusters, smoother lighting/background and facial detail at larger resolution. Mouth is readable, but frame registration and style continuity are not proven. No production asset replaced or added. Existing approved Tommy remains. Next: constrained native-resolution expression via PixelLab or a locally authored mouth patch preserving base pixels.
+
+Subsequent PixelLab masked edit accepted: image.png native128x128,253changed pixels inside mask and0outside. Promoted unchanged tommy_talk.png after actual124px Godot runtime rest/talk comparison passed and inspected. OpenAI candidate remains rejected. Measured voice envelope selects speaking frame; still single aperture.

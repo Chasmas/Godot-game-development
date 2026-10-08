@@ -1,0 +1,46 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\build_folding_chair.py:10: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: Saved as "folding_chair.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+17:24:17 | INFO: Starting glTF 2.0 export
+17:24:17 | INFO: Extracting primitive: Cube.001
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.008
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.001
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.005
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.004
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.003
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.007
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.009
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube.003
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube.004
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube.005
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube.006
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cube.002
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.002
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Extracting primitive: Cylinder.006
+17:24:17 | INFO: Primitives created: 1
+17:24:17 | INFO: Finished glTF 2.0 export in 0.07956147193908691 s
+
+Folding chair exported: C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\props3d\folding_chair.glb
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

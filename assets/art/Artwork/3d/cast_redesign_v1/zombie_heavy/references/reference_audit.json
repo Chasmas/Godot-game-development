@@ -1,0 +1,51 @@
+{
+  "character": "zombie_heavy",
+  "height_m": 1.86,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_heavy_turnaround.png",
+  "source_sha256": "af5acffddf7780e5a2c204fc9e23852145f62176cccaff2aceb144bc6308429e",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        470,
+        1024
+      ],
+      "width": 470,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_heavy\\references\\front.png",
+      "sha256": "04ae0aab7c5db88fa51ba4b4a89dc8219a4a1fc1ad6e1141a34b0e40d11835f2"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        475,
+        0,
+        705,
+        1024
+      ],
+      "width": 230,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_heavy\\references\\side.png",
+      "sha256": "cc3df8cf6ebb0714317ccb8a62bb787298fa96be7b84f284522e765c1730056b"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        720,
+        0,
+        1150,
+        1024
+      ],
+      "width": 430,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_heavy\\references\\back.png",
+      "sha256": "37fb0581b063d8979f1a2be29a0932573dbf2784edb6594f24f4a4356ce5aefe"
+    }
+  ],
+  "visual_review": "Original sheet and all three saved Blender views directly inspected: complete isolated figures, broad build retained, no clipped extremities or adjacent fragments. Input approval only; no mesh or rig approval."
+}

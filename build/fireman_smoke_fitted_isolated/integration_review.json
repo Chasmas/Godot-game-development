@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 24 other clips including seated pose preserved",
+  "baseline_sha256": "0705025a2e0bcd8f635a698d4ebe151c6634c23cce7798a529ff1f1b4551456f",
+  "integrated_sha256": "bdf1151da862491c137e4c2dcaaa70dfbc90aa8bed200511f79322b1c0e5b42a",
+  "backup": "build\\fireman_smoke_fitted_isolated\\fireman_before_0705025a2e0b.glb",
+  "visual_review": "build/fireman_idle_review_directions.png",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/fireman_smoke_fitted_isolated/fireman.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.0003080716195140741,
+      "Hips": 0.0,
+      "LeftArm": 0.000226545929175658,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00013967497793589652,
+      "LeftHand": 3.693147813256881e-05,
+      "Neck": 0.0002497412880223283,
+      "RightArm": 0.00022408883955087413,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.02701232502192735,
+      "RightHand": 0.01751560962492691
+    },
+    "loop_gap_m": {
+      "Head": 0.0003925250577559361,
+      "Hips": 0.0,
+      "LeftArm": 0.000288571477257785,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00015922550588382009,
+      "LeftHand": 1.598791305379887e-05,
+      "Neck": 0.0003182078256379175,
+      "RightArm": 0.0002854759064538438,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00016312438780897727,
+      "RightHand": 3.456118755392743e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.16989743709565008,
+    "contact_hand_minus_head_m": [
+      -0.03500223159789995,
+      -0.03499960899353005
+    ]
+  }
+}

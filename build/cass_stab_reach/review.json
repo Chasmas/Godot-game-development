@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "candidate_sha256": "5bf7c179fa8d170eacb13e82d03fe07abe30765d693d169f543a317878ec050d",
+  "runtime_sha256": "5a11358b54984d3a59f1f42ed8b5b94659b2e55d55ef98a20beac60ff6637661",
+  "missing_previous_clips": [],
+  "review": "Contact peak .62 and pose recovery checked; 65-pose moving review in 8 headings and M01 rendered level review pass. Windup/contact/recovery captures inspected. Only stab animation track data changed; runtime integrated, matching knife trail remains to regenerate.",
+  "backup": "build\\cass_stab_reach\\cass_before_5a11358b5498.glb"
+}

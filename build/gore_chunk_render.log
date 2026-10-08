@@ -1,0 +1,11 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\build_gore_chunks.py:9: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+00:02.156  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\gore_chunk_review\chunk_0.png'
+00:02.250  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\gore_chunk_review\chunk_1.png'
+00:02.344  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\gore_chunk_review\chunk_2.png'
+Info: Saved as "chunk_0.blend"
+Info: Saved as "chunk_1.blend"
+Info: Saved as "chunk_2.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,13 @@
+{
+  "status": "reviewed_candidate_not_integrated",
+  "scope": "Actual Godot OpenGL: 24 looks, head/arm cuts at three death_back poses. Binding check passed 97 surfaces and 48 combinations at five poses.",
+  "findings": [
+    "Head caps compact at reviewed scale",
+    "Weight-based arm caps too broad on side of torso in several looks; replaced by shoulder-plane candidate for further review"
+  ],
+  "pending": [
+    "Detached-side independent caps",
+    "Shoulder-plane actual-source skinning validation",
+    "Gameplay integration"
+  ]
+}

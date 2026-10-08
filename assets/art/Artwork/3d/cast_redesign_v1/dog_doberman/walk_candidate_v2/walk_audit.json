@@ -1,0 +1,334 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "duration_seconds": 1.0,
+  "stride_m": 0.2,
+  "stance_fraction": 0.65,
+  "matching_forward_speed_m_per_s": 0.3076923076923077,
+  "neutral_body_lowering_m": 0.04,
+  "body_bob_amplitude_m": 0.002,
+  "footfall_phase_offsets": {
+    "rear_negative_x": 0.0,
+    "front_negative_x": 0.25,
+    "rear_positive_x": 0.5,
+    "front_positive_x": 0.75
+  },
+  "sampled_frames": 31,
+  "maximum_paw_endpoint_error_m": 2.3292656353191266e-05,
+  "maximum_planted_sole_slip_per_frame_m": 1.493752370151924e-05,
+  "minimum_full_cycle_mesh_height_m": -2.2000569515512325e-05,
+  "mesh_loop_seam_m": 0.0,
+  "scope": "Full-cycle Blender evaluated-mesh contact checks at 30Hz; rendered anatomy, baked export and Godot playback pending",
+  "samples": [
+    {
+      "frame": 1,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 5.440964707809617e-07,
+        "front_negative_x": 1.1114231136979528e-05,
+        "rear_positive_x": 3.414284955677271e-08,
+        "front_positive_x": 9.477030889416143e-06
+      },
+      "minimum_mesh_height_m": 2.7512116503203288e-05
+    },
+    {
+      "frame": 2,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.1265817967589625e-07,
+        "front_negative_x": 5.471836449351561e-06,
+        "rear_positive_x": 5.3726900748371916e-08,
+        "front_positive_x": 2.0536570926970432e-05
+      },
+      "minimum_mesh_height_m": 3.3002124837366864e-05
+    },
+    {
+      "frame": 3,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 2.119163074095233e-07,
+        "front_negative_x": 9.653629616690578e-06,
+        "rear_positive_x": 1.4901161193847656e-08,
+        "front_positive_x": 7.91291033539446e-06
+      },
+      "minimum_mesh_height_m": 2.8878763259854168e-05
+    },
+    {
+      "frame": 4,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 2.252491780792322e-07,
+        "front_negative_x": 1.2418117613129892e-05,
+        "rear_positive_x": 6.006850114687196e-08,
+        "front_positive_x": 2.312804351764263e-05
+      },
+      "minimum_mesh_height_m": 2.609331568237394e-05
+    },
+    {
+      "frame": 5,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.828051231262877e-07,
+        "front_negative_x": 7.519658799941985e-06,
+        "rear_positive_x": 3.0719530773294423e-08,
+        "front_positive_x": 1.621048248542904e-05
+      },
+      "minimum_mesh_height_m": 3.093619307037443e-05
+    },
+    {
+      "frame": 6,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.5521546196937307e-07,
+        "front_negative_x": 1.1187711046577098e-05,
+        "rear_positive_x": 7.068241373080863e-08,
+        "front_positive_x": 6.93609538762063e-06
+      },
+      "minimum_mesh_height_m": 2.7270507416687906e-05
+    },
+    {
+      "frame": 7,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 9.799708752308715e-08,
+        "front_negative_x": 1.9005467263497417e-05,
+        "rear_positive_x": 1.666000468656264e-08,
+        "front_positive_x": 4.1248233722646263e-07
+      },
+      "minimum_mesh_height_m": 1.945803887792863e-05
+    },
+    {
+      "frame": 8,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.454295314546163e-07,
+        "front_negative_x": 7.89382245754633e-06,
+        "rear_positive_x": 8.33000234328132e-09,
+        "front_positive_x": 1.4156103134155273e-07
+      },
+      "minimum_mesh_height_m": 3.0559403967345133e-05
+    },
+    {
+      "frame": 9,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.1662003280593849e-07,
+        "front_negative_x": 1.0319592060775746e-05,
+        "rear_positive_x": 4.280032699210963e-08,
+        "front_positive_x": 2.4586915969848633e-07
+      },
+      "minimum_mesh_height_m": -2.342315212899848e-07
+    },
+    {
+      "frame": 10,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 4.712160915387242e-08,
+        "front_negative_x": 1.1375211593996333e-05,
+        "rear_positive_x": 4.7706993203109864e-08,
+        "front_positive_x": 4.5594874861223225e-07
+      },
+      "minimum_mesh_height_m": -4.236878794472432e-07
+    },
+    {
+      "frame": 11,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 6.869095904598301e-08,
+        "front_negative_x": 1.7333114032716397e-05,
+        "rear_positive_x": 2.1542358837725164e-07,
+        "front_positive_x": 9.334361412147179e-07
+      },
+      "minimum_mesh_height_m": -8.898825853975723e-07
+    },
+    {
+      "frame": 12,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 4.012260442327338e-08,
+        "front_negative_x": 4.823426699555635e-06,
+        "rear_positive_x": 7.286728768981189e-07,
+        "front_positive_x": 1.6373699758004102e-06
+      },
+      "minimum_mesh_height_m": -1.6083301943581318e-06
+    },
+    {
+      "frame": 13,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 2.6863450374185958e-08,
+        "front_negative_x": 5.471734999561627e-06,
+        "rear_positive_x": 9.453726962543667e-07,
+        "front_positive_x": 2.0837796813627437e-06
+      },
+      "minimum_mesh_height_m": -2.071333028652589e-06
+    },
+    {
+      "frame": 14,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.332000937312528e-08,
+        "front_negative_x": 8.200852404641734e-06,
+        "rear_positive_x": 8.663282532818687e-07,
+        "front_positive_x": 5.153584694820255e-06
+      },
+      "minimum_mesh_height_m": -5.035597496316768e-06
+    },
+    {
+      "frame": 15,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 2.6863450374185958e-08,
+        "front_negative_x": 2.3292656353191266e-05,
+        "rear_positive_x": 6.542128441416828e-07,
+        "front_positive_x": 8.666243155195153e-06
+      },
+      "minimum_mesh_height_m": -8.52246921567712e-06
+    },
+    {
+      "frame": 16,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.666000468656264e-08,
+        "front_negative_x": 8.6085075112237e-06,
+        "rear_positive_x": 4.5012853941301153e-07,
+        "front_positive_x": 1.12097990098608e-05
+      },
+      "minimum_mesh_height_m": -1.1085468941018917e-05
+    },
+    {
+      "frame": 17,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 6.869095904598301e-08,
+        "front_negative_x": 2.012098504502481e-05,
+        "rear_positive_x": 2.5397629363923237e-07,
+        "front_positive_x": 5.804743470022476e-06
+      },
+      "minimum_mesh_height_m": -5.792364845547127e-06
+    },
+    {
+      "frame": 18,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 1.666000468656264e-08,
+        "front_negative_x": 6.7556113578240646e-06,
+        "rear_positive_x": 1.8204438273415887e-07,
+        "front_positive_x": 9.861022857199654e-06
+      },
+      "minimum_mesh_height_m": -9.819937076827046e-06
+    },
+    {
+      "frame": 19,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.0719530773294423e-08,
+        "front_negative_x": 2.2209255978412255e-05,
+        "rear_positive_x": 1.6203942277231475e-07,
+        "front_positive_x": 1.3235597317224865e-05
+      },
+      "minimum_mesh_height_m": -1.3217401829024311e-05
+    },
+    {
+      "frame": 20,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.0719530773294423e-08,
+        "front_negative_x": 1.5863215198984836e-05,
+        "rear_positive_x": 1.401818373965232e-07,
+        "front_positive_x": 7.91247800796964e-06
+      },
+      "minimum_mesh_height_m": -7.941323929117061e-06
+    },
+    {
+      "frame": 21,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 6.409231772305538e-08,
+        "front_negative_x": 6.663344813297563e-06,
+        "rear_positive_x": 8.059035112255788e-08,
+        "front_positive_x": 1.1386979142453332e-05
+      },
+      "minimum_mesh_height_m": -1.1435646229074337e-05
+    },
+    {
+      "frame": 22,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.332000937312528e-08,
+        "front_negative_x": 4.842877388000488e-07,
+        "rear_positive_x": 5.960464477539063e-08,
+        "front_positive_x": 2.1946776275147305e-05
+      },
+      "minimum_mesh_height_m": -2.2000569515512325e-05
+    },
+    {
+      "frame": 23,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 3.3527612686157227e-08,
+        "front_negative_x": 1.1175870895385742e-07,
+        "rear_positive_x": 1.0536712127723509e-08,
+        "front_positive_x": 8.3151859192648e-06
+      },
+      "minimum_mesh_height_m": -8.380908184335567e-06
+    },
+    {
+      "frame": 24,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 4.470348358154297e-08,
+        "front_negative_x": 2.7567148208618164e-07,
+        "rear_positive_x": 2.9802322387695312e-08,
+        "front_positive_x": 1.0614701395248551e-05
+      },
+      "minimum_mesh_height_m": -1.0675687008188106e-05
+    },
+    {
+      "frame": 25,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 6.828569911354542e-08,
+        "front_negative_x": 3.846982313223358e-07,
+        "rear_positive_x": 2.9802322387695312e-08,
+        "front_positive_x": 1.1590943688459195e-05
+      },
+      "minimum_mesh_height_m": -1.164107015938498e-05
+    },
+    {
+      "frame": 26,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 2.616204301428711e-07,
+        "front_negative_x": 9.334361412147179e-07,
+        "rear_positive_x": 7.450580596923828e-09,
+        "front_positive_x": 2.0205374292705994e-05
+      },
+      "minimum_mesh_height_m": -2.019752901105676e-05
+    },
+    {
+      "frame": 27,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 7.443499180084488e-07,
+        "front_negative_x": 1.5685905352176112e-06,
+        "rear_positive_x": 1.0536712127723509e-08,
+        "front_positive_x": 5.298892519926802e-06
+      },
+      "minimum_mesh_height_m": -5.303817943058675e-06
+    },
+    {
+      "frame": 28,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 9.920749524759715e-07,
+        "front_negative_x": 2.1468534799629143e-06,
+        "rear_positive_x": 1.4901161193847656e-08,
+        "front_positive_x": 5.873935867988516e-06
+      },
+      "minimum_mesh_height_m": -5.829617748531746e-06
+    },
+    {
+      "frame": 29,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 9.128785680863859e-07,
+        "front_negative_x": 4.8763125078807465e-06,
+        "rear_positive_x": 0.0,
+        "front_positive_x": 8.554317849207998e-06
+      },
+      "minimum_mesh_height_m": 3.37120691256132e-05
+    },
+    {
+      "frame": 30,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 6.93487078566684e-07,
+        "front_negative_x": 8.484340271817388e-06,
+        "rear_positive_x": 2.9802322387695312e-08,
+        "front_positive_x": 5.450593673545429e-06
+      },
+      "minimum_mesh_height_m": 3.009639840456657e-05
+    },
+    {
+      "frame": 31,
+      "paw_endpoint_errors_m": {
+        "rear_negative_x": 5.440964707809617e-07,
+        "front_negative_x": 1.1114231136979528e-05,
+        "rear_positive_x": 3.414284955677271e-08,
+        "front_positive_x": 9.477030889416143e-06
+      },
+      "minimum_mesh_height_m": 2.7512116503203288e-05
+    }
+  ]
+}

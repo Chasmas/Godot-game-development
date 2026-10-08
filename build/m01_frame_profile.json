@@ -1,0 +1,43 @@
+{
+	"cast_models": 26,
+	"live_cast_viewports": 14,
+	"results": [
+		{
+			"draw_calls_mean": 2143.80416666667,
+			"label": "native_scene",
+			"median_ms": 23.403,
+			"p95_ms": 26.33,
+			"physics_mean_ms": 2.71325,
+			"process_mean_ms": 28.5822833333333,
+			"samples": 240
+		},
+		{
+			"draw_calls_mean": 2140.85833333333,
+			"label": "diagnostic_postfx_disabled",
+			"median_ms": 23.069,
+			"p95_ms": 25.889,
+			"physics_mean_ms": 1.30077916666666,
+			"process_mean_ms": 25.544375,
+			"samples": 240
+		},
+		{
+			"draw_calls_mean": 2146.42916666667,
+			"label": "diagnostic_2d_lights_disabled",
+			"median_ms": 21.681,
+			"p95_ms": 24.671,
+			"physics_mean_ms": 1.304275,
+			"process_mean_ms": 24.3436416666666,
+			"samples": 240
+		},
+		{
+			"draw_calls_mean": 2157.78333333333,
+			"label": "diagnostic_character_viewports_disabled",
+			"median_ms": 21.35,
+			"p95_ms": 30.434,
+			"physics_mean_ms": 1.4556125,
+			"process_mean_ms": 24.6299999999999,
+			"samples": 240
+		}
+	],
+	"scope": "Frozen actors; native scene, then diagnostic render suppression. No gameplay or visual-quality approval."
+}

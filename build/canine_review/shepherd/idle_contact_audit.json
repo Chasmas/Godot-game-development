@@ -1,0 +1,617 @@
+{
+  "candidate_only": true,
+  "duration_seconds": 2.0,
+  "stride_meters": 0.0,
+  "paw_lift_meters": 0.0,
+  "stance_fraction": 1.0,
+  "paw_phase_offsets": {
+    "FrontContact.L": 0,
+    "FrontContact.R": 0.5,
+    "HindContact.L": 0.5,
+    "HindContact.R": 0
+  },
+  "native_forward_speed_mps": 0.0,
+  "note": "Target contact audit only; skinned paw geometry and playback still require visual review.",
+  "samples": [
+    {
+      "frame": 1,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 1,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 1,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 1,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 2,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 2,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 2,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 2,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 3,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 3,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 3,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 3,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 4,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 4,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 4,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 4,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 5,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 5,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 5,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 5,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 6,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 6,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 6,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 6,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 7,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 7,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 7,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 7,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 8,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 8,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 8,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 8,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 9,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 9,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 9,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 9,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 10,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 10,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 10,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 10,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 11,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 11,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 11,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 11,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 12,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 12,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 12,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 12,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 13,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 13,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 13,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 13,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 14,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 14,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 14,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 14,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 15,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 15,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 15,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 15,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 16,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 16,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 16,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 16,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 17,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 17,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 17,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 17,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 18,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 18,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 18,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 18,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 19,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 19,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 19,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 19,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 20,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 20,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 20,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 20,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 21,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 21,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 21,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 21,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 22,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 22,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 22,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 22,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 23,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 23,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 23,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 23,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 24,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 24,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 24,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 24,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 25,
+      "paw": "FrontContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 25,
+      "paw": "FrontContact.R",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 25,
+      "paw": "HindContact.L",
+      "stance": true,
+      "lift": 0
+    },
+    {
+      "frame": 25,
+      "paw": "HindContact.R",
+      "stance": true,
+      "lift": 0
+    }
+  ]
+}

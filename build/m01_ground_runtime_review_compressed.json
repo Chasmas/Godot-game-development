@@ -1,0 +1,26 @@
+{
+	"baseline": {
+		"median_ms": 23.699,
+		"p95_ms": 26.243,
+		"samples": 180
+	},
+	"candidate": "ground_layer_candidate_v3.png",
+	"compressed": true,
+	"map_extent_px": [
+		1088,
+		976
+	],
+	"scope": "frozen actors, compatibility renderer, capped 60 fps; visual fixture, not gameplay benchmark",
+	"texture_bytes": 16990208,
+	"with_ground": {
+		"median_ms": 24.505,
+		"p95_ms": 27.835,
+		"samples": 180
+	},
+	"with_tiled_ground": {
+		"median_ms": 24.958,
+		"p95_ms": 35.77,
+		"samples": 180,
+		"tiles": 253
+	}
+}

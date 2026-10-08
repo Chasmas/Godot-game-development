@@ -8,6 +8,55 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 		var cell := Vector2i(int(it.pos[0]), int(it.pos[1]))
 		var p := Vector2(float(it.pos[0]) * 16.0 + 8.0, float(it.pos[1]) * 16.0 + 8.0)
 		match str(it.type):
+			"rendered_prop":
+				var rendered_root := level.props_root as Node2D if bool(it.get("sort_with_actors", false)) else root
+				# Blender render framed about its authored ground footprint.
+				# Imported textures are shared and remain available in exports.
+				var path := str(it.get("texture", ""))
+				if not ResourceLoader.exists(path):
+					push_warning("Missing rendered decor: " + path)
+					continue
+				var tex := load(path) as Texture2D
+				if tex == null:
+					continue
+				var sp := Sprite2D.new()
+				sp.texture = tex
+				sp.position = p
+				var offset: Array = it.get("render_offset", [0,0])
+				sp.offset = Vector2(float(offset[0]),float(offset[1]))
+				sp.scale = Vector2.ONE * float(it.get("width", 56.32)) / tex.get_width()
+				var brightness := float(it.get("brightness", 1.0))
+				sp.modulate = Color(brightness,brightness,brightness,1)
+				sp.z_index = 1
+				sp.set_meta("rendered_decor_id", str(it.get("id", "")))
+				rendered_root.add_child(sp)
+				var footprint: Array = it.get("footprint", [])
+				if footprint.size() == 4:
+					var area := Rect2(float(footprint[0]),float(footprint[1]),float(footprint[2]),float(footprint[3]))
+					var body := StaticBody2D.new()
+					body.position = p + area.get_center()
+					body.collision_layer = Layers.LOW if str(it.get("collision", "solid")) == "low" else Layers.PROP
+					body.collision_mask = 0
+					var shape := CollisionShape2D.new()
+					var rectangle := RectangleShape2D.new()
+					rectangle.size = area.size
+					shape.shape = rectangle
+					body.add_child(shape)
+					rendered_root.add_child(body)
+					var bounds := Rect2(p + area.position,area.size)
+					for y in range(floori(bounds.position.y/16),ceili(bounds.end.y/16)):
+						for x in range(floori(bounds.position.x/16),ceili(bounds.end.x/16)):
+							if level.nav.is_in_boundsv(Vector2i(x,y)):
+								level.nav.set_point_solid(Vector2i(x,y),true)
+			"steam_vent":
+				if not _valid_floor_sprite(builder, cell):
+					continue
+				var vent := Node2D.new()
+				vent.set_script(load("res://scripts/levels/steam_vent.gd"))
+				vent.texture = load("res://assets/art/vfx/steam_wisp_v1.png")
+				vent.position = p + Vector2(0, -10)
+				vent.z_index = 2
+				root.add_child(vent)
 			"palm":
 				var pt := PalmTree.new()
 				pt.position = p
@@ -24,10 +73,35 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				if tex:
 					var sp := Sprite2D.new()
 					sp.texture = tex
+					sp.set_meta("decor_asset_id",str(it.get("id","")))
 					sp.scale = Vector2.ONE * float(it.get("size", 0.5))
 					sp.position = p
-					sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
-					sp.z_index = -5 if it.get("floor", false) else -1
+					if it.get("floor", false):
+						sp.rotation = deg_to_rad(float(it.get("rot", 0.0)))
+						sp.z_index = -5
+					else:
+						# Standing things are drawn from the oblique camera: turning them
+						# stands them on their heads. A mirror gives the variety instead,
+						# and they sort against the cast by their foot (origin at the base).
+						var turned := fposmod(float(it.get("rot", 0.0)), 360.0)
+						sp.flip_h = turned > 90.0 and turned < 270.0
+						sp.offset.y = -tex.get_height() * 0.5
+						sp.position.y += tex.get_height() * 0.5 * sp.scale.y
+						sp.z_index = 1
+					if str(it.get("id", "")) in ["motel_pool_float", "motel_pool_float_flamingo"]:
+						sp.set_script(load("res://scripts/levels/animated_prop.gd"))
+						sp.bob_amplitude = 1.1
+						sp.bob_speed = 0.85
+						sp.drift_amplitude = 1.6
+					elif str(it.get("id", "")) == "motel_pool_party_ruin":
+						sp.set_script(load("res://scripts/levels/animated_prop.gd"))
+						sp.bob_amplitude = 0.45
+						sp.bob_speed = 0.55
+						sp.sway_amplitude = 0.018
+					elif str(it.get("id", "")) == "motel_tv_crt":
+						sp.set_script(load("res://scripts/levels/ambient_screen.gd"))
+						sp.pulse_speed = 2.1
+						sp.pulse_amount = 0.06
 					root.add_child(sp)
 					# Light-emitting props cast a PointLight2D so they feel like
 					# real sources instead of painted decoration.
@@ -163,18 +237,36 @@ static func _valid_floor_sprite(builder: LevelBuilder, cell: Vector2i) -> bool:
 ## leaf lets go, tumbles away with the wind and settles on the ground.
 class PalmTree extends Node2D:
 	var size := 1.0
+	var _burn_t := 0.0
+	var _burn_seed := 0.0
+	var _canopy_burned := false
+	var _burn_particles: Array = []
+	var flame_texture: Texture2D
+	var trunk_texture: Texture2D
+	var smoke_texture: Texture2D
+	var _smoke: Array = []
+	var _smoke_timer := 0.0
+	var _burn_glow: PointLight2D
 	var _t := 0.0
 	var _seed := 0.0
 	var _shadow: Node2D
 	var _ground: Node2D
 	var _leaves: Array = []      # falling: {p, v, rot, spin, h, vh, s, c}
+	var _charred_sectors: Dictionary = {}
 	var _next_leaf := 0.0
 	const SECTORS := 14
 	const RINGS := 4
 
 	func _ready() -> void:
 		z_index = 45
+		if ResourceLoader.exists("res://assets/art/vfx/flame_v1.png"):
+			flame_texture = load("res://assets/art/vfx/flame_v1.png")
+		if ResourceLoader.exists("res://assets/art/vfx/palm_trunk_top_v1.png"):
+			trunk_texture = load("res://assets/art/vfx/palm_trunk_top_v1.png")
+		if ResourceLoader.exists("res://assets/art/vfx/steam_wisp_v1.png"):
+			smoke_texture = load("res://assets/art/vfx/steam_wisp_v1.png")
 		_seed = randf() * 10.0
+		_burn_seed = randf() * 20.0
 		_next_leaf = randf_range(2.0, 9.0)
 		_vis_t = randf() * 0.25
 		_shadow = PalmShadow.new()
@@ -201,6 +293,15 @@ class PalmTree extends Node2D:
 
 	func _process(d: float) -> void:
 		_t += d
+		var was_burning := _burn_t > 0.0
+		_burn_t = maxf(0.0, _burn_t - d)
+		if was_burning and _burn_t <= 0.0:
+			_canopy_burned = true
+		if _burn_t > 0.0:
+			_spawn_burn_particles(d)
+		_tick_burn_particles(d)
+		_tick_smoke(d)
+		_tick_burn_glow()
 		_vis_t -= d
 		if _vis_t <= 0.0:
 			_vis_t = 0.25
@@ -218,6 +319,91 @@ class PalmTree extends Node2D:
 		queue_redraw()
 		if Engine.get_process_frames() % 2 == 0:
 			_shadow.queue_redraw()
+
+	## Rare ambient event hook. It is visual only and never changes collision/nav.
+	func start_lightning_fire() -> void:
+		if _canopy_burned or _burn_t > 0.0:
+			return
+		_burn_t = 12.0
+		_burn_seed = randf() * 20.0
+		_burn_particles.clear()
+		for i in 22: _add_ember(i % SECTORS)
+		queue_redraw()
+		var glow := PointLight2D.new()
+		glow.texture = SpriteLib.light_texture(96)
+		glow.color = Color(1.0, 0.28, 0.06)
+		glow.energy = 0.0
+		glow.texture_scale = 0.55
+		glow.position = bend(0.0, 0.0, 1.0)
+		add_child(glow)
+		_burn_glow = glow
+
+	func _tick_burn_glow() -> void:
+		if not is_instance_valid(_burn_glow): return
+		if _burn_t <= 0.0:
+			_burn_glow.energy = 0.0
+			_burn_glow.queue_free()
+			_burn_glow = null
+			return
+		var foliage := 0.0
+		for sector in SECTORS: foliage += sector_survival(sector)
+		foliage /= float(SECTORS)
+		var ignition := smoothstep(0.0, 0.18, 12.0 - _burn_t)
+		var flicker := 0.85 + sin(_t * 9.0 + _burn_seed) * 0.15
+		_burn_glow.energy = 0.9 * ignition * foliage * flicker
+
+	func _add_ember(sector: int) -> void:
+		if sector_survival(sector) <= 0.05: return
+		var lifetime := randf_range(0.7,1.6)
+		_burn_particles.append({"p": fire_anchor(sector) + Vector2(randf_range(-2,2),randf_range(-2,2))*size,
+			"v": (Vector2(randf_range(-4,4),randf_range(-14,-5)) + _wdir*_g*5.0)*size,
+			"life": lifetime, "total": lifetime, "s": randf_range(0.18,0.45)*size,
+			"c": Color(1.0,randf_range(0.35,0.75),0.12,0.8)})
+
+	func _spawn_burn_particles(d: float) -> void:
+		if _burn_particles.size() >= 38 or randf() > d * 18.0: return
+		_add_ember(randi() % SECTORS)
+
+	func _draw_embers() -> void:
+		var glow := SpriteLib.light_texture(32)
+		for p in _burn_particles:
+			var remaining := clampf(float(p.life)/float(p.total),0.0,1.0)
+			var fade := smoothstep(0.0,0.4,remaining)
+			var radius := float(p.s)*5.0
+			draw_texture_rect(glow,Rect2(p.p-Vector2.ONE*radius,Vector2.ONE*radius*2),false,Color(p.c.r,p.c.g,p.c.b,fade*0.5))
+			draw_line(p.p,p.p-p.v.normalized()*float(p.s)*2.0,Color(1,0.75,0.35,fade*0.7),maxf(0.25,float(p.s)),true)
+
+	func _tick_burn_particles(d: float) -> void:
+		for p in _burn_particles:
+			p.p += p.v * d
+			p.v.y -= 2.0 * size * d
+			p.life -= d
+		for i in range(_burn_particles.size() - 1, -1, -1):
+			if float(_burn_particles[i].life) <= 0.0:
+				_burn_particles.remove_at(i)
+
+	func _tick_smoke(d: float) -> void:
+		for puff in _smoke:
+			puff.age += d
+			puff.p += puff.v * d
+		for i in range(_smoke.size()-1,-1,-1):
+			if _smoke[i].age >= 3.0: _smoke.remove_at(i)
+		_smoke_timer -= d
+		if _burn_t <= 0.0 or _smoke_timer > 0.0 or _smoke.size() >= 6: return
+		_smoke_timer = 0.6
+		var sector := randi() % SECTORS
+		if sector_survival(sector) < 0.15: return
+		_smoke.append({"p":fire_anchor(sector),"v":(_wdir*(3.0+_g*4.0)+Vector2(0,-5))*size,"age":0.0,"rot":randf_range(-0.15,0.15)})
+
+	func _draw_smoke() -> void:
+		if smoke_texture == null: return
+		for puff in _smoke:
+			var life: float = puff.age/3.0
+			var opacity := 0.4*smoothstep(0.0,0.2,life)*(1.0-smoothstep(0.45,1.0,life))
+			var dimensions := Vector2(24,30)*size*(0.8+life*0.7)
+			draw_set_transform(puff.p,puff.rot+life*0.1)
+			draw_texture_rect(smoke_texture,Rect2(-dimensions*0.5,dimensions),false,Color(0.6,0.61,0.65,opacity))
+		draw_set_transform(Vector2.ZERO)
 
 	func _read_wind() -> void:
 		if _weather == null or not is_instance_valid(_weather):
@@ -290,13 +476,20 @@ class PalmTree extends Node2D:
 
 	func _draw() -> void:
 		var tex := ArtLib.sprite("palm")
-		if tex:
+		if tex and not _canopy_burned:
 			# the painted crown's corners fall outside the circle - the art is
 			# a round canopy on a transparent square, so the fan loses nothing
 			var R: float = tex.get_width() * 0.5 * 0.5 * size * 1.414
-			var tint := PackedColorArray([Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE])
 			draw_set_transform(Vector2.ZERO, _seed, Vector2.ONE)
-			for q in crown_polys(R):
+			var polygons := crown_polys(R)
+			for qi in polygons.size():
+				var q: Array = polygons[qi]
+				var survival := sector_survival(qi % SECTORS)
+				if survival <= 0.0: continue
+				var burn := 1.0 - survival
+				var col := Color.WHITE.lerp(Color(0.22, 0.12, 0.07), burn)
+				col.a = survival
+				var tint := PackedColorArray([col, col, col, col])
 				var uv: PackedVector2Array = q[1]
 				# the square's corners: stretch the outer ring's UVs to reach them
 				var uv2 := PackedVector2Array()
@@ -307,10 +500,75 @@ class PalmTree extends Node2D:
 			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		else:
 			_draw_procedural()
+		# Sector fading includes the painted centre, but the intact trunk must
+		# remain visible throughout the burn, even with faint residual fronds.
+		if tex and not _canopy_burned and _burn_t > 0.0:
+			_draw_trunk()
 		_draw_leaves()
+		if _burn_t > 0.0 and flame_texture != null:
+			_draw_textured_fire()
+			_draw_embers()
+			_draw_smoke()
+			return
+		if _burn_t > 0.0:
+			var pulse := 0.82 + sin(_t * 9.0 + _burn_seed) * 0.18
+			# The canopy catches first; the trunk remains intact.
+			var base := Vector2(0, -34) * size
+			draw_circle(base, 13.0 * size * pulse, Color(1.0, 0.10, 0.01, 0.12))
+			draw_circle(base, 8.0 * size * pulse, Color(1.0, 0.18, 0.03, 0.3))
+			for i in 7:
+				var x := (float(i) - 1.5) * 5.0 * size
+				var h := (17.0 + fmod(_burn_seed + i * 7.0, 15.0)) * size * pulse
+				var tip := base + Vector2(x * 0.35, -h)
+				draw_colored_polygon(PackedVector2Array([base + Vector2(x - 5.0, 2), base + Vector2(x + 5.0, 2), tip]), Color(0.95, 0.08 + (i % 3) * 0.08, 0.01, 0.88))
+				draw_colored_polygon(PackedVector2Array([base + Vector2(x - 2.0, 0), base + Vector2(x + 2.0, 0), tip + Vector2(0, 3)],), Color(1.0, 0.75, 0.08, 0.9))
+				draw_circle(tip, 2.5 * size, Color(1.0, 0.9, 0.3, 0.95))
+		_draw_embers()
+		_draw_smoke()
+
+	func _draw_textured_fire() -> void:
+		for i in 8:
+			var phase := _t * (3.8 + float(i) * 0.13) + float(i) * 1.7 + _burn_seed
+			var sector := int(float(i) * SECTORS / 8.0)
+			var survival := sector_survival(sector)
+			if survival <= 0.0: continue
+			var anchor := fire_anchor(sector)
+			var height := (21.0 + sin(phase) * 2.5 + sin(phase*1.37)*1.5 + float(i % 3)*2.0)*size
+			var width := height * (0.48 + float(i%3)*0.035)
+			var tint := Color(1,1,1,(0.73+sin(phase*1.23)*0.1)*survival)
+			draw_set_transform(anchor)
+			for band in 6:
+				var lower := float(band)/6.0
+				var upper := float(band+1)/6.0
+				var bottom := flame_row(lower,phase,width,height)
+				var top := flame_row(upper,phase,width,height)
+				var points := PackedVector2Array([bottom[0],bottom[1],top[1],top[0]])
+				var uv := PackedVector2Array([Vector2(0,1-lower),Vector2(1,1-lower),Vector2(1,1-upper),Vector2(0,1-upper)])
+				draw_polygon(points,PackedColorArray([tint,tint,tint,tint]),uv,flame_texture)
+		draw_set_transform(Vector2.ZERO)
+
+	func flame_row(fraction: float, phase: float, width: float, height: float) -> PackedVector2Array:
+		# Base stays anchored; turbulence grows continuously towards the tip.
+		var shift := (sin(phase-fraction*5.0)*2.4+sin(phase*1.61-fraction*9.0)*1.2)*fraction*size
+		shift += _wdir.x*_g*fraction*fraction*3.0*size
+		var half_width := width*0.5*(1.0+sin(phase*1.3-fraction*6.0)*fraction*0.12)
+		return PackedVector2Array([Vector2(shift-half_width,-fraction*height),Vector2(shift+half_width,-fraction*height)])
+
+	func fire_anchor(sector: int) -> Vector2:
+		# Match the painted fan's angular sector and final crown rotation.
+		return bend((float(sector) + 0.5) * TAU / SECTORS, 0.35, 30.0 * size).rotated(_seed)
+
+	func sector_survival(sector: int) -> float:
+		if _canopy_burned: return 0.0
+		if _burn_t <= 0.0: return 1.0
+		var progress := clampf(1.0 - _burn_t / 12.0, 0.0, 1.0)
+		# Spread consumption around the crown instead of erasing every frond
+		# on the same frame. The seed stays fixed throughout this tree's life.
+		var start := 0.12 + fposmod(float(sector) * 0.618034 + _seed * 0.1, 1.0) * 0.5
+		return 1.0 - smoothstep(start, start + 0.26, progress)
 
 	func _draw_procedural() -> void:
-		for i in 9:
+		for i in (0 if _canopy_burned else 9):
 			var a := i * TAU / 9.0 + _seed
 			var L := (26.0 + (i % 3) * 5.0) * size
 			var base := bend(a, 0.0, L)
@@ -324,15 +582,29 @@ class PalmTree extends Node2D:
 			for k in 3:
 				var q := bend(a, 0.35 + k * 0.2, L)
 				draw_line(q, q + dir.rotated(0.9) * 4.0 * size, Color(0.06, 0.22, 0.12, 0.9), 1.0)
+		_draw_trunk()
+
+	func _draw_trunk() -> void:
 		var c := bend(0.0, 0.0, 1.0)
+		if trunk_texture != null:
+			draw_texture_rect(trunk_texture, Rect2(c - Vector2.ONE * 8.0 * size, Vector2.ONE * 16.0 * size), false)
+			return
 		draw_circle(c, 4.0 * size, Color(0.35, 0.22, 0.1))
 		draw_circle(c + Vector2(-1, -1), 2.0 * size, Color(0.55, 0.38, 0.18))
 
 	# ---- leaves letting go
 	func _tick_leaves(d: float) -> void:
 		var g := gust()
+		if _burn_t > 0.0:
+			for sector in SECTORS:
+				if sector_survival(sector) > 0.2 or _charred_sectors.has(sector): continue
+				_charred_sectors[sector] = true
+				var angle := (float(sector)+0.5)*TAU/SECTORS
+				var origin := bend(angle,0.7,30.0*size).rotated(_seed)
+				_leaves.append({"p":origin,"v":_wind_dir()*6.0,"rot":angle+_seed,"spin":randf_range(-2.0,2.0),
+					"h":1.0,"vh":0.5,"s":randf_range(0.2,0.45)*size,"c":Color(0.16,0.12,0.09),"ph":randf()*TAU})
 		_next_leaf -= d * (0.4 + g * 1.6)
-		if _next_leaf <= 0.0 and _leaves.size() < 6:
+		if not _canopy_burned and _burn_t <= 0.0 and _next_leaf <= 0.0 and _leaves.size() < 6:
 			_next_leaf = randf_range(3.0, 11.0)
 			var a := randf() * TAU
 			var start := bend(a, randf_range(0.6, 0.95), 24.0 * size)
@@ -420,12 +692,20 @@ class PalmShadow extends Node2D:
 		if palm == null:
 			return
 		var base := OFFSET * size
+		if palm._canopy_burned:
+			# Only the intact trunk remains; do not retain a leafy silhouette.
+			draw_circle(base, 4.0 * size, SHADE)
+			return
 		var tex := ArtLib.sprite("palm")
 		draw_set_transform_matrix(Transform2D(0.0, Vector2(1.05, 0.72), 0.25, base) * Transform2D(palm._seed, Vector2.ZERO))
 		if tex:
 			var R: float = tex.get_width() * 0.5 * 0.5 * size * 1.414
-			var tint := PackedColorArray([SHADE, SHADE, SHADE, SHADE])
-			for q in palm.crown_polys(R, 1.25):
+			var polygons := palm.crown_polys(R, 1.25)
+			for qi in polygons.size():
+				var q: Array = polygons[qi]
+				var shade := SHADE
+				shade.a *= palm.sector_survival(qi % palm.SECTORS)
+				var tint := PackedColorArray([shade, shade, shade, shade])
 				var uv2 := PackedVector2Array()
 				for u in (q[1] as PackedVector2Array):
 					uv2.append(Vector2(0.5, 0.5) + (u - Vector2(0.5, 0.5)) * 1.414)

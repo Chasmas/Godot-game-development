@@ -70,8 +70,10 @@ void fragment() {
 		col += acc / 12.0 * bloom * 1.6;
 	}
 	if (cel > 0.0) {
-		vec3 q = floor(col * 10.0 + 0.5) / 10.0;
-		col = mix(col, q, cel * 0.5);
+		// Keep a restrained illustrated finish without turning soft light pools
+		// into broad, jagged colour plateaus across detailed floor textures.
+		vec3 q = floor(col * 32.0 + 0.5) / 32.0;
+		col = mix(col, q, cel * 0.25);
 	}
 	if (crt_enabled) {
 		float sl = sin(SCREEN_UV.y * 540.0 * 3.14159) * 0.5 + 0.5;

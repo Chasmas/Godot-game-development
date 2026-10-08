@@ -1,0 +1,12 @@
+{
+  "scope": "Diagnostic only: source triangle geometry preservation for 24 looks x leg/legs; strict normal serialization comparison and uncut guard control. Not wound-cap or animated visual approval.",
+  "cuts": 48,
+  "protected_triangles": 739411,
+  "missing_geometry_faces": 0,
+  "strict_attribute_mismatches": 259818,
+  "guard_uncut_normal_mismatches_match_candidate": true,
+  "guard_uncut_position_uv_mismatches": 0,
+  "next": "Audit cut position/UV preservation across all looks; quantify normal precision; rebuild caps from current protected cut geometry.",
+  "all_cast_position_uv_mismatches": 0,
+  "all_cast_position_uv_faces": 739411
+}

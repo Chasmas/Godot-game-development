@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS neon candidate loads
+PASS edge-on checkpoint remains visible
+PASS duplicate activation cannot restart transition
+PASS save pulse respects reduced flashing
+PASS save confirmation stays local
+PASS save marker finishes within .61 seconds
+PASS neon candidate loads
+PASS edge-on checkpoint remains visible
+PASS duplicate activation cannot restart transition
+PASS save pulse respects reduced flashing
+PASS save confirmation stays local
+PASS save marker finishes within .61 seconds
+PASS restored checkpoint disappears silently
+CHECKPOINT ACTIVATION: 0 failures

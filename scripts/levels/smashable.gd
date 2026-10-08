@@ -10,8 +10,9 @@ const DEFS := {
 	"vase":  {"hp": 1, "r": 5.0, "sfx": "bottle_break", "loot": 0.3},
 	"box":   {"hp": 1, "r": 6.0, "sfx": "hit_blunt", "loot": 0.45},
 	"crate": {"hp": 2, "r": 7.0, "sfx": "door_break", "loot": 0.5},
-	"chair": {"hp": 1, "r": 5.0, "sfx": "hit_blunt", "loot": 0.1},
+	"chair": {"hp": 1, "r": 5.0, "sfx": "hit_blunt", "loot": 0.0},
 	"drum":  {"hp": 3, "r": 6.0, "sfx": "metal_clang", "loot": 0.25},
+	"coffin": {"hp": 2, "r": 8.0, "sfx": "door_break", "loot": 0.35},
 }
 
 var kind := "box"
@@ -53,7 +54,7 @@ func take_damage(info: DamageInfo) -> String:
 	_shake = 1.0
 	if hp > 0:
 		Audio.play_at(DEFS[kind].sfx, global_position, -8.0, 0.1)
-		Effects.splinters(global_position, -info.dir, kind in ["crate", "chair"], 0.5)
+		Effects.splinters(global_position, -info.dir, kind in ["crate", "chair", "coffin"], 0.5)
 		return "blocked"
 	_break(info.dir)
 	return "blocked"
@@ -67,7 +68,7 @@ func _break(dir: Vector2) -> void:
 		"box":
 			Effects.shards(global_position, dir, Color("b08858"), 9)
 			Effects.dust(global_position, dir)
-		"crate", "chair":
+		"crate", "chair", "coffin":
 			Effects.splinters(global_position, dir, true, 1.5)
 			Effects.shards(global_position, dir, Color("8a5a30"), 8)
 		"drum":
@@ -75,6 +76,12 @@ func _break(dir: Vector2) -> void:
 			Effects.shards(global_position, dir, Color("5a6a4a"), 6)
 	if level and level.get("nav"):
 		(level.nav as AStarGrid2D).set_point_solid(cell, false)
+	# Maintenance saws are exceptionally rare, and never emerge from chairs,
+	# coffins or household clutter. The same crate repeats across checkpoints.
+	if chainsaw_stash(kind, cell, str(get_parent().name)):
+		WeaponPickup.spawn.call_deferred(get_parent(), WeaponInstance.create(DB.weapon(&"chainsaw")), position)
+		queue_free()
+		return
 	# loot: deterministic per prop, so a checkpoint restart gives the same
 	if float(absi(hash(str(cell) + kind)) % 100) / 100.0 < float(DEFS[kind].loot):
 		var l := LootPickup.new()
@@ -86,6 +93,9 @@ func _break(dir: Vector2) -> void:
 		l.position = position
 		get_parent().add_child.call_deferred(l)
 	queue_free()
+
+static func chainsaw_stash(prop_kind: String, prop_cell: Vector2i, location_id: String) -> bool:
+	return prop_kind == "crate" and absi(hash(location_id + str(prop_cell) + "maintenance_saw")) % 1000 < 8
 
 func _process(delta: float) -> void:
 	if _shake > 0.0:
@@ -153,6 +163,12 @@ func _draw() -> void:
 			draw_arc(Vector2.ZERO, 4.2, 0, TAU, 16, Color(0, 0, 0, 0.35), 1.0)
 			draw_circle(Vector2(2, -2), 1.1, ink)
 			draw_circle(Vector2(-2, -2.5), 1.6, Color(1, 1, 1, 0.12))
+		"coffin":
+			var cr := PackedVector2Array([Vector2(-7, -4), Vector2(-4, -7), Vector2(4, -7), Vector2(7, -4), Vector2(7, 5), Vector2(-7, 5)])
+			draw_colored_polygon(cr, ink)
+			draw_colored_polygon(PackedVector2Array([Vector2(-6, -3), Vector2(-3, -6), Vector2(3, -6), Vector2(6, -3), Vector2(6, 4), Vector2(-6, 4)]), Color("49314c"))
+			draw_line(Vector2(0, -5), Vector2(0, 4), Color("b17a62"), 1.2)
+			draw_line(Vector2(-3, 0), Vector2(3, 0), Color("d3a06f"), 1.2)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 

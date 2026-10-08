@@ -1,0 +1,9 @@
+Built-in OpenAI image generation, 2026-10-07. Original alpha preserved.
+Candidate only: not loaded by gameplay.
+
+Prompt:
+Use case: stylized-concept. Asset type: small transparent top-down game sprite, crownless intact palm trunk seen directly from overhead after the leafy crown was destroyed, for a highly polished dark 1980s neon-noir pixel-art action game. Show ONLY the small irregular round top of an upright intact palm trunk: layered rough brown fibrous leaf-base scars around its circumference, interlocking tan and umber ridges, tiny broken dry petiole stubs and a dark recessed central growing heart. Detailed textured old palm bark, natural asymmetric silhouette. NOT a freshly cut log: no concentric saw-cut wood rings, no flat saw-cut disk. NOT a stump on the ground: no roots, no soil, no grass, no detached wood, no side elevation, no full tall tree. No green fronds, no leaf canopy, no fire, no smoke, no glowing embers; trunk itself has not burned. Restrained warm beige upper-left light and cool dark lower-right shading, hand-painted finely pixelated videogame detail that remains readable at 12-16 game pixels. Subject centered with generous fully transparent margins on all sides. Genuine transparent alpha, no background, no baked ground shadow, no text. This asset replaces a plain brown circle after foliage disappears and must read as intact bark rather than a coin.
+
+Initial visual review: overhead fibrous palm crown heart with irregular bark and broken dry leaf-base stubs; no flames or green crown. Must still verify alpha, scale and readability in the real post-fire scene before approval. It is not a final approved trunk remnant.
+
+Promoted unchanged to assets/art/vfx/palm_trunk_top_v1.png after actual M01 GPU review at game scale, including lateburn and finished phases.

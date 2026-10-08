@@ -1,0 +1,36 @@
+{
+  "scope": "Shared direct-GLTF material preparation on five existing cast models; mipmaps and filtering assertions, no animation or gameplay validation",
+  "cases": [
+    {
+      "model": "cass",
+      "source_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba",
+      "passed": true,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nOpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU\n\nPrepared runtime material textures: 2\n"
+    },
+    {
+      "model": "guard",
+      "source_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c",
+      "passed": true,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nOpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU\n\nPrepared runtime material textures: 1\n"
+    },
+    {
+      "model": "bellhop",
+      "source_sha256": "1d7e6eaf41593a5a6fcef3fd41002025cee67d4fa8aba802fbe2bc9a6b4ee42a",
+      "passed": true,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nOpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU\n\nPrepared runtime material textures: 1\n"
+    },
+    {
+      "model": "civilian",
+      "source_sha256": "1cafbe093730bef265cbc2a184a11dd3fe06e4d4be62fea1d23d6f42ebb97829",
+      "passed": true,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nOpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU\n\nPrepared runtime material textures: 1\n"
+    },
+    {
+      "model": "zombie",
+      "source_sha256": "1b55f6cd12059033271b73d8dfd4d4abf40e06c704b613abb6bab3078eb8c722",
+      "passed": true,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nOpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU\n\nPrepared runtime material textures: 1\n"
+    }
+  ],
+  "all_passed": true
+}

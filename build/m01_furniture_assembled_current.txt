@@ -1,0 +1,59 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+[level] prewarmed 24 looks in 2312 ms
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/layout_reconstruction_v1/wall_layer_candidate_v6.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/m01_wall_candidate.gd:12)
+       [1] _ready (res://tools/m01_native_bed_review.gd:28)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_000.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:280)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_000.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:280)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+WARNING: Loaded resource as image file, this will not work on export: 'res://assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/bed_090.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/m01_native_bed_review.gd:355)
+M01 BED REVIEW: 10 coherent beds; uniform scale; original solid colliders retained
+M01 NIGHTSTAND REVIEW: 21 coherent cabinets with solid footprints, original drawings removed before baking

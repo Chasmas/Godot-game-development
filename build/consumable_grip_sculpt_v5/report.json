@@ -1,0 +1,6 @@
+{
+  "approved": false,
+  "modified_vertices": 5109,
+  "uvs_preserved_after_subdivision": true,
+  "scope": "Static review candidate; hand-only subdivision interpolates source UVs and weights. Finger/prop fit and action-specific playback remain unvalidated."
+}

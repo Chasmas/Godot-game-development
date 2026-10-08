@@ -1,0 +1,51 @@
+{
+  "character": "civilian_8",
+  "height_m": 1.66,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\civilian_8_turnaround.png",
+  "source_sha256": "8b221e4a005bcc05cdc785a5d9addb44dd002516000dd1281e91611ac1460a62",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        450,
+        1024
+      ],
+      "width": 450,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_8\\references\\front.png",
+      "sha256": "70e91a0267a8a0a1ad8d00c99d7124721356eae1a8b028d7a7878c5a078264b7"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        460,
+        0,
+        705,
+        1024
+      ],
+      "width": 245,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_8\\references\\side.png",
+      "sha256": "1cd1856ffc20ba8b60fbaa86ccf0f5d29c8da44f08450c2f61d7f094951c8f4e"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        715,
+        0,
+        1175,
+        1024
+      ],
+      "width": 460,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_8\\references\\back.png",
+      "sha256": "46f0d0497ff5f2cd4a2fa9e4b283b5f999eaf76f160f7af6c73e1120fbad9991"
+    }
+  ],
+  "visual_review": "Original turnaround and all three saved views directly inspected. Complete isolated figures; no adjacent fragments or clipped head, hands or feet. Input approval only; no model or runtime approval."
+}

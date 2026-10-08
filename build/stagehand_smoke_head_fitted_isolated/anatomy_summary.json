@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/stagehand_smoke_head_fitted_isolated/stagehand.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.00019411478623683207,
+    "Hips": 0.0,
+    "LeftArm": 0.00016482278600669014,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00025779762870322434,
+    "LeftHand": 9.516978645511697e-06,
+    "Neck": 0.0,
+    "RightArm": 0.00016484571596560773,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.019964920018720553,
+    "RightHand": 0.015345453782178449
+  },
+  "loop_gap_m": {
+    "Head": 0.000247249034722258,
+    "Hips": 0.0,
+    "LeftArm": 0.00021003366372252829,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00021439775190739086,
+    "LeftHand": 2.230201588665094e-07,
+    "Neck": 0.0,
+    "RightArm": 0.00020987069027709196,
+    "RightFoot": 0.0,
+    "RightForeArm": 4.7983219879507855e-05,
+    "RightHand": 1.2013700199423292e-07
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.1942394971847501,
+  "contact_hand_minus_head_m": [
+    -0.035011053085330035,
+    -0.03499317169189009
+  ]
+}

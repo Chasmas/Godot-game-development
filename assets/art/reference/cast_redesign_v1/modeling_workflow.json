@@ -1,0 +1,37 @@
+{
+  "phase": "Cass pilot generated; Blender surface cleanup and visual comparison in progress",
+  "prerequisite": "Finish all concept entries, present consolidated gallery, inspect references; then begin Blender work.",
+  "references": [
+    "https://docs.meshy.ai/en/api/multi-image-to-3d",
+    "https://help.meshy.ai/en/articles/9996860-how-to-use-meshy-image-to-3d"
+  ],
+  "reference_preparation": "Separate front, profile and back into individual reference images in Blender. Never submit a full sheet containing three figures as one subject. Preserve source originals. Review every crop for complete hands, head and feet.",
+  "meshy_candidate_parameters": {
+    "target_formats": [
+      "glb"
+    ],
+    "enable_pbr": true,
+    "should_texture": true,
+    "ai_model": "meshy-7.1",
+    "multi_view_thumbnails": true,
+    "endpoint": "/v1/multi-image-to-3d",
+    "image_enhancement": false,
+    "remove_lighting": true,
+    "texture_resolution": "4k",
+    "pose_mode": "a-pose"
+  },
+  "generation_policy": "Persist unique task IDs and exact source hashes in a separate redesign output folder. Poll existing task; do not resubmit for observation timeouts. Review one coherent candidate in Blender before applying a paid batch to the remaining cast.",
+  "blender_requirements": [
+    "Preserve face/body/clothing identity across living, undead, dialogue and FMV versions.",
+    "Inspect head, hands, fingers, limb lengths, garment topology and material seams.",
+    "Author facial controls for mouth, blinking and expressions; avoid a rigid talking portrait.",
+    "Rig shared animation conventions while retaining different body builds and clothing silhouettes.",
+    "Correct gun and melee grips using both hands and contact poses; no arbitrary appended arm.",
+    "Use separate undead materials and authored poses; prohibit cigarettes for undead and demons.",
+    "Keep interactive collision bodies and gameplay input independent from visual reference art."
+  ],
+  "validation": "Actual Godot gameplay camera, all directions and full clips; run at 16:9 and 3840x2160, inspect hands, weapon contacts, movement foot sliding, seated poses, silhouettes, frame timing and performance. Concept image or task success is not runtime approval.",
+  "runtime_replacements": false,
+  "pilot_task_id": "01a118f8-980b-7034-ad04-4705b30ce212",
+  "pilot_findings": "One static mesh, no armature. Base color and normal maps4096x4096, packed material map2048x2048. Red jacket/face/body recognizable, but hair and collar artifacts need cleanup; not runtime approved."
+}

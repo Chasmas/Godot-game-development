@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "reviewed_frames": [
+    "godot_frames/idle_000.png",
+    "godot_frames/idle_006.png",
+    "godot_frames/idle_012.png"
+  ],
+  "findings": [
+    "GPU captures preserve the standing-to-walk silhouette",
+    "Direct interpolation of ankle targets moves supported paws along the floor; this is not a satisfactory authored first step",
+    "Shoulder folding remains visible"
+  ],
+  "next_work": [
+    "Author sequential paw lift, swing and touchdown instead of simultaneous target interpolation",
+    "Couple body travel and planted world-space contacts",
+    "Review bridge endpoint against walk frame 1"
+  ],
+  "scope": "Three GPU frames inspected; bridge remains unapproved"
+}

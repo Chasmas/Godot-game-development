@@ -1,0 +1,67 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Walk sequence preview at 15fps; no gait or gameplay approval",
+  "probes": [
+    {
+      "render": "walk_001.png",
+      "frame": 1
+    },
+    {
+      "render": "walk_003.png",
+      "frame": 3
+    },
+    {
+      "render": "walk_005.png",
+      "frame": 5
+    },
+    {
+      "render": "walk_007.png",
+      "frame": 7
+    },
+    {
+      "render": "walk_009.png",
+      "frame": 9
+    },
+    {
+      "render": "walk_011.png",
+      "frame": 11
+    },
+    {
+      "render": "walk_013.png",
+      "frame": 13
+    },
+    {
+      "render": "walk_015.png",
+      "frame": 15
+    },
+    {
+      "render": "walk_017.png",
+      "frame": 17
+    },
+    {
+      "render": "walk_019.png",
+      "frame": 19
+    },
+    {
+      "render": "walk_021.png",
+      "frame": 21
+    },
+    {
+      "render": "walk_023.png",
+      "frame": 23
+    },
+    {
+      "render": "walk_025.png",
+      "frame": 25
+    },
+    {
+      "render": "walk_027.png",
+      "frame": 27
+    },
+    {
+      "render": "walk_029.png",
+      "frame": 29
+    }
+  ]
+}

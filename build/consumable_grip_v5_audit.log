@@ -1,0 +1,5 @@
+00:01.703  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\consumable_grip_sculpt_v5\guard_grip.blend"
+GRIP_MESH_AUDIT {"approved": false, "scope": "Static native evaluated full-body versus actual can meshes; bidirectional edge-triangle crossings. Coplanar contacts and animated state transitions remain unvalidated.", "hand_triangles": 32342, "can_triangles": 22244, "bvh_candidate_pairs": 0, "surface_crossing_pairs": 0, "strong_hand_vertices_inside_cylinder": 0}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

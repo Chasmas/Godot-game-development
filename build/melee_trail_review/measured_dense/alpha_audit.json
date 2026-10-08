@@ -1,0 +1,5122 @@
+[
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\002.png",
+    "bbox": [
+      183,
+      89,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\003.png",
+    "bbox": [
+      183,
+      84,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\004.png",
+    "bbox": [
+      183,
+      78,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\005.png",
+    "bbox": [
+      181,
+      72,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\006.png",
+    "bbox": [
+      178,
+      66,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\007.png",
+    "bbox": [
+      173,
+      60,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\008.png",
+    "bbox": [
+      168,
+      54,
+      190,
+      95
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\009.png",
+    "bbox": [
+      161,
+      50,
+      189,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\010.png",
+    "bbox": [
+      155,
+      47,
+      188,
+      90
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\011.png",
+    "bbox": [
+      148,
+      44,
+      187,
+      85
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\012.png",
+    "bbox": [
+      143,
+      43,
+      186,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\013.png",
+    "bbox": [
+      140,
+      42,
+      183,
+      73
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\014.png",
+    "bbox": [
+      138,
+      41,
+      180,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\015.png",
+    "bbox": [
+      137,
+      41,
+      175,
+      61
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\016.png",
+    "bbox": [
+      137,
+      40,
+      169,
+      56
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\017.png",
+    "bbox": [
+      136,
+      39,
+      162,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\018.png",
+    "bbox": [
+      136,
+      38,
+      156,
+      48
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\019.png",
+    "bbox": [
+      135,
+      37,
+      150,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\020.png",
+    "bbox": [
+      136,
+      37,
+      153,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\021.png",
+    "bbox": [
+      136,
+      37,
+      158,
+      45
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\022.png",
+    "bbox": [
+      137,
+      37,
+      163,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\023.png",
+    "bbox": [
+      137,
+      37,
+      169,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\024.png",
+    "bbox": [
+      138,
+      37,
+      174,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\025.png",
+    "bbox": [
+      140,
+      38,
+      179,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\026.png",
+    "bbox": [
+      143,
+      39,
+      183,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\027.png",
+    "bbox": [
+      148,
+      39,
+      186,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\028.png",
+    "bbox": [
+      152,
+      41,
+      188,
+      76
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\029.png",
+    "bbox": [
+      157,
+      42,
+      190,
+      82
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\030.png",
+    "bbox": [
+      162,
+      44,
+      191,
+      88
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\031.png",
+    "bbox": [
+      167,
+      47,
+      191,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\032.png",
+    "bbox": [
+      173,
+      52,
+      192,
+      100
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\033.png",
+    "bbox": [
+      178,
+      57,
+      192,
+      104
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\034.png",
+    "bbox": [
+      182,
+      63,
+      192,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\035.png",
+    "bbox": [
+      181,
+      68,
+      192,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\036.png",
+    "bbox": [
+      180,
+      74,
+      192,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\037.png",
+    "bbox": [
+      179,
+      80,
+      191,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\038.png",
+    "bbox": [
+      178,
+      87,
+      190,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\039.png",
+    "bbox": [
+      178,
+      93,
+      189,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\040.png",
+    "bbox": [
+      178,
+      98,
+      188,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\041.png",
+    "bbox": [
+      177,
+      103,
+      186,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\042.png",
+    "bbox": [
+      176,
+      106,
+      184,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\043.png",
+    "bbox": [
+      176,
+      108,
+      183,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\044.png",
+    "bbox": [
+      176,
+      108,
+      182,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\045.png",
+    "bbox": [
+      176,
+      107,
+      183,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\046.png",
+    "bbox": [
+      176,
+      106,
+      183,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\047.png",
+    "bbox": [
+      176,
+      106,
+      183,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\048.png",
+    "bbox": [
+      177,
+      105,
+      183,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\049.png",
+    "bbox": [
+      177,
+      104,
+      184,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\050.png",
+    "bbox": [
+      177,
+      103,
+      184,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\051.png",
+    "bbox": [
+      178,
+      102,
+      185,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\052.png",
+    "bbox": [
+      178,
+      101,
+      185,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\053.png",
+    "bbox": [
+      178,
+      100,
+      186,
+      109
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\054.png",
+    "bbox": [
+      179,
+      99,
+      186,
+      108
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\055.png",
+    "bbox": [
+      179,
+      98,
+      187,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\056.png",
+    "bbox": [
+      180,
+      97,
+      187,
+      106
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\057.png",
+    "bbox": [
+      180,
+      96,
+      188,
+      106
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\058.png",
+    "bbox": [
+      181,
+      95,
+      188,
+      105
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\059.png",
+    "bbox": [
+      181,
+      94,
+      188,
+      103
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\060.png",
+    "bbox": [
+      182,
+      94,
+      189,
+      103
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\061.png",
+    "bbox": [
+      182,
+      94,
+      189,
+      101
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\062.png",
+    "bbox": [
+      182,
+      93,
+      189,
+      101
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\063.png",
+    "bbox": [
+      182,
+      93,
+      189,
+      99
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\0\\064.png",
+    "bbox": [
+      183,
+      92,
+      189,
+      99
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\002.png",
+    "bbox": [
+      80,
+      122,
+      86,
+      128
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\003.png",
+    "bbox": [
+      80,
+      122,
+      89,
+      131
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\004.png",
+    "bbox": [
+      80,
+      122,
+      94,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\005.png",
+    "bbox": [
+      80,
+      122,
+      100,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\006.png",
+    "bbox": [
+      80,
+      123,
+      107,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\007.png",
+    "bbox": [
+      80,
+      123,
+      115,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\008.png",
+    "bbox": [
+      80,
+      123,
+      124,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\009.png",
+    "bbox": [
+      81,
+      124,
+      132,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\010.png",
+    "bbox": [
+      84,
+      126,
+      138,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\011.png",
+    "bbox": [
+      88,
+      129,
+      145,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\012.png",
+    "bbox": [
+      92,
+      126,
+      149,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\013.png",
+    "bbox": [
+      99,
+      124,
+      152,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\014.png",
+    "bbox": [
+      107,
+      123,
+      154,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\015.png",
+    "bbox": [
+      115,
+      122,
+      155,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\016.png",
+    "bbox": [
+      123,
+      121,
+      155,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\017.png",
+    "bbox": [
+      131,
+      121,
+      156,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\018.png",
+    "bbox": [
+      138,
+      121,
+      157,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\019.png",
+    "bbox": [
+      144,
+      121,
+      157,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\020.png",
+    "bbox": [
+      143,
+      121,
+      157,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\021.png",
+    "bbox": [
+      138,
+      122,
+      157,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\022.png",
+    "bbox": [
+      133,
+      122,
+      157,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\023.png",
+    "bbox": [
+      127,
+      123,
+      156,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\024.png",
+    "bbox": [
+      121,
+      124,
+      156,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\025.png",
+    "bbox": [
+      113,
+      125,
+      155,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\026.png",
+    "bbox": [
+      106,
+      128,
+      152,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\027.png",
+    "bbox": [
+      99,
+      130,
+      149,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\028.png",
+    "bbox": [
+      93,
+      132,
+      145,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\029.png",
+    "bbox": [
+      87,
+      129,
+      140,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\030.png",
+    "bbox": [
+      83,
+      125,
+      135,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\031.png",
+    "bbox": [
+      79,
+      121,
+      128,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\032.png",
+    "bbox": [
+      75,
+      116,
+      121,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\033.png",
+    "bbox": [
+      73,
+      112,
+      114,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\034.png",
+    "bbox": [
+      72,
+      108,
+      107,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\035.png",
+    "bbox": [
+      71,
+      106,
+      100,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\036.png",
+    "bbox": [
+      70,
+      104,
+      95,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\037.png",
+    "bbox": [
+      69,
+      103,
+      89,
+      131
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\038.png",
+    "bbox": [
+      69,
+      102,
+      84,
+      127
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\039.png",
+    "bbox": [
+      68,
+      102,
+      80,
+      122
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\040.png",
+    "bbox": [
+      68,
+      101,
+      77,
+      118
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\041.png",
+    "bbox": [
+      68,
+      101,
+      75,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\042.png",
+    "bbox": [
+      68,
+      100,
+      75,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\043.png",
+    "bbox": [
+      69,
+      100,
+      75,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\044.png",
+    "bbox": [
+      69,
+      100,
+      75,
+      106
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\045.png",
+    "bbox": [
+      69,
+      100,
+      76,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\046.png",
+    "bbox": [
+      69,
+      101,
+      76,
+      108
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\047.png",
+    "bbox": [
+      69,
+      101,
+      76,
+      109
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\048.png",
+    "bbox": [
+      70,
+      102,
+      76,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\049.png",
+    "bbox": [
+      70,
+      102,
+      77,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\050.png",
+    "bbox": [
+      70,
+      103,
+      77,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\051.png",
+    "bbox": [
+      70,
+      104,
+      78,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\052.png",
+    "bbox": [
+      71,
+      104,
+      78,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\053.png",
+    "bbox": [
+      71,
+      105,
+      78,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\054.png",
+    "bbox": [
+      72,
+      106,
+      79,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\055.png",
+    "bbox": [
+      72,
+      107,
+      79,
+      118
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\056.png",
+    "bbox": [
+      72,
+      108,
+      80,
+      119
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\057.png",
+    "bbox": [
+      73,
+      109,
+      80,
+      120
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\058.png",
+    "bbox": [
+      73,
+      110,
+      81,
+      121
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\059.png",
+    "bbox": [
+      74,
+      111,
+      82,
+      122
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\060.png",
+    "bbox": [
+      75,
+      112,
+      82,
+      122
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\061.png",
+    "bbox": [
+      75,
+      114,
+      82,
+      123
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\062.png",
+    "bbox": [
+      76,
+      115,
+      83,
+      123
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\063.png",
+    "bbox": [
+      76,
+      116,
+      83,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\135\\064.png",
+    "bbox": [
+      77,
+      117,
+      84,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\002.png",
+    "bbox": [
+      66,
+      82,
+      73,
+      88
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\003.png",
+    "bbox": [
+      66,
+      82,
+      73,
+      92
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\004.png",
+    "bbox": [
+      66,
+      82,
+      73,
+      98
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\005.png",
+    "bbox": [
+      66,
+      82,
+      75,
+      104
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\006.png",
+    "bbox": [
+      66,
+      82,
+      78,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\007.png",
+    "bbox": [
+      66,
+      82,
+      83,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\008.png",
+    "bbox": [
+      66,
+      82,
+      88,
+      122
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\009.png",
+    "bbox": [
+      67,
+      83,
+      95,
+      126
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\010.png",
+    "bbox": [
+      68,
+      86,
+      101,
+      129
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\011.png",
+    "bbox": [
+      69,
+      91,
+      107,
+      131
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\012.png",
+    "bbox": [
+      70,
+      96,
+      112,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\013.png",
+    "bbox": [
+      73,
+      102,
+      116,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\014.png",
+    "bbox": [
+      76,
+      108,
+      118,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\015.png",
+    "bbox": [
+      81,
+      115,
+      118,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\016.png",
+    "bbox": [
+      87,
+      120,
+      119,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\017.png",
+    "bbox": [
+      94,
+      124,
+      120,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\018.png",
+    "bbox": [
+      100,
+      127,
+      120,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\019.png",
+    "bbox": [
+      106,
+      127,
+      121,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\020.png",
+    "bbox": [
+      103,
+      128,
+      120,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\021.png",
+    "bbox": [
+      98,
+      128,
+      120,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\022.png",
+    "bbox": [
+      92,
+      126,
+      119,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\023.png",
+    "bbox": [
+      87,
+      123,
+      118,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\024.png",
+    "bbox": [
+      82,
+      120,
+      118,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\025.png",
+    "bbox": [
+      77,
+      114,
+      116,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\026.png",
+    "bbox": [
+      73,
+      109,
+      113,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\027.png",
+    "bbox": [
+      70,
+      103,
+      109,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\028.png",
+    "bbox": [
+      68,
+      97,
+      104,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\029.png",
+    "bbox": [
+      66,
+      90,
+      99,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\030.png",
+    "bbox": [
+      65,
+      84,
+      94,
+      128
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\031.png",
+    "bbox": [
+      65,
+      79,
+      88,
+      125
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\032.png",
+    "bbox": [
+      64,
+      74,
+      83,
+      121
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\033.png",
+    "bbox": [
+      64,
+      69,
+      79,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\034.png",
+    "bbox": [
+      64,
+      65,
+      74,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\035.png",
+    "bbox": [
+      64,
+      63,
+      75,
+      104
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\036.png",
+    "bbox": [
+      64,
+      61,
+      76,
+      97
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\037.png",
+    "bbox": [
+      65,
+      60,
+      77,
+      91
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\038.png",
+    "bbox": [
+      66,
+      59,
+      78,
+      85
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\039.png",
+    "bbox": [
+      67,
+      59,
+      78,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\040.png",
+    "bbox": [
+      68,
+      58,
+      78,
+      75
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\041.png",
+    "bbox": [
+      70,
+      58,
+      79,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\042.png",
+    "bbox": [
+      72,
+      58,
+      80,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\043.png",
+    "bbox": [
+      73,
+      58,
+      80,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\044.png",
+    "bbox": [
+      74,
+      58,
+      80,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\045.png",
+    "bbox": [
+      73,
+      58,
+      80,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\046.png",
+    "bbox": [
+      73,
+      59,
+      80,
+      66
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\047.png",
+    "bbox": [
+      73,
+      60,
+      80,
+      66
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\048.png",
+    "bbox": [
+      73,
+      60,
+      79,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\049.png",
+    "bbox": [
+      72,
+      60,
+      79,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\050.png",
+    "bbox": [
+      72,
+      61,
+      79,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\051.png",
+    "bbox": [
+      71,
+      61,
+      79,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\052.png",
+    "bbox": [
+      71,
+      62,
+      78,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\053.png",
+    "bbox": [
+      70,
+      63,
+      78,
+      73
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\054.png",
+    "bbox": [
+      70,
+      64,
+      77,
+      75
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\055.png",
+    "bbox": [
+      69,
+      65,
+      77,
+      76
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\056.png",
+    "bbox": [
+      69,
+      66,
+      76,
+      77
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\057.png",
+    "bbox": [
+      68,
+      67,
+      76,
+      78
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\058.png",
+    "bbox": [
+      68,
+      68,
+      75,
+      79
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\059.png",
+    "bbox": [
+      68,
+      69,
+      75,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\060.png",
+    "bbox": [
+      67,
+      70,
+      74,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\061.png",
+    "bbox": [
+      67,
+      72,
+      74,
+      82
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\062.png",
+    "bbox": [
+      67,
+      73,
+      74,
+      82
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\063.png",
+    "bbox": [
+      67,
+      74,
+      74,
+      83
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\180\\064.png",
+    "bbox": [
+      67,
+      75,
+      73,
+      83
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\002.png",
+    "bbox": [
+      87,
+      43,
+      93,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\003.png",
+    "bbox": [
+      85,
+      43,
+      93,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\004.png",
+    "bbox": [
+      81,
+      44,
+      93,
+      57
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\005.png",
+    "bbox": [
+      79,
+      44,
+      93,
+      63
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\006.png",
+    "bbox": [
+      77,
+      44,
+      93,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\007.png",
+    "bbox": [
+      75,
+      44,
+      93,
+      78
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\008.png",
+    "bbox": [
+      74,
+      44,
+      93,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\009.png",
+    "bbox": [
+      73,
+      45,
+      92,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\010.png",
+    "bbox": [
+      73,
+      47,
+      89,
+      100
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\011.png",
+    "bbox": [
+      73,
+      51,
+      86,
+      105
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\012.png",
+    "bbox": [
+      72,
+      55,
+      86,
+      109
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\013.png",
+    "bbox": [
+      73,
+      62,
+      88,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\014.png",
+    "bbox": [
+      73,
+      69,
+      89,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\015.png",
+    "bbox": [
+      74,
+      77,
+      90,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\016.png",
+    "bbox": [
+      75,
+      85,
+      90,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\017.png",
+    "bbox": [
+      76,
+      92,
+      91,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\018.png",
+    "bbox": [
+      78,
+      98,
+      91,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\019.png",
+    "bbox": [
+      79,
+      104,
+      91,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\020.png",
+    "bbox": [
+      76,
+      101,
+      90,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\021.png",
+    "bbox": [
+      74,
+      97,
+      90,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\022.png",
+    "bbox": [
+      72,
+      92,
+      88,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\023.png",
+    "bbox": [
+      70,
+      86,
+      88,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\024.png",
+    "bbox": [
+      69,
+      80,
+      87,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\025.png",
+    "bbox": [
+      68,
+      73,
+      86,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\026.png",
+    "bbox": [
+      68,
+      66,
+      83,
+      109
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\027.png",
+    "bbox": [
+      67,
+      60,
+      81,
+      106
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\028.png",
+    "bbox": [
+      67,
+      54,
+      79,
+      103
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\029.png",
+    "bbox": [
+      67,
+      48,
+      83,
+      98
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\030.png",
+    "bbox": [
+      68,
+      44,
+      88,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\031.png",
+    "bbox": [
+      68,
+      40,
+      92,
+      87
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\032.png",
+    "bbox": [
+      69,
+      37,
+      97,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\033.png",
+    "bbox": [
+      70,
+      36,
+      101,
+      74
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\034.png",
+    "bbox": [
+      72,
+      34,
+      106,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\035.png",
+    "bbox": [
+      74,
+      33,
+      109,
+      61
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\036.png",
+    "bbox": [
+      78,
+      32,
+      111,
+      55
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\037.png",
+    "bbox": [
+      82,
+      31,
+      112,
+      50
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\038.png",
+    "bbox": [
+      86,
+      31,
+      112,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\039.png",
+    "bbox": [
+      91,
+      30,
+      113,
+      42
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\040.png",
+    "bbox": [
+      96,
+      30,
+      113,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\041.png",
+    "bbox": [
+      100,
+      30,
+      114,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\042.png",
+    "bbox": [
+      104,
+      30,
+      114,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\043.png",
+    "bbox": [
+      107,
+      30,
+      114,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\044.png",
+    "bbox": [
+      108,
+      31,
+      114,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\045.png",
+    "bbox": [
+      108,
+      31,
+      114,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\046.png",
+    "bbox": [
+      107,
+      31,
+      114,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\047.png",
+    "bbox": [
+      106,
+      31,
+      113,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\048.png",
+    "bbox": [
+      105,
+      31,
+      113,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\049.png",
+    "bbox": [
+      104,
+      31,
+      112,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\050.png",
+    "bbox": [
+      103,
+      32,
+      112,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\051.png",
+    "bbox": [
+      102,
+      32,
+      111,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\052.png",
+    "bbox": [
+      100,
+      32,
+      110,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\053.png",
+    "bbox": [
+      99,
+      33,
+      110,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\054.png",
+    "bbox": [
+      98,
+      33,
+      109,
+      41
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\055.png",
+    "bbox": [
+      97,
+      34,
+      108,
+      41
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\056.png",
+    "bbox": [
+      96,
+      34,
+      107,
+      42
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\057.png",
+    "bbox": [
+      95,
+      35,
+      106,
+      43
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\058.png",
+    "bbox": [
+      94,
+      35,
+      105,
+      43
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\059.png",
+    "bbox": [
+      93,
+      36,
+      103,
+      44
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\060.png",
+    "bbox": [
+      93,
+      37,
+      102,
+      44
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\061.png",
+    "bbox": [
+      92,
+      37,
+      101,
+      45
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\062.png",
+    "bbox": [
+      91,
+      38,
+      100,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\063.png",
+    "bbox": [
+      91,
+      39,
+      99,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\225\\064.png",
+    "bbox": [
+      90,
+      39,
+      98,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\002.png",
+    "bbox": [
+      130,
+      29,
+      137,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\003.png",
+    "bbox": [
+      125,
+      29,
+      137,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\004.png",
+    "bbox": [
+      120,
+      29,
+      137,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\005.png",
+    "bbox": [
+      113,
+      29,
+      137,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\006.png",
+    "bbox": [
+      107,
+      29,
+      137,
+      41
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\007.png",
+    "bbox": [
+      100,
+      30,
+      137,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\008.png",
+    "bbox": [
+      94,
+      30,
+      137,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\009.png",
+    "bbox": [
+      89,
+      30,
+      135,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\010.png",
+    "bbox": [
+      86,
+      31,
+      131,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\011.png",
+    "bbox": [
+      83,
+      32,
+      127,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\012.png",
+    "bbox": [
+      82,
+      33,
+      121,
+      74
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\013.png",
+    "bbox": [
+      81,
+      36,
+      115,
+      77
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\014.png",
+    "bbox": [
+      80,
+      39,
+      108,
+      79
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\015.png",
+    "bbox": [
+      80,
+      45,
+      101,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\016.png",
+    "bbox": [
+      79,
+      50,
+      96,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\017.png",
+    "bbox": [
+      78,
+      57,
+      91,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\018.png",
+    "bbox": [
+      77,
+      63,
+      87,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\019.png",
+    "bbox": [
+      76,
+      68,
+      85,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\020.png",
+    "bbox": [
+      76,
+      63,
+      85,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\021.png",
+    "bbox": [
+      76,
+      58,
+      84,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\022.png",
+    "bbox": [
+      76,
+      53,
+      86,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\023.png",
+    "bbox": [
+      76,
+      48,
+      89,
+      79
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\024.png",
+    "bbox": [
+      76,
+      43,
+      93,
+      78
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\025.png",
+    "bbox": [
+      77,
+      39,
+      99,
+      76
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\026.png",
+    "bbox": [
+      78,
+      35,
+      105,
+      73
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\027.png",
+    "bbox": [
+      79,
+      32,
+      111,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\028.png",
+    "bbox": [
+      80,
+      29,
+      118,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\029.png",
+    "bbox": [
+      82,
+      28,
+      125,
+      60
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\030.png",
+    "bbox": [
+      84,
+      27,
+      131,
+      55
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\031.png",
+    "bbox": [
+      87,
+      26,
+      137,
+      50
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\032.png",
+    "bbox": [
+      92,
+      26,
+      143,
+      45
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\033.png",
+    "bbox": [
+      97,
+      26,
+      147,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\034.png",
+    "bbox": [
+      104,
+      26,
+      151,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\035.png",
+    "bbox": [
+      110,
+      26,
+      154,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\036.png",
+    "bbox": [
+      117,
+      26,
+      156,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\037.png",
+    "bbox": [
+      123,
+      27,
+      157,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\038.png",
+    "bbox": [
+      130,
+      27,
+      157,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\039.png",
+    "bbox": [
+      136,
+      29,
+      158,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\040.png",
+    "bbox": [
+      141,
+      30,
+      158,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\041.png",
+    "bbox": [
+      146,
+      31,
+      159,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\042.png",
+    "bbox": [
+      150,
+      33,
+      159,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\043.png",
+    "bbox": [
+      152,
+      34,
+      159,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\044.png",
+    "bbox": [
+      153,
+      34,
+      159,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\045.png",
+    "bbox": [
+      152,
+      33,
+      159,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\046.png",
+    "bbox": [
+      151,
+      33,
+      158,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\047.png",
+    "bbox": [
+      150,
+      33,
+      157,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\048.png",
+    "bbox": [
+      149,
+      32,
+      157,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\049.png",
+    "bbox": [
+      148,
+      32,
+      156,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\050.png",
+    "bbox": [
+      147,
+      32,
+      156,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\051.png",
+    "bbox": [
+      146,
+      31,
+      155,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\052.png",
+    "bbox": [
+      145,
+      31,
+      155,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\053.png",
+    "bbox": [
+      144,
+      31,
+      154,
+      38
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\054.png",
+    "bbox": [
+      143,
+      30,
+      153,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\055.png",
+    "bbox": [
+      141,
+      30,
+      152,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\056.png",
+    "bbox": [
+      140,
+      30,
+      151,
+      37
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\057.png",
+    "bbox": [
+      139,
+      29,
+      150,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\058.png",
+    "bbox": [
+      138,
+      29,
+      149,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\059.png",
+    "bbox": [
+      137,
+      29,
+      148,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\060.png",
+    "bbox": [
+      137,
+      29,
+      147,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\061.png",
+    "bbox": [
+      136,
+      29,
+      145,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\062.png",
+    "bbox": [
+      135,
+      29,
+      144,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\063.png",
+    "bbox": [
+      135,
+      29,
+      143,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\270\\064.png",
+    "bbox": [
+      135,
+      29,
+      142,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\002.png",
+    "bbox": [
+      171,
+      49,
+      177,
+      55
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\003.png",
+    "bbox": [
+      167,
+      46,
+      176,
+      55
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\004.png",
+    "bbox": [
+      162,
+      43,
+      176,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\005.png",
+    "bbox": [
+      156,
+      40,
+      176,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\006.png",
+    "bbox": [
+      149,
+      38,
+      176,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\007.png",
+    "bbox": [
+      141,
+      37,
+      176,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\008.png",
+    "bbox": [
+      132,
+      36,
+      176,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\009.png",
+    "bbox": [
+      124,
+      35,
+      175,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\010.png",
+    "bbox": [
+      117,
+      35,
+      172,
+      50
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\011.png",
+    "bbox": [
+      111,
+      35,
+      168,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\012.png",
+    "bbox": [
+      107,
+      35,
+      163,
+      48
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\013.png",
+    "bbox": [
+      104,
+      35,
+      157,
+      50
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\014.png",
+    "bbox": [
+      102,
+      36,
+      149,
+      51
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\015.png",
+    "bbox": [
+      101,
+      36,
+      142,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\016.png",
+    "bbox": [
+      100,
+      37,
+      133,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\017.png",
+    "bbox": [
+      100,
+      39,
+      125,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\018.png",
+    "bbox": [
+      99,
+      41,
+      118,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\019.png",
+    "bbox": [
+      99,
+      41,
+      112,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\020.png",
+    "bbox": [
+      99,
+      38,
+      113,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\021.png",
+    "bbox": [
+      99,
+      36,
+      117,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\022.png",
+    "bbox": [
+      99,
+      33,
+      123,
+      51
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\023.png",
+    "bbox": [
+      100,
+      32,
+      129,
+      50
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\024.png",
+    "bbox": [
+      100,
+      31,
+      136,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\025.png",
+    "bbox": [
+      101,
+      30,
+      143,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\026.png",
+    "bbox": [
+      104,
+      30,
+      150,
+      45
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\027.png",
+    "bbox": [
+      107,
+      29,
+      157,
+      42
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\028.png",
+    "bbox": [
+      111,
+      29,
+      163,
+      40
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\029.png",
+    "bbox": [
+      116,
+      29,
+      169,
+      43
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\030.png",
+    "bbox": [
+      121,
+      29,
+      173,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\031.png",
+    "bbox": [
+      127,
+      30,
+      177,
+      52
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\032.png",
+    "bbox": [
+      135,
+      31,
+      181,
+      56
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\033.png",
+    "bbox": [
+      142,
+      32,
+      183,
+      61
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\034.png",
+    "bbox": [
+      149,
+      33,
+      184,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\035.png",
+    "bbox": [
+      156,
+      35,
+      185,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\036.png",
+    "bbox": [
+      162,
+      38,
+      186,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\037.png",
+    "bbox": [
+      167,
+      42,
+      187,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\038.png",
+    "bbox": [
+      172,
+      46,
+      187,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\039.png",
+    "bbox": [
+      176,
+      51,
+      188,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\040.png",
+    "bbox": [
+      179,
+      55,
+      188,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\041.png",
+    "bbox": [
+      181,
+      59,
+      188,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\042.png",
+    "bbox": [
+      181,
+      63,
+      188,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\043.png",
+    "bbox": [
+      181,
+      65,
+      187,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\044.png",
+    "bbox": [
+      181,
+      66,
+      187,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\045.png",
+    "bbox": [
+      180,
+      65,
+      187,
+      72
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\046.png",
+    "bbox": [
+      180,
+      64,
+      187,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\047.png",
+    "bbox": [
+      180,
+      63,
+      187,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\048.png",
+    "bbox": [
+      180,
+      62,
+      186,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\049.png",
+    "bbox": [
+      179,
+      62,
+      186,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\050.png",
+    "bbox": [
+      179,
+      61,
+      186,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\051.png",
+    "bbox": [
+      178,
+      60,
+      186,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\052.png",
+    "bbox": [
+      178,
+      59,
+      185,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\053.png",
+    "bbox": [
+      178,
+      58,
+      185,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\054.png",
+    "bbox": [
+      177,
+      57,
+      184,
+      66
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\055.png",
+    "bbox": [
+      177,
+      56,
+      184,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\056.png",
+    "bbox": [
+      176,
+      55,
+      183,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\057.png",
+    "bbox": [
+      176,
+      54,
+      183,
+      63
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\058.png",
+    "bbox": [
+      175,
+      53,
+      182,
+      62
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\059.png",
+    "bbox": [
+      175,
+      53,
+      182,
+      61
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\060.png",
+    "bbox": [
+      174,
+      52,
+      181,
+      60
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\061.png",
+    "bbox": [
+      174,
+      52,
+      181,
+      59
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\062.png",
+    "bbox": [
+      174,
+      51,
+      180,
+      59
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\063.png",
+    "bbox": [
+      173,
+      51,
+      180,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\315\\064.png",
+    "bbox": [
+      173,
+      51,
+      179,
+      57
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\002.png",
+    "bbox": [
+      162,
+      128,
+      169,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\003.png",
+    "bbox": [
+      163,
+      124,
+      172,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\004.png",
+    "bbox": [
+      163,
+      119,
+      175,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\005.png",
+    "bbox": [
+      163,
+      113,
+      177,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\006.png",
+    "bbox": [
+      163,
+      106,
+      179,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\007.png",
+    "bbox": [
+      163,
+      98,
+      181,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\008.png",
+    "bbox": [
+      163,
+      90,
+      182,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\009.png",
+    "bbox": [
+      164,
+      83,
+      183,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\010.png",
+    "bbox": [
+      167,
+      76,
+      183,
+      129
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\011.png",
+    "bbox": [
+      170,
+      70,
+      183,
+      126
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\012.png",
+    "bbox": [
+      170,
+      66,
+      183,
+      120
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\013.png",
+    "bbox": [
+      168,
+      63,
+      183,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\014.png",
+    "bbox": [
+      167,
+      61,
+      183,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\015.png",
+    "bbox": [
+      166,
+      60,
+      182,
+      99
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\016.png",
+    "bbox": [
+      166,
+      59,
+      181,
+      91
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\017.png",
+    "bbox": [
+      165,
+      59,
+      180,
+      84
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\018.png",
+    "bbox": [
+      165,
+      58,
+      178,
+      77
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\019.png",
+    "bbox": [
+      165,
+      58,
+      177,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\020.png",
+    "bbox": [
+      166,
+      58,
+      180,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\021.png",
+    "bbox": [
+      166,
+      58,
+      182,
+      75
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\022.png",
+    "bbox": [
+      167,
+      58,
+      184,
+      80
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\023.png",
+    "bbox": [
+      168,
+      59,
+      186,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\024.png",
+    "bbox": [
+      169,
+      59,
+      187,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\025.png",
+    "bbox": [
+      170,
+      60,
+      188,
+      100
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\026.png",
+    "bbox": [
+      173,
+      63,
+      188,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\027.png",
+    "bbox": [
+      175,
+      66,
+      189,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\028.png",
+    "bbox": [
+      177,
+      70,
+      189,
+      118
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\029.png",
+    "bbox": [
+      173,
+      74,
+      188,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\030.png",
+    "bbox": [
+      168,
+      79,
+      188,
+      129
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\031.png",
+    "bbox": [
+      164,
+      85,
+      188,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\032.png",
+    "bbox": [
+      159,
+      92,
+      187,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\033.png",
+    "bbox": [
+      154,
+      99,
+      186,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\034.png",
+    "bbox": [
+      150,
+      106,
+      184,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\035.png",
+    "bbox": [
+      147,
+      111,
+      182,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\036.png",
+    "bbox": [
+      145,
+      117,
+      178,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\037.png",
+    "bbox": [
+      144,
+      122,
+      175,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\038.png",
+    "bbox": [
+      144,
+      127,
+      170,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\039.png",
+    "bbox": [
+      143,
+      131,
+      165,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\040.png",
+    "bbox": [
+      143,
+      134,
+      160,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\041.png",
+    "bbox": [
+      142,
+      136,
+      156,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\042.png",
+    "bbox": [
+      142,
+      136,
+      152,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\043.png",
+    "bbox": [
+      141,
+      135,
+      149,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\044.png",
+    "bbox": [
+      141,
+      135,
+      148,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\045.png",
+    "bbox": [
+      142,
+      135,
+      148,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\046.png",
+    "bbox": [
+      142,
+      135,
+      149,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\047.png",
+    "bbox": [
+      143,
+      134,
+      150,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\048.png",
+    "bbox": [
+      143,
+      134,
+      151,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\049.png",
+    "bbox": [
+      144,
+      134,
+      152,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\050.png",
+    "bbox": [
+      144,
+      133,
+      153,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\051.png",
+    "bbox": [
+      145,
+      133,
+      154,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\052.png",
+    "bbox": [
+      146,
+      133,
+      156,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\053.png",
+    "bbox": [
+      146,
+      132,
+      157,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\054.png",
+    "bbox": [
+      147,
+      132,
+      158,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\055.png",
+    "bbox": [
+      148,
+      131,
+      159,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\056.png",
+    "bbox": [
+      149,
+      131,
+      160,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\057.png",
+    "bbox": [
+      150,
+      131,
+      161,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\058.png",
+    "bbox": [
+      151,
+      130,
+      162,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\059.png",
+    "bbox": [
+      153,
+      130,
+      163,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\060.png",
+    "bbox": [
+      154,
+      130,
+      163,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\061.png",
+    "bbox": [
+      155,
+      129,
+      164,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\062.png",
+    "bbox": [
+      156,
+      129,
+      164,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\063.png",
+    "bbox": [
+      157,
+      129,
+      165,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\45\\064.png",
+    "bbox": [
+      158,
+      129,
+      165,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\000.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\001.png",
+    "bbox": null,
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\002.png",
+    "bbox": [
+      119,
+      141,
+      126,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\003.png",
+    "bbox": [
+      119,
+      141,
+      131,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\004.png",
+    "bbox": [
+      119,
+      140,
+      137,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\005.png",
+    "bbox": [
+      119,
+      138,
+      143,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\006.png",
+    "bbox": [
+      119,
+      135,
+      149,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\007.png",
+    "bbox": [
+      119,
+      130,
+      156,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\008.png",
+    "bbox": [
+      119,
+      125,
+      162,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\009.png",
+    "bbox": [
+      121,
+      118,
+      167,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\010.png",
+    "bbox": [
+      125,
+      112,
+      170,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\011.png",
+    "bbox": [
+      130,
+      106,
+      173,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\012.png",
+    "bbox": [
+      135,
+      100,
+      174,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\013.png",
+    "bbox": [
+      142,
+      97,
+      175,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\014.png",
+    "bbox": [
+      148,
+      95,
+      176,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\015.png",
+    "bbox": [
+      155,
+      94,
+      176,
+      131
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\016.png",
+    "bbox": [
+      161,
+      93,
+      177,
+      126
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\017.png",
+    "bbox": [
+      165,
+      92,
+      178,
+      120
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\018.png",
+    "bbox": [
+      169,
+      92,
+      179,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\019.png",
+    "bbox": [
+      171,
+      92,
+      180,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\020.png",
+    "bbox": [
+      171,
+      92,
+      180,
+      109
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\021.png",
+    "bbox": [
+      172,
+      92,
+      180,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\022.png",
+    "bbox": [
+      170,
+      93,
+      180,
+      119
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\023.png",
+    "bbox": [
+      167,
+      94,
+      180,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\024.png",
+    "bbox": [
+      163,
+      95,
+      180,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\025.png",
+    "bbox": [
+      157,
+      96,
+      179,
+      134
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\026.png",
+    "bbox": [
+      151,
+      99,
+      178,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\027.png",
+    "bbox": [
+      145,
+      103,
+      177,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\028.png",
+    "bbox": [
+      139,
+      108,
+      176,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\029.png",
+    "bbox": [
+      132,
+      113,
+      174,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\030.png",
+    "bbox": [
+      125,
+      118,
+      172,
+      145
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\031.png",
+    "bbox": [
+      119,
+      123,
+      169,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\032.png",
+    "bbox": [
+      113,
+      128,
+      164,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\033.png",
+    "bbox": [
+      109,
+      133,
+      159,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\034.png",
+    "bbox": [
+      104,
+      136,
+      152,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\035.png",
+    "bbox": [
+      102,
+      137,
+      146,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\036.png",
+    "bbox": [
+      100,
+      136,
+      139,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\037.png",
+    "bbox": [
+      99,
+      135,
+      133,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\038.png",
+    "bbox": [
+      99,
+      134,
+      126,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\039.png",
+    "bbox": [
+      98,
+      134,
+      120,
+      145
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\040.png",
+    "bbox": [
+      97,
+      134,
+      114,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\041.png",
+    "bbox": [
+      97,
+      133,
+      110,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\042.png",
+    "bbox": [
+      97,
+      132,
+      106,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\043.png",
+    "bbox": [
+      97,
+      132,
+      104,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\044.png",
+    "bbox": [
+      97,
+      132,
+      103,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\045.png",
+    "bbox": [
+      97,
+      132,
+      104,
+      138
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\046.png",
+    "bbox": [
+      98,
+      132,
+      105,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\047.png",
+    "bbox": [
+      99,
+      132,
+      106,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\048.png",
+    "bbox": [
+      99,
+      133,
+      107,
+      139
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\049.png",
+    "bbox": [
+      99,
+      133,
+      108,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\050.png",
+    "bbox": [
+      100,
+      133,
+      109,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\051.png",
+    "bbox": [
+      101,
+      134,
+      110,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\052.png",
+    "bbox": [
+      101,
+      134,
+      111,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\053.png",
+    "bbox": [
+      102,
+      134,
+      112,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\054.png",
+    "bbox": [
+      103,
+      135,
+      114,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\055.png",
+    "bbox": [
+      104,
+      135,
+      115,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\056.png",
+    "bbox": [
+      105,
+      136,
+      116,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\057.png",
+    "bbox": [
+      106,
+      136,
+      117,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\058.png",
+    "bbox": [
+      107,
+      137,
+      118,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\059.png",
+    "bbox": [
+      108,
+      137,
+      119,
+      145
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\060.png",
+    "bbox": [
+      109,
+      138,
+      119,
+      145
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\061.png",
+    "bbox": [
+      110,
+      138,
+      120,
+      145
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\062.png",
+    "bbox": [
+      112,
+      139,
+      121,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\063.png",
+    "bbox": [
+      113,
+      139,
+      121,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured_dense\\bat\\90\\064.png",
+    "bbox": [
+      114,
+      139,
+      122,
+      146
+    ],
+    "clipped": false
+  }
+]

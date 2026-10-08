@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "scope": "Seated entry continuity, foot support during rise, slower authored car_exit; 33 other clips preserved. Foot planting and hand/door interaction need further choreography.",
+  "baseline_sha256": "63d8f66c465eeb7fd5557d4868ad7a110d96b38056dea5e11778f2979feeadcf",
+  "integrated_sha256": "5255554f2f0d44c0e1c5e4cd328b7e4c438c593b59aa7857d72c4962284d0ba0",
+  "anatomy_review": "build/car_exit_review/grounded_lengths_anatomy.json",
+  "actual_level_review": "build/car_exit_review/grounded_arrival"
+}

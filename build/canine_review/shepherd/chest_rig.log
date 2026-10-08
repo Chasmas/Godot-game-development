@@ -1,0 +1,9 @@
+18:50:39 | INFO: Data are loaded, start creating Blender stuff
+18:50:39 | INFO: Blender create Mesh node 0
+18:50:39 | INFO: glTF import finished in 0.04s
+Info: 4219 vertex weights limited
+Info: Saved as "rig_candidate.blend"
+{"breed": "shepherd", "candidate_only": true, "reviewed_deformation": false, "bones": 17, "unweighted_vertices": 0, "weight_proxy_vertices": 7042, "torso_weights_adjusted": 7469, "notes": "Provisional landmarks and proxy heat weights; inspect shoulders, knees, paws and head before animation/export."}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

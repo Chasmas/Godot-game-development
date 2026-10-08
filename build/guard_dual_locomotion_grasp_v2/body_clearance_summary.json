@@ -1,0 +1,69 @@
+{
+  "approved": false,
+  "samples": [
+    {
+      "file": "body_armed_dual_run_0.25.json",
+      "clip": "armed_dual_run",
+      "phase": 0.25,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_run_0.75.json",
+      "clip": "armed_dual_run",
+      "phase": 0.75,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_run_0.json",
+      "clip": "armed_dual_run",
+      "phase": 0.0,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_run_1.json",
+      "clip": "armed_dual_run",
+      "phase": 1.0,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_walk_0.25.json",
+      "clip": "armed_dual_walk",
+      "phase": 0.25,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_walk_0.75.json",
+      "clip": "armed_dual_walk",
+      "phase": 0.75,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_walk_0.json",
+      "clip": "armed_dual_walk",
+      "phase": 0.0,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_armed_dual_walk_1.json",
+      "clip": "armed_dual_walk",
+      "phase": 1.0,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    },
+    {
+      "file": "body_run_midpoint.json",
+      "clip": "armed_dual_run",
+      "phase": 0.5,
+      "hand_crossings": 0,
+      "body_crossings": 0
+    }
+  ],
+  "scope": "Sparse phase segment-triangle crossing checks; containment and intermediate-frame contact unverified"
+}

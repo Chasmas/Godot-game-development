@@ -1,0 +1,102 @@
+WorkerThreadPool: 8 threads, 2 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/systems/events.gd remapped: res://scripts/systems/events.gd
+Completed load for: 'res://scripts/systems/events.gd' remapped 'res://scripts/systems/events.gd' at thread -1
+Loading resource: res://scripts/systems/save_manager.gd remapped: res://scripts/systems/save_manager.gd
+Completed load for: 'res://scripts/systems/save_manager.gd' remapped 'res://scripts/systems/save_manager.gd' at thread -1
+Loading resource: res://scripts/systems/loc.gd remapped: res://scripts/systems/loc.gd
+Completed load for: 'res://scripts/systems/loc.gd' remapped 'res://scripts/systems/loc.gd' at thread -1
+Loading resource: res://scripts/systems/input_setup.gd remapped: res://scripts/systems/input_setup.gd
+Completed load for: 'res://scripts/systems/input_setup.gd' remapped 'res://scripts/systems/input_setup.gd' at thread -1
+Loading resource: res://scripts/systems/audio_manager.gd remapped: res://scripts/systems/audio_manager.gd
+Loading resource: res://shaders/painted_shot.gdshader remapped: res://shaders/painted_shot.gdshader
+Completed load for: 'res://shaders/painted_shot.gdshader' remapped 'res://shaders/painted_shot.gdshader' at thread -1
+Completed load for: 'res://scripts/systems/audio_manager.gd' remapped 'res://scripts/systems/audio_manager.gd' at thread -1
+Loading resource: res://scripts/systems/debug_menu.gd remapped: res://scripts/systems/debug_menu.gd
+Loading resource: res://assets/art/blender_reload/magazine_loaded.png remapped: res://assets/art/blender_reload/magazine_loaded.png
+Loading resource: res://.godot/imported/magazine_loaded.png-8469977a1886b31a8c4a5dc4ebbcf468.ctex remapped: res://.godot/imported/magazine_loaded.png-8469977a1886b31a8c4a5dc4ebbcf468.ctex
+Completed load for: 'res://assets/art/blender_reload/magazine_loaded.png' remapped 'res://assets/art/blender_reload/magazine_loaded.png' at thread -1
+Loading resource: res://assets/art/blender_reload/magazine_empty.png remapped: res://assets/art/blender_reload/magazine_empty.png
+Loading resource: res://.godot/imported/magazine_empty.png-fd99d028b77cb0abc8ea30841b27a255.ctex remapped: res://.godot/imported/magazine_empty.png-fd99d028b77cb0abc8ea30841b27a255.ctex
+Completed load for: 'res://assets/art/blender_reload/magazine_empty.png' remapped 'res://assets/art/blender_reload/magazine_empty.png' at thread -1
+Loading resource: res://assets/art/blender_reload/spent_brass.png remapped: res://assets/art/blender_reload/spent_brass.png
+Loading resource: res://.godot/imported/spent_brass.png-4585a41500456798d748c97a309dc6e3.ctex remapped: res://.godot/imported/spent_brass.png-4585a41500456798d748c97a309dc6e3.ctex
+Completed load for: 'res://assets/art/blender_reload/spent_brass.png' remapped 'res://assets/art/blender_reload/spent_brass.png' at thread -1
+Loading resource: res://assets/art/blender_reload/spent_shotgun.png remapped: res://assets/art/blender_reload/spent_shotgun.png
+Loading resource: res://.godot/imported/spent_shotgun.png-452c6a80372193add59f8f3b778b7511.ctex remapped: res://.godot/imported/spent_shotgun.png-452c6a80372193add59f8f3b778b7511.ctex
+Completed load for: 'res://assets/art/blender_reload/spent_shotgun.png' remapped 'res://assets/art/blender_reload/spent_shotgun.png' at thread -1
+Completed load for: 'res://scripts/systems/debug_menu.gd' remapped 'res://scripts/systems/debug_menu.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://tools/audio_shutdown_regression.tscn remapped: res://tools/audio_shutdown_regression.tscn
+Loading resource: res://tools/audio_shutdown_regression.gd remapped: res://tools/audio_shutdown_regression.gd
+Completed load for: 'res://tools/audio_shutdown_regression.gd' remapped 'res://tools/audio_shutdown_regression.gd' at thread -1
+Completed load for: 'res://tools/audio_shutdown_regression.tscn' remapped 'res://tools/audio_shutdown_regression.tscn' at thread -1
+Loading resource: res://data/missions/m01_checkout.tres remapped: res://data/missions/m01_checkout.tres
+Completed load for: 'res://data/missions/m01_checkout.tres' remapped 'res://data/missions/m01_checkout.tres' at thread -1
+Loading resource: res://data/missions/m02_dog_days.tres remapped: res://data/missions/m02_dog_days.tres
+Completed load for: 'res://data/missions/m02_dog_days.tres' remapped 'res://data/missions/m02_dog_days.tres' at thread -1
+Loading resource: res://data/missions/m03_prime_time.tres remapped: res://data/missions/m03_prime_time.tres
+Completed load for: 'res://data/missions/m03_prime_time.tres' remapped 'res://data/missions/m03_prime_time.tres' at thread -1
+Loading resource: res://data/missions/m04_sweet_dreams.tres remapped: res://data/missions/m04_sweet_dreams.tres
+Completed load for: 'res://data/missions/m04_sweet_dreams.tres' remapped 'res://data/missions/m04_sweet_dreams.tres' at thread -1
+Loading resource: res://data/characters/bobby.tres remapped: res://data/characters/bobby.tres
+Completed load for: 'res://data/characters/bobby.tres' remapped 'res://data/characters/bobby.tres' at thread -1
+Loading resource: res://data/characters/cass.tres remapped: res://data/characters/cass.tres
+Completed load for: 'res://data/characters/cass.tres' remapped 'res://data/characters/cass.tres' at thread -1
+Loading resource: res://data/characters/dana.tres remapped: res://data/characters/dana.tres
+Completed load for: 'res://data/characters/dana.tres' remapped 'res://data/characters/dana.tres' at thread -1
+Loading resource: res://data/characters/deacon.tres remapped: res://data/characters/deacon.tres
+Completed load for: 'res://data/characters/deacon.tres' remapped 'res://data/characters/deacon.tres' at thread -1
+Loading resource: res://data/characters/director.tres remapped: res://data/characters/director.tres
+Completed load for: 'res://data/characters/director.tres' remapped 'res://data/characters/director.tres' at thread -1
+Loading resource: res://data/characters/luz.tres remapped: res://data/characters/luz.tres
+Completed load for: 'res://data/characters/luz.tres' remapped 'res://data/characters/luz.tres' at thread -1
+Loading resource: res://data/characters/marv.tres remapped: res://data/characters/marv.tres
+Completed load for: 'res://data/characters/marv.tres' remapped 'res://data/characters/marv.tres' at thread -1
+Loading resource: res://data/characters/nadia.tres remapped: res://data/characters/nadia.tres
+Completed load for: 'res://data/characters/nadia.tres' remapped 'res://data/characters/nadia.tres' at thread -1
+Loading resource: res://data/characters/tilly.tres remapped: res://data/characters/tilly.tres
+Completed load for: 'res://data/characters/tilly.tres' remapped 'res://data/characters/tilly.tres' at thread -1
+Loading resource: res://data/characters/wes.tres remapped: res://data/characters/wes.tres
+Completed load for: 'res://data/characters/wes.tres' remapped 'res://data/characters/wes.tres' at thread -1
+Loading resource: res://shaders/crt_vhs.gdshader remapped: res://shaders/crt_vhs.gdshader
+Completed load for: 'res://shaders/crt_vhs.gdshader' remapped 'res://shaders/crt_vhs.gdshader' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono.ttf remapped: res://assets/fonts/DejaVuSansMono.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata remapped: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono.ttf' remapped 'res://assets/fonts/DejaVuSansMono.ttf' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono-Bold.ttf remapped: res://assets/fonts/DejaVuSansMono-Bold.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata remapped: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono-Bold.ttf' remapped 'res://assets/fonts/DejaVuSansMono-Bold.ttf' at thread -1
+Loading resource: res://assets/art/pixellab_ui_v3_approved/painted/desert_road.png remapped: res://assets/art/pixellab_ui_v3_approved/painted/desert_road.png
+Loading resource: res://.godot/imported/desert_road.png-c17427e2771d60a7c5c3885f5e07b44e.ctex remapped: res://.godot/imported/desert_road.png-c17427e2771d60a7c5c3885f5e07b44e.ctex
+Completed load for: 'res://assets/art/pixellab_ui_v3_approved/painted/desert_road.png' remapped 'res://assets/art/pixellab_ui_v3_approved/painted/desert_road.png' at thread -1
+Loading resource: res://assets/audio/voice/prologue/e.mp3 remapped: res://assets/audio/voice/prologue/e.mp3
+Loading resource: res://.godot/imported/e.mp3-c4ffe9fc0670f013b05a5a5c5308d035.mp3str remapped: res://.godot/imported/e.mp3-c4ffe9fc0670f013b05a5a5c5308d035.mp3str
+Completed load for: 'res://assets/audio/voice/prologue/e.mp3' remapped 'res://assets/audio/voice/prologue/e.mp3' at thread -1
+Loading resource: res://assets/audio/sfx/vhs_static.wav remapped: res://assets/audio/sfx/vhs_static.wav
+Loading resource: res://.godot/imported/vhs_static.wav-6e3e4ff014715367e530827280834cf2.sample remapped: res://.godot/imported/vhs_static.wav-6e3e4ff014715367e530827280834cf2.sample
+Completed load for: 'res://assets/audio/sfx/vhs_static.wav' remapped 'res://assets/audio/sfx/vhs_static.wav' at thread -1
+Loading resource: res://assets/audio/sfx/pistol.wav remapped: res://assets/audio/sfx/pistol.wav
+Loading resource: res://.godot/imported/pistol.wav-f63af63f657ab3404844db519d6dc0e5.sample remapped: res://.godot/imported/pistol.wav-f63af63f657ab3404844db519d6dc0e5.sample
+Completed load for: 'res://assets/audio/sfx/pistol.wav' remapped 'res://assets/audio/sfx/pistol.wav' at thread -1
+Loading resource: res://music/st_main_theme.ogg remapped: res://music/st_main_theme.ogg
+Loading resource: res://.godot/imported/st_main_theme.ogg-eb8123e48c3df1e9da9e943ff8ab96a3.oggvorbisstr remapped: res://.godot/imported/st_main_theme.ogg-eb8123e48c3df1e9da9e943ff8ab96a3.oggvorbisstr
+Completed load for: 'res://music/st_main_theme.ogg' remapped 'res://music/st_main_theme.ogg' at thread -1
+Loading resource: res://music/st_story_apartment.ogg remapped: res://music/st_story_apartment.ogg
+Loading resource: res://.godot/imported/st_story_apartment.ogg-f5bc3a6d5c510681031764deabdc10ae.oggvorbisstr remapped: res://.godot/imported/st_story_apartment.ogg-f5bc3a6d5c510681031764deabdc10ae.oggvorbisstr
+Completed load for: 'res://music/st_story_apartment.ogg' remapped 'res://music/st_story_apartment.ogg' at thread -1
+Loading resource: res://assets/art/pixellab_ui_v3_approved/portraits/tommy.png remapped: res://assets/art/pixellab_ui_v3_approved/portraits/tommy.png
+Loading resource: res://.godot/imported/tommy.png-685472716ef1d02559bf564c551bcac5.ctex remapped: res://.godot/imported/tommy.png-685472716ef1d02559bf564c551bcac5.ctex
+Completed load for: 'res://assets/art/pixellab_ui_v3_approved/portraits/tommy.png' remapped 'res://assets/art/pixellab_ui_v3_approved/portraits/tommy.png' at thread -1
+AUDIO SHUTDOWN REGRESSION: 0 failures
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"

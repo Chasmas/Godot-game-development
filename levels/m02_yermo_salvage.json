@@ -202,10 +202,12 @@
       "facing": "left"
     },
     "58,33": {
+      "idle_action": "watch",
       "kind": "sniper",
       "facing": "left"
     },
     "41,21": {
+      "idle_action": "watch",
       "kind": "welder",
       "facing": "down"
     },
@@ -637,16 +639,6 @@
     },
     {
       "type": "sprite",
-      "id": "yard_steam_vent_overlay",
-      "pos": [
-        37,
-        35
-      ],
-      "size": 0.38,
-      "floor": true
-    },
-    {
-      "type": "sprite",
       "id": "yard_workbench_cluster",
       "pos": [
         25,
@@ -704,6 +696,10 @@
       ],
       "size": 0.55,
       "floor": true
+    },
+    {
+      "type": "steam_vent",
+      "pos": [29, 26]
     },
     {
       "type": "sprite",
@@ -1246,6 +1242,16 @@
     },
     {
       "type": "sprite",
+      "id": "hq_workbench",
+      "pos": [
+        10,
+        30
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
       "id": "yard_car_stack",
       "pos": [
         3,
@@ -1416,6 +1422,61 @@
     },
     {
       "type": "sprite",
+      "id": "yard_tumbleweed",
+      "pos": [
+        5,
+        38
+      ],
+      "size": 0.58,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tumbleweed",
+      "pos": [
+        63,
+        27
+      ],
+      "size": 0.58,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tumbleweed",
+      "pos": [
+        29,
+        21
+      ],
+      "size": 0.58,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tumbleweed",
+      "pos": [
+        43,
+        41
+      ],
+      "size": 0.58,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "yard_tumbleweed",
+      "pos": [
+        24,
+        36
+      ],
+      "size": 0.58,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
       "id": "yard_welder_sparks",
       "pos": [
         2,
@@ -1460,119 +1521,75 @@
       "type": "sprite",
       "id": "dirt_pebbles",
       "pos": [
-        5,
-        38
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_pebbles",
-      "pos": [
-        63,
-        27
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_pebbles",
-      "pos": [
-        29,
-        21
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_pebbles",
-      "pos": [
-        43,
-        41
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_pebbles",
-      "pos": [
-        24,
-        36
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_pebbles",
-      "pos": [
-        12,
-        27
-      ],
-      "size": 1.0,
-      "auto": true,
-      "floor": true
-    },
-    {
-      "type": "sprite",
-      "id": "dirt_weeds",
-      "pos": [
         6,
         33
       ],
-      "size": 0.9,
+      "size": 1.0,
       "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
-      "id": "dirt_weeds",
+      "id": "dirt_pebbles",
       "pos": [
         54,
         21
       ],
-      "size": 0.9,
+      "size": 1.0,
       "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
-      "id": "dirt_weeds",
+      "id": "dirt_pebbles",
       "pos": [
         33,
         41
       ],
-      "size": 0.9,
+      "size": 1.0,
       "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
-      "id": "dirt_weeds",
+      "id": "dirt_pebbles",
       "pos": [
         22,
         27
       ],
-      "size": 0.9,
+      "size": 1.0,
       "auto": true,
       "floor": true
     },
     {
       "type": "sprite",
-      "id": "dirt_weeds",
+      "id": "dirt_pebbles",
       "pos": [
         46,
         34
       ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_pebbles",
+      "pos": [
+        61,
+        30
+      ],
+      "size": 1.0,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_weeds",
+      "pos": [
+        7,
+        40
+      ],
       "size": 0.9,
       "auto": true,
       "floor": true
@@ -1581,8 +1598,52 @@
       "type": "sprite",
       "id": "dirt_weeds",
       "pos": [
-        61,
-        30
+        58,
+        25
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_weeds",
+      "pos": [
+        33,
+        33
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_weeds",
+      "pos": [
+        15,
+        21
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_weeds",
+      "pos": [
+        50,
+        39
+      ],
+      "size": 0.9,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "dirt_weeds",
+      "pos": [
+        41,
+        24
       ],
       "size": 0.9,
       "auto": true,
@@ -1592,8 +1653,8 @@
       "type": "sprite",
       "id": "dirt_boards",
       "pos": [
-        7,
-        40
+        10,
+        38
       ],
       "size": 1.0,
       "auto": true,
@@ -1603,8 +1664,8 @@
       "type": "sprite",
       "id": "dirt_boards",
       "pos": [
-        58,
-        25
+        52,
+        23
       ],
       "size": 1.0,
       "auto": true,
@@ -1614,8 +1675,8 @@
       "type": "sprite",
       "id": "dirt_boards",
       "pos": [
-        33,
-        33
+        41,
+        39
       ],
       "size": 1.0,
       "auto": true,
@@ -1625,8 +1686,8 @@
       "type": "sprite",
       "id": "hq_junk_heap",
       "pos": [
-        9,
-        30
+        12,
+        32
       ],
       "size": 0.72,
       "auto": true
@@ -1635,8 +1696,8 @@
       "type": "sprite",
       "id": "hq_junk_heap",
       "pos": [
-        52,
-        23
+        51,
+        26
       ],
       "size": 0.72,
       "auto": true
@@ -1655,65 +1716,15 @@
       "type": "sprite",
       "id": "hq_crate_stack",
       "pos": [
-        10,
-        38
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        58,
-        31
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        32,
-        28
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        15,
-        21
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        45,
-        39
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_fire_barrel",
-      "pos": [
         12,
-        31
+        27
       ],
       "size": 0.72,
       "auto": true
     },
     {
       "type": "sprite",
-      "id": "hq_fire_barrel",
+      "id": "hq_crate_stack",
       "pos": [
         60,
         33
@@ -1723,10 +1734,30 @@
     },
     {
       "type": "sprite",
-      "id": "hq_fire_barrel",
+      "id": "hq_crate_stack",
       "pos": [
-        41,
-        24
+        31,
+        39
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        43,
+        26
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        48,
+        37
       ],
       "size": 0.72,
       "auto": true
@@ -1735,7 +1766,37 @@
       "type": "sprite",
       "id": "hq_fire_barrel",
       "pos": [
-        31,
+        12,
+        40
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        58,
+        31
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        32,
+        28
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_fire_barrel",
+      "pos": [
+        45,
         39
       ],
       "size": 0.72,
@@ -1755,7 +1816,17 @@
       "type": "sprite",
       "id": "hq_forklift",
       "pos": [
-        51,
+        41,
+        35
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_tire_wall",
+      "pos": [
+        17,
         26
       ],
       "size": 0.72,
@@ -1765,18 +1836,8 @@
       "type": "sprite",
       "id": "hq_tire_wall",
       "pos": [
-        12,
-        40
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_tire_wall",
-      "pos": [
-        53,
-        29
+        57,
+        35
       ],
       "size": 0.72,
       "auto": true
@@ -1845,10 +1906,10 @@
   "cameras": [
     {
       "cell": [
-        1,
-        1
+        30,
+        7
       ],
-      "angle": 45
+      "angle": 160
     },
     {
       "cell": [

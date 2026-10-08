@@ -212,7 +212,7 @@ static func _walls(r, b: LevelBuilder, pieces: Array, blocked: Dictionary, used:
 			_claim(rect, used, 1)
 			_claim(front, used, 0)
 			if bool(d[2]):
-				_solid(b, rect)
+				_solid(b, rect, id)
 			budget -= 1
 			break
 
@@ -250,11 +250,12 @@ static func _ballroom(r, b: LevelBuilder, blocked: Dictionary, used: Dictionary,
 		_claim(tr, used, 1)
 		_solid(b, tr)
 
-static func _solid(b: LevelBuilder, rect: Rect2i) -> void:
+static func _solid(b: LevelBuilder, rect: Rect2i, id := "") -> void:
 	var lvl: Node = b.level
 	var body := StaticBody2D.new()
 	body.collision_layer = Layers.PROP
 	body.collision_mask = 0
+	body.set_meta("furnish_id",id)
 	var cs := CollisionShape2D.new()
 	var rs := RectangleShape2D.new()
 	rs.size = Vector2(rect.size) * T - Vector2(4, 4)

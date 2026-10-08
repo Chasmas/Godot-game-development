@@ -1,0 +1,16 @@
+{
+  "status": "joint_placement_requires_revision",
+  "runtime_approved": false,
+  "next_action": "Revise tail, jaw and hind-leg landmarks before skin binding; rerender matching overlays",
+  "reviewed_views": [
+    "front_overlay.png",
+    "side_overlay.png"
+  ],
+  "findings": [
+    "Four limb chains broadly align with independent paw regions",
+    "Tail chain extends beyond the model silhouette and must be shortened and repositioned",
+    "Jaw segment is below the lower muzzle and needs a higher endpoint",
+    "Rear knee placement is too far forward relative to the visible thigh"
+  ],
+  "rig_approved": false
+}

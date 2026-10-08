@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS punch direction=(1.0, 0.0) travel=(27.50015, 0.0)
+PASS punch direction=(-1.0, 0.0) travel=(-27.50015, 0.0)
+PASS punch direction=(0.0, -1.0) travel=(0.0, -27.50015)
+PASS punch direction=(0.0, 1.0) travel=(0.0, 27.50015)
+PASS punch direction=(0.0, 0.0) travel=(0.0, 27.50015)
+PASS coincident noise has valid escape direction
+NPC PUNCH FLEE REVIEW: 0 failures

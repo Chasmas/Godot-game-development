@@ -1,0 +1,7 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_laundry_cart_review.py:79: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world=bpy.data.worlds.new('Neutral prop review');sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.35,.38,.45,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.45
+00:03.047  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\blender_prop_review\laundry_cart_v3.png'
+Info: Saved as "laundry_cart_v3.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

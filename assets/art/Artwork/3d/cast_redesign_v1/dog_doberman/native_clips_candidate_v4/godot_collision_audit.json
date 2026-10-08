@@ -1,0 +1,28 @@
+{
+  "animation_approved": false,
+  "cases": [
+    {
+      "achieved_travel_m": 0.0923076942563057,
+      "actor_front_z": 0.192307695746422,
+      "collision_count": 0,
+      "maximum_motion_carrier_residual_m": 0.0,
+      "requested_travel_m": 0.0923076942563057,
+      "wall_near_face_z": null,
+      "wall_present": false
+    },
+    {
+      "achieved_travel_m": 0.030100654810667,
+      "actor_front_z": 0.130100656300783,
+      "collision_count": 8,
+      "maximum_motion_carrier_residual_m": 0.0,
+      "requested_travel_m": 0.0923076942563057,
+      "wall_near_face_z": 0.13,
+      "wall_present": true
+    }
+  ],
+  "collision_probe_passed": true,
+  "contact_tolerance_m": 0.001,
+  "runtime_approved": false,
+  "scope": "Isolated CharacterBody3D capsule and static wall with extracted GLB start motion. Production 2D collisions, visual limb clearance, blocked-animation handling and input responsiveness remain unverified.",
+  "source_glb_sha256": "cd0a61f8bc0bc3545d46764a0ef72d259cffd2d3dd116e1e317b3dbfdfd7078a"
+}

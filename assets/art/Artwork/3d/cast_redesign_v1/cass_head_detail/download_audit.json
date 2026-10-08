@@ -1,0 +1,36 @@
+{
+  "task_id": "01a11917-bf9a-777c-8a67-78f9cc9c4017",
+  "outputs": [
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\model.glb",
+      "bytes": 36701636,
+      "sha256": "dc0d62323e5a8624f8091e2485c422a94c7a685caef94a824765c6cb6f15521e"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\pre_remeshed.glb",
+      "bytes": 185575576,
+      "sha256": "c153f320305cc6c12581961094d780c8dc413eb45fbe84785d90016d8befccdf"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\texture_0_base_color.png",
+      "bytes": 15011882,
+      "sha256": "54b7815272d0e6af62a391868bb789935363bb9faac22c7b9c90263a0cf46dd5"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\texture_0_metallic.png",
+      "bytes": 414188,
+      "sha256": "af2aa277d005dc65e9b39c45de440ec672332825f3a7cbbccfabae522684dfcf"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\texture_0_roughness.png",
+      "bytes": 1022148,
+      "sha256": "13578f04a81bf2c789ac9a118c49b83dbd7fcd942e7ccbab878b801e73756d6f"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\raw\\texture_0_normal.png",
+      "bytes": 20335815,
+      "sha256": "01c38443ffa77eed6ae71902c20d0cd643e393dd9dcf5e2b5f57cb4687ff30cb"
+    }
+  ],
+  "runtime_approved": false
+}

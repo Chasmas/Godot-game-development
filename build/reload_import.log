@@ -1,0 +1,197 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (9 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Dog[39m[0m
+[  10% ] [90m[1mupdate_scripts_classes[22m | CastModel[39m[0m
+[  20% ] [90m[1mupdate_scripts_classes[22m | CastSprite[39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | CharacterVisual[39m[0m
+[  40% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  60% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  70% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  80% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (47 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | magazine_empty.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | magazine_loaded.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | source_review.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | source_review.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | 00.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | 01.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | 02.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | 03.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | 04.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | 05.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | 06.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | 07.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | 08.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | 09.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | 10.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | 11.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | 12.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | 13.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | 14.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | 15.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | 16.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | 17.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | 18.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | 19.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | 20.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | 21.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | 22.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | 23.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | godot_idle_review.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | godot_trot_review.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | joint_stress.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | rest.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | shepherd_idle_candidate.glb[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | shepherd_trot_candidate.glb[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | source_review.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | trot_01.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | trot_07.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | trot_13.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | trot_19.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | source_review.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | d00_f00.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | d01_f00.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | d02_f00.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | d03_f00.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | magazine_empty.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | magazine_loaded.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | guard_idle_review.png[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (47 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | 19.png[39m[0m
+[   2% ] [90m[1mreimport[22m | 20.png[39m[0m
+[   4% ] [90m[1mreimport[22m | 21.png[39m[0m
+[   6% ] [90m[1mreimport[22m | 22.png[39m[0m
+[   8% ] [90m[1mreimport[22m | 23.png[39m[0m
+[  10% ] [90m[1mreimport[22m | godot_idle_review.png[39m[0m
+[  12% ] [90m[1mreimport[22m | godot_trot_review.png[39m[0m
+[  14% ] [90m[1mreimport[22m | joint_stress.png[39m[0m
+[  16% ] [90m[1mreimport[22m | rest.png[39m[0m
+[  18% ] [90m[1mreimport[22m | source_review.png[39m[0m
+[  20% ] [90m[1mreimport[22m | trot_01.png[39m[0m
+[  22% ] [90m[1mreimport[22m | trot_07.png[39m[0m
+[  25% ] [90m[1mreimport[22m | trot_13.png[39m[0m
+[  27% ] [90m[1mreimport[22m | trot_19.png[39m[0m
+[  29% ] [90m[1mreimport[22m | source_review.png[39m[0m
+[  31% ] [90m[1mreimport[22m | d00_f00.png[39m[0m
+[  33% ] [90m[1mreimport[22m | d01_f00.png[39m[0m
+[  35% ] [90m[1mreimport[22m | d02_f00.png[39m[0m
+[  37% ] [90m[1mreimport[22m | d03_f00.png[39m[0m
+[  39% ] [90m[1mreimport[22m | magazine_empty.png[39m[0m
+[  41% ] [90m[1mreimport[22m | magazine_loaded.png[39m[0m
+[  43% ] [90m[1mreimport[22m | guard_idle_review.png[39m[0m
+[  45% ] [90m[1mreimport[22m | magazine_empty.png[39m[0m
+[  47% ] [90m[1mreimport[22m | magazine_loaded.png[39m[0m
+[  50% ] [90m[1mreimport[22m | source_review.png[39m[0m
+[  52% ] [90m[1mreimport[22m | source_review.png[39m[0m
+[  54% ] [90m[1mreimport[22m | 00.png[39m[0m
+[  56% ] [90m[1mreimport[22m | 01.png[39m[0m
+[  58% ] [90m[1mreimport[22m | 02.png[39m[0m
+[  60% ] [90m[1mreimport[22m | 03.png[39m[0m
+[  62% ] [90m[1mreimport[22m | 04.png[39m[0m
+[  64% ] [90m[1mreimport[22m | 05.png[39m[0m
+[  66% ] [90m[1mreimport[22m | 06.png[39m[0m
+[  68% ] [90m[1mreimport[22m | 07.png[39m[0m
+[  70% ] [90m[1mreimport[22m | 08.png[39m[0m
+[  72% ] [90m[1mreimport[22m | 09.png[39m[0m
+[  75% ] [90m[1mreimport[22m | 10.png[39m[0m
+[  77% ] [90m[1mreimport[22m | 11.png[39m[0m
+[  79% ] [90m[1mreimport[22m | 12.png[39m[0m
+[  81% ] [90m[1mreimport[22m | 13.png[39m[0m
+[  83% ] [90m[1mreimport[22m | 14.png[39m[0m
+[  85% ] [90m[1mreimport[22m | 15.png[39m[0m
+[  87% ] [90m[1mreimport[22m | 16.png[39m[0m
+[  89% ] [90m[1mreimport[22m | 17.png[39m[0m
+[  91% ] [90m[1mreimport[22m | 18.png[39m[0m
+[  93% ] [90m[1mreimport[22m | shepherd_trot_candidate.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | shepherd_idle_candidate.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (47 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[  33% ] [90m[1mloading_editor_layout[22m | Reopening scenes...[39m[0m
+[  50% ] [90m[1mloading_editor_layout[22m | Loading central editor layout...[39m[0m
+[  66% ] [90m[1mloading_editor_layout[22m | Loading plugin window layout...[39m[0m
+[  83% ] [90m[1mloading_editor_layout[22m | Editor layout ready.[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

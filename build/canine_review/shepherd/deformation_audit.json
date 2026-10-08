@@ -1,0 +1,572 @@
+{
+  "candidate_only": true,
+  "runtime_approved": false,
+  "maximum_torso_displacement_m": 0.07648967156933024,
+  "maximum_ankle_target_error_m": 4.742879264490007e-05,
+  "samples": [
+    {
+      "frame": 1,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912166476249695,
+        "FrontPaw.R": -0.6908800601959229,
+        "HindPaw.L": -0.6909671425819397,
+        "HindPaw.R": -0.6910488605499268
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.6336273753246773,
+        "FrontPaw.R": -0.2844515524990341,
+        "HindPaw.L": 0.6271277805380466,
+        "HindPaw.R": 0.2799575372827289
+      },
+      "maximum_torso_displacement_m": 0.06000001694696406,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.816559456248789e-07,
+        "FrontContact.R": 1.7285346984863281e-06,
+        "HindContact.L": 8.108477509267802e-07,
+        "HindContact.R": 8.025904303488273e-07
+      }
+    },
+    {
+      "frame": 2,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912164092063904,
+        "FrontPaw.R": -0.6908808946609497,
+        "HindPaw.L": -0.6909670829772949,
+        "HindPaw.R": -0.6910488605499268
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.6044604954544527,
+        "FrontPaw.R": -0.2552847044537272,
+        "HindPaw.L": 0.6562943705477736,
+        "HindPaw.R": 0.309124127415943
+      },
+      "maximum_torso_displacement_m": 0.06824444424151486,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 8.560065398421926e-08,
+        "FrontContact.R": 2.396123400316965e-06,
+        "HindContact.L": 7.998190462779785e-07,
+        "HindContact.R": 7.750036492315438e-07
+      }
+    },
+    {
+      "frame": 3,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912170648574829,
+        "FrontPaw.R": -0.6908811330795288,
+        "HindPaw.L": -0.6909669637680054,
+        "HindPaw.R": -0.6910489797592163
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.5752940977874555,
+        "FrontPaw.R": -0.2261179761955943,
+        "HindPaw.L": 0.6854609677932693,
+        "HindPaw.R": 0.3382909043920276
+      },
+      "maximum_torso_displacement_m": 0.07428041205011267,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 6.952633349471214e-07,
+        "FrontContact.R": 2.655627740671482e-06,
+        "HindContact.L": 7.998190462779785e-07,
+        "HindContact.R": 7.824173923030541e-07
+      }
+    },
+    {
+      "frame": 4,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912189722061157,
+        "FrontPaw.R": -0.6694376468658447,
+        "HindPaw.L": -0.6695072054862976,
+        "HindPaw.R": -0.6910490393638611
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.5461278761275257,
+        "FrontPaw.R": -0.21916563082434795,
+        "HindPaw.L": 0.6924111077926589,
+        "HindPaw.R": 0.3674576028478381
+      },
+      "maximum_torso_displacement_m": 0.07648967156933024,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.833611645708363e-06,
+        "FrontContact.R": 1.937511415140052e-05,
+        "HindContact.L": 7.20359800176133e-07,
+        "HindContact.R": 7.37419309118904e-07
+      }
+    },
+    {
+      "frame": 5,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912198066711426,
+        "FrontPaw.R": -0.6359109282493591,
+        "HindPaw.L": -0.6359673738479614,
+        "HindPaw.R": -0.6910490989685059
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.51696147259913,
+        "FrontPaw.R": -0.24556032644579615,
+        "HindPaw.L": 0.6660168941538323,
+        "HindPaw.R": 0.3966242422433386
+      },
+      "maximum_torso_displacement_m": 0.07428041205011267,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.656861541213997e-06,
+        "FrontContact.R": 3.267824649810791e-05,
+        "HindContact.L": 7.841183016850275e-07,
+        "HindContact.R": 7.663602155818814e-07
+      }
+    },
+    {
+      "frame": 6,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.691219687461853,
+        "FrontPaw.R": -0.6082067489624023,
+        "HindPaw.L": -0.6082648634910583,
+        "HindPaw.R": -0.6910490393638611
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.4877945358072952,
+        "FrontPaw.R": -0.29018650280306546,
+        "HindPaw.L": 0.6213935780959353,
+        "HindPaw.R": 0.42579088386153885
+      },
+      "maximum_torso_displacement_m": 0.06824444424151486,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.356997145330945e-06,
+        "FrontContact.R": 3.0732571156845265e-05,
+        "HindContact.L": 7.252748920701716e-07,
+        "HindContact.R": 7.252748920701716e-07
+      }
+    },
+    {
+      "frame": 7,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912188529968262,
+        "FrontPaw.R": -0.5892982482910156,
+        "HindPaw.L": -0.5893402099609375,
+        "HindPaw.R": -0.6910491585731506
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.45862760021250665,
+        "FrontPaw.R": -0.34734866844485013,
+        "HindPaw.L": 0.5642376195226707,
+        "HindPaw.R": 0.454957584086437
+      },
+      "maximum_torso_displacement_m": 0.06000001694696406,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.7183900477865646e-06,
+        "FrontContact.R": 4.742879264490007e-05,
+        "HindContact.L": 6.6656676668957e-07,
+        "HindContact.R": 7.252748920701716e-07
+      }
+    },
+    {
+      "frame": 8,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912175416946411,
+        "FrontPaw.R": -0.5811595916748047,
+        "HindPaw.L": -0.5812022686004639,
+        "HindPaw.R": -0.6910491585731506
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.4294607829601811,
+        "FrontPaw.R": -0.41134587751696317,
+        "HindPaw.L": 0.5002456958178142,
+        "HindPaw.R": 0.4841242476594684
+      },
+      "maximum_torso_displacement_m": 0.06014884044674637,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 1.0482837162590955e-06,
+        "FrontContact.R": 4.717402870436814e-05,
+        "HindContact.L": 7.178896349934282e-07,
+        "HindContact.R": 7.841183016850275e-07
+      }
+    },
+    {
+      "frame": 9,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912166476249695,
+        "FrontPaw.R": -0.5846555829048157,
+        "HindPaw.L": -0.5847148895263672,
+        "HindPaw.R": -0.6910491585731506
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.40029378648114666,
+        "FrontPaw.R": -0.4764752771468044,
+        "HindPaw.L": 0.4351143722107269,
+        "HindPaw.R": 0.5132908106666721
+      },
+      "maximum_torso_displacement_m": 0.06025783748740105,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 4.308471767545033e-07,
+        "FrontContact.R": 3.100961360692773e-05,
+        "HindContact.L": 7.178896349934282e-07,
+        "HindContact.R": 7.750036492315438e-07
+      }
+    },
+    {
+      "frame": 10,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912165880203247,
+        "FrontPaw.R": -0.5994470119476318,
+        "HindPaw.L": -0.5995051264762878,
+        "HindPaw.R": -0.6910492777824402
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.3711272664264959,
+        "FrontPaw.R": -0.5370523710412662,
+        "HindPaw.L": 0.37454046528328533,
+        "HindPaw.R": 0.5424574527384847
+      },
+      "maximum_torso_displacement_m": 0.06029770272963111,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 1.6924465733171325e-07,
+        "FrontContact.R": 3.312973194408476e-05,
+        "HindContact.L": 7.587896023079166e-07,
+        "HindContact.R": 8.430686688313267e-07
+      }
+    },
+    {
+      "frame": 11,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912165880203247,
+        "FrontPaw.R": -0.6239335536956787,
+        "HindPaw.L": -0.6240031719207764,
+        "HindPaw.R": -0.6910492181777954
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.34196044917417034,
+        "FrontPaw.R": -0.5873683482986408,
+        "HindPaw.L": 0.32422034422074175,
+        "HindPaw.R": 0.5716240547563387
+      },
+      "maximum_torso_displacement_m": 0.06025783748740105,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.9950963321688443e-07,
+        "FrontContact.R": 2.1090381539410834e-05,
+        "HindContact.L": 7.404242902281788e-07,
+        "HindContact.R": 7.841183016850275e-07
+      }
+    },
+    {
+      "frame": 12,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912168264389038,
+        "FrontPaw.R": -0.6555205583572388,
+        "HindPaw.L": -0.6556085348129272,
+        "HindPaw.R": -0.6910491585731506
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.3127939891369389,
+        "FrontPaw.R": -0.6217296489222889,
+        "HindPaw.L": 0.28985061739572804,
+        "HindPaw.R": 0.6007907532121493
+      },
+      "maximum_torso_displacement_m": 0.06014884044674637,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.5506679368948475e-07,
+        "FrontContact.R": 4.65765583756202e-07,
+        "HindContact.L": 6.952633349471214e-07,
+        "HindContact.R": 7.37419309118904e-07
+      }
+    },
+    {
+      "frame": 13,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912180185317993,
+        "FrontPaw.R": -0.6908786296844482,
+        "HindPaw.L": -0.690966784954071,
+        "HindPaw.R": -0.6910492181777954
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.2836269628555821,
+        "FrontPaw.R": -0.6344519646379095,
+        "HindPaw.L": 0.2771279958835683,
+        "HindPaw.R": 0.629957324837985
+      },
+      "maximum_torso_displacement_m": 0.06000001694696406,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 1.7285346984863281e-06,
+        "FrontContact.R": 3.816559456248789e-07,
+        "HindContact.L": 8.025904303488273e-07,
+        "HindContact.R": 8.108477509267802e-07
+      }
+    },
+    {
+      "frame": 14,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.691218912601471,
+        "FrontPaw.R": -0.6908783912658691,
+        "HindPaw.L": -0.6909667253494263,
+        "HindPaw.R": -0.6910491585731506
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.25446011497538507,
+        "FrontPaw.R": -0.6052850856345116,
+        "HindPaw.L": 0.3062945852149419,
+        "HindPaw.R": 0.6591239134289177
+      },
+      "maximum_torso_displacement_m": 0.06824444424151486,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.396123400316965e-06,
+        "FrontContact.R": 8.560065398421926e-08,
+        "HindContact.L": 7.750036492315438e-07,
+        "HindContact.R": 7.998190462779785e-07
+      }
+    },
+    {
+      "frame": 15,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912190914154053,
+        "FrontPaw.R": -0.6908790469169617,
+        "HindPaw.L": -0.6909669041633606,
+        "HindPaw.R": -0.6910490393638611
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.22529338671725213,
+        "FrontPaw.R": -0.5761186868530231,
+        "HindPaw.L": 0.335461362992867,
+        "HindPaw.R": 0.6882905081889764
+      },
+      "maximum_torso_displacement_m": 0.07428041205011267,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.655627740671482e-06,
+        "FrontContact.R": 6.952633349471214e-07,
+        "HindContact.L": 7.824173923030541e-07,
+        "HindContact.R": 7.998190462779785e-07
+      }
+    },
+    {
+      "frame": 16,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6697757244110107,
+        "FrontPaw.R": -0.6908808946609497,
+        "HindPaw.L": -0.6909669637680054,
+        "HindPaw.R": -0.6695892810821533
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.2183410413460058,
+        "FrontPaw.R": -0.546952465069261,
+        "HindPaw.L": 0.36462806144867754,
+        "HindPaw.R": 0.6952406481883661
+      },
+      "maximum_torso_displacement_m": 0.07648967156933024,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 1.937511415140052e-05,
+        "FrontContact.R": 2.833611645708363e-06,
+        "HindContact.L": 7.37419309118904e-07,
+        "HindContact.R": 7.20359800176133e-07
+      }
+    },
+    {
+      "frame": 17,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6362489461898804,
+        "FrontPaw.R": -0.6908818483352661,
+        "HindPaw.L": -0.6909670233726501,
+        "HindPaw.R": -0.6360494494438171
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.24473573680234417,
+        "FrontPaw.R": -0.5177860644715645,
+        "HindPaw.L": 0.3937947007068553,
+        "HindPaw.R": 0.6688464343819989
+      },
+      "maximum_torso_displacement_m": 0.07428041205011267,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.267824649810791e-05,
+        "FrontContact.R": 3.656861541213997e-06,
+        "HindContact.L": 7.663602155818814e-07,
+        "HindContact.R": 7.841183016850275e-07
+      }
+    },
+    {
+      "frame": 18,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6085448265075684,
+        "FrontPaw.R": -0.690881609916687,
+        "HindPaw.L": -0.6909669637680054,
+        "HindPaw.R": -0.6083469390869141
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.28936191315961346,
+        "FrontPaw.R": -0.48861912747334246,
+        "HindPaw.L": 0.422961342000093,
+        "HindPaw.R": 0.6242231236745234
+      },
+      "maximum_torso_displacement_m": 0.06824444424151486,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.0732571156845265e-05,
+        "FrontContact.R": 3.356997145330945e-06,
+        "HindContact.L": 7.252748920701716e-07,
+        "HindContact.R": 7.252748920701716e-07
+      }
+    },
+    {
+      "frame": 19,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.5896363258361816,
+        "FrontPaw.R": -0.6908808350563049,
+        "HindPaw.L": -0.6909670829772949,
+        "HindPaw.R": -0.5894222855567932
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.3465240788013981,
+        "FrontPaw.R": -0.4594521906815077,
+        "HindPaw.L": 0.4521280420839515,
+        "HindPaw.R": 0.5670671598189134
+      },
+      "maximum_torso_displacement_m": 0.06000001694696406,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 4.742879264490007e-05,
+        "FrontContact.R": 2.7183900477865646e-06,
+        "HindContact.L": 7.252748920701716e-07,
+        "HindContact.R": 6.6656676668957e-07
+      }
+    },
+    {
+      "frame": 20,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.5814975500106812,
+        "FrontPaw.R": -0.6908795237541199,
+        "HindPaw.L": -0.6909670829772949,
+        "HindPaw.R": -0.5812842845916748
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.41052128787351116,
+        "FrontPaw.R": -0.4302853726036331,
+        "HindPaw.L": 0.4812947062603078,
+        "HindPaw.R": 0.5030752383682826
+      },
+      "maximum_torso_displacement_m": 0.06014884044674637,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 4.717402870436814e-05,
+        "FrontContact.R": 1.0482837162590955e-06,
+        "HindContact.L": 7.841183016850275e-07,
+        "HindContact.R": 7.178896349934282e-07
+      }
+    },
+    {
+      "frame": 21,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.5849936008453369,
+        "FrontPaw.R": -0.6908786296844482,
+        "HindPaw.L": -0.6909670829772949,
+        "HindPaw.R": -0.5847969651222229
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.475650686017364,
+        "FrontPaw.R": -0.40111837612459866,
+        "HindPaw.L": 0.5104612677339719,
+        "HindPaw.R": 0.4379439140291519
+      },
+      "maximum_torso_displacement_m": 0.06025783748740105,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.100961360692773e-05,
+        "FrontContact.R": 4.308471767545033e-07,
+        "HindContact.L": 7.750036492315438e-07,
+        "HindContact.R": 7.178896349934282e-07
+      }
+    },
+    {
+      "frame": 22,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.5997849702835083,
+        "FrontPaw.R": -0.6908786296844482,
+        "HindPaw.L": -0.6909672021865845,
+        "HindPaw.R": -0.5995872020721436
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.5362277829250801,
+        "FrontPaw.R": -0.37195185590483804,
+        "HindPaw.L": 0.5396279114692816,
+        "HindPaw.R": 0.37737000818666255
+      },
+      "maximum_torso_displacement_m": 0.06029770272963111,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.312973194408476e-05,
+        "FrontContact.R": 1.6924465733171325e-07,
+        "HindContact.L": 8.430686688313267e-07,
+        "HindContact.R": 7.587896023079166e-07
+      }
+    },
+    {
+      "frame": 23,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6242715716362,
+        "FrontPaw.R": -0.6908786296844482,
+        "HindPaw.L": -0.6909671425819397,
+        "HindPaw.R": -0.6240852475166321
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.5865437592330732,
+        "FrontPaw.R": -0.34278503881762235,
+        "HindPaw.L": 0.568794514412945,
+        "HindPaw.R": 0.32704988561990234
+      },
+      "maximum_torso_displacement_m": 0.06025783748740105,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 2.1090381539410834e-05,
+        "FrontContact.R": 2.9950963321688443e-07,
+        "HindContact.L": 7.841183016850275e-07,
+        "HindContact.R": 7.404242902281788e-07
+      }
+    },
+    {
+      "frame": 24,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6558585166931152,
+        "FrontPaw.R": -0.6908788681030273,
+        "HindPaw.L": -0.6909670829772949,
+        "HindPaw.R": -0.6556906700134277
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.6209050591137271,
+        "FrontPaw.R": -0.3136185787803909,
+        "HindPaw.L": 0.5979612128687556,
+        "HindPaw.R": 0.2926801595967291
+      },
+      "maximum_torso_displacement_m": 0.06014884044674637,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 4.65765583756202e-07,
+        "FrontContact.R": 2.5506679368948475e-07,
+        "HindContact.L": 7.37419309118904e-07,
+        "HindContact.R": 6.952633349471214e-07
+      }
+    },
+    {
+      "frame": 25,
+      "paw_surface_minimum_z_m": {
+        "FrontPaw.L": -0.6912166476249695,
+        "FrontPaw.R": -0.6908800601959229,
+        "HindPaw.L": -0.6909671425819397,
+        "HindPaw.R": -0.6910488605499268
+      },
+      "sole_center_y_m": {
+        "FrontPaw.L": -0.6336273753246773,
+        "FrontPaw.R": -0.2844515524990341,
+        "HindPaw.L": 0.6271277805380466,
+        "HindPaw.R": 0.2799575372827289
+      },
+      "maximum_torso_displacement_m": 0.06000001694696406,
+      "ankle_target_errors_m": {
+        "FrontContact.L": 3.816559456248789e-07,
+        "FrontContact.R": 1.7285346984863281e-06,
+        "HindContact.L": 8.108477509267802e-07,
+        "HindContact.R": 8.025904303488273e-07
+      }
+    }
+  ],
+  "limitation": "Measurements cover this candidate at native stride speed; gameplay scale, turning, acceleration and other gaits still require review.",
+  "stance_sole_height_variation_m": {
+    "FrontPaw.L": 3.3974647521972656e-06,
+    "FrontPaw.R": 3.4570693969726562e-06,
+    "HindPaw.L": 4.76837158203125e-07,
+    "HindPaw.R": 4.172325134277344e-07
+  },
+  "stance_world_slip_m": {
+    "FrontPaw.L": 1.419215211129199e-06,
+    "FrontPaw.R": 1.1786391970192156e-06,
+    "HindPaw.L": 2.809106309786813e-07,
+    "HindPaw.R": 4.2799219507339004e-07
+  },
+  "native_forward_speed_mps": 1.1666666666666667
+}

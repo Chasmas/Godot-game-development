@@ -1,0 +1,208 @@
+18:24:58 | INFO: Data are loaded, start creating Blender stuff
+18:24:58 | INFO: Blender create Mesh node char1
+18:24:58 | INFO: glTF import finished in 0.18s
+ELBOW aim Right 0.0 (0.09923417866230011, -0.1337478905916214, 1.1793136596679688)
+ELBOW aim Left 2.618 (0.20664222538471222, 0.05199383944272995, 1.152790904045105)
+anim aim 79 frames (baked)
+18:24:58 | INFO: Data are loaded, start creating Blender stuff
+18:24:58 | INFO: Blender create Mesh node char1
+18:24:58 | INFO: glTF import finished in 0.18s
+anim death 53 frames (baked)
+18:24:59 | INFO: Data are loaded, start creating Blender stuff
+18:24:59 | INFO: Blender create Mesh node char1
+18:24:59 | INFO: glTF import finished in 0.18s
+anim death_back 85 frames (baked)
+18:24:59 | INFO: Data are loaded, start creating Blender stuff
+18:24:59 | INFO: Blender create Mesh node char1
+18:24:59 | INFO: glTF import finished in 0.18s
+ELBOW idle Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW idle Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim idle 77 frames (baked)
+18:24:59 | INFO: Data are loaded, start creating Blender stuff
+18:24:59 | INFO: Blender create Mesh node char1
+18:24:59 | INFO: glTF import finished in 0.18s
+anim kick 35 frames (baked)
+18:24:59 | INFO: Data are loaded, start creating Blender stuff
+18:24:59 | INFO: Blender create Mesh node char1
+18:25:00 | INFO: glTF import finished in 0.18s
+anim knocked 60 frames (baked)
+18:25:00 | INFO: Data are loaded, start creating Blender stuff
+18:25:00 | INFO: Blender create Mesh node char1
+18:25:00 | INFO: glTF import finished in 0.19s
+ELBOW melee Right 1.047 (0.02793685346841812, -0.20726503431797028, 1.1562790870666504)
+ELBOW melee Left 2.618 (-0.06547331064939499, 0.27884581685066223, 1.1988182067871094)
+anim melee 10 frames (baked)
+18:25:00 | INFO: Data are loaded, start creating Blender stuff
+18:25:00 | INFO: Blender create Mesh node char1
+18:25:00 | INFO: glTF import finished in 0.18s
+ELBOW punch Right 1.047 (0.019746949896216393, -0.22234755754470825, 1.1605252027511597)
+ELBOW punch Left 2.094 (0.008933969773352146, 0.22142405807971954, 1.1592177152633667)
+anim punch 10 frames (baked)
+18:25:00 | INFO: Data are loaded, start creating Blender stuff
+18:25:00 | INFO: Blender create Mesh node char1
+18:25:01 | INFO: glTF import finished in 0.18s
+anim roll 81 frames (baked)
+18:25:01 | INFO: Data are loaded, start creating Blender stuff
+18:25:01 | INFO: Blender create Mesh node char1
+18:25:01 | INFO: glTF import finished in 0.17s
+ELBOW run Right 0.0 (-0.023732978850603104, -0.17032364010810852, 1.2044801712036133)
+ELBOW run Left 2.88 (-0.04712051525712013, 0.24481599032878876, 1.21055006980896)
+anim run 18 frames (baked)
+18:25:01 | INFO: Data are loaded, start creating Blender stuff
+18:25:01 | INFO: Blender create Mesh node char1
+18:25:01 | INFO: glTF import finished in 0.18s
+ELBOW sneak Right 0.262 (-0.07674527913331985, -0.2283186912536621, 0.9993181228637695)
+ELBOW sneak Left 3.142 (0.12908007204532623, 0.10636641830205917, 1.0197781324386597)
+anim sneak 69 frames (baked)
+18:25:01 | INFO: Data are loaded, start creating Blender stuff
+18:25:01 | INFO: Blender create Mesh node char1
+18:25:01 | INFO: glTF import finished in 0.18s
+ELBOW walk Right 0.524 (-0.04660128802061081, -0.26578688621520996, 1.270002007484436)
+ELBOW walk Left 2.356 (-0.07649437338113785, 0.28656286001205444, 1.2620320320129395)
+anim walk 101 frames (baked)
+18:25:02 | INFO: Data are loaded, start creating Blender stuff
+18:25:02 | INFO: Blender create Mesh node char1
+18:25:02 | INFO: glTF import finished in 0.18s
+ELBOW armed_walk Right 1.047 (0.1332448124885559, -0.1914428025484085, 1.2141567468643188)
+ELBOW armed_walk Left 2.094 (0.18120810389518738, 0.037906941026449203, 1.2818899154663086)
+anim armed_walk 101 frames (baked)
+18:25:02 | INFO: Data are loaded, start creating Blender stuff
+18:25:02 | INFO: Blender create Mesh node char1
+18:25:02 | INFO: glTF import finished in 0.17s
+ELBOW armed_run Right 0.0 (0.19729408621788025, -0.20562691986560822, 1.1032952070236206)
+ELBOW armed_run Left 2.88 (0.194210946559906, 0.014403466135263443, 1.1538982391357422)
+anim armed_run 18 frames (baked)
+18:25:02 | INFO: Data are loaded, start creating Blender stuff
+18:25:02 | INFO: Blender create Mesh node char1
+18:25:03 | INFO: glTF import finished in 0.18s
+ELBOW armed_sneak Right 0.262 (0.13799990713596344, -0.1367003619670868, 0.9700831174850464)
+ELBOW armed_sneak Left 3.142 (0.22978553175926208, 0.024329692125320435, 0.9605162739753723)
+anim armed_sneak 69 frames (baked)
+18:25:03 | INFO: Data are loaded, start creating Blender stuff
+18:25:03 | INFO: Blender create Mesh node char1
+18:25:03 | INFO: glTF import finished in 0.17s
+ELBOW reload_mag Right 0.0 (0.09923417866230011, -0.1337478905916214, 1.1793136596679688)
+ELBOW reload_mag Left 0.524 (0.0014264020137488842, 0.1980578601360321, 1.1791627407073975)
+anim reload_mag 79 frames (baked)
+18:25:03 | INFO: Data are loaded, start creating Blender stuff
+18:25:03 | INFO: Blender create Mesh node char1
+18:25:03 | INFO: glTF import finished in 0.18s
+ELBOW reload_shell Right 0.0 (0.09923417866230011, -0.1337478905916214, 1.1793136596679688)
+ELBOW reload_shell Left 0.524 (0.0014264020137488842, 0.1980578601360321, 1.1791627407073975)
+anim reload_shell 79 frames (baked)
+18:25:03 | INFO: Data are loaded, start creating Blender stuff
+18:25:03 | INFO: Blender create Mesh node char1
+18:25:04 | INFO: glTF import finished in 0.18s
+ELBOW reload_dual Right 0.0 (0.09719144552946091, -0.16420288383960724, 1.182982325553894)
+ELBOW reload_dual Left 2.618 (0.08970646560192108, 0.21833181381225586, 1.1815906763076782)
+anim reload_dual 79 frames (baked)
+18:25:04 | INFO: Data are loaded, start creating Blender stuff
+18:25:04 | INFO: Blender create Mesh node char1
+18:25:04 | INFO: glTF import finished in 0.19s
+ELBOW punch_left Right 1.047 (0.019746949896216393, -0.22234755754470825, 1.1605252027511597)
+ELBOW punch_left Left 2.094 (0.008933969773352146, 0.22142405807971954, 1.1592177152633667)
+anim punch_left 10 frames (baked)
+18:25:04 | INFO: Data are loaded, start creating Blender stuff
+18:25:04 | INFO: Blender create Mesh node char1
+18:25:04 | INFO: glTF import finished in 0.18s
+ELBOW stab Right 1.047 (0.027706703171133995, -0.19555284082889557, 1.1524739265441895)
+ELBOW stab Left 1.833 (-0.1055743545293808, 0.14683790504932404, 1.1553800106048584)
+anim stab 10 frames (baked)
+18:25:04 | INFO: Data are loaded, start creating Blender stuff
+18:25:04 | INFO: Blender create Mesh node char1
+18:25:05 | INFO: glTF import finished in 0.17s
+ELBOW aim_dual Right 0.0 (0.09719144552946091, -0.16420288383960724, 1.182982325553894)
+ELBOW aim_dual Left 2.618 (0.08970646560192108, 0.21833181381225586, 1.1815906763076782)
+anim aim_dual 79 frames (baked)
+18:25:05 | INFO: Data are loaded, start creating Blender stuff
+18:25:05 | INFO: Blender create Mesh node char1
+18:25:05 | INFO: glTF import finished in 0.18s
+ELBOW armed_dual_walk Right 1.047 (0.11376022547483444, -0.23049716651439667, 1.2267673015594482)
+ELBOW armed_dual_walk Left 1.833 (0.10879113525152206, 0.2207668572664261, 1.2164485454559326)
+anim armed_dual_walk 101 frames (baked)
+18:25:05 | INFO: Data are loaded, start creating Blender stuff
+18:25:05 | INFO: Blender create Mesh node char1
+18:25:05 | INFO: glTF import finished in 0.17s
+ELBOW armed_dual_run Right 0.0 (0.13155578076839447, -0.2535247802734375, 1.1358870267868042)
+ELBOW armed_dual_run Left 2.618 (0.12782689929008484, 0.23982810974121094, 1.1211549043655396)
+anim armed_dual_run 18 frames (baked)
+18:25:05 | INFO: Data are loaded, start creating Blender stuff
+18:25:05 | INFO: Blender create Mesh node char1
+18:25:06 | INFO: glTF import finished in 0.21s
+ELBOW armed_dual_sneak Right 0.262 (0.14532853662967682, -0.18262344598770142, 0.9609555006027222)
+ELBOW armed_dual_sneak Left 3.142 (0.11275596916675568, 0.12497244030237198, 1.0478726625442505)
+anim armed_dual_sneak 69 frames (baked)
+18:25:06 | INFO: Data are loaded, start creating Blender stuff
+18:25:06 | INFO: Blender create Mesh node char1
+18:25:06 | INFO: glTF import finished in 0.18s
+ELBOW aim_melee Right 1.047 (0.027936868369579315, -0.20726503431797028, 1.1562790870666504)
+ELBOW aim_melee Left 2.618 (-0.06547331064939499, 0.27884581685066223, 1.1988182067871094)
+anim aim_melee 58 frames (baked)
+18:25:06 | INFO: Data are loaded, start creating Blender stuff
+18:25:06 | INFO: Blender create Mesh node char1
+18:25:06 | INFO: glTF import finished in 0.18s
+ELBOW armed_melee_walk Right 1.047 (0.04253443330526352, -0.19240714609622955, 1.1976888179779053)
+ELBOW armed_melee_walk Left 2.356 (-0.07649437338113785, 0.28656286001205444, 1.2620320320129395)
+anim armed_melee_walk 101 frames (baked)
+18:25:07 | INFO: Data are loaded, start creating Blender stuff
+18:25:07 | INFO: Blender create Mesh node char1
+18:25:07 | INFO: glTF import finished in 0.17s
+ELBOW armed_melee_run Right 0.0 (0.026415936648845673, -0.16749051213264465, 1.1424586772918701)
+ELBOW armed_melee_run Left 2.88 (-0.04712051525712013, 0.24481599032878876, 1.21055006980896)
+anim armed_melee_run 18 frames (baked)
+18:25:07 | INFO: Data are loaded, start creating Blender stuff
+18:25:07 | INFO: Blender create Mesh node char1
+18:25:07 | INFO: glTF import finished in 0.17s
+ELBOW armed_melee_sneak Right 0.262 (0.062384024262428284, -0.17494910955429077, 0.9499452114105225)
+ELBOW armed_melee_sneak Left 3.142 (0.12908007204532623, 0.10636641830205917, 1.0197781324386597)
+anim armed_melee_sneak 69 frames (baked)
+18:25:07 | INFO: Data are loaded, start creating Blender stuff
+18:25:07 | INFO: Blender create Mesh node char1
+18:25:07 | INFO: glTF import finished in 0.18s
+ELBOW smoke Right 0.524 (-0.061581097543239594, -0.27472153306007385, 1.1927095651626587)
+ELBOW smoke Left 2.618 (-0.06547331064939499, 0.27884581685066223, 1.1988182067871094)
+anim smoke 96 frames (baked)
+18:25:08 | INFO: Data are loaded, start creating Blender stuff
+18:25:08 | INFO: Blender create Mesh node char1
+18:25:08 | INFO: glTF import finished in 0.18s
+ELBOW grab Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW grab Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim grab 20 frames (baked)
+18:25:08 | INFO: Data are loaded, start creating Blender stuff
+18:25:08 | INFO: Blender create Mesh node char1
+18:25:08 | INFO: glTF import finished in 0.19s
+ELBOW held Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW held Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim held 20 frames (baked)
+18:25:08 | INFO: Data are loaded, start creating Blender stuff
+18:25:08 | INFO: Blender create Mesh node char1
+18:25:08 | INFO: glTF import finished in 0.18s
+ELBOW drive Right 1.047 (0.09716423600912094, -0.21862535178661346, 0.7753901481628418)
+ELBOW drive Left 2.094 (0.09041744470596313, 0.17742358148097992, 0.7708468437194824)
+anim drive 48 frames (baked)
+18:25:09 | INFO: Data are loaded, start creating Blender stuff
+18:25:09 | INFO: Blender create Mesh node char1
+18:25:09 | INFO: glTF import finished in 0.18s
+ELBOW car_exit Right 1.047 (-0.0289960615336895, -0.22353893518447876, 0.9080470204353333)
+ELBOW car_exit Left 2.094 (-0.03720647841691971, 0.19962668418884277, 0.9077293276786804)
+anim car_exit 22 frames (baked)
+18:25:09 | INFO: Data are loaded, start creating Blender stuff
+18:25:09 | INFO: Blender create Mesh node char1
+18:25:09 | INFO: glTF import finished in 0.18s
+ELBOW doze Right 0.785 (0.0018238381016999483, -0.17281173169612885, 0.7040241360664368)
+ELBOW doze Left 2.356 (0.0009641399374231696, 0.1300957053899765, 0.703791618347168)
+anim doze 77 frames (baked)
+18:25:09 | INFO: Data are loaded, start creating Blender stuff
+18:25:09 | INFO: Blender create Mesh node char1
+18:25:09 | INFO: glTF import finished in 0.12s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+18:25:11 | INFO: Starting glTF 2.0 export
+18:25:11 | INFO: Extracting primitive: char1
+18:25:12 | INFO: Primitives created: 2
+18:25:15 | INFO: Finished glTF 2.0 export in 3.7791690826416016 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cast_activity_candidates\cass.glb clips: ['aim', 'death', 'death_back', 'idle', 'kick', 'knocked', 'melee', 'punch', 'roll', 'run', 'sneak', 'walk', 'armed_walk', 'armed_run', 'armed_sneak', 'reload_mag', 'reload_shell', 'reload_dual', 'punch_left', 'stab', 'aim_dual', 'armed_dual_walk', 'armed_dual_run', 'armed_dual_sneak', 'aim_melee', 'armed_melee_walk', 'armed_melee_run', 'armed_melee_sneak', 'smoke', 'grab', 'held', 'drive', 'car_exit', 'doze']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

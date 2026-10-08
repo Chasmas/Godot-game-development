@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "26cdec9523f208f34afe17f8cee2b8504e16ab53c6da94e984339fd7a7339ddf",
+  "integrated_sha256": "73f4bccdc7780f2f690888aba9649c917a847d9e39319e590ce857ad5b345b43",
+  "backup": "build\\zombie_doze_runtime_verified\\zombie_before_26cdec9523f2.glb",
+  "visual_review": "build/zombie_idle_review_directions.png",
+  "mechanics": "build/zombie_doze_supported_isolated/regression.log"
+}

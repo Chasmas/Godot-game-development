@@ -1,0 +1,44 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+-- mission 2: dogs, stealth, power, upgrades, gore
+[level] prewarmed 21 looks in 2184 ms
+  ok   mission 2 loads
+  ok   M01 ground plate stays out of mission 2
+  ok   m02 enemies spawned (19)
+  ok   dogs spawned (6)
+  ok   light switches built (3)
+  ok   upgrade briefcases rolled (3)
+  ok   picked up upgrade quick_hands
+  ok   kevlar vest survives a bullet
+  ok   vest is used up
+  ok   lock-on grabs a target
+  ok   tap switches lock target
+  ok   hold releases lock
+  ok   unaware guard can be taken down from behind
+  ok   held target stays aligned despite crowd pressure
+  ok   rear hold plays authored grab pose
+  ok   takedown kills
+  ok   takedown counts as silent
+  ok   a dog is asleep
+  ok   sneaking up doesn't wake the dog
+  ok   sleeping dog put down
+  ok   dog notices a player next to it (COMBAT)
+  ok   dog dies to a bullet
+  ok   warehouse switch exists
+  ok   switch kills the warehouse lights
+  ok   warehouse is dark
+  ok   darkness overlay active
+  ok   a guard walks over and turns the lights back on
+  ok   fuse box kills kennel power for good
+  ok   dead zone can't be switched back on
+  ok   decapitation throws a head
+  ok   blood pools spread
+  ok   Buck is in the kennels
+  ok   Buck fights
+  ok   a hit opens a cage
+  ok   the dinner bell leaves him alone
+  ok   Buck's last scene plays
+  ok   clearing the yard opens the escape (5)
+  ok   m02 car exit enabled
+  ok   m02 results screen
+=== SMOKE TEST DONE: 0 failures ===

@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS smoker plays authored standing activity
+PASS NPC smoking does not spawn a duplicate player cigarette
+PASS cigarette follows the actual hand socket
+PASS alert releases activity and restores the equipped weapon
+ERROR: sleeper has lowered hips in the authored seated pose
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tools/idle_activity_regression.gd:8)
+       [1] _ready (res://tools/idle_activity_regression.gd:53)
+FAIL sleeper has lowered hips in the authored seated pose
+Standing hips=1.00717735290527 seated hips=1.00717735290527
+PASS waking an unarmed guard does not reveal a stale weapon
+PASS waking a Blender guard does not reveal fallback legs
+PASS alert reparents and tips the occupied chair
+PASS chair remains at the seated position after alert
+PASS alert plays the runtime Blender chair animation
+PASS chair fall ends instead of looping
+PASS settled chair stops continuous rendering
+PASS settled chair preserves the final fallen pose
+IDLE ACTIVITY REGRESSION: 1 failures

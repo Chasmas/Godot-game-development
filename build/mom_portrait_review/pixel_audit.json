@@ -1,0 +1,29 @@
+{
+  "blink": {
+    "size": [
+      128,
+      128
+    ],
+    "changed_inside_mask": 359,
+    "changed_outside_mask": 0,
+    "visual_decision": "blink candidate accepted; mouth variants rejected as exaggerated"
+  },
+  "talk": {
+    "size": [
+      128,
+      128
+    ],
+    "changed_inside_mask": 235,
+    "changed_outside_mask": 0,
+    "visual_decision": "blink candidate accepted; mouth variants rejected as exaggerated"
+  },
+  "talk_wide": {
+    "size": [
+      128,
+      128
+    ],
+    "changed_inside_mask": 246,
+    "changed_outside_mask": 0,
+    "visual_decision": "blink candidate accepted; mouth variants rejected as exaggerated"
+  }
+}

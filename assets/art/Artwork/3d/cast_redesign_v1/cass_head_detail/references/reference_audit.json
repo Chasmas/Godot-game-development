@@ -1,0 +1,51 @@
+{
+  "character": "cass_head_detail",
+  "height_m": 0.48,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\cass_head_detail_v1.png",
+  "source_sha256": "198d9907c643207fa42e917a79415636e27c985ec89d061f01ebf625da2fe006",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "width": 724,
+      "height": 724,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\references\\front.png",
+      "sha256": "95dea442c3290449630e9de03a47953a8948fd40eef7a1f4f3790a557aaab0b0"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "width": 724,
+      "height": 724,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\references\\side.png",
+      "sha256": "758052b236ffd1f34535d7e865f8632f5da9ce5a5c83eb6ac4a2477f0011de5b"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "width": 724,
+      "height": 724,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\references\\back.png",
+      "sha256": "f5710b52d59533ae2103565e8a1df5eae2c77e60b314c769e60305c437424ee2"
+    }
+  ],
+  "visual_review": "Three 724x724 saved bust views directly inspected. Complete hair/head silhouette and neck, one figure per view; identity matches Cass reference. Input approval only; generated model requires Blender anatomy and material review."
+}

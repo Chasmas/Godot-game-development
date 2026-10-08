@@ -1,0 +1,51 @@
+{
+  "character": "civilian_2",
+  "height_m": 1.7,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\civilian_2_turnaround.png",
+  "source_sha256": "3e79e30ed7499345b19b56c379945977ef08d9ce5ccfd19d057873befa8008bb",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        575,
+        1024
+      ],
+      "width": 575,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_2\\references\\front.png",
+      "sha256": "d9d8d6342d138869d72b329aa868c06e38e2e7414e9260015d07b8170f108e85"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        585,
+        0,
+        950,
+        1024
+      ],
+      "width": 365,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_2\\references\\side.png",
+      "sha256": "8afe3a0d0737ddaeb412f1805d4da8546cb7dc73960e5e2843a2f0c5ccb364f6"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        960,
+        0,
+        1536,
+        1024
+      ],
+      "width": 576,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\civilian_2\\references\\back.png",
+      "sha256": "7c9ecbdb53a70e452cf4b9f55a08ac4f3e40d33a0e6ab9195b6b9a074621635d"
+    }
+  ],
+  "visual_review": "All three saved front/profile/back views directly inspected. One complete figure, head/hands/feet intact, no adjacent figures; input approval only. Preserve same face and clothing for eligible undead version."
+}

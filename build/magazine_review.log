@@ -1,0 +1,8 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\build_magazine.py:14: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  result.use_nodes = True
+00:02.797  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\reload_prop_review\magazine_loaded.png'
+00:03.485  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\reload_prop_review\magazine_empty.png'
+Info: Saved as "magazine.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

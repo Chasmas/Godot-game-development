@@ -8,6 +8,7 @@ signal used(it: Interactable, by: Node)
 var kind := "phone"          # phone, tape, photo, clipping, terminal, switch, car
 var prompt := "USE"
 var enabled := true
+var _prop3d: PropModel        ## a 3D model of the thing, when there is one (extinguisher)
 var one_shot := true
 var item_id := ""
 var ringing := false
@@ -127,11 +128,28 @@ func _draw() -> void:
 				draw_arc(Vector2.ZERO, 12.0, 0, TAU, 20, Color(UIStyle.CYAN, 0.4 + 0.3 * sin(_t * 6.0)), 1.5)
 		"extinguisher":
 			if not enabled and _t > 0.0 and kind == "extinguisher":
+				if _prop3d:
+					_prop3d.visible = false   # she has it now
 				draw_rect(Rect2(-3, -6, 6, 12), Color(0.3, 0.3, 0.32))   # the empty bracket
 				return
-			draw_rect(Rect2(-3, -7, 6, 13), ink)
-			draw_rect(Rect2(-2, -6, 4, 11), Color(0.85, 0.08, 0.1))
-			draw_rect(Rect2(-2, -8, 4, 2), Color(0.2, 0.2, 0.2))
+			if _prop3d == null and PropModel.available("prop_extinguisher"):
+				_prop3d = PropModel.new()
+				_prop3d.id = "prop_extinguisher"
+				_prop3d.height_m = 0.6
+				_prop3d.position = Vector2(0, 5)
+				add_child(_prop3d)
+			var ext_tex := null if _prop3d else ArtLib.sprite("prop_extinguisher")
+			if _prop3d:
+				pass   # the 3D canister draws itself
+			elif ext_tex:
+				# the painted canister, standing (the same art as the wall dressing)
+				var h := 16.0
+				var w := h * ext_tex.get_width() / float(ext_tex.get_height())
+				draw_texture_rect(ext_tex, Rect2(-w * 0.5, -h * 0.6, w, h), false)
+			else:
+				draw_rect(Rect2(-3, -7, 6, 13), ink)
+				draw_rect(Rect2(-2, -6, 4, 11), Color(0.85, 0.08, 0.1))
+				draw_rect(Rect2(-2, -8, 4, 2), Color(0.2, 0.2, 0.2))
 			if enabled:
 				draw_arc(Vector2.ZERO, 12.0, 0, TAU, 20, Color(1, 1, 1, 0.35 + 0.3 * sin(_t * 6.0)), 1.5)
 		"terminal":

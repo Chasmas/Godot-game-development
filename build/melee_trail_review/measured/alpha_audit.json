@@ -1,0 +1,1794 @@
+[
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\000.png",
+    "alpha_range": [
+      0,
+      191
+    ],
+    "bbox": [
+      138,
+      41,
+      180,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\001.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      135,
+      37,
+      150,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\002.png",
+    "alpha_range": [
+      0,
+      199
+    ],
+    "bbox": [
+      138,
+      37,
+      174,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\003.png",
+    "alpha_range": [
+      0,
+      200
+    ],
+    "bbox": [
+      157,
+      42,
+      190,
+      82
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\004.png",
+    "alpha_range": [
+      0,
+      194
+    ],
+    "bbox": [
+      181,
+      68,
+      192,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\005.png",
+    "alpha_range": [
+      0,
+      176
+    ],
+    "bbox": [
+      178,
+      98,
+      188,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\006.png",
+    "alpha_range": [
+      0,
+      188
+    ],
+    "bbox": [
+      177,
+      103,
+      184,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\0\\007.png",
+    "alpha_range": [
+      0,
+      171
+    ],
+    "bbox": [
+      183,
+      92,
+      189,
+      99
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\000.png",
+    "alpha_range": [
+      0,
+      195
+    ],
+    "bbox": [
+      107,
+      123,
+      154,
+      141
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\001.png",
+    "alpha_range": [
+      0,
+      174
+    ],
+    "bbox": [
+      144,
+      121,
+      157,
+      132
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\002.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      121,
+      124,
+      156,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\003.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      87,
+      129,
+      140,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\004.png",
+    "alpha_range": [
+      0,
+      191
+    ],
+    "bbox": [
+      71,
+      106,
+      100,
+      137
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\005.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      68,
+      101,
+      77,
+      118
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\006.png",
+    "alpha_range": [
+      0,
+      197
+    ],
+    "bbox": [
+      70,
+      103,
+      77,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\135\\007.png",
+    "alpha_range": [
+      0,
+      185
+    ],
+    "bbox": [
+      77,
+      117,
+      84,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\000.png",
+    "alpha_range": [
+      0,
+      198
+    ],
+    "bbox": [
+      76,
+      108,
+      118,
+      133
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\001.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      106,
+      127,
+      121,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\002.png",
+    "alpha_range": [
+      0,
+      195
+    ],
+    "bbox": [
+      82,
+      120,
+      118,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\003.png",
+    "alpha_range": [
+      0,
+      200
+    ],
+    "bbox": [
+      66,
+      90,
+      99,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\004.png",
+    "alpha_range": [
+      0,
+      198
+    ],
+    "bbox": [
+      64,
+      63,
+      75,
+      104
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\005.png",
+    "alpha_range": [
+      0,
+      188
+    ],
+    "bbox": [
+      68,
+      58,
+      78,
+      75
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\006.png",
+    "alpha_range": [
+      0,
+      197
+    ],
+    "bbox": [
+      72,
+      61,
+      79,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\180\\007.png",
+    "alpha_range": [
+      0,
+      178
+    ],
+    "bbox": [
+      67,
+      75,
+      73,
+      83
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\000.png",
+    "alpha_range": [
+      0,
+      206
+    ],
+    "bbox": [
+      73,
+      69,
+      89,
+      112
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\001.png",
+    "alpha_range": [
+      0,
+      197
+    ],
+    "bbox": [
+      79,
+      104,
+      91,
+      115
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\002.png",
+    "alpha_range": [
+      0,
+      206
+    ],
+    "bbox": [
+      69,
+      80,
+      87,
+      113
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\003.png",
+    "alpha_range": [
+      0,
+      198
+    ],
+    "bbox": [
+      67,
+      48,
+      83,
+      98
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\004.png",
+    "alpha_range": [
+      0,
+      204
+    ],
+    "bbox": [
+      74,
+      33,
+      109,
+      61
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\005.png",
+    "alpha_range": [
+      0,
+      193
+    ],
+    "bbox": [
+      96,
+      30,
+      113,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\006.png",
+    "alpha_range": [
+      0,
+      176
+    ],
+    "bbox": [
+      103,
+      32,
+      112,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\225\\007.png",
+    "alpha_range": [
+      0,
+      194
+    ],
+    "bbox": [
+      90,
+      39,
+      98,
+      46
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\000.png",
+    "alpha_range": [
+      0,
+      194
+    ],
+    "bbox": [
+      80,
+      39,
+      108,
+      79
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\001.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      76,
+      68,
+      85,
+      81
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\002.png",
+    "alpha_range": [
+      0,
+      201
+    ],
+    "bbox": [
+      76,
+      43,
+      93,
+      78
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\003.png",
+    "alpha_range": [
+      0,
+      196
+    ],
+    "bbox": [
+      82,
+      28,
+      125,
+      60
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\004.png",
+    "alpha_range": [
+      0,
+      197
+    ],
+    "bbox": [
+      110,
+      26,
+      154,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\005.png",
+    "alpha_range": [
+      0,
+      188
+    ],
+    "bbox": [
+      141,
+      30,
+      158,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\006.png",
+    "alpha_range": [
+      0,
+      187
+    ],
+    "bbox": [
+      147,
+      32,
+      156,
+      39
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\270\\007.png",
+    "alpha_range": [
+      0,
+      183
+    ],
+    "bbox": [
+      135,
+      29,
+      142,
+      36
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\000.png",
+    "alpha_range": [
+      0,
+      201
+    ],
+    "bbox": [
+      102,
+      36,
+      149,
+      51
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\001.png",
+    "alpha_range": [
+      0,
+      181
+    ],
+    "bbox": [
+      99,
+      41,
+      112,
+      53
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\002.png",
+    "alpha_range": [
+      0,
+      195
+    ],
+    "bbox": [
+      100,
+      31,
+      136,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\003.png",
+    "alpha_range": [
+      0,
+      199
+    ],
+    "bbox": [
+      116,
+      29,
+      169,
+      43
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\004.png",
+    "alpha_range": [
+      0,
+      203
+    ],
+    "bbox": [
+      156,
+      35,
+      185,
+      67
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\005.png",
+    "alpha_range": [
+      0,
+      191
+    ],
+    "bbox": [
+      179,
+      55,
+      188,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\006.png",
+    "alpha_range": [
+      0,
+      177
+    ],
+    "bbox": [
+      179,
+      61,
+      186,
+      69
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\315\\007.png",
+    "alpha_range": [
+      0,
+      167
+    ],
+    "bbox": [
+      173,
+      51,
+      179,
+      57
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\000.png",
+    "alpha_range": [
+      0,
+      191
+    ],
+    "bbox": [
+      167,
+      61,
+      183,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\001.png",
+    "alpha_range": [
+      0,
+      193
+    ],
+    "bbox": [
+      165,
+      58,
+      177,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\002.png",
+    "alpha_range": [
+      0,
+      198
+    ],
+    "bbox": [
+      169,
+      59,
+      187,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\003.png",
+    "alpha_range": [
+      0,
+      191
+    ],
+    "bbox": [
+      173,
+      74,
+      188,
+      124
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\004.png",
+    "alpha_range": [
+      0,
+      194
+    ],
+    "bbox": [
+      147,
+      111,
+      182,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\005.png",
+    "alpha_range": [
+      0,
+      201
+    ],
+    "bbox": [
+      143,
+      134,
+      160,
+      142
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\006.png",
+    "alpha_range": [
+      0,
+      187
+    ],
+    "bbox": [
+      144,
+      133,
+      153,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\45\\007.png",
+    "alpha_range": [
+      0,
+      188
+    ],
+    "bbox": [
+      158,
+      129,
+      165,
+      135
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\000.png",
+    "alpha_range": [
+      0,
+      199
+    ],
+    "bbox": [
+      148,
+      95,
+      176,
+      136
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\001.png",
+    "alpha_range": [
+      0,
+      179
+    ],
+    "bbox": [
+      171,
+      92,
+      180,
+      107
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\002.png",
+    "alpha_range": [
+      0,
+      197
+    ],
+    "bbox": [
+      163,
+      95,
+      180,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\003.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      132,
+      113,
+      174,
+      144
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\004.png",
+    "alpha_range": [
+      0,
+      198
+    ],
+    "bbox": [
+      102,
+      137,
+      146,
+      147
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\005.png",
+    "alpha_range": [
+      0,
+      193
+    ],
+    "bbox": [
+      97,
+      134,
+      114,
+      143
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\006.png",
+    "alpha_range": [
+      0,
+      196
+    ],
+    "bbox": [
+      100,
+      133,
+      109,
+      140
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\bat\\90\\007.png",
+    "alpha_range": [
+      0,
+      181
+    ],
+    "bbox": [
+      114,
+      139,
+      122,
+      146
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\000.png",
+    "alpha_range": [
+      0,
+      147
+    ],
+    "bbox": [
+      159,
+      88,
+      163,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\001.png",
+    "alpha_range": [
+      0,
+      134
+    ],
+    "bbox": [
+      159,
+      88,
+      163,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\002.png",
+    "alpha_range": [
+      0,
+      162
+    ],
+    "bbox": [
+      159,
+      88,
+      167,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\003.png",
+    "alpha_range": [
+      0,
+      185
+    ],
+    "bbox": [
+      163,
+      87,
+      173,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\004.png",
+    "alpha_range": [
+      0,
+      183
+    ],
+    "bbox": [
+      169,
+      87,
+      176,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\005.png",
+    "alpha_range": [
+      0,
+      99
+    ],
+    "bbox": [
+      173,
+      87,
+      176,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\006.png",
+    "alpha_range": [
+      0,
+      173
+    ],
+    "bbox": [
+      170,
+      87,
+      175,
+      93
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\0\\007.png",
+    "alpha_range": [
+      0,
+      179
+    ],
+    "bbox": [
+      163,
+      87,
+      169,
+      94
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\000.png",
+    "alpha_range": [
+      0,
+      147
+    ],
+    "bbox": [
+      98,
+      102,
+      104,
+      108
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\001.png",
+    "alpha_range": [
+      0,
+      150
+    ],
+    "bbox": [
+      99,
+      103,
+      104,
+      108
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\002.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      96,
+      103,
+      103,
+      110
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\003.png",
+    "alpha_range": [
+      0,
+      194
+    ],
+    "bbox": [
+      92,
+      106,
+      100,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\004.png",
+    "alpha_range": [
+      0,
+      172
+    ],
+    "bbox": [
+      90,
+      110,
+      96,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\005.png",
+    "alpha_range": [
+      0,
+      91
+    ],
+    "bbox": [
+      90,
+      111,
+      94,
+      117
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\006.png",
+    "alpha_range": [
+      0,
+      170
+    ],
+    "bbox": [
+      90,
+      110,
+      96,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\135\\007.png",
+    "alpha_range": [
+      0,
+      177
+    ],
+    "bbox": [
+      94,
+      106,
+      100,
+      111
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\000.png",
+    "alpha_range": [
+      0,
+      175
+    ],
+    "bbox": [
+      93,
+      79,
+      98,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\001.png",
+    "alpha_range": [
+      0,
+      159
+    ],
+    "bbox": [
+      93,
+      79,
+      98,
+      85
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\002.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      89,
+      79,
+      97,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\003.png",
+    "alpha_range": [
+      0,
+      190
+    ],
+    "bbox": [
+      83,
+      79,
+      94,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\004.png",
+    "alpha_range": [
+      0,
+      187
+    ],
+    "bbox": [
+      80,
+      80,
+      87,
+      87
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\005.png",
+    "alpha_range": [
+      0,
+      119
+    ],
+    "bbox": [
+      79,
+      80,
+      83,
+      87
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\006.png",
+    "alpha_range": [
+      0,
+      185
+    ],
+    "bbox": [
+      81,
+      80,
+      86,
+      87
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\180\\007.png",
+    "alpha_range": [
+      0,
+      193
+    ],
+    "bbox": [
+      87,
+      79,
+      93,
+      86
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\000.png",
+    "alpha_range": [
+      0,
+      159
+    ],
+    "bbox": [
+      107,
+      59,
+      112,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\001.png",
+    "alpha_range": [
+      0,
+      112
+    ],
+    "bbox": [
+      107,
+      59,
+      111,
+      65
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\002.png",
+    "alpha_range": [
+      0,
+      175
+    ],
+    "bbox": [
+      104,
+      57,
+      111,
+      64
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\003.png",
+    "alpha_range": [
+      0,
+      183
+    ],
+    "bbox": [
+      99,
+      54,
+      108,
+      62
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\004.png",
+    "alpha_range": [
+      0,
+      167
+    ],
+    "bbox": [
+      96,
+      52,
+      103,
+      59
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\005.png",
+    "alpha_range": [
+      0,
+      115
+    ],
+    "bbox": [
+      95,
+      52,
+      100,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\006.png",
+    "alpha_range": [
+      0,
+      150
+    ],
+    "bbox": [
+      97,
+      53,
+      102,
+      59
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\225\\007.png",
+    "alpha_range": [
+      0,
+      188
+    ],
+    "bbox": [
+      102,
+      56,
+      108,
+      62
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\000.png",
+    "alpha_range": [
+      0,
+      147
+    ],
+    "bbox": [
+      131,
+      54,
+      137,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\001.png",
+    "alpha_range": [
+      0,
+      128
+    ],
+    "bbox": [
+      131,
+      54,
+      137,
+      58
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\002.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      130,
+      51,
+      137,
+      57
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\003.png",
+    "alpha_range": [
+      0,
+      174
+    ],
+    "bbox": [
+      130,
+      46,
+      137,
+      55
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\004.png",
+    "alpha_range": [
+      0,
+      165
+    ],
+    "bbox": [
+      129,
+      44,
+      136,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\005.png",
+    "alpha_range": [
+      0,
+      82
+    ],
+    "bbox": [
+      129,
+      43,
+      135,
+      47
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\006.png",
+    "alpha_range": [
+      0,
+      160
+    ],
+    "bbox": [
+      129,
+      44,
+      136,
+      49
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\270\\007.png",
+    "alpha_range": [
+      0,
+      171
+    ],
+    "bbox": [
+      130,
+      49,
+      137,
+      54
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\000.png",
+    "alpha_range": [
+      0,
+      128
+    ],
+    "bbox": [
+      152,
+      65,
+      158,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\001.png",
+    "alpha_range": [
+      0,
+      115
+    ],
+    "bbox": [
+      153,
+      65,
+      157,
+      71
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\002.png",
+    "alpha_range": [
+      0,
+      179
+    ],
+    "bbox": [
+      153,
+      63,
+      160,
+      70
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\003.png",
+    "alpha_range": [
+      0,
+      175
+    ],
+    "bbox": [
+      156,
+      60,
+      164,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\004.png",
+    "alpha_range": [
+      0,
+      179
+    ],
+    "bbox": [
+      160,
+      57,
+      166,
+      63
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\005.png",
+    "alpha_range": [
+      0,
+      99
+    ],
+    "bbox": [
+      161,
+      57,
+      167,
+      62
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\006.png",
+    "alpha_range": [
+      0,
+      178
+    ],
+    "bbox": [
+      160,
+      57,
+      166,
+      63
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\315\\007.png",
+    "alpha_range": [
+      0,
+      178
+    ],
+    "bbox": [
+      156,
+      62,
+      162,
+      68
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\000.png",
+    "alpha_range": [
+      0,
+      119
+    ],
+    "bbox": [
+      144,
+      108,
+      149,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\001.png",
+    "alpha_range": [
+      0,
+      119
+    ],
+    "bbox": [
+      144,
+      109,
+      149,
+      114
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\002.png",
+    "alpha_range": [
+      0,
+      202
+    ],
+    "bbox": [
+      145,
+      109,
+      152,
+      116
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\003.png",
+    "alpha_range": [
+      0,
+      192
+    ],
+    "bbox": [
+      148,
+      111,
+      157,
+      119
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\004.png",
+    "alpha_range": [
+      0,
+      182
+    ],
+    "bbox": [
+      154,
+      114,
+      160,
+      121
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\005.png",
+    "alpha_range": [
+      0,
+      61
+    ],
+    "bbox": [
+      156,
+      115,
+      160,
+      121
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\006.png",
+    "alpha_range": [
+      0,
+      174
+    ],
+    "bbox": [
+      154,
+      114,
+      159,
+      121
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\45\\007.png",
+    "alpha_range": [
+      0,
+      186
+    ],
+    "bbox": [
+      148,
+      111,
+      154,
+      118
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\000.png",
+    "alpha_range": [
+      0,
+      161
+    ],
+    "bbox": [
+      119,
+      115,
+      125,
+      119
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\001.png",
+    "alpha_range": [
+      0,
+      152
+    ],
+    "bbox": [
+      119,
+      116,
+      125,
+      120
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\002.png",
+    "alpha_range": [
+      0,
+      193
+    ],
+    "bbox": [
+      119,
+      116,
+      126,
+      123
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\003.png",
+    "alpha_range": [
+      0,
+      186
+    ],
+    "bbox": [
+      119,
+      119,
+      126,
+      127
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\004.png",
+    "alpha_range": [
+      0,
+      187
+    ],
+    "bbox": [
+      120,
+      124,
+      127,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\005.png",
+    "alpha_range": [
+      0,
+      96
+    ],
+    "bbox": [
+      121,
+      127,
+      127,
+      130
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\006.png",
+    "alpha_range": [
+      0,
+      180
+    ],
+    "bbox": [
+      120,
+      125,
+      127,
+      129
+    ],
+    "clipped": false
+  },
+  {
+    "file": "build\\melee_trail_review\\measured\\knife\\90\\007.png",
+    "alpha_range": [
+      0,
+      184
+    ],
+    "bbox": [
+      119,
+      119,
+      126,
+      124
+    ],
+    "clipped": false
+  }
+]

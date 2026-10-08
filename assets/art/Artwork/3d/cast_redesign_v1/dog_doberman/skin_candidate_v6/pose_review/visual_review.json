@@ -1,0 +1,19 @@
+{
+  "rig_approved": false,
+  "findings": [
+    "All five renders directly inspected after 24 iterations of local root-weight diffusion",
+    "Previous large tail/leg stretched panels remain absent",
+    "Tail root transition is smoother but retains a visible bulge at the 25 degree stress pose",
+    "Repeated lower-paw probes preserve zero displacement of the other three sampled lower-paw regions"
+  ],
+  "runtime_approved": false,
+  "next_action": "Review opposite-side poses and moderate tail wag sequence; refine visible root bulge and neck/hip transitions before locomotion approval",
+  "status": "retained_for_expanded_pose_validation",
+  "reviewed_views": [
+    "rest.png",
+    "front_paw_bend.png",
+    "rear_hip_bend.png",
+    "head_turn.png",
+    "tail_bend.png"
+  ]
+}

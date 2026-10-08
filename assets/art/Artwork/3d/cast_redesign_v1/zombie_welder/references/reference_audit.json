@@ -1,0 +1,51 @@
+{
+  "character": "zombie_welder",
+  "height_m": 1.77,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_welder_isolated_turnaround_v2.png",
+  "source_sha256": "410400715fa4fbba01e9c94f9684131962e56e3d2b18956b80d89b2476a735fd",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        560,
+        1024
+      ],
+      "width": 560,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_welder\\references\\front.png",
+      "sha256": "bef462612ae25a9aee18914607f9fabf83a580ceda2b2fb0c505c33e62685c21"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        610,
+        0,
+        900,
+        1024
+      ],
+      "width": 290,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_welder\\references\\side.png",
+      "sha256": "ce6c48ac301741f5e807a698829be29649d29152ac5f49a37d4be5315c4082b6"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        980,
+        0,
+        1510,
+        1024
+      ],
+      "width": 530,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_welder\\references\\back.png",
+      "sha256": "c4231106390c6fa323e0549e85c762c86748e79f5b613aa2482de205ab5ccb78"
+    }
+  ],
+  "visual_review": "New isolated ImageGen sheet and all three saved Blender crops directly inspected. Complete helmet, gloves, boots and apron; no adjacent detail panels. Identity retained with minor generated material variation. Modeling input approval only."
+}

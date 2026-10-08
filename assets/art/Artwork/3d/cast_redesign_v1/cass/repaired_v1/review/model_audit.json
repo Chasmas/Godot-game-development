@@ -1,0 +1,60 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass\\repaired_v1\\cass_surface_candidate.glb",
+  "runtime_approved": false,
+  "normalized_height_m": 1.72,
+  "source_bounds": {
+    "lower": [
+      -0.5387915372848511,
+      -0.154246985912323,
+      -0.9435242414474487
+    ],
+    "upper": [
+      0.5381634831428528,
+      0.15561877191066742,
+      0.9499701261520386
+    ]
+  },
+  "mesh_objects": 1,
+  "vertices": 101866,
+  "polygons": 118178,
+  "smooth_polygons": 118178,
+  "armature_objects": 0,
+  "materials": [
+    {
+      "name": "Material_0",
+      "textures": [
+        {
+          "name": "Image_0",
+          "size": [
+            4096,
+            4096
+          ],
+          "color_space": "sRGB"
+        },
+        {
+          "name": "Image_1",
+          "size": [
+            2048,
+            2048
+          ],
+          "color_space": "Non-Color"
+        },
+        {
+          "name": "normal",
+          "size": [
+            4096,
+            4096
+          ],
+          "color_space": "Non-Color"
+        }
+      ]
+    }
+  ],
+  "scope": "Static imported model and reference renders; no rig, facial animation, weapon contacts or Godot gameplay validation.",
+  "renders": [
+    "front.png",
+    "side.png",
+    "back.png",
+    "face_front.png"
+  ]
+}

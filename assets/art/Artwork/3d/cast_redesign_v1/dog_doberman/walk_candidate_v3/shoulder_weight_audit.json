@@ -1,0 +1,13 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "scope": "Local shoulder weight diffusion only; gait pose validation pending",
+  "iterations": 60,
+  "affected_vertices": 12808,
+  "sole_weights_preserved": true,
+  "source_geometry_unchanged": true,
+  "maximum_regional_adjacent_weight_gap_before": 2.0,
+  "maximum_regional_adjacent_weight_gap_after": 0.842147946357727,
+  "minimum_weight_sum": 0.9999997615814209,
+  "maximum_weight_sum": 1.000000238418579
+}

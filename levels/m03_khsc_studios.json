@@ -250,6 +250,7 @@
       "facing": "left"
     },
     "5,38": {
+      "idle_action": "watch",
       "kind": "security",
       "facing": "up"
     },
@@ -280,7 +281,7 @@
         ],
         [
           9,
-          19
+          18
         ],
         [
           18,
@@ -327,6 +328,7 @@
       "facing": "left"
     },
     "25,40": {
+      "idle_action": "watch",
       "kind": "security",
       "facing": "up"
     },
@@ -1072,7 +1074,7 @@
       "id": "studio_clapperboard",
       "pos": [
         22,
-        15
+        14
       ],
       "size": 0.5,
       "auto": true,
@@ -1093,7 +1095,7 @@
       "type": "sprite",
       "id": "studio_clapperboard",
       "pos": [
-        43,
+        44,
         2
       ],
       "size": 0.5,
@@ -1105,7 +1107,7 @@
       "id": "studio_teleprompter",
       "pos": [
         22,
-        32
+        18
       ],
       "size": 0.7,
       "auto": true
@@ -1114,8 +1116,8 @@
       "type": "sprite",
       "id": "studio_teleprompter",
       "pos": [
-        47,
-        2
+        46,
+        30
       ],
       "size": 0.7,
       "auto": true
@@ -1124,8 +1126,8 @@
       "type": "sprite",
       "id": "studio_spotlight_beam",
       "pos": [
-        25,
-        21
+        22,
+        25
       ],
       "size": 0.8,
       "auto": true,
@@ -1135,7 +1137,7 @@
       "type": "sprite",
       "id": "studio_spotlight_beam",
       "pos": [
-        39,
+        40,
         2
       ],
       "size": 0.8,
@@ -1146,12 +1148,54 @@
       "type": "sprite",
       "id": "studio_spotlight_beam",
       "pos": [
-        46,
-        30
+        44,
+        32
       ],
       "size": 0.8,
       "auto": true,
       "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_block_x",
+      "pos": [
+        22,
+        32
+      ],
+      "size": 0.34,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_block_x",
+      "pos": [
+        45,
+        13
+      ],
+      "size": 0.34,
+      "auto": true,
+      "floor": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_boom_mic",
+      "pos": [
+        21,
+        10
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "studio_boom_mic",
+      "pos": [
+        49,
+        40
+      ],
+      "size": 0.72,
+      "auto": true
     },
     {
       "type": "sprite",
@@ -1245,8 +1289,8 @@
       "type": "sprite",
       "id": "road_pothole",
       "pos": [
-        9,
-        46
+        7,
+        45
       ],
       "size": 0.9,
       "auto": true,
@@ -1267,8 +1311,8 @@
       "type": "sprite",
       "id": "road_pothole",
       "pos": [
-        31,
-        55
+        32,
+        53
       ],
       "size": 0.9,
       "auto": true,
@@ -1278,8 +1322,8 @@
       "type": "sprite",
       "id": "road_patch",
       "pos": [
-        11,
-        48
+        10,
+        47
       ],
       "size": 1.2,
       "auto": true,
@@ -1367,7 +1411,7 @@
       "id": "hq_light_stand",
       "pos": [
         26,
-        17
+        16
       ],
       "size": 0.72,
       "auto": true
@@ -1377,7 +1421,7 @@
       "id": "hq_light_stand",
       "pos": [
         44,
-        17
+        16
       ],
       "size": 0.72,
       "auto": true
@@ -1387,7 +1431,7 @@
       "id": "hq_light_stand",
       "pos": [
         34,
-        34
+        39
       ],
       "size": 0.72,
       "auto": true
@@ -1397,7 +1441,7 @@
       "id": "hq_light_stand",
       "pos": [
         36,
-        34
+        39
       ],
       "size": 0.72,
       "auto": true
@@ -1426,8 +1470,8 @@
       "type": "sprite",
       "id": "hq_light_stand",
       "pos": [
-        26,
-        32
+        34,
+        13
       ],
       "size": 0.72,
       "auto": true
@@ -1436,8 +1480,8 @@
       "type": "sprite",
       "id": "hq_light_stand",
       "pos": [
-        44,
-        32
+        36,
+        13
       ],
       "size": 0.72,
       "auto": true
@@ -1447,7 +1491,7 @@
       "id": "hq_crate_stack",
       "pos": [
         21,
-        10
+        21
       ],
       "size": 0.72,
       "auto": true
@@ -1456,7 +1500,17 @@
       "type": "sprite",
       "id": "hq_crate_stack",
       "pos": [
-        49,
+        47,
+        1
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_crate_stack",
+      "pos": [
+        42,
         40
       ],
       "size": 0.72,
@@ -1466,18 +1520,8 @@
       "type": "sprite",
       "id": "hq_crate_stack",
       "pos": [
-        36,
-        24
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_crate_stack",
-      "pos": [
-        21,
-        39
+        24,
+        1
       ],
       "size": 0.72,
       "auto": true
@@ -1486,7 +1530,7 @@
       "type": "sprite",
       "id": "hq_costume_rack",
       "pos": [
-        29,
+        24,
         20
       ],
       "size": 0.72,
@@ -1496,8 +1540,8 @@
       "type": "sprite",
       "id": "hq_costume_rack",
       "pos": [
-        45,
-        13
+        47,
+        15
       ],
       "size": 0.72,
       "auto": true
@@ -1507,7 +1551,7 @@
       "id": "hq_makeup_station",
       "pos": [
         21,
-        24
+        38
       ],
       "size": 0.72,
       "auto": true
@@ -1516,8 +1560,8 @@
       "type": "sprite",
       "id": "hq_directors_chairs",
       "pos": [
-        32,
-        25
+        25,
+        31
       ],
       "size": 0.72,
       "auto": true
@@ -1526,8 +1570,8 @@
       "type": "sprite",
       "id": "hq_directors_chairs",
       "pos": [
-        47,
-        15
+        48,
+        18
       ],
       "size": 0.72,
       "auto": true
@@ -1537,7 +1581,7 @@
       "id": "hq_directors_chairs",
       "pos": [
         35,
-        8
+        7
       ],
       "size": 0.72,
       "auto": true
@@ -1556,8 +1600,8 @@
       "type": "sprite",
       "id": "hq_directors_chairs",
       "pos": [
-        38,
-        18
+        29,
+        20
       ],
       "size": 0.72,
       "auto": true
@@ -1566,8 +1610,8 @@
       "type": "sprite",
       "id": "hq_directors_chairs",
       "pos": [
-        32,
-        36
+        34,
+        35
       ],
       "size": 0.72,
       "auto": true
@@ -1576,28 +1620,28 @@
       "type": "sprite",
       "id": "hq_catering_table",
       "pos": [
-        32,
+        26,
+        25
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_catering_table",
+      "pos": [
+        40,
+        13
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_catering_table",
+      "pos": [
+        40,
         32
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_catering_table",
-      "pos": [
-        48,
-        18
-      ],
-      "size": 0.72,
-      "auto": true
-    },
-    {
-      "type": "sprite",
-      "id": "hq_catering_table",
-      "pos": [
-        33,
-        14
       ],
       "size": 0.72,
       "auto": true

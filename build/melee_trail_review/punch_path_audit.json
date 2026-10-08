@@ -1,0 +1,230 @@
+{
+  "approved": false,
+  "scope": "Frozen projected hand paths, not body acting approval",
+  "rows": [
+    {
+      "hand": "punch_right",
+      "heading": 0.0,
+      "stroke_px": 4.350740055575642,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22578455496966537
+    },
+    {
+      "hand": "punch_right",
+      "heading": 22.49999999999999,
+      "stroke_px": 4.4318180817738035,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.23040695563573693
+    },
+    {
+      "hand": "punch_right",
+      "heading": 44.99999999999998,
+      "stroke_px": 4.242476094511046,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.2209767945697778
+    },
+    {
+      "hand": "punch_right",
+      "heading": 67.49999999999986,
+      "stroke_px": 3.8669444639933346,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.20187802473441094
+    },
+    {
+      "hand": "punch_right",
+      "heading": 90.0000000000002,
+      "stroke_px": 3.50432438529531,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18341546339251893
+    },
+    {
+      "hand": "punch_right",
+      "heading": 112.49999999999996,
+      "stroke_px": 3.397047130709325,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.17793691628309807
+    },
+    {
+      "hand": "punch_right",
+      "heading": 134.99999999999972,
+      "stroke_px": 3.6283258253015007,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18975700358734357
+    },
+    {
+      "hand": "punch_right",
+      "heading": 157.50000000000006,
+      "stroke_px": 4.025633939684222,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.209993712615181
+    },
+    {
+      "hand": "punch_right",
+      "heading": 179.99999999999983,
+      "stroke_px": 4.346085682541334,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22621897155208612
+    },
+    {
+      "hand": "punch_right",
+      "heading": 202.50000000000014,
+      "stroke_px": 4.432945588025115,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.23030133761327146
+    },
+    {
+      "hand": "punch_right",
+      "heading": 224.99999999999991,
+      "stroke_px": 4.249419786678029,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22032456820000143
+    },
+    {
+      "hand": "punch_right",
+      "heading": 247.50000000000028,
+      "stroke_px": 3.879716352846694,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.20066873505857702
+    },
+    {
+      "hand": "punch_right",
+      "heading": 270.0,
+      "stroke_px": 3.5219495761281943,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18177269214825265
+    },
+    {
+      "hand": "punch_right",
+      "heading": 292.4999999999998,
+      "stroke_px": 3.4161161805005587,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.17616060145667412
+    },
+    {
+      "hand": "punch_right",
+      "heading": 315.0000000000001,
+      "stroke_px": 3.6443032664841066,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18825324183249603
+    },
+    {
+      "hand": "punch_right",
+      "heading": 337.4999999999999,
+      "stroke_px": 4.036144953414071,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.2090013681331041
+    },
+    {
+      "hand": "punch_left",
+      "heading": 0.0,
+      "stroke_px": 4.336568478421475,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22624670002019914
+    },
+    {
+      "hand": "punch_left",
+      "heading": 22.49999999999999,
+      "stroke_px": 4.092494894752073,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.2100856593090283
+    },
+    {
+      "hand": "punch_left",
+      "heading": 44.99999999999998,
+      "stroke_px": 3.7821612226812293,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18987897277441346
+    },
+    {
+      "hand": "punch_left",
+      "heading": 67.49999999999986,
+      "stroke_px": 3.617929563066852,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.17802715630517027
+    },
+    {
+      "hand": "punch_left",
+      "heading": 90.0000000000002,
+      "stroke_px": 3.726711333406268,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.18341340221709926
+    },
+    {
+      "hand": "punch_left",
+      "heading": 112.49999999999996,
+      "stroke_px": 4.023173812402119,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.20185869794309216
+    },
+    {
+      "hand": "punch_left",
+      "heading": 134.99999999999972,
+      "stroke_px": 4.298234047089426,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.2209433823400253
+    },
+    {
+      "hand": "punch_left",
+      "heading": 157.50000000000006,
+      "stroke_px": 4.377611698220535,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.2303711085226396
+    },
+    {
+      "hand": "punch_left",
+      "heading": 179.99999999999983,
+      "stroke_px": 4.188847714060559,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22576231471826755
+    },
+    {
+      "hand": "punch_left",
+      "heading": 202.50000000000014,
+      "stroke_px": 3.791838684115292,
+      "peak_phase": 0.578125,
+      "recovery_gap_px": 0.20898914006195463
+    },
+    {
+      "hand": "punch_left",
+      "heading": 224.99999999999991,
+      "stroke_px": 3.402644721762137,
+      "peak_phase": 0.609375,
+      "recovery_gap_px": 0.18820351423938295
+    },
+    {
+      "hand": "punch_left",
+      "heading": 247.50000000000028,
+      "stroke_px": 3.1814223873298992,
+      "peak_phase": 0.609375,
+      "recovery_gap_px": 0.17602311387664862
+    },
+    {
+      "hand": "punch_left",
+      "heading": 270.0,
+      "stroke_px": 3.2866231758571947,
+      "peak_phase": 0.609375,
+      "recovery_gap_px": 0.18157423001731454
+    },
+    {
+      "hand": "punch_left",
+      "heading": 292.4999999999998,
+      "stroke_px": 3.673158189805704,
+      "peak_phase": 0.546875,
+      "recovery_gap_px": 0.20050781354235542
+    },
+    {
+      "hand": "punch_left",
+      "heading": 315.0000000000001,
+      "stroke_px": 4.113871929225132,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.22021074366696086
+    },
+    {
+      "hand": "punch_left",
+      "heading": 337.4999999999999,
+      "stroke_px": 4.359556610189842,
+      "peak_phase": 0.53125,
+      "recovery_gap_px": 0.23025092362206143
+    }
+  ]
+}

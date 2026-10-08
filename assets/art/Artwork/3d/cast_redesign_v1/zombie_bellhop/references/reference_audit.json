@@ -1,0 +1,51 @@
+{
+  "character": "zombie_bellhop",
+  "height_m": 1.74,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_bellhop_isolated_turnaround_v2.png",
+  "source_sha256": "942bda4874ebef84cf802e3bf4163053278d44a7ed621da4f65bab2ab7407b34",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        590,
+        1024
+      ],
+      "width": 590,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_bellhop\\references\\front.png",
+      "sha256": "a6deaea293f085f3ab8f656875f88fb65b98c744a5a32f003e841ebff5af3bde"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        650,
+        0,
+        900,
+        1024
+      ],
+      "width": 250,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_bellhop\\references\\side.png",
+      "sha256": "d342f60daaea6dc5ca406fbe15f2b81481670762e62f3024c9d370b29ab64f3d"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        960,
+        0,
+        1450,
+        1024
+      ],
+      "width": 490,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_bellhop\\references\\back.png",
+      "sha256": "b8ac0f3015aff175998cdb28f42ed27cd188069036f37ca69872115eb3a7c575"
+    }
+  ],
+  "visual_review": "New ImageGen isolated reference and all three saved Blender crops directly inspected. Complete hands, feet and hat; no portrait contamination. Identity and uniform retained with minor generated cloth variation. Modeling input approval only."
+}

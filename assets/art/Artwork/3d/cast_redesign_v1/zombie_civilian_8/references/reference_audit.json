@@ -1,0 +1,51 @@
+{
+  "character": "zombie_civilian_8",
+  "height_m": 1.66,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_civilian_8_turnaround.png",
+  "source_sha256": "7d5fd9a01942546036fedb5eda6dd6ba6a634e0044a6a39eadc5645fc4c94f7c",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        445,
+        1024
+      ],
+      "width": 445,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_8\\references\\front.png",
+      "sha256": "e6e8ccb6dc233f60a76942754de418b30a105b10b390c2e565baf9fca16197ae"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        455,
+        0,
+        690,
+        1024
+      ],
+      "width": 235,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_8\\references\\side.png",
+      "sha256": "e0bf7c444fac38d9ea631c0786aa8f7cd6158174c17b91a3ceab49d166fd7ae8"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        720,
+        0,
+        1150,
+        1024
+      ],
+      "width": 430,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_8\\references\\back.png",
+      "sha256": "9b3cb516ecf4fbdc9018958a8f78f8d6ef47480641c4eee160dabf1cb883f91c"
+    }
+  ],
+  "visual_review": "Original sheet and three saved Blender views directly inspected. Full braid, fingers and boots; isolated figures with denim jacket and striped blouse preserved. Modeling input approval only, no mesh/rig/runtime approval."
+}

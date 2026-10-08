@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+PASS unreviewed camera-move preview cannot replace narrative shots
+PASS establishing apartment shot is preserved
+PASS first dialogue node selects its machine shot
+PASS dialogue changes to its authored close shot
+PASS dialogue can return to its prior shot
+CUTSCENE SHOT REGRESSION: 0 failures

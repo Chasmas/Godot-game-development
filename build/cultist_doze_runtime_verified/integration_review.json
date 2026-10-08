@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "1d5c9c4c0bdd4f41157395d591d817a2b4d8f3456fc27a4e70826dbce74c6007",
+  "integrated_sha256": "fcd0507c454694b4a6b38dc5bf90b68e85250f5c150defa387fb548338d7129b",
+  "backup": "build\\cultist_doze_runtime_verified\\cultist_before_1d5c9c4c0bdd.glb",
+  "visual_review": "build/cultist_idle_review_directions.png",
+  "mechanics": "build/cultist_doze_supported_isolated/regression.log"
+}

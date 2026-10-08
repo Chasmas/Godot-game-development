@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/civilian_smoke_fitted_isolated/civilian.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.00032060059657821797,
+    "Hips": 0.0,
+    "LeftArm": 0.0002087709085693304,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00013467373785254578,
+    "LeftHand": 3.524653570922613e-05,
+    "Neck": 0.00018456865319704663,
+    "RightArm": 0.00022887679752671522,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.02158973831703858,
+    "RightHand": 0.017624011669875424
+  },
+  "loop_gap_m": {
+    "Head": 0.00040840038713904446,
+    "Hips": 0.0,
+    "LeftArm": 0.00026595595337236045,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00017540471309165966,
+    "LeftHand": 5.1130653095599025e-05,
+    "Neck": 0.0002351185099741849,
+    "RightArm": 0.0002915429049882369,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00016955135120662394,
+    "RightHand": 7.070566637819759e-06
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.13507163524627996,
+  "contact_hand_minus_head_m": [
+    -0.03500103950500999,
+    -0.034999728202819824
+  ]
+}

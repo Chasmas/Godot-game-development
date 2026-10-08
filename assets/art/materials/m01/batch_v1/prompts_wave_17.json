@@ -1,0 +1,52 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "damaged_vending_reference_v2",
+      "target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/vending_reference.png",
+      "detail": "Crack and break a central portion of the display glass, dent a small metal corner, tip a few cans inside their original five shelves. Preserve coral palm side graphics, original coin slot and circular button, paired coloured selection buttons, lower collection opening and cabinet vents.",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the sole edit target. Create a locally damaged version of this EXACT object, preserving camera, silhouette, dimensions, colour scheme, printed graphics and all fittings except the explicitly damaged area. No redesign, no change of model. Preserve physically detailed material treatment. Genuinely transparent background, remove studio halo/gradient without changing object illumination. Entire subject visible, no floor or detached shadow. Crack and break a central portion of the display glass, dent a small metal corner, tip a few cans inside their original five shelves. Preserve coral palm side graphics, original coin slot and circular button, paired coloured selection buttons, lower collection opening and cabinet vents."
+    },
+    {
+      "id": "damaged_arcade_reference_v2",
+      "target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/arcade_reference.png",
+      "detail": "Crack and puncture the CRT, chip one control-deck corner. Preserve original dark teal and cream cabinet, coral palm side illustration, sunset landscape marquee, red joystick and EXACTLY TWO ivory buttons, original coin door with two red slots and two bottom square recesses.",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the sole edit target. Create a locally damaged version of this EXACT object, preserving camera, silhouette, dimensions, colour scheme, printed graphics and all fittings except the explicitly damaged area. No redesign, no change of model. Preserve physically detailed material treatment. Genuinely transparent background, remove studio halo/gradient without changing object illumination. Entire subject visible, no floor or detached shadow. Crack and puncture the CRT, chip one control-deck corner. Preserve original dark teal and cream cabinet, coral palm side illustration, sunset landscape marquee, red joystick and EXACTLY TWO ivory buttons, original coin door with two red slots and two bottom square recesses."
+    },
+    {
+      "id": "damaged_ice_machine_reference_v2",
+      "target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/ice_machine_reference.png",
+      "detail": "Dent and slightly tear a dispensing-bay edge, deform a few lower grille slats and scatter a few ice chips directly below. Preserve original cream cabinet, teal and coral ICE/palm graphics, Cooler Days Ahead text, Sunset MOTEL side graphic, push button and indicator panel, large original dispensing bay.",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the sole edit target. Create a locally damaged version of this EXACT object, preserving camera, silhouette, dimensions, colour scheme, printed graphics and all fittings except the explicitly damaged area. No redesign, no change of model. Preserve physically detailed material treatment. Genuinely transparent background, remove studio halo/gradient without changing object illumination. Entire subject visible, no floor or detached shadow. Dent and slightly tear a dispensing-bay edge, deform a few lower grille slats and scatter a few ice chips directly below. Preserve original cream cabinet, teal and coral ICE/palm graphics, Cooler Days Ahead text, Sunset MOTEL side graphic, push button and indicator panel, large original dispensing bay."
+    },
+    {
+      "id": "damaged_window_reference_v2",
+      "target": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/materials/m01/batch_v1/window_reference.png",
+      "detail": "Break a large hole through left glass pane and crack a small corner of right pane, bend a few blind slats locally. Preserve original two-pane aluminium frame, sill, BOTH open teal side curtains and full brass curtain rod and finials in exactly their original positions. Do not replace curtains with fabric behind glass.",
+      "transparent": true,
+      "prompt": "Use case: precise-object-edit. Image 1 is the sole edit target. Create a locally damaged version of this EXACT object, preserving camera, silhouette, dimensions, colour scheme, printed graphics and all fittings except the explicitly damaged area. No redesign, no change of model. Preserve physically detailed material treatment. Genuinely transparent background, remove studio halo/gradient without changing object illumination. Entire subject visible, no floor or detached shadow. Break a large hole through left glass pane and crack a small corner of right pane, bend a few blind slats locally. Preserve original two-pane aluminium frame, sill, BOTH open teal side curtains and full brass curtain rod and finials in exactly their original positions. Do not replace curtains with fabric behind glass."
+    }
+  ],
+"sources": [
+  {
+    "id": "damaged_vending_reference_v2",
+    "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0fb3a7b4-6a92-4582-a4c5-c236dbef2604.png"
+  },
+  {
+    "id": "damaged_arcade_reference_v2",
+    "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-534c2151-f3c0-4530-a01e-162a116b5f64.png"
+  },
+  {
+    "id": "damaged_ice_machine_reference_v2",
+    "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-93d91e07-b0be-4239-865d-077c2dced850.png"
+  },
+  {
+    "id": "damaged_window_reference_v2",
+    "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-8c651e48-c8d3-49c7-99c7-7709f1366655.png"
+  }
+],
+"status": "generated_pending_visual_review"
+}

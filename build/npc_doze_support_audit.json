@@ -1,0 +1,125 @@
+{
+  "scope": "Joint support comparison; visual approval still required",
+  "looks": [
+    {
+      "look": "boss",
+      "source": "res://build/boss_doze_supported_isolated/boss.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 2.5555491439954725e-06,
+        "RightFoot": 3.740191460016584e-06
+      },
+      "hip_height_m": 0.549999833106995,
+      "approved": false
+    },
+    {
+      "look": "buck",
+      "source": "res://build/buck_doze_supported_isolated/buck.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 4.1127204900015535e-06,
+        "RightFoot": 1.490116120217433e-07
+      },
+      "hip_height_m": 0.550000011920929,
+      "approved": false
+    },
+    {
+      "look": "burnt",
+      "source": "res://build/burnt_doze_supported_isolated/burnt.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 7.212162018016555e-06,
+        "RightFoot": 6.675720214982528e-06
+      },
+      "hip_height_m": 0.550000011920929,
+      "approved": false
+    },
+    {
+      "look": "civilian",
+      "source": "res://build/civilian_doze_supported_isolated/civilian.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 1.19060277939953e-05,
+        "RightFoot": 9.715557098999295e-06
+      },
+      "hip_height_m": 0.550000309944153,
+      "approved": false
+    },
+    {
+      "look": "cultist",
+      "source": "res://build/cultist_doze_supported_isolated/cultist.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 4.008412361006242e-06,
+        "RightFoot": 1.0266900062977369e-05
+      },
+      "hip_height_m": 0.550000071525574,
+      "approved": false
+    },
+    {
+      "look": "fireman",
+      "source": "res://build/fireman_doze_supported_isolated/fireman.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 1.8030405040114772e-06,
+        "RightFoot": 3.0547380449885697e-06
+      },
+      "hip_height_m": 0.54999977350235,
+      "approved": false
+    },
+    {
+      "look": "ghoul",
+      "source": "res://build/ghoul_doze_supported_isolated/ghoul.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 9.268522262989576e-06,
+        "RightFoot": 7.405877113009218e-06
+      },
+      "hip_height_m": 0.550000309944153,
+      "approved": false
+    },
+    {
+      "look": "riot",
+      "source": "res://build/riot_doze_supported_isolated/riot.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 3.427267080136076e-07,
+        "RightFoot": 1.4036893844021625e-05
+      },
+      "hip_height_m": 0.549999892711639,
+      "approved": false
+    },
+    {
+      "look": "scout",
+      "source": "res://build/scout_doze_supported_isolated/scout.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 2.086162566999894e-06,
+        "RightFoot": 2.1010637279994526e-06
+      },
+      "hip_height_m": 0.550000011920929,
+      "approved": false
+    },
+    {
+      "look": "scrapper",
+      "source": "res://build/scrapper_doze_supported_isolated/scrapper.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 5.990266799982269e-06,
+        "RightFoot": 7.74860382099507e-06
+      },
+      "hip_height_m": 0.550000071525574,
+      "approved": false
+    },
+    {
+      "look": "welder",
+      "source": "res://build/welder_doze_supported_isolated/welder.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 2.6375055309779682e-06,
+        "RightFoot": 1.0594725608992217e-05
+      },
+      "hip_height_m": 0.549999892711639,
+      "approved": false
+    },
+    {
+      "look": "zombie",
+      "source": "res://build/zombie_doze_supported_isolated/zombie.glb",
+      "ankle_height_error_m": {
+        "LeftFoot": 2.9802321999117254e-08,
+        "RightFoot": 1.255050301550431e-05
+      },
+      "hip_height_m": 0.550000309944153,
+      "approved": false
+    }
+  ]
+}

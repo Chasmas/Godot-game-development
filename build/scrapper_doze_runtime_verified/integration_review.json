@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "a195fb8e430b127ce63d5d6e79a2c0d9784a810101294aee9518c070a0dbab34",
+  "integrated_sha256": "21f26b295294a70b2ae9c0aa7d43440980f8705981151cbf99b980fbdf12f353",
+  "backup": "build\\scrapper_doze_runtime_verified\\scrapper_before_a195fb8e430b.glb",
+  "visual_review": "build/scrapper_idle_review_directions.png",
+  "mechanics": "build/scrapper_doze_supported_isolated/regression.log"
+}

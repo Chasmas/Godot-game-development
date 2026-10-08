@@ -1,0 +1,46 @@
+{
+  "animation_approved": false,
+  "explicit_static_pose_reset": true,
+  "passed": true,
+  "runtime_approved": false,
+  "samples": [
+    {
+      "source_frame": 1,
+      "start_stop_mesh_difference_m": 0.000000280462643331703,
+      "stop_idle_mesh_difference_m": 0.000000333533137109043
+    },
+    {
+      "source_frame": 4,
+      "start_stop_mesh_difference_m": 0.0000132528402900789,
+      "stop_idle_mesh_difference_m": 0.00000032951450634755
+    },
+    {
+      "source_frame": 7,
+      "start_stop_mesh_difference_m": 0.0000105701792563195,
+      "stop_idle_mesh_difference_m": 0.000000329935403442505
+    },
+    {
+      "source_frame": 10,
+      "start_stop_mesh_difference_m": 0.0000177639849425759,
+      "stop_idle_mesh_difference_m": 0.00000033394894671801
+    },
+    {
+      "source_frame": 13,
+      "start_stop_mesh_difference_m": 0.00000963851744018029,
+      "stop_idle_mesh_difference_m": 0.000000359176709707754
+    },
+    {
+      "source_frame": 16,
+      "start_stop_mesh_difference_m": 0.0000142479275382357,
+      "stop_idle_mesh_difference_m": 0.000000333533137109043
+    },
+    {
+      "source_frame": 19,
+      "start_stop_mesh_difference_m": 0.0000107635187305277,
+      "stop_idle_mesh_difference_m": 0.00000033394894671801
+    }
+  ],
+  "scope": "Seven discrete full-mesh endpoint comparisons using actual Godot skin and combined clips, with explicit carrier reset and one-time travel transfer. Continuous blending, contacts during transitions, GPU appearance and gameplay remain pending.",
+  "source_glb_sha256": "ecbdd2cbe5a86fde6e9f200d84b4fa290d76aded2737870b33bc7db1b3406eed",
+  "vertices": 69148
+}

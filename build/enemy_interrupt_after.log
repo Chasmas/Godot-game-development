@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS down clears controller attack/reload
+PASS down cancels authored attack and attached effects
+PASS downed body owns pose immediately instead of finishing swing
+PASS stun clears controller attack/reload
+PASS stun cancels authored attack and attached effects
+PASS execution clears controller attack/reload
+PASS execution cancels authored attack and attached effects
+ENEMY INTERRUPT REVIEW: 0 failures

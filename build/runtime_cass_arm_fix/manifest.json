@@ -1,0 +1,15 @@
+[
+  {
+    "approved": false,
+    "game_size": [
+      5.0,
+      8.0
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      20,
+      32
+    ]
+  }
+]

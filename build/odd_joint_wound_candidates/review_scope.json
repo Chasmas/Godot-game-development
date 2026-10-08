@@ -1,0 +1,12 @@
+{
+  "status": "superseded_candidate",
+  "scope": "Guard/demon both-leg topology with odd edge multiplicity, preserves source overlap topology. Guard OpenGL intact/cut/capped reviewed at three phases",
+  "remaining": [
+    "Demon visual check",
+    "All24 look audit with edge multiplicity",
+    "Distinguish duplicate faces from layered source geometry",
+    "Live integration and matching detached parts"
+  ],
+  "superseded_reason": "Joint-plane prototype now restricts cutting to limb-weighted faces to protect wings and low arms; previous cap geometry needs regeneration.",
+  "demon_visual": "Three-phase actual OpenGL comparison exposed need for limb-domain protection"
+}

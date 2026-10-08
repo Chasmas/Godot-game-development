@@ -1,0 +1,86 @@
+{
+  "approved": false,
+  "note": "Frozen source trajectory; moving-body/intermediate alignment remains unproven",
+  "samples": [
+    {
+      "heading": 0.0,
+      "tip_stroke_px": 10.465024683182751,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 22.5,
+      "tip_stroke_px": 10.355722036774942,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 45.0,
+      "tip_stroke_px": 10.588628597727451,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 67.5,
+      "tip_stroke_px": 11.008550196773461,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 90.0,
+      "tip_stroke_px": 11.31614507391666,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 112.5,
+      "tip_stroke_px": 11.260713815507538,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 135.0,
+      "tip_stroke_px": 10.758731994282783,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 157.5,
+      "tip_stroke_px": 9.939680625404698,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 180.0,
+      "tip_stroke_px": 9.139944169384542,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 202.5,
+      "tip_stroke_px": 8.784498482994602,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 225.0,
+      "tip_stroke_px": 9.084514825636642,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 247.5,
+      "tip_stroke_px": 9.827792661124489,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 270.0,
+      "tip_stroke_px": 10.591781164349628,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 292.5,
+      "tip_stroke_px": 11.04915193985513,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 315.0,
+      "tip_stroke_px": 11.085953111090399,
+      "contact_clip": "melee"
+    },
+    {
+      "heading": 337.5,
+      "tip_stroke_px": 10.803940899112261,
+      "contact_clip": "melee"
+    }
+  ]
+}

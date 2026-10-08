@@ -1,0 +1,9 @@
+{
+	"failures": 0,
+	"runtime_promoted": false,
+	"scope": "GLTF load, mesh scale and isolated GPU views; no rig or gameplay integration",
+	"sha256": "5d98b350a2413a8ed162e1a9967fbfc00528ffadb4051c489d90c1bfd3fbcc9c",
+	"source": "res://build/cass_fist_review/volume_candidate_v4/fist_review.glb",
+	"surfaces": 1,
+	"visual_approved": false
+}

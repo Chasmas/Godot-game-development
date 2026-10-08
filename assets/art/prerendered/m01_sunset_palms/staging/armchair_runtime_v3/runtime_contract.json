@@ -1,0 +1,63 @@
+{
+  "source_reference": "assets/art/materials/m01/batch_v1/guest_room_direction.png",
+  "fabric_source": "assets/art/materials/m01/batch_v1/armchair_sage_fabric_albedo_v1.png",
+  "camera_elevation_degrees": 50,
+  "pixels_per_metre": 365.7142857142857,
+  "game_pixels_per_metre": 16,
+  "sprite_scale": 0.04375,
+  "runtime_approved": false,
+  "frames": [
+    {
+      "file": "armchair_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    },
+    {
+      "file": "armchair_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        350.0305938720703
+      ]
+    }
+  ],
+  "collision_footprint_metres": [
+    0.7299998998641968,
+    0.6799684464931488
+  ],
+  "collision_center_metres": [
+    0.0,
+    0.019984230399131775
+  ],
+  "geometry_bounds_metres": {
+    "minimum": [
+      -0.3649999499320984,
+      -0.3199999928474426,
+      0.04332774132490158
+    ],
+    "maximum": [
+      0.3649999499320984,
+      0.3599684536457062,
+      0.9181655645370483
+    ]
+  }
+}

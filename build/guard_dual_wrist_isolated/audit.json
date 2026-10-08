@@ -1,0 +1,46 @@
+{
+  "approved": false,
+  "base_sha256": "91f61e0c4fc72c6fa8a1bada8d437d635a19b2f965a405ca87e1dbfd8a55b9f6",
+  "candidate_sha256": "0282c3bb5b72d7d9d3b535db2edc796b28f06e47dfce72d49b20d4bbb1a76186",
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "punch_left",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze",
+    "drink"
+  ],
+  "changed_clips": [
+    "aim_dual"
+  ],
+  "added_clips": [],
+  "rig_geometry_bind_preserved": true,
+  "pose_space_checks": [
+    {
+      "clip": "aim_dual",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 0
+    }
+  ]
+}

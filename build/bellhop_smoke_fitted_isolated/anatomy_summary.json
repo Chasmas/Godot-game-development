@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/bellhop_smoke_fitted_isolated/bellhop.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.000289159143276527,
+    "Hips": 0.0,
+    "LeftArm": 0.00020195658935441072,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00012305482782090085,
+    "LeftHand": 4.360598395375299e-05,
+    "Neck": 0.0002334379935811492,
+    "RightArm": 0.00020378516111902746,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.02459566284639551,
+    "RightHand": 0.016784084284807026
+  },
+  "loop_gap_m": {
+    "Head": 0.00036838902358743355,
+    "Hips": 0.0,
+    "LeftArm": 0.0002572441060121534,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00014045201393648614,
+    "LeftHand": 1.3385694443997478e-05,
+    "Neck": 0.0002974192561396866,
+    "RightArm": 0.0002595768700373537,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00015988058259312047,
+    "RightHand": 5.572262832185467e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.1385109424591,
+  "contact_hand_minus_head_m": [
+    -0.03500163555144997,
+    -0.03499805927276989
+  ]
+}

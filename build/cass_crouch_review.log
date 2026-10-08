@@ -1,0 +1,14 @@
+17:45:56 | INFO: Data are loaded, start creating Blender stuff
+17:45:56 | INFO: Blender create Mesh node char1
+17:45:56 | INFO: glTF import finished in 0.18s
+00:03.579  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_crouch_review\sneak\d00_f00.png'
+00:03.704  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_crouch_review\sneak\d01_f00.png'
+00:03.829  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_crouch_review\sneak\d02_f00.png'
+00:03.954  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_crouch_review\sneak\d03_f00.png'
+ELBOW sneak Right 0.262 (-0.07674527913331985, -0.2283186912536621, 0.9993181228637695)
+ELBOW sneak Left 3.142 (0.12908007204532623, 0.10636641830205917, 1.0197781324386597)
+FACING sneak 0.145 -0.05
+anim sneak 1 frames
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,14 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_bed_batch.py:19: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  result=bpy.data.materials.new(name); result.use_nodes=True
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_bed_batch.py:66: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('Neutral bed review');scene.world.use_nodes=True
+00:08.093  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\bed_family_v1\bed_000.png'
+00:13.797  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\bed_family_v1\bed_090.png'
+00:19.125  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\bed_family_v1\bed_180.png'
+00:25.172  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\bed_family_v1\bed_270.png'
+Info: Packed 3 file(s)
+Info: Saved as "motel_bed.blend"
+M01_BED_BATCH: four coherent views; staging only
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

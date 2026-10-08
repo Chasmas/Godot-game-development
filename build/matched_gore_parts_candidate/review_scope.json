@@ -1,0 +1,4 @@
+{
+  "status": "rejected_incomplete_caps",
+  "reason": "Body-side cap contours contain vertices absent from complementary detached surface. Separate detached boundary reconstruction required; any PNGs in this candidate directory are unapproved."
+}

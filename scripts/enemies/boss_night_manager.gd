@@ -67,6 +67,9 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	_smoke.setup(visual, IdleActivity.Kind.SMOKE, "harcourt")
 	visual.legs.visible = false
 	visual.weapon_sprite.visible = false
+	# a rendered body sits for real (the seated clip, hands forward on the desk)
+	if visual.has_clip("drive"):
+		visual.pose_override = "drive"
 
 func activate() -> void:
 	_stand_up()
@@ -93,7 +96,7 @@ func _physics_process(delta: float) -> void:
 		velocity = _knock + Vector2(sin(_blind_t * 9.0), cos(_blind_t * 7.0)) * 14.0
 		move_and_slide()
 		visual.set_aim(facing.angle() + sin(_blind_t * 6.0) * 0.6)
-		visual.update_move(velocity, delta)
+		visual.update_move(get_real_velocity(), delta)
 		queue_redraw()
 		return
 	super._physics_process(delta)
@@ -182,10 +185,25 @@ const HIT_P2 := 1.5           ## phase two: he's hurt, he's careless
 const HIT_OPEN := 3.2         ## a blow while he's blinded / soaked / foamed
 const HIT_BOOM := 2.5         ## explosions
 
+## How hard each weapon hits a boss, in pistol shots: ~10 pistol rounds empty
+## the bar, heavier guns take fewer. Pellet guns are split across the pellets,
+## so a whole shotgun blast counts as about 1.6 shots, not 8.
+const BOSS_WEIGHT := {
+	&"pistol": 1.0, &"whisper": 0.9, &"smg": 0.6, &"revolver": 1.6, &"rifle": 1.3,
+	&"hotshot": 1.4, &"shotgun": 1.6, &"boomstick": 2.0, &"flamethrower": 0.25,
+	&"bat": 1.2, &"pipe": 1.2, &"machete": 1.1, &"knife": 0.9,
+	&"bottle": 0.6, &"broken_bottle": 0.7, &"brick": 0.7, &"glass_shard": 0.5,
+}
+const HIT_UNIT := 1.0   ## one pistol shot (max_hp 10)
+
 func _chip(info: DamageInfo) -> float:
 	if info.type == DamageInfo.Type.EXPLOSIVE:
 		return HIT_BOOM
-	return HIT if phase == 1 else HIT_P2
+	var w := DB.weapon(info.weapon_id) if info.weapon_id != &"" else null
+	var weight: float = BOSS_WEIGHT.get(info.weapon_id, 1.0)
+	if w and w.pellets > 1:
+		weight /= float(w.pellets)
+	return HIT_UNIT * weight
 
 func _hurt(amount: float, info: DamageInfo) -> String:
 	hp = maxf(0.0, hp - amount)
@@ -295,6 +313,7 @@ func _stand_up() -> void:
 		_smoke = null
 	visual.legs.visible = true
 	visual.weapon_sprite.visible = true
+	visual.pose_override = ""
 	if _chair and is_instance_valid(_chair):
 		var back := Vector2.from_angle(_chair.rotation) * -12.0
 		var ch := _chair

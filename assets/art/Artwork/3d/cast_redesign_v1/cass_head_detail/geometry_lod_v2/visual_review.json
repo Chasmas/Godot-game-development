@@ -1,0 +1,18 @@
+{
+  "status": "continuous_surface_preserved_facial_cleanup_required",
+  "approved_for_rigging": false,
+  "runtime_approved": false,
+  "inspected": [
+    "front_clay.png",
+    "side_clay.png",
+    "back_clay.png",
+    "face_front_clay.png"
+  ],
+  "findings": [
+    "Continuous face and neck retained compared with failed voxel reconstruction.",
+    "Eyelid margins and brows remain malformed; local face faceting visible after reduction.",
+    "Hair silhouette retained; thin strands and bust shoulder edges need cleanup.",
+    "No UV, facial rig or runtime quality approval."
+  ],
+  "next_action": "Localized facial topology and eyelid cleanup, followed by independent neutral clay review before UV work."
+}

@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2240 ms
+PASS m01_checkout wall switch accessible from room (104.0, 184.0)
+PASS m01_checkout wall switch accessible from room (82.5, 648.0)
+[level] prewarmed 21 looks in 476 ms
+PASS m02_dog_days wall switch accessible from room (808.0, 152.0)
+PASS m02_dog_days wall switch accessible from room (520.0, 200.0)
+PASS m02_dog_days wall switch accessible from room (200.0, 301.5)
+[level] prewarmed 16 looks in 340 ms
+PASS m03_prime_time wall switch accessible from room (18.5, 584.0)
+PASS m03_prime_time wall switch accessible from room (338.5, 584.0)
+[level] prewarmed 14 looks in 603 ms
+PASS m04_sweet_dreams wall switch accessible from room (370.5, 328.0)
+AUTHORED SWITCH REACH REVIEW: 0 failures / 8 switches

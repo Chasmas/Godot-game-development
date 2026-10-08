@@ -1,0 +1,51 @@
+{
+  "character": "zombie_civilian_6",
+  "height_m": 1.63,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_civilian_6_turnaround.png",
+  "source_sha256": "595b5ed103756277c2ed23ac039172535882f23f6402e53fd25e759402a93804",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        465,
+        1024
+      ],
+      "width": 465,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_6\\references\\front.png",
+      "sha256": "9edb2ff45f117e2893ede00a3b9c9c447e13635611304f80a38a68ce7ccfbc8a"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        480,
+        0,
+        720,
+        1024
+      ],
+      "width": 240,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_6\\references\\side.png",
+      "sha256": "3aa663c7601df2d106742c9a6cc221bcf5ac3c2331af3b67614c40771c875963"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        745,
+        0,
+        1170,
+        1024
+      ],
+      "width": 425,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_6\\references\\back.png",
+      "sha256": "9751281acef666f37d835618e5b2f57e9170ffe36da77e2cc4b9fe168eb99f51"
+    }
+  ],
+  "visual_review": "Original ImageGen sheet and all three saved Blender crops directly inspected. Complete isolated figures; lavender blouse, tied hair and body proportions retained. No adjacent portraits or clipped extremities. Modeling input approval only."
+}

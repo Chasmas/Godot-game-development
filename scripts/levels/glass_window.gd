@@ -53,6 +53,10 @@ func shatter(dir: Vector2) -> void:
 			side = 1.0
 	elif dir != Vector2.ZERO:
 		side = -signf(dir.dot(normal))
+		# A tangential impact has no preferred side; keep the pickup clear
+		# of the remaining frame instead of dropping it inside the collider.
+		if side == 0.0:
+			side = 1.0
 	Effects.glass(global_position, normal * side)
 	var wd: WeaponData = DB.weapon(&"glass_shard")
 	var host := get_parent()

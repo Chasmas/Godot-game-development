@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS knife starts with pending windup contact
+PASS kick cancels the unlanded knife contact
+PASS kick clears superseded knife animation
+PASS kick owns the current body pose
+PASS new knife strike replaces the kick pose
+PASS old kick does not resume after the roll
+PASS punch replaces the kick pose
+PASS shared cancellation also clears kick timer
+PASS fallback ground execution retains its mounted leg pose
+PASS ordinary fallback cancellation removes kick overlay
+PASS nonlethal stagger cancels contact, pose and trail
+PASS nonlethal stagger cannot deal delayed damage
+PASS armor stagger cancels contact, pose and trail
+PASS armor stagger cannot deal delayed damage
+PASS guard stagger cancels contact, pose and trail
+PASS guard stagger cannot deal delayed damage
+PASS invulnerability preserves committed attack
+PASS external target death immediately releases execution control
+PASS external target death clears paired pose
+PASS death cancels pending contact and attack animation
+PASS death invalidates attached attack effects
+PASS second actor starts a real controller roll
+PASS death stops roll pose and further roll ghosts
+COMBAT INTERRUPT REVIEW: 0 failures

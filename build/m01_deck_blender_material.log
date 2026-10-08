@@ -1,0 +1,9 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\review_m01_deck_material.py:15: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\review_m01_deck_material.py:34: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+00:07.453  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\m01_material_review\deck_material.png'
+Info: Saved as "deck_material.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

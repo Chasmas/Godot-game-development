@@ -1,0 +1,9 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 25,
+  "clip": "Animation",
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/Artwork/3d/cast_redesign_v1/dog_doberman/trot_candidate_v2/baked_candidate_v1/dog_doberman_walk_baked.glb",
+  "source_sha256": "9a5c94e9d8b41e2c6c42d43fa8bbe067e06fbbab4f0993afb746439ae84eca9c"
+}

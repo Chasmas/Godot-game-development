@@ -1,0 +1,15 @@
+{
+  "scope": "Surface topology diagnostic on an analysis copy; no original GLB or character model modified.",
+  "interpretation": "Boundary loops may be intentional, including the base of an isolated bust. Topology counts do not approve anatomy, UV quality, animation or runtime integration.",
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\surface_cleanup_v2\\dog_doberman_surface_candidate.glb",
+  "runtime_approved": false,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "vertices_before": 69131,
+      "vertices_welded_for_analysis": 59858,
+      "boundary_components": [],
+      "nonmanifold_edges_after_weld": 0
+    }
+  ]
+}

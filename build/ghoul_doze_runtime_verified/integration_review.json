@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "c2e85230f3fd3dd8416c6a9d98d107dc7d49590d19c5990cae4a7e91713b1a41",
+  "integrated_sha256": "18f8f6d879e03a4ce879657cc8a3f55c13433a66de6ccb8dddccfe6bf1ca47d4",
+  "backup": "build\\ghoul_doze_runtime_verified\\ghoul_before_c2e85230f3fd.glb",
+  "visual_review": "build/ghoul_idle_review_directions.png",
+  "mechanics": "build/ghoul_doze_supported_isolated/regression.log"
+}

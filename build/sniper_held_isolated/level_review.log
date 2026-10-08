@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+[level] prewarmed 21 looks in 2244 ms
+SCRIPT ERROR: Invalid call. Nonexistent function 'is_alive' in base 'previously freed'.
+   at: _ready (res://tools/sniper_hold_level_review.gd:45)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tools/sniper_hold_level_review.gd:45)

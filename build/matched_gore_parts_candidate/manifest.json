@@ -1,0 +1,158 @@
+[
+  {
+    "approved": false,
+    "game_size": [
+      6.25,
+      5.0
+    ],
+    "look": "guard",
+    "part": "head",
+    "pixels": [
+      25,
+      20
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      5.5,
+      8.25
+    ],
+    "look": "guard",
+    "part": "arm",
+    "pixels": [
+      22,
+      33
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      15.5,
+      6.75
+    ],
+    "look": "guard",
+    "part": "leg",
+    "pixels": [
+      62,
+      27
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      4.5,
+      4.25
+    ],
+    "look": "boss",
+    "part": "head",
+    "pixels": [
+      18,
+      17
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      10.25,
+      9.75
+    ],
+    "look": "boss",
+    "part": "arm",
+    "pixels": [
+      41,
+      39
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      14.75,
+      5.75
+    ],
+    "look": "boss",
+    "part": "leg",
+    "pixels": [
+      59,
+      23
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      10.25,
+      7.5
+    ],
+    "look": "demon",
+    "part": "head",
+    "pixels": [
+      41,
+      30
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      19.25,
+      11.25
+    ],
+    "look": "demon",
+    "part": "arm",
+    "pixels": [
+      77,
+      45
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      18.25,
+      10.5
+    ],
+    "look": "demon",
+    "part": "leg",
+    "pixels": [
+      73,
+      42
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      10.25,
+      7.0
+    ],
+    "look": "cass",
+    "part": "head",
+    "pixels": [
+      41,
+      28
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      7.0,
+      5.75
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      28,
+      23
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      15.25,
+      6.25
+    ],
+    "look": "cass",
+    "part": "leg",
+    "pixels": [
+      61,
+      25
+    ]
+  }
+]

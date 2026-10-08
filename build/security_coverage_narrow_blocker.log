@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2249 ms
+PASS m01_checkout camera (296.0, 516.0) visible=181 max=106.0
+PASS m01_checkout camera (648.0, 516.0) visible=185 max=106.0
+PASS m01_checkout camera (1054.0, 434.0) visible=218 max=106.0
+[level] prewarmed 21 looks in 480 ms
+PASS m02_dog_days camera (18.0, 18.0) visible=202 max=106.0
+PASS m02_dog_days camera (488.0, 324.0) visible=242 max=106.0
+PASS m02_dog_days camera (766.0, 18.0) visible=230 max=106.0
+[level] prewarmed 16 looks in 339 ms
+FAIL studio entry camera does not watch its eastbound corridor at centre sweep
+CORRIDOR lens ray: { "position": (386.0, 18.0), "normal": (-1.0, 0.0), "collider_id": 745428489894, "collider": @StaticBody2D@5435:<StaticBody2D#745428489894>, "shape": 0, "rid": RID(45028437131536) } aim=372.5
+CORRIDOR blocker: layer=128 path=/root/Level/YSorted/Props/@StaticBody2D@5435 position=(392.0, 24.0) groups=[]
+PASS m03_prime_time camera (338.0, 18.0) visible=84 max=106.0
+PASS m03_prime_time camera (1102.0, 402.0) visible=203 max=106.0
+PASS m03_prime_time camera (18.0, 354.0) visible=210 max=106.0
+SECURITY COVERAGE REVIEW: 1 failures / 9 cameras

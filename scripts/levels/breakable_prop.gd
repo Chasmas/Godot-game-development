@@ -47,7 +47,8 @@ func _ready() -> void:
 	cs.shape = r
 	add_child(cs)
 	hit_radius = maxf(size.x, size.y) * 0.5
-	z_index = 3 if kind == "weak_wall" else 0
+	# standing props share the cast's layer and y-sort with them (Level)
+	z_index = 3 if kind == "weak_wall" else 1
 	if kind == "weak_wall":
 		light_mask = 2
 		var occ := LightOccluder2D.new()
@@ -163,7 +164,12 @@ func _draw() -> void:
 			var scr := r.grow(-2)
 			if is_broken:
 				draw_rect(scr, Color(0.05, 0.05, 0.06))
-				draw_line(scr.position, scr.end, Color(0.6, 0.7, 0.8), 1.0)
+				# readable CRT star crack plus two secondary fractures
+				var c := scr.get_center()
+				draw_line(c, scr.position + Vector2(2, 1), Color(0.75, 0.82, 0.9), 1.0)
+				draw_line(c, scr.position + Vector2(scr.size.x - 2, 2), Color(0.55, 0.65, 0.78), 1.0)
+				draw_line(c, scr.position + Vector2(scr.size.x - 3, scr.size.y - 2), Color(0.48, 0.58, 0.7), 1.0)
+				draw_circle(c, 1.2, Color(0.8, 0.9, 1.0, 0.8))
 			else:
 				var n := sin(_t * 23.0) * 0.5 + 0.5
 				draw_rect(scr, Color(0.35 + n * 0.2, 0.55 + n * 0.1, 0.85))
@@ -175,6 +181,12 @@ func _draw() -> void:
 			draw_rect(r, ink, false, 1.0)
 			var scr2 := Rect2(r.position + Vector2(2, 2), Vector2(r.size.x - 4, r.size.y * 0.55))
 			draw_rect(scr2, Color(0.05, 0.05, 0.06) if is_broken else Color.from_hsv(fmod(_t * 0.2, 1.0), 0.8, 0.9))
+			if is_broken:
+				var ac := scr2.get_center()
+				draw_line(ac, scr2.position + Vector2(1, 1), Color(0.85, 0.9, 1.0), 1.0)
+				draw_line(ac, scr2.position + Vector2(scr2.size.x - 1, scr2.size.y - 1), Color(0.5, 0.65, 0.9), 1.0)
+				if fmod(_t, 0.55) < 0.08:
+					draw_circle(r.position + Vector2(r.size.x - 2, 2), 1.2, Color(1.0, 0.75, 0.2))
 			draw_rect(Rect2(r.position + Vector2(3, r.size.y - 4), Vector2(r.size.x - 6, 2)), UIStyle.PINK)
 		"vending":
 			draw_rect(r, Color(0.75, 0.1, 0.18))
@@ -184,6 +196,12 @@ func _draw() -> void:
 			if not is_broken:
 				for i in 3:
 					draw_rect(Rect2(win.position + Vector2(1 + i * 3, 2), Vector2(2, 3)), [UIStyle.GOLD, UIStyle.CYAN, Color.WHITE][i])
+			else:
+				# jagged glass fragments remain readable at the game's pixel scale
+				draw_line(win.position + Vector2(1, 1), win.end - Vector2(2, 2), Color(0.75, 0.9, 1.0), 1.0)
+				draw_line(win.position + Vector2(win.size.x - 2, 1), win.position + Vector2(3, win.size.y - 2), Color(0.55, 0.75, 0.9), 1.0)
+				for i in 2:
+					draw_rect(Rect2(win.position + Vector2(2 + i * 5, win.size.y - 2), Vector2(2, 1)), Color(0.65, 0.8, 0.95))
 		"lamp":
 			draw_circle(Vector2.ZERO, 3.5, ink)
 			draw_circle(Vector2.ZERO, 2.5, Color(0.3, 0.3, 0.3) if is_broken else Color(1, 0.95, 0.7))
@@ -193,16 +211,30 @@ func _draw() -> void:
 				draw_circle(Vector2(1, 2), 6.0, Color(0, 0, 0, 0.3))
 				draw_texture_rect(ptx, Rect2(-7, -7, 14, 14), false)
 			elif is_broken:
-				draw_circle(Vector2.ZERO, 3.0, Color(0.35, 0.2, 0.1))
+				# overturned pot: soil and leaves stay low to the floor and never
+				# become a navigation obstacle.
+				draw_circle(Vector2(-1, 1), 3.0, Color(0.35, 0.2, 0.1))
+				for i in 4:
+					var a := -0.8 + i * 0.55
+					draw_line(Vector2(-1, 1), Vector2.from_angle(a) * (5.0 + i % 2), Color(0.2, 0.5, 0.22), 1.0)
 			else:
 				draw_circle(Vector2.ZERO, 4.5, Color(0.55, 0.28, 0.12))
 				for i in 6:
 					var a := i * TAU / 6.0 + 0.3
 					draw_line(Vector2.ZERO, Vector2.from_angle(a) * 6.5, Color(0.2, 0.6, 0.3), 2.0)
 		"fuse":
-			draw_rect(r, Color(0.45, 0.48, 0.5))
-			draw_rect(r, ink, false, 1.0)
-			draw_rect(Rect2(r.position + Vector2(2, 1), Vector2(2, 2)), Color(0.2, 1.0, 0.3) if not is_broken else Color(0.3, 0.05, 0.05))
+			# PixelLab supplies two authored, immediately distinct states.  Keep
+			# the original 10x6 collision below the wall-mounted painting so the
+			# gameplay footprint and navigation do not change.
+			var fuse_tex := ArtLib.sprite("fuse_box_off" if is_broken else "fuse_box_on")
+			if fuse_tex:
+				var visual_rect := Rect2(-7, -10, 14, 14)
+				draw_rect(Rect2(visual_rect.position + Vector2(1, 1.5), visual_rect.size), Color(0, 0, 0, 0.28))
+				ArtLib.draw_fitted(self, fuse_tex, visual_rect)
+			else:
+				draw_rect(r, Color(0.45, 0.48, 0.5))
+				draw_rect(r, ink, false, 1.0)
+				draw_rect(Rect2(r.position + Vector2(2, 1), Vector2(2, 2)), Color(0.2, 1.0, 0.3) if not is_broken else Color(0.3, 0.05, 0.05))
 			if is_broken and fmod(_t, 0.8) < 0.1:
 				draw_circle(Vector2(randf_range(-3, 3), randf_range(-2, 2)), 1.5, Color(1, 1, 0.6))
 		"weak_wall":

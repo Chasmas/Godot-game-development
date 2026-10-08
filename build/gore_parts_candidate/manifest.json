@@ -1,0 +1,41 @@
+[
+  {
+    "approved": false,
+    "game_size": [
+      5.75,
+      4.5
+    ],
+    "look": "scout",
+    "part": "head",
+    "pixels": [
+      23,
+      18
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      7.25,
+      8.5
+    ],
+    "look": "scout",
+    "part": "arm",
+    "pixels": [
+      29,
+      34
+    ]
+  },
+  {
+    "approved": false,
+    "game_size": [
+      18.75,
+      8.0
+    ],
+    "look": "scout",
+    "part": "leg",
+    "pixels": [
+      75,
+      32
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS  finished callback starts next sequence without being stopped
+PASS  final sequence stops and emits once
+PASS  rejected replacement clears stale animation for still fallback
+PASS  numeric render order excludes contact sheet
+PASS  missing and duplicate frame numbers rejected
+PASS  existing 24-frame staging preview loads in numeric order
+PASS  actual unapproved preview remains excluded from production playback
+FRAME SEQUENCE TRANSITION REVIEW: 0 failures

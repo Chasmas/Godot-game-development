@@ -1,0 +1,67 @@
+[
+  {
+    "look": "biker",
+    "part": "legs",
+    "unresolved_edges": 400
+  },
+  {
+    "look": "civilian",
+    "part": "legs",
+    "unresolved_edges": 190
+  },
+  {
+    "look": "cultist",
+    "part": "legs",
+    "unresolved_edges": 255
+  },
+  {
+    "look": "fireman",
+    "part": "head",
+    "unresolved_edges": 134
+  },
+  {
+    "look": "fireman",
+    "part": "legs",
+    "unresolved_edges": 194
+  },
+  {
+    "look": "ghoul",
+    "part": "leg",
+    "unresolved_edges": 287
+  },
+  {
+    "look": "guard",
+    "part": "head",
+    "unresolved_edges": 174
+  },
+  {
+    "look": "handler",
+    "part": "legs",
+    "unresolved_edges": 217
+  },
+  {
+    "look": "hunter",
+    "part": "leg",
+    "unresolved_edges": 2
+  },
+  {
+    "look": "scrapper",
+    "part": "leg",
+    "unresolved_edges": 195
+  },
+  {
+    "look": "sniper",
+    "part": "leg",
+    "unresolved_edges": 146
+  },
+  {
+    "look": "stagehand",
+    "part": "legs",
+    "unresolved_edges": 150
+  },
+  {
+    "look": "zombie",
+    "part": "legs",
+    "unresolved_edges": 261
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "runtime_approved": false,
+  "scope": "Nine idle mesh samples: Blender full-weight dual-quaternion versus four-weight linear skinning; no locomotion validation",
+  "vertices": 69131,
+  "pruned_vertices": 10119,
+  "maximum_discarded_weight": 0.055649448186159134,
+  "samples": [
+    {
+      "frame": 1,
+      "maximum_difference_m": 4.983491817256436e-05,
+      "p99_difference_m": 2.827296441409999e-07,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 10,
+      "maximum_difference_m": 0.00014511497283820063,
+      "p99_difference_m": 3.490983999654418e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 19,
+      "maximum_difference_m": 0.00021242986258585006,
+      "p99_difference_m": 6.934700195415644e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 28,
+      "maximum_difference_m": 0.00015097019786480814,
+      "p99_difference_m": 3.4872298328991747e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 37,
+      "maximum_difference_m": 4.974913827027194e-05,
+      "p99_difference_m": 2.980232238769531e-07,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 46,
+      "maximum_difference_m": 0.00014591560466215014,
+      "p99_difference_m": 3.5016321362491e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 55,
+      "maximum_difference_m": 0.0002206725039286539,
+      "p99_difference_m": 6.970078175072558e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 64,
+      "maximum_difference_m": 0.0001590609608683735,
+      "p99_difference_m": 3.5277514598419657e-06,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    },
+    {
+      "frame": 73,
+      "maximum_difference_m": 4.983491817256436e-05,
+      "p99_difference_m": 2.827296441409999e-07,
+      "maximum_paw_difference_m": 2.9802322387695312e-08
+    }
+  ]
+}

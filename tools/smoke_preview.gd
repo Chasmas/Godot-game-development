@@ -19,5 +19,11 @@ func _ready() -> void:
   add_child(label)
  await RenderingServer.frame_post_draw
  await RenderingServer.frame_post_draw
- get_viewport().get_texture().get_image().save_png(OS.get_environment("CAST_PREVIEW_OUT"))
+ if DisplayServer.get_name() != "headless":
+  var texture := get_viewport().get_texture()
+  var image := texture.get_image() if texture else null
+  if image:
+   image.save_png(OS.get_environment("CAST_PREVIEW_OUT"))
+ else:
+  push_warning("Smoke preview capture skipped: headless renderer has no visual texture")
  get_tree().quit()

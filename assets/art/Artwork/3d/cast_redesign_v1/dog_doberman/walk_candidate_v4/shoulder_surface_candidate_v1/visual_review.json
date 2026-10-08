@@ -1,0 +1,19 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "reviewed_frames": [
+    "godot_frames/walk_008.png",
+    "godot_frames_opposite/walk_020.png"
+  ],
+  "findings": [
+    "Local shoulder surface relaxation preserves silhouette in inspected side poses",
+    "Residual shoulder grooves remain; improvement insufficient for final art approval",
+    "Godot world contact audit unchanged from baseline"
+  ],
+  "remaining": [
+    "Compare clay poses to separate baked texture grooves from geometric folds",
+    "Review continuous shoulder contour and export normals",
+    "Propagate an approved correction to idle/start/stop only after approval"
+  ],
+  "scope": "Two full-size GPU frames inspected; no runtime approval"
+}

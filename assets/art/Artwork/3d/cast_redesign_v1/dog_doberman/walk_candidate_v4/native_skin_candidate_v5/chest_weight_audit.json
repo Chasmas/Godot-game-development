@@ -1,0 +1,9 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "operation": "Smooth inner-chest rigidity and lower-leg isolation above elbow; no geometry or clip changes",
+  "changed_vertices": 7711,
+  "maximum_weight_transferred_to_chest": 0.7194077734109312,
+  "maximum_sole_weight_change": 0.0,
+  "scope": "Local native-skin weight candidate; deformation and contact review pending"
+}

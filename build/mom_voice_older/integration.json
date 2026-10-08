@@ -1,0 +1,54 @@
+{
+  "approved": false,
+  "decode_failures": 0,
+  "lines": [
+    {
+      "bytes": 96174.0,
+      "dialogue": "apartment_1988",
+      "duration": 5.94430828094482,
+      "file": "build\\mom_voice_older\\apartment_1988\\m1.mp3",
+      "node": "m1",
+      "text": "Cassie, it's Mom. Happy Fourth. The fireworks have the cat under the stove again.",
+      "runtime_sha256": "03057e89b0771bd30ffc1db4748351bd338bd5f0fd4069bbe079d3f6b633e3c4"
+    },
+    {
+      "bytes": 120834.0,
+      "dialogue": "apartment_1988",
+      "duration": 7.47682523727417,
+      "file": "build\\mom_voice_older\\apartment_1988\\m2.mp3",
+      "node": "m2",
+      "text": "I bought a cake. I know. I know it's silly. He'd be twenty-six today... Anyway. Call me back, sweetheart.",
+      "runtime_sha256": "6cd4fbeed77b2d5065604f3271870d5ffe40198cd3d1dbcee2d26bff8ecc214e"
+    },
+    {
+      "bytes": 140060.0,
+      "dialogue": "call_m02",
+      "duration": 8.68426322937012,
+      "file": "build\\mom_voice_older\\call_m02\\a.mp3",
+      "node": "a",
+      "text": "Cassie? It's Mom. I know it's late. A man called about Tommy's car. Arlo something. He says he still has it.",
+      "runtime_sha256": "ef2811fb492d4083902fdf36dadfcf0099d41e5840157b12a790793b72578583"
+    },
+    {
+      "bytes": 75276.0,
+      "dialogue": "call_m02",
+      "duration": 4.64399099349976,
+      "file": "build\\mom_voice_older\\call_m02\\b.mp3",
+      "node": "b",
+      "text": "He said you'd come for it tonight. Out in Yermo? At two in the morning?",
+      "runtime_sha256": "019db315960de2bab3423535937dd446701c07320bb168db7dcba90d25982ba7"
+    },
+    {
+      "bytes": 119162.0,
+      "dialogue": "call_m02",
+      "duration": 7.38394546508789,
+      "file": "build\\mom_voice_older\\call_m02\\d.mp3",
+      "node": "d",
+      "text": "Bring me something of his. Anything. ...And be nice to the dogs. You know how you get with dogs.",
+      "runtime_sha256": "ac24eadfa0ddcffb5972178133a1553df9d791ddb84dd234bea147fce0302333"
+    }
+  ],
+  "voice_id": "g12yXXabMWeFoLMzxPrF",
+  "integrated": true,
+  "auditory_review": "User audition pending; casting selected by confirmed old-age American female library metadata"
+}

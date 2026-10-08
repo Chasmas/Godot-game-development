@@ -1,0 +1,9 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\build_spent_shells.py:15: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:02.719  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\reload_prop_review\spent_brass.png'
+00:03.344  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\reload_prop_review\spent_shotgun.png'
+Info: Saved as "spent_brass.blend"
+Info: Saved as "spent_shotgun.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,7 @@
+Generated with the built-in OpenAI image generation tool, 2026-10-07.
+Review only; not loaded by production. Original alpha preserved.
+
+Prompt:
+Use case: stylized-concept. Asset type: transparent VFX texture for a polished top-down oblique pixel-art 1980s neon-noir action game. Generate ONE isolated thin steam wisp emitted by a leaking compressor, no compressor or pipe drawn. Sparse curling elongated wisps, very soft translucent white-grey vapor, barely perceptible pale cyan rim, restrained amber reflected light. Extremely airy, delicate density, broken flowing strands with transparent gaps, not a cloud pile, not solid lumps, not orange foam, not an explosion. Composition: single wisp gently drifting diagonally from lower left toward upper right, comfortably inside canvas with generous fully transparent margins. Painterly high quality fine texture suited to downsampling and animation, no hard black outlines, no background, no floor, no shadow, no letters. Genuine alpha transparency including partially transparent vapor fringes. The texture will be layered sparingly, low opacity, scaled and drifted as a particle; preserve visual clarity of characters underneath.
+
+Visual inspection: flowing curled vapor with fine filaments, substantially better material reading than the rejected solid orange clumps. Must still review downsampled appearance, animation, placement and contrast in the real Yermo scene before promotion.

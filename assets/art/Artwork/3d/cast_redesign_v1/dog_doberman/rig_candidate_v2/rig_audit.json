@@ -1,0 +1,402 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\surface_cleanup_v2\\dog_doberman_surface_candidate.glb",
+  "runtime_approved": false,
+  "rig_approved": false,
+  "mesh_bound": false,
+  "animation_clips": [],
+  "bones": [
+    {
+      "name": "root",
+      "head_m": [
+        0,
+        0,
+        0
+      ],
+      "tail_m": [
+        0,
+        0,
+        0.1
+      ],
+      "parent": null,
+      "deform": false
+    },
+    {
+      "name": "pelvis",
+      "head_m": [
+        0,
+        0.27,
+        0.48
+      ],
+      "tail_m": [
+        0,
+        0.1,
+        0.48
+      ],
+      "parent": "root",
+      "deform": true
+    },
+    {
+      "name": "spine",
+      "head_m": [
+        0,
+        0.1,
+        0.48
+      ],
+      "tail_m": [
+        0,
+        -0.12,
+        0.51
+      ],
+      "parent": "pelvis",
+      "deform": true
+    },
+    {
+      "name": "chest",
+      "head_m": [
+        0,
+        -0.12,
+        0.51
+      ],
+      "tail_m": [
+        0,
+        -0.26,
+        0.55
+      ],
+      "parent": "spine",
+      "deform": true
+    },
+    {
+      "name": "neck",
+      "head_m": [
+        0,
+        -0.26,
+        0.55
+      ],
+      "tail_m": [
+        0,
+        -0.37,
+        0.73
+      ],
+      "parent": "chest",
+      "deform": true
+    },
+    {
+      "name": "head",
+      "head_m": [
+        0,
+        -0.37,
+        0.73
+      ],
+      "tail_m": [
+        0,
+        -0.46,
+        0.79
+      ],
+      "parent": "neck",
+      "deform": true
+    },
+    {
+      "name": "jaw",
+      "head_m": [
+        0,
+        -0.4,
+        0.715
+      ],
+      "tail_m": [
+        0,
+        -0.54,
+        0.715
+      ],
+      "parent": "head",
+      "deform": true
+    },
+    {
+      "name": "tail_1",
+      "head_m": [
+        0,
+        0.34,
+        0.55
+      ],
+      "tail_m": [
+        0,
+        0.42,
+        0.4
+      ],
+      "parent": "pelvis",
+      "deform": true
+    },
+    {
+      "name": "tail_2",
+      "head_m": [
+        0,
+        0.42,
+        0.4
+      ],
+      "tail_m": [
+        0,
+        0.52,
+        0.29
+      ],
+      "parent": "tail_1",
+      "deform": true
+    },
+    {
+      "name": "tail_3",
+      "head_m": [
+        0,
+        0.52,
+        0.29
+      ],
+      "tail_m": [
+        0,
+        0.59,
+        0.245
+      ],
+      "parent": "tail_2",
+      "deform": true
+    },
+    {
+      "name": "front_negative_x_upper",
+      "head_m": [
+        -0.085,
+        -0.25,
+        0.52
+      ],
+      "tail_m": [
+        -0.085,
+        -0.23,
+        0.3
+      ],
+      "parent": "chest",
+      "deform": true
+    },
+    {
+      "name": "front_negative_x_lower",
+      "head_m": [
+        -0.085,
+        -0.23,
+        0.3
+      ],
+      "tail_m": [
+        -0.08842761069536209,
+        -0.26,
+        0.08
+      ],
+      "parent": "front_negative_x_upper",
+      "deform": true
+    },
+    {
+      "name": "front_negative_x_paw",
+      "head_m": [
+        -0.08842761069536209,
+        -0.26,
+        0.08
+      ],
+      "tail_m": [
+        -0.08842761069536209,
+        -0.30018070340156555,
+        0.02
+      ],
+      "parent": "front_negative_x_lower",
+      "deform": true
+    },
+    {
+      "name": "front_negative_x_contact",
+      "head_m": [
+        -0.08842761069536209,
+        -0.30018070340156555,
+        0.0
+      ],
+      "tail_m": [
+        -0.08842761069536209,
+        -0.30018070340156555,
+        0.05999999865889549
+      ],
+      "parent": "root",
+      "deform": false
+    },
+    {
+      "name": "rear_negative_x_upper",
+      "head_m": [
+        -0.085,
+        0.27,
+        0.49
+      ],
+      "tail_m": [
+        -0.085,
+        0.27,
+        0.29
+      ],
+      "parent": "pelvis",
+      "deform": true
+    },
+    {
+      "name": "rear_negative_x_lower",
+      "head_m": [
+        -0.085,
+        0.27,
+        0.29
+      ],
+      "tail_m": [
+        -0.10357196629047394,
+        0.39,
+        0.12
+      ],
+      "parent": "rear_negative_x_upper",
+      "deform": true
+    },
+    {
+      "name": "rear_negative_x_paw",
+      "head_m": [
+        -0.10357196629047394,
+        0.39,
+        0.12
+      ],
+      "tail_m": [
+        -0.10357196629047394,
+        0.39130884408950806,
+        0.02
+      ],
+      "parent": "rear_negative_x_lower",
+      "deform": true
+    },
+    {
+      "name": "rear_negative_x_contact",
+      "head_m": [
+        -0.10357196629047394,
+        0.39130884408950806,
+        0.0
+      ],
+      "tail_m": [
+        -0.10357196629047394,
+        0.39130884408950806,
+        0.05999999865889549
+      ],
+      "parent": "root",
+      "deform": false
+    },
+    {
+      "name": "front_positive_x_upper",
+      "head_m": [
+        0.085,
+        -0.25,
+        0.52
+      ],
+      "tail_m": [
+        0.085,
+        -0.23,
+        0.3
+      ],
+      "parent": "chest",
+      "deform": true
+    },
+    {
+      "name": "front_positive_x_lower",
+      "head_m": [
+        0.085,
+        -0.23,
+        0.3
+      ],
+      "tail_m": [
+        0.08866115659475327,
+        -0.26,
+        0.08
+      ],
+      "parent": "front_positive_x_upper",
+      "deform": true
+    },
+    {
+      "name": "front_positive_x_paw",
+      "head_m": [
+        0.08866115659475327,
+        -0.26,
+        0.08
+      ],
+      "tail_m": [
+        0.08866115659475327,
+        -0.30013421177864075,
+        0.02
+      ],
+      "parent": "front_positive_x_lower",
+      "deform": true
+    },
+    {
+      "name": "front_positive_x_contact",
+      "head_m": [
+        0.08866115659475327,
+        -0.30013421177864075,
+        0.0
+      ],
+      "tail_m": [
+        0.08866115659475327,
+        -0.30013421177864075,
+        0.05999999865889549
+      ],
+      "parent": "root",
+      "deform": false
+    },
+    {
+      "name": "rear_positive_x_upper",
+      "head_m": [
+        0.085,
+        0.27,
+        0.49
+      ],
+      "tail_m": [
+        0.085,
+        0.27,
+        0.29
+      ],
+      "parent": "pelvis",
+      "deform": true
+    },
+    {
+      "name": "rear_positive_x_lower",
+      "head_m": [
+        0.085,
+        0.27,
+        0.29
+      ],
+      "tail_m": [
+        0.10358528792858124,
+        0.39,
+        0.12
+      ],
+      "parent": "rear_positive_x_upper",
+      "deform": true
+    },
+    {
+      "name": "rear_positive_x_paw",
+      "head_m": [
+        0.10358528792858124,
+        0.39,
+        0.12
+      ],
+      "tail_m": [
+        0.10358528792858124,
+        0.39131224155426025,
+        0.02
+      ],
+      "parent": "rear_positive_x_lower",
+      "deform": true
+    },
+    {
+      "name": "rear_positive_x_contact",
+      "head_m": [
+        0.10358528792858124,
+        0.39131224155426025,
+        0.0
+      ],
+      "tail_m": [
+        0.10358528792858124,
+        0.39131224155426025,
+        0.05999999865889549
+      ],
+      "parent": "root",
+      "deform": false
+    }
+  ],
+  "normalized_height_m": 0.88,
+  "scope": "Authored skeleton and measured paw targets; joint placement needs visual review before weights",
+  "next": "Inspect bones over mesh from front/profile; bind reviewed weights, test jaw and leg poses then locomotion"
+}

@@ -1,0 +1,21 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "source_skin": "walk_candidate_v4/native_skin_candidate_v6",
+  "blender_samples": 73,
+  "blender_paw_displacement_m": 0,
+  "blender_loop_seam_m": 0,
+  "godot_gpu_frames": 24,
+  "reviewed_frames": [
+    "godot_frames/idle_012.png"
+  ],
+  "findings": [
+    "Standing silhouette retained on refined native linear skin",
+    "Rendered idle shows fine surface noise requiring morph normal/material inspection before approval"
+  ],
+  "next_work": [
+    "Compare neutral and breath morph shading",
+    "Validate Godot endpoint and transition into walk"
+  ],
+  "scope": "Isolated idle authoring and GPU capture, no runtime integration"
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "37c2aa3d499162df464eabcce3b6faa1b170c0abdbd8b2887267f6c31ee0c042",
+  "checked_cells": 4148,
+  "visible_wall_cells": 538,
+  "centre_alpha_mismatches": [],
+  "opaque_pixels_outside_wall_cells": 0,
+  "passed": true,
+  "runtime_approved": false,
+  "scope": "Current map cell centres and every alpha pixel in non-wall cells; no physics or visual quality approval"
+}

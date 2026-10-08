@@ -1,0 +1,639 @@
+{
+  "source": "levels/m01_sunset_palms.json",
+  "note": "Multi-cell furniture counts are occupied cells, not distinct objects. Image presence does not prove quality, identity fidelity, Blender production or runtime integration.",
+  "furniture": [
+    {
+      "glyph": "T",
+      "kind": "table",
+      "occupied_map_cells": 20
+    },
+    {
+      "glyph": "C",
+      "kind": "counter",
+      "occupied_map_cells": 9
+    },
+    {
+      "glyph": "b",
+      "kind": "bed",
+      "occupied_map_cells": 40
+    },
+    {
+      "glyph": "l",
+      "kind": "lounger",
+      "occupied_map_cells": 8
+    },
+    {
+      "glyph": "w",
+      "kind": "washer",
+      "occupied_map_cells": 4
+    },
+    {
+      "glyph": "k",
+      "kind": "desk",
+      "occupied_map_cells": 3
+    },
+    {
+      "glyph": "K",
+      "kind": "car",
+      "occupied_map_cells": 40
+    },
+    {
+      "glyph": "Z",
+      "kind": "dumpster",
+      "occupied_map_cells": 4
+    }
+  ],
+  "interactive_props": [
+    {
+      "glyph": "V",
+      "kind": "vending",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "t",
+      "kind": "tv",
+      "occupied_map_cells": 5
+    },
+    {
+      "glyph": "Q",
+      "kind": "arcade",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "I",
+      "kind": "ice",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "Y",
+      "kind": "plant",
+      "occupied_map_cells": 8
+    },
+    {
+      "glyph": "F",
+      "kind": "fuse",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "o",
+      "kind": "lamp",
+      "occupied_map_cells": 2
+    }
+  ],
+  "actors": [
+    {
+      "glyph": "g",
+      "kind": "guard",
+      "occupied_map_cells": 12
+    },
+    {
+      "glyph": "m",
+      "kind": "gunner",
+      "occupied_map_cells": 4
+    },
+    {
+      "glyph": "h",
+      "kind": "hunter",
+      "occupied_map_cells": 3
+    },
+    {
+      "glyph": "H",
+      "kind": "heavy",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "s",
+      "kind": "scout",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "r",
+      "kind": "riot",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "B",
+      "kind": "night_manager",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "d",
+      "kind": "dog",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "y",
+      "kind": "dog_rott",
+      "occupied_map_cells": 1
+    }
+  ],
+  "authored_enemy_overrides": {
+    "40,45": {
+      "kind": "handler",
+      "patrol": [
+        [
+          40,
+          45
+        ],
+        [
+          52,
+          45
+        ],
+        [
+          52,
+          50
+        ],
+        [
+          26,
+          51
+        ],
+        [
+          26,
+          45
+        ]
+      ]
+    },
+    "8,32": {
+      "kind": "biker",
+      "facing": "up"
+    },
+    "20,33": {
+      "patrol": [
+        [
+          20,
+          33
+        ],
+        [
+          44,
+          33
+        ]
+      ]
+    },
+    "47,33": {
+      "idle_action": "watch",
+      "facing": "left"
+    },
+    "25,28": {
+      "idle_action": "watch",
+      "facing": "left"
+    },
+    "35,28": {
+      "kind": "bellhop",
+      "facing": "right"
+    },
+    "38,29": {
+      "kind": "bellhop",
+      "facing": "left"
+    },
+    "47,29": {
+      "idle_action": "watch",
+      "facing": "down"
+    },
+    "24,38": {
+      "facing": "down"
+    },
+    "34,38": {
+      "facing": "down"
+    },
+    "46,38": {
+      "patrol": [
+        [
+          46,
+          38
+        ],
+        [
+          44,
+          37
+        ],
+        [
+          51,
+          39
+        ]
+      ]
+    },
+    "25,22": {
+      "patrol": [
+        [
+          25,
+          22
+        ],
+        [
+          34,
+          22
+        ],
+        [
+          34,
+          13
+        ],
+        [
+          19,
+          13
+        ],
+        [
+          19,
+          22
+        ]
+      ]
+    },
+    "11,12": {
+      "facing": "right"
+    },
+    "45,14": {
+      "facing": "left"
+    },
+    "40,23": {
+      "patrol": [
+        [
+          40,
+          23
+        ],
+        [
+          48,
+          23
+        ],
+        [
+          48,
+          14
+        ]
+      ]
+    },
+    "10,6": {
+      "kind": "biker",
+      "facing": "down"
+    },
+    "22,4": {
+      "facing": "down"
+    },
+    "18,7": {
+      "facing": "right"
+    },
+    "32,3": {
+      "facing": "down"
+    },
+    "36,7": {
+      "facing": "left"
+    },
+    "44,6": {
+      "kind": "bellhop",
+      "facing": "right"
+    },
+    "61,14": {
+      "patrol": [
+        [
+          61,
+          14
+        ],
+        [
+          58,
+          12
+        ],
+        [
+          62,
+          16
+        ]
+      ]
+    },
+    "63,23": {
+      "kind": "sniper",
+      "facing": "left"
+    },
+    "58,28": {
+      "facing": "down",
+      "boss": true
+    },
+    "13,21": {
+      "sleep": true,
+      "facing": "left"
+    },
+    "2,24": {
+      "sniff": true
+    },
+    "3,43": {
+      "idle_action": "smoke",
+      "facing": "left"
+    }
+  },
+  "civilians": {
+    "13,28": {
+      "id": "earl",
+      "palette": "civilian",
+      "lines": [
+        "Room's paid through Sunday. I'm not moving for anybody.",
+        "Harcourt's been jumpy all week. Keeps checking the parking lot like he's waiting for somebody.",
+        "Room 204? Tape starts by itself after midnight. Same scream, same fire, every night."
+      ]
+    },
+    "13,3": {
+      "id": "dolores",
+      "palette": "scout",
+      "lines": [
+        "Housekeeping stopped servicing this floor months ago, honey. Manager's orders.",
+        "Harcourt keeps 204 locked even when it's empty. Sometimes I hear a projector through the wall.",
+        "If you're looking for him, try the office. If you're looking for answers... don't let him see you asking."
+      ]
+    }
+  },
+  "weapon_pickups": [
+    {
+      "glyph": "2",
+      "kind": "whisper",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "3",
+      "kind": "revolver",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "4",
+      "kind": "smg",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "5",
+      "kind": "shotgun",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "6",
+      "kind": "rifle",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "7",
+      "kind": "knife",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "8",
+      "kind": "bat",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "9",
+      "kind": "pipe",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "0",
+      "kind": "machete",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "!",
+      "kind": "bottle",
+      "occupied_map_cells": 2
+    },
+    {
+      "glyph": "?",
+      "kind": "brick",
+      "occupied_map_cells": 1
+    },
+    {
+      "glyph": "G",
+      "kind": "hotshot",
+      "occupied_map_cells": 1
+    }
+  ],
+  "decor_ids": [
+    "arcade",
+    "clutter_ashtray",
+    "clutter_bottles",
+    "dumpster",
+    "hq_motel_bed",
+    "hq_motel_dresser",
+    "hq_motel_ice_machine",
+    "hq_motel_vending",
+    "hq_palm_planter",
+    "hq_pool_cooler",
+    "hq_pool_lounger_set",
+    "lamp",
+    "laundry_service_bench",
+    "motel_bedside_lamp",
+    "motel_bougainvillea",
+    "motel_gecko",
+    "motel_hasty_checkout",
+    "motel_housekeeping_cart",
+    "motel_ice_bucket",
+    "motel_ice_bucket_full",
+    "motel_ice_machine",
+    "motel_neon_vacancy_sign",
+    "motel_palm_planter",
+    "motel_pool_float",
+    "motel_pool_float_flamingo",
+    "motel_pool_lounger",
+    "motel_pool_party_ruin",
+    "motel_pool_umbrella",
+    "motel_room_key_spill",
+    "motel_suitcase_open",
+    "motel_telephone",
+    "motel_towel_cart",
+    "motel_tv_crt",
+    "motel_water_ring",
+    "neon",
+    "palm",
+    "paper",
+    "road_arrow",
+    "road_manhole",
+    "road_patch",
+    "road_pothole",
+    "road_sand",
+    "road_stop_line",
+    "vacancy"
+  ],
+  "zones": {
+    "exterior": [
+      0,
+      42,
+      68,
+      19
+    ],
+    "exterior_alley": [
+      0,
+      0,
+      4,
+      42
+    ],
+    "lobby": [
+      53,
+      0,
+      15,
+      42
+    ],
+    "north_wing": [
+      4,
+      0,
+      50,
+      11
+    ],
+    "courtyard": [
+      4,
+      11,
+      50,
+      15
+    ],
+    "ground_floor": [
+      4,
+      26,
+      50,
+      16
+    ]
+  },
+  "camera_placements": [
+    {
+      "cell": [
+        18,
+        32
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        40,
+        32
+      ],
+      "angle": 90
+    },
+    {
+      "cell": [
+        65,
+        27
+      ],
+      "angle": 125
+    }
+  ],
+  "visual_sources_present": [
+    "arcade_reference.png",
+    "ashtray_reference.png",
+    "asphalt_albedo.png",
+    "back_office_direction.png",
+    "bat_reference.png",
+    "bath_sink_reference.png",
+    "bath_toilet_reference.png",
+    "bathroom_direction.png",
+    "bathroom_wall_tiles_albedo.png",
+    "bathtub_reference.png",
+    "bed_reference.png",
+    "bedside_lamp_reference.png",
+    "biker_reference.png",
+    "blood_splatter_reference.png",
+    "boiler_reference.png",
+    "bottle_weapon_reference.png",
+    "bougainvillea_reference.png",
+    "breached_wall_reference.png",
+    "brick_reference.png",
+    "broken_planter_reference.png",
+    "cass_reference.png",
+    "chainsaw_reference.png",
+    "collectible_photo_reference.png",
+    "collectible_vhs_reference.png",
+    "corridor_carpet_albedo.png",
+    "corridor_direction.png",
+    "counter_reference.png",
+    "crt_reference.png",
+    "damaged_arcade_reference.png",
+    "damaged_crt_reference.png",
+    "damaged_door_reference.png",
+    "damaged_fuse_box_reference.png",
+    "damaged_ice_machine_reference.png",
+    "damaged_lamp_reference.png",
+    "damaged_vending_reference.png",
+    "damaged_window_reference.png",
+    "desk_reference.png",
+    "dog_reference.png",
+    "dolores_reference.png",
+    "drain_grate_reference.png",
+    "dresser_reference.png",
+    "dumpster_reference.png",
+    "earl_reference.png",
+    "electrical_sparks_reference.png",
+    "entrance_direction.png",
+    "exterior_stucco_albedo.png",
+    "fire_extinguisher_reference.png",
+    "fire_reference.png",
+    "flamingo_float_reference.png",
+    "floor_clutter_reference.png",
+    "furniture_walnut_albedo.png",
+    "fuse_box_reference.png",
+    "gecko_reference.png",
+    "glass_shards_reference.png",
+    "guard_reference.png",
+    "guest_bedspread_albedo.png",
+    "guest_door_reference.png",
+    "guest_room_direction.png",
+    "guest_wallpaper_albedo.png",
+    "gunner_reference.png",
+    "handler_reference.png",
+    "harcourt_reference.png",
+    "hasty_checkout_reference.png",
+    "heavy_reference.png",
+    "hotshot_reference.png",
+    "housekeeping_cart_reference.png",
+    "hunter_reference.png",
+    "ice_bucket_reference.png",
+    "ice_machine_reference.png",
+    "impact_dust_reference.png",
+    "key_rack_reference.png",
+    "knife_reference.png",
+    "laundry_direction.png",
+    "ledger_reference.png",
+    "machete_reference.png",
+    "maintenance_cabinet_reference.png",
+    "neon_checkpoint_reference.png",
+    "neon_sign_reference.png",
+    "office_chair_reference.png",
+    "painted_metal_albedo.png",
+    "palm_planter_reference.png",
+    "parked_sedan_reference.png",
+    "pipe_reference.png",
+    "pool_cooler_reference.png",
+    "pool_direction.png",
+    "pool_ladder_reference.png",
+    "pool_lounger_reference.png",
+    "pool_party_ruin_reference.png",
+    "pool_ring_reference.png",
+    "pool_tiles_albedo.png",
+    "pool_umbrella_reference.png",
+    "propane_tank_reference.png",
+    "railing_reference.png",
+    "reception_bell_reference.png",
+    "reception_direction.png",
+    "reception_wood_albedo.png",
+    "red_car_reference.png",
+    "revolver_reference.png",
+    "rifle_reference.png",
+    "riot_reference.png",
+    "road_manhole_reference.png",
+    "road_markings_reference.png",
+    "road_patch_reference.png",
+    "road_pothole_reference.png",
+    "road_sand_reference.png",
+    "road_stop_line_reference.png",
+    "room_key_spill_reference.png",
+    "rottweiler_reference.png",
+    "rubber_albedo.png",
+    "scout_reference.png",
+    "security_camera_reference.png",
+    "service_alley_direction.png",
+    "shotgun_reference.png",
+    "smg_reference.png",
+    "smoke_reference.png",
+    "stair_reference.png",
+    "steam_reference.png",
+    "suitcase_reference.png",
+    "table_reference.png",
+    "telephone_reference.png",
+    "towel_fabric_albedo.png",
+    "vending_reference.png",
+    "wall_lamp_reference.png",
+    "wall_trim_reference.png",
+    "washer_reference.png",
+    "water_ring_reference.png",
+    "water_splash_reference.png",
+    "water_surface_direction.png",
+    "whisper_reference.png",
+    "window_reference.png"
+  ],
+  "full_map_imagegen_coverage": "incomplete",
+  "blender_batch_started": false
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "weapon": "bat",
+    "heading_deg": 0.0,
+    "shape_error_px": 0.855
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 22.5,
+    "shape_error_px": 1.723
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 45.0,
+    "shape_error_px": 0.874
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 67.5,
+    "shape_error_px": 1.717
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 90.0,
+    "shape_error_px": 0.903
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 112.5,
+    "shape_error_px": 1.78
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 135.0,
+    "shape_error_px": 0.884
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 157.5,
+    "shape_error_px": 1.764
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 180.0,
+    "shape_error_px": 0.864
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 202.5,
+    "shape_error_px": 1.692
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 225.0,
+    "shape_error_px": 0.872
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 247.5,
+    "shape_error_px": 1.662
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 270.0,
+    "shape_error_px": 0.874
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 292.5,
+    "shape_error_px": 1.712
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 315.0,
+    "shape_error_px": 0.863
+  },
+  {
+    "weapon": "bat",
+    "heading_deg": 337.5,
+    "shape_error_px": 1.746
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 0.0,
+    "shape_error_px": 0.706
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 22.5,
+    "shape_error_px": 0.744
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 45.0,
+    "shape_error_px": 0.711
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 67.5,
+    "shape_error_px": 0.735
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 90.0,
+    "shape_error_px": 0.728
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 112.5,
+    "shape_error_px": 0.743
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 135.0,
+    "shape_error_px": 0.72
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 157.5,
+    "shape_error_px": 0.742
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 180.0,
+    "shape_error_px": 0.714
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 202.5,
+    "shape_error_px": 0.742
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 225.0,
+    "shape_error_px": 0.703
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 247.5,
+    "shape_error_px": 0.728
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 270.0,
+    "shape_error_px": 0.689
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 292.5,
+    "shape_error_px": 0.724
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 315.0,
+    "shape_error_px": 0.691
+  },
+  {
+    "weapon": "knife",
+    "heading_deg": 337.5,
+    "shape_error_px": 0.738
+  }
+]

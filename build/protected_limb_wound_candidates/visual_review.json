@@ -1,0 +1,18 @@
+{
+  "status": "candidate_reviewed_not_integrated",
+  "scope": "Actual Godot OpenGL screenshots: 24 looks x leg/legs at death_back phases .15/.5/.995; three final-pose batches and demon intact/cut/capped comparison. No large wound membranes or displaced unrelated wings/hands observed at rendered scale. Not every animation, angle or gameplay approval.",
+  "images": [
+    "poses_0.png",
+    "poses_1.png",
+    "poses_2.png",
+    "poses_3.png",
+    "poses_4.png",
+    "poses_5.png"
+  ],
+  "binding_test": "binding_review.json",
+  "pending": [
+    "Matching detached part geometry/texture",
+    "Head and arm wound review",
+    "Runtime integration and actual gameplay/performance review"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "runtime_approved": false,
+  "source_models_unchanged": true,
+  "purpose": "Separate geometry/albedo defects from transferred normal shading defects",
+  "original_normal_strengths": [
+    1.0
+  ],
+  "renders": [
+    {
+      "file": "face_normal_0_0.png",
+      "normal_strength": 0.0
+    },
+    {
+      "file": "face_normal_0_25.png",
+      "normal_strength": 0.25
+    }
+  ]
+}

@@ -41,7 +41,20 @@ var _fade_speed := 1.2
 var _outgoing: Array = []          ## [players, level] fading out
 var _resume: Dictionary = {}       ## track id -> where it was left
 
+func _release_player(player: AudioStreamPlayer) -> void:
+	player.stop()
+	player.stream = null
+	player.queue_free()
+
+func _exit_tree() -> void:
+	for child in get_children():
+		if child is AudioStreamPlayer:
+			child.stop()
+			child.stream = null
+
 func play(track_id: String, restart := false, fade := 0.8) -> void:
+	if Game.quitting:
+		return
 	if OS.has_environment("AUDIO_LOG"):
 		print("[music] ", track_id)
 	if track_id == _base_id and not restart and not _players.is_empty():
@@ -70,7 +83,7 @@ func _switch(id: String, fade: float, resume: bool) -> void:
 			_outgoing.append([_players.duplicate(), _levels.duplicate(), _master_fade, 1.0 / fade])
 		else:
 			for p in _players:
-				p.queue_free()
+				_release_player(p)
 		_players.clear()
 		_targets.clear()
 		_levels.clear()
@@ -112,8 +125,12 @@ func _switch(id: String, fade: float, resume: bool) -> void:
 func stop(fade_time := 1.0) -> void:
 	_base_id = ""
 	if fade_time <= 0.0:
+		for outgoing in _outgoing:
+			for p in outgoing[0]:
+				_release_player(p)
+		_outgoing.clear()
 		for p in _players:
-			p.queue_free()
+			_release_player(p)
 		_players.clear()
 		_targets.clear()
 		_levels.clear()
@@ -167,6 +184,23 @@ func beat_distance() -> float:
 		return 99.0
 	return minf(ph, 1.0 - ph) * beat_length()
 
+## Jukebox transport controls. These intentionally expose only the audible
+## layer, keeping gameplay's crossfade internals private.
+func playback_position() -> float:
+	if _players.is_empty() or not is_instance_valid(_players[0]):
+		return 0.0
+	return _players[0].get_playback_position()
+
+func playback_length() -> float:
+	if _players.is_empty() or not _players[0].stream:
+		return 0.0
+	return _players[0].stream.get_length()
+
+func seek_playback(seconds: float) -> void:
+	if _players.is_empty() or not _players[0].playing:
+		return
+	_players[0].seek(maxf(0.0, seconds))
+
 ## A boss's later phase: its own collapse theme ("phase2" in music.json),
 ## crossfaded in. Safe to call every frame.
 func boss_phase2() -> void:
@@ -208,7 +242,7 @@ func _process(delta: float) -> void:
 			(o[0][i] as AudioStreamPlayer).volume_db = linear_to_db(lin) if lin > 0.001 else SILENT_DB
 	for o in _outgoing.filter(func(q): return float(q[2]) <= 0.0):
 		for p in o[0]:
-			(p as Node).queue_free()
+			_release_player(p as AudioStreamPlayer)
 	_outgoing = _outgoing.filter(func(q): return float(q[2]) > 0.0)
 	_calm_switch(delta)
 	if _players.is_empty():

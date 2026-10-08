@@ -21,6 +21,7 @@ var panel_body: VBoxContainer
 var _started := false
 var _t := 0.0
 var _options: OptionsMenu
+var _jukebox_deck: JukeboxBooth
 
 func _ready() -> void:
 	theme = UIStyle.theme()
@@ -148,7 +149,7 @@ func _ready() -> void:
 	panel_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	panel_body.add_theme_constant_override("separation", 6)
 	sc.add_child(panel_body)
-	Music.play("title")
+	Music.play("menu")
 	PostFX.set_desaturate(0.0)
 	PostFX.set_tint(Color(1, 1, 1, 0))
 	Audio.set_music_muffled(false)
@@ -164,8 +165,8 @@ func _process(delta: float) -> void:
 	if fmod(_t, 5.1) < 0.08 or fmod(_t, 3.3) < 0.04:
 		flick = 0.35
 	logo_bottom.modulate = Color(1, 1, 1, flick)
-	var secs := int(_t)
-	osd.text = "PLAY ▶   SP   %d:%02d:%02d" % [secs / 3600, (secs / 60) % 60, secs % 60]
+	var now := Time.get_time_dict_from_system()
+	osd.text = "PLAY ▶   SP   %02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
 	if not key_art:
 		logo_top.position.y = 36 + sin(_t * 1.3) * 3.0
 	# (the key art stays still: the VCR filter on it does the moving)
@@ -206,13 +207,14 @@ func _build_menu() -> void:
 	_add("NEW GAME", _confirm_new_game if has_save else _choose_difficulty)
 	_add("CHAPTERS", _show_chapters)
 	_add("PLAY VIDEOTAPE", _show_vcr)
+	_add("JUKEBOX", _show_jukebox)
 	_add("MASKS", _show_masks)
 	var arcade_unlocked: bool = SaveManager.data.missions.has("m01_checkout")
 	_add("ARCADE" if arcade_unlocked else "ARCADE  [LOCKED]", _show_arcade, not arcade_unlocked)
 	_add("CAST", _show_cast)
 	_add("EXTRAS", _show_extras)
 	_add("OPTIONS", _show_options)
-	_add("QUIT", func(): get_tree().quit())
+	_add("QUIT", func(): Game.request_quit())
 	UIStyle.reveal(menu)
 	await get_tree().process_frame
 	if menu.get_child_count() > 0:
@@ -224,6 +226,7 @@ const MENU_DESC := {
 	"NEW GAME": "July 4, 1988. A key to room 204, and a star to wear.",
 	"CHAPTERS": "Replay any job you've been through, as many times as it takes.",
 	"PLAY VIDEOTAPE": "The tapes and photos you've found. Put one in the deck.",
+	"JUKEBOX": "A neon listening booth for every score you've unlocked.",
 	"MASKS": "Every mask gives something and takes something. Pick one for the next job.",
 	"ARCADE": "The jobs as score attacks, waves and endless runs, with modifiers.",
 	"ARCADE  [LOCKED]": "Finish Checkout Time to open the arcade.",
@@ -262,7 +265,91 @@ func _show_vcr() -> void:
 	menu.visible = false
 	var v := VcrScreen.new()
 	add_child(v)
-	v.closed.connect(_build_menu)
+	v.closed.connect(_return_from_vcr)
+
+func _return_from_vcr() -> void:
+	# VCR is a child screen rather than a panel, so it bypasses _close_panel.
+	# Restore the menu bed here as soon as the tape player closes.
+	Music.play("menu", true, 0.0)
+	_build_menu()
+
+## Jukebox: the score archive grows with completed chapters.  Tracks are
+## played through the same MusicManager as the game, so volume and CRT mood
+## remain consistent with the rest of the front-end.
+const JUKEBOX_TRACKS := [
+	["vcr", "VIDEOTAPE REWIND", "vcr"],
+	["m01_checkout", "CHECKOUT TIME", "motel"],
+	["m02_dog_days", "DOG DAYS", "yard"],
+	["m03_prime_time", "PRIME TIME", "prime_time"],
+	["m04_sweet_dreams", "VILLA ESTRELLA", "nightmare"],
+	["__always__", "VENGEANCE SERVED COLD", "title"],
+]
+
+func _show_jukebox() -> void:
+	_open_panel("JUKEBOX")
+	var deck := JukeboxBooth.new()
+	_jukebox_deck = deck
+	deck.name = "JukeboxArtwork"
+	deck.custom_minimum_size = Vector2(0, 188)
+	deck.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel_body.add_child(deck)
+	panel_body.add_child(UIStyle.label("SELECT A TAPE — UNLOCKED SCORES", 17, UIStyle.CYAN, true))
+	panel_body.add_child(UIStyle.label("Complete a chapter to add its music to the booth.", 13, UIStyle.DIM))
+	var gap := Control.new()
+	gap.custom_minimum_size = Vector2(0, 8)
+	panel_body.add_child(gap)
+	var ordered := JUKEBOX_TRACKS.duplicate(true)
+	ordered.sort_custom(func(a: Array, b: Array):
+		var au: bool = str(a[0]) in ["__always__", "vcr"] or SaveManager.data.missions.has(str(a[0]))
+		var bu: bool = str(b[0]) in ["__always__", "vcr"] or SaveManager.data.missions.has(str(b[0]))
+		return int(au) > int(bu))
+	for entry in ordered:
+		var unlocked: bool = str(entry[0]) in ["__always__", "vcr"] or SaveManager.data.missions.has(str(entry[0]))
+		var label := ("▶  " if unlocked else "□  ") + str(entry[1])
+		var tape_button := _panel_button(label, func(): _play_jukebox(str(entry[2])), not unlocked)
+		if unlocked:
+			tape_button.focus_entered.connect(func():
+				if _jukebox_deck:
+					_jukebox_deck.set_track(str(entry[0])))
+	var seek := HSlider.new()
+	seek.name = "JukeboxSeek"
+	seek.custom_minimum_size = Vector2(0, 22)
+	seek.min_value = 0.0
+	seek.max_value = 1.0
+	seek.step = 0.001
+	seek.tooltip_text = ""
+	var dragging := [false]
+	seek.drag_started.connect(func(): dragging[0] = true)
+	seek.drag_ended.connect(func(_changed: bool): dragging[0] = false)
+	seek.value_changed.connect(func(v: float):
+		var length := Music.playback_length()
+		if length > 0.0:
+			Music.seek_playback(v * length))
+	panel_body.add_child(seek)
+	var time_label := UIStyle.label("00:00 / 00:00", 12, UIStyle.DIM)
+	panel_body.add_child(time_label)
+	var sync := Timer.new()
+	sync.wait_time = 0.1
+	sync.autostart = true
+	sync.timeout.connect(func():
+		var length := Music.playback_length()
+		var keyboard_seek := seek.has_focus() and (Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"))
+		if length > 0.0 and not dragging[0] and not keyboard_seek:
+			# Display progress without firing the player's seek command again.
+			seek.set_value_no_signal(Music.playback_position() / length)
+		time_label.text = "%s / %s" % [_jukebox_time(Music.playback_position()), _jukebox_time(length)])
+	panel_body.add_child(sync)
+	var stop := _panel_button("■  STOP PLAYBACK", func(): Music.stop(0.35))
+	stop.add_theme_color_override("font_color", UIStyle.PINK)
+	_back_button()
+
+func _play_jukebox(track_id: String) -> void:
+	if _jukebox_deck:
+		_jukebox_deck.set_track(track_id)
+	Music.play(track_id, true, 0.45)
+
+func _jukebox_time(seconds: float) -> String:
+	return "%02d:%02d" % [int(seconds) / 60, int(seconds) % 60]
 
 ## The masks gallery: the same shelf as before a job, without the pause;
 ## picking one sets it for the next job.
@@ -279,6 +366,9 @@ var _panel_scroll: ScrollContainer
 ## Panels are 760 x 420 unless a screen asks for more room (the chapter
 ## tapes need the width, and their notes must fit without scrolling).
 func _size_panel(sz: Vector2) -> void:
+	var vp := get_viewport_rect().size
+	var safe := Vector2(maxf(320.0, vp.x - 40.0), maxf(240.0, vp.y - 56.0))
+	sz = Vector2(minf(sz.x, safe.x), minf(sz.y, safe.y))
 	panel.custom_minimum_size = sz
 	UIStyle.place(panel, Control.PRESET_CENTER, -sz * 0.5 + Vector2(0, 10), sz)
 	_panel_scroll.custom_minimum_size = sz - Vector2(30, 30)
@@ -308,7 +398,9 @@ func _reveal_panel() -> void:
 
 func _close_panel() -> void:
 	panel.visible = false
-	Music.play("title", false, 1.2)
+	# Return to the menu bed immediately when leaving any panel.  The menu is
+	# the front-end's home state; it must never leave the VCR/jukebox cue hanging.
+	Music.play("menu", true, 0.0)
 	if press_fx:
 		press_fx.visible = not _started
 	menu.visible = true
@@ -953,6 +1045,103 @@ class PressStart extends Control:
 		var sx := fmod(_t * 0.8, 1.0)
 		draw_line(Vector2(x0, y + 18), Vector2(x0 + tw, y + 18), Color(UIStyle.PINK, 0.25), 1.0)
 		draw_line(Vector2(x0 + tw * sx - 30, y + 18), Vector2(x0 + tw * sx + 30, y + 18), Color(1, 1, 1, 0.7), 2.0)
+
+## Integrated record-booth artwork: the approved bitmap is framed as part of the
+## interface, with a restrained animated tracer instead of a pasted thumbnail.
+class JukeboxBooth extends Control:
+	var _t := 0.0
+	var _art: Texture2D
+	var _track_id := "__always__"
+	const ART := {
+		"__always__": "jukebox_vengeance_served_cold.png",
+		"title": "jukebox_vengeance_served_cold.png",
+		"vcr": "jukebox_vcr_rewind.png",
+		"m01_checkout": "jukebox_checkout_time.png",
+		"motel": "jukebox_checkout_time.png",
+		"m02_dog_days": "jukebox_dog_days.png",
+		"yard": "jukebox_dog_days.png",
+		"m03_prime_time": "jukebox_prime_time.png",
+		"prime_time": "jukebox_prime_time.png",
+		"m04_sweet_dreams": "jukebox_villa_estrella.png",
+		"nightmare": "jukebox_villa_estrella.png",
+	}
+
+	func _ready() -> void:
+		_load_art()
+
+	func set_track(track_id: String) -> void:
+		_track_id = track_id
+		_load_art()
+		queue_redraw()
+
+	func _load_art() -> void:
+		var file := str(ART.get(_track_id, ART["__always__"]))
+		_art = load("res://assets/art/pixellab_ui_v3_approved/" + file) as Texture2D
+
+	func _vinyl_color() -> Color:
+		return {
+			"vcr": Color("55d9ff"), "motel": Color("ff9b43"),
+			"yard": Color("e6b84f"), "prime_time": Color("ff3d9a"),
+			"nightmare": Color("8f72ff"), "title": Color("ff3c83"),
+			"__always__": Color("ff3c83"),
+		}.get(_track_id, Color("ff3c83"))
+
+	func _process(delta: float) -> void:
+		_t += delta
+		queue_redraw()
+
+	func _draw() -> void:
+		var outer := Rect2(16, 8, maxf(40.0, size.x - 32.0), maxf(40.0, size.y - 16.0))
+		var frame := _box(Color(0.008, 0.006, 0.025, 0.94), Color(0.12, 0.72, 0.96, 0.75), 2.0, 10.0)
+		draw_style_box(frame, outer)
+		var art_rect := outer.grow(-10.0)
+		if _art:
+			# Fill the booth with a cinematic crop: preserve proportions and crop
+			# only the excess source edges, so no black side pillars remain.
+			var tex_size := _art.get_size()
+			var dest_ratio := art_rect.size.x / maxf(1.0, art_rect.size.y)
+			var src_size := tex_size
+			var src_pos := Vector2.ZERO
+			if tex_size.x / maxf(1.0, tex_size.y) > dest_ratio:
+				src_size.x = tex_size.y * dest_ratio
+				src_pos.x = (tex_size.x - src_size.x) * 0.5
+			else:
+				src_size.y = tex_size.x / dest_ratio
+				src_pos.y = (tex_size.y - src_size.y) * 0.5
+			draw_rect(art_rect, Color(0.015, 0.012, 0.04, 0.92))
+			draw_texture_rect_region(_art, art_rect, Rect2(src_pos, src_size), Color(1, 1, 1, 0.96))
+		# A separate record object makes each selected score visibly collectible.
+		var disc_center := art_rect.position + Vector2(40, 40)
+		var disc_col := _vinyl_color()
+		draw_circle(disc_center, 27.0, Color(0.01, 0.008, 0.018, 0.94))
+		for rr in [20.0, 23.0, 25.0]:
+			draw_arc(disc_center, rr, 0.0, TAU, 48, Color(0.22, 0.24, 0.31, 0.7), 0.65)
+		draw_circle(disc_center, 9.0, disc_col)
+		draw_circle(disc_center, 2.0, Color(1, 0.9, 0.6, 0.95))
+		draw_arc(disc_center, 28.0, _t * 0.8, _t * 0.8 + 1.2, 18, Color(1, 1, 1, 0.65), 1.4)
+		# lower glass strip makes the labels feel printed into the booth
+		var strip := Rect2(art_rect.position.x, art_rect.end.y - 30.0, art_rect.size.x, 30.0)
+		draw_rect(strip, Color(0.005, 0.008, 0.025, 0.86))
+		draw_string(UIStyle.font_mono(), strip.position + Vector2(10, 18), "RECORD BOOTH  /  ON AIR", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, UIStyle.CYAN)
+		draw_string(UIStyle.font_mono(), Vector2(strip.end.x - 68, strip.position.y + 18), "ON AIR", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, UIStyle.GOLD)
+		# one moving dash follows the four corners; no floating red orb
+		var p := fmod(_t * 0.22, 4.0)
+		var corners := [outer.position, Vector2(outer.end.x, outer.position.y), outer.end, Vector2(outer.position.x, outer.end.y)]
+		var i := int(floor(p))
+		var q := p - float(i)
+		var a: Vector2 = corners[i % 4]
+		var b: Vector2 = corners[(i + 1) % 4]
+		var head := a.lerp(b, q)
+		draw_circle(head, 5.0, Color(1.0, 0.18, 0.62, 0.12))
+		draw_line(a.lerp(b, maxf(0.0, q - 0.06)), head, Color(0.3, 0.95, 1.0, 0.95), 2.0)
+
+	func _box(bg: Color, border: Color, width: float, radius: float) -> StyleBoxFlat:
+		var b := StyleBoxFlat.new()
+		b.bg_color = bg
+		b.border_color = border
+		b.set_border_width_all(int(width))
+		b.set_corner_radius_all(int(radius))
+		return b
 
 
 ## A title-menu entry with some soul: a two-digit tape index in cyan, the

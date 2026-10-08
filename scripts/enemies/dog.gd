@@ -214,7 +214,7 @@ func _physics_process(delta: float) -> void:
 		_move_vel = _move_vel.move_toward(_eat(delta) + _separation() * 0.3, 1200.0 * delta)
 		velocity = _move_vel + _knock
 		move_and_slide()
-		_speed_now = velocity.length()
+		_speed_now = get_real_velocity().length()
 		if _move_vel.length() > 5.0:
 			facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 6.5))
 		_update_head(delta)
@@ -282,7 +282,7 @@ func _physics_process(delta: float) -> void:
 		_move_vel = _move_vel.move_toward(desired + _separation(), 1500.0 * delta)
 		velocity = _move_vel + _knock
 	move_and_slide()
-	_speed_now = velocity.length()
+	_speed_now = get_real_velocity().length()
 	if _move_vel.length() > 5.0 and state != State.DOWNED:
 		# the body turns a bit slower than the head: turns curve
 		facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 6.5))
@@ -310,9 +310,11 @@ func heel_follow(delta: float, heel: Vector2, face: Vector2) -> void:
 	if off.length() < 1.5:
 		want = Vector2.ZERO
 	_move_vel = _move_vel.move_toward(want, 900.0 * delta)
-	global_position += _move_vel * delta
-	_speed_now = _move_vel.length()
-	var dir := _move_vel.normalized() if _speed_now > 8.0 else face
+	velocity = _move_vel
+	move_and_slide()
+	var travelled := get_real_velocity()
+	_speed_now = travelled.length()
+	var dir := travelled.normalized() if _speed_now > 8.0 else face
 	facing = facing.slerp(dir, minf(1.0, delta * 6.0)).normalized()
 	_update_head(delta)
 	_update_eyes(delta)

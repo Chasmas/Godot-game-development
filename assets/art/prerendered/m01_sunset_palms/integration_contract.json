@@ -1,0 +1,48 @@
+{
+  "level": "m01_sunset_palms",
+  "status": "preview_only_not_integrated",
+  "source_blend": "sunset_palms_courtyard.blend",
+  "master_render": "courtyard_master.png",
+  "pixel_source_render": "courtyard_pixel_source.png",
+  "godot_tile_size_px": 16,
+  "godot_courtyard_region": {
+    "x": 4,
+    "y": 11,
+    "width": 50,
+    "height": 15
+  },
+  "gameplay_footprint_world_m": {
+    "center": [0.0, -3.4],
+    "size": [24.4, 14.0],
+    "pool_center": [0.0, -3.0],
+    "pool_size": [9.0, 5.3]
+  },
+  "camera": {
+    "projection": "orthographic",
+    "elevation_degrees": 50,
+    "azimuth_degrees": 30,
+    "ortho_scale": 31.5
+  },
+  "preview_calibration": {
+    "master_plate": {
+      "position_world_px": [464, 296],
+      "scale": 0.333333,
+      "alpha": 0.62
+    },
+    "transparent_layers": {
+      "position_world_px": [464, 296],
+      "scale": 1.0,
+      "alpha": 0.55,
+      "env": "GALLERY_PRERENDER_LAYERS=1"
+    },
+    "result": "ground_and_props_align_usefully; motel_wing_projection_requires_crop_or_camera_match"
+  },
+  "layers_pending": [
+    "ground",
+    "architecture",
+    "props_vegetation",
+    "foreground_occlusion",
+    "light_fx"
+  ],
+  "integration_gate": "Validate a real M01 gameplay capture for navigation, collision, objective readability, cast contrast and occlusion before enabling any layer."
+}

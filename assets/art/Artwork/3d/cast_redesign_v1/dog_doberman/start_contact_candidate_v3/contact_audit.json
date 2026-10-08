@@ -1,0 +1,92 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "duration_seconds": 0.6,
+  "samples": [
+    {
+      "frame": 1,
+      "minimum_sole_height_m": -4.365407590967152e-08
+    },
+    {
+      "frame": 2,
+      "minimum_sole_height_m": -8.534897233403171e-09
+    },
+    {
+      "frame": 3,
+      "minimum_sole_height_m": -8.823690791359695e-07
+    },
+    {
+      "frame": 4,
+      "minimum_sole_height_m": -5.693310413334984e-06
+    },
+    {
+      "frame": 5,
+      "minimum_sole_height_m": -6.130760993983131e-06
+    },
+    {
+      "frame": 6,
+      "minimum_sole_height_m": -6.624632987950463e-06
+    },
+    {
+      "frame": 7,
+      "minimum_sole_height_m": -7.129138793970924e-06
+    },
+    {
+      "frame": 8,
+      "minimum_sole_height_m": -7.702833499934059e-06
+    },
+    {
+      "frame": 9,
+      "minimum_sole_height_m": 3.717868821695447e-05
+    },
+    {
+      "frame": 10,
+      "minimum_sole_height_m": 3.7103116483194754e-05
+    },
+    {
+      "frame": 11,
+      "minimum_sole_height_m": 3.719358937814832e-05
+    },
+    {
+      "frame": 12,
+      "minimum_sole_height_m": 3.712760371854529e-05
+    },
+    {
+      "frame": 13,
+      "minimum_sole_height_m": 3.712440229719505e-05
+    },
+    {
+      "frame": 14,
+      "minimum_sole_height_m": 3.7137189792701975e-05
+    },
+    {
+      "frame": 15,
+      "minimum_sole_height_m": 3.709994052769616e-05
+    },
+    {
+      "frame": 16,
+      "minimum_sole_height_m": 3.6963690945412964e-05
+    },
+    {
+      "frame": 17,
+      "minimum_sole_height_m": 3.692433165269904e-05
+    },
+    {
+      "frame": 18,
+      "minimum_sole_height_m": 3.6501754948403686e-05
+    },
+    {
+      "frame": 19,
+      "minimum_sole_height_m": 3.594085501390509e-05
+    }
+  ],
+  "sequential_first_steps": true,
+  "moving_body": true,
+  "forward_travel_m": 0.09230769230769231,
+  "handoff_speed_m_per_s": 0.3076923076923077,
+  "maximum_support_slip_per_frame_m": 4.84345047567636e-06,
+  "maximum_world_sole_step_m": 0.05285831628708305,
+  "maximum_walk_handoff_mesh_difference_m": 1.0949263838371699e-05,
+  "minimum_sole_height_m": -7.702833499934059e-06,
+  "scope": "Blender IK bridge from idle to walk frame 1; world-space sole samples and optional object travel. Export, handoff and visual validation pending"
+}

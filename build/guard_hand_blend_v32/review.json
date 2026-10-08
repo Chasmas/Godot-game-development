@@ -1,0 +1,29 @@
+{
+  "approved": false,
+  "hand_faces": 4093,
+  "repaired_small_uv_polygons": [
+    23946,
+    23948,
+    23949,
+    23951,
+    23952,
+    23955,
+    25716,
+    25775,
+    25776,
+    25785,
+    25786,
+    25915,
+    25916,
+    25925,
+    25926,
+    25968,
+    25969,
+    25971,
+    25972,
+    25973,
+    25975,
+    25983
+  ],
+  "scope": "Blender emission bake of smooth 1-4 cm wrist transition; source atlas at seam, ImageGen skin distally. Body and animation isolation plus GPU review pending."
+}

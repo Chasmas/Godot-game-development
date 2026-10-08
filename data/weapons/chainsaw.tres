@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"chainsaw"
+display_name = "Chainsaw"
+kind = 1
+hold = 1
+melee_range = 23.0
+melee_arc_deg = 18.0
+melee_cooldown = 0.24
+melee_windup = 0.08
+noise_radius = 420.0
+throw_lethal = false
+sfx_hit = "hit_blade"
+sprite_key = "chainsaw"
+score_tag = "melee"
+flavor = "A maintenance tool with absolutely no discretion."

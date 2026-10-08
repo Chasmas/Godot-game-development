@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "scope": "Added authored car_close with short lean, fixed-foot support, brief door push and hand release; arrival controller synced. Further full choreography/sole/finger art review remains.",
+  "baseline_sha256": "6a5f588270975e213af4e6f1e27ad389783ebf561dbbef53fdfb7811b8791cde",
+  "integrated_sha256": "4bb9dde50a99b9f1d25908b14e1b924d13f0fb3482ed6e5773275f1fc015d1ba",
+  "preserved_clips": 34,
+  "review": "build/car_exit_review/close_supported_actual"
+}

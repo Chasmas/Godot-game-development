@@ -1,0 +1,51 @@
+{
+  "character": "zombie_civilian_4",
+  "height_m": 1.75,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_civilian_4_isolated_turnaround_v2.png",
+  "source_sha256": "d752066ad1250c68118f670e60ef561b674a3b0d9f916df5676379c7aec3562f",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        610,
+        1024
+      ],
+      "width": 610,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_4\\references\\front.png",
+      "sha256": "4806109df8013bd59b708fd80a5858563605e29662a630b5a8268114d99cb15b"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        640,
+        0,
+        950,
+        1024
+      ],
+      "width": 310,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_4\\references\\side.png",
+      "sha256": "8aefd91e13c0aea0a892d1afeded926b47c7268fa4cfa7e1d8b419750a72db39"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        965,
+        0,
+        1450,
+        1024
+      ],
+      "width": 485,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_civilian_4\\references\\back.png",
+      "sha256": "e9b7f321351889aafa693fa18d49f25a141e0e555f55b01635d1d88e18af0ef6"
+    }
+  ],
+  "visual_review": "New isolated ImageGen sheet and all three saved Blender views directly inspected. Complete figure, backpack and shoes; no portrait contamination. Modeling input approval only."
+}

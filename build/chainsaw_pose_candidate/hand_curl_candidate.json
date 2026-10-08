@@ -1,0 +1,18 @@
+{
+  "approved": false,
+  "changed_vertices": {
+    "LeftHand": 377,
+    "RightHand": 401
+  },
+  "scope": "Candidate rest mesh finger curl; bones, weights and UVs preserved; not runtime.",
+  "geometry_invariants": "hand_geometry_invariants.json",
+  "geometry_audit_passed": true,
+  "remaining": "Thumb selection must be authored separately from palm; continue actual mesh-to-handle contact and forearm twist review.",
+  "closeup_rejected": true,
+  "source_defect": "Original rig_newhair hand already has pointed finger triangles and a palm opening in Blender closeup; curling preserves/exposes defective source geometry. Need repair/remodel hand geometry before integration.",
+  "evidence": [
+    "left_original_hand_closeup.png",
+    "left_hand_closeup.png"
+  ],
+  "next_action": "Repair original hand topology in isolated candidate, then author finger/thumb grip."
+}

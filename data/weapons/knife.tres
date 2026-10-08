@@ -16,5 +16,6 @@ throw_lethal = true
 throw_speed = 620.0
 sfx_hit = "hit_blade"
 sprite_key = "knife"
+held_scale = 0.45
 score_tag = "melee"
 flavor = "Fast. Throw it and it stays thrown."

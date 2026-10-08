@@ -1,0 +1,550 @@
+{
+  "cameras": [
+    {
+      "angle_degrees": 385.0,
+      "max_visible_distance": 106.0,
+      "mission": "m01_checkout",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            18,
+            28
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            20,
+            28
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            18,
+            29
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            20,
+            29
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            14,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            14,
+            32
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            15,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            15,
+            32
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            23,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            23,
+            32
+          ],
+          "visible_sweep_samples": 9
+        },
+        {
+          "cell": [
+            24,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            24,
+            32
+          ],
+          "visible_sweep_samples": 9
+        },
+        {
+          "cell": [
+            16,
+            34
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            16,
+            36
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            17,
+            34
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            17,
+            36
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            21,
+            34
+          ],
+          "visible_sweep_samples": 13
+        },
+        {
+          "cell": [
+            21,
+            36
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            22,
+            34
+          ],
+          "visible_sweep_samples": 16
+        },
+        {
+          "cell": [
+            22,
+            36
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            18,
+            38
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            20,
+            38
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        296.0,
+        516.0
+      ],
+      "power_zone": "ground_floor",
+      "sweep_degrees": 21.0,
+      "visible_samples": 181
+    },
+    {
+      "angle_degrees": 377.5,
+      "max_visible_distance": 106.0,
+      "mission": "m01_checkout",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            40,
+            28
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            42,
+            28
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            40,
+            29
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            42,
+            29
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            36,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            36,
+            32
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            37,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            37,
+            32
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            46,
+            30
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            46,
+            32
+          ],
+          "visible_sweep_samples": 14
+        },
+        {
+          "cell": [
+            34,
+            34
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            40,
+            37
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            42,
+            37
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            40,
+            38
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            42,
+            38
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        648.0,
+        516.0
+      ],
+      "power_zone": "ground_floor",
+      "sweep_degrees": 13.5,
+      "visible_samples": 185
+    },
+    {
+      "angle_degrees": 137.5,
+      "max_visible_distance": 106.0,
+      "mission": "m01_checkout",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            59,
+            25
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            59,
+            27
+          ],
+          "visible_sweep_samples": 6
+        },
+        {
+          "cell": [
+            60,
+            25
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            60,
+            27
+          ],
+          "visible_sweep_samples": 6
+        }
+      ],
+      "position": [
+        1054.0,
+        434.0
+      ],
+      "power_zone": "lobby",
+      "sweep_degrees": 43.5,
+      "visible_samples": 218
+    },
+    {
+      "angle_degrees": 195.0,
+      "max_visible_distance": 106.0,
+      "mission": "m02_dog_days",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            30,
+            8
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            32,
+            8
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            30,
+            9
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            32,
+            9
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        491.758758544922,
+        118.63191986084
+      ],
+      "power_zone": "warehouse",
+      "sweep_degrees": 55.0,
+      "visible_samples": 259
+    },
+    {
+      "angle_degrees": 452.5,
+      "max_visible_distance": 106.0,
+      "mission": "m02_dog_days",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            27,
+            18
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            27,
+            20
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            28,
+            18
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            28,
+            20
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        488.0,
+        324.0
+      ],
+      "power_zone": "exterior",
+      "sweep_degrees": 55.0,
+      "visible_samples": 242
+    },
+    {
+      "angle_degrees": 137.5,
+      "max_visible_distance": 106.0,
+      "mission": "m02_dog_days",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            47,
+            6
+          ],
+          "visible_sweep_samples": 5
+        },
+        {
+          "cell": [
+            49,
+            6
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            47,
+            7
+          ],
+          "visible_sweep_samples": 5
+        },
+        {
+          "cell": [
+            49,
+            7
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        766.0,
+        18.0
+      ],
+      "power_zone": "kennels",
+      "sweep_degrees": 43.5,
+      "visible_samples": 230
+    },
+    {
+      "angle_degrees": 372.5,
+      "max_visible_distance": 106.0,
+      "mission": "m03_prime_time",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            19,
+            7
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            21,
+            7
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            22,
+            7
+          ],
+          "visible_sweep_samples": 0
+        }
+      ],
+      "position": [
+        338.0,
+        18.0
+      ],
+      "power_zone": "stage",
+      "sweep_degrees": 8.5,
+      "visible_samples": 84
+    },
+    {
+      "angle_degrees": 157.5,
+      "max_visible_distance": 106.0,
+      "mission": "m03_prime_time",
+      "nearby_door_approaches": [],
+      "position": [
+        1102.0,
+        402.0
+      ],
+      "power_zone": "offices",
+      "sweep_degrees": 23.5,
+      "visible_samples": 203
+    },
+    {
+      "angle_degrees": 407.5,
+      "max_visible_distance": 106.0,
+      "mission": "m03_prime_time",
+      "nearby_door_approaches": [
+        {
+          "cell": [
+            3,
+            20
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            3,
+            22
+          ],
+          "visible_sweep_samples": 6
+        },
+        {
+          "cell": [
+            4,
+            20
+          ],
+          "visible_sweep_samples": 0
+        },
+        {
+          "cell": [
+            4,
+            22
+          ],
+          "visible_sweep_samples": 5
+        }
+      ],
+      "position": [
+        18.0,
+        354.0
+      ],
+      "power_zone": "warehouse",
+      "sweep_degrees": 43.5,
+      "visible_samples": 210
+    }
+  ],
+  "scope": "Initial real-level lens coverage samples; encounter purpose, counterplay and visual polish not approved"
+}

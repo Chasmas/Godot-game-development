@@ -1,0 +1,77 @@
+{
+  "chairs": [
+    {
+      "actual_player_contact_directions": 1,
+      "blockers": [],
+      "enemy_id": "e_32,3",
+      "navigation_routes_checked": 4,
+      "position": [
+        520.041015625,
+        55.8798065185547
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    },
+    {
+      "actual_player_contact_directions": 3,
+      "blockers": [],
+      "enemy_id": "e_22,4",
+      "navigation_routes_checked": 4,
+      "position": [
+        360.001678466797,
+        73.074462890625
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    },
+    {
+      "actual_player_contact_directions": 4,
+      "blockers": [],
+      "enemy_id": "e_10,6",
+      "navigation_routes_checked": 4,
+      "position": [
+        167.956588745117,
+        104.332275390625
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    },
+    {
+      "actual_player_contact_directions": 4,
+      "blockers": [],
+      "enemy_id": "e_45,14",
+      "navigation_routes_checked": 4,
+      "position": [
+        728.0,
+        233.075759887695
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    },
+    {
+      "actual_player_contact_directions": 2,
+      "blockers": [],
+      "enemy_id": "e_38,29",
+      "navigation_routes_checked": 4,
+      "position": [
+        616.0,
+        473.353088378906
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    },
+    {
+      "actual_player_contact_directions": 3,
+      "blockers": [],
+      "enemy_id": "e_8,32",
+      "navigation_routes_checked": 4,
+      "position": [
+        136.043411254883,
+        520.332275390625
+      ],
+      "reachable_door_arc_hits": 0,
+      "solid_overlap_free": true
+    }
+  ],
+  "scope": "Assembled M01 physics footprints, reachable door arcs and dynamic navigation routes; actual NPC steering playtest remains pending"
+}

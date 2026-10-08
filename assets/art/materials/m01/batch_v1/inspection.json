@@ -1,0 +1,2194 @@
+[
+  {
+    "file": "arcade_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3751646677652995,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "ashtray_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5282732645670573,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "asphalt_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "back_office_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bat_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8453865051269531,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bath_sink_reference.png",
+    "size": [
+      1328,
+      1184
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4524241391240638,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bath_toilet_reference.png",
+    "size": [
+      1225,
+      1284
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5534827388899485,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bathroom_direction.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bathroom_wall_tiles_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bathtub_reference.png",
+    "size": [
+      1290,
+      1219
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.32233244939618827,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bed_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.47983638755935243,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bedside_lamp_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5971262943117027,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "biker_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6631075541178385,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "blood_splatter_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7230523427327474,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "blood_spurt_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8374423980712891,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "boiler_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6815403842633089,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bottle_weapon_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6947574615478516,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "bougainvillea_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5535261849824883,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "breached_wall_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5165863037109375,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "brick_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.47737375895182294,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "broken_planter_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5070877075195312,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "burned_plant_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5167909333028229,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "cass_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7433751424153646,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "chainsaw_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6595452626546224,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "collectible_photo_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.47588782314092665,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "collectible_vhs_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4366162618001302,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "corridor_carpet_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "corridor_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "counter_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3845507303873698,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "crt_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3603675241382379,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_arcade_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3868255615234375,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_arcade_reference_v2.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3454825083414714,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_crt_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4435259501139323,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_crt_reference_v2.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3544275153664753,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_door_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5006688435872396,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_door_reference_v2.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.424136479695638,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_fuse_box_reference.png",
+    "size": [
+      1211,
+      1299
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.514182605052861,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_ice_machine_reference.png",
+    "size": [
+      1271,
+      1238
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5214916065988009,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_ice_machine_reference_v2.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.2775109608968099,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_lamp_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6902118635448239,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_vending_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.45491250484671664,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_vending_reference_v2.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.2528769175211589,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_window_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.43480720722553345,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "damaged_window_reference_v2.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.37503305600195286,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "desk_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.48813120524088544,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "dog_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6637058789878149,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "dolores_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7188040415445963,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "drain_grate_reference.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5318686741502153,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "dresser_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4279034932454427,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "dumpster_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3286561209544539,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "earl_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6617997487386068,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "electrical_sparks_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.782586415608724,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "entrance_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "exploded_propane_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5731058910881018,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "exterior_stucco_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "fire_extinguisher_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6711396299333219,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "fire_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6487305959065756,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "flamingo_float_reference.png",
+    "size": [
+      1269,
+      1239
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.46541257311782613,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "floor_clutter_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.545263926188151,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "furniture_walnut_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "fuse_box_reference.png",
+    "size": [
+      1310,
+      1201
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3638081496971353,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "gecko_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7608623504638672,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "glass_shards_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7563730875651041,
+    "alpha_range": [
+      0,
+      253
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "guard_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6929950714111328,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "guest_bedspread_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "guest_door_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4263693491617839,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "guest_room_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "guest_wallpaper_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "gunner_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7162615458170573,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "handler_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6889661153157552,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "harcourt_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6989860534667969,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "hasty_checkout_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.44888223590956183,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "heavy_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7249359597770193,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "hotshot_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.661675771077474,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "housekeeping_cart_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3670996155332696,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "hunter_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7063350677490234,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "ice_bucket_reference.png",
+    "size": [
+      1295,
+      1214
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4073988792275448,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "ice_machine_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.2825501759847005,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "impact_dust_reference.png",
+    "size": [
+      1378,
+      1141
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7106954279659454,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "key_rack_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3357873176834354,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "knife_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8239638010660807,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "laundry_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "ledger_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.42763646443684894,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "machete_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8276710510253906,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "maintenance_cabinet_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.35400053906710877,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "muzzle_flash_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7643305460611979,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "neon_checkpoint_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5499145070968644,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "neon_sign_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3989581942881842,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "office_chair_reference.png",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5836388561429477,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "painted_metal_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "palm_planter_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.48168690999348956,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "parked_sedan_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5469551086425781,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pipe_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7956142425537109,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_cooler_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.35646193982790536,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_ladder_reference.png",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8152938169304781,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_lounger_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6483114357087012,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_party_ruin_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6075363159179688,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_ring_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5212505482351595,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_tiles_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "pool_umbrella_reference.png",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5656248609548509,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "propane_tank_reference.png",
+    "size": [
+      1291,
+      1218
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5129512260578796,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "railing_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6871878306070963,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "rain_reference.png",
+    "size": [
+      1234,
+      1275
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6024953125496552,
+    "alpha_range": [
+      0,
+      250
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "reception_bell_reference.png",
+    "size": [
+      1351,
+      1164
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5165964628466632,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "reception_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "reception_floor_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "reception_wood_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "red_car_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5329774220784506,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "revolver_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6106802622477213,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "rifle_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7912267049153646,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "riot_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6869169871012369,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_manhole_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.333454103977168,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_markings_reference.png",
+    "size": [
+      1214,
+      1295
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.79977164738285,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_patch_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4710222880045573,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_pothole_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3970375061035156,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_sand_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.49493662516276044,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "road_stop_line_reference.png",
+    "size": [
+      2172,
+      724
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5981470600205528,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "roof_tile_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "room_key_spill_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6156648000081381,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "rottweiler_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6717631878364893,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "rubber_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "scout_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7255045572916666,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "security_camera_reference.png",
+    "size": [
+      1365,
+      1152
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.5084738756613757,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "service_alley_direction.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "shotgun_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.8317699432373047,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "smg_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7396907806396484,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "smoke_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7406978607177734,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "stair_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.545808626090848,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "steam_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7201251983642578,
+    "alpha_range": [
+      0,
+      253
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "suitcase_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4524196993429484,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "table_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6873734792073568,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "telephone_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4932676951090495,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "towel_fabric_albedo.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "material_albedo",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "vending_reference.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.2563120524088542,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "wall_lamp_reference.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6686803582438677,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "wall_trim_reference.png",
+    "size": [
+      1292,
+      1217
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.4315661004703745,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "washer_reference.png",
+    "size": [
+      1247,
+      1261
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.26228722128985854,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "water_ring_reference.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.42880008852056195,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "water_splash_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.7179648081461588,
+    "alpha_range": [
+      0,
+      253
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "water_surface_direction.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "transparent_pixel_fraction": 0,
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "whisper_reference.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.6770394643147787,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  },
+  {
+    "file": "window_reference.png",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "transparent_pixel_fraction": 0.3756890905022478,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "role": "Blender_visual_reference",
+    "runtime_integration": false,
+    "visual_quality_approval": "pending"
+  }
+]

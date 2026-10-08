@@ -1,0 +1,250 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "bath_sink_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One compact motel bathroom wall-mounted ivory porcelain sink, chrome hot and cold taps, drain, visible curved trap below and wall mounting brackets. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "bath_toilet_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One compact ivory porcelain motel toilet with cistern, flush lever, seat and realistic proportions, restrained age at joints. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "bathtub_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One cream enamel rectangular motel bathtub, chrome shower fittings and shower curtain rod, partly gathered pale teal curtain with believable folds. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "bedside_lamp_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One 1980s motel bedside lamp, brass base and neck, warm ivory pleated fabric shade, switch and cable, realistic shade weave. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "dresser_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One low walnut motel dresser with three drawers and brass pulls, fine wood grain, worn corners, sturdy legs. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "telephone_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One 1980s cream rotary desk telephone, clear circular dial holes, handset seated correctly, coiled receiver cord and trailing cable. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "reception_bell_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One brass reception service bell on a dark wood round base, physically believable plunger, patina and edge wear. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "key_rack_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One wall mounted walnut motel key pigeonhole cabinet with numbered cubbies, scattered hanging brass keys and teal key tags. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "ledger_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One open motel guest ledger with cream paper, mundane ruled registration rows with restrained illegible handwritten marks, red cloth binding and a pen lying beside it. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "ashtray_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One small amber glass motel ashtray with cigarette rests, fine glass facets, a few extinguished cigarette ends and ash inside. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "suitcase_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One open worn brown leather guest suitcase, straps and brass buckles, folded clothing and toiletries neatly packed inside, coherent hinges. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "ice_bucket_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One small cream motel ice bucket, metal handle, removable lid resting alongside, visible irregular clear ice cubes and tongs. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "pool_cooler_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One vintage red portable pool cooler, cream lid and handle, worn paint and believable insulated body. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "flamingo_float_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One pink inflatable flamingo swimming pool float with loop opening, correct inflation seams, curved neck, black white beak, no water or ground. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "dumpster_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One green wheeled metal service dumpster with hinged lid, handle brackets, realistic casters, subtle dents, scuffed paint and grime. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "fuse_box_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One wall mounted grey steel electrical fuse box with open hinged cover, breakers inside, labelled small switch rows, conduit attachments, believable safe mechanical layout. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "arcade_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One 1980s upright arcade cabinet with dark teal and coral side panels, CRT screen, joystick, two buttons, coin door, cabinet trim and restrained worn paint. No copied game branding. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "bougainvillea_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One large climbing bougainvillea plant with fine woody stems, dense layered natural green leaves and vivid small magenta bracts, supported on a simple wood trellis, roots in terracotta planter. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "stair_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One modular exterior motel stair flight with concrete steps, landing, thin steel handrails, drainage grooves, subtle surface erosion and real structural supports. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "railing_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One modular motel balcony railing section with pale cream vertical steel balusters and coral top rail, realistic joints and two mounting posts. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "red_car_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One 1980s red convertible car used by Cass, coherent four wheel proportions, black tyres and silver rims, windshield, cream seats, dark dashboard, believable lights and bumpers, empty interior. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "parked_sedan_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One dark charcoal 1980s four door sedan, coherent proportions, real wheel arches, windows, bumpers, lights, restrained weathering. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "biker_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. Full body adult human biker enemy, broad muscular build, dark leather vest over plain shirt, dark trousers and boots, readable natural face, relaxed neutral standing pose with empty hands, distinct from security guard. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "handler_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. Full body adult human dog handler enemy, dark practical work jacket, utility trousers and boots, distinct readable face, empty hands, neutral standing pose suitable for later animation. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "dog_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One adult guard dog, natural German shepherd anatomy, short tan black fur, plain collar, standing with four paws grounded, neutral closed mouth and realistic joints, no leash or person. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "security_camera_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One 1980s wall mounted CCTV surveillance camera, cream rectangular housing, small dark lens, articulated metal mounting bracket, plausible cable connection, realistic wear. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Whole single subject fully visible, isolated on genuinely transparent background, orthographic elevated three-quarter view, no floor or detached shadow, no extra objects or collage. No UI, text overlays or watermark."
+    },
+    {
+      "id": "water_surface_direction",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for later Blender reconstruction, part of M01 Sunset Palms. One square close-up top-down visual reference of a turquoise motel swimming pool surface with restrained natural irregular ripples, subtle tile grid visible beneath and soft broken reflected warm lights. No objects or people, no white repetitive line pattern. Physically believable water, for later Blender animated water reconstruction. Rich handcrafted physically believable surface detail, premium indie 3D diorama finish, matching detailed motel environment references, restrained cream coral teal walnut palette and neutral soft studio lighting. Full bleed top down water study. No UI, text overlays or watermark."
+    }
+  ],
+  "sources": [
+    {
+      "id": "bath_sink_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-779f7ce5-7df5-4b6b-ab05-3b71834411dc.png"
+    },
+    {
+      "id": "bath_toilet_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-48e05897-6517-4a4f-a96e-165e99e8647b.png"
+    },
+    {
+      "id": "bathtub_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c226e354-a3d6-42ae-bbc8-d9633de39b37.png"
+    },
+    {
+      "id": "bedside_lamp_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-a4b3cd75-f995-431c-8bae-bb7094b716cb.png"
+    },
+    {
+      "id": "dresser_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c57e9243-06ff-4c8f-a1bf-1ca75d394c30.png"
+    },
+    {
+      "id": "telephone_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-8c66f8e5-ab0c-4adf-b8e2-e680fc9d456c.png"
+    },
+    {
+      "id": "reception_bell_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-1acfb804-1a0c-4446-b2b2-2565a902931b.png"
+    },
+    {
+      "id": "key_rack_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-02bf21b5-554a-496d-9528-25326d179c0f.png"
+    },
+    {
+      "id": "ledger_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-792ebc52-4f6d-4cdc-bcdd-3de54b6ba009.png"
+    },
+    {
+      "id": "ashtray_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-3f8aa4b8-aab4-4eef-9205-19e87382e136.png"
+    },
+    {
+      "id": "suitcase_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-5aadcb40-7284-4cd1-9d47-f03b3f1c70dd.png"
+    },
+    {
+      "id": "ice_bucket_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-f9a940c2-cbf1-434d-a60b-29d3e1ed495c.png"
+    },
+    {
+      "id": "pool_cooler_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-a28ad983-bcb9-4fde-be47-6fcc61774f21.png"
+    },
+    {
+      "id": "flamingo_float_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-ebc1eed9-82ea-40f5-87c0-b46c11bb0ed9.png"
+    },
+    {
+      "id": "dumpster_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-b15bc88c-8891-4150-9f76-71694f536357.png"
+    },
+    {
+      "id": "fuse_box_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-70cdfc30-adbf-412e-8d42-02f773db4910.png"
+    },
+    {
+      "id": "arcade_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-814f0193-517d-482e-98a9-af66f64c8b7e.png"
+    },
+    {
+      "id": "bougainvillea_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-ed82881a-5f36-4014-a4f8-3cc1c6854df5.png"
+    },
+    {
+      "id": "stair_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-51ac9484-7718-4d4b-b7ea-b887bf64162e.png"
+    },
+    {
+      "id": "railing_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-ef2dbb3f-67ec-4f33-a19f-aa4b042fe78c.png"
+    },
+    {
+      "id": "red_car_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c010e4cf-6c85-4080-a3bb-5305608fc8ce.png"
+    },
+    {
+      "id": "parked_sedan_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-1cadf30e-1032-41f8-98c3-4931aed6a533.png"
+    },
+    {
+      "id": "biker_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-684c5d8c-f540-40f3-93db-648a779cec25.png"
+    },
+    {
+      "id": "handler_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-14400630-56f2-43c7-997c-177b325e3b1b.png"
+    },
+    {
+      "id": "dog_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-1039e473-7545-4774-aa05-0d09e1efadb4.png"
+    },
+    {
+      "id": "security_camera_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-8ebc945b-8a6c-4762-8c38-c3d5383dec5e.png"
+    },
+    {
+      "id": "water_surface_direction",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-806e4606-0b44-492e-b5d8-610d3d655315.png"
+    }
+  ]
+}

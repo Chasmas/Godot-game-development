@@ -1,0 +1,8 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 24,
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/Artwork/3d/cast_redesign_v1/dog_doberman/idle_native_candidate_v3/dog_doberman_idle_candidate.glb",
+  "source_sha256": "c96017e6448c321048842da6647034bd8e863c1cd1098198b54d183f82826982"
+}

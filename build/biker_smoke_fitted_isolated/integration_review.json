@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 27 other clips including seated pose preserved",
+  "baseline_sha256": "a146d70f0e94433a201ba848f7c160608fe48c99c356ee18fc2099794e5c2433",
+  "integrated_sha256": "4a14d2aadd316c3b5376421cfa14358a0c84082b336e774dd2fd81b466b0e2e9",
+  "backup": "build\\biker_smoke_fitted_isolated\\biker_before_a146d70f0e94.glb",
+  "visual_review": "build/biker_idle_review_directions.png",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/biker_smoke_fitted_isolated/biker.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.00032593679783522587,
+      "Hips": 0.0,
+      "LeftArm": 0.0002288753888634827,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00013445889057274945,
+      "LeftHand": 3.345384052206404e-05,
+      "Neck": 0.00022862481662895987,
+      "RightArm": 0.00023785983304539535,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.02878178750103629,
+      "RightHand": 0.018185760964760236
+    },
+    "loop_gap_m": {
+      "Head": 0.0004152489764756788,
+      "Hips": 0.0,
+      "LeftArm": 0.0002915811585963403,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.0001625489874990724,
+      "LeftHand": 2.5314823396735396e-05,
+      "Neck": 0.0002912860447886732,
+      "RightArm": 0.0003029256557003207,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00017231006972854616,
+      "RightHand": 4.490195611368074e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.12931895256041992,
+    "contact_hand_minus_head_m": [
+      -0.03500151634216997,
+      -0.03499817848205988
+    ]
+  }
+}

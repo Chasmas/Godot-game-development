@@ -1,0 +1,29 @@
+{
+  "scope": "Current Cass knife runtime recovery and material correction",
+  "runtime_changes": [
+    "Per-instance Cass body emission disabled; imported asset retained",
+    "Stab duration 0.24 seconds",
+    "Pending contact and active swing reject repeated attack restarts",
+    "Melee cooldown cannot finish before authored swing duration"
+  ],
+  "tests": {
+    "cast": "build/cast_test_skin_lighting.txt",
+    "knife_gpu": "build/knife_recovery_visual.txt",
+    "failures": 0,
+    "post_contact_repeat_test": true,
+    "headings": [
+      11.25,
+      101.25,
+      191.25,
+      281.25
+    ],
+    "swap_and_roll_cancel_test": true
+  },
+  "captures": "build/melee_trail_review/runtime_sequence",
+  "visual_approved": false,
+  "remaining": [
+    "Review blade attachment and both arms across full authored animation",
+    "Validate responsive repeat-input handling during normal play",
+    "Review other character weapons and melee poses"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\surface_cleanup_v2\\dog_doberman_surface_candidate.glb",
+  "normalized_height_m": 0.88,
+  "orientation": "Front negative Y; side labels are explicit world-X signs, not anatomical names",
+  "paw_regions": {
+    "front_negative_x": {
+      "samples": 974,
+      "bounds_m": {
+        "lower": [
+          -0.12196324020624161,
+          -0.3512338697910309,
+          3.843679587589577e-05
+        ],
+        "upper": [
+          -0.054891977459192276,
+          -0.24912752211093903,
+          0.034997276961803436
+        ]
+      },
+      "contact_target_m": [
+        -0.08842760883271694,
+        -0.30018069595098495,
+        0.0
+      ],
+      "surface_min_z_m": 3.843679587589577e-05
+    },
+    "rear_negative_x": {
+      "samples": 1100,
+      "bounds_m": {
+        "lower": [
+          -0.14394618570804596,
+          0.3320960998535156,
+          0.00022796232951804996
+        ],
+        "upper": [
+          -0.06319775432348251,
+          0.4505215585231781,
+          0.03487834706902504
+        ]
+      },
+      "contact_target_m": [
+        -0.10357197001576424,
+        0.39130882918834686,
+        0.0
+      ],
+      "surface_min_z_m": 0.00022796232951804996
+    },
+    "front_positive_x": {
+      "samples": 975,
+      "bounds_m": {
+        "lower": [
+          0.05522711202502251,
+          -0.35081198811531067,
+          0.0
+        ],
+        "upper": [
+          0.12209519743919373,
+          -0.24945645034313202,
+          0.03491489961743355
+        ]
+      },
+      "contact_target_m": [
+        0.08866115473210812,
+        -0.30013421922922134,
+        0.0
+      ],
+      "surface_min_z_m": 0.0
+    },
+    "rear_positive_x": {
+      "samples": 1076,
+      "bounds_m": {
+        "lower": [
+          0.06322439759969711,
+          0.3322522044181824,
+          0.00013691031199414283
+        ],
+        "upper": [
+          0.14394618570804596,
+          0.45037227869033813,
+          0.03497929498553276
+        ]
+      },
+      "contact_target_m": [
+        0.10358529165387154,
+        0.39131224155426025,
+        0.0
+      ],
+      "surface_min_z_m": 0.00013691031199414283
+    }
+  },
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Geometric contact-region measurement, not a rig or animated ground-contact validation"
+}

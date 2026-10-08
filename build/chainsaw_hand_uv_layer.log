@@ -1,0 +1,17 @@
+04:11:30 | INFO: Data are loaded, start creating Blender stuff
+04:11:30 | INFO: Blender create Mesh node char1
+04:11:30 | INFO: glTF import finished in 0.13s
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\model_chainsaw_hands.py:14: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  images=[n.image for n in material_source.node_tree.nodes if n.type=='TEX_IMAGE' and n.image] if material_source.use_nodes else []
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\model_chainsaw_hands.py:49: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material=bpy.data.materials.new('AuthoredHandSkin');material.diffuse_color=(*skin_colour,1);material.use_nodes=True
+Traceback (most recent call last):
+  File "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\model_chainsaw_hands.py", line 82, in <module>
+    layer=mesh.uv_layers.new(name=uv.name)
+                                  ^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd0 in position 2: invalid continuation byte
+
+Error: script failed, file: 'tools/blender/model_chainsaw_hands.py', exiting.
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

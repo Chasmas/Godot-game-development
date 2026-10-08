@@ -1,0 +1,454 @@
+{
+  "scope": "Reviewed source and crop integrity only; not geometry, anatomy, rig, animation or runtime approval",
+  "service_contacted": false,
+  "entries": [
+    {
+      "character": "bellhop",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "biker",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "cass",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3,
+      "task_id": "01a118f8-980b-7034-ad04-4705b30ce212",
+      "last_recorded_service_status": "SUCCEEDED"
+    },
+    {
+      "character": "cass_head",
+      "runtime_approval_verified": false,
+      "reference_integrity": "superseded",
+      "reason": "Superseded modeling reference; intentionally unapproved for API. Use cass_head_detail reviewed high-resolution references instead."
+    },
+    {
+      "character": "cass_head_detail",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3,
+      "task_id": "01a11917-bf9a-777c-8a67-78f9cc9c4017",
+      "last_recorded_service_status": "SUCCEEDED"
+    },
+    {
+      "character": "civilian_1",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_2",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_3",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_4",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_5",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_6",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_7",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "civilian_8",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "dana",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "dog_doberman",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "dog_rott",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "dog_shepherd",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "guard",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "gunner",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "harcourt",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "heavy",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "hunter",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "mom",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "scout",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "security",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "sniper",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "tommy",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "welder",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_bellhop",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_biker",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_civilian_3",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_civilian_4",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_civilian_6",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_civilian_7",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_civilian_8",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_guard",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_gunner",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_heavy",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_hunter",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_security",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    },
+    {
+      "character": "zombie_welder",
+      "runtime_approval_verified": false,
+      "reference_integrity": "passed",
+      "validated_views": 3
+    }
+  ],
+  "unconfigured_concepts_including_supplemental_references": [
+    {
+      "concept": "riot",
+      "reference_file": "riot_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "boss",
+      "reference_file": "harcourt_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "burnt",
+      "reference_file": "burnt_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie",
+      "reference_file": "zombie_stylized_gore_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "ghoul",
+      "reference_file": "ghoul_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "demon",
+      "reference_file": "demon_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "cultist",
+      "reference_file": "cultist_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "fireman",
+      "reference_file": "fireman_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "stagehand",
+      "reference_file": "stagehand_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "handler",
+      "reference_file": "handler_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "buck",
+      "reference_file": "buck_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "scrapper",
+      "reference_file": "scrapper_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "civilian",
+      "reference_file": "earl_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "pa",
+      "reference_file": "pa_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "arlo",
+      "reference_file": "arlo_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "anchor",
+      "reference_file": "anchor_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "director",
+      "reference_file": "director_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "dutch",
+      "reference_file": "fireman_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "earl",
+      "reference_file": "earl_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "marv",
+      "reference_file": "marv_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "rudy",
+      "reference_file": "rudy_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "voice",
+      "reference_file": "voice_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "machine",
+      "reference_file": "machine_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "dead",
+      "reference_file": "dead_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "hellhound",
+      "reference_file": "hellhound_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "shadow",
+      "reference_file": "shadow_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "cass_star",
+      "reference_file": "cass_star_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_civilian_1",
+      "reference_file": "zombie_civilian_1_turnaround.png",
+      "status": "no_configured_modeling_views",
+      "source_review_status": "needs_isolated_back_reference",
+      "finding": "Directly inspected original: back-view hand shares horizontal span with portrait/detail panels; rectangular crop risks contamination."
+    },
+    {
+      "concept": "zombie_civilian_2",
+      "reference_file": "zombie_civilian_2_turnaround.png",
+      "status": "no_configured_modeling_views",
+      "source_review_status": "needs_isolated_back_reference",
+      "finding": "Back right hand extends into the horizontal span of the adjacent portrait panel. Rectangular crop risks portrait fragments."
+    },
+    {
+      "concept": "zombie_civilian_5",
+      "reference_file": "zombie_civilian_5_turnaround.png",
+      "status": "no_configured_modeling_views",
+      "source_review_status": "needs_isolated_back_reference",
+      "finding": "Directly inspected original: back-view hand shares horizontal span with portrait/detail panels; rectangular crop risks contamination."
+    },
+    {
+      "concept": "zombie_base_concept",
+      "reference_file": "zombie_turnaround.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "cass_head_detail_v1",
+      "reference_file": "cass_head_detail_v1.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "welder_isolated_v2",
+      "reference_file": "welder_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_bellhop_isolated_v2",
+      "reference_file": "zombie_bellhop_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_biker_isolated_v2",
+      "reference_file": "zombie_biker_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_welder_isolated_v2",
+      "reference_file": "zombie_welder_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_civilian_4_isolated_v2",
+      "reference_file": "zombie_civilian_4_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    },
+    {
+      "concept": "zombie_civilian_7_isolated_v2",
+      "reference_file": "zombie_civilian_7_isolated_turnaround_v2.png",
+      "status": "no_configured_modeling_views"
+    }
+  ]
+}

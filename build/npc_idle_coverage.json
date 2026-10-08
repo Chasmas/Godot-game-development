@@ -1,0 +1,103 @@
+{
+  "scope": "Presence only, not visual approval",
+  "looks": [
+    {
+      "look": "bellhop",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "biker",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "boss",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "buck",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "burnt",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "cass",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "civilian",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "cultist",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "demon",
+      "missing_activity_clips": [
+        "doze"
+      ]
+    },
+    {
+      "look": "fireman",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "ghoul",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "guard",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "gunner",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "handler",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "heavy",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "hunter",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "riot",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "scout",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "scrapper",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "security",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "sniper",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "stagehand",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "welder",
+      "missing_activity_clips": []
+    },
+    {
+      "look": "zombie",
+      "missing_activity_clips": []
+    }
+  ]
+}

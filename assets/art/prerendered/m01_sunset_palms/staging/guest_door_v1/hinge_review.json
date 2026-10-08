@@ -1,0 +1,16 @@
+{
+  "closed_slab_center": [
+    0.0,
+    0.0,
+    1.0199999809265137
+  ],
+  "open_slab_center": [
+    -0.39252302050590515,
+    0.42836374044418335,
+    1.0199999809265137
+  ],
+  "stationary_frame_verified": true,
+  "opening_degrees": 85,
+  "runtime_approved": false,
+  "collision_validated": false
+}

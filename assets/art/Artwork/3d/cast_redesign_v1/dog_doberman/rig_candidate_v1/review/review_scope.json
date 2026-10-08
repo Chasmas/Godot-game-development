@@ -1,0 +1,8 @@
+{
+  "runtime_approved": false,
+  "scope": "Through-body skeleton placement overlays, no skin weights or animation validation",
+  "renders": [
+    "front_overlay.png",
+    "side_overlay.png"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "character": "zombie_bellhop",
+  "source": "assets/art/reference/cast_redesign_v1/zombie_bellhop_turnaround.png",
+  "approved_for_api": false,
+  "status": "original_superseded_by_reviewed_isolated_v2",
+  "finding": "Back-view right hand touches portrait panel boundary. Rectangular crop risks clipped fingers or adjacent portrait contamination.",
+  "next_action": "Use references/reference_audit.json for the reviewed isolated v2 modeling input. Original collage remains unapproved.",
+  "replacement_source": "assets/art/reference/cast_redesign_v1/zombie_bellhop_isolated_turnaround_v2.png"
+}

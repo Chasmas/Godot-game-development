@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "changed_vertices": {
+    "RightHand": 4915,
+    "LeftHand": 501
+  },
+  "uvs_preserved": true,
+  "default_weight": 0,
+  "scope": "Opt-in WeaponGrip morph; original rest and CanGrip retained. Finger self-intersection and pistol contact not approved."
+}

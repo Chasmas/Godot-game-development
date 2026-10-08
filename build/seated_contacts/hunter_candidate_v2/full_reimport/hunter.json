@@ -1,0 +1,97 @@
+{
+  "source": "C:\\Users\\gil_n\\Documents\\GitHub\\Godot-game-development-codex\\build\\seated_contacts\\hunter_candidate_v2\\hunter_full_candidate.glb",
+  "sha256": "07b88e9bd4983020f91a65ea76fd4503d1fe5eca1915d4d232d08afa274d0aa8",
+  "source_unchanged": true,
+  "runtime_promoted": false,
+  "scope": "Evaluated vertices with foot/toe influence above 0.75; lowest selected boot vertex approximates sole contact; verify visually before correcting animation",
+  "rows": [
+    {
+      "phase": 0,
+      "hips_height_m": 0.5217519998550415,
+      "feet": [
+        {
+          "side": "Left",
+          "weighted_boot_vertices": 1528,
+          "hip_joint_height_m": 0.43066418170928955,
+          "ankle_joint_height_m": 0.15622124075889587,
+          "sole_min_height_m": 0.001994020538404584,
+          "boot_max_height_m": 0.14678941667079926
+        },
+        {
+          "side": "Right",
+          "weighted_boot_vertices": 1441,
+          "hip_joint_height_m": 0.4329681992530823,
+          "ankle_joint_height_m": 0.15947569906711578,
+          "sole_min_height_m": 0.00199774163775146,
+          "boot_max_height_m": 0.14747044444084167
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "hips_height_m": 0.5217519998550415,
+      "feet": [
+        {
+          "side": "Left",
+          "weighted_boot_vertices": 1528,
+          "hip_joint_height_m": 0.43066418170928955,
+          "ankle_joint_height_m": 0.15622124075889587,
+          "sole_min_height_m": 0.001994020538404584,
+          "boot_max_height_m": 0.14678941667079926
+        },
+        {
+          "side": "Right",
+          "weighted_boot_vertices": 1441,
+          "hip_joint_height_m": 0.4329681992530823,
+          "ankle_joint_height_m": 0.15947569906711578,
+          "sole_min_height_m": 0.00199774163775146,
+          "boot_max_height_m": 0.14747044444084167
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "hips_height_m": 0.5217519998550415,
+      "feet": [
+        {
+          "side": "Left",
+          "weighted_boot_vertices": 1528,
+          "hip_joint_height_m": 0.43066418170928955,
+          "ankle_joint_height_m": 0.15622124075889587,
+          "sole_min_height_m": 0.001994020538404584,
+          "boot_max_height_m": 0.14678941667079926
+        },
+        {
+          "side": "Right",
+          "weighted_boot_vertices": 1441,
+          "hip_joint_height_m": 0.4329681992530823,
+          "ankle_joint_height_m": 0.15947569906711578,
+          "sole_min_height_m": 0.00199774163775146,
+          "boot_max_height_m": 0.14747044444084167
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "hips_height_m": 0.5217519998550415,
+      "feet": [
+        {
+          "side": "Left",
+          "weighted_boot_vertices": 1528,
+          "hip_joint_height_m": 0.43066418170928955,
+          "ankle_joint_height_m": 0.15622124075889587,
+          "sole_min_height_m": 0.001994020538404584,
+          "boot_max_height_m": 0.14678941667079926
+        },
+        {
+          "side": "Right",
+          "weighted_boot_vertices": 1441,
+          "hip_joint_height_m": 0.4329681992530823,
+          "ankle_joint_height_m": 0.15947569906711578,
+          "sole_min_height_m": 0.00199774163775146,
+          "boot_max_height_m": 0.14747044444084167
+        }
+      ]
+    }
+  ]
+}

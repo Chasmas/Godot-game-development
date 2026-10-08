@@ -1,0 +1,92 @@
+{
+  "review_method": "Direct inspection of all fourteen listed source PNGs, not rendered Blender validation.",
+  "runtime_approved": false,
+  "seam_validation": "pending",
+  "native_scale_validation": "pending",
+  "materials": [
+    {
+      "file": "exterior_stucco_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Detailed peach plaster with patch variation. Keep aggregate small; no excessive displacement."
+    },
+    {
+      "file": "guest_wallpaper_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Cream/teal/gold repeated fan design. Preserve motif orientation and physical repeat scale."
+    },
+    {
+      "file": "reception_wood_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Vertical boards with dark grooves. Model panel joints; do not interpret dark grooves as validated height."
+    },
+    {
+      "file": "roof_tile_albedo.png",
+      "visual_review": "inspected",
+      "role": "geometry_and_finish_reference",
+      "notes": "Visible overlap shadows and cylindrical tile shading. Geometry/finish direction only; not neutral base colour for raised tiles."
+    },
+    {
+      "file": "bathroom_wall_tiles_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Sage square tiles with grout and occasional chips. Separate tile/grout response; seam repeat pending."
+    },
+    {
+      "file": "guest_bedspread_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Coral/teal printed woven cloth. Bind to cloth UVs; avoid macro-sized weave."
+    },
+    {
+      "file": "corridor_carpet_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Dark teal dense floral carpet. Limit high frequency detail at gameplay scale."
+    },
+    {
+      "file": "asphalt_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Dark aggregate and restrained patch variation. Wet reflections must come from shader/lighting."
+    },
+    {
+      "file": "towel_fabric_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Ivory terry loops with self-shadow. Surface direction; use restrained relief to avoid tangled macro loops."
+    },
+    {
+      "file": "painted_metal_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Ivory paint chips and sparse wear. Base colour candidate; exposed-metal roughness requires separate mask."
+    },
+    {
+      "file": "rubber_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Dark fine-grained rubber. Use restrained relief and nonmetallic shader."
+    },
+    {
+      "file": "furniture_walnut_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Horizontal fine walnut grain. Align UVs to each furniture part; do not duplicate grain scale blindly."
+    },
+    {
+      "file": "pool_tiles_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Turquoise tiles with subdued chips. Independent water material; no water lighting baked into tile shader."
+    },
+    {
+      "file": "reception_floor_albedo.png",
+      "visual_review": "inspected",
+      "role": "material_candidate_with_constraints",
+      "notes": "Ivory/sage checkerboard. Model geometry and tile scale consistent with reception; edge repeat pending."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "rig_approved": false,
+  "findings": [
+    "Rear-hip probe no longer shows the thin hock spike from v2",
+    "Independent lower-paw displacement checks repeated: other three sampled paw regions remain stationary",
+    "Tail bend now exposes a broad stretched panel: distance mask splits adjacent tail surface vertices",
+    "Head-to-trunk influence narrowed; neck transition still needs close inspection"
+  ],
+  "runtime_approved": false,
+  "status": "tail_region_continuity_requires_revision",
+  "reviewed_views": [
+    "rest.png",
+    "front_paw_bend.png",
+    "rear_hip_bend.png",
+    "head_turn.png",
+    "tail_bend.png"
+  ],
+  "next_action": "Derive connected tail surface region using welded adjacency and seed propagation, then smooth transition at tail root; avoid another fixed distance threshold"
+}

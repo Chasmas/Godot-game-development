@@ -27,6 +27,14 @@ func _ready() -> void:
 	level.camera.snap_to_target()
 	for i in 20: await get_tree().process_frame
 	await RenderingServer.frame_post_draw
-	get_viewport().get_texture().get_image().save_png(OS.get_environment("CAST_PREVIEW_OUT"))
+	if DisplayServer.get_name() == "headless":
+		push_warning("Cast ingame capture skipped: headless renderer has no visual texture")
+	else:
+		var texture := get_viewport().get_texture()
+		if texture:
+			var out := OS.get_environment("CAST_PREVIEW_OUT")
+			if not out.is_empty(): texture.get_image().save_png(out)
+		else:
+			push_warning("Cast ingame capture skipped: no viewport texture")
 	print("Cass rendered in mission; cast active=", p.visual.cast_sprite != null)
 	get_tree().quit()

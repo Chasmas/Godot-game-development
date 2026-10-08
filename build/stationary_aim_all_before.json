@@ -1,0 +1,692 @@
+[
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0228719264268875,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "bellhop",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0486656054854393,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "bellhop",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0486656054854393,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "bellhop",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0257791057229042,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "biker",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0556493401527405,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "biker",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0556493401527405,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "biker",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0253304876387119,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "boss",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0566551946103573,
+      "LeftFoot": 0.56556761264801,
+      "RightFoot": 0.607521235942841
+    },
+    "look": "boss",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0566551946103573,
+      "LeftFoot": 0.56556761264801,
+      "RightFoot": 0.607521235942841
+    },
+    "look": "boss",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0238647721707821,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "buck",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0587182343006134,
+      "LeftFoot": 0.572751820087433,
+      "RightFoot": 0.632653057575226
+    },
+    "look": "buck",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0587182343006134,
+      "LeftFoot": 0.572751820087433,
+      "RightFoot": 0.632653057575226
+    },
+    "look": "buck",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0236442722380161,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "burnt",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0537591353058815,
+      "LeftFoot": 0.565894067287445,
+      "RightFoot": 0.610832512378693
+    },
+    "look": "burnt",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0537591353058815,
+      "LeftFoot": 0.565894067287445,
+      "RightFoot": 0.610832512378693
+    },
+    "look": "burnt",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0249376259744167,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "civilian",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0561699643731117,
+      "LeftFoot": 0.565179347991943,
+      "RightFoot": 0.619040966033936
+    },
+    "look": "civilian",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0561699643731117,
+      "LeftFoot": 0.565179347991943,
+      "RightFoot": 0.619040966033936
+    },
+    "look": "civilian",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0225796457380056,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "cultist",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.05374476313591,
+      "LeftFoot": 0.654625713825226,
+      "RightFoot": 0.697457492351532
+    },
+    "look": "cultist",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.05374476313591,
+      "LeftFoot": 0.654625713825226,
+      "RightFoot": 0.697457492351532
+    },
+    "look": "cultist",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0205705463886261,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "demon",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0508668087422848,
+      "LeftFoot": 0.674201786518097,
+      "RightFoot": 0.753296256065369
+    },
+    "look": "demon",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0508668087422848,
+      "LeftFoot": 0.674201786518097,
+      "RightFoot": 0.753296256065369
+    },
+    "look": "demon",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0240151397883892,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "fireman",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0587966442108154,
+      "LeftFoot": 0.638467490673065,
+      "RightFoot": 0.681460976600647
+    },
+    "look": "fireman",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0587966442108154,
+      "LeftFoot": 0.638467490673065,
+      "RightFoot": 0.681460976600647
+    },
+    "look": "fireman",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0247369837015867,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "ghoul",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0510194338858128,
+      "LeftFoot": 0.632909774780273,
+      "RightFoot": 0.676750898361206
+    },
+    "look": "ghoul",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0510194338858128,
+      "LeftFoot": 0.632909774780273,
+      "RightFoot": 0.676750898361206
+    },
+    "look": "ghoul",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0232234764844179,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0501038059592247,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0501038059592247,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0159512329846621,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "gunner",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0440527275204659,
+      "LeftFoot": 0.607845962047577,
+      "RightFoot": 0.651385962963104
+    },
+    "look": "gunner",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0440527275204659,
+      "LeftFoot": 0.607845962047577,
+      "RightFoot": 0.651385962963104
+    },
+    "look": "gunner",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0250937417149544,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "handler",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0553278289735317,
+      "LeftFoot": 0.576373219490051,
+      "RightFoot": 0.619172334671021
+    },
+    "look": "handler",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0553278289735317,
+      "LeftFoot": 0.576373219490051,
+      "RightFoot": 0.619172334671021
+    },
+    "look": "handler",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0253649912774563,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "heavy",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0557231344282627,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "heavy",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0557231344282627,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "heavy",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.024923549965024,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "hunter",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0557481050491333,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "hunter",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0557481050491333,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "hunter",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0235634446144104,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "riot",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0568677671253681,
+      "LeftFoot": 0.561765432357788,
+      "RightFoot": 0.604474723339081
+    },
+    "look": "riot",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0568677671253681,
+      "LeftFoot": 0.561765432357788,
+      "RightFoot": 0.604474723339081
+    },
+    "look": "riot",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0223969649523497,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "scout",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0524843223392963,
+      "LeftFoot": 0.521368622779846,
+      "RightFoot": 0.556446433067322
+    },
+    "look": "scout",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0524843223392963,
+      "LeftFoot": 0.521368622779846,
+      "RightFoot": 0.556446433067322
+    },
+    "look": "scout",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0220498144626617,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "scrapper",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0539601854979992,
+      "LeftFoot": 0.584577679634094,
+      "RightFoot": 0.63219678401947
+    },
+    "look": "scrapper",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0539601854979992,
+      "LeftFoot": 0.584577679634094,
+      "RightFoot": 0.63219678401947
+    },
+    "look": "scrapper",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0246812272816896,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "security",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.056292749941349,
+      "LeftFoot": 0.58514142036438,
+      "RightFoot": 0.628895461559296
+    },
+    "look": "security",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.056292749941349,
+      "LeftFoot": 0.58514142036438,
+      "RightFoot": 0.628895461559296
+    },
+    "look": "security",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0162030234932899,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "sniper",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0465025044977665,
+      "LeftFoot": 0.549906551837921,
+      "RightFoot": 0.604015350341797
+    },
+    "look": "sniper",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0465025044977665,
+      "LeftFoot": 0.549906551837921,
+      "RightFoot": 0.604015350341797
+    },
+    "look": "sniper",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0151693494990468,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "stagehand",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0658294260501862,
+      "LeftFoot": 0.477872908115387,
+      "RightFoot": 0.594087302684784
+    },
+    "look": "stagehand",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0658294260501862,
+      "LeftFoot": 0.477872908115387,
+      "RightFoot": 0.594087302684784
+    },
+    "look": "stagehand",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0231255423277617,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "welder",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0555632263422012,
+      "LeftFoot": 0.543917238712311,
+      "RightFoot": 0.59274023771286
+    },
+    "look": "welder",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0555632263422012,
+      "LeftFoot": 0.543917238712311,
+      "RightFoot": 0.59274023771286
+    },
+    "look": "welder",
+    "requested": "aim_dual"
+  },
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0216782186180353,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "zombie",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.053581427782774,
+      "LeftFoot": 0.549435496330261,
+      "RightFoot": 0.743936240673065
+    },
+    "look": "zombie",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.053581427782774,
+      "LeftFoot": 0.549435496330261,
+      "RightFoot": 0.743936240673065
+    },
+    "look": "zombie",
+    "requested": "aim_dual"
+  }
+]

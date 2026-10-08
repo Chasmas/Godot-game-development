@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CIVILIAN CLIPS: ["aim", "aim_dual", "aim_melee", "armed_dual_run", "armed_dual_walk", "armed_melee_run", "armed_melee_walk", "armed_run", "armed_walk", "car_exit", "death", "death_back", "doze", "drive", "idle", "knocked", "melee", "punch", "punch_left", "reload_dual", "reload_mag", "reload_shell", "run", "smoke", "walk"]
+PASS calm civilian offers conversation
+PASS panic clears held idle activity
+PASS conversation unavailable during flight
+PASS direct interaction cannot advance dialogue during panic
+PASS panic ends at rest
+PASS rest does not retain walking velocity
+PASS conversation returns after panic
+PASS settled civilian dialogue can advance
+NPC PANIC TRANSITION REVIEW: 0 failures

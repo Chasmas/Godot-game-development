@@ -1,0 +1,58 @@
+{
+  "approved": true,
+  "base_sha256": "5bf7c179fa8d170eacb13e82d03fe07abe30765d693d169f543a317878ec050d",
+  "candidate_sha256": "63d8f66c465eeb7fd5557d4868ad7a110d96b38056dea5e11778f2979feeadcf",
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "kick",
+    "knocked",
+    "melee",
+    "roll",
+    "run",
+    "sneak",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "armed_sneak",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "stab",
+    "aim_dual",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "armed_dual_sneak",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "armed_melee_sneak",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "changed_clips": [
+    "punch",
+    "punch_left"
+  ],
+  "rig_geometry_bind_preserved": true,
+  "pose_space_checks": [
+    {
+      "clip": "punch",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 1.9559577767646e-05
+    },
+    {
+      "clip": "punch_left",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 1.9559577767646e-05
+    }
+  ],
+  "backup": "build\\cass_punch_isolated\\cass_before_5bf7c179fa8d.glb",
+  "review": "Pose-space equivalence and unchanged geometry/skin/32 clips verified; both-hand moving8-heading and actual M01 reviews pass; legacy floor wedge removed for authored punches."
+}

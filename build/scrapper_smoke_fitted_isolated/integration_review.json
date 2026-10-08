@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 24 other clips including seated pose preserved",
+  "baseline_sha256": "21f26b295294a70b2ae9c0aa7d43440980f8705981151cbf99b980fbdf12f353",
+  "integrated_sha256": "1775272785e5314617ec02ded343c9dc7f0541678c5a27a898902b014b0fb5f2",
+  "backup": "build\\scrapper_smoke_fitted_isolated\\scrapper_before_21f26b295294.glb",
+  "visual_review": "build/scrapper_idle_review_directions.png",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/scrapper_smoke_fitted_isolated/scrapper.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.00028734262173857225,
+      "Hips": 0.0,
+      "LeftArm": 0.00020766917960642154,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00012437922161999106,
+      "LeftHand": 5.0029872889085975e-05,
+      "Neck": 0.00023484613406002822,
+      "RightArm": 0.00021002084667109621,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.01948830537160827,
+      "RightHand": 0.016721642768347592
+    },
+    "loop_gap_m": {
+      "Head": 0.00036609817920099457,
+      "Hips": 0.0,
+      "LeftArm": 0.0002645821182223003,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00015357458217254212,
+      "LeftHand": 4.368913225208285e-05,
+      "Neck": 0.00029920679841252744,
+      "RightArm": 0.0002675963272551558,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00015531238955589986,
+      "RightHand": 4.4523311019195364e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.13495230674743985,
+    "contact_hand_minus_head_m": [
+      -0.03499186038971014,
+      -0.034987092018120114
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "damaged_crt_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: damaged-state visual source for subsequent Blender modelling in M01 Sunset Palms. One damaged 1980s motel CRT television, walnut housing cracked at one corner, imploded dark screen with radial fractures and a few glass shards at its base, internal parts only modestly visible, no active smoke or sparks. Single whole subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background, no floor or detached shadow. Rich physically believable fine surfaces and damage, restrained premium indie handcrafted 3D diorama finish, neutral soft studio illumination, consistent 1980s motel art direction. No people, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "damaged_vending_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: damaged-state visual source for subsequent Blender modelling in M01 Sunset Palms. One damaged dark teal 1980s motel vending machine, broken product window, bent frame, several cans spilled near base, coherent original housing and coin controls, no active smoke or sparks. Single whole subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background, no floor or detached shadow. Rich physically believable fine surfaces and damage, restrained premium indie handcrafted 3D diorama finish, neutral soft studio illumination, consistent 1980s motel art direction. No people, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "damaged_arcade_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: damaged-state visual source for subsequent Blender modelling in M01 Sunset Palms. One damaged teal coral 1980s arcade cabinet, fractured dark CRT screen, dented control panel, joystick still attached, a few small glass fragments, coherent worn cabinet structure, no active smoke or sparks. Single whole subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background, no floor or detached shadow. Rich physically believable fine surfaces and damage, restrained premium indie handcrafted 3D diorama finish, neutral soft studio illumination, consistent 1980s motel art direction. No people, UI, text overlays, watermark or collage."
+    },
+    {
+      "id": "damaged_window_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: damaged-state visual source for subsequent Blender modelling in M01 Sunset Palms. One damaged motel aluminium window assembly, shattered glass with jagged remaining edges, cream blinds bent at one side, faded teal curtain hanging naturally, visible frame and sill, a few small fragments at base. Single whole subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background, no floor or detached shadow. Rich physically believable fine surfaces and damage, restrained premium indie handcrafted 3D diorama finish, neutral soft studio illumination, consistent 1980s motel art direction. No people, UI, text overlays, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "damaged_crt_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-9578e820-bdc6-4ab8-acc1-4bd8b9f5852a.png"
+    },
+    {
+      "id": "damaged_vending_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-83dc45e9-30de-4597-a6d5-d3488cf9acbc.png"
+    },
+    {
+      "id": "damaged_arcade_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-e373592d-e661-4ca2-a75b-c2dfa85598f1.png"
+    },
+    {
+      "id": "damaged_window_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-06a3157f-accf-4963-9705-d2381b779bcb.png"
+    }
+  ]
+}

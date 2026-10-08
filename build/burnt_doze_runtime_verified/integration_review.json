@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "scope": "Doze only; smoking quality remains outstanding",
+  "baseline_sha256": "c77a02c5df7b24bece86e61c26ee053be4b6124643548fc17348eb65acc4428c",
+  "integrated_sha256": "2ce40e27c9750bd2c62842f9437cf38699f5a0588612ae5531cb77a661731526",
+  "backup": "build\\burnt_doze_runtime_verified\\burnt_before_c77a02c5df7b.glb",
+  "visual_review": "build/burnt_idle_review_directions.png",
+  "mechanics": "build/burnt_doze_supported_isolated/regression.log"
+}

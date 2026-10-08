@@ -1,0 +1,228 @@
+{
+  "read_only": true,
+  "families": [
+    {
+      "family": "bed_family_v1",
+      "resolution": [
+        768.0,
+        768.0
+      ],
+      "frames": [
+        {
+          "file": "bed_000.png",
+          "recorded_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "saved_camera_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "bed_090.png",
+          "recorded_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "saved_camera_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "bed_180.png",
+          "recorded_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "saved_camera_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "bed_270.png",
+          "recorded_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "saved_camera_anchor": [
+            384.0,
+            437.47242736816406
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "family": "nightstand_family_v1",
+      "resolution": [
+        512.0,
+        512.0
+      ],
+      "frames": [
+        {
+          "file": "nightstand_000.png",
+          "recorded_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "nightstand_090.png",
+          "recorded_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "nightstand_180.png",
+          "recorded_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "nightstand_270.png",
+          "recorded_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            347.6105194091797
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "family": "tv_dresser_family_v1",
+      "resolution": [
+        512.0,
+        512.0
+      ],
+      "frames": [
+        {
+          "file": "tv_dresser_000.png",
+          "recorded_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "tv_dresser_090.png",
+          "recorded_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "tv_dresser_180.png",
+          "recorded_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "tv_dresser_270.png",
+          "recorded_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            328.42613220214844
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "family": "rug_family_v1",
+      "resolution": [
+        512.0,
+        512.0
+      ],
+      "frames": [
+        {
+          "file": "rug_000.png",
+          "recorded_anchor": [
+            256.0,
+            256.00006103515625
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            256.00006103515625
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        },
+        {
+          "file": "rug_090.png",
+          "recorded_anchor": [
+            256.0,
+            256.00006103515625
+          ],
+          "saved_camera_anchor": [
+            256.0,
+            256.00006103515625
+          ],
+          "error_pixels": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "cases": 96,
+  "failures": 0,
+  "gore_mode_tested": 2,
+  "prefetch_us": 4059236,
+  "scope": "Actual Corpse.setup/_process and Gore.Gib rendering across 24 looks x four cuts. Manual 3.3-second corpse advance; screenshots and authored mesh markers checked. Not full combat or frame-time benchmark.",
+  "setup_max_us": 17462,
+  "setup_median_us": 5104
+}

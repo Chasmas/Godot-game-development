@@ -1,0 +1,39 @@
+{
+  "scope": "Server names and credential variable names only; no URLs, tokens or private login state copied",
+  "servers": [
+    {
+      "name": "node_repl",
+      "transport": "stdio",
+      "command_basename": "node_repl.exe",
+      "environment_variable_names": [
+        "NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS",
+        "NODE_REPL_NODE_MODULE_DIRS",
+        "NODE_REPL_NODE_PATH",
+        "NODE_REPL_TRUSTED_CODE_PATHS",
+        "CODEX_HOME",
+        "BROWSER_USE_AVAILABLE_BACKENDS",
+        "BROWSER_USE_TINYSKY_ENABLED",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME",
+        "BROWSER_USE_CODEX_APP_BUILD_FLAVOR",
+        "BROWSER_USE_CODEX_APP_VERSION",
+        "NODE_REPL_TRUSTED_SERVICES",
+        "SKY_CUA_NATIVE_PIPE",
+        "SKY_CUA_NATIVE_PIPE_DIRECTORY",
+        "CODEX_CLI_PATH",
+        "NODE_REPL_UNTRUSTED_ENV_ALLOWLIST"
+      ],
+      "reconnect_required": true
+    },
+    {
+      "name": "godot-ai",
+      "transport": "stdio",
+      "command_basename": "pythonw.exe",
+      "environment_variable_names": [],
+      "reconnect_required": true
+    }
+  ],
+  "project_addons": [
+    "godot_ai"
+  ]
+}

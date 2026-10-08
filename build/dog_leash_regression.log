@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ok: leashed dog approaches handler
+ok: leashed dog cannot pass through wall
+ok: blocked dog stops gait cadence
+ok: dog resumes following once obstacle is removed
+ok: dog settles beside handler
+DOG LEASH REGRESSION: 0 failures

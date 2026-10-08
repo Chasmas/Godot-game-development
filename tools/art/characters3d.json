@@ -3,5 +3,305 @@
   "prompt": "Full body 3D game character, a fit young woman in her twenties, 1980s action heroine, long voluminous wavy dark auburn hair, a crimson red leather biker jacket, a white tank top, high-waisted blue jeans, black leather boots, a gold star painted over one eye, standing in an A-pose, stylized realistic proportions",
   "texture": "Crimson red worn leather biker jacket with silver zips, white tank top, faded high-waisted blue denim jeans, black leather boots, long wavy dark auburn red hair, fair skin, gold star face paint over the left eye, 1980s neon noir, hand-painted texture",
   "height": 1.68
+ },
+ "guard": {
+  "image": "assets/art/Artwork/3d/guard/reference.png",
+  "prompt": "Full body 3D game character, a burly Latino motel security guard in his forties, thick dark moustache, navy baseball-style patrol cap with a brass badge, navy short sleeve uniform shirt with a brass badge, shoulder radio, black duty belt with pouches, navy cargo trousers, black boots, standing in an A-pose, stylized realistic proportions",
+  "texture": "Navy blue short sleeve security uniform shirt with chest pockets and a brass star badge, white undershirt collar, navy patrol cap with brass badge, black shoulder radio, black leather duty belt with pouches, navy cargo trousers, black leather boots, tanned skin, thick black moustache, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "gunner": {
+  "prompt": "Full body 3D game character, a lean slick-haired Miami-style hitman in his thirties, slicked-back dark hair, mirrored aviator sunglasses, a purple double-breasted 1980s suit with big padded shoulders, white shirt open at the collar, gold chain, white loafers, standing in an A-pose, stylized realistic proportions",
+  "texture": "Purple 1980s power suit with padded shoulders, white open-collar shirt, thick gold chain, mirrored aviator sunglasses, slicked-back dark brown hair, white loafers, tanned skin, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "hunter": {
+  "prompt": "Full body 3D game character, a wiry Vietnam-veteran mercenary in his forties, red bandana on his head, sleeveless cream tank top, military dog tags, olive cargo trousers, combat boots, ropey muscular arms, standing in an A-pose, stylized realistic proportions",
+  "texture": "Red bandana, sleeveless off-white tank top, steel dog tags, olive drab cargo trousers, black combat boots, weathered tanned skin, short brown stubble, 1980s neon noir, hand-painted texture",
+  "height": 1.78
+ },
+ "heavy": {
+  "prompt": "Full body 3D game character, a huge bald bruiser enforcer in his forties, shaved head, thick neck, heavy stubble, brown leather vest over bare muscular arms, black trousers, black boots, very broad heavy build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Brown worn leather vest, bare muscular tanned arms, shaved head, dark stubble, black trousers, black boots, 1980s neon noir, hand-painted texture",
+  "height": 1.92
+ },
+ "scout": {
+  "prompt": "Full body 3D game character, a skinny young 1980s California street lookout, blonde mullet, yellow and pink Hawaiian shirt, cream shorts, white sneakers, chunky headphones around the neck, light blue accents, standing in an A-pose, stylized realistic proportions",
+  "texture": "Yellow Hawaiian shirt with pink hibiscus print, cream shorts, white high-top sneakers, chunky headphones, blonde mullet hair, fair tanned skin, 1980s neon noir, hand-painted texture",
+  "height": 1.72
+ },
+ "bellhop": {
+  "prompt": "Full body 3D game character, a young hotel bellhop gone bad, red 1980s bellhop jacket with gold epaulettes and gold buttons, small red pillbox cap, black trousers, black shoes, slim build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Red bellhop jacket with gold epaulettes, gold buttons and a gold name badge, red pillbox cap, black trousers, black polished shoes, fair skin, dark hair, 1980s neon noir, hand-painted texture",
+  "height": 1.7
+ },
+ "scrapper": {
+  "prompt": "Full body 3D game character, a bald junkyard scrapper in his forties, shaved head, stubble, olive green work shirt with rolled sleeves, dog tags, grimy grey work trousers, work boots, orange safety accents, standing in an A-pose, stylized realistic proportions",
+  "texture": "Olive green grimy work shirt with rolled sleeves, steel dog tags, grey stained work trousers, brown work boots, orange safety rag, shaved head, stubble, oil stains, 1980s neon noir, hand-painted texture",
+  "height": 1.78
+ },
+ "security": {
+  "prompt": "Full body 3D game character, a film-studio security guard in his thirties, short dark hair, burgundy blazer uniform with lapels and a gold badge, shoulder radio, dark grey trousers, black shoes, standing in an A-pose, stylized realistic proportions",
+  "texture": "Burgundy security blazer with lapels and gold badge, white shirt, black tie, black shoulder radio, dark grey trousers, black shoes, short dark hair, brown skin, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "stagehand": {
+  "prompt": "Full body 3D game character, a film-set stagehand in his twenties, black baseball cap, black t-shirt and black work trousers, headphones with a mic, gaffer tape on one hand, tool belt, yellow accents, standing in an A-pose, stylized realistic proportions",
+  "texture": "Black baseball cap, black t-shirt, black work trousers, tool belt with yellow gaffer tape rolls, headset with microphone, tape wrapped on one hand, sneakers, 1980s neon noir, hand-painted texture",
+  "height": 1.76
+ },
+ "biker": {
+  "prompt": "Full body 3D game character, a big outlaw biker in his forties, red bandana, mirrored sunglasses, sleeveless black leather vest over bare tattooed arms, chain, blue jeans, black boots, beard, standing in an A-pose, stylized realistic proportions",
+  "texture": "Black sleeveless leather vest, bare tattooed arms, red bandana, mirrored sunglasses, steel chain, faded blue jeans, black biker boots, brown beard, 1980s neon noir, hand-painted texture",
+  "height": 1.86
+ },
+ "sniper": {
+  "prompt": "Full body 3D game character, a lean ex-military sniper in his thirties, dark olive cap, dark sunglasses, olive drab field jacket, shoulder radio, dark trousers, boots, standing in an A-pose, stylized realistic proportions",
+  "texture": "Dark olive field jacket and cap, olive trousers, black boots, black radio on the shoulder, dark sunglasses, red patch accent, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "handler": {
+  "prompt": "Full body 3D game character, a burly dog handler in his forties, brown bandana, orange padded bite-work vest, olive trousers, work boots, stubble, standing in an A-pose, stylized realistic proportions",
+  "texture": "Orange padded dog-handler vest over a brown shirt, brown bandana, olive trousers, brown work boots, leather gloves, stubble, tanned skin, 1980s neon noir, hand-painted texture",
+  "height": 1.82
+ },
+ "welder": {
+  "prompt": "Full body 3D game character, a stocky junkyard welder, dark welding helmet with a cyan visor pushed up, brown leather welding apron and jacket, thick gloves, dark trousers, boots, standing in an A-pose, stylized realistic proportions",
+  "texture": "Brown leather welding jacket and apron, dark welding helmet with glowing cyan visor, thick leather gloves, dark grey trousers, black boots, soot stains, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "cass_v2": {
+  "prompt": "Full body 3D game character, a fit woman in her late twenties, 1980s action heroine, long loose voluminous wavy auburn-brown hair falling well past her shoulders with a side part, hair worn down and loose with no ponytail, no braid and no pigtails, a crimson red leather jacket with wide lapels, a white tank top, high-waisted faded blue jeans, black leather boots, standing in an A-pose, stylized realistic proportions",
+  "texture": "Long loose wavy auburn-brown hair worn down past the shoulders, crimson red worn leather jacket with wide lapels and silver zips, white tank top, faded high-waisted blue denim jeans, black leather boots, fair skin, red lipstick, 1980s neon noir, hand-painted texture",
+  "height": 1.68,
+  "note": "Matches the cutscene paintings (assets/art/Artwork/paint_4k/cass_close.png): loose long hair, no braid/pigtails. Replaces 'cass' once approved."
+ },
+ "boss": {
+  "prompt": "Full body 3D game character, Victor Harcourt, a silver-haired motel night manager in his sixties, swept-back grey hair, lined tanned face, cream linen suit jacket over a black open-collar shirt, dark trousers, brown loafers, lean build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Cream linen suit jacket, black open-collar shirt, dark charcoal trousers, brown leather loafers, swept-back silver grey hair, tanned weathered skin, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "fireman": {
+  "prompt": "Full body 3D game character, Dutch, a huge bald arsonist in his forties, welding goggles pushed up on a shaved head, a silver aluminized fire-proximity suit, black rubber gloves, fuel tank harness on his back, heavy black boots, very broad build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Silver aluminized fire suit with scorch marks and orange burn stains, black rubber gloves, black fuel tank harness, brass welding goggles, shaved head, tanned skin, black boots, 1980s neon noir, hand-painted texture",
+  "height": 1.93
+ },
+ "buck": {
+  "prompt": "Full body 3D game character, Buck Halverson, a weathered kennel master in his sixties, battered brown cowboy hat, grey stubble, faded olive work shirt with rolled sleeves, dark leather apron, worn jeans, cowboy boots, stocky build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Battered brown cowboy hat, faded olive work shirt, dark brown leather apron with stains, worn blue jeans, brown cowboy boots, grey stubble, sun-weathered skin, 1980s neon noir, hand-painted texture",
+  "height": 1.82
+ },
+ "burnt": {
+  "prompt": "Full body 3D game character, Tommy, a young man in his early twenties, feathered brown 1980s hair, navy blue varsity letterman jacket with cream sleeves stripes, white t-shirt, jeans, sneakers, skin and clothes scorched with glowing ember burns, standing in an A-pose, stylized realistic proportions",
+  "texture": "Navy varsity letterman jacket with cream stripes, white t-shirt, faded jeans, white sneakers, feathered brown hair, burnt scorched patches glowing orange on skin and clothes, 1980s neon noir, hand-painted texture",
+  "height": 1.78
+ },
+ "riot": {
+  "prompt": "Full body 3D game character, a riot police officer, black helmet with a clear visor, black padded body armour and shoulder pads, black gloves, dark trousers with knee pads, black boots, heavy build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Black riot helmet with clear visor, black padded body armour, shoulder and knee pads, black gloves, dark navy trousers, black boots, POLICE lettering, 1980s neon noir, hand-painted texture",
+  "height": 1.84
+ },
+ "civilian": {
+  "prompt": "Full body 3D game character, a 1980s motel guest in his thirties, messy brown hair, pastel teal short-sleeve shirt untucked, khaki trousers, white sneakers, ordinary build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Pastel teal short-sleeve shirt, khaki trousers, white sneakers, messy brown hair, fair skin, 1980s neon noir, hand-painted texture",
+  "height": 1.76
+ },
+ "zombie": {
+  "prompt": "Full body 3D game character, a rotting zombie in torn 1980s party clothes, grey-green decayed skin, sunken eyes, torn pink blazer and ripped jeans, stained and bloody, hunched build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Grey-green rotting skin, torn faded pink blazer, ripped stained jeans, dried blood, dirt, dark sunken eyes, 1980s neon noir, hand-painted texture",
+  "height": 1.75
+ },
+ "ghoul": {
+  "prompt": "Full body 3D game character, a gaunt pale ghoul, skeletal thin limbs, long black claws, bald veined head, tattered grey rags, hunched predatory build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Pale bluish-grey skin with dark veins, long black claws, tattered grey cloth rags, glowing yellow eyes, 1980s neon noir, hand-painted texture",
+  "height": 1.8
+ },
+ "cultist": {
+  "prompt": "Full body 3D game character, a hooded cultist in a long dark red robe with gold trim, face hidden in shadow under the hood, rope belt, bare feet, holding nothing, standing in an A-pose, stylized realistic proportions",
+  "texture": "Long dark crimson robe with gold trim, black rope belt, deep hood shadowing the face, pale hands, bare feet, 1980s neon noir, hand-painted texture",
+  "height": 1.78
+ },
+ "demon": {
+  "prompt": "Full body 3D game character, a tall muscular demon, dark red skin, curved black horns, glowing orange eyes, black claws, scorched loincloth, digitigrade legs with hooves, imposing build, standing in an A-pose, stylized realistic proportions",
+  "texture": "Dark crimson skin with glowing orange cracks, curved black horns, black claws and hooves, scorched black loincloth, glowing orange eyes, 1980s neon noir, hand-painted texture",
+  "height": 2.1
+ },
+ "shepherd": {
+  "prompt": "Full body 3D game creature, a lean German shepherd guard dog standing on all four legs, alert ears, tan and black saddle coat, thick tail, studded black leather collar, side standing pose, stylized realistic proportions",
+  "texture": "Tan and black German shepherd coat with a dark saddle, black muzzle, studded black leather collar, 1980s neon noir, hand-painted texture",
+  "height": 0.75,
+  "humanoid": false,
+  "polys": 16000
+ },
+ "doberman": {
+  "prompt": "Full body 3D game creature, a muscular Doberman pinscher guard dog standing on all four legs, cropped pointed ears, short glossy black and rust coat, docked tail, spiked collar, side standing pose, stylized realistic proportions",
+  "texture": "Glossy black coat with rust-tan markings on muzzle, chest and legs, spiked steel collar, 1980s neon noir, hand-painted texture",
+  "height": 0.75,
+  "humanoid": false,
+  "polys": 16000
+ },
+ "rottweiler": {
+  "prompt": "Full body 3D game creature, a heavy Rottweiler guard dog standing on all four legs, broad head, black and mahogany coat, thick neck, chain collar, side standing pose, stylized realistic proportions",
+  "texture": "Black coat with mahogany markings on face, chest and legs, heavy steel chain collar, 1980s neon noir, hand-painted texture",
+  "height": 0.75,
+  "humanoid": false,
+  "polys": 16000
+ },
+ "hellhound": {
+  "prompt": "Full body 3D game creature, a demonic hellhound standing on all four legs, emaciated black dog with cracked skin glowing orange inside, burning eyes, spiked spine ridge, long tail, side standing pose, stylized realistic proportions",
+  "texture": "Charred black skin with glowing orange lava cracks, burning orange eyes, black spikes along the spine, 1980s neon noir, hand-painted texture",
+  "height": 0.75,
+  "humanoid": false,
+  "polys": 16000
+ },
+ "eldorado": {
+  "prompt": "3D game vehicle, a 1959 Cadillac Eldorado convertible with the top down, candy apple red paint, tall chrome tail fins with twin bullet tail lights, wide chrome grille and bumpers, whitewall tyres, cream white tufted leather bench seats, white steering wheel, a large gold five-pointed star painted on the hood, empty with no driver, stylized realistic proportions",
+  "texture": "Glossy candy apple red paint, polished chrome trim grille and bumpers, cream white tufted leather seats, whitewall tyres, a gold five-pointed star on the hood, red tail lights, 1980s neon noir, hand-painted texture",
+  "height": 1.4,
+  "humanoid": false,
+  "polys": 30000,
+  "note": "Hero car (scripts/levels/hero_car.gd). Drawn in 3D with Cass in the same viewport so the body hides her legs; the driver door is cut out in Blender to swing."
+ },
+ "prop_sedan80": {
+  "prompt": "3D game vehicle prop, a boxy 1980s American four-door sedan like a 1984 Chevrolet Caprice, dark navy blue paint, chrome bumpers and trim, square headlights, vinyl roof, closed windows, parked, no driver, stylized realistic proportions",
+  "texture": "Dark navy blue metallic paint slightly dusty, chrome bumpers and window trim, dark tinted glass, black tyres with chrome hubcaps, red tail lights, 1980s neon noir, hand-painted texture",
+  "height": 1.4,
+  "humanoid": false,
+  "polys": 20000,
+  "note": "Guest car in the Sunset Palms pre-rendered courtyard (tools/art/build_prerendered_motel.py)."
+ },
+ "prop_extinguisher": {
+  "prompt": "3D game prop, a classic red fire extinguisher standing upright, cylindrical red steel canister, black rubber hose curving down the side, chrome valve and squeeze handle on top, white instruction label, stylized realistic proportions",
+  "texture": "Glossy red painted steel canister with scuffs, black rubber hose and nozzle, polished chrome valve and handle, white label with red text, 1980s neon noir, hand-painted texture",
+  "height": 0.6,
+  "humanoid": false,
+  "polys": 6000,
+  "note": "Replaces the 2D extinguisher sprite (interactable.gd) and goes in Cass's hands during FoamSpray. Draw with CastModel.dress_stage like CarModel."
+ },
+ "int_motel_bed": {
+  "prompt": "3D game prop, a 1980s motel double bed with a padded vinyl headboard, floral orange and teal bedspread, two white pillows, wooden frame, stylized realistic proportions",
+  "texture": "a 1980s motel double bed with a padded vinyl headboard, floral orange and teal bedspread, two white pillows, wooden frame, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.9,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_nightstand_lamp": {
+  "prompt": "3D game prop, a small wooden 1980s nightstand with a ceramic table lamp with a cream shade and a beige rotary telephone on top, stylized realistic proportions",
+  "texture": "a small wooden 1980s nightstand with a ceramic table lamp with a cream shade and a beige rotary telephone on top, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.75,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_tv_dresser": {
+  "prompt": "3D game prop, a low wood-veneer dresser with three drawers and a boxy 1980s CRT television with rabbit-ear antenna on top, stylized realistic proportions",
+  "texture": "a low wood-veneer dresser with three drawers and a boxy 1980s CRT television with rabbit-ear antenna on top, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.0,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_armchair": {
+  "prompt": "3D game prop, a 1970s burnt-orange vinyl armchair with wooden legs and a small tear in the seat, stylized realistic proportions",
+  "texture": "a 1970s burnt-orange vinyl armchair with wooden legs and a small tear in the seat, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.85,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_reception_desk": {
+  "prompt": "3D game prop, a motel reception counter, wood paneling front, laminate top with a brass service bell, a guest ledger book, a cash register and a small desk lamp, stylized realistic proportions",
+  "texture": "a motel reception counter, wood paneling front, laminate top with a brass service bell, a guest ledger book, a cash register and a small desk lamp, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.1,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_key_rack": {
+  "prompt": "3D game prop, a wall-mounted wooden key board with numbered brass hooks and plastic diamond key fobs hanging, mail pigeonholes above, stylized realistic proportions",
+  "texture": "a wall-mounted wooden key board with numbered brass hooks and plastic diamond key fobs hanging, mail pigeonholes above, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.9,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_palm_pot": {
+  "prompt": "3D game prop, an indoor potted kentia palm in a terracotta pot, lush green fronds, stylized realistic proportions",
+  "texture": "an indoor potted kentia palm in a terracotta pot, lush green fronds, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.5,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_luggage_cart": {
+  "prompt": "3D game prop, a brass hotel luggage cart with red carpet base, two suitcases and a hat box on it, stylized realistic proportions",
+  "texture": "a brass hotel luggage cart with red carpet base, two suitcases and a hat box on it, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.6,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_washing_machine": {
+  "prompt": "3D game prop, a white 1980s top-loading coin laundry washing machine with chrome coin slot and dials, stylized realistic proportions",
+  "texture": "a white 1980s top-loading coin laundry washing machine with chrome coin slot and dials, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.95,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_laundry_cart": {
+  "prompt": "3D game prop, a canvas laundry cart on wheels full of white towels and sheets, stylized realistic proportions",
+  "texture": "a canvas laundry cart on wheels full of white towels and sheets, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.85,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_linen_shelf": {
+  "prompt": "3D game prop, a grey metal utility shelf stacked with folded white towels, toilet paper rolls and cleaning bottles, stylized realistic proportions",
+  "texture": "a grey metal utility shelf stacked with folded white towels, toilet paper rolls and cleaning bottles, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.7,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_vending_machine": {
+  "prompt": "3D game prop, a 1980s soda vending machine with a glowing red front panel and button column, stylized realistic proportions",
+  "texture": "a 1980s soda vending machine with a glowing red front panel and button column, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.8,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_ice_machine": {
+  "prompt": "3D game prop, a stainless steel motel ice machine with a scoop and a drip tray, stylized realistic proportions",
+  "texture": "a stainless steel motel ice machine with a scoop and a drip tray, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.2,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_lobby_couch": {
+  "prompt": "3D game prop, a three-seat 1980s teal vinyl lobby couch with chrome legs, stylized realistic proportions",
+  "texture": "a three-seat 1980s teal vinyl lobby couch with chrome legs, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.85,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_coffee_table": {
+  "prompt": "3D game prop, a low glass and chrome coffee table with scattered magazines and an ashtray, stylized realistic proportions",
+  "texture": "a low glass and chrome coffee table with scattered magazines and an ashtray, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.45,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_water_cooler": {
+  "prompt": "3D game prop, an office water cooler with a blue bottle and paper cups, stylized realistic proportions",
+  "texture": "an office water cooler with a blue bottle and paper cups, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 1.3,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_suitcase_pile": {
+  "prompt": "3D game prop, a pile of two vintage brown leather suitcases and a duffel bag, stylized realistic proportions",
+  "texture": "a pile of two vintage brown leather suitcases and a duffel bag, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.6,
+  "humanoid": false,
+  "polys": 8000
+ },
+ "int_room_ac": {
+  "prompt": "3D game prop, a beige through-the-wall motel air conditioner unit with vents and a control panel, stylized realistic proportions",
+  "texture": "a beige through-the-wall motel air conditioner unit with vents and a control panel, 1980s California motel, worn but cared for, neon noir mood, hand-painted texture",
+  "height": 0.6,
+  "humanoid": false,
+  "polys": 8000
  }
 }

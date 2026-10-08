@@ -1,0 +1,51 @@
+{
+  "character": "mom",
+  "height_m": 1.64,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\mom_turnaround.png",
+  "source_sha256": "8890f3a26bee47fcea6b88d9aa4e77bbc6e08b0c2ea7cbee7a06242e6e9c6a80",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        655,
+        0,
+        1055,
+        1024
+      ],
+      "width": 400,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\mom\\references\\back.png",
+      "sha256": "82790b7ce1595e398730745b9b415924ca7e4e6bce74a3895adab0971a33000a"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        420,
+        0,
+        635,
+        1024
+      ],
+      "width": 215,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\mom\\references\\side.png",
+      "sha256": "edf18a50732f3d22f0a7e4dd806f3b8417654471f7952f971ddd0a98af3ff7de"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        415,
+        1024
+      ],
+      "width": 415,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\mom\\references\\front.png",
+      "sha256": "dff4573746105cbf12abde65eb3a150dbc6a04bd4e02081e9ceacf52b5784e8b"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops directly inspected. Complete anatomy retained, no adjacent portrait contamination. Mature character identity and knitted clothing retained. Modeling input approval only; no mesh, rig or runtime approval."
+}

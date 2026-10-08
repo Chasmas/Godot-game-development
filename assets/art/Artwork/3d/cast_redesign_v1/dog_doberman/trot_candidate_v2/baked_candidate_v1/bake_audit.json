@@ -1,0 +1,18 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "sampled_frames": 25,
+  "comparison_space": "world",
+  "object_travel_preserved": false,
+  "maximum_bake_mesh_difference_m": 3.0055036859266693e-07,
+  "remaining_bone_constraints": 0,
+  "scope": "Solved animation bake versus source at 30Hz; GLB skin limits and Godot playback pending",
+  "exported_animations": [
+    {
+      "name": "Animation",
+      "channels": 78,
+      "start_seconds": 0,
+      "end_seconds": 0.8
+    }
+  ]
+}

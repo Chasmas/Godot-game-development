@@ -1,0 +1,22 @@
+{
+  "standing_leaf_visible": false,
+  "stationary_frame_visible": true,
+  "fragment_count": 5,
+  "fragment_colliders_required": false,
+  "debris_image": "guest_door_debris_topdown.png",
+  "hinge_pixel": [
+    54.4,
+    32
+  ],
+  "image_size": [
+    384,
+    384
+  ],
+  "scale_for_32px_leaf": 0.11627906976744186,
+  "runtime_approved": false,
+  "layout_changed": false,
+  "remaining": [
+    "Godot projection and actual map review",
+    "Hardware debris and finer splinter detail"
+  ]
+}

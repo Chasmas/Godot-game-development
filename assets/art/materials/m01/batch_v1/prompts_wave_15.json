@@ -1,0 +1,70 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "roof_tile_albedo",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms Blender base colour material data. Seamless square orthographic flat scan of aged muted terracotta roof tiles, regular overlapping terracotta surface pattern, subtle clay grain and restrained wear, neutral uniform diffuse illumination, matching edges, no baked shadows, highlights, perspective, objects or borders. Finely authored physically believable detail suitable for premium indie game art. Full bleed material texture only. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "reception_floor_albedo",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms Blender base colour material data. Seamless square flat orthographic scan of aged motel reception ceramic floor, alternating warm ivory and subdued sage square tiles, thin grey grout, fine subtle chips and material wear, neutral uniform diffuse illumination, matching opposite edges, no baked shadows, highlights, perspective, objects or borders. Finely authored physically believable detail suitable for premium indie game art. Full bleed material texture only. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "burned_plant_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for later Blender geometry/effect reconstruction. One burned motel tropical plant in weathered terracotta pot, scorched irregular dark fronds, a few remaining green leaves, lightly blackened pot rim and sparse leaf fragments at base, no active flames. Finely authored physically believable detail suitable for premium indie game art. Entire subject visible, orthographic elevated three-quarter view unless a particle effect, genuinely transparent background, no floor or detached shadow. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "exploded_propane_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for later Blender geometry/effect reconstruction. One ruptured motel steel propane cylinder, realistically torn metal opening and bent protective valve collar, charred oxidised edges and a few coherent fragments at base, no active fire or cloud. Finely authored physically believable detail suitable for premium indie game art. Entire subject visible, orthographic elevated three-quarter view unless a particle effect, genuinely transparent background, no floor or detached shadow. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "rain_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for later Blender geometry/effect reconstruction. One isolated small visual reference of varied thin falling rain streaks and sparse droplets, delicate translucent cool grey cyan glints, restrained density, no scene or ground. Finely authored physically believable detail suitable for premium indie game art. Entire subject visible, orthographic elevated three-quarter view unless a particle effect, genuinely transparent background, no floor or detached shadow. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "muzzle_flash_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for later Blender geometry/effect reconstruction. One compact realistic firearm muzzle flash effect, short pale amber white core with irregular star-like hot gas tongues and a few tiny sparks, controlled bloom, no gun or scene. Finely authored physically believable detail suitable for premium indie game art. Entire subject visible, orthographic elevated three-quarter view unless a particle effect, genuinely transparent background, no floor or detached shadow. No UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "blood_spurt_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual reference for later Blender geometry/effect reconstruction. One short compact crimson liquid blood spurt effect, coherent curved jet separating into varied fine droplets, believable fluid form and restrained wet highlights, no body, injury or scene. Finely authored physically believable detail suitable for premium indie game art. Entire subject visible, orthographic elevated three-quarter view unless a particle effect, genuinely transparent background, no floor or detached shadow. No UI, overlay text, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "roof_tile_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-e2774f9c-31a4-457b-8af0-27eba1d56e9f.png"
+    },
+    {
+      "id": "reception_floor_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-903a356e-09ee-4153-99d2-908ea68e0c87.png"
+    },
+    {
+      "id": "burned_plant_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-d88bfa95-ce53-4154-8e55-396a0fea2f91.png"
+    },
+    {
+      "id": "exploded_propane_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0a0e313e-64f3-470d-a74d-b3cbacc3e4fe.png"
+    },
+    {
+      "id": "rain_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-56bae391-3e8d-42a8-966f-4e0b938a2c47.png"
+    },
+    {
+      "id": "muzzle_flash_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c9559cb8-6900-4b04-8fcd-5db73560ac8c.png"
+    },
+    {
+      "id": "blood_spurt_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-f04ea365-25da-44d2-a585-7ca3fbfc78c1.png"
+    }
+  ]
+}

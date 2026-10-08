@@ -1,0 +1,101 @@
+{
+  "results": [
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        482.837646484375,
+        133.935485839844
+      ],
+      "moving_enemies": 14,
+      "passed": true,
+      "peak_detection": 0.0,
+      "phase": 0.0,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        481.765960693359,
+        128.469604492188
+      ],
+      "moving_enemies": 15,
+      "passed": true,
+      "peak_detection": 0.0,
+      "phase": 0.25,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        479.998870849609,
+        134.084030151367
+      ],
+      "moving_enemies": 14,
+      "passed": true,
+      "peak_detection": 0.574355101143872,
+      "phase": 0.5,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        477.019836425781,
+        133.158462524414
+      ],
+      "moving_enemies": 14,
+      "passed": true,
+      "peak_detection": 0.895123750791348,
+      "phase": 0.75,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 4.40833333333333,
+      "end_position": [
+        430.197235107422,
+        134.936584472656
+      ],
+      "moving_enemies": 15,
+      "passed": true,
+      "peak_detection": 0.991312487920126,
+      "phase": 0.0,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": 2.78333333333333,
+      "end_position": [
+        433.729309082031,
+        132.100723266602
+      ],
+      "moving_enemies": 14,
+      "passed": true,
+      "peak_detection": 0.991312487920126,
+      "phase": 0.25,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": 1.1,
+      "end_position": [
+        428.685699462891,
+        139.409820556641
+      ],
+      "moving_enemies": 14,
+      "passed": true,
+      "peak_detection": 0.994356189329158,
+      "phase": 0.5,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": 0.875,
+      "end_position": [
+        427.627593994141,
+        133.166412353516
+      ],
+      "moving_enemies": 16,
+      "passed": true,
+      "peak_detection": 0.996488682145165,
+      "phase": 0.75,
+      "retreat": false
+    }
+  ],
+  "scope": "Entry and retreat or linger at four initial sweep phases with active AI and real collisions; god mode, main entrance only"
+}

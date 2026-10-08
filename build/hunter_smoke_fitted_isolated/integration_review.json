@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 26 other clips preserved",
+  "baseline_sha256": "2ea070637c61cccb02bf536f7413ab5d11180e69d61d2f1e8da94c8623ff1226",
+  "integrated_sha256": "9651f5e1233717677786be4f0ca6be9a22b9cdfbce57bb8ad6614e06557fc0ad",
+  "backup": "build\\hunter_smoke_fitted_isolated\\hunter_before_2ea070637c61.glb",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/hunter_smoke_fitted_isolated/hunter.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.0003223554127012982,
+      "Hips": 0.0,
+      "LeftArm": 0.00023058765381786704,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00014690683609783512,
+      "LeftHand": 4.736860721551456e-05,
+      "Neck": 0.00021452748664079626,
+      "RightArm": 0.00022901195916162013,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.022858185300219172,
+      "RightHand": 0.01806950771932472
+    },
+    "loop_gap_m": {
+      "Head": 0.00041069735536014535,
+      "Hips": 0.0,
+      "LeftArm": 0.0002936812758768695,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00017564711383224224,
+      "LeftHand": 3.2098825505868066e-05,
+      "Neck": 0.0002733085929951719,
+      "RightArm": 0.00029173039384515264,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00018127938158049513,
+      "RightHand": 3.467302778426771e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.16280245780945002,
+    "contact_hand_minus_head_m": [
+      -0.035004138946530095,
+      -0.03499877452851008
+    ]
+  },
+  "visual_review": "build/hunter_idle_review_directions.png"
+}

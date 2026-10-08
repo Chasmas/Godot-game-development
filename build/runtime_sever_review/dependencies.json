@@ -1,0 +1,6 @@
+{
+  "bad": [],
+  "checked": 96,
+  "failures": 0,
+  "scope": "Direct saved runtime mesh resource dependencies; no build/tools asset dependencies allowed."
+}

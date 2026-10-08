@@ -1,0 +1,19 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS chainsaw kills through damage receiver mode=2
+PASS death interrupts actions before corpse/drop mode=2
+PASS one corpse after duplicate damage mode=2
+PASS exact carried weapon drops once mode=2
+PASS cut obeys gore mode=2
+PASS death uses matching authored wound mesh
+PASS chainsaw kills through damage receiver mode=1
+PASS death interrupts actions before corpse/drop mode=1
+PASS one corpse after duplicate damage mode=1
+PASS exact carried weapon drops once mode=1
+PASS cut obeys gore mode=1
+PASS chainsaw kills through damage receiver mode=0
+PASS death interrupts actions before corpse/drop mode=0
+PASS one corpse after duplicate damage mode=0
+PASS exact carried weapon drops once mode=0
+PASS cut obeys gore mode=0
+COMBAT DEATH INTEGRATION: 0 failures

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "clip": "armed_dual_walk",
+      "unchanged_channels_outside_six_arm_rotations": 66
+    },
+    {
+      "clip": "armed_dual_run",
+      "unchanged_channels_outside_six_arm_rotations": 66
+    }
+  ]
+}

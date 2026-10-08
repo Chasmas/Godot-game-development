@@ -30,11 +30,46 @@ var attempts := 1
 var _slowmo_scale := 1.0
 var _hitstop_until := 0
 var transitioning := false
+var quitting := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().auto_accept_quit = false
 	_load_data()
 	Events.hit_stop.connect(hit_stop)
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		request_quit()
+
+## Stop playback while the audio server is still running, before freeing scenes.
+func request_quit(exit_code := 0) -> void:
+	if quitting:
+		return
+	quitting = true
+	Dialogue._end(false)
+	Music.stop(0.0)
+	Audio.shutdown()
+	get_tree().paused = true
+	for child in get_tree().root.get_children():
+		if child != self:
+			child.process_mode = Node.PROCESS_MODE_DISABLED
+		_stop_scene_audio(child)
+	# Ignore hit-stop/slow-motion and allow at least two audio mix buffers to drain.
+	var grace := maxf(0.15, AudioServer.get_output_latency() * 2.0 + 0.05)
+	var deadline := Time.get_ticks_msec() + int(ceil(grace * 1000.0))
+	# Headless fast-forward can advance scene timers faster than the audio thread.
+	# Mixer cleanup needs wall-clock time, even in accelerated regression runs.
+	while Time.get_ticks_msec() < deadline:
+		await get_tree().create_timer(0.02, true, false, true).timeout
+	get_tree().quit(exit_code)
+
+func _stop_scene_audio(node: Node) -> void:
+	if node is AudioStreamPlayer or node is AudioStreamPlayer2D or node is AudioStreamPlayer3D:
+		node.stop()
+		node.stream = null
+	for child in node.get_children():
+		_stop_scene_audio(child)
 
 func _load_data() -> void:
 	for id in ["m01_checkout", "m02_dog_days", "m03_prime_time", "m04_sweet_dreams"]:
@@ -149,6 +184,8 @@ var _queued_scene := ""
 var _queued_fade := true
 
 func change_scene(path: String, fade := true) -> void:
+	if quitting:
+		return
 	if _timed_slowmo_until > 0:
 		_timed_slowmo_until = 0
 		set_slowmo(1.0)
@@ -162,6 +199,8 @@ func change_scene(path: String, fade := true) -> void:
 	get_tree().paused = false
 	if fade and is_inside_tree():
 		await PostFX.fade_out(0.25)
+	if quitting:
+		return
 	var err := get_tree().change_scene_to_file(path)
 	if err != OK:
 		push_error("Scene change failed %s: %s" % [path, err])

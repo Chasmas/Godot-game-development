@@ -1,0 +1,54 @@
+{
+	"passed": true,
+	"rows": [
+		{
+			"degrees": 0,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.32933783531189,
+			"minimum_hand_separation_m": 0.319983333349228
+		},
+		{
+			"degrees": 45,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337865114212,
+			"minimum_hand_separation_m": 0.319983303546906
+		},
+		{
+			"degrees": 90,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.32933783531189,
+			"minimum_hand_separation_m": 0.319983333349228
+		},
+		{
+			"degrees": 135,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337865114212,
+			"minimum_hand_separation_m": 0.319983303546906
+		},
+		{
+			"degrees": 180,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337805509567,
+			"minimum_hand_separation_m": 0.319983303546906
+		},
+		{
+			"degrees": 225,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337865114212,
+			"minimum_hand_separation_m": 0.319983303546906
+		},
+		{
+			"degrees": 270,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337865114212,
+			"minimum_hand_separation_m": 0.319983303546906
+		},
+		{
+			"degrees": 315,
+			"minimum_below_head_m": 0.296791076660156,
+			"minimum_hand_forward_m": 0.329337865114212,
+			"minimum_hand_separation_m": 0.31998336315155
+		}
+	],
+	"scope": "33 phases in eight directions; wrist-linked weapon origins and geometric arm posture"
+}

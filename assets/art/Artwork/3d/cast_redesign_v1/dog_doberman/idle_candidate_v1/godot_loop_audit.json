@@ -1,0 +1,12 @@
+{
+  "corrected_length_seconds": 2.4,
+  "imported_length_seconds": 2.40000009536743,
+  "last_imported_key_seconds": 2.40000009536743,
+  "loop_breath_seam": 0.0,
+  "loop_rotation_seam_rad": 0.000690533954184502,
+  "loop_translation_seam_m": 0.0,
+  "runtime_approved": false,
+  "save_error": 0,
+  "scope": "Imported bone and morph endpoint comparison; exported vertex deformation and visual playback pending",
+  "source_duration_seconds": 2.4
+}

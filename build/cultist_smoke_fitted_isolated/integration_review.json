@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "scope": "Smoke only; 24 other clips preserved",
+  "baseline_sha256": "fcd0507c454694b4a6b38dc5bf90b68e85250f5c150defa387fb548338d7129b",
+  "integrated_sha256": "b3f9e0d0c2463833718aacbf363978af858a3d09877dd171305262a7f9de9da7",
+  "backup": "build\\cultist_smoke_fitted_isolated\\cultist_before_fcd0507c4546.glb",
+  "anatomy": {
+    "approved": false,
+    "source": "res://build/cultist_smoke_fitted_isolated/cultist.glb",
+    "clip": "smoke",
+    "samples": 257,
+    "scope": "Joint trajectories only; actual rendered review required",
+    "max_step_m": {
+      "Head": 0.0002817582113180899,
+      "Hips": 0.0,
+      "LeftArm": 0.00018486761645212824,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.00011309103071027336,
+      "LeftHand": 3.528174906568309e-05,
+      "Neck": 0.00018001901608187152,
+      "RightArm": 0.00018969707649093352,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.022355499472088536,
+      "RightHand": 0.016106072758071494
+    },
+    "loop_gap_m": {
+      "Head": 0.00035895670864332003,
+      "Hips": 0.0,
+      "LeftArm": 0.0002355246464925246,
+      "LeftFoot": 0.0,
+      "LeftForeArm": 0.0001346330801083569,
+      "LeftHand": 2.4946737976240103e-05,
+      "Neck": 0.0002293279741847305,
+      "RightArm": 0.00024172657775440993,
+      "RightFoot": 0.0,
+      "RightForeArm": 0.00013053530941676544,
+      "RightHand": 2.232934405685189e-05
+    },
+    "foot_drift_m": {
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "contact_elbow_minus_shoulder_m": -0.10675108432769997,
+    "contact_hand_minus_head_m": [
+      -0.03500127792357999,
+      -0.03499913215636985
+    ]
+  },
+  "visual_review": "build/cultist_idle_review_directions.png"
+}

@@ -1,0 +1,13 @@
+00:01.750  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\nightstand_family_v1\nightstand.blend"
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_tv_dresser_batch.py:21: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+00:04.422  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\tv_dresser_family_v1\tv_dresser_000.png'
+00:06.406  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\tv_dresser_family_v1\tv_dresser_090.png'
+00:08.562  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\tv_dresser_family_v1\tv_dresser_180.png'
+00:10.640  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\tv_dresser_family_v1\tv_dresser_270.png'
+Info: Packed 1 file(s)
+Info: Saved as "tv_dresser.blend"
+M01_TV_DRESSER_BATCH: four authored views, staging only
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

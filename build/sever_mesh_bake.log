@@ -1,0 +1,2163 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: bellhop head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: bellhop arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: bellhop leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: bellhop legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: biker head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: biker arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: biker leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: biker legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: boss head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: boss arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: boss leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: boss legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: buck head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: buck arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: buck leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: buck legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: burnt head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: burnt arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: burnt leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: burnt legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cass head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cass arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cass leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cass legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: civilian head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: civilian arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: civilian leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: civilian legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cultist head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cultist arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cultist leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: cultist legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: demon head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: demon arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: demon leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: demon legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: fireman head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: fireman arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: fireman leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: fireman legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: ghoul head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: ghoul arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: ghoul leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: ghoul legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: guard head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: guard arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: guard leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: guard legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: gunner head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: gunner arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: gunner leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: gunner legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: handler head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: handler arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: handler leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: handler legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: heavy head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: heavy arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: heavy leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: heavy legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: hunter head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: hunter arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: hunter leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: hunter legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: riot head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: riot arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: riot leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: riot legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scout head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scout arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scout leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scout legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scrapper head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scrapper arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scrapper leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: scrapper legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: security head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: security arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: security leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: security legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: sniper head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: sniper arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: sniper leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: sniper legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: stagehand head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: stagehand arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: stagehand leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: stagehand legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: welder head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: welder arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: welder leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: welder legs
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: zombie head
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: zombie arm
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: zombie leg
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/sever_mesh_bake.gd:17)
+Saved cut mesh: zombie legs

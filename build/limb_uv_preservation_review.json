@@ -1,0 +1,343 @@
+{
+  "cuts": [
+    {
+      "geometry_missing": 0,
+      "look": "bellhop",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 19808
+    },
+    {
+      "geometry_missing": 0,
+      "look": "bellhop",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 15219
+    },
+    {
+      "geometry_missing": 0,
+      "look": "biker",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17132
+    },
+    {
+      "geometry_missing": 0,
+      "look": "biker",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 12200
+    },
+    {
+      "geometry_missing": 0,
+      "look": "boss",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 19796
+    },
+    {
+      "geometry_missing": 0,
+      "look": "boss",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 15889
+    },
+    {
+      "geometry_missing": 0,
+      "look": "buck",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17323
+    },
+    {
+      "geometry_missing": 0,
+      "look": "buck",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 13425
+    },
+    {
+      "geometry_missing": 0,
+      "look": "burnt",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 19205
+    },
+    {
+      "geometry_missing": 0,
+      "look": "burnt",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 13826
+    },
+    {
+      "geometry_missing": 0,
+      "look": "cass",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 18839
+    },
+    {
+      "geometry_missing": 0,
+      "look": "cass",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 16266
+    },
+    {
+      "geometry_missing": 0,
+      "look": "civilian",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 18699
+    },
+    {
+      "geometry_missing": 0,
+      "look": "civilian",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 15077
+    },
+    {
+      "geometry_missing": 0,
+      "look": "cultist",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 15162
+    },
+    {
+      "geometry_missing": 0,
+      "look": "cultist",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 11524
+    },
+    {
+      "geometry_missing": 0,
+      "look": "demon",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 18157
+    },
+    {
+      "geometry_missing": 0,
+      "look": "demon",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 14606
+    },
+    {
+      "geometry_missing": 0,
+      "look": "fireman",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 18330
+    },
+    {
+      "geometry_missing": 0,
+      "look": "fireman",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 12908
+    },
+    {
+      "geometry_missing": 0,
+      "look": "ghoul",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17582
+    },
+    {
+      "geometry_missing": 0,
+      "look": "ghoul",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 12477
+    },
+    {
+      "geometry_missing": 0,
+      "look": "guard",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 16907
+    },
+    {
+      "geometry_missing": 0,
+      "look": "guard",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 9338
+    },
+    {
+      "geometry_missing": 0,
+      "look": "gunner",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17910
+    },
+    {
+      "geometry_missing": 0,
+      "look": "gunner",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 14805
+    },
+    {
+      "geometry_missing": 0,
+      "look": "handler",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17022
+    },
+    {
+      "geometry_missing": 0,
+      "look": "handler",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 9910
+    },
+    {
+      "geometry_missing": 0,
+      "look": "heavy",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17288
+    },
+    {
+      "geometry_missing": 0,
+      "look": "heavy",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 10367
+    },
+    {
+      "geometry_missing": 0,
+      "look": "hunter",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 14717
+    },
+    {
+      "geometry_missing": 0,
+      "look": "hunter",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 8452
+    },
+    {
+      "geometry_missing": 0,
+      "look": "riot",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 19117
+    },
+    {
+      "geometry_missing": 0,
+      "look": "riot",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 12722
+    },
+    {
+      "geometry_missing": 0,
+      "look": "scout",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 19241
+    },
+    {
+      "geometry_missing": 0,
+      "look": "scout",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 14960
+    },
+    {
+      "geometry_missing": 0,
+      "look": "scrapper",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17236
+    },
+    {
+      "geometry_missing": 0,
+      "look": "scrapper",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 11778
+    },
+    {
+      "geometry_missing": 0,
+      "look": "security",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17460
+    },
+    {
+      "geometry_missing": 0,
+      "look": "security",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 14438
+    },
+    {
+      "geometry_missing": 0,
+      "look": "sniper",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 17694
+    },
+    {
+      "geometry_missing": 0,
+      "look": "sniper",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 13379
+    },
+    {
+      "geometry_missing": 0,
+      "look": "stagehand",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 20119
+    },
+    {
+      "geometry_missing": 0,
+      "look": "stagehand",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 14328
+    },
+    {
+      "geometry_missing": 0,
+      "look": "welder",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 16436
+    },
+    {
+      "geometry_missing": 0,
+      "look": "welder",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 10229
+    },
+    {
+      "geometry_missing": 0,
+      "look": "zombie",
+      "missing": 0,
+      "part": "leg",
+      "protected_triangles": 16880
+    },
+    {
+      "geometry_missing": 0,
+      "look": "zombie",
+      "missing": 0,
+      "part": "legs",
+      "protected_triangles": 13228
+    }
+  ],
+  "failures": 0,
+  "scope": "Source triangles with limb weight <=0.15 retained with original rest position/UV. Not cap, animated seam or gameplay approval.",
+  "triangles_checked": 739411
+}

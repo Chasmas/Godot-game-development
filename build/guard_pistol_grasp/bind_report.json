@@ -1,0 +1,8 @@
+{
+  "approved": false,
+  "mesh_world_matrix_error": 0.0,
+  "inverse_bind_matrix_error": 0.0014190673828125,
+  "max_joint_rest_world_matrix_error": 8.41424622888276e-06,
+  "joint_order_preserved": true,
+  "scope": "Rest-space matrix parity only; does not validate finger contact or animated surface intersections."
+}

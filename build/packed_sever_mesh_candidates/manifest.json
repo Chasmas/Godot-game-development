@@ -1,0 +1,1453 @@
+{
+  "cuts": [
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/bellhop_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/bellhop_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/bellhop_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "bellhop",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/bellhop_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/biker_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/biker_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/biker_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "biker",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/biker_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/boss_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/boss_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/boss_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "boss",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/boss_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/buck_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/buck_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/buck_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "buck",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/buck_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/burnt_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/burnt_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/burnt_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 12.0,
+      "expected_caps": 12.0,
+      "look": "burnt",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/burnt_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 12.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/cass_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://build/packed_sever_mesh_candidates/cass_arm_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://build/packed_sever_mesh_candidates/cass_leg_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "cass",
+      "meshes": [
+        {
+          "body_surfaces": 2,
+          "path": "res://build/packed_sever_mesh_candidates/cass_legs_0.res",
+          "source": "char1",
+          "surfaces": 3,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/civilian_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/civilian_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/civilian_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "civilian",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/civilian_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/cultist_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/cultist_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/cultist_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "cultist",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/cultist_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/demon_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 6.0,
+      "expected_caps": 6.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/demon_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 6.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/demon_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "demon",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/demon_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/fireman_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/fireman_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/fireman_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "fireman",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/fireman_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/ghoul_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/ghoul_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 16.0,
+      "expected_caps": 16.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/ghoul_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 16.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 15.0,
+      "expected_caps": 15.0,
+      "look": "ghoul",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/ghoul_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 15.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/guard_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/guard_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/guard_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "guard",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/guard_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/gunner_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/gunner_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/gunner_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "gunner",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/gunner_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/handler_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/handler_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 8.0,
+      "expected_caps": 8.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/handler_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 8.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 10.0,
+      "expected_caps": 10.0,
+      "look": "handler",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/handler_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 10.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/heavy_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/heavy_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/heavy_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "heavy",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/heavy_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/hunter_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/hunter_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/hunter_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 9.0,
+      "expected_caps": 9.0,
+      "look": "hunter",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/hunter_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 9.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/riot_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/riot_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/riot_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "riot",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/riot_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scout_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scout_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scout_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "scout",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scout_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scrapper_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scrapper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scrapper_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "scrapper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/scrapper_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/security_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/security_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 13.0,
+      "expected_caps": 13.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/security_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 13.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 11.0,
+      "expected_caps": 11.0,
+      "look": "security",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/security_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 11.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/sniper_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/sniper_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/sniper_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 7.0,
+      "expected_caps": 7.0,
+      "look": "sniper",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/sniper_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 7.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/stagehand_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 2.0,
+      "expected_caps": 2.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/stagehand_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 2.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/stagehand_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 3.0,
+      "expected_caps": 3.0,
+      "look": "stagehand",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/stagehand_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 3.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 4.0,
+      "expected_caps": 4.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/welder_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 4.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/welder_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/welder_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "welder",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/welder_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    },
+    {
+      "caps": 1.0,
+      "expected_caps": 1.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/zombie_head_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 1.0
+        }
+      ],
+      "part": "head"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/zombie_arm_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "arm"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/zombie_leg_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "leg"
+    },
+    {
+      "caps": 5.0,
+      "expected_caps": 5.0,
+      "look": "zombie",
+      "meshes": [
+        {
+          "body_surfaces": 1,
+          "path": "res://build/packed_sever_mesh_candidates/zombie_legs_0.res",
+          "source": "char1",
+          "surfaces": 2,
+          "wound_surfaces_before_batch": 5.0
+        }
+      ],
+      "part": "legs"
+    }
+  ],
+  "failures": 0.0,
+  "packing": {
+    "failures": 0,
+    "scope": "Wound triangles batched per source mesh and binary resource compressed. Not runtime performance or visual equivalence approval.",
+    "surfaces_after": 195,
+    "surfaces_before": 512
+  },
+  "scope": "Precomputed source mesh with independently built wound surfaces, retaining original skin bind indices. Requires saved-resource equivalence, body binding, visual and gameplay validation.",
+  "status": "candidate_not_integrated"
+}

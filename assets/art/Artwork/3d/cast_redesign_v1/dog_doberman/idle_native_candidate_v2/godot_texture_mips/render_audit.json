@@ -1,0 +1,8 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 24,
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "res://native_idle.glb",
+  "source_sha256": "d082e598cba0bfa23390cacb3cc02a13168095941afbedcb45eb301bb100c06e"
+}

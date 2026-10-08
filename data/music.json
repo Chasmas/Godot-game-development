@@ -2,7 +2,7 @@
   "teaser": {
     "name": "Coming Attractions",
     "layers": [
-      "res://music/intro_teaser.ogg"
+      "res://music/intro_teaser_v2.mp3"
     ],
     "bpm": 128
   },
@@ -24,7 +24,7 @@
     "name": "Checkout Time",
     "bpm": 120,
     "layers": [
-      "res://music/st_motel_combat.ogg"
+      "res://music/st_motel_combat.mp3"
     ],
     "calm": "motel_stealth",
     "calm_after": 8.0
@@ -95,17 +95,10 @@
     "phase2": "boss_nightmare_wake"
   },
   "menu": {
-    "name": "Tape Deck",
+    "name": "Vengeance Served Cold",
     "bpm": 92,
     "layers": [
-      "res://music/st_menu_tapes.ogg"
-    ]
-  },
-  "vcr": {
-    "name": "Rewind",
-    "bpm": 84,
-    "layers": [
-      "res://music/st_menu_vcr.ogg"
+      "res://music/st_menu_tapes.mp3"
     ]
   },
   "story_firewatch": {
@@ -274,6 +267,13 @@
     "bpm": 84,
     "layers": [
       "res://music/st_credits_rewind.ogg"
+    ]
+  },
+  "vcr": {
+    "name": "Videotape Rewind",
+    "bpm": 72,
+    "layers": [
+      "res://music/st_menu_vcr.ogg"
     ]
   }
 }

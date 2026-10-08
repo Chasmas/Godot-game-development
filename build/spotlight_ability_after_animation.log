@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS No activation during dialogue/input lock
+PASS No activation during execution
+PASS No activation after death
+PASS Full charge activates Spotlight
+PASS World slows to thirty percent
+PASS One real second drains one second at slow motion
+PASS Kill rewards half a real second
+PASS Expiry restores normal time and clamps HUD meter
+PASS Expiry disconnects kill callback
+PASS Forced end restores normal time
+SPOTLIGHT REVIEW: 0 failures

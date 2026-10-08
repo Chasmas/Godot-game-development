@@ -1,0 +1,81 @@
+{
+  "runtime_approved": false,
+  "contact_solver_approved": false,
+  "scope": "Four independent IK endpoint contacts, five small body-shift probes; foot orientation, full mesh contacts and locomotion pending",
+  "maximum_paw_endpoint_error_m": 1.367744784853296e-07,
+  "samples": [
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 8.940696716308594e-08,
+        "front_positive_x": 1.367744784853296e-07,
+        "rear_negative_x": 1.4901161193847656e-08,
+        "rear_positive_x": 4.012260442327338e-08
+      },
+      "minimum_mesh_height_m": -1.562531792842492e-08
+    },
+    {
+      "body_offset_m": [
+        0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 9.799708752308715e-08,
+        "front_positive_x": 7.068241373080863e-08,
+        "rear_negative_x": 7.450580596923828e-08,
+        "rear_positive_x": 4.280032699210963e-08
+      },
+      "minimum_mesh_height_m": -0.0022086461540311575
+    },
+    {
+      "body_offset_m": [
+        -0.005,
+        0,
+        0.005
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 4.828528090125218e-08,
+        "front_positive_x": 3.161013638317052e-08,
+        "rear_negative_x": 3.332000937312528e-08,
+        "rear_positive_x": 1.0133885226201597e-07
+      },
+      "minimum_mesh_height_m": -0.0022761316504329443
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0.01
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 1.0023731028343521e-07,
+        "front_positive_x": 9.657056180250437e-08,
+        "rear_negative_x": 7.450580596923828e-08,
+        "rear_positive_x": 6.664001874625056e-08
+      },
+      "minimum_mesh_height_m": -0.005978619214147329
+    },
+    {
+      "body_offset_m": [
+        0,
+        0,
+        0
+      ],
+      "paw_endpoint_errors_m": {
+        "front_negative_x": 8.940696716308594e-08,
+        "front_positive_x": 1.367744784853296e-07,
+        "rear_negative_x": 1.4901161193847656e-08,
+        "rear_positive_x": 4.012260442327338e-08
+      },
+      "minimum_mesh_height_m": -1.562531792842492e-08
+    }
+  ],
+  "decision": "not_promoted_contact_revision_required",
+  "reason": "Paw endpoint fixed but evaluated mesh penetrates floor by up to 5.98mm during body lift",
+  "next": "Inspect foreleg joint bend and reachable motion envelope; author leg geometry/joint alignment before gait"
+}

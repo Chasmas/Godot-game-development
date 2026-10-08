@@ -1,0 +1,42 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "scope": "Three grounded contact stance renders; no locomotion or gameplay approval",
+  "probes": [
+    {
+      "render": "neutral_stance.png",
+      "bone": null,
+      "axis": 0,
+      "degrees": 0
+    },
+    {
+      "render": "side_shift.png",
+      "bone": null,
+      "axis": 0,
+      "degrees": 0
+    },
+    {
+      "render": "upper_stance.png",
+      "bone": null,
+      "axis": 0,
+      "degrees": 0
+    }
+  ],
+  "body_offsets_m": {
+    "neutral_stance": [
+      0,
+      0,
+      -0.01
+    ],
+    "side_shift": [
+      0.005,
+      0,
+      -0.005
+    ],
+    "upper_stance": [
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 19,
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "res://native_start.glb",
+  "source_sha256": "a51ddbf61c4cbca530580c4d83238de16af80d1c4fa28b83342ff6a777f1d6bd"
+}

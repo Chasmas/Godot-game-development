@@ -1,0 +1,20 @@
+23:41:26 | INFO: Data are loaded, start creating Blender stuff
+23:41:26 | INFO: Blender create Mesh node Mesh_0
+23:41:26 | INFO: glTF import finished in 0.16s
+ELBOW smoke Right 1.724 (-0.0784136950969696, -0.22320649027824402, 1.3007749319076538)
+ELBOW smoke Left 1.416 (-0.07424644380807877, 0.23371171951293945, 1.2950905561447144)
+anim smoke 240 frames (baked)
+23:41:27 | INFO: Data are loaded, start creating Blender stuff
+23:41:27 | INFO: Blender create Mesh node Mesh_0
+23:41:27 | INFO: glTF import finished in 0.18s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:41:28 | INFO: Starting glTF 2.0 export
+23:41:28 | INFO: Extracting primitive: Mesh_0
+23:41:28 | INFO: Primitives created: 1
+23:41:28 | INFO: Finished glTF 2.0 export in 0.4566504955291748 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\heavy_smoke_stable\heavy.glb clips: ['smoke']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

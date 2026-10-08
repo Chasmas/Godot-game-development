@@ -1,0 +1,12 @@
+{
+  "animation_approved": false,
+  "bones": 26,
+  "clip": "Animation",
+  "length_seconds": 1.0,
+  "loop_basis_column_difference": 0.000000168628545793581,
+  "loop_translation_difference_m": 0.0,
+  "runtime_approved": false,
+  "scope": "Imported skeleton endpoint check; no gameplay or vertex contact approval",
+  "source_glb_sha256": "46de46c75c75bc37e221311155fe4f273f58811d00b273ba77c4cc3a9d1f791d",
+  "tracks": 22
+}

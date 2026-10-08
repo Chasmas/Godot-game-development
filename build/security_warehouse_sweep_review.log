@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 21 looks in 2168 ms
+PASS { "phase": 0.0, "retreat": true, "alarm_seconds": -1.0, "peak_detection": 0.0, "end_position": [482.837646484375, 133.935485839844], "moving_enemies": 14, "passed": true }
+PASS { "phase": 0.25, "retreat": true, "alarm_seconds": -1.0, "peak_detection": 0.0, "end_position": [481.765960693359, 128.469604492188], "moving_enemies": 15, "passed": true }
+PASS { "phase": 0.5, "retreat": true, "alarm_seconds": -1.0, "peak_detection": 0.57435510114387, "end_position": [479.998870849609, 134.084030151367], "moving_enemies": 14, "passed": true }
+PASS { "phase": 0.75, "retreat": true, "alarm_seconds": -1.0, "peak_detection": 0.89512375079135, "end_position": [477.019836425781, 133.158462524414], "moving_enemies": 14, "passed": true }
+PASS { "phase": 0.0, "retreat": false, "alarm_seconds": 4.40833333333333, "peak_detection": 0.99131248792013, "end_position": [430.197235107422, 134.936584472656], "moving_enemies": 15, "passed": true }
+PASS { "phase": 0.25, "retreat": false, "alarm_seconds": 2.78333333333333, "peak_detection": 0.99131248792013, "end_position": [433.729309082031, 132.100723266602], "moving_enemies": 14, "passed": true }
+PASS { "phase": 0.5, "retreat": false, "alarm_seconds": 1.1, "peak_detection": 0.99435618932916, "end_position": [428.685699462891, 139.409820556641], "moving_enemies": 14, "passed": true }
+PASS { "phase": 0.75, "retreat": false, "alarm_seconds": 0.875, "peak_detection": 0.99648868214517, "end_position": [427.627593994141, 133.166412353516], "moving_enemies": 16, "passed": true }
+WAREHOUSE ENCOUNTER REVIEW: 0 failures

@@ -29,6 +29,7 @@ var _driving := false
 const LANE := 300.0            ## how far out it starts / leaves to
 const SEAT_LOCAL := Vector2(-1, -6)   ## the driver's seat (front left) in the car's frame
 var _seated := false          ## draw her at the wheel (it's a convertible)
+var _car3d: CarModel          ## the 3D Eldorado, with her inside it (null: the old top-down picture)
 var _driver_tex: Texture2D
 const BODY_HALF_W := 16.0      ## the car's side, from its centre line (world px)
 const DOOR_FRONT := 10.0       ## the driver's door: hinge edge by the windscreen...
@@ -37,6 +38,9 @@ const DOOR_BACK := -9.0        ## ...to its back edge
 func _ready() -> void:
 	z_index = 4
 	_tex = ArtLib.sprite("car_hero")
+	if CarModel.available():
+		_car3d = CarModel.new()
+		add_child(_car3d)
 	for i in 2:
 		var h := PointLight2D.new()
 		h.texture = SpriteLib.light_texture(256)
@@ -82,6 +86,7 @@ func _ready() -> void:
 
 var _heading := 0.0            ## direction of travel (the nose may be off it mid-slide)
 var _drift := 0.0              ## slip angle through a turn
+var _drift_vel := 0.0          ## how fast the slip angle is changing (it rides a spring)
 var _skid_cd := 0.0
 var night := true              ## headlights only after dark
 var _idle: AudioStreamPlayer2D   ## the V8 ticking over while it's parked with the lights on
@@ -106,27 +111,43 @@ func _drive(pts: Array, dur: float, ease_mode: int, on_step := Callable()) -> Tw
 	var total := curve.get_baked_length()
 	_heading = rotation
 	_drift = 0.0
+	_drift_vel = 0.0
+	var last_d := 0.0
 	var tw := create_tween()
 	tw.tween_method(func(k: float):
-		var e := 1.0 - pow(1.0 - k, 3.0) if ease_mode == 0 else k * k * (0.4 + 0.6 * k)
+		# arriving: in fast, carries its speed through the corner, brakes late and
+		# hard into the space. Leaving: floors it.
+		var e := (1.0 - pow(1.0 - k, 2.4)) if ease_mode == 0 else k * k * (0.4 + 0.6 * k)
 		var d := e * total
 		var here := curve.sample_baked(d)
-		var ahead := curve.sample_baked(minf(d + 6.0, total))
 		var before := global_position
 		global_position = here
-		var head := _heading
-		if ahead.distance_to(here) > 0.5:
-			head = (ahead - here).angle()
-		elif d > 6.0:
-			head = (here - curve.sample_baked(d - 6.0)).angle()
-		var step := before.distance_to(here)
-		# the powerslide: the tail steps out through the turn, the body leads
-		# the line by an angle that grows with how hard it's turning
-		var turn := angle_difference(_heading, head) / maxf(step, 0.5)
+		var dt := maxf(get_process_delta_time(), 1.0 / 240.0)
+		var speed := (d - last_d) / dt
+		last_d = d
+		# the line's own heading and curvature, read off the curve over a car's
+		# length either side: smooth whatever the frame rate or the step size
+		var span := 14.0
+		var a := curve.sample_baked(maxf(d - span, 0.0))
+		var b := curve.sample_baked(minf(d + span, total))
+		var head := (b - a).angle() if b.distance_to(a) > 1.0 else _heading
+		var bend := 0.0
+		if d > span and d < total - span:
+			var t0 := (here - a).angle()
+			var t1 := (b - here).angle()
+			bend = angle_difference(t0, t1) / (2.0 * span)
 		_heading = head
-		_drift = lerpf(_drift, clampf(turn * 14.0, -0.75, 0.75), 0.18)
+		# the powerslide: the tail steps out with how hard it's cornering (curvature
+		# x speed), on a damped spring - it swings out, holds, and snaps back
+		# straight with a little counter-steer wobble instead of jerking
+		var target := clampf(bend * speed * 0.011, -0.85, 0.85)
+		if k > 0.93 and ease_mode == 0:
+			target = 0.0   # straightens up as it stops in the space
+		_drift_vel += ((target - _drift) * 38.0 - _drift_vel * 9.0) * dt
+		_drift += _drift_vel * dt
 		_dir = Vector2.from_angle(head)
-		rotation = head + _drift
+		rotation = lerp_angle(rotation, head + _drift, 1.0 - exp(-dt * 22.0))
+		var step := before.distance_to(here)
 		# rubber where the tyres scrub sideways
 		_skid_cd -= get_process_delta_time()
 		if absf(_drift) > 0.3 and _skid_cd <= 0.0:
@@ -164,8 +185,29 @@ func _take_wheel(player: Node2D, on: bool) -> void:
 	if on:
 		var vis: Node = player.get("visual")
 		var pal := str(vis.get("palette")) if vis and vis.get("palette") != null else "cass"
-		_driver_tex = SpriteLib.torso("aim_two", pal)
+		_driver_tex = null if _cast_driver(player) else SpriteLib.torso("aim_two", pal)
 	queue_redraw()
+
+## The driver's rendered body when it has the car clips (seated "drive" and
+## "car_exit", tools/art/render_cast3d.py): she is then shown in the seat herself
+## and climbs out with her own legs instead of a scaled, fading picture.
+func _cast_driver(player: Node2D) -> CharacterVisual:
+	var vis := player.get("visual") as CharacterVisual
+	return vis if vis and vis.has_clip("drive") and vis.has_clip("car_exit") else null
+
+## Shows her in the seat facing along the car (or puts her back on her feet).
+func _sit(player: Node2D, on: bool) -> void:
+	var vis := _cast_driver(player)
+	if vis == null:
+		return
+	player.visible = true
+	player.z_index = z_index + 1 if on else 1
+	vis.shadow.visible = not on
+	vis.pose_override = "drive" if on else ""
+	vis.pose_progress = -1.0
+	if on:
+		player.global_position = _seat()
+		vis.set_aim(_dir.angle())
 
 func _door_spot() -> Vector2:
 	return global_position + _dir.orthogonal() * 23.0 - _dir * 1.0
@@ -174,7 +216,13 @@ func _door_spot() -> Vector2:
 ## on the springs; the dome light comes on, the door swings, a boot, then
 ## her - she slides out of the seat and stands up into the night, looks
 ## the place over, and shoves the door shut behind her.
+var arrival_in_progress := false
+
 func arrive(player: Node2D) -> void:
+	arrival_in_progress = true
+	if _car3d and _car3d.add_driver(_driver_look(player)):
+		_arrive_3d(player)
+		return
 	if route_in.size() < 2:
 		route_in = [global_position - _dir * LANE, global_position]
 	var home: Vector2 = route_in[-1]
@@ -184,13 +232,17 @@ func arrive(player: Node2D) -> void:
 	_body.collision_layer = 0
 	player.visible = false
 	_take_wheel(player, true)
+	_sit(player, true)
+	var driver := _cast_driver(player)
 	player.set("input_enabled", false)
 	player.set("respawn_grace", 6.0)
 	var vis: Node2D = player.get("visual")
 	Audio.play_at("car_arrive", home, -2.0)
 	var tw := _drive(route_in, 2.8, 0, func(k: float, _b: Vector2):
 		# she's at the wheel: the camera rides with the car
-		player.global_position = global_position
+		player.global_position = _seat() if driver else global_position
+		if driver:
+			driver.set_aim(_dir.angle())
 		if k > 0.62 and _brake < 1.0:
 			_brake = 1.0
 			Audio.play_at("car_brake", global_position, -6.0))
@@ -209,26 +261,47 @@ func arrive(player: Node2D) -> void:
 		Audio.play_at("car_door", global_position, -6.0)
 		_swing_door(true))
 	tw.tween_interval(0.3)
-	tw.tween_callback(func():
-		# she's in the seat, low, turned toward the door - drawn over the car
-		# (she was hidden under the bodywork until she cleared the door)
-		_take_wheel(player, false)
-		player.global_position = _seat()
-		player.visible = true
-		player.z_index = z_index + 1
-		if vis:
-			vis.scale = Vector2.ONE * 0.8
-			vis.modulate.a = 0.75
-			vis.call("set_aim", _dir.orthogonal().angle()))
-	# slides out through the doorway and stands up
-	tw.tween_method(func(k: float):
-		player.global_position = _seat().lerp(_door_spot(), k * k * (3.0 - 2.0 * k))
-		if vis:
-			vis.scale = Vector2.ONE * lerpf(0.8, 1.0, k)
-			vis.modulate.a = lerpf(0.75, 1.0, k), 0.0, 1.0, 0.45)
-	tw.tween_callback(func():
-		player.z_index = 2
-		Effects.dust(player.global_position, _dir.orthogonal(), 0.3))
+	if driver:
+		# a rendered body climbs out for real: turns in the seat toward the door,
+		# swings out and rises onto her feet - no scaling, no fade
+		var door_angle := _dir.orthogonal().angle()
+		# turns in the seat and slides across it to the door sill...
+		tw.tween_method(func(k: float):
+			var e := k * k * (3.0 - 2.0 * k)
+			driver.set_aim(lerp_angle(_dir.angle(), door_angle, e))
+			player.global_position = _seat().lerp(_door_spot(), 0.45 * e), 0.0, 1.0, 0.35)
+		# ...feet out on the tarmac, and up onto them
+		tw.tween_callback(func():
+			driver.pose_override = "car_exit"
+			driver.pose_progress = 0.0)
+		tw.tween_method(func(k: float):
+			driver.pose_progress = k
+			player.global_position = _seat().lerp(_door_spot(), lerpf(0.45, 1.0, k * k * (3.0 - 2.0 * k))), 0.0, 1.0, 0.7)
+		tw.tween_callback(func():
+			_sit(player, false)
+			_take_wheel(player, false)
+			Effects.dust(player.global_position, _dir.orthogonal(), 0.3))
+	else:
+		tw.tween_callback(func():
+			# she's in the seat, low, turned toward the door - drawn over the car
+			# (she was hidden under the bodywork until she cleared the door)
+			_take_wheel(player, false)
+			player.global_position = _seat()
+			player.visible = true
+			player.z_index = z_index + 1
+			if vis:
+				vis.scale = Vector2.ONE * 0.8
+				vis.modulate.a = 0.75
+				vis.call("set_aim", _dir.orthogonal().angle()))
+		# slides out through the doorway and stands up
+		tw.tween_method(func(k: float):
+			player.global_position = _seat().lerp(_door_spot(), k * k * (3.0 - 2.0 * k))
+			if vis:
+				vis.scale = Vector2.ONE * lerpf(0.8, 1.0, k)
+				vis.modulate.a = lerpf(0.75, 1.0, k), 0.0, 1.0, 0.45)
+		tw.tween_callback(func():
+			player.z_index = 1
+			Effects.dust(player.global_position, _dir.orthogonal(), 0.3))
 	# a look around: over the lot, then back at the job
 	tw.tween_method(func(k: float):
 		if vis:
@@ -239,6 +312,7 @@ func arrive(player: Node2D) -> void:
 	tw.tween_interval(0.25)
 	tw.tween_callback(func():
 		player.set("input_enabled", true)
+		arrival_in_progress = false
 		arrived.emit())
 
 
@@ -246,6 +320,9 @@ func arrive(player: Node2D) -> void:
 ## the door slams, the dome light dies, the V8 catches and it peels out
 ## along the exit lane, laying rubber and smoke through the turns.
 func depart(player: Node2D) -> void:
+	if _car3d and CastModel.available(_driver_look(player)):
+		_depart_3d(player)
+		return
 	player.set("input_enabled", false)
 	var vis: Node2D = player.get("visual")
 	var from := player.global_position
@@ -260,19 +337,44 @@ func depart(player: Node2D) -> void:
 		Audio.play_at("car_door", global_position, -6.0)
 		_swing_door(true, 0.22))
 	tw.tween_interval(0.22)
-	# drops into the seat
-	tw.tween_method(func(k: float):
-		player.global_position = _door_spot().lerp(_seat(), k * k)
-		if vis:
-			vis.scale = Vector2.ONE * lerpf(1.0, 0.8, k)
-			vis.modulate.a = lerpf(1.0, 0.0, clampf(k * 1.4 - 0.4, 0.0, 1.0)), 0.0, 1.0, 0.35)
-	tw.tween_callback(func():
-		player.visible = false
-		_take_wheel(player, true)
-		if vis:
-			vis.scale = Vector2.ONE
-			vis.modulate.a = 1.0
-		_swing_door(false, 0.18))
+	var driver := _cast_driver(player)
+	if driver:
+		# climbs in: the way out, played backwards, then turns to face the road
+		tw.tween_callback(func():
+			player.z_index = z_index + 1
+			driver.shadow.visible = false
+			driver.set_aim(_dir.orthogonal().angle())
+			driver.pose_override = "car_exit"
+			driver.pose_progress = 1.0)
+		# sits down onto the sill (getting out, backwards)...
+		tw.tween_method(func(k: float):
+			driver.pose_progress = 1.0 - k
+			player.global_position = _door_spot().lerp(_seat(), 0.55 * k * k * (3.0 - 2.0 * k)), 0.0, 1.0, 0.55)
+		# ...swings in behind the wheel
+		tw.tween_callback(func():
+			driver.pose_override = "drive")
+		tw.tween_method(func(k: float):
+			var e := k * k * (3.0 - 2.0 * k)
+			driver.set_aim(lerp_angle(_dir.orthogonal().angle(), _dir.angle(), e))
+			player.global_position = _door_spot().lerp(_seat(), lerpf(0.55, 1.0, e)), 0.0, 1.0, 0.3)
+		tw.tween_callback(func():
+			_take_wheel(player, true)
+			_sit(player, true)
+			_swing_door(false, 0.18))
+	else:
+		# drops into the seat
+		tw.tween_method(func(k: float):
+			player.global_position = _door_spot().lerp(_seat(), k * k)
+			if vis:
+				vis.scale = Vector2.ONE * lerpf(1.0, 0.8, k)
+				vis.modulate.a = lerpf(1.0, 0.0, clampf(k * 1.4 - 0.4, 0.0, 1.0)), 0.0, 1.0, 0.35)
+		tw.tween_callback(func():
+			player.visible = false
+			_take_wheel(player, true)
+			if vis:
+				vis.scale = Vector2.ONE
+				vis.modulate.a = 1.0
+			_swing_door(false, 0.18))
 	tw.tween_interval(0.45)
 	tw.tween_callback(func():
 		_lights = 1.0 if night else 0.0
@@ -289,8 +391,139 @@ func depart(player: Node2D) -> void:
 		_engine(false)
 		Events.camera_shake.emit(3.0)
 		var t2 := _drive(pts, 1.9, 1, func(k: float, before: Vector2):
-			if k < 0.7:
+			if driver:
+				# she rides along in the seat, the camera with her
+				player.global_position = _seat()
+				driver.set_aim(_dir.angle())
+			elif k < 0.7:
 				player.global_position = global_position   # the camera follows her out
+			if k < 0.3:
+				_skids.add_pair(global_position - _dir * 20.0, _dir, 0.0, before.distance_to(global_position))
+			if k < 0.55 and randf() < 0.45:
+				Effects.smoke(global_position - _dir * 26.0 + _dir.orthogonal() * randf_range(-10, 10)))
+		t2.tween_callback(func(): departed.emit()))
+
+func _driver_look(player: Node2D) -> String:
+	var vis := player.get("visual") as CharacterVisual
+	return SpriteForge.base_name(vis.palette) if vis else "cass"
+
+## The 3D car's arrival: she drives in seated behind the wheel (the bodywork hides
+## her legs), the door swings out, she turns to it, swings her feet out and stands
+## up beside the car - all inside the car's own viewport - then the player takes
+## over exactly where she stands and the door is shoved shut.
+func _arrive_3d(player: Node2D) -> void:
+	if route_in.size() < 2:
+		route_in = [global_position - _dir * LANE, global_position]
+	var home: Vector2 = route_in[-1]
+	global_position = route_in[0]
+	_lights = 1.0 if night else 0.0
+	_driving = true
+	_body.collision_layer = 0
+	player.visible = false
+	player.set("input_enabled", false)
+	player.set("respawn_grace", 6.0)
+	var vis := player.get("visual") as CharacterVisual
+	Audio.play_at("car_arrive", home, -2.0)
+	var tw := _drive(route_in, 2.8, 0, func(k: float, _b: Vector2):
+		player.global_position = global_position   # the camera rides with the car
+		if k > 0.62 and _brake < 1.0:
+			_brake = 1.0
+			Audio.play_at("car_brake", global_position, -6.0))
+	tw.tween_callback(func():
+		_driving = false
+		_bounce = 1.0
+		_drift = 0.0
+		_face(_dir)
+		_body.collision_layer = Layers.PROP
+		Audio.play_at("car_door", global_position, -14.0, 0.3))   # handbrake clunk
+	tw.tween_interval(0.4)
+	tw.tween_callback(func():
+		_brake = 0.0
+		create_tween().tween_property(self, "_lights", 0.0, 0.25)
+		Audio.play_at("car_door", global_position, -6.0)
+		_swing_door(true))
+	tw.tween_interval(0.3)
+	# turns in the seat toward the open door...
+	tw.tween_method(func(k: float):
+		_car3d.pose_driver("drive", -1.0, 0.15 * k, k * k * (3.0 - 2.0 * k)), 0.0, 1.0, 0.35)
+	# ...feet out onto the tarmac and up
+	tw.tween_method(func(k: float):
+		_car3d.pose_driver("car_exit", k, lerpf(0.15, 1.0, k * k * (3.0 - 2.0 * k)), 1.0), 0.0, 1.0, _car3d.exit_duration())
+	# she's clear of it: shoves the door shut while still drawn in the car's
+	# own 3D scene (so it can't swing through her), then the player takes over
+	tw.tween_callback(func():
+		_car3d.pose_driver("car_exit", 1.0, 1.0, 1.0)   # held on its last frame: standing
+		# the player's own body wakes up early, on the spot but see-through: its
+		# 3D view has been idle for seconds and needs a few frames to catch up
+		player.global_position = _car3d.driver_screen_global(1.0)
+		if vis:
+			vis.set_aim(_dir.orthogonal().angle()))
+	if _car3d.has_driver_clip("car_close"):
+		var door_latched := [false]
+		tw.tween_method(func(k: float):
+			_door = 1.0 - smoothstep(0.20,0.78,k)
+			_car3d.set_door(_door)
+			_car3d.pose_driver("car_close",k,1.0,1.0)
+			if k >= 0.78 and not door_latched[0]:
+				door_latched[0] = true
+				Audio.play_at("car_door",global_position,-4.0,0.08)
+				_bounce = 0.6,0.0,1.0,_car3d.driver_clip_duration("car_close"))
+	else:
+		tw.tween_callback(func(): _swing_door(false,0.3))
+		tw.tween_interval(0.32)
+	tw.tween_callback(func():
+		# the player takes over on the very spot, facing the same way
+		player.visible = true
+		_car3d.remove_driver()
+		# standing by the car, idle: the player has her now
+		player.set("input_enabled", true)
+		arrival_in_progress = false
+		arrived.emit())
+
+## The 3D getaway: she walks to the door, the player hands over to her body in the
+## car's viewport, she sits down onto the sill (getting out, played backwards),
+## swings in behind the wheel, the door slams and the car peels out.
+func _depart_3d(player: Node2D) -> void:
+	player.set("input_enabled", false)
+	var vis := player.get("visual") as CharacterVisual
+	var from := player.global_position
+	_car3d.set_heading(rotation)
+	var to := _car3d.driver_screen_global(1.0)   # where her 3D self will take over
+	var pts: Array = route_out if route_out.size() >= 2 else [global_position, global_position + _dir * LANE]
+	var tw := create_tween()
+	tw.tween_method(func(k: float):
+		player.global_position = from.lerp(to, k)
+		if vis:
+			vis.update_move((to - from).normalized() * 120.0, 0.016), 0.0, 1.0, clampf(from.distance_to(to) / 140.0, 0.1, 0.5))
+	tw.tween_callback(func():
+		Audio.play_at("car_door", global_position, -6.0)
+		_swing_door(true, 0.22)
+		_car3d.add_driver(_driver_look(player))
+		_car3d.pose_driver("car_exit", 1.0, 1.0, 1.0)
+		player.visible = false)
+	tw.tween_interval(0.22)
+	tw.tween_method(func(k: float):
+		_car3d.pose_driver("car_exit", 1.0 - k, lerpf(1.0, 0.15, k * k * (3.0 - 2.0 * k)), 1.0), 0.0, 1.0, _car3d.exit_duration())
+	tw.tween_method(func(k: float):
+		_car3d.pose_driver("drive", -1.0, 0.15 * (1.0 - k), 1.0 - k * k * (3.0 - 2.0 * k)), 0.0, 1.0, 0.3)
+	tw.tween_callback(func(): _swing_door(false, 0.18))
+	tw.tween_interval(0.45)
+	tw.tween_callback(func():
+		_lights = 1.0 if night else 0.0
+		_brake = 1.0
+		Audio.play_at("car_arrive", global_position, -16.0, 0.4)   # the engine catching
+		_engine(true))
+	tw.tween_interval(0.35)
+	tw.tween_callback(func():
+		_brake = 0.0
+		_driving = true
+		_body.collision_layer = 0
+		Audio.play_at("car_peel", global_position, 0.0)
+		Audio.play_at("tire_skid", global_position, -2.0)
+		_engine(false)
+		Events.camera_shake.emit(3.0)
+		var t2 := _drive(pts, 1.9, 1, func(k: float, before: Vector2):
+			player.global_position = global_position   # the camera follows her out
 			if k < 0.3:
 				_skids.add_pair(global_position - _dir * 20.0, _dir, 0.0, before.distance_to(global_position))
 			if k < 0.55 and randf() < 0.45:
@@ -331,6 +564,12 @@ func _process(delta: float) -> void:
 		_tails[i].position = Vector2(-36, side * 9)
 		_tails[i].energy = (0.35 * hl + 0.9 * _brake)
 	_dome.energy = 0.8 * _door
+	if _car3d:
+		_car3d.set_heading(rotation)
+		_car3d.set_door(_door)
+		# settling on the springs
+		var sq := 1.0 + sin(_t * 18.0) * 0.02 * _bounce
+		_car3d.scale = Vector2(sq, 2.0 - sq) * 16.0 / (float(CastModel.PX) / CastModel.METERS)
 	queue_redraw()
 
 func _draw() -> void:
@@ -338,6 +577,8 @@ func _draw() -> void:
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2(sq, 2.0 - sq))
 	# a soft shadow under the body
 	draw_rect(Rect2(-34, -13, 70, 28), Color(0, 0, 0.02, 0.35))
+	if _car3d:
+		return   # the body, door and driver are the 3D model's
 	if _tex:
 		var sz := Vector2(_tex.get_width(), _tex.get_height()) * 0.5
 		draw_texture_rect(_tex, Rect2(-sz * 0.5, sz), false)

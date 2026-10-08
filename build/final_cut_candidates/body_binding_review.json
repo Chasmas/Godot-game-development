@@ -1,0 +1,584 @@
+{
+  "cuts": [
+    {
+      "available": true,
+      "look": "bellhop",
+      "part": "head",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "bellhop",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "bellhop",
+      "part": "leg",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "bellhop",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "biker",
+      "part": "head",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "biker",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "biker",
+      "part": "leg",
+      "surfaces": 9
+    },
+    {
+      "available": true,
+      "look": "biker",
+      "part": "legs",
+      "surfaces": 9
+    },
+    {
+      "available": true,
+      "look": "boss",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "boss",
+      "part": "arm",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "boss",
+      "part": "leg",
+      "surfaces": 6
+    },
+    {
+      "available": true,
+      "look": "boss",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "buck",
+      "part": "head",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "buck",
+      "part": "arm",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "buck",
+      "part": "leg",
+      "surfaces": 8
+    },
+    {
+      "available": true,
+      "look": "buck",
+      "part": "legs",
+      "surfaces": 8
+    },
+    {
+      "available": true,
+      "look": "burnt",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "burnt",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "burnt",
+      "part": "leg",
+      "surfaces": 6
+    },
+    {
+      "available": true,
+      "look": "burnt",
+      "part": "legs",
+      "surfaces": 12
+    },
+    {
+      "available": true,
+      "look": "cass",
+      "part": "head",
+      "surfaces": 8
+    },
+    {
+      "available": true,
+      "look": "cass",
+      "part": "arm",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "cass",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "cass",
+      "part": "legs",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "civilian",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "civilian",
+      "part": "arm",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "civilian",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "civilian",
+      "part": "legs",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "cultist",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "cultist",
+      "part": "arm",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "cultist",
+      "part": "leg",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "cultist",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "demon",
+      "part": "head",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "demon",
+      "part": "arm",
+      "surfaces": 6
+    },
+    {
+      "available": true,
+      "look": "demon",
+      "part": "leg",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "demon",
+      "part": "legs",
+      "surfaces": 8
+    },
+    {
+      "available": true,
+      "look": "fireman",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "fireman",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "fireman",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "fireman",
+      "part": "legs",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "ghoul",
+      "part": "head",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "ghoul",
+      "part": "arm",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "ghoul",
+      "part": "leg",
+      "surfaces": 16
+    },
+    {
+      "available": true,
+      "look": "ghoul",
+      "part": "legs",
+      "surfaces": 15
+    },
+    {
+      "available": true,
+      "look": "guard",
+      "part": "head",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "guard",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "guard",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "guard",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "gunner",
+      "part": "head",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "gunner",
+      "part": "arm",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "gunner",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "gunner",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "handler",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "handler",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "handler",
+      "part": "leg",
+      "surfaces": 8
+    },
+    {
+      "available": true,
+      "look": "handler",
+      "part": "legs",
+      "surfaces": 10
+    },
+    {
+      "available": true,
+      "look": "heavy",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "heavy",
+      "part": "arm",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "heavy",
+      "part": "leg",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "heavy",
+      "part": "legs",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "hunter",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "hunter",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "hunter",
+      "part": "leg",
+      "surfaces": 9
+    },
+    {
+      "available": true,
+      "look": "hunter",
+      "part": "legs",
+      "surfaces": 9
+    },
+    {
+      "available": true,
+      "look": "riot",
+      "part": "head",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "riot",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "riot",
+      "part": "leg",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "riot",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "scout",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "scout",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "scout",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "scout",
+      "part": "legs",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "scrapper",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "scrapper",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "scrapper",
+      "part": "leg",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "scrapper",
+      "part": "legs",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "security",
+      "part": "head",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "security",
+      "part": "arm",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "security",
+      "part": "leg",
+      "surfaces": 13
+    },
+    {
+      "available": true,
+      "look": "security",
+      "part": "legs",
+      "surfaces": 11
+    },
+    {
+      "available": true,
+      "look": "sniper",
+      "part": "head",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "sniper",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "sniper",
+      "part": "leg",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "sniper",
+      "part": "legs",
+      "surfaces": 7
+    },
+    {
+      "available": true,
+      "look": "stagehand",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "stagehand",
+      "part": "arm",
+      "surfaces": 2
+    },
+    {
+      "available": true,
+      "look": "stagehand",
+      "part": "leg",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "stagehand",
+      "part": "legs",
+      "surfaces": 3
+    },
+    {
+      "available": true,
+      "look": "welder",
+      "part": "head",
+      "surfaces": 4
+    },
+    {
+      "available": true,
+      "look": "welder",
+      "part": "arm",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "welder",
+      "part": "leg",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "welder",
+      "part": "legs",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "zombie",
+      "part": "head",
+      "surfaces": 1
+    },
+    {
+      "available": true,
+      "look": "zombie",
+      "part": "arm",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "zombie",
+      "part": "leg",
+      "surfaces": 5
+    },
+    {
+      "available": true,
+      "look": "zombie",
+      "part": "legs",
+      "surfaces": 5
+    }
+  ],
+  "failures": 0,
+  "max_seam_gap_model_units": 0.0,
+  "scope": "Candidate availability, finite vertices, normalized weights, valid skin indices/skeleton and cap vertices compared with actual selected cut-source vertex skinning at five poses. Does not prove all overlapping source layers share weights or visual approval.",
+  "surfaces": 413
+}

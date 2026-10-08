@@ -1,0 +1,34 @@
+{
+  "failures": 0,
+  "rows": [
+    {
+      "first_frame_tip_jump_m": 0.0161984115839005,
+      "max_blend_gap_m": 0.000000268220901489258,
+      "max_palm_angle_deg": 0.0000109336359889547,
+      "max_steady_gap_m": 0.000000268220901489258,
+      "target": "aim"
+    },
+    {
+      "first_frame_tip_jump_m": 0.0161984115839005,
+      "max_blend_gap_m": 0.000000282041639820818,
+      "max_palm_angle_deg": 0.0000173730401250311,
+      "max_steady_gap_m": 0.000000282041639820818,
+      "target": "walk"
+    },
+    {
+      "first_frame_tip_jump_m": 0.0161984115839005,
+      "max_blend_gap_m": 0.000000283611797158301,
+      "max_palm_angle_deg": 0.0000169482767928773,
+      "max_steady_gap_m": 0.000000261514315980094,
+      "target": "run"
+    },
+    {
+      "first_frame_tip_jump_m": 0.0161984115839005,
+      "max_blend_gap_m": 0.000000221521688104076,
+      "max_palm_angle_deg": 0.0000172083637258437,
+      "max_steady_gap_m": 0.000000211260427818161,
+      "target": "sneak"
+    }
+  ],
+  "scope": "Raise-to-four-carry transitions, eight headings, 40real process frames each; both palm contact gap limits blend15mm/steady5mm, first-frame tip jump50mm"
+}

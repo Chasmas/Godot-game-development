@@ -1,0 +1,20 @@
+23:12:57 | INFO: Data are loaded, start creating Blender stuff
+23:12:57 | INFO: Blender create Mesh node char1
+23:12:57 | INFO: glTF import finished in 0.22s
+ELBOW car_close Right 0.0 (-0.00897135678678751, -0.18448667228221893, 1.1449861526489258)
+ELBOW car_close Left 3.142 (-0.009517011232674122, 0.1836095005273819, 1.1448936462402344)
+anim car_close 51 frames (baked)
+23:12:57 | INFO: Data are loaded, start creating Blender stuff
+23:12:57 | INFO: Blender create Mesh node char1
+23:12:57 | INFO: glTF import finished in 0.20s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:12:58 | INFO: Starting glTF 2.0 export
+23:12:58 | INFO: Extracting primitive: char1
+23:12:58 | INFO: Primitives created: 1
+23:12:58 | INFO: Finished glTF 2.0 export in 0.47956013679504395 s
+
+baked C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_car_close_push\cass.glb clips: ['car_close']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

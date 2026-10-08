@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2408 ms
+M01 RUNTIME BEDS: ten shared Blender beds, isotropic scale and player collision verified

@@ -1,0 +1,36 @@
+{
+  "purpose": "Reviewed identity-preserving ImageGen references for subsequent Blender reconstruction; not runtime assets.",
+  "runtime_approved": false,
+  "pairs": [
+    {
+      "intact": "crt_reference.png",
+      "damaged": "damaged_crt_reference_v2.png",
+      "review": "Shared model identity preserved; native projection and destruction animation pending."
+    },
+    {
+      "intact": "guest_door_reference.png",
+      "damaged": "damaged_door_reference_v2.png",
+      "review": "Plaque, peephole, hardware and kick plate preserved; studio halo prevents direct sprite promotion."
+    },
+    {
+      "intact": "vending_reference.png",
+      "damaged": "damaged_vending_reference_v2.png",
+      "review": "Five shelves, paired controls and coral palm graphics preserved; studio halo remains."
+    },
+    {
+      "intact": "arcade_reference.png",
+      "damaged": "damaged_arcade_reference_v2.png",
+      "review": "Two ivory buttons, red joystick, coin door and original graphics preserved; studio halo remains."
+    },
+    {
+      "intact": "ice_machine_reference.png",
+      "damaged": "damaged_ice_machine_reference_v2.png",
+      "review": "Original push control, graphics, bay and grille preserved; studio halo remains."
+    },
+    {
+      "intact": "window_reference.png",
+      "damaged": "damaged_window_reference_v2.png",
+      "review": "Both open curtains, curtain rod, two panes and sill preserved. Sunset reflection is direction only; separate glass/background in Blender."
+    }
+  ]
+}

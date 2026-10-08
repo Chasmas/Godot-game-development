@@ -1,0 +1,26 @@
+{
+  "scope": "Three forced shutdown points during boot; gameplay and normal menu exit not covered",
+  "runs": [
+    {
+      "frames": 4,
+      "returncode": 0,
+      "leak_warning": true,
+      "resource_warning": true,
+      "script_error": false
+    },
+    {
+      "frames": 30,
+      "returncode": 0,
+      "leak_warning": true,
+      "resource_warning": true,
+      "script_error": false
+    },
+    {
+      "frames": 120,
+      "returncode": 0,
+      "leak_warning": true,
+      "resource_warning": true,
+      "script_error": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "approved": true,
+  "scope": "Smoke only, mouth-height wrist and elbow below shoulder; other actions unchanged",
+  "baseline_sha256": "99c3911ee8178429d03d3a70bfdd6e778915c1f7775cbb8af594fe3a1ab53d22",
+  "integrated_sha256": "e186c0db281aef3a4cd29089ac6e16788006acd6bfdf2761298bc191f94bc2cd",
+  "pose_samples": 257,
+  "source": "build/heavy_smoke_smooth/heavy.glb",
+  "recipe_flags": [
+    "--smoke-fitted"
+  ],
+  "max_contact_elbow_above_shoulder": -0.14352202415465998
+}

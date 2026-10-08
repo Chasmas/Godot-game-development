@@ -1,0 +1,19 @@
+{
+  "approved": false,
+  "source": "build\\guard_pistol_lower_grasp_review\\guard.glb",
+  "rows": [
+    {
+      "side": "LeftHand",
+      "seam_edges": 37,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0
+    },
+    {
+      "side": "RightHand",
+      "seam_edges": 35,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0
+    }
+  ],
+  "scope": "Wrist seam only; diagnostic weld handles glTF attribute seams without modifying saved asset."
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "Guard single-leg anatomical section and wound candidate, actual OpenGL comparison intact/cut/capped at death_back .15/.5/.995",
+  "result": "compact wound without previous full-leg membrane in reviewed views",
+  "image_sha256": "6300599498a20ebc41f99b996d304117eec1a507aac42784cc1ad32dc18eea11",
+  "runtime_integration": false,
+  "remaining": [
+    "All24 look coverage",
+    "Both-legs section",
+    "Other directions and live combat",
+    "Matched detached-part rebake"
+  ]
+}

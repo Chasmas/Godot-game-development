@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CHAIR_BOUNDS [P: (-0.2665, 0.0, -0.2615), S: (0.533, 0.915, 0.553)] scale=(0.983607, 0.983607, 0.983607) pos=(0.0, 0.0, -0.014754) top=0.89999998035978 bottom=0.0
+CHAIR_ORIGIN: top=0.89999998035978 floor=0.0; wake preserves chair

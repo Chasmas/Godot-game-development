@@ -1,0 +1,8 @@
+{
+  "character": "zombie_civilian_1",
+  "source": "assets/art/reference/cast_redesign_v1/zombie_civilian_1_turnaround.png",
+  "approved_for_api": false,
+  "status": "needs_isolated_back_reference",
+  "finding": "Directly inspected original: back-view hand shares horizontal span with portrait/detail panels; rectangular crop risks contamination.",
+  "next_action": "Create clean isolated three-view ImageGen reference preserving identity and clothing before Blender crop preparation."
+}

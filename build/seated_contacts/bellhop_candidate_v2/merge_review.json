@@ -1,0 +1,12 @@
+{
+  "runtime_approved": true,
+  "source_sha256": "1d7e6eaf41593a5a6fcef3fd41002025cee67d4fa8aba802fbe2bc9a6b4ee42a",
+  "candidate_sha256": "210ce6275a96a003c5a406a04eeb4fa7f3f70917536e7607347c9c5edfa3586b",
+  "original_binary_prefix_preserved": true,
+  "other_clips_unchanged": true,
+  "geometry_materials_skins_unchanged": true,
+  "clips": 28,
+  "max_bind_probe_error_m": 2.9939521045837663e-05,
+  "bind_tolerance_m": 0.0001,
+  "approval_scope": "Bellhop doze only: corrected sole contacts, four-facing visual and scripted wake/walk/stab. Other cast poses still pending."
+}

@@ -1,0 +1,9 @@
+{
+  "approved": false,
+  "mesh_world_matrix_error": 0.0,
+  "inverse_bind_matrix_error": 0.00049591064453125,
+  "max_joint_rest_world_matrix_error": 5.762910258000353e-06,
+  "joint_order_preserved": true,
+  "scope": "Rest-space matrix parity only; does not validate finger contact or animated surface intersections.",
+  "source": "build/guard_pistol_anatomy_source/guard.glb"
+}

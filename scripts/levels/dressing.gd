@@ -62,6 +62,13 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 				return true)
 	for layer in [glow_layer, floor_layer, wall_layer]:
 		level.add_child(layer)
+	# Explicit isolated review only; never load unapproved art in gameplay.
+	if Engine.has_meta("review_m01_nightstands") and str(builder.data.get("id",""))=="m01_sunset_palms":
+		load("res://tools/m01_nightstand_candidate.gd").build(level,floor_layer)
+	if Engine.has_meta("review_m01_dressers") and str(builder.data.get("id",""))=="m01_sunset_palms":
+		load("res://tools/m01_dresser_candidate.gd").build(level,floor_layer)
+	else:
+		M01NativeRugs.build(level,builder,floor_layer)
 	# the floor clutter never changes: one texture instead of ~650 draw calls
 	StaticBake.queue(level, floor_layer, Rect2(Vector2.ZERO, Vector2(builder.w, builder.h) * LevelBuilder.T))
 	StaticBake.queue(level, wall_layer, Rect2(Vector2(-16, -16), Vector2(builder.w + 2, builder.h + 2) * LevelBuilder.T))

@@ -1,0 +1,39 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "painted_metal_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless Blender base-color material texture for M01 Sunset Palms motel. Square full bleed orthographic flat surface scan of aged pale cream painted steel, fine enamel grain, sparse small chipped spots showing dark metal and tiny oxidised seams, no large dramatic rust. Physically believable fine material detail. Uniform neutral diffuse illumination, matching opposite edges for tiling. No baked lighting, shadows, reflections, ambient occlusion, perspective, objects, text, borders or watermark. Albedo colour data only, not a scene."
+    },
+    {
+      "id": "rubber_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless Blender base-color material texture for M01 Sunset Palms motel. Square full bleed orthographic flat surface scan of dark charcoal rubber with fine natural surface grain and restrained wear, no tread pattern, no dramatic cracks. Physically believable fine material detail. Uniform neutral diffuse illumination, matching opposite edges for tiling. No baked lighting, shadows, reflections, ambient occlusion, perspective, objects, text, borders or watermark. Albedo colour data only, not a scene."
+    },
+    {
+      "id": "furniture_walnut_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless Blender base-color material texture for M01 Sunset Palms motel. Square full bleed orthographic flat surface scan of warm medium dark walnut furniture wood with fine straight grain, subtle pores and restrained age, no boards or seams. Physically believable fine material detail. Uniform neutral diffuse illumination, matching opposite edges for tiling. No baked lighting, shadows, reflections, ambient occlusion, perspective, objects, text, borders or watermark. Albedo colour data only, not a scene."
+    },
+    {
+      "id": "pool_tiles_albedo",
+      "prompt": "Use case: stylized-concept. Asset type: seamless Blender base-color material texture for M01 Sunset Palms motel. Square full bleed orthographic flat surface scan of small muted turquoise ceramic square pool tiles in a regular grid, thin warm grey grout, subtle varied glaze colour and fine tiny chips. Physically believable fine material detail. Uniform neutral diffuse illumination, matching opposite edges for tiling. No baked lighting, shadows, reflections, ambient occlusion, perspective, objects, text, borders or watermark. Albedo colour data only, not a scene."
+    }
+  ],
+  "sources": [
+    {
+      "id": "painted_metal_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-f7921a6f-a97f-426a-992f-615c40b87a23.png"
+    },
+    {
+      "id": "rubber_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-0706757d-8fef-40f5-bdcd-9cdde8e9a1c6.png"
+    },
+    {
+      "id": "furniture_walnut_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-127f373c-3ffd-4a72-a478-94b44415295c.png"
+    },
+    {
+      "id": "pool_tiles_albedo",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-66490458-ecf2-4f10-98ee-9feb7b66f0a8.png"
+    }
+  ]
+}

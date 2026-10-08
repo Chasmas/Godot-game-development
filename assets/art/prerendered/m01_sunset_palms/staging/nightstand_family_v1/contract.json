@@ -1,0 +1,50 @@
+{
+  "runtime_approved": false,
+  "footprint_metres": [
+    0.65,
+    0.5
+  ],
+  "height_metres": 1.143,
+  "pixels_per_metre": 284.44444444444446,
+  "frames": [
+    {
+      "file": "nightstand_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    }
+  ],
+  "source_kind": "Blender geometry; existing ImageGen walnut and linen colour maps",
+  "pending": [
+    "visual and scale review",
+    "solid collider mapping",
+    "lamp light attachment",
+    "room layout validation"
+  ]
+}

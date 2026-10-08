@@ -1,0 +1,15 @@
+08:19:02 | INFO: Data are loaded, start creating Blender stuff
+08:19:02 | INFO: Blender create Mesh node Mesh_0
+08:19:03 | INFO: glTF import finished in 0.38s
+Info: Saved as "biker_doze.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+08:19:04 | INFO: Starting glTF 2.0 export
+08:19:04 | INFO: Extracting primitive: Mesh_0
+08:19:04 | INFO: Primitives created: 1
+08:19:04 | INFO: Finished glTF 2.0 export in 0.46610403060913086 s
+
+SEATED CANDIDATE {'phase': 0.5, 'before': {'Left': -0.14313165843486786, 'Right': -0.1377478539943695}, 'after': {'Left': 0.0019996282644569874, 'Right': 0.0019994424656033516}, 'pelvis_drift_m': 0.0}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,25 @@
+{
+  "approved": false,
+  "source": "build/guard_hand_blend_restored_v30/guard.glb",
+  "clip": "armed_dual_walk",
+  "phase": 0.5,
+  "rows": [
+    {
+      "side": "Right",
+      "hand_triangles": 1524,
+      "pierced_hand_triangles": 0,
+      "crossing_pairs_by_part": {},
+      "body_crossing_pairs_by_part": {},
+      "pierced_face_centres_hand_local_m": null
+    },
+    {
+      "side": "Left",
+      "hand_triangles": 1530,
+      "pierced_hand_triangles": 0,
+      "crossing_pairs_by_part": {},
+      "body_crossing_pairs_by_part": {},
+      "pierced_face_centres_hand_local_m": null
+    }
+  ],
+  "scope": "Sampled phase, fully hand-weighted faces distal to 5 cm and evaluated non-hand body; segment-triangle crossings in both directions. Does not prove absence of containment, coplanar overlap or contact in other poses."
+}

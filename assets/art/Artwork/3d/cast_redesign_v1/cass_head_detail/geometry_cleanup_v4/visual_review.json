@@ -1,0 +1,14 @@
+{
+  "findings": [
+    "Face and neck remain continuous",
+    "Eyelids still contain jagged collapsed surfaces despite corrected world-space smoothing",
+    "Hair contains thin angular strands; facial topology is not ready for mouth or blink animation"
+  ],
+  "rig_approved": false,
+  "status": "not_promoted_facial_topology_cleanup_required",
+  "next_action": "Reconstruct eyelid topology and eye sockets before material transfer or facial rigging",
+  "reviewed_views": [
+    "face_front_clay.png"
+  ],
+  "runtime_approved": false
+}

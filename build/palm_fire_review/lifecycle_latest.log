@@ -1,0 +1,91 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS burning crown cannot emit fresh green leaves
+PASS consumed crown sectors shed charred fragments
+PASS each consumed sector sheds only once
+PASS burn fragments are small and dark rather than fresh foliage
+PASS charred fragments settle into bounded floor debris
+PASS ignition embers originate on crown sectors
+PASS consumed foliage cannot emit fresh embers
+PASS surviving embers travel independently from the crown
+PASS fire emits a bounded drifting smoke trail
+PASS residual smoke expires without new emission after burnout
+PASS frond consumption never reverses sector=0 t=0.0
+PASS frond consumption never reverses sector=1 t=0.0
+PASS frond consumption never reverses sector=2 t=0.0
+PASS frond consumption never reverses sector=3 t=0.0
+PASS frond consumption never reverses sector=4 t=0.0
+PASS frond consumption never reverses sector=5 t=0.0
+PASS frond consumption never reverses sector=6 t=0.0
+PASS frond consumption never reverses sector=7 t=0.0
+PASS frond consumption never reverses sector=8 t=0.0
+PASS frond consumption never reverses sector=9 t=0.0
+PASS frond consumption never reverses sector=10 t=0.0
+PASS frond consumption never reverses sector=11 t=0.0
+PASS frond consumption never reverses sector=12 t=0.0
+PASS frond consumption never reverses sector=13 t=0.0
+PASS frond consumption never reverses sector=0 t=3.0
+PASS frond consumption never reverses sector=1 t=3.0
+PASS frond consumption never reverses sector=2 t=3.0
+PASS frond consumption never reverses sector=3 t=3.0
+PASS frond consumption never reverses sector=4 t=3.0
+PASS frond consumption never reverses sector=5 t=3.0
+PASS frond consumption never reverses sector=6 t=3.0
+PASS frond consumption never reverses sector=7 t=3.0
+PASS frond consumption never reverses sector=8 t=3.0
+PASS frond consumption never reverses sector=9 t=3.0
+PASS frond consumption never reverses sector=10 t=3.0
+PASS frond consumption never reverses sector=11 t=3.0
+PASS frond consumption never reverses sector=12 t=3.0
+PASS frond consumption never reverses sector=13 t=3.0
+PASS frond consumption never reverses sector=0 t=6.0
+PASS frond consumption never reverses sector=1 t=6.0
+PASS frond consumption never reverses sector=2 t=6.0
+PASS frond consumption never reverses sector=3 t=6.0
+PASS frond consumption never reverses sector=4 t=6.0
+PASS frond consumption never reverses sector=5 t=6.0
+PASS frond consumption never reverses sector=6 t=6.0
+PASS frond consumption never reverses sector=7 t=6.0
+PASS frond consumption never reverses sector=8 t=6.0
+PASS frond consumption never reverses sector=9 t=6.0
+PASS frond consumption never reverses sector=10 t=6.0
+PASS frond consumption never reverses sector=11 t=6.0
+PASS frond consumption never reverses sector=12 t=6.0
+PASS frond consumption never reverses sector=13 t=6.0
+PASS frond consumption never reverses sector=0 t=9.0
+PASS frond consumption never reverses sector=1 t=9.0
+PASS frond consumption never reverses sector=2 t=9.0
+PASS frond consumption never reverses sector=3 t=9.0
+PASS frond consumption never reverses sector=4 t=9.0
+PASS frond consumption never reverses sector=5 t=9.0
+PASS frond consumption never reverses sector=6 t=9.0
+PASS frond consumption never reverses sector=7 t=9.0
+PASS frond consumption never reverses sector=8 t=9.0
+PASS frond consumption never reverses sector=9 t=9.0
+PASS frond consumption never reverses sector=10 t=9.0
+PASS frond consumption never reverses sector=11 t=9.0
+PASS frond consumption never reverses sector=12 t=9.0
+PASS frond consumption never reverses sector=13 t=9.0
+PASS frond consumption never reverses sector=0 t=11.9
+PASS frond consumption never reverses sector=1 t=11.9
+PASS frond consumption never reverses sector=2 t=11.9
+PASS frond consumption never reverses sector=3 t=11.9
+PASS frond consumption never reverses sector=4 t=11.9
+PASS frond consumption never reverses sector=5 t=11.9
+PASS frond consumption never reverses sector=6 t=11.9
+PASS frond consumption never reverses sector=7 t=11.9
+PASS frond consumption never reverses sector=8 t=11.9
+PASS frond consumption never reverses sector=9 t=11.9
+PASS frond consumption never reverses sector=10 t=11.9
+PASS frond consumption never reverses sector=11 t=11.9
+PASS frond consumption never reverses sector=12 t=11.9
+PASS frond consumption never reverses sector=13 t=11.9
+PASS fronds progressively consume before the final state
+PASS fire light follows the same advanced burn clock
+PASS repeated strike cannot restart an active canopy burn
+PASS canopy burn reaches a permanent finished state
+PASS fire finish immediately extinguishes and releases its light
+PASS burned canopy cannot shed new green leaves
+PASS burn particles expire after the fire ends
+PASS destroyed canopy cannot be reignited
+PALM FIRE LIFECYCLE REVIEW: 0 failures

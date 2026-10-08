@@ -1,0 +1,17 @@
+{
+  "size": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "transparent_pixels": 1138078,
+  "partial_alpha_pixels": 434786,
+  "opaque_pixels": 0,
+  "alpha_bbox": [
+    25,
+    33,
+    1010,
+    1536
+  ],
+  "runtime_approved": false
+}

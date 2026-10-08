@@ -1,0 +1,116 @@
+{
+  "mode": "built_in_imagegen",
+  "status": "generation_started",
+  "assets": [
+    {
+      "id": "whisper_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One compact suppressed semiautomatic pistol, dark blued steel slide, integrated screw-on cylindrical suppressor, textured black grip and mechanically plausible controls. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "revolver_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One steel six shot revolver, short medium barrel, visible cylinder and hammer, worn walnut grip and mechanically plausible proportions. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "smg_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One compact 1980s submachine gun, dark steel body, short barrel, folding metal stock and straight inserted magazine, believable functional proportions. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "shotgun_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One pump action shotgun, dark blued barrel and receiver, worn walnut stock and grooved fore-end, physically plausible proportions. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "rifle_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One 1980s service rifle, dark steel receiver and barrel, practical polymer stock and foregrip, inserted magazine, coherent functional proportions. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "knife_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One practical combat knife, straight steel blade with fine wear, small metal guard and dark textured grip, whole blade and handle visible. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "bat_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One worn wooden baseball bat, rounded barrel and narrow handle, subtle wood grain and small scuffs, no text. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "pipe_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One improvised melee metal pipe, dark worn steel with natural oxidation, open ends and a small threaded coupling near one end. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "machete_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One machete, broad steel blade with gently curved cutting edge, subtle abrasion, dark riveted grip and coherent functional proportions. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "bottle_weapon_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One green glass beverage bottle, paper label with muted cream coral graphic and no readable lettering, realistic lip and glass thickness. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "brick_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One aged red clay building brick, believable rectangular proportions, fine clay grain and a few chipped corners. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "chainsaw_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One rare melee chainsaw, compact 1980s orange dark grey motor housing, two practical handles, steel guide bar and accurately seated toothed chain, subtle grime and wear. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "hunter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. Full body adult human hunter enemy, lean rugged build, faded olive work jacket, dark trousers and boots, distinct natural face, neutral relaxed standing pose with empty hands. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "rottweiler_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One adult Rottweiler guard dog, natural powerful anatomy, short black tan coat, plain collar, four paws planted in neutral standing pose, mouth closed, believable joints. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "table_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One motel walnut dining table, rectangular tabletop with rounded worn corners, four sturdy legs and fine restrained wood grain. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "counter_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One motel reception counter, walnut framed front panels, dark green laminate worktop, modest brass footrail, realistic shelving on staff side, no surrounding room. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "desk_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One worn walnut manager desk, three drawers with brass pulls, modest knee space, functional sturdy proportions and subtle corner wear, no extra objects. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "maintenance_cabinet_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One wall mounted motel maintenance cabinet, grey painted steel housing, double doors with vents and simple lock, worn paint and mounting brackets. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "wall_trim_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One modular wall corner assembly, aged salmon stucco faces with walnut skirting board and cream door trim sample, distinct fine surface materials and believable depth. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "pool_ladder_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One stainless swimming pool ladder, two curved handrails and three anti-slip rungs, coherent fittings and feet, restrained metal highlights, no water. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "fire_extinguisher_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One wall mounted 1980s red fire extinguisher, dark flexible hose, valve and pressure gauge, cream instruction label with small illegible diagram marks, bracket. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    },
+    {
+      "id": "drain_grate_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: individual visual source for subsequent Blender modelling for M01 Sunset Palms. One square motel service floor drain assembly, dark cast iron grate with parallel slots, shallow recessed frame and realistic mild oxidation. Entire single subject fully visible, orthographic elevated three-quarter view, isolated on genuinely transparent background with no floor or detached shadow. Rich finely authored physically believable surfaces, premium indie handcrafted 3D diorama finish, restrained material highlights, soft neutral studio illumination. No people unless subject is a character, no additional props, no UI, overlay labels, watermark or collage."
+    }
+  ]
+}

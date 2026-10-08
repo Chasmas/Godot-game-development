@@ -1204,16 +1204,6 @@
       },
       {
         "type": "sprite",
-        "id": "yard_steam_vent_overlay",
-        "pos": [
-          37,
-          35
-        ],
-        "size": 0.38,
-        "floor": true
-      },
-      {
-        "type": "sprite",
         "id": "yard_workbench_cluster",
         "pos": [
           25,
@@ -1270,7 +1260,11 @@
           26
         ],
         "size": 0.55,
-        "floor": false
+        "floor": true
+      },
+      {
+        "type": "steam_vent",
+        "pos": [29, 26]
       },
       {
         "type": "sprite",

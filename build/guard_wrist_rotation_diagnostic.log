@@ -1,0 +1,14 @@
+21:34:03 | INFO: Data are loaded, start creating Blender stuff
+21:34:03 | INFO: Blender create Mesh node Mesh_0
+21:34:03 | INFO: glTF import finished in 0.37s
+WRIST_LOCAL_ROTATION aim_dual {"Right": 123.44984992680762, "Left": 119.7441307926172}
+WRIST_SWING_ONLY aim_dual {"Right": 37.2972110195276, "Left": 38.48022027434132}
+WRIST_LOCAL_ROTATION armed_dual_walk {"Right": 123.44984992680762, "Left": 119.74414445299554}
+WRIST_SWING_ONLY armed_dual_walk {"Right": 37.2972110195276, "Left": 38.48022027434132}
+WRIST_LOCAL_ROTATION armed_dual_run {"Right": 123.44984992680762, "Left": 119.74414445299554}
+WRIST_SWING_ONLY armed_dual_run {"Right": 37.2972110195276, "Left": 38.48022027434132}
+{"regions": {"Right": 231, "Left": 259}, "clips": [{"clip": "aim_dual", "extreme_samples": 0, "min": 0.37936338004874476, "max": 5.258794234630523}, {"clip": "armed_dual_walk", "extreme_samples": 0, "min": 0.37715022487972855, "max": 5.313185081860625}, {"clip": "armed_dual_run", "extreme_samples": 0, "min": 0.37716036906501754, "max": 5.313209422677339}]}
+[{"side": "Right", "vertex": 19093, "hand_local_rest": [-2.3441271781921387, -1.1704312562942505, -1.9356814622879028], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 0.7297455668449402, "RightForeArm": 0.2702544033527374}}, {"side": "Right", "vertex": 19225, "hand_local_rest": [-1.561662197113037, 0.9994663000106812, -2.3475983142852783], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 1.0}}, {"side": "Right", "vertex": 19087, "hand_local_rest": [-1.3966789245605469, -0.5375751256942749, -2.5053701400756836], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 0.8669272661209106, "RightForeArm": 0.13307273387908936}}, {"side": "Left", "vertex": 12648, "hand_local_rest": [-3.1935863494873047, -4.0487799644470215, 1.9429597854614258], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftForeArm": 0.8860557675361633, "LeftHand": 0.11394425481557846}}, {"side": "Left", "vertex": 12654, "hand_local_rest": [-2.5161032676696777, -2.0747556686401367, 2.2860965728759766], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftHand": 0.5288926959037781, "LeftForeArm": 0.47110727429389954}}, {"side": "Left", "vertex": 12657, "hand_local_rest": [-3.144932746887207, -2.4183437824249268, 1.484900712966919], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftForeArm": 0.548522412776947, "LeftHand": 0.4514775574207306}}]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

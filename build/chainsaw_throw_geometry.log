@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+THROW geometry start=(6.418235, -7.007385) velocity=(520.0, 0.0) target=(60.0, 0.0)
+PASS throw creates recoverable same weapon
+FAIL physical flight hits guard exactly once
+FAIL impact respects weapon lethality
+PASS weapon settles and becomes collectible
+PASS settled saw is discoverable by pickup system
+CHAINSAW THROW PHYSICS: 2 failures

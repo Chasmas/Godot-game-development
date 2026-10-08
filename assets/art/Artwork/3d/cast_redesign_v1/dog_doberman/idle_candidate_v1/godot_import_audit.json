@@ -1,0 +1,14 @@
+{
+  "blend_shapes": 1,
+  "bones": 26,
+  "clips": [
+    {
+      "length": 2.43333339691162,
+      "name": "Animation",
+      "tracks": 6
+    }
+  ],
+  "meshes": 1,
+  "runtime_approved": false,
+  "scope": "Headless GLTF import and animation seek; visual playback and skin deformation not validated"
+}

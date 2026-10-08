@@ -1,0 +1,13 @@
+{
+  "approved": true,
+  "scope": "Smoke only, mouth-height wrist and elbow below shoulder; other actions unchanged",
+  "baseline_sha256": "0e75eb0205e4a3e28425e9a96dcb9565ae7ef5eab27c747647b667ddb4c10fd5",
+  "integrated_sha256": "0386b3b8a9a3a650495975eb939337f049cb896ded5e570a594183c15c7e53a1",
+  "pose_samples": 257,
+  "source": "build/guard_smoke_stable/guard.glb",
+  "recipe_flags": [
+    "--smoke-fitted",
+    "--smoke-fixed-pole"
+  ],
+  "max_contact_elbow_above_shoulder": -0.10729062557220015
+}

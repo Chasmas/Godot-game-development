@@ -1,0 +1,14 @@
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_nightstand_batch.py:14: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\art\render_m01_nightstand_batch.py:74: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('Neutral prop world');scene.world.use_nodes=True
+00:04.235  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\nightstand_family_v1\nightstand_000.png'
+00:06.266  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\nightstand_family_v1\nightstand_090.png'
+00:08.328  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\nightstand_family_v1\nightstand_180.png'
+00:10.610  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\assets\art\prerendered\m01_sunset_palms\staging\nightstand_family_v1\nightstand_270.png'
+Info: Packed 2 file(s)
+Info: Saved as "nightstand.blend"
+M01_NIGHTSTAND_BATCH: four views, staging only
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,16 @@
+{
+  "animation_approved": false,
+  "animation_tracks": 23,
+  "blocked_stop": false,
+  "maximum_planted_sole_slip_per_frame_m": 0.0000047855078264547,
+  "mesh_loop_seam_m": null,
+  "minimum_full_cycle_mesh_height_m": -0.00000760625835027895,
+  "mode": "direct_gltf",
+  "moving_start": true,
+  "runtime_approved": false,
+  "sampled_frames": 19,
+  "scope": "CPU linear skin reconstruction from actual Godot arrays, skin bindings and animated skeleton in world coordinates; start includes object travel and authored stance schedule, walk uses external matched travel. No GPU vertex readback or gameplay approval",
+  "source_glb_sha256": "e27d1c1668db73e95ce1e3484a21dfbc73e0f992b8eef884be59bf856b394427",
+  "surface_format": 34359745559,
+  "vertices": 69146
+}

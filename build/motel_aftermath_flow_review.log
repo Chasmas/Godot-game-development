@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2237 ms
+PASS boss aftermath dialogue owns paused control
+PASS actual dialogue-finished signal arms cleared-motel phone
+PASS real telephone interaction starts authored call
+PASS authored phone ending unlocks escape: h1
+PASS phone close restores control and stops speech: h1
+PASS real telephone interaction starts authored call
+PASS authored phone ending unlocks escape: t3
+PASS phone close restores control and stops speech: t3
+MOTEL AFTERMATH FLOW REVIEW: 0 failures

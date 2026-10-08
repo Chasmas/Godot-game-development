@@ -1,0 +1,24 @@
+{
+  "image": "guest_door_leaf_topdown.png",
+  "image_size": [
+    384,
+    192
+  ],
+  "projection": "orthographic top-down; image +x is leaf direction",
+  "hinge_pixel": [
+    54.4,
+    96
+  ],
+  "leaf_tip_pixel": [
+    329.6,
+    96
+  ],
+  "leaf_width_m": 0.86,
+  "texture_scale_for_32px_leaf": 0.11627906976744186,
+  "frame_included": false,
+  "runtime_approved": false,
+  "remaining": [
+    "Check actual gameplay illumination and readable thickness.",
+    "Provide damaged leaf render before replacing destructible runtime art."
+  ]
+}

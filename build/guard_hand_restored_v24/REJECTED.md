@@ -1,0 +1,1 @@
+Rejected after actual Godot closeup: per-vertex nearest skin UVs interpolate across unrelated atlas islands, creating dark bands on palm and fingers. Rig/body preservation passing does not establish valid texturing. Keep v23 as prior staging baseline. Vertex UV experiment now opt-in only. No runtime asset changed.

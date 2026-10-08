@@ -1,0 +1,21 @@
+{
+  "cuts": [
+    {
+      "geometry_missing": 0,
+      "look": "guard",
+      "missing": 6079,
+      "part": "leg",
+      "protected_triangles": 16907
+    },
+    {
+      "geometry_missing": 0,
+      "look": "guard",
+      "missing": 3398,
+      "part": "legs",
+      "protected_triangles": 9338
+    }
+  ],
+  "failures": 9477,
+  "scope": "Source triangles with limb weight <=0.15 retained with original rest position/normal/UV. Not cap, animated seam or gameplay approval.",
+  "triangles_checked": 26245
+}

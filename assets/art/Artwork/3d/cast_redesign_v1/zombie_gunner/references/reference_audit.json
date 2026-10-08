@@ -1,0 +1,51 @@
+{
+  "character": "zombie_gunner",
+  "height_m": 1.76,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\zombie_gunner_turnaround.png",
+  "source_sha256": "39e3b0373fca21cb4152665db52554e46f82e0aff74be60f47c9cec571f9aa19",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        400,
+        1024
+      ],
+      "width": 400,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_gunner\\references\\front.png",
+      "sha256": "94677bc608419fc88864de53d067d571b3fc3ace25fab94bbe064da7f05af9bd"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        410,
+        0,
+        615,
+        1024
+      ],
+      "width": 205,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_gunner\\references\\side.png",
+      "sha256": "ad5a34c8a3af521def923b3b4a4c60c64a3b362168feeb85c1f41a06ebfa93e6"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        640,
+        0,
+        1025,
+        1024
+      ],
+      "width": 385,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\zombie_gunner\\references\\back.png",
+      "sha256": "c0e9b37a057278545209af765b0a48e4365feccb108599ca92265e2add0f4f6a"
+    }
+  ],
+  "visual_review": "Original sheet and all three saved Blender crops directly inspected. Complete isolated figures with matching body build and clothing. No adjacent fragments or clipped extremities. Modeling input approval only; no mesh, rig or runtime approval."
+}

@@ -1,0 +1,15 @@
+{
+  "approved": false,
+  "repairs": [
+    {
+      "mesh": "char1",
+      "merged_vertices": 589,
+      "hand_boundary_before": 963,
+      "hand_boundary_after": 55,
+      "filled_faces": 6
+    }
+  ],
+  "visual_rejected": true,
+  "reason": "Closeup still shows finger spikes/palm opening; new filled faces sample unsuitable atlas colours. Boundary count reduction is not proof of anatomical repair.",
+  "next_action": "Replace defective finger/palm region with deliberately modeled hand topology and authored UVs, rather than automatic hole fill."
+}

@@ -1,0 +1,197 @@
+{
+  "runtime_approved": false,
+  "scope": "All 31 walk mesh samples: Blender full-weight dual-quaternion versus four-weight linear skinning; no Godot or runtime approval",
+  "vertices": 69131,
+  "pruned_vertices": 17094,
+  "maximum_discarded_weight": 0.11607515020295978,
+  "samples": [
+    {
+      "frame": 1,
+      "maximum_difference_m": 0.011738133616745472,
+      "p99_difference_m": 0.004586717113852501,
+      "maximum_paw_difference_m": 1.8907454091277032e-07
+    },
+    {
+      "frame": 2,
+      "maximum_difference_m": 0.011939818039536476,
+      "p99_difference_m": 0.005751068238168955,
+      "maximum_paw_difference_m": 1.423431399416586e-07
+    },
+    {
+      "frame": 3,
+      "maximum_difference_m": 0.01111270859837532,
+      "p99_difference_m": 0.006387682631611824,
+      "maximum_paw_difference_m": 1.4057727071303816e-07
+    },
+    {
+      "frame": 4,
+      "maximum_difference_m": 0.010420413687825203,
+      "p99_difference_m": 0.00618501752614975,
+      "maximum_paw_difference_m": 1.8003456148107944e-07
+    },
+    {
+      "frame": 5,
+      "maximum_difference_m": 0.008918153122067451,
+      "p99_difference_m": 0.0051916600205004215,
+      "maximum_paw_difference_m": 1.8540572455094662e-07
+    },
+    {
+      "frame": 6,
+      "maximum_difference_m": 0.007338766474276781,
+      "p99_difference_m": 0.0039526126347482204,
+      "maximum_paw_difference_m": 1.816246140151634e-07
+    },
+    {
+      "frame": 7,
+      "maximum_difference_m": 0.007756490260362625,
+      "p99_difference_m": 0.003277013311162591,
+      "maximum_paw_difference_m": 1.8289050274233887e-07
+    },
+    {
+      "frame": 8,
+      "maximum_difference_m": 0.008120069280266762,
+      "p99_difference_m": 0.00364674162119627,
+      "maximum_paw_difference_m": 1.2754699696415628e-07
+    },
+    {
+      "frame": 9,
+      "maximum_difference_m": 0.008425290696322918,
+      "p99_difference_m": 0.004437662195414305,
+      "maximum_paw_difference_m": 1.3836645962328475e-07
+    },
+    {
+      "frame": 10,
+      "maximum_difference_m": 0.008641955442726612,
+      "p99_difference_m": 0.004898810759186745,
+      "maximum_paw_difference_m": 1.9460853195596428e-07
+    },
+    {
+      "frame": 11,
+      "maximum_difference_m": 0.008766829036176205,
+      "p99_difference_m": 0.004941475111991167,
+      "maximum_paw_difference_m": 1.9040024312744208e-07
+    },
+    {
+      "frame": 12,
+      "maximum_difference_m": 0.008804652839899063,
+      "p99_difference_m": 0.00462186336517334,
+      "maximum_paw_difference_m": 1.3920079311446898e-07
+    },
+    {
+      "frame": 13,
+      "maximum_difference_m": 0.00876594241708517,
+      "p99_difference_m": 0.004181003663688898,
+      "maximum_paw_difference_m": 1.9245730698003172e-07
+    },
+    {
+      "frame": 14,
+      "maximum_difference_m": 0.009243837557733059,
+      "p99_difference_m": 0.0037868006620556116,
+      "maximum_paw_difference_m": 1.3556423539284879e-07
+    },
+    {
+      "frame": 15,
+      "maximum_difference_m": 0.0104210851714015,
+      "p99_difference_m": 0.0037645234260708094,
+      "maximum_paw_difference_m": 1.399836975224389e-07
+    },
+    {
+      "frame": 16,
+      "maximum_difference_m": 0.011342573910951614,
+      "p99_difference_m": 0.0046171946451067924,
+      "maximum_paw_difference_m": 2.560713596722053e-07
+    },
+    {
+      "frame": 17,
+      "maximum_difference_m": 0.011432355269789696,
+      "p99_difference_m": 0.005758353974670172,
+      "maximum_paw_difference_m": 1.8460166018030577e-07
+    },
+    {
+      "frame": 18,
+      "maximum_difference_m": 0.010579681023955345,
+      "p99_difference_m": 0.006353393197059631,
+      "maximum_paw_difference_m": 1.8491854802960006e-07
+    },
+    {
+      "frame": 19,
+      "maximum_difference_m": 0.010369374416768551,
+      "p99_difference_m": 0.006155813578516245,
+      "maximum_paw_difference_m": 1.292627445081962e-07
+    },
+    {
+      "frame": 20,
+      "maximum_difference_m": 0.0088827945291996,
+      "p99_difference_m": 0.0051643336191773415,
+      "maximum_paw_difference_m": 1.2219861389439757e-07
+    },
+    {
+      "frame": 21,
+      "maximum_difference_m": 0.007641009986400604,
+      "p99_difference_m": 0.003910357132554054,
+      "maximum_paw_difference_m": 1.892304481998508e-07
+    },
+    {
+      "frame": 22,
+      "maximum_difference_m": 0.008062525652348995,
+      "p99_difference_m": 0.0032409881241619587,
+      "maximum_paw_difference_m": 1.399836975224389e-07
+    },
+    {
+      "frame": 23,
+      "maximum_difference_m": 0.00841572880744934,
+      "p99_difference_m": 0.0036299985367804766,
+      "maximum_paw_difference_m": 1.2888642686448293e-07
+    },
+    {
+      "frame": 24,
+      "maximum_difference_m": 0.00868882704526186,
+      "p99_difference_m": 0.004407025407999754,
+      "maximum_paw_difference_m": 1.3903868989473267e-07
+    },
+    {
+      "frame": 25,
+      "maximum_difference_m": 0.00886501930654049,
+      "p99_difference_m": 0.004864671267569065,
+      "maximum_paw_difference_m": 1.25171965237314e-07
+    },
+    {
+      "frame": 26,
+      "maximum_difference_m": 0.00894441083073616,
+      "p99_difference_m": 0.004911364987492561,
+      "maximum_paw_difference_m": 1.4175697060636594e-07
+    },
+    {
+      "frame": 27,
+      "maximum_difference_m": 0.008932152763009071,
+      "p99_difference_m": 0.004603594541549683,
+      "maximum_paw_difference_m": 1.4638068535077764e-07
+    },
+    {
+      "frame": 28,
+      "maximum_difference_m": 0.008839691989123821,
+      "p99_difference_m": 0.004153168294578791,
+      "maximum_paw_difference_m": 1.381657170895778e-07
+    },
+    {
+      "frame": 29,
+      "maximum_difference_m": 0.00933423638343811,
+      "p99_difference_m": 0.0037579438649117947,
+      "maximum_paw_difference_m": 1.5998159597074846e-07
+    },
+    {
+      "frame": 30,
+      "maximum_difference_m": 0.010642710141837597,
+      "p99_difference_m": 0.0037636952474713326,
+      "maximum_paw_difference_m": 2.10999544947299e-07
+    },
+    {
+      "frame": 31,
+      "maximum_difference_m": 0.011738148517906666,
+      "p99_difference_m": 0.004586716182529926,
+      "maximum_paw_difference_m": 2.4237300522145233e-07
+    }
+  ],
+  "maximum_difference_m": 0.011939818039536476,
+  "maximum_paw_difference_m": 2.560713596722053e-07
+}

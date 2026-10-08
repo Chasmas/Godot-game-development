@@ -1,0 +1,96 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "duration_seconds": 0.6,
+  "samples": [
+    {
+      "frame": 1,
+      "minimum_sole_height_m": -1.4032678336661775e-05
+    },
+    {
+      "frame": 2,
+      "minimum_sole_height_m": 3.727782313944772e-05
+    },
+    {
+      "frame": 3,
+      "minimum_sole_height_m": 3.724270573002286e-05
+    },
+    {
+      "frame": 4,
+      "minimum_sole_height_m": 3.7293790228432044e-05
+    },
+    {
+      "frame": 5,
+      "minimum_sole_height_m": 3.730231037479825e-05
+    },
+    {
+      "frame": 6,
+      "minimum_sole_height_m": 3.7219284422462806e-05
+    },
+    {
+      "frame": 7,
+      "minimum_sole_height_m": -8.089643301900651e-07
+    },
+    {
+      "frame": 8,
+      "minimum_sole_height_m": -3.566126451914897e-07
+    },
+    {
+      "frame": 9,
+      "minimum_sole_height_m": -1.533132376607682e-07
+    },
+    {
+      "frame": 10,
+      "minimum_sole_height_m": -1.4799638847762253e-07
+    },
+    {
+      "frame": 11,
+      "minimum_sole_height_m": -7.562429971130769e-08
+    },
+    {
+      "frame": 12,
+      "minimum_sole_height_m": -4.7955708737390523e-08
+    },
+    {
+      "frame": 13,
+      "minimum_sole_height_m": 2.6550097231847758e-08
+    },
+    {
+      "frame": 14,
+      "minimum_sole_height_m": -9.052546090515534e-08
+    },
+    {
+      "frame": 15,
+      "minimum_sole_height_m": -7.349058961381161e-08
+    },
+    {
+      "frame": 16,
+      "minimum_sole_height_m": -2.347023553284089e-08
+    },
+    {
+      "frame": 17,
+      "minimum_sole_height_m": -3.198768183665379e-08
+    },
+    {
+      "frame": 18,
+      "minimum_sole_height_m": -6.072313851746003e-08
+    },
+    {
+      "frame": 19,
+      "minimum_sole_height_m": -5.32725579205362e-08
+    }
+  ],
+  "sequential_first_steps": true,
+  "moving_body": false,
+  "forward_travel_m": 0,
+  "blocked_stop": true,
+  "blocked_source_frame": 7,
+  "blocked_source_pose_difference_m": 1.0658622590655336e-05,
+  "idle_handoff_mesh_difference_m": 2.1126042125758269e-07,
+  "handoff_speed_m_per_s": 0,
+  "maximum_support_slip_per_frame_m": 4.658996448829146e-07,
+  "maximum_world_sole_step_m": 0.03406763954781028,
+  "maximum_walk_handoff_mesh_difference_m": null,
+  "minimum_sole_height_m": -1.4032678336661775e-05,
+  "scope": "Blender IK blocked-stop from moving-start frame 7 to neutral idle; export and visual validation pending"
+}

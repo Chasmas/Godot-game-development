@@ -1,0 +1,16 @@
+22:03:28 | INFO: Data are loaded, start creating Blender stuff
+22:03:28 | INFO: Blender create Mesh node Mesh_0
+22:03:28 | INFO: glTF import finished in 0.38s
+WRIST_LOCAL_ROTATION aim_dual {"Right": 37.29719052896009, "Left": 38.48022027434132}
+WRIST_SWING_ONLY aim_dual {"Right": 37.2972110195276, "Left": 38.48022027434132}
+WRIST_LOCAL_ROTATION armed_dual_walk {"Right": 37.29719052896009, "Left": 38.48022027434132}
+WRIST_SWING_ONLY armed_dual_walk {"Right": 37.2972110195276, "Left": 38.48022027434132}
+WRIST_LOCAL_ROTATION armed_dual_run {"Right": 37.29719052896009, "Left": 38.48022027434132}
+WRIST_SWING_ONLY armed_dual_run {"Right": 37.2972110195276, "Left": 38.48022027434132}
+WRIST_LOCAL_ROTATION reload_dual {"Right": 56.07936038794349, "Left": 37.26977414963166}
+WRIST_SWING_ONLY reload_dual {"Right": 56.07936038794349, "Left": 37.26977414963166}
+{"regions": {"Right": 227, "Left": 255}, "clips": [{"clip": "aim_dual", "extreme_samples": 0, "min": 0.5207746405261795, "max": 3.4057473874591695}, {"clip": "armed_dual_walk", "extreme_samples": 0, "min": 0.5207669222544751, "max": 3.405760082227285}, {"clip": "armed_dual_run", "extreme_samples": 0, "min": 0.5207735992096892, "max": 3.405759981951524}, {"clip": "reload_dual", "extreme_samples": 0, "min": 0.456426569843091, "max": 5.618699037925045}]}
+[{"side": "Right", "vertex": 1440, "hand_local_rest": [-0.5898826122283936, -1.3165717124938965, -2.5902044773101807], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 0.7292928695678711, "RightForeArm": 0.2707071602344513}}, {"side": "Right", "vertex": 1489, "hand_local_rest": [-1.3967021703720093, -0.5375443696975708, -2.505375862121582], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 0.8668454885482788, "RightForeArm": 0.13315449655056}}, {"side": "Right", "vertex": 1422, "hand_local_rest": [-0.4178917407989502, 0.5592670440673828, -2.635313034057617], "morph_delta": [0.0, 0.0, 0.0], "weights": {"RightHand": 0.9905593991279602, "RightForeArm": 0.009440576657652855}}, {"side": "Left", "vertex": 497, "hand_local_rest": [2.4808201789855957, -2.8858578205108643, -1.8277626037597656], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftForeArm": 0.6499749422073364, "LeftHand": 0.3500250279903412}}, {"side": "Left", "vertex": 552, "hand_local_rest": [2.523519992828369, -0.15162670612335205, -1.8186604976654053], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftHand": 0.9436578750610352, "LeftForeArm": 0.05634210631251335}}, {"side": "Left", "vertex": 548, "hand_local_rest": [3.0419869422912598, -0.27385997772216797, -0.5184593200683594], "morph_delta": [0.0, 0.0, 0.0], "weights": {"LeftHand": 0.9070090055465698, "LeftForeArm": 0.09299099445343018}}]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

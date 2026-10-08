@@ -1,0 +1,6 @@
+{
+  "approved": false,
+  "inside_can_vertices": 5,
+  "sampled_vertices": 5510,
+  "scope": "Strong hand-weighted vertex containment only; triangle intersections and animated grip not validated"
+}

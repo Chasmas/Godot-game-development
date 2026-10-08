@@ -48,7 +48,8 @@ func _phase_two_bark() -> String:
 const FOAM := 3.0
 
 func _chip(info: DamageInfo) -> float:
-	return 0.45 if info.type != DamageInfo.Type.EXPLOSIVE else 1.5
+	# half of what the others take, per weapon (pellets split, as everywhere)
+	return super._chip(info) * 0.5 if info.type != DamageInfo.Type.EXPLOSIVE else 1.5
 
 func take_damage(info: DamageInfo) -> String:
 	if _defeated:

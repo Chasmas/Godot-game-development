@@ -1,0 +1,15 @@
+08:19:18 | INFO: Data are loaded, start creating Blender stuff
+08:19:18 | INFO: Blender create Mesh node Mesh_0
+08:19:18 | INFO: glTF import finished in 0.36s
+Info: Saved as "handler_doze.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+08:19:19 | INFO: Starting glTF 2.0 export
+08:19:19 | INFO: Extracting primitive: Mesh_0
+08:19:20 | INFO: Primitives created: 1
+08:19:20 | INFO: Finished glTF 2.0 export in 0.4640641212463379 s
+
+SEATED CANDIDATE {'phase': 0.5, 'before': {'Left': -0.17883948981761932, 'Right': -0.17962989211082458}, 'after': {'Left': 0.0020097726956009865, 'Right': 0.002015710109844804}, 'pelvis_drift_m': 0.0}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -46,11 +46,14 @@ def compose(tid, t, songs):
     for c in t["chunks"]:
         ch = {"text": c["text"], "duration_ms": int(c["sec"] * 1000), "positive_styles": c["styles"]}
         avoid = list(c.get("avoid", []))
-        if t.get("instrumental", True):
+        # Every game cue is instrumental by contract.  Keep this guard
+        # unconditional so a future plan entry cannot accidentally create
+        # narration, lyrics, choir or voice-like textures.
+        if True:
             # force_instrumental only works with a plain prompt: say it per chunk
             if "instrumental" not in ch["positive_styles"]:
                 ch["positive_styles"] = ch["positive_styles"] + ["instrumental"]
-            avoid += ["vocals", "singing", "lyrics", "spoken word"]
+            avoid += ["vocals", "singing", "lyrics", "spoken word", "narration", "voice", "choir", "vocoder"]
         if avoid:
             ch["negative_styles"] = avoid
         if c.get("adherence"):

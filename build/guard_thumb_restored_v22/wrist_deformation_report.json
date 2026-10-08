@@ -1,0 +1,6385 @@
+{
+  "approved": false,
+  "source": "build\\guard_thumb_restored_v22\\guard.glb",
+  "region_triangle_counts": {
+    "Right": 227,
+    "Left": 255
+  },
+  "rows": [
+    {
+      "clip": "aim_dual",
+      "samples": [
+        {
+          "phase": 0.0,
+          "side": "Right",
+          "min_area_ratio": 0.7187659081872683,
+          "max_area_ratio": 3.341347092132269,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340468813061445,
+          "max_area_ratio": 1.7626811906977777,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Right",
+          "min_area_ratio": 0.7180386886551512,
+          "max_area_ratio": 3.347682859509922,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Left",
+          "min_area_ratio": 0.532740744858598,
+          "max_area_ratio": 1.7644032964681153,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Right",
+          "min_area_ratio": 0.7173370575423131,
+          "max_area_ratio": 3.353930650876112,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Left",
+          "min_area_ratio": 0.531456327581609,
+          "max_area_ratio": 1.7661200539751896,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Right",
+          "min_area_ratio": 0.7166224895075579,
+          "max_area_ratio": 3.360054922641916,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Left",
+          "min_area_ratio": 0.53019646502457,
+          "max_area_ratio": 1.7678019149638777,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Right",
+          "min_area_ratio": 0.7159447383200915,
+          "max_area_ratio": 3.365998949964726,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Left",
+          "min_area_ratio": 0.5289693229874268,
+          "max_area_ratio": 1.7694214403113975,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Right",
+          "min_area_ratio": 0.7152880523561277,
+          "max_area_ratio": 3.3716794840018633,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Left",
+          "min_area_ratio": 0.5277895684329591,
+          "max_area_ratio": 1.7709874674474224,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Right",
+          "min_area_ratio": 0.7146655257985548,
+          "max_area_ratio": 3.3771380494123266,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Left",
+          "min_area_ratio": 0.5266789537703719,
+          "max_area_ratio": 1.772460318757649,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Right",
+          "min_area_ratio": 0.7140966639036355,
+          "max_area_ratio": 3.38218014966477,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Left",
+          "min_area_ratio": 0.525626414078249,
+          "max_area_ratio": 1.7738452093364543,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Right",
+          "min_area_ratio": 0.7135578235706447,
+          "max_area_ratio": 3.386922998564888,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Left",
+          "min_area_ratio": 0.5246567035089593,
+          "max_area_ratio": 1.7751186562523782,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Right",
+          "min_area_ratio": 0.7130579454673723,
+          "max_area_ratio": 3.391094148375637,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Left",
+          "min_area_ratio": 0.5237827256714779,
+          "max_area_ratio": 1.776277871076177,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Right",
+          "min_area_ratio": 0.7126364158752566,
+          "max_area_ratio": 3.3949099013082678,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Left",
+          "min_area_ratio": 0.5230060323188465,
+          "max_area_ratio": 1.7772985925079907,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Right",
+          "min_area_ratio": 0.7122685411294574,
+          "max_area_ratio": 3.398115455199461,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Left",
+          "min_area_ratio": 0.522338613827836,
+          "max_area_ratio": 1.7781611038602145,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Right",
+          "min_area_ratio": 0.7119580352813438,
+          "max_area_ratio": 3.400806200684447,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Left",
+          "min_area_ratio": 0.5217841125348011,
+          "max_area_ratio": 1.7788979183375426,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Right",
+          "min_area_ratio": 0.7117070916756024,
+          "max_area_ratio": 3.402946035170589,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Left",
+          "min_area_ratio": 0.5213430134025155,
+          "max_area_ratio": 1.7794764738576156,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Right",
+          "min_area_ratio": 0.7115419080626918,
+          "max_area_ratio": 3.404451991513726,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Left",
+          "min_area_ratio": 0.5210247574749431,
+          "max_area_ratio": 1.7799117707269676,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Right",
+          "min_area_ratio": 0.711435150564246,
+          "max_area_ratio": 3.4054206393664592,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Left",
+          "min_area_ratio": 0.5208317264443625,
+          "max_area_ratio": 1.780156576404756,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Right",
+          "min_area_ratio": 0.7113944961024814,
+          "max_area_ratio": 3.4057473874591695,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Left",
+          "min_area_ratio": 0.5207746405261795,
+          "max_area_ratio": 1.7802381751575458,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Right",
+          "min_area_ratio": 0.7114359556320258,
+          "max_area_ratio": 3.4053486356559515,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Left",
+          "min_area_ratio": 0.5208318551321497,
+          "max_area_ratio": 1.780152151562987,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Right",
+          "min_area_ratio": 0.7115428352883084,
+          "max_area_ratio": 3.404463474840501,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Left",
+          "min_area_ratio": 0.5210239037715871,
+          "max_area_ratio": 1.7798998457576225,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Right",
+          "min_area_ratio": 0.7117200656108098,
+          "max_area_ratio": 3.4029834223271695,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Left",
+          "min_area_ratio": 0.5213377228711458,
+          "max_area_ratio": 1.779489447216262,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Right",
+          "min_area_ratio": 0.7119672445551916,
+          "max_area_ratio": 3.400827219102984,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Left",
+          "min_area_ratio": 0.5217830654478617,
+          "max_area_ratio": 1.7789025743762825,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Right",
+          "min_area_ratio": 0.7122624330454388,
+          "max_area_ratio": 3.398123971912292,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Left",
+          "min_area_ratio": 0.5223387810281667,
+          "max_area_ratio": 1.7781669613590012,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Right",
+          "min_area_ratio": 0.7126380098224608,
+          "max_area_ratio": 3.3948855374240825,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Left",
+          "min_area_ratio": 0.5230062264897287,
+          "max_area_ratio": 1.7772788817911713,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Right",
+          "min_area_ratio": 0.7130726265443968,
+          "max_area_ratio": 3.3911123625069295,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Left",
+          "min_area_ratio": 0.5237835981442114,
+          "max_area_ratio": 1.7762612718129054,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Right",
+          "min_area_ratio": 0.7135526727140673,
+          "max_area_ratio": 3.3868812543708384,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Left",
+          "min_area_ratio": 0.5246648290956394,
+          "max_area_ratio": 1.7751091937042396,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Right",
+          "min_area_ratio": 0.7140891256954062,
+          "max_area_ratio": 3.3822115507435027,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Left",
+          "min_area_ratio": 0.5256260585847436,
+          "max_area_ratio": 1.7738354165073884,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Right",
+          "min_area_ratio": 0.7146673785352848,
+          "max_area_ratio": 3.3771263378687295,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Left",
+          "min_area_ratio": 0.5266752748125778,
+          "max_area_ratio": 1.7724527582982332,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Right",
+          "min_area_ratio": 0.7152910208702369,
+          "max_area_ratio": 3.3717184972861,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Left",
+          "min_area_ratio": 0.5277890681639107,
+          "max_area_ratio": 1.770970560043093,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Right",
+          "min_area_ratio": 0.7159366039540298,
+          "max_area_ratio": 3.366024289643208,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Left",
+          "min_area_ratio": 0.5289725828308753,
+          "max_area_ratio": 1.7694206836235853,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Right",
+          "min_area_ratio": 0.7166199897291038,
+          "max_area_ratio": 3.3600304152635556,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Left",
+          "min_area_ratio": 0.5301963692557583,
+          "max_area_ratio": 1.7678028297223538,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Right",
+          "min_area_ratio": 0.7173355654914233,
+          "max_area_ratio": 3.3539132062576593,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Left",
+          "min_area_ratio": 0.5314575352282707,
+          "max_area_ratio": 1.7661174547660172,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Right",
+          "min_area_ratio": 0.7180396851899649,
+          "max_area_ratio": 3.3476502257291814,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Left",
+          "min_area_ratio": 0.53274499191887,
+          "max_area_ratio": 1.7644060657382683,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Right",
+          "min_area_ratio": 0.7187733245533708,
+          "max_area_ratio": 3.341358249580637,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Left",
+          "min_area_ratio": 0.5340468698967459,
+          "max_area_ratio": 1.7626747326023153,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Right",
+          "min_area_ratio": 0.7194869320572806,
+          "max_area_ratio": 3.3350293634605515,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Left",
+          "min_area_ratio": 0.535353165883241,
+          "max_area_ratio": 1.7609416281237282,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Right",
+          "min_area_ratio": 0.7202019464899815,
+          "max_area_ratio": 3.328738721675068,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Left",
+          "min_area_ratio": 0.5366328736596152,
+          "max_area_ratio": 1.7592347948310956,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Right",
+          "min_area_ratio": 0.7209111801183208,
+          "max_area_ratio": 3.3226410482857758,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Left",
+          "min_area_ratio": 0.5378991948911057,
+          "max_area_ratio": 1.75754081782233,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Right",
+          "min_area_ratio": 0.7215956724070659,
+          "max_area_ratio": 3.3166865328382467,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Left",
+          "min_area_ratio": 0.5391246742478696,
+          "max_area_ratio": 1.7559171972551042,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Right",
+          "min_area_ratio": 0.72225352151506,
+          "max_area_ratio": 3.3108983810962997,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Left",
+          "min_area_ratio": 0.5403022030456226,
+          "max_area_ratio": 1.7543346019922723,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Right",
+          "min_area_ratio": 0.7228746061893794,
+          "max_area_ratio": 3.3055097328655143,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Left",
+          "min_area_ratio": 0.541415524580861,
+          "max_area_ratio": 1.7528348543840184,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Right",
+          "min_area_ratio": 0.7234488354497401,
+          "max_area_ratio": 3.3004074888867536,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Left",
+          "min_area_ratio": 0.542455580207081,
+          "max_area_ratio": 1.7514320053595662,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Right",
+          "min_area_ratio": 0.7240005539299639,
+          "max_area_ratio": 3.2957143658341392,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Left",
+          "min_area_ratio": 0.54342296625802,
+          "max_area_ratio": 1.750144547549516,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Right",
+          "min_area_ratio": 0.7244809266753989,
+          "max_area_ratio": 3.2914622686387665,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Left",
+          "min_area_ratio": 0.5442977525085456,
+          "max_area_ratio": 1.7489648169516523,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Right",
+          "min_area_ratio": 0.7249135151984581,
+          "max_area_ratio": 3.28765131436706,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Left",
+          "min_area_ratio": 0.545070683674702,
+          "max_area_ratio": 1.7479161377809111,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Right",
+          "min_area_ratio": 0.7252854127436691,
+          "max_area_ratio": 3.2843892880013517,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Left",
+          "min_area_ratio": 0.5457400209505779,
+          "max_area_ratio": 1.7470050016399934,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Right",
+          "min_area_ratio": 0.7255939496185067,
+          "max_area_ratio": 3.281681181982829,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Left",
+          "min_area_ratio": 0.5462965642802445,
+          "max_area_ratio": 1.746271550090495,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Right",
+          "min_area_ratio": 0.7258404740865763,
+          "max_area_ratio": 3.27954224822682,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Left",
+          "min_area_ratio": 0.546730817426611,
+          "max_area_ratio": 1.745688754795746,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Right",
+          "min_area_ratio": 0.7260133785933133,
+          "max_area_ratio": 3.2779988083586136,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Left",
+          "min_area_ratio": 0.5470523869072581,
+          "max_area_ratio": 1.7452477466619472,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Right",
+          "min_area_ratio": 0.7261211070454335,
+          "max_area_ratio": 3.277074620424793,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Left",
+          "min_area_ratio": 0.5472385628844377,
+          "max_area_ratio": 1.7450057296868022,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Right",
+          "min_area_ratio": 0.7261687917927199,
+          "max_area_ratio": 3.2767535130191963,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Left",
+          "min_area_ratio": 0.5473074728398521,
+          "max_area_ratio": 1.7449347636058148,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Right",
+          "min_area_ratio": 0.7261313028761824,
+          "max_area_ratio": 3.277083396280612,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Left",
+          "min_area_ratio": 0.547244042820121,
+          "max_area_ratio": 1.7449925962800898,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Right",
+          "min_area_ratio": 0.726023317497868,
+          "max_area_ratio": 3.2780045168312775,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Left",
+          "min_area_ratio": 0.5470552104219929,
+          "max_area_ratio": 1.7452580021157194,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Right",
+          "min_area_ratio": 0.7258441425528079,
+          "max_area_ratio": 3.2795582197875315,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Left",
+          "min_area_ratio": 0.5467341589704591,
+          "max_area_ratio": 1.7456845596707502,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Right",
+          "min_area_ratio": 0.7255929385672176,
+          "max_area_ratio": 3.2816687665476403,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Left",
+          "min_area_ratio": 0.5463013770219115,
+          "max_area_ratio": 1.74626003765252,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Right",
+          "min_area_ratio": 0.725287610308099,
+          "max_area_ratio": 3.284403493952263,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Left",
+          "min_area_ratio": 0.5457413681848102,
+          "max_area_ratio": 1.747027577027599,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Right",
+          "min_area_ratio": 0.724906943006139,
+          "max_area_ratio": 3.287636184377141,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Left",
+          "min_area_ratio": 0.5450742980924669,
+          "max_area_ratio": 1.7479401189746577,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Right",
+          "min_area_ratio": 0.7244823382709025,
+          "max_area_ratio": 3.291426641263295,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Left",
+          "min_area_ratio": 0.5442987133709193,
+          "max_area_ratio": 1.748960215431441,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Right",
+          "min_area_ratio": 0.7239938278604491,
+          "max_area_ratio": 3.295700456647971,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Left",
+          "min_area_ratio": 0.5434205854560503,
+          "max_area_ratio": 1.7501367482803034,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Right",
+          "min_area_ratio": 0.7234552384733288,
+          "max_area_ratio": 3.300414901362356,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Left",
+          "min_area_ratio": 0.542460193016994,
+          "max_area_ratio": 1.7514349572970676,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Right",
+          "min_area_ratio": 0.722871265074445,
+          "max_area_ratio": 3.305499807554865,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Left",
+          "min_area_ratio": 0.5414207614713406,
+          "max_area_ratio": 1.7528492781552483,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Right",
+          "min_area_ratio": 0.7222538036743249,
+          "max_area_ratio": 3.3109249093742674,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Left",
+          "min_area_ratio": 0.5402964553476992,
+          "max_area_ratio": 1.7543236925652486,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Right",
+          "min_area_ratio": 0.7215943141333989,
+          "max_area_ratio": 3.316626894836251,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Left",
+          "min_area_ratio": 0.5391239772945698,
+          "max_area_ratio": 1.7558995604760383,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Right",
+          "min_area_ratio": 0.7209059456798375,
+          "max_area_ratio": 3.322628016014161,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Left",
+          "min_area_ratio": 0.5378951471157367,
+          "max_area_ratio": 1.7575354390252906,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Right",
+          "min_area_ratio": 0.7201974074377442,
+          "max_area_ratio": 3.328772060366977,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Left",
+          "min_area_ratio": 0.5366377938846439,
+          "max_area_ratio": 1.7592250952908708,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Right",
+          "min_area_ratio": 0.7194862910830531,
+          "max_area_ratio": 3.3350467270130686,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Left",
+          "min_area_ratio": 0.53535147002825,
+          "max_area_ratio": 1.7609422107152846,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Right",
+          "min_area_ratio": 0.7187720593388619,
+          "max_area_ratio": 3.34137010121433,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340447211223238,
+          "max_area_ratio": 1.7626819502787336,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        }
+      ],
+      "extreme_samples": 0
+    },
+    {
+      "clip": "armed_dual_walk",
+      "samples": [
+        {
+          "phase": 0.0,
+          "side": "Right",
+          "min_area_ratio": 0.718762756766087,
+          "max_area_ratio": 3.3413755927023985,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340494674302125,
+          "max_area_ratio": 1.7626742590954032,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Right",
+          "min_area_ratio": 0.7180559834657685,
+          "max_area_ratio": 3.347693088162207,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Left",
+          "min_area_ratio": 0.5327466617591474,
+          "max_area_ratio": 1.764412455081647,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Right",
+          "min_area_ratio": 0.7173212885467355,
+          "max_area_ratio": 3.3539057292395182,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Left",
+          "min_area_ratio": 0.5314552498692962,
+          "max_area_ratio": 1.7661058107870669,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Right",
+          "min_area_ratio": 0.716629588908731,
+          "max_area_ratio": 3.360030026720894,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Left",
+          "min_area_ratio": 0.5301962658254223,
+          "max_area_ratio": 1.76778702630148,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Right",
+          "min_area_ratio": 0.7159447155744335,
+          "max_area_ratio": 3.366001944306237,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Left",
+          "min_area_ratio": 0.5289672687765844,
+          "max_area_ratio": 1.7694197565986813,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Right",
+          "min_area_ratio": 0.7152877955968185,
+          "max_area_ratio": 3.371737294184665,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Left",
+          "min_area_ratio": 0.5277866591693918,
+          "max_area_ratio": 1.7709683410570232,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Right",
+          "min_area_ratio": 0.7146754924878431,
+          "max_area_ratio": 3.3771753121767842,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Left",
+          "min_area_ratio": 0.5266726100587564,
+          "max_area_ratio": 1.7724548086509244,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Right",
+          "min_area_ratio": 0.7140868930166698,
+          "max_area_ratio": 3.3821889845341997,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Left",
+          "min_area_ratio": 0.525623608764267,
+          "max_area_ratio": 1.7738400531589205,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Right",
+          "min_area_ratio": 0.7135631454036725,
+          "max_area_ratio": 3.38694988105073,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Left",
+          "min_area_ratio": 0.5246619102476374,
+          "max_area_ratio": 1.775105797884465,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Right",
+          "min_area_ratio": 0.7130698789482744,
+          "max_area_ratio": 3.3911533248352983,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Left",
+          "min_area_ratio": 0.5237863008616329,
+          "max_area_ratio": 1.7762701963427119,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Right",
+          "min_area_ratio": 0.7126366884283137,
+          "max_area_ratio": 3.394855097928173,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Left",
+          "min_area_ratio": 0.5230098652387282,
+          "max_area_ratio": 1.7772960846542718,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Right",
+          "min_area_ratio": 0.7122622390937913,
+          "max_area_ratio": 3.398130001972605,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Left",
+          "min_area_ratio": 0.5223412618081804,
+          "max_area_ratio": 1.778186349314183,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Right",
+          "min_area_ratio": 0.7119595140060265,
+          "max_area_ratio": 3.4008522864808195,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Left",
+          "min_area_ratio": 0.5217807104677,
+          "max_area_ratio": 1.7789084685324084,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Right",
+          "min_area_ratio": 0.711715167287621,
+          "max_area_ratio": 3.402954659890245,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Left",
+          "min_area_ratio": 0.5213477506810686,
+          "max_area_ratio": 1.7794760829942253,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Right",
+          "min_area_ratio": 0.711540237115619,
+          "max_area_ratio": 3.4044722691113645,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Left",
+          "min_area_ratio": 0.5210251317006309,
+          "max_area_ratio": 1.7798987809080304,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Right",
+          "min_area_ratio": 0.7114406740683443,
+          "max_area_ratio": 3.4054261275763436,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Left",
+          "min_area_ratio": 0.5208333057922779,
+          "max_area_ratio": 1.780156693618958,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Right",
+          "min_area_ratio": 0.7114013890385369,
+          "max_area_ratio": 3.405760082227285,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Left",
+          "min_area_ratio": 0.5207669222544751,
+          "max_area_ratio": 1.7802349063304188,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Right",
+          "min_area_ratio": 0.7114317279012478,
+          "max_area_ratio": 3.4054094984620966,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Left",
+          "min_area_ratio": 0.5208372560909087,
+          "max_area_ratio": 1.7801496672651052,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Right",
+          "min_area_ratio": 0.7115402977498622,
+          "max_area_ratio": 3.4044995287613773,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Left",
+          "min_area_ratio": 0.5210291312208811,
+          "max_area_ratio": 1.7799000965019292,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Right",
+          "min_area_ratio": 0.7117061822557003,
+          "max_area_ratio": 3.4029440146522645,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Left",
+          "min_area_ratio": 0.5213482415479311,
+          "max_area_ratio": 1.7794756400156124,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Right",
+          "min_area_ratio": 0.7119594728346657,
+          "max_area_ratio": 3.4008387449902053,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Left",
+          "min_area_ratio": 0.5217857240325279,
+          "max_area_ratio": 1.7789091266956722,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Right",
+          "min_area_ratio": 0.7122640562749462,
+          "max_area_ratio": 3.398156510168999,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Left",
+          "min_area_ratio": 0.5223437659064648,
+          "max_area_ratio": 1.7781867926139814,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Right",
+          "min_area_ratio": 0.712642686231092,
+          "max_area_ratio": 3.3948957514838316,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Left",
+          "min_area_ratio": 0.5230126496218788,
+          "max_area_ratio": 1.7772900547028232,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Right",
+          "min_area_ratio": 0.7130721168874704,
+          "max_area_ratio": 3.3911557340075995,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Left",
+          "min_area_ratio": 0.5237876308881849,
+          "max_area_ratio": 1.7762727578539543,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Right",
+          "min_area_ratio": 0.7135672373297627,
+          "max_area_ratio": 3.386886037451998,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Left",
+          "min_area_ratio": 0.524659448182851,
+          "max_area_ratio": 1.7751195149973489,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Right",
+          "min_area_ratio": 0.7140917773810552,
+          "max_area_ratio": 3.3821911494736723,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Left",
+          "min_area_ratio": 0.5256264449907163,
+          "max_area_ratio": 1.7738245747336714,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Right",
+          "min_area_ratio": 0.7146764921734537,
+          "max_area_ratio": 3.377128259541747,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Left",
+          "min_area_ratio": 0.5266741024768123,
+          "max_area_ratio": 1.7724664043808374,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Right",
+          "min_area_ratio": 0.7152927249218639,
+          "max_area_ratio": 3.3717190814465994,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Left",
+          "min_area_ratio": 0.5277943286616438,
+          "max_area_ratio": 1.7709872350780733,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Right",
+          "min_area_ratio": 0.7159454719114882,
+          "max_area_ratio": 3.3659965115446098,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Left",
+          "min_area_ratio": 0.5289657559507885,
+          "max_area_ratio": 1.7694012585832521,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Right",
+          "min_area_ratio": 0.7166289469134146,
+          "max_area_ratio": 3.360077898780272,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Left",
+          "min_area_ratio": 0.5301905541411036,
+          "max_area_ratio": 1.7677974296896584,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Right",
+          "min_area_ratio": 0.7173276117063464,
+          "max_area_ratio": 3.353933349670022,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Left",
+          "min_area_ratio": 0.5314657135226861,
+          "max_area_ratio": 1.7661207694134065,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Right",
+          "min_area_ratio": 0.7180442626818491,
+          "max_area_ratio": 3.347684738175112,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Left",
+          "min_area_ratio": 0.5327508096502477,
+          "max_area_ratio": 1.7644087561638275,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Right",
+          "min_area_ratio": 0.718761910943287,
+          "max_area_ratio": 3.341341627777593,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Left",
+          "min_area_ratio": 0.5340447629569527,
+          "max_area_ratio": 1.7626768732465592,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Right",
+          "min_area_ratio": 0.7194882910759566,
+          "max_area_ratio": 3.3350750397464504,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Left",
+          "min_area_ratio": 0.5353507643688858,
+          "max_area_ratio": 1.7609322440941948,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Right",
+          "min_area_ratio": 0.7202131236211852,
+          "max_area_ratio": 3.3287583757081847,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Left",
+          "min_area_ratio": 0.5366339182650087,
+          "max_area_ratio": 1.7592305512888275,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Right",
+          "min_area_ratio": 0.7209134248120761,
+          "max_area_ratio": 3.32264828702262,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Left",
+          "min_area_ratio": 0.5378969520044123,
+          "max_area_ratio": 1.7575377277367725,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Right",
+          "min_area_ratio": 0.7215952557575351,
+          "max_area_ratio": 3.3166488329284958,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Left",
+          "min_area_ratio": 0.5391217997806179,
+          "max_area_ratio": 1.7558985668959033,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Right",
+          "min_area_ratio": 0.7222444423464572,
+          "max_area_ratio": 3.3109431708002455,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Left",
+          "min_area_ratio": 0.5403030150111,
+          "max_area_ratio": 1.7543150396431784,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Right",
+          "min_area_ratio": 0.7228817969653067,
+          "max_area_ratio": 3.305540664842026,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Left",
+          "min_area_ratio": 0.5414217480718279,
+          "max_area_ratio": 1.752840485687093,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Right",
+          "min_area_ratio": 0.7234545587438118,
+          "max_area_ratio": 3.300418373124013,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Left",
+          "min_area_ratio": 0.5424594816284131,
+          "max_area_ratio": 1.7514339777309147,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Right",
+          "min_area_ratio": 0.7239936995639568,
+          "max_area_ratio": 3.2956981028505474,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Left",
+          "min_area_ratio": 0.5434228092823872,
+          "max_area_ratio": 1.7501496526574432,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Right",
+          "min_area_ratio": 0.7244844218551032,
+          "max_area_ratio": 3.291436674543317,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Left",
+          "min_area_ratio": 0.5442969110529186,
+          "max_area_ratio": 1.7489627142058919,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Right",
+          "min_area_ratio": 0.7249147904662041,
+          "max_area_ratio": 3.2877093785819804,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Left",
+          "min_area_ratio": 0.5450707824194233,
+          "max_area_ratio": 1.7479213687731734,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Right",
+          "min_area_ratio": 0.7252868710612781,
+          "max_area_ratio": 3.2844004661197026,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Left",
+          "min_area_ratio": 0.5457442505850022,
+          "max_area_ratio": 1.747031185014967,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Right",
+          "min_area_ratio": 0.7255986569577575,
+          "max_area_ratio": 3.281744747075911,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Left",
+          "min_area_ratio": 0.5462973877844326,
+          "max_area_ratio": 1.7462735648008265,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Right",
+          "min_area_ratio": 0.7258407090479887,
+          "max_area_ratio": 3.279563890930565,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Left",
+          "min_area_ratio": 0.546733962081838,
+          "max_area_ratio": 1.7456741755724425,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Right",
+          "min_area_ratio": 0.7260208825965204,
+          "max_area_ratio": 3.278023115185597,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Left",
+          "min_area_ratio": 0.5470504432959444,
+          "max_area_ratio": 1.7452544120495412,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Right",
+          "min_area_ratio": 0.726131916956166,
+          "max_area_ratio": 3.277077758950666,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Left",
+          "min_area_ratio": 0.5472416470947463,
+          "max_area_ratio": 1.7450126982575094,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Right",
+          "min_area_ratio": 0.7261653606384026,
+          "max_area_ratio": 3.2768084109902476,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Left",
+          "min_area_ratio": 0.5473019378738969,
+          "max_area_ratio": 1.744914076109443,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Right",
+          "min_area_ratio": 0.7261276162883344,
+          "max_area_ratio": 3.277065178270517,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Left",
+          "min_area_ratio": 0.5472422650481511,
+          "max_area_ratio": 1.7450015893860225,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Right",
+          "min_area_ratio": 0.7260215208893894,
+          "max_area_ratio": 3.278020196898261,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Left",
+          "min_area_ratio": 0.5470525484104661,
+          "max_area_ratio": 1.7452579473182799,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Right",
+          "min_area_ratio": 0.7258471868901868,
+          "max_area_ratio": 3.279569903600698,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Left",
+          "min_area_ratio": 0.5467335534448511,
+          "max_area_ratio": 1.7456842326265498,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Right",
+          "min_area_ratio": 0.7256065945193205,
+          "max_area_ratio": 3.2816907054096403,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Left",
+          "min_area_ratio": 0.5462949563057344,
+          "max_area_ratio": 1.746264951648952,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Right",
+          "min_area_ratio": 0.7252929733824253,
+          "max_area_ratio": 3.284397763189192,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Left",
+          "min_area_ratio": 0.545739989316585,
+          "max_area_ratio": 1.7470131217795708,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Right",
+          "min_area_ratio": 0.7249163339012716,
+          "max_area_ratio": 3.2876562452669504,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Left",
+          "min_area_ratio": 0.5450721387601999,
+          "max_area_ratio": 1.7479170132063804,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Right",
+          "min_area_ratio": 0.7244874163254892,
+          "max_area_ratio": 3.291473956182598,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Left",
+          "min_area_ratio": 0.5443005996414416,
+          "max_area_ratio": 1.7489580596556542,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Right",
+          "min_area_ratio": 0.7240007619131895,
+          "max_area_ratio": 3.2956981671494265,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Left",
+          "min_area_ratio": 0.543423960435975,
+          "max_area_ratio": 1.7501362117687869,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Right",
+          "min_area_ratio": 0.7234552384733288,
+          "max_area_ratio": 3.3003960026697094,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Left",
+          "min_area_ratio": 0.5424568382500383,
+          "max_area_ratio": 1.7514223056285503,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Right",
+          "min_area_ratio": 0.7228799756973621,
+          "max_area_ratio": 3.3054821605765747,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Left",
+          "min_area_ratio": 0.5414182668271073,
+          "max_area_ratio": 1.752830228302954,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Right",
+          "min_area_ratio": 0.7222540382798897,
+          "max_area_ratio": 3.3109206257306583,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Left",
+          "min_area_ratio": 0.5403060147618662,
+          "max_area_ratio": 1.754340664591229,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Right",
+          "min_area_ratio": 0.7215971413467954,
+          "max_area_ratio": 3.316681010740433,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Left",
+          "min_area_ratio": 0.5391220898651643,
+          "max_area_ratio": 1.755917134538068,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Right",
+          "min_area_ratio": 0.7209088516328032,
+          "max_area_ratio": 3.322633897227395,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Left",
+          "min_area_ratio": 0.537900301227394,
+          "max_area_ratio": 1.7575418665374318,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Right",
+          "min_area_ratio": 0.7202066185958542,
+          "max_area_ratio": 3.328758322279019,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Left",
+          "min_area_ratio": 0.5366358750022487,
+          "max_area_ratio": 1.7592259947409743,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Right",
+          "min_area_ratio": 0.7194925715829442,
+          "max_area_ratio": 3.3350584603799445,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Left",
+          "min_area_ratio": 0.5353477520275911,
+          "max_area_ratio": 1.7609389093605836,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Right",
+          "min_area_ratio": 0.7187721349575592,
+          "max_area_ratio": 3.3413525893206835,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340449569174615,
+          "max_area_ratio": 1.7626600340992802,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        }
+      ],
+      "extreme_samples": 0
+    },
+    {
+      "clip": "armed_dual_run",
+      "samples": [
+        {
+          "phase": 0.0,
+          "side": "Right",
+          "min_area_ratio": 0.7187655572780978,
+          "max_area_ratio": 3.3413778384454864,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340489045689817,
+          "max_area_ratio": 1.7626684158781099,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Right",
+          "min_area_ratio": 0.7180477506089308,
+          "max_area_ratio": 3.347666110857965,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Left",
+          "min_area_ratio": 0.5327408096703647,
+          "max_area_ratio": 1.764408440802802,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Right",
+          "min_area_ratio": 0.717332147218495,
+          "max_area_ratio": 3.3539319246800297,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Left",
+          "min_area_ratio": 0.5314624575065299,
+          "max_area_ratio": 1.7661285670148124,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Right",
+          "min_area_ratio": 0.7166349637746007,
+          "max_area_ratio": 3.3600943164055197,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Left",
+          "min_area_ratio": 0.5301993342501424,
+          "max_area_ratio": 1.7678028231649474,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Right",
+          "min_area_ratio": 0.7159494795038236,
+          "max_area_ratio": 3.3660353675420995,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Left",
+          "min_area_ratio": 0.5289687969566251,
+          "max_area_ratio": 1.7694173424008046,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Right",
+          "min_area_ratio": 0.7152873730259077,
+          "max_area_ratio": 3.3717251879098558,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Left",
+          "min_area_ratio": 0.5277898993799152,
+          "max_area_ratio": 1.7709831997012804,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Right",
+          "min_area_ratio": 0.7146658027268935,
+          "max_area_ratio": 3.377150346937594,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Left",
+          "min_area_ratio": 0.5266687768002346,
+          "max_area_ratio": 1.7724599688582063,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Right",
+          "min_area_ratio": 0.7140995809812156,
+          "max_area_ratio": 3.38223357417586,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Left",
+          "min_area_ratio": 0.525626672970107,
+          "max_area_ratio": 1.7738378998458686,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Right",
+          "min_area_ratio": 0.7135547023791181,
+          "max_area_ratio": 3.3869059031995103,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Left",
+          "min_area_ratio": 0.5246646277962985,
+          "max_area_ratio": 1.7751095659379355,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Right",
+          "min_area_ratio": 0.7130645287574405,
+          "max_area_ratio": 3.3911492507748635,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Left",
+          "min_area_ratio": 0.523786079836485,
+          "max_area_ratio": 1.776284384131797,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Right",
+          "min_area_ratio": 0.7126347850656317,
+          "max_area_ratio": 3.3949282103322616,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Left",
+          "min_area_ratio": 0.5230065293961611,
+          "max_area_ratio": 1.7772862684437831,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Right",
+          "min_area_ratio": 0.7122741661904853,
+          "max_area_ratio": 3.3981330437247297,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Left",
+          "min_area_ratio": 0.5223403908146588,
+          "max_area_ratio": 1.778190244481426,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Right",
+          "min_area_ratio": 0.7119648523607457,
+          "max_area_ratio": 3.4008618928950636,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Left",
+          "min_area_ratio": 0.5217843655480585,
+          "max_area_ratio": 1.7789014144405495,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Right",
+          "min_area_ratio": 0.7117203029754648,
+          "max_area_ratio": 3.4029298331819646,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Left",
+          "min_area_ratio": 0.5213440574774737,
+          "max_area_ratio": 1.7794909031710204,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Right",
+          "min_area_ratio": 0.711540447552088,
+          "max_area_ratio": 3.4045078341581516,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Left",
+          "min_area_ratio": 0.5210238258077406,
+          "max_area_ratio": 1.779907550430184,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Right",
+          "min_area_ratio": 0.7114331454117779,
+          "max_area_ratio": 3.405400675497811,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Left",
+          "min_area_ratio": 0.5208374705682592,
+          "max_area_ratio": 1.7801569671187327,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Right",
+          "min_area_ratio": 0.7113918975069374,
+          "max_area_ratio": 3.405759981951524,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Left",
+          "min_area_ratio": 0.5207735992096892,
+          "max_area_ratio": 1.7802464285937518,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Right",
+          "min_area_ratio": 0.7114334406617074,
+          "max_area_ratio": 3.405459453621428,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Left",
+          "min_area_ratio": 0.5208368544330876,
+          "max_area_ratio": 1.780165790719866,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Right",
+          "min_area_ratio": 0.711542171939883,
+          "max_area_ratio": 3.4045010968098355,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Left",
+          "min_area_ratio": 0.5210255799914654,
+          "max_area_ratio": 1.7799069545078412,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Right",
+          "min_area_ratio": 0.7117233260100795,
+          "max_area_ratio": 3.4029787486075613,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Left",
+          "min_area_ratio": 0.5213426471966245,
+          "max_area_ratio": 1.779487958688577,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Right",
+          "min_area_ratio": 0.7119665291433902,
+          "max_area_ratio": 3.4008186084602916,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Left",
+          "min_area_ratio": 0.521786887888902,
+          "max_area_ratio": 1.7789179662608643,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Right",
+          "min_area_ratio": 0.7122771514222531,
+          "max_area_ratio": 3.398110431798817,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Left",
+          "min_area_ratio": 0.5223366579688301,
+          "max_area_ratio": 1.778167176492145,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Right",
+          "min_area_ratio": 0.7126388525267513,
+          "max_area_ratio": 3.3949029604391345,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Left",
+          "min_area_ratio": 0.5230112438403278,
+          "max_area_ratio": 1.7772959313783119,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Right",
+          "min_area_ratio": 0.7130699226061885,
+          "max_area_ratio": 3.3911348687779315,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Left",
+          "min_area_ratio": 0.5237848506247502,
+          "max_area_ratio": 1.7762713416813165,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Right",
+          "min_area_ratio": 0.7135482662937406,
+          "max_area_ratio": 3.386871878126737,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Left",
+          "min_area_ratio": 0.5246597346501026,
+          "max_area_ratio": 1.7751114630224871,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Right",
+          "min_area_ratio": 0.7140894791987774,
+          "max_area_ratio": 3.382208954509878,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Left",
+          "min_area_ratio": 0.5256237053662369,
+          "max_area_ratio": 1.7738301851474514,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Right",
+          "min_area_ratio": 0.7146709086885824,
+          "max_area_ratio": 3.3771530103683736,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Left",
+          "min_area_ratio": 0.5266685299898768,
+          "max_area_ratio": 1.7724540107468099,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Right",
+          "min_area_ratio": 0.7152907053331471,
+          "max_area_ratio": 3.3717381819240666,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Left",
+          "min_area_ratio": 0.5277924969214919,
+          "max_area_ratio": 1.7709739081539797,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Right",
+          "min_area_ratio": 0.7159398733323057,
+          "max_area_ratio": 3.365993308656306,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Left",
+          "min_area_ratio": 0.5289741762688318,
+          "max_area_ratio": 1.7694237693354902,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Right",
+          "min_area_ratio": 0.7166345160870681,
+          "max_area_ratio": 3.360031305532876,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Left",
+          "min_area_ratio": 0.5301957869810116,
+          "max_area_ratio": 1.7677973903450976,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Right",
+          "min_area_ratio": 0.7173270760024342,
+          "max_area_ratio": 3.353927074858011,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Left",
+          "min_area_ratio": 0.531463206544877,
+          "max_area_ratio": 1.7661062439917172,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Right",
+          "min_area_ratio": 0.7180405801085055,
+          "max_area_ratio": 3.347653355737393,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Left",
+          "min_area_ratio": 0.5327457658409279,
+          "max_area_ratio": 1.7644048897023643,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Right",
+          "min_area_ratio": 0.7187678274449592,
+          "max_area_ratio": 3.3413534171824315,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Left",
+          "min_area_ratio": 0.5340479499854027,
+          "max_area_ratio": 1.7626839560970007,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Right",
+          "min_area_ratio": 0.7194842248294018,
+          "max_area_ratio": 3.3350068654812786,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Left",
+          "min_area_ratio": 0.5353538146317164,
+          "max_area_ratio": 1.7609407163840132,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Right",
+          "min_area_ratio": 0.7202070541375665,
+          "max_area_ratio": 3.3287647462773924,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Left",
+          "min_area_ratio": 0.5366370899167515,
+          "max_area_ratio": 1.7592341523699968,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Right",
+          "min_area_ratio": 0.7209124231554618,
+          "max_area_ratio": 3.3226396019031754,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Left",
+          "min_area_ratio": 0.5379002106060771,
+          "max_area_ratio": 1.7575338131808853,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Right",
+          "min_area_ratio": 0.7216032440383663,
+          "max_area_ratio": 3.316678659282354,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Left",
+          "min_area_ratio": 0.5391225344100105,
+          "max_area_ratio": 1.7558893737772892,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Right",
+          "min_area_ratio": 0.7222459843432106,
+          "max_area_ratio": 3.310933797802785,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Left",
+          "min_area_ratio": 0.5403020639588212,
+          "max_area_ratio": 1.7543208512133377,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Right",
+          "min_area_ratio": 0.7228762535698574,
+          "max_area_ratio": 3.3055124998124334,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Left",
+          "min_area_ratio": 0.5414142078475633,
+          "max_area_ratio": 1.7528281748348948,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Right",
+          "min_area_ratio": 0.7234528132871616,
+          "max_area_ratio": 3.300382060471934,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Left",
+          "min_area_ratio": 0.542458062592615,
+          "max_area_ratio": 1.7514207800091957,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Right",
+          "min_area_ratio": 0.7239930033973476,
+          "max_area_ratio": 3.2956952438455613,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Left",
+          "min_area_ratio": 0.5434260459612642,
+          "max_area_ratio": 1.7501396080163836,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Right",
+          "min_area_ratio": 0.7244833188780218,
+          "max_area_ratio": 3.2914308824461265,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Left",
+          "min_area_ratio": 0.5442981387194512,
+          "max_area_ratio": 1.748965782987667,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Right",
+          "min_area_ratio": 0.7249062534347954,
+          "max_area_ratio": 3.2876831417914376,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Left",
+          "min_area_ratio": 0.5450679952030577,
+          "max_area_ratio": 1.7479275099878517,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Right",
+          "min_area_ratio": 0.7252923690894145,
+          "max_area_ratio": 3.2843836689720174,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Left",
+          "min_area_ratio": 0.5457392021878175,
+          "max_area_ratio": 1.7470149581368533,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Right",
+          "min_area_ratio": 0.7256003193724533,
+          "max_area_ratio": 3.2816848707429034,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Left",
+          "min_area_ratio": 0.5462986797354542,
+          "max_area_ratio": 1.7462734851418131,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Right",
+          "min_area_ratio": 0.7258341348782158,
+          "max_area_ratio": 3.2795555809430654,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Left",
+          "min_area_ratio": 0.5467360182642237,
+          "max_area_ratio": 1.7456991105854807,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Right",
+          "min_area_ratio": 0.726012962614717,
+          "max_area_ratio": 3.277974011884728,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Left",
+          "min_area_ratio": 0.547046164356539,
+          "max_area_ratio": 1.7452475623421975,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Right",
+          "min_area_ratio": 0.72612689921663,
+          "max_area_ratio": 3.277065749858225,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Left",
+          "min_area_ratio": 0.5472391066123066,
+          "max_area_ratio": 1.745002741961715,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Right",
+          "min_area_ratio": 0.7261599510009544,
+          "max_area_ratio": 3.2767446381188425,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Left",
+          "min_area_ratio": 0.5473035521674365,
+          "max_area_ratio": 1.7449223172561272,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Right",
+          "min_area_ratio": 0.7261236951615109,
+          "max_area_ratio": 3.277048852759696,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Left",
+          "min_area_ratio": 0.5472451618114159,
+          "max_area_ratio": 1.7450004949366418,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Right",
+          "min_area_ratio": 0.7260206740268049,
+          "max_area_ratio": 3.278021566000159,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Left",
+          "min_area_ratio": 0.547051854131969,
+          "max_area_ratio": 1.7452697121229879,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Right",
+          "min_area_ratio": 0.7258432867421793,
+          "max_area_ratio": 3.279558534787188,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Left",
+          "min_area_ratio": 0.5467341088195905,
+          "max_area_ratio": 1.745697266203572,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Right",
+          "min_area_ratio": 0.7255956080800068,
+          "max_area_ratio": 3.281681378009571,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Left",
+          "min_area_ratio": 0.5462976517516521,
+          "max_area_ratio": 1.746285053915898,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Right",
+          "min_area_ratio": 0.7252837848317942,
+          "max_area_ratio": 3.284413169632881,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Left",
+          "min_area_ratio": 0.5457412639789662,
+          "max_area_ratio": 1.7470302477683899,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Right",
+          "min_area_ratio": 0.7249159871946483,
+          "max_area_ratio": 3.2877014103083995,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Left",
+          "min_area_ratio": 0.5450724983389881,
+          "max_area_ratio": 1.7479366455021623,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Right",
+          "min_area_ratio": 0.7244812765093991,
+          "max_area_ratio": 3.2914167401667895,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Left",
+          "min_area_ratio": 0.5442958531678344,
+          "max_area_ratio": 1.7489643579600824,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Right",
+          "min_area_ratio": 0.7239960327337734,
+          "max_area_ratio": 3.2957209920239445,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Left",
+          "min_area_ratio": 0.5434232316214866,
+          "max_area_ratio": 1.7501247065377965,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Right",
+          "min_area_ratio": 0.7234549215859162,
+          "max_area_ratio": 3.30039711597918,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Left",
+          "min_area_ratio": 0.542461855416146,
+          "max_area_ratio": 1.7514309000363966,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Right",
+          "min_area_ratio": 0.7228705898279746,
+          "max_area_ratio": 3.3054984349518883,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Left",
+          "min_area_ratio": 0.5414144967038601,
+          "max_area_ratio": 1.7528384388444396,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Right",
+          "min_area_ratio": 0.7222502558854265,
+          "max_area_ratio": 3.3109344378327203,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Left",
+          "min_area_ratio": 0.5403032819068934,
+          "max_area_ratio": 1.7543243401285287,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Right",
+          "min_area_ratio": 0.7215901501985896,
+          "max_area_ratio": 3.316648308095447,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Left",
+          "min_area_ratio": 0.5391258157424086,
+          "max_area_ratio": 1.7559223136373683,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Right",
+          "min_area_ratio": 0.7209150155375507,
+          "max_area_ratio": 3.322644321435887,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Left",
+          "min_area_ratio": 0.5378998481206568,
+          "max_area_ratio": 1.7575303372326294,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Right",
+          "min_area_ratio": 0.7202043381642157,
+          "max_area_ratio": 3.328772050135902,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Left",
+          "min_area_ratio": 0.5366329455709212,
+          "max_area_ratio": 1.7592292993101162,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Right",
+          "min_area_ratio": 0.7194892222288983,
+          "max_area_ratio": 3.3350524989587838,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Left",
+          "min_area_ratio": 0.5353463293164266,
+          "max_area_ratio": 1.760940051504934,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Right",
+          "min_area_ratio": 0.7187644861301792,
+          "max_area_ratio": 3.3413209265692565,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1440,
+            1489,
+            1422
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Left",
+          "min_area_ratio": 0.5340396172730223,
+          "max_area_ratio": 1.7626711944503695,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            552,
+            548
+          ]
+        }
+      ],
+      "extreme_samples": 0
+    },
+    {
+      "clip": "reload_dual",
+      "samples": [
+        {
+          "phase": 0.0,
+          "side": "Right",
+          "min_area_ratio": 0.4950406820857809,
+          "max_area_ratio": 5.3434673003534074,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.0,
+          "side": "Left",
+          "min_area_ratio": 0.4882167743878603,
+          "max_area_ratio": 1.5945420789926108,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Right",
+          "min_area_ratio": 0.4958909153629809,
+          "max_area_ratio": 5.335848290079715,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.015625,
+          "side": "Left",
+          "min_area_ratio": 0.4892758385814236,
+          "max_area_ratio": 1.5957375045807687,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Right",
+          "min_area_ratio": 0.5022774439646438,
+          "max_area_ratio": 5.277501824105582,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.03125,
+          "side": "Left",
+          "min_area_ratio": 0.496212140596135,
+          "max_area_ratio": 1.601944197890965,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Right",
+          "min_area_ratio": 0.5090134299943483,
+          "max_area_ratio": 5.21340058956866,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.046875,
+          "side": "Left",
+          "min_area_ratio": 0.5000396813144237,
+          "max_area_ratio": 1.6501673587264474,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Right",
+          "min_area_ratio": 0.5069573839676498,
+          "max_area_ratio": 5.2323693043935435,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.0625,
+          "side": "Left",
+          "min_area_ratio": 0.49471420738411837,
+          "max_area_ratio": 1.626593411085198,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Right",
+          "min_area_ratio": 0.5056630853626796,
+          "max_area_ratio": 5.2409556600855165,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.078125,
+          "side": "Left",
+          "min_area_ratio": 0.4827589008343577,
+          "max_area_ratio": 1.6074172958342194,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Right",
+          "min_area_ratio": 0.5141142834963075,
+          "max_area_ratio": 5.1554720596063275,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.09375,
+          "side": "Left",
+          "min_area_ratio": 0.4728868809327622,
+          "max_area_ratio": 1.5982607313860673,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Right",
+          "min_area_ratio": 0.5182365186679646,
+          "max_area_ratio": 5.114952000651998,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.109375,
+          "side": "Left",
+          "min_area_ratio": 0.47624616108940493,
+          "max_area_ratio": 1.597486510674499,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Right",
+          "min_area_ratio": 0.5157775435736996,
+          "max_area_ratio": 5.140941410358428,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.125,
+          "side": "Left",
+          "min_area_ratio": 0.4901221494474857,
+          "max_area_ratio": 1.6039603693339677,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Right",
+          "min_area_ratio": 0.5096939635190867,
+          "max_area_ratio": 5.2038037990221175,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.140625,
+          "side": "Left",
+          "min_area_ratio": 0.4961779304136466,
+          "max_area_ratio": 1.6040782112252763,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Right",
+          "min_area_ratio": 0.5009561131871324,
+          "max_area_ratio": 5.293296910183952,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.15625,
+          "side": "Left",
+          "min_area_ratio": 0.49560148202306986,
+          "max_area_ratio": 1.6019494079057646,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Right",
+          "min_area_ratio": 0.49789942132072623,
+          "max_area_ratio": 5.325280277980966,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.171875,
+          "side": "Left",
+          "min_area_ratio": 0.4921666158124799,
+          "max_area_ratio": 1.5973077143280294,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Right",
+          "min_area_ratio": 0.49789122541731173,
+          "max_area_ratio": 5.3264081693719625,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.1875,
+          "side": "Left",
+          "min_area_ratio": 0.4941492812213251,
+          "max_area_ratio": 1.5905649884441309,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Right",
+          "min_area_ratio": 0.49368272681999154,
+          "max_area_ratio": 5.370187961442848,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.203125,
+          "side": "Left",
+          "min_area_ratio": 0.5053088422508493,
+          "max_area_ratio": 1.5891867530459844,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Right",
+          "min_area_ratio": 0.4896853785981069,
+          "max_area_ratio": 5.412829554665785,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.21875,
+          "side": "Left",
+          "min_area_ratio": 0.5146931171784161,
+          "max_area_ratio": 1.6334939929164762,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Right",
+          "min_area_ratio": 0.48777805744873876,
+          "max_area_ratio": 5.433539206326129,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.234375,
+          "side": "Left",
+          "min_area_ratio": 0.5158585787122373,
+          "max_area_ratio": 1.5917114786809634,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Right",
+          "min_area_ratio": 0.49190717757915076,
+          "max_area_ratio": 5.391435707616958,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.25,
+          "side": "Left",
+          "min_area_ratio": 0.5136814838977449,
+          "max_area_ratio": 1.5682797667195099,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Right",
+          "min_area_ratio": 0.5014247814959052,
+          "max_area_ratio": 5.293624900970024,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.265625,
+          "side": "Left",
+          "min_area_ratio": 0.5200860206198697,
+          "max_area_ratio": 1.543234420432796,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Right",
+          "min_area_ratio": 0.5049392759116643,
+          "max_area_ratio": 5.257497547710347,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.28125,
+          "side": "Left",
+          "min_area_ratio": 0.5339943731292287,
+          "max_area_ratio": 1.5333639793963665,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Right",
+          "min_area_ratio": 0.5096027908555665,
+          "max_area_ratio": 5.209298936395497,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.296875,
+          "side": "Left",
+          "min_area_ratio": 0.5427521289573726,
+          "max_area_ratio": 1.5375867365462705,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Right",
+          "min_area_ratio": 0.5172800873064864,
+          "max_area_ratio": 5.130925293676863,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.3125,
+          "side": "Left",
+          "min_area_ratio": 0.541277968754215,
+          "max_area_ratio": 1.5367817708378484,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Right",
+          "min_area_ratio": 0.5238877240123795,
+          "max_area_ratio": 5.064456798567129,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.328125,
+          "side": "Left",
+          "min_area_ratio": 0.5302808553489559,
+          "max_area_ratio": 1.527087371423926,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Right",
+          "min_area_ratio": 0.5325221023208998,
+          "max_area_ratio": 4.978213701332629,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.34375,
+          "side": "Left",
+          "min_area_ratio": 0.5169084840248861,
+          "max_area_ratio": 1.505246696896648,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Right",
+          "min_area_ratio": 0.5379841897075853,
+          "max_area_ratio": 4.924238867285838,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.359375,
+          "side": "Left",
+          "min_area_ratio": 0.5123953633584785,
+          "max_area_ratio": 1.4841890483084004,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Right",
+          "min_area_ratio": 0.5299732463564151,
+          "max_area_ratio": 5.003440351313787,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.375,
+          "side": "Left",
+          "min_area_ratio": 0.5320716147644662,
+          "max_area_ratio": 1.4989495023461343,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Right",
+          "min_area_ratio": 0.5225334068072778,
+          "max_area_ratio": 5.077687101940649,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.390625,
+          "side": "Left",
+          "min_area_ratio": 0.5485060037950408,
+          "max_area_ratio": 1.5129033986500087,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Right",
+          "min_area_ratio": 0.5136443767024422,
+          "max_area_ratio": 5.16757292113694,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.40625,
+          "side": "Left",
+          "min_area_ratio": 0.5507775938436957,
+          "max_area_ratio": 1.5143018994765314,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Right",
+          "min_area_ratio": 0.5075815610687658,
+          "max_area_ratio": 5.230138264027315,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.421875,
+          "side": "Left",
+          "min_area_ratio": 0.5443107450815631,
+          "max_area_ratio": 1.5094475472522348,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Right",
+          "min_area_ratio": 0.5077459505753935,
+          "max_area_ratio": 5.2287692110294826,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.4375,
+          "side": "Left",
+          "min_area_ratio": 0.5387757371893693,
+          "max_area_ratio": 1.5014897203840119,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Right",
+          "min_area_ratio": 0.5097923000333797,
+          "max_area_ratio": 5.208071467872226,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.453125,
+          "side": "Left",
+          "min_area_ratio": 0.5389846613651231,
+          "max_area_ratio": 1.5017036617902215,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Right",
+          "min_area_ratio": 0.5050234493792642,
+          "max_area_ratio": 5.256684981224177,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.46875,
+          "side": "Left",
+          "min_area_ratio": 0.5407817197967859,
+          "max_area_ratio": 1.526784831412412,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Right",
+          "min_area_ratio": 0.4993193275621038,
+          "max_area_ratio": 5.315208429243624,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.484375,
+          "side": "Left",
+          "min_area_ratio": 0.5387566793493224,
+          "max_area_ratio": 1.54058266898636,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Right",
+          "min_area_ratio": 0.4985752206700537,
+          "max_area_ratio": 5.3226433173172625,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.5,
+          "side": "Left",
+          "min_area_ratio": 0.5303920932935565,
+          "max_area_ratio": 1.5343663299421546,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Right",
+          "min_area_ratio": 0.5023421143150066,
+          "max_area_ratio": 5.283054528795039,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.515625,
+          "side": "Left",
+          "min_area_ratio": 0.514414359766671,
+          "max_area_ratio": 1.5252641853507816,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Right",
+          "min_area_ratio": 0.5068029695271226,
+          "max_area_ratio": 5.236251744586427,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.53125,
+          "side": "Left",
+          "min_area_ratio": 0.50521836907242,
+          "max_area_ratio": 1.5185930843542823,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Right",
+          "min_area_ratio": 0.5047482083904815,
+          "max_area_ratio": 5.254956814670075,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.546875,
+          "side": "Left",
+          "min_area_ratio": 0.5121486836783127,
+          "max_area_ratio": 1.5274028390106424,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Right",
+          "min_area_ratio": 0.49890888555214813,
+          "max_area_ratio": 5.312292599979023,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.5625,
+          "side": "Left",
+          "min_area_ratio": 0.5184512332470114,
+          "max_area_ratio": 1.5457185557178632,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Right",
+          "min_area_ratio": 0.49643618746467777,
+          "max_area_ratio": 5.3356089774452595,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.578125,
+          "side": "Left",
+          "min_area_ratio": 0.5052450877317979,
+          "max_area_ratio": 1.5547413255232787,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Right",
+          "min_area_ratio": 0.494782430236914,
+          "max_area_ratio": 5.350037105429549,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.59375,
+          "side": "Left",
+          "min_area_ratio": 0.49107307273172945,
+          "max_area_ratio": 1.5451547211017735,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Right",
+          "min_area_ratio": 0.4969979181515165,
+          "max_area_ratio": 5.326226315963945,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.609375,
+          "side": "Left",
+          "min_area_ratio": 0.4788319138475775,
+          "max_area_ratio": 1.533724050055449,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Right",
+          "min_area_ratio": 0.4978527536311189,
+          "max_area_ratio": 5.316223476933498,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.625,
+          "side": "Left",
+          "min_area_ratio": 0.4786480039820848,
+          "max_area_ratio": 1.5337901507491658,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Right",
+          "min_area_ratio": 0.49072032351774564,
+          "max_area_ratio": 5.386966148673862,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.640625,
+          "side": "Left",
+          "min_area_ratio": 0.4968756359313337,
+          "max_area_ratio": 1.5595881969212064,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Right",
+          "min_area_ratio": 0.4856095827536389,
+          "max_area_ratio": 5.4375004386852925,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.65625,
+          "side": "Left",
+          "min_area_ratio": 0.4982970181138086,
+          "max_area_ratio": 1.5739250254782067,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Right",
+          "min_area_ratio": 0.48626674914110757,
+          "max_area_ratio": 5.429192410035096,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.671875,
+          "side": "Left",
+          "min_area_ratio": 0.4836246871045552,
+          "max_area_ratio": 1.5775869482173464,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Right",
+          "min_area_ratio": 0.49372009053563765,
+          "max_area_ratio": 5.351681509513706,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.6875,
+          "side": "Left",
+          "min_area_ratio": 0.46571358534486856,
+          "max_area_ratio": 1.553114541112534,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Right",
+          "min_area_ratio": 0.49897240138326676,
+          "max_area_ratio": 5.297257564577242,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.703125,
+          "side": "Left",
+          "min_area_ratio": 0.456426569843091,
+          "max_area_ratio": 1.5316996473257456,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Right",
+          "min_area_ratio": 0.49141032342811025,
+          "max_area_ratio": 5.373267333812579,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.71875,
+          "side": "Left",
+          "min_area_ratio": 0.472815981004874,
+          "max_area_ratio": 1.5459264898047453,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Right",
+          "min_area_ratio": 0.4811183108986683,
+          "max_area_ratio": 5.478381205061809,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.734375,
+          "side": "Left",
+          "min_area_ratio": 0.4959051646112201,
+          "max_area_ratio": 1.573509441067072,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Right",
+          "min_area_ratio": 0.47644187270243166,
+          "max_area_ratio": 5.526232405096804,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.75,
+          "side": "Left",
+          "min_area_ratio": 0.5001355711713787,
+          "max_area_ratio": 1.5723099195261145,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Right",
+          "min_area_ratio": 0.47399347944484604,
+          "max_area_ratio": 5.551736559551901,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.765625,
+          "side": "Left",
+          "min_area_ratio": 0.49067766361920917,
+          "max_area_ratio": 1.5738113618613434,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Right",
+          "min_area_ratio": 0.475136710755169,
+          "max_area_ratio": 5.539997959655842,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.78125,
+          "side": "Left",
+          "min_area_ratio": 0.48472904556716284,
+          "max_area_ratio": 1.5685135844211426,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Right",
+          "min_area_ratio": 0.4747885187334187,
+          "max_area_ratio": 5.5420559983228905,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.796875,
+          "side": "Left",
+          "min_area_ratio": 0.48917298875216564,
+          "max_area_ratio": 1.5661057859359253,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Right",
+          "min_area_ratio": 0.4698284663901434,
+          "max_area_ratio": 5.592219749931259,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.8125,
+          "side": "Left",
+          "min_area_ratio": 0.5055054722241158,
+          "max_area_ratio": 1.572783284325662,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Right",
+          "min_area_ratio": 0.46718747955284257,
+          "max_area_ratio": 5.618699037925045,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.828125,
+          "side": "Left",
+          "min_area_ratio": 0.5095712073323133,
+          "max_area_ratio": 1.577064600865104,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Right",
+          "min_area_ratio": 0.4680364730386079,
+          "max_area_ratio": 5.608468225112729,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.84375,
+          "side": "Left",
+          "min_area_ratio": 0.5016788323455579,
+          "max_area_ratio": 1.577563561435559,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Right",
+          "min_area_ratio": 0.47321560886266384,
+          "max_area_ratio": 5.555578358757847,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.859375,
+          "side": "Left",
+          "min_area_ratio": 0.4842337511279575,
+          "max_area_ratio": 1.578148829780671,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Right",
+          "min_area_ratio": 0.4797273440020637,
+          "max_area_ratio": 5.489867765802815,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.875,
+          "side": "Left",
+          "min_area_ratio": 0.4819374610361269,
+          "max_area_ratio": 1.5649651400096123,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Right",
+          "min_area_ratio": 0.4763802978474841,
+          "max_area_ratio": 5.522893353683516,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.890625,
+          "side": "Left",
+          "min_area_ratio": 0.49712321747770244,
+          "max_area_ratio": 1.5636341211288634,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Right",
+          "min_area_ratio": 0.4740542284382507,
+          "max_area_ratio": 5.547933941288471,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.90625,
+          "side": "Left",
+          "min_area_ratio": 0.514927332701527,
+          "max_area_ratio": 1.565073848709958,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Right",
+          "min_area_ratio": 0.47692838954564265,
+          "max_area_ratio": 5.521332137291337,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.921875,
+          "side": "Left",
+          "min_area_ratio": 0.5151929002549478,
+          "max_area_ratio": 1.5657492370163104,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Right",
+          "min_area_ratio": 0.48507294072631413,
+          "max_area_ratio": 5.43923443379075,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.9375,
+          "side": "Left",
+          "min_area_ratio": 0.5020301120387776,
+          "max_area_ratio": 1.5592190964410446,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Right",
+          "min_area_ratio": 0.49474484606564106,
+          "max_area_ratio": 5.341070167726389,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.953125,
+          "side": "Left",
+          "min_area_ratio": 0.4863627716167458,
+          "max_area_ratio": 1.5412097456542684,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Right",
+          "min_area_ratio": 0.5007698304551031,
+          "max_area_ratio": 5.28024702974614,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.96875,
+          "side": "Left",
+          "min_area_ratio": 0.480987159249527,
+          "max_area_ratio": 1.528634600962106,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Right",
+          "min_area_ratio": 0.4935637861777276,
+          "max_area_ratio": 5.356200045495623,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 0.984375,
+          "side": "Left",
+          "min_area_ratio": 0.49389995400018305,
+          "max_area_ratio": 1.5572567294354394,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Right",
+          "min_area_ratio": 0.4908787208882039,
+          "max_area_ratio": 5.386503722320785,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            1432,
+            1425,
+            3468
+          ]
+        },
+        {
+          "phase": 1.0,
+          "side": "Left",
+          "min_area_ratio": 0.49458745490609674,
+          "max_area_ratio": 1.5876562221827881,
+          "extreme_triangles": 0,
+          "worst_triangle_vertices": [
+            497,
+            538,
+            555
+          ]
+        }
+      ],
+      "extreme_samples": 0
+    }
+  ],
+  "scope": "65 phases per clip, area ratios against rest wrist triangles; does not prove normals, anatomical silhouette or self-intersection quality.",
+  "worst_rest_vertices": [
+    {
+      "side": "Right",
+      "vertex": 1440,
+      "hand_local_rest": [
+        -0.5898826122283936,
+        -1.3165717124938965,
+        -2.5902044773101807
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "RightHand": 0.7292928695678711,
+        "RightForeArm": 0.2707071602344513
+      }
+    },
+    {
+      "side": "Right",
+      "vertex": 1489,
+      "hand_local_rest": [
+        -1.3967021703720093,
+        -0.5375443696975708,
+        -2.505375862121582
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "RightHand": 0.8668454885482788,
+        "RightForeArm": 0.13315449655056
+      }
+    },
+    {
+      "side": "Right",
+      "vertex": 1422,
+      "hand_local_rest": [
+        -0.4178917407989502,
+        0.5592670440673828,
+        -2.635313034057617
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "RightHand": 0.9905593991279602,
+        "RightForeArm": 0.009440576657652855
+      }
+    },
+    {
+      "side": "Left",
+      "vertex": 497,
+      "hand_local_rest": [
+        2.4808201789855957,
+        -2.8858578205108643,
+        -1.8277626037597656
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "LeftForeArm": 0.6499749422073364,
+        "LeftHand": 0.3500250279903412
+      }
+    },
+    {
+      "side": "Left",
+      "vertex": 552,
+      "hand_local_rest": [
+        2.523519992828369,
+        -0.15162670612335205,
+        -1.8186604976654053
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "LeftHand": 0.9436578750610352,
+        "LeftForeArm": 0.05634210631251335
+      }
+    },
+    {
+      "side": "Left",
+      "vertex": 548,
+      "hand_local_rest": [
+        3.0419869422912598,
+        -0.27385997772216797,
+        -0.5184593200683594
+      ],
+      "morph_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "weights": {
+        "LeftHand": 0.9070090055465698,
+        "LeftForeArm": 0.09299099445343018
+      }
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 class_name Effects
 extends Node2D
+const MeasuredTrail = preload("res://scripts/player/measured_melee_trail.gd")
+const MeasuredHeavyKnifeTrail = preload("res://scripts/player/measured_heavy_knife_trail.gd")
+const MeasuredKnifeTrail = preload("res://scripts/player/measured_knife_trail.gd")
 ## Per-level visual effects hub: pooled particles, persistent decals
 ## (blood, glass, casings, scorch), muzzle flashes and score popups.
 ## Static helpers let any object spawn effects without holding a reference.
@@ -111,6 +114,12 @@ func _make_pool(pool_name: String, color: Color, amount: int, life: float, speed
 		p.damping_max = speed * 2.0
 		p.scale_amount_min = size * 0.6
 		p.scale_amount_max = size * 1.4
+		if pool_name == "blood":
+			# Scale authored droplets in world pixels, not the default 8px square.
+			p.texture = ArtLib.sprite("decal_blood")
+			var width := float(p.texture.get_width()) if p.texture else 8.0
+			p.scale_amount_min /= width
+			p.scale_amount_max /= width
 		p.color = color
 		p.gravity = Vector2.ZERO
 		p.z_index = 5
@@ -271,9 +280,24 @@ static func shards(pos: Vector2, dir: Vector2, color: Color, count := 10, glint 
 
 ## Melee slash trail: a bright crescent sweeping through the attack arc
 ## (or a thrust streak for knives).
-static func slash(pos: Vector2, angle: float, radius: float, arc: float, tint: Color, heavy := false, stab := false, side := 1.0) -> void:
+static func slash(pos: Vector2, angle: float, radius: float, arc: float, tint: Color, heavy := false, stab := false, side := 1.0, driver: CharacterVisual = null, weapon_id: StringName = &"") -> void:
 	var fx := get_fx()
 	if fx == null:
+		return
+	if MeasuredHeavyKnifeTrail.supports(driver, weapon_id):
+		var measured := MeasuredHeavyKnifeTrail.new()
+		fx.add_child(measured)
+		measured.configure(driver)
+		return
+	if MeasuredKnifeTrail.supports(driver, weapon_id):
+		var measured := MeasuredKnifeTrail.new()
+		fx.add_child(measured)
+		measured.configure(driver)
+		return
+	if MeasuredTrail.supports(driver, weapon_id):
+		var measured := MeasuredTrail.new()
+		fx.add_child(measured)
+		measured.configure(driver)
 		return
 	var s := SlashFX.new()
 	s.global_position = pos
@@ -284,6 +308,10 @@ static func slash(pos: Vector2, angle: float, radius: float, arc: float, tint: C
 	s.heavy = heavy
 	s.stab = stab
 	s.side = signf(side) if side != 0.0 else 1.0
+	s.driver = driver
+	if driver:
+		s.attack_serial = driver.attack_serial
+		s.driver_offset = pos - driver.global_position
 	fx.add_child(s)
 
 ## Melee connect: impact star, shock ring, spray and a slice mark.
@@ -350,6 +378,7 @@ static func popup(text: String, pos: Vector2, color := Color(1, 0.9, 0.3)) -> vo
 class DecalLayer extends Node2D:
 	const CHUNK := 96
 	var chunks: Array = []
+	var blood_chunks: Array = []
 	var _count := 0
 
 	func _current() -> DecalChunk:
@@ -363,15 +392,26 @@ class DecalLayer extends Node2D:
 				old.queue_free()
 		return chunks[-1]
 
+	func _blood_current() -> DecalChunk:
+		# Blood belongs to the level's history. Shell/scorch eviction must never
+		# erase it; completed batches draw once and retain their canvas commands.
+		if blood_chunks.is_empty() or (blood_chunks[-1] as DecalChunk).size() >= CHUNK:
+			var batch := DecalChunk.new()
+			add_child(batch)
+			blood_chunks.append(batch)
+		return blood_chunks[-1]
+
 	func add_splat(p: Vector2, r: float, c: Color) -> void:
-		var ch := _current()
+		var is_blood := c.r >= 0.12 or c.g >= 0.12
+		var ch := _blood_current() if is_blood else _current()
 		var rng := RandomNumberGenerator.new()
 		rng.seed = randi()
 		var blobs := []
 		for i in 3:
 			blobs.append([Vector2(rng.randf_range(-r, r), rng.randf_range(-r, r)), r * rng.randf_range(0.3, 0.6)])
 		ch.splats.append([p.round(), r, c, blobs])
-		_count += 1
+		if not is_blood:
+			_count += 1
 		ch.dirty()
 
 	func add_mark(p: Vector2, c: Color, s: float) -> void:
@@ -380,13 +420,20 @@ class DecalLayer extends Node2D:
 		_count += 1
 		ch.dirty()
 
+	func add_shell(p: Vector2, angle: float, shotgun: bool) -> void:
+		var ch := _current()
+		ch.shells.append([p, angle, shotgun])
+		_count += 1
+		ch.dirty()
+
 
 class DecalChunk extends Node2D:
 	var splats: Array = []
 	var marks: Array = []
+	var shells: Array = []
 	var _dirty := false
 	func size() -> int:
-		return splats.size() + marks.size()
+		return splats.size() + marks.size() + shells.size()
 	func dirty() -> void:
 		if not _dirty:
 			_dirty = true
@@ -419,6 +466,8 @@ class DecalChunk extends Node2D:
 		for m in marks:
 			var sz: float = m[2]
 			draw_rect(Rect2(m[0], Vector2(sz, sz)), m[1])
+		for shell in shells:
+			ShellLayer.draw_shell(self, shell[0], shell[1], shell[2])
 
 
 class MuzzleFlash extends Node2D:
@@ -558,13 +607,24 @@ class SlashFX extends Node2D:
 	var stab := false
 	var side := 1.0
 	var t := 0.0
+	var driver: CharacterVisual
+	var attack_serial := -1
+	var driver_offset := Vector2.ZERO
+	var attack_progress := -1.0
 	const LIFE := 0.16
 
 	func _ready() -> void:
 		z_index = 25
 
 	func _process(d: float) -> void:
-		t += d / maxf(Engine.time_scale, 0.05) * 0.6 + d * 0.4
+		if attack_serial >= 0:
+			if not is_instance_valid(driver) or driver.attack_serial != attack_serial or (driver._swing_t < 0.0 and driver._punch_t < 0.0):
+				queue_free()
+				return
+			attack_progress = driver._swing_t / driver._swing_dur if driver._swing_t >= 0.0 else driver._punch_t / CharacterVisual.PUNCH_DURATION
+			global_position = driver.global_position + driver_offset
+		else:
+			t += d / maxf(Engine.time_scale, 0.05) * 0.6 + d * 0.4
 		if t >= LIFE:
 			queue_free()
 		queue_redraw()
@@ -573,6 +633,12 @@ class SlashFX extends Node2D:
 		var k := clampf(t / LIFE, 0.0, 1.0)
 		var reveal := clampf(k / 0.35, 0.0, 1.0)
 		var fade := 1.0 - clampf((k - 0.3) / 0.7, 0.0, 1.0)
+		if attack_serial >= 0:
+			if attack_progress < 0.22:
+				return
+			k = clampf((attack_progress - 0.22) / 0.78, 0.0, 1.0)
+			reveal = clampf((attack_progress - 0.22) / 0.40, 0.0, 1.0)
+			fade = 1.0 - clampf((attack_progress - 0.62) / 0.38, 0.0, 1.0)
 		if stab:
 			var L := radius * (0.6 + 0.6 * reveal)
 			var w := 3.0 * fade
@@ -652,6 +718,13 @@ class ImpactFX extends Node2D:
 ## per shell). Landed shells become floor decals; the list is capped.
 class ShellLayer extends Node2D:
 	const MAX := 48
+	const BRASS = preload("res://assets/art/blender_reload/spent_brass.png")
+	const SHOTGUN = preload("res://assets/art/blender_reload/spent_shotgun.png")
+	static func draw_shell(canvas: CanvasItem, position: Vector2, angle: float, shotgun: bool) -> void:
+		var diameter := 6.0 if shotgun else 4.5
+		canvas.draw_set_transform(position, angle, Vector2.ONE)
+		canvas.draw_texture_rect(SHOTGUN if shotgun else BRASS, Rect2(-diameter / 2, -diameter / 2, diameter, diameter), false)
+		canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	var fx: Node
 	var items: Array = []   ## [pos, vel, height, vz, rot, spin, bounced, shotgun]
 	func eject(pos: Vector2, dir: Vector2, left: bool, shotgun: bool) -> void:
@@ -689,12 +762,8 @@ class ShellLayer extends Node2D:
 		queue_redraw()
 	func _land(it: Array) -> void:
 		if fx and is_instance_valid(fx):
-			fx.decals.add_mark(it[0], Color(0.95, 0.72, 0.28, 0.9) if not it[7] else Color(0.8, 0.12, 0.12, 0.9), 1.0)
+			fx.decals.add_shell(it[0], it[4], it[7])
 	func _draw() -> void:
 		for it in items:
 			var p: Vector2 = it[0] - Vector2(0, it[2])
-			var d := Vector2.from_angle(it[4])
-			var len := 1.6 if not it[7] else 2.2
-			var col := Color(1.0, 0.8, 0.35) if not it[7] else Color(0.85, 0.15, 0.12)
-			draw_line(p - d * len, p + d * len, Color(0.1, 0.06, 0.02, 0.8), 1.8)
-			draw_line(p - d * len, p + d * len, col, 1.0)
+			draw_shell(self, p, it[4], it[7])

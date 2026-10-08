@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "shoulder_weight_improvement_retained_posture_revision_pending",
+  "inspected_frames": [
+    1,
+    9,
+    21
+  ],
+  "inspected_angles": [
+    "positive_x_side",
+    "negative_x_side"
+  ],
+  "findings": [
+    "Hard shoulder-to-chest panel reduced in directly compared poses",
+    "Rigid sole weights preserved; 31-frame ground contact audit unchanged",
+    "Forty-millimetre lowered gait posture still too flexed for final approval"
+  ],
+  "next": "Refine leg-specific stance ranges while retaining shared world speed; reduce body lowering, inspect continuous playback and validate baked GLB/Godot animation"
+}

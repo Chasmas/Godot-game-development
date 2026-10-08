@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/welder_smoke_fitted_isolated/welder.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.0002966487792177056,
+    "Hips": 0.0,
+    "LeftArm": 0.00021046003430103848,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00012586706288639135,
+    "LeftHand": 4.5973958957267545e-05,
+    "Neck": 0.00024240064503591158,
+    "RightArm": 0.00021436377779688343,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.023401660221433376,
+    "RightHand": 0.017145419612057514
+  },
+  "loop_gap_m": {
+    "Head": 0.0003779558673526186,
+    "Hips": 0.0,
+    "LeftArm": 0.000268096625264138,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00016410829538793554,
+    "LeftHand": 5.389323386094673e-05,
+    "Neck": 0.00030883825000546146,
+    "RightArm": 0.0002731018975752527,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00015871663775750473,
+    "RightHand": 4.6704750298885994e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.13830971717833984,
+  "contact_hand_minus_head_m": [
+    -0.035001397132879974,
+    -0.03499543666839999
+  ]
+}

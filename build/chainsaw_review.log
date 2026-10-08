@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS Chainsaw registered as non-lethal thrown tool
+PASS Blender world art loads at correct density
+PASS Rare crate rate below 1.3%: 70/10000
+PASS No saw from chair
+PASS No saw from coffin
+PASS No saw from vase
+PASS No saw from box
+PASS No saw from drum
+PASS Every chainsaw kill severs a limb at full gore
+PASS Machete high severing probability: 164/200
+PASS Reduced gore suppresses severing
+PASS Cutting preserves two-hand hold instead of bat swing
+PASS Cutting only hits narrow forward contact
+PASS Releasing attack cancels pending saw contact
+PASS Corpse bleeding ends and processing sleeps
+CHAINSAW REVIEW: 0 failures

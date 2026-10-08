@@ -38,6 +38,7 @@ func stop() -> void:
 	active = false
 	if player:
 		player.stop()
+		player.stream = null
 		player.queue_free()
 	player = null
 	playback = null

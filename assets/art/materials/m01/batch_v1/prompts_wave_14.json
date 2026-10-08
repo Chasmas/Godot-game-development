@@ -1,0 +1,61 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "wall_lamp_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One 1980s motel wall sconce, aged brass rectangular fixture with warm cream ribbed glass shade, wall mounting plate and believable screws, restrained soft light within glass. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    },
+    {
+      "id": "hasty_checkout_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One coherent small motel guest departure clutter cluster: a half-open brown suitcase with a shirt hanging over its edge, one dropped slipper and a crumpled guest receipt, natural materials and practical scale. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    },
+    {
+      "id": "pool_party_ruin_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One coherent small abandoned motel pool party clutter cluster: a tipped red plastic cup, two empty glass bottles, one crumpled paper plate and a damp folded towel, understated disorder, no people. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    },
+    {
+      "id": "water_ring_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One delicate faded circular water stain decal from a drinking glass, irregular thin brown grey rim with tiny droplets and a faint uneven translucent interior, straight top down view. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    },
+    {
+      "id": "road_sand_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One restrained irregular scatter of pale beige sand grains and fine dust as a road ground decal, several sparse tiny pebbles, top down view, no underlying asphalt. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    },
+    {
+      "id": "road_stop_line_reference",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms individual visual source for later Blender reconstruction. One short worn white road stop line paint decal viewed straight from above, rectangular strip with chipped uneven edges and fine missing paint gaps, no road background. Entire subject visible with clear margins on genuinely transparent background, no floor, detached shadow, scene, UI, text overlay, watermark or collage. Orthographic elevated three-quarter view unless top down specified. Finely authored physically believable material detail, restrained premium indie 3D diorama finish, neutral soft studio lighting."
+    }
+  ],
+  "sources": [
+    {
+      "id": "wall_lamp_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-75835af0-32d6-48d4-82bc-21c6238ed6f0.png"
+    },
+    {
+      "id": "hasty_checkout_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-825ebda6-fde6-4062-b07c-bf068cca95b6.png"
+    },
+    {
+      "id": "pool_party_ruin_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-6e90724f-d3bb-487b-a84b-f42c8fcb1347.png"
+    },
+    {
+      "id": "water_ring_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-89ddd855-d40e-4b9c-bdd6-58e976cd0cff.png"
+    },
+    {
+      "id": "road_sand_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-f18897bc-1fda-4453-9286-3bafeec062f7.png"
+    },
+    {
+      "id": "road_stop_line_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-7460a5d3-87ec-409f-84b4-bcd83a72b821.png"
+    }
+  ]
+}

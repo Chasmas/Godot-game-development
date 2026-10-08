@@ -1,0 +1,14 @@
+{
+ "refine": "01a10bdb-ea37-7361-87dd-80bed193cf49",
+ "source": "image-to-3d",
+ "rig": "01a10bdf-00a1-7108-9420-998635ee26a2",
+ "anim_idle": "01a10bdf-6562-75ab-a1e1-0aec4a99d8d4",
+ "anim_walk": "01a10bdf-8cde-764b-92d8-d77a22245d06",
+ "anim_run": "01a10bdf-b436-70dc-8f24-273e5a89efb5",
+ "anim_aim": "01a10bdf-dc52-7034-9f3d-0cdc2c86bd89",
+ "anim_melee": "01a10be0-03d2-714e-ba24-1b0e7543388a",
+ "anim_punch": "01a10be0-2b42-7610-9f69-8cdfb7861aab",
+ "anim_death": "01a10be0-530b-75dd-80cc-5a00c42b7d33",
+ "anim_death_back": "01a10be0-7b6f-7449-9144-cde28c22c9df",
+ "anim_knocked": "01a10be0-a311-7340-9de9-0ce23548af63"
+}

@@ -1,0 +1,17 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "engine_compatible_authoring_source_retained_anatomy_review_pending",
+  "inspected_frames": [
+    1,
+    9,
+    21
+  ],
+  "camera": "positive_x_side",
+  "findings": [
+    "Authoring uses normalized four-weight linear skin and installed exporter influence threshold",
+    "Independent GLB reimport agrees over all31frames within0.333micrometres",
+    "Native source now exposes shoulder/chest deformation honestly; residual anatomical folds still require refinement"
+  ],
+  "next": "Refine native-source body deformation, measure ground contacts, import this exact GLB in isolated Godot preview; no gameplay replacement until remaining animation and anatomy requirements pass"
+}

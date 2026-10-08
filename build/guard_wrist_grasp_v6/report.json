@@ -1,0 +1,24 @@
+{
+  "approved": false,
+  "parts": [
+    {
+      "side": "Left",
+      "vertices": 906,
+      "boundary_edges": 37
+    },
+    {
+      "side": "Right",
+      "vertices": 894,
+      "boundary_edges": 35
+    }
+  ],
+  "skin_colour": [
+    0.847058892250061,
+    0.5882353186607361,
+    0.4784314036369324
+  ],
+  "source_skin_samples": 266,
+  "uv_transfer_samples": 3870,
+  "skin_material": "Material_0",
+  "remaining": "Visual validation, skin material matching, wrist join and contact validation."
+}

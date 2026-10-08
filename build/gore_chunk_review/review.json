@@ -1,0 +1,48 @@
+{
+  "status": "integrated",
+  "scope": "Three candidate textures inspected in actual Godot OpenGL on light/dark backgrounds at gameplay scale and enlarged. Integrated for chunk gibs only; full combat and wound cap quality remain pending.",
+  "items": [
+    {
+      "file": "chunk_0.png",
+      "sha256": "9283ea0cf56ccd0cd80680b6cb9b3147dad4f0b873127fff97139cb87832e181",
+      "dimensions": [
+        48,
+        48
+      ],
+      "alpha_bounds": [
+        7,
+        11,
+        42,
+        36
+      ]
+    },
+    {
+      "file": "chunk_1.png",
+      "sha256": "dc4a4ee91eb61010e221d47e6fca9d58c80f7b2f6f4f8c61059174545eaf6e79",
+      "dimensions": [
+        48,
+        48
+      ],
+      "alpha_bounds": [
+        8,
+        10,
+        41,
+        36
+      ]
+    },
+    {
+      "file": "chunk_2.png",
+      "sha256": "bb0db7785c65fa00149cd20aa6547b9d0b330cb10e0fb71e2aa9d740306469da",
+      "dimensions": [
+        48,
+        48
+      ],
+      "alpha_bounds": [
+        5,
+        10,
+        42,
+        37
+      ]
+    }
+  ]
+}

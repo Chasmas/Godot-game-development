@@ -1,0 +1,8 @@
+17:44:04 | INFO: Data are loaded, start creating Blender stuff
+17:44:04 | INFO: Blender create Mesh node 0
+17:44:04 | INFO: glTF import finished in 0.05s
+00:06.953  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\canine_review\source_review.png'
+Info: Saved as "source_review.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

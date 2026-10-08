@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2243 ms
+PASS dead player receives no delayed boss dialogue
+PASS superseded boss phase cannot open stale dialogue
+PASS valid living aftermath still starts authored dialogue
+PASS death after collection prevents delayed evidence dialogue
+DELAYED DIALOGUE LIFECYCLE REVIEW: 0 failures

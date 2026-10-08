@@ -1,0 +1,130 @@
+[
+  {
+    "angle_index": 0,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      7.0,
+      5.75
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      28,
+      23
+    ]
+  },
+  {
+    "angle_index": 1,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.75,
+      5.25
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      23,
+      21
+    ]
+  },
+  {
+    "angle_index": 2,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      7.5,
+      4.5
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      30,
+      18
+    ]
+  },
+  {
+    "angle_index": 3,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      8.0,
+      5.75
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      32,
+      23
+    ]
+  },
+  {
+    "angle_index": 4,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      7.0,
+      7.0
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      28,
+      28
+    ]
+  },
+  {
+    "angle_index": 5,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      5.75,
+      9.0
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      23,
+      36
+    ]
+  },
+  {
+    "angle_index": 6,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      7.5,
+      7.75
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      30,
+      31
+    ]
+  },
+  {
+    "angle_index": 7,
+    "approved": false,
+    "caps": 4,
+    "expected_caps": 4,
+    "game_size": [
+      8.0,
+      7.5
+    ],
+    "look": "cass",
+    "part": "arm",
+    "pixels": [
+      32,
+      30
+    ]
+  }
+]

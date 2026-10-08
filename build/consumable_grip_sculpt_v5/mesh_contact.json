@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "scope": "Static native evaluated full-body versus actual can meshes; bidirectional edge-triangle crossings. Coplanar contacts and animated state transitions remain unvalidated.",
+  "hand_triangles": 32342,
+  "can_triangles": 22244,
+  "bvh_candidate_pairs": 0,
+  "surface_crossing_pairs": 0,
+  "strong_hand_vertices_inside_cylinder": 0,
+  "crossings": []
+}

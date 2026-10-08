@@ -1,0 +1,194 @@
+{
+  "scope": "Current file hash matched to scoped smoke visual review, not general character approval",
+  "looks": [
+    {
+      "look": "bellhop",
+      "current_smoking_review": [
+        "build/bellhop_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "biker",
+      "current_smoking_review": [
+        "build/biker_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "boss",
+      "current_smoking_review": [
+        "build\\boss_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "buck",
+      "current_smoking_review": [
+        "build\\buck_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "burnt",
+      "current_smoking_review": [
+        "build\\burnt_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "civilian",
+      "current_smoking_review": [
+        "build\\civilian_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "cultist",
+      "current_smoking_review": [
+        "build/cultist_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "demon",
+      "current_smoking_review": [],
+      "needs_review": false,
+      "applicable": false,
+      "reason": "User rule: no human ambient activities for zombies or demons"
+    },
+    {
+      "look": "eldorado",
+      "current_smoking_review": [],
+      "needs_review": false,
+      "applicable": false,
+      "asset_kind": "vehicle",
+      "reason": "Eldorado is a car, not an NPC; excluded from character activity coverage"
+    },
+    {
+      "look": "fireman",
+      "current_smoking_review": [
+        "build\\fireman_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "ghoul",
+      "current_smoking_review": [],
+      "needs_review": false,
+      "applicable": false,
+      "reason": "Undead creature; human ambient activities disabled"
+    },
+    {
+      "look": "guard",
+      "current_smoking_review": [
+        "build\\guard_smoke_stable_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "gunner",
+      "current_smoking_review": [
+        "build/gunner_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "handler",
+      "current_smoking_review": [
+        "build/handler_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "heavy",
+      "current_smoking_review": [
+        "build\\heavy_smoke_smooth_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "hunter",
+      "current_smoking_review": [
+        "build/hunter_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "riot",
+      "current_smoking_review": [
+        "build/riot_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "scout",
+      "current_smoking_review": [
+        "build\\scout_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "scrapper",
+      "current_smoking_review": [
+        "build\\scrapper_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "security",
+      "current_smoking_review": [
+        "build/security_smoke_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "sniper",
+      "current_smoking_review": [
+        "build\\sniper_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "stagehand",
+      "current_smoking_review": [
+        "build/stagehand_smoke_head_fitted_isolated/integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "welder",
+      "current_smoking_review": [
+        "build\\welder_smoke_fitted_isolated\\integration_review.json"
+      ],
+      "needs_review": false,
+      "applicable": true
+    },
+    {
+      "look": "zombie",
+      "current_smoking_review": [],
+      "needs_review": false,
+      "applicable": false,
+      "reason": "User rule: no human ambient activities for zombies or demons"
+    }
+  ]
+}

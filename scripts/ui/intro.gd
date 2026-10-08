@@ -127,8 +127,8 @@ func _start_logo() -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	var secs := int(_t * 30.0)
-	osd.text = "PLAY ▶   SP   0:00:%02d:%02d" % [secs / 30, secs % 30]
+	var now := Time.get_time_dict_from_system()
+	osd.text = "PLAY ▶   SP   %02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
 	if _logo_t >= 0.0:
 		_logo_t += delta
 		var k := clampf(_logo_t / 0.18, 0.0, 1.0)

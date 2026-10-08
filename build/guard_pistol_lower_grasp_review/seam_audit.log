@@ -1,0 +1,7 @@
+07:19:14 | INFO: Data are loaded, start creating Blender stuff
+07:19:14 | INFO: Blender create Mesh node Mesh_0
+07:19:15 | INFO: glTF import finished in 0.45s
+[{'side': 'LeftHand', 'seam_edges': 37, 'boundary_edges': 0, 'non_manifold_edges': 0}, {'side': 'RightHand', 'seam_edges': 35, 'boundary_edges': 0, 'non_manifold_edges': 0}]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,2164 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: bellhop
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: bellhop
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: bellhop
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: bellhop
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: biker
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: biker
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: biker
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: biker
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: boss
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: boss
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: boss
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: boss
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: buck
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: buck
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: buck
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: buck
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: burnt
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: burnt
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: burnt
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: burnt
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cass
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cass
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cass
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cass
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: civilian
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: civilian
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: civilian
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: civilian
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cultist
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cultist
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cultist
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: cultist
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: demon
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: demon
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: demon
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: demon
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: fireman
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: fireman
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: fireman
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: fireman
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: ghoul
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: ghoul
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: ghoul
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: ghoul
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: guard
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: guard
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: guard
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: guard
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: gunner
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: gunner
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: gunner
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: gunner
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: handler
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: handler
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: handler
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: handler
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: heavy
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: heavy
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: heavy
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: heavy
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: hunter
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: hunter
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: hunter
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: hunter
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: riot
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: riot
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: riot
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: riot
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scout
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scout
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scout
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scout
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scrapper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scrapper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scrapper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: scrapper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: security
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: security
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: security
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: security
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: sniper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: sniper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: sniper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: sniper
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: stagehand
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: stagehand
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: stagehand
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: stagehand
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: welder
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: welder
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: welder
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: welder
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: zombie
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: zombie
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: zombie
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+WARNING: Loaded resource as image file, this will not work on export: 'res://build/wound_surface_candidates/wound_fibres.png'. Instead, import the image file as an Image resource and load it normally as a resource.
+   at: load_from_file (core/io/image.cpp:2780)
+   GDScript backtrace (most recent call first):
+       [0] attach (res://tools/wound_candidate_binding.gd:76)
+       [1] _ready (res://tools/final_body_binding_review.gd:17)
+Checked skin bindings: zombie
+WOUND BINDING REVIEW: 0 failures / 413 surfaces / 96 combinations; max seam gap=0.0

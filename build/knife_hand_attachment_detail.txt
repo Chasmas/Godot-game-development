@@ -1,0 +1,59 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2297 ms
+KNIFE REVIEW RENDERER: res://scripts/player/cast_model.gd
+KNIFE REVIEW LOOK: cass actor tint: (1.0, 1.0, 1.0, 1.0) visual tint: (1.0, 1.0, 1.0, 1.0)
+KNIFE REVIEW MATERIAL: char1 shading: 1 albedo: (1.0, 1.0, 1.0, 1.0) emission: false
+KNIFE REVIEW MATERIAL: char1 shading: 1 albedo: (1.0, 1.0, 1.0, 1.0) emission: false
+PASS atlas prewarmed before gameplay
+PASS repeated input preserves the pending strike and pose
+PASS cooldown preserves authored recovery
+PASS actual controller creates Blender trail
+GRIP DIFFERENCE frame= 0 phase= 0.0 recoil= 0.0 hand= (154.3107, 865.3212) weapon= (155.2676, 876.2185)
+PASS repeated input cannot truncate post-contact recovery
+FAIL weapon grip follows native hand throughout strike
+ERROR: weapon grip follows native hand throughout strike
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tools/knife_trail_runtime_review.gd:7)
+       [1] _ready (res://tools/knife_trail_runtime_review.gd:132)
+PASS native strike never adds a fallback arm overlay
+KNIFE GRIP AUDIT heading= 11.25 samples= 32 max_error_px= 10.9392070770264
+PASS post-contact recovery was exercised
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS repeated input preserves the pending strike and pose
+PASS cooldown preserves authored recovery
+PASS actual controller creates Blender trail
+PASS repeated input cannot truncate post-contact recovery
+PASS weapon grip follows native hand throughout strike
+PASS native strike never adds a fallback arm overlay
+KNIFE GRIP AUDIT heading= 101.25 samples= 34 max_error_px= 0.0
+PASS post-contact recovery was exercised
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS repeated input preserves the pending strike and pose
+PASS cooldown preserves authored recovery
+PASS actual controller creates Blender trail
+PASS repeated input cannot truncate post-contact recovery
+PASS weapon grip follows native hand throughout strike
+PASS native strike never adds a fallback arm overlay
+KNIFE GRIP AUDIT heading= 191.25 samples= 34 max_error_px= 0.0
+PASS post-contact recovery was exercised
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS repeated input preserves the pending strike and pose
+PASS cooldown preserves authored recovery
+PASS actual controller creates Blender trail
+PASS repeated input cannot truncate post-contact recovery
+PASS weapon grip follows native hand throughout strike
+PASS native strike never adds a fallback arm overlay
+KNIFE GRIP AUDIT heading= 281.25 samples= 31 max_error_px= 0.0
+PASS post-contact recovery was exercised
+PASS light knife strike reaches visible contact
+PASS actual strike cleans up on recovery
+PASS heavy knife does not borrow stab artwork
+PASS weapon swap cancels runtime trail
+PASS bat does not borrow knife artwork
+PASS roll cancels runtime trail
+RUNTIME BLENDER KNIFE: 1 failures

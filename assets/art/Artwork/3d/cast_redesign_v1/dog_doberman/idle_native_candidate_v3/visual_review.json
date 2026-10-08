@@ -1,0 +1,15 @@
+{
+  "runtime_approved": false,
+  "source_glb_sha256": "c96017e6448c321048842da6647034bd8e863c1cd1098198b54d183f82826982",
+  "captured_frames": 24,
+  "visually_inspected_frames": [
+    12
+  ],
+  "observation": "Side mid-breath pose has grounded feet, attached limbs and smooth shoulder illumination. Full cycle and opposite side remain pending.",
+  "remaining": [
+    "Opposite-side and full-cycle visual review",
+    "Numerical Godot idle deformation and endpoint validation",
+    "Shared corrected surface in start and stop clips",
+    "Production integration and gameplay validation"
+  ]
+}

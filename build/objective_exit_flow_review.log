@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2265 ms
+PASS m01_checkout exit obeys current objectives
+PASS m01_checkout completed objective state unlocks exit
+[level] prewarmed 21 looks in 488 ms
+PASS m02_dog_days exit obeys current objectives
+PASS m02_dog_days completed objective state unlocks exit
+[level] prewarmed 16 looks in 339 ms
+PASS m03_prime_time exit obeys current objectives
+PASS m03_prime_time completed objective state unlocks exit
+[level] prewarmed 14 looks in 603 ms
+PASS m04_sweet_dreams exit obeys current objectives
+PASS m04_sweet_dreams completed objective state unlocks exit
+OBJECTIVE EXIT FLOW REVIEW: 0 failures / 4 missions

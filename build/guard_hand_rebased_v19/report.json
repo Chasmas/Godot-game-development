@@ -1,0 +1,41 @@
+{
+  "approved": false,
+  "preserved_animations": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "punch_left",
+    "aim_dual",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "original_binary_prefix_preserved": true,
+  "skin_joint_order_preserved": true,
+  "materials_preserved": true,
+  "mesh_morph_names": {
+    "targetNames": [
+      "WeaponGrip"
+    ]
+  },
+  "sha256": "574715ffdaa5589a48d7d8ed0eb26bcde640d7a0e20de47aa799d72607ab93fc"
+}

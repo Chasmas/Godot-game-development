@@ -1,0 +1,63 @@
+{
+  "source_blend": "assets\\art\\prerendered\\m01_sunset_palms\\staging\\m01_interiors_transitions_staging.blend",
+  "blender_materials_applied": [
+    {
+      "material": "wallpaper stripes",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\guest_wallpaper_albedo.png",
+      "repeat_metres": 2.0
+    },
+    {
+      "material": "wallpaper warm",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\guest_wallpaper_albedo.png",
+      "repeat_metres": 2.0
+    },
+    {
+      "material": "motel carpet",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\corridor_carpet_albedo.png",
+      "repeat_metres": 2.4
+    },
+    {
+      "material": "teal guest carpet",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\corridor_carpet_albedo.png",
+      "repeat_metres": 2.4
+    },
+    {
+      "material": "lobby terrazzo check",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\reception_floor_albedo.png",
+      "repeat_metres": 2.4
+    },
+    {
+      "material": "floral bedspread",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\guest_bedspread_albedo.png",
+      "repeat_metres": 1.6
+    },
+    {
+      "material": "floral bedspread 2",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\guest_bedspread_albedo.png",
+      "repeat_metres": 1.6
+    },
+    {
+      "material": "veneer grain",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\furniture_walnut_albedo.png",
+      "repeat_metres": 1.2
+    },
+    {
+      "material": "white towel",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\towel_fabric_albedo.png",
+      "repeat_metres": 0.12
+    },
+    {
+      "material": "service wall tiles",
+      "source": "assets\\art\\materials\\m01\\batch_v1\\bathroom_wall_tiles_albedo.png",
+      "repeat_metres": 2.0
+    }
+  ],
+  "runtime_approved": false,
+  "collision_layout_changed": false,
+  "review_pending": [
+    "rendered scale",
+    "material seams",
+    "projection",
+    "gameplay integration"
+  ]
+}

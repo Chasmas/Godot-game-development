@@ -1,0 +1,51 @@
+{
+  "character": "guard",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\guard_turnaround.png",
+  "source_sha256": "a3b729c0f0b26ece5748da07883acf9c8b0dc0bd09d30099bf27868ea7896b63",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        475,
+        1024
+      ],
+      "width": 475,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\references\\front.png",
+      "sha256": "14dd5f899e8163729e5a0d5023d92ed91467371d3765bfba713b46bce601db6c"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        480,
+        0,
+        690,
+        1024
+      ],
+      "width": 210,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\references\\side.png",
+      "sha256": "499484ac984e79266455d8ae643895a7345209cf9749c7493f1afc73b1ee6fdc"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        695,
+        0,
+        1135,
+        1024
+      ],
+      "width": 440,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\references\\back.png",
+      "sha256": "31811e2927b3374eed7930c3a20dfe3f29666d30806b481debf564a8c538793f"
+    }
+  ],
+  "visual_review": "All three saved crops directly inspected: one complete figure per image, head/hands/feet preserved, no adjacent figure fragments. Approval covers API input only, not model or runtime quality."
+}

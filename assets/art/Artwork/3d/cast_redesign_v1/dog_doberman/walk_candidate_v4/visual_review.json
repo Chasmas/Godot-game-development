@@ -1,0 +1,37 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "balanced_posture_candidate_retained_for_export_validation",
+  "inspected_side_contact_sheet_frames": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29
+  ],
+  "inspected_full_size_frames": {
+    "positive_x_side": [
+      9
+    ],
+    "negative_x_side": [
+      9,
+      21
+    ]
+  },
+  "findings": [
+    "Body lowered28mm instead of40mm, restoring12mm height while preserving measured sole contacts",
+    "Hindleg stance fraction.52 and foreleg.65 share same world speed.307692m/s",
+    "Shoulder weight refinement retained; residual anatomical folds still require game-camera review"
+  ],
+  "next": "Import baked one-second clip into isolated Godot project, compare exported four-influence skin deformation and validate both-angle playback before any integration"
+}

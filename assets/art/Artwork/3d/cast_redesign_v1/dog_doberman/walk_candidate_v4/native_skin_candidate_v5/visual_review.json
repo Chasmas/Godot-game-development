@@ -1,0 +1,24 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "decision": "chest_weight_candidate_retained_for_full_cycle_and_export_validation",
+  "inspected_frames": [
+    1,
+    9,
+    21
+  ],
+  "inspected_angles": [
+    "positive_x_side",
+    "negative_x_side"
+  ],
+  "findings": [
+    "Chest fold reduced in directly compared stance poses; leg bending no longer pulls inner sternum as strongly",
+    "Sole weight change exactly zero; all31frame contact check retained",
+    "Geometry and clip timings preserved"
+  ],
+  "limitations": [
+    "Only3visual poses perangle; full continuous clip and reexport of refined weights not yet validated",
+    "No remaining canine attacks, jaw articulation, gameplay camera or full-game performance approval"
+  ],
+  "next": "Render whole refined clip, export with exact native four-weight threshold, independent roundtrip and isolated Godot optimizer-disabled import checks"
+}

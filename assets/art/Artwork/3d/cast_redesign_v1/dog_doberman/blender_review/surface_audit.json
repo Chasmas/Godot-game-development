@@ -1,0 +1,192 @@
+{
+  "scope": "Surface topology diagnostic on an analysis copy; no original GLB or character model modified.",
+  "interpretation": "Boundary loops may be intentional, including the base of an isolated bust. Topology counts do not approve anatomy, UV quality, animation or runtime integration.",
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\model.glb",
+  "runtime_approved": false,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "vertices_before": 70610,
+      "vertices_welded_for_analysis": 59866,
+      "boundary_components": [
+        {
+          "edges": 1,
+          "closed_loop": false,
+          "perimeter_source_units": 0.0084375636652112,
+          "center_blender": [
+            0.019967999309301376,
+            -0.6070889830589294,
+            0.2631630003452301
+          ],
+          "bounds": {
+            "lower": [
+              0.015980999916791916,
+              -0.6082469820976257,
+              0.26241400837898254
+            ],
+            "upper": [
+              0.023955000564455986,
+              -0.6059309840202332,
+              0.26391199231147766
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.011207517702132463,
+          "center_blender": [
+            -0.13283365964889526,
+            -0.5612973570823669,
+            -0.6984297037124634
+          ],
+          "bounds": {
+            "lower": [
+              -0.13343800604343414,
+              -0.5627580285072327,
+              -0.7016249895095825
+            ],
+            "upper": [
+              -0.1316780000925064,
+              -0.5590059757232666,
+              -0.6949260234832764
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.0114413988776505,
+          "center_blender": [
+            -0.22539466619491577,
+            0.6245720386505127,
+            -0.7010273337364197
+          ],
+          "bounds": {
+            "lower": [
+              -0.22912199795246124,
+              0.6221129894256592,
+              -0.7017300128936768
+            ],
+            "upper": [
+              -0.2206519991159439,
+              0.6268960237503052,
+              -0.7005199790000916
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.011712383944541216,
+          "center_blender": [
+            0.15690568089485168,
+            0.564723014831543,
+            -0.7017383575439453
+          ],
+          "bounds": {
+            "lower": [
+              0.15311799943447113,
+              0.5633280277252197,
+              -0.7044190168380737
+            ],
+            "upper": [
+              0.16031700372695923,
+              0.5671489834785461,
+              -0.6987059712409973
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.012659096624702215,
+          "center_blender": [
+            0.2259896695613861,
+            0.567212700843811,
+            -0.6997172832489014
+          ],
+          "bounds": {
+            "lower": [
+              0.22354599833488464,
+              0.5652269721031189,
+              -0.7020459771156311
+            ],
+            "upper": [
+              0.2279220074415207,
+              0.5710520148277283,
+              -0.6975209712982178
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.014940063003450632,
+          "center_blender": [
+            -0.19213366508483887,
+            -0.5643366575241089,
+            0.5842323303222656
+          ],
+          "bounds": {
+            "lower": [
+              -0.1959269940853119,
+              -0.5686460137367249,
+              0.5824019908905029
+            ],
+            "upper": [
+              -0.18870499730110168,
+              -0.5585619807243347,
+              0.5866010189056396
+            ]
+          }
+        },
+        {
+          "edges": 3,
+          "closed_loop": false,
+          "perimeter_source_units": 0.015807704534381628,
+          "center_blender": [
+            0.13018949329853058,
+            -0.559776246547699,
+            -0.6953974962234497
+          ],
+          "bounds": {
+            "lower": [
+              0.1276089996099472,
+              -0.561493992805481,
+              -0.6995530128479004
+            ],
+            "upper": [
+              0.13448099792003632,
+              -0.557328999042511,
+              -0.6913859844207764
+            ]
+          }
+        },
+        {
+          "edges": 2,
+          "closed_loop": false,
+          "perimeter_source_units": 0.01659111538901925,
+          "center_blender": [
+            -0.05910667032003403,
+            -0.5904719829559326,
+            0.2707173526287079
+          ],
+          "bounds": {
+            "lower": [
+              -0.06279700249433517,
+              -0.5932390093803406,
+              0.2663179934024811
+            ],
+            "upper": [
+              -0.05508299916982651,
+              -0.5889319777488708,
+              0.2744620144367218
+            ]
+          }
+        }
+      ],
+      "nonmanifold_edges_after_weld": 25
+    }
+  ]
+}

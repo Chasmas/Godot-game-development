@@ -1,0 +1,128 @@
+{
+  "note": "Base M01 visual source coverage derived from map inventory and requested material/detail/destruction pass. Authored decor is mapped separately. File presence is not quality approval or finished assets. Shared UI, dialogue portrait identity and FMV remain separate parts of full game goal, and may require additional source refinement.",
+  "domains": {
+    "areas": [
+      "reception_direction",
+      "guest_room_direction",
+      "laundry_direction",
+      "pool_direction",
+      "corridor_direction",
+      "entrance_direction",
+      "bathroom_direction",
+      "back_office_direction",
+      "service_alley_direction"
+    ],
+    "architecture": [
+      "exterior_stucco_albedo",
+      "guest_wallpaper_albedo",
+      "reception_wood_albedo",
+      "guest_door_reference",
+      "window_reference",
+      "wall_trim_reference",
+      "stair_reference",
+      "railing_reference",
+      "roof_tile_albedo"
+    ],
+    "materials": [
+      "bathroom_wall_tiles_albedo",
+      "guest_bedspread_albedo",
+      "corridor_carpet_albedo",
+      "asphalt_albedo",
+      "towel_fabric_albedo",
+      "painted_metal_albedo",
+      "rubber_albedo",
+      "furniture_walnut_albedo",
+      "pool_tiles_albedo",
+      "reception_floor_albedo"
+    ],
+    "actors": [
+      "cass_reference",
+      "earl_reference",
+      "dolores_reference",
+      "guard_reference",
+      "gunner_reference",
+      "hunter_reference",
+      "heavy_reference",
+      "scout_reference",
+      "riot_reference",
+      "harcourt_reference",
+      "dog_reference",
+      "rottweiler_reference",
+      "biker_reference",
+      "handler_reference"
+    ],
+    "furniture": [
+      "table_reference",
+      "counter_reference",
+      "bed_reference",
+      "pool_lounger_reference",
+      "washer_reference",
+      "desk_reference",
+      "red_car_reference",
+      "parked_sedan_reference",
+      "dumpster_reference",
+      "office_chair_reference"
+    ],
+    "interactive_props": [
+      "vending_reference",
+      "crt_reference",
+      "arcade_reference",
+      "ice_machine_reference",
+      "palm_planter_reference",
+      "fuse_box_reference",
+      "wall_lamp_reference",
+      "security_camera_reference",
+      "boiler_reference",
+      "propane_tank_reference",
+      "fire_extinguisher_reference"
+    ],
+    "weapons": [
+      "whisper_reference",
+      "revolver_reference",
+      "smg_reference",
+      "shotgun_reference",
+      "rifle_reference",
+      "knife_reference",
+      "bat_reference",
+      "pipe_reference",
+      "machete_reference",
+      "bottle_weapon_reference",
+      "brick_reference",
+      "hotshot_reference",
+      "chainsaw_reference"
+    ],
+    "collectibles": [
+      "collectible_vhs_reference",
+      "collectible_photo_reference",
+      "neon_checkpoint_reference"
+    ],
+    "damage": [
+      "damaged_crt_reference",
+      "damaged_vending_reference",
+      "damaged_arcade_reference",
+      "damaged_window_reference",
+      "damaged_door_reference",
+      "damaged_ice_machine_reference",
+      "breached_wall_reference",
+      "damaged_fuse_box_reference",
+      "broken_planter_reference",
+      "damaged_lamp_reference",
+      "burned_plant_reference",
+      "exploded_propane_reference"
+    ],
+    "effects": [
+      "glass_shards_reference",
+      "smoke_reference",
+      "steam_reference",
+      "electrical_sparks_reference",
+      "fire_reference",
+      "impact_dust_reference",
+      "water_splash_reference",
+      "blood_splatter_reference",
+      "water_surface_direction",
+      "rain_reference",
+      "muzzle_flash_reference",
+      "blood_spurt_reference"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "source_glb_sha256": "d082e598cba0bfa23390cacb3cc02a13168095941afbedcb45eb301bb100c06e",
+  "scope": "Same direct-GLTF idle compared with normal map disabled, clay, and generated texture mipmaps; isolated GPU capture only",
+  "observed_texture_mipmaps_before": {
+    "albedo_texture": false,
+    "normal_texture": false,
+    "roughness_texture": false,
+    "metallic_texture": false
+  },
+  "correction": "Generate mipmaps for each texture image; renormalize normal-map mip levels; use linear mipmap filtering",
+  "visual_review": {
+    "godot_no_normal/idle_012.png": "Fine surface noise remains without normal map",
+    "godot_clay/idle_000.png": "Smooth surface without texture noise",
+    "godot_clay/idle_012.png": "Breath deformation remains smooth without texture noise",
+    "godot_texture_mips/idle_012.png": "Fine surface noise resolved with texture mipmaps"
+  },
+  "remaining": [
+    "Godot endpoint and idle-walk transition checks",
+    "Shoulder anatomy refinement",
+    "Validate runtime texture handling before integration"
+  ]
+}

@@ -104,7 +104,7 @@ level = {
         "20,31": {"patrol": [[20, 31], [40, 33], [40, 26], [20, 26]]},
         "21,32": {"patrol": [[21, 32], [41, 34], [41, 27], [21, 27]]},
         "6,26": {"sleep": True, "facing": "right"},
-        "48,33": {"facing": "left"}, "58,33": {"facing": "left"}, "41,21": {"facing": "down"},
+        "48,33": {"facing": "left"}, "58,33": {"idle_action": "watch", "facing": "left"}, "41,21": {"idle_action": "watch", "facing": "down"},
         "16,12": {"facing": "down"}, "8,7": {"patrol": [[8, 7], [8, 12], [20, 12], [20, 7]]},
         "26,15": {"facing": "left"}, "12,2": {"facing": "right"},
         "40,11": {"facing": "down"}, "34,8": {"facing": "right"},
@@ -131,6 +131,7 @@ level = {
     ],
     "exit": [7, 45],
     "weather": {"preset": "desert_wind"},
+    "cameras": [{"cell": [1, 1], "angle": 45}, {"cell": [30, 20], "angle": 90}, {"cell": [47, 1], "angle": 130}],
     "decor": [
         {"type": "neon", "pos": [33, 45], "text": "YERMO SALVAGE & K-9", "color": "ffd23f", "size": 14},
         {"type": "neon", "pos": [10, 42], "text": "BEWARE OF DOG", "color": "ff3d7f", "size": 9},

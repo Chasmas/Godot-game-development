@@ -1,0 +1,16 @@
+{
+  "status": "rejected",
+  "approved_for_rigging": false,
+  "runtime_approved": false,
+  "inspected": [
+    "review/front.png",
+    "review/face_front.png",
+    "review/clay_review/front_clay.png"
+  ],
+  "findings": [
+    "Severe absent/fragmented facial surface and neck regions remain in neutral clay. This is geometry damage, not merely materials.",
+    "Voxel reconstruction reduced boundary count but did not preserve usable facial anatomy.",
+    "Nearest UV transfer also produces unsuitable visual appearance."
+  ],
+  "next_action": "Reconstruct continuous facial geometry from the preserved high source in a separate candidate and inspect neutral clay BEFORE any expensive UV transfer. Do not promote this candidate."
+}

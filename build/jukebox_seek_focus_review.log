@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS  real jukebox timer updates progress without emitting seek command
+PASS  player slider change still emits one seek command
+PASS  focused idle slider continues silent progress updates
+PASS  progress timer does not fight active drag
+PASS  progress resumes when drag ends
+PASS  held keyboard seek suppresses sync until release
+PASS  leaving jukebox returns to menu music
+JUKEBOX SEEK REVIEW: 0 failures

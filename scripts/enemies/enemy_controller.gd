@@ -36,6 +36,8 @@ var hit_radius := 6.0
 var armor_left := 0
 var _mask_speed := 1.0   ## the devil's mask makes everyone faster
 var patrol_points: PackedVector2Array = []
+## Authored encounter role: watch keeps hands free; auto preserves ambient selection.
+var idle_action := "auto"
 var required := true                # counts toward "clear the floor"
 var debug_draw := false
 ## 0 calm, 1 suspicious (heard something), 2 alerted (heard fighting / saw you)
@@ -46,6 +48,7 @@ var _perceive_t := 0.0
 var _repath_t := 0.0
 var _path: PackedVector2Array = []
 var _path_i := 0
+var _path_target := Vector2(INF,INF)
 var _goal := Vector2.ZERO
 var _last_known := Vector2.ZERO
 var _sees_player := false
@@ -134,12 +137,21 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	visual.set_alert_posture(alert_posture())
 	if not patrol_points.is_empty():
 		_set_state(State.PATROL)
-	elif data.combat != EnemyData.Combat.ALERTER and not (self is Dog) and absi(hash(enemy_id + "busy")) % 100 < 65:
+	elif _allows_idle_activity() and idle_action != "watch" and (idle_action != "auto" or absi(hash(enemy_id + "busy")) % 100 < 65):
 		# calm guards find something to do with their hands
 		idle_activity = IdleActivity.new()
 		visual.rig.add_child(idle_activity)
 		# handlers walk dogs and never nap (a chair dragged along by a dog)
-		idle_activity.setup(visual, IdleActivity.pick(enemy_id if enemy_id != "" else str(get_instance_id()), not (self is Handler)), enemy_id)
+		var activity: int = {"smoke": IdleActivity.Kind.SMOKE, "drink": IdleActivity.Kind.DRINK, "eat": IdleActivity.Kind.EAT, "snooze": IdleActivity.Kind.SNOOZE}.get(idle_action, IdleActivity.pick(enemy_id if enemy_id != "" else str(get_instance_id()), not (self is Handler)))
+		if self is Handler and activity == IdleActivity.Kind.SNOOZE:
+			activity = IdleActivity.Kind.SMOKE
+		idle_activity.setup(visual, activity, enemy_id)
+
+func _allows_idle_activity() -> bool:
+	# Undead and demons keep their creature idle; no cigarettes or human props.
+	return data != null and data.combat != EnemyData.Combat.ALERTER and not (self is Dog) and not (self is Sniper) \
+		and data.id not in [&"zombie", &"ghoul", &"demon"] \
+		and SpriteForge.base_name(data.palette) not in ["zombie", "ghoul", "demon"]
 
 func is_snoozing() -> bool:
 	return idle_activity != null and is_instance_valid(idle_activity) and idle_activity.snoozing
@@ -231,14 +243,20 @@ func _physics_process(delta: float) -> void:
 			desired = _flee(delta)
 	if state == State.DOWNED or state == State.STUNNED:
 		desired = Vector2.ZERO
-	if not is_snoozing():
-		desired += _separation()   # a sleeper isn't nudged along by passers-by
+	if state not in [State.IDLE, State.DOWNED, State.STUNNED] and not _held:
+		# A guard at a fixed post stays there. Crowd spacing is locomotion,
+		# not a reason to shuffle while smoking or watching. Knockback still
+		# flows through _steer independently of this navigation adjustment.
+		desired += _separation()
 	_steer(desired, delta)
-	move_and_slide()
+	# Collision recovery can push an overlapping grabbed body even at zero
+	# velocity. Its executor owns the paired placement until release.
+	if not _held:
+		move_and_slide()
 	if _move_vel.length() > 5.0 and not (state in [State.COMBAT, State.RETREAT] and _sees_player) and state != State.SEARCH:
 		facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 8.0))
 	visual.set_aim(facing.angle())
-	visual.update_move(velocity, delta)
+	visual.update_move(Vector2.ZERO if _held else get_real_velocity(), delta)
 	if debug_draw or _alert_icon > 0.0 or data.shield_arc_deg > 0.0:
 		queue_redraw()
 
@@ -489,15 +507,15 @@ func can_be_taken_down() -> bool:
 
 ## The building alarm: everyone is alerted and heads for the rough area the
 ## scout reported, then searches. Nobody gets the player's exact position.
-func _on_alarm(_pos: Vector2) -> void:
-	if not is_alive() or state == State.DOWNED or _held:
-		return
-	var p := _player()
-	if p == null or is_aware():
+func _on_alarm(reported_pos: Vector2) -> void:
+	if not is_alive() or state == State.DOWNED or _held or is_aware():
 		return
 	alert_level = 2
 	var err := Tuning.get_t().position_error_max
-	_begin_investigate(p.global_position + Vector2.from_angle(randf() * TAU) * randf_range(err * 0.4, err), 0.0)
+	var estimate := reported_pos + Vector2.from_angle(randf() * TAU) * randf_range(err * 0.4, err)
+	if level and level.has_method("nearest_open_point"):
+		estimate = level.nearest_open_point(estimate, reported_pos)
+	_begin_investigate(estimate, 0.0)
 
 func _enter_combat() -> void:
 	if _held:
@@ -713,8 +731,9 @@ func _shoot(p: Player) -> void:
 		bs.fire(origin, aim, weapon.data, self, err + weapon.data.spread_deg * 0.5)
 	weapon.ammo -= 1
 	visual.kick_recoil(2.0)
-	Effects.muzzle(origin, aim, weapon.data.muzzle_color, weapon.data.pellets > 1)
-	Effects.casing(global_position, aim)
+	Effects.muzzle(origin + visual.muzzle_lift(), aim, weapon.data.muzzle_color, weapon.data.pellets > 1)
+	if weapon.data.ejects_shells:
+		Effects.casing(visual.muzzle_tip_global() - aim * 5.0, aim, false, weapon.data.pellets > 1)
 	Audio.play_at(weapon.data.sfx_fire, global_position, -2.0)
 	Events.noise.emit(global_position, weapon.data.noise_radius * 0.8, &"gunshot", self)
 	_burst_left -= 1
@@ -818,17 +837,22 @@ func _separation() -> Vector2:
 func _go_to(target: Vector2, speed: float) -> Vector2:
 	speed *= _mask_speed
 	_repath_t -= get_physics_process_delta_time()
-	if _path.is_empty() or _repath_t <= 0.0 or (_path.size() > 0 and _path[_path.size() - 1].distance_to(target) > 24.0):
+	if _repath_t <= 0.0 or (_path.size() > 0 and _path_target.distance_to(target) > 24.0):
 		_repath_t = 0.45 + randf() * 0.2
+		_path_target = target
 		if level and level.has_method("get_nav_path"):
 			_path = level.get_nav_path(global_position, target)
 		else:
 			_path = PackedVector2Array([target])
 		_path_i = 0
+	if _path.is_empty():
+		return Vector2.ZERO
 	while _path_i < _path.size() and global_position.distance_to(_path[_path_i]) < 6.0:
 		_path_i += 1
 	if _path_i >= _path.size():
-		var d := target - global_position
+		# Navigation may project a blocked request onto nearby open floor.
+		# Finish at that validated endpoint, not the original obstacle position.
+		var d := _path[_path.size()-1] - global_position
 		return d.normalized() * speed if d.length() > 4.0 else Vector2.ZERO
 	return (_path[_path_i] - global_position).normalized() * speed
 
@@ -924,8 +948,16 @@ func _react_to_attack(info: DamageInfo) -> void:
 		_last_known = (info.source as Node2D).global_position
 	_enter_combat()
 
-func knock_down(info: DamageInfo) -> void:
+## A forced state change must not leave a swing or reload running underneath it.
+func _interrupt_action() -> void:
 	_windup_t = -1.0
+	_reload_t = 0.0
+	visual.cancel_attack()
+	visual.cancel_reload()
+	visual.finish_roll()
+
+func knock_down(info: DamageInfo) -> void:
+	_interrupt_action()
 	Audio.play_at(hurt_voice(), global_position, -5.0, 0.08)
 	_set_state(State.DOWNED)
 	_down_t = DOWN_TIME
@@ -958,24 +990,48 @@ func _get_up() -> void:
 	_pick_slot()
 
 func _stun(t: float, dir: Vector2) -> void:
-	_windup_t = -1.0
+	_interrupt_action()
 	_stun_t = t
 	_knock = dir * 120.0
 	visual.hit_react(dir, false, t)
 	_set_state(State.STUNNED)
 
 func begin_execution(by: Node) -> void:
+	_interrupt_action()
 	_executor = by
 	_down_t = 99.0
+	# Once grabbed, the target must stay aligned with the execution instead
+	# of continuing the knockback from the blow that put them down.
+	_knock = Vector2.ZERO
+	_move_vel = Vector2.ZERO
+	velocity = Vector2.ZERO
+	# Freeze both ground and standing targets: collision recovery must not
+	# move either participant out of the paired execution pose.
+	_held = true
 	if state != State.DOWNED:
 		# stealth takedown: grabbed from behind, frozen in place
-		_held = true
-		_windup_t = -1.0
+		visual.set_weapon(null)
 		_stun_t = 99.0
 		_knock = Vector2.ZERO
 		_move_vel = Vector2.ZERO
 		state = State.STUNNED
 		_state_t = 0.0
+		if visual.has_clip("held"):
+			visual.pose_override = "held"
+			visual.pose_progress = 0.0
+
+func cancel_execution(by: Node) -> void:
+	if _executor != by or not is_alive():
+		return
+	_executor = null
+	_held = false
+	visual.pose_override = ""
+	visual.pose_progress = -1.0
+	visual.set_weapon(weapon.data if weapon else null)
+	if state == State.DOWNED:
+		_down_t = minf(_down_t, DOWN_TIME)
+	else:
+		_stun_t = 0.35
 
 func finish_execution(by: Node, weapon_id: StringName, finisher := "") -> void:
 	if not is_alive():
@@ -1005,6 +1061,7 @@ func _die(info: DamageInfo) -> void:
 	if not is_alive():
 		return
 	_was_unaware_when_killed = not is_aware() and state != State.DOWNED
+	_interrupt_action()
 	var prev_state := state
 	state = State.DEAD
 	if idle_activity and is_instance_valid(idle_activity):
@@ -1027,7 +1084,9 @@ func _die(info: DamageInfo) -> void:
 	# the last sound they make: a cry, a groan - nothing if the neck went
 	if str(info.get_meta("finisher", "")) != "neck":
 		Audio.play_at(death_voice(), global_position, -2.0 if self is BossNightManager else -4.0, 0.06)
-	if weapon and info.method != &"execution":
+	# Armed guards always leave their weapon behind, including executions and
+	# environmental kills. The pickup is part of the encounter readability.
+	if weapon:
 		_drop_weapon(info.dir * 60.0)
 	var p := _player()
 	var from_player: bool = info.from_player or bool(info.get_meta("player_caused", false))

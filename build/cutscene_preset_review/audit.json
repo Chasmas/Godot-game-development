@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "engine": "BLENDER_EEVEE",
+  "camera_initial_preserved": true,
+  "camera_lens_preserved": true,
+  "body_and_hands_return_to_rest": true,
+  "scope": "Technical named-object hook test only; no rendered character acting or finished cinematic"
+}

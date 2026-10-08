@@ -1,0 +1,10 @@
+04:02:16 | INFO: Data are loaded, start creating Blender stuff
+04:02:16 | INFO: Blender create Mesh node char1
+04:02:16 | INFO: glTF import finished in 0.13s
+C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\tools\blender\render_chainsaw_hands.py:9: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('HandReviewWorld');scene.world.use_nodes=True
+00:05.094  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\chainsaw_pose_candidate\left_hand_closeup.png'
+00:07.500  render           | Saved: 'C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\chainsaw_pose_candidate\right_hand_closeup.png'
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

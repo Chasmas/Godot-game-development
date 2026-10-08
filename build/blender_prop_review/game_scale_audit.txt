@@ -1,0 +1,10 @@
+Laundry cart Blender v2 actual Godot review (2026-10-07).
+Initial mount (136,504) rejected: visible overlap with seated guard and chair. Revised staging mount (136,456) beside north washer removes overlap and leaves door approach clear. Added contact shadow and .65 neutral modulation to avoid washed-out cloth under game lighting. GPU capture exit 0, laundry_cart_game_review.png inspected. Asset still not approved: fabric reads as rectangular slabs at gameplay scale; folds, silhouette and material contrast need further Blender work. Runtime assets/layout unchanged; fixture only.
+
+V3: Rounded bundles, broad creases, curled edges, thickness and teal hanging towel authored in Blender. GPU capture inspected: fabric silhouette improved; overall cart contrast/material polish remains pending. No runtime promotion.
+
+V4: Basket front/back now tapered, bowed canvas meshes with broad creases and rim sag; darkened woven canvas, support straps, lower chrome rail and caster forks. Blender and actual-M01 GPU capture exit 0, inspected. Visual improvement remains small under scene grading; not claiming reference-quality completion. Cart gameplay footprint, occlusion and passage clearance remain pending before promotion.
+
+V4 footprint test: staging LOW-layer rectangle 18x12 at (136,450). Actual Cass movement at x120 passes washer/cart gap north (488 ->437.01) and south (440 ->506.00). Direct north approach at x136 stops at y461.01, outside basket bounds. Exit 0, build/laundry_cart_collision_review.log. This validates only tested walking routes; dash, NPC navigation and full art finish remain pending.
+
+Roll check: real _start_dash/_movement/move_and_slide/_after_move crosses LOW footprint from (136,488), finishes at (136,437.076), no LOW overlap and full walking mask restored. Combined fixture five checks pass, exit 0; build/laundry_cart_roll_review.log. This covers one launch route, not all nearby rolls or broad obstacles.

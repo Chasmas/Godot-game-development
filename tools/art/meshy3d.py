@@ -3,6 +3,7 @@
 turn a full 360 degrees (rendered from straight above in Blender).
 
   python tools/art/meshy3d.py model <id>          text -> 3D preview -> textured refine
+  python tools/art/meshy3d.py image <id>          reference painting ("image" in the spec) -> textured 3D
   python tools/art/meshy3d.py rig <id>            humanoid skeleton (+ walk / run)
   python tools/art/meshy3d.py anim <id>           the game's actions on that skeleton
   python tools/art/meshy3d.py balance
@@ -66,7 +67,9 @@ def model(cid):
     b0 = balance()
     if "preview" not in s:
         t = call("POST", "/v2/text-to-3d", {"mode": "preview", "prompt": spec["prompt"], "ai_model": "latest", "topology": "triangle",
-                                            "target_polycount": spec.get("polys", 24000), "should_remesh": True, "pose_mode": "a-pose"})
+                                            "target_polycount": spec.get("polys", 24000), "should_remesh": True,
+                                            # animals stand as they are (rigged in Blender, tools/art/rig_quadruped.py)
+                                            "pose_mode": "a-pose" if spec.get("humanoid", True) else ""})
         s["preview"] = t["result"]
         save_state(cid, s)
     wait(f"/v2/text-to-3d/{s['preview']}")
@@ -76,6 +79,28 @@ def model(cid):
         s["refine"] = t["result"]
         save_state(cid, s)
     t = wait(f"/v2/text-to-3d/{s['refine']}")
+    fetch(t["model_urls"]["glb"], os.path.join(OUT, cid, "model.glb"))
+    if t.get("thumbnail_url"):
+        fetch(t["thumbnail_url"], os.path.join(OUT, cid, "thumb.png"))
+    print(f"credits {b0} -> {balance()}")
+
+def model_from_image(cid):
+    """Like model(), from the spec's reference painting: keeps the drawn identity."""
+    spec = json.load(open(SPEC, encoding="utf-8"))[cid]
+    s = state(cid)
+    b0 = balance()
+    if "refine" not in s:
+        with open(os.path.join(ROOT, spec["image"]), "rb") as f:
+            uri = "data:image/png;base64," + base64.b64encode(f.read()).decode()
+        t = call("POST", "/v1/image-to-3d", {"image_url": uri, "ai_model": "latest", "topology": "triangle",
+                                             "target_polycount": spec.get("polys", 24000), "should_remesh": True,
+                                             "should_texture": True, "enable_pbr": False, "pose_mode": "a-pose",
+                                             "texture_prompt": spec["texture"]})
+        # rigging and animation take this id as their input task, as for text-to-3d
+        s["refine"] = t["result"]
+        s["source"] = "image-to-3d"
+        save_state(cid, s)
+    t = wait(f"/v1/image-to-3d/{s['refine']}")
     fetch(t["model_urls"]["glb"], os.path.join(OUT, cid, "model.glb"))
     if t.get("thumbnail_url"):
         fetch(t["thumbnail_url"], os.path.join(OUT, cid, "thumb.png"))
@@ -121,6 +146,8 @@ if __name__ == "__main__":
         print(balance())
     elif cmd == "model":
         model(sys.argv[2])
+    elif cmd == "image":
+        model_from_image(sys.argv[2])
     elif cmd == "rig":
         rig(sys.argv[2])
     elif cmd == "anim":

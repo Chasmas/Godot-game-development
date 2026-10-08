@@ -1,0 +1,72 @@
+{
+  "approved": false,
+  "base_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c",
+  "candidate_sha256": "bc0e5a5a727195421757d35799bf0e8d23211810fab7d9e7bb350c84d2a36e53",
+  "changed_clips": [
+    "reload_dual",
+    "aim_dual"
+  ],
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "punch_left",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "rig_and_material_records_preserved": true,
+  "original_binary_prefix_preserved": true,
+  "untouched_body_attributes": [
+    "POSITION",
+    "TEXCOORD_0",
+    "NORMAL",
+    "JOINTS_0",
+    "WEIGHTS_0"
+  ],
+  "comparison_precision": 1e-05,
+  "original_unique_vertices": 27024,
+  "candidate_unique_vertices": 27024,
+  "missing_untouched_vertices": 0,
+  "added_untouched_vertices": 0,
+  "scope": "Attributes outside hands and forearms; excludes tangents, topology and silhouette approval. Original clip records and binary payload preserved for 24 unchanged clips.",
+  "attribute_comparisons": {
+    "position_uv": {
+      "missing": 0,
+      "added": 0
+    },
+    "normal": {
+      "missing": 0,
+      "added": 0
+    },
+    "skin": {
+      "missing": 0,
+      "added": 0
+    }
+  },
+  "tolerant_comparison": {
+    "position_uv_unmatched_candidate_vertices": 0,
+    "normal_mismatches_above_1e_4": 0,
+    "max_nearest_normal_vector_error": 0,
+    "position_uv_tolerance": 1e-05,
+    "scope": "Forward matching only, normal nearest among colocated source corners; does not establish reverse coverage or topology."
+  }
+}

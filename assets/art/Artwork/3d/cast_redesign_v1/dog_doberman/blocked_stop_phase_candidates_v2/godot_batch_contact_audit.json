@@ -1,0 +1,58 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "tested_candidates": 7,
+  "frames_per_candidate": 19,
+  "scope": "Seven direct GLTF CPU contact audits with exact source hashes. Visual, continuous stop selection and production gameplay remain pending.",
+  "candidates": [
+    {
+      "source_frame": 1,
+      "source_sha256": "be190a32ef7c095b4a71f5f8920f188e08b0201557a2dc7b55b31e2fec6b1c4c",
+      "slip_m": 3.72529029846191E-08,
+      "floor_m": -1.77084942265537E-07,
+      "samples": 19
+    },
+    {
+      "source_frame": 4,
+      "source_sha256": "abbed443055d9b6bd2699b384ea0ada714f6eaa99c1683a8fe6e17988f091139",
+      "slip_m": 3.20569188261288E-06,
+      "floor_m": -1.12108873508987E-05,
+      "samples": 19
+    },
+    {
+      "source_frame": 7,
+      "source_sha256": "aff92830091289985b7ac156c0759bed9f084d7217a8ad57a54dcf1cbbd3ea03",
+      "slip_m": 3.19181208396913E-06,
+      "floor_m": -1.39940857479814E-05,
+      "samples": 19
+    },
+    {
+      "source_frame": 10,
+      "source_sha256": "6380050d5bd77fcf5c90017ec9cba098c1736b4f690f746868cf0361a85fe2c6",
+      "slip_m": 3.19458786179894E-06,
+      "floor_m": -5.02852435602108E-06,
+      "samples": 19
+    },
+    {
+      "source_frame": 13,
+      "source_sha256": "55b7a4282db0cde29b227cfbf467c497db1b996095af690c19c915538de7ce4e",
+      "slip_m": 3.19445757668291E-06,
+      "floor_m": -5.04927493238938E-06,
+      "samples": 19
+    },
+    {
+      "source_frame": 16,
+      "source_sha256": "32190f20d673f408fe4f3b6cbb9296e767f0745fffb00b2251b10d188648f055",
+      "slip_m": 3.19754144584294E-06,
+      "floor_m": -5.05771276948508E-06,
+      "samples": 19
+    },
+    {
+      "source_frame": 19,
+      "source_sha256": "9588ae80fcdc06e8b0bc15e50b0e1a87d0bc0968a4dac044da6c3ab6d679dae7",
+      "slip_m": 3.19921446134686E-06,
+      "floor_m": -5.04686795466114E-06,
+      "samples": 19
+    }
+  ]
+}

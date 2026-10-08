@@ -1,0 +1,549 @@
+{
+  "assembled_navigation": {},
+  "integrated_bodies": [],
+  "placements": [
+    {
+      "candidate_footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "current_position_blockers": [],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 8.0,
+          "position": [
+            235.0,
+            64.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 11.3137083053589,
+          "position": [
+            227.0,
+            64.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 17.8885440826416,
+          "position": [
+            219.0,
+            64.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 24.0,
+          "position": [
+            211.0,
+            72.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 25.2982215881348,
+          "position": [
+            211.0,
+            80.0
+          ]
+        }
+      ],
+      "position": [
+        235.0,
+        72.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 1,
+      "rotation": 4.71238906780747,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 2,
+        "distance": 17.8885440826416,
+        "newly_reserved_cells": 2,
+        "position": [
+          219.0,
+          64.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "current_position_blockers": [],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 8.0,
+          "position": [
+            411.0,
+            128.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 16.0,
+          "position": [
+            411.0,
+            120.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 48.0,
+          "position": [
+            363.0,
+            136.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 48.6621017456055,
+          "position": [
+            363.0,
+            144.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 48.6621017456055,
+          "position": [
+            363.0,
+            128.0
+          ]
+        }
+      ],
+      "position": [
+        411.0,
+        136.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": 4.71238906780747,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 1,
+        "distance": 8.0,
+        "newly_reserved_cells": 2,
+        "position": [
+          411.0,
+          128.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "current_position_blockers": [
+        "/root/Level/YSorted/Props/@StaticBody2D@1991"
+      ],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 8.0,
+          "position": [
+            1051.0,
+            64.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 11.3137083053589,
+          "position": [
+            1043.0,
+            64.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 16.0,
+          "position": [
+            1035.0,
+            72.0
+          ]
+        },
+        {
+          "clear_player_approaches": 3,
+          "distance": 17.8885440826416,
+          "position": [
+            1035.0,
+            80.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 17.8885440826416,
+          "position": [
+            1035.0,
+            64.0
+          ]
+        }
+      ],
+      "position": [
+        1051.0,
+        72.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": 4.71238906780747,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 1,
+        "distance": 8.0,
+        "newly_reserved_cells": 2,
+        "position": [
+          1051.0,
+          64.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "current_position_blockers": [],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 8.0,
+          "position": [
+            360.0,
+            445.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 11.3137083053589,
+          "position": [
+            368.0,
+            445.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 16.0,
+          "position": [
+            360.0,
+            453.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 17.8885440826416,
+          "position": [
+            376.0,
+            445.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 17.8885440826416,
+          "position": [
+            368.0,
+            453.0
+          ]
+        }
+      ],
+      "position": [
+        360.0,
+        437.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": 0.0,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 2,
+        "distance": 16.0,
+        "newly_reserved_cells": 3,
+        "position": [
+          360.0,
+          453.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "current_position_blockers": [
+        "/root/Level/YSorted/Props/CandidateNightstand_19",
+        "/root/Level/YSorted/Props/@StaticBody2D@1376"
+      ],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 16.0,
+          "position": [
+            824.0,
+            475.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 17.8885440826416,
+          "position": [
+            832.0,
+            475.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 17.8885440826416,
+          "position": [
+            816.0,
+            475.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 22.6274166107178,
+          "position": [
+            808.0,
+            475.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 28.844409942627,
+          "position": [
+            800.0,
+            475.0
+          ]
+        }
+      ],
+      "position": [
+        824.0,
+        491.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": -0.0000000437113900630948,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 2,
+        "distance": 40.0,
+        "newly_reserved_cells": 2,
+        "position": [
+          784.0,
+          491.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "current_position_blockers": [
+        "/root/Level/Walls/@StaticBody2D@630"
+      ],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 1,
+          "distance": 17.8885440826416,
+          "position": [
+            835.0,
+            648.0
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 22.6274166107178,
+          "position": [
+            827.0,
+            648.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 28.844409942627,
+          "position": [
+            819.0,
+            648.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 43.0813179016113,
+          "position": [
+            803.0,
+            648.0
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 48.6621017456055,
+          "position": [
+            835.0,
+            584.0
+          ]
+        }
+      ],
+      "position": [
+        843.0,
+        632.0
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": 3.14159265358979,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 1,
+        "distance": 43.0813179016113,
+        "newly_reserved_cells": 2,
+        "position": [
+          803.0,
+          648.0
+        ]
+      },
+      "source": "room_kit"
+    },
+    {
+      "candidate_footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "current_position_blockers": [],
+      "placement_proposals": [
+        {
+          "clear_player_approaches": 2,
+          "distance": 8.0,
+          "position": [
+            552.0,
+            56.6399993896484
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 8.0,
+          "position": [
+            560.0,
+            48.6399993896484
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 11.3137083053589,
+          "position": [
+            560.0,
+            40.6399993896484
+          ]
+        },
+        {
+          "clear_player_approaches": 2,
+          "distance": 11.3137083053589,
+          "position": [
+            560.0,
+            56.6399993896484
+          ]
+        },
+        {
+          "clear_player_approaches": 1,
+          "distance": 11.3137083053589,
+          "position": [
+            544.0,
+            56.6399993896484
+          ]
+        }
+      ],
+      "position": [
+        552.0,
+        48.6399993896484
+      ],
+      "proposal_scope": "All footprint corners remain in original authored room; actual physics, reachable door arcs, player approach and cumulative navigation checked; visual composition pending",
+      "reachable_door_arc_hits": 0,
+      "rotation": 0.0,
+      "selected_navigation_safe_proposal": {
+        "clear_player_approaches": 2,
+        "distance": 8.0,
+        "newly_reserved_cells": 3,
+        "position": [
+          552.0,
+          56.6399993896484
+        ]
+      },
+      "source": "decor"
+    }
+  ],
+  "rug_geometry": [],
+  "rugs": [
+    {
+      "position": [
+        154.0,
+        64.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        410.0,
+        128.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        826.0,
+        64.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        938.0,
+        64.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        298.0,
+        464.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        352.0,
+        454.0
+      ],
+      "rotation": -0.0000000437113900630948
+    },
+    {
+      "position": [
+        816.0,
+        474.0
+      ],
+      "rotation": 3.14159269730118
+    },
+    {
+      "position": [
+        298.0,
+        624.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        362.0,
+        592.0
+      ],
+      "rotation": 1.5707963267949
+    },
+    {
+      "position": [
+        826.0,
+        624.0
+      ],
+      "rotation": 1.5707963267949
+    }
+  ],
+  "runtime_approved": false
+}

@@ -1,0 +1,8 @@
+{
+  "character": "zombie_civilian_2",
+  "source": "assets/art/reference/cast_redesign_v1/zombie_civilian_2_turnaround.png",
+  "approved_for_api": false,
+  "status": "needs_isolated_back_reference",
+  "finding": "Back right hand extends into the horizontal span of the adjacent portrait panel. Rectangular crop risks portrait fragments.",
+  "next_action": "Clean isolated three-view ImageGen composition before Blender crop preparation."
+}

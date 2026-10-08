@@ -1,0 +1,198 @@
+{
+  "approved": false,
+  "scope": "32 frozen hand/headings; contact phase.53125; no visual/body-motion approval",
+  "rows": [
+    {
+      "hand": "punch_right",
+      "heading": 0.0,
+      "contact_extension_ratio": 0.9929932134881406,
+      "stroke_px": 4.9775019453468925
+    },
+    {
+      "hand": "punch_right",
+      "heading": 0.392699081698724,
+      "contact_extension_ratio": 0.9927488222967333,
+      "stroke_px": 4.984994512282485
+    },
+    {
+      "hand": "punch_right",
+      "heading": 0.785398163397448,
+      "contact_extension_ratio": 0.9925793762228177,
+      "stroke_px": 4.691366014186163
+    },
+    {
+      "hand": "punch_right",
+      "heading": 1.17809724509617,
+      "contact_extension_ratio": 0.9927794037912852,
+      "stroke_px": 4.211766408825896
+    },
+    {
+      "hand": "punch_right",
+      "heading": 1.5707963267949,
+      "contact_extension_ratio": 0.9936924664115627,
+      "stroke_px": 3.7947998657431734
+    },
+    {
+      "hand": "punch_right",
+      "heading": 1.96349540849362,
+      "contact_extension_ratio": 0.9948838484426463,
+      "stroke_px": 3.723822885662509
+    },
+    {
+      "hand": "punch_right",
+      "heading": 2.35619449019234,
+      "contact_extension_ratio": 0.995162734030483,
+      "stroke_px": 4.054433961994443
+    },
+    {
+      "hand": "punch_right",
+      "heading": 2.74889357189107,
+      "contact_extension_ratio": 0.9945452715498782,
+      "stroke_px": 4.546388958943843
+    },
+    {
+      "hand": "punch_right",
+      "heading": 3.14159265358979,
+      "contact_extension_ratio": 0.9936272064701555,
+      "stroke_px": 4.919904969141487
+    },
+    {
+      "hand": "punch_right",
+      "heading": 3.53429173528852,
+      "contact_extension_ratio": 0.992672608556617,
+      "stroke_px": 5.014290646535545
+    },
+    {
+      "hand": "punch_right",
+      "heading": 3.92699081698724,
+      "contact_extension_ratio": 0.9917746752925336,
+      "stroke_px": 4.808353901477818
+    },
+    {
+      "hand": "punch_right",
+      "heading": 4.31968989868597,
+      "contact_extension_ratio": 0.9910939406009751,
+      "stroke_px": 4.41582241429437
+    },
+    {
+      "hand": "punch_right",
+      "heading": 4.71238898038469,
+      "contact_extension_ratio": 0.9909802104957315,
+      "stroke_px": 4.067498453572993
+    },
+    {
+      "hand": "punch_right",
+      "heading": 5.10508806208341,
+      "contact_extension_ratio": 0.9917429276516454,
+      "stroke_px": 4.008310626203058
+    },
+    {
+      "hand": "punch_right",
+      "heading": 5.49778714378214,
+      "contact_extension_ratio": 0.9926933713120166,
+      "stroke_px": 4.284498246248428
+    },
+    {
+      "hand": "punch_right",
+      "heading": 5.89048622548086,
+      "contact_extension_ratio": 0.9930737854802096,
+      "stroke_px": 4.692111573790225
+    },
+    {
+      "hand": "punch_left",
+      "heading": 0.0,
+      "contact_extension_ratio": 0.9936909211200678,
+      "stroke_px": 4.993549836204076
+    },
+    {
+      "hand": "punch_left",
+      "heading": 0.392699081698724,
+      "contact_extension_ratio": 0.9951570118756928,
+      "stroke_px": 4.619359734704677
+    },
+    {
+      "hand": "punch_left",
+      "heading": 0.785398163397448,
+      "contact_extension_ratio": 0.9964219620914486,
+      "stroke_px": 4.124381578828342
+    },
+    {
+      "hand": "punch_left",
+      "heading": 1.17809724509617,
+      "contact_extension_ratio": 0.9966432347999927,
+      "stroke_px": 3.7909911512241217
+    },
+    {
+      "hand": "punch_left",
+      "heading": 1.5707963267949,
+      "contact_extension_ratio": 0.9953144991611625,
+      "stroke_px": 3.8613917452840516
+    },
+    {
+      "hand": "punch_left",
+      "heading": 1.96349540849362,
+      "contact_extension_ratio": 0.9937798181995775,
+      "stroke_px": 4.280466368828445
+    },
+    {
+      "hand": "punch_left",
+      "heading": 2.35619449019234,
+      "contact_extension_ratio": 0.9929680962861235,
+      "stroke_px": 4.762986835629082
+    },
+    {
+      "hand": "punch_left",
+      "heading": 2.74889357189107,
+      "contact_extension_ratio": 0.9926613690808078,
+      "stroke_px": 5.057327943610428
+    },
+    {
+      "hand": "punch_left",
+      "heading": 3.14159265358979,
+      "contact_extension_ratio": 0.992475891103665,
+      "stroke_px": 5.04641635794532
+    },
+    {
+      "hand": "punch_left",
+      "heading": 3.53429173528852,
+      "contact_extension_ratio": 0.9920726748328326,
+      "stroke_px": 4.75338146929193
+    },
+    {
+      "hand": "punch_left",
+      "heading": 3.92699081698724,
+      "contact_extension_ratio": 0.9911392975165413,
+      "stroke_px": 4.336021482893969
+    },
+    {
+      "hand": "punch_left",
+      "heading": 4.31968989868597,
+      "contact_extension_ratio": 0.9897772093429171,
+      "stroke_px": 4.05263643954293
+    },
+    {
+      "hand": "punch_left",
+      "heading": 4.71238898038469,
+      "contact_extension_ratio": 0.989048864658357,
+      "stroke_px": 4.112383779407683
+    },
+    {
+      "hand": "punch_left",
+      "heading": 5.10508806208341,
+      "contact_extension_ratio": 0.9896064701844036,
+      "stroke_px": 4.4685927284782165
+    },
+    {
+      "hand": "punch_left",
+      "heading": 5.49778714378214,
+      "contact_extension_ratio": 0.9908583781483252,
+      "stroke_px": 4.870931511039526
+    },
+    {
+      "hand": "punch_left",
+      "heading": 5.89048622548086,
+      "contact_extension_ratio": 0.9922580672921859,
+      "stroke_px": 5.084497709089044
+    }
+  ]
+}

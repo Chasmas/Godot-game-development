@@ -1,0 +1,444 @@
+[
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@441",
+        "position": [
+          72.0,
+          120.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 24.0,
+    "clear_player_approaches": 3,
+    "clear_player_side_passages": 0,
+    "facing_index": 1,
+    "nearest_door_leaf_px": 73.7563552856445,
+    "opaque_samples": 4495,
+    "original_position": [
+      96.0,
+      112.0
+    ],
+    "physical_footprint_overlaps": 1,
+    "position": [
+      96.0,
+      112.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@438",
+        "position": [
+          576.0,
+          24.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@2010",
+        "position": [
+          56.0,
+          40.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@719",
+        "position": [
+          128.0,
+          64.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 1,
+    "clear_player_side_passages": 0,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 134.238586425781,
+    "opaque_samples": 4441,
+    "original_position": [
+      88.0,
+      40.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      88.0,
+      46.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@438",
+        "position": [
+          576.0,
+          24.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@444",
+        "position": [
+          248.0,
+          56.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 0,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 37.576587677002,
+    "opaque_samples": 4441,
+    "original_position": [
+      264.0,
+      40.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      264.0,
+      46.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@438",
+        "position": [
+          576.0,
+          24.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@450",
+        "position": [
+          632.0,
+          56.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@1947",
+        "position": [
+          696.0,
+          40.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 1,
+    "clear_player_side_passages": 0,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 37.576587677002,
+    "opaque_samples": 4441,
+    "original_position": [
+      648.0,
+      40.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      648.0,
+      46.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@438",
+        "position": [
+          576.0,
+          24.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@778",
+        "position": [
+          912.0,
+          64.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@778",
+        "position": [
+          912.0,
+          64.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 1,
+    "clear_player_side_passages": 2,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 38.0,
+    "opaque_samples": 4441,
+    "original_position": [
+      872.0,
+      40.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      894.0,
+      54.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@546",
+        "position": [
+          272.0,
+          424.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@558",
+        "position": [
+          168.0,
+          480.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 0,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 70.4556579589844,
+    "opaque_samples": 4441,
+    "original_position": [
+      184.0,
+      440.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      184.0,
+      446.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@546",
+        "position": [
+          272.0,
+          424.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@2024",
+        "position": [
+          408.0,
+          440.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@564",
+        "position": [
+          456.0,
+          472.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 1,
+    "clear_player_side_passages": 0,
+    "facing_index": 1,
+    "nearest_door_leaf_px": 32.5576400756836,
+    "opaque_samples": 4495,
+    "original_position": [
+      440.0,
+      440.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      440.0,
+      446.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@549",
+        "position": [
+          672.0,
+          424.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@570",
+        "position": [
+          664.0,
+          440.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 1,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 38.0,
+    "opaque_samples": 4441,
+    "original_position": [
+      680.0,
+      440.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      702.0,
+      450.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@603",
+        "position": [
+          208.0,
+          568.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@2030",
+        "position": [
+          152.0,
+          600.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 0,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 34.0,
+    "opaque_samples": 4441,
+    "original_position": [
+      184.0,
+      584.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      184.0,
+      590.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@660",
+        "position": [
+          336.0,
+          664.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@648",
+        "position": [
+          312.0,
+          656.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 1,
+    "facing_index": 0,
+    "nearest_door_leaf_px": 17.8885440826416,
+    "opaque_samples": 5321,
+    "original_position": [
+      328.0,
+      648.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      328.0,
+      648.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  },
+  {
+    "approach_blockers": [
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@612",
+        "position": [
+          672.0,
+          568.0
+        ]
+      },
+      {
+        "class": "StaticBody2D",
+        "name": "@StaticBody2D@627",
+        "position": [
+          664.0,
+          584.0
+        ]
+      }
+    ],
+    "approach_stop_distance_px": 14.0,
+    "clear_player_approaches": 2,
+    "clear_player_side_passages": 1,
+    "facing_index": 3,
+    "nearest_door_leaf_px": 38.0525970458984,
+    "opaque_samples": 4441,
+    "original_position": [
+      680.0,
+      584.0
+    ],
+    "physical_footprint_overlaps": 0,
+    "position": [
+      702.0,
+      590.0
+    ],
+    "projected_wall_samples": 0,
+    "reachable_door_arc_overlaps": 0,
+    "scope": "projected silhouette, not physical footprint"
+  }
+]

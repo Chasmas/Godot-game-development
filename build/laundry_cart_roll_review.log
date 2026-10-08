@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 24 looks in 2233 ms
+PASS  washer/cart passage start=(120.0, 488.0) end=(120.0, 437.0054)
+PASS  washer/cart passage start=(120.0, 440.0) end=(120.0, 505.9961)
+PASS  cart footprint blocks walking at (136.0, 461.0054)
+PASS  active guard navigates around cart, nearest=9.56152629852295
+PASS  cart roll clears obstacle and restores walking collision at (136.0, 437.076)
+LAUNDRY COLLISION REVIEW: 0 failures

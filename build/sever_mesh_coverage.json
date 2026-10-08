@@ -1,0 +1,581 @@
+{
+  "checks": [
+    {
+      "look": "bellhop",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 4160
+    },
+    {
+      "look": "bellhop",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3946
+    },
+    {
+      "look": "bellhop",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4465
+    },
+    {
+      "look": "bellhop",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9003
+    },
+    {
+      "look": "biker",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3167
+    },
+    {
+      "look": "biker",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3021
+    },
+    {
+      "look": "biker",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 5675
+    },
+    {
+      "look": "biker",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 11054
+    },
+    {
+      "look": "boss",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3694
+    },
+    {
+      "look": "boss",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 4337
+    },
+    {
+      "look": "boss",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 3878
+    },
+    {
+      "look": "boss",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 8005
+    },
+    {
+      "look": "buck",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 4102
+    },
+    {
+      "look": "buck",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3705
+    },
+    {
+      "look": "buck",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 6034
+    },
+    {
+      "look": "buck",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 10405
+    },
+    {
+      "look": "burnt",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 4867
+    },
+    {
+      "look": "burnt",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3369
+    },
+    {
+      "look": "burnt",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4631
+    },
+    {
+      "look": "burnt",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9671
+    },
+    {
+      "look": "cass",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 7571
+    },
+    {
+      "look": "cass",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2060
+    },
+    {
+      "look": "cass",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 2578
+    },
+    {
+      "look": "cass",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 5060
+    },
+    {
+      "look": "civilian",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 7125
+    },
+    {
+      "look": "civilian",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2394
+    },
+    {
+      "look": "civilian",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4290
+    },
+    {
+      "look": "civilian",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 8927
+    },
+    {
+      "look": "cultist",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 1821
+    },
+    {
+      "look": "cultist",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3726
+    },
+    {
+      "look": "cultist",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 6379
+    },
+    {
+      "look": "cultist",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 12057
+    },
+    {
+      "look": "demon",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3180
+    },
+    {
+      "look": "demon",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 4898
+    },
+    {
+      "look": "demon",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4528
+    },
+    {
+      "look": "demon",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9592
+    },
+    {
+      "look": "fireman",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3099
+    },
+    {
+      "look": "fireman",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 4115
+    },
+    {
+      "look": "fireman",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 5483
+    },
+    {
+      "look": "fireman",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 11159
+    },
+    {
+      "look": "ghoul",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 1723
+    },
+    {
+      "look": "ghoul",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2008
+    },
+    {
+      "look": "ghoul",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 5805
+    },
+    {
+      "look": "ghoul",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 11477
+    },
+    {
+      "look": "guard",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2575
+    },
+    {
+      "look": "guard",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2303
+    },
+    {
+      "look": "guard",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 6537
+    },
+    {
+      "look": "guard",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 14325
+    },
+    {
+      "look": "gunner",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 4620
+    },
+    {
+      "look": "gunner",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 4138
+    },
+    {
+      "look": "gunner",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4557
+    },
+    {
+      "look": "gunner",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9286
+    },
+    {
+      "look": "handler",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 1692
+    },
+    {
+      "look": "handler",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 1985
+    },
+    {
+      "look": "handler",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 7007
+    },
+    {
+      "look": "handler",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 14371
+    },
+    {
+      "look": "heavy",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 1556
+    },
+    {
+      "look": "heavy",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2580
+    },
+    {
+      "look": "heavy",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 6236
+    },
+    {
+      "look": "heavy",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 13122
+    },
+    {
+      "look": "hunter",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3106
+    },
+    {
+      "look": "hunter",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 1552
+    },
+    {
+      "look": "hunter",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 9001
+    },
+    {
+      "look": "hunter",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 15810
+    },
+    {
+      "look": "riot",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2424
+    },
+    {
+      "look": "riot",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2984
+    },
+    {
+      "look": "riot",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4817
+    },
+    {
+      "look": "riot",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 10775
+    },
+    {
+      "look": "scout",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 7734
+    },
+    {
+      "look": "scout",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2659
+    },
+    {
+      "look": "scout",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4966
+    },
+    {
+      "look": "scout",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9641
+    },
+    {
+      "look": "scrapper",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2203
+    },
+    {
+      "look": "scrapper",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2907
+    },
+    {
+      "look": "scrapper",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 6141
+    },
+    {
+      "look": "scrapper",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 11857
+    },
+    {
+      "look": "security",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2919
+    },
+    {
+      "look": "security",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 4278
+    },
+    {
+      "look": "security",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4339
+    },
+    {
+      "look": "security",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9250
+    },
+    {
+      "look": "sniper",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 1731
+    },
+    {
+      "look": "sniper",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2574
+    },
+    {
+      "look": "sniper",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 5639
+    },
+    {
+      "look": "sniper",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 10208
+    },
+    {
+      "look": "stagehand",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 3770
+    },
+    {
+      "look": "stagehand",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3807
+    },
+    {
+      "look": "stagehand",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 4472
+    },
+    {
+      "look": "stagehand",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 9911
+    },
+    {
+      "look": "welder",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2532
+    },
+    {
+      "look": "welder",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 2606
+    },
+    {
+      "look": "welder",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 7302
+    },
+    {
+      "look": "welder",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 14008
+    },
+    {
+      "look": "zombie",
+      "part": "head",
+      "passed": true,
+      "removed_triangles": 2652
+    },
+    {
+      "look": "zombie",
+      "part": "arm",
+      "passed": true,
+      "removed_triangles": 3798
+    },
+    {
+      "look": "zombie",
+      "part": "leg",
+      "passed": true,
+      "removed_triangles": 5698
+    },
+    {
+      "look": "zombie",
+      "part": "legs",
+      "passed": true,
+      "removed_triangles": 10532
+    }
+  ],
+  "visual_approved": false
+}

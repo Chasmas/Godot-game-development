@@ -1,0 +1,7 @@
+{
+  "affected_vertices": 1020,
+  "operation": "Three iterations of weighted localized facial smoothing, factor 0.35",
+  "runtime_approved": false,
+  "source_models_unchanged": true,
+  "visual_validation": "pending"
+}

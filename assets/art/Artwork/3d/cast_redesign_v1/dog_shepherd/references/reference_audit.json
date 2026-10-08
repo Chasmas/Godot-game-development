@@ -1,0 +1,51 @@
+{
+  "character": "dog_shepherd",
+  "height_m": 0.88,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\dog_shepherd_turnaround.png",
+  "source_sha256": "883263e28072b9a403d732d84d02eb78432794c09331dba8775726712618c5f9",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        1235,
+        0,
+        1536,
+        1024
+      ],
+      "width": 301,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_shepherd\\references\\back.png",
+      "sha256": "508dfd683a4a785c1c77637b254ca12e36bbeb1cbf499376d47b4994501a0b39"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        312,
+        0,
+        1238,
+        1024
+      ],
+      "width": 926,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_shepherd\\references\\side.png",
+      "sha256": "df8a52749ea64e1f3e89016d827afb29d4c8f94cadaa0316440bd3641f11eeb4"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        305,
+        1024
+      ],
+      "width": 305,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_shepherd\\references\\front.png",
+      "sha256": "c75a439269c043b9007934a38aff8cdfaf32f5a0ec8075d4f29357b6c411db83"
+    }
+  ],
+  "visual_review": "Original and three Blender crops directly inspected; full muzzle, paws and tail retained, clean view separation. Shepherd side crop widened and re-inspected to preserve tail tip. Modeling input approval only, quadruped source pose required."
+}

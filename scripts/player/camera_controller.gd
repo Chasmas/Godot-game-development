@@ -17,6 +17,13 @@ var _noise := FastNoiseLite.new()
 var _t := 0.0
 var zoom_bias := 1.0
 var _nudge := Vector2.ZERO
+## The player's own framing: mouse wheel (or +/-) a little closer to see the
+## cast's detail, or a little wider. Kept to a narrow range so combat still reads.
+const VIEW_ZOOM_MIN := 0.85
+const VIEW_ZOOM_MAX := 1.35
+const VIEW_ZOOM_STEP := 0.05
+var view_zoom := 1.0
+var _view_zoom_shown := 1.0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -25,6 +32,8 @@ func _ready() -> void:
 	position_smoothing_enabled = false
 	_noise.seed = 1988
 	_noise.frequency = 0.9
+	view_zoom = clampf(float(SaveManager.get_setting("camera_zoom", 1.0)), VIEW_ZOOM_MIN, VIEW_ZOOM_MAX)
+	_view_zoom_shown = view_zoom
 	Events.camera_shake.connect(add_trauma)
 	Events.camera_punch.connect(punch)
 	Events.camera_nudge.connect(func(o: Vector2): _nudge += o * float(SaveManager.get_setting("screen_shake", 1.0)))
@@ -39,6 +48,25 @@ func punch(z: float, duration: float) -> void:
 		return
 	_punch_target = z
 	_punch_time = duration
+
+func _unhandled_input(event: InputEvent) -> void:
+	if get_tree().paused or not is_current():
+		return
+	var step := 0.0
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			step = VIEW_ZOOM_STEP
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			step = -VIEW_ZOOM_STEP
+	elif event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode in [KEY_EQUAL, KEY_PLUS, KEY_KP_ADD]:
+			step = VIEW_ZOOM_STEP
+		elif event.keycode in [KEY_MINUS, KEY_KP_SUBTRACT]:
+			step = -VIEW_ZOOM_STEP
+	if step != 0.0:
+		view_zoom = clampf(view_zoom + step, VIEW_ZOOM_MIN, VIEW_ZOOM_MAX)
+		SaveManager.set_setting("camera_zoom", view_zoom)
+		get_viewport().set_input_as_handled()
 
 func snap_to_target() -> void:
 	if target:
@@ -68,7 +96,8 @@ func _process(delta: float) -> void:
 		_punch = lerpf(_punch, _punch_target, 1.0 - exp(-rd * 12.0))
 	else:
 		_punch = lerpf(_punch, 1.0, 1.0 - exp(-rd * 6.0))
-	var z := BASE_ZOOM * _punch * zoom_bias
+	_view_zoom_shown = lerpf(_view_zoom_shown, view_zoom, 1.0 - exp(-rd * 10.0))
+	var z := BASE_ZOOM * _punch * zoom_bias * _view_zoom_shown
 	zoom = Vector2(z, z)
 	# shake
 	var scale_setting := float(SaveManager.get_setting("screen_shake", 1.0))

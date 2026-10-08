@@ -1,0 +1,16 @@
+{
+  "scope": "One paused GPU close-up of actual M01 light knife attack; visual quality review, not approval of complete animation",
+  "image_sha256": "97148fe20fb0735ab9277a6543620d7ac4c0989a09a88c973bf4fbbf9c7dd503",
+  "runtime_controller_checks": "passed",
+  "visual_approved": false,
+  "observations": [
+    "Close-up framing now exposes arms and blade region",
+    "Bright character highlights and CRT treatment obscure hand and weapon detail",
+    "A single contact image does not establish satisfactory anticipation, swing or recovery"
+  ],
+  "next_actions": [
+    "Capture a sequence with neutral review lighting and post effects disabled",
+    "Review both arms through anticipation, contact and recovery",
+    "Compare review and normal game output before choosing art or lighting changes"
+  ]
+}

@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS  first advance reveals text without skipping line
+PASS  immediate duplicate input cannot skip next line
+PASS  subsequent intentional input advances
+PASS  dialogue close stops voice and mouth animation
+DIALOGUE ADVANCE REVIEW: 0 failures

@@ -1,0 +1,62 @@
+{
+  "runtime_approved": false,
+  "animation_approved": false,
+  "duration_seconds": 0.4,
+  "samples": [
+    {
+      "frame": 1,
+      "minimum_sole_height_m": -4.365407590967152e-08
+    },
+    {
+      "frame": 2,
+      "minimum_sole_height_m": 3.838888733298518e-05
+    },
+    {
+      "frame": 3,
+      "minimum_sole_height_m": 3.832714355667122e-05
+    },
+    {
+      "frame": 4,
+      "minimum_sole_height_m": 3.824839950539172e-05
+    },
+    {
+      "frame": 5,
+      "minimum_sole_height_m": 3.8207934267120436e-05
+    },
+    {
+      "frame": 6,
+      "minimum_sole_height_m": 3.8031259464332834e-05
+    },
+    {
+      "frame": 7,
+      "minimum_sole_height_m": 3.779284088523127e-05
+    },
+    {
+      "frame": 8,
+      "minimum_sole_height_m": 3.760019535548054e-05
+    },
+    {
+      "frame": 9,
+      "minimum_sole_height_m": 3.737560837180354e-05
+    },
+    {
+      "frame": 10,
+      "minimum_sole_height_m": 3.6922196159139276e-05
+    },
+    {
+      "frame": 11,
+      "minimum_sole_height_m": 3.640703289420344e-05
+    },
+    {
+      "frame": 12,
+      "minimum_sole_height_m": 3.6123910831520334e-05
+    },
+    {
+      "frame": 13,
+      "minimum_sole_height_m": 3.598662806325592e-05
+    }
+  ],
+  "maximum_local_sole_step_m": 0.00990742426759269,
+  "minimum_sole_height_m": -4.365407590967152e-08,
+  "scope": "Blender IK bridge from neutral idle to walk frame 1; no world travel or stance-lock guarantee, export and visual validation pending"
+}

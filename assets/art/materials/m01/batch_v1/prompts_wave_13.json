@@ -1,0 +1,43 @@
+{
+  "mode": "built_in_imagegen",
+  "assets": [
+    {
+      "id": "harcourt_reference",
+      "reference": true,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual source for subsequent Blender reconstruction. Full body Lyle Harcourt, older motel night manager. Use attached portrait ONLY as identity reference: preserve his swept-back grey blond hair, lined stern face, age and recognisable features. Cream suit jacket over dark shirt and patterned tie, dark trousers and practical shoes, neutral relaxed standing pose with empty hands. Whole single subject visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Premium indie handcrafted 3D diorama finish, finely authored physically believable surfaces, soft neutral studio illumination. No additional props, UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "hotshot_reference",
+      "reference": false,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual source for subsequent Blender reconstruction. One gold plated six shot prop revolver from an unreleased 1980s movie, engraved restrained scroll details on gold metal, dark walnut grip, visible cylinder and hammer, believable functional firearm proportions. Whole single subject visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Premium indie handcrafted 3D diorama finish, finely authored physically believable surfaces, soft neutral studio illumination. No additional props, UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "damaged_ice_machine_reference",
+      "reference": false,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual source for subsequent Blender reconstruction. One damaged cream enamel 1980s motel ice machine, dispensing recess bent, side panel dented, loosened grille, small compact ice spill at base, no active steam or electricity. Whole single subject visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Premium indie handcrafted 3D diorama finish, finely authored physically believable surfaces, soft neutral studio illumination. No additional props, UI, overlay text, watermark or collage."
+    },
+    {
+      "id": "damaged_door_reference",
+      "reference": false,
+      "prompt": "Use case: stylized-concept. Asset type: M01 Sunset Palms visual source for subsequent Blender reconstruction. One broken cream motel guest door in walnut jamb, splintered lock area and modest cracked wooden panels, brass handle loose but attached, small wood fragments near base, intact coherent frame. Whole single subject visible, orthographic elevated three-quarter view, genuinely transparent background with no floor or detached shadow. Premium indie handcrafted 3D diorama finish, finely authored physically believable surfaces, soft neutral studio illumination. No additional props, UI, overlay text, watermark or collage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "harcourt_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-2840eb37-c3b7-4003-bd39-0337d34663f3.png"
+    },
+    {
+      "id": "hotshot_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-42699054-c3ab-4037-b7ff-bacefd04db04.png"
+    },
+    {
+      "id": "damaged_ice_machine_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-66ae0948-9096-4030-bbf4-a6b111ddd67b.png"
+    },
+    {
+      "id": "damaged_door_reference",
+      "source": "C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-bfa8e09f-4751-4043-bdea-b922cfa8b2d1.png"
+    }
+  ]
+}

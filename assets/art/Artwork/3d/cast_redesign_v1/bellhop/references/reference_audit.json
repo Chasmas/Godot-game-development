@@ -1,0 +1,51 @@
+{
+  "character": "bellhop",
+  "height_m": 1.74,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\bellhop_turnaround.png",
+  "source_sha256": "51f5eb2be208f26a9de28023fea002fcfdc045f489c3108142340ee7a8160a85",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        560,
+        1024
+      ],
+      "width": 560,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\bellhop\\references\\front.png",
+      "sha256": "7fc08fa47c29810ba0f32c5686b67a7188f19d9026e2ed462752b317dda97c44"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        560,
+        0,
+        960,
+        1024
+      ],
+      "width": 400,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\bellhop\\references\\side.png",
+      "sha256": "fe79027183087e4de68408691afda1892c2654657bbcf6388f2e8dcec58d6132"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        960,
+        0,
+        1536,
+        1024
+      ],
+      "width": 576,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\bellhop\\references\\back.png",
+      "sha256": "b92935ccb81cf1854b68699483f228940cd15125cd33975732de7925ed869230"
+    }
+  ],
+  "visual_review": "All three saved views directly inspected: single complete figure, hands/head/feet visible, no adjacent figure fragments. API-input approval only."
+}

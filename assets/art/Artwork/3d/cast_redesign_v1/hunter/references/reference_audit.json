@@ -1,0 +1,51 @@
+{
+  "character": "hunter",
+  "height_m": 1.78,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\hunter_turnaround.png",
+  "source_sha256": "538e3caf76230c090d2159893e5f1eaf9547dc9403229e0aec6e8ec5ecde1ab7",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        565,
+        1024
+      ],
+      "width": 565,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\hunter\\references\\front.png",
+      "sha256": "7376ba5dd45af32e52afb18525db81562cad0d30eeda35a096ec19a668bb30b4"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        565,
+        0,
+        960,
+        1024
+      ],
+      "width": 395,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\hunter\\references\\side.png",
+      "sha256": "600b6e49c6406d5a8e126b71891c831c2a23a747da5d8a97cc8d4e334e79f2a9"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        960,
+        0,
+        1536,
+        1024
+      ],
+      "width": 576,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\hunter\\references\\back.png",
+      "sha256": "5d23ae925c52c21967761c03da7fafa92abe017b8ee324739a3b09cbfc9f8b24"
+    }
+  ],
+  "visual_review": "All three saved crops directly inspected: one complete figure per image, head/hands/feet preserved, no adjacent figure fragments. Approval covers API input only, not model or runtime quality."
+}

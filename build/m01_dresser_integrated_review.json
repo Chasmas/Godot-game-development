@@ -1,0 +1,276 @@
+{
+  "assembled_navigation": {
+    "newly_reserved_cells": 17,
+    "passed": true,
+    "split_components": []
+  },
+  "integrated_bodies": [
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 3,
+      "four_side_safe_fractions": [
+        0.7734375,
+        0.7734375,
+        0.55078125,
+        0.55078125
+      ],
+      "overlap_free": true,
+      "position": [
+        219.0,
+        88.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 1,
+      "four_side_safe_fractions": [
+        0.7734375,
+        0.7734375,
+        0.55078125,
+        0.55078125
+      ],
+      "overlap_free": true,
+      "position": [
+        411.0,
+        128.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 1,
+      "four_side_safe_fractions": [
+        0.7734375,
+        0.7734375,
+        0.55078125,
+        0.55078125
+      ],
+      "overlap_free": true,
+      "position": [
+        1051.0,
+        64.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 2,
+      "four_side_safe_fractions": [
+        0.55078125,
+        0.55078125,
+        0.7734375,
+        0.7734375
+      ],
+      "overlap_free": true,
+      "position": [
+        360.0,
+        453.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 2,
+      "four_side_safe_fractions": [
+        0.55078125,
+        0.55078125,
+        0.7734375,
+        0.7734375
+      ],
+      "overlap_free": true,
+      "position": [
+        784.0,
+        491.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 1,
+      "four_side_safe_fractions": [
+        0.55078125,
+        0.55078125,
+        0.7734375,
+        0.7734375
+      ],
+      "overlap_free": true,
+      "position": [
+        803.0,
+        648.0
+      ]
+    },
+    {
+      "actor_overlap_free": true,
+      "actor_overlaps": [],
+      "actual_player_contact_directions": 2,
+      "four_side_safe_fractions": [
+        0.55078125,
+        0.55078125,
+        0.7734375,
+        0.7734375
+      ],
+      "overlap_free": true,
+      "position": [
+        552.0,
+        56.6399993896484
+      ]
+    }
+  ],
+  "placements": [],
+  "rug_geometry": [
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_0",
+      "outside_room_cells": [],
+      "position": [
+        154.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 1,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_1",
+      "outside_room_cells": [],
+      "position": [
+        409.0,
+        144.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 2,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_2",
+      "outside_room_cells": [],
+      "position": [
+        826.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 4,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_3",
+      "outside_room_cells": [],
+      "position": [
+        938.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 5,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_4",
+      "outside_room_cells": [],
+      "position": [
+        297.0,
+        464.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 9,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_5",
+      "outside_room_cells": [],
+      "position": [
+        378.0,
+        480.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 10,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        25.2159996032715,
+        12.0
+      ],
+      "name": "CandidateWovenRug_6",
+      "outside_room_cells": [],
+      "position": [
+        816.0,
+        474.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 13,
+      "visible_source_pixels": 66085
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_7",
+      "outside_room_cells": [],
+      "position": [
+        297.0,
+        624.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 15,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_8",
+      "outside_room_cells": [],
+      "position": [
+        362.0,
+        592.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 16,
+      "visible_source_pixels": 65051
+    },
+    {
+      "footprint_px": [
+        12.0,
+        25.2159996032715
+      ],
+      "name": "CandidateWovenRug_9",
+      "outside_room_cells": [],
+      "position": [
+        826.0,
+        624.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 18,
+      "visible_source_pixels": 65051
+    }
+  ],
+  "rugs": [],
+  "runtime_approved": false
+}

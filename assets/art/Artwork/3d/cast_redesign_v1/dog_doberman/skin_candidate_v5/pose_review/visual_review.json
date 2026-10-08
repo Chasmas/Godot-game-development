@@ -1,0 +1,15 @@
+{
+  "reviewed_views": [
+    "rear_hip_bend.png",
+    "tail_bend.png"
+  ],
+  "status": "improved_tail_leg_separation_root_transition_pending",
+  "runtime_approved": false,
+  "rig_approved": false,
+  "next_action": "Smooth root weight gradients along welded adjacency and inspect remaining pose views, opposite-side probes and lower-foot independence before locomotion",
+  "findings": [
+    "Geodesic competing seeds eliminate broad inner-hind-leg stretched panels visible in v4",
+    "Rear-hip bend retains recognizable leg silhouette in inspected view",
+    "Tail bend preserves hind-leg silhouette but still produces a raised kink at tail root"
+  ]
+}

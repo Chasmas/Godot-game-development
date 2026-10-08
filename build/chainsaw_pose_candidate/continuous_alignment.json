@@ -1,0 +1,235 @@
+{
+  "failures": 0,
+  "rows": [
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 0.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.00218352535739541
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 45.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.00218353397212923
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 90.0,
+      "max_entry_gap_m": 0.169253811240196,
+      "max_steady_gap_m": 0.00218355050310493
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 135.0,
+      "max_entry_gap_m": 0.169253945350647,
+      "max_steady_gap_m": 0.0021835423540324
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 180.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.00218355073593557
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 225.0,
+      "max_entry_gap_m": 0.169253900647163,
+      "max_steady_gap_m": 0.00218353350646794
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 270.0,
+      "max_entry_gap_m": 0.169253885746002,
+      "max_steady_gap_m": 0.00218355073593557
+    },
+    {
+      "clip": "powered/chainsaw_aim",
+      "duration_s": 0.375,
+      "heading": 315.0,
+      "max_entry_gap_m": 0.169253841042519,
+      "max_steady_gap_m": 0.00218354212120175
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 0.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.0003948429657612
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 45.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.000394836330087855
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 90.0,
+      "max_entry_gap_m": 0.169253811240196,
+      "max_steady_gap_m": 0.0003948429657612
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 135.0,
+      "max_entry_gap_m": 0.169253945350647,
+      "max_steady_gap_m": 0.000394809292629361
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 180.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.0003948429657612
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 225.0,
+      "max_entry_gap_m": 0.169253900647163,
+      "max_steady_gap_m": 0.000394845294067636
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 270.0,
+      "max_entry_gap_m": 0.169253885746002,
+      "max_steady_gap_m": 0.0003948429657612
+    },
+    {
+      "clip": "powered/chainsaw_walk",
+      "duration_s": 4.16666650772095,
+      "heading": 315.0,
+      "max_entry_gap_m": 0.169253841042519,
+      "max_steady_gap_m": 0.000394925154978409
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 0.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.00354477390646935
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 45.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.00354479276575148
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 90.0,
+      "max_entry_gap_m": 0.169253811240196,
+      "max_steady_gap_m": 0.0035447736736387
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 135.0,
+      "max_entry_gap_m": 0.169253945350647,
+      "max_steady_gap_m": 0.00354482978582382
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 180.0,
+      "max_entry_gap_m": 0.16925385594368,
+      "max_steady_gap_m": 0.0035447736736387
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 225.0,
+      "max_entry_gap_m": 0.169253900647163,
+      "max_steady_gap_m": 0.0035448307171464
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 270.0,
+      "max_entry_gap_m": 0.169253885746002,
+      "max_steady_gap_m": 0.0035447992850095
+    },
+    {
+      "clip": "powered/chainsaw_run",
+      "duration_s": 0.708333313465118,
+      "heading": 315.0,
+      "max_entry_gap_m": 0.169253841042519,
+      "max_steady_gap_m": 0.0035448030102998
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 0.0,
+      "max_entry_gap_m": 0.202633544802666,
+      "max_steady_gap_m": 0.000463016447611153
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 45.0,
+      "max_entry_gap_m": 0.202633485198021,
+      "max_steady_gap_m": 0.000463041913462803
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 90.0,
+      "max_entry_gap_m": 0.202633455395699,
+      "max_steady_gap_m": 0.000463016447611153
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 135.0,
+      "max_entry_gap_m": 0.202633515000343,
+      "max_steady_gap_m": 0.000462969881482422
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 180.0,
+      "max_entry_gap_m": 0.202633574604988,
+      "max_steady_gap_m": 0.000463016447611153
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 225.0,
+      "max_entry_gap_m": 0.202633589506149,
+      "max_steady_gap_m": 0.000463096017483622
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 270.0,
+      "max_entry_gap_m": 0.202633515000343,
+      "max_steady_gap_m": 0.000463016447611153
+    },
+    {
+      "clip": "powered/chainsaw_sneak",
+      "duration_s": 2.83333325386047,
+      "heading": 315.0,
+      "max_entry_gap_m": 0.202633544802666,
+      "max_steady_gap_m": 0.000463068980025128
+    }
+  ],
+  "scope": "Original Cass with added powered AnimationLibrary, 540 real process frames, animation advanced at 60Hz through at least two loops per clip. Entry gaps recorded separately; no input or physical locomotion.",
+  "max_steady_gap_m": 0.0035448307171464,
+  "max_entry_gap_m": 0.202633589506149,
+  "steady_alignment_pass": true,
+  "entry_approved": false,
+  "remaining": "Entry from idle has up to .203m wrist separation during blend; dedicated equip/raise and clip-to-clip transitions still required. No gameplay integration."
+}

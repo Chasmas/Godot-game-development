@@ -1,0 +1,51 @@
+{
+  "character": "dog_rott",
+  "height_m": 0.79,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\dog_rott_turnaround.png",
+  "source_sha256": "6a7079b5dfa9f81e8d33073c2b83d89d1f11de345cee1d0881a19a2ab6e52ab0",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        1410,
+        0,
+        1774,
+        887
+      ],
+      "width": 364,
+      "height": 887,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_rott\\references\\back.png",
+      "sha256": "2f2b3998b9e5b463b2aa4d81d4c122988f38d8985f6b5963fe8e070925611371"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        390,
+        0,
+        1400,
+        887
+      ],
+      "width": 1010,
+      "height": 887,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_rott\\references\\side.png",
+      "sha256": "16576eaf4733e0c09fc9a9a57bb17097b6ad4ea40c579a887f9cc12fcd8b5b91"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        380,
+        887
+      ],
+      "width": 380,
+      "height": 887,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_rott\\references\\front.png",
+      "sha256": "c9353e65c1099235e4b6366a80851721320a3e9d55e019111a397d94280db05b"
+    }
+  ],
+  "visual_review": "Original and three Blender crops directly inspected; full muzzle, paws and tail retained, clean view separation. Shepherd side crop widened and re-inspected to preserve tail tip. Modeling input approval only, quadruped source pose required."
+}

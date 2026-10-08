@@ -22,7 +22,7 @@ const ACTIONS := {
 	"interact":   ["Interact / Pick up", [["key", KEY_E], ["jb", JOY_BUTTON_X]]],
 	"swap":       ["Quick Swap",  [["key", KEY_Q], ["jb", JOY_BUTTON_Y]]],
 	"reload":     ["Reload",      [["key", KEY_R]]],
-	"lock_on":    ["Lock-on / Switch", [["key", KEY_V], ["mouse", MOUSE_BUTTON_XBUTTON1], ["jb", JOY_BUTTON_RIGHT_STICK]]],
+	"lock_on":    ["Lock-on / Release", [["key", KEY_V], ["mouse", MOUSE_BUTTON_XBUTTON1], ["jb", JOY_BUTTON_RIGHT_STICK]]],
 	"sneak":      ["Sneak", [["key", KEY_CTRL], ["key", KEY_ALT]]],
 	"execute":    ["Execute / Kick", [["key", KEY_F], ["jb", JOY_BUTTON_B]]],
 	"ability":    ["Ability",     [["key", KEY_C], ["mouse", MOUSE_BUTTON_MIDDLE], ["jb", JOY_BUTTON_RIGHT_SHOULDER]]],

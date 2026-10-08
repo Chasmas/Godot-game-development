@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "direction": [
+        1.0,
+        0.0
+      ],
+      "frames": 152,
+      "minimum_clearance": 11.6752691268921,
+      "remaining_distance": 7.60883617401123,
+      "walking_seen": true
+    },
+    {
+      "direction": [
+        0.0,
+        1.0
+      ],
+      "frames": 149,
+      "minimum_clearance": 10.9690990447998,
+      "remaining_distance": 7.59162378311157,
+      "walking_seen": true
+    },
+    {
+      "direction": [
+        -1.0,
+        0.0
+      ],
+      "frames": 152,
+      "minimum_clearance": 11.6752691268921,
+      "remaining_distance": 7.60883617401123,
+      "walking_seen": true
+    },
+    {
+      "direction": [
+        0.0,
+        -1.0
+      ],
+      "frames": 149,
+      "minimum_clearance": 10.5806646347046,
+      "remaining_distance": 7.58290910720825,
+      "walking_seen": true
+    }
+  ],
+  "scope": "Actual Enemy patrol controller around one M01 sleeping chair; other actors ignored to isolate furniture steering"
+}

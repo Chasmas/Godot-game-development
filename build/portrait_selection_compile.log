@@ -1,0 +1,24 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS punch has a visible hand stroke
+PASS punch recovers its starting hand pose
+PASS punch reaches extension at damage contact
+punch reach=4.34468603134155 peak=53 endpoint gap=0.22578477859497
+PASS punch_left has a visible hand stroke
+PASS punch_left recovers its starting hand pose
+PASS punch_left reaches extension at damage contact
+punch_left reach=4.33083343505859 peak=53 endpoint gap=0.22624669969082
+PASS melee has a visible hand stroke
+PASS melee recovers its starting hand pose
+melee reach=5.9303126335144 peak=27 endpoint gap=0.09245617687702
+PASS grab has a visible hand stroke
+PASS grab recovers its starting hand pose
+grab reach=10.014910697937 peak=26 endpoint gap=0.24095311760902
+PASS held has a visible hand stroke
+PASS held recovers its starting hand pose
+held reach=5.15395736694336 peak=68 endpoint gap=0.04449752345681
+PASS stab has a visible hand stroke
+PASS stab recovers its starting hand pose
+PASS knife reaches contact at its damage timing
+stab reach=3.61129188537598 peak=62 endpoint gap=0.27751716971397
+COMBAT ANIMATION REGRESSION: 0 failures

@@ -1,0 +1,15 @@
+{
+  "rig_approved": false,
+  "next_action": "Explicit region-aware skin weights required: Blender bone heat failed with all 69131 vertices unweighted",
+  "findings": [
+    "Tail follows the visible silhouette after repositioning",
+    "Jaw now aligns lower muzzle",
+    "Rear knee moved into thigh region; four chains retain independent paw targets"
+  ],
+  "status": "placement_retained_for_skinning",
+  "reviewed_views": [
+    "front_overlay.png",
+    "side_overlay.png"
+  ],
+  "runtime_approved": false
+}

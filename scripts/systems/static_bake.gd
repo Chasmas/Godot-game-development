@@ -31,6 +31,10 @@ func _ready() -> void:
 		var world: Rect2 = j[1]
 		if not is_instance_valid(node) or world.size.x < 1.0 or world.size.y < 1.0:
 			continue
+		# Reviewed native floors already draw every pixel of these chunks.
+		# Retain water and partially transparent boundaries as native fallback.
+		if node.has_meta("native_floor_fully_covered"):
+			continue
 		var k := minf(SCALE, float(MAX_TEX) / maxf(world.size.x, world.size.y))
 		var vp := SubViewport.new()
 		vp.size = Vector2i((world.size * k).ceil())

@@ -1,0 +1,51 @@
+{
+  "character": "sniper",
+  "height_m": 1.81,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\sniper_turnaround.png",
+  "source_sha256": "e0ea695cc16ad107a739ce7ecd0118b918727008451eb73d6cebdc148bd1f61e",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        650,
+        0,
+        900,
+        1024
+      ],
+      "width": 250,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\sniper\\references\\side.png",
+      "sha256": "944252172f881a8cb3df2e5de833eb116f7569e8ddecd27f85678dcb9d5ff6b9"
+    },
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        580,
+        1024
+      ],
+      "width": 580,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\sniper\\references\\front.png",
+      "sha256": "3a31145d9b86b6d53bce48949f926e783115268860756448ec442f8bcb686cfb"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        990,
+        0,
+        1490,
+        1024
+      ],
+      "width": 500,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\sniper\\references\\back.png",
+      "sha256": "910049265bfcaa61721ac34e84ff5b4a51123efc180c741c829763cc04c1f69a"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops inspected: complete figures, clean separation, hands and feet retained; modeling inputs only, no runtime approval."
+}

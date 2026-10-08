@@ -1,0 +1,32 @@
+[
+  {
+    "actual": "idle",
+    "bone_motion_metres": {
+      "Head": 0.0244413297623396,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "idle"
+  },
+  {
+    "actual": "aim",
+    "bone_motion_metres": {
+      "Head": 0.0501634664833546,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "aim"
+  },
+  {
+    "actual": "aim_dual",
+    "bone_motion_metres": {
+      "Head": 0.0243250671774149,
+      "LeftFoot": 0.0,
+      "RightFoot": 0.0
+    },
+    "look": "guard",
+    "requested": "aim_dual"
+  }
+]

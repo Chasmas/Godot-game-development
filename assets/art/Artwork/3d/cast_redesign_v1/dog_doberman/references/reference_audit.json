@@ -1,0 +1,51 @@
+{
+  "character": "dog_doberman",
+  "height_m": 0.88,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\dog_doberman_turnaround.png",
+  "source_sha256": "f4aa4114b9dbd2e3a9b932a6d3a41ce0c9af1b32d39174ccaaec78a58fe6c0b8",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        295,
+        1024
+      ],
+      "width": 295,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\references\\front.png",
+      "sha256": "5cbc16cee94c833a227d77274ac84ffb4fd6f6404a805c5f485eb8cd0e8ef6f5"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        300,
+        0,
+        1258,
+        1024
+      ],
+      "width": 958,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\references\\side.png",
+      "sha256": "d3713e1ef5c3ba36eb818e9e98d4b2249183cb6559a7635df89eb2424652f948"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        1262,
+        0,
+        1536,
+        1024
+      ],
+      "width": 274,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\references\\back.png",
+      "sha256": "299d45a57e6f5f0a82dda268213044c0b3eb8900b825c93eab49f7ba3691c53b"
+    }
+  ],
+  "visual_review": "Original and all three Blender crops directly inspected. Full muzzle, paws and tail retained; isolated front/profile/back. Modeling inputs only; quadruped source pose required."
+}

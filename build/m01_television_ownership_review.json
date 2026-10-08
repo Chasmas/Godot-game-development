@@ -1,0 +1,77 @@
+{
+  "replacements_applied": false,
+  "televisions": [
+    {
+      "damageable": true,
+      "position": [
+        200.0,
+        136.0
+      ],
+      "room_id": 1,
+      "same_room_cabinets": [
+        {
+          "distance_px": 51.6236381530762,
+          "name": "CandidateDresser_0",
+          "position": [
+            219.0,
+            88.0
+          ]
+        }
+      ]
+    },
+    {
+      "damageable": true,
+      "position": [
+        760.0,
+        136.0
+      ],
+      "room_id": 4,
+      "same_room_cabinets": []
+    },
+    {
+      "damageable": true,
+      "position": [
+        952.0,
+        136.0
+      ],
+      "room_id": 5,
+      "same_room_cabinets": [
+        {
+          "distance_px": 122.413230895996,
+          "name": "CandidateDresser_2",
+          "position": [
+            1051.0,
+            64.0
+          ]
+        }
+      ]
+    },
+    {
+      "damageable": true,
+      "position": [
+        696.0,
+        440.0
+      ],
+      "room_id": 13,
+      "same_room_cabinets": [
+        {
+          "distance_px": 101.710372924805,
+          "name": "CandidateDresser_4",
+          "position": [
+            784.0,
+            491.0
+          ]
+        }
+      ]
+    },
+    {
+      "damageable": true,
+      "position": [
+        200.0,
+        488.0
+      ],
+      "room_id": 9,
+      "same_room_cabinets": []
+    }
+  ]
+}

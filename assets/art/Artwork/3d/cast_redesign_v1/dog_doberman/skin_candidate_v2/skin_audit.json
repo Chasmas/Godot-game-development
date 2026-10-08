@@ -1,0 +1,28 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "region_vertices": {
+        "head_neck": 13567,
+        "torso": 19404,
+        "front_positive_x": 8034,
+        "front_negative_x": 8002,
+        "rear_positive_x": 9061,
+        "rear_negative_x": 9084,
+        "tail": 1979
+      },
+      "unweighted_vertices": 0,
+      "minimum_weight_sum": 0.9999898070236668,
+      "maximum_weight_sum": 1.0000000456348062
+    }
+  ],
+  "scope": "Authored spatial region skin-weight pilot; no motion or deformation approval",
+  "jaw_animation_ready": false,
+  "limitations": [
+    "Closed muzzle requires authored jaw topology before mouth animation",
+    "Shoulder/hip transitions and torso regions require pose-probe visual checks"
+  ],
+  "next": "Render independent limb bends, head turns and tail bends; inspect cross-limb displacement"
+}

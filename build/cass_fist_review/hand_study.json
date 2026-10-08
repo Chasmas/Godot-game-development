@@ -1,0 +1,20 @@
+{
+  "hands": [
+    {
+      "hand": "LeftHand",
+      "weighted_vertices": 504,
+      "vertices_with_two_adjoining_rings": 536,
+      "faces": 444,
+      "boundary_cut_is_diagnostic_only": true
+    },
+    {
+      "hand": "RightHand",
+      "weighted_vertices": 544,
+      "vertices_with_two_adjoining_rings": 576,
+      "faces": 444,
+      "boundary_cut_is_diagnostic_only": true
+    }
+  ],
+  "scope": "Original hand surface inventory, not a fist candidate",
+  "runtime_promoted": false
+}

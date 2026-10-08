@@ -8,7 +8,7 @@ extends CharacterBody2D
 signal died(info: Dictionary)
 
 const RADIUS := 5.0
-const EXEC_RANGE := 20.0
+const EXEC_RANGE := 30.0
 const KICK_RANGE := 22.0
 const TAKEDOWN_RANGE := 22.0
 const LOCK_RANGE := 300.0
@@ -63,6 +63,8 @@ var _hold_t := 0.0
 var _heavy_ready := false
 var _pending_melee := -1.0
 var _pending_heavy := false
+var _pending_aim := Vector2.RIGHT
+var _pending_weapon: WeaponInstance = null
 var _locked_t := 0.0
 var _exec_target: Enemy = null
 var _exec_hits := 0
@@ -74,13 +76,13 @@ var _kick_cd := 0.0
 var _stagger := 0.0
 var _tackled: Array = []
 var _last_move := Vector2.ZERO
+var _travel_velocity := Vector2.ZERO
 var _exec_move: Dictionary = {}
 var _exec_standing := false
 # lock-on
 var lock_target: Node2D = null
-var _lock_hold := 0.0
-var _lock_press_locked := false
 var _lock_flick_ready := true
+var _lock_occluded := 0.0
 # stealth / upgrades
 var sneak_held := false
 var upgrades: Dictionary = {}          ## id -> true
@@ -112,7 +114,7 @@ func _ready() -> void:
 	add_child(visual)
 	ability = AbilitySystem.new()
 	add_child(ability)
-	z_index = 2
+	z_index = 1   # the cast's layer: y-sorted with enemies and standing props (Level)
 	Events.enemy_killed.connect(_on_any_kill)
 
 ## Re-reads the mask after it's been picked at the start of a job.
@@ -157,17 +159,24 @@ func current() -> WeaponInstance:
 
 # =============================================================== main loop
 func _physics_process(delta: float) -> void:
+	var tm := ability.player_time_mult() if alive else 1.0
+	if visual:
+		# Animation and contact timers must use the same actor clock. Otherwise
+		# Spotlight resolves a blow while the slowed hand is still winding up.
+		visual.animation_time_mult = tm
+		visual.set_powered_cutting(alive and input_enabled and _stagger <= 0.0 and not is_dashing() and _locked_t <= 0.0 and Input.is_action_pressed("fire"))
 	if not alive:
 		return
-	var tm := ability.player_time_mult()
 	var pd := delta * tm
 	_tick_timers(pd)
 	_update_lock(pd)
-	_update_aim()
+	if _locked_t <= 0.0:
+		_update_aim(pd)
 	if _locked_t > 0.0:
 		_locked_t -= pd
 		_process_execution(pd)
 		velocity = Vector2.ZERO
+		_travel_velocity = Vector2.ZERO
 		visual.update_move(Vector2.ZERO, pd)
 		return
 	var move := Vector2.ZERO
@@ -180,12 +189,19 @@ func _physics_process(delta: float) -> void:
 	if input_enabled:
 		_actions(pd)
 	# spotlight: scale motion so the player keeps near-normal speed while the world slows
-	var real_vel := velocity
 	velocity *= tm
 	move_and_slide()
-	velocity = real_vel
+	velocity /= maxf(tm, 0.001)
+	# Floating bodies can retain velocity into a wall even when travel is zero.
+	# Remove blocked momentum while preserving movement along the surface.
+	for contact in get_slide_collision_count():
+		var normal := get_slide_collision(contact).get_normal()
+		if velocity.dot(normal) < 0.0:
+			velocity = velocity.slide(normal)
 	_after_move()
-	visual.update_move(velocity, pd)
+	# Animation follows displacement after collisions, in the player's time scale.
+	_travel_velocity = get_real_velocity() / maxf(tm, 0.001)
+	visual.update_move(_travel_velocity, pd)
 	visual.set_aim(aim_dir.angle())
 	_update_prompt()
 	_footsteps(pd)
@@ -236,7 +252,7 @@ func _tick_timers(pd: float) -> void:
 		if _pending_melee < 0.0:
 			_melee_hit(_pending_heavy)
 
-func _update_aim() -> void:
+func _update_aim(pd: float = 1.0 / 120.0) -> void:
 	if lock_target and is_instance_valid(lock_target):
 		var tv: Vector2 = lock_target.velocity if lock_target is CharacterBody2D else Vector2.ZERO
 		var tp := lock_target.global_position + tv * 0.05
@@ -251,7 +267,7 @@ func _update_aim() -> void:
 		if stick.length() > 0.3:
 			aim_dir = stick.normalized()
 		elif _last_move.length() > 0.2:
-			aim_dir = aim_dir.slerp(_last_move.normalized(), 0.25)
+			aim_dir = aim_dir.slerp(_last_move.normalized(), 1.0 - pow(0.75, pd * 120.0))
 		aim_dir = _aim_assist(aim_dir, float(SaveManager.get_setting("aim_assist", 0.5)))
 		aim_point = global_position + aim_dir * 120.0
 	else:
@@ -303,6 +319,7 @@ func set_lock(t: Node2D) -> void:
 	if t == lock_target:
 		return
 	lock_target = t
+	_lock_occluded = 0.0
 	Events.lock_changed.emit(t)
 	if t:
 		Audio.play("blip", -6.0, 1.6)
@@ -310,36 +327,36 @@ func set_lock(t: Node2D) -> void:
 func _update_lock(pd: float) -> void:
 	var real := pd / maxf(Engine.time_scale, 0.05)
 	if lock_target != null:
-		var lost: bool = not is_instance_valid(lock_target) or not lock_target.is_alive() \
-			or lock_target.global_position.distance_to(global_position) > LOCK_RANGE * 1.4
-		if lost:
+		var dead: bool = not is_instance_valid(lock_target) or not lock_target.is_alive()
+		var outside := false
+		if not dead:
+			outside = lock_target.global_position.distance_to(global_position) > LOCK_RANGE * 1.4
+			if _has_los(global_position, lock_target.global_position, lock_target):
+				_lock_occluded = 0.0
+			else:
+				_lock_occluded += real
+		if dead or outside or _lock_occluded >= 0.3:
+			# Only a defeated target can trigger auto-next. Leaving range or
+			# losing sight returns free aim instead of grabbing another enemy.
 			lock_target = null
-			var nxt: Array = _lock_candidates() if SaveManager.get_setting("lock_auto_next", true) else []
-			set_lock(nxt[0] if not nxt.is_empty() else null)
-			if lock_target == null:
+			_lock_occluded = 0.0
+			var nxt: Array = _lock_candidates() if dead and SaveManager.get_setting("lock_auto_next", true) else []
+			if not nxt.is_empty():
+				set_lock(nxt[0])
+			else:
 				Events.lock_changed.emit(null)
 	if not input_enabled:
 		return
 	if Input.is_action_just_pressed("lock_on"):
-		_lock_hold = 0.0
-		_lock_press_locked = lock_target != null
-		var c := _lock_candidates()
-		if lock_target == null:
-			if c.is_empty():
+		if lock_target != null:
+			set_lock(null)
+			Audio.play("blip", -8.0, 0.8)
+		else:
+			var candidates := _lock_candidates()
+			if candidates.is_empty():
 				Audio.play("empty", -10.0)
 			else:
-				set_lock(c[0])
-		else:
-			var i := c.find(lock_target)
-			if c.size() > 1:
-				set_lock(c[(i + 1) % c.size()])
-	elif Input.is_action_pressed("lock_on") and _lock_press_locked:
-		_lock_hold += real
-		if _lock_hold > 0.4 and lock_target:
-			set_lock(null)
-			Events.lock_changed.emit(null)
-			Audio.play("blip", -8.0, 0.8)
-			_lock_press_locked = false
+				set_lock(candidates[0])
 	# flick the right stick to hop to the target in that direction
 	if lock_target and InputSetup.using_gamepad:
 		var stick := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
@@ -382,9 +399,11 @@ func _movement(move: Vector2, pd: float) -> void:
 	sneak_held = input_enabled and Input.is_action_pressed("sneak")
 	if sneak_held:
 		speed *= 0.45
-	elif Input.is_action_pressed("sprint") and move.length() > 0.1 and not _winded and stamina > 0.0:
+	elif input_enabled and Input.is_action_pressed("sprint") and move.length() > 0.1 and not _winded and stamina > 0.0:
 		speed *= data.sprint_mult
-		stamina = maxf(0.0, stamina - SPRINT_DRAIN * pd)
+		# Spend stamina for actual travel, not for pushing against a wall.
+		var effort := clampf(_travel_velocity.length() / maxf(speed, 0.001), 0.0, 1.0)
+		stamina = maxf(0.0, stamina - SPRINT_DRAIN * effort * pd)
 		_stamina_rest = STAMINA_DELAY * 0.5
 		if stamina <= 0.0:
 			_winded = true   # run dry: no sprinting until she's got a third back
@@ -397,6 +416,9 @@ func _movement(move: Vector2, pd: float) -> void:
 	# quick turns: reversing direction uses the (higher) decel rate
 	if move.length() > 0.05 and velocity.dot(target) < 0.0:
 		rate = data.decel * 1.3
+	elif target.length_squared() < velocity.length_squared():
+		# Releasing sprint or crouching brakes as promptly as releasing movement.
+		rate = data.decel
 	velocity = velocity.move_toward(target, rate * pd)
 
 func _start_dash() -> void:
@@ -409,6 +431,11 @@ func _start_dash() -> void:
 		Audio.play_at("dash", global_position, -18.0, 0.0)
 		return
 	stamina -= ROLL_COST
+	_reload_t = 0.0
+	_reload_weapon = null
+	visual.cancel_reload()
+	# Dodging cancels an unlanded strike; it cannot hit invisibly from the roll.
+	_cancel_melee()
 	_stamina_rest = STAMINA_DELAY
 	_dash_dir = _last_move.normalized() if _last_move.length() > 0.2 else aim_dir
 	# shorter dodge: split the reduction between speed and time so it keeps
@@ -416,7 +443,7 @@ func _start_dash() -> void:
 	var sc := sqrt(Tuning.get_t().dash_distance_scale)
 	# a roll, not a blink: longer and a little slower, so the body has time
 	# to go over and come up - about the same ground covered
-	_dash_total = data.dash_time * sc * 1.8
+	_dash_total = data.dash_time * sc * 2.25
 	_dash_avg = data.dash_speed * sc * 0.62
 	_dash_t = _dash_total
 	_dash_extend = 0.0
@@ -434,9 +461,14 @@ func _start_dash() -> void:
 
 func _end_dash() -> void:
 	_dash_t = 0.0
+	visual.finish_roll()
 	Effects.dust(global_position, _dash_dir, 0.5)
 	collision_mask = Layers.WALK_MASK_PLAYER
-	velocity = _dash_dir * data.move_speed * 0.8   # roll out of it
+	# Recover into the current movement, without forcing a slide after release.
+	var recovery_speed := data.move_speed * (persona.move_mult if persona else 1.0)
+	if input_enabled and Input.is_action_pressed("sneak"):
+		recovery_speed *= 0.45
+	velocity = _last_move * recovery_speed * 0.8 if input_enabled else Vector2.ZERO
 
 func is_dashing() -> bool:
 	return _dash_t > 0.0
@@ -447,7 +479,7 @@ func is_quiet() -> bool:
 	if _dash_t > 0.0:
 		return false
 	var limit := data.move_speed * (1.05 if upgrades.has(&"soft_soles") else 0.6)
-	return velocity.length() <= limit
+	return _travel_velocity.length() <= limit
 
 func has_upgrade(id: StringName) -> bool:
 	return upgrades.has(id)
@@ -504,7 +536,7 @@ func _overlaps(mask: int) -> bool:
 	return not space.intersect_shape(q, 1).is_empty()
 
 func _footsteps(pd: float) -> void:
-	var sp := velocity.length()
+	var sp := _travel_velocity.length()
 	if sp < 30.0 or _dash_t > 0.0:
 		return
 	_step_t -= pd * (sp / data.move_speed)
@@ -525,18 +557,23 @@ func _footsteps(pd: float) -> void:
 func _actions(pd: float) -> void:
 	if Input.is_action_just_pressed("dash"):
 		_start_dash()
+	if is_dashing():
+		return
 	var w := current()
 	# --- fire / attack
 	if w and w.data.is_firearm():
 		var want := Input.is_action_pressed("fire") if w.data.automatic else Input.is_action_just_pressed("fire")
 		if want:
 			_try_shoot(w)
+	elif w and w.data.id == &"chainsaw":
+		if Input.is_action_pressed("fire"):
+			_chainsaw_attack(w)
 	elif w and (w.data.is_melee() or w.data.kind == WeaponData.Kind.THROWABLE):
 		if Input.is_action_just_pressed("fire"):
 			_hold_t = 0.0
 			_heavy_ready = false
 			_melee_attack(false)
-		elif Input.is_action_pressed("fire"):
+		elif Input.is_action_pressed("fire") and _stagger <= 0.0:
 			_hold_t += pd
 			if not _heavy_ready and _hold_t >= w.data.heavy_charge + 0.12:
 				_heavy_ready = true
@@ -566,7 +603,7 @@ func _actions(pd: float) -> void:
 
 # ---------------------------------------------------------------- firearms
 func _try_shoot(w: WeaponInstance) -> void:
-	if _fire_cd > 0.0 or _reload_t > 0.0:
+	if _stagger > 0.0 or _fire_cd > 0.0 or _reload_t > 0.0:
 		return
 	respawn_grace = 0.0
 	if Game.modifiers.get("melee_only", false):
@@ -606,6 +643,9 @@ func _try_shoot(w: WeaponInstance) -> void:
 	if upgrades.has(&"laser"):
 		spread *= 0.4
 	_bloom = minf(_bloom + w.data.recoil_deg * (0.6 if upgrades.has(&"laser") else 1.0) * (DUAL_BLOOM if w.dual else 1.0), 14.0)
+	# Aim can change in this physics tick, before the visual update below.
+	# Orient the muzzle before computing the shot origin.
+	visual.set_aim(aim_dir.angle())
 	var origin := visual.muzzle_global(left)
 	# never spawn the bullet on the far side of a wall we're hugging
 	var space := get_world_2d().direct_space_state
@@ -619,17 +659,17 @@ func _try_shoot(w: WeaponInstance) -> void:
 		return
 	var bs := BulletSystem.get_system()
 	if bs:
-		bs.fire(origin, _forgiving_shot(aim_dir), w.data, self, spread)
+		bs.fire(origin, _forgiving_shot(aim_dir, origin), w.data, self, spread)
 		if _volley_ready and _dash_cd > 0.0:
 			# the cowboy: out of a dash, the first shot fans out three
 			for side in [-1.0, 1.0]:
-				bs.fire(origin, _forgiving_shot(aim_dir).rotated(side * 0.12), w.data, self, spread)
+				bs.fire(origin, _forgiving_shot(aim_dir, origin).rotated(side * 0.12), w.data, self, spread)
 		_volley_ready = false
 	visual.kick_recoil(w.data.camera_kick * (0.35 if w.dual else 0.6))
 	visual.gun_recoil(left, 1.5 + w.data.camera_kick * 0.4)
 	var silenced := upgrades.has(&"silencer") or w.data.suppressed
 	var mscale := w.data.muzzle_scale * (0.5 if upgrades.has(&"silencer") else 1.0)
-	Effects.muzzle(origin, aim_dir, w.data.muzzle_color if not upgrades.has(&"silencer") else Color(1, 0.9, 0.7), w.data.pellets > 1 and not silenced, mscale)
+	Effects.muzzle(origin + visual.muzzle_lift(left), aim_dir, w.data.muzzle_color if not upgrades.has(&"silencer") else Color(1, 0.9, 0.7), w.data.pellets > 1 and not silenced, mscale)
 	if w.data.id == &"shotgun":
 		# pump gun: the shell comes out when she racks it, a beat later
 		var sw := w
@@ -638,9 +678,9 @@ func _try_shoot(w: WeaponInstance) -> void:
 				return
 			Audio.play_at("slide_rack", global_position, -9.0, 0.08)
 			visual.pump()
-			Effects.casing(visual.muzzle_global(false) - aim_dir * 7.0, aim_dir, false, true))
+			Effects.casing(visual.muzzle_tip_global(false) - aim_dir * 7.0, aim_dir, false, true))
 	elif w.data.ejects_shells:
-		Effects.casing(origin - aim_dir * 5.0, aim_dir, left, w.data.pellets > 1)
+		Effects.casing(origin + visual.muzzle_lift(left) - aim_dir * 5.0, aim_dir, left, w.data.pellets > 1)
 	Audio.play_at("suppressed" if upgrades.has(&"silencer") else w.data.sfx_fire, global_position, 0.0, 0.05)
 	Events.noise.emit(global_position, gun_noise(w), &"gunshot", self)
 	# every gun has its own weight: the shotgun shoves the camera back and
@@ -655,7 +695,7 @@ func _try_shoot(w: WeaponInstance) -> void:
 	# punch: a hair of zoom per shot, more for heavy guns, and smoke that
 	# hangs where the gun went off
 	Events.camera_punch.emit(1.0 + clampf(w.data.camera_kick * 0.006, 0.004, 0.035), 0.07)
-	Effects.gun_smoke(origin, aim_dir, 1.4 if w.data.pellets > 1 else (0.6 if silenced else 1.0))
+	Effects.gun_smoke(origin + visual.muzzle_lift(left), aim_dir, 1.4 if w.data.pellets > 1 else (0.6 if silenced else 1.0))
 	_emit_weapon()
 
 ## The flamethrower: a short cone that kills what it touches and leaves
@@ -739,44 +779,84 @@ func is_reloading() -> bool:
 	return _reload_t > 0.0
 
 # ---------------------------------------------------------------- melee
+func _cancel_melee() -> void:
+	_pending_melee = -1.0
+	_pending_weapon = null
+	_heavy_ready = false
+	_hold_t = 0.0
+	visual.cancel_attack()
+
+## Powered cutting uses the forward two-hand hold, never a bat swing.
+func _chainsaw_attack(w: WeaponInstance) -> void:
+	if _stagger > 0.0 or _melee_cd > 0.0 or _pending_melee >= 0.0:
+		return
+	respawn_grace = 0.0
+	_melee_cd = w.data.melee_cooldown
+	_pending_melee = w.data.melee_windup
+	_pending_heavy = false
+	_pending_aim = aim_dir
+	_pending_weapon = w
+	visual.set_aim(aim_dir.angle())
+	visual.kick_recoil(0.55)
+	Events.noise.emit(global_position, w.data.noise_radius, &"gun", self)
+
 func _melee_attack(heavy: bool) -> void:
 	var w := current()
-	if w == null or _melee_cd > 0.0:
+	if w == null or _stagger > 0.0 or _melee_cd > 0.0 or _pending_melee >= 0.0 or visual.is_swinging():
 		return
 	respawn_grace = 0.0
 	_melee_cd = w.data.melee_cooldown * (1.45 if heavy else 1.0) * (0.75 if upgrades.has(&"quick_hands") else 1.0)
 	_turn_into_target(w.data.melee_range + (6.0 if heavy else 0.0), w.data.melee_arc_deg * 0.5)
 	var stab := w.data.id in [&"knife", &"broken_bottle", &"glass_shard"]
+	visual.set_aim(aim_dir.angle())
 	visual.swing(heavy, stab)
+	# Preserve the full authored recovery even for fast weapons and Quick Hands.
+	_melee_cd = maxf(_melee_cd, visual._swing_dur)
 	Audio.play_at("swing_heavy" if heavy else "swing", global_position, -2.0, 0.15)
-	_pending_melee = w.data.melee_windup * 0.5 + (0.04 if heavy else 0.0)
+	# Resolve contact when the authored arm reaches the strike, not during windup.
+	_pending_melee = visual._swing_dur * (0.62 if visual._stab else 0.58)
 	_pending_heavy = heavy
+	_pending_aim = aim_dir
+	_pending_weapon = w
 	velocity += aim_dir * (150.0 if heavy else 85.0)   # lunge into the swing
 	var blade := w.data.sfx_hit == "hit_blade"
 	var tint := Color(0.75, 0.95, 1.0) if blade else Color(1.0, 0.8, 0.45)
 	Effects.slash(global_position + aim_dir * 3.0, aim_dir.angle(), w.data.melee_range + (8.0 if heavy else 3.0),
-		deg_to_rad(w.data.melee_arc_deg + (40.0 if heavy else 0.0)), tint, heavy, stab, visual._swing_dir)
+		deg_to_rad(w.data.melee_arc_deg + (40.0 if heavy else 0.0)), tint, heavy, stab, visual._swing_dir, visual, w.data.id)
 
 func _punch() -> void:
-	if _melee_cd > 0.0:
+	if _stagger > 0.0 or _melee_cd > 0.0:
 		return
 	respawn_grace = 0.0
 	_melee_cd = 0.22
 	_turn_into_target(17.0, 50.0)
+	visual.set_aim(aim_dir.angle())
 	visual.punch()
 	Audio.play_at("swing", global_position, -8.0, 0.2)
 	velocity += aim_dir * 60.0
-	Effects.slash(global_position + aim_dir * 4.0, aim_dir.angle(), 14.0, 0.5, Color(1, 0.95, 0.85), false, true, 1.0)
-	_pending_melee = 0.02
+	# The authored fist supplies the motion; the old floor wedge detached from it.
+	if not visual.cast_sprite is CastModel:
+		Effects.slash(global_position + aim_dir * 4.0, aim_dir.angle(), 14.0, 0.5, Color(1, 0.95, 0.85), false, true, 1.0, visual)
+	_pending_melee = CharacterVisual.PUNCH_DURATION * CharacterVisual.PUNCH_CONTACT
 	_pending_heavy = false
+	_pending_aim = aim_dir
+	_pending_weapon = null
 
 func _melee_hit(heavy: bool) -> void:
 	var w := current()
+	if w != _pending_weapon:
+		return
+	if w and w.data.id == &"chainsaw" and (not Input.is_action_pressed("fire") or not input_enabled or not alive):
+		return
+	var strike_dir := _pending_aim
 	var unarmed := w == null
 	# forgiving by design: the crosshair says which way you swing, it doesn't
 	# have to sit on the body - a little extra reach and a wider arc
 	var rng := (17.0 if unarmed else w.data.melee_range + (6.0 if heavy else 0.0)) + MELEE_REACH_BONUS
 	var arc := (100.0 if unarmed else w.data.melee_arc_deg + (40.0 if heavy else 0.0)) + MELEE_ARC_BONUS
+	if w and w.data.id == &"chainsaw":
+		arc = w.data.melee_arc_deg
+		rng = w.data.melee_range
 	var hit_any := false
 	var killed_any := false
 	for n in get_tree().get_nodes_in_group("damageable"):
@@ -787,7 +867,7 @@ func _melee_hit(heavy: bool) -> void:
 		var r: float = n.get("hit_radius") if n.get("hit_radius") != null else 6.0
 		if to.length() - r > rng:
 			continue
-		if to.length() > 7.0 and absf(angle_difference(aim_dir.angle(), to.angle())) > deg_to_rad(arc * 0.5):
+		if to.length() > 7.0 and absf(angle_difference(strike_dir.angle(), to.angle())) > deg_to_rad(arc * 0.5):
 			continue
 		if not _has_los(global_position, p, n, Layers.WORLD | Layers.DOOR):
 			continue
@@ -818,8 +898,8 @@ func _melee_hit(heavy: bool) -> void:
 		Audio.play_at("punch" if unarmed else w.data.sfx_hit, global_position)
 		Events.hit_stop.emit((0.085 if heavy else 0.065) if killed_any else 0.04)
 		Events.camera_shake.emit(5.0 if heavy else 3.0)
-		Events.camera_nudge.emit(aim_dir * (7.0 if heavy else 4.0))
-		Effects.impact(global_position + aim_dir * (rng * 0.7), aim_dir, killed_any, not unarmed and w.data.sfx_hit == "hit_blade")
+		Events.camera_nudge.emit(strike_dir * (7.0 if heavy else 4.0))
+		Effects.impact(global_position + strike_dir * (rng * 0.7), strike_dir, killed_any, not unarmed and w.data.sfx_hit == "hit_blade")
 		InputSetup.vibrate(0.4, 0.4, 0.1)
 		Events.noise.emit(global_position, 90.0, &"voice", self)
 		if not unarmed and w.durability > 0:
@@ -892,7 +972,7 @@ func _turn_into_target(reach: float, half_arc: float) -> void:
 
 ## A shot fired close to someone goes to them: the tolerance is a few px
 ## of body width at any distance (a wider angle up close, a hair at range).
-func _forgiving_shot(dir: Vector2) -> Vector2:
+func _forgiving_shot(dir: Vector2, shot_origin := Vector2.INF) -> Vector2:
 	if lock_target and is_instance_valid(lock_target):
 		return dir
 	var best: Node2D = null
@@ -916,13 +996,17 @@ func _forgiving_shot(dir: Vector2) -> Vector2:
 	if best == null:
 		return dir
 	var tv: Vector2 = best.velocity if best is CharacterBody2D else Vector2.ZERO
-	return ((best.global_position + tv * 0.04) - global_position).normalized()
+	var from := global_position if shot_origin == Vector2.INF else shot_origin
+	return ((best.global_position + tv * 0.04) - from).normalized()
 
 # ---------------------------------------------------------------- throwing
 func _throw_current() -> void:
+	if _stagger > 0.0:
+		return
 	var w := current()
 	if w == null:
 		return
+	_cancel_melee()
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
 	var spd := w.data.throw_speed
 	if w.dual and (w.ammo > 0 or w.ammo2 > 0):
@@ -933,7 +1017,7 @@ func _throw_current() -> void:
 		w.ammo = maxi(w.ammo, w.ammo2)
 		w.dual = false
 		w.ammo2 = 0
-		WeaponPickup.spawn(parent, off, visual.muzzle_global(true), aim_dir * spd + velocity * 0.3, self)
+		WeaponPickup.spawn(parent, off, visual.muzzle_global(true), aim_dir * spd + velocity * 0.3, self, visual.muzzle_lift(true))
 		Audio.play_at("throw", global_position)
 		visual.punch()
 		_reload_t = 0.0
@@ -947,8 +1031,8 @@ func _throw_current() -> void:
 		twin.reserve = 0
 		w.dual = false
 		w.ammo2 = 0
-		WeaponPickup.spawn(parent, twin, visual.muzzle_global(true), (aim_dir.rotated(0.18) * spd + velocity * 0.3), self)
-	WeaponPickup.spawn(parent, w, visual.hand_global(), aim_dir * spd + velocity * 0.3, self)
+		WeaponPickup.spawn(parent, twin, visual.muzzle_global(true), (aim_dir.rotated(0.18) * spd + velocity * 0.3), self, visual.muzzle_lift(true))
+	WeaponPickup.spawn(parent, w, visual.hand_floor_global(), aim_dir * spd + velocity * 0.3, self, visual.muzzle_lift())
 	slots[slot] = null
 	Audio.play_at("throw", global_position)
 	visual.punch()
@@ -961,14 +1045,20 @@ func _throw_current() -> void:
 	_refresh_weapon()
 
 # ---------------------------------------------------------------- interact
-func _interact() -> void:
+func _interaction_target() -> Node2D:
 	var it := _nearest_interactable()
 	var pk := WeaponPickup.nearest(global_position, get_tree())
 	if it and (pk == null or it.global_position.distance_to(global_position) <= pk.global_position.distance_to(global_position) + 4.0):
-		it.interact(self)
+		return it
+	return pk
+
+func _interact() -> void:
+	var target := _interaction_target()
+	if target is WeaponPickup:
+		_pick_up(target as WeaponPickup)
 		return
-	if pk:
-		_pick_up(pk)
+	if target:
+		target.interact(self)
 		return
 	if current() and current().data.is_firearm():
 		_start_reload()
@@ -991,6 +1081,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 		if not pool.is_empty():
 			pk.weapon = WeaponInstance.create(pool[randi() % pool.size()])
 			pk.set_meta("remixed", true)
+	_cancel_melee()
 	var new_w: WeaponInstance = pk.weapon
 	Events.tutorial.emit("weapon")
 	var parent: Node = level.pickup_root() if level and level.has_method("pickup_root") else get_parent()
@@ -1026,6 +1117,7 @@ func _pick_up(pk: WeaponPickup) -> void:
 func _swap() -> void:
 	if slots[1 - slot] == null and slots[slot] == null:
 		return
+	_cancel_melee()
 	slot = 1 - slot
 	_reload_t = 0.0
 	visual.cancel_reload()
@@ -1036,12 +1128,12 @@ func _nearest_interactable() -> Node2D:
 	var best: Node2D = null
 	var bd := 22.0
 	for n in get_tree().get_nodes_in_group("interactable"):
-		if not (n is Node2D) or not n.has_method("interact"):
+		if not (n is Node2D) or n.is_queued_for_deletion() or not n.has_method("interact"):
 			continue
 		if n.has_method("can_interact") and not n.can_interact(self):
 			continue
 		var d := (n as Node2D).global_position.distance_to(global_position)
-		if d < bd:
+		if d < bd and _has_los(global_position, n.global_position, n, Layers.WORLD | Layers.DOOR):
 			bd = d
 			best = n
 	return best
@@ -1053,7 +1145,7 @@ func _find_downed() -> Enemy:
 	for e in get_tree().get_nodes_in_group("enemies"):
 		if is_instance_valid(e) and not e.is_queued_for_deletion() and e.has_method("is_downed") and e.is_downed():
 			var d := (e as Node2D).global_position.distance_to(global_position)
-			if d < bd:
+			if d < bd and _has_los(global_position, e.global_position, e, Layers.WORLD | Layers.PROP | Layers.DOOR):
 				bd = d
 				best = e
 	return best
@@ -1068,7 +1160,7 @@ func _find_takedown() -> Enemy:
 			continue
 		var en := e as Enemy
 		var d := en.global_position.distance_to(global_position)
-		if d >= bd or not _has_los(global_position, en.global_position, en):
+		if d >= bd or not _has_los(global_position, en.global_position, en, Layers.WORLD | Layers.PROP | Layers.DOOR):
 			continue
 		var from_me := global_position - en.global_position
 		var behind := absf(angle_difference(en.facing.angle(), from_me.angle())) > deg_to_rad(en.data.view_angle_deg * 0.5)
@@ -1079,6 +1171,8 @@ func _find_takedown() -> Enemy:
 	return best
 
 func _execute_or_kick() -> void:
+	if _stagger > 0.0:
+		return
 	var target := _find_downed()
 	if target:
 		_begin_execution(target)
@@ -1089,6 +1183,7 @@ func _execute_or_kick() -> void:
 		return
 	if _kick_cd > 0.0:
 		return
+	_cancel_melee()
 	_kick_cd = 0.4
 	visual.kick_leg()
 	velocity += aim_dir * 40.0
@@ -1119,6 +1214,15 @@ func _execute_or_kick() -> void:
 	Audio.play_at("swing", global_position, -10.0)
 
 func _begin_execution(target: Enemy, standing := false) -> void:
+	# A paired animation owns both actors: no queued contact, reload or drift.
+	_cancel_melee()
+	_reload_t = 0.0
+	_reload_weapon = null
+	visual.cancel_reload()
+	velocity = Vector2.ZERO
+	_travel_velocity = Vector2.ZERO
+	prompt = ""
+	prompt_target = null
 	_exec_target = target
 	_exec_standing = standing
 	var w := current()
@@ -1133,7 +1237,9 @@ func _begin_execution(target: Enemy, standing := false) -> void:
 	_exec_elapsed = 0.0
 	_exec_done = 0
 	aim_dir = (target.global_position - global_position).normalized()
-	global_position = target.global_position - aim_dir * (8.0 if standing else 9.0)
+	if standing and target.facing.length_squared() > 0.01:
+		aim_dir = target.facing.normalized()
+	global_position = target.global_position - aim_dir * (6.0 if standing else 9.0)
 	visual.set_aim(aim_dir.angle())
 	Events.camera_punch.emit(1.18, 0.45)
 	Effects.popup(tr(str(_exec_move.name)), target.global_position + Vector2(0, -8), UIStyle.HOT)
@@ -1141,10 +1247,19 @@ func _begin_execution(target: Enemy, standing := false) -> void:
 		Audio.play_at("punch", global_position, -14.0)
 
 func _process_execution(pd: float) -> void:
-	if _exec_target == null or not is_instance_valid(_exec_target):
+	if _exec_target == null or not is_instance_valid(_exec_target) or not _exec_target.is_alive():
 		_locked_t = 0.0
+		_exec_target = null
+		visual.pose_override = ""
+		visual.pose_progress = -1.0
+		visual.set_mount(false)
 		return
 	_exec_elapsed += pd
+	if str(_exec_move.get("anim", "")) == "grab" and visual.has_clip("grab"):
+		visual.pose_override = "grab"
+		visual.pose_progress = clampf(_exec_elapsed / maxf(_exec_total, 0.01), 0.0, 0.98)
+		if _exec_standing and _exec_target.visual.has_clip("held"):
+			_exec_target.visual.pose_progress = visual.pose_progress
 	var w := current()
 	var due := 0
 	for i in _exec_hits:
@@ -1173,13 +1288,14 @@ func _process_execution(pd: float) -> void:
 				if w and w.data.is_firearm() and w.ammo > 0:
 					w.ammo -= 1
 					var silenced := upgrades.has(&"silencer")
-					Effects.muzzle(visual.muzzle_global(), aim_dir, w.data.muzzle_color, false)
+					Effects.muzzle(visual.muzzle_tip_global(), aim_dir, w.data.muzzle_color, false)
 					Audio.play_at("suppressed" if silenced else w.data.sfx_fire, global_position)
 					noise = gun_noise(w)
 					Events.camera_shake.emit(w.data.camera_kick)
 					_emit_weapon()
 			"grab":
-				visual.punch()
+				if not visual.has_clip("grab"):
+					visual.punch()
 				Audio.play_at("punch", global_position, -10.0)
 			_:
 				if w == null and not _exec_standing:
@@ -1205,6 +1321,8 @@ func _process_execution(pd: float) -> void:
 			Events.camera_shake.emit(3.5 if last else 2.0)
 		InputSetup.vibrate(0.6, 0.6 if last else 0.3, 0.12)
 	if _locked_t <= 0.0:
+		visual.pose_override = ""
+		visual.pose_progress = -1.0
 		visual.set_mount(false)
 		var wid: StringName = w.data.id if w else &"fists"
 		var t := _exec_target
@@ -1251,6 +1369,7 @@ func take_damage(info: DamageInfo) -> String:
 		_die(info)   # the crown: no vest, no second chance
 		return "killed"
 	if not info.lethal and info.type != DamageInfo.Type.EXPLOSIVE:
+		_cancel_melee()
 		_stagger = 0.35
 		velocity += info.dir * 160.0
 		visual.flash()
@@ -1259,6 +1378,7 @@ func take_damage(info: DamageInfo) -> String:
 		_hurt_voice()
 		return "hurt"
 	if armor_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
+		_cancel_melee()
 		armor_hits -= 1
 		_iframes = 0.45
 		visual.flash(0.25)
@@ -1276,6 +1396,7 @@ func take_damage(info: DamageInfo) -> String:
 			_vest = null
 		return "absorbed"
 	if guard_hits > 0 and info.type != DamageInfo.Type.EXPLOSIVE:
+		_cancel_melee()
 		guard_hits -= 1
 		_guard_regen_t = float(Difficulty.value("player_guard_regen"))
 		_iframes = 0.6
@@ -1313,6 +1434,18 @@ func _hurt_voice() -> void:
 
 func _die(info: DamageInfo) -> void:
 	alive = false
+	# Stop action-owned effects before hiding the living body. Its visual
+	# node still processes, so an unfinished roll could keep spawning ghosts.
+	_cancel_melee()
+	_dash_t = 0.0
+	_reload_t = 0.0
+	_reload_weapon = null
+	visual.cancel_reload()
+	visual.finish_roll()
+	if is_instance_valid(_exec_target):
+		_exec_target.cancel_execution(self)
+	_exec_target = null
+	_locked_t = 0.0
 	ability.force_end()
 	collision_layer = 0
 	collision_mask = 0
@@ -1338,6 +1471,8 @@ func _die(info: DamageInfo) -> void:
 # =============================================================== helpers
 func _refresh_weapon() -> void:
 	var w := current()
+	if _reload_t <= 0.0:
+		_reload_weapon = null
 	visual.set_weapon(w.data if w else null, w != null and w.dual)
 	_emit_weapon()
 
@@ -1354,28 +1489,29 @@ var prompt_target: Node2D = null
 func _update_prompt() -> void:
 	prompt = ""
 	prompt_target = null
-	var dn = _find_downed()
+	if not alive or not input_enabled or is_dashing() or _locked_t > 0.0:
+		return
+	var dn = _find_downed() if _stagger <= 0.0 else null
 	if dn:
 		prompt = tr("[%s] EXECUTE") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
 		prompt_target = dn as Node2D
 		return
-	var td := _find_takedown()
+	var td := _find_takedown() if _stagger <= 0.0 else null
 	if td:
 		prompt = tr("[%s] TAKEDOWN") % InputSetup.binding_text("execute", InputSetup.using_gamepad)
 		prompt_target = td as Node2D
 		return
-	var it := _nearest_interactable()
-	if it and it.has_method("get_prompt"):
-		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), tr(it.get_prompt())]
-		prompt_target = it as Node2D
-		return
-	var pk := WeaponPickup.nearest(global_position, get_tree())
-	if pk:
+	var target := _interaction_target()
+	if target is WeaponPickup:
+		var pk := target as WeaponPickup
 		prompt_target = pk
 		var what := tr(pk.weapon.data.display_name).to_upper()
 		if can_dual_with(pk):
 			what = tr("DUAL WIELD  ") + what
 		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), what]
+	elif target and target.has_method("get_prompt"):
+		prompt = "[%s] %s" % [InputSetup.binding_text("interact", InputSetup.using_gamepad), tr(target.get_prompt())]
+		prompt_target = target
 
 func give_weapon(id: StringName) -> void:
 	var d := DB.weapon(id)
@@ -1501,3 +1637,4 @@ class StaminaRing extends Node2D:
 			# spent: the cooldown ticking round the rim
 			var k: float = 1.0 - cd / player.STAMINA_COOLDOWN
 			draw_arc(c, r + 0.5, -PI * 0.5, -PI * 0.5 + TAU * k, 24, Color(1.0, 0.3, 0.25, 0.9 * _a), 0.8)
+

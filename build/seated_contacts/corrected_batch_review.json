@@ -1,0 +1,89 @@
+{
+  "runtime_approved": true,
+  "casts": [
+    {
+      "id": "biker",
+      "minimum_sole_height_m": 0.0019825156778097153,
+      "maximum_sole_height_m": 0.002002097200602293,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "cass",
+      "minimum_sole_height_m": 0.0019987637642771006,
+      "maximum_sole_height_m": 0.0020042734686285257,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "gunner",
+      "minimum_sole_height_m": 0.001995759317651391,
+      "maximum_sole_height_m": 0.0020056921057403088,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "handler",
+      "minimum_sole_height_m": 0.001996828941628337,
+      "maximum_sole_height_m": 0.002014616969972849,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "heavy",
+      "minimum_sole_height_m": 0.0018214398296549916,
+      "maximum_sole_height_m": 0.0020054865162819624,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "hunter",
+      "minimum_sole_height_m": 0.001994020538404584,
+      "maximum_sole_height_m": 0.00199774163775146,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "security",
+      "minimum_sole_height_m": 0.0019985544495284557,
+      "maximum_sole_height_m": 0.0020044457633048296,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "sniper",
+      "minimum_sole_height_m": 0.0024679985363036394,
+      "maximum_sole_height_m": 0.0031382297165691853,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    },
+    {
+      "id": "stagehand",
+      "minimum_sole_height_m": 0.001999369589611888,
+      "maximum_sole_height_m": 0.002002861350774765,
+      "scripted_transitions_passed": 4,
+      "runtime_approved": true,
+      "source_unchanged": false,
+      "other_clips_unchanged": true
+    }
+  ],
+  "next_action": "Review all nine comparison captures, then validate imported production assets after individually approved promotion.",
+  "scope": "Nine corrected doze clips only; does not approve entire character quality.",
+  "validation": "Blender evaluated soles, merged reimport, four-facing visual comparison, scripted wake/walk/attack, production import, cast regression and anatomy audit."
+}

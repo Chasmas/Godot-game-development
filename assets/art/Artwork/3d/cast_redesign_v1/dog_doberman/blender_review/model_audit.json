@@ -1,0 +1,62 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\dog_doberman\\raw\\model.glb",
+  "runtime_approved": false,
+  "normalized_height_m": 0.88,
+  "source_bounds": {
+    "lower": [
+      -0.23304900527000427,
+      -0.9500799775123596,
+      -0.7131320238113403
+    ],
+    "upper": [
+      0.2316949963569641,
+      0.9495519995689392,
+      0.7074499726295471
+    ]
+  },
+  "mesh_objects": 1,
+  "vertices": 70610,
+  "polygons": 119740,
+  "smooth_polygons": 119724,
+  "armature_objects": 0,
+  "materials": [
+    {
+      "name": "Material_0",
+      "textures": [
+        {
+          "name": "Image_0",
+          "size": [
+            4096,
+            4096
+          ],
+          "color_space": "sRGB"
+        },
+        {
+          "name": "Image_1",
+          "size": [
+            2048,
+            2048
+          ],
+          "color_space": "Non-Color"
+        },
+        {
+          "name": "normal",
+          "size": [
+            4096,
+            4096
+          ],
+          "color_space": "Non-Color"
+        }
+      ]
+    }
+  ],
+  "scope": "Static imported model and reference renders; no rig, facial animation, weapon contacts or Godot gameplay validation.",
+  "renders": [
+    "front.png",
+    "side.png",
+    "back.png",
+    "three_quarter.png"
+  ],
+  "anatomy_type": "quadruped",
+  "framing": "Full normalized bounds; no fixed humanoid face crop"
+}

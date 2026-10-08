@@ -1,0 +1,36 @@
+{
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass_head_detail\\geometry_lod_v2\\cass_head_geometry_candidate.glb",
+  "runtime_approved": false,
+  "normalized_height_m": 0.48,
+  "source_bounds": {
+    "lower": [
+      -0.7235444784164429,
+      -0.6909517049789429,
+      -0.9510632753372192
+    ],
+    "upper": [
+      0.7222832441329956,
+      0.7230247855186462,
+      0.9617867469787598
+    ]
+  },
+  "mesh_objects": 1,
+  "vertices": 139294,
+  "polygons": 309916,
+  "smooth_polygons": 309916,
+  "armature_objects": 0,
+  "materials": [
+    {
+      "name": "Material_0",
+      "textures": []
+    }
+  ],
+  "scope": "Static imported model and reference renders; no rig, facial animation, weapon contacts or Godot gameplay validation.",
+  "renders": [
+    "front_clay.png",
+    "side_clay.png",
+    "back_clay.png",
+    "face_front_clay.png"
+  ],
+  "material_override": "Neutral clay; geometry diagnostic only"
+}

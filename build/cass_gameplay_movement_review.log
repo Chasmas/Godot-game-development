@@ -1,0 +1,37 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 23 looks in 2198 ms
+  ok   solid wall stops player
+  ok   blocked player animation stops stepping
+  ok   wall collision clears blocked movement momentum
+  ok   blocked player produces no walking detection noise
+  ok   blocked player footstep clock stops
+  ok   blocked sprint does not waste stamina
+  ok   wall contact preserves movement along the surface
+  ok   diagonal wall movement clears only blocked momentum
+  ok   dodge starts its visual roll
+  ok   dodge cancels an unlanded strike and its pose
+  ok   wall contact ends motion and visual roll together
+  ok   roll recovery stops when movement is released
+  ok   roll recovery follows direction and crouch speed
+  ok   interrupted execution releases pose and input
+  ok   reload starts with matching visual
+  ok   dodge cancels reload and held magazine
+  ok   cancelled reload does not grant ammunition
+  ok   reload restarts after dodge
+  ok   reload can finish normally after dodge
+  ok   weapon swap cancels reload without ammunition transfer
+  ok   swapping away and back cannot resurrect a queued strike
+  ok   weapon swap cancels attack pose, effects and charge
+  ok   throwing during windup cancels the old strike
+  ok   throw gesture is not masked by the old swing
+  ok   picking up a weapon cancels an unfinished punch
+  ok   rapid aim change fires normally
+  ok   shot synchronizes visual aim in the firing tick
+  ok   rapid aim change fires normally
+  ok   shot synchronizes visual aim in the firing tick
+  ok   rapid aim change fires normally
+  ok   shot synchronizes visual aim in the firing tick
+  ok   rapid aim change fires normally
+  ok   shot synchronizes visual aim in the firing tick
+MOVEMENT COLLISION REGRESSION: 0 failures

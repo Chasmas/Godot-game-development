@@ -1,0 +1,12 @@
+{
+  "approved": false,
+  "scope": "Wrist support on measured fully-open door edge; excludes closing-door action and finger contact",
+  "target_car_local": [
+    1.171825,
+    1.1,
+    0.23436
+  ],
+  "max_contact_error": 0.027412398498729562,
+  "endpoint_error": 1.590450292945252e-06,
+  "foot_trajectory_error": 0.002590978200243824
+}

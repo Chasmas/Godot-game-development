@@ -1,0 +1,26 @@
+{
+  "removed": [
+    {
+      "type": "sprite",
+      "id": "hq_motel_bed",
+      "pos": [
+        14,
+        8
+      ],
+      "size": 0.72,
+      "auto": true
+    },
+    {
+      "type": "sprite",
+      "id": "hq_motel_bed",
+      "pos": [
+        40,
+        2
+      ],
+      "size": 0.72,
+      "auto": true
+    }
+  ],
+  "reason": "Blender bed footprint review found wall/furniture intersections; main functional beds retained.",
+  "scope": "Remove two decorative-only placements; no objectives or gameplay furniture removed."
+}

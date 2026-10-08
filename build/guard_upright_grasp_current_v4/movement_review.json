@@ -1,0 +1,16 @@
+{
+  "approved": false,
+  "candidate": "build/guard_upright_grasp_current_v4/guard.glb",
+  "candidate_sha256": "4f81053f9cfeb85c6578cf66c96c263a02cc9eedbbca823b0a35f21ec5549ab0",
+  "transition_checks": 5,
+  "reviewed": [
+    "armed_dual_walk angle180 left closeup",
+    "armed_dual_run angle45 right closeup"
+  ],
+  "findings": [
+    "Walking left fingers surround grip; wrist seam remains visible",
+    "Running right pistol overlaps torso in captured pose",
+    "Current audit does not prove absence of whole-body collisions"
+  ],
+  "next": "Revise running upper-body trajectory before runtime integration"
+}

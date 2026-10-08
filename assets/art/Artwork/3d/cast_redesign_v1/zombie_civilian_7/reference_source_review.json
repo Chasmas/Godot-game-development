@@ -1,0 +1,8 @@
+{
+  "character": "zombie_civilian_7",
+  "source": "assets/art/reference/cast_redesign_v1/zombie_civilian_7_turnaround.png",
+  "approved_for_api": false,
+  "status": "original_superseded_by_reviewed_isolated_v2",
+  "finding": "Directly inspected original: back-view hand shares horizontal span with portrait/detail panels; rectangular crop risks contamination.",
+  "next_action": "Use references/reference_audit.json for isolated v2; original collage remains unapproved."
+}

@@ -22,21 +22,33 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 	dog = d
 
 func _enter_combat() -> void:
+	if _held or state == State.DOWNED:
+		return
 	super._enter_combat()
 	_release()
 
-func _release() -> void:
+func _release(announce := true) -> void:
 	if _released or dog == null or not is_instance_valid(dog) or not dog.is_alive():
 		return
 	_released = true
+	_leash_points.clear()
+	_leash_previous.clear()
 	_reset_pose()
 	dog.set_physics_process(true)
 	dog._last_known = _last_known
 	dog._enter_combat()
 	var bl := BarkLayer.find(get_tree())
-	if bl:
+	if bl and announce:
 		bl.say(self, "Sic 'em!", 1.6, Color(1, 0.6, 0.3))
 	Audio.play_at("bark", dog.global_position, 0.0, 0.1)
+
+func _die(info: DamageInfo) -> void:
+	if not is_alive():
+		return
+	# Enemy death queues the handler for deletion. Do not rely on another
+	# physics tick to release the surviving dog or it can stay frozen at heel.
+	_release(false)
+	super._die(info)
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
@@ -76,25 +88,80 @@ func _reset_pose() -> void:
 	visual.torso.scale = Vector2(0.5, 0.5)
 	visual.weapon_sprite.rotation = 0.0
 
+func _leash_hand_point() -> Vector2:
+	if visual and visual.cast_sprite is CastModel:
+		return to_local(visual.rig.to_global(visual.cast_sprite.grip(true)))
+	return facing.orthogonal() * 4.0 + facing * (2.0 + sin(_stride * 2.0) * 1.2)
+
+# World-space Verlet particles keep inertia when either anchor changes direction.
+var _leash_points := PackedVector2Array()
+var _leash_previous := PackedVector2Array()
+var _leash_last_dt := 1.0 / 120.0
+const LEASH_SEGMENTS := 8
+
+func _simulate_leash(delta: float) -> void:
+	if _released or not is_alive() or not is_instance_valid(dog) or not dog.is_alive():
+		_leash_points.clear()
+		_leash_previous.clear()
+		return
+	var a := to_global(_leash_hand_point())
+	var b := dog.global_position + dog.facing * 3.5
+	var size_scale := maxf(global_scale.length() / sqrt(2.0), 0.1)
+	if _leash_points.is_empty() or _leash_points[0].distance_to(a) > 48.0 * size_scale or _leash_points[LEASH_SEGMENTS].distance_to(b) > 48.0 * size_scale:
+		_leash_points.resize(LEASH_SEGMENTS + 1)
+		_leash_previous.resize(LEASH_SEGMENTS + 1)
+		for i in LEASH_SEGMENTS + 1:
+			_leash_points[i] = a.lerp(b, float(i) / LEASH_SEGMENTS)
+			_leash_previous[i] = _leash_points[i]
+		_leash_last_dt = 1.0 / 120.0
+	if delta <= 0.0:
+		_leash_points[0] = a
+		_leash_points[LEASH_SEGMENTS] = b
+		return
+	# Bound work and integration time after a pause; gravity acts in screen space.
+	var elapsed := clampf(delta, 0.0, 0.05)
+	var steps := maxi(1, ceili(elapsed / (1.0 / 120.0)))
+	var dt := elapsed / steps
+	var segment_length := maxf(14.0 * size_scale, a.distance_to(b) * 1.01) / LEASH_SEGMENTS
+	for step in steps:
+		for i in range(1, LEASH_SEGMENTS):
+			var point := _leash_points[i]
+			var inertia := (point - _leash_previous[i]) * (dt / _leash_last_dt) * pow(0.12, dt)
+			_leash_points[i] += inertia + Vector2(0.0, 90.0 * size_scale) * dt * dt
+			_leash_previous[i] = point
+		for iteration in 24:
+			_leash_points[0] = a
+			_leash_points[LEASH_SEGMENTS] = b
+			for i in LEASH_SEGMENTS:
+				var offset := _leash_points[i + 1] - _leash_points[i]
+				var length := offset.length()
+				if length < 0.0001:
+					continue
+				var correction := offset * ((length - segment_length) / length)
+				if i == 0:
+					_leash_points[i + 1] -= correction
+				elif i == LEASH_SEGMENTS - 1:
+					_leash_points[i] += correction
+				else:
+					_leash_points[i] += correction * 0.5
+					_leash_points[i + 1] -= correction * 0.5
+		_leash_points[0] = a
+		_leash_points[LEASH_SEGMENTS] = b
+		_leash_last_dt = dt
+
 func _draw() -> void:
 	super._draw()
-	# the leash
-	if not _released and dog and is_instance_valid(dog) and is_alive():
-		# from his off hand to the collar, sagging when slack, taut when the
-		# dog pulls ahead
-		var a := facing.orthogonal() * 4.0 + facing * (2.0 + sin(_stride * 2.0) * 1.2)
-		var b := dog.global_position + dog.facing * 3.5 - global_position
-		var slack := clampf(1.0 - (a.distance_to(b) - 7.0) / 6.0, 0.0, 1.0)
-		var mid := (a + b) * 0.5 + Vector2(0, 3.0 * slack + sin(Time.get_ticks_msec() * 0.006) * 0.4 * slack)
-		var pts := PackedVector2Array()
-		for i in 7:
-			var t := i / 6.0
-			pts.append(a.lerp(mid, t).lerp(mid.lerp(b, t), t))
-		draw_polyline(pts, Color(0.1, 0.06, 0.04), 1.6)
-		draw_polyline(pts, Color(0.55, 0.32, 0.16), 0.8)
-		# his fist round the leash loop, swinging with the stride
-		draw_circle(a, 1.6, Color(0.05, 0.03, 0.06))
-		draw_circle(a, 1.1, Color(0.78, 0.56, 0.42))
+	if _leash_points.size() < 2 or _released:
+		return
+	var points := PackedVector2Array()
+	for point in _leash_points:
+		points.append(to_local(point))
+	draw_polyline(points, Color(0.1, 0.06, 0.04), 1.6, true)
+	draw_polyline(points, Color(0.55, 0.32, 0.16), 0.8, true)
+	if not (visual.cast_sprite is CastModel):
+		draw_circle(points[0], 1.6, Color(0.05, 0.03, 0.06))
+		draw_circle(points[0], 1.1, Color(0.78, 0.56, 0.42))
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	_simulate_leash(delta)
 	queue_redraw()

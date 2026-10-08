@@ -62,70 +62,117 @@
       ]
     },
     "combat_motel": {
-      "title": "Checkout Time (Synthwave Remake)",
+      "title": "Checkout Time — Neon Breach",
       "family": "combat",
       "chunks": [
         {
-          "text": "[Breach] instant rain-soaked motel synthwave: punchy LinnDrum kick, gated snare, tense analog octave bass and a dim neon pad; sleek and dangerous, never acid or rave",
-          "sec": 28,
-          "styles": [
-            "dark action synthwave",
-            "120 BPM",
-            "E minor",
-            "LinnDrum",
-            "gated snare",
-            "analog bass",
-            "neon noir",
-            "instrumental",
-            "1980s"
-          ],
-          "avoid": [
-            "hard trance",
-            "trance",
-            "EDM",
-            "acid",
-            "TB-303",
-            "techno",
-            "hardstyle",
-            "vocals"
-          ]
-        },
-        {
-          "text": "[Run] a sharp detuned brass lead states the five-note Star motif in a memorable call-and-response over restless hi-hats and glassy arpeggios",
-          "sec": 46,
-          "styles": [
-            "cinematic synthwave",
-            "brassy analog lead",
-            "memorable hook",
-            "Juno pads",
-            "arpeggiator",
-            "cassette saturation",
-            "instrumental"
-          ],
-          "avoid": [
-            "hard trance",
-            "EDM drop",
-            "acid bass",
-            "techno",
-            "vocals"
-          ]
-        },
-        {
-          "text": "[Red sign] a short tape-warp breakdown gives way to a larger synthwave chorus with tom fills and a clean loop ending",
-          "sec": 40,
+          "text": "[Lobby breach] start at the exact first millisecond of the front door breach: crushing TR-909 kick, claustrophobic dry snare, distorted electric neon buzz as the bass, immediate impact, no intro",
+          "sec": 8,
           "styles": [
             "dark synthwave",
-            "tape flutter",
-            "dramatic re-entry",
+            "TR-909",
+            "distorted neon bass",
+            "claustrophobic",
+            "instrumental",
+            "115 BPM"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "guitar solo"
+          ]
+        },
+        {
+          "text": "[Corridor clearance] minimal high synth hook with short slapback delay ricocheting off narrow motel walls, sharp kick and snare cadence for the first shots and melee hits, tense melodic motif, no linear loop",
+          "sec": 27,
+          "styles": [
+            "dark synthwave",
+            "minimal analog lead",
+            "slapback delay",
+            "motel corridor echo",
+            "instrumental",
+            "minor key"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "guitar"
+          ]
+        },
+        {
+          "text": "[Room invasion] open hi-hats accelerate the perception of motion, violent sidechain pumping crushes pads on every kick, psychotic trance-like pressure while the melody mutates and never repeats the opening section",
+          "sec": 30,
+          "styles": [
+            "aggressive synthwave",
+            "open hi-hats",
+            "hard sidechain",
             "analog pads",
-            "loopable",
+            "instrumental",
+            "darkwave"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "EDM drop",
+            "guitar solo"
+          ]
+        },
+        {
+          "text": "[Dirty bathroom] bass descends into a heavier minor register, metallic percussion vibrates like stressed pipes, the high melody rapidly modulates and loses control, ominous and unstable but still instrumental",
+          "sec": 35,
+          "styles": [
+            "ominous synthwave",
+            "sub bass",
+            "metal pipe percussion",
+            "unstable modulation",
+            "cassette distortion",
             "instrumental"
           ],
           "avoid": [
-            "hard trance",
-            "EDM",
-            "industrial techno",
-            "vocals"
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "guitar"
+          ]
+        },
+        {
+          "text": "[Final massacre] every layer collides: distorted counter-rhythm synth pushes against the beat, saturated analog peak, maximum adrenaline, dense but articulate climax before the area goes quiet",
+          "sec": 35,
+          "styles": [
+            "violent dark synthwave",
+            "distorted counter-rhythm",
+            "analog saturation",
+            "cinematic climax",
+            "instrumental"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "guitar solo"
           ]
         }
       ]
@@ -181,78 +228,118 @@
       ]
     },
     "menu_tapes": {
-      "title": "Tape Deck",
+      "title": "Vengeance Served Cold",
       "family": "menu",
       "chunks": [
         {
-          "text": "[Loop] a lazy analog bass pulse, soft drum machine, warm tape-saturated pads, the five-note motif hummed on a muted synth",
-          "sec": 50,
-          "styles": [
-            "dreamy synthwave",
-            "menu music",
-            "lo-fi cassette",
-            "92 BPM",
-            "E minor",
-            "tape hiss",
-            "warm analog pads",
-            "soft LinnDrum",
-            "elegant",
-            "slightly uneasy"
-          ],
-          "ref": {
-            "track": "main_theme",
-            "start": 4,
-            "end": 24,
-            "strength": "low"
-          }
-        },
-        {
-          "text": "[Turn] a glassy arpeggio joins, the pad opens up, then settles back so it loops",
-          "sec": 40,
-          "styles": [
-            "dreamy",
-            "arpeggiator",
-            "filter sweep",
-            "loopable"
-          ]
-        }
-      ]
-    },
-    "menu_vcr": {
-      "title": "Rewind",
-      "family": "menu",
-      "chunks": [
-        {
-          "text": "[Static] VHS tracking noise, a VCR motor hum, a slow pulsing synth bass and a detuned bell",
-          "sec": 40,
-          "styles": [
-            "experimental electronic",
-            "VHS texture",
-            "dark ambient",
-            "84 BPM",
-            "A minor",
-            "detuned bell",
-            "tape warble",
-            "mysterious"
-          ]
-        },
-        {
-          "text": "[Play] a soft drum machine enters, a melancholic analog lead drifts, the tape wobbles",
-          "sec": 45,
+          "text": "[0:00-0:05] PURELY INSTRUMENTAL, NO VOICE. Immediate heavy galloping saw bass, scratched nostalgic lead hook, dry hard kick and snare. No intro, instant danger.",
+          "sec": 5,
           "styles": [
             "dark synthwave",
-            "melancholic",
-            "tape wobble",
-            "loopable"
+            "outrun",
+            "115 BPM",
+            "E minor",
+            "immediate hook",
+            "saw bass",
+            "Juno 106",
+            "Polysix",
+            "LinnDrum",
+            "instrumental",
+            "no vocals",
+            "no singing",
+            "no speech",
+            "no choir",
+            "no human voice"
+          ]
+        },
+        {
+          "text": "[0:05-0:25] PURELY INSTRUMENTAL. Aggressive memorable main melody on chorused analog synth with delay, decaying neon-city chords and tense night-drive atmosphere. Keep moving, no opening loop.",
+          "sec": 20,
+          "styles": [
+            "high energy synthwave",
+            "analog chorus",
+            "stereo delay",
+            "dark metropolitan night",
+            "driving bass",
+            "LinnDrum",
+            "instrumental",
+            "no vocals",
+            "no singing",
+            "no speech",
+            "no choir",
+            "no human voice"
+          ]
+        },
+        {
+          "text": "[0:25-0:50] PURELY INSTRUMENTAL. New aggressive section with fast hi-hats, syncopated drums, higher melody and controlled distortion. New harmony and rhythm, no repetition.",
+          "sec": 25,
+          "styles": [
+            "evolving synthwave",
+            "outrun",
+            "syncopated drums",
+            "fast hi hats",
+            "distorted analog lead",
+            "rising tension",
+            "115 BPM",
+            "instrumental",
+            "no vocals",
+            "no singing",
+            "no speech",
+            "no choir",
+            "no human voice"
+          ]
+        },
+        {
+          "text": "[0:50-1:15] PURELY INSTRUMENTAL. Faster straight bass and a mysterious detuned synth solo, tense and hypnotic over restrained distorted LinnDrum and nocturnal pads. No guitar.",
+          "sec": 25,
+          "styles": [
+            "synthwave climax",
+            "dark outrun",
+            "distorted LinnDrum",
+            "Juno pads",
+            "instrumental",
+            "no vocals",
+            "no singing",
+            "no speech",
+            "no choir",
+            "no human voice",
+            "mysterious synth solo",
+            "hypnotic",
+            "ominous",
+            "restrained tension"
+          ]
+        },
+        {
+          "text": "[1:15-1:30] PURELY INSTRUMENTAL. Deconstruct the main melody into distant fragments, filter sweep and tape echo, then one cold dry synth impact. Definitive abrupt ending, never a loop.",
+          "sec": 15,
+          "styles": [
+            "cinematic outro",
+            "filter sweep",
+            "abrupt ending",
+            "tape echo",
+            "instrumental",
+            "no vocals",
+            "no singing",
+            "no speech",
+            "no choir",
+            "no human voice"
           ],
-          "ref": {
-            "track": "main_theme",
-            "start": 4,
-            "end": 24,
-            "strength": "low"
-          }
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "choir",
+            "voice",
+            "vocoder",
+            "loop",
+            "seamless loop",
+            "ambient intro"
+          ]
         }
-      ]
+      ],
+      "instrumental": true,
+      "seed": 20261006
     },
     "story_apartment": {
       "title": "Answering Machine",
@@ -291,7 +378,7 @@
       "family": "story",
       "chunks": [
         {
-          "text": "[Memory] distant crackling fire, a low drone, a slow synth choir, a music box plays the five-note motif out of tune",
+          "text": "[Memory] distant crackling fire, a low drone, a slow wide synth pad, a music box plays the five-note motif out of tune",
           "sec": 50,
           "styles": [
             "ambient horror",
@@ -446,7 +533,7 @@
           ]
         },
         {
-          "text": "[Chorus] a dreamy lead sings the five-note motif over the pads, wet asphalt shimmer",
+          "text": "[Chorus] a dreamy lead plays the five-note motif over the pads, wet asphalt shimmer",
           "sec": 50,
           "styles": [
             "synthwave",
@@ -1648,7 +1735,7 @@
       "family": "boss",
       "chunks": [
         {
-          "text": "[Prom] a distorted 80s prom ballad turned into a slow heavy half-time groove, choir pads, the lullaby motif",
+          "text": "[Prom] a distorted 80s prom ballad turned into a slow heavy half-time groove, wide pads, the lullaby motif",
           "sec": 55,
           "styles": [
             "dark synthwave",
@@ -1656,7 +1743,7 @@
             "90 BPM",
             "D minor",
             "half-time",
-            "choir pads",
+            "wide pads",
             "distorted ballad",
             "instrumental",
             "tragic"
@@ -2144,17 +2231,17 @@
       "family": "menu",
       "chunks": [
         {
-          "text": "[Trailer] tape click, low drone, 128 BPM four-on-the-floor kick, pulsing sub bass, riser, hits on the beat, huge impact, then brassy lead over pounding drums, one massive final hit",
+          "text": "[Opening cutscene] tape click into a smooth cinematic synthwave glide: warm pads, pulsing bass, restrained gated drums, glassy arpeggio and cool nocturnal lead; gentle build, polished VHS resolution, complete cue",
           "sec": 22,
           "styles": [
             "dark synthwave",
             "cinematic trailer",
-            "128 BPM",
+            "108 BPM",
             "E minor",
             "1980s",
             "analog synthesizers",
             "gated reverb snare",
-            "heavy sub bass",
+            "smooth sub bass",
             "tape hiss",
             "instrumental",
             "trailer",
@@ -2165,6 +2252,56 @@
           ]
         }
       ]
+    },
+    "menu_vcr": {
+      "title": "Videotape Rewind",
+      "family": "menu",
+      "chunks": [
+        {
+          "text": "Soft mysterious analog pad with tape texture, immediate melancholic crystal FM pluck melody, sparse muted kick and reverberant rimshot, deep ominous sub bass.",
+          "sec": 45,
+          "styles": [
+            "contained dark synthwave",
+            "mysterious analog pad",
+            "melancholic FM pluck",
+            "sparse vintage rhythm",
+            "deep ominous sub bass",
+            "evolving instrumental"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "vocoder"
+          ]
+        },
+        {
+          "text": "Detuned cassette interference grows slowly, then drums disappear completely; the opening chord returns with a final clean echo into silence.",
+          "sec": 45,
+          "styles": [
+            "detuned cassette texture",
+            "cinematic synthwave",
+            "minimal",
+            "evolving instrumental"
+          ],
+          "avoid": [
+            "vocals",
+            "singing",
+            "lyrics",
+            "spoken word",
+            "narration",
+            "voice",
+            "choir",
+            "vocoder"
+          ]
+        }
+      ],
+      "instrumental": true,
+      "seed": 20261008
     }
   }
 }

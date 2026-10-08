@@ -1,0 +1,20 @@
+{
+  "approved": false,
+  "scope": "Car-local ankle trajectories only, not sole/door contact or complete choreography",
+  "support_phase": [
+    0.5,
+    0.67
+  ],
+  "baseline": {
+    "LeftFoot": 0.15087531318565764,
+    "RightFoot": 0.1149827836001953
+  },
+  "candidate": {
+    "LeftFoot": 0.020021604513569703,
+    "RightFoot": 0.020095737324782124
+  },
+  "endpoint_error": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  }
+}

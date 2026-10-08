@@ -1,0 +1,1 @@
+Built-in ImageGen. Prompt: square seamless human skin base-color/albedo texture; light warm peach beige, subtle pores and restrained fine pigmentation, flat neutral illumination, no anatomy, objects, shadows, highlights, labels or borders; main color around #dca98b. Blender hand UV staging consumes albedo.png. Not production-approved.

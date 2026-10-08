@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "source": "res://build/gunner_smoke_fitted_isolated/gunner.glb",
+  "clip": "smoke",
+  "samples": 257,
+  "scope": "Joint trajectories only; actual rendered review required",
+  "max_step_m": {
+    "Head": 0.0002043819031392414,
+    "Hips": 0.0,
+    "LeftArm": 0.0002315781272703989,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.0001350451547032784,
+    "LeftHand": 6.763724290884141e-05,
+    "Neck": 0.00017840944662189716,
+    "RightArm": 0.0002330188152942571,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.02126258908275897,
+    "RightHand": 0.013547748417042966
+  },
+  "loop_gap_m": {
+    "Head": 0.00026036532308838773,
+    "Hips": 0.0,
+    "LeftArm": 0.000295021830102034,
+    "LeftFoot": 0.0,
+    "LeftForeArm": 0.00016703205310901391,
+    "LeftHand": 7.878806545656305e-05,
+    "Neck": 0.0002272815120438487,
+    "RightArm": 0.0002968077299264324,
+    "RightFoot": 0.0,
+    "RightForeArm": 0.00016679454833493014,
+    "RightHand": 7.771062079027408e-05
+  },
+  "foot_drift_m": {
+    "LeftFoot": 0.0,
+    "RightFoot": 0.0
+  },
+  "contact_elbow_minus_shoulder_m": -0.17050015926360995,
+  "contact_hand_minus_head_m": [
+    -0.034999489784240057,
+    -0.03499794006347989
+  ]
+}

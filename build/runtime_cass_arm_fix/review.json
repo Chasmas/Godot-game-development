@@ -1,0 +1,6 @@
+{
+  "status": "integrated_asset",
+  "scope": "Cass detached arm rendered with current runtime sever_part filter; changed camera orientation only to reveal sleeve/hand. New anatomical cut/cap pipeline remains unintegrated.",
+  "view_angle": "225 degrees",
+  "backup": "cass_arm_before.png"
+}

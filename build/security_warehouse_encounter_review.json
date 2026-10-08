@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        484.95556640625,
+        136.0
+      ],
+      "moving_enemies": 8,
+      "passed": true,
+      "peak_detection": 0.895123750791348,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 0.875,
+      "end_position": [
+        432.733489990234,
+        136.0
+      ],
+      "moving_enemies": 12,
+      "passed": true,
+      "peak_detection": 0.996488682145165,
+      "retreat": false
+    }
+  ],
+  "scope": "Two controlled warehouse entry routes with active AI, real collision, god mode and fixed initial camera sweep; not full encounter approval"
+}

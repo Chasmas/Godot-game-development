@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+ACTIVITY_REVIEW 1 pose= clips=["aim", "aim_dual", "aim_melee", "armed_dual_run", "armed_dual_walk", "armed_melee_run", "armed_melee_walk", "armed_run", "armed_walk", "car_exit", "death", "death_back", "doze", "drive", "grab", "held", "idle", "knocked", "melee", "punch", "punch_left", "reload_dual", "reload_mag", "reload_shell", "run", "smoke", "walk"]
+ACTIVITY_REVIEW 2 pose= clips=["aim", "aim_dual", "aim_melee", "armed_dual_run", "armed_dual_walk", "armed_melee_run", "armed_melee_walk", "armed_run", "armed_walk", "car_exit", "death", "death_back", "doze", "drive", "grab", "held", "idle", "knocked", "melee", "punch", "punch_left", "reload_dual", "reload_mag", "reload_shell", "run", "smoke", "walk"]

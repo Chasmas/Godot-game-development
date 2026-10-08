@@ -1,0 +1,13 @@
+{
+  "status": "candidate_not_integrated",
+  "scope": "24 looks, shoulder-plane versus previous weight-cut arm, actual Godot OpenGL at three death_back phases",
+  "findings": [
+    "Smaller side-of-torso wound in several looks including boss and buck",
+    "Some character wounds remain broad in intermediate pose; layered geometry and demon wing preservation require further review"
+  ],
+  "pending": [
+    "Detached-source cap reconstruction",
+    "All-source skinning and geometry preservation",
+    "Runtime appearance and performance"
+  ]
+}

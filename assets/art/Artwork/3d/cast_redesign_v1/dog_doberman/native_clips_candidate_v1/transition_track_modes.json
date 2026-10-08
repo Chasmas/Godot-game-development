@@ -1,0 +1,302 @@
+[
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:spine",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:head",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:tail_1",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:tail_2",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:tail_3",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D/Mesh_0:Idle torso breath",
+    "type": 4
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:pelvis",
+    "type": 1
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "idle",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:pelvis",
+    "type": 1
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:spine",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_negative_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_upper",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_lower",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:front_positive_x_paw",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_negative_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_contact",
+    "type": 1
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D:rear_positive_x_contact",
+    "type": 2
+  },
+  {
+    "clip": "walk",
+    "interpolation": 1,
+    "path": "DOBERMAN_RIG_CANDIDATE/Skeleton3D/Mesh_0:Idle torso breath",
+    "type": 4
+  }
+]

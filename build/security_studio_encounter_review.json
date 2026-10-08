@@ -1,0 +1,101 @@
+{
+  "results": [
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        357.04443359375,
+        40.0
+      ],
+      "initial_sweep_phase": 0.0,
+      "moving_enemies": 6,
+      "passed": true,
+      "peak_detection": 0.567391341388541,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 0.8,
+      "end_position": [
+        382.870941162109,
+        40.0
+      ],
+      "initial_sweep_phase": 0.0,
+      "moving_enemies": 9,
+      "passed": true,
+      "peak_detection": 0.999158726041279,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        357.04443359375,
+        40.0
+      ],
+      "initial_sweep_phase": 0.25,
+      "moving_enemies": 6,
+      "passed": true,
+      "peak_detection": 0.678451965063337,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 0.725,
+      "end_position": [
+        382.870941162109,
+        40.0
+      ],
+      "initial_sweep_phase": 0.25,
+      "moving_enemies": 9,
+      "passed": true,
+      "peak_detection": 0.997402390380384,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        357.04443359375,
+        40.0
+      ],
+      "initial_sweep_phase": 0.5,
+      "moving_enemies": 6,
+      "passed": true,
+      "peak_detection": 0.55379220253576,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 0.808333333333333,
+      "end_position": [
+        382.870941162109,
+        40.0
+      ],
+      "initial_sweep_phase": 0.5,
+      "moving_enemies": 9,
+      "passed": true,
+      "peak_detection": 0.998094804892464,
+      "retreat": false
+    },
+    {
+      "alarm_seconds": -1.0,
+      "end_position": [
+        357.04443359375,
+        40.0
+      ],
+      "initial_sweep_phase": 0.75,
+      "moving_enemies": 6,
+      "passed": true,
+      "peak_detection": 0.408683881999324,
+      "retreat": true
+    },
+    {
+      "alarm_seconds": 0.9,
+      "end_position": [
+        382.870941162109,
+        40.0
+      ],
+      "initial_sweep_phase": 0.75,
+      "moving_enemies": 9,
+      "passed": true,
+      "peak_detection": 0.990873879099648,
+      "retreat": false
+    }
+  ],
+  "scope": "Two controlled studio corridor routes at four initial sweep phases with active AI, real collision and god mode; not full encounter approval"
+}

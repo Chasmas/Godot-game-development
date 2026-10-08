@@ -1,0 +1,114 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+  ok Cass loads rendered clips
+  ok clip exists: idle
+  ok complete clip: idle
+  ok clip exists: walk
+  ok complete clip: walk
+  ok clip exists: run
+  ok complete clip: run
+  ok clip exists: sneak
+  ok complete clip: sneak
+  ok clip exists: aim
+  ok complete clip: aim
+  ok clip exists: armed_walk
+  ok complete clip: armed_walk
+  ok clip exists: armed_run
+  ok complete clip: armed_run
+  ok clip exists: armed_sneak
+  ok complete clip: armed_sneak
+  ok clip exists: roll
+  ok complete clip: roll
+  ok clip exists: punch
+  ok complete clip: punch
+  ok clip exists: melee
+  ok complete clip: melee
+  ok clip exists: kick
+  ok complete clip: kick
+  ok clip exists: death
+  ok complete clip: death
+  ok clip exists: smoke
+  ok complete clip: smoke
+  ok armed locomotion
+  ok muzzle stays near hand
+  ok armed locomotion
+  ok muzzle stays near hand
+  ok armed locomotion
+  ok muzzle stays near hand
+  ok armed locomotion
+  ok muzzle stays near hand
+  ok roll preserves direction-dependent facing
+  ok roll restores weapon
+  ok kick clip
+  ok melee clip
+  ok punch clip
+  ok corpse settles at the complete death pose
+  ok bat reload mag
+  ok bat reload shell
+  ok bat reload dual
+  ok boomstick reload mag
+  ok boomstick reload shell
+  ok boomstick reload dual
+  ok bottle reload mag
+  ok bottle reload shell
+  ok bottle reload dual
+  ok brick reload mag
+  ok brick reload shell
+  ok brick reload dual
+  ok broken_bottle reload mag
+  ok broken_bottle reload shell
+  ok broken_bottle reload dual
+  ok chainsaw reload mag
+  ok chainsaw reload shell
+  ok chainsaw reload dual
+  ok flamethrower reload mag
+  ok flamethrower reload shell
+  ok flamethrower reload dual
+  ok glass_shard reload mag
+  ok glass_shard reload shell
+  ok glass_shard reload dual
+  ok hotshot reload mag
+  ok hotshot reload shell
+  ok hotshot reload dual
+  ok knife reload mag
+  ok knife reload shell
+  ok knife reload dual
+  ok machete reload mag
+  ok machete reload shell
+  ok machete reload dual
+  ok pipe reload mag
+  ok pipe reload shell
+  ok pipe reload dual
+  ok pistol reload mag
+  ok pistol reload shell
+  ok pistol reload dual
+  ok revolver reload mag
+  ok revolver reload shell
+  ok revolver reload dual
+  ok rifle reload mag
+  ok rifle reload shell
+  ok rifle reload dual
+  ok shotgun reload mag
+  ok shotgun reload shell
+  ok shotgun reload dual
+  ok smg reload mag
+  ok smg reload shell
+  ok smg reload dual
+  ok whisper reload mag
+  ok whisper reload shell
+  ok whisper reload dual
+  ok dual pistols have distinct grips at angle 0.0
+  ok dual pistols have distinct grips at angle 1.5707963267949
+  ok dual pistols have distinct grips at angle 3.14159265358979
+  ok dual pistols have distinct grips at angle -1.5707963267949
+  ok idle smoking starts with attached cigarette
+  ok movement interrupts smoking
+  ok equipping a gun interrupts smoking
+  ok guard uses the current 3D renderer
+  ok zombie cannot smoke through idle fidgets
+  ok zombie rejects scripted human activity
+  ok ghoul cannot smoke through idle fidgets
+  ok ghoul rejects scripted human activity
+  ok demon cannot smoke through idle fidgets
+  ok demon rejects scripted human activity
+CAST TEST DONE: 0 failures

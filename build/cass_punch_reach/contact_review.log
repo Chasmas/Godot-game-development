@@ -1,0 +1,186 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS punch has a visible hand stroke
+PASS punch recovers its starting hand pose
+ERROR: punch reaches extension at damage contact
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tools/combat_animation_regression.gd:8)
+       [1] _ready (res://tools/combat_animation_regression.gd:42)
+FAIL punch reaches extension at damage contact
+punch reach=4.98243808746338 peak=62 endpoint gap=0.48231270909309
+PASS punch_left has a visible hand stroke
+PASS punch_left recovers its starting hand pose
+ERROR: punch_left reaches extension at damage contact
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tools/combat_animation_regression.gd:8)
+       [1] _ready (res://tools/combat_animation_regression.gd:42)
+FAIL punch_left reaches extension at damage contact
+punch_left reach=4.99251937866211 peak=62 endpoint gap=0.48630800843239
+PASS melee has a visible hand stroke
+PASS melee recovers its starting hand pose
+melee reach=5.9302134513855 peak=27 endpoint gap=0.09245647490025
+PASS grab has a visible hand stroke
+PASS grab recovers its starting hand pose
+grab reach=10.0350828170776 peak=26 endpoint gap=0.24036844074726
+PASS held has a visible hand stroke
+PASS held recovers its starting hand pose
+held reach=5.1620044708252 peak=71 endpoint gap=0.04434196650982
+PASS stab has a visible hand stroke
+PASS stab recovers its starting hand pose
+PASS knife reaches contact at its damage timing
+stab reach=4.06761360168457 peak=62 endpoint gap=0.47250831127167
+PASS attack start does not flash a fallback arm
+PASS punch 0: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 1: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 2: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 3: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 4: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 5: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 6: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS punch 7: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 0: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 1: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 2: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 3: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 4: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 5: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 6: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS knife 7: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 0: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 1: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 2: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 3: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 4: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 5: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 6: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+PASS attack start does not flash a fallback arm
+PASS bat 7: body preserves committed contact direction while aim changes
+PASS authored attack has no fallback arm
+PASS trail follows attack phase and moving body
+PASS trail direction matches authored Blender arc
+PASS roll releases committed attack
+PASS roll cancels the attack trail
+COMBAT ANIMATION REGRESSION: 2 failures

@@ -1,0 +1,408 @@
+{
+  "runtime_approved": false,
+  "scope": "Authoritative M01 authored decor inventory; generated sources are inventoried but per-object coverage is not yet established",
+  "imagegen_sources": [
+    "assets/art/materials/m01/batch_v1/arcade_reference.png",
+    "assets/art/materials/m01/batch_v1/armchair_sage_fabric_albedo_v1.png",
+    "assets/art/materials/m01/batch_v1/ashtray_reference.png",
+    "assets/art/materials/m01/batch_v1/asphalt_albedo.png",
+    "assets/art/materials/m01/batch_v1/back_office_direction.png",
+    "assets/art/materials/m01/batch_v1/bat_reference.png",
+    "assets/art/materials/m01/batch_v1/bath_sink_reference.png",
+    "assets/art/materials/m01/batch_v1/bath_toilet_reference.png",
+    "assets/art/materials/m01/batch_v1/bathroom_direction.png",
+    "assets/art/materials/m01/batch_v1/bathroom_wall_tiles_albedo.png",
+    "assets/art/materials/m01/batch_v1/bathtub_reference.png",
+    "assets/art/materials/m01/batch_v1/bed_reference.png",
+    "assets/art/materials/m01/batch_v1/bedside_lamp_reference.png",
+    "assets/art/materials/m01/batch_v1/biker_reference.png",
+    "assets/art/materials/m01/batch_v1/blood_splatter_reference.png",
+    "assets/art/materials/m01/batch_v1/blood_spurt_reference.png",
+    "assets/art/materials/m01/batch_v1/boiler_reference.png",
+    "assets/art/materials/m01/batch_v1/bottle_weapon_reference.png",
+    "assets/art/materials/m01/batch_v1/bougainvillea_reference.png",
+    "assets/art/materials/m01/batch_v1/breached_wall_reference.png",
+    "assets/art/materials/m01/batch_v1/brick_reference.png",
+    "assets/art/materials/m01/batch_v1/broken_planter_reference.png",
+    "assets/art/materials/m01/batch_v1/burned_plant_reference.png",
+    "assets/art/materials/m01/batch_v1/cass_reference.png",
+    "assets/art/materials/m01/batch_v1/chainsaw_reference.png",
+    "assets/art/materials/m01/batch_v1/collectible_photo_reference.png",
+    "assets/art/materials/m01/batch_v1/collectible_vhs_reference.png",
+    "assets/art/materials/m01/batch_v1/corridor_carpet_albedo.png",
+    "assets/art/materials/m01/batch_v1/corridor_direction.png",
+    "assets/art/materials/m01/batch_v1/counter_reference.png",
+    "assets/art/materials/m01/batch_v1/crt_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_arcade_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_arcade_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/damaged_crt_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_crt_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/damaged_door_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_door_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/damaged_fuse_box_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_ice_machine_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_ice_machine_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/damaged_lamp_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_vending_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_vending_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/damaged_window_reference.png",
+    "assets/art/materials/m01/batch_v1/damaged_window_reference_v2.png",
+    "assets/art/materials/m01/batch_v1/desk_reference.png",
+    "assets/art/materials/m01/batch_v1/dog_reference.png",
+    "assets/art/materials/m01/batch_v1/dolores_reference.png",
+    "assets/art/materials/m01/batch_v1/drain_grate_reference.png",
+    "assets/art/materials/m01/batch_v1/dresser_reference.png",
+    "assets/art/materials/m01/batch_v1/dumpster_reference.png",
+    "assets/art/materials/m01/batch_v1/earl_reference.png",
+    "assets/art/materials/m01/batch_v1/electrical_sparks_reference.png",
+    "assets/art/materials/m01/batch_v1/entrance_direction.png",
+    "assets/art/materials/m01/batch_v1/exploded_propane_reference.png",
+    "assets/art/materials/m01/batch_v1/exterior_stucco_albedo.png",
+    "assets/art/materials/m01/batch_v1/fire_extinguisher_reference.png",
+    "assets/art/materials/m01/batch_v1/fire_reference.png",
+    "assets/art/materials/m01/batch_v1/flamingo_float_reference.png",
+    "assets/art/materials/m01/batch_v1/floor_clutter_reference.png",
+    "assets/art/materials/m01/batch_v1/furniture_walnut_albedo.png",
+    "assets/art/materials/m01/batch_v1/fuse_box_reference.png",
+    "assets/art/materials/m01/batch_v1/gecko_reference.png",
+    "assets/art/materials/m01/batch_v1/glass_shards_reference.png",
+    "assets/art/materials/m01/batch_v1/guard_reference.png",
+    "assets/art/materials/m01/batch_v1/guest_bedspread_albedo.png",
+    "assets/art/materials/m01/batch_v1/guest_door_reference.png",
+    "assets/art/materials/m01/batch_v1/guest_room_direction.png",
+    "assets/art/materials/m01/batch_v1/guest_wallpaper_albedo.png",
+    "assets/art/materials/m01/batch_v1/gunner_reference.png",
+    "assets/art/materials/m01/batch_v1/handler_reference.png",
+    "assets/art/materials/m01/batch_v1/harcourt_reference.png",
+    "assets/art/materials/m01/batch_v1/hasty_checkout_reference.png",
+    "assets/art/materials/m01/batch_v1/heavy_reference.png",
+    "assets/art/materials/m01/batch_v1/hotshot_reference.png",
+    "assets/art/materials/m01/batch_v1/housekeeping_cart_reference.png",
+    "assets/art/materials/m01/batch_v1/hunter_reference.png",
+    "assets/art/materials/m01/batch_v1/ice_bucket_reference.png",
+    "assets/art/materials/m01/batch_v1/ice_machine_reference.png",
+    "assets/art/materials/m01/batch_v1/impact_dust_reference.png",
+    "assets/art/materials/m01/batch_v1/interior_ivory_plaster_albedo_v1.png",
+    "assets/art/materials/m01/batch_v1/key_rack_reference.png",
+    "assets/art/materials/m01/batch_v1/knife_reference.png",
+    "assets/art/materials/m01/batch_v1/laundry_direction.png",
+    "assets/art/materials/m01/batch_v1/ledger_reference.png",
+    "assets/art/materials/m01/batch_v1/machete_reference.png",
+    "assets/art/materials/m01/batch_v1/maintenance_cabinet_reference.png",
+    "assets/art/materials/m01/batch_v1/motel_rug_oxblood_albedo_v1.png",
+    "assets/art/materials/m01/batch_v1/muzzle_flash_reference.png",
+    "assets/art/materials/m01/batch_v1/neon_checkpoint_reference.png",
+    "assets/art/materials/m01/batch_v1/neon_sign_reference.png",
+    "assets/art/materials/m01/batch_v1/office_chair_reference.png",
+    "assets/art/materials/m01/batch_v1/painted_metal_albedo.png",
+    "assets/art/materials/m01/batch_v1/palm_planter_reference.png",
+    "assets/art/materials/m01/batch_v1/parked_sedan_reference.png",
+    "assets/art/materials/m01/batch_v1/pipe_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_cooler_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_direction.png",
+    "assets/art/materials/m01/batch_v1/pool_ladder_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_lounger_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_party_ruin_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_ring_reference.png",
+    "assets/art/materials/m01/batch_v1/pool_tiles_albedo.png",
+    "assets/art/materials/m01/batch_v1/pool_umbrella_reference.png",
+    "assets/art/materials/m01/batch_v1/propane_tank_reference.png",
+    "assets/art/materials/m01/batch_v1/railing_reference.png",
+    "assets/art/materials/m01/batch_v1/rain_reference.png",
+    "assets/art/materials/m01/batch_v1/reception_bell_reference.png",
+    "assets/art/materials/m01/batch_v1/reception_direction.png",
+    "assets/art/materials/m01/batch_v1/reception_floor_albedo.png",
+    "assets/art/materials/m01/batch_v1/reception_wood_albedo.png",
+    "assets/art/materials/m01/batch_v1/red_car_reference.png",
+    "assets/art/materials/m01/batch_v1/revolver_reference.png",
+    "assets/art/materials/m01/batch_v1/rifle_reference.png",
+    "assets/art/materials/m01/batch_v1/riot_reference.png",
+    "assets/art/materials/m01/batch_v1/road_manhole_reference.png",
+    "assets/art/materials/m01/batch_v1/road_markings_reference.png",
+    "assets/art/materials/m01/batch_v1/road_patch_reference.png",
+    "assets/art/materials/m01/batch_v1/road_pothole_reference.png",
+    "assets/art/materials/m01/batch_v1/road_sand_reference.png",
+    "assets/art/materials/m01/batch_v1/road_stop_line_reference.png",
+    "assets/art/materials/m01/batch_v1/roof_tile_albedo.png",
+    "assets/art/materials/m01/batch_v1/room_key_spill_reference.png",
+    "assets/art/materials/m01/batch_v1/rottweiler_reference.png",
+    "assets/art/materials/m01/batch_v1/rubber_albedo.png",
+    "assets/art/materials/m01/batch_v1/scout_reference.png",
+    "assets/art/materials/m01/batch_v1/security_camera_reference.png",
+    "assets/art/materials/m01/batch_v1/service_alley_direction.png",
+    "assets/art/materials/m01/batch_v1/shotgun_reference.png",
+    "assets/art/materials/m01/batch_v1/smg_reference.png",
+    "assets/art/materials/m01/batch_v1/smoke_reference.png",
+    "assets/art/materials/m01/batch_v1/stair_reference.png",
+    "assets/art/materials/m01/batch_v1/steam_reference.png",
+    "assets/art/materials/m01/batch_v1/suitcase_reference.png",
+    "assets/art/materials/m01/batch_v1/table_reference.png",
+    "assets/art/materials/m01/batch_v1/telephone_reference.png",
+    "assets/art/materials/m01/batch_v1/towel_fabric_albedo.png",
+    "assets/art/materials/m01/batch_v1/vending_reference.png",
+    "assets/art/materials/m01/batch_v1/wall_lamp_reference.png",
+    "assets/art/materials/m01/batch_v1/wall_trim_reference.png",
+    "assets/art/materials/m01/batch_v1/washer_reference.png",
+    "assets/art/materials/m01/batch_v1/water_ring_reference.png",
+    "assets/art/materials/m01/batch_v1/water_splash_reference.png",
+    "assets/art/materials/m01/batch_v1/water_surface_direction.png",
+    "assets/art/materials/m01/batch_v1/whisper_reference.png",
+    "assets/art/materials/m01/batch_v1/window_reference.png"
+  ],
+  "blender_sources": [
+    "assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v1/armchair_runtime_review.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v2/armchair_runtime_review.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/armchair_runtime_v3/armchair_runtime_review.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/bed_family_v1/motel_bed.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door_damaged.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door_destroyed.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/guest_room_composition_v1/guest_room_composition.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/imagegen_batch_v1/interiors_material_review.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/imagegen_upholstery_v1/interiors_material_review.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/laundry_batch/detergent_service_bench.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/layout_reconstruction_v1/layout_reconstruction.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/m01_interiors_transitions_staging.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/nightstand_family_v1/nightstand.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/rug_family_v1/motel_rug.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/tv_dresser_family_v1/tv_dresser.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/upholstery_v1/m01_interiors_transitions_staging.blend",
+    "assets/art/prerendered/m01_sunset_palms/staging/window_v1/window.blend",
+    "assets/art/prerendered/m01_sunset_palms/sunset_palms_courtyard.blend"
+  ],
+  "legacy_decor_categories": [
+    {
+      "id": "arcade",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "clutter_ashtray",
+      "placements": 6,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "clutter_bottles",
+      "placements": 6,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "dumpster",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_motel_dresser",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_motel_ice_machine",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_motel_vending",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_palm_planter",
+      "placements": 4,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_pool_cooler",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "hq_pool_lounger_set",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "lamp",
+      "placements": 4,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "laundry_service_bench",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_bedside_lamp",
+      "placements": 8,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_bougainvillea",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_gecko",
+      "placements": 6,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_hasty_checkout",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_housekeeping_cart",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_ice_bucket",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_ice_bucket_full",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_ice_machine",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_neon_vacancy_sign",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_palm_planter",
+      "placements": 4,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_pool_float",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_pool_float_flamingo",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_pool_lounger",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_pool_party_ruin",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_pool_umbrella",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_room_key_spill",
+      "placements": 7,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_suitcase_open",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_telephone",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_towel_cart",
+      "placements": 8,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_tv_crt",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "motel_water_ring",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "neon",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "palm",
+      "placements": 8,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "paper",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_arrow",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_manhole",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_patch",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_pothole",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_sand",
+      "placements": 3,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "road_stop_line",
+      "placements": 2,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    },
+    {
+      "id": "vacancy",
+      "placements": 1,
+      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+    }
+  ],
+  "quality_reference": [
+    "Approved pool-area lighting, architecture and environmental detail",
+    "Detailed mourning angel sculpture",
+    "User supplied richly detailed environment references"
+  ],
+  "quality_gate": [
+    "Room composition prototype is not final art approval",
+    "No removal solely because a vaguely similar asset exists",
+    "Verify exact replacement geometry, scale, collision, interaction and readable gameplay",
+    "Complete ImageGen and Blender coverage before removing an entire legacy family"
+  ],
+  "room_study_findings": [
+    "Composition is coherent but too sparse for the requested reference quality",
+    "TV is correctly aimed at the bed; art-review camera sees its rear",
+    "Empty wall picture is a placeholder and cannot ship",
+    "Practical lamps lack convincing emitted light and need a lighting pass",
+    "Missing room-specific dressing, authored wear, personal belongings and varied surface detail"
+  ]
+}

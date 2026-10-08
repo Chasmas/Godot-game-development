@@ -1,0 +1,42 @@
+{
+  "cuts": [
+    {
+      "body_area": 5.57152269176841,
+      "detached_area": 0.408950517058656,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "head",
+      "relative_error": 0.00000000426775464888286,
+      "valid": true
+    },
+    {
+      "body_area": 5.49977319751842,
+      "detached_area": 0.480699978378112,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "arm",
+      "relative_error": 0.00000000977409639209125,
+      "valid": true
+    },
+    {
+      "body_area": 5.23210124819156,
+      "detached_area": 0.748371807456806,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "leg",
+      "relative_error": 0.0000000298808949379569,
+      "valid": true
+    },
+    {
+      "body_area": 4.21023739283905,
+      "detached_area": 1.77023559035881,
+      "look": "demon",
+      "original_area": 5.98047323435026,
+      "part": "legs",
+      "relative_error": 0.0000000419954051821458,
+      "valid": true
+    }
+  ],
+  "failures": 0,
+  "scope": "Uncapped source surface area equals body plus complementary detached part across 24 looks and four cuts. Does not prove cap appearance, all animated seams, disconnected fragments or runtime performance."
+}

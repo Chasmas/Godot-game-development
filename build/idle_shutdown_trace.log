@@ -1,0 +1,228 @@
+WorkerThreadPool: 8 threads, 2 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/systems/events.gd remapped: res://scripts/systems/events.gd
+Completed load for: 'res://scripts/systems/events.gd' remapped 'res://scripts/systems/events.gd' at thread -1
+Loading resource: res://scripts/systems/save_manager.gd remapped: res://scripts/systems/save_manager.gd
+Completed load for: 'res://scripts/systems/save_manager.gd' remapped 'res://scripts/systems/save_manager.gd' at thread -1
+Loading resource: res://scripts/systems/loc.gd remapped: res://scripts/systems/loc.gd
+Completed load for: 'res://scripts/systems/loc.gd' remapped 'res://scripts/systems/loc.gd' at thread -1
+Loading resource: res://scripts/systems/input_setup.gd remapped: res://scripts/systems/input_setup.gd
+Completed load for: 'res://scripts/systems/input_setup.gd' remapped 'res://scripts/systems/input_setup.gd' at thread -1
+Loading resource: res://scripts/systems/audio_manager.gd remapped: res://scripts/systems/audio_manager.gd
+Completed load for: 'res://scripts/systems/audio_manager.gd' remapped 'res://scripts/systems/audio_manager.gd' at thread -1
+Loading resource: res://scripts/systems/music_manager.gd remapped: res://scripts/systems/music_manager.gd
+Completed load for: 'res://scripts/systems/music_manager.gd' remapped 'res://scripts/systems/music_manager.gd' at thread -1
+Loading resource: res://scripts/systems/score_system.gd remapped: res://scripts/systems/score_system.gd
+Completed load for: 'res://scripts/systems/score_system.gd' remapped 'res://scripts/systems/score_system.gd' at thread -1
+Loading resource: res://scripts/systems/game.gd remapped: res://scripts/systems/game.gd
+Completed load for: 'res://scripts/systems/game.gd' remapped 'res://scripts/systems/game.gd' at thread -1
+Loading resource: res://scripts/narrative/dialogue_manager.gd remapped: res://scripts/narrative/dialogue_manager.gd
+Loading resource: res://shaders/painted_shot.gdshader remapped: res://shaders/painted_shot.gdshader
+Completed load for: 'res://shaders/painted_shot.gdshader' remapped 'res://shaders/painted_shot.gdshader' at thread -1
+Completed load for: 'res://scripts/narrative/dialogue_manager.gd' remapped 'res://scripts/narrative/dialogue_manager.gd' at thread -1
+Loading resource: res://scripts/systems/debug_menu.gd remapped: res://scripts/systems/debug_menu.gd
+Completed load for: 'res://scripts/systems/debug_menu.gd' remapped 'res://scripts/systems/debug_menu.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://tools/idle_activity_regression.tscn remapped: res://tools/idle_activity_regression.tscn
+Loading resource: res://tools/idle_activity_regression.gd remapped: res://tools/idle_activity_regression.gd
+Completed load for: 'res://tools/idle_activity_regression.gd' remapped 'res://tools/idle_activity_regression.gd' at thread -1
+Completed load for: 'res://tools/idle_activity_regression.tscn' remapped 'res://tools/idle_activity_regression.tscn' at thread -1
+Loading resource: res://data/missions/m01_checkout.tres remapped: res://data/missions/m01_checkout.tres
+Completed load for: 'res://data/missions/m01_checkout.tres' remapped 'res://data/missions/m01_checkout.tres' at thread -1
+Loading resource: res://data/missions/m02_dog_days.tres remapped: res://data/missions/m02_dog_days.tres
+Completed load for: 'res://data/missions/m02_dog_days.tres' remapped 'res://data/missions/m02_dog_days.tres' at thread -1
+Loading resource: res://data/missions/m03_prime_time.tres remapped: res://data/missions/m03_prime_time.tres
+Completed load for: 'res://data/missions/m03_prime_time.tres' remapped 'res://data/missions/m03_prime_time.tres' at thread -1
+Loading resource: res://data/missions/m04_sweet_dreams.tres remapped: res://data/missions/m04_sweet_dreams.tres
+Completed load for: 'res://data/missions/m04_sweet_dreams.tres' remapped 'res://data/missions/m04_sweet_dreams.tres' at thread -1
+Loading resource: res://data/characters/bobby.tres remapped: res://data/characters/bobby.tres
+Completed load for: 'res://data/characters/bobby.tres' remapped 'res://data/characters/bobby.tres' at thread -1
+Loading resource: res://data/characters/cass.tres remapped: res://data/characters/cass.tres
+Completed load for: 'res://data/characters/cass.tres' remapped 'res://data/characters/cass.tres' at thread -1
+Loading resource: res://data/characters/dana.tres remapped: res://data/characters/dana.tres
+Completed load for: 'res://data/characters/dana.tres' remapped 'res://data/characters/dana.tres' at thread -1
+Loading resource: res://data/characters/deacon.tres remapped: res://data/characters/deacon.tres
+Completed load for: 'res://data/characters/deacon.tres' remapped 'res://data/characters/deacon.tres' at thread -1
+Loading resource: res://data/characters/director.tres remapped: res://data/characters/director.tres
+Completed load for: 'res://data/characters/director.tres' remapped 'res://data/characters/director.tres' at thread -1
+Loading resource: res://data/characters/luz.tres remapped: res://data/characters/luz.tres
+Completed load for: 'res://data/characters/luz.tres' remapped 'res://data/characters/luz.tres' at thread -1
+Loading resource: res://data/characters/marv.tres remapped: res://data/characters/marv.tres
+Completed load for: 'res://data/characters/marv.tres' remapped 'res://data/characters/marv.tres' at thread -1
+Loading resource: res://data/characters/nadia.tres remapped: res://data/characters/nadia.tres
+Completed load for: 'res://data/characters/nadia.tres' remapped 'res://data/characters/nadia.tres' at thread -1
+Loading resource: res://data/characters/tilly.tres remapped: res://data/characters/tilly.tres
+Completed load for: 'res://data/characters/tilly.tres' remapped 'res://data/characters/tilly.tres' at thread -1
+Loading resource: res://data/characters/wes.tres remapped: res://data/characters/wes.tres
+Completed load for: 'res://data/characters/wes.tres' remapped 'res://data/characters/wes.tres' at thread -1
+Loading resource: res://shaders/crt_vhs.gdshader remapped: res://shaders/crt_vhs.gdshader
+Completed load for: 'res://shaders/crt_vhs.gdshader' remapped 'res://shaders/crt_vhs.gdshader' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono.ttf remapped: res://assets/fonts/DejaVuSansMono.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata remapped: res://.godot/imported/DejaVuSansMono.ttf-9a4c8400e0605ada74fff5183c94f917.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono.ttf' remapped 'res://assets/fonts/DejaVuSansMono.ttf' at thread -1
+Loading resource: res://assets/fonts/DejaVuSansMono-Bold.ttf remapped: res://assets/fonts/DejaVuSansMono-Bold.ttf
+Loading resource: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata remapped: res://.godot/imported/DejaVuSansMono-Bold.ttf-2eecaf3dccb21bcfe2e0ad26b61043b1.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSansMono-Bold.ttf' remapped 'res://assets/fonts/DejaVuSansMono-Bold.ttf' at thread -1
+Loading resource: res://assets/characters/baked/l_guard_0.png remapped: res://assets/characters/baked/l_guard_0.png
+Loading resource: res://.godot/imported/l_guard_0.png-7eb37447285e04f221eda48e360dd3ef.ctex remapped: res://.godot/imported/l_guard_0.png-7eb37447285e04f221eda48e360dd3ef.ctex
+Completed load for: 'res://assets/characters/baked/l_guard_0.png' remapped 'res://assets/characters/baked/l_guard_0.png' at thread -1
+Loading resource: res://assets/art/materials/twill.png remapped: res://assets/art/materials/twill.png
+Loading resource: res://.godot/imported/twill.png-08881ae797a2761510d99988c23ca092.ctex remapped: res://.godot/imported/twill.png-08881ae797a2761510d99988c23ca092.ctex
+Completed load for: 'res://assets/art/materials/twill.png' remapped 'res://assets/art/materials/twill.png' at thread -1
+Loading resource: res://assets/art/cast3d_rt/guard/guard.glb remapped: res://assets/art/cast3d_rt/guard/guard.glb
+Loading resource: res://.godot/imported/guard.glb-052a42f1cbf90d8929b76dbfa91d531a.scn remapped: res://.godot/imported/guard.glb-052a42f1cbf90d8929b76dbfa91d531a.scn
+Loading resource: res://assets/art/cast3d_rt/guard/guard_Image_0.jpg remapped: res://assets/art/cast3d_rt/guard/guard_Image_0.jpg
+Loading resource: res://.godot/imported/guard_Image_0.jpg-82e6841c4ba0c52d3e223109a0b5c504.ctex remapped: res://.godot/imported/guard_Image_0.jpg-82e6841c4ba0c52d3e223109a0b5c504.ctex
+Completed load for: 'res://assets/art/cast3d_rt/guard/guard_Image_0.jpg' remapped 'res://assets/art/cast3d_rt/guard/guard_Image_0.jpg' at thread -1
+Completed load for: 'res://assets/art/cast3d_rt/guard/guard.glb' remapped 'res://assets/art/cast3d_rt/guard/guard.glb' at thread -1
+Loading resource: res://data/weapons/bat.tres remapped: res://data/weapons/bat.tres
+Completed load for: 'res://data/weapons/bat.tres' remapped 'res://data/weapons/bat.tres' at thread -1
+Loading resource: res://data/weapons/boomstick.tres remapped: res://data/weapons/boomstick.tres
+Completed load for: 'res://data/weapons/boomstick.tres' remapped 'res://data/weapons/boomstick.tres' at thread -1
+Loading resource: res://data/weapons/bottle.tres remapped: res://data/weapons/bottle.tres
+Completed load for: 'res://data/weapons/bottle.tres' remapped 'res://data/weapons/bottle.tres' at thread -1
+Loading resource: res://data/weapons/brick.tres remapped: res://data/weapons/brick.tres
+Completed load for: 'res://data/weapons/brick.tres' remapped 'res://data/weapons/brick.tres' at thread -1
+Loading resource: res://data/weapons/broken_bottle.tres remapped: res://data/weapons/broken_bottle.tres
+Completed load for: 'res://data/weapons/broken_bottle.tres' remapped 'res://data/weapons/broken_bottle.tres' at thread -1
+Loading resource: res://data/weapons/flamethrower.tres remapped: res://data/weapons/flamethrower.tres
+Completed load for: 'res://data/weapons/flamethrower.tres' remapped 'res://data/weapons/flamethrower.tres' at thread -1
+Loading resource: res://data/weapons/glass_shard.tres remapped: res://data/weapons/glass_shard.tres
+Completed load for: 'res://data/weapons/glass_shard.tres' remapped 'res://data/weapons/glass_shard.tres' at thread -1
+Loading resource: res://data/weapons/hotshot.tres remapped: res://data/weapons/hotshot.tres
+Completed load for: 'res://data/weapons/hotshot.tres' remapped 'res://data/weapons/hotshot.tres' at thread -1
+Loading resource: res://data/weapons/knife.tres remapped: res://data/weapons/knife.tres
+Completed load for: 'res://data/weapons/knife.tres' remapped 'res://data/weapons/knife.tres' at thread -1
+Loading resource: res://data/weapons/machete.tres remapped: res://data/weapons/machete.tres
+Completed load for: 'res://data/weapons/machete.tres' remapped 'res://data/weapons/machete.tres' at thread -1
+Loading resource: res://data/weapons/pipe.tres remapped: res://data/weapons/pipe.tres
+Completed load for: 'res://data/weapons/pipe.tres' remapped 'res://data/weapons/pipe.tres' at thread -1
+Loading resource: res://data/weapons/pistol.tres remapped: res://data/weapons/pistol.tres
+Completed load for: 'res://data/weapons/pistol.tres' remapped 'res://data/weapons/pistol.tres' at thread -1
+Loading resource: res://data/weapons/revolver.tres remapped: res://data/weapons/revolver.tres
+Completed load for: 'res://data/weapons/revolver.tres' remapped 'res://data/weapons/revolver.tres' at thread -1
+Loading resource: res://data/weapons/rifle.tres remapped: res://data/weapons/rifle.tres
+Completed load for: 'res://data/weapons/rifle.tres' remapped 'res://data/weapons/rifle.tres' at thread -1
+Loading resource: res://data/weapons/shotgun.tres remapped: res://data/weapons/shotgun.tres
+Completed load for: 'res://data/weapons/shotgun.tres' remapped 'res://data/weapons/shotgun.tres' at thread -1
+Loading resource: res://data/weapons/smg.tres remapped: res://data/weapons/smg.tres
+Completed load for: 'res://data/weapons/smg.tres' remapped 'res://data/weapons/smg.tres' at thread -1
+Loading resource: res://data/weapons/whisper.tres remapped: res://data/weapons/whisper.tres
+Completed load for: 'res://data/weapons/whisper.tres' remapped 'res://data/weapons/whisper.tres' at thread -1
+Loading resource: res://data/enemies/bellhop.tres remapped: res://data/enemies/bellhop.tres
+Completed load for: 'res://data/enemies/bellhop.tres' remapped 'res://data/enemies/bellhop.tres' at thread -1
+Loading resource: res://data/enemies/biker.tres remapped: res://data/enemies/biker.tres
+Completed load for: 'res://data/enemies/biker.tres' remapped 'res://data/enemies/biker.tres' at thread -1
+Loading resource: res://data/enemies/burning_man.tres remapped: res://data/enemies/burning_man.tres
+Completed load for: 'res://data/enemies/burning_man.tres' remapped 'res://data/enemies/burning_man.tres' at thread -1
+Loading resource: res://data/enemies/cultist.tres remapped: res://data/enemies/cultist.tres
+Completed load for: 'res://data/enemies/cultist.tres' remapped 'res://data/enemies/cultist.tres' at thread -1
+Loading resource: res://data/enemies/demon.tres remapped: res://data/enemies/demon.tres
+Completed load for: 'res://data/enemies/demon.tres' remapped 'res://data/enemies/demon.tres' at thread -1
+Loading resource: res://data/enemies/dog.tres remapped: res://data/enemies/dog.tres
+Completed load for: 'res://data/enemies/dog.tres' remapped 'res://data/enemies/dog.tres' at thread -1
+Loading resource: res://data/enemies/dog_doberman.tres remapped: res://data/enemies/dog_doberman.tres
+Completed load for: 'res://data/enemies/dog_doberman.tres' remapped 'res://data/enemies/dog_doberman.tres' at thread -1
+Loading resource: res://data/enemies/dog_rott.tres remapped: res://data/enemies/dog_rott.tres
+Completed load for: 'res://data/enemies/dog_rott.tres' remapped 'res://data/enemies/dog_rott.tres' at thread -1
+Loading resource: res://data/enemies/fireman.tres remapped: res://data/enemies/fireman.tres
+Completed load for: 'res://data/enemies/fireman.tres' remapped 'res://data/enemies/fireman.tres' at thread -1
+Loading resource: res://data/enemies/ghoul.tres remapped: res://data/enemies/ghoul.tres
+Completed load for: 'res://data/enemies/ghoul.tres' remapped 'res://data/enemies/ghoul.tres' at thread -1
+Loading resource: res://data/enemies/guard.tres remapped: res://data/enemies/guard.tres
+Completed load for: 'res://data/enemies/guard.tres' remapped 'res://data/enemies/guard.tres' at thread -1
+Loading resource: res://data/enemies/gunner.tres remapped: res://data/enemies/gunner.tres
+Completed load for: 'res://data/enemies/gunner.tres' remapped 'res://data/enemies/gunner.tres' at thread -1
+Loading resource: res://data/enemies/handler.tres remapped: res://data/enemies/handler.tres
+Completed load for: 'res://data/enemies/handler.tres' remapped 'res://data/enemies/handler.tres' at thread -1
+Loading resource: res://data/enemies/heavy.tres remapped: res://data/enemies/heavy.tres
+Completed load for: 'res://data/enemies/heavy.tres' remapped 'res://data/enemies/heavy.tres' at thread -1
+Loading resource: res://data/enemies/hellhound.tres remapped: res://data/enemies/hellhound.tres
+Completed load for: 'res://data/enemies/hellhound.tres' remapped 'res://data/enemies/hellhound.tres' at thread -1
+Loading resource: res://data/enemies/hunter.tres remapped: res://data/enemies/hunter.tres
+Completed load for: 'res://data/enemies/hunter.tres' remapped 'res://data/enemies/hunter.tres' at thread -1
+Loading resource: res://data/enemies/kennel_master.tres remapped: res://data/enemies/kennel_master.tres
+Completed load for: 'res://data/enemies/kennel_master.tres' remapped 'res://data/enemies/kennel_master.tres' at thread -1
+Loading resource: res://data/enemies/night_manager.tres remapped: res://data/enemies/night_manager.tres
+Completed load for: 'res://data/enemies/night_manager.tres' remapped 'res://data/enemies/night_manager.tres' at thread -1
+Loading resource: res://data/enemies/riot.tres remapped: res://data/enemies/riot.tres
+Completed load for: 'res://data/enemies/riot.tres' remapped 'res://data/enemies/riot.tres' at thread -1
+Loading resource: res://data/enemies/scout.tres remapped: res://data/enemies/scout.tres
+Completed load for: 'res://data/enemies/scout.tres' remapped 'res://data/enemies/scout.tres' at thread -1
+Loading resource: res://data/enemies/scrapper.tres remapped: res://data/enemies/scrapper.tres
+Completed load for: 'res://data/enemies/scrapper.tres' remapped 'res://data/enemies/scrapper.tres' at thread -1
+Loading resource: res://data/enemies/security.tres remapped: res://data/enemies/security.tres
+Completed load for: 'res://data/enemies/security.tres' remapped 'res://data/enemies/security.tres' at thread -1
+Loading resource: res://data/enemies/sniper.tres remapped: res://data/enemies/sniper.tres
+Completed load for: 'res://data/enemies/sniper.tres' remapped 'res://data/enemies/sniper.tres' at thread -1
+Loading resource: res://data/enemies/stagehand.tres remapped: res://data/enemies/stagehand.tres
+Completed load for: 'res://data/enemies/stagehand.tres' remapped 'res://data/enemies/stagehand.tres' at thread -1
+Loading resource: res://data/enemies/welder.tres remapped: res://data/enemies/welder.tres
+Completed load for: 'res://data/enemies/welder.tres' remapped 'res://data/enemies/welder.tres' at thread -1
+Loading resource: res://data/enemies/zombie.tres remapped: res://data/enemies/zombie.tres
+Completed load for: 'res://data/enemies/zombie.tres' remapped 'res://data/enemies/zombie.tres' at thread -1
+Loading resource: res://data/personas/angel.tres remapped: res://data/personas/angel.tres
+Completed load for: 'res://data/personas/angel.tres' remapped 'res://data/personas/angel.tres' at thread -1
+Loading resource: res://data/personas/cowboy.tres remapped: res://data/personas/cowboy.tres
+Completed load for: 'res://data/personas/cowboy.tres' remapped 'res://data/personas/cowboy.tres' at thread -1
+Loading resource: res://data/personas/devil.tres remapped: res://data/personas/devil.tres
+Completed load for: 'res://data/personas/devil.tres' remapped 'res://data/personas/devil.tres' at thread -1
+Loading resource: res://data/personas/dog.tres remapped: res://data/personas/dog.tres
+Completed load for: 'res://data/personas/dog.tres' remapped 'res://data/personas/dog.tres' at thread -1
+Loading resource: res://data/personas/fool.tres remapped: res://data/personas/fool.tres
+Completed load for: 'res://data/personas/fool.tres' remapped 'res://data/personas/fool.tres' at thread -1
+Loading resource: res://data/personas/ghost.tres remapped: res://data/personas/ghost.tres
+Completed load for: 'res://data/personas/ghost.tres' remapped 'res://data/personas/ghost.tres' at thread -1
+Loading resource: res://data/personas/king.tres remapped: res://data/personas/king.tres
+Completed load for: 'res://data/personas/king.tres' remapped 'res://data/personas/king.tres' at thread -1
+Loading resource: res://data/personas/king_hidden.tres remapped: res://data/personas/king_hidden.tres
+Completed load for: 'res://data/personas/king_hidden.tres' remapped 'res://data/personas/king_hidden.tres' at thread -1
+Loading resource: res://data/personas/saint.tres remapped: res://data/personas/saint.tres
+Completed load for: 'res://data/personas/saint.tres' remapped 'res://data/personas/saint.tres' at thread -1
+Loading resource: res://data/personas/soldier.tres remapped: res://data/personas/soldier.tres
+Completed load for: 'res://data/personas/soldier.tres' remapped 'res://data/personas/soldier.tres' at thread -1
+Loading resource: res://data/personas/star.tres remapped: res://data/personas/star.tres
+Completed load for: 'res://data/personas/star.tres' remapped 'res://data/personas/star.tres' at thread -1
+Loading resource: res://assets/art/weapons_world/pistol.png remapped: res://assets/art/weapons_world/pistol.png
+Loading resource: res://.godot/imported/pistol.png-6fb0bb4faab1ae6a837d6c07920b82ae.ctex remapped: res://.godot/imported/pistol.png-6fb0bb4faab1ae6a837d6c07920b82ae.ctex
+Completed load for: 'res://assets/art/weapons_world/pistol.png' remapped 'res://assets/art/weapons_world/pistol.png' at thread -1
+Loading resource: res://assets/art/sprites/cigarette_pixellab.png remapped: res://assets/art/sprites/cigarette_pixellab.png
+Loading resource: res://.godot/imported/cigarette_pixellab.png-0836d7e938776887d4cc1dd05ab26fb0.ctex remapped: res://.godot/imported/cigarette_pixellab.png-0836d7e938776887d4cc1dd05ab26fb0.ctex
+Completed load for: 'res://assets/art/sprites/cigarette_pixellab.png' remapped 'res://assets/art/sprites/cigarette_pixellab.png' at thread -1
+Loading resource: res://assets/audio/sfx/light_switch.wav remapped: res://assets/audio/sfx/light_switch.wav
+Loading resource: res://.godot/imported/light_switch.wav-4d1ccb0bca8d0c6fb0d1b0344e17715f.sample remapped: res://.godot/imported/light_switch.wav-4d1ccb0bca8d0c6fb0d1b0344e17715f.sample
+Completed load for: 'res://assets/audio/sfx/light_switch.wav' remapped 'res://assets/audio/sfx/light_switch.wav' at thread -1
+PASS smoker plays authored standing activity
+PASS cigarette follows the actual hand socket
+PASS alert releases activity and restores the equipped weapon
+Loading resource: res://assets/art/sprites/cigarette.png remapped: res://assets/art/sprites/cigarette.png
+Loading resource: res://.godot/imported/cigarette.png-1b9cc8eec6dad6efc4d4ed2e2a8d8cb1.ctex remapped: res://.godot/imported/cigarette.png-1b9cc8eec6dad6efc4d4ed2e2a8d8cb1.ctex
+Completed load for: 'res://assets/art/sprites/cigarette.png' remapped 'res://assets/art/sprites/cigarette.png' at thread -1
+PASS sleeper has lowered hips in the authored seated pose
+Standing hips=1.00717735290527 seated hips=0.5594927072525
+PASS waking an unarmed guard does not reveal a stale weapon
+Loading resource: res://assets/art/props3d/folding_chair.glb remapped: res://assets/art/props3d/folding_chair.glb
+Loading resource: res://.godot/imported/folding_chair.glb-41c91ca904da62ee89546c4ea5599e0a.scn remapped: res://.godot/imported/folding_chair.glb-41c91ca904da62ee89546c4ea5599e0a.scn
+Completed load for: 'res://assets/art/props3d/folding_chair.glb' remapped 'res://assets/art/props3d/folding_chair.glb' at thread -1
+IDLE ACTIVITY REGRESSION: 0 failures
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Leaked instance: AudioStreamWAV:9223372143708866690 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372143759198342 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Resource still in use: res://assets/audio/sfx/light_switch.wav (AudioStreamWAV)
+Orphan StringName: SFX_Far (static: 0, total: 1)
+StringName: 1 unclaimed string names at exit.
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 1 resources still in use at exit.
+   at: clear (core/io/resource.cpp:817)

@@ -1,0 +1,873 @@
+{
+  "routes": [
+    {
+      "enemy": "e_61,14",
+      "from": [
+        61,
+        14
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 4,
+      "reachable": true,
+      "to": [
+        58,
+        12
+      ]
+    },
+    {
+      "enemy": "e_61,14",
+      "from": [
+        58,
+        12
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        62,
+        16
+      ]
+    },
+    {
+      "enemy": "e_61,14",
+      "from": [
+        62,
+        16
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 3,
+      "reachable": true,
+      "to": [
+        61,
+        14
+      ]
+    },
+    {
+      "enemy": "e_25,22",
+      "from": [
+        25,
+        22
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        34,
+        22
+      ]
+    },
+    {
+      "enemy": "e_25,22",
+      "from": [
+        34,
+        22
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        34,
+        13
+      ]
+    },
+    {
+      "enemy": "e_25,22",
+      "from": [
+        34,
+        13
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 16,
+      "reachable": true,
+      "to": [
+        19,
+        13
+      ]
+    },
+    {
+      "enemy": "e_25,22",
+      "from": [
+        19,
+        13
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        19,
+        22
+      ]
+    },
+    {
+      "enemy": "e_25,22",
+      "from": [
+        19,
+        22
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        25,
+        22
+      ]
+    },
+    {
+      "enemy": "e_40,23",
+      "from": [
+        40,
+        23
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 9,
+      "reachable": true,
+      "to": [
+        48,
+        23
+      ]
+    },
+    {
+      "enemy": "e_40,23",
+      "from": [
+        48,
+        23
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        48,
+        14
+      ]
+    },
+    {
+      "enemy": "e_40,23",
+      "from": [
+        48,
+        14
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        40,
+        23
+      ]
+    },
+    {
+      "enemy": "e_20,33",
+      "from": [
+        20,
+        33
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 25,
+      "reachable": true,
+      "to": [
+        44,
+        33
+      ]
+    },
+    {
+      "enemy": "e_20,33",
+      "from": [
+        44,
+        33
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 25,
+      "reachable": true,
+      "to": [
+        20,
+        33
+      ]
+    },
+    {
+      "enemy": "e_46,38",
+      "from": [
+        46,
+        38
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 3,
+      "reachable": true,
+      "to": [
+        44,
+        37
+      ]
+    },
+    {
+      "enemy": "e_46,38",
+      "from": [
+        44,
+        37
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 9,
+      "reachable": true,
+      "to": [
+        51,
+        39
+      ]
+    },
+    {
+      "enemy": "e_46,38",
+      "from": [
+        51,
+        39
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        46,
+        38
+      ]
+    },
+    {
+      "enemy": "e_40,45",
+      "from": [
+        40,
+        45
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 13,
+      "reachable": true,
+      "to": [
+        52,
+        45
+      ]
+    },
+    {
+      "enemy": "e_40,45",
+      "from": [
+        52,
+        45
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        52,
+        50
+      ]
+    },
+    {
+      "enemy": "e_40,45",
+      "from": [
+        52,
+        50
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 27,
+      "reachable": true,
+      "to": [
+        26,
+        51
+      ]
+    },
+    {
+      "enemy": "e_40,45",
+      "from": [
+        26,
+        51
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        26,
+        45
+      ]
+    },
+    {
+      "enemy": "e_40,45",
+      "from": [
+        26,
+        45
+      ],
+      "mission": "m01_checkout",
+      "path_cells": 15,
+      "reachable": true,
+      "to": [
+        40,
+        45
+      ]
+    },
+    {
+      "enemy": "e_8,7",
+      "from": [
+        8,
+        7
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 8,
+      "reachable": true,
+      "to": [
+        8,
+        12
+      ]
+    },
+    {
+      "enemy": "e_8,7",
+      "from": [
+        8,
+        12
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 13,
+      "reachable": true,
+      "to": [
+        20,
+        12
+      ]
+    },
+    {
+      "enemy": "e_8,7",
+      "from": [
+        20,
+        12
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        20,
+        7
+      ]
+    },
+    {
+      "enemy": "e_8,7",
+      "from": [
+        20,
+        7
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 13,
+      "reachable": true,
+      "to": [
+        8,
+        7
+      ]
+    },
+    {
+      "enemy": "e_44,10",
+      "from": [
+        44,
+        10
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 11,
+      "reachable": true,
+      "to": [
+        34,
+        11
+      ]
+    },
+    {
+      "enemy": "e_44,10",
+      "from": [
+        34,
+        11
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        34,
+        6
+      ]
+    },
+    {
+      "enemy": "e_44,10",
+      "from": [
+        34,
+        6
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 11,
+      "reachable": true,
+      "to": [
+        44,
+        6
+      ]
+    },
+    {
+      "enemy": "e_44,10",
+      "from": [
+        44,
+        6
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        44,
+        10
+      ]
+    },
+    {
+      "enemy": "e_57,16",
+      "from": [
+        57,
+        16
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        51,
+        15
+      ]
+    },
+    {
+      "enemy": "e_57,16",
+      "from": [
+        51,
+        15
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 11,
+      "reachable": true,
+      "to": [
+        61,
+        13
+      ]
+    },
+    {
+      "enemy": "e_57,16",
+      "from": [
+        61,
+        13
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        57,
+        16
+      ]
+    },
+    {
+      "enemy": "e_20,31",
+      "from": [
+        20,
+        31
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 21,
+      "reachable": true,
+      "to": [
+        40,
+        33
+      ]
+    },
+    {
+      "enemy": "e_20,31",
+      "from": [
+        40,
+        33
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 8,
+      "reachable": true,
+      "to": [
+        40,
+        26
+      ]
+    },
+    {
+      "enemy": "e_20,31",
+      "from": [
+        40,
+        26
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 21,
+      "reachable": true,
+      "to": [
+        20,
+        26
+      ]
+    },
+    {
+      "enemy": "e_20,31",
+      "from": [
+        20,
+        26
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        20,
+        31
+      ]
+    },
+    {
+      "enemy": "e_21,32",
+      "from": [
+        21,
+        32
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 21,
+      "reachable": true,
+      "to": [
+        41,
+        34
+      ]
+    },
+    {
+      "enemy": "e_21,32",
+      "from": [
+        41,
+        34
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 8,
+      "reachable": true,
+      "to": [
+        41,
+        27
+      ]
+    },
+    {
+      "enemy": "e_21,32",
+      "from": [
+        41,
+        27
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 21,
+      "reachable": true,
+      "to": [
+        21,
+        27
+      ]
+    },
+    {
+      "enemy": "e_21,32",
+      "from": [
+        21,
+        27
+      ],
+      "mission": "m02_dog_days",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        21,
+        32
+      ]
+    },
+    {
+      "enemy": "e_15,16",
+      "from": [
+        15,
+        16
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        9,
+        16
+      ]
+    },
+    {
+      "enemy": "e_15,16",
+      "from": [
+        9,
+        16
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 3,
+      "reachable": true,
+      "to": [
+        9,
+        18
+      ]
+    },
+    {
+      "enemy": "e_15,16",
+      "from": [
+        9,
+        18
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        18,
+        19
+      ]
+    },
+    {
+      "enemy": "e_15,16",
+      "from": [
+        18,
+        19
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 4,
+      "reachable": true,
+      "to": [
+        15,
+        16
+      ]
+    },
+    {
+      "enemy": "e_55,26",
+      "from": [
+        55,
+        26
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 12,
+      "reachable": true,
+      "to": [
+        66,
+        26
+      ]
+    },
+    {
+      "enemy": "e_55,26",
+      "from": [
+        66,
+        26
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 12,
+      "reachable": true,
+      "to": [
+        55,
+        26
+      ]
+    },
+    {
+      "enemy": "e_27,28",
+      "from": [
+        27,
+        28
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        27,
+        31
+      ]
+    },
+    {
+      "enemy": "e_27,28",
+      "from": [
+        27,
+        31
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 18,
+      "reachable": true,
+      "to": [
+        43,
+        31
+      ]
+    },
+    {
+      "enemy": "e_27,28",
+      "from": [
+        43,
+        31
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 4,
+      "reachable": true,
+      "to": [
+        43,
+        28
+      ]
+    },
+    {
+      "enemy": "e_27,28",
+      "from": [
+        43,
+        28
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 17,
+      "reachable": true,
+      "to": [
+        27,
+        28
+      ]
+    },
+    {
+      "enemy": "e_8,31",
+      "from": [
+        8,
+        31
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        8,
+        37
+      ]
+    },
+    {
+      "enemy": "e_8,31",
+      "from": [
+        8,
+        37
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        17,
+        37
+      ]
+    },
+    {
+      "enemy": "e_8,31",
+      "from": [
+        17,
+        37
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 7,
+      "reachable": true,
+      "to": [
+        17,
+        31
+      ]
+    },
+    {
+      "enemy": "e_8,31",
+      "from": [
+        17,
+        31
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 10,
+      "reachable": true,
+      "to": [
+        8,
+        31
+      ]
+    },
+    {
+      "enemy": "e_20,46",
+      "from": [
+        20,
+        46
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 15,
+      "reachable": true,
+      "to": [
+        34,
+        46
+      ]
+    },
+    {
+      "enemy": "e_20,46",
+      "from": [
+        34,
+        46
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        34,
+        51
+      ]
+    },
+    {
+      "enemy": "e_20,46",
+      "from": [
+        34,
+        51
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 15,
+      "reachable": true,
+      "to": [
+        20,
+        51
+      ]
+    },
+    {
+      "enemy": "e_20,46",
+      "from": [
+        20,
+        51
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 6,
+      "reachable": true,
+      "to": [
+        20,
+        46
+      ]
+    },
+    {
+      "enemy": "e_40,49",
+      "from": [
+        40,
+        49
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 15,
+      "reachable": true,
+      "to": [
+        54,
+        49
+      ]
+    },
+    {
+      "enemy": "e_40,49",
+      "from": [
+        54,
+        49
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        54,
+        45
+      ]
+    },
+    {
+      "enemy": "e_40,49",
+      "from": [
+        54,
+        45
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 15,
+      "reachable": true,
+      "to": [
+        40,
+        45
+      ]
+    },
+    {
+      "enemy": "e_40,49",
+      "from": [
+        40,
+        45
+      ],
+      "mission": "m03_prime_time",
+      "path_cells": 5,
+      "reachable": true,
+      "to": [
+        40,
+        49
+      ]
+    }
+  ],
+  "scope": "Actual initial mission navigation connectivity, not live patrol or encounter balance approval"
+}

@@ -1,0 +1,17 @@
+{
+  "runtime_approved": false,
+  "rig_approved": false,
+  "meshes": [
+    {
+      "mesh": "Mesh_0",
+      "vertices": 69131,
+      "unweighted_vertices": 69131,
+      "minimum_weight_sum": 0,
+      "maximum_weight_sum": 0,
+      "armature_modifiers": 1
+    }
+  ],
+  "method": "Blender automatic bone heat weights on a preserved copy",
+  "limitations": "Weight coverage does not validate joint deformation or independent limb motion",
+  "next": "Render isolated leg, head, jaw and tail pose probes; correct cross-limb influence before locomotion"
+}

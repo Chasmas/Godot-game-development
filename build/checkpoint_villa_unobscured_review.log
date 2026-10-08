@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.97 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+[level] prewarmed 14 looks in 1643 ms
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 0, "name": "THE LAWN", "position": [152.0, 920.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 1, "name": "THE FOYER", "position": [378.0, 448.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 2, "name": "WEST WING", "position": [176.0, 534.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT { "mission": "m04_sweet_dreams", "index": 3, "name": "EAST WING", "position": [826.0, 448.0], "inside_trigger": true, "overlaps": [] }
+CHECKPOINT PLACEMENT: 4 actual positions captured

@@ -1,0 +1,51 @@
+{
+  "character": "scout",
+  "height_m": 1.74,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\scout_turnaround.png",
+  "source_sha256": "6cf3196de86864c32ba3db1e72840611832f957843470a67bb48319356ada20f",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        550,
+        1024
+      ],
+      "width": 550,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\scout\\references\\front.png",
+      "sha256": "f8e1b370658039e6afc5bd0ffc03f52107750465ef6efd3c00f931414d13d85d"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        630,
+        0,
+        880,
+        1024
+      ],
+      "width": 250,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\scout\\references\\side.png",
+      "sha256": "ed91cb57ad19acfd2c492fa0ef5f256d008bc312750cc1de9f75d377f1837b03"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        990,
+        0,
+        1490,
+        1024
+      ],
+      "width": 500,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\scout\\references\\back.png",
+      "sha256": "189cb39a4b56c54f57461781ffd965414f4f911f0eb41c197e041f566256c310"
+    }
+  ],
+  "visual_review": "Original ImageGen turnaround and all three saved Blender crops directly inspected. Complete hands, hair and feet; isolated figures, yellow shirt and ivory trousers retained. Modeling input approval only."
+}

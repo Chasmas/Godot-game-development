@@ -1,0 +1,51 @@
+{
+  "character": "security",
+  "height_m": 1.84,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\security_turnaround.png",
+  "source_sha256": "88eabda604d81cb9d825b0fe741445ea5573fa62ee2d950ba041c4f23ae87e4e",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        380,
+        1024
+      ],
+      "width": 380,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\security\\references\\front.png",
+      "sha256": "99e66df62c3faf669daecc5d4ca29b63cb4068a2b9b6daf663da58383c615acf"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        385,
+        0,
+        578,
+        1024
+      ],
+      "width": 193,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\security\\references\\side.png",
+      "sha256": "7cf2f289c5ed8d47aeb9ed4ad0a40646d281c7af1c523a226ca70907f6fa378f"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        580,
+        0,
+        930,
+        1024
+      ],
+      "width": 350,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\security\\references\\back.png",
+      "sha256": "0964424903d5e7940c864b845efec56239602a4cd6c3655aafce51746107987a"
+    }
+  ],
+  "visual_review": "All three saved views directly inspected: single complete figure, hands/head/feet visible, no adjacent figure fragments. API-input approval only."
+}

@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS swap cancels pending contact
+PASS swap clears cutting visual
+PASS swap selects pistol
+PASS swap drops correct count
+PASS swap has no delayed saw damage
+PASS throw cancels pending contact
+PASS throw clears cutting visual
+PASS throw selects pistol
+PASS throw drops correct count
+PASS throw has no delayed saw damage
+POWERED WEAPON LIFECYCLE: 0 failures

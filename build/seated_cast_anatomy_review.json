@@ -1,0 +1,1926 @@
+{
+  "rows": [
+    {
+      "id": "bellhop",
+      "legs": [
+        {
+          "foot_height_m": 0.143387407064438,
+          "hip_height_m": 0.405053406953812,
+          "knee_bend_degrees": 125.284233832198,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.271576225757599
+        },
+        {
+          "foot_height_m": 0.139598697423935,
+          "hip_height_m": 0.404318809509277,
+          "knee_bend_degrees": 105.0997066083,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.231684699654579
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "bellhop",
+      "legs": [
+        {
+          "foot_height_m": 0.143387407064438,
+          "hip_height_m": 0.405053406953812,
+          "knee_bend_degrees": 125.284233832198,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.271576225757599
+        },
+        {
+          "foot_height_m": 0.139598697423935,
+          "hip_height_m": 0.404318809509277,
+          "knee_bend_degrees": 105.0997066083,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.231684699654579
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "bellhop",
+      "legs": [
+        {
+          "foot_height_m": 0.143387407064438,
+          "hip_height_m": 0.405053406953812,
+          "knee_bend_degrees": 125.284233832198,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.271576225757599
+        },
+        {
+          "foot_height_m": 0.139598697423935,
+          "hip_height_m": 0.404318809509277,
+          "knee_bend_degrees": 105.0997066083,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.231684699654579
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "bellhop",
+      "legs": [
+        {
+          "foot_height_m": 0.143387407064438,
+          "hip_height_m": 0.405053406953812,
+          "knee_bend_degrees": 125.284233832198,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.271576225757599
+        },
+        {
+          "foot_height_m": 0.139598697423935,
+          "hip_height_m": 0.404318809509277,
+          "knee_bend_degrees": 105.0997066083,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.231684699654579
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "biker",
+      "legs": [
+        {
+          "foot_height_m": 0.152112573385239,
+          "hip_height_m": 0.504783093929291,
+          "knee_bend_degrees": 103.002080382109,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.216845750808716
+        },
+        {
+          "foot_height_m": 0.161164551973343,
+          "hip_height_m": 0.503177285194397,
+          "knee_bend_degrees": 102.763939006507,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.197305291891098
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "biker",
+      "legs": [
+        {
+          "foot_height_m": 0.152112573385239,
+          "hip_height_m": 0.504783093929291,
+          "knee_bend_degrees": 103.002080382109,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.216845750808716
+        },
+        {
+          "foot_height_m": 0.161164551973343,
+          "hip_height_m": 0.503177285194397,
+          "knee_bend_degrees": 102.763939006507,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.197305291891098
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "biker",
+      "legs": [
+        {
+          "foot_height_m": 0.152112573385239,
+          "hip_height_m": 0.504783093929291,
+          "knee_bend_degrees": 103.002080382109,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.216845750808716
+        },
+        {
+          "foot_height_m": 0.161164551973343,
+          "hip_height_m": 0.503177285194397,
+          "knee_bend_degrees": 102.763939006507,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.197305291891098
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "biker",
+      "legs": [
+        {
+          "foot_height_m": 0.152112573385239,
+          "hip_height_m": 0.504783093929291,
+          "knee_bend_degrees": 103.002080382109,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.216845750808716
+        },
+        {
+          "foot_height_m": 0.161164551973343,
+          "hip_height_m": 0.503177285194397,
+          "knee_bend_degrees": 102.763939006507,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.197305291891098
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "boss",
+      "legs": [
+        {
+          "foot_height_m": 0.122578807175159,
+          "hip_height_m": 0.450121730566025,
+          "knee_bend_degrees": 107.850442353118,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0937379598617554
+        },
+        {
+          "foot_height_m": 0.126775935292244,
+          "hip_height_m": 0.451676785945892,
+          "knee_bend_degrees": 107.777338838431,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.116595074534416
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "boss",
+      "legs": [
+        {
+          "foot_height_m": 0.122578807175159,
+          "hip_height_m": 0.450121730566025,
+          "knee_bend_degrees": 107.850442353118,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0937379598617554
+        },
+        {
+          "foot_height_m": 0.126775935292244,
+          "hip_height_m": 0.451676785945892,
+          "knee_bend_degrees": 107.777338838431,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.116595074534416
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "boss",
+      "legs": [
+        {
+          "foot_height_m": 0.122578807175159,
+          "hip_height_m": 0.450121730566025,
+          "knee_bend_degrees": 107.850442353118,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0937379598617554
+        },
+        {
+          "foot_height_m": 0.126775935292244,
+          "hip_height_m": 0.451676785945892,
+          "knee_bend_degrees": 107.777338838431,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.116595074534416
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "boss",
+      "legs": [
+        {
+          "foot_height_m": 0.122578807175159,
+          "hip_height_m": 0.450121730566025,
+          "knee_bend_degrees": 107.850442353118,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0937379598617554
+        },
+        {
+          "foot_height_m": 0.126775935292244,
+          "hip_height_m": 0.451676785945892,
+          "knee_bend_degrees": 107.777338838431,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.116595074534416
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "buck",
+      "legs": [
+        {
+          "foot_height_m": 0.158345103263855,
+          "hip_height_m": 0.452940165996552,
+          "knee_bend_degrees": 112.490210346875,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.206822916865349
+        },
+        {
+          "foot_height_m": 0.160039588809013,
+          "hip_height_m": 0.454509735107422,
+          "knee_bend_degrees": 113.206294209649,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.267916023731232
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "buck",
+      "legs": [
+        {
+          "foot_height_m": 0.158345103263855,
+          "hip_height_m": 0.452940165996552,
+          "knee_bend_degrees": 112.490210346875,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.206822916865349
+        },
+        {
+          "foot_height_m": 0.160039588809013,
+          "hip_height_m": 0.454509735107422,
+          "knee_bend_degrees": 113.206294209649,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.267916023731232
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "buck",
+      "legs": [
+        {
+          "foot_height_m": 0.158345103263855,
+          "hip_height_m": 0.452940165996552,
+          "knee_bend_degrees": 112.490210346875,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.206822916865349
+        },
+        {
+          "foot_height_m": 0.160039588809013,
+          "hip_height_m": 0.454509735107422,
+          "knee_bend_degrees": 113.206294209649,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.267916023731232
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "buck",
+      "legs": [
+        {
+          "foot_height_m": 0.158345103263855,
+          "hip_height_m": 0.452940165996552,
+          "knee_bend_degrees": 112.490210346875,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.206822916865349
+        },
+        {
+          "foot_height_m": 0.160039588809013,
+          "hip_height_m": 0.454509735107422,
+          "knee_bend_degrees": 113.206294209649,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.267916023731232
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "burnt",
+      "legs": [
+        {
+          "foot_height_m": 0.152694463729858,
+          "hip_height_m": 0.45276728272438,
+          "knee_bend_degrees": 110.528409262518,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.195679873228073
+        },
+        {
+          "foot_height_m": 0.152719646692276,
+          "hip_height_m": 0.453535944223404,
+          "knee_bend_degrees": 110.554623528553,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.206741705536842
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "burnt",
+      "legs": [
+        {
+          "foot_height_m": 0.152694463729858,
+          "hip_height_m": 0.45276728272438,
+          "knee_bend_degrees": 110.528409262518,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.195679873228073
+        },
+        {
+          "foot_height_m": 0.152719646692276,
+          "hip_height_m": 0.453535944223404,
+          "knee_bend_degrees": 110.554623528553,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.206741705536842
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "burnt",
+      "legs": [
+        {
+          "foot_height_m": 0.152694463729858,
+          "hip_height_m": 0.45276728272438,
+          "knee_bend_degrees": 110.528409262518,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.195679873228073
+        },
+        {
+          "foot_height_m": 0.152719646692276,
+          "hip_height_m": 0.453535944223404,
+          "knee_bend_degrees": 110.554623528553,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.206741705536842
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "burnt",
+      "legs": [
+        {
+          "foot_height_m": 0.152694463729858,
+          "hip_height_m": 0.45276728272438,
+          "knee_bend_degrees": 110.528409262518,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.195679873228073
+        },
+        {
+          "foot_height_m": 0.152719646692276,
+          "hip_height_m": 0.453535944223404,
+          "knee_bend_degrees": 110.554623528553,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.206741705536842
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "cass",
+      "legs": [
+        {
+          "foot_height_m": 0.127308651804924,
+          "hip_height_m": 0.441835403442383,
+          "knee_bend_degrees": 103.036279139283,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.269727230072021
+        },
+        {
+          "foot_height_m": 0.129755169153214,
+          "hip_height_m": 0.440136671066284,
+          "knee_bend_degrees": 101.888766377586,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.245535954833031
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "cass",
+      "legs": [
+        {
+          "foot_height_m": 0.127308651804924,
+          "hip_height_m": 0.441835403442383,
+          "knee_bend_degrees": 103.036279139283,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.269727230072021
+        },
+        {
+          "foot_height_m": 0.129755169153214,
+          "hip_height_m": 0.440136671066284,
+          "knee_bend_degrees": 101.888766377586,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.245535954833031
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "cass",
+      "legs": [
+        {
+          "foot_height_m": 0.127308651804924,
+          "hip_height_m": 0.441835403442383,
+          "knee_bend_degrees": 103.036279139283,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.269727230072021
+        },
+        {
+          "foot_height_m": 0.129755169153214,
+          "hip_height_m": 0.440136671066284,
+          "knee_bend_degrees": 101.888766377586,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.245535954833031
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "cass",
+      "legs": [
+        {
+          "foot_height_m": 0.127308651804924,
+          "hip_height_m": 0.441835403442383,
+          "knee_bend_degrees": 103.036279139283,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.269727230072021
+        },
+        {
+          "foot_height_m": 0.129755169153214,
+          "hip_height_m": 0.440136671066284,
+          "knee_bend_degrees": 101.888766377586,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.245535954833031
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "civilian",
+      "legs": [
+        {
+          "foot_height_m": 0.129520684480667,
+          "hip_height_m": 0.453101456165314,
+          "knee_bend_degrees": 108.835519555974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.080025777220726
+        },
+        {
+          "foot_height_m": 0.132872775197029,
+          "hip_height_m": 0.453862547874451,
+          "knee_bend_degrees": 110.334561663684,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.126231238245964
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "civilian",
+      "legs": [
+        {
+          "foot_height_m": 0.129520684480667,
+          "hip_height_m": 0.453101456165314,
+          "knee_bend_degrees": 108.835519555974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.080025777220726
+        },
+        {
+          "foot_height_m": 0.132872775197029,
+          "hip_height_m": 0.453862547874451,
+          "knee_bend_degrees": 110.334561663684,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.126231238245964
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "civilian",
+      "legs": [
+        {
+          "foot_height_m": 0.129520684480667,
+          "hip_height_m": 0.453101456165314,
+          "knee_bend_degrees": 108.835519555974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.080025777220726
+        },
+        {
+          "foot_height_m": 0.132872775197029,
+          "hip_height_m": 0.453862547874451,
+          "knee_bend_degrees": 110.334561663684,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.126231238245964
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "civilian",
+      "legs": [
+        {
+          "foot_height_m": 0.129520684480667,
+          "hip_height_m": 0.453101456165314,
+          "knee_bend_degrees": 108.835519555974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.080025777220726
+        },
+        {
+          "foot_height_m": 0.132872775197029,
+          "hip_height_m": 0.453862547874451,
+          "knee_bend_degrees": 110.334561663684,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.126231238245964
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "cultist",
+      "legs": [
+        {
+          "foot_height_m": 0.137347027659416,
+          "hip_height_m": 0.451999604701996,
+          "knee_bend_degrees": 118.174553321348,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.381642639636993
+        },
+        {
+          "foot_height_m": 0.137331113219261,
+          "hip_height_m": 0.452769011259079,
+          "knee_bend_degrees": 117.818659484456,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.378685414791107
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "cultist",
+      "legs": [
+        {
+          "foot_height_m": 0.137347027659416,
+          "hip_height_m": 0.451999604701996,
+          "knee_bend_degrees": 118.174553321348,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.381642639636993
+        },
+        {
+          "foot_height_m": 0.137331113219261,
+          "hip_height_m": 0.452769011259079,
+          "knee_bend_degrees": 117.818659484456,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.378685414791107
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "cultist",
+      "legs": [
+        {
+          "foot_height_m": 0.137347027659416,
+          "hip_height_m": 0.451999604701996,
+          "knee_bend_degrees": 118.174553321348,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.381642639636993
+        },
+        {
+          "foot_height_m": 0.137331113219261,
+          "hip_height_m": 0.452769011259079,
+          "knee_bend_degrees": 117.818659484456,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.378685414791107
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "cultist",
+      "legs": [
+        {
+          "foot_height_m": 0.137347027659416,
+          "hip_height_m": 0.451999604701996,
+          "knee_bend_degrees": 118.174553321348,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.381642639636993
+        },
+        {
+          "foot_height_m": 0.137331113219261,
+          "hip_height_m": 0.452769011259079,
+          "knee_bend_degrees": 117.818659484456,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.378685414791107
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "fireman",
+      "legs": [
+        {
+          "foot_height_m": 0.167701184749603,
+          "hip_height_m": 0.444573849439621,
+          "knee_bend_degrees": 121.317560490578,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.366043835878372
+        },
+        {
+          "foot_height_m": 0.16556441783905,
+          "hip_height_m": 0.446239084005356,
+          "knee_bend_degrees": 120.216725241669,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.350959450006485
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "fireman",
+      "legs": [
+        {
+          "foot_height_m": 0.167701184749603,
+          "hip_height_m": 0.444573849439621,
+          "knee_bend_degrees": 121.317560490578,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.366043835878372
+        },
+        {
+          "foot_height_m": 0.16556441783905,
+          "hip_height_m": 0.446239084005356,
+          "knee_bend_degrees": 120.216725241669,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.350959450006485
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "fireman",
+      "legs": [
+        {
+          "foot_height_m": 0.167701184749603,
+          "hip_height_m": 0.444573849439621,
+          "knee_bend_degrees": 121.317560490578,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.366043835878372
+        },
+        {
+          "foot_height_m": 0.16556441783905,
+          "hip_height_m": 0.446239084005356,
+          "knee_bend_degrees": 120.216725241669,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.350959450006485
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "fireman",
+      "legs": [
+        {
+          "foot_height_m": 0.167701184749603,
+          "hip_height_m": 0.444573849439621,
+          "knee_bend_degrees": 121.317560490578,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.366043835878372
+        },
+        {
+          "foot_height_m": 0.16556441783905,
+          "hip_height_m": 0.446239084005356,
+          "knee_bend_degrees": 120.216725241669,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.350959450006485
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "ghoul",
+      "legs": [
+        {
+          "foot_height_m": 0.169314071536064,
+          "hip_height_m": 0.460219711065292,
+          "knee_bend_degrees": 118.063480785066,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.476746708154678
+        },
+        {
+          "foot_height_m": 0.172154501080513,
+          "hip_height_m": 0.460219472646713,
+          "knee_bend_degrees": 118.745283928395,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.516159236431122
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "ghoul",
+      "legs": [
+        {
+          "foot_height_m": 0.169314071536064,
+          "hip_height_m": 0.460219711065292,
+          "knee_bend_degrees": 118.063480785066,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.476746708154678
+        },
+        {
+          "foot_height_m": 0.172154501080513,
+          "hip_height_m": 0.460219472646713,
+          "knee_bend_degrees": 118.745283928395,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.516159236431122
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "ghoul",
+      "legs": [
+        {
+          "foot_height_m": 0.169314071536064,
+          "hip_height_m": 0.460219711065292,
+          "knee_bend_degrees": 118.063480785066,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.476746708154678
+        },
+        {
+          "foot_height_m": 0.172154501080513,
+          "hip_height_m": 0.460219472646713,
+          "knee_bend_degrees": 118.745283928395,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.516159236431122
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "ghoul",
+      "legs": [
+        {
+          "foot_height_m": 0.169314071536064,
+          "hip_height_m": 0.460219711065292,
+          "knee_bend_degrees": 118.063480785066,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.476746708154678
+        },
+        {
+          "foot_height_m": 0.172154501080513,
+          "hip_height_m": 0.460219472646713,
+          "knee_bend_degrees": 118.745283928395,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.516159236431122
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "guard",
+      "legs": [
+        {
+          "foot_height_m": 0.153854519128799,
+          "hip_height_m": 0.464273899793625,
+          "knee_bend_degrees": 102.911047620851,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426777124405
+        },
+        {
+          "foot_height_m": 0.149094387888908,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906327960134,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836120843887
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "guard",
+      "legs": [
+        {
+          "foot_height_m": 0.153854519128799,
+          "hip_height_m": 0.464273899793625,
+          "knee_bend_degrees": 102.911047620851,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426777124405
+        },
+        {
+          "foot_height_m": 0.149094387888908,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906327960134,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836120843887
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "guard",
+      "legs": [
+        {
+          "foot_height_m": 0.153854519128799,
+          "hip_height_m": 0.464273899793625,
+          "knee_bend_degrees": 102.911047620851,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426777124405
+        },
+        {
+          "foot_height_m": 0.149094387888908,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906327960134,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836120843887
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "guard",
+      "legs": [
+        {
+          "foot_height_m": 0.153854519128799,
+          "hip_height_m": 0.464273899793625,
+          "knee_bend_degrees": 102.911047620851,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426777124405
+        },
+        {
+          "foot_height_m": 0.149094387888908,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906327960134,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836120843887
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "gunner",
+      "legs": [
+        {
+          "foot_height_m": 0.13315112888813,
+          "hip_height_m": 0.504127740859985,
+          "knee_bend_degrees": 103.578493706544,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0950761362910271
+        },
+        {
+          "foot_height_m": 0.129328384995461,
+          "hip_height_m": 0.503351271152496,
+          "knee_bend_degrees": 99.015408246599,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0851252973079681
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "gunner",
+      "legs": [
+        {
+          "foot_height_m": 0.13315112888813,
+          "hip_height_m": 0.504127740859985,
+          "knee_bend_degrees": 103.578493706544,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0950761362910271
+        },
+        {
+          "foot_height_m": 0.129328384995461,
+          "hip_height_m": 0.503351271152496,
+          "knee_bend_degrees": 99.015408246599,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0851252973079681
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "gunner",
+      "legs": [
+        {
+          "foot_height_m": 0.13315112888813,
+          "hip_height_m": 0.504127740859985,
+          "knee_bend_degrees": 103.578493706544,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0950761362910271
+        },
+        {
+          "foot_height_m": 0.129328384995461,
+          "hip_height_m": 0.503351271152496,
+          "knee_bend_degrees": 99.015408246599,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0851252973079681
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "gunner",
+      "legs": [
+        {
+          "foot_height_m": 0.13315112888813,
+          "hip_height_m": 0.504127740859985,
+          "knee_bend_degrees": 103.578493706544,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0950761362910271
+        },
+        {
+          "foot_height_m": 0.129328384995461,
+          "hip_height_m": 0.503351271152496,
+          "knee_bend_degrees": 99.015408246599,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0851252973079681
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "handler",
+      "legs": [
+        {
+          "foot_height_m": 0.162191957235336,
+          "hip_height_m": 0.487803608179092,
+          "knee_bend_degrees": 103.257604589148,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.161023616790771
+        },
+        {
+          "foot_height_m": 0.166150122880936,
+          "hip_height_m": 0.487803399562836,
+          "knee_bend_degrees": 103.874568746686,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.162607759237289
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "handler",
+      "legs": [
+        {
+          "foot_height_m": 0.162191957235336,
+          "hip_height_m": 0.487803608179092,
+          "knee_bend_degrees": 103.257604589148,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.161023616790771
+        },
+        {
+          "foot_height_m": 0.166150122880936,
+          "hip_height_m": 0.487803399562836,
+          "knee_bend_degrees": 103.874568746686,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.162607759237289
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "handler",
+      "legs": [
+        {
+          "foot_height_m": 0.162191957235336,
+          "hip_height_m": 0.487803608179092,
+          "knee_bend_degrees": 103.257604589148,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.161023616790771
+        },
+        {
+          "foot_height_m": 0.166150122880936,
+          "hip_height_m": 0.487803399562836,
+          "knee_bend_degrees": 103.874568746686,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.162607759237289
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "handler",
+      "legs": [
+        {
+          "foot_height_m": 0.162191957235336,
+          "hip_height_m": 0.487803608179092,
+          "knee_bend_degrees": 103.257604589148,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.161023616790771
+        },
+        {
+          "foot_height_m": 0.166150122880936,
+          "hip_height_m": 0.487803399562836,
+          "knee_bend_degrees": 103.874568746686,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.162607759237289
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "heavy",
+      "legs": [
+        {
+          "foot_height_m": 0.180999368429184,
+          "hip_height_m": 0.547148406505585,
+          "knee_bend_degrees": 106.865037301182,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.110142357647419
+        },
+        {
+          "foot_height_m": 0.191135942935944,
+          "hip_height_m": 0.548803687095642,
+          "knee_bend_degrees": 108.196316302498,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.142341986298561
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "heavy",
+      "legs": [
+        {
+          "foot_height_m": 0.180999368429184,
+          "hip_height_m": 0.547148406505585,
+          "knee_bend_degrees": 106.865037301182,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.110142357647419
+        },
+        {
+          "foot_height_m": 0.191135942935944,
+          "hip_height_m": 0.548803687095642,
+          "knee_bend_degrees": 108.196316302498,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.142341986298561
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "heavy",
+      "legs": [
+        {
+          "foot_height_m": 0.180999368429184,
+          "hip_height_m": 0.547148406505585,
+          "knee_bend_degrees": 106.865037301182,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.110142357647419
+        },
+        {
+          "foot_height_m": 0.191135942935944,
+          "hip_height_m": 0.548803687095642,
+          "knee_bend_degrees": 108.196316302498,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.142341986298561
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "heavy",
+      "legs": [
+        {
+          "foot_height_m": 0.180999368429184,
+          "hip_height_m": 0.547148406505585,
+          "knee_bend_degrees": 106.865037301182,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.110142357647419
+        },
+        {
+          "foot_height_m": 0.191135942935944,
+          "hip_height_m": 0.548803687095642,
+          "knee_bend_degrees": 108.196316302498,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.142341986298561
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "hunter",
+      "legs": [
+        {
+          "foot_height_m": 0.156226307153702,
+          "hip_height_m": 0.430664390325546,
+          "knee_bend_degrees": 110.109179081452,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.228443562984467
+        },
+        {
+          "foot_height_m": 0.159478068351746,
+          "hip_height_m": 0.432968288660049,
+          "knee_bend_degrees": 110.965008614644,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.263036608695984
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "hunter",
+      "legs": [
+        {
+          "foot_height_m": 0.156226307153702,
+          "hip_height_m": 0.430664390325546,
+          "knee_bend_degrees": 110.109179081452,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.228443562984467
+        },
+        {
+          "foot_height_m": 0.159478068351746,
+          "hip_height_m": 0.432968288660049,
+          "knee_bend_degrees": 110.965008614644,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.263036608695984
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "hunter",
+      "legs": [
+        {
+          "foot_height_m": 0.156226307153702,
+          "hip_height_m": 0.430664390325546,
+          "knee_bend_degrees": 110.109179081452,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.228443562984467
+        },
+        {
+          "foot_height_m": 0.159478068351746,
+          "hip_height_m": 0.432968288660049,
+          "knee_bend_degrees": 110.965008614644,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.263036608695984
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "hunter",
+      "legs": [
+        {
+          "foot_height_m": 0.156226307153702,
+          "hip_height_m": 0.430664390325546,
+          "knee_bend_degrees": 110.109179081452,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.228443562984467
+        },
+        {
+          "foot_height_m": 0.159478068351746,
+          "hip_height_m": 0.432968288660049,
+          "knee_bend_degrees": 110.965008614644,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.263036608695984
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "riot",
+      "legs": [
+        {
+          "foot_height_m": 0.169740781188011,
+          "hip_height_m": 0.453460484743118,
+          "knee_bend_degrees": 112.08150548732,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.230649918317795
+        },
+        {
+          "foot_height_m": 0.173717603087425,
+          "hip_height_m": 0.454254329204559,
+          "knee_bend_degrees": 112.104277338013,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.243708848953247
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "riot",
+      "legs": [
+        {
+          "foot_height_m": 0.169740781188011,
+          "hip_height_m": 0.453460484743118,
+          "knee_bend_degrees": 112.08150548732,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.230649918317795
+        },
+        {
+          "foot_height_m": 0.173717603087425,
+          "hip_height_m": 0.454254329204559,
+          "knee_bend_degrees": 112.104277338013,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.243708848953247
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "riot",
+      "legs": [
+        {
+          "foot_height_m": 0.169740781188011,
+          "hip_height_m": 0.453460484743118,
+          "knee_bend_degrees": 112.08150548732,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.230649918317795
+        },
+        {
+          "foot_height_m": 0.173717603087425,
+          "hip_height_m": 0.454254329204559,
+          "knee_bend_degrees": 112.104277338013,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.243708848953247
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "riot",
+      "legs": [
+        {
+          "foot_height_m": 0.169740781188011,
+          "hip_height_m": 0.453460484743118,
+          "knee_bend_degrees": 112.08150548732,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.230649918317795
+        },
+        {
+          "foot_height_m": 0.173717603087425,
+          "hip_height_m": 0.454254329204559,
+          "knee_bend_degrees": 112.104277338013,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.243708848953247
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "scout",
+      "legs": [
+        {
+          "foot_height_m": 0.137300252914429,
+          "hip_height_m": 0.459014743566513,
+          "knee_bend_degrees": 101.000780313782,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.058553010225296
+        },
+        {
+          "foot_height_m": 0.143855318427086,
+          "hip_height_m": 0.457531005144119,
+          "knee_bend_degrees": 101.736296064744,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0491468124091625
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "scout",
+      "legs": [
+        {
+          "foot_height_m": 0.137300252914429,
+          "hip_height_m": 0.459014743566513,
+          "knee_bend_degrees": 101.000780313782,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.058553010225296
+        },
+        {
+          "foot_height_m": 0.143855318427086,
+          "hip_height_m": 0.457531005144119,
+          "knee_bend_degrees": 101.736296064744,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0491468124091625
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "scout",
+      "legs": [
+        {
+          "foot_height_m": 0.137300252914429,
+          "hip_height_m": 0.459014743566513,
+          "knee_bend_degrees": 101.000780313782,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.058553010225296
+        },
+        {
+          "foot_height_m": 0.143855318427086,
+          "hip_height_m": 0.457531005144119,
+          "knee_bend_degrees": 101.736296064744,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0491468124091625
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "scout",
+      "legs": [
+        {
+          "foot_height_m": 0.137300252914429,
+          "hip_height_m": 0.459014743566513,
+          "knee_bend_degrees": 101.000780313782,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.058553010225296
+        },
+        {
+          "foot_height_m": 0.143855318427086,
+          "hip_height_m": 0.457531005144119,
+          "knee_bend_degrees": 101.736296064744,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.0491468124091625
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "scrapper",
+      "legs": [
+        {
+          "foot_height_m": 0.137565717101097,
+          "hip_height_m": 0.452001184225082,
+          "knee_bend_degrees": 111.111085870423,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.190068408846855
+        },
+        {
+          "foot_height_m": 0.139765620231628,
+          "hip_height_m": 0.452768474817276,
+          "knee_bend_degrees": 111.330847206968,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.199457958340645
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "scrapper",
+      "legs": [
+        {
+          "foot_height_m": 0.137565717101097,
+          "hip_height_m": 0.452001184225082,
+          "knee_bend_degrees": 111.111085870423,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.190068408846855
+        },
+        {
+          "foot_height_m": 0.139765620231628,
+          "hip_height_m": 0.452768474817276,
+          "knee_bend_degrees": 111.330847206968,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.199457958340645
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "scrapper",
+      "legs": [
+        {
+          "foot_height_m": 0.137565717101097,
+          "hip_height_m": 0.452001184225082,
+          "knee_bend_degrees": 111.111085870423,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.190068408846855
+        },
+        {
+          "foot_height_m": 0.139765620231628,
+          "hip_height_m": 0.452768474817276,
+          "knee_bend_degrees": 111.330847206968,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.199457958340645
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "scrapper",
+      "legs": [
+        {
+          "foot_height_m": 0.137565717101097,
+          "hip_height_m": 0.452001184225082,
+          "knee_bend_degrees": 111.111085870423,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.190068408846855
+        },
+        {
+          "foot_height_m": 0.139765620231628,
+          "hip_height_m": 0.452768474817276,
+          "knee_bend_degrees": 111.330847206968,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.199457958340645
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "security",
+      "legs": [
+        {
+          "foot_height_m": 0.122323870658875,
+          "hip_height_m": 0.476717710494995,
+          "knee_bend_degrees": 103.627794011974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0869645550847054
+        },
+        {
+          "foot_height_m": 0.12803053855896,
+          "hip_height_m": 0.479047119617462,
+          "knee_bend_degrees": 105.827832094581,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.117020189762115
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "security",
+      "legs": [
+        {
+          "foot_height_m": 0.122323870658875,
+          "hip_height_m": 0.476717710494995,
+          "knee_bend_degrees": 103.627794011974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0869645550847054
+        },
+        {
+          "foot_height_m": 0.12803053855896,
+          "hip_height_m": 0.479047119617462,
+          "knee_bend_degrees": 105.827832094581,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.117020189762115
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "security",
+      "legs": [
+        {
+          "foot_height_m": 0.122323870658875,
+          "hip_height_m": 0.476717710494995,
+          "knee_bend_degrees": 103.627794011974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0869645550847054
+        },
+        {
+          "foot_height_m": 0.12803053855896,
+          "hip_height_m": 0.479047119617462,
+          "knee_bend_degrees": 105.827832094581,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.117020189762115
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "security",
+      "legs": [
+        {
+          "foot_height_m": 0.122323870658875,
+          "hip_height_m": 0.476717710494995,
+          "knee_bend_degrees": 103.627794011974,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.0869645550847054
+        },
+        {
+          "foot_height_m": 0.12803053855896,
+          "hip_height_m": 0.479047119617462,
+          "knee_bend_degrees": 105.827832094581,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.117020189762115
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "sniper",
+      "legs": [
+        {
+          "foot_height_m": 0.180411785840988,
+          "hip_height_m": 0.470378875732422,
+          "knee_bend_degrees": 105.55668041472,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.166204109787941
+        },
+        {
+          "foot_height_m": 0.182434722781181,
+          "hip_height_m": 0.472708970308304,
+          "knee_bend_degrees": 108.385539863264,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.191895946860313
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "sniper",
+      "legs": [
+        {
+          "foot_height_m": 0.180411785840988,
+          "hip_height_m": 0.470378875732422,
+          "knee_bend_degrees": 105.55668041472,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.166204109787941
+        },
+        {
+          "foot_height_m": 0.182434722781181,
+          "hip_height_m": 0.472708970308304,
+          "knee_bend_degrees": 108.385539863264,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.191895946860313
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "sniper",
+      "legs": [
+        {
+          "foot_height_m": 0.180411785840988,
+          "hip_height_m": 0.470378875732422,
+          "knee_bend_degrees": 105.55668041472,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.166204109787941
+        },
+        {
+          "foot_height_m": 0.182434722781181,
+          "hip_height_m": 0.472708970308304,
+          "knee_bend_degrees": 108.385539863264,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.191895946860313
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "sniper",
+      "legs": [
+        {
+          "foot_height_m": 0.180411785840988,
+          "hip_height_m": 0.470378875732422,
+          "knee_bend_degrees": 105.55668041472,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.166204109787941
+        },
+        {
+          "foot_height_m": 0.182434722781181,
+          "hip_height_m": 0.472708970308304,
+          "knee_bend_degrees": 108.385539863264,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.191895946860313
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "stagehand",
+      "legs": [
+        {
+          "foot_height_m": 0.145552054047585,
+          "hip_height_m": 0.449972599744797,
+          "knee_bend_degrees": 110.67792210345,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.21895095705986
+        },
+        {
+          "foot_height_m": 0.158100351691246,
+          "hip_height_m": 0.455605953931808,
+          "knee_bend_degrees": 112.122937414825,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.331895768642426
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "stagehand",
+      "legs": [
+        {
+          "foot_height_m": 0.145552054047585,
+          "hip_height_m": 0.449972599744797,
+          "knee_bend_degrees": 110.67792210345,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.21895095705986
+        },
+        {
+          "foot_height_m": 0.158100351691246,
+          "hip_height_m": 0.455605953931808,
+          "knee_bend_degrees": 112.122937414825,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.331895768642426
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "stagehand",
+      "legs": [
+        {
+          "foot_height_m": 0.145552054047585,
+          "hip_height_m": 0.449972599744797,
+          "knee_bend_degrees": 110.67792210345,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.21895095705986
+        },
+        {
+          "foot_height_m": 0.158100351691246,
+          "hip_height_m": 0.455605953931808,
+          "knee_bend_degrees": 112.122937414825,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.331895768642426
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "stagehand",
+      "legs": [
+        {
+          "foot_height_m": 0.145552054047585,
+          "hip_height_m": 0.449972599744797,
+          "knee_bend_degrees": 110.67792210345,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.21895095705986
+        },
+        {
+          "foot_height_m": 0.158100351691246,
+          "hip_height_m": 0.455605953931808,
+          "knee_bend_degrees": 112.122937414825,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.331895768642426
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "welder",
+      "legs": [
+        {
+          "foot_height_m": 0.163414299488068,
+          "hip_height_m": 0.454782783985138,
+          "knee_bend_degrees": 108.806969365243,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173318475484848
+        },
+        {
+          "foot_height_m": 0.160301402211189,
+          "hip_height_m": 0.457110077142715,
+          "knee_bend_degrees": 108.474626020609,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.20809768140316
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "welder",
+      "legs": [
+        {
+          "foot_height_m": 0.163414299488068,
+          "hip_height_m": 0.454782783985138,
+          "knee_bend_degrees": 108.806969365243,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173318475484848
+        },
+        {
+          "foot_height_m": 0.160301402211189,
+          "hip_height_m": 0.457110077142715,
+          "knee_bend_degrees": 108.474626020609,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.20809768140316
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "welder",
+      "legs": [
+        {
+          "foot_height_m": 0.163414299488068,
+          "hip_height_m": 0.454782783985138,
+          "knee_bend_degrees": 108.806969365243,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173318475484848
+        },
+        {
+          "foot_height_m": 0.160301402211189,
+          "hip_height_m": 0.457110077142715,
+          "knee_bend_degrees": 108.474626020609,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.20809768140316
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "welder",
+      "legs": [
+        {
+          "foot_height_m": 0.163414299488068,
+          "hip_height_m": 0.454782783985138,
+          "knee_bend_degrees": 108.806969365243,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173318475484848
+        },
+        {
+          "foot_height_m": 0.160301402211189,
+          "hip_height_m": 0.457110077142715,
+          "knee_bend_degrees": 108.474626020609,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.20809768140316
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "zombie",
+      "legs": [
+        {
+          "foot_height_m": 0.180942803621292,
+          "hip_height_m": 0.461202681064606,
+          "knee_bend_degrees": 110.777308186063,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.227582931518555
+        },
+        {
+          "foot_height_m": 0.0403609834611416,
+          "hip_height_m": 0.457428842782974,
+          "knee_bend_degrees": 110.428422123258,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.235601529479027
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "zombie",
+      "legs": [
+        {
+          "foot_height_m": 0.180942803621292,
+          "hip_height_m": 0.461202681064606,
+          "knee_bend_degrees": 110.777308186063,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.227582931518555
+        },
+        {
+          "foot_height_m": 0.0403609834611416,
+          "hip_height_m": 0.457428842782974,
+          "knee_bend_degrees": 110.428422123258,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.235601529479027
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "zombie",
+      "legs": [
+        {
+          "foot_height_m": 0.180942803621292,
+          "hip_height_m": 0.461202681064606,
+          "knee_bend_degrees": 110.777308186063,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.227582931518555
+        },
+        {
+          "foot_height_m": 0.0403609834611416,
+          "hip_height_m": 0.457428842782974,
+          "knee_bend_degrees": 110.428422123258,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.235601529479027
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "zombie",
+      "legs": [
+        {
+          "foot_height_m": 0.180942803621292,
+          "hip_height_m": 0.461202681064606,
+          "knee_bend_degrees": 110.777308186063,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.227582931518555
+        },
+        {
+          "foot_height_m": 0.0403609834611416,
+          "hip_height_m": 0.457428842782974,
+          "knee_bend_degrees": 110.428422123258,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.235601529479027
+        }
+      ],
+      "phase": 0.75
+    },
+    {
+      "id": "guard_direct",
+      "legs": [
+        {
+          "foot_height_m": 0.153854474425316,
+          "hip_height_m": 0.464273810386658,
+          "knee_bend_degrees": 102.911061281229,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426851630211
+        },
+        {
+          "foot_height_m": 0.149094462394714,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906321129945,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836076140404
+        }
+      ],
+      "phase": 0.0
+    },
+    {
+      "id": "guard_direct",
+      "legs": [
+        {
+          "foot_height_m": 0.153854474425316,
+          "hip_height_m": 0.464273810386658,
+          "knee_bend_degrees": 102.911061281229,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426851630211
+        },
+        {
+          "foot_height_m": 0.149094462394714,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906321129945,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836076140404
+        }
+      ],
+      "phase": 0.25
+    },
+    {
+      "id": "guard_direct",
+      "legs": [
+        {
+          "foot_height_m": 0.153854474425316,
+          "hip_height_m": 0.464273810386658,
+          "knee_bend_degrees": 102.911061281229,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426851630211
+        },
+        {
+          "foot_height_m": 0.149094462394714,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906321129945,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836076140404
+        }
+      ],
+      "phase": 0.5
+    },
+    {
+      "id": "guard_direct",
+      "legs": [
+        {
+          "foot_height_m": 0.153854474425316,
+          "hip_height_m": 0.464273810386658,
+          "knee_bend_degrees": 102.911061281229,
+          "side": "Left",
+          "thigh_vertical_fraction": 0.173426851630211
+        },
+        {
+          "foot_height_m": 0.149094462394714,
+          "hip_height_m": 0.463497459888458,
+          "knee_bend_degrees": 102.906321129945,
+          "side": "Right",
+          "thigh_vertical_fraction": 0.170836076140404
+        }
+      ],
+      "phase": 0.75
+    }
+  ],
+  "runtime_approved": false,
+  "scope": "Current production doze clip joint geometry; visual quality not inferred from socket alignment"
+}

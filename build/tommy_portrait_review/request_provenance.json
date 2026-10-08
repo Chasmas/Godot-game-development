@@ -1,0 +1,12 @@
+{
+  "source": "assets\\art\\pixellab_ui_v3_approved\\portraits\\tommy.png",
+  "mask_box": [
+    53,
+    64,
+    74,
+    76
+  ],
+  "description": "Same tired man speaking softly. Only slightly open his lips, dark mouth interior and tiny upper tooth edge. Match existing pixel clusters, palette, stubble and face. No smile. Natural understated speech mouth, not a scream.",
+  "endpoint": "/v2/inpaint-v3",
+  "seed": 43
+}

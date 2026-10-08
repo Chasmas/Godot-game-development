@@ -1,0 +1,58 @@
+{
+  "approved": false,
+  "source": "build/guard_current_grasp_review/guard.glb",
+  "rows": [
+    {
+      "side": "Right",
+      "hand_triangles": 1358,
+      "pierced_hand_triangles": 265,
+      "crossing_pairs_by_part": {
+        "Curved trigger": 18,
+        "Grip side panel": 76,
+        "Polymer grip": 50,
+        "Receiver": 62,
+        "Slide catch": 41,
+        "Slide catch.001": 40,
+        "Trigger guard": 300
+      },
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          -0.02250015363097191,
+          0.07118967175483704,
+          0.019897261634469032
+        ],
+        "max": [
+          0.026111643761396408,
+          0.09167466312646866,
+          0.059315841645002365
+        ]
+      }
+    },
+    {
+      "side": "Left",
+      "hand_triangles": 1364,
+      "pierced_hand_triangles": 288,
+      "crossing_pairs_by_part": {
+        "Grip side panel.001": 94,
+        "Polymer grip": 150,
+        "Receiver": 64,
+        "Slide catch": 44,
+        "Slide catch.001": 45,
+        "Trigger guard": 288
+      },
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          -0.026104716584086418,
+          0.07301456481218338,
+          0.018945636227726936
+        ],
+        "max": [
+          0.024715736508369446,
+          0.089667908847332,
+          0.05832117795944214
+        ]
+      }
+    }
+  ],
+  "scope": "Dual aim frame 0, fully hand-weighted faces distal to 5 cm; segment-triangle crossings in both directions. Does not prove absence of containment, coplanar overlap or contact in other poses."
+}

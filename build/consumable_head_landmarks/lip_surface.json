@@ -1,0 +1,24 @@
+{
+  "pixel": [
+    149,
+    505
+  ],
+  "mesh": "char1",
+  "face": 11814,
+  "world_blender": [
+    -0.1220276802778244,
+    -0.06712009012699127,
+    1.4287556409835815
+  ],
+  "head_local_blender": [
+    6.829709053039551,
+    18.234853744506836,
+    7.3571271896362305
+  ],
+  "scope": "Raycast on visible lip seam in authored side-view render; review candidate",
+  "head_local_gltf": [
+    6.829841741025533,
+    18.234821208266005,
+    7.3569754433998575
+  ]
+}

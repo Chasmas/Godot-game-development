@@ -1,0 +1,23 @@
+{
+  "rig_approved": false,
+  "reviewed_views": [
+    "front.png",
+    "side.png",
+    "back.png",
+    "three_quarter.png",
+    "clay_review/front_clay.png",
+    "clay_review/side_clay.png",
+    "clay_review/back_clay.png",
+    "clay_review/three_quarter_clay.png"
+  ],
+  "status": "static_candidate_retained_rig_and_deformation_validation_pending",
+  "next_action": "Audit surface topology, inspect paw separation and author quadruped skeleton with grounded idle/walk/run and jaw motion; validate deformation before Godot integration",
+  "runtime_approved": false,
+  "findings": [
+    "Recognizable Doberman silhouette, coat markings and collar retained",
+    "Four paws and tail visible in full corrected review framing",
+    "Clay views show continuous body; no obvious detached limbs in these static views",
+    "Eye geometry is shallow and paw details need close inspection before deformation work",
+    "No armature or locomotion clips yet"
+  ]
+}

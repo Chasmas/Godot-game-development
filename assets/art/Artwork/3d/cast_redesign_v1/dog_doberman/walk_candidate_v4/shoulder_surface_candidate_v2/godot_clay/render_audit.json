@@ -1,0 +1,8 @@
+{
+  "camera": "positive_x_side",
+  "captured_frames": 30,
+  "runtime_approved": false,
+  "scope": "GPU render capture only; visual review and gameplay validation separate",
+  "source_path": "C:/Users/gil_n/Documents/GitHub/Godot-game-development-codex/assets/art/Artwork/3d/cast_redesign_v1/dog_doberman/walk_candidate_v4/shoulder_surface_candidate_v2/dog_doberman_native_skin.glb",
+  "source_sha256": "b051704dbe2fbf87cd01691042de9837320fd5e02f4c0016afb7b427f106b0c4"
+}

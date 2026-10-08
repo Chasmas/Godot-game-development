@@ -1,0 +1,10 @@
+{
+  "breed": "shepherd",
+  "candidate_only": true,
+  "reviewed_deformation": false,
+  "bones": 17,
+  "unweighted_vertices": 0,
+  "weight_proxy_vertices": 7042,
+  "torso_weights_adjusted": 5416,
+  "notes": "Provisional landmarks and proxy heat weights; inspect shoulders, knees, paws and head before animation/export."
+}

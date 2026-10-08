@@ -7,6 +7,7 @@ extends Control
 
 var speaker := "cass"
 var talking := false
+var speech_energy := -1.0
 var _t := 0.0
 var _glitch := 0.0
 var _mouth := 0
@@ -24,6 +25,11 @@ var _blink_t := 2.0
 var _blinking := 0.0
 var _jit := Vector2.ZERO
 var _sweat := 0.0
+var _seq_frames: Array[Texture2D] = []
+var _seq_key := ""
+var _seq_i := 0
+var _seq_t := 0.0
+const PORTRAIT_FPS := 8.0
 
 ## Temperament per character: how they blink, look around, move while
 ## talking. Cass is calm and restrained, Earl can't sit still, the anchor
@@ -62,8 +68,20 @@ func _ready() -> void:
 func glitch() -> void:
 	_glitch = 0.35
 
+func reset_speech() -> void:
+	talking = false
+	speech_energy = 0.0
+	_mouth = 0
+	_mouth_t = 0.0
+	_talk_amt = 0.0
+	queue_redraw()
+
 func _process(delta: float) -> void:
 	_t += delta
+	_seq_t += delta
+	if _seq_frames.size() > 1 and _seq_t >= 1.0 / PORTRAIT_FPS:
+		_seq_t = fmod(_seq_t, 1.0 / PORTRAIT_FPS)
+		_seq_i = (_seq_i + 1) % _seq_frames.size()
 	var tp := _temper()
 	if speaker != _last_speaker:
 		_last_speaker = speaker
@@ -78,7 +96,18 @@ func _process(delta: float) -> void:
 	else:
 		_mood_k = move_toward(_mood_k, 1.0 if mood != "" else 0.0, delta * 5.0)
 	_mouth_t -= delta
-	if _mouth_t <= 0.0:
+	if not talking:
+		_mouth = 0
+	elif speech_energy >= 0.0:
+		# Separate entry/exit levels prevent tiny loudness changes from
+		# alternating expression frames, while silence still closes immediately.
+		if speech_energy < 0.12:
+			_mouth = 0
+		elif _mouth == 2:
+			_mouth = 1 if speech_energy < 0.42 else 2
+		else:
+			_mouth = 2 if speech_energy > 0.58 else 1
+	if _mouth_t <= 0.0 and speech_energy < 0.0:
 		_mouth_t = randf_range(0.06, 0.11)
 		_mouth = (randi() % 3) if talking else 0
 	_glance_t -= delta
@@ -105,12 +134,52 @@ func _process(delta: float) -> void:
 
 static var _art_cache: Dictionary = {}
 
+static func _art_path(id: String) -> String:
+	var approved := "res://assets/art/pixellab_ui_v3_approved/portraits/"
+	if ResourceLoader.exists(approved + id + ".png"):
+		return approved + id + ".png"
+	var base := id.trim_suffix("_talk_wide").trim_suffix("_talk").trim_suffix("_blink")
+	# A missing expression must not replace approved art with a different style.
+	if base != id and (ResourceLoader.exists(approved + base + ".png") or (base == "cass_star" and ResourceLoader.exists(approved + "cass.png"))):
+		return ""
+	if id == "cass_star" and ResourceLoader.exists(approved + "cass.png"):
+		return approved + "cass.png"
+	return "res://assets/characters/portraits/%s.png" % id
+
 func _art(id: String) -> Texture2D:
 	if not _art_cache.has(id):
-		var pixel_path := "res://assets/art/pixellab_ui_v3_approved/portraits/%s.png" % id
-		var path := pixel_path if ResourceLoader.exists(pixel_path) else "res://assets/characters/portraits/%s.png" % id
-		_art_cache[id] = load(path) if ResourceLoader.exists(path) else null
+		var path := _art_path(id)
+		_art_cache[id] = load(path) if path != "" and ResourceLoader.exists(path) else null
 	return _art_cache[id]
+
+func _sequence(id: String) -> void:
+	var key := id
+	if _seq_key == key:
+		return
+	_seq_key = key
+	_seq_frames.clear()
+	_seq_i = 0
+	_seq_t = 0.0
+	var path := "res://assets/art/animated/portraits/%s" % id
+	var abs_path := ProjectSettings.globalize_path(path)
+	if not DirAccess.dir_exists_absolute(abs_path):
+		return
+	var dir := DirAccess.open(path)
+	if dir == null:
+		return
+	var names: Array[String] = []
+	dir.list_dir_begin()
+	var name := dir.get_next()
+	while name != "":
+		if not dir.current_is_dir() and (name.to_lower().ends_with(".png") or name.to_lower().ends_with(".webp")):
+			names.append(name)
+		name = dir.get_next()
+	dir.list_dir_end()
+	names.sort()
+	for n in names:
+		var tex := load(path.path_join(n)) as Texture2D
+		if tex:
+			_seq_frames.append(tex)
 
 func _on_a_job() -> bool:
 	return is_inside_tree() and get_tree().get_first_node_in_group("level") != null
@@ -123,6 +192,9 @@ func _art_frame() -> Texture2D:
 	# also when a chapter is started straight from the shelf
 	if id == "cass" and (bool(SaveManager.get_flag("wore_the_star", false)) or _on_a_job()):
 		id = "cass_star"
+	_sequence(id)
+	if not _seq_frames.is_empty():
+		return _seq_frames[_seq_i]
 	var base := _art(id)
 	if base == null:
 		return null
@@ -131,6 +203,9 @@ func _art_frame() -> Texture2D:
 		if b:
 			return b
 	if talking and _mouth > 0:
+		if _mouth == 2:
+			var wide := _art(id + "_talk_wide")
+			if wide: return wide
 		var t := _art(id + "_talk")
 		if t:
 			return t
@@ -204,8 +279,9 @@ func _draw() -> void:
 	if _talk_amt > 0.05:
 		var bars := 9
 		var bw := inner.size.x / bars
+		var level := clampf(speech_energy,0.0,1.0) if speech_energy >= 0.0 else 1.0
 		for i in bars:
-			var hgt := (0.25 + 0.75 * absf(sin(_t * (11.0 + i * 1.7) + i))) * 8.0 * _talk_amt
+			var hgt := (0.25 + 0.75 * absf(sin(_t * (11.0 + i * 1.7) + i))) * 8.0 * _talk_amt * level
 			draw_rect(Rect2(inner.position.x + i * bw + 1, inner.end.y - hgt - 2, bw - 2, hgt), Color(frame_col, 0.75))
 	if _glitch > 0.0:
 		for i in 3:

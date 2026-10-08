@@ -1,0 +1,9 @@
+{
+  "scope": "Clay material override, no texture or normal maps; static face geometry only",
+  "source_models_unchanged": true,
+  "runtime_approved": false,
+  "renders": [
+    "face_clay_front.png",
+    "face_clay_three_quarter.png"
+  ]
+}

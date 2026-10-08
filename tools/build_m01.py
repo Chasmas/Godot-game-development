@@ -125,7 +125,7 @@ put(46, 38, 'g'); put(51, 37, 'E'); put(43, 39, '!'); fill(49, 38, 50, 39, 'b');
 fill(10, 14, 11, 14, 'T'); fill(44, 21, 45, 21, 'T')
 for x in (15, 17, 36, 38): put(x, 17, 'l'); put(x, 18, 'l')
 put(36, 13, 'E'); put(37, 13, 'E'); put(16, 22, 'E')
-put(26, 22, 'r'); put(11, 12, 's'); put(5, 12, 'A'); put(45, 14, 'h'); put(40, 23, 'g')
+put(25, 22, 'r'); put(11, 12, 's'); put(5, 12, 'A'); put(45, 14, 'h'); put(40, 23, 'g')
 put(8, 20, 'Y'); put(49, 17, 'Y'); put(50, 12, 'I'); put(34, 24, '5')
 for p in ((12, 17), (26, 13), (26, 22), (42, 17), (26, 18)): put(*p, '*')
 # north wing
@@ -177,18 +177,18 @@ level = {
     "light_colors": {".": "ffb070", ",": "d8f0ff", "_": "ffc080", ":": "ff9a40", "=": "ff5aa0", "\"": "50e0ff", "~": "40d8ff"},
     "enemies": {
         "40,45": {"patrol": [[40, 45], [52, 45], [52, 50], [26, 51], [26, 45]]},
-        "3,43": {"facing": "left"},
+        "3,43": {"idle_action": "smoke", "facing": "left"},
         "8,32": {"facing": "up"},
         "20,33": {"patrol": [[20, 33], [44, 33]]},
-        "47,33": {"facing": "left"},
-        "25,28": {"facing": "left"},
+        "47,33": {"idle_action": "watch", "facing": "left"},
+        "25,28": {"idle_action": "watch", "facing": "left"},
         "35,28": {"facing": "right"},
         "38,29": {"facing": "left"},
-        "47,29": {"facing": "down"},
+        "47,29": {"idle_action": "watch", "facing": "down"},
         "24,38": {"facing": "down"},
         "34,38": {"facing": "down"},
         "46,38": {"patrol": [[46, 38], [44, 37], [51, 39]]},
-        "26,22": {"patrol": [[26, 22], [34, 22], [34, 13], [19, 13], [19, 22]]},
+        "25,22": {"patrol": [[25, 22], [34, 22], [34, 13], [19, 13], [19, 22]]},
         "11,12": {"facing": "right"},
         "45,14": {"facing": "left"},
         "40,23": {"patrol": [[40, 23], [48, 23], [48, 14]]},
@@ -226,7 +226,7 @@ level = {
     "hints": [
         {"rect": [5, 44, 12, 14], "id": "move", "text": "WASD / LEFT STICK  move    ·    MOUSE / RIGHT STICK  aim"},
         {"rect": [1, 42, 6, 6], "id": "sneak", "text": "He hasn't seen you.  Hold [CTRL] (or tilt the stick gently) to SNEAK behind him, then [F] TAKEDOWN.  Or PUNCH him down and [F] EXECUTE"},
-        {"rect": [20, 44, 16, 12], "id": "lock", "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  tap again to switch target (or flick the right stick)  ·  hold to release"},
+        {"rect": [20, 44, 16, 12], "id": "lock", "text": "[V] / [R3]  LOCK-ON the nearest enemy  ·  press again to release  ·  flick the right stick to switch target"},
         {"rect": [4, 36, 3, 5], "id": "switch", "text": "LIGHT SWITCH: kill the lights. Unaware guards are blind in the dark — but someone may walk over to turn them back on."},
         {"rect": [1, 27, 3, 6], "id": "dog", "text": "A DOG. It smells you if you rush past. SNEAK, or take it down from behind. Dogs bark for their owners."},
         {"rect": [1, 46, 5, 4], "id": "upgrade", "text": "BRIEFCASES hold random upgrades — they last the whole mission."},
@@ -236,6 +236,7 @@ level = {
     ],
     "exit": [8, 53],
     "weather": {"schedule": [["drizzle", 20], ["storm", 55], ["rain", 30], ["clear", 25], ["storm", 40]]},
+    "cameras": [{"cell": [18, 32], "angle": 90}, {"cell": [40, 32], "angle": 90}, {"cell": [65, 27], "angle": 125}],
     "decor": [
         {"type": "neon", "pos": [59, 44], "text": "SUNSET PALMS", "color": "ff3d7f", "size": 16},
         {"type": "neon", "pos": [59, 46], "text": "VACANCY", "color": "35e0ff", "size": 10},

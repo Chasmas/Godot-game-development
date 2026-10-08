@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS HUD selects clearly closer weapon rather than distant switch
+PASS button performs displayed weapon pickup
+PASS HUD honors nearby interactable priority within four pixels
+PASS button uses displayed switch and leaves weapon
+PASS HUD falls back to weapon when switch leaves reach
+INTERACTION PROMPT REVIEW: 0 failures

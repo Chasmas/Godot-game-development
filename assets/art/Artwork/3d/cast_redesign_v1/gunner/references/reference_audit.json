@@ -1,0 +1,51 @@
+{
+  "character": "gunner",
+  "height_m": 1.76,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\gunner_turnaround.png",
+  "source_sha256": "d68bd717f7528fa42ed04c26ba38a5854425331304664e3ea77e3d4fdfb840be",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        410,
+        1024
+      ],
+      "width": 410,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\references\\front.png",
+      "sha256": "edf2ddcf0235ecc14d29a23af728ec41e1ebd144047cf66c63429d32d5587fc1"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        410,
+        0,
+        630,
+        1024
+      ],
+      "width": 220,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\references\\side.png",
+      "sha256": "b3c2d8223c84bd482b207c4562f08e898d374c487dbd4e11bcf3c03817db22b8"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        635,
+        0,
+        1025,
+        1024
+      ],
+      "width": 390,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\references\\back.png",
+      "sha256": "8f04c0791503d43408b6ef4d162ee079ab4d2924472dc63445ac8b20ec35fe0b"
+    }
+  ],
+  "visual_review": "All three saved views directly inspected: single complete figure, hands/head/feet visible, no adjacent figure fragments. API-input approval only."
+}

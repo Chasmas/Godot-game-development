@@ -1,0 +1,14 @@
+{
+  "scope": "Surface topology diagnostic on an analysis copy; no original GLB or character model modified.",
+  "source": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass\\repaired_v1\\cass_surface_candidate.glb",
+  "runtime_approved": false,
+  "meshes": [
+    {
+      "mesh": "Cass_BlendAuthored_LOD_Candidate",
+      "vertices_before": 101866,
+      "vertices_welded_for_analysis": 58383,
+      "boundary_components": [],
+      "nonmanifold_edges_after_weld": 0
+    }
+  ]
+}

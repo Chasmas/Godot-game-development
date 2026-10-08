@@ -1,0 +1,51 @@
+{
+  "character": "welder",
+  "height_m": 1.77,
+  "source": "assets\\art\\reference\\cast_redesign_v1\\welder_isolated_turnaround_v2.png",
+  "source_sha256": "46aedc5d0afb7b511a9f194aae554192bfcbe8f5b7da061e6794841fd23144a4",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        575,
+        1024
+      ],
+      "width": 575,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\welder\\references\\front.png",
+      "sha256": "63b756bd00d5f6b6f9232306aa2b46dd94a9c03603441d539a1bd6ac072a4b33"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        590,
+        0,
+        945,
+        1024
+      ],
+      "width": 355,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\welder\\references\\side.png",
+      "sha256": "f341f1ffc82fd2f5ce48c48ef09455ac092d3e32e9ef14d284895dcb4df32d7c"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        960,
+        0,
+        1536,
+        1024
+      ],
+      "width": 576,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\welder\\references\\back.png",
+      "sha256": "6753e15073abf26f8059b5898c070313caf7656c65613eb375205a98c356d46d"
+    }
+  ],
+  "visual_review": "Recomposed identity reference and all saved views directly inspected: one complete welder per crop, lifted helmet, hands and boots intact, no adjacent fragments. API input only."
+}

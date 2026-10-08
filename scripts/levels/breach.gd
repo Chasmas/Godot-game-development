@@ -428,8 +428,16 @@ class Plank extends Node2D:
 			if hit.is_empty():
 				position += step
 			else:
-				global_position = hit.position + hit.normal * 2.0
-				velocity = velocity.bounce(hit.normal) * 0.35
+				# A zero-length normal can occur when a projectile starts inside a
+				# composite collider. Avoid invalid Vector2.reflect/bounce calls and
+				# settle the fragment safely at the reported contact point.
+				var normal: Vector2 = hit.normal
+				if normal.length_squared() > 0.0001:
+					global_position = hit.position + normal * 2.0
+					velocity = velocity.bounce(normal) * 0.35
+				else:
+					global_position = hit.position
+					velocity *= 0.35
 			_r += _w * delta
 			_vh -= 420.0 * delta
 			_h += _vh * delta

@@ -1,0 +1,49 @@
+{
+  "approved": false,
+  "source": "build/guard_pistol_anatomy_review/guard.glb",
+  "rows": [
+    {
+      "side": "Right",
+      "hand_triangles": 1358,
+      "pierced_hand_triangles": 118,
+      "crossing_pairs_by_part": {
+        "Curved trigger": 157,
+        "Trigger guard": 96
+      },
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          -0.022310391068458557,
+          0.08254992216825485,
+          0.024165520444512367
+        ],
+        "max": [
+          0.012068492360413074,
+          0.09421948343515396,
+          0.05437704175710678
+        ]
+      }
+    },
+    {
+      "side": "Left",
+      "hand_triangles": 1364,
+      "pierced_hand_triangles": 118,
+      "crossing_pairs_by_part": {
+        "Curved trigger": 157,
+        "Trigger guard": 98
+      },
+      "pierced_face_centres_hand_local_m": {
+        "min": [
+          -0.012061577290296555,
+          0.08255282044410706,
+          0.0233171246945858
+        ],
+        "max": [
+          0.022254254668951035,
+          0.09431272745132446,
+          0.05371036008000374
+        ]
+      }
+    }
+  ],
+  "scope": "Dual aim frame 0, fully hand-weighted faces distal to 5 cm; segment-triangle crossings in both directions. Does not prove absence of containment, coplanar overlap or contact in other poses."
+}

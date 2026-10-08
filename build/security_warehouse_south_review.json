@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "camera_alarm": false,
+      "door_swing": 0.850810743575933,
+      "end": [
+        216.0,
+        199.3369140625
+      ],
+      "lane": 216.0,
+      "passed": true,
+      "peak": 0.0
+    },
+    {
+      "camera_alarm": false,
+      "door_swing": 1.83259571459405,
+      "end": [
+        232.0,
+        199.3369140625
+      ],
+      "lane": 232.0,
+      "passed": true,
+      "peak": 0.0
+    }
+  ],
+  "scope": "Two real south-door walking lanes with active AI and normal door pushing, god mode; not full stealth or combat approval"
+}

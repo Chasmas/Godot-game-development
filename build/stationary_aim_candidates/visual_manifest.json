@@ -1,0 +1,110 @@
+[
+  {
+    "angle": 0.785398163397448,
+    "look": "boss",
+    "page": 0,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "buck",
+    "page": 0,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "burnt",
+    "page": 0,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "civilian",
+    "page": 0,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "cultist",
+    "page": 0,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "demon",
+    "page": 1,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "fireman",
+    "page": 1,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "ghoul",
+    "page": 1,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "gunner",
+    "page": 1,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "handler",
+    "page": 1,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "riot",
+    "page": 2,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "scout",
+    "page": 2,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "scrapper",
+    "page": 2,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "security",
+    "page": 2,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "sniper",
+    "page": 2,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "stagehand",
+    "page": 3,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "welder",
+    "page": 3,
+    "phase": 0.35
+  },
+  {
+    "angle": 0.785398163397448,
+    "look": "zombie",
+    "page": 3,
+    "phase": 0.35
+  }
+]

@@ -1,0 +1,5 @@
+import json,shutil
+from pathlib import Path
+p=Path('assets/art/materials/m01/batch_v1')
+files=[{"id":"reception_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-094572eb-1379-4d36-b54e-4f06aee142e8.png"},{"id":"guest_room_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-15713007-e40f-47d8-9f4f-0e5ced331b4c.png"},{"id":"laundry_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-986096d5-141d-4824-ab58-175a6055a515.png"},{"id":"pool_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-1f95cf9f-7aca-474d-9a9c-4e916ba4a42d.png"},{"id":"corridor_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-c37ac0d7-39bb-41ca-9653-d4b2cf71cfd2.png"},{"id":"entrance_direction","source":"C:\\Users\\gil_n\\.codex\\generated_images\\01a0ee67-7e1b-7d31-a814-1ae1a58f829d\\exec-250e314e-6240-4cad-a26e-9e8ff18ebcac.png"}]
+for a in files: shutil.copy2(a['source'],p/(a['id']+'.png'))

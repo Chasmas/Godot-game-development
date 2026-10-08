@@ -1,0 +1,9 @@
+{
+  "approved": false,
+  "restored_triangles": 21950,
+  "unmatched_triangles": 0,
+  "old_vertex_count": 30759,
+  "new_vertex_count": 30759,
+  "sha256": "73528b172ca695ec8c087a065940f2618a2d71b5210fc982d533f5abc9b968dc",
+  "scope": "Restore body outside hands/forearms only; candidate hand geometry untouched. GPU visual and preservation audit pending."
+}

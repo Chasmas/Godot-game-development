@@ -1,0 +1,37 @@
+{
+  "approved": false,
+  "source_sha256": "f97cdca1c9f4cf77e6931507041bd1dd31db5e173b7746f6e74411d1c566ab3c",
+  "candidate_sha256": "6e9a79ded1f25e81a316b154b6ea6a44bc6a688f29dda1fe6e86dc6c1ffeeeab",
+  "changed_clip": "aim_melee",
+  "changed_bones": [
+    "RightArm"
+  ],
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "punch_left",
+    "aim_dual",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "held",
+    "drive",
+    "car_exit",
+    "doze"
+  ]
+}

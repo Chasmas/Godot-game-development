@@ -1,0 +1,42 @@
+{
+  "status": "candidate",
+  "scope": "Rest-space triangulated closed contour geometry; ambiguous borders omitted. Skin binding, missing border reconstruction, orientation, visual review and integration pending.",
+  "cuts": [
+    {
+      "look": "demon",
+      "part": "leg",
+      "surfaces": 11,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "demon",
+      "part": "legs",
+      "surfaces": 13,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "guard",
+      "part": "leg",
+      "surfaces": 9,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "guard",
+      "part": "legs",
+      "surfaces": 11,
+      "ambiguous_components": 1
+    },
+    {
+      "look": "gunner",
+      "part": "leg",
+      "surfaces": 10,
+      "ambiguous_components": 0
+    },
+    {
+      "look": "gunner",
+      "part": "legs",
+      "surfaces": 10,
+      "ambiguous_components": 0
+    }
+  ]
+}

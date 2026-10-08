@@ -1,0 +1,48 @@
+{
+  "approved": true,
+  "base_sha256": "95d17e41e8a8c89deba9f24e24316642825bc95c568064aeb915389632f092cd",
+  "candidate_sha256": "99c3911ee8178429d03d3a70bfdd6e778915c1f7775cbb8af594fe3a1ab53d22",
+  "unchanged_clips": [
+    "aim",
+    "death",
+    "death_back",
+    "idle",
+    "knocked",
+    "melee",
+    "punch",
+    "run",
+    "walk",
+    "armed_walk",
+    "armed_run",
+    "reload_mag",
+    "reload_shell",
+    "reload_dual",
+    "punch_left",
+    "stab",
+    "aim_dual",
+    "armed_dual_walk",
+    "armed_dual_run",
+    "aim_melee",
+    "armed_melee_walk",
+    "armed_melee_run",
+    "smoke",
+    "grab",
+    "drive",
+    "car_exit",
+    "doze"
+  ],
+  "changed_clips": [
+    "held"
+  ],
+  "added_clips": [],
+  "rig_geometry_bind_preserved": true,
+  "pose_space_checks": [
+    {
+      "clip": "held",
+      "posed_joint_world_error": 0,
+      "skin_matrix_error": 0
+    }
+  ],
+  "approval_scope": "Held target pose only: full-angle elbow solver, model fitted wrists; remaining choreography/actions not approved",
+  "backup": "build\\heavy_held_fitted_isolated\\heavy_before_95d17e41e8a8.glb"
+}

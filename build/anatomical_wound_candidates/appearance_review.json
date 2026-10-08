@@ -1,0 +1,10 @@
+{
+  "integration_approved": false,
+  "scope": "Actual OpenGL all24 looks x head/arm/leg settled pose",
+  "findings": [
+    "Interpolated weight contour still creates elongated leg membranes",
+    "Guard primary leg contour rest extent 0.1925 x 0.4074 x 0.3116 model units",
+    "Next: construct anatomical section using joint-local geometry rather than weight threshold alone"
+  ],
+  "runtime_changed": false
+}

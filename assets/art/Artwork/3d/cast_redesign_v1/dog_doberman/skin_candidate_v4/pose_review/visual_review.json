@@ -1,0 +1,16 @@
+{
+  "rig_approved": false,
+  "next_action": "Use competing tail and hind-leg surface seeds with geodesic partition and smooth root weights; plain connectivity inside a coordinate box is insufficient",
+  "findings": [
+    "Connected tail seed region also reaches inner rear-leg surface through the tail-root area",
+    "Rear-hip and tail probes show broad stretched panels on inner hind legs",
+    "Head probe retained the narrower trunk influence"
+  ],
+  "status": "rejected_tail_region_leaks_into_hind_legs",
+  "reviewed_views": [
+    "rear_hip_bend.png",
+    "tail_bend.png",
+    "head_turn.png"
+  ],
+  "runtime_approved": false
+}

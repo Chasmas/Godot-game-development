@@ -1,0 +1,18 @@
+{
+  "approved": false,
+  "both_wrists_alignment_passed": true,
+  "improvement": "Stable downward elbow poles and below-chest tool height remove overhead hands in early crouch blend.",
+  "remaining": "Thumb wrap, forearm twist, and actual triangle-to-handle contact require further review. Numeric result measures anatomical reference points, not mesh intersection. Runtime integration remains pending.",
+  "evidence": [
+    "sneak_blend_04.png",
+    "raise_to_sneak.png",
+    "transition_alignment.json"
+  ],
+  "palms_orientation_passed": true,
+  "inspected": [
+    "build/chainsaw_grip_closeup/raise_to_aim.png",
+    "build/chainsaw_grip_closeup/raise_to_sneak.png"
+  ],
+  "contact_reference": "Palm centre offset 6 cm along hand and 2 cm toward surface, replacing wrist-as-contact approximation.",
+  "numeric_contact_passed": true
+}

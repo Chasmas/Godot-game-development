@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FAIL down clears controller attack/reload
+FAIL down cancels authored attack and attached effects
+FAIL downed body owns pose immediately instead of finishing swing
+FAIL stun clears controller attack/reload
+FAIL stun cancels authored attack and attached effects
+FAIL execution clears controller attack/reload
+PASS execution cancels authored attack and attached effects
+ENEMY INTERRUPT REVIEW: 6 failures

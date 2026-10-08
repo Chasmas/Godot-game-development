@@ -1,0 +1,50 @@
+{
+  "character": "cass",
+  "source": "assets\\art\\reference\\cast_redesign_v1\\cass_turnaround.png",
+  "source_sha256": "753f7d4b61e92dc2c1759e86f95d2b849584dba8a53894077b3f92e81dff5e50",
+  "operation": "Blender image buffers; separate existing front/profile/back views",
+  "model_generated": false,
+  "approved_for_api": true,
+  "views": [
+    {
+      "name": "front",
+      "box_top_left_pixels": [
+        0,
+        0,
+        575,
+        1024
+      ],
+      "width": 575,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass\\references\\front.png",
+      "sha256": "e0bf47954c806315e9c7c54c56df28341794e90c66d647b520040f33a057c29d"
+    },
+    {
+      "name": "side",
+      "box_top_left_pixels": [
+        575,
+        0,
+        965,
+        1024
+      ],
+      "width": 390,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass\\references\\side.png",
+      "sha256": "8ba468782920602896f74836e823f2efef387575266f548181cf87bed576e07a"
+    },
+    {
+      "name": "back",
+      "box_top_left_pixels": [
+        965,
+        0,
+        1536,
+        1024
+      ],
+      "width": 571,
+      "height": 1024,
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\cass\\references\\back.png",
+      "sha256": "a70f9f088fa6858827fa0faaf8b2caf15dfbb2ddd9408a9d7dc6fb8a7e3dd2ed"
+    }
+  ],
+  "visual_review": "All three cropped views directly inspected: one Cass per view, complete head/hair/hands/feet, red jacket preserved. API input approval only, not model approval."
+}

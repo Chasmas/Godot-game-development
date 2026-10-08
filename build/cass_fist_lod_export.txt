@@ -1,0 +1,12 @@
+00:01.750  blend            | Read blend: "C:\Users\gil_n\Documents\GitHub\Godot-game-development-codex\build\cass_fist_review\volume_candidate_v4\fist.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+07:33:44 | INFO: Starting glTF 2.0 export
+07:33:44 | INFO: Extracting primitive: Palm_loft
+07:33:44 | INFO: Primitives created: 1
+07:33:44 | INFO: Finished glTF 2.0 export in 0.06149578094482422 s
+
+{"runtime_promoted": false, "visual_approved": false, "source_faces": 31844, "candidate_faces": 12791, "sampled_bidirectional_surface_deviation_m": 0.00019610716844908893, "surface_deviation_under_2mm": true, "scope": "Mesh LOD surface samples; does not prove silhouette, rig, texture or anatomical quality"}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

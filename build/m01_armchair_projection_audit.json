@@ -1,0 +1,94 @@
+{
+  "scope": "All source pixels with alpha >= 128; projection only, not traversal",
+  "passed": true,
+  "placements": [
+    {
+      "position": [
+        96.0,
+        112.0
+      ],
+      "opaque_pixels": 71329,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        88.0,
+        46.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        264.0,
+        46.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        648.0,
+        46.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        894.0,
+        54.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        184.0,
+        446.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        440.0,
+        446.0
+      ],
+      "opaque_pixels": 71329,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        702.0,
+        450.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        184.0,
+        590.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        328.0,
+        648.0
+      ],
+      "opaque_pixels": 85283,
+      "wall_or_outside_pixels": 0
+    },
+    {
+      "position": [
+        702.0,
+        590.0
+      ],
+      "opaque_pixels": 71334,
+      "wall_or_outside_pixels": 0
+    }
+  ]
+}

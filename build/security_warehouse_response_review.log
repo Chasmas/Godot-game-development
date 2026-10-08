@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[level] prewarmed 21 looks in 2169 ms
+PASS { "start": [552.0, 136.0], "goal": [391.516082763672, 134.124755859375], "closest_to_goal": 1.87548553943634, "start_distance": 160.494873046875, "initial_state": 3, &"end": [417.577178955078, 114.732376098633], &"end_state": 4, &"arrived": true }
+PASS { "start": [424.0, 248.0], "goal": [353.742706298828, 144.893173217773], "closest_to_goal": 10.4303178787231, "start_distance": 124.768203735352, "initial_state": 3, &"end": [352.3564453125, 167.891098022461], &"end_state": 4, &"arrived": true }
+PASS { "start": [264.0, 200.0], "goal": [392.0, 216.0], "closest_to_goal": 7.52248811721802, "start_distance": 128.996124267578, "initial_state": 3, &"end": [344.854583740234, 228.85888671875], &"end_state": 4, &"arrived": true }
+WAREHOUSE RESPONSE REVIEW: 0 failures / 3 responders
