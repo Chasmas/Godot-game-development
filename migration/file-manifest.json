@@ -144199,7 +144199,7 @@
     },
     {
       "path": "migration/setup-validation.json",
-      "size": 582
+      "size": 629
     },
     {
       "path": "migration/verify_migration.py",
