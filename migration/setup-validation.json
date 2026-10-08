@@ -1,0 +1,10 @@
+{
+  "python_scripts_compile": true,
+  "powershell_syntax": "passed before final manifest refresh",
+  "dependency_resolution": "pip dry-run passed on current Windows Python",
+  "locked_dependencies": 87,
+  "credential_round_trip": "passed for four configured services",
+  "working_source_inventory": "all listed files present and size matched",
+  "fresh_pc_install": "not yet run; launcher must be executed on new PC",
+  "github_upload": "in progress; final remote verification required"
+}

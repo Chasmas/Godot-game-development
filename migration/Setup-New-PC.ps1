@@ -32,7 +32,8 @@ if (-not $CheckOnly) {
     $venvPath = Join-Path $toolchainRoot 'python'
     if (-not (Test-Path (Join-Path $venvPath 'Scripts\python.exe'))) { Run-Native 'py' @('-3.13','-m','venv',$venvPath) }
     $pythonPath = Join-Path $venvPath 'Scripts\python.exe'
-    Run-Native $pythonPath @('-m','pip','install','-r',(Join-Path $PSScriptRoot 'requirements.txt'))
+    Run-Native $pythonPath @('-m','pip','install','-r',(Join-Path $PSScriptRoot 'requirements.lock.txt'))
+    Run-Native $pythonPath @((Join-Path $PSScriptRoot 'configure_godot_connector.py'))
     Expand-Archive -LiteralPath (Join-Path $PSScriptRoot 'godot-current-windows.zip') -DestinationPath (Join-Path $toolchainRoot 'godot') -Force
     if (Test-Path (Join-Path $PSScriptRoot 'credentials.enc.json')) {
         Add-Type -AssemblyName System.Windows.Forms

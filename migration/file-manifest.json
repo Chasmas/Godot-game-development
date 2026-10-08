@@ -1,5 +1,5 @@
 {
-  "scope": "Portable working source snapshot; runtime/staging state in handoff",
+  "scope": "Portable source snapshot; current runtime/staging state in handoff",
   "files": [
     {
       "path": ".gitattributes",
@@ -143999,7 +143999,7 @@
     },
     {
       "path": "migration/RESUME_HANDOFF.md",
-      "size": 6389
+      "size": 6640
     },
     {
       "path": "migration/START-HERE.cmd",
@@ -144011,11 +144011,15 @@
     },
     {
       "path": "migration/Setup-New-PC.ps1",
-      "size": 4707
+      "size": 4800
     },
     {
       "path": "migration/blender-current-windows.zip",
       "size": 439918531
+    },
+    {
+      "path": "migration/configure_godot_connector.py",
+      "size": 1148
     },
     {
       "path": "migration/connector-inventory.json",
@@ -144030,8 +144034,16 @@
       "size": 86239930
     },
     {
+      "path": "migration/relink_blender_sources.py",
+      "size": 1191
+    },
+    {
+      "path": "migration/requirements.lock.txt",
+      "size": 1682
+    },
+    {
       "path": "migration/requirements.txt",
-      "size": 66
+      "size": 83
     },
     {
       "path": "migration/restore_credentials.py",
@@ -144040,6 +144052,10 @@
     {
       "path": "migration/secret-scan.json",
       "size": 215
+    },
+    {
+      "path": "migration/setup-validation.json",
+      "size": 499
     },
     {
       "path": "migration/verify_migration.py",

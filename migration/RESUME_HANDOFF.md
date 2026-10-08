@@ -29,3 +29,5 @@ No automatic chat/goal/connector/session transfer is guaranteed. Open this repos
 The user explicitly authorizes continuing with full project/filesystem/network/API access on the new PC. The user must enable the actual Codex permission profile on that host. Respect its effective runtime permissions; this handoff cannot grant technical permissions.
 
 Use SOL medium only if available in the new host model selector, as requested by the user. No model selector is available in this current tool interface.
+
+Godot AI MCP is configured by setup using pinned godot-ai 4.2.3 and the transferred addons/godot_ai project addon, ports 8001/8002. Existing Codex server config is preserved. Built-in node_repl is supplied by Codex, not migrated from this machine.

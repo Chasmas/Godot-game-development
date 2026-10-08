@@ -5,3 +5,4 @@ requests
 cryptography
 trimesh
 pygltflib
+godot-ai==4.2.3
