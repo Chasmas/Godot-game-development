@@ -1,0 +1,95 @@
+{
+  "expected_placements": 8,
+  "placements": [
+    {
+      "legacy_scale": [
+        0.479999989271164,
+        0.479999989271164
+      ],
+      "position": [
+        728.0,
+        360.0
+      ],
+      "standing_anchor": false
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        472.0,
+        62.0800018310547
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        104.0,
+        334.079986572266
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        88.0,
+        590.080017089844
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        616.0,
+        798.080017089844
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        520.0,
+        78.0800018310547
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        424.0,
+        526.080017089844
+      ],
+      "standing_anchor": true
+    },
+    {
+      "legacy_scale": [
+        0.379999995231628,
+        0.379999995231628
+      ],
+      "position": [
+        504.0,
+        910.080017089844
+      ],
+      "standing_anchor": true
+    }
+  ],
+  "runtime_approved": true,
+  "scope": "M01 native towel-cart visuals only; legacy decor transforms retained and no collision or navigation changes introduced."
+}

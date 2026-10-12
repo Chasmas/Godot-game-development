@@ -1,0 +1,208 @@
+{
+  "broken_state_handoff": true,
+  "passed": true,
+  "runtime_approved": false,
+  "scope": "Review-only span-aware window sprites on every live M01 GlassWindow; original collision and damaged drawing remain authoritative.",
+  "windows": [
+    {
+      "orientation": "horizontal",
+      "position": [
+        112.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        208.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        288.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        384.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        464.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        576.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        672.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        816.0,
+        168.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "vertical",
+      "position": [
+        856.0,
+        192.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_v_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "vertical",
+      "position": [
+        856.0,
+        320.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_v_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        192.0,
+        504.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        336.0,
+        504.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        544.0,
+        504.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        696.0,
+        504.0
+      ],
+      "span_px": 48.0,
+      "texture": "window_h_048.png",
+      "uniform_scale": 0.131249994039536
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        240.0,
+        664.0
+      ],
+      "span_px": 64.0,
+      "texture": "window_h_064.png",
+      "uniform_scale": 0.162499994039536
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        384.0,
+        664.0
+      ],
+      "span_px": 64.0,
+      "texture": "window_h_064.png",
+      "uniform_scale": 0.162499994039536
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        560.0,
+        664.0
+      ],
+      "span_px": 128.0,
+      "texture": "window_h_128.png",
+      "uniform_scale": 0.287499994039536
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        736.0,
+        664.0
+      ],
+      "span_px": 64.0,
+      "texture": "window_h_064.png",
+      "uniform_scale": 0.162499994039536
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        896.0,
+        664.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        1008.0,
+        664.0
+      ],
+      "span_px": 32.0,
+      "texture": "window_h_032.png",
+      "uniform_scale": 0.100000001490116
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\zombie\\zombie.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/c8AsP3c41UUR/character.glb",
+    "character_id": "c8AsP3c41UUR",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

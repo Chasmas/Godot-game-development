@@ -50,9 +50,9 @@ const STYLES := {
 
 ## Per-instance looks so a room of guards isn't a room of clones:
 ## "guard#2" = guard palette, variant 2 (skin tone / hair / trousers).
-const VARIANT_SKIN := [0.0, -0.28, 0.12, -0.14]
-const VARIANT_HAIR := ["", "3a2618", "8a6a3a", "121014"]
-const VARIANT_PANTS := [0.0, 0.12, -0.1, 0.06]
+const VARIANT_SKIN := [0.0, -0.28, 0.12, -0.14, 0.22, -0.36, 0.06, -0.06]
+const VARIANT_HAIR := ["", "3a2618", "8a6a3a", "121014", "b36a36", "d0b078", "5c3825", "302018"]
+const VARIANT_PANTS := [0.0, 0.12, -0.1, 0.06, -0.2, 0.2, -0.04, 0.16]
 
 static func base_name(palette: String) -> String:
 	var i := palette.find("#")

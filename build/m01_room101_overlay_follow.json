@@ -1,0 +1,30 @@
+{
+	"runtime_promoted": false,
+	"samples": [
+		{
+			"capture": "res://build/m01_room101_overlay_follow_232_472.png",
+			"point": [
+				232.0,
+				472.0
+			],
+			"roundtrip_error_px": 0.0
+		},
+		{
+			"capture": "res://build/m01_room101_overlay_follow_248_464.png",
+			"point": [
+				248.0,
+				464.0
+			],
+			"roundtrip_error_px": 0.0
+		},
+		{
+			"capture": "res://build/m01_room101_overlay_follow_184_480.png",
+			"point": [
+				184.0,
+				480.0
+			],
+			"roundtrip_error_px": 0.0
+		}
+	],
+	"scope": "Actual Camera2D to staging 3D Room 101 overlay follow proof; no production option or compositing approval"
+}

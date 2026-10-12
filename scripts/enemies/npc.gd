@@ -34,7 +34,7 @@ func _ready() -> void:
 	visual = CharacterVisual.new()
 	add_child(visual)
 	if palette == "civilian":
-		palette = "civilian#%d" % (absi(hash(npc_id)) % 4)
+		palette = "civilian#%d" % (absi(hash(npc_id)) % 8)
 	visual.setup(palette)
 	visual.set_aim(facing.angle())
 	Events.noise.connect(_on_noise)
@@ -90,7 +90,7 @@ func _physics_process(delta: float) -> void:
 	if panicking:
 		_panic_t -= delta
 		if _panic_t > 1.2:
-			velocity = _flee_dir * 110.0
+			velocity = _flee_dir * 110.0 * Enemy.TRAVERSAL_SPEED_SCALE
 		else:
 			velocity = Vector2.ZERO
 			cowering = true
@@ -109,7 +109,7 @@ func _physics_process(delta: float) -> void:
 	if travelled.length() > 5.0:
 		facing = travelled.normalized()
 	visual.set_aim(facing.angle())
-	visual.update_move(travelled, delta)
+	visual.update_move(travelled, delta,false,panicking and not cowering)
 	visual.scale = Vector2(0.85, 0.85) if cowering else Vector2.ONE
 	if _bark_t > 0.0 or Engine.get_physics_frames() % 10 == 0:
 		queue_redraw()

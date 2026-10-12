@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\gunner\\gunner.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cnbT9BAsu4qP/character.glb",
+    "character_id": "cnbT9BAsu4qP",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

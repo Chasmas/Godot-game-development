@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "office_desk.png",
+  "imagegen_reference": "res://assets/art/prerendered/m01_sunset_palms/staging/office_desk_v2/office_desk_imagegen_reference.png",
+  "production_method": "ImageGen manager-desk reference plus Blender geometry, props and render.",
+  "expected_count": 1,
+  "approval_scope": "M01 office-desk visual only; existing Furniture collision stays authoritative."
+}

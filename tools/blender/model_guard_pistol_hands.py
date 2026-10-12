@@ -24,15 +24,15 @@ if os.environ.get('GUARD_PISTOL_ANATOMY') == '1':
                        "for index,x in enumerate([sign*2.05,sign*.7,-sign*.7,-sign*2.05]):")
  old_centre='centres.append(Vector((x,6+radius*math.sin(angle),(3.9 if side=="Left" else 4.1)-radius*math.cos(angle))))'
  assert source.count(old_centre)==1
- source=source.replace(old_centre,'''if index==0:
+ source=source.replace(old_centre,'''if index==0 and not (side=="Left" and os.environ.get('GUARD_FOREEND_GRASP')=='1'):
     # Pistol up is hand X (mirrored on the left), not hand Z.
     # Lift the index from its palm root to the receiver's side, keeping
     # its distal surface outside the 17 mm side panel.
     lift=min(1.0,t/.45);lift=lift*lift*(3-2*lift)
     centres.append(Vector((sign*(2.05+2.35*lift),6+5.5*t,1.2+.12*math.sin(math.pi*t))))
    else:
-    radius=3.05
-    if os.environ.get('GUARD_PISTOL_LOWER_GRASP') == '1':
+    radius=2.45 if side=="Left" and os.environ.get('GUARD_FOREEND_GRASP')=='1' else 3.05
+    if os.environ.get('GUARD_PISTOL_LOWER_GRASP') == '1' and not (side=="Left" and os.environ.get('GUARD_FOREEND_GRASP')=='1'):
      # Seat the three bent phalanges below the guard; keep their knuckle
      # roots on the original palm and blend whole cross-section rings.
      bend=min(1.0,t/.33);bend=bend*bend*(3-2*bend)

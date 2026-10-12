@@ -35,11 +35,13 @@ func _ready() -> void:
 	z_index = 15
 
 ## Fire a weapon's full shot (all pellets). Returns nothing; results via signals.
-func fire(origin: Vector2, dir: Vector2, weapon: WeaponData, shooter: Node, spread_deg: float) -> void:
+func fire(origin: Vector2, dir: Vector2, weapon: WeaponData, shooter: Node, spread_deg: float, muzzle_offset: Variant = null) -> void:
 	var from_player := shooter != null and shooter.is_in_group("player")
 	# bullets fly (and hit) along the floor, but are drawn at the gun's height
 	var vis = shooter.get("visual") if shooter != null else null
 	var lift: Vector2 = (vis as CharacterVisual).muzzle_lift() if vis is CharacterVisual else Vector2.ZERO
+	if muzzle_offset is Vector2:
+		lift = muzzle_offset
 	var gid := -1
 	if from_player:
 		gid = _next_group
@@ -113,7 +115,7 @@ func _simulate(b: Bullet, step: float) -> bool:
 		remaining -= travelled
 		b.dist_left -= travelled
 		if b.weapon.hitscan:
-			tracers.append([b.pos - b.lift, hp - b.lift, b.color, 0.08])
+			tracers.append([b.pos + b.lift, hp + b.lift, b.color, 0.08])
 		b.pos = hp
 		var col: Object = hit.collider
 		var result := "wall"
@@ -179,7 +181,7 @@ func _resolve_group(gid: int, hit: bool) -> void:
 
 func _draw() -> void:
 	for b in bullets:
-		var head := b.pos - b.lift
+		var head := b.pos + b.lift
 		var tail := head - b.vel.normalized() * minf(10.0, b.pos.distance_to(b.trail) + 4.0)
 		draw_line(tail, head, Color(b.color, 0.35), 3.0)
 		draw_line(tail, head, b.color, 1.2)

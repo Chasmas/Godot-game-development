@@ -1,0 +1,28 @@
+{
+  "runtime_approved": false,
+  "source": "room_101_v20",
+  "cabinet_source": "tv_dresser_family_v1/tv_dresser.blend",
+  "collision_centre_pixels": [
+    200,
+    440
+  ],
+  "visual_aabb_centre_pixels": [
+    199.99999952316284,
+    440.36800050735474
+  ],
+  "size_pixels": [
+    25.91999912261963,
+    8.736001014709473
+  ],
+  "production_size_pixels": [
+    25.92,
+    8.0
+  ],
+  "drawer_pull_overhang_metres": 0.046,
+  "height_metres": 1.2100000381469727,
+  "pending": [
+    "Full-map art/camera integration",
+    "Whole room visual quality",
+    "Actor depth visibility"
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "passed": true,
+  "runtime_approved": false,
+  "source_runtime_report": "C:\\Users\\Gil\\AppData\\Roaming\\HOTSHOT CALIFORNIA Codex Preview\\m01_native_beds_runtime_review.json",
+  "scope": "Fresh native-furniture runtime output mapped to the ten authored M01 guest rooms; staging composition remains uninstalled.",
+  "rooms": [
+    {
+      "room": 1,
+      "beds": [
+        [
+          128.0,
+          64.0
+        ]
+      ],
+      "nightstands": [
+        [
+          118.0,
+          40.0
+        ],
+        [
+          118.0,
+          88.0
+        ]
+      ],
+      "dressers": [
+        [
+          219.0,
+          88.0
+        ]
+      ]
+    },
+    {
+      "room": 2,
+      "beds": [
+        [
+          384.0,
+          128.0
+        ]
+      ],
+      "nightstands": [
+        [
+          374.0,
+          104.0
+        ]
+      ],
+      "dressers": [
+        [
+          411.0,
+          128.0
+        ]
+      ]
+    },
+    {
+      "room": 3,
+      "beds": [
+        [
+          800.0,
+          64.0
+        ]
+      ],
+      "nightstands": [
+        [
+          790.0,
+          40.0
+        ],
+        [
+          790.0,
+          88.0
+        ]
+      ],
+      "dressers": []
+    },
+    {
+      "room": 4,
+      "beds": [
+        [
+          912.0,
+          64.0
+        ]
+      ],
+      "nightstands": [
+        [
+          902.0,
+          40.0
+        ],
+        [
+          902.0,
+          88.0
+        ]
+      ],
+      "dressers": [
+        [
+          1051.0,
+          64.0
+        ]
+      ]
+    },
+    {
+      "room": 5,
+      "beds": [
+        [
+          272.0,
+          464.0
+        ]
+      ],
+      "nightstands": [
+        [
+          262.0,
+          440.0
+        ],
+        [
+          262.0,
+          488.0
+        ]
+      ],
+      "dressers": []
+    },
+    {
+      "room": 6,
+      "beds": [
+        [
+          352.0,
+          480.0
+        ]
+      ],
+      "nightstands": [],
+      "dressers": [
+        [
+          360.0,
+          453.0
+        ]
+      ]
+    },
+    {
+      "room": 7,
+      "beds": [
+        [
+          816.0,
+          448.0
+        ]
+      ],
+      "nightstands": [
+        [
+          792.0,
+          438.0
+        ],
+        [
+          840.0,
+          438.0
+        ]
+      ],
+      "dressers": [
+        [
+          784.0,
+          491.0
+        ]
+      ]
+    },
+    {
+      "room": 8,
+      "beds": [
+        [
+          272.0,
+          624.0
+        ]
+      ],
+      "nightstands": [
+        [
+          230.0,
+          600.0
+        ]
+      ],
+      "dressers": []
+    },
+    {
+      "room": 9,
+      "beds": [
+        [
+          336.0,
+          592.0
+        ]
+      ],
+      "nightstands": [],
+      "dressers": []
+    },
+    {
+      "room": 10,
+      "beds": [
+        [
+          800.0,
+          624.0
+        ]
+      ],
+      "nightstands": [
+        [
+          758.0,
+          600.0
+        ]
+      ],
+      "dressers": [
+        [
+          803.0,
+          648.0
+        ]
+      ]
+    }
+  ],
+  "guest_room_native_counts": {
+    "beds": 10,
+    "nightstands": 13,
+    "dressers": 6
+  },
+  "non_guest_native_positions": {
+    "beds": [],
+    "nightstands": [],
+    "dressers": [
+      [
+        552.0,
+        56.6399993896484
+      ]
+    ]
+  },
+  "preservation": [
+    "Keep every existing bed body, collision shape and navigation behaviour.",
+    "Keep room door approaches clear; validate any future projection against actual actor, aim and occlusion behaviour.",
+    "Do not install guest_room_composition_v10 until exact gameplay projection is approved."
+  ]
+}

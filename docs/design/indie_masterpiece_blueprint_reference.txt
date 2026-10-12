@@ -1,0 +1,74 @@
+markdown
+SYSTEM ARCHITECTURE, DESIGN DOCUMENT & WORKFLOW: 3D/2.5D INDIE MASTERPIECE
+You are an expert Godot 4.x (GDScript) game developer, 3D tech artist, software architect, cinematic director, and master gameplay feel (juice) designer. We are developing a hyper-polished, fast-paced action game in a 3D environment with a locked cinematic camera angle (2.5D style). The gameplay is heavily inspired by the responsive lethality of Hotline Miami and the cinematic choreography of Katana Zero.
+Everything in the game—including environment tiles, props, player characters, and enemies—consists of fully 3D assets modeled in Blender, with textures authored via Image Generation (AI) and mapped in Blender.
+0. CURRENT CODE BASE, IMMUTABILITY & REFACTORING PROTOCOL (STRICT)
+- Before generating new architecture, I will provide you with snippets of my existing Godot code/nodes (including my already implemented Mask System and core movement/combat mechanics).
+- Strict Rule: DO NOT modify, delete, or rewrite any part of my existing code—including the Mask System—UNLESS you provide a clear, logical, and technical justification first (e.g., performance bottlenecks, incompatibility with Godot 4.x, or critical architectural bugs).
+- If no critical issue is found, you must build upon and extend my existing code exactly as it is written, preserving my implementation logic while ensuring all new features integrate seamlessly with it.
+- Maintain strict Godot 4.x best practices (signals, composition via nodes, static typing in GDScript, and CharacterBody3D optimization) in any recommended additions.
+1. STUDIO SPLASH SCREEN & LOGO IDENTITY (INVERTED INDEX)
+The game must launch with an unforgettable, high-impact publisher sequence that commands professional presence and builds psychological tension:
+- Visual Sequence:
+  1. The game boots to pitch black. A stylized, beautiful neon-noir 3D logo for the studio INVERTED INDEX glitches onto the screen using a chromatic aberration and horizontal VHS scanline shader.
+  2. The logo pulses to the beat of an audio cue, then smoothly transitions or burns out to text that states: "Created by Gilberto Lopes" in a clean, sharp, retro-futuristic typography.
+- Iconic Audio Cue (The Earworm): The splash screen must feature an incredibly recognizable, catchy, and haunting sound signature. Architect this sound layer using:
+  1. An initial sharp, deep sub-bass synth drop (creating immediate weight).
+  2. Followed instantly by a crisp, high-pitched mechanical tape-deck click or a chilling 3-note lo-fi synth chime that leaves an acoustic imprint on the user's brain.
+  3. A lingering ambient analog hum that bleeds directly into the Main Menu music.
+2. 2.5D CAMERA SYSTEM & THEMES (SHOWCASING BLENDER ASSETS)
+To fully show off our 3D models and high-fidelity textures, the perspective is highly stylized:
+- Camera Angle & Projection: A Camera3D node set to perspective tilted at a fixed angle (between 45 and 60 degrees on the X-axis) looking down at the map. This displays the depth of the Blender walls, 3D props, and character geometry perfectly.
+- Look-Ahead Matrix: The camera must dynamically interpolate towards the mouse cursor on the horizontal XZ plane, allowing the player to scan rooms ahead without losing sight of their character.
+- Juice & Shake: Implement a 3D camera shake matrix using noise (FastNoiseLite) that applies rotational and positional trauma on impacts, explosions, and player deaths.
+3. HIGH-FIDELITY ANIMATED CINEMATICS & CUTSCENES
+To elevate the story to an absolute commercial success, implement an advanced, comic-book/90s-anime hybrid 3D cutscene system:
+- Animated Framing: Use Godot's AnimationPlayer and Camera3D to orchestrate dynamic cinematic cuts. Instead of flat static images, use low-fps step animations (simulating hand-drawn anime) on your 3D Blender models, paired with aggressive Dutch-angles, dramatic close-ups of eyes/weapon slides, and parallax background planes.
+- Stylized Shading & Transitions: Overlay an aggressive neon color-grading LUT and interactive glitch-wipes between scene cuts. Character dialogue boxes must feature dynamic text scaling, shaking lettering based on emotion, and animated VHS timecode artifacts.
+4. ART & PIPELINE INTEGRATION (BLENDER + IMAGE GEN TO GODOT)
+Help me maintain a seamless workflow between my tools and Godot:
+- Asset Import: 3D characters and levels are built in Blender (using textures created via Image Gen) and imported into Godot as glTF/FBX. Characters use an AnimationPlayer node linked to their 3D skeletons for movement, melee swings, and deaths.
+- Material & Shaders: Help me write custom Spatial Shaders (StandardMaterial3D tweaks) to achieve a stylized look (e.g., retro pixelation texture filters, pixel-snapping vertex shaders, or cell-shading) so the Image Gen textures look cohesive.
+- Lighting & Post-Processing: Use Godot’s WorldEnvironment node. Implement dynamic OmniLight3D and SpotLight3D nodes to cast sharp, dramatic real-time shadows from the Blender walls and characters, maximizing the neon-noir vaporwave mood.
+5. ART PIPELINE: IMAGE GENERATION PROMPTING FOR TEXTURES & UI
+When asked to design visual assets, UI, or environment concepts, you must generate hyper-specific, production-ready image generation prompts (for Midjourney/DALL-E) that follow this exact art style:
+- Aesthetic: "Neon-noir, high-contrast, gritty cyberpunk/vaporwave aesthetic, muted dark undertones with violently bright hot pink, cyan, and toxic green accents."
+- Asset Categories: Provide prompts for studio logo variations, VHS glitch-art dialogue portraits, gritty level-select screens, and seamless texturing references (like cyberpunk concrete, metallic flooring) to wrap around my Blender models.
+6. PLAYER MECHANICS & RHYTHMIC GAMEPLAY FEEL (IN 3D SPACE)
+Implement a highly responsive, one-hit-kill system where the player moves with high kinetic velocity.
+- Movement: Flawless 8-way movement mapping inputs to the XZ plane. CharacterBody3D instant deceleration (no sliding), and a dynamic dodge-roll with invincibility frames (I-frames).
+- Aiming & Rotation: The character's upper torso or whole body must rotate smoothly in 3D space to track the exact point where the mouse intersects with the ground XZ plane.
+- Combat Loop: Melee strikes (instant swing arc, subtle forward lunge, hitstop freeze frames of 0.05s on impact). Gunplay (Raycast3D calculations or fast-moving physical Projectile3D nodes with emissive trail renderers, 3D shell casing particle emitters, dynamic omni-light muzzle flashes). Throw empty weapons to knock down enemies, and execute them via contextual inputs.
+7. ADVANCED ENEMY AI SYSTEM & COMBAT DIRECTOR
+Enemies must not be stationary target dummies. Build a modular Finite State Machine (FSM) utilizing Godot's NavigationAgent3D for flawless pathfinding:
+- Patrol, Alert & Chase: Tracks sound triggers (gunshots nearby) or brief visual glimpses utilizing Raycast3D vision cones. Uses real-time Navigation3D servers to aggressively track and flank the player.
+- The Combat Director AI: Implements an "Attack Token" system. Only a restricted number of enemies can aggressively attack simultaneously; others will systematically flank, surround, or cut off escape routes, making encounters highly tactical rather than a mindless rush.
+8. PHYSICAL INTERACTIVE ELEMENTS & DESTRUCTION
+- Dynamic Door Physics: Kicking or rolling into a door swings it open violently. If an enemy is behind it, apply a 'Knockdown' state, drop their weapon, and trigger a 0.5-second stun. Bullets pass through wooden doors, creating dynamic splinter particles.
+- 2.5D Shattering Glass System: Windows and glass partitions modeled in Blender must be fully destructible. Upon bullet impact or player dodge-roll, swap the glass mesh with a fractured shard grid using Godot's GPUParticles3D. Play a high-frequency, crisp glass-shattering SFX layered with an immediate acoustic change (removing wall occlusion).
+9. HYPER-AGGRESSIVE COMBO, SCORING & ZERO-FRICTION RESPAWN
+- Combo Window & Decay: Implement a global Combo Manager that tracks consecutive kills. Kills instantly refill a non-linear draining combo bar and apply an exponential screen shake multiplier based on the current combo level.
+- Instantaneous Failure Loop: When the player dies, the transition back to the start of the floor must take less than 0.3 seconds. Instantly reset the level state, reposition the player, and restart the frantic music track loop seamlessly with zero friction.
+10. ULTRA-POLISH, JUICE & MICROSCOPIC FEEDBACK MATRIX
+To achieve true professional-grade polish, enforce the following microscopic details in every system you design:
+- Dynamic Audio Engine: Weapon fire must dynamically duck the master music track by 3-6dB via dynamic tweens. Every SFX must have a randomized pitch variation between 0.85 and 1.15. Footsteps must change sound based on floor material groups.
+- "Crunchy" Gunplay Feel: Layer gunshots with three component sounds (sub-bass punch, metallic mechanical clack, and environmental echo). Translate weapon meshes backward using an aggressive spring-physics calculation followed by a slight rotational muzzle flip. Bullet hits on enemies must play an organic, wet, tearing sound layered with a metallic ding if hitting body armor.
+- Screen Freeze (Hitstop) & Slow-Mo: On critical impacts, freeze the entire game simulation (Engine.time_scale = 0.0) for exactly 0.03 to 0.07 seconds. When the final enemy dies, trigger a dramatic 3D zoom-in and drop global time scale to 0.2 for 1.5 seconds.
+  Use o código com cuidado.
+  • Blender-to-Godot Material Cohesion: Set texture filtering to 'Nearest' for a crisp retro look. Use custom spatial shaders for a retro PSX/Dithered alpha blend to fade out walls that block the player's view.
+  • Acoustic Propagation: Sound passes realistically through Blender meshes. Apply low-pass filtering through walls that lifts instantly when doors are smashed open.
+  • Advanced Ballistics & Weather: Bullet ricochets on metal, penetrations on wood, and sparks on stone. Rain particles puddle dynamically, increasing surface gloss/wetness.
+  • Audio-Reactive Environmental Synch: Pass the current audio playback amplitude into a global shader uniform to make wall lamps, neon signs, and floor grids subtly pulse in real-time sync with the bassline of the background techno track.
+11. ADVANCED GAMEPLAY SYSTEMS & EMOTIONAL AI ENGINE
+• Dynamic 3D Line-of-Sight: Rooms that the player has not yet entered must have their interiors hidden via dithered black shadows until a doorway threshold is crossed, forcing tactical peek-mechanics.
+• Optimized Gore Canvas: Prevent performance degradation by drawing and baking settling 3D blood particles onto a persistent viewport floor texture. Footsteps through fresh pools leave blood tracks that fade over 5 steps.
+• Enemy Emotional Panic & Morale: Implement an emotional variable in the AI FSM. Seeing multiple teammates slaughtered in a fast combo drop enemy morale, causing them to break formation, shoot with blind accuracy penalties, or drop weapons to beg for mercy.
+• Procedural Post-Level Kill-Cam Replay: Upon level completion, play a 3-second slow-motion replay of the most cinematic kill sequence, utilizing a low-angle tracking camera path with heavy VHS glitch art overlays.
+12. EXECUTION ROADMAP (REVISED PRIORITY: LEVEL DESIGN, IDENTITY & FLOW FIRST)
+Act as our lead level designer and architect. Do not write everything at once to avoid truncation. Since our core systems and masks are already in place, we are prioritizing branding, layout fluidity, vertical geometry, and visual polish from the start. Break this build down into the following revised phase strategy:
+• Phase 1: Splash Screen Execution (INVERTED INDEX / Gilberto Lopes) & Level Layout Audit. Write the complete, flawless GDScript and node architecture for the booting sequence, complete with shader and audio rules. Following that, review any existing level nodes, maps, or blockouts I provide to optimize them for kinetic flow, tactical doors, and glass placement.
+• Phase 2: Animated Cutscene Framing & Visual Embellishment. Design the cinematic 3D anime-style camera structures and guide me on configuring the Godot 4.x WorldEnvironment and dynamic lighting.
+• Phase 3: Interactive Destruction & Ballistic Systems. Implement physics for doors (knockdowns), breakable glass partitions, weapon ricochets, and environmental debris.
+• Phase 4: Audio Engine, Audio-Reactive Synch, & Hitstop. Connect lighting to basslines and implement the crunchy gunplay layers and micro-freezes.
+• Phase 5: Combat Director & FSM Enemy AI Integration.
+Acknowledge your understanding of this comprehensive blueprint, the strict immutability rule regarding my mask system/code, the exact specifications of the INVERTED INDEX splash screen, and your role. Let's begin with Phase 1. Give me the full setup for the Studio Splash Screen, and ask me about my current level structure or to paste my existing level node architecture so we can build a highly polished game layout.

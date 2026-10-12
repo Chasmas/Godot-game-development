@@ -333,7 +333,7 @@
   "npcs": {
     "13,28": {
       "id": "earl",
-      "palette": "civilian",
+      "palette": "civilian#0",
       "lines": [
         "Room's paid through Sunday. I'm not moving for anybody.",
         "Harcourt's been jumpy all week. Keeps checking the parking lot like he's waiting for somebody.",
@@ -342,7 +342,7 @@
     },
     "13,3": {
       "id": "dolores",
-      "palette": "scout",
+      "palette": "scout#6",
       "lines": [
         "Housekeeping stopped servicing this floor months ago, honey. Manager's orders.",
         "Harcourt keeps 204 locked even when it's empty. Sometimes I hear a projector through the wall.",
@@ -409,7 +409,7 @@
       "name": "FRONT OFFICE"
     }
   ],
-  "boss_trigger": [],
+  "boss_trigger": [54, 11, 12, 30],
   "boss_cover": [
     [
       58,
@@ -589,18 +589,19 @@
     {
       "type": "neon",
       "pos": [
-        59,
-        44
+        49,
+        56
       ],
       "text": "SUNSET PALMS",
       "color": "ff3d7f",
-      "size": 16
+      "size": 16,
+      "avoid_windows": true
     },
     {
       "type": "vacancy",
       "pos": [
-        50,
-        44
+        57,
+        53
       ]
     },
     {

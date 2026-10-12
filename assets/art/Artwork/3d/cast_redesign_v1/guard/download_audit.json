@@ -1,0 +1,36 @@
+{
+  "task_id": "01a12030-a6af-7061-b326-55c1e1596deb",
+  "outputs": [
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\model.glb",
+      "bytes": 28710008,
+      "sha256": "cf53ce64fe78dbfd666843bfa2f580929948b80e25ae37580f00730b38b3fc1d"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\pre_remeshed.glb",
+      "bytes": 25800276,
+      "sha256": "ecd036daf933411a1a746753433d1405d77c8f2fe1677d581a29e55d4e42dfd4"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\texture_0_base_color.png",
+      "bytes": 13096142,
+      "sha256": "8462f6c29daa4d1986239963fde0e9cdf1321b631cfdf7c4141fb5f690061185"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\texture_0_metallic.png",
+      "bytes": 277543,
+      "sha256": "49ab1f081c1b85f3a5bc9df76dfe4aedb905f367651fe188ff5ca4786dd7a966"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\texture_0_roughness.png",
+      "bytes": 882412,
+      "sha256": "e0b48e7a7101e2c9c0fda1f4cffab974ada087484a7d4e8d1180841a3b042793"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\guard\\raw\\texture_0_normal.png",
+      "bytes": 14221610,
+      "sha256": "febe057fb6038ff38f828bb455f294a0ca1840934606a0d069016c5639d70bdf"
+    }
+  ],
+  "runtime_approved": false
+}

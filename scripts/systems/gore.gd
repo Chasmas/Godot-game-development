@@ -164,7 +164,9 @@ class SurfaceBlood extends Node2D:
 		queue_redraw()
 	func _ready() -> void:
 		add_to_group("surface_blood")
-		z_index = 2
+		# Spray crosses the floor and resolves into decals; it must not become a
+		# foreground veil over characters standing at the impact site.
+		z_index = -1
 		set_process(false)
 	func _draw() -> void:
 		var texture := ArtLib.sprite("decal_blood")

@@ -1,0 +1,29 @@
+{
+	"baseline": {
+		"median_ms": 239.574,
+		"p95_ms": 265.244,
+		"samples": 60
+	},
+	"candidate": "res://assets/art/prerendered/m01_sunset_palms/staging/layout_reconstruction_v1/ground_layer_candidate_v3.png",
+	"captures": [
+		"res://build/m01_ground_v3_standalone_exterior.png",
+		"res://build/m01_ground_v3_standalone_room101.png"
+	],
+	"scale": 0.25,
+	"scope": "isolated Godot renderer review of v3 full-resolution nearest-neighbour ground layer; map alpha coverage is proven separately by audit_m01_ground_projection.py",
+	"source_bytes": 67960832,
+	"source_size_px": [
+		4352,
+		3904
+	],
+	"texture_bytes": 16990208,
+	"with_ground": {
+		"median_ms": 244.169,
+		"p95_ms": 259.246,
+		"samples": 60
+	},
+	"world_size_px": [
+		1088.0,
+		976.0
+	]
+}

@@ -1,0 +1,5 @@
+{
+	"routes_checked": 3,
+	"runtime_promoted": false,
+	"scope": "Navigation clearance sampled against actual M01 collision world. Guard steering remains covered by the dedicated NPC movement regression; this isolated art bridge intentionally does not advance AI."
+}

@@ -1,0 +1,114 @@
+{
+	"clips": [
+		{
+			"clip": "walk",
+			"directional_stance_sweeps": 32,
+			"duration": 1.0,
+			"merged_tracks": 47,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000789088880992495
+		},
+		{
+			"clip": "armed_walk",
+			"directional_stance_sweeps": 32,
+			"duration": 1.0,
+			"merged_tracks": 47,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000789088880992495
+		},
+		{
+			"clip": "armed_dual_walk",
+			"directional_stance_sweeps": 32,
+			"duration": 1.0,
+			"merged_tracks": 47,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000789088880992495
+		},
+		{
+			"clip": "armed_melee_walk",
+			"directional_stance_sweeps": 32,
+			"duration": 1.0,
+			"merged_tracks": 47,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000789088880992495
+		},
+		{
+			"clip": "run",
+			"directional_stance_sweeps": 32,
+			"duration": 0.649999976158142,
+			"merged_tracks": 48,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000586636670050211
+		},
+		{
+			"clip": "armed_run",
+			"directional_stance_sweeps": 32,
+			"duration": 0.649999976158142,
+			"merged_tracks": 48,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000586636670050211
+		},
+		{
+			"clip": "armed_dual_run",
+			"directional_stance_sweeps": 32,
+			"duration": 0.649999976158142,
+			"merged_tracks": 48,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000586636670050211
+		},
+		{
+			"clip": "armed_melee_run",
+			"directional_stance_sweeps": 32,
+			"duration": 0.649999976158142,
+			"merged_tracks": 48,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000586636670050211
+		},
+		{
+			"clip": "sneak",
+			"directional_stance_sweeps": 32,
+			"duration": 1.39999997615814,
+			"merged_tracks": 46,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000615698008914478
+		},
+		{
+			"clip": "armed_sneak",
+			"directional_stance_sweeps": 32,
+			"duration": 1.39999997615814,
+			"merged_tracks": 46,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000615698008914478
+		},
+		{
+			"clip": "armed_dual_sneak",
+			"directional_stance_sweeps": 32,
+			"duration": 1.39999997615814,
+			"merged_tracks": 46,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000615698008914478
+		},
+		{
+			"clip": "armed_melee_sneak",
+			"directional_stance_sweeps": 32,
+			"duration": 1.39999997615814,
+			"merged_tracks": 46,
+			"original_tracks": 50,
+			"upper_tracks_preserved": true,
+			"worst_foot_drift_metres": 0.0000615698008914478
+		}
+	],
+	"runtime_promoted": false,
+	"scope": "Merged foot contact in 8 facings forward/reverse and retained upper tracks; gameplay cadence and visual quality still require review"
+}

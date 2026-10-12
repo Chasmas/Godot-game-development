@@ -129,3 +129,120 @@ Next Blender pass is limited to the reception/service zones: readable motel sign
 
 - 2026-10-06 — added small drain/condensation details to the shared interior walkway for authored density; rendered in 4K and retained staging-only.
 - 2026-10-06 — arrival readability pass: added restrained amber gate-post lights and cool lane markers to the staging-only entrance render; gameplay route and runtime integration remain unchanged.
+
+### 2026-10-08 — guest-room bathroom fixture refinement (Codex)
+- Generated `staging/guest_room_composition_v10`: the bathroom bay now has a lit vanity/mirror wall, faucet, shower panel, towel rail and fixture detail while the open room route remains visible.
+- Regenerated the 0 and 30 degree camera comparison from v10 under `staging/guest_room_camera_review_v4` with measured ground-projection probes.
+- Validation: guest-room staging audit, runtime-isolation audit, room-fit audit and general Blender staging audit PASS.
+- v10 remains staging-only. Exact gameplay projection, actor occlusion, and live bathroom/entry clearance still gate promotion.
+
+### 2026-10-08 — M01 ice-machine runtime replacement (Codex)
+- Added the M01-only `runtime/ice_machine_v1` intact machine visual and its runtime contract. It overlays the two live `BreakableProp` ice-machine placements without changing their collision, health, sound, navigation, or damaged drawing.
+- `tools/m01_ice_machine_review.tscn` validates both placements, transparent source texture, preserved PROP-layer collision, and the damage transition that hides the intact overlay and restores the existing broken state.
+- Windowed runtime capture: `build/m01_ice_machine_runtime.png`; review evidence: `build/m01_ice_machine_runtime_review.json`.
+
+### 2026-10-08 — M01 towel-cart runtime replacement (Codex)
+- Added `runtime/towel_cart_v1`: a detailed overhead housekeeping-cart visual over the eight existing `motel_towel_cart` decor anchors.
+- The native overlay preserves the authored transform and adds no collision, navigation reservation or interaction state. The former low-detail source sprite remains as a hidden transform anchor.
+- `tools/m01_towel_cart_review.tscn` validates all eight placements, texture presence, hidden former sprite and zero added collision. Windowed capture: `build/m01_towel_cart_runtime.png`; review evidence: `build/m01_towel_cart_runtime_review.json`.
+
+### 2026-10-08 — bedside-lamp runtime gate (Codex)
+- Tested the existing generated `guest_room_props_v1/bedside_lamp_game.png` over the eight live bedside-lamp anchors without changing their LightFixture behavior or collision.
+- Rejected the promotion after windowed review: at the runtime camera it read as oversized circular floor light rather than a bedside lamp. The experiment was removed; live M01 continues using the previous lamp visual.
+
+### 2026-10-08 — M01 bedside-lamp runtime replacement (Codex)
+- Replaced the rejected circular lamp candidate with `runtime/bedside_lamp_v2`: a high-angle shade/stem/base silhouette that reads as a bedside lamp at the live gameplay camera.
+- The M01-only overlay is attached to the eight existing `motel_bedside_lamp` anchors, retaining their existing LightFixture behavior and adding no collision, pathing or interaction state.
+- Runtime guest-room review verifies all eight overlays; windowed evidence: `build/m01_guest_room_accents_runtime.png` and `build/m01_guest_room_accents_runtime_review.json`.
+
+### 2026-10-08 — M01 telephone runtime replacement (Codex)
+- Added `runtime/telephone_v1` over the two visual-only `motel_telephone` decor anchors. The new handset/keypad/cord silhouette is verified in `build/m01_telephone_runtime.png`; collision and navigation remain unchanged.
+- `tools/m01_telephone_review.tscn` passes both placements. Full M01/M02 smoke: `0 failures`.
+
+### 2026-10-08 — M01 open-suitcase runtime replacement (Codex)
+- Added `runtime/open_suitcase_v1` to the three `motel_suitcase_open` guest-room floor anchors, introducing readable clothing, sunglasses, paperback and key dressing.
+- The overlay preserves the original floor anchor transforms and adds no collision, navigation reservation or interaction state. Focused validation: `tools/m01_open_suitcase_review.tscn`; windowed evidence: `build/m01_open_suitcase_runtime.png`.
+
+### 2026-10-08 — M01 vending-machine runtime replacement (Codex)
+- Added the M01-only `runtime/vending_machine_v1` intact visual to the two live `BreakableProp(kind="vending")` placements. The generated product window and weathered casing are fitted to the unchanged gameplay footprint.
+- `tools/m01_vending_machine_review.tscn` validates both placements, texture and collision preservation, and the damage transition that hides the intact overlay while restoring the native broken drawing. Windowed evidence: `build/m01_vending_machine_runtime.png`; no navigation, health, sound or collision behavior changed.
+
+### 2026-10-08 — M01 arcade-machine runtime replacement (Codex)
+- Added M01-only `runtime/arcade_machine_v1` intact cabinet visuals to both live `BreakableProp(kind="arcade")` placements, with a high-angle CRT/control-panel treatment that reads at gameplay scale.
+- `tools/m01_arcade_machine_review.tscn` verifies both overlays, transparent texture content, unchanged PROP-layer collision, and the damage transition back to the established broken cabinet rendering. Windowed evidence: `build/m01_arcade_machine_runtime.png`; navigation, health, sound and collision are unchanged.
+
+### 2026-10-08 — M01 pool-lounger runtime replacement (Codex)
+- Added `runtime/pool_lounger_v1` over both visual-only `motel_pool_lounger` anchors. The weathered turquoise/cream lounge chairs carry compact towel and paperback dressing, sized after live pool-patio review.
+- `tools/m01_pool_lounger_review.tscn` validates both placements, source texture visibility, hidden former sprites and zero added collision. Windowed evidence: `build/m01_pool_lounger_runtime.png`; no navigation or gameplay behavior changed.
+
+### 2026-10-08 — M01 guest-room clothing-dressing runtime expansion (Codex)
+- Extended the existing guest-room accent family with generated `clothes_game.png`: folded windbreaker, denim shirt, T-shirt, belt and room key detail now replace the authored `clothes` dressing entries.
+- Both staging and runtime contracts now declare all 13 contained room accents. The existing alpha boundary search keeps every non-transparent pixel within its original guest-room cells and retains no collision or navigation footprint. Runtime evidence: `build/m01_guest_room_accents_runtime.png` and `build/m01_guest_room_accents_runtime_review.json`.
+
+### 2026-10-08 — M01 guest-room towel-dressing runtime expansion (Codex)
+- Extended the established guest-room accent family with `towel_game.png`, replacing every authored `towel` dressing entry with a contained ivory/coral motel towel and key-tag treatment.
+- Candidate and live runtime review now validate 19 total guest-room accents. Alpha-boundary search retains all opaque pixels within the original guest-room cells; this remains visual-only with no collision or navigation change.
+
+### 2026-10-08 — M01 pool-umbrella runtime replacement (Codex)
+- Added `runtime/pool_umbrella_v1` over the live visual-only `motel_pool_umbrella` anchor. The faded coral/cream/turquoise canopy is composed for the pool surface and keeps its original anchor-only behavior.
+- `tools/m01_pool_umbrella_review.tscn` validates visible texture, hidden former source sprite, and no child collision. Windowed evidence: `build/m01_pool_umbrella_runtime.png`; navigation and gameplay remain unchanged.
+
+### 2026-10-08 — M01 palm-planter runtime replacement (Codex)
+- Added `runtime/palm_planter_v1` over the four visual-only `motel_palm_planter` anchors. The ceramic pot and fan-palm silhouette use the established standing-prop baseline and retain all existing gameplay space.
+- `tools/m01_palm_planter_review.tscn` validates all four overlays, texture visibility, hidden former source sprites and zero added collision. Windowed evidence: `build/m01_palm_planter_runtime.png`; navigation and interactions are unchanged.
+
+### 2026-10-08 — M01 vacancy-sign runtime replacement (Codex)
+- Added `runtime/vacancy_sign_v1` over the three visual-only `motel_neon_vacancy_sign` anchors. The detailed weathered neon sign retains the existing Decor light fixture rather than adding another emitter.
+- `tools/m01_vacancy_sign_review.tscn` validates all three overlays, visible source texture, hidden former sprites and zero added collision. Windowed evidence: `build/m01_vacancy_sign_runtime.png`; navigation and interactions are unchanged.
+
+### 2026-10-08 — M01 exact runtime replacement coverage audit (Codex)
+- Added 	ools/art/audit_m01_runtime_replacement_coverage.py, which verifies only exact legacy Decor-family mappings with existing runtime asset, builder, contract where applicable, review evidence, and matching placement counts.
+- Current result: 8 exact categories verified, 35 remaining explicitly unverified, 0 audit failures. BreakableProp and room-dressing overlays remain separately evidenced and are deliberately not counted as legacy Decor category coverage.
+
+
+### 2026-10-08 — M01 pool-flamingo runtime replacement (Codex)
+- Added `runtime/pool_flamingo_v1` over the `motel_pool_float_flamingo` anchor. The generated worn float was resized after live review to stay compact at the original water anchor.
+- `tools/m01_pool_flamingo_review.tscn` validates its visible texture, hidden former sprite, zero child collision, and preserved animated parent anchor. Windowed evidence: `build/m01_pool_flamingo_runtime.png`; bob/drift, navigation and gameplay remain unchanged.
+
+### 2026-10-08 — M01 live-composition review (Codex)
+- Refreshed live Godot captures for courtyard, lounge, reception, office, service, and guest rooms, then assembled uild/m01_runtime_composition_contact_sheet.png.
+- Review confirms the current guest-room, pool and exterior replacements read coherently at gameplay scale. Reception/office use the established bright tile lighting pass; it is retained pending an in-motion lighting review rather than being changed from a static capture alone.
+
+
+### 2026-10-08 — M01 runtime composition luminance audit (Codex)
+- Added 	ools/art/audit_m01_runtime_composition.py to validate the six live 800×600 zone captures and guard against global clipped-white lighting.
+- Current result: 6 captures, 0 failures. Reception uses 2.842% concentrated clipped-white tile/light pixels, within the 3% capture gate; no global washout was found.
+
+
+### 2026-10-08 — M01 housekeeping-cart runtime replacement (Codex)
+- Added `runtime/housekeeping_cart_v1` over the single visual-only `motel_housekeeping_cart` anchor. Live review corrected the child scale so its inherited anchor transform matches the legacy cart footprint.
+- `tools/m01_housekeeping_cart_review.tscn` validates visible texture, hidden former source sprite and zero added collision. Windowed evidence: `build/m01_housekeeping_cart_runtime.png`; navigation and interactions are unchanged.
+
+### 2026-10-08 — Project-wide instrumental music enforcement (Codex)
+- User rule: every music track must be instrumental; vocals, spoken content, and gibberish are not allowed in music anywhere in the game.
+- `tools/run_godot_review.ps1` now runs `tools/audio/verify_instrumental_audit.py` as a required preflight for all standard Godot reviews. The verifier rejects missing, extra, duplicate, or non-passing entries against the full `music/` library.
+- Current verified result: 88/88 music tracks pass with no discernible vocals. Any future non-instrumental music must be replaced with a similar instrumental track before it can pass review.
+
+### 2026-10-08 — M01 pool-ring runtime replacement (Codex)
+- Added `runtime/pool_ring_v1` over the live `motel_pool_float` anchor using the authored turquoise/ivory pool-ring source. The overlay is normalized for gameplay scale and retains the parent AnimatedProp bob and drift.
+- `tools/m01_pool_ring_review.tscn` verifies the intact visual, hidden former source sprite, zero child collision, and preserved animated anchor. Windowed evidence: `build/m01_pool_ring_runtime.png`; pool navigation and interactions remain unchanged.
+
+### 2026-10-08 — M01 pool-party-remains runtime replacement (Codex)
+- Added `runtime/pool_party_ruin_v1` over the live `motel_pool_party_ruin` anchor using the authored abandoned-party source: sun-faded bottles, paper plate, cup and towel are now legible at gameplay scale.
+- `tools/m01_pool_party_ruin_review.tscn` verifies its visible texture, hidden former source sprite, zero child collision, and preserved AnimatedProp slow bob/sway. Windowed evidence: `build/m01_pool_party_ruin_runtime.png`; gameplay and pool navigation remain unchanged.
+
+### 2026-10-08 — M01 room-key-spill runtime replacement (Codex)
+- Added `runtime/room_key_spill_v1` across all seven `motel_room_key_spill` anchors. The teal/ivory numbered key tags and brass keys provide compact authored storytelling in rooms and pool-side spaces.
+- `tools/m01_room_key_spill_review.tscn` verifies every overlay, hidden legacy sprites and zero child collision. Windowed evidence: `build/m01_room_key_spill_runtime.png`; authored transforms, navigation and interactions are unchanged.
+
+### 2026-10-08 — M01 CRT television runtime replacement (Codex)
+- Added `runtime/crt_tv_v1` over all three `motel_tv_crt` anchors with a detailed walnut CRT visual at the former footprint.
+- `tools/m01_crt_tv_review.tscn` verifies all overlays, hidden former source sprites, retained AmbientScreen pulse scripts and zero child collision. Navigation and interactions are unchanged.
+
+### 2026-10-08 — M01 pool-cooler runtime replacement (Codex)
+- Added `runtime/pool_cooler_v1` over both `hq_pool_cooler` anchors using the authored pool-patio cooler source.
+- `tools/m01_pool_cooler_review.tscn` verifies two visible overlays, hidden former sprites and zero child collision. Navigation and interactions are unchanged.
+
+### 2026-10-08 — M01 bougainvillea runtime replacement (Codex)
+- Added untime/bougainvillea_v1 across three motel_bougainvillea anchors. Focused review verifies visible overlays, hidden source sprites and zero child collision; gameplay navigation is unchanged.
+

@@ -821,14 +821,25 @@ class FloorChunk extends Node2D:
 				if h % 9 == 0:
 					var fp := p + Vector2(3 + h % 10, 3 + (h >> 4) % 10)
 					draw_circle(fp, 1.2, [Color(1, 0.85, 0.3), Color(1, 0.5, 0.7), Color(0.95, 0.95, 1)][h % 3])
-			"~":   # pool: deep gradient + tile edge (caustics animate in PoolFX)
-				draw_rect(r, Color(0.04, 0.26, 0.5))
-				draw_rect(Rect2(p + Vector2(0, 8), Vector2(T2, 8)), Color(0.03, 0.21, 0.44))
+			"~":   # pool: tiled depth, irregular reflections and a real coping edge
+				var pool_tone := 0.92 + 0.05 * sin(float(x) * .71 + float(y) * 1.13)
+				draw_rect(r, Color(0.025, 0.18, 0.34))
+				draw_rect(Rect2(p + Vector2(1, 1), Vector2(T2 - 2, 7)), Color(0.045 * pool_tone, 0.34 * pool_tone, 0.57 * pool_tone))
+				draw_rect(Rect2(p + Vector2(1, 8), Vector2(T2 - 2, 7)), Color(0.025 * pool_tone, 0.22 * pool_tone, 0.43 * pool_tone))
+				# Small grout marks keep the floor readable beneath the animated
+				# caustics without turning water into a static texture.
+				for gy in 2:
+					for gx in 2:
+						var tile := Rect2(p + Vector2(2 + gx * 6, 2 + gy * 6), Vector2(5, 5))
+						draw_rect(tile, Color(0.10, 0.48, 0.66, 0.13), false, .55)
+				var glint := Vector2(p.x + 3.0 + float(h % 9), p.y + 3.0 + float((h >> 5) % 8))
+				draw_line(glint, glint + Vector2(3.0, .6), Color(0.68, 0.95, 1.0, .20), .8)
 				for d in [Vector2i(0, -1), Vector2i(0, 1), Vector2i(-1, 0), Vector2i(1, 0)]:
 					if builder.ch(x + d.x, y + d.y) != "~" and builder.floor_grid[y + d.y][x + d.x] != "~":
 						var er := Rect2(p, Vector2(T2, 3)) if d.y == -1 else (Rect2(p + Vector2(0, T2 - 3), Vector2(T2, 3)) if d.y == 1 else (Rect2(p, Vector2(3, T2)) if d.x == -1 else Rect2(p + Vector2(T2 - 3, 0), Vector2(3, T2))))
-						draw_rect(er, Color(0.92, 0.96, 1.0))
-						draw_rect(er.grow(-1), Color(0.55, 0.85, 0.95))
+						draw_rect(er, Color(0.16, 0.22, 0.28))
+						draw_rect(er.grow(-.7), Color(0.76, 0.84, 0.82))
+						draw_line(er.position + Vector2(1, 1), Vector2(er.end.x - 1, er.position.y + 1) if d.y != 0 else Vector2(er.position.x + 1, er.end.y - 1), Color(0.98, 1.0, .96, .42), .65)
 			";":   # packed desert dirt / gravel with tyre ruts and scrub
 				draw_rect(r, Color(0.46, 0.36, 0.27))
 				for i in 7:

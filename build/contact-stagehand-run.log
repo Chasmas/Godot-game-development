@@ -1,0 +1,27 @@
+23:25:32 | INFO: Data are loaded, start creating Blender stuff
+23:25:32 | INFO: Blender create Mesh node char1
+23:25:32 | INFO: glTF import finished in 0.25s
+Armature transform: <Matrix 4x4 (0.0100, 0.0000, 0.0000, 0.0000)
+            (0.0000, 0.0100, 0.0000, 0.0000)
+            (0.0000, 0.0000, 0.0100, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+Leg geometry: LeftUpLeg head (24.580503463745117, 19.31024932861328, 96.49842071533203) tail (23.233999252319336, 1.086568832397461, 63.418479919433594) length 37.791507720947266
+Leg geometry: LeftLeg head (23.233524322509766, 1.086695671081543, 63.418418884277344) tail (16.515350341796875, 5.891049385070801, 25.105907440185547) length 39.19265365600586
+Leg geometry: LeftFoot head (16.515417098999023, 5.8909382820129395, 25.10590171813965) tail (9.245504379272461, -4.2706475257873535, 15.235716819763184) length 15.922625541687012
+Leg geometry: RightUpLeg head (0.015178491361439228, 14.90183162689209, 97.22755432128906) tail (-0.8691414594650269, 17.7371826171875, 61.3718147277832) length 35.978538513183594
+Leg geometry: RightLeg head (-0.8692411184310913, 17.737428665161133, 61.371826171875) tail (6.735065937042236, 54.051910400390625, 80.85960388183594) length 41.90871810913086
+Leg geometry: RightFoot head (6.735087871551514, 54.05198287963867, 80.85943603515625) tail (4.962064266204834, 65.20883178710938, 82.44696044921875) length 11.407854080200195
+Loop seam, metres / radians: 6.805921330818865e-07 0.0
+Info: Saved as "run_contact_candidate.blend"
+Foot target errors, IK / baked: 1.5711175882217586e-05 1.5612624085932573e-05
+CASS STRIDE CANDIDATE BUILT; staging only
+INFO Draco is available, use library at C:\Users\Gil\Documents\GitHub\Hotshot-California\.toolchain\blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Users\Gil\Documents\GitHub\Hotshot-California\.toolchain\blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+23:25:33 | INFO: Starting glTF 2.0 export
+23:25:33 | INFO: Extracting primitive: char1
+23:25:33 | INFO: Primitives created: 1
+23:25:33 | INFO: Finished glTF 2.0 export in 0.3847501277923584 s
+
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

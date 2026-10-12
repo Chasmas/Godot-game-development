@@ -1,6 +1,7 @@
 extends Node
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	Engine.set_meta("skip_tasks", true)
 	Engine.set_meta("autoplay", true)
 	Engine.set_meta("skip_native_m01_ground",true)
@@ -13,9 +14,14 @@ func _ready() -> void:
 	get_tree().current_scene = placeholder
 	Game.campaign_mode = false
 	Game.replay_mission("m01_checkout")
-	for frame in 900:
-		await get_tree().physics_frame
 	var level := get_tree().get_first_node_in_group("level") as Level
+	for attempt in 100:
+		if level != null: break
+		await get_tree().create_timer(0.05, true).timeout
+		level = get_tree().get_first_node_in_group("level") as Level
+	assert(level != null, "M01 must finish loading before the ground review")
+	# The title/intro can pause M01 before this fixture reaches its freeze step.
+	get_tree().paused = false
 	var integrated_ground := level.floor_root.get_node_or_null("NativeM01Ground")
 	if integrated_ground != null: integrated_ground.queue_free()
 	Dialogue._end(false)
@@ -121,13 +127,13 @@ func _ready() -> void:
 	Game.request_quit(0)
 
 func measure_frames() -> Dictionary:
-	for frame in 30: await get_tree().process_frame
+	for frame in 30: await get_tree().create_timer(0.001, true).timeout
 	var samples: Array[float] = []
 	for frame in 180:
 		if Dialogue.active: Dialogue._end(false)
 		Dialogue.root.hide()
 		var started := Time.get_ticks_usec()
-		await get_tree().process_frame
+		await get_tree().create_timer(0.001, true).timeout
 		samples.append(float(Time.get_ticks_usec()-started)/1000.0)
 	samples.sort()
 	return {"median_ms": samples[90], "p95_ms": samples[171], "samples": samples.size()}

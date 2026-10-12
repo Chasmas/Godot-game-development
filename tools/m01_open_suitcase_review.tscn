@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource path="res://tools/m01_open_suitcase_review.gd" type="Script" id="1"]
+
+[node name="M01OpenSuitcaseReview" type="Node"]
+script = ExtResource("1")

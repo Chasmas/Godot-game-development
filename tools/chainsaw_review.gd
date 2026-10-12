@@ -80,6 +80,9 @@ func _ready() -> void:
 	var body := Corpse.new()
 	add_child(body)
 	body.set_process(false)
+	var effects_before := fx.get_child_count()
+	body._process(0.19)
+	check(fx.get_child_count() > effects_before, "Fresh corpse emits a brief blood spurt")
 	for i in 200: body._process(0.016)
 	check(body._bleed_left == 0.0 and not body.is_processing(), "Corpse bleeding ends and processing sleeps")
 	SaveManager.settings["gore"] = previous_gore

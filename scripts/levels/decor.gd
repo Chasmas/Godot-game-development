@@ -145,7 +145,7 @@ static func build(level: Node, root: Node2D, builder: LevelBuilder, items: Array
 				ns.color = Color.html("#" + str(it.get("color", "ff3d7f")))
 				ns.font_size = int(it.get("size", 14))
 				ns.zone = builder.zone_at_cell(int(it.pos[0]), int(it.pos[1]))
-				var spot := mount_sign(builder, int(it.pos[0]), int(it.pos[1]), ns.board_size().x)
+				var spot := mount_sign(builder, int(it.pos[0]), int(it.pos[1]), ns.board_size().x, bool(it.get("avoid_windows", false)))
 				ns.position = spot.pos
 				ns.mount = spot.mount
 				root.add_child(ns)
@@ -728,7 +728,7 @@ class PalmShadow extends Node2D:
 ## it goes on the nearest stretch of plain wall (no doors, no windows) whose
 ## face looks toward where the level put it, sliding along the wall to find
 ## room; out in the open (lots, drives) it becomes a pylon on two posts.
-static func mount_sign(builder: LevelBuilder, cx: int, cy: int, width_px: float) -> Dictionary:
+static func mount_sign(builder: LevelBuilder, cx: int, cy: int, width_px: float, avoid_windows := false) -> Dictionary:
 	var need := int(ceil((width_px + 10.0) / 16.0))
 	var best := {}
 	var best_cost := 1e9
@@ -742,9 +742,10 @@ static func mount_sign(builder: LevelBuilder, cx: int, cy: int, width_px: float)
 			var ok := true
 			var over_glass := 0
 			for xx in range(x0, x0 + need):
-				# wall (a window's fine to hang over, a door never), open floor in front
+				# A landmark motel sign can require a solid facade, leaving windows
+				# visible as part of the building rather than treating them as a board.
 				var wc := builder.ch(xx, wy)
-				if not (wc == "#" or wc == "W") or builder.ch(xx, wy + face) == "#" or builder.ch(xx, wy + face) == "D":
+				if not (wc == "#" or (wc == "W" and not avoid_windows)) or builder.ch(xx, wy + face) == "#" or builder.ch(xx, wy + face) == "D":
 					ok = false
 					break
 				if wc == "W":
@@ -782,6 +783,7 @@ class NeonSign extends Node2D:
 	var _t := 0.0
 	var _on := 1.0
 	var _light: PointLight2D
+	var native_visual_override := false
 
 	func _ready() -> void:
 		z_index = 44
@@ -802,10 +804,14 @@ class NeonSign extends Node2D:
 			on = 0.25 + randf() * 0.3
 		_on = on
 		_light.energy = 0.9 * on
+		if native_visual_override:
+			var visual := get_node_or_null("NativeM01SunsetPalmsSign") as CanvasItem
+			if visual: visual.modulate.a = on
 		if Engine.get_process_frames() % 3 == 0:
 			queue_redraw()
 
 	func _draw() -> void:
+		if native_visual_override: return
 		var f := UIStyle.font_display()
 		var bs := board_size()
 		var w := bs.x - 14.0

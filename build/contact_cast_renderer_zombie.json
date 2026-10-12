@@ -1,0 +1,24 @@
+{
+	"cast": "zombie",
+	"clips": [
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "walk",
+			"worst_drift_px": 0.000441539683379233
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "run",
+			"worst_drift_px": 0.000878685794305056
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "sneak",
+			"worst_drift_px": 0.000535457453224808
+		}
+	],
+	"runtime_promoted": false
+}

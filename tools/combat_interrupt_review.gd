@@ -30,6 +30,9 @@ func _ready() -> void:
 	for frame in 2: await get_tree().physics_frame
 	player._melee_attack(false)
 	check(player._pending_melee > 0.0, "knife starts with pending windup contact")
+	player.velocity = Vector2.RIGHT * 80.0
+	player._movement(Vector2.RIGHT, 1.0 / 60.0)
+	check(player.velocity.is_zero_approx(), "committed melee plants Cass instead of sliding her collision body")
 	player._execute_or_kick()
 	player._tick_timers(0.3)
 	check(target.hits == 0, "kick cancels the unlanded knife contact")

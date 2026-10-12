@@ -1,0 +1,24 @@
+{
+	"cast": "guard",
+	"clips": [
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "walk",
+			"worst_drift_px": 0.000298158614896238
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "run",
+			"worst_drift_px": 0.000464487442513928
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "sneak",
+			"worst_drift_px": 0.000416603579651564
+		}
+	],
+	"runtime_promoted": false
+}

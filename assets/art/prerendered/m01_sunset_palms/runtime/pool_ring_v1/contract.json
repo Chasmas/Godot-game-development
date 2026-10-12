@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "pool_ring.png",
+  "scale": 0.42,
+  "expected_placements": 1,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_pool_float Decor sprite only; visual child retains the existing AnimatedProp bob and drift, adding no collision, navigation or interaction."
+}

@@ -1,0 +1,52 @@
+{
+	"animations": [
+		"aim",
+		"aim_dual",
+		"aim_melee",
+		"armed_dual_run",
+		"armed_dual_sneak",
+		"armed_dual_walk",
+		"armed_melee_run",
+		"armed_melee_sneak",
+		"armed_melee_walk",
+		"armed_run",
+		"armed_sneak",
+		"armed_walk",
+		"car_close",
+		"car_exit",
+		"death",
+		"death_back",
+		"doze",
+		"drive",
+		"grab",
+		"held",
+		"idle",
+		"kick",
+		"knocked",
+		"melee",
+		"punch",
+		"punch_left",
+		"reload_dual",
+		"reload_mag",
+		"reload_shell",
+		"roll",
+		"run",
+		"smoke",
+		"sneak",
+		"stab",
+		"walk"
+	],
+	"hand_bones": [
+		{
+			"index": 15,
+			"name": "LeftHand",
+			"rest_origin": "(37.75182, 133.3092, 10.60639)"
+		},
+		{
+			"index": 23,
+			"name": "RightHand",
+			"rest_origin": "(-38.09412, 133.0495, 10.62728)"
+		}
+	],
+	"scope": "Existing skeleton attachment candidates, not grip alignment approval"
+}

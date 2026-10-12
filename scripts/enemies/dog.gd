@@ -215,8 +215,12 @@ func _physics_process(delta: float) -> void:
 		velocity = _move_vel + _knock
 		move_and_slide()
 		_speed_now = get_real_velocity().length()
-		if _move_vel.length() > 5.0:
-			facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 6.5))
+		if _speed_now > 5.0:
+			# The body must point where the collision body actually travelled.
+			# Steering toward the requested velocity let a dog visibly slide sideways
+			# when it met a wall or changed its mind.  Its head still has independent
+			# look behaviour in _update_head().
+			facing = get_real_velocity().normalized()
 		_update_head(delta)
 		_update_eyes(delta)
 		_gait += delta * _speed_now * 0.16
@@ -283,9 +287,10 @@ func _physics_process(delta: float) -> void:
 		velocity = _move_vel + _knock
 	move_and_slide()
 	_speed_now = get_real_velocity().length()
-	if _move_vel.length() > 5.0 and state != State.DOWNED:
-		# the body turns a bit slower than the head: turns curve
-		facing = facing.slerp(_move_vel.normalized(), minf(1.0, delta * 6.5))
+	if _speed_now > 5.0 and state != State.DOWNED:
+		# Use real displacement after collision resolution, so all four feet and
+		# the drawn gait follow travel instead of skating through tight turns.
+		facing = get_real_velocity().normalized()
 	_update_head(delta)
 	_update_eyes(delta)
 	_pant = clampf(_pant + (delta * 0.35 if _speed_now > 120.0 else -delta * 0.12), 0.0, 1.0)
@@ -315,7 +320,7 @@ func heel_follow(delta: float, heel: Vector2, face: Vector2) -> void:
 	var travelled := get_real_velocity()
 	_speed_now = travelled.length()
 	var dir := travelled.normalized() if _speed_now > 8.0 else face
-	facing = facing.slerp(dir, minf(1.0, delta * 6.0)).normalized()
+	facing = dir.normalized()
 	_update_head(delta)
 	_update_eyes(delta)
 	_pant = clampf(_pant + (delta * 0.2 if _speed_now > 40.0 else -delta * 0.1), 0.0, 0.6)

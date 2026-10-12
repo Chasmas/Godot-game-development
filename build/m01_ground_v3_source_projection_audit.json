@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "image_sha256": "033bbf8852a71f24a0faeadb75dfa6b162ccf894f000c274e36286e8d31f02fe",
+  "level_sha256": "4b43f4974ab8f176c9cacfb38e6742596aff5e9055aaa964757c1941ac0877cc",
+  "contract_level_sha256": "4b43f4974ab8f176c9cacfb38e6742596aff5e9055aaa964757c1941ac0877cc",
+  "covered_cells": 3410,
+  "excluded_cells": 738,
+  "missing_floor_centres": 0,
+  "opaque_pixels_over_water_walls_or_void": 0,
+  "scope": "every alpha>=128 pixel in excluded cells; centre coverage in ground cells"
+}

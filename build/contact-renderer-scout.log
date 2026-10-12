@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 617.14 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070
+
+CONTACT CAST RENDERER PASSED scout [{ "gait": "walk", "aim_movement_pairs": 64, "both_feet": true, "worst_drift_px": 0.00080362905283 }, { "gait": "run", "aim_movement_pairs": 64, "both_feet": true, "worst_drift_px": 0.00045040418627 }, { "gait": "sneak", "aim_movement_pairs": 64, "both_feet": true, "worst_drift_px": 0.00037184724351 }]
+

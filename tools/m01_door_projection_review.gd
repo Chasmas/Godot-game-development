@@ -22,6 +22,9 @@ class ReviewDoor extends Door:
 		draw_circle(Vector2.ZERO, 0.7, Color.CYAN)
 
 func _ready() -> void:
+	# Headless test runs do not produce RenderingServer.frame_post_draw.  Keep
+	# capture for interactive review but never block the physics validation on it.
+	var capture_preview := DisplayServer.get_name().to_lower() != "headless"
 	var image := Image.load_from_file(ProjectSettings.globalize_path(
 		"res://assets/art/prerendered/m01_sunset_palms/staging/guest_door_v1/guest_door_leaf_topdown.png"))
 	assert(not image.is_empty())
@@ -45,7 +48,7 @@ func _ready() -> void:
 		door.set_physics_process(false)
 		door.swing = deg_to_rad([0, 45, 85][index])
 		door._apply()
-		assert(is_equal_approx(door.leaf.rotation, door.swing))
+		assert(is_equal_approx(door.leaf.rotation, door.closed_angle + door.swing))
 		assert(door.hit_point(door.global_position + door.leaf_dir() * 100).distance_to(
 			door.global_position + door.leaf_dir() * 32) < 0.001)
 		var label := Label.new()
@@ -54,9 +57,10 @@ func _ready() -> void:
 		label.scale = Vector2(.2, .2)
 		add_child(label)
 	await get_tree().process_frame
-	await RenderingServer.frame_post_draw
-	var result := get_viewport().get_texture().get_image()
-	result.save_png(ProjectSettings.globalize_path("res://build/m01_door_projection_review.png"))
+	if capture_preview:
+		await RenderingServer.frame_post_draw
+		var result := get_viewport().get_texture().get_image()
+		result.save_png(ProjectSettings.globalize_path("res://build/m01_door_projection_review.png"))
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	for door in reviewed_doors:
@@ -92,9 +96,10 @@ func _ready() -> void:
 		centre + Vector2(0, 10), Layers.DOOR)
 	assert(get_world_2d().direct_space_state.intersect_ray(broken_ray).is_empty())
 	await get_tree().process_frame
-	await RenderingServer.frame_post_draw
-	get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(
-		"res://build/m01_door_destroyed_godot_review.png"))
+	if capture_preview:
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(
+			"res://build/m01_door_destroyed_godot_review.png"))
 	print("M01_DOOR_PROJECTION: 3 angles; collider rotation and leaf endpoints verified; preview only")
 	print("M01_DOOR_INTERACTION: rays at 3 angles; locked world blocker, unlock and 5-hit destruction verified")
 	get_tree().quit()

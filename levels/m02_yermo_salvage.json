@@ -11,9 +11,9 @@
     "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,,,#................#",
     "#++++++++++^h++++++++++++++++U+#,nnn,nnn,nnn,nnn#.A.......&..bb..#",
     "#+++++++++++++++++++++++ccccc++#,nnn,nnn,nnn,nnn#......kkk...bb..#",
-    "#+++cccccc++++cccccc++++ccccc++#,nnn,nnn,nnn,nnn#...*........bb..#",
+    "#+++cccccc++++cccccc++++ccccc++#,nnn,nnn,nnn,nnn#...*.@......bb..#",
     "#+++cccccc++++cccccc+++++++++++#,,,,,,,,,,,,,,,,#.......s...*....#",
-    "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,0,D................#",
+    "#++++++++++++++++++++++++++++++#,,,,,,,,,,,,,,0,D........@.......#",
     "#+++++*+g+++++++*+++++++++*++++#,,,,*,,,,,,,*,,,D................#",
     "#++++++++++++++++++++++++++++++D,,g,,,,,B,,,,,,,#...d.......t....#",
     "#+++cccccc++++cccccc+++++++++++D,,,,,,,TTT,,,,,,#.S............U.#",
@@ -23,7 +23,7 @@
     "#+++++++++++++++++++++#______5_W,,,,,,,,,,,,,,,,#+FF+F+++++++++++#",
     "#+++++++++++++++++++++#___kkk__W,nnn,,,,,,,nnnn,W+++++++++++++E++#",
     "#+++++*+++++++++*+++++D___m____W,nnn,,,,,,,nnnn,W+++++++*+++++E++#",
-    "#+++++++++++++++++++++D___*____#,nnn,,,,,,,nnnn,W++++++++g+++++++#",
+    "#++@++++++++++++++++++D___*____#,nnn,,,,,,,nnnn,W++++++++g+++++++#",
     "#+++++++++++++++++++++#______$_#,nnn,,,,,,,nnnn,#+++++++++++2++++#",
     "#+++++++++++S+++++++++#________#,,,,,,,,,,,,,,,,#++++++++++++++++#",
     "#####WW######DD#######WW###DD##########DD#################DD######",
@@ -299,6 +299,32 @@
     "40,8": {
       "kind": "kennel_master",
       "facing": "down"
+    }
+  },
+  "npcs": {
+    "54,4": {
+      "id": "maya",
+      "palette": "civilian#1",
+      "lines": [
+        "Arlo keeps the good keys in the office. The ones that open things you should not open.",
+        "I catalogued a car that never arrived. The paperwork was already here."
+      ]
+    },
+    "57,6": {
+      "id": "lena",
+      "palette": "civilian#2",
+      "lines": [
+        "The dogs know the difference between a thief and a witness. I wish I did.",
+        "If Buck hears the dinner bell, stay out of his way. He remembers the hand that rings it."
+      ]
+    },
+    "3,16": {
+      "id": "frank",
+      "palette": "civilian#3",
+      "lines": [
+        "I only came for a tail light. That was two days ago.",
+        "The yard gets quiet when the generator dies. Too quiet."
+      ]
     }
   },
   "collectibles": {

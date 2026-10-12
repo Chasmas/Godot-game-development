@@ -16,6 +16,7 @@ extends Resource
 @export var accel := 2100.0
 @export var decel := 2600.0
 @export var sprint_mult := 1.3
+@export_range(0.1, 1.0, 0.001) var sneak_mult := 0.45
 @export var dash_speed := 430.0
 @export var dash_time := 0.15
 @export var dash_cooldown := 0.42

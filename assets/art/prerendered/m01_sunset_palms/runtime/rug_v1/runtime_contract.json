@@ -26,6 +26,7 @@
   "source_kind": "Blender wool backing and fringe with ImageGen albedo",
   "solid_collision": false,
   "reason": "Flat textile is walkable floor dressing",
-  "source_level_sha256": "7fbd0bd73a18b4f5edd01c5b85e5e8d8c7704690eb219757e0d8aa8c9a9820d0",
-  "validation": "Ten default RoomKits positions: same-room physical footprint and alpha projection pass; Blender saved-camera anchor matches; floor dressing adds no physical/nav volumes."
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "expected_placements": 10,
+  "validation": "Ten current RoomKits positions: same-room footprint and full alpha-projection pass; cabinet-safe room-side offsets match the isolated review; Blender saved-camera anchor matches; floor dressing adds no physical/nav volumes."
 }

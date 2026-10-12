@@ -25,6 +25,11 @@ var hp := 5
 var broken := false
 var hit_radius := 12.0
 var metal := false             ## locked/security doors are steel: clang, sparks
+var breach_only := false       ## mission gate: only the scripted planted charge opens it
+## Optional art plate for a one-off mission gate. It never changes the leaf
+## transform, collision or damage behavior; those remain owned by Door.
+var visual_texture: Texture2D
+var broken_visual_texture: Texture2D
 var _slammer_is_player := false
 var _knocked: Array = []
 var _sound_cd := 0.0
@@ -135,11 +140,13 @@ func _integrate_step(delta: float) -> void:
 	omega -= (t.door_friction * omega + t.door_drag * omega * absf(omega)) * delta
 	omega = move_toward(omega, 0.0, t.door_hinge_friction * delta)
 
-## Ray along the leaf (from just off the hinge to the tip) against walls.
+## Ray along the leaf (from just off the hinge to the tip) against walls and
+## low furniture.  Beds and cabinets are solid for the player, so letting a
+## wooden leaf visually pass through them made the rebuilt rooms inconsistent.
 func _leaf_blocked() -> bool:
 	var space := get_world_2d().direct_space_state
 	var a := leaf_dir()
-	var q := PhysicsRayQueryParameters2D.create(global_position + a * 5.0, global_position + a * (length - 1.0), Layers.WORLD | Layers.PROP)
+	var q := PhysicsRayQueryParameters2D.create(global_position + a * 5.0, global_position + a * (length - 1.0), Layers.WORLD | Layers.PROP | Layers.LOW)
 	q.exclude = [leaf.get_rid()]
 	return not space.intersect_ray(q).is_empty()
 
@@ -296,6 +303,10 @@ func _sweep_hits() -> void:
 func take_damage(info: DamageInfo) -> String:
 	if broken:
 		return "pass"
+	if breach_only:
+		_rattle = maxf(_rattle, 0.4)
+		Effects.sparks(info.pos, -info.dir)
+		return "blocked"
 	match info.type:
 		DamageInfo.Type.MELEE, DamageInfo.Type.PUNCH:
 			if locked:
@@ -365,6 +376,13 @@ func slam_shut(hold := 4.0) -> void:
 
 func _draw() -> void:
 	if broken:
+		if broken_visual_texture:
+			# Cleared breach gates leave steel fragments along their original
+			# aperture instead of inheriting the normal wooden-door splinters.
+			draw_set_transform(Vector2.ZERO, closed_angle, Vector2.ONE)
+			draw_texture_rect(broken_visual_texture, Rect2(-length * 0.05, -length * 0.28, length * 1.10, length * 0.55), false)
+			draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			return
 		# splintered stump on the hinge + a few boards on the floor (seeded so
 		# they don't dance every redraw)
 		var rng := RandomNumberGenerator.new()
@@ -385,12 +403,19 @@ func _draw() -> void:
 	var base := Color(0.62, 0.36, 0.18) if not metal else Color(0.45, 0.46, 0.52)
 	var dark := base.darkened(0.35)
 	var pts := PackedVector2Array([n * 1.8, end + n * 1.8, end - n * 1.8, -n * 1.8])
-	var ptex := ArtLib.sprite("door_steel" if metal else "door_wood")
+	var ptex := visual_texture if visual_texture else ArtLib.sprite("door_steel" if metal else "door_wood")
 	if ptex:
 		# the painted door, laid along the leaf (hinge at 0, handle at the far end)
+		# A dedicated Blender gate plate may be wider than the physical leaf so
+		# its lockbox and welded rails are readable at gameplay scale. Physics
+		# remains the unchanged three-pixel Door collider.
+		# Mission gate plates need enough silhouette for their lockbox, welded
+		# rails and warning lamp to read at the normal gameplay camera.  This is
+		# paint only: the authoritative DoorLeaf collider remains three pixels.
+		var visual_thickness := 10.4 if visual_texture else 4.8
 		draw_set_transform(Vector2.ZERO, a, Vector2.ONE)
-		draw_texture_rect(ptex, Rect2(0, -2.4, length, 4.8), false)
-		draw_rect(Rect2(0, -2.4, length, 4.8), Color(0.05, 0.02, 0.04), false, 0.8)
+		draw_texture_rect(ptex, Rect2(0, -visual_thickness * 0.5, length, visual_thickness), false)
+		draw_rect(Rect2(0, -visual_thickness * 0.5, length, visual_thickness), Color(0.05, 0.02, 0.04), false, 0.8)
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		draw_circle(Vector2.ZERO, 2.0, Color(0.1, 0.08, 0.1))
 		draw_circle(Vector2.ZERO, 0.8, Color(0.55, 0.5, 0.45))

@@ -1,0 +1,9 @@
+{
+	"runtime_promoted": false,
+	"scope": "Actual Player movement velocity solver under projected input; not sustained physical travel or gait contact",
+	"speeds_pixels_per_second": {
+		"sneak": 20.0000076293945,
+		"sprint": 86.0219955444336,
+		"walk": 53.0999946594238
+	}
+}

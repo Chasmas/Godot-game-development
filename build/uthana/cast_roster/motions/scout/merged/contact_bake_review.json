@@ -1,0 +1,34 @@
+{
+	"cast": "scout",
+	"clips": [
+		{
+			"anatomical_fold_gate": true,
+			"contact_target_gate": true,
+			"gait": "walk",
+			"maximum_unreachable_distance_m": 0.0,
+			"minimum_knee_angle_degrees": 117.880407817251,
+			"pelvis_drop_m": 0.0261896312967139,
+			"worst_target_error_m": 0.0000541562621947378
+		},
+		{
+			"anatomical_fold_gate": true,
+			"contact_target_gate": true,
+			"gait": "run",
+			"maximum_unreachable_distance_m": 0.0,
+			"minimum_knee_angle_degrees": 111.738947187077,
+			"pelvis_drop_m": 0.0473575287259385,
+			"worst_target_error_m": 0.000106844956462737
+		},
+		{
+			"anatomical_fold_gate": true,
+			"contact_target_gate": true,
+			"gait": "sneak",
+			"maximum_unreachable_distance_m": 0.0,
+			"minimum_knee_angle_degrees": 118.696627013657,
+			"pelvis_drop_m": 0.00612445982796928,
+			"worst_target_error_m": 0.0000678990836604498
+		}
+	],
+	"pending": "Subframe contacts, temporal visual and upper-body parity review",
+	"runtime_approved": false
+}

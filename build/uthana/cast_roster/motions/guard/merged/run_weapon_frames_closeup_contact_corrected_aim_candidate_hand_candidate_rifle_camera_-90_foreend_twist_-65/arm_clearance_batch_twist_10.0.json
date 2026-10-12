@@ -1,0 +1,256 @@
+{
+  "runtime_approved": false,
+  "frames": 48,
+  "source": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\build\\uthana\\cast_roster\\motions\\guard\\merged\\run_weapon_frames_closeup_contact_corrected_aim_candidate_hand_candidate_rifle_camera_-90_foreend_twist_-65",
+  "additional_axial_twist_degrees": 10.0,
+  "max_right_crossings": 182,
+  "max_left_crossings": 390,
+  "frames_with_crossings": [
+    {
+      "frame": 4,
+      "triangle_crossings": {
+        "Right": 109,
+        "Left": 390
+      }
+    },
+    {
+      "frame": 5,
+      "triangle_crossings": {
+        "Right": 148,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 6,
+      "triangle_crossings": {
+        "Right": 91,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 7,
+      "triangle_crossings": {
+        "Right": 152,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 8,
+      "triangle_crossings": {
+        "Right": 106,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 9,
+      "triangle_crossings": {
+        "Right": 182,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 10,
+      "triangle_crossings": {
+        "Right": 142,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 11,
+      "triangle_crossings": {
+        "Right": 119,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 12,
+      "triangle_crossings": {
+        "Right": 113,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 13,
+      "triangle_crossings": {
+        "Right": 149,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 14,
+      "triangle_crossings": {
+        "Right": 97,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 15,
+      "triangle_crossings": {
+        "Right": 97,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 16,
+      "triangle_crossings": {
+        "Right": 52,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 17,
+      "triangle_crossings": {
+        "Right": 67,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 18,
+      "triangle_crossings": {
+        "Right": 38,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 19,
+      "triangle_crossings": {
+        "Right": 37,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 21,
+      "triangle_crossings": {
+        "Right": 30,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 25,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 13
+      }
+    },
+    {
+      "frame": 26,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 13
+      }
+    },
+    {
+      "frame": 27,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 25
+      }
+    },
+    {
+      "frame": 28,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 23
+      }
+    },
+    {
+      "frame": 29,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 26
+      }
+    },
+    {
+      "frame": 30,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 33
+      }
+    },
+    {
+      "frame": 31,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 25
+      }
+    },
+    {
+      "frame": 32,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 38
+      }
+    },
+    {
+      "frame": 33,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 36
+      }
+    },
+    {
+      "frame": 34,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 34
+      }
+    },
+    {
+      "frame": 35,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 17
+      }
+    },
+    {
+      "frame": 36,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 33
+      }
+    },
+    {
+      "frame": 37,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 13
+      }
+    },
+    {
+      "frame": 38,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 8
+      }
+    },
+    {
+      "frame": 44,
+      "triangle_crossings": {
+        "Right": 10,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 45,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 253
+      }
+    },
+    {
+      "frame": 46,
+      "triangle_crossings": {
+        "Right": 82,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 47,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 5
+      }
+    }
+  ],
+  "scope": "Exact 48 captured poses; central torso versus >80% arm-weight faces. Excludes blended boundaries/lateral torso/coplanar/containment."
+}

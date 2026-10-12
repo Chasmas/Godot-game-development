@@ -1,0 +1,159 @@
+{
+  "entry_transitions": [
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        856.0,
+        48.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        248.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        424.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        632.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        144.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        320.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        720.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        928.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        312.0,
+        448.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        664.0,
+        448.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        224.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        368.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        736.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        256.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        336.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        784.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        456.0,
+        592.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        664.0,
+        592.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        312.0,
+        608.0
+      ]
+    }
+  ],
+  "passed": true,
+  "runtime_approved": true,
+  "scope": "Live M01 guest-door sill and jamb visuals; each mounts on an existing Door and adds no collision or navigation footprint."
+}

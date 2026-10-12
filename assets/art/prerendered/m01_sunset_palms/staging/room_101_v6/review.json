@@ -1,0 +1,13 @@
+{
+  "runtime_approved": false,
+  "map_sha256": "e10c43d0cd606bb9f9e61c3af235a09db9a201a9863d142fba912a446a7fbafb",
+  "floor_metres": [
+    8,
+    4
+  ],
+  "pending": [
+    "Final reference-quality dressing",
+    "Door/window actors and sightline validation",
+    "Production camera and layout integration"
+  ]
+}

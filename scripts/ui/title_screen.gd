@@ -45,12 +45,15 @@ func _ready() -> void:
 		vignette.modulate.a = 0.0
 		add_child(vignette)
 		key_art = CinematicArt.make_fullscreen(title_tex)
-		key_art.modulate = Color(1, 1, 1, 0.94)
+		key_art.stretch_mode = TextureRect.STRETCH_SCALE
+		key_art.modulate = Color.WHITE
 		# a tape on an old deck: the picture holds still, the tape doesn't
 		var vm := ShaderMaterial.new()
 		vm.shader = load("res://shaders/vcr_filter.gdshader")
 		key_art.material = vm
+		key_art.resized.connect(_update_title_cover)
 		add_child(key_art)
+		_update_title_cover.call_deferred()
 		key_art_shade = ColorRect.new()
 		key_art_shade.color = Color(0.015, 0.0, 0.04, 0.20)
 		key_art_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -1207,8 +1210,18 @@ func _cycle_vignettes(delta: float) -> void:
 		PostFX.vhs_glitch(0.3)
 	var want := 1.0 if _vig_on else 0.0
 	vignette.modulate.a = move_toward(vignette.modulate.a, want, delta / 1.6)
-	key_art.modulate.a = 0.94 * (1.0 - vignette.modulate.a)
+	key_art.modulate.a = 1.0 - vignette.modulate.a
 	# the wordmark rides over the vignettes (the key art has it painted in)
 	logo_top.visible = vignette.modulate.a > 0.01
 	logo_bottom.visible = logo_top.visible
 	logo_top.modulate.a = vignette.modulate.a
+
+func _update_title_cover() -> void:
+	if key_art == null or key_art.texture == null or key_art.size.y <= 0: return
+	var texture_ratio := key_art.texture.get_size().aspect()
+	var screen_ratio := key_art.size.aspect()
+	var uv_scale := Vector2(minf(screen_ratio / texture_ratio, 1.0), minf(texture_ratio / screen_ratio, 1.0))
+	var material := key_art.material as ShaderMaterial
+	material.set_shader_parameter("cover_scale", uv_scale)
+	# Keep the wordmark at the top visible when ultrawide crops the lower image.
+	material.set_shader_parameter("cover_offset", Vector2((1.0-uv_scale.x)*.5,0.0))

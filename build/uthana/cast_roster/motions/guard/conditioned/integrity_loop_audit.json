@@ -1,0 +1,29 @@
+[
+  {
+    "clip": "run",
+    "duration_seconds": 1.3333333730697632,
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "max_loop_rotation_degrees": 0.03956468205889273,
+    "max_loop_translation_native_units": 0.0,
+    "runtime_approved": false
+  },
+  {
+    "clip": "stealth",
+    "duration_seconds": 2.1666667461395264,
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "max_loop_rotation_degrees": 0.03956468205889273,
+    "max_loop_translation_native_units": 0.0,
+    "runtime_approved": false
+  },
+  {
+    "clip": "walk",
+    "duration_seconds": 1.8666667938232422,
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "max_loop_rotation_degrees": 0.03956468205889273,
+    "max_loop_translation_native_units": 0.0,
+    "runtime_approved": false
+  }
+]

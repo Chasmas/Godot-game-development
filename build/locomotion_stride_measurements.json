@@ -1,0 +1,1105 @@
+{
+  "models": {
+    "bellhop": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 51.9809638267468,
+          "stance_samples": 100
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5274836222331,
+          "stance_samples": 165
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 51.9809638267468,
+          "stance_samples": 100
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5274836222331,
+          "stance_samples": 165
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 51.9809638267468,
+          "stance_samples": 100
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5274836222331,
+          "stance_samples": 165
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 51.9809638267468,
+          "stance_samples": 100
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5274836222331,
+          "stance_samples": 165
+        }
+      },
+      "sha256": "210ce6275a96a003c5a406a04eeb4fa7f3f70917536e7607347c9c5edfa3586b"
+    },
+    "biker": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2258593372745,
+          "stance_samples": 105
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6563994089762,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2258593372745,
+          "stance_samples": 105
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6563994089762,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2258593372745,
+          "stance_samples": 105
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6563994089762,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2258593372745,
+          "stance_samples": 105
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6563994089762,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "dd14f5458ee6c073046cc73a51edc3884a94c7ee43c4bd1f63db829f3d0f3f83"
+    },
+    "boss": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 42.4459161625529,
+          "stance_samples": 98
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.3901246388753,
+          "stance_samples": 164
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 42.4459161625529,
+          "stance_samples": 98
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.3901246388753,
+          "stance_samples": 164
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 42.4459161625529,
+          "stance_samples": 98
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.3901246388753,
+          "stance_samples": 164
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 42.4459161625529,
+          "stance_samples": 98
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.3901246388753,
+          "stance_samples": 164
+        }
+      },
+      "sha256": "65f95a147b81d18bc7ff269b9f4a74b34ceea94cb4dd40b90612ea74ecafd59c"
+    },
+    "buck": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.9836211805457,
+          "stance_samples": 101
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.5082187652588,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.9836211805457,
+          "stance_samples": 101
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.5082187652588,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.9836211805457,
+          "stance_samples": 101
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.5082187652588,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.9836211805457,
+          "stance_samples": 101
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.5082187652588,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "9735547416af8c2d38ed286a8dda3fc7c81b6a2a8731fccbed26f45faa1e0baf"
+    },
+    "burnt": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.2139897580746,
+          "stance_samples": 101
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.28516604503,
+          "stance_samples": 165
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.2139897580746,
+          "stance_samples": 101
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.28516604503,
+          "stance_samples": 165
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.2139897580746,
+          "stance_samples": 101
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.28516604503,
+          "stance_samples": 165
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.2139897580746,
+          "stance_samples": 101
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.28516604503,
+          "stance_samples": 165
+        }
+      },
+      "sha256": "89a664eef42fd1e3f8cb8c275df3afa57860333c02393eb50e0f35f33728cde3"
+    },
+    "cass": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 55.9210219641579,
+          "stance_samples": 100
+        },
+        "armed_dual_sneak": {
+          "duration": 2.83333325386047,
+          "median_stance_speed": 0.206162626775927,
+          "stance_samples": 164
+        },
+        "armed_dual_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 11.64775518981,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 55.9210219641579,
+          "stance_samples": 100
+        },
+        "armed_melee_sneak": {
+          "duration": 2.83333325386047,
+          "median_stance_speed": 0.206162626775927,
+          "stance_samples": 164
+        },
+        "armed_melee_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 11.64775518981,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 55.9210219641579,
+          "stance_samples": 100
+        },
+        "armed_sneak": {
+          "duration": 2.83333325386047,
+          "median_stance_speed": 0.206162626775927,
+          "stance_samples": 164
+        },
+        "armed_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 11.64775518981,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 55.9210219641579,
+          "stance_samples": 100
+        },
+        "sneak": {
+          "duration": 2.83333325386047,
+          "median_stance_speed": 0.206162626775927,
+          "stance_samples": 164
+        },
+        "walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 11.64775518981,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "6d84de7f1db3a1edc16c667bf91e07cf263188b0b33e6dfa61fdde8c753e65eb"
+    },
+    "civilian": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.4227051310925,
+          "stance_samples": 95
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.537452061971,
+          "stance_samples": 164
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.4227051310925,
+          "stance_samples": 95
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.537452061971,
+          "stance_samples": 164
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.4227051310925,
+          "stance_samples": 95
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.537452061971,
+          "stance_samples": 164
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.4227051310925,
+          "stance_samples": 95
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.537452061971,
+          "stance_samples": 164
+        }
+      },
+      "sha256": "1cafbe093730bef265cbc2a184a11dd3fe06e4d4be62fea1d23d6f42ebb97829"
+    },
+    "cultist": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.6918807121551,
+          "stance_samples": 108
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.8108838399251,
+          "stance_samples": 166
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.6918807121551,
+          "stance_samples": 108
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.8108838399251,
+          "stance_samples": 166
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.6918807121551,
+          "stance_samples": 108
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.8108838399251,
+          "stance_samples": 166
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.6918807121551,
+          "stance_samples": 108
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.8108838399251,
+          "stance_samples": 166
+        }
+      },
+      "sha256": "d6b31acd3374c8e92f7319c66c63396e718626335e251727d6a9e1f9f6add5e2"
+    },
+    "demon": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 56.5764667816023,
+          "stance_samples": 109
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 13.3324394226074,
+          "stance_samples": 169
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 56.5764667816023,
+          "stance_samples": 109
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 13.3324394226074,
+          "stance_samples": 169
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 56.5764667816023,
+          "stance_samples": 109
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 13.3324394226074,
+          "stance_samples": 169
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 56.5764667816023,
+          "stance_samples": 109
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 13.3324394226074,
+          "stance_samples": 169
+        }
+      },
+      "sha256": "bf33cd66f2ac2c97064c12690ee7cd851778357989caf7c5b0d5b3449ee98a0c"
+    },
+    "fireman": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.9118667271177,
+          "stance_samples": 103
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.5405720074972,
+          "stance_samples": 168
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.9118667271177,
+          "stance_samples": 103
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.5405720074972,
+          "stance_samples": 168
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.9118667271177,
+          "stance_samples": 103
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.5405720074972,
+          "stance_samples": 168
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.9118667271177,
+          "stance_samples": 103
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.5405720074972,
+          "stance_samples": 168
+        }
+      },
+      "sha256": "435bd0c7ae626b2227dceb71fa76909d2b532700f9c4facec8f6df2c5c06af5c"
+    },
+    "ghoul": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.9731550224675,
+          "stance_samples": 111
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.2637666066488,
+          "stance_samples": 169
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.9731550224675,
+          "stance_samples": 111
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.2637666066488,
+          "stance_samples": 169
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.9731550224675,
+          "stance_samples": 111
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.2637666066488,
+          "stance_samples": 169
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 55.9731550224675,
+          "stance_samples": 111
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.2637666066488,
+          "stance_samples": 169
+        }
+      },
+      "sha256": "a8d271e8c3b226bebba11c4f3392ed74905d12125756d5bffaeea6aa43406a35"
+    },
+    "guard": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.5558708144465,
+          "stance_samples": 101
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2703170776367,
+          "stance_samples": 166
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.5558708144465,
+          "stance_samples": 101
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2703170776367,
+          "stance_samples": 166
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.5558708144465,
+          "stance_samples": 101
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2703170776367,
+          "stance_samples": 166
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.5558708144465,
+          "stance_samples": 101
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2703170776367,
+          "stance_samples": 166
+        }
+      },
+      "sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c"
+    },
+    "gunner": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 57.5467333332678,
+          "stance_samples": 99
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.9850641886393,
+          "stance_samples": 161
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 57.5467333332678,
+          "stance_samples": 99
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.9850641886393,
+          "stance_samples": 161
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 57.5467333332678,
+          "stance_samples": 99
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.9850641886393,
+          "stance_samples": 161
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 57.5467333332678,
+          "stance_samples": 99
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.9850641886393,
+          "stance_samples": 161
+        }
+      },
+      "sha256": "3a001800907321b2e5ec6157f9d2584b05ab399b09f114efa6fef57bc6e15f12"
+    },
+    "handler": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.3892757776595,
+          "stance_samples": 100
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.370787302653,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.3892757776595,
+          "stance_samples": 100
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.370787302653,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.3892757776595,
+          "stance_samples": 100
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.370787302653,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.3892757776595,
+          "stance_samples": 100
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.370787302653,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "2e79a6832ef2ef3b6243d3079389b13f194fac34930dfbf948edfac47c035512"
+    },
+    "heavy": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2255131535079,
+          "stance_samples": 103
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.0087445576986,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2255131535079,
+          "stance_samples": 103
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.0087445576986,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2255131535079,
+          "stance_samples": 103
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.0087445576986,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 58.2255131535079,
+          "stance_samples": 103
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.0087445576986,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "ca8e739ab23a5991e6ca26074d6cd3ee54e614be8d1b4f14617d907600eef0dd"
+    },
+    "hunter": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 46.8129594679785,
+          "stance_samples": 101
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5522270202637,
+          "stance_samples": 168
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 46.8129594679785,
+          "stance_samples": 101
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5522270202637,
+          "stance_samples": 168
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 46.8129594679785,
+          "stance_samples": 101
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5522270202637,
+          "stance_samples": 168
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 46.8129594679785,
+          "stance_samples": 101
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.5522270202637,
+          "stance_samples": 168
+        }
+      },
+      "sha256": "07b88e9bd4983020f91a65ea76fd4503d1fe5eca1915d4d232d08afa274d0aa8"
+    },
+    "riot": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.4083503065005,
+          "stance_samples": 99
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2222429911296,
+          "stance_samples": 166
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.4083503065005,
+          "stance_samples": 99
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2222429911296,
+          "stance_samples": 166
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.4083503065005,
+          "stance_samples": 99
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2222429911296,
+          "stance_samples": 166
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 43.4083503065005,
+          "stance_samples": 99
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.2222429911296,
+          "stance_samples": 166
+        }
+      },
+      "sha256": "40462c07c96cde9eaed2c99c13e90150e964c7320a20fd64be0edab9950b0b84"
+    },
+    "scout": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 40.2065831957286,
+          "stance_samples": 93
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.3533496856689,
+          "stance_samples": 165
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 40.2065831957286,
+          "stance_samples": 93
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.3533496856689,
+          "stance_samples": 165
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 40.2065831957286,
+          "stance_samples": 93
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.3533496856689,
+          "stance_samples": 165
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 40.2065831957286,
+          "stance_samples": 93
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.3533496856689,
+          "stance_samples": 165
+        }
+      },
+      "sha256": "a6f526e7a5b49165f2adfe805bfbab9008476471925536cbb092bb463aedc37c"
+    },
+    "scrapper": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 45.4121484931663,
+          "stance_samples": 101
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6462411880493,
+          "stance_samples": 167
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 45.4121484931663,
+          "stance_samples": 101
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6462411880493,
+          "stance_samples": 167
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 45.4121484931663,
+          "stance_samples": 101
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6462411880493,
+          "stance_samples": 167
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 45.4121484931663,
+          "stance_samples": 101
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.6462411880493,
+          "stance_samples": 167
+        }
+      },
+      "sha256": "d0bf081e3ab4e7de79cb0e30c3f46361e1d237102dd9de1cdfd53c1b62799996"
+    },
+    "security": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.2855504666105,
+          "stance_samples": 100
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.7146697441737,
+          "stance_samples": 166
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.2855504666105,
+          "stance_samples": 100
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.7146697441737,
+          "stance_samples": 166
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.2855504666105,
+          "stance_samples": 100
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.7146697441737,
+          "stance_samples": 166
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 50.2855504666105,
+          "stance_samples": 100
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.7146697441737,
+          "stance_samples": 166
+        }
+      },
+      "sha256": "99cb48a6a51e3bb8e62e42b236a42d34b0e87455ed98ac8aa600edb4b073a8ab"
+    },
+    "sniper": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.9198899292979,
+          "stance_samples": 98
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.0606625874837,
+          "stance_samples": 165
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.9198899292979,
+          "stance_samples": 98
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.0606625874837,
+          "stance_samples": 165
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.9198899292979,
+          "stance_samples": 98
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.0606625874837,
+          "stance_samples": 165
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.9198899292979,
+          "stance_samples": 98
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 11.0606625874837,
+          "stance_samples": 165
+        }
+      },
+      "sha256": "36cdea8c763bf562dbe2e42ad31ed9dbd87d31108bb2aaa6e03449f91ed88480"
+    },
+    "stagehand": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 46.9659906826578,
+          "stance_samples": 105
+        },
+        "armed_dual_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 10.8105858539805,
+          "stance_samples": 174
+        },
+        "armed_melee_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 46.9659906826578,
+          "stance_samples": 105
+        },
+        "armed_melee_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 10.8105858539805,
+          "stance_samples": 174
+        },
+        "armed_run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 46.9659906826578,
+          "stance_samples": 105
+        },
+        "armed_walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 10.8105858539805,
+          "stance_samples": 174
+        },
+        "run": {
+          "duration": 0.708333313465118,
+          "median_stance_speed": 46.9659906826578,
+          "stance_samples": 105
+        },
+        "walk": {
+          "duration": 4.16666650772095,
+          "median_stance_speed": 10.8105858539805,
+          "stance_samples": 174
+        }
+      },
+      "sha256": "11d0f2046088351024f39d3d2c47040ee01712351d0b846fe9d2ea16ca684264"
+    },
+    "welder": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.5602266323499,
+          "stance_samples": 99
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.9321777025859,
+          "stance_samples": 165
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.5602266323499,
+          "stance_samples": 99
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.9321777025859,
+          "stance_samples": 165
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.5602266323499,
+          "stance_samples": 99
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.9321777025859,
+          "stance_samples": 165
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 41.5602266323499,
+          "stance_samples": 99
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 10.9321777025859,
+          "stance_samples": 165
+        }
+      },
+      "sha256": "425f5903cbfa3c1976a78765bea09e3f2ad978e50cf04be7aa6500c831db043d"
+    },
+    "zombie": {
+      "clips": {
+        "armed_dual_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.0191886121276,
+          "stance_samples": 104
+        },
+        "armed_dual_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.1984252929688,
+          "stance_samples": 168
+        },
+        "armed_melee_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.0191886121276,
+          "stance_samples": 104
+        },
+        "armed_melee_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.1984252929688,
+          "stance_samples": 168
+        },
+        "armed_run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.0191886121276,
+          "stance_samples": 104
+        },
+        "armed_walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.1984252929688,
+          "stance_samples": 168
+        },
+        "run": {
+          "duration": 0.666666686534882,
+          "median_stance_speed": 49.0191886121276,
+          "stance_samples": 104
+        },
+        "walk": {
+          "duration": 4.125,
+          "median_stance_speed": 12.1984252929688,
+          "stance_samples": 168
+        }
+      },
+      "sha256": "1b55f6cd12059033271b73d8dfd4d4abf40e06c704b613abb6bab3078eb8c722"
+    }
+  },
+  "units": "game pixels per second; 16 pixels per metre"
+}

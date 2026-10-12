@@ -1,0 +1,24 @@
+{
+  "damage_transition_checked": true,
+  "expected_placements": 2,
+  "placements": [
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        568.0,
+        584.0
+      ]
+    },
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        584.0,
+        584.0
+      ]
+    }
+  ],
+  "runtime_approved": true,
+  "scope": "M01 native intact arcade visuals; original BreakableProp collision, health, sound, and broken drawing retained."
+}

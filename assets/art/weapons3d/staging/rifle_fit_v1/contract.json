@@ -1,0 +1,41 @@
+{
+  "runtime_approved": false,
+  "weapon": "rifle",
+  "units": "metres",
+  "forward_blender": "-Y",
+  "anchors_blender": {
+    "GripAnchor": [
+      0,
+      0.015,
+      0
+    ],
+    "SupportGrip": [
+      0,
+      -0.23,
+      0.02
+    ],
+    "SupportRearGrip": [
+      0,
+      -0.17,
+      0.02
+    ],
+    "ShoulderAnchor": [
+      0,
+      0.256,
+      0.04
+    ],
+    "Muzzle": [
+      0,
+      -0.58,
+      0.064
+    ]
+  },
+  "overall_length_m": 0.83,
+  "pending": [
+    "authored finish",
+    "hand mesh contact",
+    "shoulder contact",
+    "all gait and aim reviews",
+    "firing origin"
+  ]
+}

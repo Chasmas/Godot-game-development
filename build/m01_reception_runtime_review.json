@@ -1,0 +1,23 @@
+{
+  "camera_world_position": [
+    968,
+    480
+  ],
+  "camera_zoom": 2.4,
+  "counter_bodies": 2,
+  "counter_layers": [
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    },
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    }
+  ],
+  "native_visuals": 2,
+  "passed": true,
+  "preserved_low_collision_bodies": 2,
+  "reception_wall_details_present": true,
+  "scope": "Live M01 reception counter/lobby camera; no staging layer loaded."
+}

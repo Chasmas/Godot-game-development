@@ -1,0 +1,63 @@
+{
+  "runtime_approved": false,
+  "camera_elevation_degrees": 49.72,
+  "frames": [
+    {
+      "file": "window_h_032.png",
+      "orientation": "horizontal",
+      "span_px": 32,
+      "pixels_per_metre": 159.99999761581424,
+      "floor_anchor_px": [
+        256.0,
+        302.37779235839844
+      ]
+    },
+    {
+      "file": "window_h_048.png",
+      "orientation": "horizontal",
+      "span_px": 48,
+      "pixels_per_metre": 121.90476744083075,
+      "floor_anchor_px": [
+        256.0,
+        291.33546447753906
+      ]
+    },
+    {
+      "file": "window_h_064.png",
+      "orientation": "horizontal",
+      "span_px": 64,
+      "pixels_per_metre": 98.4615420730863,
+      "floor_anchor_px": [
+        256.0,
+        284.54017639160156
+      ]
+    },
+    {
+      "file": "window_h_128.png",
+      "orientation": "horizontal",
+      "span_px": 128,
+      "pixels_per_metre": 55.652175066827176,
+      "floor_anchor_px": [
+        256.0,
+        272.13140869140625
+      ]
+    },
+    {
+      "file": "window_v_032.png",
+      "orientation": "vertical",
+      "span_px": 32,
+      "pixels_per_metre": 159.99999761581424,
+      "floor_anchor_px": [
+        256.0,
+        302.37779235839844
+      ]
+    }
+  ],
+  "source": "Authored Blender geometry with reviewed M01 ImageGen material sources",
+  "pending": [
+    "Actual Camera2D projection review",
+    "Twenty-window placement, light-mask and actor-occlusion review",
+    "Break-state handoff to legacy GlassWindow art",
+    "Runtime integration approval"
+  ]
+}

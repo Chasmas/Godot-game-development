@@ -6,6 +6,7 @@ var velocity := Vector2.ZERO
 var life := 9.0
 var light: PointLight2D
 var _noise_t := 0.0
+var art: Sprite2D
 
 func _ready() -> void:
 	add_to_group("flares")
@@ -16,7 +17,14 @@ func _ready() -> void:
 	light.energy = 1.4
 	light.shadow_enabled = true
 	add_child(light)
-	z_index = 4
+	# A spent road flare lies on the floor rather than floating above the cast.
+	z_index = -2
+	art = Sprite2D.new()
+	art.texture = load("res://assets/art/sprites/flare_road_burning.png") as Texture2D
+	art.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	art.scale = Vector2.ONE * 0.22
+	art.rotation = deg_to_rad(-28.0)
+	add_child(art)
 
 func _physics_process(delta: float) -> void:
 	if velocity.length() > 5.0:
@@ -39,6 +47,9 @@ func _physics_process(delta: float) -> void:
 	light.energy = 1.2 + randf() * 0.4
 	if life < 1.5:
 		light.energy *= life / 1.5
+	if art:
+		# Ember flicker stays local to the prop; the PointLight carries the room light.
+		art.modulate = Color(1.0, 0.82 + sin(life * 31.0) * 0.12, 0.72, 1.0)
 	if life <= 0.0:
 		queue_free()
 	queue_redraw()
@@ -46,6 +57,3 @@ func _physics_process(delta: float) -> void:
 func light_level_at(p: Vector2) -> float:
 	return clampf(1.0 - p.distance_to(global_position) / 110.0, 0.0, 1.0)
 
-func _draw() -> void:
-	draw_rect(Rect2(-3, -1, 6, 2), Color(0.8, 0.1, 0.1))
-	draw_circle(Vector2(3, 0), 1.5 + randf(), Color(1, 0.9, 0.6))

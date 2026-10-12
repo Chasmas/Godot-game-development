@@ -1,0 +1,24 @@
+{
+	"cast": "boss",
+	"clips": [
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "walk",
+			"worst_drift_px": 0.000884628214407712
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "run",
+			"worst_drift_px": 0.000882188265677541
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "sneak",
+			"worst_drift_px": 0.000663805403746665
+		}
+	],
+	"runtime_promoted": false
+}

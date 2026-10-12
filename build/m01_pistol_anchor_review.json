@@ -1,0 +1,7 @@
+{
+	"anchors": 2,
+	"grip_to_muzzle_metres": 0.178843528032303,
+	"laser_origin_error_metres": 0.0,
+	"runtime_promoted": false,
+	"scope": "Exported weapon anchors and laser source under rotated transform; not hand pose or barrel heading approval"
+}

@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "laundry_washer_bank.png",
+  "imagegen_reference": "res://assets/art/prerendered/m01_sunset_palms/staging/laundry_washer_v2/laundry_washer_imagegen_reference.png",
+  "production_method": "ImageGen prop reference plus Blender-modelled washer bank and lighting.",
+  "expected_count": 2,
+  "approval_scope": "M01 service-laundry visual replacement only; original Furniture collision remains authoritative."
+}

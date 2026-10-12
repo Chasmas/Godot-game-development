@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "vacancy_sign.png",
+  "scale": 0.34,
+  "expected_placements": 3,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_neon_vacancy_sign Decor sprites only; standing visual children retain anchors and existing light fixtures, adding no collision, navigation or interaction."
+}

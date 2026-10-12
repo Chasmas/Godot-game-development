@@ -12,6 +12,7 @@ persona = &"star"
 palette = "cass"
 move_speed = 118.0
 sprint_mult = 1.62
+sneak_mult = 0.376648
 playable_in_slice = true
 ability = &"spotlight"
 equipment = &"flare"

@@ -1,0 +1,10 @@
+00:00.391  blend            | Read blend: "C:\Users\Gil\Documents\GitHub\Hotshot-California\assets\art\prerendered\m01_sunset_palms\staging\room_101_v19\room_101.blend"
+C:\Users\Gil\Documents\GitHub\Hotshot-California\tools\art\decorate_m01_room_101.py:14: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+00:14.125  render           | Saved: 'C:\Users\Gil\Documents\GitHub\Hotshot-California\assets\art\prerendered\m01_sunset_palms\staging\room_101_v20\room_101_cutaway.png'
+Info: Saved as "room_101.blend"
+M01 ROOM101 DRESSING STUDY BUILT
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
+Error: Not freed memory blocks: 2, total unfreed memory 0.000046 MB

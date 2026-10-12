@@ -1,0 +1,53 @@
+00:01.343  blend            | Read blend: "C:\Users\Gil\Documents\GitHub\Hotshot-California\build\meshy_import\cass_red_rebel_weapon_combo_2\cass_meshy_weapon_combo_2_staging.blend"
+11:15:03 | INFO: Data are loaded, start creating Blender stuff
+11:15:03 | INFO: Blender create Mesh node Cube.043
+11:15:03 | INFO: Blender create Mesh node Cube.041
+11:15:03 | INFO: Blender create Mesh node Cube.001
+11:15:03 | INFO: Blender create Mesh node Cube.035
+11:15:03 | INFO: Blender create Mesh node Cube.002
+11:15:03 | INFO: Blender create Mesh node Cube.003
+11:15:03 | INFO: Blender create Mesh node Cube.004
+11:15:03 | INFO: Blender create Mesh node Cube.005
+11:15:03 | INFO: Blender create Mesh node Cube.006
+11:15:03 | INFO: Blender create Mesh node Cube.007
+11:15:03 | INFO: Blender create Mesh node Cube.008
+11:15:03 | INFO: Blender create Mesh node Cube.009
+11:15:03 | INFO: Blender create Mesh node Cube.010
+11:15:03 | INFO: Blender create Mesh node Cube.011
+11:15:03 | INFO: Blender create Mesh node Cube.019
+11:15:03 | INFO: Blender create Mesh node Cube.020
+11:15:03 | INFO: Blender create Mesh node Cube.021
+11:15:03 | INFO: Blender create Mesh node Cube.022
+11:15:03 | INFO: Blender create Mesh node Cube.023
+11:15:03 | INFO: Blender create Mesh node Cube.024
+11:15:03 | INFO: Blender create Mesh node Cube.025
+11:15:03 | INFO: Blender create Mesh node Cube.026
+11:15:03 | INFO: Blender create Mesh node Cube.027
+11:15:03 | INFO: Blender create Mesh node Open barrel tube
+11:15:03 | INFO: Blender create Mesh node Cube.036
+11:15:03 | INFO: Blender create Mesh node Cube.037
+11:15:03 | INFO: Blender create Mesh node Cube
+11:15:03 | INFO: Blender create Mesh node Cube.012
+11:15:03 | INFO: Blender create Mesh node Cube.013
+11:15:03 | INFO: Blender create Mesh node Cube.014
+11:15:03 | INFO: Blender create Mesh node Cube.015
+11:15:03 | INFO: Blender create Mesh node Cube.016
+11:15:03 | INFO: Blender create Mesh node Cube.017
+11:15:03 | INFO: Blender create Mesh node Cube.018
+11:15:03 | INFO: Blender create Mesh node Cube.028
+11:15:03 | INFO: Blender create Mesh node Cube.029
+11:15:03 | INFO: Blender create Mesh node Cube.030
+11:15:03 | INFO: Blender create Mesh node Cube.031
+11:15:03 | INFO: Blender create Mesh node Cube.032
+11:15:03 | INFO: Blender create Mesh node Cube.033
+11:15:03 | INFO: Blender create Mesh node Cube.034
+11:15:03 | INFO: Blender create Mesh node Cube.042
+11:15:03 | INFO: Blender create Mesh node Cube.040
+11:15:03 | INFO: Blender create Mesh node Cube.039
+11:15:03 | INFO: Blender create Mesh node Cube.038
+11:15:03 | INFO: glTF import finished in 0.05s
+Info: Saved as "cass_pistol_attachment_probe.blend"
+CASS_ATTACHMENT_PROBE [{'frame': 1, 'anchor_wrist_error_m': 2.9802322387695312e-08, 'wrist': [-0.26257941126823425, 0.3311077356338501, 0.8780926465988159]}, {'frame': 70, 'anchor_wrist_error_m': 2.9802322387695312e-08, 'wrist': [0.3282661736011505, -0.7035714983940125, 0.8945356011390686]}, {'frame': 136, 'anchor_wrist_error_m': 6.664001874625056e-08, 'wrist': [0.16454634070396423, -0.30958715081214905, 0.9240095019340515]}, {'frame': 205, 'anchor_wrist_error_m': 6.006850114687196e-08, 'wrist': [0.0630049780011177, -1.655988097190857, 0.6833887696266174]}, {'frame': 271, 'anchor_wrist_error_m': 0.0, 'wrist': [-0.2604619860649109, -0.645057737827301, 0.8756706714630127]}]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

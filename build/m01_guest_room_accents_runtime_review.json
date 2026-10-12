@@ -1,0 +1,488 @@
+{
+  "accents": [
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "clothes",
+      "position": [
+        185.863388061523,
+        41.5
+      ],
+      "source_kind": "clothes",
+      "visible_pixels": 1064
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        230.5,
+        55.6190032958984
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        89.5,
+        70.1615447998047
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "tray",
+      "position": [
+        89.5,
+        57.0592460632324
+      ],
+      "source_kind": "tray",
+      "visible_pixels": 718
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        408.873291015625,
+        41.5
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        266.5,
+        120.0
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "clothes",
+      "position": [
+        312.103393554688,
+        150.5
+      ],
+      "source_kind": "clothes",
+      "visible_pixels": 1064
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "clothes",
+      "position": [
+        838.5,
+        118.173027038574
+      ],
+      "source_kind": "clothes",
+      "visible_pixels": 1064
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        1043.5,
+        150.0
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        949.526550292969,
+        41.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        1002.75079345703,
+        41.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        327.118011474609,
+        441.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        423.0,
+        443.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        730.9755859375,
+        441.5
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        282.248260498047,
+        646.5
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "towel",
+      "position": [
+        423.038665771484,
+        646.5
+      ],
+      "source_kind": "towel",
+      "visible_pixels": 738
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        438.0,
+        587.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        838.0,
+        587.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "clothes",
+      "position": [
+        795.784606933594,
+        646.5
+      ],
+      "source_kind": "clothes",
+      "visible_pixels": 1064
+    }
+  ],
+  "bedside_lamps": [
+    [
+      104.0,
+      64.0
+    ],
+    [
+      824.0,
+      112.0
+    ],
+    [
+      776.0,
+      64.0
+    ],
+    [
+      168.0,
+      64.0
+    ],
+    [
+      120.0,
+      112.0
+    ],
+    [
+      232.0,
+      640.0
+    ],
+    [
+      808.0,
+      480.0
+    ],
+    [
+      776.0,
+      640.0
+    ]
+  ],
+  "botanical_wall_art": [
+    [
+      168.0,
+      23.0
+    ],
+    [
+      344.0,
+      23.0
+    ],
+    [
+      744.0,
+      23.0
+    ],
+    [
+      968.0,
+      23.0
+    ],
+    [
+      248.0,
+      423.0
+    ],
+    [
+      392.0,
+      423.0
+    ],
+    [
+      816.0,
+      425.5
+    ],
+    [
+      216.0,
+      567.0
+    ],
+    [
+      328.0,
+      569.5
+    ],
+    [
+      728.0,
+      567.0
+    ]
+  ],
+  "expected_bedside_lamps": 8,
+  "expected_guest_door_plaques": 3,
+  "expected_guest_entry_trims": 19,
+  "expected_guest_wall_ac_units": 8,
+  "guest_door_plaques": [
+    {
+      "position": [
+        136.0,
+        165.0
+      ],
+      "room_number": 101
+    },
+    {
+      "position": [
+        264.0,
+        501.0
+      ],
+      "room_number": 102
+    },
+    {
+      "position": [
+        296.0,
+        565.0
+      ],
+      "room_number": 103
+    }
+  ],
+  "guest_entry_trims": [
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        856.0,
+        48.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        248.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        424.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        632.0,
+        80.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        144.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        320.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        720.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        928.0,
+        168.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        312.0,
+        448.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        664.0,
+        448.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        224.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        368.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        736.0,
+        504.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        256.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        336.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        784.0,
+        568.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        456.0,
+        592.0
+      ]
+    },
+    {
+      "guest_room_side": 1.0,
+      "length_px": 32.0,
+      "position": [
+        664.0,
+        592.0
+      ]
+    },
+    {
+      "guest_room_side": -1.0,
+      "length_px": 32.0,
+      "position": [
+        312.0,
+        608.0
+      ]
+    }
+  ],
+  "guest_wall_ac_units": [
+    [
+      232.0,
+      27.0
+    ],
+    [
+      408.0,
+      27.0
+    ],
+    [
+      840.0,
+      27.0
+    ],
+    [
+      1048.0,
+      27.0
+    ],
+    [
+      296.0,
+      427.0
+    ],
+    [
+      440.0,
+      427.0
+    ],
+    [
+      840.0,
+      427.0
+    ],
+    [
+      840.0,
+      571.0
+    ]
+  ],
+  "passed": true,
+  "runtime_approved": true,
+  "scope": "Live M01 runtime capture. Generated props replace equivalent existing floor dressing only; native lamps, AC fixtures, door plaques and guest entry trims retain existing gameplay anchors and add no collision or navigation footprint."
+}

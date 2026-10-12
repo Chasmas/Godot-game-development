@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "pool_cooler.png",
+  "scale": 0.38,
+  "expected_placements": 2,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 hq_pool_cooler Decor sprites only; visual children add no collision, navigation or interaction."
+}

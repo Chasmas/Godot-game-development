@@ -1,0 +1,24 @@
+{
+	"cast": "buck",
+	"clips": [
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "walk",
+			"worst_drift_px": 0.0010122616076842
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "run",
+			"worst_drift_px": 0.00161617039702833
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "sneak",
+			"worst_drift_px": 0.000771609658841044
+		}
+	],
+	"runtime_promoted": false
+}

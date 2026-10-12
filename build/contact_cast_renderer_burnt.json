@@ -1,0 +1,24 @@
+{
+	"cast": "burnt",
+	"clips": [
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "walk",
+			"worst_drift_px": 0.000479465146781877
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "run",
+			"worst_drift_px": 0.000485810713144019
+		},
+		{
+			"aim_movement_pairs": 64,
+			"both_feet": true,
+			"gait": "sneak",
+			"worst_drift_px": 0.000521337031386793
+		}
+	],
+	"runtime_promoted": false
+}

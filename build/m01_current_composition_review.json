@@ -1,0 +1,107 @@
+{
+	"native_crt_anchors": [
+		{
+			"anchor": [
+				88.0,
+				148.600006103516
+			],
+			"source_alpha": 0.0,
+			"visible": true
+		},
+		{
+			"anchor": [
+				712.0,
+				52.5999984741211
+			],
+			"source_alpha": 0.0,
+			"visible": true
+		},
+		{
+			"anchor": [
+				360.0,
+				52.5999984741211
+			],
+			"source_alpha": 0.0,
+			"visible": true
+		}
+	],
+	"native_crt_count": 3,
+	"native_ground": {
+		"scale": [
+			0.25,
+			0.25
+		],
+		"sprite_count": 1,
+		"texture_size": [
+			4352.0,
+			3904.0
+		]
+	},
+	"room101_physics_furniture": [
+		{
+			"kind": "bed",
+			"name": "@StaticBody2D@1240",
+			"native_armchair": false,
+			"native_dresser": false,
+			"position": [
+				272.0,
+				464.0
+			]
+		},
+		{
+			"kind": "tv",
+			"name": "@StaticBody2D@1372",
+			"native_armchair": false,
+			"native_dresser": true,
+			"position": [
+				200.0,
+				440.0
+			]
+		},
+		{
+			"kind": null,
+			"name": "NativeNightstand_7",
+			"native_armchair": false,
+			"native_dresser": false,
+			"position": [
+				230.0,
+				440.0
+			]
+		},
+		{
+			"kind": null,
+			"name": "NativeNightstand_8",
+			"native_armchair": false,
+			"native_dresser": false,
+			"position": [
+				214.0,
+				488.0
+			]
+		},
+		{
+			"kind": null,
+			"name": "@StaticBody2D@1992",
+			"native_armchair": true,
+			"native_dresser": false,
+			"position": [
+				200.0,
+				471.680267333984
+			]
+		}
+	],
+	"scope": "Current live M01 composition inventory; count is descriptive and must not be confused with an approved layout.",
+	"source_crt_anchors": [
+		[
+			88.0,
+			148.600006103516
+		],
+		[
+			712.0,
+			52.5999984741211
+		],
+		[
+			360.0,
+			52.5999984741211
+		]
+	]
+}

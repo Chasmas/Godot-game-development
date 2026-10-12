@@ -1,0 +1,10 @@
+{
+  "runtime_approved": true,
+  "file": "bedside_lamp.png",
+  "source": "Generated three-quarter motel bedside lamp with shade, stem and walnut base, 2026-10-08",
+  "projection": "High three-quarter upright prop silhouette matched to the existing bedside-lamp footprint",
+  "scale": 0.375,
+  "expected_placements": 8,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 Decor sprites tagged motel_bedside_lamp only. Existing LightFixture nodes remain authoritative; visual overlay adds no collision, physics, navigation or interaction state."
+}

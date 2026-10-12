@@ -1,0 +1,10 @@
+{
+  "runtime_approved": true,
+  "file": "towel_cart_topdown.png",
+  "source": "Generated transparent overhead motel housekeeping cart, 2026-10-08",
+  "projection": "Strict overhead service-cart silhouette with folded towels, supplies and chrome frame",
+  "scale": 0.38,
+  "expected_placements": 8,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 Decor sprites tagged motel_towel_cart only. Visual overlay adds no collision, physics, navigation reservation or interaction state; legacy sprite is hidden but remains in the tree as an anchor."
+}

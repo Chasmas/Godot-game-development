@@ -5,8 +5,8 @@ from mathutils import Vector
 from bpy_extras.object_utils import world_to_camera_view
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'assets/art/prerendered/m01_sunset_palms/staging'
-OUT=BASE/'guest_room_camera_review_v1';OUT.mkdir(parents=True,exist_ok=True)
-bpy.ops.wm.open_mainfile(filepath=str(BASE/'guest_room_composition_v3/guest_room_composition.blend'))
+OUT=BASE/'guest_room_camera_review_v4';OUT.mkdir(parents=True,exist_ok=True)
+bpy.ops.wm.open_mainfile(filepath=str(BASE/'guest_room_composition_v10/guest_room_composition.blend'))
 scene=bpy.context.scene;camera=scene.camera
 scene.render.resolution_x=960;scene.render.resolution_y=720;scene.cycles.samples=24
 reviews=[]
@@ -23,5 +23,5 @@ for yaw in (0,30):
     scene.render.filepath=str(OUT/f'room_elevation50_yaw{yaw:02}.png')
     bpy.ops.render.render(write_still=True)
     reviews.append({'yaw_degrees':yaw,'elevation_degrees':50,'ground_projection_probes_px':points})
-(OUT/'projection_review.json').write_text(json.dumps({'runtime_approved':False,'views':reviews,'requirements':['Chosen yaw requires consistent world-to-screen mapping for floors, objects, characters, aim and collisions','Do not rotate or squash background alone','Check actor occlusion and clear door approaches in an actual gameplay prototype'],'scope':'Blender composition comparison only; does not demonstrate runtime camera compatibility'},indent=2)+'\n',encoding='utf-8')
+(OUT/'projection_review.json').write_text(json.dumps({'runtime_approved':False,'source_composition':'guest_room_composition_v10','views':reviews,'requirements':['Chosen yaw requires consistent world-to-screen mapping for floors, objects, characters, aim and collisions','Do not rotate or squash background alone','Check actor occlusion and clear bathroom and entry door approaches in an actual gameplay prototype'],'scope':'Blender composition comparison only; does not demonstrate runtime camera compatibility'},indent=2)+'\n',encoding='utf-8')
 print('ROOM CAMERA REVIEW: two rendered angles with measured ground projection probes')

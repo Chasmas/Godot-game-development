@@ -1,0 +1,420 @@
+{
+  "generated": "2026-10-09T11:05:28.9638106+01:00",
+  "scope": "24 promoted humanoid cast source folders; no runtime replacement",
+  "humanoids": [
+    {
+      "cast": "bellhop",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\bellhop\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\bellhop\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "biker",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\biker\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\biker\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "boss",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\boss\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\boss\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "buck",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\buck\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\buck\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "burnt",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\burnt\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\burnt\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "cass",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\cass\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\cass\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "civilian",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\civilian\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\civilian\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "cultist",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\cultist\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\cultist\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "demon",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\demon\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\demon\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "fireman",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\fireman\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\fireman\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "ghoul",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\ghoul\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\ghoul\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "guard",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\guard\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\guard\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "gunner",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\gunner\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\gunner\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "handler",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\handler\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\handler\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "heavy",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\heavy\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\heavy\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "hunter",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\hunter\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\hunter\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "riot",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\riot\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\riot\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "scout",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\scout\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\scout\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "scrapper",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\scrapper\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\scrapper\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "security",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\security\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\security\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "sniper",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\sniper\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\sniper\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "stagehand",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\stagehand\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\stagehand\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "welder",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\welder\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\welder\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    },
+    {
+      "cast": "zombie",
+      "model": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\zombie\\model.glb",
+      "meshy_rig": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\Artwork\\3d\\zombie\\rig_rigged_character_fbx_url.fbx",
+      "source_clips": [
+        "idle",
+        "walk",
+        "run",
+        "aim",
+        "melee",
+        "death",
+        "death_back",
+        "knocked",
+        "punch"
+      ],
+      "status": "queued_for_blender_weapon_and_motion_review"
+    }
+  ],
+  "quadrupeds": [
+    "doberman",
+    "hellhound",
+    "rottweiler",
+    "shepherd"
+  ]
+}

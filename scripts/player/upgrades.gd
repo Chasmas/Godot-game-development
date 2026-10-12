@@ -43,12 +43,14 @@ class Pickup extends Node2D:
 
 	func _ready() -> void:
 		add_to_group("interactable")
-		z_index = 2
+		# A case belongs on the floor with the rest of the room dressing; it
+		# should not overlay the character like a HUD icon.
+		z_index = 0
 		_t = randf() * 5.0
 		var l := PointLight2D.new()
 		l.texture = SpriteLib.light_texture(64)
-		l.texture_scale = 0.8
-		l.energy = 0.55
+		l.texture_scale = 0.42
+		l.energy = 0.24
 		l.color = Upgrades.def(upgrade_id).get("color", Color.WHITE)
 		l.range_item_cull_mask = 1
 		l.name = "Glow"
@@ -80,10 +82,9 @@ class Pickup extends Node2D:
 		var col: Color = d.color
 		var bob := sin(_t * 3.0) * 1.0
 		var ink := Color("0b0710")
-		# light cone rising from the case, like something precious inside
-		var beam := PackedVector2Array([Vector2(-6, -4 + bob), Vector2(6, -4 + bob), Vector2(9, -26 + bob), Vector2(-9, -26 + bob)])
-		draw_colored_polygon(beam, Color(col, 0.07 + 0.03 * sin(_t * 5.0)))
-		draw_arc(Vector2(0, bob), 10.0 + sin(_t * 4.0) * 1.0, 0, TAU, 20, Color(col, 0.35 + 0.2 * sin(_t * 5.0)), 1.2)
+		# A small marker makes it discoverable without turning the prop into a
+		# floating objective icon.
+		draw_circle(Vector2(0, bob), 7.5, Color(0, 0, 0, 0.18))
 		draw_set_transform(Vector2(1.5, 3.5), 0.0, Vector2(1.0, 0.5))
 		draw_circle(Vector2.ZERO, 7.0, Color(0, 0, 0, 0.3))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
@@ -97,18 +98,9 @@ class Pickup extends Node2D:
 		draw_rect(Rect2(-3, -7 + bob, 6, 1), Color(0.2, 0.2, 0.22))
 		draw_rect(Rect2(-6, -1 + bob, 12, 2), col)
 		draw_rect(Rect2(-1, -2 + bob, 2, 4), Color(0.95, 0.85, 0.4))
-		# hologram of what's inside, turning slowly above the case
-		var spin := cos(_t * 1.6)
-		var hc := Vector2(0, -19 + sin(_t * 2.2) * 1.5)
-		draw_set_transform(hc, 0.0, Vector2(maxf(absf(spin), 0.15), 1.0))
-		UpgradeIcon.badge(self, Vector2.ZERO, 8.0, col, _t, 0.8)
-		UpgradeIcon.draw(self, upgrade_id, Vector2.ZERO, 11.0, col, _t)
-		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-		# glints
-		for i in 3:
-			var k := fmod(_t * 0.7 + i * 0.33, 1.0)
-			var gp := Vector2(sin(i * 2.4 + _t) * 7.0, -6.0 - k * 22.0 + bob)
-			draw_rect(Rect2(gp, Vector2(1, 1)), Color(col.lightened(0.5), 1.0 - k))
+		var marker := Vector2(0, -10.0 + bob + sin(_t * 2.2) * 0.6)
+		draw_colored_polygon(PackedVector2Array([marker + Vector2(0, -2.5), marker + Vector2(2.5, 0), marker + Vector2(0, 2.5), marker + Vector2(-2.5, 0)]), col)
+		draw_circle(marker, 0.8, Color.WHITE)
 
 
 ## Laser sight: a thin red beam from the muzzle to whatever it hits.
@@ -119,6 +111,16 @@ class LaserBeam extends Node2D:
 		top_level = true
 	func _process(_d: float) -> void:
 		queue_redraw()
+	## Shared physical ray and paired visual endpoints for alternate renderers.
+	func sample_beam() -> Dictionary:
+		if player==null or not is_instance_valid(player) or not player.alive:return {}
+		var floor_from: Vector2=player.visual.muzzle_global()
+		var from: Vector2=player.visual.muzzle_tip_global()
+		var dir: Vector2=player.aim_dir if player.aim_dir!=Vector2.ZERO else Vector2.from_angle(player.visual.weapon_sprite.global_rotation)
+		var query := PhysicsRayQueryParameters2D.create(floor_from,floor_from+dir*420.0,Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.ENEMY | Layers.GLASS | Layers.DOWNED,[player.get_rid()])
+		var hit := get_world_2d().direct_space_state.intersect_ray(query)
+		var floor_to: Vector2=hit.position if not hit.is_empty() else floor_from+dir*420.0
+		return {"floor_from":floor_from,"floor_to":floor_to,"visual_from":from,"visual_to":from+(floor_to-floor_from),"hit":not hit.is_empty()}
 	func _draw() -> void:
 		if player == null or not is_instance_valid(player) or not player.alive:
 			return
@@ -130,24 +132,20 @@ class LaserBeam extends Node2D:
 		var ws: Sprite2D = player.visual.weapon_sprite
 		if not ws.visible or ws.texture == null:
 			return
-		var from: Vector2 = player.visual.muzzle_global()
-		# along the aim (where shots go), even while she runs facing elsewhere
-		var dir: Vector2 = player.aim_dir if player.aim_dir != Vector2.ZERO else Vector2.from_angle(ws.global_rotation)
-		var space := get_world_2d().direct_space_state
-		var q := PhysicsRayQueryParameters2D.create(from, from + dir * 420.0, Layers.WORLD | Layers.DOOR | Layers.PROP | Layers.ENEMY | Layers.GLASS | Layers.DOWNED, [player.get_rid()])
-		var hit := space.intersect_ray(q)
-		var to: Vector2 = hit.position if not hit.is_empty() else from + dir * 420.0
-		# traced along the floor (where shots fly), drawn at the gun's height
-		var lift: Vector2 = player.visual.muzzle_lift()
-		from += lift
-		to += lift
+		# The ray lives on the floor while the line is drawn at the barrel tip.
+		# Keep them paired through one shared delta so moving and aiming in
+		# different directions never separates the sight from the weapon.
+		var beam := sample_beam()
+		if beam.is_empty():return
+		var from: Vector2=beam.visual_from
+		var to: Vector2=beam.visual_to
 		var flick := 0.8 + 0.2 * sin(Time.get_ticks_msec() * 0.05)
 		# a hairline core with a faint haze, fading along its length
 		var mid := from.lerp(to, 0.6)
 		draw_line(from, to, Color(1.0, 0.1, 0.2, 0.22 * flick), 1.6)
 		draw_line(from, mid, Color(1.0, 0.35, 0.4, 0.95 * flick), 0.7)
 		draw_line(mid, to, Color(1.0, 0.35, 0.4, 0.6 * flick), 0.7)
-		if not hit.is_empty():
+		if beam.hit:
 			draw_circle(to, 1.4, Color(1, 0.2, 0.3, 0.35))
 			draw_circle(to, 0.6, Color(1, 0.85, 0.85, 0.95))
 

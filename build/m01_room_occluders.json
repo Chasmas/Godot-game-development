@@ -1,0 +1,7 @@
+{
+	"method": "local AABB broadphase followed by mesh triangle intersections",
+	"occluders": [
+		"Stationary walnut jamb"
+	],
+	"runtime_promoted": false
+}

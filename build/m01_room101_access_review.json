@@ -1,0 +1,27 @@
+{
+	"intact_window_blocks": true,
+	"routes": [
+		{
+			"clear": true,
+			"collider": "",
+			"collider_class": "",
+			"collider_parent": "",
+			"collider_position": "",
+			"route": "south_door"
+		},
+		{
+			"clear": true,
+			"collider": "",
+			"collider_class": "",
+			"collider_parent": "",
+			"collider_position": "",
+			"route": "east_door"
+		},
+		{
+			"clear": true,
+			"collider": "",
+			"route": "broken_window_dive_mask"
+		}
+	],
+	"scope": "Actual M01 Player geometry sweeps; dash mask only, no input/animation proof; new art not integrated"
+}

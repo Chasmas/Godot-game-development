@@ -1,0 +1,135 @@
+{
+	"rows": [
+		{
+			"all_obstacle_clearance_samples": 80,
+			"from": [
+				232.0,
+				520.0
+			],
+			"minimum_bed_gap_pixels": 9.0,
+			"path": [
+				[
+					248.0,
+					504.0
+				],
+				[
+					248.0,
+					488.0
+				],
+				[
+					264.0,
+					488.0
+				],
+				[
+					280.0,
+					488.0
+				],
+				[
+					296.0,
+					488.0
+				],
+				[
+					296.0,
+					472.0
+				],
+				[
+					312.0,
+					456.0
+				],
+				[
+					328.0,
+					456.0
+				]
+			],
+			"to": [
+				328.0,
+				456.0
+			],
+			"waypoints": 8
+		},
+		{
+			"all_obstacle_clearance_samples": 80,
+			"from": [
+				328.0,
+				456.0
+			],
+			"minimum_bed_gap_pixels": 9.0,
+			"path": [
+				[
+					312.0,
+					472.0
+				],
+				[
+					296.0,
+					472.0
+				],
+				[
+					296.0,
+					488.0
+				],
+				[
+					280.0,
+					488.0
+				],
+				[
+					264.0,
+					488.0
+				],
+				[
+					248.0,
+					488.0
+				],
+				[
+					232.0,
+					504.0
+				],
+				[
+					232.0,
+					520.0
+				]
+			],
+			"to": [
+				232.0,
+				520.0
+			],
+			"waypoints": 8
+		},
+		{
+			"all_obstacle_clearance_samples": 41,
+			"from": [
+				248.0,
+				464.0
+			],
+			"minimum_bed_gap_pixels": 9.0,
+			"path": [
+				[
+					248.0,
+					456.0
+				],
+				[
+					248.0,
+					440.0
+				],
+				[
+					264.0,
+					440.0
+				],
+				[
+					280.0,
+					440.0
+				],
+				[
+					296.0,
+					440.0
+				]
+			],
+			"to": [
+				296.0,
+				440.0
+			],
+			"waypoints": 5
+		}
+	],
+	"runtime_promoted": false,
+	"scope": "Actual M01 navigation paths and sampled bed clearance; not live enemy steering"
+}

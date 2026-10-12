@@ -1,0 +1,45 @@
+{
+  "actions": [
+    {
+      "name": "Armature|Casual_Walk",
+      "frame_range": [
+        1.0,
+        125.0
+      ]
+    },
+    {
+      "name": "Armature|Cautious_Crouch_Walk_Forward",
+      "frame_range": [
+        1.0,
+        35.0
+      ]
+    },
+    {
+      "name": "Armature|Run_02",
+      "frame_range": [
+        1.0,
+        22.0
+      ]
+    },
+    {
+      "name": "Armature|Walk_Backward_While_Shooting",
+      "frame_range": [
+        1.0,
+        39.0
+      ]
+    },
+    {
+      "name": "Armature|Walk_Forward_While_Shooting",
+      "frame_range": [
+        1.0,
+        99.0
+      ]
+    }
+  ],
+  "armatures": [
+    {
+      "name": "Armature",
+      "bones": 24
+    }
+  ]
+}

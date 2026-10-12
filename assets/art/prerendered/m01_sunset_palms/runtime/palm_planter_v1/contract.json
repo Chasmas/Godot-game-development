@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "palm_planter.png",
+  "scale": 0.38,
+  "expected_placements": 4,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_palm_planter Decor sprites only; standing visual children retain each authored anchor and add no collision, navigation or interaction."
+}

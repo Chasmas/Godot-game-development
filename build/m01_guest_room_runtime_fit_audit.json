@@ -1,0 +1,280 @@
+{
+  "passed": true,
+  "runtime_approved": false,
+  "scope": "Maps existing M01 bed and armchair review positions to the authored motel rooms. It validates preservation targets only; it does not install guest_room_composition_v10.",
+  "guest_rooms": [
+    {
+      "room": 1,
+      "bounds_cells": [
+        5,
+        2,
+        14,
+        9
+      ],
+      "floor_cells": 80,
+      "bed_positions_px": [
+        [
+          128.0,
+          64.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          88.0,
+          46.0
+        ],
+        [
+          96.0,
+          112.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 2
+    },
+    {
+      "room": 2,
+      "bounds_cells": [
+        16,
+        2,
+        25,
+        9
+      ],
+      "floor_cells": 80,
+      "bed_positions_px": [
+        [
+          384.0,
+          128.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          264.0,
+          46.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 3,
+      "bounds_cells": [
+        40,
+        2,
+        52,
+        9
+      ],
+      "floor_cells": 104,
+      "bed_positions_px": [
+        [
+          800.0,
+          64.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          648.0,
+          46.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 4,
+      "bounds_cells": [
+        54,
+        2,
+        65,
+        9
+      ],
+      "floor_cells": 96,
+      "bed_positions_px": [
+        [
+          912.0,
+          64.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          894.0,
+          54.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 5,
+      "bounds_cells": [
+        11,
+        27,
+        18,
+        30
+      ],
+      "floor_cells": 32,
+      "bed_positions_px": [
+        [
+          272.0,
+          464.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          184.0,
+          446.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 6,
+      "bounds_cells": [
+        20,
+        27,
+        27,
+        30
+      ],
+      "floor_cells": 32,
+      "bed_positions_px": [
+        [
+          352.0,
+          480.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          440.0,
+          446.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 7,
+      "bounds_cells": [
+        42,
+        27,
+        52,
+        30
+      ],
+      "floor_cells": 44,
+      "bed_positions_px": [
+        [
+          816.0,
+          448.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          702.0,
+          450.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 8,
+      "bounds_cells": [
+        11,
+        36,
+        18,
+        40
+      ],
+      "floor_cells": 40,
+      "bed_positions_px": [
+        [
+          272.0,
+          624.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          184.0,
+          590.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 9,
+      "bounds_cells": [
+        20,
+        36,
+        27,
+        40
+      ],
+      "floor_cells": 40,
+      "bed_positions_px": [
+        [
+          336.0,
+          592.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          328.0,
+          648.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    },
+    {
+      "room": 10,
+      "bounds_cells": [
+        42,
+        36,
+        52,
+        40
+      ],
+      "floor_cells": 55,
+      "bed_positions_px": [
+        [
+          800.0,
+          624.0
+        ]
+      ],
+      "native_chair_positions_px": [
+        [
+          702.0,
+          590.0
+        ]
+      ],
+      "bed_body_count": 1,
+      "chair_count": 1
+    }
+  ],
+  "preservation_contract": {
+    "bed_bodies": "Keep all ten existing Furniture bodies, collision shapes and navigation behaviour.",
+    "woven_rugs": "Keep all ten native woven rugs as walkable in-room dressing; rerun alpha-projection validation after map or placement changes.",
+    "armchairs": "Keep the eleven reviewed native armchair placements or re-run physical, door-arc and steering reviews.",
+    "projection": "Adapt staging art to the exact gameplay camera; do not rotate or squash a background independently."
+  },
+  "promotion_blockers": [
+    "Adapt to exact gameplay projection and room geometry",
+    "Check actor occlusion and clear bathroom and entry door approaches in an actual gameplay prototype",
+    "Chosen yaw requires consistent world-to-screen mapping for floors, objects, characters, aim and collisions",
+    "Do not rotate or squash background alone",
+    "Reference-quality textile and botanical artwork refinement",
+    "Validate collisions, door clearance and actor placement"
+  ],
+  "native_rug_validation": {
+    "count": 10,
+    "projected_alpha_pixels_outside_rooms": 0
+  },
+  "runtime_visual_coverage": {
+    "beds": 10,
+    "native_armchairs": 11,
+    "native_rugs": 10,
+    "native_nightstands": 13,
+    "native_dressers": 7,
+    "room_story_accents": 19,
+    "botanical_wall_lithographs": 10,
+    "guest_door_transition_trims": 19,
+    "guest_facing_curtained_windows": 12
+  }
+}

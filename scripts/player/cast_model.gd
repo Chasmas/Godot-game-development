@@ -50,15 +50,20 @@ var roll_mode := 0                          ## set by CharacterVisual: 0 forward
 ## Meshy's walk ~1.4 m/s, run ~3.6 m/s, sneak ~0.9 m/s.
 # Calibrated to the game's world units. The old low values made the imported
 # clips run at 3–4x speed, which read as skating and made crouch movement pop.
-const NATIVE_SPEED := {"walk": 92.0, "run": 168.0, "sneak": 58.0}
+const NATIVE_SPEED := {"walk": 70.0, "run": 128.0, "sneak": 44.0}
+var _contact_native_speed: Dictionary = {}
+var _contact_neutral: Dictionary = {}
 var _body_angle := 0.0
 var _body_init := false
 var _progress := 0.0
+var _crouch_weapon_weight := 0.0
+var crouch_pistol_pose := false
 var _driven_sample := false
 var _stale_frames := 0
 var _origin := Vector2.ZERO
 var _look_id := ""
 var _procedural_rotations: Dictionary = {}
+var _procedural_positions: Dictionary = {}
 
 func _rotate_pose_bone(bone: int, offset: Quaternion) -> void:
 	if not _procedural_rotations.has(bone):
@@ -82,6 +87,7 @@ static func create(id: String) -> CastSprite:
 
 var _activity_grips: Array = []
 var _drink_prop: Node3D
+var _smoke_prop: Node3D
 var _held_pistols: Array[Node3D] = []
 var _held_grips: Array = []
 var _magazine_parts: Array = [[], []]
@@ -123,7 +129,7 @@ func update_dual_pistols(active: bool, recoil := Vector2.ZERO) -> void:
 		var hand := _skeleton.global_transform * _skeleton.get_bone_global_pose(_hand_bones[side])
 		var axes := hand.basis.orthonormalized()
 		var basis := Basis(axes.y, axes.x, -axes.z) if side == 0 else Basis(axes.y, -axes.x, axes.z)
-		_held_pistols[side].global_transform = Transform3D(basis, hand.origin + axes.y * (0.06 - recoil[side] / 16.0) + axes.z * 0.039)
+		_held_pistols[side].global_transform = Transform3D(basis.scaled(Vector3.ONE * .9), hand.origin + axes.y * (0.06 - recoil[side] / 16.0) + axes.z * 0.039)
 		_held_pistols[side].visible = active
 		var extraction := 0.0
 		if active and clip == "reload_dual":
@@ -138,7 +144,11 @@ func native_pistol_points(left := false) -> PackedVector2Array:
 	var side := 1 if left else 0
 	if _held_pistols.size() <= side or not _held_pistols[side].visible:
 		return PackedVector2Array()
-	var tip := _held_pistols[side].to_global(Vector3(0.169, 0.055, 0))
+	# The Blender prop owns its muzzle transform.  Visual flash, laser and
+	# physical projectile all query this same point; never infer a barrel tip
+	# from a model-space magic number after a weapon is re-exported.
+	var muzzle := _held_pistols[side].find_child("Muzzle", true, false) as Node3D
+	var tip := muzzle.global_position if muzzle else _held_pistols[side].to_global(Vector3(0.169, 0.055, 0))
 	var floor := Vector3(tip.x, 0, tip.z)
 	return PackedVector2Array([
 		((_camera.unproject_position(tip) - _origin) * world_scale).rotated(-_facing_angle),
@@ -184,9 +194,41 @@ func _update_drink_prop() -> void:
 	var axes := hand.basis.orthonormalized()
 	_drink_prop.global_transform = Transform3D(Basis(axes.y, axes.x, -axes.z), hand.origin - axes.x * .0575 + axes.y * .09 - axes.z * .041)
 
+func _update_smoke_prop() -> void:
+	if _smoke_prop==null and clip=="smoke":
+		_smoke_prop=Node3D.new()
+		_smoke_prop.name="HandCigarette"
+		_viewport.add_child(_smoke_prop)
+		for part in [[.07,.035,Color("e9dfce")],[.02,-.01,Color("a66b37")],[.003,.0715,Color("ef431b")]]:
+			var piece:=MeshInstance3D.new()
+			var cylinder:=CylinderMesh.new()
+			cylinder.top_radius=.004
+			cylinder.bottom_radius=.004
+			cylinder.height=part[0]
+			cylinder.radial_segments=8
+			var surface:=StandardMaterial3D.new()
+			surface.albedo_color=part[2]
+			surface.roughness=.9
+			if part[0]<.01:
+				surface.emission_enabled=true
+				surface.emission=part[2]
+			cylinder.material=surface
+			piece.mesh=cylinder
+			piece.position.y=part[1]
+			_smoke_prop.add_child(piece)
+	if _smoke_prop==null:return
+	_smoke_prop.visible=clip=="smoke"
+	if not _smoke_prop.visible:return
+	var hand:=_skeleton.global_transform*_skeleton.get_bone_global_pose(_hand_bones[0])
+	var axes:=hand.basis.orthonormalized()
+	_smoke_prop.global_transform=Transform3D(axes,hand.origin-axes.x*.075+axes.z*.015)
+
 func _cache_activity_morphs() -> void:
 	_activity_grips.clear()
 	for mesh in _model.find_children("*", "MeshInstance3D", true, false):
+		# Imported bind-pose bounds do not follow the source clip's root travel.
+		# Recentring the skeleton can otherwise cull a visibly in-frame roll.
+		mesh.extra_cull_margin = maxf(mesh.extra_cull_margin, 4.0)
 		var index: int = mesh.find_blend_shape_by_name("CanGrip")
 		if index >= 0:
 			_activity_grips.append([mesh, index])
@@ -269,6 +311,39 @@ func _ready() -> void:
 	texture = _viewport.get_texture()
 	_origin = _camera.unproject_position(Vector3.ZERO)
 	offset = Vector2(PX * 0.5, PX * 0.5) - _origin
+	var contact_path:="res://assets/art/locomotion3d/%s.res" % _look_id
+	if ResourceLoader.exists(contact_path):
+		var contact:=load(contact_path) as AnimationLibrary
+		if contact!=null and bool(contact.get_meta("runtime_approved",false)):
+			apply_contact_locomotion(contact)
+
+func apply_contact_locomotion(contact_library: AnimationLibrary) -> void:
+	assert(contact_library!=null and contact_library.has_meta("native_speeds"))
+	_contact_native_speed=contact_library.get_meta("native_speeds").duplicate()
+	# Imported libraries can be shared by actors. Keep replacements per instance.
+	var original_library := _player.get_animation_library("").duplicate(true) as AnimationLibrary
+	_player.remove_animation_library("")
+	for name in contact_library.get_animation_list():
+		if original_library.has_animation(name):original_library.remove_animation(name)
+		original_library.add_animation(name,contact_library.get_animation(name))
+		clips[name]=true
+	_player.add_animation_library("",original_library)
+	_contact_neutral.clear()
+	var stance: Dictionary=contact_library.get_meta("stance_fractions",{})
+	for gait in _contact_native_speed:
+		var neutral: Array=[]
+		var animation:=_player.get_animation(gait)
+		_player.play(gait,0)
+		for side in 2:
+			var time:=fposmod(float(stance.get(gait,.6))*.5-side*.5,1.0)*animation.length
+			_player.seek(time,true)
+			_player.advance(.000001)
+			_skeleton.force_update_all_bone_transforms()
+			var foot:=_skeleton.find_bone("LeftFoot" if side==0 else "RightFoot")
+			neutral.append(_model.to_local(_skeleton.to_global(_skeleton.get_bone_global_pose(foot).origin)))
+		_contact_neutral[gait]=neutral
+	_player.play("idle",0)
+	_player.seek(0,true)
 
 func _notification(what: int) -> void:
 	# a model never staged (configure failed, or freed before _ready) is orphaned
@@ -321,7 +396,14 @@ func _bone(names: Array) -> int:
 	return -1
 
 func play_sample(name: String, delta: float, progress := -1.0) -> void:
-	name = _available(name)
+	# The imported roll moves its skeleton root several metres through the
+	# source scene. At gameplay scale that makes Cass vanish mid-dodge even
+	# though her CharacterBody remains in the right place. Sample a low,
+	# planted authored pose instead, then let the explicit roll transform own
+	# the tumble. This keeps the silhouette inside the camera throughout the
+	# dodge and never changes its movement/collision timing.
+	var is_roll := name == "roll" and progress >= 0.0
+	name = _available("sneak" if is_roll else name)
 	# Grip shapes belong to the resolved activity, never to the actor's next
 	# combat pose. Existing models without these shapes are unaffected.
 	for pair in _activity_grips:
@@ -335,6 +417,9 @@ func play_sample(name: String, delta: float, progress := -1.0) -> void:
 	for bone in _procedural_rotations:
 		_skeleton.set_bone_pose_rotation(bone, _procedural_rotations[bone])
 	_procedural_rotations.clear()
+	for bone in _procedural_positions:
+		_skeleton.set_bone_pose_position(bone,_procedural_positions[bone])
+	_procedural_positions.clear()
 	var parent_2d := get_parent() as Node2D
 	_facing_angle = parent_2d.global_rotation if parent_2d else 0.0
 	global_rotation = 0.0
@@ -343,23 +428,39 @@ func play_sample(name: String, delta: float, progress := -1.0) -> void:
 	# other way, the stride plays backwards) so the spine never twists too far.
 	var body := _facing_angle
 	var backwards := false
+	var contact_base:=name.trim_prefix("armed_").trim_prefix("dual_").trim_prefix("melee_")
+	# Locomotion owns the hips and legs.  The previous armed-contact path left
+	# the hips facing the aim and pulled each foot back toward the travel vector
+	# with a two-bone IK pass.  At large aim offsets that made knees fold through
+	# the body.  Let the lower body follow actual displacement in every gait and
+	# use the authored spine twist below for aiming instead.
 	if moving and progress < 0.0:
 		body = move_angle
 		if absf(angle_difference(move_angle, _facing_angle)) > deg_to_rad(100.0):
 			body = move_angle + PI
 			backwards = true
-	_body_angle = lerp_angle(_body_angle, body, 1.0 - exp(-maxf(delta, 0.0) * 14.0)) if _body_init else body
+	# Locomotion must face the actual displacement immediately. Smoothing the
+	# legs through a turn while physics already moves sideways creates skating.
+	_body_angle = body
 	_body_init = true
 	if OS.get_environment("CAST_DEBUG") == "1":
 		print("cast ", clip, " moving=", moving, " move=", snappedf(move_angle, 0.01), " aim=", snappedf(_facing_angle, 0.01), " body=", snappedf(_body_angle, 0.01), " spine=", _spine)
 	# the model faces +Z; game angle 0 is screen right (+X), PI/2 screen down (+Z)
 	_model.rotation.y = PI * 0.5 - _body_angle
 	if clip != name:
+		var previous_gait := clip.trim_prefix("armed_").trim_prefix("dual_").trim_prefix("melee_")
+		var next_gait := name.trim_prefix("armed_").trim_prefix("dual_").trim_prefix("melee_")
+		var keep_stride := progress < 0.0 and previous_gait in ["walk", "run", "sneak"] and next_gait in ["walk", "run", "sneak"]
+		var stride_phase := 0.0
+		if keep_stride:
+			stride_phase = fposmod(_player.current_animation_position / maxf(_player.get_animation(clip).length, 0.001), 1.0)
 		clip = name
 		clock = 0.0
 		# Driven attacks seek directly to their pose; advancing only 1 ms below
 		# would otherwise stretch the blend across most of the whole attack.
 		_player.play(name, 0.0 if progress >= 0.0 else BLEND)
+		if keep_stride:
+			_player.seek(stride_phase * _player.get_animation(name).length, false)
 	else:
 		clock += delta
 		if progress >= 0.0 and not _driven_sample:
@@ -384,8 +485,15 @@ func play_sample(name: String, delta: float, progress := -1.0) -> void:
 		var rate := 1.0
 		var base := name.trim_prefix("armed_").trim_prefix("dual_").trim_prefix("melee_")
 		if moving and NATIVE_SPEED.has(base):
-			rate = clampf(move_speed / float(NATIVE_SPEED[base]), 0.0, 2.0)
+			if _contact_native_speed.has(base):
+				rate=maxf(move_speed/float(_contact_native_speed[base]),0.0)
+			else:
+				rate = clampf(move_speed / float(NATIVE_SPEED[base]), 0.0, 2.0)
 		_player.advance((-delta if backwards else delta) * rate)
+	var crouch_weapon := crouch_pistol_pose and _look_id == "cass" and name == "armed_sneak"
+	_crouch_weapon_weight = move_toward(_crouch_weapon_weight, 1.0 if crouch_weapon else 0.0, delta * 10.0)
+	if _crouch_weapon_weight > 0.0 and progress < 0.0:
+		preload("res://scripts/player/crouch_weapon_pose.gd").apply(self, _crouch_weapon_weight)
 	# the twist, spread up the spine (after the clip has posed it this frame)
 	var twist := -angle_difference(_body_angle, _facing_angle)
 	if twist != 0.0:
@@ -415,7 +523,7 @@ func play_sample(name: String, delta: float, progress := -1.0) -> void:
 	_model.rotation.x = 0.0
 	_model.rotation.z = 0.0
 	_model.position.y = 0.0
-	if clip == "roll" and progress >= 0.0:
+	if is_roll:
 		var e := _progress * _progress * (3.0 - 2.0 * _progress)
 		match roll_mode:
 			0: _model.rotation.x = TAU * e
@@ -426,18 +534,23 @@ func play_sample(name: String, delta: float, progress := -1.0) -> void:
 		var pivot := Vector3(0.0, 0.55 - 0.15 * tuck, 0.0)
 		var spun := Basis.from_euler(_model.rotation) * pivot
 		_model.position.y = pivot.y - spun.y - 0.35 * tuck
-		# tucked into a ball: knees to the chest, back rounded
-		var t2 := clampf(tuck * 1.6, 0.0, 1.0)
-		for pair in [[_legs[0], -1.75], [_legs[1], 2.1], [_legs[2], -1.75], [_legs[3], 2.1]]:
-			if pair[0] >= 0:
-				_rotate_pose_bone(pair[0], Quaternion(Vector3.RIGHT, float(pair[1]) * t2))
-		for b in _spine:
-			_rotate_pose_bone(b, Quaternion(Vector3.RIGHT, 0.45 * t2))
+		# Keep the authored limb pose intact during the dodge.  The old procedural
+		# tuck bent thighs, shins and spine independently after the source pose had
+		# been sampled; it was the cause of the visibly broken knees and back.
+		_skeleton.force_update_all_bone_transforms()
+		var lowest := INF
+		for bone in _skeleton.get_bone_count():
+			lowest = minf(lowest, _skeleton.to_global(_skeleton.get_bone_global_pose(bone).origin).y)
+		# The rotating source pose must rest on the floor, not sink below the
+		# sprite viewport while its hips turn upside down.
+		if OS.get_environment("CAST_ROLL_GROUND_CANDIDATE") == "1":
+			_model.position.y += 0.06 - lowest
 	# keep the hips over the ground point, as the baked renders follow them
 	if _hips >= 0:
 		var hips := _skeleton.to_global(_skeleton.get_bone_global_pose(_hips).origin)
 		_model.position -= Vector3(hips.x, 0.0, hips.z)
 	_update_drink_prop()
+	_update_smoke_prop()
 
 func grip(left := false) -> Vector2:
 	var bone: int = _hand_bones[1 if left else 0]
@@ -488,6 +601,12 @@ func weapon_angle() -> float:
 			var k := smoothstep(keys[i].x, keys[i + 1].x, _progress)
 			return lerpf(keys[i].y, keys[i + 1].y, k) - 0.59
 	return 0.0
+
+func firearm_projection() -> Vector2:
+	# Project the barrel on the same camera plane as the hand and body.
+	var direction := Vector3(cos(_facing_angle), 0.0, sin(_facing_angle))
+	var at := _skeleton.to_global(_skeleton.get_bone_global_pose(_hand_bones[0]).origin)
+	return ((_camera.unproject_position(at + direction) - _camera.unproject_position(at)) / (PX / METERS)).rotated(-_facing_angle)
 
 static func _outline_material(lift := 0.88) -> ShaderMaterial:
 	var shader := Shader.new()

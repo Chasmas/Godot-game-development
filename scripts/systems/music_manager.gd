@@ -105,6 +105,11 @@ func _switch(id: String, fade: float, resume: bool) -> void:
 			var s: AudioStream = load(path)
 			if s is AudioStreamOggVorbis:
 				s.loop = true
+			elif s is AudioStreamMP3:
+				# A few authored menu/story tracks are MP3s.  They need the same
+				# persistent score behaviour as OGG layers instead of stopping at
+				# the end of their first pass.
+				s.loop = true
 			elif s is AudioStreamWAV:
 				s.loop_mode = AudioStreamWAV.LOOP_FORWARD
 			p.stream = s
@@ -199,7 +204,13 @@ func playback_length() -> float:
 func seek_playback(seconds: float) -> void:
 	if _players.is_empty() or not _players[0].playing:
 		return
-	_players[0].seek(maxf(0.0, seconds))
+	# The jukebox exposes the first (audible) stem, but a score can contain
+	# several equally long layers. Seeking only that stem desynchronised their
+	# beat grid until the periodic drift repair caught up.
+	var at := maxf(0.0, seconds)
+	for player in _players:
+		if is_instance_valid(player) and player.playing:
+			player.seek(at)
 
 ## A boss's later phase: its own collapse theme ("phase2" in music.json),
 ## crossfaded in. Safe to call every frame.

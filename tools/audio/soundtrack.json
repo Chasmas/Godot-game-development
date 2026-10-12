@@ -62,11 +62,11 @@
       ]
     },
     "combat_motel": {
-      "title": "Checkout Time — Neon Breach",
+      "title": "Checkout Time \u2014 Neon Breach",
       "family": "combat",
       "chunks": [
         {
-          "text": "[Lobby breach] start at the exact first millisecond of the front door breach: crushing TR-909 kick, claustrophobic dry snare, distorted electric neon buzz as the bass, immediate impact, no intro",
+          "text": "Immediate analog kick, dry snare and distorted neon bass.",
           "sec": 8,
           "styles": [
             "dark synthwave",
@@ -88,7 +88,7 @@
           ]
         },
         {
-          "text": "[Corridor clearance] minimal high synth hook with short slapback delay ricocheting off narrow motel walls, sharp kick and snare cadence for the first shots and melee hits, tense melodic motif, no linear loop",
+          "text": "High synth hook with short slapback delay, sharp kick and tense minor motif.",
           "sec": 27,
           "styles": [
             "dark synthwave",
@@ -110,7 +110,7 @@
           ]
         },
         {
-          "text": "[Room invasion] open hi-hats accelerate the perception of motion, violent sidechain pumping crushes pads on every kick, psychotic trance-like pressure while the melody mutates and never repeats the opening section",
+          "text": "Open hi-hats, compressed analog pads and a changing dark melody.",
           "sec": 30,
           "styles": [
             "aggressive synthwave",
@@ -133,7 +133,7 @@
           ]
         },
         {
-          "text": "[Dirty bathroom] bass descends into a heavier minor register, metallic percussion vibrates like stressed pipes, the high melody rapidly modulates and loses control, ominous and unstable but still instrumental",
+          "text": "Heavy descending bass, metallic percussion and unstable minor harmony.",
           "sec": 35,
           "styles": [
             "ominous synthwave",
@@ -155,7 +155,7 @@
           ]
         },
         {
-          "text": "[Final massacre] every layer collides: distorted counter-rhythm synth pushes against the beat, saturated analog peak, maximum adrenaline, dense but articulate climax before the area goes quiet",
+          "text": "Dense analog counter-rhythm, saturated climax and clean loop ending.",
           "sec": 35,
           "styles": [
             "violent dark synthwave",
@@ -182,46 +182,40 @@
       "family": "stealth",
       "chunks": [
         {
-          "text": "[Drift] a low drone, a slow sub-bass pulse like a heartbeat, small percussive clicks, distant fluorescent hum",
+          "text": "Syncopated analog bass, tight drum-machine groove, smoky electric piano motif.",
           "sec": 30,
           "styles": [
-            "dark ambient",
-            "minimal",
-            "suspense",
+            "noir synthwave",
             "100 BPM",
             "E minor",
-            "sub bass pulse",
-            "analog drone",
             "instrumental",
+            "syncopated analog bass",
+            "restrained drum machine",
+            "electric piano",
+            "memorable dark melody",
             "cassette texture"
           ]
         },
         {
-          "text": "[Watch] fragments of the five-note motif on a muted bell, far away, a reversed sound now and then, a ticking hi-hat",
+          "text": "Interlocking muted synth arpeggio, crisp rimshots, haunting electric piano refrain.",
           "sec": 30,
           "styles": [
-            "stealth",
-            "tension",
-            "sparse",
-            "muted FM bell",
-            "reversed textures",
-            "ticking hi-hat"
-          ],
-          "ref": {
-            "track": "main_theme",
-            "start": 4,
-            "end": 24,
-            "strength": "low"
-          }
+            "noir synthwave",
+            "instrumental",
+            "muted synth arpeggio",
+            "crisp rimshot groove",
+            "electric piano motif",
+            "subtle suspense"
+          ]
         },
         {
-          "text": "[Closer] the pulse tightens, a filtered analog sequence creeps in, tension that never resolves, loop-friendly",
+          "text": "Warm bass groove, restrained analog lead melody, suspended minor harmony.",
           "sec": 30,
           "styles": [
-            "suspense",
-            "analog sequence",
-            "filter sweep",
-            "creeping",
+            "instrumental",
+            "analog bass groove",
+            "haunting melodic synth",
+            "restrained energy",
             "loopable"
           ]
         }
@@ -851,15 +845,17 @@
           "text": "[Lullaby] haunted luxury-villa synthwave: a warped music-box fragment, slow analog bass pulse, soft gated snare and moonlit Juno pads",
           "sec": 28,
           "styles": [
-            "dark dream synthwave",
-            "104 BPM",
+            "dark nightmare synthwave",
+            "132 BPM",
             "D minor",
             "music box",
             "analog bass",
             "Juno pads",
             "gated snare",
             "instrumental",
-            "cinematic"
+            "cinematic",
+            "driving",
+            "aggressive"
           ],
           "avoid": [
             "hard trance",
@@ -874,11 +870,11 @@
           "text": "[Awake] a detuned lead turns the lullaby into a fast, memorable minor-key hook; toms and glassy arpeggios add pressure without becoming rave music",
           "sec": 46,
           "styles": [
-            "dark synthwave",
+            "dark aggressive synthwave",
             "detuned analog lead",
             "memorable hook",
             "arpeggiator",
-            "cinematic drums",
+            "relentless cinematic drums",
             "tape saturation",
             "instrumental"
           ],
@@ -894,10 +890,10 @@
           "text": "[Night bloom] the drums fall to a heartbeat and the pad blooms, then a powerful return to the synthwave hook closes cleanly for looping",
           "sec": 40,
           "styles": [
-            "nightmare synthwave",
+            "intense nightmare synthwave",
             "heartbeat breakdown",
             "wide analog pads",
-            "dramatic re-entry",
+            "violent dramatic re-entry",
             "loopable",
             "instrumental"
           ],
@@ -1947,7 +1943,7 @@
       ]
     },
     "trailer_synthwave": {
-      "title": "Hotshot California — Trailer Synthwave",
+      "title": "Hotshot California \u2014 Trailer Synthwave",
       "family": "trailer",
       "instrumental": true,
       "chunks": [

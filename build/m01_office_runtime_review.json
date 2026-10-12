@@ -1,0 +1,26 @@
+{
+  "camera_world_position": [
+    944,
+    344
+  ],
+  "camera_zoom": 2.4,
+  "counter_bodies": 2,
+  "counter_layers": [
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    },
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    }
+  ],
+  "native_counter_visuals": 2,
+  "native_office_desk_visuals": 1,
+  "office_desk_bodies": 1,
+  "passed": true,
+  "preserved_counter_collision_bodies": 2,
+  "preserved_desk_collision_bodies": 1,
+  "reception_wall_details_present": true,
+  "scope": "Live M01 manager office camera; no staging layer loaded."
+}

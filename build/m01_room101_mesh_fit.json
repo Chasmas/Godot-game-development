@@ -1,0 +1,103 @@
+{
+  "runtime_approved": false,
+  "source": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\assets\\art\\prerendered\\m01_sunset_palms\\staging\\room_101_v19\\room_101.blend",
+  "scope": "Whole hierarchy visual AABBs, including lamps; not collision geometry",
+  "placements": [
+    {
+      "name": "motel_bed101 placement",
+      "centre_pixels": [
+        272.0,
+        464.0
+      ],
+      "size_pixels": [
+        25.422637939453125,
+        31.999998092651367
+      ],
+      "bounds_pixels": [
+        259.28868103027344,
+        448.00000190734863,
+        284.71131896972656,
+        480.0
+      ]
+    },
+    {
+      "name": "armchair_runtime_review101 placement",
+      "centre_pixels": [
+        200.0,
+        472.08350372314453
+      ],
+      "size_pixels": [
+        11.680000305175781,
+        11.0465087890625
+      ],
+      "bounds_pixels": [
+        194.1599998474121,
+        466.5602493286133,
+        205.8400001525879,
+        477.6067581176758
+      ]
+    },
+    {
+      "name": "tv_dresser101 placement",
+      "centre_pixels": [
+        200.0,
+        440.0
+      ],
+      "size_pixels": [
+        12.799999237060547,
+        4.31407356262207
+      ],
+      "bounds_pixels": [
+        193.60000038146973,
+        437.84296321868896,
+        206.39999961853027,
+        442.15703678131104
+      ]
+    },
+    {
+      "name": "nightstand101 placement",
+      "centre_pixels": [
+        230.0,
+        440.0
+      ],
+      "size_pixels": [
+        9.647491455078125,
+        8.0
+      ],
+      "bounds_pixels": [
+        225.17625427246094,
+        436.0,
+        234.82374572753906,
+        444.0
+      ]
+    },
+    {
+      "name": "nightstand101 placement.001",
+      "centre_pixels": [
+        214.0,
+        488.0
+      ],
+      "size_pixels": [
+        9.647491455078125,
+        8.0
+      ],
+      "bounds_pixels": [
+        209.17625427246094,
+        484.0,
+        218.82374572753906,
+        492.0
+      ]
+    }
+  ],
+  "visual_aabb_overlaps": [],
+  "screen_facing_blender": [
+    0.0,
+    -1.0,
+    0.0
+  ],
+  "screen_centre_blender": [
+    1.393827199935913,
+    -0.573580265045166,
+    0.7713580131530762
+  ]
+}

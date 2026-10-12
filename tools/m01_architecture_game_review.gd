@@ -212,7 +212,10 @@ func _ready() -> void:
 	get_tree().current_scene = placeholder
 	Game.campaign_mode = false
 	Game.replay_mission("m01_checkout")
-	for frame in 900:
+	# M01's mission scene, furniture and collision grid are established within
+	# the same 120-frame settling window used by the native-furniture reviews.
+	# Extra idle frames only delayed this deterministic architecture review.
+	for frame in 180:
 		await get_tree().physics_frame
 	var level := get_tree().get_first_node_in_group("level") as Level
 	var seat_review: Array = []

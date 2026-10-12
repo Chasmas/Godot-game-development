@@ -243,7 +243,15 @@ func _draw() -> void:
 			shake = Vector2(randf_range(-1, 1), randf_range(-1, 1)) * 1.2 * _mood_k
 		var ctr := inner.get_center() + jit + shake + Vector2(0, -bob * s * 0.6) + _jit * s
 		draw_set_transform(ctr, tilt2, Vector2.ONE * sc)
-		draw_texture_rect(art, Rect2(-inner.size * 0.5 - Vector2(2, 2), inner.size + Vector2(4, 4)), false)
+		var painted_rect := Rect2(-inner.size * 0.5 - Vector2(2, 2), inner.size + Vector2(4, 4))
+		draw_texture_rect(art, painted_rect, false)
+		if speaker == "cass" and art == _art("cass") and talking and _mouth > 0:
+			var mouths := _art("cass_mouth_poses_v1")
+			if mouths:
+				var tile := Vector2(mouths.get_width()*.5, mouths.get_height())
+				var area := Rect2(.415,.520,.17,.085)
+				var source := Rect2(area.position*tile+Vector2(tile.x if _mouth==2 else 0.0,0),area.size*tile)
+				draw_texture_rect_region(mouths,Rect2(painted_rect.position+area.position*painted_rect.size,area.size*painted_rect.size),source)
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	elif style == "phone" or style == "machine":
 		_draw_device(px, style, frame_col)

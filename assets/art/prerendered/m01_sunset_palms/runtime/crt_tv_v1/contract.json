@@ -1,0 +1,10 @@
+{
+  "runtime_approved": true,
+  "file": "crt_tv.png",
+  "world_width_px": 12.8,
+  "visible_width_px": 153,
+  "visible_bottom_px": 153,
+  "expected_placements": 3,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_tv_crt Decor sprites only; visual children preserve the established CRT pulse behavior and add no collision, navigation or interaction."
+}

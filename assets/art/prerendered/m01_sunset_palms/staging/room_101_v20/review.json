@@ -1,0 +1,12 @@
+{
+  "runtime_approved": false,
+  "source": "room_101_v19",
+  "added": "Shallow walnut shelf, seven bound books, hollow ceramic vase, eucalyptus and five flowers",
+  "physics_changed": false,
+  "pending": [
+    "Visual reference-quality review",
+    "Shelf wall/actor sightlines",
+    "Reconcile staged cabinet scale with current production composite",
+    "Full-map camera and environment integration"
+  ]
+}

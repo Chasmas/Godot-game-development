@@ -1,0 +1,20 @@
+[
+	{
+		"runtime_approved": false,
+		"shoulder_to_muzzle_m": 0.976295053958893,
+		"support_to_trigger_m": 0.285700887441635,
+		"weapon": "shotgun"
+	},
+	{
+		"runtime_approved": false,
+		"shoulder_to_muzzle_m": 0.836344420909882,
+		"support_to_trigger_m": 0.245814979076386,
+		"weapon": "rifle"
+	},
+	{
+		"runtime_approved": false,
+		"shoulder_to_muzzle_m": 0.536537051200867,
+		"support_to_trigger_m": 0.156285002827644,
+		"weapon": "smg"
+	}
+]

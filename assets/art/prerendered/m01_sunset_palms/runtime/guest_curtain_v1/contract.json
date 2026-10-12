@@ -1,0 +1,10 @@
+{
+  "runtime_approved": true,
+  "file": "curtain_panel_game.png",
+  "scale": 0.3,
+  "source": "Generated tied-back teal and cream guest-room curtain, extracted onto transparent alpha",
+  "pending": [],
+  "expected_windows": 12,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 horizontal GlassWindow bodies adjoining guest rooms only; curtains are visual-only and hide with a shattered pane."
+}

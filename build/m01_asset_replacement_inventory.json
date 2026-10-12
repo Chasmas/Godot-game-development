@@ -214,7 +214,7 @@
     {
       "id": "hq_pool_cooler",
       "placements": 2,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_cooler; exact 2 placements, texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "hq_pool_lounger_set",
@@ -234,12 +234,12 @@
     {
       "id": "motel_bedside_lamp",
       "placements": 8,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_bedside_lamp; exact 8 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_bougainvillea",
       "placements": 3,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_bougainvillea; exact 3 placements, texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_gecko",
@@ -254,17 +254,17 @@
     {
       "id": "motel_housekeeping_cart",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_housekeeping_cart; exact 1 placement, texture/contract/runtime review recorded; visual-only anchor retains gameplay behavior."
     },
     {
       "id": "motel_ice_bucket",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_guest_ice_bucket_empty"
     },
     {
       "id": "motel_ice_bucket_full",
       "placements": 2,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_guest_ice_bucket_full"
     },
     {
       "id": "motel_ice_machine",
@@ -274,62 +274,62 @@
     {
       "id": "motel_neon_vacancy_sign",
       "placements": 3,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_neon_vacancy_sign; exact 3 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_palm_planter",
       "placements": 4,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_palm_planter; exact 4 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_pool_float",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_ring; exact 1 placement, texture/contract/runtime review recorded; existing AnimatedProp motion and gameplay behavior retained."
     },
     {
       "id": "motel_pool_float_flamingo",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_flamingo; exact 1 placement, texture/contract/runtime review recorded; existing AnimatedProp motion and gameplay behavior retained."
     },
     {
       "id": "motel_pool_lounger",
       "placements": 2,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_lounger; exact 2 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_pool_party_ruin",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_party_ruin; exact 1 placement, texture/contract/runtime review recorded; existing AnimatedProp motion and gameplay behavior retained."
     },
     {
       "id": "motel_pool_umbrella",
       "placements": 1,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_pool_umbrella; exact 1 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_room_key_spill",
       "placements": 7,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_room_key_spill; exact 7 placements, texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_suitcase_open",
       "placements": 3,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_open_suitcase; exact 3 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_telephone",
       "placements": 2,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_motel_telephone; exact 2 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_towel_cart",
       "placements": 8,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_towel_cart; exact 8 placement(s), texture/contract/runtime review recorded; visual-only anchors retain gameplay behavior."
     },
     {
       "id": "motel_tv_crt",
       "placements": 3,
-      "replacement_coverage": "pending individual source, Blender geometry and runtime validation"
+      "replacement_coverage": "Runtime verified by m01_crt_tv; exact 3 placements, texture/contract/runtime review recorded; visual-only anchors retain the established CRT pulse behavior."
     },
     {
       "id": "motel_water_ring",
@@ -404,5 +404,204 @@
     "Empty wall picture is a placeholder and cannot ship",
     "Practical lamps lack convincing emitted light and need a lighting pass",
     "Missing room-specific dressing, authored wear, personal belongings and varied surface detail"
+  ],
+  "runtime_replacement_evidence": [
+    {
+      "id": "m01_interactive_ice_machine",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/ice_machine_v1/ice_machine_intact.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/ice_machine_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_ice_machine.gd",
+      "verification": "build/m01_ice_machine_runtime_review.json",
+      "coverage": "M01 BreakableProp kind ice only; intact visual is replaced; original collision, health, sound and broken drawing are retained and damage-transition tested."
+    },
+    {
+      "id": "m01_towel_cart",
+      "placements": 8,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/towel_cart_v1/towel_cart_topdown.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/towel_cart_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_towel_carts.gd",
+      "verification": "build/m01_towel_cart_runtime_review.json",
+      "coverage": "M01 Decor sprites tagged motel_towel_cart only; detailed overlay retains each authored transform and adds no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_bedside_lamp",
+      "placements": 8,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/bedside_lamp_v2/bedside_lamp.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/bedside_lamp_v2/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_bedside_lamps.gd",
+      "verification": "build/m01_guest_room_accents_runtime_review.json",
+      "coverage": "M01 Decor sprites tagged motel_bedside_lamp only; generated shade/stem/base overlay preserves each existing LightFixture anchor and adds no collision or navigation change."
+    },
+    {
+      "id": "m01_motel_telephone",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/telephone_v1/motel_telephone.png",
+      "runtime_builder": "scripts/levels/m01_native_telephones.gd",
+      "verification": "build/m01_telephone_runtime_review.json",
+      "coverage": "M01 motel_telephone Decor sprites only; visual-only overlay retains existing anchors with no collision or navigation."
+    },
+    {
+      "id": "m01_open_suitcase",
+      "placements": 3,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/open_suitcase_v1/open_suitcase.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/open_suitcase_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_open_suitcases.gd",
+      "verification": "build/m01_open_suitcase_runtime_review.json",
+      "coverage": "M01 motel_suitcase_open Decor sprites only; detailed visual overlay retains existing floor anchors, rotation, collision state and navigation."
+    },
+    {
+      "id": "m01_interactive_vending_machine",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/vending_machine_v1/vending_machine_intact.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/vending_machine_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_vending_machines.gd",
+      "verification": "build/m01_vending_machine_runtime_review.json",
+      "coverage": "M01 BreakableProp kind vending only; intact visual is replaced; original collision, health, sound and broken drawing are retained and damage-transition tested."
+    },
+    {
+      "id": "m01_interactive_arcade_machine",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/arcade_machine_v1/arcade_machine_intact.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/arcade_machine_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_arcade_machines.gd",
+      "verification": "build/m01_arcade_machine_runtime_review.json",
+      "coverage": "M01 BreakableProp kind arcade only; intact visual is replaced; original collision, health, sound and broken drawing are retained and damage-transition tested."
+    },
+    {
+      "id": "m01_pool_lounger",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_lounger_v1/pool_lounger.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_lounger_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_loungers.gd",
+      "verification": "build/m01_pool_lounger_runtime_review.json",
+      "coverage": "M01 motel_pool_lounger Decor sprites only; detailed overlay retains each existing floor anchor and adds no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_guest_room_dressing",
+      "placements": 19,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/guest_room_props_v1/",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/guest_room_props_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_room_accents.gd",
+      "verification": "build/m01_guest_room_accents_runtime_review.json",
+      "coverage": "M01 guest-room authored dressing cells for suitcase, shoes, service tray, clothing piles and towels; alpha fit check retains all pixels inside existing guest-room cells and adds no collision or navigation."
+    },
+    {
+      "id": "m01_pool_umbrella",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_umbrella_v1/pool_umbrella.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_umbrella_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_umbrella.gd",
+      "verification": "build/m01_pool_umbrella_runtime_review.json",
+      "coverage": "M01 motel_pool_umbrella Decor sprite only; detailed overlay retains its existing floor anchor and adds no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_palm_planter",
+      "placements": 4,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/palm_planter_v1/palm_planter.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/palm_planter_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_palm_planters.gd",
+      "verification": "build/m01_palm_planter_runtime_review.json",
+      "coverage": "M01 motel_palm_planter Decor sprites only; standing visual overlay retains existing anchors and adds no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_neon_vacancy_sign",
+      "placements": 3,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/vacancy_sign_v1/vacancy_sign.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/vacancy_sign_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_vacancy_signs.gd",
+      "verification": "build/m01_vacancy_sign_runtime_review.json",
+      "coverage": "M01 motel_neon_vacancy_sign Decor sprites only; detailed standing overlays retain existing anchors and light fixtures, adding no collision, navigation or interaction."
+    },
+    {
+      "id": "m01_pool_flamingo",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_flamingo_v1/pool_flamingo.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_flamingo_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_flamingo.gd",
+      "verification": "build/m01_pool_flamingo_runtime_review.json",
+      "coverage": "M01 motel_pool_float_flamingo Decor sprite only; detailed visual overlay retains its existing AnimatedProp bob and drift, adding no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_housekeeping_cart",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/housekeeping_cart_v1/housekeeping_cart.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/housekeeping_cart_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_housekeeping_cart.gd",
+      "verification": "build/m01_housekeeping_cart_runtime_review.json",
+      "coverage": "M01 motel_housekeeping_cart Decor sprite only; detailed visual overlay retains its existing floor anchor and adds no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_pool_ring",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_ring_v1/pool_ring.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_ring_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_ring.gd",
+      "verification": "build/m01_pool_ring_runtime_review.json",
+      "coverage": "M01 motel_pool_float Decor sprite only; detailed visual overlay retains its existing AnimatedProp bob and drift, adding no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_pool_party_ruin",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_party_ruin_v1/pool_party_ruin.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_party_ruin_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_party_ruin.gd",
+      "verification": "build/m01_pool_party_ruin_runtime_review.json",
+      "coverage": "M01 motel_pool_party_ruin Decor sprite only; detailed visual overlay retains the existing AnimatedProp slow bob and sway, adding no collision, navigation or interaction change."
+    },
+    {
+      "id": "m01_room_key_spill",
+      "placements": 7,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/room_key_spill_v1/room_key_spill.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/room_key_spill_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_room_key_spills.gd",
+      "verification": "build/m01_room_key_spill_runtime_review.json",
+      "coverage": "M01 motel_room_key_spill Decor sprites only; detailed visual children retain authored floor/standing transforms and add no collision, navigation or interaction."
+    },
+    {
+      "id": "m01_crt_tv",
+      "placements": 3,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/crt_tv_v1/crt_tv.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/crt_tv_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_crt_tvs.gd",
+      "verification": "build/m01_crt_tv_runtime_review.json",
+      "coverage": "M01 motel_tv_crt Decor sprites only; visual children preserve established CRT pulse behavior and add no collision, navigation or interaction."
+    },
+    {
+      "id": "m01_pool_cooler",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/pool_cooler_v1/pool_cooler.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/pool_cooler_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_pool_coolers.gd",
+      "verification": "build/m01_pool_cooler_runtime_review.json",
+      "coverage": "M01 hq_pool_cooler Decor sprites only; visual children add no collision, navigation or interaction."
+    },
+    {
+      "id": "m01_bougainvillea",
+      "placements": 3,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/bougainvillea_v1/bougainvillea.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/bougainvillea_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_bougainvillea.gd",
+      "verification": "build/m01_bougainvillea_runtime_review.json",
+      "coverage": "M01 motel_bougainvillea Decor sprites only; visual children add no collision, navigation or interaction."
+    },
+    {
+      "id": "m01_guest_ice_bucket_empty",
+      "placements": 1,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/guest_ice_buckets_v1/bucket_empty.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/guest_ice_buckets_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_guest_ice_buckets.gd",
+      "verification": "build/m01_guest_ice_buckets_review.json",
+      "coverage": "Exact Decor family; original transforms preserved, no new collision or navigation."
+    },
+    {
+      "id": "m01_guest_ice_bucket_full",
+      "placements": 2,
+      "asset": "assets/art/prerendered/m01_sunset_palms/runtime/guest_ice_buckets_v1/bucket_full.png",
+      "contract": "assets/art/prerendered/m01_sunset_palms/runtime/guest_ice_buckets_v1/contract.json",
+      "runtime_builder": "scripts/levels/m01_native_guest_ice_buckets.gd",
+      "verification": "build/m01_guest_ice_buckets_review.json",
+      "coverage": "Exact Decor family; original transforms preserved, no new collision or navigation."
+    }
   ]
 }

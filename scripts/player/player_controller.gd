@@ -7,7 +7,10 @@ extends CharacterBody2D
 
 signal died(info: Dictionary)
 
-const RADIUS := 5.0
+# Match the visible lower-body footprint of the real-time cast.  The former
+# 5 px radius let Cass's body appear inside solid walls before physics stopped
+# her centre point.
+const RADIUS := 8.0
 const EXEC_RANGE := 30.0
 const KICK_RANGE := 22.0
 const TAKEDOWN_RANGE := 22.0
@@ -27,6 +30,19 @@ var respawn_grace := 0.0
 var noclip := false
 var aim_dir := Vector2.RIGHT
 var aim_point := Vector2.ZERO
+## Optional visual-camera bridge. Null preserves the existing 2D input path.
+var visual_projection_camera: Camera3D
+var visual_projection_origin := Vector2.ZERO
+
+func project_screen_input(direction: Vector2) -> Vector2:
+	if not is_instance_valid(visual_projection_camera):return direction
+	var mapped: Vector2=preload("res://scripts/systems/locked_floor_projection.gd").screen_direction_to_map(visual_projection_camera,global_position,direction,visual_projection_origin)
+	return mapped*direction.length()
+
+func projected_mouse_point(screen_point: Vector2) -> Vector2:
+	if not is_instance_valid(visual_projection_camera):return get_global_mouse_position()
+	var mapped: Variant=preload("res://scripts/systems/locked_floor_projection.gd").screen_to_map(visual_projection_camera,screen_point,visual_projection_origin)
+	return mapped if mapped!=null else aim_point
 var prompt := ""
 var equipment_left := 2
 var bones := 0
@@ -77,6 +93,8 @@ var _stagger := 0.0
 var _tackled: Array = []
 var _last_move := Vector2.ZERO
 var _travel_velocity := Vector2.ZERO
+## Keeps combat readable at the more detailed oblique presentation scale.
+const TRAVERSAL_SPEED_SCALE := 0.495
 var _exec_move: Dictionary = {}
 var _exec_standing := false
 # lock-on
@@ -85,6 +103,7 @@ var _lock_flick_ready := true
 var _lock_occluded := 0.0
 # stealth / upgrades
 var sneak_held := false
+var locomotion_sprinting := false
 var upgrades: Dictionary = {}          ## id -> true
 var armor_hits := 0
 var _adrenaline_t := 0.0
@@ -139,6 +158,10 @@ func setup(p_data: CharacterData) -> void:
 	# Cass wears the mask chosen for the job; the others their own persona
 	persona = Masks.current() if data.id == &"cass" else DB.persona(data.persona)
 	visual.setup(data.palette)
+	# Player stance is explicit; mask speed bonuses must not turn walking into running.
+	visual.infer_running_from_speed = false
+	visual.use_run_cycle_for_walk = true
+	visual.locomotion_run_speed=data.move_speed*TRAVERSAL_SPEED_SCALE*1.15
 	visual.idle_fidgets = true
 	visual.set_persona_overlay(persona != null)
 	ability.setup(data.ability, self, persona.ability_charge_mult if persona else 1.0)
@@ -181,7 +204,7 @@ func _physics_process(delta: float) -> void:
 		return
 	var move := Vector2.ZERO
 	if input_enabled:
-		move = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		move = project_screen_input(Input.get_vector("move_left", "move_right", "move_up", "move_down"))
 	if move.length() > 1.0:
 		move = move.normalized()
 	_last_move = move
@@ -201,7 +224,7 @@ func _physics_process(delta: float) -> void:
 	_after_move()
 	# Animation follows displacement after collisions, in the player's time scale.
 	_travel_velocity = get_real_velocity() / maxf(tm, 0.001)
-	visual.update_move(_travel_velocity, pd)
+	visual.update_move(_travel_velocity, pd, sneak_held, locomotion_sprinting)
 	visual.set_aim(aim_dir.angle())
 	_update_prompt()
 	_footsteps(pd)
@@ -263,7 +286,7 @@ func _update_aim(pd: float = 1.0 / 120.0) -> void:
 		return
 	var pad := InputSetup.using_gamepad
 	if pad:
-		var stick := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+		var stick := project_screen_input(Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down"))
 		if stick.length() > 0.3:
 			aim_dir = stick.normalized()
 		elif _last_move.length() > 0.2:
@@ -271,7 +294,7 @@ func _update_aim(pd: float = 1.0 / 120.0) -> void:
 		aim_dir = _aim_assist(aim_dir, float(SaveManager.get_setting("aim_assist", 0.5)))
 		aim_point = global_position + aim_dir * 120.0
 	else:
-		aim_point = get_global_mouse_position()
+		aim_point = projected_mouse_point(get_viewport().get_mouse_position())
 		var d := aim_point - global_position
 		if d.length() > 2.0:
 			aim_dir = d.normalized()
@@ -379,6 +402,7 @@ func _update_lock(pd: float) -> void:
 
 # =============================================================== movement
 func _movement(move: Vector2, pd: float) -> void:
+	locomotion_sprinting = false
 	if _dash_t > 0.0:
 		_dash_t -= pd
 		# fast push-off easing into the roll-out: reads as a shove, not a
@@ -395,11 +419,19 @@ func _movement(move: Vector2, pd: float) -> void:
 			else:
 				_end_dash()
 		return
-	var speed := data.move_speed * (persona.move_mult if persona else 1.0)
+	# A melee pose owns the planted feet for its brief anticipation, impact and
+	# recovery. Letting ordinary input keep moving the collision body here made
+	# Cass glide while the authored strike animation was visibly rooted. Dodge
+	# is handled above and still interrupts the attack normally.
+	if _pending_melee >= 0.0 or visual.is_swinging() or visual._punch_t >= 0.0:
+		velocity = Vector2.ZERO
+		return
+	var speed := data.move_speed * (persona.move_mult if persona else 1.0) * TRAVERSAL_SPEED_SCALE
 	sneak_held = input_enabled and Input.is_action_pressed("sneak")
 	if sneak_held:
-		speed *= 0.45
+		speed *= data.sneak_mult
 	elif input_enabled and Input.is_action_pressed("sprint") and move.length() > 0.1 and not _winded and stamina > 0.0:
+		locomotion_sprinting = true
 		speed *= data.sprint_mult
 		# Spend stamina for actual travel, not for pushing against a wall.
 		var effort := clampf(_travel_velocity.length() / maxf(speed, 0.001), 0.0, 1.0)
@@ -412,6 +444,10 @@ func _movement(move: Vector2, pd: float) -> void:
 	if _stagger > 0.0:
 		speed *= 0.3
 	var target := move * speed
+	# Releasing movement plants her feet immediately; animation follows real travel.
+	if move.length() <= 0.05:
+		velocity = Vector2.ZERO
+		return
 	var rate := data.accel if move.length() > 0.05 else data.decel
 	# quick turns: reversing direction uses the (higher) decel rate
 	if move.length() > 0.05 and velocity.dot(target) < 0.0:
@@ -437,14 +473,15 @@ func _start_dash() -> void:
 	# Dodging cancels an unlanded strike; it cannot hit invisibly from the roll.
 	_cancel_melee()
 	_stamina_rest = STAMINA_DELAY
-	_dash_dir = _last_move.normalized() if _last_move.length() > 0.2 else aim_dir
+	var dodge_input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	_dash_dir = dodge_input.normalized() if dodge_input.length() > 0.2 else aim_dir
 	# shorter dodge: split the reduction between speed and time so it keeps
 	# its snap but doesn't cross a room
 	var sc := sqrt(Tuning.get_t().dash_distance_scale)
 	# a roll, not a blink: longer and a little slower, so the body has time
 	# to go over and come up - about the same ground covered
-	_dash_total = data.dash_time * sc * 2.25
-	_dash_avg = data.dash_speed * sc * 0.62
+	_dash_total = data.dash_time * sc * 2.0
+	_dash_avg = data.dash_speed * sc * 0.50
 	_dash_t = _dash_total
 	_dash_extend = 0.0
 	_dash_cd = data.dash_cooldown * (persona.dash_cd_mult if persona else 1.0)
@@ -465,9 +502,9 @@ func _end_dash() -> void:
 	Effects.dust(global_position, _dash_dir, 0.5)
 	collision_mask = Layers.WALK_MASK_PLAYER
 	# Recover into the current movement, without forcing a slide after release.
-	var recovery_speed := data.move_speed * (persona.move_mult if persona else 1.0)
+	var recovery_speed := data.move_speed * (persona.move_mult if persona else 1.0) * TRAVERSAL_SPEED_SCALE
 	if input_enabled and Input.is_action_pressed("sneak"):
-		recovery_speed *= 0.45
+		recovery_speed *= data.sneak_mult
 	velocity = _last_move * recovery_speed * 0.8 if input_enabled else Vector2.ZERO
 
 func is_dashing() -> bool:
@@ -478,7 +515,7 @@ func is_dashing() -> bool:
 func is_quiet() -> bool:
 	if _dash_t > 0.0:
 		return false
-	var limit := data.move_speed * (1.05 if upgrades.has(&"soft_soles") else 0.6)
+	var limit := data.move_speed * TRAVERSAL_SPEED_SCALE * (1.05 if upgrades.has(&"soft_soles") else 0.6)
 	return _travel_velocity.length() <= limit
 
 func has_upgrade(id: StringName) -> bool:
@@ -537,15 +574,21 @@ func _overlaps(mask: int) -> bool:
 
 func _footsteps(pd: float) -> void:
 	var sp := _travel_velocity.length()
-	if sp < 30.0 or _dash_t > 0.0:
+	if sp < 0.5 or _dash_t > 0.0:
 		return
-	_step_t -= pd * (sp / data.move_speed)
+	_step_t -= pd * sp
 	if _step_t <= 0.0:
-		_step_t = 0.27
+		var step_distance:=10.0
+		if visual.cast_sprite is CastModel:
+			var cast:=visual.cast_sprite as CastModel
+			var gait:=cast.clip.trim_prefix("armed_").trim_prefix("dual_").trim_prefix("melee_")
+			if cast._contact_native_speed.has(gait):
+				step_distance=float(cast._contact_native_speed[gait])*cast._player.get_animation(cast.clip).length*.5
+		_step_t += step_distance
 		# the floor under her decides the sound: carpet, wood, tile, a grating...
 		var surf: String = level.surface_at(global_position) if level and level.has_method("surface_at") else "hard"
 		Audio.play_at("step_%s%d" % [surf, randi() % 3], global_position, (-24.0 if is_quiet() else -15.0) + (3.0 if surf == "metal" else 0.0), 0.1)
-		var sprinting := sp > data.move_speed * 1.1
+		var sprinting := sp > data.move_speed * TRAVERSAL_SPEED_SCALE * 1.1
 		if is_quiet():
 			return
 		var r := 120.0 if sprinting else 36.0
@@ -659,11 +702,11 @@ func _try_shoot(w: WeaponInstance) -> void:
 		return
 	var bs := BulletSystem.get_system()
 	if bs:
-		bs.fire(origin, _forgiving_shot(aim_dir, origin), w.data, self, spread)
+		bs.fire(origin, _forgiving_shot(aim_dir, origin), w.data, self, spread, visual.muzzle_lift(left))
 		if _volley_ready and _dash_cd > 0.0:
 			# the cowboy: out of a dash, the first shot fans out three
 			for side in [-1.0, 1.0]:
-				bs.fire(origin, _forgiving_shot(aim_dir, origin).rotated(side * 0.12), w.data, self, spread)
+				bs.fire(origin, _forgiving_shot(aim_dir, origin).rotated(side * 0.12), w.data, self, spread, visual.muzzle_lift(left))
 		_volley_ready = false
 	visual.kick_recoil(w.data.camera_kick * (0.35 if w.dual else 0.6))
 	visual.gun_recoil(left, 1.5 + w.data.camera_kick * 0.4)
@@ -814,11 +857,13 @@ func _melee_attack(heavy: bool) -> void:
 	_melee_cd = maxf(_melee_cd, visual._swing_dur)
 	Audio.play_at("swing_heavy" if heavy else "swing", global_position, -2.0, 0.15)
 	# Resolve contact when the authored arm reaches the strike, not during windup.
-	_pending_melee = visual._swing_dur * (0.62 if visual._stab else 0.58)
+	_pending_melee = visual._swing_dur * visual.swing_contact_time()
 	_pending_heavy = heavy
 	_pending_aim = aim_dir
 	_pending_weapon = w
-	velocity += aim_dir * (150.0 if heavy else 85.0)   # lunge into the swing
+	# The authored 3D clip supplies the small body lean. Do not inject a body
+	# velocity here: that made Cass slide across the floor while her feet were
+	# planted in the strike pose. Dodge remains available and cancels the strike.
 	var blade := w.data.sfx_hit == "hit_blade"
 	var tint := Color(0.75, 0.95, 1.0) if blade else Color(1.0, 0.8, 0.45)
 	Effects.slash(global_position + aim_dir * 3.0, aim_dir.angle(), w.data.melee_range + (8.0 if heavy else 3.0),
@@ -833,10 +878,14 @@ func _punch() -> void:
 	visual.set_aim(aim_dir.angle())
 	visual.punch()
 	Audio.play_at("swing", global_position, -8.0, 0.2)
-	velocity += aim_dir * 60.0
-	# The authored fist supplies the motion; the old floor wedge detached from it.
+	# The authored fist and torso carry the reach; keeping the collision body
+	# planted prevents a punch from turning into a short, unanimated slide.
+	# The old floor wedge detached from the visible hand.
 	if not visual.cast_sprite is CastModel:
 		Effects.slash(global_position + aim_dir * 4.0, aim_dir.angle(), 14.0, 0.5, Color(1, 0.95, 0.85), false, true, 1.0, visual)
+	# CastModel supplies the same visible fist, so it must also schedule the
+	# shared contact. Previously this was accidentally limited to the old 2D
+	# renderer, leaving Cass's rendered punch with no gameplay impact.
 	_pending_melee = CharacterVisual.PUNCH_DURATION * CharacterVisual.PUNCH_CONTACT
 	_pending_heavy = false
 	_pending_aim = aim_dir
@@ -1457,7 +1506,9 @@ func _die(info: DamageInfo) -> void:
 	Effects.blood(global_position, info.dir, true)
 	# no tone on her death: the hit, the body hitting the floor, then quiet
 	Audio.play_at("hit_flesh", global_position)
-	Audio.play("vox_die_f%d" % (randi() % 3), -3.0)
+	# A brief, startled scream reads as an immediate death reaction; the older
+	# generated death takes were sustained cries and felt too mournful in play.
+	Audio.play("scream_f", -10.0, 1.08)
 	get_tree().create_timer(0.18, true, false, true).timeout.connect(func(): Audio.play("body_fall", -2.0))
 	Events.camera_shake.emit(8.0)
 	Events.camera_punch.emit(1.25, 0.8)

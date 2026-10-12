@@ -1,0 +1,48 @@
+{
+  "runtime_approved": false,
+  "source_composition": "guest_room_composition_v10",
+  "views": [
+    {
+      "yaw_degrees": 0,
+      "elevation_degrees": 50,
+      "ground_projection_probes_px": {
+        "origin": [
+          480.0,
+          382.29353427886963
+        ],
+        "one_metre_x": [
+          585.494499206543,
+          382.29353427886963
+        ],
+        "one_metre_y": [
+          480.0,
+          301.4800786972046
+        ]
+      }
+    },
+    {
+      "yaw_degrees": 30,
+      "elevation_degrees": 50,
+      "ground_projection_probes_px": {
+        "origin": [
+          472.0879554748535,
+          380.6696391105652
+        ],
+        "one_metre_x": [
+          563.4488868713379,
+          421.0763669013977
+        ],
+        "one_metre_y": [
+          524.835205078125,
+          310.68310260772705
+        ]
+      }
+    }
+  ],
+  "requirements": [
+    "Chosen yaw requires consistent world-to-screen mapping for floors, objects, characters, aim and collisions",
+    "Do not rotate or squash background alone",
+    "Check actor occlusion and clear bathroom and entry door approaches in an actual gameplay prototype"
+  ],
+  "scope": "Blender composition comparison only; does not demonstrate runtime camera compatibility"
+}

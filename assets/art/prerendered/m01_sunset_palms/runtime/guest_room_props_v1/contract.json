@@ -1,0 +1,35 @@
+{
+  "runtime_approved": true,
+  "source": "Generated transparent top-down guest-room prop sheet, 2026-10-08",
+  "projection": "Flat 90-degree overhead sprites downsampled for the existing 16-pixel gameplay grid",
+  "items": {
+    "suitcase": {
+      "file": "open_suitcase_game.png",
+      "scale": 0.45
+    },
+    "shoes": {
+      "file": "shoes_game.png",
+      "scale": 0.38
+    },
+    "tray": {
+      "file": "service_tray_game.png",
+      "scale": 0.38
+    },
+    "lamp": {
+      "file": "bedside_lamp_game.png",
+      "scale": 0.38
+    },
+    "clothes": {
+      "file": "clothes_game.png",
+      "scale": 0.38
+    },
+    "towel": {
+      "file": "towel_game.png",
+      "scale": 0.38
+    }
+  },
+  "pending": [],
+  "expected_placements": 19,
+  "approval_scope": "M01 guest-room suitcase, shoes and service-tray dressing only; visual replacements retain original authored cells and add no collision or navigation.",
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083"
+}

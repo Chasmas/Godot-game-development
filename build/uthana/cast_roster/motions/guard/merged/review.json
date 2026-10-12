@@ -1,0 +1,90 @@
+{
+	"cast": "guard",
+	"clips": [
+		{
+			"clip": "walk",
+			"duration_seconds": 1.86666679382324,
+			"runtime_approved": false,
+			"source": "walk",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_walk",
+			"duration_seconds": 1.86666679382324,
+			"runtime_approved": false,
+			"source": "walk",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_dual_walk",
+			"duration_seconds": 1.86666679382324,
+			"runtime_approved": false,
+			"source": "walk",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_melee_walk",
+			"duration_seconds": 1.86666679382324,
+			"runtime_approved": false,
+			"source": "walk",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "run",
+			"duration_seconds": 1.33333337306976,
+			"runtime_approved": false,
+			"source": "run",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_run",
+			"duration_seconds": 1.33333337306976,
+			"runtime_approved": false,
+			"source": "run",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_dual_run",
+			"duration_seconds": 1.33333337306976,
+			"runtime_approved": false,
+			"source": "run",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_melee_run",
+			"duration_seconds": 1.33333337306976,
+			"runtime_approved": false,
+			"source": "run",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "sneak",
+			"duration_seconds": 2.16666674613953,
+			"runtime_approved": false,
+			"source": "stealth",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_sneak",
+			"duration_seconds": 2.16666674613953,
+			"runtime_approved": false,
+			"source": "stealth",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_dual_sneak",
+			"duration_seconds": 2.16666674613953,
+			"runtime_approved": false,
+			"source": "stealth",
+			"upper_tracks_preserved": true
+		},
+		{
+			"clip": "armed_melee_sneak",
+			"duration_seconds": 2.16666674613953,
+			"runtime_approved": false,
+			"source": "stealth",
+			"upper_tracks_preserved": true
+		}
+	],
+	"runtime_approved": false
+}

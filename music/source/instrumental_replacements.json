@@ -1,0 +1,45 @@
+{
+  "scope": "All source and legacy music files flagged by the instrumental content audit",
+  "replacements": [
+    {
+      "file": "music/source/combat_arcade1.mp3",
+      "replacement_master": "music/st_arcade1.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/combat_motel.mp3",
+      "replacement_master": "music/st_motel_combat.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/combat_yard.mp3",
+      "replacement_master": "music/st_yard_combat.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/main_theme_v2.mp3",
+      "replacement_master": "music/st_main_theme.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/stealth_motel.mp3",
+      "replacement_master": "music/st_motel_stealth.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/stealth_yard.mp3",
+      "replacement_master": "music/st_yard_stealth.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/source/trailer_synthwave.mp3",
+      "replacement_master": "music/intro_teaser_v2.mp3",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    },
+    {
+      "file": "music/st_motel_combat.mp3",
+      "replacement_master": "music/st_motel_combat.ogg",
+      "reason": "Voice-risk transcription response; replaced with a same-role verified instrumental master."
+    }
+  ]
+}

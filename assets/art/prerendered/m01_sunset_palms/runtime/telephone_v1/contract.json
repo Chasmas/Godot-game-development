@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "motel_telephone.png",
+  "scale": 0.375,
+  "expected_placements": 2,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_telephone Decor sprites only; visual child retains existing anchor and adds no collision, navigation or interaction."
+}

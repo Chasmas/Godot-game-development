@@ -1,0 +1,6 @@
+{
+	"runtime_approved": false,
+	"samples_per_gait": 960,
+	"unchanged_upper_keys": 13192,
+	"worst_target_error_m": 0.000678132812026888
+}

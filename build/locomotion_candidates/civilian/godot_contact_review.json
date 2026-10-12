@@ -1,0 +1,167 @@
+{
+  "cast": "civilian",
+  "native_speed_px_s": 14.6666666666667,
+  "runtime_approved": false,
+  "stance": {
+    "LeftFoot_0_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000466640922240913,
+      "samples": 555
+    },
+    "LeftFoot_0_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641461374470964,
+      "samples": 555
+    },
+    "LeftFoot_1_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000046664154069731,
+      "samples": 555
+    },
+    "LeftFoot_1_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641470905975439,
+      "samples": 555
+    },
+    "LeftFoot_2_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000466642122773919,
+      "samples": 555
+    },
+    "LeftFoot_2_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641455844743177,
+      "samples": 555
+    },
+    "LeftFoot_3_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000046664154069731,
+      "samples": 555
+    },
+    "LeftFoot_3_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641470905975439,
+      "samples": 555
+    },
+    "LeftFoot_4_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000466640922240913,
+      "samples": 555
+    },
+    "LeftFoot_4_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641456063021906,
+      "samples": 555
+    },
+    "LeftFoot_5_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000466642522951588,
+      "samples": 555
+    },
+    "LeftFoot_5_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641444567008875,
+      "samples": 555
+    },
+    "LeftFoot_6_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000466640922240913,
+      "samples": 555
+    },
+    "LeftFoot_6_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000641461374470964,
+      "samples": 555
+    },
+    "LeftFoot_7_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000046664023102494,
+      "samples": 555
+    },
+    "LeftFoot_7_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000064143976487685,
+      "samples": 555
+    },
+    "RightFoot_0_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.000064561769249849,
+      "samples": 555
+    },
+    "RightFoot_0_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647918714093976,
+      "samples": 555
+    },
+    "RightFoot_1_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000645578547846526,
+      "samples": 555
+    },
+    "RightFoot_1_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647951746941544,
+      "samples": 555
+    },
+    "RightFoot_2_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.000064561769249849,
+      "samples": 555
+    },
+    "RightFoot_2_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647918714093976,
+      "samples": 555
+    },
+    "RightFoot_3_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000645578547846526,
+      "samples": 555
+    },
+    "RightFoot_3_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647951746941544,
+      "samples": 555
+    },
+    "RightFoot_4_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.000064561769249849,
+      "samples": 555
+    },
+    "RightFoot_4_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647918714093976,
+      "samples": 555
+    },
+    "RightFoot_5_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.000064553736592643,
+      "samples": 555
+    },
+    "RightFoot_5_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647903434582986,
+      "samples": 555
+    },
+    "RightFoot_6_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.000064561769249849,
+      "samples": 555
+    },
+    "RightFoot_6_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647918714093976,
+      "samples": 555
+    },
+    "RightFoot_7_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000645578547846526,
+      "samples": 555
+    },
+    "RightFoot_7_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000647857596050017,
+      "samples": 555
+    }
+  }
+}

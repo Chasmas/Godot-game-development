@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+M01 native guest AC fixtures: 8
+M01 native guest door plates: 3
+[level] prewarmed 24 looks in 1610 ms
+M01 native guest wall shelves: 8
+M01 CRT native count=3 anchors=[{ "anchor": [88.0, 148.600006103516], "visible": true, "source_alpha": 0.0 }, { "anchor": [712.0, 52.5999984741211], "visible": true, "source_alpha": 0.0 }, { "anchor": [360.0, 52.5999984741211], "visible": true, "source_alpha": 0.0 }] source anchors=[[88.0, 148.600006103516], [712.0, 52.5999984741211], [360.0, 52.5999984741211]]
+M01 room101 physics furniture=[{ "name": &"@StaticBody2D@1240", "position": [272.0, 464.0], "native_dresser": false, "native_armchair": false, "kind": "bed" }, { "name": &"@StaticBody2D@1372", "position": [200.0, 440.0], "native_dresser": true, "native_armchair": false, "kind": "tv" }, { "name": &"NativeNightstand_7", "position": [230.0, 440.0], "native_dresser": false, "native_armchair": false, "kind": <null> }, { "name": &"NativeNightstand_8", "position": [214.0, 488.0], "native_dresser": false, "native_armchair": false, "kind": <null> }, { "name": &"@StaticBody2D@1992", "position": [200.0, 471.680267333984], "native_dresser": false, "native_armchair": true, "kind": <null> }]
+M01 CURRENT COMPOSITION REVIEW PASSED: v3 ground, captures saved; breach gate survives 12 shots

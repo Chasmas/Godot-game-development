@@ -1,0 +1,181 @@
+{
+  "cast": "cass",
+  "controller": {
+    "configured_base_speed_px_s": 53.0999766360103,
+    "contact_error_metres": 0.0000304986133414786,
+    "distance_metres": 3.12025046348572,
+    "passed": true,
+    "peak_actual_speed_px_s": 20.0001525878906,
+    "peak_playback_rate": 1.00000762939453,
+    "peak_steps_per_second": 2.50001907348633,
+    "runtime_approved": false,
+    "speed_profile": "grounded",
+    "stopped_phase_frozen": true,
+    "wall_blocked": true
+  },
+  "gait": "sneak",
+  "native_speed_px_s": 20.0,
+  "runtime_approved": false,
+  "stance": {
+    "LeftFoot_0_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622870938968845,
+      "samples": 484
+    },
+    "LeftFoot_0_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559477957722265,
+      "samples": 484
+    },
+    "LeftFoot_1_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622868174104951,
+      "samples": 484
+    },
+    "LeftFoot_1_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000055949898523977,
+      "samples": 484
+    },
+    "LeftFoot_2_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622870938968845,
+      "samples": 484
+    },
+    "LeftFoot_2_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559477957722265,
+      "samples": 484
+    },
+    "LeftFoot_3_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622868174104951,
+      "samples": 484
+    },
+    "LeftFoot_3_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000055949898523977,
+      "samples": 484
+    },
+    "LeftFoot_4_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622870938968845,
+      "samples": 484
+    },
+    "LeftFoot_4_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559477957722265,
+      "samples": 484
+    },
+    "LeftFoot_5_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622904844931327,
+      "samples": 484
+    },
+    "LeftFoot_5_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559476284252014,
+      "samples": 484
+    },
+    "LeftFoot_6_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622863735770807,
+      "samples": 484
+    },
+    "LeftFoot_6_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559470972802956,
+      "samples": 484
+    },
+    "LeftFoot_7_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000622872248641215,
+      "samples": 484
+    },
+    "LeftFoot_7_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000559476284252014,
+      "samples": 484
+    },
+    "RightFoot_0_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349810215993784,
+      "samples": 484
+    },
+    "RightFoot_0_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352377064700704,
+      "samples": 484
+    },
+    "RightFoot_1_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349831934727263,
+      "samples": 484
+    },
+    "RightFoot_1_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352368078893051,
+      "samples": 484
+    },
+    "RightFoot_2_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349810215993784,
+      "samples": 484
+    },
+    "RightFoot_2_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352377064700704,
+      "samples": 484
+    },
+    "RightFoot_3_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349831934727263,
+      "samples": 484
+    },
+    "RightFoot_3_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352368078893051,
+      "samples": 484
+    },
+    "RightFoot_4_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349810215993784,
+      "samples": 484
+    },
+    "RightFoot_4_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352377064700704,
+      "samples": 484
+    },
+    "RightFoot_5_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349687798006926,
+      "samples": 484
+    },
+    "RightFoot_5_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352389106410556,
+      "samples": 484
+    },
+    "RightFoot_6_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349825313605834,
+      "samples": 484
+    },
+    "RightFoot_6_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352374809153844,
+      "samples": 484
+    },
+    "RightFoot_7_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000349831934727263,
+      "samples": 484
+    },
+    "RightFoot_7_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000352405768353492,
+      "samples": 484
+    }
+  }
+}

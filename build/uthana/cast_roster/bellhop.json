@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\bellhop\\bellhop.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/coFj4AYvGfDU/character.glb",
+    "character_id": "coFj4AYvGfDU",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

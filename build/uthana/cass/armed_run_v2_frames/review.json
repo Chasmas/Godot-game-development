@@ -1,0 +1,10 @@
+{
+	"cast": "cass",
+	"duration_seconds": 4.33333349227905,
+	"frames": 48,
+	"motion": "armed_run_v2",
+	"pending": "Finger contact, anatomical clearance, other aim angles and actual gameplay",
+	"runtime_approved": false,
+	"weapon": "pistol",
+	"worst_shouldered_hand_target_error_m": 0.0
+}

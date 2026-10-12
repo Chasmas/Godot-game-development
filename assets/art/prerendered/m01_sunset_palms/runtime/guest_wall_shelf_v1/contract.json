@@ -1,0 +1,12 @@
+{
+  "runtime_approved": true,
+  "file": "guest_wall_shelf.png",
+  "world_width_px": 20.0,
+  "max_placements": 8,
+  "approval_scope": "M01 guest-room visual-only high wall shelf variants; no collision, navigation, interaction or geometry changes.",
+  "files": [
+    "guest_wall_shelf.png",
+    "guest_wall_shelf_radio.png",
+    "guest_wall_shelf_vases.png"
+  ]
+}

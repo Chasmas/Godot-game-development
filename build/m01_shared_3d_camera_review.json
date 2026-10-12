@@ -1,0 +1,16 @@
+{
+	"angles": [
+		{
+			"capture": "res://build/m01_shared_3d_yaw_0.png",
+			"minimum_screen_direction_alignment": 0.999999940395355,
+			"yaw_degrees": 0.0
+		},
+		{
+			"capture": "res://build/m01_shared_3d_yaw_20.png",
+			"minimum_screen_direction_alignment": 1.0,
+			"yaw_degrees": 20.0
+		}
+	],
+	"runtime_promoted": false,
+	"screen_direction_checks_per_angle": 8
+}

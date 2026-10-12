@@ -1,0 +1,97 @@
+{
+  "accents": [
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "tray",
+      "position": [
+        89.5,
+        57.0592460632324
+      ],
+      "source_kind": "tray",
+      "visible_pixels": 718
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        266.5,
+        120.0
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        1043.5,
+        150.0
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        949.526550292969,
+        41.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        1002.75079345703,
+        41.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "shoes",
+      "position": [
+        327.118011474609,
+        441.5
+      ],
+      "source_kind": "shoes",
+      "visible_pixels": 685
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        423.0,
+        443.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        438.0,
+        587.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "kind": "suitcase",
+      "position": [
+        838.0,
+        587.5
+      ],
+      "source_kind": "suitcase",
+      "visible_pixels": 1782
+    }
+  ],
+  "passed": true,
+  "runtime_approved": false,
+  "scope": "Live M01 candidate capture. Generated props replace equivalent existing floor dressing only; no collision or navigation footprint is added."
+}

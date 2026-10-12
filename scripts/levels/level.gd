@@ -1,5 +1,30 @@
 class_name Level
 extends Node2D
+const NativeM01ReceptionCounter = preload("res://scripts/levels/m01_native_reception_counter.gd")
+const NativeM01LaundryWashers = preload("res://scripts/levels/m01_native_laundry_washers.gd")
+const NativeM01ReceptionWallDetails = preload("res://scripts/levels/m01_native_reception_wall_details_builder.gd")
+const NativeM01OfficeDesk = preload("res://scripts/levels/m01_native_office_desk.gd")
+const NativeM01GuestEntryTrim = preload("res://scripts/levels/m01_native_guest_entry_trim.gd")
+const NativeM01IceMachine = preload("res://scripts/levels/m01_native_ice_machine.gd")
+const NativeM01VendingMachines = preload("res://scripts/levels/m01_native_vending_machines.gd")
+const NativeM01ArcadeMachines = preload("res://scripts/levels/m01_native_arcade_machines.gd")
+const NativeM01TowelCarts = preload("res://scripts/levels/m01_native_towel_carts.gd")
+const NativeM01HousekeepingCart = preload("res://scripts/levels/m01_native_housekeeping_cart.gd")
+const NativeM01PoolLoungers = preload("res://scripts/levels/m01_native_pool_loungers.gd")
+const NativeM01PoolUmbrella = preload("res://scripts/levels/m01_native_pool_umbrella.gd")
+const NativeM01PoolFlamingo = preload("res://scripts/levels/m01_native_pool_flamingo.gd")
+const NativeM01PoolRing = preload("res://scripts/levels/m01_native_pool_ring.gd")
+const NativeM01PoolPartyRuin = preload("res://scripts/levels/m01_native_pool_party_ruin.gd")
+const NativeM01RoomKeySpills = preload("res://scripts/levels/m01_native_room_key_spills.gd")
+const NativeM01CrtTVs = preload("res://scripts/levels/m01_native_crt_tvs.gd")
+const NativeM01PoolCoolers = preload("res://scripts/levels/m01_native_pool_coolers.gd")
+const NativeM01Bougainvillea = preload("res://scripts/levels/m01_native_bougainvillea.gd")
+const NativeM01PalmPlanters = preload("res://scripts/levels/m01_native_palm_planters.gd")
+const NativeM01VacancySigns = preload("res://scripts/levels/m01_native_vacancy_signs.gd")
+const NativeM01SunsetPalmsSign = preload("res://scripts/levels/m01_native_sunset_palms_sign.gd")
+const NativeM01BedsideLamps = preload("res://scripts/levels/m01_native_bedside_lamps.gd")
+const NativeM01Telephones = preload("res://scripts/levels/m01_native_telephones.gd")
+const NativeM01OpenSuitcases = preload("res://scripts/levels/m01_native_open_suitcases.gd")
 ## Mission runtime. Builds the level from MissionData.level_file, spawns the
 ## player at the start or last checkpoint, runs objectives, checkpoints,
 ## hints, the boss encounter, the phone call, the walk back to the car,
@@ -39,6 +64,11 @@ var upgrade_pickups: Array = []
 
 const APPROVED_M01_GROUND_PLATE := "res://assets/art/prerendered/m01_sunset_palms/layers/ground_no_pool_review.png"
 const APPROVED_M01_GROUND_PLATE_ALPHA := 0.12
+## Phase-two boss blackout: the room remains navigable through Cass's light,
+## emergency spill and muzzle flashes, but the far interior becomes dangerous.
+const BOSS_BLACKOUT_AMBIENT := 0.14
+const BOSS_BLACKOUT_PLAYER_LIGHT := 0.72
+const DEFAULT_PLAYER_LIGHT := 0.35
 
 var floor_root: Node2D
 var walls_root: Node2D
@@ -98,6 +128,24 @@ func _ready() -> void:
 	ok.setup(self, Vector2i(mw, data.get("map", []).size()), String(mission.id))
 	var decor_root := _root("Decor")
 	Decor.build(self, decor_root, b, data.get("decor", []))
+	NativeM01TowelCarts.build(self)
+	NativeM01HousekeepingCart.build(self)
+	NativeM01PoolLoungers.build(self)
+	NativeM01PoolUmbrella.build(self)
+	NativeM01PoolFlamingo.build(self)
+	NativeM01PoolRing.build(self)
+	NativeM01PoolPartyRuin.build(self)
+	NativeM01RoomKeySpills.build(self)
+	NativeM01CrtTVs.build(self)
+	NativeM01PoolCoolers.build(self)
+	NativeM01Bougainvillea.build(self)
+	NativeM01PalmPlanters.build(self)
+	NativeM01VacancySigns.build(self)
+	NativeM01SunsetPalmsSign.build(self)
+	NativeM01BedsideLamps.build(self)
+	NativeM01Telephones.build(self)
+	NativeM01OpenSuitcases.build(self)
+	M01NativeGuestIceBuckets.build(self)
 	if data.get("ground_mist", false):
 		var exterior: Array = data.get("zones", {}).get("exterior", [])
 		if exterior.size() == 4:
@@ -119,8 +167,19 @@ func _ready() -> void:
 		Dressing.build(self, b, wall_art)
 		M01NativeArmchairs.build(self)
 		M01NativeBeds.build(self)
+		NativeM01ReceptionCounter.build(self)
+		NativeM01LaundryWashers.build(self)
+		NativeM01ReceptionWallDetails.build(self)
+		NativeM01OfficeDesk.build(self)
 	_add_approved_m01_ground_plate()
 	M01NativeGround.build(self)
+	M01NativeWalls.build(self)
+	M01NativeWindows.build(self)
+	M01NativeGuestCurtains.build(self)
+	NativeM01GuestEntryTrim.build(self, b)
+	NativeM01IceMachine.build(self)
+	NativeM01VendingMachines.build(self)
+	NativeM01ArcadeMachines.build(self)
 	var motes := AmbientMotes.new()
 	motes.level = self
 	add_child(motes)
@@ -207,9 +266,11 @@ func _ready() -> void:
 	player_light = PointLight2D.new()
 	player_light.texture = SpriteLib.light_texture(128)
 	player_light.texture_scale = 0.9
-	player_light.energy = 0.35
+	player_light.energy = DEFAULT_PLAYER_LIGHT
 	player_light.color = Color(1, 0.8, 0.9)
-	player_light.range_item_cull_mask = 1 | 2
+	# Illuminate the floor without adding a second light pass to baked actors
+	# and the car when the hidden arrival player becomes visible.
+	player_light.range_item_cull_mask = 1
 	player.add_child(player_light)
 	# camera
 	camera = CameraController.new()
@@ -570,6 +631,11 @@ func _send_fixer(zone: String) -> void:
 	for e in get_tree().get_nodes_in_group("enemies"):
 		if not e.has_method("can_fix_lights") or not e.can_fix_lights():
 			continue
+		# A nearby guard can be on the other side of a sealed room. Selecting it
+		# by straight-line distance strands the repair order and leaves the zone
+		# dark forever; choose only a guard with a real route to the switch.
+		if nav != null and get_nav_path((e as Node2D).global_position, sw.global_position).is_empty():
+			continue
 		var d := (e as Node2D).global_position.distance_to(sw.global_position)
 		if d < bd:
 			bd = d
@@ -623,7 +689,9 @@ func _process(delta: float) -> void:
 		_poll_tasks()
 		_poll_boss_checkpoint()
 	_check_checkpoints(cell)
-	if not _boss_triggered and boss and is_instance_valid(boss):
+	# Breach missions own the boss opening.  A generic map trigger must never
+	# start the fight or bypass Harcourt's locked front door before it blows.
+	if not _boss_triggered and (breach == null or breach.done) and boss and is_instance_valid(boss):
 		var br: Array = data.get("boss_trigger", [])
 		if br.size() == 4 and Rect2i(br[0], br[1], br[2], br[3]).has_point(cell):
 			_start_boss(true)
@@ -1246,14 +1314,9 @@ func _boss_dialogue(which: String) -> String:
 
 ## The Fireman's second act: the stage goes up. Fires break out along the
 ## level's "fire_points", the light turns orange, the sprinklers cough dry.
-## The doors are gone: straight into the boss's scene, no walking in.
+## Opening the seal grants access; the room-entry trigger owns the intro.
 func _on_breached() -> void:
 	_update_objective()
-	await get_tree().create_timer(1.1, false).timeout
-	if not is_inside_tree() or player == null or not player.alive:
-		return
-	if boss and is_instance_valid(boss) and boss.is_alive() and not _boss_triggered:
-		_start_boss(true)
 
 func boss_set_ablaze() -> void:
 	var tw := create_tween()
@@ -1273,8 +1336,11 @@ func boss_set_ablaze() -> void:
 func boss_lights_out() -> void:
 	set_zone_lights("lobby", false, "boss")
 	var tw := create_tween()
-	tw.tween_property(dark_modulate, "color", ambient * 0.28, 0.6)
-	player_light.energy = 0.9
+	# The prior 28% ambient and 0.9 player light left the office broadly lit.
+	# Leave just enough architectural spill to read walls and navigation while
+	# making the flashlight cone, emergency glow and muzzle flashes meaningful.
+	tw.tween_property(dark_modulate, "color", ambient * BOSS_BLACKOUT_AMBIENT, 0.85)
+	player_light.energy = BOSS_BLACKOUT_PLAYER_LIGHT
 	hud.show_hint("HE CUT THE POWER. WATCH FOR HIS FLASHLIGHT.", 3.0)
 	get_tree().create_timer(3.2, false).timeout.connect(_arm_boss_props)
 	PostFX.vhs_glitch(0.7)
@@ -1348,6 +1414,7 @@ func _on_boss_prop(it: Interactable, _by: Node) -> void:
 			Audio.play("power_up", -4.0)
 			set_zone_lights("lobby", true, "boss")
 			create_tween().tween_property(dark_modulate, "color", ambient, 0.25)
+			player_light.energy = DEFAULT_PLAYER_LIGHT
 			PostFX.flash(Color(1, 1, 0.9), 0.5)
 			boss.blind(4.0, "MY EYES! Who turned the lights on?!")
 		"valve":

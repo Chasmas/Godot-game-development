@@ -1,0 +1,7 @@
+{
+	"directions": 8,
+	"roundtrips": 121,
+	"runtime_integrated": false,
+	"scope": "Camera-ground roundtrips and screen-relative direction conversion, not actual Player input integration",
+	"zero_input": true
+}

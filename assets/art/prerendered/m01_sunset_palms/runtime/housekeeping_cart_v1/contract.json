@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "housekeeping_cart.png",
+  "scale": 1.0,
+  "expected_placements": 1,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_housekeeping_cart Decor sprite only; visual child retains its existing floor anchor and adds no collision, navigation or interaction."
+}

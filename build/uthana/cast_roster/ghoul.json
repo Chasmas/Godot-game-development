@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\ghoul\\ghoul.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cXx1LAmacFpv/character.glb",
+    "character_id": "cXx1LAmacFpv",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

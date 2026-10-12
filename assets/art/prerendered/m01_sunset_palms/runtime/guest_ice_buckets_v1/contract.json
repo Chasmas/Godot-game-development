@@ -1,0 +1,14 @@
+{
+  "runtime_approved": true,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "imagegen_reference": "assets/art/materials/m01/batch_v1/guest_room_rebuild_direction_v2.png",
+  "reference_role": "Approved guest-room palette and hospitality styling; final asset is modeled in Blender.",
+  "variants": {
+    "motel_ice_bucket": "bucket_empty.png",
+    "motel_ice_bucket_full": "bucket_full.png"
+  },
+  "expected_placements": 3,
+  "world_width_px": 12,
+  "scope": "Visual-only Decor replacement. Preserve original transforms, navigation and collision.",
+  "visual_review": "All three live M01 anchors inspected in build/m01_guest_ice_buckets_runtime_0.png through _2.png; 12px visual footprint, no collisions added."
+}

@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\handler\\handler.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cCotLNQvzfwK/character.glb",
+    "character_id": "cCotLNQvzfwK",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

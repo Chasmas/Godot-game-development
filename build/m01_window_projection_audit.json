@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "runtime_approved": false,
+  "scope": "Maps the uninstalled Blender window reconstruction to live M01 GlassWindow bodies; it does not replace their art.",
+  "live_window_inventory": {
+    "total": 20,
+    "horizontal": 18,
+    "vertical": 2,
+    "horizontal_spans_px": [
+      32,
+      48,
+      64,
+      128
+    ]
+  },
+  "staging_status": "window_v1 remains reconstruction-only; its full-height architecture cannot be placed directly over 4-pixel gameplay collision strips. window_strip_family_v1 provides an uninstalled, span-aware visual candidate.",
+  "required_before_promotion": [
+    "Bake a dedicated 2D frame/sill/curtain sprite family anchored to 4-pixel horizontal and vertical GlassWindow spans.",
+    "Keep each GlassWindow body, collision layer, hit point and breakable state intact.",
+    "Hide the intact override when GlassWindow.broken so the existing damaged frame, shards and dive-through collision remain visible.",
+    "Validate all 20 placements under the actual Camera2D projection, including actor occlusion and light masks."
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "scope": "Current M01 GlassWindow collision bodies and intact state. No staging asset installed.",
+  "window_count": 20,
+  "windows": [
+    {
+      "orientation": "horizontal",
+      "position": [
+        112.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        208.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        288.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        384.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        464.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        576.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        672.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        816.0,
+        168.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "vertical",
+      "position": [
+        856.0,
+        192.0
+      ],
+      "size_px": [
+        4.0,
+        32.0
+      ]
+    },
+    {
+      "orientation": "vertical",
+      "position": [
+        856.0,
+        320.0
+      ],
+      "size_px": [
+        4.0,
+        32.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        192.0,
+        504.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        336.0,
+        504.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        544.0,
+        504.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        696.0,
+        504.0
+      ],
+      "size_px": [
+        48.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        240.0,
+        664.0
+      ],
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        384.0,
+        664.0
+      ],
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        560.0,
+        664.0
+      ],
+      "size_px": [
+        128.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        736.0,
+        664.0
+      ],
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        896.0,
+        664.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "orientation": "horizontal",
+      "position": [
+        1008.0,
+        664.0
+      ],
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    }
+  ]
+}

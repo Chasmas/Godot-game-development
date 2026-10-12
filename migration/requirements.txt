@@ -6,3 +6,4 @@ cryptography
 trimesh
 pygltflib
 godot-ai==4.2.3
+uthana==0.5.1

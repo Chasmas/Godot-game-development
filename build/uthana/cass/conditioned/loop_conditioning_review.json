@@ -1,0 +1,476 @@
+[
+  {
+    "clip": "walk",
+    "tail_blend_seconds": 0.12,
+    "channels": [
+      {
+        "bone": "Hips",
+        "path": "translation",
+        "maximum_component_adjustment": 0.19748687744140625,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Hips",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0023503582924604416,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.01433498039841652,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.008141808211803436,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.003613889217376709,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0009646415710449219,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.015334367752075195,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.011344313621520996,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.007253289222717285,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0008249580860137939,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine02",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.00492832250893116,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine01",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.002835111692547798,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0028606560081243515,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0025397539138793945,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.007291167974472046,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0036603212356567383,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0031297802925109863,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "neck",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0027525825425982475,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Head",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0009776204824447632,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "head_end",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0024768896400928497,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "headfront",
+        "path": "rotation",
+        "maximum_component_adjustment": 1.1920928955078125e-07,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0021555423736572266,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.012792736291885376,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.006384700536727905,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.005594566464424133,
+        "endpoint_difference": 0.0
+      }
+    ],
+    "runtime_approved": false,
+    "remaining_review": "Foot contacts and temporal visual review; endpoint equality alone is insufficient."
+  },
+  {
+    "clip": "run",
+    "tail_blend_seconds": 0.12,
+    "channels": [
+      {
+        "bone": "Hips",
+        "path": "translation",
+        "maximum_component_adjustment": 0.1799468994140625,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Hips",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.003700222820043564,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.03576143458485603,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.022310182452201843,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0043282825499773026,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.00015283748507499695,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.019593939185142517,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.020730167627334595,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.005630016326904297,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0005617290735244751,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine02",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.001797424629330635,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine01",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0010875165462493896,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0010642712004482746,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0017799735069274902,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.006235778331756592,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.04860416054725647,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.009881675243377686,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "neck",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0007922854274511337,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Head",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0015567466616630554,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "head_end",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0026402215007692575,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "headfront",
+        "path": "rotation",
+        "maximum_component_adjustment": 1.1920928955078125e-07,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0010169446468353271,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.004645191133022308,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.05180313438177109,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.008878946304321289,
+        "endpoint_difference": 0.0
+      }
+    ],
+    "runtime_approved": false,
+    "remaining_review": "Foot contacts and temporal visual review; endpoint equality alone is insufficient."
+  },
+  {
+    "clip": "pistol_walk",
+    "tail_blend_seconds": 0.12,
+    "channels": [
+      {
+        "bone": "Hips",
+        "path": "translation",
+        "maximum_component_adjustment": 0.09056854248046875,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Hips",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0027307728305459023,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.02515318989753723,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.013433992862701416,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.004028737545013428,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.003979504108428955,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightUpLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.022969283163547516,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightLeg",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.01053360104560852,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightFoot",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.018345236778259277,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightToeBase",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0005416274070739746,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine02",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.00556725449860096,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine01",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.003342447802424431,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Spine",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0033803298138082027,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.002814352512359619,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.013143956661224365,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0023781657218933105,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "LeftHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.007132977247238159,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "neck",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0032137520611286163,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "Head",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0020443499088287354,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "head_end",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.01005571335554123,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "headfront",
+        "path": "rotation",
+        "maximum_component_adjustment": 1.1920928955078125e-07,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightShoulder",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.0031123757362365723,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.015603303909301758,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightForeArm",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.006939947605133057,
+        "endpoint_difference": 0.0
+      },
+      {
+        "bone": "RightHand",
+        "path": "rotation",
+        "maximum_component_adjustment": 0.005070284008979797,
+        "endpoint_difference": 0.0
+      }
+    ],
+    "runtime_approved": false,
+    "remaining_review": "Foot contacts and temporal visual review; endpoint equality alone is insufficient."
+  }
+]

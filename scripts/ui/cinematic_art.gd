@@ -58,6 +58,10 @@ static func make_fullscreen(tex: Texture2D) -> TextureRect:
 	r.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	r.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	r.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	r.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	# The title frame is composed at 16:9.  Cover-cropping it on an ultrawide
+	# display cuts the wordmark off at the top and makes the whole composition
+	# feel left-heavy.  Keep the complete frame centered at every aspect ratio;
+	# TitleBackdrop remains visible in the extra space around it.
+	r.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	r.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return r

@@ -1,0 +1,10 @@
+{
+	"cast": "cass",
+	"duration_seconds": 5.73333358764648,
+	"frames": 48,
+	"motion": "armed_idle_v2",
+	"pending": "Finger contact, anatomical clearance, other aim angles and actual gameplay",
+	"runtime_approved": false,
+	"weapon": "pistol",
+	"worst_shouldered_hand_target_error_m": 0.0
+}

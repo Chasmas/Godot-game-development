@@ -17,6 +17,7 @@ const NEONS := ["star", "palm", "cocktail", "open", "arrow", "heart", "tv"]
 const NEON_COLORS := [Color("ff3d7f"), Color("35e0ff"), Color("ffd23f"), Color("b18cff"), Color("ff5a5a"), Color("5affb0")]
 const TAGS := ["TOMMY 4EVER", "CUT!", "★", "HOTSHOT", "WAKE UP", "1988", "NO CUT", "AGAIN", "V.", "ROOM 204"]
 const TAG_COLORS := [Color("ff3d7f"), Color("35e0ff"), Color("ffd23f"), Color("7aff6a"), Color("ff8a3d"), Color("f4f0e8")]
+const M01_BOTANICAL_LITHOGRAPH := "res://assets/art/materials/m01/batch_v1/guest_room_botanical_lithograph_v1.png"
 
 ## Each place dresses its walls its own way. "outside" is the cycle of what
 ## goes on exterior faces: "tag" (spray paint, drips), "stencil" (painted
@@ -178,6 +179,15 @@ func add_painting(pos: Vector2, idx: int) -> void:
 	items.append({"kind": "painting", "pos": pos, "tex": tex, "seed": fmod(idx * 0.31, 1.0)})
 	_inspect(pos, "LOOK AT THE PAINTING", str(d[0]), tr(str(d[1])))
 
+## Sunset Palms rooms share a specific inexpensive palm lithograph from the
+## approved room direction.  It occupies the same wall anchor as the former
+## generic painting, so gameplay routes and interaction placement are intact.
+func add_m01_botanical_lithograph(pos: Vector2) -> void:
+	var tex := load(M01_BOTANICAL_LITHOGRAPH) as Texture2D
+	if tex == null:
+		return
+	items.append({"kind": "m01_botanical", "pos": pos, "tex": tex, "seed": 0.0})
+
 ## A movie poster; inspectable (the poster art full screen, title, tagline).
 func add_poster(pos: Vector2, id: String) -> void:
 	var d: Array = POSTER_DEFS.get(id, POSTER_DEFS.values()[0])
@@ -260,6 +270,19 @@ func _draw() -> void:
 				var src := Rect2(tw * (0.15 + 0.3 * float(it.seed)), th * 0.1, tw * 0.55, th * 0.55 * (8.0 / 14.0) * (tw / th))
 				draw_texture_rect_region(tex, r, src)
 				draw_rect(Rect2(r.position, Vector2(r.size.x, 1)), Color(1, 1, 1, 0.25))
+			"m01_botanical":
+				# Printed hotel art, not a bespoke gallery canvas: aged paper,
+				# thin walnut frame and a wide crop of the palm lithograph.
+				var br := Rect2(p + Vector2(-7, -9), Vector2(14, 8))
+				draw_rect(br.grow(2.0), Color(0.05, 0.03, 0.02, 0.6))
+				draw_rect(br.grow(1.5), Color(0.30, 0.16, 0.08))
+				draw_rect(br.grow(0.5), Color(0.68, 0.45, 0.2))
+				var btex: Texture2D = it.tex
+				var bw := float(btex.get_width())
+				var bh := float(btex.get_height())
+				draw_texture_rect_region(btex, br, Rect2(bw * 0.16, bh * 0.08, bw * 0.68, bh * 0.70))
+				draw_rect(br, Color(0.16, 0.10, 0.05), false, 0.8)
+				draw_line(br.position + Vector2(1, 1), Vector2(br.end.x - 1, br.position.y + 1), Color(1, 0.92, 0.72, 0.24), 0.7)
 			"poster":
 				# a one-sheet in proportion (2:3), pinned on the wall, not hanging over the floor
 				var r2 := Rect2(p + Vector2(-3.5, -10), Vector2(7, 10.5))

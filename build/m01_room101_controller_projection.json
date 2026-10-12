@@ -1,0 +1,174 @@
+{
+	"runtime_promoted": false,
+	"samples": [
+		{
+			"direction": "(-1.0, 0.0)",
+			"distance_pixels": 0.874999642372131,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(1.0, 0.0)",
+			"distance_pixels": 0.874999642372131,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, -1.0)",
+			"distance_pixels": 0.87497615814209,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, 1.0)",
+			"distance_pixels": 0.87497615814209,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, -0.707107)",
+			"distance_pixels": 0.87499338388443,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, -0.707107)",
+			"distance_pixels": 0.875004410743713,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, 0.707107)",
+			"distance_pixels": 0.875004410743713,
+			"screen_alignment": 1.0,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, 0.707107)",
+			"distance_pixels": 0.87499338388443,
+			"screen_alignment": 0.999999940395355,
+			"stance": "walk",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-1.0, 0.0)",
+			"distance_pixels": 0.479166954755783,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(1.0, 0.0)",
+			"distance_pixels": 0.479166954755783,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, -1.0)",
+			"distance_pixels": 0.479157835245132,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, 1.0)",
+			"distance_pixels": 0.479157835245132,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, -0.707107)",
+			"distance_pixels": 0.479152262210846,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, -0.707107)",
+			"distance_pixels": 0.479184120893478,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, 0.707107)",
+			"distance_pixels": 0.479184120893478,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, 0.707107)",
+			"distance_pixels": 0.479152262210846,
+			"screen_alignment": 1.0,
+			"stance": "sneak",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-1.0, 0.0)",
+			"distance_pixels": 0.874999642372131,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(1.0, 0.0)",
+			"distance_pixels": 0.874999642372131,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, -1.0)",
+			"distance_pixels": 0.87497615814209,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.0, 1.0)",
+			"distance_pixels": 0.87497615814209,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, -0.707107)",
+			"distance_pixels": 0.87499338388443,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, -0.707107)",
+			"distance_pixels": 0.875004410743713,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(-0.707107, 0.707107)",
+			"distance_pixels": 0.875004410743713,
+			"screen_alignment": 1.0,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		},
+		{
+			"direction": "(0.707107, 0.707107)",
+			"distance_pixels": 0.87499338388443,
+			"screen_alignment": 0.999999940395355,
+			"stance": "sprint",
+			"stopped_velocity": 0.0
+		}
+	],
+	"scope": "Actual Player input/physics callbacks; short displacement and settled braking, not gait/laser/dash approval"
+}

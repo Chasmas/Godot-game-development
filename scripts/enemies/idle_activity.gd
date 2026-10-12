@@ -197,17 +197,17 @@ func _draw() -> void:
 	var ink := Color("0b0710")
 	match kind:
 		Kind.SMOKE:
-			var drag := _hump(phase, 0.16, 0.28)
-			var cig := ArtLib.sprite("cigarette")
-			if cig:
-				# the painted cigarette (square sheet, the cigarette across its middle)
-				draw_texture_rect(cig, Rect2(p + Vector2(-0.5, -1.6), Vector2(3.2, 3.2)), false)
-			else:
-				draw_line(p, p + Vector2(2.5, 0.5), Color(0.95, 0.93, 0.88), 1.0)
-			# the ember: a pinprick that brightens on the drag
-			var ember := p + Vector2(2.15, 0.1)
-			draw_circle(ember, 0.9 + drag * 0.5, Color(1.0, 0.4, 0.1, 0.1 + 0.15 * drag))
-			draw_circle(ember, 0.35 + drag * 0.15, Color(1.0, 0.45 + 0.35 * drag, 0.15))
+			# Native cigarette is depth-tested with the hand; keep the smoke below.
+			if not (visual and visual.cast_sprite is CastModel):
+				var drag := _hump(phase, 0.16, 0.28)
+				var cig := ArtLib.sprite("cigarette")
+				if cig:
+					draw_texture_rect(cig, Rect2(p + Vector2(-0.5, -1.6), Vector2(3.2, 3.2)), false)
+				else:
+					draw_line(p, p + Vector2(2.5, 0.5), Color(0.95, 0.93, 0.88), 1.0)
+				var ember := p + Vector2(2.15, 0.1)
+				draw_circle(ember, 0.9 + drag * 0.5, Color(1.0, 0.4, 0.1, 0.1 + 0.15 * drag))
+				draw_circle(ember, 0.35 + drag * 0.15, Color(1.0, 0.45 + 0.35 * drag, 0.15))
 		Kind.DRINK:
 			if not _native_drink:
 				var tilt := _hump(phase, 0.14, 0.34) * 0.9

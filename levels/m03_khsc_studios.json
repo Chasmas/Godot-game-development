@@ -16,7 +16,7 @@
     "#,c,,c,D......D.....#--#....bb...#---____________-W__________________#",
     "#,c,,c,#......#..m..D--D....bb...D---_____g______-W__kkkkkkkk________#",
     "#,c,,c,#......#.....D--D.........D---__________2_-W_____________*____#",
-    "#,,,,,,#.Y..o.#.....#--#.o.......#---____________-W_______________m__#",
+    "#,,,,,,#.Y..o.#.@...#--#.o.......#---____________-W_______________m__#",
     "#,,,,,,#......#4..Y.#--#.........#----------------W__________________#",
     "#,,,,,,#......#.....###############DD###WWWWWW#####__________________#",
     "#,c,,c,###DD####DD###-s-------------------*-------########DD##########",
@@ -395,7 +395,7 @@
   "npcs": {
     "57,20": {
       "id": "rudy",
-      "palette": "civilian",
+      "palette": "civilian#4",
       "lines": [
         "I'm not here. I'm a coat rack. Coat racks don't testify.",
         "Mr. Kowalski's on the Cadillac. He's been talking to it.",
@@ -404,10 +404,18 @@
     },
     "4,2": {
       "id": "bev",
-      "palette": "scout",
+      "palette": "scout#7",
       "lines": [
         "Hold still, your star's smudged. ...Sorry. Habit.",
         "They made me paint twenty of those stars tonight. For the extras. The extras didn't come back."
+      ]
+    },
+    "16,9": {
+      "id": "carmine",
+      "palette": "civilian#5",
+      "lines": [
+        "The stage manager said this room was empty. Then the monitor started giving me notes.",
+        "There is a camera in the prop skull. I did not put it there."
       ]
     }
   },

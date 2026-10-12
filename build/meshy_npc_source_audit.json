@@ -1,0 +1,1685 @@
+{
+  "scope": "Import integrity only; not visual motion or weapon grip approval",
+  "rows": [
+    {
+      "cast": "guard",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "guard",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "guard",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "guard",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "guard",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "guard",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 29940,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "gunner",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25724,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "hunter",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 27183,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "heavy",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25989,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "scout",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26859,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "bellhop",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 24041,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "security",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 26081,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "idle",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Idle|baselayer",
+          "frames": [
+            0.8000000715255737,
+            96.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "walk",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Casual_Walk|baselayer",
+          "frames": [
+            0.8000000715255737,
+            100.79999542236328
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "run",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Run_02|baselayer",
+          "frames": [
+            0.8000000715255737,
+            17.600000381469727
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "aim",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Walk_Forward_While_Shooting|baselayer",
+          "frames": [
+            0.8000000715255737,
+            79.19999694824219
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "melee",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "frames": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        }
+      ],
+      "missing_images": []
+    },
+    {
+      "cast": "boss",
+      "clip": "death",
+      "armatures": 1,
+      "bones": 24,
+      "hand_bones": {
+        "Left": [
+          "LeftHand"
+        ],
+        "Right": [
+          "RightHand"
+        ]
+      },
+      "vertices": 25158,
+      "images": [
+        {
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "pixels_available": true
+        }
+      ],
+      "actions": [
+        {
+          "name": "Armature|Shot_and_Fall_Forward|baselayer",
+          "frames": [
+            0.8000000715255737,
+            52.80000305175781
+          ]
+        }
+      ],
+      "missing_images": []
+    }
+  ]
+}

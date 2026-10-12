@@ -1,0 +1,55 @@
+{
+  "runtime_approved": true,
+  "footprint_metres": [
+    0.65,
+    0.5
+  ],
+  "height_metres": 1.143,
+  "pixels_per_metre": 284.44444444444446,
+  "frames": [
+    {
+      "file": "nightstand_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    },
+    {
+      "file": "nightstand_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        347.6105194091797
+      ]
+    }
+  ],
+  "source_kind": "Blender geometry; existing ImageGen walnut and linen colour maps",
+  "pending": [
+    "Full guest-room visual assembly and lighting refinement remain separate work."
+  ],
+  "source_sha256": {
+    "nightstand_000.png": "a5c2fc1571b8eebbc72bdd7781b90b5bce881aa511e1561ac7469dfb9351f16b",
+    "nightstand_090.png": "3c06bfff2afe1bc214b84c1edb1eb01de7f7e172772e4d1b5ba4f9845a4ba091",
+    "nightstand_180.png": "ae38cef6fc6280691a11b50a2ced114fda10454adf5c14ba67eb2d4d2fcecc1d",
+    "nightstand_270.png": "f3943d3276921713cf99f89bb3f70adaf2ac0cffa764c86a97a1248853130830"
+  },
+  "expected_placements": 12,
+  "approval_scope": "M01 bedside cabinet family only: twelve gameplay-safe positions, reviewed Blender frames, solid collision volumes and preserved navigation connectivity. One recessed authored cabinet and legacy decorative lamps remain visual-only."
+}

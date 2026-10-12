@@ -1,0 +1,51 @@
+{
+	"cutaway_surfaces": 4,
+	"materials": {
+		"generated_mipmaps": 8,
+		"prepared_surfaces": 303,
+		"unique_textures": 8
+	},
+	"runtime_approved": false,
+	"samples": [
+		{
+			"capture": "res://build/m01_room101_entry.png",
+			"label": "entry",
+			"occluders": [
+				"101 entrance lintel"
+			]
+		},
+		{
+			"capture": "res://build/m01_room101_bedside.png",
+			"label": "bedside",
+			"occluders": []
+		},
+		{
+			"capture": "res://build/m01_room101_window.png",
+			"label": "window",
+			"occluders": [
+				"101 wall above window",
+				"101 window horizontal frame_001"
+			]
+		},
+		{
+			"capture": "res://build/m01_room101_lit_screen.png",
+			"label": "lit_screen",
+			"scope": "Diagnostic emission/occluder comparison only",
+			"screen_surfaces": 1
+		},
+		{
+			"capture": "res://build/m01_room101_lit_screen_without_right_curtain.png",
+			"label": "lit_screen_without_right_curtain",
+			"scope": "Diagnostic emission/occluder comparison only",
+			"screen_surfaces": 1
+		},
+		{
+			"capture": "res://build/m01_room101_foreground_window.png",
+			"label": "foreground_window_comparison",
+			"opacity": 0.35,
+			"scope": "Static visual trial, not dynamic fade or production approval",
+			"surfaces": 14
+		}
+	],
+	"scope": "Room101 material/actor/projection review; no full mission collision or input approval"
+}

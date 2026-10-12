@@ -1,0 +1,39 @@
+{
+  "submission_started": true,
+  "parameters": {
+    "rig_task_id": "01a12022-f4f0-761a-9562-4455c4f0be28",
+    "action_ids": [
+      30,
+      14,
+      524,
+      234,
+      233
+    ],
+    "post_process": {
+      "operation_type": "change_fps",
+      "fps": 60
+    }
+  },
+  "runtime_approved": false,
+  "task_id": "01a1202f-60c5-76c0-8361-27913798f7b0",
+  "last_response": {
+    "id": "01a1202f-60c5-76c0-8361-27913798f7b0",
+    "type": "animate",
+    "name": "",
+    "status": "SUCCEEDED",
+    "created_at": 1791541338607,
+    "progress": 100,
+    "started_at": 1791541338614,
+    "finished_at": 1791541361190,
+    "expires_at": 1791800561190,
+    "task_error": null,
+    "result": {
+      "animation_glb_url": "https://assets.meshy.ai/d1417b37-ef8d-452d-9291-7e0a6d515bb7/tasks/01a1202f-60c5-76c0-8361-27913798f7b0/output/merged_animations.glb?Expires=1791800561&Signature=crgA7m4Y4EiI6ZfEF0FVWrBYtd4cBBkKAlLPX8A9ZP7fzYaq~e3YKq4HhanLyZcYhUQOvAJRYhXszqzwudqf6qsane33jVKmwnO-yfheMSakQsa6nEFEVKule1WbrRBEMzs4nXVIErSRpE7T58x58fBuTZRPElmiavgbKmE-5Ge4svVUbjhQVkOz1fK6y5nnzJyy43B4KJJ2nRn13FY6CFrKQRwdkSQAOrt6hNzSAMAnQkzXdHXttcE7TAoceWDFCTNBQqJ9TQiUwI2-JwOrIEEsK~qHNyYfztli2bmQLkq8DAoELz12pWbhrv74mYehYVVSEOD8bCqQpfoJvmV4Kw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "animation_fbx_url": "https://assets.meshy.ai/d1417b37-ef8d-452d-9291-7e0a6d515bb7/tasks/01a1202f-60c5-76c0-8361-27913798f7b0/output/merged_animations.fbx?Expires=1791800561&Signature=exxe9wvhqsdpw7Okm~qtWoxf42kS88CM-229r~xP1YvjSRhcJdn-KPS7DTBIhMcL~q2TuIvTajvxJenKMyNWc-Wu4MYhm522T-VVJ04O9O4-fyK8kGweWPRo-D9UiSbBXJrn5tLbfCPtfFzjGToCtyfSzqjTFAt3HrZRq05cixABmCXwC5ewt53RsdAbKvkmMGtK766E2P1YLoNHXY1slus~6kmlB4hdiuQxA2bV6nBWqxHJvbD86BrypoSiIXlAOUQj5i2CNV4Fj-UgogU3jGEg4KFx5SPGqIoCGN8Z4vfnFPm0d6qE6ONzfja4bWS6i-bYtbnVLxzGtSnCoaj1wg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "processed_usdz_url": "",
+      "processed_armature_fbx_url": "",
+      "processed_animation_fps_fbx_url": "https://assets.meshy.ai/d1417b37-ef8d-452d-9291-7e0a6d515bb7/tasks/01a1202f-60c5-76c0-8361-27913798f7b0/output/processed_60fps.fbx?Expires=1791800561&Signature=m7Dt52SDyYSpGitvg~nXVog3qmN3lIevQpcfasmTQ5DrTcy8bhouvR7CxcVT4643cCLIxsvFlQCvPdJmRWqtByJkcSWkRudOae8~DAHqSLhcRpog1x3w5L-xDACsWqnriWDFpkMtGrkAolHGv0BAUZicYLc~bqi5WJDj1CVxw6wDXUbnSjGgl1wGvjDsudQzvmoXrjkMxb0JDC464Esi7rDBJRIcPpPrXk7lNWsJFCGbMdWEwMqPEkl1jRgpnQrLlFs~Z~MOI-BdxZ86M-mYFGKFq2FYHizG2i9OClrC10Yn-J8wBKAuOvlVN0BQL0AdbFJHPw5ngGHQJvS6LTB05w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "consumed_credits": 15
+  }
+}

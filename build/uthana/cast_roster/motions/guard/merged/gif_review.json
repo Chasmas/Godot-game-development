@@ -1,0 +1,12 @@
+{
+  "runtime_approved": false,
+  "duration_seconds": 6,
+  "fps": 24,
+  "scope": "Three separately timed merged loops with staged Blender pistol; source renders preserved",
+  "pending": [
+    "planted foot correction",
+    "hand grasp",
+    "aim direction changes",
+    "gameplay cadence"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "reference": "assets/art/reference/m01_armored_door_v1/concept.png",
+  "leaf_image": "armored_breach_leaf_topdown.png",
+  "debris_image": "armored_breach_debris_topdown.png",
+  "physical_leaf_length_m": 2.0,
+  "hinge": "left image edge / +x gameplay leaf origin",
+  "runtime_approved": true,
+  "collision": "existing Door leaf remains authoritative",
+  "remaining": []
+}

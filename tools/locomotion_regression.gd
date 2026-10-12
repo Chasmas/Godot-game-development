@@ -36,10 +36,20 @@ func _ready() -> void:
 				player.seek(0.0, true)
 				model.move_speed = speed
 				model.play_sample(requested, 0.1)
-				var expected: float = 0.1 * float(speed) / float(CastModel.NATIVE_SPEED[base])
+				var native: float=float(model._contact_native_speed.get(base,CastModel.NATIVE_SPEED[base]))
+				var expected: float = 0.1 * float(speed) / native
 				if absf(player.current_animation_position - expected) > 0.002:
 					failures += 1
 					push_error(look + " gait does not follow slow travel: " + str(speed))
+		model.play_sample("run", 0.0)
+		model._player.seek(model._player.get_animation(model.clip).length * 0.37, true)
+		for next_pose in ["armed_run", "armed_sneak", "sneak", "run"]:
+			model.play_sample(next_pose, 0.0)
+			var phase: float = model._player.current_animation_position / model._player.get_animation(model.clip).length
+			if absf(phase - 0.37) > 0.002:
+				failures += 1
+				push_error(look + " resets footfall phase when changing to " + next_pose)
 		model.queue_free()
 	print("LOCOMOTION REGRESSION: ", failures, " failures")
 	get_tree().quit(1 if failures else 0)
+

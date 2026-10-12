@@ -1,0 +1,11 @@
+{
+  "runtime_approved": false,
+  "file": "curtain_panel_game.png",
+  "scale": 0.3,
+  "source": "Generated tied-back teal and cream guest-room curtain, extracted onto transparent alpha",
+  "pending": [
+    "Map M01 guest-room window bodies in a live scene",
+    "Live composition and window-shatter review",
+    "Promote only after placement count and gameplay regression pass"
+  ]
+}

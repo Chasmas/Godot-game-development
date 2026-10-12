@@ -1,0 +1,20 @@
+{
+  "collision_added": false,
+  "placements": [
+    {
+      "id": "motel_ice_bucket",
+      "position": "(488.0, 232.0)",
+      "width_px": 12.0000008046627
+    },
+    {
+      "id": "motel_ice_bucket_full",
+      "position": "(888.0, 232.0)",
+      "width_px": 12.0000000447035
+    },
+    {
+      "id": "motel_ice_bucket_full",
+      "position": "(1032.0, 552.0)",
+      "width_px": 12.0000000447035
+    }
+  ]
+}

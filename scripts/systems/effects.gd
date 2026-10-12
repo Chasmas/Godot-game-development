@@ -122,7 +122,9 @@ func _make_pool(pool_name: String, color: Color, amount: int, life: float, speed
 			p.scale_amount_max /= width
 		p.color = color
 		p.gravity = Vector2.ZERO
-		p.z_index = 5
+		# Blood is on the floor.  Keep the airborne burst behind living actors
+		# too, so it cannot render through Cass while it settles into decals.
+		p.z_index = -1 if pool_name == "blood" else 5
 		if pool_name == "smoke" or pool_name == "fire" or pool_name == "dust":
 			var ramp := Gradient.new()
 			ramp.set_color(0, color)

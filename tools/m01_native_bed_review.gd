@@ -77,7 +77,7 @@ func _ready() -> void:
 		assert(routes_checked>0,"Chair approach must retain a reachable projected destination")
 		chair_layout.append({"enemy_id":enemy.enemy_id,"position":[chair.global_position.x,chair.global_position.y],"solid_overlap_free":blockers.is_empty(),"blockers":blockers,"actual_player_contact_directions":player_contacts,"navigation_routes_checked":routes_checked,"reachable_door_arc_hits":door_hits})
 	chair_circulation.free()
-	var chair_report := FileAccess.open("res://build/m01_sleeping_chair_layout.json",FileAccess.WRITE)
+	var chair_report := FileAccess.open("user://m01_sleeping_chair_layout.json",FileAccess.WRITE)
 	chair_report.store_string(JSON.stringify({"chairs":chair_layout,"scope":"Assembled M01 physics footprints, reachable door arcs and dynamic navigation routes; actual NPC steering playtest remains pending"},"  "));chair_report.close()
 	var cast_states: Array=[]
 	for enemy in level.enemies:
@@ -85,7 +85,7 @@ func _ready() -> void:
 		var cast := vis.cast_sprite
 		if cast==null:continue
 		cast_states.append({"id":enemy.enemy_id,"look":enemy.look,"position":[enemy.position.x,enemy.position.y],"clip":cast.clip,"idle_pose":vis.idle_activity_pose,"weapon_visible":vis.weapon_sprite.visible,"visual_scale":[vis.scale.x,vis.scale.y],"rig_scale":[vis.rig.scale.x,vis.rig.scale.y],"cast_scale":[cast.scale.x,cast.scale.y],"hand": [cast.grip().x,cast.grip().y],"weapon":str(enemy.weapon.data.id) if enemy.weapon else ""})
-	var cast_report := FileAccess.open("res://build/m01_live_cast_states.json",FileAccess.WRITE)
+	var cast_report := FileAccess.open("user://m01_live_cast_states.json",FileAccess.WRITE)
 	cast_report.store_string(JSON.stringify(cast_states,"  "));cast_report.close()
 	level.hud.hide()
 	for child in level.get_children():
@@ -167,7 +167,7 @@ func _ready() -> void:
 				if room.id==tv_room and room.cells.has(Vector2i(floori(cabinet.position.x/16),floori(cabinet.position.y/16))):
 					cabinets.append({"name":str(cabinet.name),"position":[cabinet.position.x,cabinet.position.y],"distance_px":prop.position.distance_to(cabinet.position)})
 		television_ownership.append({"position":[prop.position.x,prop.position.y],"room_id":tv_room,"damageable":prop.is_in_group("damageable"),"same_room_cabinets":cabinets})
-	var ownership_report := FileAccess.open("res://build/m01_television_ownership_review.json",FileAccess.WRITE)
+	var ownership_report := FileAccess.open("user://m01_television_ownership_review.json",FileAccess.WRITE)
 	ownership_report.store_string(JSON.stringify({"televisions":television_ownership,"replacements_applied":false},"  "))
 	ownership_report.close()
 	for child in level.get_children():
@@ -214,7 +214,7 @@ func _ready() -> void:
 	for child in level.get_node("Decor").get_children():
 		if child is Sprite2D and child.visible and child.get_meta("decor_asset_id","")=="hq_motel_dresser":
 			dresser_inventory.append({"source":"decor","position":[child.position.x,child.position.y],"rotation":child.rotation})
-	var dresser_report := FileAccess.open("res://build/m01_dresser_integrated_review.json" if Engine.has_meta("review_m01_dressers") else "res://build/m01_dresser_inventory.json",FileAccess.WRITE)
+	var dresser_report := FileAccess.open("user://m01_dresser_integrated_review.json" if Engine.has_meta("review_m01_dressers") else "user://m01_dresser_inventory.json",FileAccess.WRITE)
 	var dresser_bodies: Array=[]
 	for body in level.props_root.get_children():
 		if not body is StaticBody2D or not str(body.name).begins_with("CandidateDresser_"):continue
@@ -492,7 +492,7 @@ func _ready() -> void:
 				await RenderingServer.frame_post_draw
 				get_viewport().get_texture().get_image().save_png("res://build/m01_dresser_%s_no_walls.png" % review[0])
 				for node in hidden:node.show()
-	var report := FileAccess.open("res://build/m01_native_bed_review.json",FileAccess.WRITE)
+	var report := FileAccess.open("user://m01_native_bed_review.json",FileAccess.WRITE)
 	var nightstand_count := int(Engine.get_meta("m01_nightstand_candidate_count",0))
 	assert(nightstand_count>0,"Bedside candidate must actually be placed")
 	report.store_string(JSON.stringify({"runtime_approved":false,"legacy_nightstands_pending":Engine.get_meta("m01_nightstand_skipped",[]),"nightstand_navigation":Engine.get_meta("m01_nightstand_navigation_review",{}),"nightstand_count":nightstand_count,"nightstand_physics":nightstand_physics,"placements":placements,"nearby_dressing":nearby_dressing,"legacy_decorative_beds":decorative_beds,

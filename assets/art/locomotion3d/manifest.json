@@ -1,0 +1,1039 @@
+{
+	"casts": [
+		{
+			"cast": "bellhop",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00037649035220965
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00085463066352531
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00057163916062563
+				}
+			],
+			"unchanged_model_sha256": "210ce6275a96a003c5a406a04eeb4fa7f3f70917536e7607347c9c5edfa3586b"
+		},
+		{
+			"cast": "biker",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00066277728183195
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00075867387931793
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00042321562068536
+				}
+			],
+			"unchanged_model_sha256": "dd14f5458ee6c073046cc73a51edc3884a94c7ee43c4bd1f63db829f3d0f3f83"
+		},
+		{
+			"cast": "boss",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00082992488751187
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00093403621576726
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00070800801040604
+				}
+			],
+			"unchanged_model_sha256": "65f95a147b81d18bc7ff269b9f4a74b34ceea94cb4dd40b90612ea74ecafd59c"
+		},
+		{
+			"cast": "buck",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.0011005875421688
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00108297949191183
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00089433859102428
+				}
+			],
+			"unchanged_model_sha256": "9735547416af8c2d38ed286a8dda3fc7c81b6a2a8731fccbed26f45faa1e0baf"
+		},
+		{
+			"cast": "burnt",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00042810550075955
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00040249378071166
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00067020358983427
+				}
+			],
+			"unchanged_model_sha256": "89a664eef42fd1e3f8cb8c275df3afa57860333c02393eb50e0f35f33728cde3"
+		},
+		{
+			"cast": "cass",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00042020980617962
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00066640973091125
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00030583576881326
+				}
+			],
+			"unchanged_model_sha256": "6d84de7f1db3a1edc16c667bf91e07cf263188b0b33e6dfa61fdde8c753e65eb"
+		},
+		{
+			"cast": "civilian",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00054450461175292
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.0011196288978681
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00035826422390528
+				}
+			],
+			"unchanged_model_sha256": "1cafbe093730bef265cbc2a184a11dd3fe06e4d4be62fea1d23d6f42ebb97829"
+		},
+		{
+			"cast": "cultist",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00061512901447713
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00088220968609675
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00044707610504701
+				}
+			],
+			"unchanged_model_sha256": "d6b31acd3374c8e92f7319c66c63396e718626335e251727d6a9e1f9f6add5e2"
+		},
+		{
+			"cast": "demon",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.0005594267277047
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00091820664238184
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00081281637540087
+				}
+			],
+			"unchanged_model_sha256": "bf33cd66f2ac2c97064c12690ee7cd851778357989caf7c5b0d5b3449ee98a0c"
+		},
+		{
+			"cast": "fireman",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00042555786785669
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00080213946057483
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00067523901816457
+				}
+			],
+			"unchanged_model_sha256": "435bd0c7ae626b2227dceb71fa76909d2b532700f9c4facec8f6df2c5c06af5c"
+		},
+		{
+			"cast": "ghoul",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00051739998161792
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00088896980741992
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00035943504190072
+				}
+			],
+			"unchanged_model_sha256": "a8d271e8c3b226bebba11c4f3392ed74905d12125756d5bffaeea6aa43406a35"
+		},
+		{
+			"cast": "guard",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00031429438968189
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00027378925005905
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00042338197818025
+				}
+			],
+			"unchanged_model_sha256": "b59a17fe4693b0a0c64adfcddf0d43fd46e3e2e6123da7be1b21fafc6ab3cf0c"
+		},
+		{
+			"cast": "gunner",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00059957127086818
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00099922367371618
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00041499937651678
+				}
+			],
+			"unchanged_model_sha256": "3a001800907321b2e5ec6157f9d2584b05ab399b09f114efa6fef57bc6e15f12"
+		},
+		{
+			"cast": "handler",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00076118489960208
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00087277696002274
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00053745758486911
+				}
+			],
+			"unchanged_model_sha256": "2e79a6832ef2ef3b6243d3079389b13f194fac34930dfbf948edfac47c035512"
+		},
+		{
+			"cast": "heavy",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00028874218696728
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.0003298544907011
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00031727727036923
+				}
+			],
+			"unchanged_model_sha256": "ca8e739ab23a5991e6ca26074d6cd3ee54e614be8d1b4f14617d907600eef0dd"
+		},
+		{
+			"cast": "hunter",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.0003794127551373
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00043705178541131
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00045836926437914
+				}
+			],
+			"unchanged_model_sha256": "07b88e9bd4983020f91a65ea76fd4503d1fe5eca1915d4d232d08afa274d0aa8"
+		},
+		{
+			"cast": "riot",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00039012974593788
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00057184882462024
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00040817511035129
+				}
+			],
+			"unchanged_model_sha256": "40462c07c96cde9eaed2c99c13e90150e964c7320a20fd64be0edab9950b0b84"
+		},
+		{
+			"cast": "scout",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00080362905282527
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.0004504041862674
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00037184724351391
+				}
+			],
+			"unchanged_model_sha256": "a6f526e7a5b49165f2adfe805bfbab9008476471925536cbb092bb463aedc37c"
+		},
+		{
+			"cast": "scrapper",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00050085404654964
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00043975969310849
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00045132447849027
+				}
+			],
+			"unchanged_model_sha256": "d0bf081e3ab4e7de79cb0e30c3f46361e1d237102dd9de1cdfd53c1b62799996"
+		},
+		{
+			"cast": "security",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00034494974534027
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00125598919112235
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00037875142879784
+				}
+			],
+			"unchanged_model_sha256": "99cb48a6a51e3bb8e62e42b236a42d34b0e87455ed98ac8aa600edb4b073a8ab"
+		},
+		{
+			"cast": "sniper",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00043462615576572
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00131881062407047
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00043764722067862
+				}
+			],
+			"unchanged_model_sha256": "36cdea8c763bf562dbe2e42ad31ed9dbd87d31108bb2aaa6e03449f91ed88480"
+		},
+		{
+			"cast": "stagehand",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00026295625139027
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00024194919387809
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00036897885729558
+				}
+			],
+			"unchanged_model_sha256": "11d0f2046088351024f39d3d2c47040ee01712351d0b846fe9d2ea16ca684264"
+		},
+		{
+			"cast": "welder",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.00066951283952221
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.000369384419173
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00038704083999618
+				}
+			],
+			"unchanged_model_sha256": "425f5903cbfa3c1976a78765bea09e3f2ad978e50cf04be7aa6500c831db043d"
+		},
+		{
+			"cast": "zombie",
+			"clips": [
+				"armed_dual_run",
+				"armed_dual_sneak",
+				"armed_dual_walk",
+				"armed_melee_run",
+				"armed_melee_sneak",
+				"armed_melee_walk",
+				"armed_run",
+				"armed_sneak",
+				"armed_walk",
+				"run",
+				"sneak",
+				"walk"
+			],
+			"native_speed_px_s": {
+				"run": 49.2307692307692,
+				"sneak": 8.20512820512821,
+				"walk": 22.6262626262626
+			},
+			"renderer_review": [
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "walk",
+					"worst_drift_px": 0.0003691783058457
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "run",
+					"worst_drift_px": 0.00063712272094562
+				},
+				{
+					"aim_movement_pairs": 64.0,
+					"both_feet": true,
+					"gait": "sneak",
+					"worst_drift_px": 0.00053789955563843
+				}
+			],
+			"unchanged_model_sha256": "1b55f6cd12059033271b73d8dfd4d4abf40e06c704b613abb6bab3078eb8c722"
+		}
+	],
+	"runtime_promoted": true,
+	"scope": "Existing 24 humanoid models preserved; contact lower-body animation, directional step IK and whole-body aim",
+	"traversal_scale": 0.22
+}

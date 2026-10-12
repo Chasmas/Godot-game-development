@@ -1,0 +1,41 @@
+{
+  "runtime_approved": false,
+  "weapon": "smg",
+  "units": "metres",
+  "forward_blender": "-Y",
+  "anchors_blender": {
+    "GripAnchor": [
+      0,
+      0.015,
+      0
+    ],
+    "SupportGrip": [
+      0,
+      -0.14,
+      0.02
+    ],
+    "SupportRearGrip": [
+      0,
+      -0.08000000000000002,
+      0.02
+    ],
+    "ShoulderAnchor": [
+      0,
+      0.186,
+      0.04
+    ],
+    "Muzzle": [
+      0,
+      -0.35000000000000003,
+      0.064
+    ]
+  },
+  "overall_length_m": 0.53,
+  "pending": [
+    "authored finish",
+    "hand mesh contact",
+    "shoulder contact",
+    "all gait and aim reviews",
+    "firing origin"
+  ]
+}

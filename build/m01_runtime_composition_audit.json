@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "zones": [
+    {
+      "capture": "m01_courtyard_runtime_capture.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 46.548,
+      "p95_luminance": 166.923,
+      "p99_luminance": 234.505,
+      "clipped_white_percent": 0.407
+    },
+    {
+      "capture": "m01_lounge_runtime_capture.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 64.14,
+      "p95_luminance": 123.439,
+      "p99_luminance": 161.252,
+      "clipped_white_percent": 0.006
+    },
+    {
+      "capture": "m01_reception_runtime_capture.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 57.7,
+      "p95_luminance": 248.622,
+      "p99_luminance": 255.0,
+      "clipped_white_percent": 2.842
+    },
+    {
+      "capture": "m01_office_runtime_capture.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 52.266,
+      "p95_luminance": 210.641,
+      "p99_luminance": 243.307,
+      "clipped_white_percent": 0.022
+    },
+    {
+      "capture": "m01_service_runtime_capture.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 56.687,
+      "p95_luminance": 170.075,
+      "p99_luminance": 211.916,
+      "clipped_white_percent": 0.106
+    },
+    {
+      "capture": "m01_guest_room_accents_runtime.png",
+      "resolution": [
+        800,
+        600
+      ],
+      "median_luminance": 44.198,
+      "p95_luminance": 83.842,
+      "p99_luminance": 144.656,
+      "clipped_white_percent": 0.007
+    }
+  ],
+  "failures": [],
+  "scope": "Live M01 camera captures. Checks expected output dimensions and guards against global clipped-white lighting while allowing the established concentrated reception tile lighting."
+}

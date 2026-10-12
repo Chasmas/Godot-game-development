@@ -1,0 +1,10 @@
+{
+	"cast": "cass",
+	"duration_seconds": 5.13333368301392,
+	"frames": 48,
+	"motion": "melee_bat_swing_v1",
+	"pending": "Finger contact, anatomical clearance, other aim angles and actual gameplay",
+	"runtime_approved": false,
+	"weapon": "pistol",
+	"worst_shouldered_hand_target_error_m": 0.0
+}

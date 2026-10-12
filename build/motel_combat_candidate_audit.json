@@ -1,0 +1,20 @@
+{
+  "scope": "Every audio track under music/, including game masters and source variants; dialogue and SFX excluded",
+  "tracks": [
+    {
+      "file": "music\\st_studio_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_villa_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_yard_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    }
+  ]
+}

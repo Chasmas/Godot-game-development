@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://tools/measure_locomotion_strides.gd" id="1"]
+[node name="StrideMeasurements" type="Node"]
+script = ExtResource("1")

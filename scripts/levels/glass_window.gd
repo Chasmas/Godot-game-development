@@ -38,6 +38,14 @@ func shatter(dir: Vector2) -> void:
 	if broken:
 		return
 	broken = true
+	var native_visual := get_node_or_null("NativeM01WindowVisual") as CanvasItem
+	if native_visual != null:
+		native_visual.hide()
+	var curtain_dressing := get_node_or_null("NativeM01GuestCurtains") as CanvasItem
+	if curtain_dressing != null:
+		curtain_dressing.hide()
+	remove_meta("review_window_visual_override")
+	remove_meta("native_window_visual_override")
 	collision_layer = Layers.LOW      # frame remains: vault/dive through it
 	remove_from_group("glass")
 	Audio.play_at("glass", global_position)
@@ -68,6 +76,12 @@ func shatter(dir: Vector2) -> void:
 
 func _draw() -> void:
 	var r := Rect2(-size * 0.5, size)
+	# Review-only projection candidates can supply an intact visual as a child
+	# while retaining this body's production collision and break logic.  The
+	# marker is never set in normal gameplay, and broken windows always return
+	# to this authoritative damaged-frame drawing.
+	if not broken and (has_meta("review_window_visual_override") or has_meta("native_window_visual_override")):
+		return
 	if broken:
 		# empty frame with jagged teeth of glass left along both edges
 		draw_rect(r, Color(0.1, 0.1, 0.14, 0.9))

@@ -1,0 +1,52 @@
+{
+	"runtime_promoted": false,
+	"samples": [
+		{
+			"capture": "res://build/m01_visibility_entry.png",
+			"label": "entry",
+			"position": [
+				0.899999976158142,
+				0.0,
+				1.70000004768372
+			]
+		},
+		{
+			"capture": "res://build/m01_visibility_bed_foot.png",
+			"label": "bed_foot",
+			"position": [
+				0.899999976158142,
+				0.0,
+				0.100000001490116
+			]
+		},
+		{
+			"capture": "res://build/m01_visibility_bedside.png",
+			"label": "bedside",
+			"position": [
+				0.899999976158142,
+				0.0,
+				-1.10000002384186
+			]
+		},
+		{
+			"capture": "res://build/m01_visibility_bed_overlap_occlusion_only.png",
+			"label": "bed_overlap_occlusion_only",
+			"position": [
+				-0.600000023841858,
+				0.0,
+				-2.15000009536743
+			]
+		},
+		{
+			"capture": "res://build/m01_visibility_bathroom.png",
+			"label": "bathroom",
+			"position": [
+				2.09999990463257,
+				0.0,
+				-1.39999997615814
+			]
+		}
+	],
+	"scope": "Static occlusion samples, no locomotion or navigability approval",
+	"yaw_degrees": 20
+}

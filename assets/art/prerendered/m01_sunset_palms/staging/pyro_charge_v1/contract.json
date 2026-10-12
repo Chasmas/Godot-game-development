@@ -1,0 +1,9 @@
+{
+  "reference": "assets/art/reference/m01_pyro_charge_v1/concept.png",
+  "image": "pyro_charge_topdown.png",
+  "runtime_approved": false,
+  "states": [
+    "pickup",
+    "planted"
+  ]
+}

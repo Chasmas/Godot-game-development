@@ -1,0 +1,325 @@
+{
+  "beds": [
+    {
+      "player_contact_sides": 2,
+      "position": [
+        128.0,
+        64.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        800.0,
+        64.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        912.0,
+        64.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        384.0,
+        128.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        816.0,
+        448.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        272.0,
+        464.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        352.0,
+        480.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        336.0,
+        592.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        272.0,
+        624.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        800.0,
+        624.0
+      ],
+      "uniform_scale": 0.0587745942175388
+    }
+  ],
+  "dresser_texture_count": 3,
+  "native_dressers": [
+    {
+      "player_contact_sides": 3,
+      "position": [
+        219.0,
+        88.0
+      ]
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        411.0,
+        128.0
+      ]
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        1051.0,
+        64.0
+      ]
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        360.0,
+        453.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        784.0,
+        491.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        803.0,
+        648.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        552.0,
+        56.6399993896484
+      ]
+    }
+  ],
+  "native_nightstands": [
+    {
+      "player_contact_sides": 1,
+      "position": [
+        118.0,
+        40.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        118.0,
+        88.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        374.0,
+        104.0
+      ]
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        790.0,
+        40.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        790.0,
+        88.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        902.0,
+        40.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        902.0,
+        88.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        262.0,
+        440.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        262.0,
+        488.0
+      ]
+    },
+    {
+      "player_contact_sides": 2,
+      "position": [
+        792.0,
+        438.0
+      ]
+    },
+    {
+      "player_contact_sides": 1,
+      "position": [
+        840.0,
+        438.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        230.0,
+        600.0
+      ]
+    },
+    {
+      "player_contact_sides": 3,
+      "position": [
+        758.0,
+        600.0
+      ]
+    }
+  ],
+  "native_rugs": [
+    {
+      "position": [
+        154.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 1,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        409.0,
+        144.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 2,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        826.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 4,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        938.0,
+        64.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 5,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        297.0,
+        464.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 9,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        378.0,
+        480.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 10,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        816.0,
+        474.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 13,
+      "visible_source_pixels": 66085
+    },
+    {
+      "position": [
+        297.0,
+        624.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 15,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        362.0,
+        592.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 16,
+      "visible_source_pixels": 65051
+    },
+    {
+      "position": [
+        826.0,
+        624.0
+      ],
+      "projected_alpha_pixels_outside_room": 0,
+      "room_id": 18,
+      "visible_source_pixels": 65051
+    }
+  ],
+  "nightstand_shared_texture_count": 1,
+  "passed": true,
+  "scope": "Production M01 beds, bedside cabinets, CRT dressers and woven rugs. Furniture collision uses actual player sweeps; rugs are verified as walkable in-room visuals with no legacy draw path.",
+  "shared_texture_count": 1
+}

@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource path="res://tools/m01_pool_party_ruin_review.gd" type="Script" id="1"]
+[node name="M01PoolPartyRuinReview" type="Node"]
+script = ExtResource("1")

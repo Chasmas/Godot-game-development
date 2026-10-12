@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://tools/m01_actor_pose_inventory.gd" id="1"]
+[node name="M01ActorPoseInventory" type="Node"]
+script = ExtResource("1")

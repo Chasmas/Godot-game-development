@@ -14,6 +14,9 @@ extends RefCounted
 ## layers (floor clutter under furniture, wall detail over walls).
 
 const T := 16
+const M01GuestAirConditioners = preload("res://scripts/levels/m01_native_guest_ac.gd")
+const M01GuestDoorPlates = preload("res://scripts/levels/m01_native_guest_door_plates.gd")
+const M01GuestWallShelves = preload("res://scripts/levels/m01_native_guest_wall_shelves.gd")
 
 class Room:
 	var id := 0
@@ -65,10 +68,17 @@ static func build(level: Node, builder: LevelBuilder, wall_art: WallArt = null) 
 	# Explicit isolated review only; never load unapproved art in gameplay.
 	if Engine.has_meta("review_m01_nightstands") and str(builder.data.get("id",""))=="m01_sunset_palms":
 		load("res://tools/m01_nightstand_candidate.gd").build(level,floor_layer)
+	else:
+		M01NativeNightstands.build(level,floor_layer)
 	if Engine.has_meta("review_m01_dressers") and str(builder.data.get("id",""))=="m01_sunset_palms":
 		load("res://tools/m01_dresser_candidate.gd").build(level,floor_layer)
 	else:
 		M01NativeRugs.build(level,builder,floor_layer)
+		M01NativeDressers.build(level,floor_layer)
+	M01NativeRoomAccents.build(level,builder,floor_layer)
+	M01GuestAirConditioners.build(level,builder,wall_layer)
+	M01GuestDoorPlates.build(level,builder,wall_layer)
+	M01GuestWallShelves.build(level,builder)
 	# the floor clutter never changes: one texture instead of ~650 draw calls
 	StaticBake.queue(level, floor_layer, Rect2(Vector2.ZERO, Vector2(builder.w, builder.h) * LevelBuilder.T))
 	StaticBake.queue(level, wall_layer, Rect2(Vector2(-16, -16), Vector2(builder.w + 2, builder.h + 2) * LevelBuilder.T))
@@ -399,7 +409,7 @@ static func _dress_walls(r: Room, b: LevelBuilder, layer: ClutterLayer, room_no:
 				bx /= bed_x.size()
 				target = Vector2(bx * T + 8, mid_face.y * T + T - 2.5)
 			if wa:
-				wa.add_painting(target + Vector2(0, -4), wa.theme_painting(r.id + room_no[0]))
+				wa.add_m01_botanical_lithograph(target + Vector2(0, -4)) if str(b.data.get("id", "")) == "m01_sunset_palms" else wa.add_painting(target + Vector2(0, -4), wa.theme_painting(r.id + room_no[0]))
 			else:
 				layer.items.append(["picture", target, 0.0, rng.randi() % 4])
 			# the wall AC unit goes at the far end of the same wall

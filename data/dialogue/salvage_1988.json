@@ -7,6 +7,7 @@
   "a": {
    "speaker": "machine",
    "text": "You have... one... new message.",
+   "voice": "res://assets/audio/voice/machine/salvage_a.ogg",
    "sfx": "blip",
    "next": "b",
    "shot": "apartment"
@@ -32,6 +33,7 @@
   "e": {
    "speaker": "machine",
    "text": "End of messages.",
+   "voice": "res://assets/audio/voice/machine/salvage_e.ogg",
    "sfx": "blip",
    "next": "f",
    "shot": "machine"

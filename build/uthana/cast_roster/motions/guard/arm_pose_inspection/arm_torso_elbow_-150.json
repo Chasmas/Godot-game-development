@@ -1,0 +1,23 @@
+{
+  "runtime_approved": false,
+  "pose": "rifle run frame12",
+  "rows": [
+    {
+      "side": "Right",
+      "arm_weight_vertices_in_rest_torso_region": 0,
+      "arm_triangles": 2970,
+      "torso_triangles": 2259,
+      "triangle_crossings": 203,
+      "distinct_pierced_arm_faces": 128
+    },
+    {
+      "side": "Left",
+      "arm_weight_vertices_in_rest_torso_region": 0,
+      "arm_triangles": 2843,
+      "torso_triangles": 2259,
+      "triangle_crossings": 32,
+      "distinct_pierced_arm_faces": 19
+    }
+  ],
+  "scope": "Triangle crossings of central torso selected in rest world space (80% shoulder span, hips+4cm to neck-3cm) against >80% arm-weight faces. Excludes lateral torso, blended arm boundaries, coplanar contact and fully contained surfaces. Not full clearance proof."
+}

@@ -1,0 +1,167 @@
+{
+  "cast": "guard",
+  "native_speed_px_s": 14.6666666666667,
+  "runtime_approved": false,
+  "stance": {
+    "LeftFoot_0_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455315021099523,
+      "samples": 555
+    },
+    "LeftFoot_0_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333114112436306,
+      "samples": 555
+    },
+    "LeftFoot_1_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455265362688806,
+      "samples": 555
+    },
+    "LeftFoot_1_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333044772560243,
+      "samples": 555
+    },
+    "LeftFoot_2_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455315021099523,
+      "samples": 555
+    },
+    "LeftFoot_2_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333114112436306,
+      "samples": 555
+    },
+    "LeftFoot_3_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455265362688806,
+      "samples": 555
+    },
+    "LeftFoot_3_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333044772560243,
+      "samples": 555
+    },
+    "LeftFoot_4_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455315021099523,
+      "samples": 555
+    },
+    "LeftFoot_4_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333026509906631,
+      "samples": 555
+    },
+    "LeftFoot_5_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455342342320364,
+      "samples": 555
+    },
+    "LeftFoot_5_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333052303176373,
+      "samples": 555
+    },
+    "LeftFoot_6_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455304616480134,
+      "samples": 555
+    },
+    "LeftFoot_6_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333114112436306,
+      "samples": 555
+    },
+    "LeftFoot_7_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000455256340501364,
+      "samples": 555
+    },
+    "LeftFoot_7_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000333013595081866,
+      "samples": 555
+    },
+    "RightFoot_0_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307914669974707,
+      "samples": 555
+    },
+    "RightFoot_0_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185500321094878,
+      "samples": 555
+    },
+    "RightFoot_1_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307877016894054,
+      "samples": 555
+    },
+    "RightFoot_1_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185402841452742,
+      "samples": 555
+    },
+    "RightFoot_2_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307900118059479,
+      "samples": 555
+    },
+    "RightFoot_2_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185506105481181,
+      "samples": 555
+    },
+    "RightFoot_3_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307877016894054,
+      "samples": 555
+    },
+    "RightFoot_3_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185402841452742,
+      "samples": 555
+    },
+    "RightFoot_4_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307929294649512,
+      "samples": 555
+    },
+    "RightFoot_4_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185500321094878,
+      "samples": 555
+    },
+    "RightFoot_5_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307877016894054,
+      "samples": 555
+    },
+    "RightFoot_5_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185518492799019,
+      "samples": 555
+    },
+    "RightFoot_6_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000307914669974707,
+      "samples": 555
+    },
+    "RightFoot_6_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185506105481181,
+      "samples": 555
+    },
+    "RightFoot_7_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000308061753457878,
+      "samples": 555
+    },
+    "RightFoot_7_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000185402841452742,
+      "samples": 555
+    }
+  }
+}

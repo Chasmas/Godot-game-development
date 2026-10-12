@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\heavy\\heavy.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cAvnDNVAdgi8/character.glb",
+    "character_id": "cAvnDNVAdgi8",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

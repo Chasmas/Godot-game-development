@@ -1,0 +1,181 @@
+{
+  "cast": "cass",
+  "controller": {
+    "configured_base_speed_px_s": 53.1,
+    "contact_error_metres": 0.0000494570158480201,
+    "distance_metres": 3.12025046348572,
+    "passed": true,
+    "peak_actual_speed_px_s": 23.8950347900391,
+    "peak_playback_rate": 0.999899524475883,
+    "peak_steps_per_second": 1.66649920745981,
+    "runtime_approved": false,
+    "speed_profile": "cadence",
+    "stopped_phase_frozen": true,
+    "wall_blocked": true
+  },
+  "gait": "sneak",
+  "native_speed_px_s": 23.8974358974359,
+  "runtime_approved": false,
+  "stance": {
+    "LeftFoot_0_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000742320480640046,
+      "samples": 726
+    },
+    "LeftFoot_0_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666082050884143,
+      "samples": 726
+    },
+    "LeftFoot_1_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.00007427381206071,
+      "samples": 726
+    },
+    "LeftFoot_1_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666303385514766,
+      "samples": 726
+    },
+    "LeftFoot_2_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000742320480640046,
+      "samples": 726
+    },
+    "LeftFoot_2_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666081978124566,
+      "samples": 726
+    },
+    "LeftFoot_3_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.00007427381206071,
+      "samples": 726
+    },
+    "LeftFoot_3_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666303385514766,
+      "samples": 726
+    },
+    "LeftFoot_4_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000742320480640046,
+      "samples": 726
+    },
+    "LeftFoot_4_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666082050884143,
+      "samples": 726
+    },
+    "LeftFoot_5_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.000074283110734541,
+      "samples": 726
+    },
+    "LeftFoot_5_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666417909087613,
+      "samples": 726
+    },
+    "LeftFoot_6_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000742320480640046,
+      "samples": 726
+    },
+    "LeftFoot_6_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666081978124566,
+      "samples": 726
+    },
+    "LeftFoot_7_forward": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000742718693800271,
+      "samples": 726
+    },
+    "LeftFoot_7_reverse": {
+      "crosses_loop_boundary": false,
+      "drift_metres": 0.0000666532578179613,
+      "samples": 726
+    },
+    "RightFoot_0_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648514251224697,
+      "samples": 726
+    },
+    "RightFoot_0_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586959649808705,
+      "samples": 726
+    },
+    "RightFoot_1_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648064524284564,
+      "samples": 726
+    },
+    "RightFoot_1_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586578025831841,
+      "samples": 726
+    },
+    "RightFoot_2_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648514251224697,
+      "samples": 726
+    },
+    "RightFoot_2_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586959649808705,
+      "samples": 726
+    },
+    "RightFoot_3_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648064524284564,
+      "samples": 726
+    },
+    "RightFoot_3_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586578025831841,
+      "samples": 726
+    },
+    "RightFoot_4_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648514251224697,
+      "samples": 726
+    },
+    "RightFoot_4_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586959649808705,
+      "samples": 726
+    },
+    "RightFoot_5_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648848217679188,
+      "samples": 726
+    },
+    "RightFoot_5_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000587201539019588,
+      "samples": 726
+    },
+    "RightFoot_6_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648514251224697,
+      "samples": 726
+    },
+    "RightFoot_6_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586959649808705,
+      "samples": 726
+    },
+    "RightFoot_7_forward": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000648848217679188,
+      "samples": 726
+    },
+    "RightFoot_7_reverse": {
+      "crosses_loop_boundary": true,
+      "drift_metres": 0.0000586578025831841,
+      "samples": 726
+    }
+  }
+}

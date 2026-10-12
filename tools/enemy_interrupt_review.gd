@@ -15,13 +15,14 @@ func _ready() -> void:
 		guard.visual.set_process(false)
 		guard.visual.swing()
 		guard._windup_t = 0.1
+		guard._melee_contact_t = 0.12
 		guard._reload_t = 1.0
 		var serial := guard.visual.attack_serial
 		if action == "down":
 			guard.knock_down(DamageInfo.make(DamageInfo.Type.PUNCH, null, guard.position, Vector2.RIGHT, &"fists", &"punch"))
 		elif action == "stun": guard._stun(0.4, Vector2.RIGHT)
 		else: guard.begin_execution(self)
-		check(guard._windup_t < 0.0 and guard._reload_t == 0.0, action+" clears controller attack/reload")
+		check(guard._windup_t < 0.0 and guard._melee_contact_t < 0.0 and guard._reload_t == 0.0, action+" clears controller attack/contact/reload")
 		check(guard.visual._swing_t < 0.0 and guard.visual.attack_serial > serial, action+" cancels authored attack and attached effects")
 		if action == "down":
 			guard.visual._process_cast(0.0)

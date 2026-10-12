@@ -1,0 +1,10 @@
+{
+  "runtime_approved": false,
+  "source": "Existing ImageGen-backed Blender furniture and door reconstruction with authored textile and room dressing",
+  "scope": "v10 staging: v9 textiles, botanical artwork, curtains, PTAC and entry dressing, plus a refined bathroom fixture wall with mirror, faucet, shower panel, towel rail and practical lighting. This camera remains art review only, not an approved gameplay projection.",
+  "pending": [
+    "Reference-quality textile and botanical artwork refinement",
+    "Adapt to exact gameplay projection and room geometry",
+    "Validate collisions, door clearance and actor placement"
+  ]
+}

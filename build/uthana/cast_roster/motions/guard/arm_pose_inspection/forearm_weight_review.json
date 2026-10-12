@@ -1,0 +1,1579 @@
+{
+  "runtime_approved": false,
+  "scope": "Rest-space middle60% of forearm within65mm centreline, arm-influence>.25; anatomical selection requires visual review",
+  "rows": [
+    {
+      "side": "Right",
+      "sample_count": 96,
+      "segment_length_m": 0.25975584584486405,
+      "average_weights": {
+        "RightArm": 0.04278447960192958,
+        "RightForeArm": 0.9560906253755093,
+        "RightHand": 0.0011248983379725057
+      },
+      "vertices": [
+        {
+          "vertex": 18708,
+          "fraction": 0.3168991950580693,
+          "axis_distance_m": 0.06393753398777714,
+          "weights": {
+            "RightForeArm": 0.8247358798980713,
+            "RightArm": 0.1752641499042511
+          }
+        },
+        {
+          "vertex": 18709,
+          "fraction": 0.6508058235029033,
+          "axis_distance_m": 0.044216068298342376,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18710,
+          "fraction": 0.6823182191784005,
+          "axis_distance_m": 0.04454207792927986,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18711,
+          "fraction": 0.4774591076925131,
+          "axis_distance_m": 0.05463135526919326,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18712,
+          "fraction": 0.6242077224903834,
+          "axis_distance_m": 0.04467159923526808,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18713,
+          "fraction": 0.5403972709230067,
+          "axis_distance_m": 0.04916501591346886,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18714,
+          "fraction": 0.3587808989007049,
+          "axis_distance_m": 0.06452514894659175,
+          "weights": {
+            "RightForeArm": 0.8185973763465881,
+            "RightArm": 0.18140265345573425
+          }
+        },
+        {
+          "vertex": 18715,
+          "fraction": 0.6483503572237697,
+          "axis_distance_m": 0.044831472936986715,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18716,
+          "fraction": 0.3853666392523794,
+          "axis_distance_m": 0.06044370543484427,
+          "weights": {
+            "RightForeArm": 0.8130316138267517,
+            "RightArm": 0.18696840107440948
+          }
+        },
+        {
+          "vertex": 18718,
+          "fraction": 0.40161854805374486,
+          "axis_distance_m": 0.06171620177632904,
+          "weights": {
+            "RightForeArm": 0.8665321469306946,
+            "RightArm": 0.13346785306930542
+          }
+        },
+        {
+          "vertex": 18719,
+          "fraction": 0.4979175649712543,
+          "axis_distance_m": 0.04899417805009705,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18720,
+          "fraction": 0.4658576128027962,
+          "axis_distance_m": 0.053232526738832095,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18721,
+          "fraction": 0.5031969091310902,
+          "axis_distance_m": 0.05051081170146507,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18722,
+          "fraction": 0.3895592470444138,
+          "axis_distance_m": 0.056872036946449336,
+          "weights": {
+            "RightForeArm": 0.899959146976471,
+            "RightArm": 0.10004084557294846
+          }
+        },
+        {
+          "vertex": 18723,
+          "fraction": 0.7166123439387088,
+          "axis_distance_m": 0.036452484352416645,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18724,
+          "fraction": 0.7166123439387088,
+          "axis_distance_m": 0.036452484352416645,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18725,
+          "fraction": 0.5176952072205462,
+          "axis_distance_m": 0.044366524176491964,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18727,
+          "fraction": 0.4813674811309689,
+          "axis_distance_m": 0.047620514183609075,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18728,
+          "fraction": 0.4189832905723513,
+          "axis_distance_m": 0.05323131571764454,
+          "weights": {
+            "RightForeArm": 0.9778054356575012,
+            "RightArm": 0.02219456247985363
+          }
+        },
+        {
+          "vertex": 18729,
+          "fraction": 0.21186775410778613,
+          "axis_distance_m": 0.06388355369521014,
+          "weights": {
+            "RightForeArm": 0.6772891283035278,
+            "RightArm": 0.32271087169647217
+          }
+        },
+        {
+          "vertex": 18730,
+          "fraction": 0.3106109696315743,
+          "axis_distance_m": 0.05988846987142938,
+          "weights": {
+            "RightForeArm": 0.791873037815094,
+            "RightArm": 0.2081269472837448
+          }
+        },
+        {
+          "vertex": 18731,
+          "fraction": 0.31773192320590493,
+          "axis_distance_m": 0.05560631799853298,
+          "weights": {
+            "RightForeArm": 0.791873037815094,
+            "RightArm": 0.2081269472837448
+          }
+        },
+        {
+          "vertex": 18733,
+          "fraction": 0.29461062313807124,
+          "axis_distance_m": 0.0582393118514929,
+          "weights": {
+            "RightForeArm": 0.7576757073402405,
+            "RightArm": 0.24232427775859833
+          }
+        },
+        {
+          "vertex": 18734,
+          "fraction": 0.25422008197798457,
+          "axis_distance_m": 0.05288168151093982,
+          "weights": {
+            "RightForeArm": 0.7109968066215515,
+            "RightArm": 0.2890032231807709
+          }
+        },
+        {
+          "vertex": 18735,
+          "fraction": 0.36920004837699694,
+          "axis_distance_m": 0.053094351747831975,
+          "weights": {
+            "RightForeArm": 0.9506528973579407,
+            "RightArm": 0.04934708774089813
+          }
+        },
+        {
+          "vertex": 18737,
+          "fraction": 0.25542978295892593,
+          "axis_distance_m": 0.049927019092201416,
+          "weights": {
+            "RightForeArm": 0.8141522407531738,
+            "RightArm": 0.18584778904914856
+          }
+        },
+        {
+          "vertex": 18740,
+          "fraction": 0.4235728784608733,
+          "axis_distance_m": 0.04429732842612266,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18741,
+          "fraction": 0.5338810807085155,
+          "axis_distance_m": 0.04274601055481745,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18742,
+          "fraction": 0.5458092227276349,
+          "axis_distance_m": 0.04245439433492076,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18743,
+          "fraction": 0.3612682338552535,
+          "axis_distance_m": 0.0467460408513447,
+          "weights": {
+            "RightForeArm": 0.917837917804718,
+            "RightArm": 0.08216206729412079
+          }
+        },
+        {
+          "vertex": 18744,
+          "fraction": 0.31745229771765143,
+          "axis_distance_m": 0.05222002636948246,
+          "weights": {
+            "RightForeArm": 0.8204547166824341,
+            "RightArm": 0.1795452982187271
+          }
+        },
+        {
+          "vertex": 18745,
+          "fraction": 0.23875796641185248,
+          "axis_distance_m": 0.06030942227269919,
+          "weights": {
+            "RightForeArm": 0.6457359790802002,
+            "RightArm": 0.3542640507221222
+          }
+        },
+        {
+          "vertex": 18748,
+          "fraction": 0.5949086568269522,
+          "axis_distance_m": 0.04190232849309737,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18749,
+          "fraction": 0.47871591226915766,
+          "axis_distance_m": 0.044639468091023884,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18751,
+          "fraction": 0.5098587300003778,
+          "axis_distance_m": 0.04183238002058742,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18752,
+          "fraction": 0.21304525298767873,
+          "axis_distance_m": 0.057536227923001795,
+          "weights": {
+            "RightForeArm": 0.6457359790802002,
+            "RightArm": 0.3542640507221222
+          }
+        },
+        {
+          "vertex": 18754,
+          "fraction": 0.22632075375843025,
+          "axis_distance_m": 0.04812882164611939,
+          "weights": {
+            "RightForeArm": 0.7693873047828674,
+            "RightArm": 0.23061272501945496
+          }
+        },
+        {
+          "vertex": 18760,
+          "fraction": 0.31151258618964206,
+          "axis_distance_m": 0.044332722841946816,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18761,
+          "fraction": 0.6432602832248288,
+          "axis_distance_m": 0.041043854582311266,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18762,
+          "fraction": 0.44162760882632673,
+          "axis_distance_m": 0.044862613513164,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18763,
+          "fraction": 0.4756071817093322,
+          "axis_distance_m": 0.04487692129502407,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18764,
+          "fraction": 0.39650951128064843,
+          "axis_distance_m": 0.04467313578656269,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18765,
+          "fraction": 0.593775517359216,
+          "axis_distance_m": 0.04245395833456064,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18768,
+          "fraction": 0.4862734269702821,
+          "axis_distance_m": 0.043855332069185585,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18769,
+          "fraction": 0.4878986293456232,
+          "axis_distance_m": 0.04166958501897329,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18770,
+          "fraction": 0.2697840799951951,
+          "axis_distance_m": 0.04393583516737289,
+          "weights": {
+            "RightForeArm": 0.8655953407287598,
+            "RightArm": 0.13440464437007904
+          }
+        },
+        {
+          "vertex": 18771,
+          "fraction": 0.5312540171210931,
+          "axis_distance_m": 0.04096049587399392,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18774,
+          "fraction": 0.2515418218118858,
+          "axis_distance_m": 0.043687584149201125,
+          "weights": {
+            "RightForeArm": 0.8102766871452332,
+            "RightArm": 0.18972334265708923
+          }
+        },
+        {
+          "vertex": 18778,
+          "fraction": 0.35006544485240004,
+          "axis_distance_m": 0.04230816436243183,
+          "weights": {
+            "RightForeArm": 0.9894274473190308,
+            "RightArm": 0.01057254709303379
+          }
+        },
+        {
+          "vertex": 18779,
+          "fraction": 0.5473738153967386,
+          "axis_distance_m": 0.04125869695983682,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18783,
+          "fraction": 0.587792633466067,
+          "axis_distance_m": 0.04109556880964966,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 18784,
+          "fraction": 0.3711326027603008,
+          "axis_distance_m": 0.04326075783475314,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19116,
+          "fraction": 0.40161854805374486,
+          "axis_distance_m": 0.06171620177632904,
+          "weights": {
+            "RightForeArm": 0.8665321469306946,
+            "RightArm": 0.13346785306930542
+          }
+        },
+        {
+          "vertex": 19119,
+          "fraction": 0.47871591226915766,
+          "axis_distance_m": 0.044639468091023884,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19121,
+          "fraction": 0.31151258618964206,
+          "axis_distance_m": 0.044332722841946816,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19162,
+          "fraction": 0.793102285368998,
+          "axis_distance_m": 0.0391741315928768,
+          "weights": {
+            "RightForeArm": 0.9868162274360657,
+            "RightHand": 0.013183788396418095
+          }
+        },
+        {
+          "vertex": 19165,
+          "fraction": 0.6823182191784005,
+          "axis_distance_m": 0.04454207792927986,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19167,
+          "fraction": 0.7823990128247852,
+          "axis_distance_m": 0.037071087105454335,
+          "weights": {
+            "RightForeArm": 0.9868162274360657,
+            "RightHand": 0.013183788396418095
+          }
+        },
+        {
+          "vertex": 19168,
+          "fraction": 0.7166123439387088,
+          "axis_distance_m": 0.036452484352416645,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19172,
+          "fraction": 0.6483503572237697,
+          "axis_distance_m": 0.044831472936986715,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19173,
+          "fraction": 0.7714583852260225,
+          "axis_distance_m": 0.03223711762327136,
+          "weights": {
+            "RightForeArm": 0.9973247051239014,
+            "RightHand": 0.0026753039564937353
+          }
+        },
+        {
+          "vertex": 19174,
+          "fraction": 0.6242077224903834,
+          "axis_distance_m": 0.04467159923526808,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19176,
+          "fraction": 0.6763099323928241,
+          "axis_distance_m": 0.040242280909592414,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19179,
+          "fraction": 0.6508058235029033,
+          "axis_distance_m": 0.044216068298342376,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19186,
+          "fraction": 0.5403972709230067,
+          "axis_distance_m": 0.04916501591346886,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19188,
+          "fraction": 0.763632907169709,
+          "axis_distance_m": 0.032527534770923364,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19189,
+          "fraction": 0.4774591076925131,
+          "axis_distance_m": 0.05463135526919326,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19190,
+          "fraction": 0.7607744300172472,
+          "axis_distance_m": 0.03589867696491533,
+          "weights": {
+            "RightForeArm": 0.9894239902496338,
+            "RightHand": 0.010576026514172554
+          }
+        },
+        {
+          "vertex": 19191,
+          "fraction": 0.7785275879500863,
+          "axis_distance_m": 0.0359013072292387,
+          "weights": {
+            "RightForeArm": 0.9894239902496338,
+            "RightHand": 0.010576026514172554
+          }
+        },
+        {
+          "vertex": 19192,
+          "fraction": 0.5098587300003778,
+          "axis_distance_m": 0.04183238002058742,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19193,
+          "fraction": 0.5031969091310902,
+          "axis_distance_m": 0.05051081170146507,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19194,
+          "fraction": 0.4979175649712543,
+          "axis_distance_m": 0.04899417805009705,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19195,
+          "fraction": 0.7697439093234384,
+          "axis_distance_m": 0.036381451647422514,
+          "weights": {
+            "RightForeArm": 0.9871165752410889,
+            "RightHand": 0.012883438728749752
+          }
+        },
+        {
+          "vertex": 19196,
+          "fraction": 0.4813674811309689,
+          "axis_distance_m": 0.047620514183609075,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19197,
+          "fraction": 0.40161854805374486,
+          "axis_distance_m": 0.06171620177632904,
+          "weights": {
+            "RightForeArm": 0.8665321469306946,
+            "RightArm": 0.13346785306930542
+          }
+        },
+        {
+          "vertex": 19198,
+          "fraction": 0.5338810807085155,
+          "axis_distance_m": 0.04274601055481745,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19199,
+          "fraction": 0.5473738153967386,
+          "axis_distance_m": 0.04125869695983682,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19200,
+          "fraction": 0.5949086568269522,
+          "axis_distance_m": 0.04190232849309737,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19201,
+          "fraction": 0.6291577072294533,
+          "axis_distance_m": 0.04169060878677663,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19202,
+          "fraction": 0.6432602832248288,
+          "axis_distance_m": 0.041043854582311266,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19203,
+          "fraction": 0.5312540171210931,
+          "axis_distance_m": 0.04096049587399392,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19204,
+          "fraction": 0.5458092227276349,
+          "axis_distance_m": 0.04245439433492076,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19205,
+          "fraction": 0.593775517359216,
+          "axis_distance_m": 0.04245395833456064,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19206,
+          "fraction": 0.4878986293456232,
+          "axis_distance_m": 0.04166958501897329,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19207,
+          "fraction": 0.587792633466067,
+          "axis_distance_m": 0.04109556880964966,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19208,
+          "fraction": 0.4862734269702821,
+          "axis_distance_m": 0.043855332069185585,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19209,
+          "fraction": 0.4756071817093322,
+          "axis_distance_m": 0.04487692129502407,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19210,
+          "fraction": 0.47871591226915766,
+          "axis_distance_m": 0.044639468091023884,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19217,
+          "fraction": 0.7823990128247852,
+          "axis_distance_m": 0.037071087105454335,
+          "weights": {
+            "RightForeArm": 0.9868162274360657,
+            "RightHand": 0.013183788396418095
+          }
+        },
+        {
+          "vertex": 19222,
+          "fraction": 0.5403972709230067,
+          "axis_distance_m": 0.04916501591346886,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19224,
+          "fraction": 0.7607744300172472,
+          "axis_distance_m": 0.03589867696491533,
+          "weights": {
+            "RightForeArm": 0.9894239902496338,
+            "RightHand": 0.010576026514172554
+          }
+        },
+        {
+          "vertex": 19225,
+          "fraction": 0.7607744300172472,
+          "axis_distance_m": 0.03589867696491533,
+          "weights": {
+            "RightForeArm": 0.9894239902496338,
+            "RightHand": 0.010576026514172554
+          }
+        },
+        {
+          "vertex": 19226,
+          "fraction": 0.5949086568269522,
+          "axis_distance_m": 0.04190232849309737,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19227,
+          "fraction": 0.7785275879500863,
+          "axis_distance_m": 0.0359013072292387,
+          "weights": {
+            "RightForeArm": 0.9894239902496338,
+            "RightHand": 0.010576026514172554
+          }
+        },
+        {
+          "vertex": 19228,
+          "fraction": 0.6432602832248288,
+          "axis_distance_m": 0.041043854582311266,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 19229,
+          "fraction": 0.5312540171210931,
+          "axis_distance_m": 0.04096049587399392,
+          "weights": {
+            "RightForeArm": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "side": "Left",
+      "sample_count": 88,
+      "segment_length_m": 0.25485585601578875,
+      "average_weights": {
+        "LeftArm": 0.07405704714950513,
+        "LeftForeArm": 0.9257560074329376,
+        "LeftHand": 0.0001869427194998769
+      },
+      "vertices": [
+        {
+          "vertex": 12588,
+          "fraction": 0.3716583252730178,
+          "axis_distance_m": 0.048369269403834576,
+          "weights": {
+            "LeftForeArm": 0.9476458430290222,
+            "LeftArm": 0.052354149520397186
+          }
+        },
+        {
+          "vertex": 12589,
+          "fraction": 0.442650127669716,
+          "axis_distance_m": 0.05139057765493418,
+          "weights": {
+            "LeftForeArm": 0.9983807802200317,
+            "LeftArm": 0.0016192238545045257
+          }
+        },
+        {
+          "vertex": 12590,
+          "fraction": 0.5891780590571251,
+          "axis_distance_m": 0.046364809810258596,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12591,
+          "fraction": 0.5088975987046822,
+          "axis_distance_m": 0.04614239205721523,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12592,
+          "fraction": 0.5001396846141678,
+          "axis_distance_m": 0.04328854822249791,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12595,
+          "fraction": 0.35429386755268133,
+          "axis_distance_m": 0.05191370471650493,
+          "weights": {
+            "LeftForeArm": 0.9204282760620117,
+            "LeftArm": 0.07957172393798828
+          }
+        },
+        {
+          "vertex": 12596,
+          "fraction": 0.2801428067755473,
+          "axis_distance_m": 0.05353519422777855,
+          "weights": {
+            "LeftForeArm": 0.7432921528816223,
+            "LeftArm": 0.2567078471183777
+          }
+        },
+        {
+          "vertex": 12597,
+          "fraction": 0.43223113543449204,
+          "axis_distance_m": 0.04768112287147104,
+          "weights": {
+            "LeftForeArm": 0.9930857419967651,
+            "LeftArm": 0.0069142603315413
+          }
+        },
+        {
+          "vertex": 12598,
+          "fraction": 0.27846777076664375,
+          "axis_distance_m": 0.0505861922175212,
+          "weights": {
+            "LeftForeArm": 0.7954679131507874,
+            "LeftArm": 0.20453207194805145
+          }
+        },
+        {
+          "vertex": 12599,
+          "fraction": 0.3460931325812008,
+          "axis_distance_m": 0.04905760772216196,
+          "weights": {
+            "LeftForeArm": 0.8657845854759216,
+            "LeftArm": 0.13421539962291718
+          }
+        },
+        {
+          "vertex": 12600,
+          "fraction": 0.5926379290565174,
+          "axis_distance_m": 0.04770641641047662,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12601,
+          "fraction": 0.45298586404555713,
+          "axis_distance_m": 0.05241344707095793,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12602,
+          "fraction": 0.7760177488810488,
+          "axis_distance_m": 0.03879226420002759,
+          "weights": {
+            "LeftForeArm": 0.9893053770065308,
+            "LeftHand": 0.010694651864469051
+          }
+        },
+        {
+          "vertex": 12603,
+          "fraction": 0.6438899692128902,
+          "axis_distance_m": 0.04448949189685597,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12604,
+          "fraction": 0.24580225871212794,
+          "axis_distance_m": 0.05167811821517801,
+          "weights": {
+            "LeftForeArm": 0.804912269115448,
+            "LeftArm": 0.1950877457857132
+          }
+        },
+        {
+          "vertex": 12605,
+          "fraction": 0.45429662153114436,
+          "axis_distance_m": 0.04422540414098818,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12606,
+          "fraction": 0.4844117257549935,
+          "axis_distance_m": 0.04191337702181521,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12607,
+          "fraction": 0.4844117257549935,
+          "axis_distance_m": 0.04191337702181521,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12608,
+          "fraction": 0.4844117257549935,
+          "axis_distance_m": 0.04191337702181521,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12609,
+          "fraction": 0.6706027156629384,
+          "axis_distance_m": 0.03886436863721988,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12610,
+          "fraction": 0.5912681441441262,
+          "axis_distance_m": 0.045165089488199806,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12611,
+          "fraction": 0.435194113534116,
+          "axis_distance_m": 0.04940421998600878,
+          "weights": {
+            "LeftForeArm": 0.9971615076065063,
+            "LeftArm": 0.0028384949546307325
+          }
+        },
+        {
+          "vertex": 12612,
+          "fraction": 0.4847361800048896,
+          "axis_distance_m": 0.04112237996671862,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12613,
+          "fraction": 0.4847361800048896,
+          "axis_distance_m": 0.04112237996671862,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12614,
+          "fraction": 0.25847689467520113,
+          "axis_distance_m": 0.04661655780134107,
+          "weights": {
+            "LeftForeArm": 0.8442502617835999,
+            "LeftArm": 0.15574970841407776
+          }
+        },
+        {
+          "vertex": 12616,
+          "fraction": 0.2894942728797374,
+          "axis_distance_m": 0.05435173113912471,
+          "weights": {
+            "LeftForeArm": 0.8084092736244202,
+            "LeftArm": 0.19159069657325745
+          }
+        },
+        {
+          "vertex": 12617,
+          "fraction": 0.48622900920324164,
+          "axis_distance_m": 0.04610483799688123,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12618,
+          "fraction": 0.7135453355746326,
+          "axis_distance_m": 0.04054975859257209,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12619,
+          "fraction": 0.23119232701532397,
+          "axis_distance_m": 0.058452820797726526,
+          "weights": {
+            "LeftForeArm": 0.7665586471557617,
+            "LeftArm": 0.23344138264656067
+          }
+        },
+        {
+          "vertex": 12620,
+          "fraction": 0.20748923259774235,
+          "axis_distance_m": 0.05777583793229247,
+          "weights": {
+            "LeftForeArm": 0.6915866136550903,
+            "LeftArm": 0.30841338634490967
+          }
+        },
+        {
+          "vertex": 12622,
+          "fraction": 0.21149552766349902,
+          "axis_distance_m": 0.057491541810037815,
+          "weights": {
+            "LeftForeArm": 0.6679693460464478,
+            "LeftArm": 0.33203062415122986
+          }
+        },
+        {
+          "vertex": 12623,
+          "fraction": 0.21778175760765514,
+          "axis_distance_m": 0.05966517464856894,
+          "weights": {
+            "LeftForeArm": 0.7578846216201782,
+            "LeftArm": 0.24211539328098297
+          }
+        },
+        {
+          "vertex": 12624,
+          "fraction": 0.25446586872244087,
+          "axis_distance_m": 0.053306351919576576,
+          "weights": {
+            "LeftForeArm": 0.7002187371253967,
+            "LeftArm": 0.29978126287460327
+          }
+        },
+        {
+          "vertex": 12625,
+          "fraction": 0.6898522907072494,
+          "axis_distance_m": 0.03760925491816627,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12627,
+          "fraction": 0.3614571644401553,
+          "axis_distance_m": 0.05319608043438004,
+          "weights": {
+            "LeftForeArm": 0.9371950030326843,
+            "LeftArm": 0.06280498206615448
+          }
+        },
+        {
+          "vertex": 12628,
+          "fraction": 0.3428645642192883,
+          "axis_distance_m": 0.05440242050799113,
+          "weights": {
+            "LeftForeArm": 0.8393319845199585,
+            "LeftArm": 0.1606680005788803
+          }
+        },
+        {
+          "vertex": 12630,
+          "fraction": 0.5213927450478452,
+          "axis_distance_m": 0.04144079216502696,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12633,
+          "fraction": 0.3893805223805191,
+          "axis_distance_m": 0.05089427618371546,
+          "weights": {
+            "LeftForeArm": 0.903952419757843,
+            "LeftArm": 0.09604757279157639
+          }
+        },
+        {
+          "vertex": 12635,
+          "fraction": 0.48295927085504725,
+          "axis_distance_m": 0.04644641955761119,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12637,
+          "fraction": 0.7507849355038171,
+          "axis_distance_m": 0.03209611971159407,
+          "weights": {
+            "LeftForeArm": 0.9994053840637207,
+            "LeftHand": 0.0005946081946603954
+          }
+        },
+        {
+          "vertex": 12638,
+          "fraction": 0.459645334409123,
+          "axis_distance_m": 0.04825643508998532,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12639,
+          "fraction": 0.6133729761828979,
+          "axis_distance_m": 0.04049765303751465,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12640,
+          "fraction": 0.5654536420416129,
+          "axis_distance_m": 0.04148084774827818,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12641,
+          "fraction": 0.6142549321734079,
+          "axis_distance_m": 0.04056919727391731,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12643,
+          "fraction": 0.7108377253381064,
+          "axis_distance_m": 0.03286751612193727,
+          "weights": {
+            "LeftForeArm": 0.9994053840637207,
+            "LeftHand": 0.0005946081946603954
+          }
+        },
+        {
+          "vertex": 12645,
+          "fraction": 0.6339170160989589,
+          "axis_distance_m": 0.0375165032540569,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12647,
+          "fraction": 0.5770402087204972,
+          "axis_distance_m": 0.04178606995929461,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12652,
+          "fraction": 0.749977554219683,
+          "axis_distance_m": 0.03397780148774007,
+          "weights": {
+            "LeftForeArm": 0.9980137348175049,
+            "LeftHand": 0.0019862414337694645
+          }
+        },
+        {
+          "vertex": 12723,
+          "fraction": 0.5926379290565174,
+          "axis_distance_m": 0.04770641641047662,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12724,
+          "fraction": 0.5891780590571251,
+          "axis_distance_m": 0.046364809810258596,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12725,
+          "fraction": 0.6706027156629384,
+          "axis_distance_m": 0.03886436863721988,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12727,
+          "fraction": 0.5001396846141678,
+          "axis_distance_m": 0.04328854822249791,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12728,
+          "fraction": 0.25446586872244087,
+          "axis_distance_m": 0.053306351919576576,
+          "weights": {
+            "LeftForeArm": 0.7002187371253967,
+            "LeftArm": 0.29978126287460327
+          }
+        },
+        {
+          "vertex": 12729,
+          "fraction": 0.6898522907072494,
+          "axis_distance_m": 0.03760925491816627,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12730,
+          "fraction": 0.7507849355038171,
+          "axis_distance_m": 0.03209611971159407,
+          "weights": {
+            "LeftForeArm": 0.9994053840637207,
+            "LeftHand": 0.0005946081946603954
+          }
+        },
+        {
+          "vertex": 12731,
+          "fraction": 0.6133729761828979,
+          "axis_distance_m": 0.04049765303751465,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12732,
+          "fraction": 0.5770402087204972,
+          "axis_distance_m": 0.04178606995929461,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12733,
+          "fraction": 0.5770402087204972,
+          "axis_distance_m": 0.04178606995929461,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 12734,
+          "fraction": 0.749977554219683,
+          "axis_distance_m": 0.03397780148774007,
+          "weights": {
+            "LeftForeArm": 0.9980137348175049,
+            "LeftHand": 0.0019862414337694645
+          }
+        },
+        {
+          "vertex": 13620,
+          "fraction": 0.32869723180320065,
+          "axis_distance_m": 0.04913544028226471,
+          "weights": {
+            "LeftForeArm": 0.8958883881568909,
+            "LeftArm": 0.10411160439252853
+          }
+        },
+        {
+          "vertex": 13626,
+          "fraction": 0.31177711764851934,
+          "axis_distance_m": 0.05130009913392412,
+          "weights": {
+            "LeftForeArm": 0.8974141478538513,
+            "LeftArm": 0.10258582979440689
+          }
+        },
+        {
+          "vertex": 13635,
+          "fraction": 0.3460931325812008,
+          "axis_distance_m": 0.04905760772216196,
+          "weights": {
+            "LeftForeArm": 0.8657845854759216,
+            "LeftArm": 0.13421539962291718
+          }
+        },
+        {
+          "vertex": 13636,
+          "fraction": 0.4096154739076282,
+          "axis_distance_m": 0.052780870960421986,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13638,
+          "fraction": 0.29385743849482043,
+          "axis_distance_m": 0.04766673098380804,
+          "weights": {
+            "LeftForeArm": 0.8958883881568909,
+            "LeftArm": 0.10411160439252853
+          }
+        },
+        {
+          "vertex": 13639,
+          "fraction": 0.20638840833495917,
+          "axis_distance_m": 0.04495503566090841,
+          "weights": {
+            "LeftForeArm": 0.7309238910675049,
+            "LeftArm": 0.26907607913017273
+          }
+        },
+        {
+          "vertex": 13640,
+          "fraction": 0.2870841086499345,
+          "axis_distance_m": 0.051480137160554884,
+          "weights": {
+            "LeftForeArm": 0.8409463763237,
+            "LeftArm": 0.15905362367630005
+          }
+        },
+        {
+          "vertex": 13641,
+          "fraction": 0.45298586404555713,
+          "axis_distance_m": 0.05241344707095793,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13643,
+          "fraction": 0.2303562818680024,
+          "axis_distance_m": 0.04612436718489551,
+          "weights": {
+            "LeftForeArm": 0.8003623485565186,
+            "LeftArm": 0.19963768124580383
+          }
+        },
+        {
+          "vertex": 13645,
+          "fraction": 0.5001396846141678,
+          "axis_distance_m": 0.04328854822249791,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13646,
+          "fraction": 0.442650127669716,
+          "axis_distance_m": 0.05139057765493418,
+          "weights": {
+            "LeftForeArm": 0.9983807802200317,
+            "LeftArm": 0.0016192238545045257
+          }
+        },
+        {
+          "vertex": 13647,
+          "fraction": 0.42372522106018345,
+          "axis_distance_m": 0.05057925287494966,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13650,
+          "fraction": 0.27846777076664375,
+          "axis_distance_m": 0.0505861922175212,
+          "weights": {
+            "LeftForeArm": 0.7954679131507874,
+            "LeftArm": 0.20453207194805145
+          }
+        },
+        {
+          "vertex": 13654,
+          "fraction": 0.4847361800048896,
+          "axis_distance_m": 0.04112237996671862,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13655,
+          "fraction": 0.25847689467520113,
+          "axis_distance_m": 0.04661655780134107,
+          "weights": {
+            "LeftForeArm": 0.8442502617835999,
+            "LeftArm": 0.15574970841407776
+          }
+        },
+        {
+          "vertex": 13656,
+          "fraction": 0.5912681441441262,
+          "axis_distance_m": 0.045165089488199806,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13657,
+          "fraction": 0.6438899692128902,
+          "axis_distance_m": 0.04448949189685597,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13658,
+          "fraction": 0.3716583252730178,
+          "axis_distance_m": 0.048369269403834576,
+          "weights": {
+            "LeftForeArm": 0.9476458430290222,
+            "LeftArm": 0.052354149520397186
+          }
+        },
+        {
+          "vertex": 13659,
+          "fraction": 0.5088975987046822,
+          "axis_distance_m": 0.04614239205721523,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13669,
+          "fraction": 0.5213927450478452,
+          "axis_distance_m": 0.04144079216502696,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13670,
+          "fraction": 0.5926379290565174,
+          "axis_distance_m": 0.04770641641047662,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        },
+        {
+          "vertex": 13671,
+          "fraction": 0.24580225871212794,
+          "axis_distance_m": 0.05167811821517801,
+          "weights": {
+            "LeftForeArm": 0.804912269115448,
+            "LeftArm": 0.1950877457857132
+          }
+        },
+        {
+          "vertex": 13672,
+          "fraction": 0.21149552766349902,
+          "axis_distance_m": 0.057491541810037815,
+          "weights": {
+            "LeftForeArm": 0.6679693460464478,
+            "LeftArm": 0.33203062415122986
+          }
+        },
+        {
+          "vertex": 13673,
+          "fraction": 0.35429386755268133,
+          "axis_distance_m": 0.05191370471650493,
+          "weights": {
+            "LeftForeArm": 0.9204282760620117,
+            "LeftArm": 0.07957172393798828
+          }
+        },
+        {
+          "vertex": 13674,
+          "fraction": 0.2801428067755473,
+          "axis_distance_m": 0.05353519422777855,
+          "weights": {
+            "LeftForeArm": 0.7432921528816223,
+            "LeftArm": 0.2567078471183777
+          }
+        },
+        {
+          "vertex": 13678,
+          "fraction": 0.25446586872244087,
+          "axis_distance_m": 0.053306351919576576,
+          "weights": {
+            "LeftForeArm": 0.7002187371253967,
+            "LeftArm": 0.29978126287460327
+          }
+        },
+        {
+          "vertex": 13679,
+          "fraction": 0.20748923259774235,
+          "axis_distance_m": 0.05777583793229247,
+          "weights": {
+            "LeftForeArm": 0.6915866136550903,
+            "LeftArm": 0.30841338634490967
+          }
+        },
+        {
+          "vertex": 13681,
+          "fraction": 0.21778175760765514,
+          "axis_distance_m": 0.05966517464856894,
+          "weights": {
+            "LeftForeArm": 0.7578846216201782,
+            "LeftArm": 0.24211539328098297
+          }
+        },
+        {
+          "vertex": 13683,
+          "fraction": 0.4844117257549935,
+          "axis_distance_m": 0.04191337702181521,
+          "weights": {
+            "LeftForeArm": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

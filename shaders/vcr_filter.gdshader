@@ -5,11 +5,13 @@ shader_type canvas_item;
 // and now and then a thin flash of head-switching at the bottom.
 
 uniform float strength = 1.0;
+uniform vec2 cover_scale = vec2(1.0);
+uniform vec2 cover_offset = vec2(0.0);
 
 float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
 
 void fragment() {
-	vec2 uv = UV;
+	vec2 uv = UV * cover_scale + cover_offset;
 	float t = TIME;
 	// the tracking bar: a band rolling slowly upward
 	float bar_y = 1.0 - fract(t * 0.07);

@@ -1,0 +1,88 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+WARNING: Detected another project.godot at res://build/doberman_idle_probe. The folder will be ignored.
+   at: _should_skip_directory (editor/file_system/editor_file_system.cpp:3497)
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (3 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Level[39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | M01NativeGuestIceBuckets[39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (16 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | bucket_empty.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | bucket_full.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | 01_studio_source.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | 02_motel_source.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | 03_tape_source.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | 04_revenge_source.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | 07_cass_source.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | 12_title_source.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | contact.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | m01_sample.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | m03_action.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | m03_sample.png[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | opening_check.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | revenge.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | studio.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | title_check.png[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (16 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | bucket_empty.png[39m[0m
+[   5% ] [90m[1mreimport[22m | bucket_full.png[39m[0m
+[  11% ] [90m[1mreimport[22m | 01_studio_source.png[39m[0m
+[  17% ] [90m[1mreimport[22m | 02_motel_source.png[39m[0m
+[  23% ] [90m[1mreimport[22m | 03_tape_source.png[39m[0m
+[  29% ] [90m[1mreimport[22m | 04_revenge_source.png[39m[0m
+[  35% ] [90m[1mreimport[22m | 07_cass_source.png[39m[0m
+[  41% ] [90m[1mreimport[22m | 12_title_source.png[39m[0m
+[  47% ] [90m[1mreimport[22m | contact.png[39m[0m
+[  52% ] [90m[1mreimport[22m | m01_sample.png[39m[0m
+[  58% ] [90m[1mreimport[22m | m03_action.png[39m[0m
+[  64% ] [90m[1mreimport[22m | m03_sample.png[39m[0m
+[  70% ] [90m[1mreimport[22m | opening_check.png[39m[0m
+[  76% ] [90m[1mreimport[22m | revenge.png[39m[0m
+[  82% ] [90m[1mreimport[22m | studio.png[39m[0m
+[  88% ] [90m[1mreimport[22m | title_check.png[39m[0m
+[  94% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (16 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[  33% ] [90m[1mloading_editor_layout[22m | Reopening scenes...[39m[0m
+[  50% ] [90m[1mloading_editor_layout[22m | Loading central editor layout...[39m[0m
+[  66% ] [90m[1mloading_editor_layout[22m | Loading plugin window layout...[39m[0m
+[  83% ] [90m[1mloading_editor_layout[22m | Editor layout ready.[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

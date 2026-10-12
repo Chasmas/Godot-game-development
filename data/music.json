@@ -24,7 +24,7 @@
     "name": "Checkout Time",
     "bpm": 120,
     "layers": [
-      "res://music/st_motel_combat.mp3"
+      "res://music/st_motel_combat.ogg"
     ],
     "calm": "motel_stealth",
     "calm_after": 8.0
@@ -79,7 +79,7 @@
   },
   "nightmare": {
     "name": "Sweet Dreams",
-    "bpm": 104,
+    "bpm": 132,
     "layers": [
       "res://music/st_villa_combat.ogg"
     ],

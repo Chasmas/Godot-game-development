@@ -41,4 +41,6 @@ func _ready() -> void:
 	dog.queue_free()
 	await get_tree().process_frame
 	print("DOG LEASH REGRESSION: ", failures, " failures")
+	if failures == 0:
+		print("DOG LEASH REGRESSION PASSED")
 	get_tree().quit(1 if failures else 0)

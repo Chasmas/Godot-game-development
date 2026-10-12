@@ -144,6 +144,7 @@ func _process(delta: float) -> void:
 		queue_redraw()
 
 func _draw() -> void:
+	if get_meta("native_tv_dresser", false): return
 	var r := Rect2(-size * 0.5, size)
 	var ink := Color(0.06, 0.03, 0.08)
 	var painted := {"tv": "tv_crt", "ice": "ice_machine"}

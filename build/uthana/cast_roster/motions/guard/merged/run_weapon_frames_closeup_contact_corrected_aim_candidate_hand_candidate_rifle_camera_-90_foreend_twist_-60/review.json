@@ -1,0 +1,10 @@
+{
+	"cast": "guard",
+	"duration_seconds": 1.33333337306976,
+	"frames": 48,
+	"motion": "run",
+	"pending": "Finger contact, anatomical clearance, other aim angles and actual gameplay",
+	"runtime_approved": false,
+	"weapon": "rifle",
+	"worst_shouldered_hand_target_error_m": 0.000000269871520686138
+}

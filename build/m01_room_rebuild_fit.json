@@ -1,0 +1,1643 @@
+{
+  "runtime_approved": false,
+  "map_sha256": "e10c43d0cd606bb9f9e61c3af235a09db9a201a9863d142fba912a446a7fbafb",
+  "method": "Connected carpet regions using LevelBuilder neighbour-floor inheritance; doors/windows/weak walls treated as room boundaries. Semantic room identification still required",
+  "candidate_regions": [
+    {
+      "room_id": "201",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        5,
+        2,
+        14,
+        9
+      ],
+      "size_tiles": [
+        10,
+        8
+      ],
+      "size_game_pixels": [
+        160,
+        128
+      ],
+      "floor_cells": 80,
+      "openings": [
+        {
+          "tile": [
+            6,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            7,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            9,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            10,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            12,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            13,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            15,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            15,
+            6
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            7,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            7,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            8,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            8,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            9,
+            5
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            10,
+            6
+          ],
+          "symbol": "g"
+        },
+        {
+          "tile": [
+            12,
+            8
+          ],
+          "symbol": "t"
+        },
+        {
+          "tile": [
+            13,
+            3
+          ],
+          "symbol": "@"
+        }
+      ]
+    },
+    {
+      "room_id": "202",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        16,
+        2,
+        25,
+        9
+      ],
+      "size_tiles": [
+        10,
+        8
+      ],
+      "size_game_pixels": [
+        160,
+        128
+      ],
+      "floor_cells": 80,
+      "openings": [
+        {
+          "tile": [
+            15,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            15,
+            6
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            17,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            18,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            20,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            21,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            23,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            24,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            26,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            26,
+            6
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            17,
+            3
+          ],
+          "symbol": "0"
+        },
+        {
+          "tile": [
+            18,
+            7
+          ],
+          "symbol": "m"
+        },
+        {
+          "tile": [
+            20,
+            3
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            22,
+            4
+          ],
+          "symbol": "h"
+        },
+        {
+          "tile": [
+            23,
+            7
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            23,
+            8
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            24,
+            7
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            24,
+            8
+          ],
+          "symbol": "b"
+        }
+      ]
+    },
+    {
+      "room_id": "203",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        27,
+        2,
+        38,
+        9
+      ],
+      "size_tiles": [
+        12,
+        8
+      ],
+      "size_game_pixels": [
+        192,
+        128
+      ],
+      "floor_cells": 96,
+      "openings": [
+        {
+          "tile": [
+            26,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            26,
+            6
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            28,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            29,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            31,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            32,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            35,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            36,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            39,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            39,
+            6
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            28,
+            8
+          ],
+          "symbol": "E"
+        },
+        {
+          "tile": [
+            31,
+            5
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            31,
+            6
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            32,
+            3
+          ],
+          "symbol": "H"
+        },
+        {
+          "tile": [
+            32,
+            5
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            32,
+            6
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            33,
+            4
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            33,
+            5
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            33,
+            6
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            36,
+            7
+          ],
+          "symbol": "m"
+        },
+        {
+          "tile": [
+            37,
+            3
+          ],
+          "symbol": "4"
+        }
+      ]
+    },
+    {
+      "room_id": "204",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        40,
+        2,
+        52,
+        9
+      ],
+      "size_tiles": [
+        13,
+        8
+      ],
+      "size_game_pixels": [
+        208,
+        128
+      ],
+      "floor_cells": 104,
+      "openings": [
+        {
+          "tile": [
+            39,
+            5
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            39,
+            6
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            41,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            42,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            45,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            46,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            50,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            51,
+            10
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            53,
+            3
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            53,
+            4
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            53,
+            5
+          ],
+          "kind": "%"
+        },
+        {
+          "tile": [
+            53,
+            6
+          ],
+          "kind": "%"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            44,
+            6
+          ],
+          "symbol": "g"
+        },
+        {
+          "tile": [
+            46,
+            3
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            47,
+            8
+          ],
+          "symbol": "t"
+        },
+        {
+          "tile": [
+            48,
+            7
+          ],
+          "symbol": "$"
+        },
+        {
+          "tile": [
+            49,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            49,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            50,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            50,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            51,
+            8
+          ],
+          "symbol": "U"
+        }
+      ]
+    },
+    {
+      "room_id": "manager_secret_suite",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        54,
+        2,
+        65,
+        9
+      ],
+      "size_tiles": [
+        12,
+        8
+      ],
+      "size_game_pixels": [
+        192,
+        128
+      ],
+      "floor_cells": 96,
+      "openings": [
+        {
+          "tile": [
+            53,
+            3
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            53,
+            4
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            53,
+            5
+          ],
+          "kind": "%"
+        },
+        {
+          "tile": [
+            53,
+            6
+          ],
+          "kind": "%"
+        },
+        {
+          "tile": [
+            58,
+            10
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            59,
+            10
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            56,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            56,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            57,
+            3
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            57,
+            4
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            59,
+            8
+          ],
+          "symbol": "t"
+        },
+        {
+          "tile": [
+            60,
+            5
+          ],
+          "symbol": "G"
+        },
+        {
+          "tile": [
+            62,
+            7
+          ],
+          "symbol": "o"
+        },
+        {
+          "tile": [
+            63,
+            3
+          ],
+          "symbol": "&"
+        }
+      ]
+    },
+    {
+      "room_id": "101",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        11,
+        27,
+        18,
+        30
+      ],
+      "size_tiles": [
+        8,
+        4
+      ],
+      "size_game_pixels": [
+        128,
+        64
+      ],
+      "floor_cells": 32,
+      "openings": [
+        {
+          "tile": [
+            11,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            12,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            14,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            15,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            28
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            29
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            12,
+            30
+          ],
+          "symbol": "t"
+        },
+        {
+          "tile": [
+            13,
+            28
+          ],
+          "symbol": "@"
+        },
+        {
+          "tile": [
+            15,
+            27
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            16,
+            28
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            16,
+            29
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            17,
+            28
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            17,
+            29
+          ],
+          "symbol": "b"
+        }
+      ]
+    },
+    {
+      "room_id": "102",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        20,
+        27,
+        27,
+        30
+      ],
+      "size_tiles": [
+        8,
+        4
+      ],
+      "size_game_pixels": [
+        128,
+        64
+      ],
+      "floor_cells": 32,
+      "openings": [
+        {
+          "tile": [
+            19,
+            28
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            29
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            20,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            21,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            23,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            24,
+            31
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            21,
+            27
+          ],
+          "symbol": "9"
+        },
+        {
+          "tile": [
+            21,
+            29
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            21,
+            30
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            22,
+            29
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            22,
+            30
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            24,
+            27
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            25,
+            28
+          ],
+          "symbol": "h"
+        }
+      ]
+    },
+    {
+      "room_id": "103_card_game",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        33,
+        27,
+        40,
+        30
+      ],
+      "size_tiles": [
+        8,
+        4
+      ],
+      "size_game_pixels": [
+        128,
+        64
+      ],
+      "floor_cells": 32,
+      "openings": [
+        {
+          "tile": [
+            33,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            34,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            36,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            37,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            41,
+            28
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            41,
+            29
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            34,
+            30
+          ],
+          "symbol": "3"
+        },
+        {
+          "tile": [
+            35,
+            28
+          ],
+          "symbol": "g"
+        },
+        {
+          "tile": [
+            36,
+            27
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            36,
+            28
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            36,
+            29
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            37,
+            28
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            37,
+            29
+          ],
+          "symbol": "T"
+        },
+        {
+          "tile": [
+            38,
+            29
+          ],
+          "symbol": "g"
+        },
+        {
+          "tile": [
+            40,
+            27
+          ],
+          "symbol": "Y"
+        }
+      ]
+    },
+    {
+      "room_id": "104",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        42,
+        27,
+        52,
+        30
+      ],
+      "size_tiles": [
+        11,
+        4
+      ],
+      "size_game_pixels": [
+        176,
+        64
+      ],
+      "floor_cells": 44,
+      "openings": [
+        {
+          "tile": [
+            41,
+            28
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            41,
+            29
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            42,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            43,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            44,
+            31
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            46,
+            31
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            47,
+            31
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            43,
+            27
+          ],
+          "symbol": "t"
+        },
+        {
+          "tile": [
+            46,
+            27
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            47,
+            29
+          ],
+          "symbol": "H"
+        },
+        {
+          "tile": [
+            50,
+            27
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            50,
+            28
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            51,
+            27
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            51,
+            28
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            52,
+            30
+          ],
+          "symbol": "Y"
+        }
+      ]
+    },
+    {
+      "room_id": "105",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        11,
+        36,
+        18,
+        40
+      ],
+      "size_tiles": [
+        8,
+        5
+      ],
+      "size_game_pixels": [
+        128,
+        80
+      ],
+      "floor_cells": 40,
+      "openings": [
+        {
+          "tile": [
+            13,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            14,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            15,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            16,
+            35
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            16,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            17,
+            35
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            38
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            39
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            12,
+            37
+          ],
+          "symbol": "U"
+        },
+        {
+          "tile": [
+            12,
+            39
+          ],
+          "symbol": "8"
+        },
+        {
+          "tile": [
+            14,
+            37
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            16,
+            38
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            16,
+            39
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            17,
+            38
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            17,
+            39
+          ],
+          "symbol": "b"
+        }
+      ]
+    },
+    {
+      "room_id": "106",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        20,
+        36,
+        27,
+        40
+      ],
+      "size_tiles": [
+        8,
+        5
+      ],
+      "size_game_pixels": [
+        128,
+        80
+      ],
+      "floor_cells": 40,
+      "openings": [
+        {
+          "tile": [
+            19,
+            38
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            19,
+            39
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            21,
+            35
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            22,
+            35
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            22,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            23,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            24,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            25,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            28,
+            37
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            28,
+            38
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            20,
+            36
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            20,
+            37
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            21,
+            36
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            21,
+            37
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            24,
+            38
+          ],
+          "symbol": "m"
+        },
+        {
+          "tile": [
+            26,
+            37
+          ],
+          "symbol": "*"
+        }
+      ]
+    },
+    {
+      "room_id": "108",
+      "identity_evidence": "tools/build_m01.py authored region comments and current map bounds; 200-series inferred from room204 comment",
+      "bounds_tiles": [
+        42,
+        36,
+        52,
+        40
+      ],
+      "size_tiles": [
+        11,
+        5
+      ],
+      "size_game_pixels": [
+        176,
+        80
+      ],
+      "floor_cells": 55,
+      "openings": [
+        {
+          "tile": [
+            41,
+            37
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            41,
+            38
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            44,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            45,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            46,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            47,
+            41
+          ],
+          "kind": "W"
+        },
+        {
+          "tile": [
+            49,
+            35
+          ],
+          "kind": "D"
+        },
+        {
+          "tile": [
+            50,
+            35
+          ],
+          "kind": "D"
+        }
+      ],
+      "embedded_entities": [
+        {
+          "tile": [
+            43,
+            39
+          ],
+          "symbol": "!"
+        },
+        {
+          "tile": [
+            46,
+            38
+          ],
+          "symbol": "g"
+        },
+        {
+          "tile": [
+            47,
+            37
+          ],
+          "symbol": "*"
+        },
+        {
+          "tile": [
+            49,
+            38
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            49,
+            39
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            50,
+            38
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            50,
+            39
+          ],
+          "symbol": "b"
+        },
+        {
+          "tile": [
+            51,
+            37
+          ],
+          "symbol": "E"
+        }
+      ]
+    }
+  ],
+  "reference_room_metres": [
+    5.4,
+    5.2
+  ],
+  "constraints": [
+    "Do not scale actors or collision radius to fit art",
+    "Rebuild furniture layout to room footprint, preserve all gameplay door/window openings",
+    "Separate floor geometry from embedded symbols before production approval"
+  ]
+}

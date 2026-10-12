@@ -35,6 +35,17 @@ static func sprite(id: String) -> Texture2D:
 		return null
 	var key := "sprite:" + id
 	if not _cache.has(key):
+		# Mission-critical demolition charge reconstructed from the ImageGen
+		# direction in Blender. Use the imported Texture2D rather than direct
+		# filesystem I/O: raw PNG paths are not available inside an exported PCK.
+		if id == "pyro_charge":
+			var pyro_source := load("res://assets/art/sprites/pyro_charge_blender_v1.png") as Texture2D
+			var pyro := pyro_source.get_image() if pyro_source else null
+			if pyro != null and not pyro.is_empty():
+				var pyro_tex := ImageTexture.create_from_image(pyro)
+				pyro_tex.set_size_override(Vector2i(24, 24))
+				_cache[key] = pyro_tex
+				return _cache[key]
 		var density := DENSITY
 		var hq_path := "res://assets/art/pixellab_world/sprites_hq/%s.png" % id
 		var src: Texture2D

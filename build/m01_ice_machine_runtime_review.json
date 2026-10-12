@@ -1,0 +1,32 @@
+{
+  "damage_transition_checked": true,
+  "expected_placements": 2,
+  "placements": [
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        808.0,
+        200.0
+      ],
+      "texture_size": [
+        56,
+        48
+      ]
+    },
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        632.0,
+        600.0
+      ],
+      "texture_size": [
+        56,
+        48
+      ]
+    }
+  ],
+  "runtime_approved": true,
+  "scope": "M01 native intact ice visuals; original BreakableProp collision, health, sound, and broken drawing retained."
+}

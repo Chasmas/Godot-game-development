@@ -1,0 +1,41 @@
+{
+  "runtime_approved": false,
+  "weapon": "shotgun",
+  "units": "metres",
+  "forward_blender": "-Y",
+  "anchors_blender": {
+    "GripAnchor": [
+      0,
+      0.015,
+      0
+    ],
+    "SupportGrip": [
+      0,
+      -0.27,
+      0.02
+    ],
+    "SupportRearGrip": [
+      0,
+      -0.21000000000000002,
+      0.02
+    ],
+    "ShoulderAnchor": [
+      0,
+      0.296,
+      0.04
+    ],
+    "Muzzle": [
+      0,
+      -0.6799999999999999,
+      0.064
+    ]
+  },
+  "overall_length_m": 0.97,
+  "pending": [
+    "authored finish",
+    "hand mesh contact",
+    "shoulder contact",
+    "all gait and aim reviews",
+    "firing origin"
+  ]
+}

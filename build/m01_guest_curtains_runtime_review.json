@@ -1,0 +1,152 @@
+{
+  "curtained_windows": [
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        112.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        208.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        288.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        384.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        672.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        816.0,
+        168.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        192.0,
+        504.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        336.0,
+        504.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        32.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        696.0,
+        504.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        48.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        240.0,
+        664.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        384.0,
+        664.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    },
+    {
+      "alpha_pixels_outside_room": 0,
+      "position": [
+        736.0,
+        664.0
+      ],
+      "room_side": -1.0,
+      "size_px": [
+        64.0,
+        4.0
+      ]
+    }
+  ],
+  "passed": true,
+  "runtime_approved": true,
+  "scope": "M01 runtime curtain review on existing breakable guest-room windows; visual dressing only.",
+  "shatter_hides_dressing": true
+}

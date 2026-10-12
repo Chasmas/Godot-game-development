@@ -264,6 +264,8 @@ func may_show(who: Object) -> bool:
 		return false
 	# the checkpoint tape has the right-hand corner while it's up
 	for c in root.get_children():
+		if c is UpgradeCard and c.visible and who != c:
+			return false
 		if c is CheckpointStamp:
 			return false
 	if who == tutorials and tips and not tips._cur.is_empty():
@@ -342,6 +344,7 @@ var upgrade_times: Dictionary = {}
 func show_upgrade(id: StringName) -> void:
 	upgrade_times[id] = status.now() if status else 0.0
 	var card := UpgradeCard.new()
+	card.hud = self
 	card.upgrade_id = id
 	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -801,12 +804,20 @@ class StatusPanel extends Control:
 ## the icon pops out of its hex badge, the text types in, then it slides
 ## away. Runs in real time so slow-mo doesn't stretch it.
 class UpgradeCard extends Control:
+	var hud: HUD
 	var upgrade_id: StringName
 	var _t := 0.0
+	var _started := false
 	const LIFE := 3.4
 	func _ready() -> void:
 		process_mode = Node.PROCESS_MODE_ALWAYS
+		hide()
 	func _process(delta: float) -> void:
+		if not _started:
+			if hud and (hud.talking() or (hud.tips and not hud.tips._cur.is_empty()) or (hud.tutorials and hud.tutorials.showing())):
+				return
+			_started = true
+			show()
 		_t += delta / maxf(Engine.time_scale, 0.05)
 		if _t > LIFE:
 			queue_free()
@@ -814,7 +825,7 @@ class UpgradeCard extends Control:
 	func _draw() -> void:
 		var d := Upgrades.def(upgrade_id)
 		var col: Color = d.color
-		var w := 360.0
+		var w := minf(420.0, size.x - 32.0)
 		var h := 96.0
 		var slide_in := 1.0 - pow(1.0 - clampf(_t / 0.35, 0.0, 1.0), 3.0)
 		var slide_out := pow(clampf((_t - (LIFE - 0.4)) / 0.4, 0.0, 1.0), 2.0)
@@ -859,9 +870,13 @@ class UpgradeCard extends Control:
 		var tag := tr("UPGRADE")
 		draw_string(f, Vector2(tx, r.position.y + 22), tag, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(col, 0.9))
 		var name_s := tr(str(d.name))
+		var name_font := UIStyle.font_display()
+		var name_size := 26
+		while name_size > 10 and name_font.get_string_size(name_s, HORIZONTAL_ALIGNMENT_LEFT, -1, name_size).x > w - 132.0:
+			name_size -= 1
 		var n := clampi(int((_t - 0.15) * 40.0), 0, name_s.length())
-		draw_string_outline(UIStyle.font_display(), Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, 6, UIStyle.INK)
-		draw_string(UIStyle.font_display(), Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, UIStyle.PAPER)
+		draw_string_outline(name_font, Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, w - 132.0, name_size, 4, UIStyle.INK)
+		draw_string(name_font, Vector2(tx, r.position.y + 50), name_s.substr(0, n), HORIZONTAL_ALIGNMENT_LEFT, w - 132.0, name_size, UIStyle.PAPER)
 		var da := clampf((_t - 0.5) / 0.3, 0.0, 1.0)
 		draw_multiline_string(f, Vector2(tx, r.position.y + 70), tr(str(d.desc)), HORIZONTAL_ALIGNMENT_LEFT, w - 130.0, 12, 2, Color(UIStyle.PAPER, 0.75 * da))
 

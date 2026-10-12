@@ -1,0 +1,542 @@
+[
+  {
+    "name": "mixamorig:Hips",
+    "deform": true,
+    "parent": null
+  },
+  {
+    "name": "mixamorig:Spine",
+    "deform": true,
+    "parent": "mixamorig:Hips"
+  },
+  {
+    "name": "mixamorig:Spine1",
+    "deform": true,
+    "parent": "mixamorig:Spine"
+  },
+  {
+    "name": "mixamorig:Spine2",
+    "deform": true,
+    "parent": "mixamorig:Spine1"
+  },
+  {
+    "name": "mixamorig:Neck",
+    "deform": true,
+    "parent": "mixamorig:Spine2"
+  },
+  {
+    "name": "mixamorig:Head",
+    "deform": true,
+    "parent": "mixamorig:Neck"
+  },
+  {
+    "name": "mixamorig:HeadTop_End",
+    "deform": true,
+    "parent": "mixamorig:Head"
+  },
+  {
+    "name": "mixamorig:HeadTop_End_end",
+    "deform": true,
+    "parent": "mixamorig:HeadTop_End"
+  },
+  {
+    "name": "headfront",
+    "deform": true,
+    "parent": "mixamorig:Head"
+  },
+  {
+    "name": "headfront_end",
+    "deform": true,
+    "parent": "headfront"
+  },
+  {
+    "name": "mixamorig:LeftShoulder",
+    "deform": true,
+    "parent": "mixamorig:Spine2"
+  },
+  {
+    "name": "mixamorig:LeftArm",
+    "deform": true,
+    "parent": "mixamorig:LeftShoulder"
+  },
+  {
+    "name": "mixamorig:LeftForeArm",
+    "deform": true,
+    "parent": "mixamorig:LeftArm"
+  },
+  {
+    "name": "mixamorig:LeftHand",
+    "deform": true,
+    "parent": "mixamorig:LeftForeArm"
+  },
+  {
+    "name": "mixamorig:LeftHandPinky1",
+    "deform": true,
+    "parent": "mixamorig:LeftHand"
+  },
+  {
+    "name": "mixamorig:LeftHandPinky2",
+    "deform": true,
+    "parent": "mixamorig:LeftHandPinky1"
+  },
+  {
+    "name": "mixamorig:LeftHandPinky3",
+    "deform": true,
+    "parent": "mixamorig:LeftHandPinky2"
+  },
+  {
+    "name": "mixamorig:LeftHandPinky4",
+    "deform": true,
+    "parent": "mixamorig:LeftHandPinky3"
+  },
+  {
+    "name": "mixamorig:LeftHandPinky4_end",
+    "deform": true,
+    "parent": "mixamorig:LeftHandPinky4"
+  },
+  {
+    "name": "mixamorig:LeftHandThumb1",
+    "deform": true,
+    "parent": "mixamorig:LeftHand"
+  },
+  {
+    "name": "mixamorig:LeftHandThumb2",
+    "deform": true,
+    "parent": "mixamorig:LeftHandThumb1"
+  },
+  {
+    "name": "mixamorig:LeftHandThumb3",
+    "deform": true,
+    "parent": "mixamorig:LeftHandThumb2"
+  },
+  {
+    "name": "mixamorig:LeftHandThumb4",
+    "deform": true,
+    "parent": "mixamorig:LeftHandThumb3"
+  },
+  {
+    "name": "mixamorig:LeftHandThumb4_end",
+    "deform": true,
+    "parent": "mixamorig:LeftHandThumb4"
+  },
+  {
+    "name": "mixamorig:LeftHandRing1",
+    "deform": true,
+    "parent": "mixamorig:LeftHand"
+  },
+  {
+    "name": "mixamorig:LeftHandRing2",
+    "deform": true,
+    "parent": "mixamorig:LeftHandRing1"
+  },
+  {
+    "name": "mixamorig:LeftHandRing3",
+    "deform": true,
+    "parent": "mixamorig:LeftHandRing2"
+  },
+  {
+    "name": "mixamorig:LeftHandRing4",
+    "deform": true,
+    "parent": "mixamorig:LeftHandRing3"
+  },
+  {
+    "name": "mixamorig:LeftHandRing4_end",
+    "deform": true,
+    "parent": "mixamorig:LeftHandRing4"
+  },
+  {
+    "name": "mixamorig:LeftHandIndex1",
+    "deform": true,
+    "parent": "mixamorig:LeftHand"
+  },
+  {
+    "name": "mixamorig:LeftHandIndex2",
+    "deform": true,
+    "parent": "mixamorig:LeftHandIndex1"
+  },
+  {
+    "name": "mixamorig:LeftHandIndex3",
+    "deform": true,
+    "parent": "mixamorig:LeftHandIndex2"
+  },
+  {
+    "name": "mixamorig:LeftHandIndex4",
+    "deform": true,
+    "parent": "mixamorig:LeftHandIndex3"
+  },
+  {
+    "name": "mixamorig:LeftHandIndex4_end",
+    "deform": true,
+    "parent": "mixamorig:LeftHandIndex4"
+  },
+  {
+    "name": "mixamorig:LeftHandMiddle1",
+    "deform": true,
+    "parent": "mixamorig:LeftHand"
+  },
+  {
+    "name": "mixamorig:LeftHandMiddle2",
+    "deform": true,
+    "parent": "mixamorig:LeftHandMiddle1"
+  },
+  {
+    "name": "mixamorig:LeftHandMiddle3",
+    "deform": true,
+    "parent": "mixamorig:LeftHandMiddle2"
+  },
+  {
+    "name": "mixamorig:LeftHandMiddle4",
+    "deform": true,
+    "parent": "mixamorig:LeftHandMiddle3"
+  },
+  {
+    "name": "mixamorig:LeftHandMiddle4_end",
+    "deform": true,
+    "parent": "mixamorig:LeftHandMiddle4"
+  },
+  {
+    "name": "Bone_050",
+    "deform": true,
+    "parent": "mixamorig:LeftForeArm"
+  },
+  {
+    "name": "Bone_049",
+    "deform": true,
+    "parent": "Bone_050"
+  },
+  {
+    "name": "Bone_049_end",
+    "deform": true,
+    "parent": "Bone_049"
+  },
+  {
+    "name": "Bone_032",
+    "deform": true,
+    "parent": "mixamorig:LeftForeArm"
+  },
+  {
+    "name": "Bone_031",
+    "deform": true,
+    "parent": "Bone_032"
+  },
+  {
+    "name": "Bone_031_end",
+    "deform": true,
+    "parent": "Bone_031"
+  },
+  {
+    "name": "mixamorig:RightShoulder",
+    "deform": true,
+    "parent": "mixamorig:Spine2"
+  },
+  {
+    "name": "mixamorig:RightArm",
+    "deform": true,
+    "parent": "mixamorig:RightShoulder"
+  },
+  {
+    "name": "mixamorig:RightForeArm",
+    "deform": true,
+    "parent": "mixamorig:RightArm"
+  },
+  {
+    "name": "mixamorig:RightHand",
+    "deform": true,
+    "parent": "mixamorig:RightForeArm"
+  },
+  {
+    "name": "mixamorig:RightHandThumb1",
+    "deform": true,
+    "parent": "mixamorig:RightHand"
+  },
+  {
+    "name": "mixamorig:RightHandThumb2",
+    "deform": true,
+    "parent": "mixamorig:RightHandThumb1"
+  },
+  {
+    "name": "mixamorig:RightHandThumb3",
+    "deform": true,
+    "parent": "mixamorig:RightHandThumb2"
+  },
+  {
+    "name": "mixamorig:RightHandThumb4",
+    "deform": true,
+    "parent": "mixamorig:RightHandThumb3"
+  },
+  {
+    "name": "mixamorig:RightHandThumb4_end",
+    "deform": true,
+    "parent": "mixamorig:RightHandThumb4"
+  },
+  {
+    "name": "mixamorig:RightHandPinky1",
+    "deform": true,
+    "parent": "mixamorig:RightHand"
+  },
+  {
+    "name": "mixamorig:RightHandPinky2",
+    "deform": true,
+    "parent": "mixamorig:RightHandPinky1"
+  },
+  {
+    "name": "mixamorig:RightHandPinky3",
+    "deform": true,
+    "parent": "mixamorig:RightHandPinky2"
+  },
+  {
+    "name": "mixamorig:RightHandPinky4",
+    "deform": true,
+    "parent": "mixamorig:RightHandPinky3"
+  },
+  {
+    "name": "mixamorig:RightHandPinky4_end",
+    "deform": true,
+    "parent": "mixamorig:RightHandPinky4"
+  },
+  {
+    "name": "mixamorig:RightHandRing1",
+    "deform": true,
+    "parent": "mixamorig:RightHand"
+  },
+  {
+    "name": "mixamorig:RightHandRing2",
+    "deform": true,
+    "parent": "mixamorig:RightHandRing1"
+  },
+  {
+    "name": "mixamorig:RightHandRing3",
+    "deform": true,
+    "parent": "mixamorig:RightHandRing2"
+  },
+  {
+    "name": "mixamorig:RightHandRing4",
+    "deform": true,
+    "parent": "mixamorig:RightHandRing3"
+  },
+  {
+    "name": "mixamorig:RightHandRing4_end",
+    "deform": true,
+    "parent": "mixamorig:RightHandRing4"
+  },
+  {
+    "name": "mixamorig:RightHandMiddle1",
+    "deform": true,
+    "parent": "mixamorig:RightHand"
+  },
+  {
+    "name": "mixamorig:RightHandMiddle2",
+    "deform": true,
+    "parent": "mixamorig:RightHandMiddle1"
+  },
+  {
+    "name": "mixamorig:RightHandMiddle3",
+    "deform": true,
+    "parent": "mixamorig:RightHandMiddle2"
+  },
+  {
+    "name": "mixamorig:RightHandMiddle4",
+    "deform": true,
+    "parent": "mixamorig:RightHandMiddle3"
+  },
+  {
+    "name": "mixamorig:RightHandMiddle4_end",
+    "deform": true,
+    "parent": "mixamorig:RightHandMiddle4"
+  },
+  {
+    "name": "mixamorig:RightHandIndex1",
+    "deform": true,
+    "parent": "mixamorig:RightHand"
+  },
+  {
+    "name": "mixamorig:RightHandIndex2",
+    "deform": true,
+    "parent": "mixamorig:RightHandIndex1"
+  },
+  {
+    "name": "mixamorig:RightHandIndex3",
+    "deform": true,
+    "parent": "mixamorig:RightHandIndex2"
+  },
+  {
+    "name": "mixamorig:RightHandIndex4",
+    "deform": true,
+    "parent": "mixamorig:RightHandIndex3"
+  },
+  {
+    "name": "mixamorig:RightHandIndex4_end",
+    "deform": true,
+    "parent": "mixamorig:RightHandIndex4"
+  },
+  {
+    "name": "Bone_046",
+    "deform": true,
+    "parent": "mixamorig:RightForeArm"
+  },
+  {
+    "name": "Bone_045",
+    "deform": true,
+    "parent": "Bone_046"
+  },
+  {
+    "name": "Bone_045_end",
+    "deform": true,
+    "parent": "Bone_045"
+  },
+  {
+    "name": "Bone_028",
+    "deform": true,
+    "parent": "mixamorig:RightForeArm"
+  },
+  {
+    "name": "Bone_027",
+    "deform": true,
+    "parent": "Bone_028"
+  },
+  {
+    "name": "Bone_027_end",
+    "deform": true,
+    "parent": "Bone_027"
+  },
+  {
+    "name": "mixamorig:LeftUpLeg",
+    "deform": true,
+    "parent": "mixamorig:Hips"
+  },
+  {
+    "name": "Bone_006",
+    "deform": true,
+    "parent": "mixamorig:LeftUpLeg"
+  },
+  {
+    "name": "mixamorig:LeftLeg",
+    "deform": true,
+    "parent": "Bone_006"
+  },
+  {
+    "name": "Bone_021",
+    "deform": true,
+    "parent": "mixamorig:LeftLeg"
+  },
+  {
+    "name": "mixamorig:LeftFoot",
+    "deform": true,
+    "parent": "Bone_021"
+  },
+  {
+    "name": "mixamorig:LeftToeBase",
+    "deform": true,
+    "parent": "mixamorig:LeftFoot"
+  },
+  {
+    "name": "mixamorig:LeftToe_End",
+    "deform": true,
+    "parent": "mixamorig:LeftToeBase"
+  },
+  {
+    "name": "mixamorig:LeftToe_End_end",
+    "deform": true,
+    "parent": "mixamorig:LeftToe_End"
+  },
+  {
+    "name": "Bone_036",
+    "deform": true,
+    "parent": "Bone_021"
+  },
+  {
+    "name": "Bone_035",
+    "deform": true,
+    "parent": "Bone_036"
+  },
+  {
+    "name": "Bone_035_end",
+    "deform": true,
+    "parent": "Bone_035"
+  },
+  {
+    "name": "Bone_020",
+    "deform": true,
+    "parent": "Bone_006"
+  },
+  {
+    "name": "Bone_019",
+    "deform": true,
+    "parent": "Bone_020"
+  },
+  {
+    "name": "Bone_019_end",
+    "deform": true,
+    "parent": "Bone_019"
+  },
+  {
+    "name": "mixamorig:RightUpLeg",
+    "deform": true,
+    "parent": "mixamorig:Hips"
+  },
+  {
+    "name": "Bone_008",
+    "deform": true,
+    "parent": "mixamorig:RightUpLeg"
+  },
+  {
+    "name": "mixamorig:RightLeg",
+    "deform": true,
+    "parent": "Bone_008"
+  },
+  {
+    "name": "Bone_025",
+    "deform": true,
+    "parent": "mixamorig:RightLeg"
+  },
+  {
+    "name": "mixamorig:RightFoot",
+    "deform": true,
+    "parent": "Bone_025"
+  },
+  {
+    "name": "mixamorig:RightToeBase",
+    "deform": true,
+    "parent": "mixamorig:RightFoot"
+  },
+  {
+    "name": "mixamorig:RightToe_End",
+    "deform": true,
+    "parent": "mixamorig:RightToeBase"
+  },
+  {
+    "name": "mixamorig:RightToe_End_end",
+    "deform": true,
+    "parent": "mixamorig:RightToe_End"
+  },
+  {
+    "name": "Bone_041",
+    "deform": true,
+    "parent": "Bone_025"
+  },
+  {
+    "name": "Bone_040",
+    "deform": true,
+    "parent": "Bone_041"
+  },
+  {
+    "name": "Bone_040_end",
+    "deform": true,
+    "parent": "Bone_040"
+  },
+  {
+    "name": "Bone_024",
+    "deform": true,
+    "parent": "Bone_008"
+  },
+  {
+    "name": "Bone_023",
+    "deform": true,
+    "parent": "Bone_024"
+  },
+  {
+    "name": "Bone_023_end",
+    "deform": true,
+    "parent": "Bone_023"
+  }
+]

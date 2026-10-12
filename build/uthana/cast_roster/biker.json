@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\biker\\biker.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cQ7k8qjRAxEi/character.glb",
+    "character_id": "cQ7k8qjRAxEi",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runtime_approved": false,
+  "units": "metres",
+  "forward_blender": "-Y",
+  "muzzle": "Muzzle",
+  "grip_anchor": "GripAnchor",
+  "pending": [
+    "visual quality review",
+    "actual skeleton grip alignment",
+    "aim pose and recoil",
+    "laser barrel binding"
+  ]
+}

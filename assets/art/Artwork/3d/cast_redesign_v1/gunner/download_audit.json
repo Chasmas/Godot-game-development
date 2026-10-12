@@ -1,0 +1,36 @@
+{
+  "task_id": "01a12045-98ad-76e5-a0e2-64c699f665ab",
+  "outputs": [
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\model.glb",
+      "bytes": 26406428,
+      "sha256": "bdb0df5793579ab604d7c0003698175cacb371b6cf797c601fe3aced56ebd0fd"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\pre_remeshed.glb",
+      "bytes": 41563868,
+      "sha256": "a39e035a101bce46826981500e00476f8f2476995abc33940b68c9956567ac40"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\texture_0_base_color.png",
+      "bytes": 11400173,
+      "sha256": "ce7514d3a5b8439513b06d5bafb07be6dac17266f4a87473da19290f1ce4d45b"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\texture_0_metallic.png",
+      "bytes": 352302,
+      "sha256": "9fb1d8854cc5aa4fb8cd011c1b646aa69e09f6d77d6f4efd9f77a1474c425c79"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\texture_0_roughness.png",
+      "bytes": 924618,
+      "sha256": "79d8a4348b948172dcf7c3e26ffbb0147bf4866258f936778f306c462165dbd5"
+    },
+    {
+      "file": "assets\\art\\Artwork\\3d\\cast_redesign_v1\\gunner\\raw\\texture_0_normal.png",
+      "bytes": 13867416,
+      "sha256": "5969b3ea189b3dcb3b7835570d76732325d4017e2dbfa3ccc75d5d37237f5f2c"
+    }
+  ],
+  "runtime_approved": false
+}

@@ -24,7 +24,9 @@ func _ready() -> void:
 		Game.campaign_mode = false
 		Game.start_mission("m01_checkout")
 		await frames(60)
-		await _movement_collision_regression(_player())
+		var movement_player := _player()
+		_prepare_live_player(movement_player)
+		await _movement_collision_regression(movement_player)
 		await _reload_transition_regression(_player())
 		await _attack_transition_regression(_player())
 		await _shoot_aim_regression(_player())
@@ -50,8 +52,28 @@ func check(cond: bool, what: String) -> void:
 		print("  FAIL ", what)
 		failures.append(what)
 
+func _prepare_live_player(p: Player) -> void:
+	# Smoke cases test gameplay, not the title-card/input lock. A mission intro
+	# may still be active after the scene has built, especially in a headless
+	# run, so explicitly release it before synthesising input.
+	Dialogue._end(false)
+	get_tree().paused = false
+	if p:
+		p.input_enabled = true
+	for action in ["move_left", "move_right", "move_up", "move_down", "sneak", "sprint", "dash"]:
+		Input.action_release(action)
+
 func _movement_collision_regression(p: Player) -> void:
 	var restore := p.global_position
+	# Slow movement is not automatically crouching. Explicit stealth input
+	# selects crouch locomotion even while accelerating or carrying a weapon.
+	p.visual.update_move(Vector2.RIGHT * 35.0, 1.0 / 60.0, false)
+	p.visual._process_cast(1.0 / 60.0)
+	check(p.visual.cast_sprite.clip.ends_with("walk") or p.visual.cast_sprite.clip.ends_with("run"), "slow ordinary movement selects an upright stepping cycle")
+	p.visual.update_move(Vector2.RIGHT * 35.0, 1.0 / 60.0, true)
+	p.visual._process_cast(1.0 / 60.0)
+	check(p.visual.cast_sprite.clip.ends_with("sneak"), "explicit stealth movement selects crouched stepping")
+	p.visual.update_move(Vector2.ZERO, 1.0 / 60.0, false)
 	var wall := StaticBody2D.new()
 	wall.collision_layer = Layers.WORLD
 	var shape := CollisionShape2D.new()
@@ -61,11 +83,13 @@ func _movement_collision_regression(p: Player) -> void:
 	wall.add_child(shape)
 	wall.position = Vector2(-900, -1000)
 	get_tree().current_scene.add_child(wall)
-	p.global_position = Vector2(-960, -1000)
+	# Current approved traversal reaches 53.1 px/s. Start close enough that
+	# the 90-frame sample actually reaches this 16 px wall plus Cass's radius.
+	p.global_position = Vector2(-930, -1000)
 	p.velocity = Vector2.ZERO
 	Input.action_press("move_right")
 	await frames(90)
-	check(p.global_position.x < -910, "solid wall stops player")
+	check(p.global_position.x <= -915, "solid wall stops player")
 	check(p.visual._cast_velocity.length() < 1.5, "blocked player animation stops stepping")
 	check(p.velocity.length() < 1.5, "wall collision clears blocked movement momentum")
 	check(p.is_quiet(), "blocked player produces no walking detection noise")
@@ -80,7 +104,7 @@ func _movement_collision_regression(p: Player) -> void:
 	var wall_y := p.global_position.y
 	Input.action_press("move_up")
 	await frames(24)
-	check(p.global_position.y < wall_y - 8.0 and p.velocity.y < -20.0, "wall contact preserves movement along the surface")
+	check(p.global_position.y < wall_y - 6.0 and p.velocity.y < -20.0, "wall contact preserves movement along the surface")
 	check(absf(p.velocity.x) < 1.5, "diagonal wall movement clears only blocked momentum")
 	Input.action_release("move_up")
 	await frames(12)
@@ -288,6 +312,7 @@ func _run() -> void:
 	check(lvl != null and lvl.get_node_or_null("ApprovedM01GroundPlate") != null, "approved M01 ground plate integrated")
 	if lvl == null or p == null:
 		return
+	_prepare_live_player(p)
 	check(lvl.enemies.size() >= 20, "enemies spawned (%d)" % lvl.enemies.size())
 	if lvl.enemies.size() < 20:
 		print("DBG ck=", Game.checkpoint_state.keys(), " ids=", lvl.killed_ids.keys(), " attempts=", Game.attempts, " grp=", get_tree().get_nodes_in_group("enemies").size(), " corpses=", get_tree().get_nodes_in_group("corpses").size(), " lvls=", get_tree().get_nodes_in_group("level").size(), " scene=", get_tree().current_scene.name)
@@ -308,7 +333,10 @@ func _run() -> void:
 	Input.action_press("move_right")
 	await frames(40)
 	Input.action_release("move_right")
-	check(p.global_position.x > start.x + 20.0, "player moves right")
+	# At the approved 53.1 px/s walk pace, 40 physics frames travel about
+	# 17.7 px. This threshold proves real movement without demanding the old,
+	# overly fast controller speed.
+	check(p.global_position.x > start.x + 12.0, "player moves right")
 	await _movement_collision_regression(p)
 	await _attack_transition_regression(p)
 	await _shoot_aim_regression(p)
@@ -489,6 +517,13 @@ func _run() -> void:
 	if boss:
 		# the lobby is sealed: find the charges, plant them, blow the doors
 		check(lvl.breach != null and not lvl.breach.done, "lobby sealed until the breach")
+		var all_locked := not lvl.breach.doors.is_empty()
+		for d in lvl.breach.doors:
+			all_locked = all_locked and d.locked and d.metal and not d.broken
+		check(all_locked, "Harcourt's double door is physically locked before the breach")
+		p.global_position = lvl.breach.doors[0].global_position
+		lvl.breach._discover()
+		check(lvl.breach.discovered and lvl.breach.objective() == lvl._obj("find_charge", "FIND SOMETHING TO BLOW THE DOORS"), "locked lobby door gives the explosives objective")
 		p.god_mode = true
 		p.global_position = lvl.breach._charge_it.global_position
 		lvl.breach._charge_it.interact(p)
@@ -507,9 +542,17 @@ func _run() -> void:
 		for d in lvl.breach.doors:
 			all_broken = all_broken and d.broken
 		check(all_broken and lvl.breach.doors.size() >= 1, "the lobby doors are destroyed")
-		await frames(200)
-		check(lvl.phase == Level.Phase.BOSS, "the breach starts Harcourt's scene")
-		p.global_position = Vector2(58 * 16, 34 * 16)
+		# The explosion only opens the armored door. Harcourt's scene must wait
+		# until Cass actually crosses the boss-room trigger, otherwise a planted
+		# charge could start the encounter from the other side of the motel.
+		check(not lvl._boss_triggered and lvl.phase != Level.Phase.BOSS, "the breach alone does not start Harcourt's scene")
+		var boss_trigger: Array = lvl.data.get("boss_trigger", [])
+		check(boss_trigger.size() == 4, "Harcourt room entry trigger exists")
+		if boss_trigger.size() == 4:
+			p.global_position = Vector2((int(boss_trigger[0]) + 1) * 16 + 8, (int(boss_trigger[1]) + 1) * 16 + 8)
+			lvl._process(1.0 / 60.0)
+		await frames(2)
+		check(lvl.phase == Level.Phase.BOSS and lvl._boss_triggered and Dialogue.active, "entering the breached lobby starts Harcourt's scene")
 		# skip intro dialogue
 		for i in 20:
 			if not Dialogue.active:
@@ -727,7 +770,10 @@ func _run_m02() -> void:
 		check(lvl.light_level_at(Vector2(16 * 16, 7 * 16)) < 0.35, "warehouse is dark")
 		check(lvl.darkness.active.has("warehouse"), "darkness overlay active")
 		var fixer := false
-		for i in 12:
+		# Repair dispatch waits 3–5 s before selecting a guard. With the approved
+		# slower NPC cadence, a reachable guard can need a further few seconds to
+		# follow a real corridor route instead of teleporting to the switch.
+		for i in 18:
 			await frames(120)
 			if not lvl.is_zone_dark("warehouse"):
 				fixer = true

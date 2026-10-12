@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\welder\\welder.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cvr8A9nvzqW4/character.glb",
+    "character_id": "cvr8A9nvzqW4",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "scope": "Every game-referenced music master; dialogue, SFX and unshipped source variants excluded",
+  "tracks": [
+    {
+      "file": "music\\intro_teaser_v2.mp3",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_aftermath.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade1.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade2.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade3.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade4.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_fireman.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_fireman_fire.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_harcourt.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_harcourt_dark.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_tommy.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_boss_tommy_wake.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_credits.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_credits_rewind.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_dream.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_drive_barstow.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_drive_burbank.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_drive_mojave.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_galaxy_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_main_theme.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_massacre1.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_massacre2.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_massacre3.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_menu_tapes.mp3",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_menu_vcr.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_motel_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_motel_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_police_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_story_apartment.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_story_firewatch.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_story_mom.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_story_tommy.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_studio_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_studio_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_villa_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_villa_nightmare.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_yard_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_yard_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    }
+  ]
+}

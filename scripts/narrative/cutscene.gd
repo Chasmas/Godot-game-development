@@ -14,6 +14,8 @@ var card: Label
 var osd: Label
 var id := ""
 var _t := 0.0
+var _skip_hint: Label
+var _skipped := false
 
 func _ready() -> void:
 	theme = UIStyle.theme()
@@ -73,6 +75,12 @@ func _ready() -> void:
 	osd = UIStyle.label("PLAY ▶", 20, UIStyle.PAPER, true)
 	osd.position = Vector2(28, 20)
 	add_child(osd)
+	_skip_hint = UIStyle.label("ESC · SKIP", 16, UIStyle.PAPER)
+	_skip_hint.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	_skip_hint.position = Vector2(-330,24)
+	_skip_hint.size = Vector2(300,30)
+	_skip_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_skip_hint)
 	card = UIStyle.title_label(str(d.get("title", "")), 30, UIStyle.PAPER)
 	card.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	UIStyle.place(card, Control.PRESET_CENTER_TOP, Vector2(-480, 80), Vector2(960, 40))
@@ -82,14 +90,20 @@ func _ready() -> void:
 		Music.play(music)
 	else:
 		Music.stop(0.8)
-	Dialogue.event.connect(_on_event)
-	Dialogue.finished.connect(_on_finished)
+	# These callbacks belong to every cutscene.  Keeping them outside the music
+	# branch prevents a scored cutscene from losing its progression callback.
+	if not Dialogue.event.is_connected(_on_event):
+		Dialogue.event.connect(_on_event)
+	if not Dialogue.finished.is_connected(_on_finished):
+		Dialogue.finished.connect(_on_finished)
 	PostFX.vhs_glitch(1.0)
 	Audio.play("vhs_static", -6.0)
 	await get_tree().create_timer(1.4).timeout
+	if _skipped: return
 	Dialogue.start(id, true)
 
 func _process(delta: float) -> void:
+	if _skipped: return
 	_t += delta
 	var now := Time.get_time_dict_from_system()
 	osd.text = "PLAY ▶   SP   %02d:%02d:%02d" % [int(now.hour), int(now.minute), int(now.second)]
@@ -108,6 +122,23 @@ func _process(delta: float) -> void:
 			art_shade.color = Color(0.01, 0.0, 0.025, pulse)
 	if sequence:
 		sequence.queue_redraw()
+
+func _input(event: InputEvent) -> void:
+	# Space remains a dialogue advance binding. ESC is reserved for an explicit
+	# cutscene skip and consumed before the pause menu sees it.
+	if is_skip_event(event):
+		get_viewport().set_input_as_handled()
+		_skip()
+
+static func is_skip_event(event: InputEvent) -> bool:
+	return event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_ESCAPE
+
+func _skip() -> void:
+	if _skipped:
+		return
+	_skipped = true
+	Dialogue._end(false)
+	_on_finished(id)
 
 ## Each line can cut to a new shot ("shot" on the dialogue node).
 func _on_line(_speaker: String, _text: String) -> void:

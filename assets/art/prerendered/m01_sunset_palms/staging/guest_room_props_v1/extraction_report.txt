@@ -1,0 +1,4 @@
+open_suitcase.png: 650x700, alpha=(15, 18, 631, 699); game=44x48
+shoes.png: 410x495, alpha=(0, 18, 410, 495); game=28x36
+service_tray.png: 550x345, alpha=(17, 1, 535, 337); game=36x24
+bedside_lamp.png: 430x430, alpha=(16, 19, 430, 430); game=32x32

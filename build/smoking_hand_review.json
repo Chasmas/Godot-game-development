@@ -1,0 +1,194 @@
+[
+	{
+		"cast": "bellhop",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0670781421661377,
+			0.615453605651855
+		]
+	},
+	{
+		"cast": "biker",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0880789375305176,
+			0.692826843261719
+		]
+	},
+	{
+		"cast": "boss",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0707792282104492,
+			0.647675476074219
+		]
+	},
+	{
+		"cast": "buck",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0402638721466064,
+			0.653196029663086
+		]
+	},
+	{
+		"cast": "burnt",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.079122200012207,
+			0.634458198547363
+		]
+	},
+	{
+		"cast": "cass",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.147951669692993,
+			0.523369293212891
+		]
+	},
+	{
+		"cast": "civilian",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.141793556213379,
+			0.654892501831055
+		]
+	},
+	{
+		"cast": "cultist",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.107512397766113,
+			0.599130668640137
+		]
+	},
+	{
+		"cast": "demon",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0900663661956787,
+			0.485615501403809
+		]
+	},
+	{
+		"cast": "fireman",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0488870000839233,
+			0.668064575195312
+		]
+	},
+	{
+		"cast": "ghoul",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.132440929412842,
+			0.507355117797852
+		]
+	},
+	{
+		"cast": "guard",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.147566041946411,
+			0.676214981079102
+		]
+	},
+	{
+		"cast": "gunner",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.139772796630859,
+			0.487446022033691
+		]
+	},
+	{
+		"cast": "handler",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.151354198455811,
+			0.652916946411133
+		]
+	},
+	{
+		"cast": "heavy",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0607566404342651,
+			0.670609741210938
+		]
+	},
+	{
+		"cast": "hunter",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0954592037200928,
+			0.662648086547852
+		]
+	},
+	{
+		"cast": "riot",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0561961317062378,
+			0.67781623840332
+		]
+	},
+	{
+		"cast": "scout",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.11083532333374,
+			0.641423110961914
+		]
+	},
+	{
+		"cast": "scrapper",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.123299007415771,
+			0.593881568908691
+		]
+	},
+	{
+		"cast": "security",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0940910339355469,
+			0.651395492553711
+		]
+	},
+	{
+		"cast": "sniper",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0927666854858398,
+			0.535964050292969
+		]
+	},
+	{
+		"cast": "stagehand",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.180994300842285,
+			0.621658935546875
+		]
+	},
+	{
+		"cast": "welder",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0988132667541504,
+			0.636463890075684
+		]
+	},
+	{
+		"cast": "zombie",
+		"left_active": false,
+		"nearest_head_metres": [
+			0.0948654937744141,
+			0.524941902160645
+		]
+	}
+]

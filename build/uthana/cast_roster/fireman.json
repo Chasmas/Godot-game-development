@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\fireman\\fireman.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/ckV5XSBdc982/character.glb",
+    "character_id": "ckV5XSBdc982",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

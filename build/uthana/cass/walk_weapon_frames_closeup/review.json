@@ -1,0 +1,10 @@
+{
+	"cast": "scout",
+	"duration_seconds": 1.66666674613953,
+	"frames": 48,
+	"motion": "walk",
+	"pending": "Finger contact, anatomical clearance, other aim angles and actual gameplay",
+	"runtime_approved": false,
+	"weapon": "pistol",
+	"worst_shouldered_hand_target_error_m": 0.0
+}

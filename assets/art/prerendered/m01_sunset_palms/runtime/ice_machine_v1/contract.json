@@ -1,0 +1,10 @@
+{
+  "runtime_approved": true,
+  "file": "ice_machine_intact.png",
+  "source": "Generated transparent motel ice machine, 2026-10-08",
+  "projection": "Stylized compact top-down game prop, fitted to the legacy 14 by 12 pixel BreakableProp footprint",
+  "pending": [],
+  "expected_placements": 2,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 ice BreakableProp instances only. The visual is child-only, hidden on break; the original collision, health, damage response and broken drawing remain authoritative."
+}

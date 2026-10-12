@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\cultist\\cultist.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/c1TRPwhYLLj8/character.glb",
+    "character_id": "c1TRPwhYLLj8",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

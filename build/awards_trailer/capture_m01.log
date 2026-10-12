@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 617.14 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070
+
+Movie Maker mode enabled, recording movie in 1600×900 @ 30 FPS...
+[   0.0] autoplay start: Normal difficulty
+M01 native guest AC fixtures: 8
+M01 native guest door plates: 3
+[level] prewarmed 24 looks in 3222 ms
+[   0.3] mission start: m01_checkout (attempt 1)
+[   0.3] UNREACHABLE guard at cell (3, 43) (exterior) - path ends at cell (-11, 57)
+[   3.7] stuck near cell (5, 54) heading for enemy
+[   4.3] stuck near cell (5, 54) heading for enemy
+[   4.9] stuck near cell (5, 54) heading for enemy
+[  12.7] SPOTLIGHT at 12.7
+[  33.8] SPOTLIGHT at 33.8
+--------------------------------------------------------------------------------
+Done recording movie at path: C:/Users/Gil/Documents/GitHub/Hotshot-California/build/awards_trailer/m01.avi
+1350 frames at 30 FPS (movie length: 00:00:45:00), recorded in 00:04:47 (15% of real-time speed).
+CPU render time: 19.25 seconds (average: 14.26 ms/frame)
+GPU render time: 53.65 seconds (average: 39.74 ms/frame)
+Encoding time: 26.88 seconds (average: 19.91 ms/frame)
+--------------------------------------------------------------------------------
+WARNING: 17 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 5 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

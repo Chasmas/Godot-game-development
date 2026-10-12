@@ -1,0 +1,29 @@
+[
+  {
+    "clip": "pistol_walk",
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "duration_s": 1.4666666984558105,
+    "max_loop_rotation_degrees": 3.201177828056492,
+    "max_loop_translation_native_units": 0.09056854248046875,
+    "runtime_approved": false
+  },
+  {
+    "clip": "run",
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "duration_s": 1.2333333492279053,
+    "max_loop_rotation_degrees": 6.674134179985337,
+    "max_loop_translation_native_units": 0.1799468994140625,
+    "runtime_approved": false
+  },
+  {
+    "clip": "walk",
+    "same_joint_names_and_order": true,
+    "max_mesh_vertex_delta": 0.0,
+    "duration_s": 1.933333396911621,
+    "max_loop_rotation_degrees": 2.2156566977833094,
+    "max_loop_translation_native_units": 0.19748687744140625,
+    "runtime_approved": false
+  }
+]

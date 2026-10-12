@@ -1,0 +1,33 @@
+{
+  "dominant_bone_vertex_counts": {
+    "head_end": 2589,
+    "headfront": 283,
+    "RightShoulder": 744,
+    "LeftShoulder": 1351,
+    "LeftArm": 2322,
+    "neck": 3,
+    "Spine02": 452,
+    "RightArm": 1869,
+    "Spine01": 30,
+    "Hips": 1146,
+    "LeftUpLeg": 5743,
+    "LeftForeArm": 127,
+    "RightUpLeg": 5009,
+    "LeftHand": 2081,
+    "RightHand": 2061,
+    "RightForeArm": 123,
+    "LeftLeg": 1785,
+    "RightLeg": 1934,
+    "LeftFoot": 1392,
+    "LeftToeBase": 122,
+    "RightFoot": 1394,
+    "RightToeBase": 90
+  },
+  "torso_face_coverage_by_weight_threshold": {
+    "0.2": 9078,
+    "0.4": 4933,
+    "0.6": 1626,
+    "0.8": 224
+  },
+  "runtime_approved": false
+}

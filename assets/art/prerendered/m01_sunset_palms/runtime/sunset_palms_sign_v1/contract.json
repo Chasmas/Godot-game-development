@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "sunset_palms_sign.png",
+  "target_text": "SUNSET PALMS",
+  "imagegen_reference": "res://assets/art/prerendered/m01_sunset_palms/staging/sunset_palms_sign_v2/sunset_palms_sign_imagegen_reference.png",
+  "production_method": "ImageGen weathered panel reference/material plus Blender geometry, lettering, tubes, lights and render.",
+  "approval_scope": "M01 main NeonSign visual child only; existing sign anchor, light and flicker remain authoritative."
+}

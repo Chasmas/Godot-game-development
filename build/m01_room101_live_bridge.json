@@ -1,0 +1,77 @@
+{
+	"bed_actual_collision_size_pixels": [
+		30.0,
+		30.0
+	],
+	"bed_body_size_pixels": [
+		32.0,
+		32.0
+	],
+	"bed_centre_error_pixels": 0.0,
+	"bed_visual_size_pixels": [
+		25.4226379394531,
+		31.9999980926514
+	],
+	"candidate_collision_size_pixels": [
+		23.4226379394531,
+		29.9999980926514
+	],
+	"candidate_contacts": [
+		{
+			"contact_error_pixels": 0.0933685302734375,
+			"direction": [
+				-1.0,
+				0.0
+			]
+		},
+		{
+			"contact_error_pixels": 0.0933685302734375,
+			"direction": [
+				1.0,
+				0.0
+			]
+		},
+		{
+			"contact_error_pixels": 0.0639657974243164,
+			"direction": [
+				0.0,
+				-1.0
+			]
+		},
+		{
+			"contact_error_pixels": 0.0639657974243164,
+			"direction": [
+				0.0,
+				1.0
+			]
+		}
+	],
+	"runtime_promoted": false,
+	"samples": [
+		{
+			"actual_player_position": [
+				232.0,
+				472.0
+			],
+			"capture": "res://build/m01_room101_live_232_472.png",
+			"roundtrip_error_pixels": 0.0
+		},
+		{
+			"actual_player_position": [
+				248.0,
+				464.0
+			],
+			"capture": "res://build/m01_room101_live_248_464.png",
+			"roundtrip_error_pixels": 0.0000152587890625
+		},
+		{
+			"actual_player_position": [
+				184.0,
+				480.0
+			],
+			"capture": "res://build/m01_room101_live_184_480.png",
+			"roundtrip_error_pixels": 0.0
+		}
+	],
+	"scope": "Loaded actual M01 physics/player mapped to isolated visual candidate; not full-map rendering or input conversion"
+}

@@ -45,7 +45,8 @@ func _ready() -> void:
 		assert(walking_seen,"Moving enemy must show locomotion")
 		rows.append({"direction":[direction.x,direction.y],"frames":frames,"remaining_distance":remaining,"minimum_clearance":minimum_clearance,"walking_seen":walking_seen})
 		probe.queue_free();await get_tree().physics_frame
-	var report := FileAccess.open("res://build/m01_chair_steering_review.json",FileAccess.WRITE)
+	var report := FileAccess.open("user://m01_chair_steering_review.json",FileAccess.WRITE)
+	assert(report != null,"M01 chair review needs a writable report location")
 	report.store_string(JSON.stringify({"scope":"Actual Enemy patrol controller around one M01 sleeping chair; other actors ignored to isolate furniture steering","passed":true,"rows":rows},"  "));report.close()
 	SaveManager.data=saved;SaveManager.save_path=saved_path;Dialogue.set_process(true)
 	print("M01 CHAIR STEERING: four actual patrol routes completed")

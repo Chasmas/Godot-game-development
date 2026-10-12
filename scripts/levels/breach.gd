@@ -16,6 +16,9 @@ extends Node
 
 signal breached
 
+const ARMORED_LEAF_ART_PATH := "res://assets/art/prerendered/m01_sunset_palms/staging/armored_breach_door_v1/armored_breach_leaf_topdown.png"
+const ARMORED_DEBRIS_ART_PATH := "res://assets/art/prerendered/m01_sunset_palms/staging/armored_breach_door_v1/armored_breach_debris_topdown.png"
+
 var level: Level
 var cfg: Dictionary
 var doors: Array = []
@@ -35,20 +38,41 @@ func setup(p_level: Level, p_cfg: Dictionary, state: Dictionary) -> void:
 	level = p_level
 	cfg = p_cfg
 	has_charge = bool(state.get("has_charge", false))
-	done = bool(state.get("done", false))
+	# A blown doorway only makes sense once this mission has entered its boss
+	# phase.  Older/stale checkpoint data could carry `done` into a fresh clear
+	# run, leaving Harcourt's office open and skipping the whole breach beat.
+	var saved_done := bool(state.get("done", false))
+	done = saved_done and level.phase >= Level.Phase.BOSS
+	if saved_done and not done:
+		push_warning("Ignoring stale M01 breach completion before the boss phase")
 	discovered = bool(state.get("discovered", false)) or has_charge
 	for c in cfg.get("doors", []):
 		var at := _cell(c)
 		for d in get_tree().get_nodes_in_group("door"):
-			if d is Door and (d as Door).global_position.distance_to(at) < 20.0 and not doors.has(d):
+			if d is Door and _matches_door(d as Door, at) and not doors.has(d):
 				doors.append(d)
+	if doors.is_empty():
+		push_error("Breach could not find its configured doors")
+	var armored_leaf := load(ARMORED_LEAF_ART_PATH) as Texture2D
+	var armored_debris := load(ARMORED_DEBRIS_ART_PATH) as Texture2D
+	if armored_leaf == null or armored_debris == null:
+		push_error("Harcourt armored breach art failed to load")
 	for d in doors:
 		d.locked = true
 		d.metal = true
+		d.breach_only = true
+		# The Harcourt gate reads as a bolted motel-office blast door, while
+		# retaining the exact live Door collider, hinge and breach-only rules.
+		d.visual_texture = armored_leaf
+		d.broken_visual_texture = armored_debris
+		d.queue_redraw()
 	if done:
 		for d in doors:
 			d._break(Vector2.UP)
 		return
+	# The armored Blender leaf is now the permanent visual lock. The previous
+	# procedural chain overlay hid it behind noisy line art; the approach popup
+	# continues to communicate LOCKED without masking the actual gate.
 	_plant_it = Interactable.new()
 	_plant_it.setup("plant", "PLANT THE CHARGE", "breach_plant")
 	_plant_it.position = _cell(cfg.plant)
@@ -65,6 +89,14 @@ func setup(p_level: Level, p_cfg: Dictionary, state: Dictionary) -> void:
 func _cell(c: Array) -> Vector2:
 	return Vector2(float(c[0]), float(c[1])) * 16.0 + Vector2(8, 8)
 
+## Configured breach cells may name either half of a double door while a
+## runtime Door has one hinge.  Match the entire closed leaf, not just its
+## hinge, so the physical gate is always locked.
+func _matches_door(door: Door, point: Vector2) -> bool:
+	var start := door.global_position
+	var end := start + Vector2.from_angle(door.closed_angle) * door.length
+	return Geometry2D.get_closest_point_to_segment(point, start, end).distance_to(point) <= 12.0
+
 func state() -> Dictionary:
 	return {"has_charge": has_charge and not done, "done": done, "discovered": discovered}
 
@@ -72,8 +104,6 @@ func state() -> Dictionary:
 func objective() -> String:
 	if done:
 		return ""
-	if not discovered:
-		return level._obj("find_boss", "FIND THE NIGHT MANAGER")
 	if planted or planting:
 		return tr("GET CLEAR!")
 	if has_charge:
@@ -353,6 +383,36 @@ class LockedPopup extends Node2D:
 		draw_rect(Rect2(r.position.x + 7.5, -1.5, 1, 2), Color(0.78, 0.08, 0.14, a))
 		draw_string(f, Vector2(r.position.x + 14, 3), txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(1, 0.95, 0.9, a))
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Permanent, readable lock dressing for Harcourt's lobby door.  It is visual
+## only; the live Door collision remains the gate until the breach breaks it.
+class LobbySeal extends Node2D:
+	var _pulse := 0.0
+	func _ready() -> void:
+		z_index = 8
+	func _process(delta: float) -> void:
+		_pulse += delta
+		queue_redraw()
+	func _draw() -> void:
+		# Chain shadows and chunky linked steel make the lock legible at the
+		# gameplay camera, with a tiny emergency light picking out the centre.
+		for dir in [-1.0, 1.0]:
+			var a := Vector2(-14.0 * dir, -7.5)
+			var b := Vector2(14.0 * dir, 7.5)
+			draw_line(a + Vector2(1, 1), b + Vector2(1, 1), Color(0.015, 0.01, 0.025, .78), 3.2)
+			draw_line(a, b, Color(0.24, 0.27, 0.31), 2.0)
+			for i in 5:
+				var at := a.lerp(b, float(i) / 4.0)
+				draw_circle(at, 2.1, Color(0.055, 0.06, 0.08))
+				draw_circle(at, 1.25, Color(0.52, 0.56, 0.58))
+		# Bolted red lock box at the crossing.
+		draw_rect(Rect2(-5.5, -3.0, 11, 9), Color(0.04, 0.015, 0.025, .9))
+		draw_rect(Rect2(-4.5, -2.0, 9, 7), Color(0.56, 0.055, 0.10))
+		draw_rect(Rect2(-3.3, -.8, 6.6, 4.5), Color(0.18, 0.025, 0.05))
+		draw_arc(Vector2(0, -.7), 2.35, PI, TAU, 8, Color(0.9, 0.82, 0.62), 1.1)
+		var blink := .45 + .35 * (sin(_pulse * 3.0) * .5 + .5)
+		draw_circle(Vector2(3.0, 3.0), 1.0, Color(1.0, 0.22, 0.16, blink))
 
 
 

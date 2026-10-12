@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\scout\\scout.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cc1GJwqytMTP/character.glb",
+    "character_id": "cc1GJwqytMTP",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

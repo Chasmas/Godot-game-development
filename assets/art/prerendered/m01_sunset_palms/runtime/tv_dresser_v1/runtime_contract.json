@@ -1,0 +1,93 @@
+{
+  "runtime_approved": true,
+  "footprint_metres": [
+    1.62,
+    0.5
+  ],
+  "height_metres": 1.21,
+  "pixels_per_metre": 200.78431372549022,
+  "frames": [
+    {
+      "file": "tv_dresser_000.png",
+      "rotation_degrees": 0,
+      "floor_anchor_px": [
+        256.0,
+        328.42613220214844
+      ],
+      "screen_polygon_px": [
+        [
+          178.6980438232422,
+          218.66336059570312
+        ],
+        [
+          246.96470642089844,
+          218.66336059570312
+        ],
+        [
+          250.9803924560547,
+          221.25003051757812
+        ],
+        [
+          250.9803924560547,
+          239.35653686523438
+        ],
+        [
+          246.96470642089844,
+          241.94320678710938
+        ],
+        [
+          178.6980438232422,
+          241.94320678710938
+        ],
+        [
+          174.68235778808594,
+          239.35653686523438
+        ],
+        [
+          174.68235778808594,
+          221.25003051757812
+        ]
+      ]
+    },
+    {
+      "file": "tv_dresser_090.png",
+      "rotation_degrees": 90,
+      "floor_anchor_px": [
+        256.0,
+        328.42613220214844
+      ],
+      "screen_polygon_px": []
+    },
+    {
+      "file": "tv_dresser_180.png",
+      "rotation_degrees": 180,
+      "floor_anchor_px": [
+        256.0,
+        328.42613220214844
+      ],
+      "screen_polygon_px": []
+    },
+    {
+      "file": "tv_dresser_270.png",
+      "rotation_degrees": 270,
+      "floor_anchor_px": [
+        256.0,
+        328.42613220214844
+      ],
+      "screen_polygon_px": []
+    }
+  ],
+  "source_kind": "Blender geometry with existing ImageGen walnut and rubber colour maps",
+  "pending": [
+    "Full guest-room visual assembly and lighting refinement remain separate work."
+  ],
+  "source_sha256": {
+    "tv_dresser_000.png": "34045d79809ee89feffe642851d89ee1eac79ae10aa3b9bd499c1e74e6edd94b",
+    "tv_dresser_090.png": "cef945b70daff13bfaa25ae7c35be90923f154cdc41c66222a6f16fa73671eda",
+    "tv_dresser_180.png": "c441c70adb17ca4ad5fc57397c98ac7eb88f0ddbb5a65d10a77aa12b8cd5e894",
+    "tv_dresser_270.png": "0424917bca3bdcc0b8823930bb179321251a5138468e0c613e595ceb47f4e6e3"
+  },
+  "expected_placements": 4,
+  "approval_scope": "M01 CRT-dresser family only: four gameplay-safe native replacement positions, collision volumes, actor clearance, navigation connectivity and CRT screen overlay. Two recessed legacy dressers remain visual-only to preserve room access.",
+  "validation": "Four gameplay-safe native CRT dressers are placed by this contract. Two recessed authored dressers remain legacy visual dressing because a solid replacement blocks every player approach."
+}

@@ -7,8 +7,8 @@
         0.0
       ],
       "frames": 152,
-      "minimum_clearance": 11.6752691268921,
-      "remaining_distance": 7.60883617401123,
+      "minimum_clearance": 11.566445350647,
+      "remaining_distance": 7.59356355667114,
       "walking_seen": true
     },
     {
@@ -17,8 +17,8 @@
         1.0
       ],
       "frames": 149,
-      "minimum_clearance": 10.9690990447998,
-      "remaining_distance": 7.59162378311157,
+      "minimum_clearance": 10.9188737869263,
+      "remaining_distance": 7.58784627914429,
       "walking_seen": true
     },
     {
@@ -37,8 +37,8 @@
         -1.0
       ],
       "frames": 149,
-      "minimum_clearance": 10.5806646347046,
-      "remaining_distance": 7.58290910720825,
+      "minimum_clearance": 10.5810232162476,
+      "remaining_distance": 7.59303903579712,
       "walking_seen": true
     }
   ],

@@ -1,0 +1,286 @@
+[
+  {
+    "id": "CwhRBWXzGAHq8TQ4Fs17",
+    "name": "Roger - Laid-Back, Casual, Resonant",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "conversational",
+      "descriptive": "classy"
+    },
+    "description": "Easy going and perfect for casual conversations."
+  },
+  {
+    "id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah - Mature, Reassuring, Confident",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "entertainment_tv",
+      "descriptive": "professional"
+    },
+    "description": "Young adult woman with a confident and warm, mature quality and a reassuring, professional tone."
+  },
+  {
+    "id": "FGY2WhTYpPnrIDTdsKH5",
+    "name": "Laura - Enthusiast, Quirky Attitude",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "social_media",
+      "descriptive": "sassy"
+    },
+    "description": "This young adult female voice delivers sunny enthusiasm with a quirky attitude."
+  },
+  {
+    "id": "IKne3meq5aSn9XLyUdCD",
+    "name": "Charlie - Deep, Confident, Energetic",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "australian",
+      "age": "young",
+      "use_case": "conversational",
+      "descriptive": "hyped"
+    },
+    "description": "A young Australian male with a confident and energetic voice."
+  },
+  {
+    "id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George - Warm, Captivating Storyteller",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "british",
+      "age": "middle_aged",
+      "use_case": "narrative_story",
+      "descriptive": "mature"
+    },
+    "description": "Warm resonance that instantly captivates listeners."
+  },
+  {
+    "id": "N2lVS1w4EtoT3dr4eOWO",
+    "name": "Callum - Husky Trickster",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "characters_animation"
+    },
+    "description": "Deceptively gravelly, yet unsettling edge."
+  },
+  {
+    "id": "SAz9YHcvj6GT2YYXdXww",
+    "name": "River - Relaxed, Neutral, Informative",
+    "labels": {
+      "gender": "neutral",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "conversational",
+      "descriptive": "calm"
+    },
+    "description": "A relaxed, neutral voice ready for narrations or conversational projects."
+  },
+  {
+    "id": "SOYHLrjzK2X1ezoPC6cr",
+    "name": "Harry - Fierce Warrior",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "characters_animation",
+      "descriptive": "rough"
+    },
+    "description": "An animated warrior ready to charge forward."
+  },
+  {
+    "id": "TX3LPaxmHKxFdv7VOQHJ",
+    "name": "Liam - Energetic, Social Media Creator",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "social_media",
+      "descriptive": "confident"
+    },
+    "description": "A young adult with energy and warmth - suitable for reels and shorts."
+  },
+  {
+    "id": "Xb7hH8MSUJpSbSDYk0k2",
+    "name": "Alice - Clear, Engaging Educator",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "british",
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "professional"
+    },
+    "description": "Clear and engaging, friendly woman with a British accent suitable for e-learning."
+  },
+  {
+    "id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda - Knowledgable, Professional",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "upbeat"
+    },
+    "description": "A professional woman with a pleasing alto pitch. Suitable for many use cases."
+  },
+  {
+    "id": "bIHbv24MWmeRgasZH58o",
+    "name": "Will - Relaxed Optimist",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "conversational",
+      "descriptive": "chill"
+    },
+    "description": "Conversational and laid back."
+  },
+  {
+    "id": "cgSgspJ2msm6clMCkdW9",
+    "name": "Jessica - Playful, Bright, Warm",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "american",
+      "age": "young",
+      "use_case": "conversational",
+      "descriptive": "cute"
+    },
+    "description": "Young and popular, this playful American female voice is perfect for trendy content."
+  },
+  {
+    "id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric - Smooth, Trustworthy",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "conversational",
+      "descriptive": "classy"
+    },
+    "description": "A smooth tenor pitch from a man in his 40s - perfect for agentic use cases."
+  },
+  {
+    "id": "hpp4J3VqNfWAUOO0d1Us",
+    "name": "Bella - Professional, Bright, Warm",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "professional"
+    },
+    "description": "This voice is warm, bright, and professional, characterized by a Standard American accent and a polished, narrative quality. It features a medium-high pitch with crisp diction and a deliberate, rhythmic pace that makes it highly intelligible and engaging for long-form listening."
+  },
+  {
+    "id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris - Charming, Down-to-Earth",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "conversational",
+      "descriptive": "casual"
+    },
+    "description": "Natural and real, this down-to-earth voice is great across many use-cases."
+  },
+  {
+    "id": "nPczCjzI2devNBz1zQrb",
+    "name": "Brian - Deep, Resonant and Comforting",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "social_media",
+      "descriptive": "classy"
+    },
+    "description": "Middle-aged man with a resonant and comforting tone. Great for narrations and advertisements."
+  },
+  {
+    "id": "onwK4e9ZLuTAKqWW03F9",
+    "name": "Daniel - Steady Broadcaster",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "british",
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "formal"
+    },
+    "description": "A strong voice perfect for delivering a professional broadcast or news story."
+  },
+  {
+    "id": "pFZP5JQG7iQjIQuC4Bku",
+    "name": "Lily - Velvety Actress",
+    "labels": {
+      "gender": "female",
+      "language": "en",
+      "accent": "british",
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "confident"
+    },
+    "description": "Velvety British female voice delivers news and narrations with warmth and clarity."
+  },
+  {
+    "id": "pNInz6obpgDQGcFmaJgB",
+    "name": "Adam - Dominant, Firm",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "middle_aged",
+      "use_case": "social_media"
+    },
+    "description": "A bright tenor pitch that immediately cuts through. The delivery is brash and openly confident, speaking with unwavering certainty and a slightly aggressive self-assurance."
+  },
+  {
+    "id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill - Wise, Mature, Balanced",
+    "labels": {
+      "gender": "male",
+      "language": "en",
+      "accent": "american",
+      "age": "old",
+      "use_case": "advertisement",
+      "descriptive": "crisp"
+    },
+    "description": "Friendly and comforting voice ready to narrate your stories."
+  },
+  {
+    "id": "g12yXXabMWeFoLMzxPrF",
+    "name": "Julie - Cass mother",
+    "labels": {
+      "gender": "female",
+      "age": "old",
+      "use_case": "narrative_story",
+      "language": "en",
+      "accent": "american",
+      "descriptive": "calm"
+    },
+    "description": "A mature, warm, and soft voice with a calm, reflective, and intimate delivery. Compassionate and gentle, with a soothing presence."
+  }
+]

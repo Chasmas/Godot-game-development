@@ -1,0 +1,171 @@
+{
+  "runtime_approved": false,
+  "room_id": "101",
+  "map_sha256": "e10c43d0cd606bb9f9e61c3af235a09db9a201a9863d142fba912a446a7fbafb",
+  "floor_size_metres": [
+    8,
+    4
+  ],
+  "origin_game_pixels": [
+    176,
+    432
+  ],
+  "coordinate_convention": "Local X right, Y toward map south;16 game pixels per metre; Blender Y is inverted",
+  "preserved_openings": [
+    {
+      "tile": [
+        11,
+        31
+      ],
+      "kind": "W"
+    },
+    {
+      "tile": [
+        12,
+        31
+      ],
+      "kind": "W"
+    },
+    {
+      "tile": [
+        14,
+        31
+      ],
+      "kind": "D"
+    },
+    {
+      "tile": [
+        15,
+        31
+      ],
+      "kind": "D"
+    },
+    {
+      "tile": [
+        19,
+        28
+      ],
+      "kind": "D"
+    },
+    {
+      "tile": [
+        19,
+        29
+      ],
+      "kind": "D"
+    }
+  ],
+  "preserved_entities": [
+    {
+      "tile": [
+        12,
+        30
+      ],
+      "symbol": "t"
+    },
+    {
+      "tile": [
+        13,
+        28
+      ],
+      "symbol": "@"
+    },
+    {
+      "tile": [
+        15,
+        27
+      ],
+      "symbol": "*"
+    },
+    {
+      "tile": [
+        16,
+        28
+      ],
+      "symbol": "b"
+    },
+    {
+      "tile": [
+        16,
+        29
+      ],
+      "symbol": "b"
+    },
+    {
+      "tile": [
+        17,
+        28
+      ],
+      "symbol": "b"
+    },
+    {
+      "tile": [
+        17,
+        29
+      ],
+      "symbol": "b"
+    }
+  ],
+  "art_placements": [
+    {
+      "asset": "motel_bed",
+      "centre_metres": [
+        6.0,
+        2.0
+      ],
+      "footprint_metres": [
+        2.0,
+        2.0
+      ],
+      "rule": "Adapt authored mesh to existing bed footprint; retain body and navigation"
+    },
+    {
+      "asset": "tv_dresser",
+      "centre_metres": [
+        1.5,
+        3.5
+      ],
+      "maximum_footprint_metres": [
+        0.8,
+        0.7
+      ],
+      "rule": "Keep original TV location, orient screen toward bed; verify adjacent window clearance"
+    },
+    {
+      "asset": "nightstand_upper",
+      "centre_metres": [
+        3.375,
+        0.5
+      ],
+      "footprint_metres": [
+        0.65,
+        0.5
+      ],
+      "rule": "Match production cabinet centre230,440; preserve south/east passage"
+    },
+    {
+      "asset": "nightstand_lower",
+      "centre_metres": [
+        2.375,
+        3.5
+      ],
+      "footprint_metres": [
+        0.65,
+        0.5
+      ],
+      "rule": "Match production cabinet centre214,488; preserve straight south entrance"
+    }
+  ],
+  "composition_rules": [
+    "Use approved textiles/walnut/plaster and coherent practical light",
+    "No new bathroom bay in this small room without a gameplay layout revision",
+    "Keep south door lane x3..5 free and west/east adjoining door lanes free",
+    "Do not duplicate invisible original decor under new dressing"
+  ],
+  "pending": [
+    "Blender reconstruction to actual8x4m bounds",
+    "Door/window frame and sill alignment",
+    "Cass/NPC clearance and gameplay objective route tests",
+    "Shared camera bridge integration"
+  ]
+}

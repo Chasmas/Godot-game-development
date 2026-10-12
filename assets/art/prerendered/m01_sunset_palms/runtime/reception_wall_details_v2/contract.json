@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "reception_keywall.png",
+  "imagegen_reference": "res://assets/art/prerendered/m01_sunset_palms/staging/reception_counter_v2/reception_counter_imagegen_reference.png",
+  "production_method": "ImageGen-directed motel reception reference plus Blender-built walnut key cubbies, brass tags, service bell, keys sign and arrivals card.",
+  "expected_count": 1,
+  "approval_scope": "M01 reception wall dressing only; wall geometry and all collision/navigation remain authoritative."
+}

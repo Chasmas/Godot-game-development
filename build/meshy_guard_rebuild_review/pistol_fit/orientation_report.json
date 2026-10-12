@@ -1,0 +1,22 @@
+[
+  {
+    "degrees": 0,
+    "grip_right_hand_distance_m": 1.4901161193847656e-08,
+    "left_to_grip_distance_m": 0.3901772263209858
+  },
+  {
+    "degrees": 90,
+    "grip_right_hand_distance_m": 1.2013700229374393e-07,
+    "left_to_grip_distance_m": 0.3901772054354184
+  },
+  {
+    "degrees": 180,
+    "grip_right_hand_distance_m": 1.1920928955078125e-07,
+    "left_to_grip_distance_m": 0.3901772125961845
+  },
+  {
+    "degrees": 270,
+    "grip_right_hand_distance_m": 0.0,
+    "left_to_grip_distance_m": 0.3901772334817515
+  }
+]

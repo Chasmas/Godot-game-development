@@ -1,0 +1,11 @@
+{
+  "runtime_approved": true,
+  "files": [
+    "reception_register.png",
+    "reception_ledger.png"
+  ],
+  "imagegen_reference": "res://assets/art/prerendered/m01_sunset_palms/staging/reception_counter_v2/reception_counter_imagegen_reference.png",
+  "production_method": "ImageGen reception reference plus Blender cabinets, service tops and practical counter props.",
+  "expected_count": 2,
+  "approval_scope": "M01 lobby counter visual-only replacement; existing Furniture collision/navigation stays authoritative."
+}

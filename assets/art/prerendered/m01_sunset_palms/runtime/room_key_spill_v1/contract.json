@@ -1,0 +1,8 @@
+{
+  "runtime_approved": true,
+  "file": "room_key_spill.png",
+  "scale": 0.3,
+  "expected_placements": 7,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 motel_room_key_spill Decor sprites only; visual children retain authored floor/standing transforms and add no collision, navigation or interaction."
+}

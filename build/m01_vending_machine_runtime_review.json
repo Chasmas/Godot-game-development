@@ -1,0 +1,24 @@
+{
+  "damage_transition_checked": true,
+  "expected_placements": 2,
+  "placements": [
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        1048.0,
+        520.0
+      ]
+    },
+    {
+      "collision_layer": 128,
+      "intact_visual": true,
+      "position": [
+        488.0,
+        600.0
+      ]
+    }
+  ],
+  "runtime_approved": true,
+  "scope": "M01 native intact vending visuals; original BreakableProp collision, health, sound, and broken drawing retained."
+}

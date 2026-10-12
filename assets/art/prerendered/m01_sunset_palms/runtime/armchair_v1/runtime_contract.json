@@ -293,7 +293,7 @@
       "approach_stop_distance_px": 14.0,
       "clear_player_approaches": 2,
       "clear_player_side_passages": 0,
-      "facing_index": 1,
+      "facing_index": 2,
       "nearest_door_leaf_px": 70.4556579589844,
       "opaque_samples": 4441,
       "original_position": [
@@ -302,13 +302,17 @@
       ],
       "physical_footprint_overlaps": 0,
       "position": [
-        184.0,
-        446.0
+        200.0,
+        471.6802523136139
       ],
       "projected_wall_samples": 0,
       "reachable_door_arc_overlaps": 0,
-      "scope": "projected silhouette, not physical footprint",
-      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary."
+      "scope": "User-approved room101 layout: below north-wall TV, back toward viewer; previous clearance metrics historical, revalidation required",
+      "placement_intent": "Seat faces into room toward bedside table / living area; back toward room boundary.",
+      "layout_geometry_center": [
+        200.0,
+        472.0
+      ]
     },
     {
       "approach_blockers": [

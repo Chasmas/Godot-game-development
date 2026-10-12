@@ -1,0 +1,420 @@
+{
+	"entry_fill_energy": 0.32,
+	"filter": "linear_mipmap_anisotropic",
+	"filtered_surfaces": 473,
+	"materials": {
+		"Aged brass curtain rod": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.5,
+			"texture": "",
+			"transparency": 0
+		},
+		"Aged brushed brass": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Aged brushed brass.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Aged brushed brass.002": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Aged luggage brass": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.349999994039536,
+			"texture": "",
+			"transparency": 0
+		},
+		"Bathroom ceramic": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.25,
+			"texture": "",
+			"transparency": 0
+		},
+		"Bathroom mirror and chrome": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.129999995231628,
+			"texture": "",
+			"transparency": 0
+		},
+		"Clock dark green display": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Clock dark green display.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Curved CRT glass": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.159999996423721,
+			"texture": "",
+			"transparency": 0
+		},
+		"Folded cream paper": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Folded cream paper.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Folded cream paper.002": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Folded towel fabric": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.970000028610229,
+			"texture": "",
+			"transparency": 0
+		},
+		"Guest suitcase brown leather": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.699999988079071,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen aged painted frame": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.519999980926514,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen bathroom tile": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.379999995231628,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen ivory plaster": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.879999995231628,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen motel carpet": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.959999978542328,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen oxblood woven wool": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.949999988079071,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen painted metal finish": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.519999980926514,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen painted metal finish.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.519999980926514,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen sage woven upholstery v1": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.860000014305115,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen textured CRT casing": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.910000026226044,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen walnut frame": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"ImageGen walnut frame.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Inset shadow / clock casing": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Inset shadow / clock casing.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Inset shadow / clock casing.002": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Ivory television markings": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.600000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Left patterned blackout curtain": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.819999992847443,
+			"texture": "",
+			"transparency": 0
+		},
+		"Muted botanical green": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.699999988079071,
+			"texture": "",
+			"transparency": 0
+		},
+		"Natural ivory fringe": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.5,
+			"texture": "",
+			"transparency": 0
+		},
+		"Open luggage leather": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.479999989271164,
+			"texture": "",
+			"transparency": 0
+		},
+		"Original botanical palm lithograph material": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.819999992847443,
+			"texture": "",
+			"transparency": 0
+		},
+		"Packed linen": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.879999995231628,
+			"texture": "",
+			"transparency": 0
+		},
+		"Painted motel appliance metal": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.519999980926514,
+			"texture": "",
+			"transparency": 0
+		},
+		"Peephole glass": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.479999989271164,
+			"texture": "",
+			"transparency": 0
+		},
+		"Peephole glass.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.479999989271164,
+			"texture": "",
+			"transparency": 0
+		},
+		"Recessed bed plinth": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.850000023841858,
+			"texture": "",
+			"transparency": 0
+		},
+		"Reference brass hardware": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.479999989271164,
+			"texture": "",
+			"transparency": 0
+		},
+		"Reference brass hardware.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.479999989271164,
+			"texture": "",
+			"transparency": 0
+		},
+		"Right patterned blackout curtain": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.819999992847443,
+			"texture": "",
+			"transparency": 0
+		},
+		"Separate glass - environment reflection only": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.100000001490116,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared ImageGen ivory linen": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.970000028610229,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared ImageGen motel bedspread": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.920000016689301,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared ImageGen motel walnut": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared motel ImageGen shade linen": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.970000028610229,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared motel ImageGen shade linen.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.970000028610229,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared motel ImageGen walnut": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared motel ImageGen walnut.001": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared motel ImageGen walnut.002": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Shared walnut architecture": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		},
+		"Sheer window curtain": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.819999992847443,
+			"texture": "",
+			"transparency": 0
+		},
+		"Teal fabric based on ImageGen window reference": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.5,
+			"texture": "",
+			"transparency": 0
+		},
+		"Warm paper": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.699999988079071,
+			"texture": "",
+			"transparency": 0
+		},
+		"Worn terracotta": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.699999988079071,
+			"texture": "",
+			"transparency": 0
+		},
+		"veneer grain": {
+			"alpha": 1.0,
+			"filter": 3,
+			"roughness": 0.550000011920929,
+			"texture": "",
+			"transparency": 0
+		}
+	},
+	"postfx_disabled_for_review": true,
+	"preparation": {
+		"generated_mipmaps": 11,
+		"prepared_surfaces": 473,
+		"unique_textures": 11
+	},
+	"runtime_promoted": false
+}

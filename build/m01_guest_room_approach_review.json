@@ -1,0 +1,432 @@
+{
+  "counts": {
+    "bed": 10,
+    "dresser": 7,
+    "nightstand": 13
+  },
+  "door_arc_conflicts": [],
+  "passed": true,
+  "rows": [
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        128.0,
+        64.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        800.0,
+        64.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        912.0,
+        64.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        384.0,
+        128.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        816.0,
+        448.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        272.0,
+        464.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        352.0,
+        480.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        336.0,
+        592.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        272.0,
+        624.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        30.0,
+        30.0
+      ],
+      "kind": "bed",
+      "position": [
+        800.0,
+        624.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        118.0,
+        40.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        118.0,
+        88.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        374.0,
+        104.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        790.0,
+        40.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        790.0,
+        88.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        902.0,
+        40.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        902.0,
+        88.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        262.0,
+        440.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        262.0,
+        488.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        792.0,
+        438.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        840.0,
+        438.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        230.0,
+        600.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        10.3999996185303,
+        8.0
+      ],
+      "kind": "nightstand",
+      "position": [
+        758.0,
+        600.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "kind": "dresser",
+      "position": [
+        219.0,
+        88.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "kind": "dresser",
+      "position": [
+        411.0,
+        128.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        8.0,
+        25.9200000762939
+      ],
+      "kind": "dresser",
+      "position": [
+        1051.0,
+        64.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 1,
+      "footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "kind": "dresser",
+      "position": [
+        360.0,
+        453.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 3,
+      "footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "kind": "dresser",
+      "position": [
+        784.0,
+        491.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "kind": "dresser",
+      "position": [
+        803.0,
+        648.0
+      ],
+      "wooden_door_arc_overlaps": 0
+    },
+    {
+      "blocking_door_hinges": [],
+      "clear_player_approaches": 2,
+      "footprint_px": [
+        25.9200000762939,
+        8.0
+      ],
+      "kind": "dresser",
+      "position": [
+        552.0,
+        56.6399993896484
+      ],
+      "wooden_door_arc_overlaps": 0
+    }
+  ],
+  "scope": "Production M01 bed, cabinet and dresser approach lanes and wooden-door swing clearance; staging guest-room art is not loaded."
+}

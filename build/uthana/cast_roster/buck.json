@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\buck\\buck.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/cN3mMoSBPjc3/character.glb",
+    "character_id": "cN3mMoSBPjc3",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

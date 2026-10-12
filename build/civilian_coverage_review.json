@@ -1,0 +1,93 @@
+{
+  "distinct_civilians": 8,
+  "distinct_visual_variants": 8,
+  "nightmare_policy": "No M04 civilian is spawned by this review; nightmare victims must derive from prior campaign kills.",
+  "normal_levels": {
+    "m01_checkout": 2,
+    "m02_dog_days": 3,
+    "m03_prime_time": 3
+  },
+  "passed": true,
+  "rows": [
+    {
+      "cell": [
+        13,
+        3
+      ],
+      "id": "dolores",
+      "line_count": 3,
+      "mission": "m01_checkout",
+      "palette": "scout#6"
+    },
+    {
+      "cell": [
+        13,
+        28
+      ],
+      "id": "earl",
+      "line_count": 3,
+      "mission": "m01_checkout",
+      "palette": "civilian#0"
+    },
+    {
+      "cell": [
+        54,
+        4
+      ],
+      "id": "maya",
+      "line_count": 2,
+      "mission": "m02_dog_days",
+      "palette": "civilian#1"
+    },
+    {
+      "cell": [
+        57,
+        6
+      ],
+      "id": "lena",
+      "line_count": 2,
+      "mission": "m02_dog_days",
+      "palette": "civilian#2"
+    },
+    {
+      "cell": [
+        3,
+        16
+      ],
+      "id": "frank",
+      "line_count": 2,
+      "mission": "m02_dog_days",
+      "palette": "civilian#3"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "id": "bev",
+      "line_count": 2,
+      "mission": "m03_prime_time",
+      "palette": "scout#7"
+    },
+    {
+      "cell": [
+        16,
+        9
+      ],
+      "id": "carmine",
+      "line_count": 2,
+      "mission": "m03_prime_time",
+      "palette": "civilian#5"
+    },
+    {
+      "cell": [
+        57,
+        20
+      ],
+      "id": "rudy",
+      "line_count": 3,
+      "mission": "m03_prime_time",
+      "palette": "civilian#4"
+    }
+  ]
+}

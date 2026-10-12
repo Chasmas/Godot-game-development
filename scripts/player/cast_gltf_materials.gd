@@ -2,8 +2,10 @@ extends RefCounted
 ## Direct GLTF loads may supply texture images without mipmaps.
 ## Prepare local material copies so small character viewports do not shimmer.
 
-static func prepare(model: Node) -> void:
+static func prepare(model: Node, texture_filter: int = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS) -> Dictionary:
 	var textures := {}
+	var prepared_surfaces := 0
+	var generated_mipmaps := 0
 	for mesh in model.find_children("*", "MeshInstance3D", true, false):
 		for surface in mesh.mesh.get_surface_count():
 			var original := mesh.get_active_material(surface) as StandardMaterial3D
@@ -29,6 +31,9 @@ static func prepare(model: Node) -> void:
 						if pixels.generate_mipmaps(normal_map) != OK:
 							continue
 						textures[key] = ImageTexture.create_from_image(pixels)
+						generated_mipmaps += 1
 				material.set(field, textures[key])
-			material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+			material.texture_filter = texture_filter
 			mesh.set_surface_override_material(surface, material)
+			prepared_surfaces += 1
+	return {"prepared_surfaces":prepared_surfaces, "unique_textures":textures.size(), "generated_mipmaps":generated_mipmaps}

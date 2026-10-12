@@ -1,0 +1,11 @@
+{
+  "runtime_approved": false,
+  "source": "Existing ImageGen-backed Blender furniture with authored textile and room dressing",
+  "scope": "v5 staging: folded textile, botanical wall relief, plants, reading table and guest luggage; camera is an art-review view, not an approved gameplay projection",
+  "pending": [
+    "Reference-quality textile and botanical artwork refinement",
+    "Bathroom and entrance composition",
+    "Adapt to exact gameplay projection and room geometry",
+    "Validate collisions, door clearance and actor placement"
+  ]
+}

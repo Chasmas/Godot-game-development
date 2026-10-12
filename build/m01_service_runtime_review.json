@@ -1,0 +1,25 @@
+{
+  "camera_world_position": [
+    128,
+    472
+  ],
+  "camera_zoom": 2.4,
+  "counter_bodies": 2,
+  "counter_layers": [
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    },
+    {
+      "has_collision_shape": true,
+      "layer": 16
+    }
+  ],
+  "native_counter_visuals": 2,
+  "native_washer_visuals": 2,
+  "passed": true,
+  "preserved_counter_collision_bodies": 2,
+  "preserved_washer_collision_bodies": 2,
+  "scope": "Live M01 service/laundry camera; no staging layer loaded.",
+  "washer_bodies": 2
+}

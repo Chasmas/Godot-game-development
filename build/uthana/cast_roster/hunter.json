@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\hunter\\hunter.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/ciVYNuXqTLWU/character.glb",
+    "character_id": "ciVYNuXqTLWU",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

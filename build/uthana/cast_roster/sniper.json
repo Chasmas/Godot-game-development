@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\sniper\\sniper.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/c8uuhrA3WmvB/character.glb",
+    "character_id": "c8uuhrA3WmvB",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}

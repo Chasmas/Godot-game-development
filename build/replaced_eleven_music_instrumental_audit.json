@@ -1,0 +1,35 @@
+{
+  "scope": "Every audio track under music/, including game masters and source variants; dialogue and SFX excluded",
+  "tracks": [
+    {
+      "file": "music\\st_main_theme.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_motel_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_motel_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_yard_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_yard_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade1.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    }
+  ]
+}

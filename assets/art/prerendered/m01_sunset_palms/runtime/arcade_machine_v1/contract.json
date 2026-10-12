@@ -1,0 +1,9 @@
+{
+  "runtime_approved": true,
+  "file": "arcade_machine_intact.png",
+  "source": "Generated transparent 1980s motel arcade cabinet, 2026-10-08",
+  "projection": "High three-quarter intact prop fitted to the legacy 14 by 12 pixel BreakableProp footprint",
+  "expected_placements": 2,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "approval_scope": "M01 arcade BreakableProp instances only. The visual is child-only, hidden on break; original collision, health, damage response and broken drawing remain authoritative."
+}

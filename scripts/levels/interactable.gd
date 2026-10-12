@@ -163,13 +163,21 @@ func _draw() -> void:
 		"charge":
 			if not enabled:
 				return
-			# a satchel of pyro charges, bobbing, ringed in gold
-			draw_rect(Rect2(-6, -4 + bob, 12, 8), ink)
-			draw_rect(Rect2(-5, -3 + bob, 10, 6), Color(0.6, 0.14, 0.1))
-			for i in 3:
-				draw_rect(Rect2(-4 + i * 3, -3 + bob, 2, 6), Color(0.85, 0.2, 0.14))
-			draw_line(Vector2(-5, bob), Vector2(5, bob), Color(0.95, 0.85, 0.3), 1.0)
-			draw_circle(Vector2(3, -2 + bob), 1.0, Color(1, 0.2, 0.1, 0.5 + 0.5 * sin(_t * 8.0)))
+			# Blender's canvas satchel is the pickup itself; preserve the compact
+			# interaction ring so it remains readable at the live camera distance.
+			var charge_tex := ArtLib.sprite("pyro_charge")
+			if charge_tex:
+				var h := 15.0
+				var w := h * charge_tex.get_width() / float(charge_tex.get_height())
+				draw_texture_rect(charge_tex, Rect2(-w * 0.5, -h * 0.5 + bob, w, h), false)
+			else:
+				# Safe fallback for a missing art import.
+				draw_rect(Rect2(-6, -4 + bob, 12, 8), ink)
+				draw_rect(Rect2(-5, -3 + bob, 10, 6), Color(0.6, 0.14, 0.1))
+				for i in 3:
+					draw_rect(Rect2(-4 + i * 3, -3 + bob, 2, 6), Color(0.85, 0.2, 0.14))
+				draw_line(Vector2(-5, bob), Vector2(5, bob), Color(0.95, 0.85, 0.3), 1.0)
+				draw_circle(Vector2(3, -2 + bob), 1.0, Color(1, 0.2, 0.1, 0.5 + 0.5 * sin(_t * 8.0)))
 			draw_arc(Vector2(0, bob), 10.0, 0, TAU, 16, Color(UIStyle.GOLD, 0.35 + 0.25 * sin(_t * 5.0)), 1.0)
 		"plant":
 			if not enabled:

@@ -1,0 +1,40 @@
+{
+  "state": "generated",
+  "request": {
+    "voice_description": "An American man in his late fifties with a convincing rural Southern US country accent, a low gravelly baritone and weathered tobacco roughness. Measured confident delivery, grounded and intimidating, restrained menace and the authority of a corrupt motel boss. Natural Southern vowels and subtle drawl, clear intelligible English. No caricature, no announcer brightness, no friendly narrator tone. Studio-quality dry dialogue.",
+    "text": "Well. You're definitely not housekeeping. I know that star. Aurelio sent you, didn't he? Tell him the tapes stay here. That was the arrangement. No. Of course you don't. That's the cruel part. SECURITY. FRONT DESK. Now.",
+    "model_id": "eleven_multilingual_ttv_v2",
+    "guidance_scale": 5,
+    "seed": 1987
+  },
+  "result": {
+    "previews": [
+      {
+        "generated_voice_id": "LvHsyKEmljfApo2DVbl3",
+        "media_type": "audio/mpeg",
+        "duration_secs": 17.138166666666667,
+        "language": "en",
+        "detected_labels": null,
+        "previews": null
+      },
+      {
+        "generated_voice_id": "7fr8D7jTnjdJqjFhIS41",
+        "media_type": "audio/mpeg",
+        "duration_secs": 18.653291666666668,
+        "language": "en",
+        "detected_labels": null,
+        "previews": null
+      },
+      {
+        "generated_voice_id": "vt95lMKpkNQ2NKPlPV4l",
+        "media_type": "audio/mpeg",
+        "duration_secs": 18.156958333333332,
+        "language": "en",
+        "detected_labels": null,
+        "previews": null
+      }
+    ],
+    "text": "Well. You're definitely not housekeeping. I know that star. Aurelio sent you, didn't he? Tell him the tapes stay here. That was the arrangement. No. Of course you don't. That's the cruel part. SECURITY. FRONT DESK. Now."
+  },
+  "runtime_approved": false
+}

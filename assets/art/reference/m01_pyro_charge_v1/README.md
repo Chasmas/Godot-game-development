@@ -1,0 +1,1 @@
+ImageGen reference for M01 pyro charge: dark canvas demolition satchel, orange-red wrapped charges, tape, black timer, yellow wire and red LED; transparent product concept. Generated with Codex built-in ImageGen on 2026-10-09 for Blender reconstruction.

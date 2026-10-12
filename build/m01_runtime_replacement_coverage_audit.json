@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "verified_exact_categories": [
+    {
+      "category": "motel_ice_bucket",
+      "evidence": "m01_guest_ice_bucket_empty",
+      "placements": 1
+    },
+    {
+      "category": "motel_ice_bucket_full",
+      "evidence": "m01_guest_ice_bucket_full",
+      "placements": 2
+    },
+    {
+      "category": "hq_pool_cooler",
+      "evidence": "m01_pool_cooler",
+      "placements": 2
+    },
+    {
+      "category": "motel_bougainvillea",
+      "evidence": "m01_bougainvillea",
+      "placements": 3
+    },
+    {
+      "category": "motel_bedside_lamp",
+      "evidence": "m01_bedside_lamp",
+      "placements": 8
+    },
+    {
+      "category": "motel_neon_vacancy_sign",
+      "evidence": "m01_neon_vacancy_sign",
+      "placements": 3
+    },
+    {
+      "category": "motel_housekeeping_cart",
+      "evidence": "m01_housekeeping_cart",
+      "placements": 1
+    },
+    {
+      "category": "motel_palm_planter",
+      "evidence": "m01_palm_planter",
+      "placements": 4
+    },
+    {
+      "category": "motel_pool_lounger",
+      "evidence": "m01_pool_lounger",
+      "placements": 2
+    },
+    {
+      "category": "motel_pool_float",
+      "evidence": "m01_pool_ring",
+      "placements": 1
+    },
+    {
+      "category": "motel_pool_float_flamingo",
+      "evidence": "m01_pool_flamingo",
+      "placements": 1
+    },
+    {
+      "category": "motel_pool_party_ruin",
+      "evidence": "m01_pool_party_ruin",
+      "placements": 1
+    },
+    {
+      "category": "motel_pool_umbrella",
+      "evidence": "m01_pool_umbrella",
+      "placements": 1
+    },
+    {
+      "category": "motel_room_key_spill",
+      "evidence": "m01_room_key_spill",
+      "placements": 7
+    },
+    {
+      "category": "motel_suitcase_open",
+      "evidence": "m01_open_suitcase",
+      "placements": 3
+    },
+    {
+      "category": "motel_telephone",
+      "evidence": "m01_motel_telephone",
+      "placements": 2
+    },
+    {
+      "category": "motel_tv_crt",
+      "evidence": "m01_crt_tv",
+      "placements": 3
+    },
+    {
+      "category": "motel_towel_cart",
+      "evidence": "m01_towel_cart",
+      "placements": 8
+    }
+  ],
+  "remaining_unverified_categories": [
+    "arcade",
+    "clutter_ashtray",
+    "clutter_bottles",
+    "dumpster",
+    "hq_motel_dresser",
+    "hq_motel_ice_machine",
+    "hq_motel_vending",
+    "hq_palm_planter",
+    "hq_pool_lounger_set",
+    "lamp",
+    "laundry_service_bench",
+    "motel_gecko",
+    "motel_hasty_checkout",
+    "motel_ice_machine",
+    "motel_water_ring",
+    "neon",
+    "palm",
+    "paper",
+    "road_arrow",
+    "road_manhole",
+    "road_patch",
+    "road_pothole",
+    "road_sand",
+    "road_stop_line",
+    "vacancy"
+  ],
+  "failures": [],
+  "scope": "Exact M01 legacy Decor category mappings only. BreakableProp overlays and room dressing are evidenced separately and are not claimed as decor-category coverage."
+}

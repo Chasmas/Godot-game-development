@@ -1,0 +1,10 @@
+{
+  "scope": "Every audio track under music/, including game masters and source variants; dialogue and SFX excluded",
+  "tracks": [
+    {
+      "file": "music\\st_motel_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    }
+  ]
+}

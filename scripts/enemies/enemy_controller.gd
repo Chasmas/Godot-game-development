@@ -35,6 +35,7 @@ var facing := Vector2.RIGHT
 var hit_radius := 6.0
 var armor_left := 0
 var _mask_speed := 1.0   ## the devil's mask makes everyone faster
+const TRAVERSAL_SPEED_SCALE := 0.242
 var patrol_points: PackedVector2Array = []
 ## Authored encounter role: watch keeps hands free; auto preserves ambient selection.
 var idle_action := "auto"
@@ -59,6 +60,11 @@ var _burst_left := 0
 var _reload_t := 0.0
 var _windup_t := -1.0
 var _melee_cd := 0.0
+# A melee strike is committed visually first and resolves at the contact frame of
+# the same CharacterVisual clip. This prevents "damage before the hand arrives".
+var _melee_contact_t := -1.0
+var _melee_contact_dir := Vector2.RIGHT
+var _melee_contact_target: Player = null
 var _knock := Vector2.ZERO
 var _down_t := 0.0
 var _shield_down := 0.0
@@ -130,6 +136,7 @@ func setup(p_data: EnemyData, p_level: Node, p_facing: Vector2) -> void:
 		# stable per enemy (same look after a checkpoint restart)
 		look = "%s#%d" % [data.palette, absi(hash(enemy_id if enemy_id != "" else str(get_instance_id()))) % 4]
 	visual.setup(look)
+	visual.locomotion_run_speed=data.walk_speed*TRAVERSAL_SPEED_SCALE*1.25
 	if data.weapon_id != &"" and DB.weapon(data.weapon_id):
 		weapon = WeaponInstance.create(DB.weapon(data.weapon_id))
 	visual.set_weapon(weapon.data if weapon else null)
@@ -191,6 +198,7 @@ func _physics_process(delta: float) -> void:
 	_state_t += delta
 	_fire_cd = maxf(0.0, _fire_cd - delta)
 	_melee_cd = maxf(0.0, _melee_cd - delta)
+	_resolve_melee_contact(delta)
 	_shield_down = maxf(0.0, _shield_down - delta)
 	_alert_icon = maxf(0.0, _alert_icon - delta)
 	_shout_cd = maxf(0.0, _shout_cd - delta)
@@ -248,7 +256,15 @@ func _physics_process(delta: float) -> void:
 		# not a reason to shuffle while smoking or watching. Knockback still
 		# flows through _steer independently of this navigation adjustment.
 		desired += _separation()
-	_steer(desired, delta)
+	# An enemy's committed hit is a planted physical action. Keep knockback
+	# separate, but discard AI navigation for the short authored swing so a
+	# guard cannot slide into Cass while its feet are in the strike pose.
+	if visual.is_swinging():
+		desired = Vector2.ZERO
+		_move_vel = Vector2.ZERO
+	# Scale all intentional travel, including direct strafe/retreat and boss
+	# movement. Pathfinding is only one producer of desired locomotion.
+	_steer(desired * TRAVERSAL_SPEED_SCALE, delta)
 	# Collision recovery can push an overlapping grabbed body even at zero
 	# velocity. Its executor owns the paired placement until release.
 	if not _held:
@@ -749,14 +765,17 @@ func _melee_combat(p: Player, dist: float, delta: float) -> Vector2:
 		_windup_t += delta
 		if _windup_t >= data.melee_windup:
 			_windup_t = -1.0
-			_melee_cd = 0.6
+			visual.set_aim(facing.angle())
 			visual.swing(true)
+			_melee_cd = maxf(0.6, visual._swing_dur)
+			# Damage lands at the authored impact beat, after anticipation and while
+			# the arm/weapon is visibly in the target's space. The player can evade
+			# during that telegraph; interruptions clear this pending contact.
+			_melee_contact_t = visual._swing_dur * visual.swing_contact_time()
+			_melee_contact_dir = facing
+			_melee_contact_target = p
 			Effects.slash(global_position + facing * 3.0, facing.angle(), MELEE_REACH + 4.0, 2.0, Color(1.0, 0.35, 0.35), false, false, visual._swing_dir)
 			Audio.play_at("swing", global_position)
-			if p.global_position.distance_to(global_position) < MELEE_REACH + 6.0 and absf(angle_difference(facing.angle(), to.angle())) < 1.2:
-				var info := DamageInfo.make(DamageInfo.Type.MELEE, self, p.global_position, to, weapon.data.id if weapon else &"fists", &"melee")
-				info.lethal = true
-				p.take_damage(info)
 		return to * 20.0
 	var crowd := _crowd()
 	_holding = crowd != null and not crowd.request_melee(self)
@@ -779,6 +798,26 @@ func _melee_combat(p: Player, dist: float, delta: float) -> Vector2:
 	if _sees_player and dist < 120.0:
 		return to * speed
 	return _go_to(p.global_position, speed)
+
+## Resolve a committed enemy strike at its visible contact frame. Capturing the
+## aim direction keeps a clearly telegraphed strike honest while still allowing
+## the player to leave its short reach before impact.
+func _resolve_melee_contact(delta: float) -> void:
+	if _melee_contact_t < 0.0:
+		return
+	_melee_contact_t -= delta
+	if _melee_contact_t >= 0.0:
+		return
+	var p := _melee_contact_target
+	_melee_contact_target = null
+	if p == null or not is_instance_valid(p) or not p.alive or not is_alive() or state not in [State.COMBAT, State.FLANK, State.RETREAT]:
+		return
+	var to := p.global_position - global_position
+	if to.length() > MELEE_REACH + 6.0 or absf(angle_difference(_melee_contact_dir.angle(), to.angle())) >= 1.2:
+		return
+	var info := DamageInfo.make(DamageInfo.Type.MELEE, self, p.global_position, to.normalized(), weapon.data.id if weapon else &"fists", &"melee")
+	info.lethal = true
+	p.take_damage(info)
 
 func _call_reinforcements(_delta: float) -> Vector2:
 	# run to the nearest alarm panel; if none, scream and flee
@@ -951,6 +990,8 @@ func _react_to_attack(info: DamageInfo) -> void:
 ## A forced state change must not leave a swing or reload running underneath it.
 func _interrupt_action() -> void:
 	_windup_t = -1.0
+	_melee_contact_t = -1.0
+	_melee_contact_target = null
 	_reload_t = 0.0
 	visual.cancel_attack()
 	visual.cancel_reload()
@@ -1168,6 +1209,9 @@ func _set_state(s: State) -> void:
 			_show_icon("!?")
 	_path = []
 	_windup_t = -1.0 if s != State.COMBAT else _windup_t
+	if s != State.COMBAT:
+		_melee_contact_t = -1.0
+		_melee_contact_target = null
 	if not is_aware():
 		var crowd := _crowd()
 		if crowd:

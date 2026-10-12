@@ -1,0 +1,174 @@
+{
+	"actual_m01_player_controller": true,
+	"cases": [
+		{
+			"direction": 0,
+			"distance_px": 28.6200561523438,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 1,
+			"distance_px": 28.6191792339087,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 2,
+			"distance_px": 28.6200561523438,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 3,
+			"distance_px": 28.6191792339087,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 4,
+			"distance_px": 28.6200561523438,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 5,
+			"distance_px": 28.6191792339087,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 6,
+			"distance_px": 28.6200561523438,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 7,
+			"distance_px": 28.6191792339087,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "walk"
+		},
+		{
+			"direction": 0,
+			"distance_px": 10.9625549316406,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 1,
+			"distance_px": 10.9627012461424,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 2,
+			"distance_px": 10.961669921875,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 3,
+			"distance_px": 10.9627012461424,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 4,
+			"distance_px": 10.9625549316406,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 5,
+			"distance_px": 10.9627012461424,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 6,
+			"distance_px": 10.961669921875,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 7,
+			"distance_px": 10.9627012461424,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sneak"
+		},
+		{
+			"direction": 0,
+			"distance_px": 45.5565643310547,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 1,
+			"distance_px": 45.5569529384375,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 2,
+			"distance_px": 45.5574035644531,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 3,
+			"distance_px": 45.5569529384375,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 4,
+			"distance_px": 45.5565643310547,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 5,
+			"distance_px": 45.5569529384375,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 6,
+			"distance_px": 45.5574035644531,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		},
+		{
+			"direction": 7,
+			"distance_px": 45.5569529384375,
+			"legs_follow_displacement": true,
+			"release_stopped": true,
+			"stance": "sprint"
+		}
+	],
+	"runtime_promoted": true
+}

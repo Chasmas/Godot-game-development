@@ -1,0 +1,45 @@
+{
+  "runtime_approved": false,
+  "frames": 48,
+  "source": "C:\\Users\\Gil\\Documents\\GitHub\\Hotshot-California\\build\\uthana\\cast_roster\\motions\\guard\\merged\\run_weapon_frames_closeup_contact_corrected_aim_candidate_hand_candidate_rifle_camera_-90_foreend_twist_-65",
+  "max_right_crossings": 54,
+  "max_left_crossings": 388,
+  "frames_with_crossings": [
+    {
+      "frame": 3,
+      "triangle_crossings": {
+        "Right": 40,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 4,
+      "triangle_crossings": {
+        "Right": 54,
+        "Left": 388
+      }
+    },
+    {
+      "frame": 5,
+      "triangle_crossings": {
+        "Right": 12,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 9,
+      "triangle_crossings": {
+        "Right": 19,
+        "Left": 0
+      }
+    },
+    {
+      "frame": 45,
+      "triangle_crossings": {
+        "Right": 0,
+        "Left": 281
+      }
+    }
+  ],
+  "scope": "Exact 48 captured poses; central torso versus >80% arm-weight faces. Excludes blended boundaries/lateral torso/coplanar/containment."
+}

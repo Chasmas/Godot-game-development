@@ -1,0 +1,35 @@
+{
+  "scope": "Every audio track under music/, including game masters and source variants; dialogue and SFX excluded",
+  "tracks": [
+    {
+      "file": "music\\st_main_theme.ogg",
+      "status": "needs_replacement",
+      "transcript": "The world changed double when Fancy FM fell, arpeggios climbing, tension rising, one beer donos us, and everything returns, no human vocal sounds. The motif resolves on a long held note, the tape slows down, and stops no human vocal sounds."
+    },
+    {
+      "file": "music\\st_motel_combat.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_motel_stealth.ogg",
+      "status": "needs_replacement",
+      "transcript": "Fragments of the five-note motif on a muted bell, far away, a reversed sound now and then, a ticking hi-hat, no human vocal sounds. The pulse tightens, a filtered analog sequence creeps in, tension that never resolves, loop-friendly, no human vocal sounds."
+    },
+    {
+      "file": "music\\st_yard_combat.ogg",
+      "status": "needs_replacement",
+      "transcript": "Three-year dark synthwave groove, tight hunchulin drum kick and gated snare, driving analog octave bass, hot desert wind and metallic scrap percussion. Intense and cinematic, never rave music."
+    },
+    {
+      "file": "music\\st_yard_stealth.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    },
+    {
+      "file": "music\\st_arcade1.ogg",
+      "status": "instrumental_pass",
+      "transcript": ""
+    }
+  ]
+}

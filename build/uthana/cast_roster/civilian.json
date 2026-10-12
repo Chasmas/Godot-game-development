@@ -1,0 +1,10 @@
+{
+  "state": "response_received",
+  "source": "assets\\art\\cast3d_rt\\civilian\\civilian.glb",
+  "result": {
+    "url": "https://uthana.com/motion/bundle/czXvZ5iWy1VA/character.glb",
+    "character_id": "czXvZ5iWy1VA",
+    "auto_rig_confidence": 0.0,
+    "message": null
+  }
+}
