@@ -93,7 +93,7 @@ The repo already contains integration scripts for these (Meshy/ElevenLabs/Uthana
 
 ## 5. Unfinished item from last session: guest clutter batch
 
-**Status: built, hooked in, NOT approved, live review not yet passed.**
+**Status: built, hooked in, NOT approved. Headless review PASSED (12 placements, no collisions); windowed visual inspection still pending.** Legacy widths measured: ashtray ≈16.7 px and bottles ≈10.9–12.2 px, versus the new 9 px and 10 px. Judge in the windowed captures whether the ashtray should be larger.
 
 - Replaces the exact legacy Decor families `clutter_ashtray` (6 placements) and `clutter_bottles` (6) in M01, visual-only (no collision or navigation change).
 - Builder: `tools/art/build_m01_guest_clutter.py`. Blender geometry directed by `assets/art/materials/m01/batch_v1/ashtray_reference.png`, `bottle_weapon_reference.png` and the approved guest-room reference `guest_room_rebuild_direction_v2.png`.

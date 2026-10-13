@@ -24,7 +24,7 @@ static func build(level: Level) -> void:
 		# Cancel the authored Decor scale for the visual only, so each family
 		# keeps a consistent footprint; the legacy node keeps its rotation.
 		var used := texture.get_image().get_used_rect()
-		visual.offset=Vector2(texture.get_size())*0.5-used.get_center()
+		visual.offset=texture.get_size()*0.5-Vector2(used.get_center())
 		visual.scale=Vector2.ONE*float(contract.world_width_px[id])/float(used.size.x)/absf(node.global_scale.x)
 		visual.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 		visual.light_mask=node.light_mask
