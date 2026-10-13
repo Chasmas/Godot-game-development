@@ -1,0 +1,20 @@
+{
+  "runtime_approved": false,
+  "source_level_sha256": "b6d4434b662f6882a0ba598f724abe4527772f68f070cf1f5522d5d8591f4083",
+  "imagegen_reference": "assets/art/materials/m01/batch_v1/guest_room_rebuild_direction_v2.png",
+  "object_references": {
+    "clutter_ashtray": "assets/art/materials/m01/batch_v1/ashtray_reference.png",
+    "clutter_bottles": "assets/art/materials/m01/batch_v1/bottle_weapon_reference.png"
+  },
+  "reference_role": "Existing ImageGen ashtray/bottle studies and approved guest-room palette direct the look; final assets are modeled in Blender.",
+  "variants": {
+    "clutter_ashtray": "ashtray.png",
+    "clutter_bottles": "bottles.png"
+  },
+  "expected_placements": 12,
+  "world_width_px": {
+    "clutter_ashtray": 9,
+    "clutter_bottles": 10
+  },
+  "scope": "Visual-only Decor replacement. Preserve original transforms, navigation and collision."
+}

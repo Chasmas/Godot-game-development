@@ -146,6 +146,7 @@ func _ready() -> void:
 	NativeM01Telephones.build(self)
 	NativeM01OpenSuitcases.build(self)
 	M01NativeGuestIceBuckets.build(self)
+	M01NativeGuestClutter.build(self)
 	if data.get("ground_mist", false):
 		var exterior: Array = data.get("zones", {}).get("exterior", [])
 		if exterior.size() == 4:
